@@ -1,0 +1,17 @@
+==Intro==
+As everyone seem to be writing a first draft, I'll put down my ideas here as well. My idea is that principally most action will be taken in its current form (lets leave bridges/tunnels out of consideration for a moment). For this purpose, the current _map array is imho the best, fastest and most memory efficient (apart from mivlad's idea of certain types referincing a mother-object, but imho that would be slow on a larger scale). So just rewriting that to a HRF (Human Readeable Form) would be sufficient for the basic stuff.
+
+==Ok so you don't want to change a thing?==
+Yes, I do. The problem with the current setup is that with the parts we would like to do the most with, we cannot. Take bridges for example. That damn type takes all possible bits, and thus you are very limited in what you can do. My proposal would be to have a basic, small struct/union (in the new map array) for bridges. It would for example only store railtype and direction (and perhaps some other stuff, until the allocated union-space (more about this later) is almost full. But, this bridge-union would have a <b>look-somewhere-else bit</b> set, that would look up additional stuff in an object format.
+
+==Wow cool!==
+Ya, I know :P. These objects would be stored as additional 'vehicles' (to put it simply, it would of course be of another type altogether). These will be static in space, as they obviously cannot move, and could be looked up by a simple hash function. This gives only 1 extra indirection for these special objects, which I think is not that big of a penalty. The same way tunnels would be saved, a chain of objects identifying spaces underground that can go in any directions, only restrictions are made by us.
+
+==Closing words==
+I feel my idea have a very strong advanteage. They retain the power and speed of the old _map stuff, while at the same time xtending the game possibilities into an endless and unconfining domain. I'd like to put here down for the record that I came up with this idea all by myself during a hard day's work in the garden and in no way have I been influenced by any discussion about the map array before.
+
+==The map array as I would see it==
+All ideas converge into a general one as seen by most of us. I have checked it and added all missing elements. Look here: [[Main/en/MapReWriteDarkvater]]
+
+
+[[Category:en/Map Re-write]]
