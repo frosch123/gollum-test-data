@@ -1,0 +1,42 @@
+Okay, lets see some code.
+
+  struct tile {
+    uint type; // Bridge, ground, support, tunnel, etc.
+    union {
+      struct bridge {
+        uint bridgetype; // not sure this is needed
+      };
+      struct ground {
+        uint slope;
+        uint grass_state;
+      };
+      struct support {
+        // What should go here?
+      };
+      struct tunnel {
+        //maybe we should have information about the direction here?
+      };
+    };
+  };
+  
+  struct content {
+    uint type; // station, industry, rail, road, etc.
+    union {
+      struct station {
+      };
+      struct industry {
+      };
+      struct rail {
+      };
+      // etc
+    }
+  }
+    
+  struct maptile {
+    uint height; // z coordinate
+    struct tile tile;
+    struct content content;
+    maptile* next;
+  } _map[];
+
+[[Category:en/Map Re-write]]
