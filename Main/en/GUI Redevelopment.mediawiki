@@ -1,0 +1,29 @@
+The current OpenTTD GUI code is inflexible and unpleasant. Therefore an effort is now underway to design and build a replacement system.
+
+Expresso tried it [http://www.tt-forums.net/viewtopic.php?t=20832 in this thread] but realised what a large project it is and very sensibly stopped.
+
+Because it's such a large project we do need to be totally convinced that we have to reimplement the GUI instead of just improving on what we already have before we start down that road.
+
+
+
+
+== Requirements ==
+
+* Fast - keep performance as close to the current GUI as possible (or make it faster, but we all know how unlikely that is)
+* Usable - the major motivation to do this is to make the code which uses the GUI cleaner and simpler. If we don't do that there's no point doing this at all
+* Abstract - if we want to switch to 32bpp and draw everything very prettily, only the GUI drawing code should care - all other parts of the game should be able to ignore it. This may also imply that the GUI acquires some level of themeability
+* No irritating limits - we really should be able to lose the 32-item limit on things like dropdowns
+* Improve user experience - eventually allow the users to get what they want from this - better handling of in-game toolbars, etc.
+
+
+== Design ==
+
+Apparently it's okay to write bits of OpenTTD in C++ now, so with that in mind it's obvious that one of these bits should be the GUI. Then we can have a nice light object-oriented design with sanity and cleanliness and a good sense of hygiene, which flosses twice a day.
+
+Performance requirements and the desire not to end up increasing OpenTTD's system requirements mean that we can't go too fancy on the drawing system. A compositing model would probably use too much memory, so we need good clipping and good z-order handling to avoid things drawing on top of each other when they shouldn't.
+
+At this time we do not intend to alter the basic look of OpenTTD, so the new GUI needs to draw its controls so that they look like the ones we already have. This is of course entirely achievable but does not preclude designing the system so that we can do other things with the look later on.
+
+Obviously some thought needs to go into this.
+
+[[Category:en/Development]]
