@@ -1,0 +1,42 @@
+{{note|These might be not optimal solutions, but I haven't yet seen better ones.}}
+==Prelude==
+One day I thought - we have logical ''OR'', why don't make logical ''NOT'' and ''AND''? It's... challenging.
+
+''(Here and afterwards I assume green color as ''TRUE'' and red as ''FALSE'')''
+==OR==
+[[File:en/Logic.or true true.png|left|frame|Arguments are ''TRUE''/''TRUE'']]
+The basic ''OR'' is simply created by a one [[Main/en/pre-signals|pre-entry signals]] and two pre-exit signals.
+[[File:en/Logic.or true false.png|128px|thumb|left|''TRUE''/''FALSE'']]
+[[File:en/Logic.or false true.png|128px|thumb|left|''FALSE''/''TRUE'']]
+[[File:en/Logic.or false false.png|128px|thumb|left|''FALSE''/''FALSE'']]
+<br style="clear:both" />
+==NOT==
+[[File:en/Logic.not true.png|left|frame|Argument set to ''TRUE'']]
+This looked easy at first, but it took a long time to create this structure.
+
+Here '''n1''' and '''n2''' are the stations for maglev to run between. (Orders set to "[[Main/en/non-stop]]", TTDPatch compatible non-stop handling set to "on"). Notice, that '''n1''' has two platforms. This is why we can't use [[Main/en/waypoints]], and this is why we need TTDPatch compatible non-stop handling.
+
+'''a''' and '''b''' are [[Main/en/pre-signals]], they stop the train, if argument is ''FALSE'' and move him out of the track.
+
+'''x''' and '''y''' collect the position of the train and close the result signal.
+Unfortunately, I've found out a little bug in this scheme. At some times, it [[Main/en/Image:Logic.not bug.png|jams]].
+[[File:en/Logic.not false.png|128px|thumb|left|Argument set to ''FALSE'']]
+
+<br style="clear:both" />
+==AND==
+[[File:en/Logic.and true true.png|left|frame|Arguments are ''TRUE''/''TRUE'']]
+One solution was to make ''A AND B'' as ''NOT((NOT A) OR (NOT B))'', but that would be messy, so I have found out another solution.
+
+Here '''a1''' and '''a2''' are the stations for maglev to run between. (Orders set to "[[Main/en/non-stop]]", TTDPatch compatible non-stop handling set to "on"). Notice, that both stations have two platforms. This is why we can't use [[Main/en/waypoints]], and this is why we need TTDPatch compatible non-stop handling.
+
+'''a''' and '''b''' are [[Main/en/pre-signals]] (so are '''aa''' and '''bb'''), they stop the train, if argument is ''FALSE'' and move him out of the track.
+
+'''x''' and '''y''' collect the position of the train and close the result signal.
+
+Unfortunately, I've found out a little bug in this scheme, too. At some times, it [[Main/en/Image:Logic.and bug.png|jams]].
+
+Other possible situations:
+[[File:en/Logic.and true false.png|128px|thumb|left|''TRUE''/''FALSE'']]
+[[File:en/Logic.and false true.png|128px|thumb|left|''FALSE''/''TRUE'']]
+[[File:en/Logic.and false false.png|128px|thumb|left|''FALSE''/''FALSE'']]
+<br style="clear: left"/>
