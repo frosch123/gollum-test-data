@@ -1,0 +1,158 @@
+''« Back to [[Main/en/Scenarios Team ToDo List]]''
+
+This page is used to gather ideas for a PHP/MySQL version for the Scenarios Database. Some valid concerns have been raised so far. Here's some information on the plans made so far. Feel free to add to this, reorder it, etc.
+
+==Page Layout==
+* Tries to blend in with openttd.org in terms of color and visual style... well, not at the moment, but that's the goal.
+* At the top is a horizontal menu with five buttons
+** Search
+** Browse
+** Upload
+** Login
+** OpenTTD.org
+
+Screenie: [[File:en/Openttd scenarios frontpage.png]] - I know, it looks like donkeys excrement, and the buttons don't match what I wrote above. I'm a programmer, not a designer (lame excuse, but true unfortunately). Good news is it runs on Smarty, so it should be relatively easy and painless to integrate the templates used for the main openTTD site.
+
+===Search===
+The Search screen provides access to the primary method of finding a specific scenario in the database. On the first pageload it shall show a form with all fields we store concerning scenario's (author, map size, setting, etc). On fields that are an ordered listing, a dropdown for specifying 'less then', 'exactly' or 'more then' will be present.
+
+Input will either be dropdowns or 'google suggest' assisted text-input boxes.
+
+After filling in some conditions to filter on (for example, 'Setting: Temperate', 'Map Size: at least 512 x 512', 'Author: Sleepie') and submitting the form, the page will reload. The form will be displayed again with the values set to what they were before the submit, and below the form a listing of scenarios will appear.
+
+===Browse===
+The browse 'button' will show the possible categories on-hover. These categories are created automatically based on tags that can be attached to scenarios, or can be built up from search queries (admins can get a 'Make Category' button on the search screen, perhaps?).
+
+Clicking a category will bring up the search results view for that category. It may be a bit superfluous, but essentially offers direct access to predefined searches. Still need to refine this, and add more value over normal search, IMHO.
+
+===Upload===
+Upload allows people to upload scenarios to the database. This form will allow the uploader to specify information regarding the scenario that can be searched for. Three pieces of information are mandatory: Author, Scenario Name and a 'Cleared for distribution' checkbox (because of liability and all that).
+
+Uploading can be done anonymously, but an anonymous upload first needs to be cleared for public use by an authenticated user before it becomes visible.
+
+''Alternative: Have the file marked in a lower-visibility way, so that it can still be accessed, but is clearly marked as unchecked.''
+
+===Login===
+Registering and logging in allows additional privileges in the database - one is the above-mentioned clearing of anonymous uploads. Other possible privileges: mark scenario for deletion, add comments to scenarios. The basic idea is that the system should be as open as possible, only abuse-sensitive features will be locked down.
+
+===OpenTTD.org===
+A link back to the main OpenTTD site. If possible, it would be nice to have a link from OpenTTD to the Scenarios base as well, in order to gain public exposure.
+
+==Technical Concerns==
+The system will run as a set of PHP scripts acting on a MySQL database. Subsystems used: AdoDB for data layer, Smarty for presentation layer.
+
+Question: Will the files be hosted on the server itself, or will there simply be URLs to external downloads?
+
+===Security Concerns===
+#Should we check the contents of files to ensure they are actual .scn files?
+#It should go without saying that all PHP/SQL should be hardened against injection, xss and other common web-app vulnerability.
+#User information - if we do choose to allow people to register, their password should not be stored plain text in the base.
+#*Perhaps also avoiding one-way encryption (so that forgotten passwords could be sent over e-mail).
+
+==Comments==
+First off, thanks for the effort. :) Now, a couple of thoughts:
+: You're welcome. I'll respond to these point by point below.. while I may seem to be opposing your position - please realize that this is just for the sake of discussion. You do have some very valid arguments. I'd like to gather input from some more of the people involved as well, though. [[Archive/en/Kander|Kander]]
+::In response to the latter I have added my thoughts as well, see below ;) [[Archive/en/Sleepie|Sleepie]] 02:34, 8 May 2007 (CEST)
+
+* I don't think we need an elaborate browse feature. A basic filelist should suffice. (All the browsing should be done at the wiki.)
+:: Hmm.. that would still make it a (relatively) lot of work to maintain the scenarios. I can understand where you're coming from though - effort has been spent on getting something on the Wiki that definitely seems to be working well, so why change a winning team? See also my reply to the third point.[[Archive/en/Kander|Kander]]
+:::: I think Kander has made some valid points here. A good search feature would become very handy when the database gets bigger. And I guess a search that will be processed by a parametrized sql statement will be much faster than a fulltext search on the wiki that might also bring a lot of 'wrong' hits. Maybe the search could be split in 'quick' (search on mandatory info's) and 'advanced', but that are details that could be discussed later imho. [[Archive/en/Sleepie|Sleepie]] 02:34, 8 May 2007 (CEST)
+:::::About false hits with the wikisearch: it is possible to search in one chosen namespace only, is it not? So when searching for scenarios, one would need only to pick the [[Archive/en/MeusH#Scenario Namespace|scenario namespace]]. I do understand this is not an optimal solution and how a custom search engine would be better, but then I always thought the elaborate categorizing T-Unit came up with in the beginning nulls any need there might have been for a search engine. (Most people coming here, I think, are looking for a specific type of scenario, so they just work their way through the listed categories. Some experienced players might be looking for a specific title, but they are experienced enough to use the wikisearch properly.) [[Archive/en/Jupix|Jupix]] 12:27, 8 May 2007 (CEST)
+::::::I think the namespace would also become handy when working on/with the bot, so I'm going to mentioned it when I contact MeusH about the bot idea itself. [[Archive/en/Sleepie|Sleepie]] 16:10, 8 May 2007 (CEST)
+
+* The script should be as open as possible. Uploading files should be totally open. (Perhaps we need an alert system of some sort, or a button for voting for the deletion of a .scn from public view, which I think you already mentioned above.)
+:: Sounds like a plan... I'm in favour of openness, and really like for visitors being able to change as much as possible.. however, I've seen quite a few systems buckle under the load of abuse an open system is bound to attract, hence the idea of validation-by-member. From what I can read you are willing to take the risk of abuse, reacting to it when needed. I prefer an approach from the other side, where the system tries to prevent abuse, but does so in a way that remains as open to non-abusers as possible. Which way is best? I think we can have long debates over this, and still not find a definitive answer. Let's go for a middle-of-the-road solution by allowing anonymous edits, but having them marked by the system as being 'unvalidated' - that is, they do show up in the results but are in a lighter shade, or have a special logo next to them.. or something.[[Archive/en/Kander|Kander]]
+:::: The proposed upload-mechanism sounds like a good compromise. Such an upload form with less mandatory options should be even easier to use as uploading scenarios to the wiki atm. So everyone who can post his/her map on the forums should be able to use it. [[Archive/en/Sleepie|Sleepie]] 02:34, 8 May 2007 (CEST)
+:::::Just a few words more before we jump into a compromise. Sorry :)
+:::::<code>Which way is best?</code> &mdash; please have a look at this wiki, and the recent changes list in particular. Do you see vandalism? I have been active here for about four to five months now, and during that time, short as it may be, I haven't seen ''one'' week where there would've been more than one or two edits of vandalism. Most of the time, there is none at all. And we're talking about a system where anyone is free to press "edit" and start typing whatever they please.
+:::::Now, with the scenario site, we are expecting, what, about five uploads a week, tops? And about ten users, with the number growing to perhaps about 30 to 50 within the first month. I'd estimate the front page receives about 1000 hits during the first month. And those are all people interested in the scenario project &mdash; players, authors. And most importantly, we don't really have a text field with which to write "Jupix is a dick" all over the front page. The user has to provide a file, and obviously we are going to make sure no one-line text file gets through. Taking a piss at the site would already require some effort, even without having to register as a user, and if they are likely to take the effort to manufacture a fake scenario file (or use something that isn't already in our database), then in my book they are as likely to take the ten seconds to make themselves a registered user. So considering all these facts, how likely do you think it is going to be that we get even ''one'' act of vandalism? And even if we do get one, how effective do you think a compulsory registration would have been in preventing that act?
+:::::Furthermore &mdash; in your system, ''who'' actually is eligible to "validate" a scenario? How does that status differ from a fresh account, as potentially made by our vandal in ten seconds? How much trouble is it for a vandal to reach a stage at which he can validate his own spam? When we have maximised that trouble, a) is it enough and b) is it too much to annoy legit users? And with all that trouble we have caused by creating a closed, potentially vandalism-free environment, was it worth it to circumvent the threat of vandalism instead of cleaning up the mess ourselves when/if an act of vandalism occurs in a free environment?
+:::::If we do decide to go ahead with a totally open system, with browse feature and everything, all we would need is a button for people to hide items with. When that button would be pressed, the now hidden item would show up for the administrators to look over, with the options of undoing the "hide", or removing the item if such action is indeed deemed justified. If we were to have an e-mail address for the scenario author, he can be notified by mail that his scenario has been hidden, so that he can prod an admin to have the situation reverted to status quo.
+:::::Sure, a system like this is totally open for abuse, but as I said earlier, we don't really have vandalism around here, so I don't think it's a problem. [[Archive/en/Jupix|Jupix]] 12:27, 8 May 2007 (CEST)
+:::::: I agree that it should be open as possible, but imho it wouldn't hurt us to at least plan ahead when we design the 'thing', so we're prepared when abuse happens and having some 'tools' to hand to prevent further damage. Hey and that 'compromise' wasn't meant to be the final thing ;-), but it seems it has helped to get an interesting discussion with lots of important points we have to think about. [[Archive/en/Sleepie|Sleepie]] 16:10, 8 May 2007 (CEST)
+
+* This script is supposed to be an .scn file repo, not a scenario database per se. That means the only function of this system is to receive .scn uploads and place them on the same server the script runs on, which I doubt will ever be the openttd.org server itself (I'm thinking this system will probably remain external). This should answer your question above. The reason the script is to be so simple is that we already have a well functioning database here at the wiki, and its minutiae can be tweaked by anyone, not just the folks with access to the code. Having two separate databases would confuse the hell out of newbies and beginning scenario authors. That's why this system only needs to provide open web hosting for .scn's.
+:: Heh, funny how you know what it is supposed to be when I'm not very sure about its exact purpose yet - not saying I know better.. in fact, I decided to take this public to gather exactly this kind of feeddback :) Going with your definition of what the system should be, my feeling would be that a lot of potential would be wasted. While they're uploading the .scn file, why not allow people to tack on some information to it? And when you have information available, why not make that searchable? As said in the basic outline above, most information will not be mandatory, so it will still be easy to upload a scenario.. people who are interested in classifying them can then update the information stored regarding that scenario. We definitely need good integration with the information currently available on the Wiki, though.. this is a point worth pondering on.[[Archive/en/Kander|Kander]]
+:::: On how to probably integrate it see my comments below. I think one of the most important reasons to give this project a try is that it would give us exactly the possibilities that are (imho) not possible with the wiki (at least not in a convenient way), like implementing a feedback system, voting and commenting maps and so on. If there is an interest for, I could make a database model as a base for discussion on how to structure the database. [[Archive/en/Sleepie|Sleepie]] 02:34, 8 May 2007 (CEST)
+:::::If there is to be a bot handling the flow of data between the scenario site and the wiki, then I am totally pro-everything that the wiki can't really handle. This includes comments, value voting, additional screenshots and so forth. This would be an incredibly useful system (and one I haven't seen anywhere else, so it would be a first). But if there is no bot, in my humble opinion we can't have stuff at the site that can even in theory not be in sync with the wiki. So regarding this we have three options:
+:::::1) have a bot and everything will be fine.
+:::::2) have the external site contain only additional, dynamic stuff which the wiki can't handle properly.
+:::::3) have the external site replace our database here at the wiki completely.
+:::::Personally, after so much blood and tears with the wiki, I'd hate to see #3 come true. If Sleepie can indeed write us a bot, we can go for #1 (and send Sleepie to the Caribbean for a couple of weeks ;). But if there's no bot, #2 is, IMO, the only course of action. [[Archive/en/Jupix|Jupix]] 12:27, 8 May 2007 (CEST)
+:::::: I'd hate it to abandon the wiki database too. We have put so much efforts on it that it'd be a shame to let it die. Perhaps we have to change some things to get it together with the external one. So #3 is not an option imho and not only because of our efforts, its also a valueable part of this wiki at all imho. Then #1 and #2 are left, where #1 should be the final goal and #2 would be fine to start with.
+:::::: Now to the bot. There are lots of infos on the web and their exist several bot frameworks too, but before I start working on it I'll contact MeusH to get some feedback on it and what he would prefer and what I should care about and so on. After that I'll start with a bot that will only run here to see how it works. And then comes the last step to reach #1. Hmm... the Caribbean hey :), what about a trip to Finland? ;-) [[Archive/en/Sleepie|Sleepie]] 16:10, 8 May 2007 (CEST)
+
+:: Also, would there be a way to keep the Wiki and the .SCN repository 'in sync' - that is, ensure information about a scenario found on the repository can be found on the Wiki?[[Archive/en/Kander|Kander]]
+:::I was already considering to write a bot to ease maintaining the wiki (only the scenario database). The bot would just automate the categorizing of the new maps and do cleanups if map information has changed. To be honest, I have no experience in writing bots so far, but there was some kind of tutorial on wikipedia or wikimedia so I would give it a try or we found someone who could donate such a bot. Having such a bot would ease maintaining a lot as the only manual editing have to be done on the single pages than. Well the problem with the search capabilities and other missing features will still remain. Now back to the external repository. Maybe we could enhance this bot (idea) to sync the map pages with the external repo than, even in both directions maybe.
+:::To summarize it, the external repo would act as data store and its basic functionalities are uploading/editing the maps and providing advanced search features and also a voting/commenting system. On the other hand the scenario database at the wiki is used to provide pre-categorized overview pages of all scenarios at the database and is synchronized (automatically) with external repo. [[Archive/en/Sleepie|Sleepie]] 02:34, 8 May 2007 (CEST)
+::::My above comment goes for this too. [[Archive/en/Jupix|Jupix]] 12:27, 8 May 2007 (CEST)
+
+[OP by [[Archive/en/Jupix|Jupix]] 15:59, 7 May 2007 (CEST)]
+
+Well done on this it sounds really good. Seeing as this will be an advancement of the existing system in the upload part size, difficulty etc could be chosen from drop-down menus that would be compulsary and a checkbox for the "based on real world". There also should be an option to upload the screenshots.
+--[[Archive/en/T-Unit|T-Unit]] 17:07, 7 May 2007 (CEST)
+
+:Screenshots would of course be part of the system. For now, I feel this would be the way to go.. having all information integrated in one system.. Jupix' arguments make sense as well though, so perhaps we need to spend time looking for a way to integrate this into the Wiki in a nice way. [[Archive/en/Kander|Kander]]
+::All binary data as screenshots and the scn's could be stored on the webservers filesystem, only the links and the other information should be stored in the database, just like wiki systems do it. Again how to integrate it see my comments above, but keep in mind that this is just an idea. I haven't made any research so far, what is possible and how much work it may involve to get this working. [[Archive/en/Sleepie|Sleepie]] 02:34, 8 May 2007 (CEST)
+
+Regarding the Pro/Contra point below regarding Templates: Smarty templates are basically just HTML, with some 'magic' in between that allows you to fill variables and create repeating sections (ok, you can make them much more complex than that.. but this is the basics). The main point of Smarty is to seperate business logics from presentation. [[Archive/en/Kander|Kander]] 23:30, 8 May 2007 (CEST)
+
+==News==
+I have talked to MeusH and MiHaMiX about the bot. All my questions are anwsered so far, so I'll start development in the next days/weeks. The first version will be for the wiki only.
+
+MiHaMix has added the Scenario namespace so we'll have to do some page movements soon ;-). Btw. does anyone have some time to add maps that are on the todolist? I'm very busy lately (reallife and other projects).
+
+Kander, how is your project coming along any news on it?
+
+[[Archive/en/Sleepie|Sleepie]] 22:15, 15 May 2007 (CEST)
+
+:I may have some free time this weekend due to exam leave; fitting it in between revision. I have two exams on 22nd May but have about two weeks of no exams where i will have more free time to possibly start uploading some scenarios. I will keep you guys posted. Good work so far guys. --[[Archive/en/T-Unit|T-Unit]] 22:29, 15 May 2007 (CEST)
+
+::Every little bit helps ;-), but exams are '''much''' more important. Good luck with your exams. [[Archive/en/Sleepie|Sleepie]] 23:30, 15 May 2007 (CEST)
+
+:::Yeah they are, thanks. But i find you have to relax at some point. I will let you know how they go afterwards. --[[Archive/en/T-Unit|T-Unit]] 17:22, 16 May 2007 (CEST)
+
+== Plan ==
+Ok.. we've had some debate over this now. The Wiki-fans have clearly made their point - especially the argument regarding the time and effort invested in the wiki seems very valid.
+
+#. Write upload form plus file-listing code. This basically fulfills the vision of the repo as Jupix set out initially - file dump, and nothing more. Code should be maintainable and extendable. (approx. 2 weeks (not 40-hour work-weeks.. these are after-work hours) )
+#. Create a list of features that the Wiki does not support, order by priority.
+#. Over time, implement features from that list. (2 months?)
+#. Over even more time, look at for ways to mirror data from/to wiki, to allow better search. (SleepieBot?)
+#. By the time the flowers have sprung in the desert re-consider integrating everything in the database. (> 3 months)
+
+Advantages I see to this method are that we can get something going very rapidly, while keeping the possibility open for integrating stuff into the database. Also, by first taking on the features that can't be presented through the means already available (=wiki) I think most value can be added.
+
+Now, feel free to comment/alter this plan. As for time: I expect to have sufficient free time to work on this during next weekend, on sunday
+== Summary - Pro & Contra ==
+
+Maybe we should make a list like the one below to make decisions on certains things. I have added a few points as an example so far.
+
+{|
+|colspan="2"|'''pro'''
+|-
+||Wiki||External repo
+|-
+|| 
+* hey, it just works :)
+* it's known and accepted by the community
+* could be edited by everyone
+* has (in theory) already a lot of maintainers (most wiki editors), imho especially useful to fix spelling/grammar/link errors etc.
+* (relatively) easy to change layout for the scenario pages (based on templates). I did a quick read on Smarty, but couldn't actually say how easy/complicated the Smarty templates could be adjusted.
+||
+* possibility for new features like a voting system, comment maps, etc.
+* better search capabilities (could be adjusted as needed)
+* all at one point (all information/data is stored at one place) -> independent from other (external) systems
+* could be (easily) enhanced/adapted if the need arise
+|-
+|colspan="2"|'''contra'''
+|-
+||Wiki||External repo
+|-
+||
+* less search capabilities (compared to the external repo)
+||
+* Needs setting up
+* Unknown to most of community
+* Would need to persuade people to use it
+|}
