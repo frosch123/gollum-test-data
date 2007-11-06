@@ -1,0 +1,128 @@
+[[Category:en/New Graphics]]
+--> please use [http://tt-forums.net/viewtopic.php?p=514993#514993 forum thread] for discussion
+
+The [[Main/en/Graphics Development| new grafix]] will bring more realistic airplanes, whose sizes have been discussed before. I would like to propose making them (at least as an option) realistically sized, for the following reasons:
+* now airplanes are far too easy. airports are far more convenient to place than train stations, so large airports would make it a bit more difficult again. It would also make airplanes less suited for the short distances.
+* In conjunction with [[Archive/en/Economy1:Supply Demand Passengers#Custom Destinations| passenger destinations]], large airports outside cities would make network-building far more interesting than the old small ones that can capture the whole city in their catchment. 
+* it would look cool. Look at [http://maps.google.com/?ie=UTF8&z=11&ll=47.413917,8.524361&spn=0.236044,0.465546&t=k&om=1 some cities in google earth]: airports ''are'' huge
+
+=Construction / Ownership=
+* It might be possible to have airports constructed/owned by cities and individual parking spaces rented out to companies. Having totally modular airports is technically difficult, but a format allowing for a variable number of parking spaces being built to a single runway would make enhancing airport capacity easier. A large airport could have several terminals owned by different players, for example. ([http://tt-forums.net/viewtopic.php?t=27724&start=9 forum]) 
+:* If planes have different sizes (see below), this would also allow having large airports with separate parking spaces for small planes that need less space.
+* There should be a height-limit for buildings being built directly in front of the runway, so that planes don't fly "through" buildings. (Saving the height of buildings with the sprite might also be necessary for building bridges over buildings ...)
+
+=unsolved problems=
+* advantage for newer airplanes: now, the Dc-8 and B-707 (e.g.) remain top-planes until late in the game because of their speed. there mus be ''something'' making an A-310 (e.g.) superior to them, or why would you want to buy a new plane?
+* '''breakdown''' handling is silly now. 
+:* if anything, it should force the plane to go to the nearest airport, plus make it more likely that the plane crashes, (especially if no airport at hand).  planes with 4 engines should get an advantage, there. (The A340 has 4 engines because of the "ETOPS problem: two-engined aircraft had to stay within close range of emergency airfields in case one of their engines malfunctioned. ... The four-engined A340 is able to fly long over-water routes." ([http://www.wikipedia.org/wiki/Airbus A340 wikipedia A340]))
+
+=Aircraft Size=
+Here is a table with some of the more popular planes' wingspan. Judging from that table, I could imagine the following airports:
+* old small airport: 3 tiles wide
+* city airport: 4 tiles
+* international: 6 tiles
+* possibly bush airport: 2 tiles
+(maybe the A-380 could be squeezed into 6 tiles .......)
+
+{| border="2"
+|+ Wingspan of major airplanes (in metre);
+! Airplane !! Wing-span !! length
+|-
+|[http://www.wikipedia.org/wiki/de Havilland Canada DHC-6 Twin Otter#Specifications (300 series) DHC-6-310] [http://www.airliners.net/open.file/1158903/M/ pic] || 19.8 || 15.77
+|-
+|[http://www.wikipedia.org/wiki/Dornier 328 Dornier 328] || 20.98 || 21.11 m
+|-
+
+! 2 Tiles || 25 || 25
+
+|-
+|[http://www.wikipedia.org/wiki/Junkers Ju 52#Specifications .28Junkers Ju 52.2F3m g7e.29 Ju-52] || 29.25 || 18.9
+|-
+|[http://www.wikipedia.org/wiki/Vickers Viscount Vickers Viscount (800)] || 28.56 || 26.11
+|-
+|[http://www.wikipedia.org/wiki/De Havilland Comet#Specifications (Comet 4) Comet 4] || 35 || 34
+|-
+|[http://www.wikipedia.org/wiki/Fokker F27#Specifications Fokker F27] || 29 || 23.5
+|-
+|[http://www.wikipedia.org/wiki/BAe 146 BAe 146] || 26.34 || 28.55
+|-
+|[http://www.wikipedia.org/wiki/Embraer ERJ 145 family ERJ-145] ||20 || 29.9
+|- 
+|[http://www.wikipedia.org/wiki/Saab 2000#Specifications Saab 2000] || 24.75 || 27.3
+|-
+|[http://www.wikipedia.org/wiki/Airbus A320#Specifications A-318/19] || 34.1 || 31.45 / 33.84
+|-
+|[http://www.wikipedia.org/wiki/Douglas DC-3 Dc-3] || 28.96 || 19.65
+|-
+|[http://www.wikipedia.org/wiki/Douglas DC-6#Specifications (DC-6B) Dc-6B] || 35.8 || 32.2
+|-
+|[http://www.wikipedia.org/wiki/DC 9 Dc 9-10 / -30] || 27.25 / 28.47 || 31.82 / 36.37
+|-
+|[http://www.wikipedia.org/wiki/Boeing 737#Specifications B-737] || 28.3-34.3 || 28.6-39.5 (737-800)
+|-
+!3 Tiles || 37.5 || 37.5
+
+|-
+|[http://www.wikipedia.org/wiki/Lockheed Constellation#Specifications (L-1049G) Lockheed Constellation] || 38.5 || 35.4
+|-
+|[http://www.wikipedia.org/wiki/Sud_Aviation_Caravelle#Specifications_.28Caravelle_III.29 Caravelle III] || 34.3 || 32
+|-
+|[http://www.wikipedia.org/wiki/Airbus A310#Specifications A310] || 43.9 || 46.66
+|-
+|[http://www.wikipedia.org/wiki/Airbus A320#Specifications A320/21] || 34.1 || 37.57 / 44.51
+|-
+|[http://www.wikipedia.org/wiki/Douglas DC-8#Specifications Dc-8 -32] || 43.4 || 45.9
+|-
+|[http://www.wikipedia.org/wiki/McDonnell Douglas DC-9 Dc 9-40] || 28.47 || 38.28
+|-
+|[http://www.wikipedia.org/wiki/McDonnell Douglas MD-80/MD-90 Md 81 - Md 90] || 32.8 || 39.7 - 46.5
+|-
+|[http://www.wikipedia.org/wiki/Boeing 707#Specifications B-707-120b] || 39.9 || 44.7
+|-
+|[http://www.wikipedia.org/wiki/Boeing 707#Specifications B-707-320B] || 44.4 || 46.6
+|-
+|[http://www.wikipedia.org/wiki/Boeing 727#Specifications B-727-100 / -200] || 32.9 || 40.6 / 46.7
+|-
+|[http://www.wikipedia.org/wiki/Boeing 757#Specifications B-757-200] || 38 || 47.32
+|-
+|[http://www.wikipedia.org/wiki/Boeing 767 B 767-200] || 47.6 || 48.5
+|-
+!4 Tiles || 50 || 50
+
+|-
+|[http://www.wikipedia.org/wiki/Airbus A300#Specifications A300] || 44.85 || 54.08
+|-
+|[http://www.wikipedia.org/wiki/Airbus A330#Specifications A330 -2&300] || 60.3 || 58.8 / 63.6
+|-
+|[http://www.wikipedia.org/wiki/Airbus A340 A-340 200] || 60 || 59.4
+|-
+|[http://www.wikipedia.org/wiki/McDonnell Douglas DC-10 Dc-1030] || 50.4 || 55.5
+|-
+|[http://www.wikipedia.org/wiki/McDonnell Douglas MD11 Md-11] || 51.66 || 61.21
+|-
+|[http://www.wikipedia.org/wiki/Boeing 757#Specifications B-757-300] || 38 || 54.47
+|-
+|[http://www.wikipedia.org/wiki/Boeing 787#Specifications B-787 -3 / -8] || 52 / 60 || 57
+|-
+!5 Tiles || 62.5 || 62.5
+
+|-
+|[http://www.wikipedia.org/wiki/Airbus A340 A340 300] || 60 || 63.6
+|-
+|[http://www.wikipedia.org/wiki/Airbus A340 A340 5/600] || 63.5 || 67.9 / 75.3
+|-
+|[http://www.wikipedia.org/wiki/A350 A-350] || 64 || 64
+|-
+|[http://www.wikipedia.org/wiki/Boeing 747 B-747 -1&2&300 / -400] || 59.6 / 64.4 || 70.6
+|-
+|[http://www.wikipedia.org/wiki/Boeing 777#Specifications B-777] || 60.9 - 64.8 || 63.7 - 73.9
+|-
+|[http://www.wikipedia.org/wiki/Boeing 787#Specifications B-787 -9] || 60 || 63
+|-
+!6 Tiles || 75 || 75
+
+|-
+|[http://www.wikipedia.org/wiki/Airbus A380 A380] || 79.8 || 73
+|-
+!7 Tiles || 87.5 || 87.5
+|}
