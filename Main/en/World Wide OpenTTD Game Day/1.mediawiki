@@ -1,0 +1,251 @@
+{{en/WWOTTDGD/Menu}}
+==Timetable==
+
+===Start===
+Saturday, 27. October 07 12:30 UTC (14:30 CEST, [http://www.swatch.com/internettime/itime.swf @562])
+
+the game will be available 10 mins before the official start,
+
+in paused mode, so you can save yourself a spot
+
+===End===
+Sunday, 28. October 07 18:30 (or until less than 10 players)
+
+
+=== Development Roadmap ===
+{|-
+!
+! prio
+! process
+! assigned to
+! details
+|-
+| Patch: console manager to view edit company passwords
+| '''3'''
+!class="checked" | 100%
+| [[Archive/en/Dihedral|~dihedral]]
+|[http://pub.dihedral.de/openttd/wwottdgd/r11339_company_pw_cmd.v2.patch diff v2]
+|-
+| Patch: move clients into any company in-game
+| '''1'''
+!class="checked" | 100%
+| [[Archive/en/Dihedral|~dihedral]]
+| [http://pub.dihedral.de/openttd/move_clients.png teaser screenie]<br>
+[http://pub.dihedral.de/openttd/wwottdgd/r11339_move_clients.v5.patch diff v5] (bugs fixed)
+|-
+| Patch: force players to join as spectator, admins then move players to company
+| '''2'''
+!class="checked" | 100%
+| [[Archive/en/Dihedral|~dihedral]]
+|[http://pub.dihedral.de/openttd/wwottdgd/r11339_force_spectators.v2.patch diff v2]
+|-
+| Patch: attempts to change company name/password results in move to spectators
+| '''2'''
+!class="checked" | 100%
+| [[Archive/en/Dihedral|~dihedral]]
+|[http://pub.dihedral.de/openttd/wwottdgd/r11339_no_company_changes.v1.patch diff v1]
+|-
+| Patch: show client id in client list
+| '''3'''
+!class="checked" | 100%
+| [[Archive/en/Dihedral|~dihedral]]
+|[http://pub.dihedral.de/openttd/wwottdgd/r11339_client_list_show_id.v1.patch diff v1]
+|-
+| GRF: Toll Booth
+| '''1'''
+!class="checked" | 99%
+| lordazamath
+| [http://www.tt-forums.net/viewtopic.php?p=634696#p634696 Download] (no toll booth at airports is not possible)
+|-
+| GRF: Party
+| '''2'''
+!class="wip" | 75%
+| AntB<br>lordazamath
+|[http://www.tt-forums.net/viewtopic.php?p=635669#p635669 partysquare.grf]<br>[http://www.tt-forums.net/viewtopic.php?p=636058#p636058 streetlights.grf]
+|-
+| Patch/GRF: snow-in-temperate
+| '''2'''
+!class="checked" | 99%
+| TrueBrain (Patch), Roujin/Leviath.NL (GRF)
+| [http://www.tt-forums.net/viewtopic.php?p=635289#p635289 GRF] 
+
+[http://devs.openttd.org/~truelight/snow-in-temperate.patch snow patch]
+
+[http://devs.openttd.org/~truelight/wwottdgd_snow_desert.patch snow and hacked desert patch]
+|-
+| Patch: 55 clients
+| '''1'''
+!class="checked" | 99%
+| Ammler
+| [http://openttdcoop.ppcis.org/ammler/55clients.diff only a constant]<br>[http://openttdcoop.ppcis.org/ammler/sameSpecAsClients_r11340.diff sameSpecAsClients_r11340.diff]
+|- 
+| #openttdcoop GRF pack
+| '''1'''
+!class="wip" | 80%
+| Ammler
+| fullpack with every GRF needed
+|-
+| Patch: Shared Global Tracks
+| '''2'''
+!class="checked" | 100%
+| TrueBrain / Phazorx
+| testing at #openttdcoop.dev
+
+[http://devs.openttd.org/~truelight/wwottdgd_shared_global.v10.diff shared global tracks patch v10]
+|-
+| Map
+| '''2'''
+!class="checked" | 99%
+| Phazorx
+| viewable at #wwottdgd server
+|-
+| Patch: Map hack for saving snowline
+| '''2'''
+!class="checked" | 100%
+| Phazorx
+| [http://openttdcoop.ppcis.org/blog/files/phazorx/savingsnowline.patch no need to download for anyone by Phazorx]
+|-
+| Patch: no self growing trees
+| 2
+!class="checked" | 99%
+| Ammler
+| [http://openttdcoop.ppcis.org/ammler/noSelfAppearingTrees.diff Download]
+|-
+| GRF: Airmod Fix
+| '''3'''
+| 0%
+| Ammler
+| 
+|-
+| GRF: Base cost modifications
+| '''1'''
+!class="checked" | 90%
+| Ammler
+| [http://openttdcoop.ppcis.org/wiki/index.php/Basecosts.grf basecosts.grf]
+|-
+| Patch: Slope cost modifications
+| '''1'''
+!class="checked" | 90%
+| Phazorx
+| [http://openttdcoop.ppcis.org/blog/files/phazorx/wwottdgd_modified_slope_costs.diff wwottdgd_modified_slope_costs.diff]
+|-
+| Testing ALL patches together
+| 1
+!class="wip" | 50%
+|
+| [http://mozart.ammler.ch/wwottdgd/patches/wwottdgd_in_v6.diff wwottdgd_in_v6.diff] against r11344<br>
+TrueBrain: we are ready, this is the final patch against 11344 [[Archive/en/Dihedral|~dihedral]] 19:51, 26 October 2007 (CEST)
+|}
+1 = needed, 2 = nice to have, 3 = would be included if available
+
+==Teams==
+Playercounter: '''40'''
+===#openttdcoop===
+* Phazorx
+* AntB
+* Kommer (not yet sure that I'm home)
+* Farden
+* welterde
+* Osai
+* Starbud
+* Sedontane
+* Hopefully: Mucht
+* Thgergo - hopes he will available
+* Shader
+* Secret Man (At least i am in at night)
+* sign in...
+
+===TT-MS.de===
+* Addi
+* Ka-ZWO (moved by [[Archive/en/Dihedral|~dihedral]])
+* openttd2
+* herbert
+*siebenherz
+* sign in...
+
+===Zeroxian Transport===
+* LittleMikey
+* Franco Begbie
+* sign in...
+
+===Board 2===
+* Ailure
+* blackhole89
+* GreyMario
+* Hammy
+* Luigi-San (maybe...)
+* chungy (perhaps)
+* sign in...
+
+===dihedral.de===
+* umj
+* [fR4g] (moved by [[Archive/en/Dihedral|~dihedral]])
+* SirkoZ (moved by [[Archive/en/Dihedral|~dihedral]])
+* Jag (will join after few hours)
+* Mark 
+* sign in...
+
+===Easy Company===
+* DeGhost
+* RedDevil
+* JJens
+* Night-Eagle
+* Dimi
+* sign in...
+
+===Register here if unsure===
+* Kuch
+* LordAzamath (not all night long though..hope to have the time)
+* Jezulkim
+* UacU
+* Kejhic
+* Vikthor
+* Sacro
+* Skidd13 (maybe I can free a few minutes ;) )
+* Zojj icq 388136
+* Reddog (few hours, like 15.00h-20.00h CEST)
+* Kolbur
+* Roujin (will probably not be on when it starts, but later)
+* bene
+* Yorick
+* tneo
+* legalnycyklista
+* sign in... and we will assign you to a company later on
+
+==Gamesettings==
+This things are still in discussion, if you like to participate, please use [[Archive/en/World Wide OpenTTD Game Day/1]].
+
+{|-
+! Settings
+! Suggestion 1
+! Suggestion 2
+|-
+| Climate
+| Temperate
+|-
+| Mapsize 
+| 2048x2048 (11x11, Europe)
+|-
+| Breakdowns 
+| off 
+|-
+| NewGRFs
+| 
+* [http://users.tt-forums.net/pikka/wiki/index.php/Pikka's_Basic_Industries PBI]
+* UK Renewal Train
+* many others from [http://openttdcoop.ppcis.org/wiki/index.php/GRF #openttdcoop]
+| 
+* NewCargo
+* DBSetXL
+|}
+
+==Map==
+Here is the sampler of the map we are going to use:
+
+[[File:en/map.zones.png|400px]]
+
+It is zoned into regions that are "responsibility" of company based there to conenct all/most industries
+This map currently runs on WWOTTDGD beta server as teaser
+
+ TrueBrain working on snow-in-temperate patch, so Alps might actualy look like Alps :)
+[[File:en/Temperate-snow-desert.png|thumb|Temperate with snow and desert.]]
