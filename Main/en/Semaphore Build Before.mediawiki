@@ -1,0 +1,13 @@
+== Description ==
+A [[Main/en/Advanced Settings|setting]] that makes semaphores the default built signals until the year you have configured in this patch. To build 'normal' signals in years this patch is active (or semaphores in the years after) use ctrl+click. 
+
+== Use ==
+This feature is set to 1975 by default. You can change the year where 'normal' signal construction begins through the [[Main/en/Configuring patches/Construction|configure patches -> construction]] window or use the following syntax in [[Main/en/openttd.cfg]]:
+<pre>
+[patches]
+semaphore_build_before = 1975
+</pre>
+
+<center>[[File:en/Semaphores.png|center|none|frame|1. - A few semaphores]]</center>
+
+[[Category:en/Settings & Preferences]]
