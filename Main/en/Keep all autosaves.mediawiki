@@ -1,0 +1,15 @@
+[[Category:en/Settings & Preferences]]
+
+This [[Main/en/Advanced Settings|setting]] makes unique savegame names so none of them are overwritten
+
+== Description ==
+
+[[Main/en/OpenTTD]] can automaticly save game every set period of time. Naturally, more saved games means much more disk space used. This [[Main/en/Advanced Settings|setting]] can use a lot of disk space
+
+This setting will make [[Main/en/OpenTTD]] ignore [[Main/en/max autosave num]]
+
+== Use ==
+
+The value is set to false by default. You can change it by using the following syntax in [[Main/en/openttd.cfg]]:
+<pre>[patches]
+keep_all_autosave = true/false</pre>
