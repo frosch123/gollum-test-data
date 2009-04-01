@@ -1,0 +1,22 @@
+[[Category:en/Settings & Preferences]]
+
+A [[Main/en/Advanced Settings|setting]] that makes trees invisible when [[Main/en/transparent buildings]] are enabled
+
+== Description ==
+You're tired of not seeing the wood for the trees? Even with transparent trees it is hard to figure out how the terrain is sloped. With this patch all trees will become invisible when you are in [[Main/en/transparent buildings]] mode.
+
+== Use ==
+This feature is disabled by default. Either enable this patch through the [[Main/en/Configuring patches/Interface|configure patches -> interface]] window or use the following syntax in [[Main/en/openttd.cfg]]:
+<pre>[patches]
+invisible_trees = true</pre>
+
+<center>
+[[File:en/invisible trees1.png|center|none|frame|You can't see the truck loading bay?]]
+[[File:en/invisible trees2.png|center|none|frame|Still too hard to figure out a good route for a connecting road...]]
+[[File:en/invisible trees3.png|center|none|frame|But you get an excellent view with the invisible trees patch!]]
+</center>
+
+This patch has been superseded by the new transparency options GUI, where not just trees but any object type can be configured to become invisible rather than just transparent. To get the same behaviour as with older versions use the following syntax in [[Main/en/openttd.cfg]]:
+<pre>[misc]
+invisibility_options = 2</pre>
+[[File:en/Transparency options.png|center|none|frame|The buttons below each object toggle transparent/invisible.]]
