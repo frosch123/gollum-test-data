@@ -1,0 +1,204 @@
+{{en/WWOTTDGD/Menu}}
+==Timetable==
+
+===Start===
+Yet to be decided
+
+===End===
+about 24 hours after begin
+
+== Development Roadmap ==
+{|-
+{|-
+!
+! prio
+! process
+! assigned to
+! details
+|- bgcolor="#F7F6A8"
+|'''Essentials:'''
+|'''1'''
+| 0%
+| 
+| 
+|-
+| [http://www.tt-forums.net/viewtopic.php?f=33&t=37455&start=40 Infrastructure Sharing]
+| '''1'''
+! class="wip" |50%
+| 
+| [http://www.tt-forums.net/viewtopic.php?f=33&t=37455&start=40 Old forum topic (r13597)] and [http://mz.openttdcoop.org/indefero/index.php/p/is2/ new repository]
+|-
+| [http://bugs.openttd.org/task/1605 No tree growth]
+| '''1'''
+! class="wip" |0%
+| 
+| r13597, better: v2 for r13434 by Belugas
+|-
+| 
+|
+|
+| 
+| 
+|- bgcolor="#F7F6A8"
+|'''Nice-to-have:'''
+|'''2'''
+!class="wip" | 0%
+| 
+| 
+|-
+| [http://wiki.openttd.org/wiki/index.php/Passenger_and_cargo_destinations Cargo Destinations]
+| '''2'''
+! class="wip" |50%
+| 
+|
+|-
+| [http://www.tt-forums.net/viewtopic.php?f=33&t=33418&hilit=close+airport close airports]
+| '''2'''
+! class="wip" |10%
+| Cirdan
+| 
+|-
+| [http://www.tt-forums.net/viewtopic.php?f=33&t=39276&start=0 improved time tables]
+| '''2'''
+! class="wip" |10%
+| Philsophus
+| 
+|-
+| [http://bugs.openttd.org/task/1884 Ingame Rivers]
+| '''2'''
+! class="wip" | 10%
+|
+| 
+|-
+| rcon gui
+| '''2'''
+!class="wip" |0%
+|
+| 
+|-
+| [http://www.icosahedron.de/openttd/patches/ advance signals]
+| '''2'''
+! class="wip" |0%
+| michi_cc
+| ask michi_cc for uploading newgrf to bananas
+|-
+|
+|
+|
+|
+|
+|- bgcolor="#F7F6A8"
+|'''Options:'''
+|'''3'''
+!class="wip" | 0%
+| 
+| 
+|-
+| [http://www.tt-forums.net/viewtopic.php?f=33&t=40114&hilit=timelapse automatic screenshots] (for movie)
+| '''3'''
+!class="wip" |50%
+| planetmaker 
+| check [http://trac.openttdcoop.org/browser/tools/autostart/patches #openttdcoop trac] for latest version
+|-
+| [http://bugs.openttd.org/task/2620 waypoint statistics]
+| '''3'''
+! class="wip" |50%
+| Roujin
+| 
+|-
+| [http://www.tt-forums.net/viewtopic.php?f=33&t=41433&hilit=sloped+stations sloped stations]
+| '''3'''
+! class="wip" |0%
+| wolf01, foobar
+| ask wolf01 or foobar for uploading newgrf to bananas
+|- 
+| modified ratings window
+| '''3'''
+!class="wip" |0%
+| planetmaker
+| from deceased client_patches.diff
+|-
+| [http://www.tt-forums.net/viewtopic.php?t=37203 filter by cargo]
+| '''3'''
+!class="wip" |50%
+| planetmaker
+| check [http://trac.openttdcoop.org/browser/tools/autostart/patches #openttdcoop trac] for latest version
+|-
+| [http://www.tt-forums.net/viewtopic.php?f=33&t=38715&hilit=filter+signs filter signs]
+| '''3'''
+!class="wip" |10%
+| Zuu
+|
+|-
+| regions with different newGRF
+| '''3'''
+!class="wip" |0%
+| 
+|
+|-
+| [http://www.tt-forums.net/viewtopic.php?f=33&t=19896&hilit=smoke more smoke]
+| '''3'''
+!class="wip" |0%
+| SirkoZ
+|
+|-
+| [http://www.tt-forums.net/viewtopic.php?f=33&t=41222&hilit=station+gui adv. station build GUI]
+| '''3'''
+!class="wip" |0%
+| planetmaker
+| check [http://trac.openttdcoop.org/browser/tools/autostart/patches #openttdcoop trac] for latest version
+|-
+|[http://www.openttdcoop.org/wiki/GRF #openttdcoop GRF Pack]
+|'''3'''
+|
+|
+| ALL GRFs should be available with [http://bananas.openttd.org BaNaNaS]
+|}
+1 = needed, 2 = nice to have, 3 = would be included if available
+
+to be decided:
+* everything
+
+==Teams==
+ Playercounter: '''0'''
+
+Note: There's no special company as every company can use the infrastructure of any other - unlike the last time! So "Global Warming Inc." is by no means special - only in the respect that its HQ is in the centre of the map.
+
+==Gamesettings==
+This things are still in discussion, if you like to participate, please use [[Archive/en/World Wide OpenTTD Game Day/3]] or join us on IRC: [irc://irc.oftc.net/#wwottdgd #WWOTTDGD] channel or [irc://irc.oftc.net/#openttdcoop.dev #openttdcoop.dev] channel .
+
+==Map==
+There has been a rumor that LordAzamath is working on a map. But don't believe everything they say.
+
+===TODO===
+
+* actually start and take initiative. Most important: start with a patch pack...! It can be YOU!
+
+==Additional Admin Features==
+(Text from wwottdgd/2):
+There are a range of features, which help especially the administration:
+* clients are joined into the company they've been in last time.
+* The usual multiplayer save patch settings with a graphical representation can be accessed via the (patch) settings dialogue. As admin put the rcon password into your openttd.cfg
+* There is a range of additional rcon commands:
+**
+** allow_terraform = {bitmask per company: 1=enable, 0=disable; default: disable}. disallows terraforming completely on a per company basis
+** allow_company_changes = {bitmask per company: 1=enable, 0=disable; default: disable}. disallows changes to the company and manager name as well as the company colour on a per company basis
+** one_tile_terraform = {0|1}: restrics terraforming to two edges of a single tile, if enabled
+** a range of rcon commands concerning the sharing patch. They're more easily available via GUI in the patch settings in a seperate section.
+* move clients: open the client list, click on the client and choose move. A menue with available companies + spectator will show up. Click on your choice
+* mute clients: open the client list, click on the client and choose mute. Choose mute all, mute team or mute private in order to shut up that client. It cannot talk unless unmuted. Don't use it on eachother, we could mute ourselfs mutually.
+
+==Bundles==
+* none so far
+
+==Links==
+*[irc://irc.oftc.net/#wwottdgd irc.oftc.net/wwottdgd] - World Wide OpenTTD Game Day IRC channel
+*[http://openttd.dihedral.de/category/wwottdgd/ openttd.dihedral.de] - ([dai’hi:drəl])
+*[http://openttd.dihedral.de/servers/wwottdgd/ Server page]
+*[http://www.openttdcoop.org/files/pm/patches/wwottdgd Patches for wwottdgd/2]
+*[http://www.kickmeto.gellar.net/pjirc/index.php?page=advanced&server=irc.oftc.net&chan=%23wwottdgd IRC JavaClient] - open IRC port needed
+*[http://www.mibbit.com/chat mibbit] ajax based irc client (no special open ports needed)
+*[http://www.tt-forums.net/viewtopic.php?f=29&t=34429 TT-Forums]
+*[http://www.tt-forums.net/viewtopic.php?f=36&t=34514 TT-Forums Graphics]
+*[http://www.tt-ms.de/forum/showthread.php?tid=3066 TT-MS (german)]
+*[http://www.openttdcoop.org #openttdcoop]
