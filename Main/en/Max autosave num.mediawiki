@@ -1,0 +1,17 @@
+[[Category:en/Settings & Preferences]]
+
+This [[Main/en/Advanced Settings|setting]] defines maximum number of automaticly saved games (autosaves) in \OpenTTD\save\autosave\ directory.  
+
+== Description ==
+
+[[Main/en/OpenTTD]] can automatically save the game every set period of time. Naturally, more saved games means much more disk space used. This [[Main/en/Advanced Settings|setting]] limits the number of saved games.
+
+If all savegame slots are already used, older savegames will be overwritten (oldest first).
+
+This setting is not used if [[Main/en/Keep all autosaves]] is used.
+
+== Use ==
+
+The value is set to 16 by default. You can change it by using the following syntax in [[Main/en/openttd.cfg]]:
+<pre>[patches]
+max_autosave_num = value</pre>
