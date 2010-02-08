@@ -1,0 +1,44 @@
+<includeonly><table style="background:transparent; width:100%; text-align: center;"><tr>
+<td style="background:{{#switch: {{{z0|}}}
+| wip      =#FFEE88;
+| done     =#006600;
+| #default =#888888;
+}}">z0</td>
+<td style="background:{{#switch: {{{z1|}}}
+| wip      =#FFEE88;
+| done     =#006600;
+| #default =#888888;
+}}">z1</td>
+<td style="background:{{#switch: {{{z2|}}} 
+| wip      =#FFEE88;
+| done     =#006600;
+| #default =#888888;
+}}">z2</td>
+</tr></table></includeonly><noinclude>
+
+{| width=200|
+|
+{{en/Tracker sprite status|z0 = unclaimed
+|z1 = wip
+|z2 = done
+}}
+|}
+
+==Usage==
+Type inside a table cell:
+
+<pre>{{en/Tracker sprite status|z0 = Status
+|z1 = Status
+|z2 = Status
+}}
+
+OR
+
+{{en/Tracker sprite status| z0 = Status | z1 = Status | z2 = Status }}
+</pre>
+When status can either: '''wip''','''done''' or '''unclaimed'''
+
+==Additional templates==
+[[Template/en/Tracker sprite key]] provides color key for the status.
+
+[[Category:en/Templates|T]]</noinclude>
