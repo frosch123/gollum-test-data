@@ -1,0 +1,57 @@
+<!-- 
+     copy of Wikipedia Userbox
+
+--><div style="float:{{{float|left}}}; border:{{{border-width|{{{border-s|1}}}}}}px solid <!-- 
+            -->{{{border-color|{{{1|{{{border-c|{{{id-c|#999}}}}}}}}}}}}; margin:1px;" class="wikipediauserbox">
+{| cellspacing="0" style="width:238px; background:{{{info-background|{{{2|{{{info-c|#EEE}}}}}}}}};" 
+{{#if:{{{logo|{{{3|{{{id|id}}}}}}}}}|
+! style="width:{{{logo-width|{{{id-w|45}}}}}}px; height:{{{logo-height|{{{id-h|45}}}}}}px; <!-- 
+      -->background:{{{logo-background|{{{1|{{{id-c|#DDD}}}}}}}}}; text-align:center;  <!--
+      -->font-size:{{{logo-size|{{{5|{{{id-s|14}}}}}}}}}pt; color:{{{logo-color|{{{id-fc|black}}}}}}; <!--  
+      -->padding:{{{logo-padding|{{{id-p|1px}}}}}}; line-height:{{{logo-line-height|{{{id-lh|1.25em}}}}}}; <!--  
+      -->vertical-align: middle; {{{logo-other-param|{{{id-op|}}}}}}" {{en/!}} {{{logo|{{{3|{{{id|id}}}}}}}}}
+}}
+| style="text-align:left; font-size:{{{info-size|{{{info-s|8}}}}}}pt; padding:{{{info-padding|{{{info-p|4px}}}}}}; <!-- 
+      -->height:{{{logo-height|{{{id-h|45}}}}}}px; line-height:{{{info-line-height|{{{info-lh|1.25em}}}}}}; <!-- 
+      -->color:{{{info-color|{{{info-fc|black}}}}}}; vertical-align: middle; {{{info-other-param|{{{info-op|}}}}}}" <!-- 
+      -->| {{{info|{{{4|{{{info|''info''}}}}}}}}}
+|}</div>{{#if:{{{usercategory|}}}|[[Category:en/{{{usercategory}}}| {{PAGENAME}}]]}}{{#if:{{{usercategory2|}}}|[[Category:en/{{{usercategory2}}}| {{PAGENAME}}]]}}{{#if:{{{usercategory3|}}}|[[Category:en/{{{usercategory3}}}| {{PAGENAME}}]]}}<noinclude>
+{{en/-}}
+==Usage==
+
+This template can be used to quickly create a [http://en.wikipedia.org/wiki/Wikipedia:Userboxes userbox] for display on a user's user page without having to know HTML or Wikitable syntax.
+
+<pre>
+{{userbox
+| float    = left|right|none (default = left)
+| border-c = border color (default = id-c)
+| border-s = border width in pixels (default = 1)
+| id       = id text or image
+| id-c     = id background color
+| id-fc    = id font color
+| id-s     = id text size
+| id-p     = id cell padding space
+| id-lh    = id line height 
+| id-op    = id other parameter (CSS)
+| id-w     = id box width
+| id-h     = id box height
+| info     = info text
+| info-c   = info background color
+| info-fc  = info font color
+| info-s   = info text size
+| info-p   = info padding (distance between cell contents & cell border)
+| info-lh  = info line height (or distance in between text lines)
+| info-op  = info other (CSS) parameter(s)
+| nocat    = {{{nocat|}}} - when 'true', doesn't categorize the user
+| usercategory  = user category (optional)
+| usercategory2 = user category (optional)
+}}
+</pre>
+* Text size is assumed to be in px.
+* All parameters are optional
+
+==See Also==
+* [[Template/en/Userboxtop]]
+* [[Template/en/Userboxbottom]]
+
+[[Category:en/Templates|U]]</noinclude>
