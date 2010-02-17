@@ -1,0 +1,28 @@
+<includeonly>{|class="userboxes" style="margin-left: {{{left|1}}}em;; margin-bottom: 0.5em; width: 248px; border: {{{bordercolor|#99B3FF}}} solid 1px; background-color: {{{backgroundcolor|#FFFFFF}}}; color: {{{textcolor|#000000}}}; float: {{{2|{{{align|right}}}}}}; {{{extra-css|}}}"
+|<div style="text-align: center; font-size: 120%; font-weight: bold;">{{{1|{{{toptext|[http://www.wikipedia.org/wiki/Userboxes Userboxes]}}}}}}</div></includeonly><noinclude>
+==Usage==
+To collect images or [[Template/en/Userbox]]es into a single column grouping easily
+
+<pre>
+{{userboxtop}}
+[userboxes]
+{{userboxbottom}}
+</pre>
+
+userboxtop Parameters (All of the parameters are '''optional'''):
+<pre>{{userboxtop
+| align           = left|right (default = right)
+| left            = left margin value(default = 1)
+| backgroundcolor = background color (default = #FFFFFF)
+| bordercolor     = border color (default = #99B3FF)
+| extra-css       = other parameter (CSS)
+| textcolor       = text color (default = #000000)
+| toptext         = Overrides the standard Userbox text and link. Can include wiki-markup
+}}
+</pre>
+
+==See Also==
+* [[Template/en/Userbox]]
+* [[Template/en/Userboxbottom]]
+
+[[Category:en/Templates|U]]</noinclude>
