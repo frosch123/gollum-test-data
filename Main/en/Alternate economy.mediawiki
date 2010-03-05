@@ -1,0 +1,67 @@
+==Problems with (O)TTDs economic model==
+
+At various occasions people have stated that OpenTTDs economic model is far from optimal. Complaints usually focus on the ability to gain large amounts of money with too little effort. The lack of opportunities to spend the money makes the game very easy in later stages. As with enough money the performance measures are easy to manipulate the performance rating shown in 2051 seems fairly arbitrary. Especially planes give the player an opportunity to make an enormous amount of money with very little effort. Thus, the economic model has frequently been called '''unbalanced'''.
+
+Additionally the whole game is centered around money as '''the''' performance rating. This makes sense when viewing the game as a simulation of reality. In reality transport companies are subject to the laws of capitalism which makes the profit they generate their performance rating. This is where the analogy ends. If OpenTTD is a simulation of capitalist economy it is very shallow. People have already complained about the lack of a proper stock market, the lack of a more detailed bank system, the lack of taxes and other shortcomings. Obviously, once you have reached a certain level, it isn't possible anymore to play the game with a truly '''capitalist''' mindset. Money quickly becomes abundant and the game gets too easy. What keeps people playing the game afterwards are entirely different things.
+
+==Cheating the economic model==
+
+You can watch the lack of capitalist mindset in the games played by the [http://openttdcoop.org OpenTTDCoop community]. Most times they play cooperatively and set themselves goals outside or even conflicting with the economic model. Certain elements of their games still need to conform to that model in order to keep the game running, but those are commonly regarded as mere formal exercises and named accordingly ("moneymaker"). Obviously, due to the weakness of the economic model, it is rather easy to subvert it and play your own game. This is widely regarded as a strength, not as a weakness of the game.
+
+==Criteria for a new economic model==
+
+Concluding from those observations some criteria for an alternate economic model can be formulated:
+* The new model should provide a challenge, even in later stages of the game. Critical resources should never become abundant.
+* The model doesn't need to mirror capitalist economy. People will still play the game if it's governed by other rules.
+* The new model should be scalable in difficulty. People need to be able to define goals on their own.
+* The new model should be optional. My changes will be pretty controversial and anyone could revert them anyway.
+* The new model should keep compatibility to the NewGRF specification where it includes economic aspects.
+
+==A suggestion==
+Building on [[Main/en/Passenger and cargo distribution]] a system can be designed that meets those criteria. First of all, a very radical change:
+
+ In the alternate economic model you will not be paid for individual shipments of cargo.
+
+Instead you get money from towns supporting you. Another radical change is the final performance rating which won't include any monetary values. Instead the aggregated town ratings will be included.
+
+===New town ratings===
+In the new model your town ratings are dependent on the amount of cargo you deliver to a town and its industries. In order to determine the desired amount of cargo, the number of accepting tiles and their acceptance values is counted for each town and globally. The global production for each cargo is also counted globally. Like this for each town and each cargo the desired amount is:
+
+ desired_amount = global_production * town_acceptance / global_acceptance
+
+If you deliver that amount or more you'll get an optimal rating. If you deliver less you'll get a worse rating. The other means of changing the town rating (frequency of service, bribe, construction, trees) can be switched on and off selectively. The rating decreases in fixed intervals so that you have to deliver the desired amount each month to keep up your rating. The amount by which the rating decreases grows with the rating number itself. Like this it's easier to keep up a low rating than a high rating.
+
+===Payment by town rating===
+This is the core of the new model. Each town has a monthly transport budget only dependent on its population number. This budget is given to the transport companies delivering cargo to the town and its industries. The share given to each company is calculated according to its town rating. Only positive ratings are considered. Companies with negative rating aren't paid at all. The formula is as follows:
+
+ payment = population * own_rating / max(1000, sum_of_all_positive_ratings)
+
+While this mechanism is active the usual payments per delivery are switched off.
+
+===Weighting deliveries===
+In order to respect the newgrf specs about cargo payments the rating gain per delivery is weighted according to the number of days it has been in transport and the base price the cargo would generate in the standard economy. The base price thus determines the ''importance'' of the cargo. The weighting for number of days in transport can range from 1/4 to 2. The time factor calculation is the same as with standard economy but the factor is then normalized to get this range.
+
+===Modified performance rating===
+The performance rating should not contain any monetary values. Instead it should include things like:
+ * accumulated town ratings
+ * cargo delivered as percentage of cargo produced
+ * number of vehicles as inverse measure (the less vehicles you need to achieve the other goals, the better you are)
+
+===Modified town and finances GUI===
+The town GUI should display:
+ * the expected payments for the various companies
+ * the next payday
+ * the monthly amount of goods expected
+ * possibly more ...
+
+The finances GUI also has to be modified to account for the new kind of income and the disappearance of several others
+
+===Modified vehicle profit rating===
+Determining the profitability of a single vehicle in this context is tricky. The current way is clearly misleading.
+
+===Losing, Merging and Debt===
+The ability to be bought up or lose the game if you run out of money doesn't really fit into the spirit of the alternate economic model. Thus some changes have to be made.
+If all your town ratings are below a certain threshold your company is dissolved, no matter how much money you have. Mind that this excludes towns where you have no rating at all. Thus, as long as you get a good start in any town you don't lose immediately after starting the game. If you run into debt, you don't lose the game either. Instead your company is auto-merged with the richest other company. If no other company is left or after merging with any other company you'd still be in debt, your stations, tracks and vehicles will start disappearing instead. The check is regularly rerun until you are either merged or you are out of debt or you have lost due to losing support of the last town. Additionally the stock market is removed. Thus you can't buy other companies for money anymore.
+
+==Connection to Cargodist==
+All this can be done by itself without using cargodist. However, without cargodist an optimal strategy is building a metro system in each town and not connecting those systems. Each town generates just as much passengers and mail as it needs itself and transporting them a short way will give you optimal values for the days in transit. This strategy is rather boring, though. Cargodist, and especially its supply scaling part provides an incentive to interconnect your network. As soon as there are multiple destinations available, cargodist makes cargo actually choose those destinations so that you have to provide enough transport capacity to deliver the goods. Also the demand function of cargodist provides a distribution which correlates with the "desired cargo" numbers above.
