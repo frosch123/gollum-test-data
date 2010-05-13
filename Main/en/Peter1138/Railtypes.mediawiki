@@ -1,0 +1,189 @@
+This work is in parallel with [[Main/en/Peter1138/Roadtypes|road types]].
+
+==Rail type labels==
+
+These work in the same way as cargo labels.
+The default rail type labels are:
+
+* RAIL
+* ELRL
+* MONO
+* MGLV
+
+By default, with no translation table in place, RAIL, MONO and MGLV are used. ELRL can only be selected by specifying RAIL and a tractive type of 2 (electric).
+
+This changes with a translation table, and the selected rail type is used directly. If the railtype is unavailable then the locomotive becomes unavailable.
+
+The translation table is loaded by action 0, feature 8, property 12.
+
+===Railtype fallbacks===
+Testing of different rail types can be provided by use of action 7:
+
+ Action 0: Install table consisting of RAIL 3RDR ELRL
+ Action 7: Skip next line if 3RDR exists
+ Action 0: Install table consisting of RAIL ELRL ELRL
+
+This will cause rail vehicles of the second rail type to be 3RDR if that type exists, or ELRL if it doesn't, allowing some flexibility.
+
+==Rail type translation table (action 0, feature 8, property 12)==
+
+This is a list of labels and works in the same way as cargo translation tables.
+
+This is an example table that sets up six rail type translations:
+
+ 1 * 30      00 08 01 06 00 12 "RAIL" "3RDR" "ELRL" "NGRL" "MONO" "MGLV"
+
+==Rail type properties (action 0, feature 10)==
+
+{|
+|-
+||Property||Format||Description
+|-
+||08||dword||Label - this is loaded in the reservation stage.
+|-
+||09||word||String ID for tool bar window caption (must start with white)
+|-
+||0A||word||String ID for main menu text
+|-
+||0B||word||String ID for build vehicle window caption (must start with white)
+|-
+||0C||word||String ID for rail type shown in autoreplace window
+|-
+||0D||word||String ID for new locomotive text: We have just designed a new "railway locomotive"
+|-
+||0E||byte (dword ...)||Compatible rail type list (list of labels, turned into a bitmask internally)
+|-
+||0F||byte (dword ...)||Powered rail type list (list of labels, turned into a bitmask internally)
+|-
+||10||byte||Rail type flags: bit 0 = draw catenary
+|-
+||11||byte||Curve speed advantage, format to be decided
+|-
+||12||byte||Type of default station building graphic to use: 0 = Rail, 1 = Monorail, 2 = Maglev.
+|-
+||13||word||Construction cost factor.
+|-
+||14||word||Max speed limit in mph*1.6 (approximately km/h) (To be decided)
+|-
+||15||byte||Acceleration model: 0 = regular rail, 1 = monorail, 2 = maglev. (In OpenTTD with realistic acceleration on, setting to 2 will use the maglev specialization, and there is no difference between regular rail and monorail.)
+|-
+||16||byte||Small map colour, index from the DOS palette.
+|}
+
+In NFO, rail type IDs will be GRF local, with an ID to label mapping. Therefore to modify an existing rail type, specify its label in property 08. To create a new rail type, again just specify its label in property 08. This way there is no need for complex GRM mechanisms to allocate IDs. If a label 'clashes' with another GRF, then one GRF will end up modifying the properties instead of creating a new rail type.
+
+When a new rail type is created, it is populated with the information from the first rail type, except that the compatible and powered list contain only the rail type being created. However, no default values should be assumed, as the first rail type may have been modified.
+
+==Rail type Action3/2/1 scheme==
+
+===Action 1===
+
+Just a regular action 1 for sprites.
+
+===Action 2===
+
+Like normal, used to assign sprites from action 1 to 'cargo ids'.
+
+As well as the usual global varaction variables, the following specific variables are available too:
+
+{| border="1" cellpadding="4"
+!Variable!!Size!!Content
+|-
+|40||byte||Terrain type: 0 normal, 1 desert, 2 rainforest, 4 on or above snowline.
+|-
+|41||byte||Enhanced tunnels; entrance has track above. Always 0 in OpenTTD. **ER WHAT?
+|-
+|42||byte||Level crossing status: 0 if open (or not a crossing), 1 if closed.
+|}
+
+===Action 3===
+
+For rail types the cargo type byte specifies the type of sprites being assigned. These are as follows:
+
+{| border = "1" cellpadding="4"
+!'Cargo' type!!Sprite type!!Sprites!!Usage
+|-
+|00||*Icons and cursors||16||4 rail directions, autorail, depot, tunnel and convert rail.
+|-
+|01||*Track overlays for junctions and PBS||10||6 flat and 4 slope pieces. [[File:en/OverlayTiles.png]]
+Sprites should contain only the track, with no landscape.
+|-
+|02||*Underlay||16||6 flat and 4 slope, and 1 X crossing pieces *with track*, and 5 junction pieces without track. [[File:en/UnderlayTiles.png]]
+Sprites should contain the track and the 'ballast' below it. No landscape should be drawn.
+|-
+|03||*Tunnel||4||1 sprite for each direction. Sprite is overlay for existing tunnel graphics.
+
+The original ground sprite is drawn, then the overlay, then the original tunnel head is drawn over the top.
+
+This keeps compatibility with different landscape types. 
+|-
+|04||Catenary wire||28||Follows the same layout for wires of the first 28 sprites as [http://wiki.ttdpatch.net/tiki-index.php?page=Action5 Action5] type 5.
+|-
+|05||Catenary pylons||8||Follows the same layout for pylons of the 8 sprites after the wires as [http://wiki.ttdpatch.net/tiki-index.php?page=Action5 Action5] type 5.
+|-
+|06||*Bridge surfaces||6||10 sprites if we ever include diagonal bridges.
+|-
+|07||*Level crossing overlay||10||1 rail overlay and 4 light sprites for X and Y.*
+|-
+|08||Depots||6||2 sprites for each southish, 1 sprite for each northish. Follows the original layout for depot sprites.**
+|-
+|09||Fences||8||X, Y, Vertical, Horizontal, SW slope, SE slope, NE slope and NW slope. Follows the same layout as original original fence sprites at sprite 1301.
+|-
+|xx||Autorail sprites||55||Follows the same layout as [http://wiki.ttdpatch.net/tiki-index.php?page=Action5 Action5] type 13. *Not implemented*
+|}
+
+Not all types need to be defined, if the type is not going to be used anyway. Items marked with * must always be supplied, however.
+
+The default 'cargo' type is not currently used.
+
+====*Level crossing sprite layout====
+
+{| border = "1" cellpadding="4"
+!Sprite number for X!!Sprite number for Y!!Usage
+|-
+|0||1||Rail overlay
+|-
+|2||3||North light
+|-
+|4||5||West light
+|-
+|6||7||East light
+|-
+|8||9||South light
+|}
+
+====**Depot sprite layout====
+
+{| border = "1" cellpadding="4"
+!Sprite number!!Usage
+|-
+|0||NE wall for SE-entry depot.
+|-
+|1||Depot building for SE-entry depot.
+|-
+|2||NW wall for SW-entry depot.
+|-
+|3||Depot building for SW-entry depot.
+|-
+|4||Depot building for NE-entry depot.
+|-
+|5||Depot building for NW-entry depot.
+|}
+
+==Action 7/9 additions==
+
+{| border="1" cellpadding="4"
+|-
+||Condition||Description
+|-
+||0D||Skip if the rail type label is not defined
+|-
+||0E||Skip if the rail type label is defined
+|-
+|}
+
+==Code Already Written==
+
+Code to load rail type translation tables, along with adding default the labels, is already written. Loading properties, and sprites is handled. Drawing of track using overlays is supported.
+
+Drawing of correct track for stations, bridges and tunnels is done. Drawing of custom depots is handled.
