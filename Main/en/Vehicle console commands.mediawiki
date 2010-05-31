@@ -1,0 +1,136 @@
+=== Help for vehicle console commands ===
+
+The patch that enables these commands can be found at http://www.tt-forums.net/viewtopic.php?f=33&t=32964
+
+There are five commands that can be used to control vehicles. They all have same syntax, they just differ in which types of vehicles they affect and some subcommands work only on some vehicle types (for example selling train wagons work only with trains).
+
+{|
+|Command||Function
+|-
+|'''train'''||Control trains (rail vehicles)
+|-
+|'''road'''||Control road vehicles (trucks, buses, trams)
+|-
+|'''ship'''||Control ships
+|-
+|'''aircraft'''||Control aircrafts (alias for this command is '''plane''')
+|-
+|'''vehicle'''||Control all types of vehicles
+|}
+=== Synopsis ===
+
+Invoke command on specified vehicle(s).
+
+Usage:
+
+ vehicle &lt;identifier&gt; &lt;command&gt; [&lt;optional command parameters...&gt;]
+
+Command can be:
+{|
+|  center        ||  Center main view on vehicle's location (Aliases: centre)
+|-
+|  clone         ||  Clone vehicle, if it is in depot. Have no effect on vehicles outside depots. If parameter is specified, then that many clones are created. If not, only one clone is created.
+|-
+|  clone_shared  ||  Same as clone, but with shared orders.
+|-
+|  count         ||  Count vehicles matching given criteria. This command will do nothing, but you'll see how many vehicles are matched by the identifier
+|-
+|  depot         ||  Send vehicle to depot, unless it is in one already.
+|-
+|  ignore        ||  Ignore signals. Valid only for trains.
+|-
+|  info          ||  Show vehicle info on console. Some basic statistics like maximum speed, etc ... are printed to console for each matched vehicle.
+|-
+|  interval      ||  Set servicing interval. Parameter specifies new interval in days or in percent, according to what is set in patches configuration.
+|-
+|  leave         ||  Leave station by skipping to next order. Does not affect vehicles that are not stopped in station.
+|-
+|  open          ||  Open vehicle window (Aliases: show)
+|-
+|  sell          ||  Sell vehicle, if it is stopped in depot.
+|-
+|  service       ||  Send for servicing, unless the vehicle is already in a depot
+|-
+|  skip          ||  Skip to next order. Optional parameter specifies how many orders to skip ('r' = skip to random order in the list, default is 1 - skip to next order). Specifying negative values can be used to skip to previous orders. Skipping to random order may be useful to randomize group of buses in city if you bought many of them at once.
+|-
+|  start         ||  Start vehicle (Aliases: go)
+|-
+|  stop          ||  Stop vehicle
+|-
+|  turn          ||  Turn around (Aliases: reverse)
+|-
+|  undepot       ||  Cancel order to send vehicle to depot
+|-
+|  unservice     ||  Cancel order to be sent for servicing
+|-
+|  winfo         ||  Show info about train wagons on console
+|-
+|  wsell         ||  Sell train wagons(s). If one parameter is given, single wagon will be sold. If two parameters are given, they will specify range of wagons to sell. Wagons are numbered from 1 (wagon number 0 is the first engine). Example: "wsell 3" will sell third wagon. "wsell 4 6" will sell wagons from 4th to 6th.
+|}
+
+Identifier is used to specify on which vehicles the command will be applied.
+Identifier can be:
+{|
+| '''all''' or '''*''' || for all vehicles
+|-
+| '''broken''' ||  for all broken-down vehicles
+|-
+| '''crashed''' ||  for all crashed vehicles
+|-
+| '''depot''' ||  for all vehicles in depot
+|-
+| ''name of group'' || for all vehicles from specified group. Can accept unique prefix of group name, case insensitive
+|-
+| ''vehicle number'' || for specific vehicle
+|}
+Operators '''&lt;''', '''&gt;''', '''&lt;=''', '''&gt;=''' and '''&lt;&gt;''' can be used instead of '''=''' for following matches:
+{|
+| '''age='''[value] || for matching age (in years)
+|-
+| '''breakdowns='''[value] || for matching breakdowns since last service
+|-
+| '''group='''[name] || for matching group by name. Comparison is done case insensitive and if other operator than '''=''' is used, match is performed lexicographically (using stricmp)
+|-
+| '''len='''[value] || for matching train length (value is in tiles)
+|-
+| '''maxspeed='''[value] || for matching maximum speed (value is in km/h)
+|-
+| '''orders='''[value] || for matching number of orders
+|-
+| '''profit='''[value] || for matching sum of this and last year's profit (value is in GBP)
+|-
+| '''profit_last='''[value] || for matching last year's profit (value is in GBP)
+|-
+| '''profit_this='''[value] || for matching this year's profit (value is in GBP)
+|-
+| '''service='''[value] || for matching service interval (in days or percent, depend on current patch settings)
+|-
+| '''speed='''[value] || for matching current speed (in km/h)
+|-
+| '''wagons='''[value] || for matching number of wagons (including engines and articulated parts)
+|}
+
+You can specify multiple match conditions before the command.
+If you use more than one match conditoion, you have to separate them by 'and' or '&' parameter. Number of match conditions is not limited.
+
+=== Some useful examples ===
+
+{|
+| ''' vehicle profit&lt;=0 depot         || Send unprofitable vehicles to depot
+|-
+| ''' vehicle profit&lt;=0 sell          || .. and then sell them
+|-
+| ''' road all turn                   || Attempt to solve huge traffic lockups by single command
+|-
+| ''' train service&lt;=150 and service&gt;=100 interval 200  || Change service interval to 200 for trains having it between 100 and 150
+|-
+| ''' train all sell                  || Sell all trains in depot. Useful for quickly getting rid of those old trains once you launch maglevs on upgraded tracks
+|}
+
+Note: This help is for version 18 of the patch.
+
+=== See also ===
+* [[Main/en/Town console commands]]
+* [[Main/en/Industry console commands]]
+
+[[Category:en/Console]]
