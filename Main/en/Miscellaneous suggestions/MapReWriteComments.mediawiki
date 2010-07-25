@@ -1,0 +1,122 @@
+{{suggestions}}
+
+==Comments==
+
+=== Celestar's comments ===
+
+For the multiple roadstop patch (MRP) it'd be helpful if we could store stop-based data in the map.
+
+For this I suggest a struct:
+
+<pre>
+typedef struct stop_t {
+        //blathijs and I will think about how to optimize this: but a likely layout looks like this:
+        uint8 status;    //whatever is currently in bus_stop_status and truck_stop_status
+        uint8 slotA:4;   //a number > 0 indicates that the slots has been reserved. 
+        uint8 slotB:4;   //the number itself contains the Time To live of the slot
+} stop_t;
+</pre>
+
+This struct should then be included in the station_t struct.
+
+=== pv2b's comments ===
+==== Signals ====
+It's unclear what the intent of signal_t.status is. I can either think of it as:
+
+*A: 2 bits -> red/green for each direction on a bidirectional signal
+*B: 2 bits->4 states (green, orange, double orange, and red).
+
+If A, the comment about orange doesn't make sense, since the bitfield would have to be enlarged to fit the extra state. Also, I thought, manual bit-packing should be avoided in order to get more clear code.
+
+If B, how are bi-directional signals handled?
+
+An alternative for fitting 3 states (green, yellow, and red) and still not exceed 8 bits would be to get rid of the "present" field, and encode the same information in the status1 and status2 bitfields.
+
+<pre>
+typedef struct signal_t {
+  uint8 type:3;      // type of signals/presignals, maybe advanced later on
+  uint8 semaphore:1; // semaphore
+  uint8 status1:2;   // status of signal 1 (not present, red, orange, green)
+  uint8 status2:2;   // status of signal 2 (not present, red, orange, green)
+} signal_t;          // 8 bits
+</pre>
+
+Anyway, if in the future, OpenTTD implements orange signals, it would be great. It will really have potential for smoother-flowing and more efficient rail networks.
+<warning>done and fixed</warning>
+
+==== More signals and parallell tracks ====
+
+This is a combination of ideas from Darkvater, Celestar and pv2b.
+
+<pre>
+typedef struct signal_s {
+  uint8 exists:2;      // Signal A or B exists or not?
+  uint8 statusA:2;     // Signal A green, orange, double orange, red
+  uint8 statusB:2;     // Signal B same as above
+  uint8 semaphore:1;   // Semaphors or traffic lights
+  uint8 presignal:1;   // Is this a presignal?
+  uint8 entrance:1;    // Is this an entrance signal?
+  uint8 reserved:1;    // Reserved for future expansion
+} signal_t; /* 10 bits packed. */
+
+union {
+/* . . . */
+struct {
+  /* For squares owned only by one owner */
+  uint8 tracks;               // Tracks laid
+  uint8 track_type:4;         // Ordinary, electric(?), monorail, maglev
+  signal_t signals;           // Signals. 10 bits
+  uint8 ground_fences:2;      // Ground fences
+  /* Total: 24 bits */
+} track;
+struct {
+  /* For squares containing tracks owned by two different owners */
+  /* Only 1 bit is required for representing which tracks are laid, since there
+     are only two possible cases where this can occur. Bit is set if both tracks
+     are North-South and is clear is both tracks are West-East. */
+  uint8 tracks:1;
+  /* In the arrays below, element 0 refers to either the northern rail, or the
+     western rail. */
+  uint8 track_type:4[2];      // Ordinary, electric(?), monorail, maglev
+  signal_t signal[2];         // Signals. 2*10 = 20 bits.
+  uint8 ground_fences:3;      // Ground fences. (Only 3 fences are needed.)
+  uint8 second_owner;         // Owner of the track described in elements 1
+  /* Total: 40 bits. */
+} parallelltracks;
+/* . . . */
+} build;
+</pre>
+
+==== Buoys and checkpoints ====
+For now, Bouys are handled by the station code. But wouldn't it be nicer and more consistent for them to be handled by the checkpoint code? Also, there should be provisions for checkpoints that cover more than one track, IMHO.
+<warning>bouys moved to checkpoints. Maybe checkpoints needs a type too, to show custom graphics?</warning>
+
+==== Trees ====
+This is less important -- but shouldnt trees_t.growth be an array, so different trees can have different growth levels? :-) There certainly is room to spare in the union for this luxury.
+
+=== Bjarni's comments ===
+
+==== Another signal idea ====
+Adding 3 bits to presignals so you get type A, B and C. A entrances would only look for A exits and so on. Since it is 3 bits, you can make a AC signal that looks for both A and C exits if needed
+An idea for a user-friendly interface for this is still needed through
+
+=== Mathijs' comments ===
+*bridge_t should have a part field which describes the part of the bridge (since not every tile in the bridge is the same)
+*bridge_t should have 3 bits for dir, since having 4 directions is not enough for diagonal bridges (there are 2 diagonal bridges in each direction)
+*bridge_t shouldn't have a section field. Bridge ramps should be stored as a different tiletype IMO
+<warning>it was implemented the same was as it was in the old days. Space left to spare, so you can experiment if you want</warning>
+
+*Maybe we could move built, stage and counter from industry_t to the Industry struct? Or on second thought that would never allow one tile of industry to be unfinished when the rest is finished (ie when an industry would physically expand). (btw, isn't built unneeded? We can see if something is built by looking at stage, right?)
+*In a lot of places (station_t, checkpoint_t), type is used. We should name this one transport_type instead, and fill it with the TransportType enum. Also, everywhere where we see (transport_)type, we also see track_type. Maybe we can add all subtypes of railway as types to transport_type?
+*We should rename section in depot_t to part, for consistency
+*tunnel_t should really, really, be a surface, not a build
+*I don't like roadnrail and paralleltracks
+<warning>just 'ballonnetjes'</warning>
+*For crossing_t, how do we want to be flexible in the future? Diagonal crossings? That really won't work, since diagonal tracks never cross on one tile...
+*How exactly is the lift_t filled? How high is a building?
+<warning>look in the docs/landscape.html file</warning>
+*We should add an index field to town_t, with an index to the Town struct.
+<warning>done and fixed</warning>
+*Maybe the stage and counter in industry_t and town_t could be moved to a seperate struct?
+
+[[Category:en/Map Re-write]]
