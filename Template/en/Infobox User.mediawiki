@@ -1,0 +1,132 @@
+<includeonly>{{en/Infobox| bodystyle   = {{#if:{{{fontcolor|}}}|color: {{{fontcolor}}};}} {{#if:{{{width|}}}|width: {{{width}}};}} <!--
+              -->{{#if:{{{tablecolor|}}}|background-color: {{{tablecolor}}};}} float: right; clear: right; <!--
+              -->padding: 0.2em; margin: 0.5em 0 0.5em 1em; border: 1px solid #aaa;
+| headerstyle = {{#if:{{{color|}}}|background-color: {{{color}}}| background-color:lightblue}}
+| abovestyle  = {{#if:{{{color|}}}|background-color: {{{color}}}| background-color:lightblue}}
+| title       = {{#if:{{{color|}}}||{{BASEPAGENAME}} {{#if:{{{status|}}}|<br /><small>{{{status}}}<small>}}}}
+| above       = {{#if:{{{color|}}}|{{BASEPAGENAME}} {{#if:{{{status|}}}|<br /><small>{{{status}}}<small>}}}}
+| image       = {{#if:{{{image|}}}|[[File:en/.{{{image|}}}|{{{image_width|238px}}}|{{{image_caption|}}}]]}}
+| caption     = {{{image_caption|}}}
+| label1      = Name
+| data1       = {{{name|}}}
+| label2      = Gender
+| data2       = {{{gender|}}}
+| label3      = Birth date
+| data3       = {{{birthdate|}}}
+| label4      = Birthplace
+| data4       = {{{birthplace|}}}
+| label5      = Location
+| data5       = {{{location|}}}
+| label6      = Country
+| data6       = {{{country|}}}
+<!--
+| data6       = {{#if:{{{country|}}}|{{flag|{{{country}}}}}}}
+| label7      = Time zone
+| data7       = {{{timezone|}}}
+-->
+| label10     = Occupation
+| data11      = {{{occupation|}}}
+| label12     = Education
+| data12      = {{{education|}}}
+| label13     = Religion
+| data13     = {{{religion|}}}
+| label14     = Politics
+| data14      = {{{politics|}}}
+
+| label20     = IQ
+| data20      = {{{IQ|}}}
+| label21     = Personality type
+| data21      = {{{personalitytype|}}}
+
+
+
+| header30    = {{#if:{{{OTTD|}}}{{{website|}}}{{{email|}}}|Contact info}}
+
+| data31      = {{#if:{{{OTTD|}}}|[http://www.tt-forums.net/memberlist.php?mode=viewprofile&u={{{OTTD}}} {{{OTTD}}}]}}
+| label31     = OpenTTD Forum
+| label32     = Website
+| data32      = {{{website|}}}
+| label33     = E-mail
+| data33      = {{{email|}}}
+
+| label34     = Facebook
+| data34      = {{{Facebook|}}}
+| label35     = MySpace
+| data35      = {{{MySpace|}}}
+| label36     = Twitter
+| data36      = {{{Twitter|}}}
+
+| header50    = {{#if:{{{interests|}}}|Interests}}
+| data51      = {{#if:{{{interests|}}}|<div style="text-align: left">
+{{{interests|}}}
+</div>}}
+
+| header52    = {{#if:{{{userboxes|}}}|Userboxes}}
+| data53      = {{#if:{{{userboxes|}}}|
+<table cellspacing=0 cellpadding=0 style="background: transparent; vertical-align: middle !important; text-align: center; font-size: 95%; color: {{{fontcolor|black}}}; margin: auto">
+<tr><td>
+{{{userboxes|}}}
+</td></tr>
+</table>
+}}
+}}</includeonly><noinclude>
+==Usage of template==
+'''(lack an explanation here)'''
+*Type:
+<pre>{{en/Infobox User| fontcolor     =
+| width         =
+| tablecolor    =
+| color         =
+| status        =
+| image         =
+| image_width   =
+| image_caption =
+| name          =
+| gender        =
+| birthdate     =
+| birthplace    =
+| location      =
+| country       =
+| ocupation     =
+| education     =
+| religion      =
+| politics      =
+| iq            =
+| personalitytype=
+| OTTD          =
+| website       =
+| email         =
+| Facebook      =
+| MySpace       =
+| Twitter       =
+| interests     =
+| userboxes     = 
+}}</pre>
+
+For userboxes use {{s|Userbox Developer}}, {{s|Userbox Graphic Developer}}, {{s|Userbox Moderator}}, {{s|Userbox Translator}}
+
+==Example==
+<pre>
+{{en/Infobox User|color       = lightblue
+|image       =
+|name        = Perico palotes
+|gender      = Male
+|country     = México
+|OTTD        = XXXX
+|Website     = 
+|email       = -
+|userboxes   = {{en/Userbox Graphic Developer}}
+}}
+</pre>
+
+{{en/Infobox User|color       = lightblue
+|image       =
+|name        = Perico palotes
+|gender      = Male
+|country     = México
+|OTTD        = XXXX
+|Website     = 
+|email       = -
+|userboxes   = {{en/Userbox Graphic Developer}}
+}}
+[[Category:en/User Templates|I]]</noinclude>
