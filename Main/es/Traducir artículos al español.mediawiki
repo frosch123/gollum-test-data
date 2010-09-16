@@ -1,0 +1,63 @@
+La mayor parte del contenido de esta guía sobre el juego se haya en inglés, por lo que '''traducir sus contenidos''' puede ser un buen trabajo para los colaboradores de OpenTTD en español.
+
+Un buen método de trabajo es, primero traducir literalmente los artículos del inglés (o de otros idiomas) al español, luego pulir el estilo (usando los giros propios del español, revisando la estructura gramatical de las frases...), y por último añadir, corregir o actualizar contenidos.
+
+==¿Cómo empezar?==
+Lo primero que debemos hacer es crear la página española.<br/>
+Veamos paso a paso, una forma práctica de cómo hacerlo.
+*'''1)''' En el artículo en inglés añada la plantilla {{s|Other languages}} al inicio de la página:
+<pre>
+'''Broken translation link'''
+</pre>
+:''OJO: Sustituya "Título del artículo en inglés" y "Título del artículo en español" por los correspondientes.''
+*'''2)''' Seleccione todo el código del artículo en inglés y cópielo (CTRL+C).
+*'''3)''' Guarde el archivo, parecerá la bandera inglesa y en lugar de la bandera española un mensaje de error, NO SE PREOCUPE, lo arreglaremos más tarde.
+*'''4)''' Pulse en el enlace en rojo <span style="color:red">EN</span> que aparece en el cuadro de las banderas.
+*'''5)''' En la nueva ventana de edición pegue el texto que había copiado (CTRL+V)
+*'''6)''' Sitúese al inicio del texto que acaba de pegar y añada la plantilla {{s|Traducción/Es}}:
+<pre>
+{{es/Traducción|Título del artículo en inglés|0}}
+</pre>
+*'''7)''' Guardamos. Ya tenemos la página española (aunque en inglés). Con la primera edición que hagamos desaparecerá el mensaje de error de la caja de las banderas.
+*'''8)''' Corrija el parámetro <code>language_page</code> de la plantilla {{s|Other languages}} por el correcto:
+<pre>
+|language_page=es
+</pre>
+
+Ahora ya solo se trata de ir paso a paso traduciéndola frase a frase, y guardándola cuando acabe.
+
+==Traducciones incompletas==
+Si por cualquier motivo deja parte del artículo sin traducir use la plantilla {{s|Pendiente de traducción/Es}} para separar el texto en español del texto en inglés. 
+Indique también el porcentaje aproximado de traducción en la plantilla {{s|Traducción/Es}} que puso al inicio del texto.
+
+==Recursos==
+===Recursos de OpenTTD wiki===
+*[[Main/en/Manual of Style|Manual de estilo]]
+*[[Template:Other languages]]
+*[[Template/es/Traducción]]
+*[[Template/es/Pendiente de traducción]]
+*[[Category/es/Plantillas]]
+*[[Category/es/Cajas de mensajes]]
+*[[Category/es/Archivos en español]]
+
+===Recursos de wikipedia y otros===
+*[http://www.wikipedia.org/wiki/es:Ayuda:Plantillas ] ''([http://www.wikipedia.org/wiki/Help:Template ])''
+*[http://www.wikipedia.org/wiki/es:Ayuda:Categoría ] ''([http://www.wikipedia.org/wiki/Help:Category ])''
+*[http://www.wikipedia.org/wiki/es:Ayuda:Imágenes ] ''([http://www.wikipedia.org/wiki/Wikipedia:Picture_tutorial ])''
+*[http://www.wikipedia.org/wiki/es:Ayuda:Tablas ] ''([http://www.wikipedia.org/wiki/Help:Table ])''
+*[http://www.wikipedia.org/wiki/es:Ayuda:Listas ] ''([http://www.wikipedia.org/wiki/Help:List ])''
+*[http://www.mediawiki.org/wiki/Help:Magic_words/es Palabras mágicas]
+*[http://www.mediawiki.org/wiki/Help:Extension:ParserFunctions/es ParserFunctions]
+*[http://www.wikipedia.org/wiki/es:Ayuda:Cómo_se_edita_una_página Ayuda de edición] de Wikipedia
+*[http://www.wikipedia.org/wiki/es:Ayuda:Caracteres_especiales Caracteres especiales]
+*[http://www.wikipedia.org/wiki/es:Anexo:Colores ] ''([http://www.wikipedia.org/wiki/List of colors ])''
+*[http://www.wikipedia.org/wiki/es:HTML ] ''([http://www.wikipedia.org/wiki/HTML ])'', ''([http://www.wikipedia.org/wiki/HTML element ])''
+*''[http://www.wikipedia.org/wiki/Help:Hidden_text ]''
+*[http://html.conclase.net/w3c/html401-es/struct/dirlang.html Idioma y dirección del texto]
+
+===Herramientas de traducción===
+*Pera dudas en inglés: http://www.wordreference.com/
+*Para dudas en castellano:
+:*Diccionario de la Real Academia [http://buscon.rae.es/draeI/html/cabecera.htm drae]
+:*Diccionario panhispánico de dudas [http://buscon.rae.es/dpdI/ dpd]
+*Traducciones automáticas: [https://addons.mozilla.org/es-ES/firefox/addon/7004/ Babelfish Instant Translation] for [http://www.mozilla-europe.org/es/firefox/ Firefox]
