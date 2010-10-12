@@ -1,0 +1,141 @@
+<noinclude>[[Translation:Template/en/Newgrf]]</noinclude><!-- Newgrf Template test.
+
+---Caption---
+--> __NOEDITSECTION__ 
+==={{#if:{{{Título|}}}|{{{Título}}}|¡Sin título proporcionado!}}===
+<table style="width:90%;"><tr><td rowspan="2" valign="top">{{#if:{{{Imagen|}}}|[[File:en/.{{{Imagen}}}|100px]]|[[File:es/No image.png|100px|{{#if:{{{Título|}}}|alt={{{Título}}}|}}]]}}</td><td style="width:100%;">
+'''{{{Subtítulo|¡Sin título proporcionado!}}}'''
+</td></tr><tr><td style="width:100%;"><!--
+
+
+---Body---
+--><table style="border: 1px solid #aaa;"><!--
+
+
+---NewGrf1---
+--><tr style="background: #F7F7F7;"><td colspan="2" style="width:100%; vertical-align: top; padding: 5px;"><!--
+  -->'''{{#if:{{{Nombre1|}}}|{{{Nombre1}}}| ¡Sin título proporcionado!}}'''<br><!--
+  -->{{#if:{{{Descripción1|}}}|{{{Descripción1}}}| ¡Sin descripción proporcionada!}}</td><!--
+  --><td rowspan="2" width=125px; height=125px valign="middle">{{#if:{{{Imagen1|}}}|[[File:en/.{{{Imagen1}}}|125px]]|[[File:es/No image.png|125px]]}}</td></tr><!--
+ --><tr><td style="background: #F7F7F7; height: 100%; padding-left: 5px;"><!--
+  -->{{#if:{{{Homepage1|}}}|[{{{Homepage1}}} Homepage]|Homepage}}&nbsp;•&nbsp;<!--
+  -->{{#if:{{{Id1|}}}|[http://grfcrawler.tt-forums.net/index.php?do=search&type=grfidlist&q={{{Id1}}} GrfCrawler]|Grfcrawler}}</td><!--
+  --><td style="background: #F7F7F7;">{{#If:{{{Bananas1|}}}|Descarga Online|Solo descarga manual}}{{#If:{{{revision1|}}}|&nbsp;•&nbsp;{{{revision1}}}|}}{{#If:{{{32bpp1|}}}|&nbsp;•&nbsp;32bpp|}}</td></tr><tr><td colspan="3" style="border-bottom: 1px solid #aaa;"></td></tr><!--
+
+---NewGRF 2---
+-->{{#if:{{{Nombre2|}}}|<tr style="background: #F7F7F7;"><td colspan="2" style="vertical-align: top; width:100%; padding: 5px;"><!--
+  -->'''{{{Nombre2}}}'''<br><!--
+  -->{{#if:{{{Descripción2|}}}|{{{Descripción2}}}| 'Sin descripción proporcionada!}}</td><!--
+  --><td rowspan="2" width=125px; height=125px valign="middle">{{#if:{{{Imagen2|}}}|[[File:en/.{{{Imagen2}}}|125px]]|[[File:es/No image.png|125px]]}}</td></tr><!--
+ --><tr><td style="background: #F7F7F7; height: 100%; padding-left: 5px;"><!--
+  -->{{#if:{{{Homepage2|}}}|[{{{Homepage2}}} Homepage]|Homepage}}&nbsp;•&nbsp;<!--
+  -->{{#if:{{{Id2|}}}|[http://grfcrawler.tt-forums.net/index.php?do=search&type=grfidlist&q={{{Id2}}} Grfcrawler]|GrfCrawler}}</td><!--
+  --><td style="background: #F7F7F7">{{#If:{{{Bananas2|}}}|Descarga Online|Solo descarga manual}}{{#If:{{{revision2|}}}|&nbsp;•&nbsp;{{{revision2}}}|}}{{#If:{{{32bpp2|}}}|&nbsp;•&nbsp;32bpp|}}</td></tr><tr><td colspan="3" style="border-bottom: 1px solid #aaa;"></td></tr>}}<!--
+
+---NewGRF 3---
+-->{{#if:{{{Nombre3|}}}|<tr style="background: #F7F7F7;"><td colspan="2" style="vertical-align: top; width:100%; padding: 5px;"><!--
+  -->'''{{{Nombre3}}}'''<br><!--
+  -->{{#if:{{{Descripción3|}}}|{{{Descripción3}}}| ¡Sin descripción proporcionada!}}</td><!--
+  --><td rowspan="2" width=125px; height=125px valign="middle">{{#if:{{{Imagen3|}}}|[[File:en/.{{{Imagen3}}}|125px]]|[[File:es/No image.png|125px]]}}</td></tr><!--
+ --><tr><td style="background: #F7F7F7; height: 100%; padding-left: 5px;"><!--
+  -->{{#if:{{{Homepage3|}}}|[{{{Homepage3}}} Homepage]|Homepage}}&nbsp;•&nbsp;<!--
+  -->{{#if:{{{Id3|}}}|[http://grfcrawler.tt-forums.net/index.php?do=search&type=grfidlist&q={{{Id3}}} Grfcrawler]|GrfCrawler}}</td><!--
+  --><td style="background: #F7F7F7">{{#If:{{{Bananas3|}}}|Descarga Online|Solo descarga manual}}{{#If:{{{revision3|}}}|&nbsp;•&nbsp;{{{revision3}}}|}}{{#If:{{{32bpp3|}}}|&nbsp;•&nbsp;32bpp|}}</td></tr><tr><td colspan="3" style="border-bottom: 1px solid #aaa;"></td></tr>}}<!--
+
+---NewGRF 4---
+-->{{#if:{{{Nombre4|}}}|<tr style="background: #F7F7F7;"><td colspan="2" style="vertical-align: top; width:100%; padding: 5px;"><!--
+  -->'''{{{Nombre4}}}'''<br><!--
+  -->{{#if:{{{Descripción4|}}}|{{{Descripción4}}}| ¡Sin descripción proporcionada!}}</td><!--
+  --><td rowspan="2" width=125px; height=125px valign="middle">{{#if:{{{Imagen4|}}}|[[File:en/.{{{Imagen4}}}|125px]]|[[File:es/No image.png|125px]]}}</td></tr><!--
+ --><tr><td style="background: #F7F7F7; height: 100%; padding-left: 5px;"><!--
+  -->{{#if:{{{Homepage4|}}}|[{{{Homepage4}}} Homepage]|Homepage}}&nbsp;•&nbsp;<!--
+  -->{{#if:{{{Id4|}}}|[http://grfcrawler.tt-forums.net/index.php?do=search&type=grfidlist&q={{{Id4}}} Grfcrawler]|GrfCrawler}}</td><!--
+  --><td style="background: #F7F7F7">{{#If:{{{Bananas4|}}}|Descarga Online|Solo descarga manual}}{{#If:{{{revision4|}}}|&nbsp;•&nbsp;{{{revision4}}}|}}{{#If:{{{32bpp4|}}}|&nbsp;•&nbsp;32bpp|}}</td></tr><tr><td colspan="3" style="border-bottom: 1px solid #aaa;"></td></tr>}}<!--
+
+---NewGRF 5---
+-->{{#if:{{{Nombre5|}}}|<tr style="background: #F7F7F7;"><td colspan="2" style="vertical-align: top; width:100%; padding: 5px;"><!--
+  -->'''{{{Nombre5}}}'''<br><!--
+  -->{{#if:{{{Descripción5|}}}|{{{Descripción5}}}| ¡Sin descripción proporcionada!}}</td><!--
+  --><td rowspan="2" width=125px; height=125px valign="middle">{{#if:{{{Imagen5|}}}|[[File:en/.{{{Imagen5}}}|125px]]|[[File:es/No image.png|125px]]}}</td></tr><!--
+ --><tr><td style="background: #F7F7F7; height: 100%; padding-left: 5px;"><!--
+  -->{{#if:{{{Homepage5|}}}|[{{{Homepage5}}} Homepage]|Homepage}}&nbsp;•&nbsp;<!--
+  -->{{#if:{{{Id5|}}}|[http://grfcrawler.tt-forums.net/index.php?do=search&type=grfidlist&q={{{Id5}}} Grfcrawler]|GrfCrawler}}</td><!--
+  --><td style="background: #F7F7F7">{{#If:{{{Bananas5|}}}|Descarga Online|Solo descarga manual}}{{#If:{{{revision5|}}}|&nbsp;•&nbsp;{{{revision5}}}|}}{{#If:{{{32bpp5|}}}|&nbsp;•&nbsp;32bpp|}}</td></tr><tr><td colspan="3" style="border-bottom: 1px solid #aaa;"></td></tr>}}<!--
+
+---NewGRF 6---
+-->{{#if:{{{Nombre6|}}}|<tr style="background: #F7F7F7;"><td colspan="2" style="vertical-align: top; width:100%; padding: 5px;"><!--
+  -->'''{{{Nombre6}}}'''<br><!--
+  -->{{#if:{{{Descripción6|}}}|{{{Descripción6}}}| ¡Sin descripción proporcionada!}}</td><!--
+  --><td rowspan="2" width=125px; height=125px valign="middle">{{#if:{{{Imagen6|}}}|[[File:en/.{{{Imagen6}}}|125px]]|[[File:es/No image.png|125px]]}}</td></tr><!--
+ --><tr><td style="background: #F7F7F7; height: 100%; padding-left: 5px;"><!--
+  -->{{#if:{{{Homepage6|}}}|[{{{Homepage6}}} Homepage]|Homepage}}&nbsp;•&nbsp;<!--
+  -->{{#if:{{{Id6|}}}|[http://grfcrawler.tt-forums.net/index.php?do=search&type=grfidlist&q={{{Id6}}} Grfcrawler]|GrfCrawler}}</td><!--
+  --><td style="background: #F7F7F7">{{#If:{{{Bananas6|}}}|Descarga Online|Solo descarga manual}}{{#If:{{{revision6|}}}|&nbsp;•&nbsp;{{{revision6}}}|}}{{#If:{{{32bpp6|}}}|&nbsp;•&nbsp;32bpp|}}</td></tr><tr><td colspan="3" style="border-bottom: 1px solid #aaa;"></td></tr>}}<!--
+
+---NewGRF 7---
+-->{{#if:{{{Nombre7|}}}|<tr style="background: #F7F7F7;"><td colspan="2" style="vertical-align: top; width:100%; padding: 5px;"><!--
+  -->'''{{{Nombre7}}}'''<br><!--
+  -->{{#if:{{{Descripción7|}}}|{{{Descripción7}}}| ¡Sin descripción proporcionada!}}</td><!--
+  --><td rowspan="2" width=125px; height=125px valign="middle">{{#if:{{{Imagen7|}}}|[[File:en/.{{{Imagen7}}}|125px]]|[[File:es/No image.png|125px]]}}</td></tr><!--
+ --><tr><td style="background: #F7F7F7; height: 100%; padding-left: 5px;"><!--
+  -->{{#if:{{{Homepage7|}}}|[{{{Homepage7}}} Homepage]|Homepage}}&nbsp;•&nbsp;<!--
+  -->{{#if:{{{Id7|}}}|[http://grfcrawler.tt-forums.net/index.php?do=search&type=grfidlist&q={{{Id7}}} Grfcrawler]|GrfCrawler}}</td><!--
+  --><td style="background: #F7F7F7">{{#If:{{{Bananas7|}}}|Descarga Online|Solo descarga manual}}{{#If:{{{revision7|}}}|&nbsp;•&nbsp;{{{revision7}}}|}}{{#If:{{{32bpp7|}}}|&nbsp;•&nbsp;32bpp|}}</td></tr><tr><td colspan="3" style="border-bottom: 1px solid #aaa;"></td></tr>}}<!--
+
+---NewGRF 8---
+-->{{#if:{{{Nombre8|}}}|<tr style="background: #F7F7F7;"><td colspan="2" style="vertical-align: top; width:100%; padding: 5px;"><!--
+  -->'''{{{Nombre8}}}'''<br><!--
+  -->{{#if:{{{Descripción8|}}}|{{{Descripción8}}}| ¡Sin descripción proporcionada!}}</td><!--
+  --><td rowspan="2" width=125px; height=125px valign="middle">{{#if:{{{Imagen8|}}}|[[File:en/.{{{Imagen8}}}|125px]]|[[File:es/No image.png|125px]]}}</td></tr><!--
+ --><tr><td style="background: #F7F7F7; height: 100%; padding-left: 5px;"><!--
+  -->{{#if:{{{Homepage8|}}}|[{{{Homepage8}}} Homepage]|Homepage}}&nbsp;•&nbsp;<!--
+  -->{{#if:{{{Id8|}}}|[http://grfcrawler.tt-forums.net/index.php?do=search&type=grfidlist&q={{{Id8}}} Grfcrawler]|GrfCrawler}}</td><!--
+  --><td style="background: #F7F7F7">{{#If:{{{Bananas8|}}}|Descarga Online|Solo descarga manual}}{{#If:{{{revision8|}}}|&nbsp;•&nbsp;{{{revision8}}}|}}{{#If:{{{32bpp8|}}}|&nbsp;•&nbsp;32bpp|}}</td></tr><tr><td colspan="3" style="border-bottom: 1px solid #aaa;"></td></tr>}}<!--
+
+---NewGRF 9---
+-->{{#if:{{{Nombre9|}}}|<tr style="background: #F7F7F7;"><td colspan="2" style="vertical-align: top; width:100%; padding: 5px;"><!--
+  -->'''{{{Nombre9}}}'''<br><!--
+  -->{{#if:{{{Descripción9|}}}|{{{Descripción9}}| ¡Sin descripción proporcionada!}}</td><!--
+  --><td rowspan="2" width=125px; height=125px valign="middle">{{#if:{{{Imagen9|}}}|[[File:en/.{{{Imagen9}}}|125px]]|[[File:es/No image.png|125px]]}}</td></tr><!--
+ --><tr><td style="background: #F7F7F7; height: 100%; padding-left: 5px;"><!--
+  -->{{#if:{{{Homepage9|}}}|[{{{Homepage9}}} Homepage]|Homepage}}&nbsp;•&nbsp;<!--
+  -->{{#if:{{{Id9|}}}|[http://grfcrawler.tt-forums.net/index.php?do=search&type=grfidlist&q={{{Id9}}} Grfcrawler]|GrfCrawler}}</td><!--
+  --><td style="background: #F7F7F7">{{#If:{{{Bananas9|}}}|Descarga Online|Solo descarga manual}}{{#If:{{{revision9|}}}|&nbsp;•&nbsp;{{{revision9}}}|}}{{#If:{{{32bpp9|}}}|&nbsp;•&nbsp;32bpp|}}</td></tr><tr><td colspan="3" style="border-bottom: 1px solid #aaa;"></td></tr>}}<!--
+
+---Footer---
+--><tr><td colspan="3" style="background: #DDDDFF;">[http://grfcrawler.tt-forums.net/index.php?do=search&type=grfidlist&q={{{Id1|}}},{{{Id2|}}},{{{Id3|}}},{{{Id4|}}},{{{Id5|}}},{{{Id6|}}},{{{Id7|}}},{{{Id8|}}},{{{Id9|}}} Obtenerlos todos]&nbsp;•&nbsp;[http://grfcrawler.tt-forums.net/index.php{{#if:{{{Categoría|}}}|?do=list&cid={{{Categoría}}}|?do=search&q={{{Título}}}}} Buscar NewGRF relacionados]</td></tr>
+</table></td></tr></table><noinclude>
+
+<!-- additional crap not yet in
+
+{{#if:{{{32bpp|}}}|[[File:en/New cargoes.png|alt=New cargoes Support]]}}&nbsp;•&nbsp;{{#if:{{{newcargoes|}}}|[[File:en/32bpp.png|32bpp Support]]}}
+
+-->
+
+== Parametros ==
+
+<pre>
+{{en/Newgrf|Título       = Título de la tabla, si no proporciona una categoría asGrfcrawler la utiliza como etiqueta de búsqueda.
+|Subtítulo    =
+|Categoría    = Categoría de la tabla, reemplaza al título como etiqueta de búsqueda en Grfcrawler
+|Imagen       = Imágen de categoría de la tabla
+
+|Nombre#      = Nombre Grf                          # número 1-9
+|Id#          = Grf Id
+|Descripción# =                                    Opcional 
+|Imagen#      =                                    Opcional 
+|Homepage#    = Homepage/Discussion page URL       Opcional 
+|Links#       = Links adicionales, notación Wiki   Opcional
+
+|revision#    =  la última
+|Bananas#     =  la última
+|newcargoes#  =  la última
+|32bpp#       =  la última
+
+|Years#       =  no se puede aplicar como estaba previsto en el wiki
+|Nationality# =  no se puede aplicar como estaba previsto en el wiki
+}}
+</pre>
+
+[[Category:es/Plantillas|Newgrf]]
+</noinclude>
