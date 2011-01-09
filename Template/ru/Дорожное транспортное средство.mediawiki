@@ -1,0 +1,61 @@
+<noinclude>[[Category:ru/Шаблоны]][[Translation:Template/en/RoadVehicle]]</noinclude>
+{| border="2" cellpadding="2" cellspacing="0" style="border: 1px #aaaaaa solid; border-collapse: collapse; margin-bottom:5px"
+|-
+| colspan="2" style="width: 400px; background: #ffdead; font-size: 120%;" | [[File:en/.{{{изоб}}}]] '''{{{имя}}}''' 
+|-
+| style="background: #f0f0ff;" | '''Цена''' 
+| style="background: #ffffff; width: 250px;" |{{{цена}}} 
+|-
+| style="background: #f0f0ff;" | '''Скорость''' 
+| style="background: #ffffff;" | {{{скорость}}}
+|-
+| style="background: #f0f0ff;" | '''Стоимость обслуживания''' 
+| style="background: #ffffff;" | {{{обслуж}}}
+|-
+| style="background: #f0f0ff;" | '''Разработан в''' 
+| style="background: #ffffff;" | {{{разработан}}}
+|-
+| style="background: #f0f0ff;" | '''Срок службы''' 
+| style="background: #ffffff;" | {{{срок}}} лет
+|-
+| style="background: #f0f0ff;" | '''Вместимость''' 
+| style="background: #ffffff;" | {{{вместимость}}}
+|}<noinclude>
+
+
+==Применение==
+Модель:
+<pre>
+{{ru/Дорожное транспортное средство|имя         =
+  |изоб        =
+  |цена        =
+  |скорость    =
+  |обслуж      =
+  |разработан  =
+  |срок        =
+  |вместимость =
+}}
+</pre>
+==Пример==
+<pre>
+{{ru/Дорожное транспортное средство|имя         = Автобус MPS Regal
+  |изоб        = Bus-MPS Regal.png
+  |цена        = 9.840 € (4.920 £)
+  |скорость    = 56 км/ч (35 миль/ч)
+  |обслуж      = 852 € (426 £)
+  |разработан  = 1930
+  |срок        = 12
+  |вместимость = 31 пассажир
+}}
+</pre>
+Результат:
+{{ru/Дорожное транспортное средство|имя    = Автобус MPS Regal
+  |изоб    = Bus-MPS Regal.png
+  |цена    = 9.840 € (4.920 £)
+  |скорость = 56 км/ч (35 миль/ч)
+  |обслуж     = 852 € (426 £)
+  |разработан   = 1930
+  |срок  = 12
+  |вместимость = 31 пассажир
+}}
+</noinclude>
