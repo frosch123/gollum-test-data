@@ -1,0 +1,111 @@
+=== Help for town console commands ===
+
+The patch that enables these commands can be found at http://www.tt-forums.net/viewtopic.php?f=33&t=32964
+
+=== Synopsis ===
+
+Invoke command on specified town(s).
+
+Usage:
+
+ town &lt;identifier&gt; &lt;command&gt; [&lt;optional command parameters...&gt;]
+
+Command can be:
+{|
+|  ad_large      ||  Launch large advertising campaign in the town (Aliases: large_ad)
+|-
+|  ad_medium     ||  Launch medium advertising campaign in the town (Aliases: medium_ad)
+|-
+|  ad_small      ||  Launch small advertising campaign in the town (Aliases: small_ad)
+|-
+|  auth          ||  Open town authority window
+|-
+|  bribe         ||  Bribe town authority
+|-
+|  center        ||  Center main view on town location (Aliases: centre)
+|-
+|  count         ||  Count towns matching given criteria. This command will do nothing, but you'll see how many towns are matched by the identifier
+|-
+|  delete        ||  Delete the town (scenario editor only)
+|-
+|  exclusive     ||  Buy exclusive rights in town
+|-
+|  expand        ||  Expand town (scenario editor only) Parameter specifies number of repetitions (default 1)
+|-
+|  fund          ||  Fund construction of new buildings (Aliases: building)
+|-
+|  info          ||  Show town info on console. Some basic statistics like population, company ratings for town, etc ... are printed to console for each matched town.
+|-
+|  open          ||  Open town window (Aliases: show)
+|-
+|  print         ||  Print town name on console
+|-
+|  road          ||  Fund road reconstruction in town (Aliases: reconstruction)
+|-
+|  statue        ||  Build statue in town
+|}
+
+Identifier is used to specify on which industry the command will be applied.
+Identifier can be:
+{|
+| '''all''' or '''*''' || for all towns
+|-
+| '''statue'''         || for towns where you have statue built
+|-
+| '''no_statue'''      || for towns where you do not have statue built
+|-
+| ''name of town'' or ''ID of town'' || for specific town
+|}
+Operators '''&lt;''', '''&gt;''', '''&lt;=''', '''&gt;=''' and '''&lt;&gt;''' can be used instead of '''=''' for following matches:
+{|
+| '''any_exclusive='''[value] ||  for matching months of remaining exclusive rights for any company
+|-
+| '''currnoise='''[value] ||  for matching currently used noise level
+|-
+| '''exclusive='''[value] ||  for matching company having exclusive rights
+|-
+| '''fund='''[value] ||  for matching months remaining in building funding
+|-
+| '''houses='''[value] ||  for matching number of town houses
+|-
+| '''maxnoise='''[value] ||  for matching maximal noise level
+|-
+| '''my_exclusive='''[value] ||  for matching months of remaining exclusive rights for your company
+|-
+| '''noise='''[value] ||  for matching remaining (usable) noise level
+|-
+| '''other_exclusive='''[value] ||  for matching months of remaining exclusive rights for any competitor company
+|-
+| '''population='''[value] ||  for matching town population
+|-
+| '''rating='''[value] ||  for matching your rating in town
+|-
+| '''roadworks='''[value] ||  for matching months remaining in road reconstructions
+|-
+| '''unwanted='''[value] ||  for matching months you are unwanted in town due to bribe
+|}
+
+You can specify multiple match conditions before the command.
+If you use more than one match condition, you have to separate them by 'and' or '&' parameter. Number of match conditions is not limited.
+
+=== Some useful examples ===
+
+{|
+| ''' town noise&gt;=25 print        || List towns where I can build intercontinental airport
+|-
+| ''' town population&gt;3000 and rating&gt;600 print || List towns over 3000 people where you have good rating
+|-
+| ''' town population&lt;300 delete || Delete small towns (in scenario editor)
+|-
+| ''' town other_exclusive&gt;0 auth || Open town authority window for towns where someone else have exclusive rights
+|-
+| ''' town other_exclusive&lt;2 auth || Open town authority window for towns where your exclusive rights are almost over (last month remaining)
+|}
+
+Note: This help is for version 18 of the patch.
+
+=== See also ===
+* [[Main/en/Vehicle console commands]]
+* [[Main/en/Industry console commands]]
+
+[[Category:en/Console]]
