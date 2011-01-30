@@ -1,0 +1,16 @@
+[[Translation:Main/en/Multiheaded trains]]{{en/-}}
+[[File:es/Multihead example.png|right|none|frame|Un ejemplo de tren multitracción de OpenTTD en el [[Depósitos/Es|depósito]]]]
+
+Los '''trenes multitracción''' son una interesante manera de incrementar la aceleración, la velocidad media (el tiempo que tarda en ir de una [[Main/es/Estaciones de tren|estación]] a otra) y la capacidad de los [[Main/es/Trenes|trenes]]. Se añaden varias locomotoras para que el mismo tren sea más eficiente subiendo colinas, acelerando y que tenga más capacidad de carga.
+
+Con la opción de "trenes multitracción" activada, las locomotoras son consideradas como vagones y pueden ser movidas de un tren a otro. Su velocidad máxima esta limitada por la locomotora más lenta del tren, pero su [[Main/es/Potencia|potencia]] es la suma de todas las locomotoras que lo componen.
+
+Note que esto difiere de los trenes multitracción en [[Main/es/TTDPatch|TTDPatch]] en varios aspectos: Ya no se tiene que crear la locomotora como si fuera un vagón de tren, manteniendo pulsada la tecla ''Ctrl''. En su lugar, basta con arrastrar la locomotora al tren deseado y se unirá. Además, las locomotoras añadidas restan velocidad al tren, no se la suman (en el caso de que sean más lentas).
+
+Tenga en cuenta que para las locomotoras que ya están compuestas por varias unidades de tracción, como la [[Main/es/AsiaStar|AsiaStar]] y la [[Main/es/T.I.M|T.I.M.]], éstas unidades cuentan como dos vehículos separados, cada uno con la misma velocidad máxima, pero con la mitad de la potencia total. Sólo la primera puede utilizarse para crear una ruta, la segunda se asocia como una parte más del tren (como un vagón).
+
+== Vea también ==
+*[[Main/es/Esfuerzo de tracción|Esfuerzo de tracción]].- para una explicación más detallada de las fuerzas que se tienen en cuenta.
+
+[[Category:es/Ferrocarril]]
+[[Category:es/Configuración y preferencias]]
