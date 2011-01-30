@@ -1,0 +1,16 @@
+[[Translation:Main/en/Multiheaded trains]]{{en/-}}
+[[File:fr/Multihead example.png|right|none|frame|1. - Un exemple de la gestion des trains à locomotives multiples par OpenTTD]]
+
+Les '''trains à locomotives multiples''' sont un moyen d'accroître l'accélération, la vitesse de pointe et le capacité des trains. Plusieurs locomotives sont ajoutées au même train pour lui permettre de mieux grimper les collines, lui donner une meilleure accélération et une plus grande capacité de chargement.
+
+Quand l'option "Trains à locomotives multiples" est activée, les locomotives du train sont traitées comme des voitures et peuvent être déplacées d'un train à un autre. Leur vitesse est seulement celle de la locomotive la moins rapide, mais leur [[Main/fr/Effort de traction|puissance]] est la somme des puissances individuelles.
+
+Notez que cela diffère de la gestion de locomotives multiples de TTDPatch de plusieurs manières: Vous n'avez plus à créer la locomotive comme une voiture du train en gardant Ctrl enfoncé. À la place, vous tirez simplement la seconde locomotive sur le train à laquelle vous voulez l'ajouter. De même, n'oubliez pas que les deuxièmes locomotives ne peuvent que diminuer la vitesse totale, pas l'augmenter.
+
+Notez que pour les trains qui ont déjà plusieurs locomotives, comme l'[[Main/fr/AsiaStar|AsiaStar]] et le [[Main/fr/T.I.M|T.I.M.]], elles sont comptées comme deux voitures séparées, chacune avec la même vitesse maximale mais la moitié de la puissance totale. Seule la première tête peut être utilisée pour créer un trajet, la seconde n'est qu'une voiture et doit être attachée à un autre train.
+
+== Voir aussi ==
+- [[Main/fr/Effort de traction|Effort de traction]] pour une explication plus détaillée sur les forces impliquées.
+
+[[Category:fr/Chemins de fer]]
+[[Category:fr/Réglages et préférences]]
