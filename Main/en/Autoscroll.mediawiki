@@ -1,0 +1,13 @@
+[[Translation:Main/en/Autoscroll]]
+{{en/-}}
+The map scrolls automatically when you move the cursor to the edge of the screen
+
+== Description ==
+Normally, to scroll the main screen you must right click and then drag the mouse.  With this option enabled, it also allows the player to move the cursor to the edge of the screen in the desired direction.  Many people find this rather annoying as it is very easy to accidently scroll the screen.
+
+== Use ==
+This feature is disabled by default. Enable this patch through either the [[Main/en/Advanced Settings/Interface#Pan window when mouse is at the edge|configure patches -> Interface]] window or use the following syntax in [[Main/en/openttd.cfg]]:
+<pre>[patches]
+autoscroll = true</pre>
+
+[[Category:en/Settings & Preferences]][[Category:en/Playing]]
