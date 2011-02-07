@@ -1,0 +1,18 @@
+[[Translation:Main/en/Long date in status bar]]
+{{en/-}}
+A [[Main/en/Advanced Settings|setting]] that changes how the date is displayed in the status bar.
+
+== Description ==
+When this patch is activated the status bar will show the day of the month, month and year all the time.<br>
+<code>Always show long date in status bar: On</code><br>
+[[File:en/LongDateInStatusBar.png|Status bar with long date]]<br><br>
+When this patch is deactivated, the status bar will show just the month and year.  The day of the month can be displayed by pausing the game.<br>
+<code>Always show long date in status bar: Off</code><br>
+[[File:en/ShortDateInStatusBar.png|Normal status bar]]
+
+== Use ==
+This feature is enabled by default. Either disable this patch through the [[Main/en/Advanced Settings/Interface#Always show long date in the status bar|configure patches -> interface]] window or use the following syntax in [[Main/en/openttd.cfg]]:
+ [patches]
+ status_long_date = false
+
+[[Category:en/Settings & Preferences]]
