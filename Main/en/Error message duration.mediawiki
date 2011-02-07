@@ -1,0 +1,13 @@
+[[Translation:Main/en/Error message duration]]
+{{en/-}}
+A [[Main/en/Advanced Settings|setting]] that allows you to change how long error messages are displayed for before automatically closing.
+
+== Description ==
+This patch allows you to change the duration for which error messages (in the red dialogs) are displayed before automatically closing.
+
+== Use ==
+This feature is set to 5 seconds by default. Modify the duration through the [[Main/en/Advanced Settings/Interface#Duration of error message|configure patches -> construction]] window or use the following syntax in [[Main/en/openttd.cfg]]:
+<pre>[patches]
+errmsg_duration = (number of seconds)</pre>
+
+[[Category:en/Settings & Preferences]]
