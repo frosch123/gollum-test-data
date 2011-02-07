@@ -1,0 +1,15 @@
+[[Translation:Main/en/Toolbar position]]
+{{en/-}}
+A [[Main/en/Advanced Settings|setting]] that allows you to set position of the main [[Main/en/Game interface#The Menu bar|toolbar]].
+
+== Description ==
+Align position of the main toolbar to the left side, center or right side of the screen.
+This patch changes only user interface and does not affect the gameplay. If selected on multiplayer, it will not affect any other players.
+
+== Use ==
+This feature is set to 0 by default. It can be set to 0, 1 or 2, which means left side, center or right side of the screen respectively. You can change it through either the [[Main/en/Advanced Settings/Interface#Position of the main toolbar|configure patches -> Interface]] window or use the following syntax in [[Main/en/openttd.cfg]]:
+<pre>[patches]
+toolbar_pos = 0</pre>
+
+
+[[Category:en/Settings & Preferences]]
