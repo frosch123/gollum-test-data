@@ -1,0 +1,17 @@
+[[Translation:Main/en/Always allow small airport]]
+{{en/-}}
+[[Category:en/Settings & Preferences]]
+[[Category:en/Aircraft]]
+
+This [[Main/en/Advanced Settings|setting]] allows you to build small airports at anytime in the game.
+
+== Description ==
+Under normal circumstances, as the game progresses, small airports become grayed out and can no longer be built. This can be a pain if you wish to build an airport but don't have the space for a city airport. If this patch is enabled, you will always be able to build small airports.
+
+== Use ==
+This feature is disabled by default. You can enable this patch through the [[Main/en/Advanced Settings/Construction#Always allow small airports|configure patches -> construction]] window or use the following syntax in [[Main/en/openttd.cfg]]:
+
+<pre>
+[patches]
+always_small_airport = true
+</pre>
