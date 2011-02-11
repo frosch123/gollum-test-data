@@ -1,0 +1,30 @@
+[[Translation:Main/en/Loading Bays]]{{en/-}}
+Les '''aires de chargement''' sont les endroits de chargement et de déchargement pour les véhicules routiers. Il y a deux sortes d'aires de chargement, une pour les bus et les passagers, l'autre pour les poids lourds et les marchandises.
+
+==Zone de chargement de bus==
+[[File:en/Busstation.png|right|frame|Une aire de chargement de bus]]
+Une unique station de bus peut gérer au plus deux bus à la fois. Les bus supplémentaires devront attendre sur la route devant la station. Cela peut provoquer des blocages (temporaires), qui sont quasiment inévitables. Cependant, en utilisant la fonctionnalité ''multistop'', les stations de bus peuvent gérer une capacité de trafic bien plus importante, car les bus essayeront d'occuper une case de station vide au lieu d'encombrer une station occupée. Il n'y a pas de limite au nombre de bus que vous pouvez envoyer à une station donnée.
+
+==Zone de chargement de poids-lourds==
+[[File:en/Lorrystation.png|right|frame|Une aire de chargement de poids lourds dans OpenTTD]]
+Les stations de poids lourds sont identiques à celles des bus, sauf qu'elles gèrent des poids lourds plutôt que des bus. Une unique station de poids lourds peut gérer au plus deux camions en même temps. Cependant, dans OpenTTD, plusieurs stations de poids lourds peuvent être réunies en utilisant la fonctionnalité ''multistop''.
+
+Bien que peu efficace comparé au train, les poids lourds dans OpenTTD sont peu coûteux à entretenir, et peuvent être profitables s'ils sont correctement utilisés. Il est possible de faire tourner une compagnie en n'utilisant que des véhicules routiers.
+
+==Multistop==
+[[File:en/Multistop2ry.png|frame|Une station multistop avec 2 aires de chargement de poids lourds]]
+Multistop est un moyen de construire deux ou plus stations de véhicules routiers proches les unes des autres, tout en partageant le même nom et les mêmes cargaisons. Les bus et les camions utiliseront alors les emplacements disponibles dans toutes les stations connectées, plutôt que d'attendre que les véhicules partent. C'est un moyen utile de gérer les problèmes de capacité de vos stations de bus, quand les villes commencent à grossir.
+
+Les stations multistop peuvent être construite jusqu'à une taille maximale de 16 stations, avant d'être trop grosses. Si vous tentez d'ajouter d'autres arrêts, un avertissement sera affiché. Cette limite inclut les stations connectées d'un type différent.
+
+Il est possible de [[Main/en/Gares/Fr#Combiner des gares|combiner]] des gares routières avec des gares ferroviaires. Par exemple, quand il y a une industrie proche d'une gare mais hors de sa zone de captage, vous pouvez utiliser des camions pour transférer la cargaison dans la gare puis sur un train. Cela s'appelle un [[Main/fr/Service d'approvisionnement|service d'approvisionnement]].
+[[File:en/Roadvehicle16stations.png|frame|Une usine avec 16 aires de chargement de véhicules routiers]]
+[[File:en/Roadvehiclerorostation.png|frame|Un modèle de station plus efficace utilisant des [[Arrêt routier sur la route/Fr|arrêts sur la route]] et des [[Main/en/Construction Routière/Fr#Construire des routes à sens unique|sens uniques]]]]
+
+==Voir aussi==
+*[[Main/fr/Arrêt routier sur la route|Arrêts routiers sur la route]]
+*[[Main/fr/Véhicules Routiers|Véhicules routiers]]
+*[[Main/fr/Gares|Gares]]
+
+[[Category:fr/Jouer]]
+[[Category:fr/Construction]]
