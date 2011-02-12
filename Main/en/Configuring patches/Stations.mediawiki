@@ -1,0 +1,87 @@
+{{en/-}}{{en/Patch Config}}
+
+==Configure Patches Window: Stations Section==
+This window of the [[Main/en/OpenTTD]] patches section enables you to set various settings that affect stations and their behaviour. The image below shows the default settings in OpenTTD 0.6.0.
+{| align="center"
+|- valign="top"
+|__TOC__
+|[[File:en/0.6.0 configurepatches stations.png|centre|none|frame|Configure Patches -> Stations (0.6.0)]]
+|}
+
+====Join train stations built next to each other====
+{{en/Feature|Old|align="right"|text=(since 0.2.0)}}
+Stations built next to each other will be [[Main/en/join train stations|joined]] as long as the station spread is not too high.
+:''Possible Settings:'' <span style="color:green">'''On'''</span> or <span style="color:red">'''Off'''</span>
+:''In [[Main/en/Openttd.cfg]] config file:'' (join_stations = <true|false>)
+{{en/-}}
+====Leave station when any cargo is full, if ‘full load’====
+{{en/Feature|-0.6|align="right"|text=(since 0.2.0 to 0.6.3)}}
+When this patch is enabled the vehicle will leave when [[Main/en/full load any cargo|any cargo is fully loaded]]. If you use lots of planes to transport passengers and mail you may want to disable this patch.
+:''Possible Settings:'' <span style="color:green">'''On'''</span> or <span style="color:red">'''Off'''</span>
+:''In [[Main/en/Openttd.cfg]] config file:'' (full_load_any = <true|false>)
+{{en/-}}
+====Use improved loading algorithm====
+{{en/Feature|Old|align="right"|text=(since 0.3.5)}}
+An [[Main/en/Improved Loading|improved loading algorithm]] (which load only one vehicle and only after it is full and ready to go start loading next), as opposed to the old balanced loading algorithm.
+:''Possible Settings:'' <span style="color:green">'''On'''</span> or <span style="color:red">'''Off'''</span>
+:''In [[Main/en/Openttd.cfg]] config file:'' (improved_load = <true|false>)
+{{en/-}}
+====Deliver cargo to a station only when there is demand====
+{{en/Feature|Old|align="right"|text=(since 0.2.0)}}
+Cargo will only be generated at a station when a vehicle with the [[Main/en/select goods|capacity to pick that cargo up]] has visited the station.  Affects station ratings.
+:''Possible Settings:'' <span style="color:green">'''On'''</span> or <span style="color:red">'''Off'''</span>
+:''In [[Main/en/Openttd.cfg]] config file:'' (selectgoods = <true|false>)
+{{en/-}}
+====TTDPatch compatible nonstop handling====
+{{en/Feature|-0.6|align="right"|text=(since 0.2.0 to 0.6.3)}}
+[[Main/en/new nonstop handling|Non stop handling]] similar to that of TTDPatch.
+When this option is enabled, trains don't stop except where ordered (there's an implied non-stop on every "go to...") and an explicit non-stop order allows a train to use a station as a waypoint, without stopping.  See [http://wiki.ttdpatch.net/tiki-index.php?page=NewNonstopHandling TTDPatch NewNonstopHandling page] for more information.
+:''Possible Settings:'' <span style="color:green">'''On'''</span> or <span style="color:red">'''Off'''</span>
+:''In [[Main/en/Openttd.cfg]] config file:'' (new_nonstop = <true|false>)
+{{en/-}}
+
+====Non uniform stations====
+{{en/Feature|Old|align="right"|text=(since 0.3.0)}}
+Enables you to [[Main/en/nonuniform stations|join stations together at different angles]], so you can have two vertical tracks and three horizontal tracks.
+:''Possible Settings:'' <span style="color:green">'''On'''</span> or <span style="color:red">'''Off'''</span>
+:''In [[Main/en/Openttd.cfg]] config file:'' (nonuniform_stations = <true|false>)
+{{en/-}}
+====Max station spread====
+{{en/Feature|Old|align="right"|text=(since 0.3.2)}}
+How [[Main/en/change station spread|spread out a station can be]] from one end to the other.
+:''Possible Settings:'' <span style="color:#FF7E00">'''4'''</span> to <span style="color:#FF7E00">'''64'''</span> <span style="color:red">(Warning: High setting slows game)</span>
+:''In Openttd.cfg config file:'' (station_spread = <num_val>)
+{{en/-}}
+====Service helicopters at helipads====
+{{en/Feature|Old|align="right"|text=(since 0.3.3)}}
+Helicopters will be [[Main/en/service at helipad|serviced at helipads]] so they don’t need an airport in their orders, but you need to build helicopters from airport. This is moved to [[Main/en/Advanced Settings/Vehicles#Service helicopters at helipads automatically|Vehicles section]] since 0.7.0.
+:''Possible Settings:'' <span style="color:green">'''On'''</span> or <span style="color:red">'''Off'''</span>
+:''In [[Main/en/Openttd.cfg]] config file:'' (service_at_helipad = <true|false>)
+{{en/-}}
+====Allow more realistically sized catchment areas====
+{{en/Feature|Old|align="right"|text=(since 0.3.5)}}
+Changes the [[Main/en/catchment]] areas to be more [[Main/en/modified catchment|realistically sized]].
+:''Possible Settings:'' <span style="color:green">'''On'''</span> or <span style="color:red">'''Off'''</span>
+:''In [[Main/en/Openttd.cfg]] config file:'' (modified_catchment = <true|false>)
+{{en/-}}
+====Load vehicles gradually====
+{{en/Feature|0.5|align="right"|text=(since 0.5.0)}}
+Vehicles will load cargo over a period of time, not full load instantly. If the option to show loading arrows is switched on, this will be reflected correctly.
+:''Possible Settings:'' <span style="color:green">'''On'''</span> or <span style="color:red">'''Off'''</span>
+:''In [[Main/en/Openttd.cfg]] config file:'' (gradual_loading = <true|false>)
+{{en/-}}
+==== Allow drive-through road stops on town owned roads ====
+{{en/Feature period|0.6|0.6|align="right"|text=(since 0.6.0 to 0.6.3)}}
+It will be possible to build [[Main/en/Drive-through Road Stops|drive-through road stops]] on [[Main/en/town]] owned roads.
+:''Possible Settings:'' <span style="color:green">'''On'''</span> or <span style="color:red">'''Off'''</span>
+:''In [[Main/en/Openttd.cfg]] config file:'' (road_stop_on_town_road = <true|false>)
+{{en/-}}
+==== Allow building adjacent stations ====
+{{en/Feature|0.6|align="right"|text=(since 0.6.0)}}
+Using CTRL, while building [[Main/en/station]] directly adjacent to one another will form new station.
+:''Possible Settings:'' <span style="color:green">'''On'''</span> or <span style="color:red">'''Off'''</span>
+:''In [[Main/en/Openttd.cfg]] config file:'' (adjacent_stations = <true|false>)
+{{en/-}}
+
+
+[[Category:en/Settings & Preferences]]
