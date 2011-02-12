@@ -1,0 +1,133 @@
+{{en/-}}{{en/Patch Config}}
+
+==Configure Patches Window: Economy Section==
+The Economy section allows you to set various options related to the
+{| align="center"
+|- valign="top"
+|__TOC__
+|[[File:en/0.6.0 configurepatches economy.png|frame|center|The Configure Patches > Economy window (0.6.0)]]
+|}
+
+====Inflation====
+{{en/Feature|Old|align="right"|text=(since 0.3.4)}}
+Whether [[Main/en/disable inflation|inflation is on or off]], if it is on the prices of things will increase as you progress. This option has been renamed from [[Main/en/#Turn off inflation|Turn off inflation]].
+:''Possible Settings:'' <span style="color:green">'''On'''</span> or <span style="color:red">'''Off'''</span>
+:''In [[Main/en/Openttd.cfg]] config file:'' (inflation = [true|false])
+{{en/-}}
+====Manual primary industry construction method ====
+{{en/Feature|0.6|align="right"|text=(since 0.6.0)}}
+Allows you to [[Main/en/build raw material industries|construct industries]] that produce raw materials as well as industries that use them. None: cannot fund new primary industries. As other industries: can fund new primary industries. Prospecting: can fund new primary industries for same prices as secondary industries.
+:''Possible Settings:'' <span style="color:red">'''none'''</span>, <span style="color:#00693E">'''as other industries'''</span> or <span style="color:#00693E">'''prospecting'''</span>
+:''In [[Main/en/Openttd.cfg]] config file:'' (raw_industry_construction = <num_val>)
+{{en/-}}
+====Allow multiple similar industries per town====
+{{en/Feature|Old|align="right"|text=(since 0.2.0)}}
+A town can have [[Main/en/multiple industries per town|more than one item of a type of industry]].
+:''Possible Settings:'' <span style="color:green">'''On'''</span> or <span style="color:red">'''Off'''</span>
+:''In [[Main/en/Openttd.cfg]] config file:'' (multiple_industry_per_town = [true|false])
+{{en/-}}
+====Industries of the same type can be built close to each other====
+{{en/Feature|-1.0|align="right"|text=(since 0.2.0 to 1.0.0)}}
+Industries of the same type can be [[Main/en/same industries close|built close to each]] other with this patch on, it could cause problems though as you may end up with ten industries of one type in one small area of your map.
+:''Possible Settings:'' <span style="color:green">'''On'''</span> or <span style="color:red">'''Off'''</span>
+:''In [[Main/en/Openttd.cfg]] config file:'' (same_industry_close = [true|false])
+{{en/-}}
+====Allow bribing of the local authority====
+{{en/Feature|Old|align="right"|text=(since 0.3.0)}}
+Allows you to [[Main/en/bribe authority|bribe the local authority]] so that they increase your rating, if you are caught though you will be fined and won’t be able to bribe them for a while.
+:''Possible Settings:'' <span style="color:green">'''On'''</span> or <span style="color:red">'''Off'''</span>
+:''In [[Main/en/Openttd.cfg]] config file:'' (bribe = [true|false])
+{{en/-}}
+====Allow buying exclusive transport rights====
+{{en/Feature|0.6|align="right"|text=(since 0.6.0)}}
+Allows you to disable the purchase of exclusive transport rights in towns. Useful in multiplayer games.
+:''Possible Settings:'' <span style="color:green">'''On'''</span> or <span style="color:red">'''Off'''</span>
+:''In [[Main/en/Openttd.cfg]] config file:'' (exclusive_rights = [true|false])
+{{en/-}}
+==== Allow sending money to other companies ====
+{{en/Feature period|0.6|0.6|align="right"|text=(since 0.6.0 to 0.6.3)}}
+Allows you to donate money to other companies. 
+:''Possible Settings:'' <span style="color:green">'''On'''</span> or <span style="color:red">'''Off'''</span>
+:''In [[Main/en/Openttd.cfg]] config file:'' (give_money = [true|false])
+{{en/-}}
+====Coloured news appears in====
+{{en/Feature|Old|align="right"|text=(since 0.3.2)}}
+The year in which [[Main/en/colored newspaper|coloured newspapers]] appear in.
+This option has been moved to [[Main/en/Advanced Settings/Interface#Coloured news appears in|Interface section]] in 0.7.0.
+:''Possible Settings:'' <span style="color:#00693E">'''0'''</span> to <span style="color:#00693E">'''5,000,000'''</span>
+:''In Openttd.cfg config file:'' (colored_news_year = <num_val>)
+{{en/-}}
+====End game in====
+{{en/Feature|-0.6|align="right"|text=(since 0.3.6 to 0.6.3)}}
+The [[Main/en/ending date]] for randomly generated games.  ''Note: Not operational yet.''
+:''Possible Settings:'' only <span style="color:#00693E">'''2051'''</span>
+:''In Openttd.cfg config file:'' (ending_year = <num_val>)
+{{en/-}}
+====Enable smooth economy (more, smaller changes)====
+{{en/Feature|Old|align="right"|text=(since 0.3.3)}}
+[[Main/en/smooth economy|Changes in production]] will happen more frequently and by smaller percentages.
+:''Possible Settings:'' <span style="color:green">'''On'''</span> or <span style="color:red">'''Off'''</span>
+:''In [[Main/en/Openttd.cfg]] config file:'' (smooth_economy = [true|false])
+{{en/-}}
+====Allow buying shares from other companies====
+{{en/Feature|-0.6|align="right"|text=(since 0.3.6 to 0.6.3)}}
+Allows you to enable or disable the ability to [[Main/en/buying shares|buy shares]] from competitors. You also have to wait for the company to get old enough before buying 25% or a full take over. This age is about 7 years old.
+:''Possible Settings:'' <span style="color:green">'''On'''</span> or <span style="color:red">'''Off'''</span>
+:''In [[Main/en/Openttd.cfg]] config file:'' (allow_shares = [true|false])
+{{en/-}}
+==== Select town road layout ====
+{{en/Feature|0.6|align="right"|text=(since 0.6.0)}}
+Select how towns should build their roads. You can choose between the default algorithm, an improved algorithm, a 2x2 grid, a 3x3 grid or random. The random setting picks one of the four option randomly for each town. This option has been renamed to [[Main/en/Advanced Settings/Economy#Road layout for new towns|Road layout for new towns]] in 0.7.0.
+:''Possible Settings:'' <span style="color:#00693E">'''original'''</span>, <span style="color:#00693E">'''better roads'''</span>, <span style="color:#00693E">'''2x2 grid'''</span>, <span style="color:#00693E">'''3x3 grid'''</span> or <span style="color:#00693E">'''random'''</span>
+:''In [[Main/en/Openttd.cfg]] config file:'' (town_layout = <num_val>)
+====Remove absurd road-elements during the road construction====
+{{en/Feature|0.6|align="right"|text=(since 0.6.0)}}
+Enable if towns should remove useless pieces of road to clean up dead ends.
+:''Possible Settings:'' <span style="color:green">'''On'''</span> or <span style="color:red">'''Off'''</span>
+:''In [[Main/en/Openttd.cfg]] config file:'' (mod_road_rebuild = [true|false])
+{{en/-}}
+==== Town growth speed ====
+{{en/Feature|0.6|align="right"|text=(since 0.6.0)}}
+Select how fast towns should grow. You can also completely disable town growth.
+:''Possible Settings:'' <span style="color:red">'''None'''</span>, <span style="color:#00693E">'''Slow'''</span>, <span style="color:#00693E">'''Normal'''</span>, <span style="color:#00693E">'''Fast'''</span> or <span style="color:#00693E">'''Very fast'''</span>
+:''In [[Main/en/Openttd.cfg]] config file:'' (town_growth_rate = <num_val>)
+{{en/-}}
+==== Proportion of towns that will become cities ====
+{{en/Feature|0.6|align="right"|text=(since 0.6.0)}}
+Set how many towns will become cities. Cities are larger towns which are allowed to grow faster (see also next patch option).
+:''Possible Settings:'' <span style="color:red">'''None'''</span> or <span style="color:#00693E">'''1 in 1'''</span> to <span style="color:#00693E">'''1 in 255'''</span>
+:''In [[Main/en/Openttd.cfg]] config file:'' (larger_towns = <num_val>)
+{{en/-}}
+==== Initial city size multiplier ====
+{{en/Feature|0.6|align="right"|text=(since 0.6.0)}}
+Set how fast cities should grow.
+:''Possible Settings:'' <span style="color:#00693E">'''1'''</span> to <span style="color:#00693E">'''10'''</span>
+:''In [[Main/en/Openttd.cfg]] config file:'' (initial_city_size = <num_val>)
+{{en/-}}
+==In previous versions==
+===Turn off inflation===
+{{en/Feature|-Old|align="right"|text=(since 0.2.0 to 0.3.3)}}
+Whether [[Main/en/disable inflation|turn off inflation is on or off]], if it is on the prices of things will increase as you progress. This option has been renamed to [[Main/en/#Inflation|Inflation]] in 0.3.4.
+:''Possible Settings:'' <span style="color:red">'''0%'''</span> to <span style="color:#00693E">'''100%'''</span>
+:''In [[Main/en/Openttd.cfg]] config file:'' (noinflation = <true|false>)
+{{en/-}}
+====Allow constructing raw material producing industries====
+{{en/Feature|-0.5|align="right"|text=(since 0.3.2 to 0.5.3)}}
+(explanation)
+:''Possible Settings:'' <span style="color:green">'''On'''</span> or <span style="color:red">'''Off'''</span>
+:''In [[Main/en/Openttd.cfg]] config file:'' (build_rawmaterial_ind = [true|false])
+{{en/-}}
+====Snow line height====
+{{en/Feature|-Old|align="right"|text=(since 0.3.2 to 0.4.8)}}
+(explanation)
+:''Possible Settings:'' <span style="color:#00693E">'''2'''</span> to <span style="color:#00693E">'''13'''</span>
+:''In [[Main/en/Openttd.cfg]] config file:'' (snow_line_height = <num_val>)
+{{en/-}}
+====Starting date====
+{{en/Feature|-Old|align="right"|text=(since 0.3.2 to 0.4.8)}}
+(explanation)
+:''Possible Settings:'' <span style="color:#00693E">'''1920'''</span> to <span style="color:#00693E">'''2100'''</span>
+:''In [[Main/en/Openttd.cfg]] config file:'' (starting_date = <num_val>)
+{{en/-}}
+
+[[Category:en/Settings & Preferences]]
