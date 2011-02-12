@@ -1,0 +1,162 @@
+{{en/-}}{{en/Patch Config}}
+
+==Configure Patches Window: Interface Section==
+The Interface section allows you to set change various options related to the game's interface. The screenshot below shows the default settings for OpenTTD 0.6.0.
+{| align="center"
+|- valign="top"
+|__TOC__
+|[[File:en/0.6.0 configurepatches interface.png|frame|center|The Configure Patches > Interface window (0.6.3)]]
+|}
+
+====Show vehicle speed in status bar====
+{{en/Feature|Old|align="right"|text=(since 0.2.0)}}
+Whether or not the vehicle [[Main/en/show vehicle speed|speed is shown]] in the vehicle window status bar, where you can stop or start a train.
+:''Possible Settings:'' <span style="color:green">'''On'''</span> or <span style="color:red">'''Off'''</span>
+:''In [[Main/en/openttd.cfg]] config file:'' ([gui] vehicle_speed = <true|false>)
+{{en/-}}
+====Always show long date in status bar====
+{{en/Feature|Old|align="right"|text=(since 0.2.0)}}
+Shows the [[Main/en/long date in status bar|full date]] all the time rather than just in pause mode.
+:''Possible Settings:'' <span style="color:green">'''On'''</span> or <span style="color:red">'''Off'''</span>
+:''In Openttd.cfg config file:'' ([gui] status_long_date = <true|false>)
+{{en/-}}
+====Show finances window at the end of the year====
+{{en/Feature|Old|align="right"|text=(since 0.2.0)}}
+Whether or not the [[Main/en/show finances at end of year|finances window]] is shown at the end of the year.
+:''Possible Settings:'' <span style="color:green">'''On'''</span> or <span style="color:red">'''Off'''</span>
+:''In Openttd.cfg config file:'' ([gui] show_finances = <true|false>)
+{{en/-}}
+====Pan window when mouse is at the edge====
+{{en/Feature|Old|align="right"|text=(since 0.2.0)}}
+When the mouse is at the edge of the window the view will [[Main/en/autoscroll|scroll]].
+:''Possible Settings:'' <span style="color:green">'''On'''</span> or <span style="color:red">'''Off'''</span>
+:''In Openttd.cfg config file:'' ([gui] autoscroll = <true|false>)
+{{en/-}}
+====Reverse scroll direction====
+{{en/Feature|Old|align="right"|text=(since 0.4.5)}}
+When right clicking, the view will scroll in the opposite direction.
+:''Possible Settings:'' <span style="color:green">'''On'''</span> or <span style="color:red">'''Off'''</span>
+:''In Openttd.cfg config file:'' ([gui] reverse_scroll = <true|false>)
+{{en/-}}
+==== Smooth Viewport Scrolling ====
+{{en/Feature|0.6|align="right"|text=(since 0.6.0)}}
+With this option enabled, the viewport scrolls smoothly to center the view when clicking on a news item or the 'Location' button in various windows, instead of 'jumping' to the location.
+:''Possible Settings:'' <span style="color:green">'''On'''</span> or <span style="color:red">'''Off'''</span>
+:''In Openttd.cfg config file:'' ([gui] smooth_scroll = <true|false>)
+{{en/-}}
+====Duration of error messages====
+{{en/Feature|Old|align="right"|text=(since 0.3.2)}}
+Amount of seconds [[Main/en/error message duration|error messages are shown]] for.
+:''Possible Settings:'' <span style="color:red">'''0'''</span> to <span style="color:green">'''20'''</span>
+:''In Openttd.cfg config file:'' ([gui] errmsg_duration = <num_val>)
+{{en/-}}
+====Position of main toolbar====
+{{en/Feature|Old|align="right"|text=(since 0.3.4)}}
+[[Main/en/toolbar position|Location of the toolbar]] containing all construction tools
+:''Possible Settings:'' <span style="color:#00693E">'''Left'''</span>, <span style="color:#00693E">'''Centre'''</span> or <span style="color:#00693E">'''Right'''</span>
+:''In Openttd.cfg config file:'' ([gui] toolbar_pos = <0-2>)
+{{en/-}}
+==== Show a measurement tooltip when using various build-tools ====
+{{en/Feature|0.5|align="right"|text=(since 0.5.0)}}
+Show a tooltip which indicates length, area and/or height when using various build-tools.
+:''Possible Settings:'' <span style="color:green">'''On'''</span> or <span style="color:red">'''Off'''</span>
+:''In Openttd.cfg config file:'' ([gui] measure_tooltip = <true|false>)
+{{en/-}}
+====Windows snap radius====
+{{en/Feature|Old|align="right"|text=(since 0.3.5)}}
+Radius in pixels in which a window being dragged will [[Main/en/window snap radius|automatically snap]] to the edge of another window or the edge of the screen.
+:''Possible Settings:'' <span style="color:red">'''disabled'''</span> or <span style="color:Green">'''1'''</span> to <span style="color:Green">'''32px'''</span>
+:''In Openttd.cfg config file:'' ([gui] window_snap_radius = <num_val>)
+{{en/-}}
+====Invisible trees====
+{{en/Feature|-0.6|align="right"|text=(0.3.4 to 0.6.3)}}
+Whether or not trees are made entirely [[Main/en/invisible trees|invisible]] when [[Main/en/transparent buildings]] is selected.
+:''Possible Settings:'' <span style="color:green">'''On'''</span> or <span style="color:red">'''Off'''</span>
+:''In Openttd.cfg config file:'' ([gui] invisible_trees = <true|false>)
+====Show town population in the town name label====
+{{en/Feature|Old|align="right"|text=(since 0.3.6)}}
+Display the population of a town inside the same label as the name of a town.
+:''Possible Settings:'' <span style="color:green">'''On'''</span> or <span style="color:red">'''Off'''</span>
+:''In Openttd.cfg config file:'' ([gui] population_in_label = <true|false>)
+{{en/-}}
+====Link landscape toolbar to rail/road/water/airport toolbars====
+{{en/Feature|Old|align="right"|text=(since 0.4.0.1)}}
+When clicking on one of [[Main/en/Railway construction|Rail Construction]], [[Main/en/Roadway construction|Road Construction]], [[Main/en/Waterway construction|Dock Construction]] or [[Main/en/Airport construction|Airport Construction]] buttons on the [[Main/en/Game interface|Menu Bar]] the [[Main/en/Landscaping]] toolbar will be opened along with the relevant construction toolbar.
+:''Possible Settings:'' <span style="color:green">'''On'''</span> or <span style="color:red">'''Off'''</span>
+:''In Openttd.cfg config file:'' ([gui] link_terraform_toolbar = <true|false>)
+{{en/-}}
+==== Show company liveries ====
+{{en/Feature|0.5|align="right"|text=(since 0.5.0)}}
+Set whether or not to show vehicle-type specific livery colours, which can be set through the Company > Colour Scheme dialog.
+:''Possible Settings:'' <span style="color:red">'''Off'''</span>, <span style="color:green">'''Own company'''</span> or <span style="color:#00693E">'''All companies'''</span>
+:''In Openttd.cfg config file:'' ([gui] liveries = <0-2>)
+{{en/-}}
+==== Prefer team chat with <ENTER> ====
+{{en/Feature|0.5|align="right"|text=(since 0.5.0)}}
+With this option enabled, chat messages will only be sent to team members instead of all players, when pressing the Enter key.
+:''Possible Settings:'' <span style="color:green">'''On'''</span> or <span style="color:red">'''Off'''</span>
+:''In Openttd.cfg config file:'' ([gui] prefer_teamchat = <true|false>)
+{{en/-}}
+==== Function of scrollwheel ====
+{{en/Feature|0.6|align="right"|text=(since 0.6.0)}}
+Set whether to use the mouse's scroll wheel for zooming, scrolling the map or disabling it.
+:''Possible Settings:'' <span style="color:#00693E">'''Zoom map'''</span>, <span style="color:green">'''Scroll map'''</span> or <span style="color:red">'''Off'''</span>
+:''In Openttd.cfg config file:'' ([gui] scrollwheel_scrolling = <0-2>)
+{{en/-}}
+==== Map scrollwheel speed ====
+{{en/Feature|0.6|align="right"|text=(since 0.6.0)}}
+Sets the sensitivity of the scrollwheel.
+:''Possible Settings:'' <span style="color:#00693E">'''1'''</span> to <span style="color:#00693E">'''15'''</span>
+:''In Openttd.cfg config file:'' ([gui] scrollwheel_multiplier = <num_val>)
+{{en/-}}
+==== Automatically pause when starting a new game ====
+{{en/Feature|0.6|align="right"|text=(since 0.6.0)}}
+Enabling this option will automatically set the game in pause mode when starting a new game.
+:''Possible Settings:'' <span style="color:green">'''On'''</span> or <span style="color:red">'''Off'''</span>
+:''In Openttd.cfg config file:'' ([gui] pause_on_newgame = <true|false>)
+{{en/-}}
+==== Use the advanced vehicle list ====
+{{en/Feature|0.6|align="right"|text=(since 0.6.0)}}
+The [[Main/en/advanced vehicle list]] allows to place vehicles in groups and perform certain actions on groups, such as replace vehicles and sending to depot.
+:''Possible Settings:'' <span style="color:red">'''Off'''</span>, <span style="color:green">'''Own company'''</span> or <span style="color:#00693E">'''All companies'''</span>
+:''In Openttd.cfg config file:'' ([gui] advanced_vehicle_list = <0-2>)
+{{en/-}}
+==== Use loading indicators ====
+{{en/Feature|0.6|align="right"|text=(since 0.6.0)}}
+This function will display [[Main/en/loading indicators]] above vehicles, which displays the amount of cargo in a vehicle when loading/unloading in percents.
+:''Possible Settings:'' <span style="color:red">'''Off'''</span>, <span style="color:green">'''Own company'''</span> or <span style="color:#00693E">'''All companies'''</span>
+:''In Openttd.cfg config file:'' ([gui] loading_indicators = <0-2>)
+{{en/-}}
+==== Show timetable in ticks rather than days ====
+{{en/Feature|0.6|align="right"|text=(since 0.6.0)}}
+Increases the accuracy of the timetable feature, where one day equals about 74 game ticks.
+:''Possible Settings:'' <span style="color:green">'''On'''</span> or <span style="color:red">'''Off'''</span>
+:''In Openttd.cfg config file:'' ([gui] timetable_in_ticks = <true|false>)
+{{en/-}}
+==== Default rail type (after new game/game load) ====
+{{en/Feature|0.6|align="right"|text=(since 0.6.0)}}
+Set what rail type to use as default.
+:''Possible Settings:'' <span style="color:#00693E">'''First available'''</span>, <span style="color:#00693E">'''Last available'''</span> or <span style="color:#00693E">'''Most used'''</span>
+:''In Openttd.cfg config file:'' ([gui] default_rail_type = <num_val>)
+{{en/-}}
+==== Show building tools when no suitable vehicle tools are available ====
+{{en/Feature|0.6|align="right"|text=(since 0.6.0)}}
+Makes it possible to use a certain building tool even when no vehicles are available for that type of infrastructure.
+:''Possible Settings:'' <span style="color:green">'''On'''</span> or <span style="color:red">'''Off'''</span>
+:''In Openttd.cfg config file:'' ([gui] always_build_infrastructure = <true|false>)
+{{en/-}}
+
+== In previous versions ==
+==== X-size of map ====
+{{en/Feature|-Old|align="right"|text=(0.4.0 to 0.4.8)}}
+See [[Main/en/Map size]].
+:''Possible Settings:'' <span style="color:green">'''6'''</span> to <span style="color:green">'''11'''</span>
+:''In Openttd.cfg config file:'' ([game_creation] map_x = <num_val>)
+{{en/-}}
+==== Y-size of map ====
+{{en/Feature|-Old|align="right"|text=(0.4.0 to 0.4.8)}}
+See [[Main/en/Map size]].
+:''Possible Settings:'' <span style="color:green">'''6'''</span> to <span style="color:green">'''11'''</span>
+:''In Openttd.cfg config file:'' ([game_creation] map_y = <num_val>)
+{{en/-}}
+[[Category:en/Settings & Preferences]]
