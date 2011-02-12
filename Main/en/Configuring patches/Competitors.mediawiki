@@ -1,0 +1,52 @@
+{{en/-}}{{en/Patch Config}}
+
+==Configure Patches Window: Competitors Section==
+The Competitors section allows you to set various options related to the
+{| align="center"
+|- valign="top"
+|__TOC__
+|[[File:en/0.6.0 configurepatches competitors.png|frame|center|The Configure Patches > Competitors window (0.6.0)]]
+|}
+
+====Enable New AI (alpha)====
+{{en/Feature|-0.6|align="right"|text=(since 0.3.4 to 0.6.3)}}
+Whether the [[Main/en/new AI]] is enabled or disabled.
+:''Possible Settings:'' <span style="color:green">'''On'''</span> or <span style="color:red">'''Off'''</span>
+:''In Openttd.cfg config file:'' (ainew_active = <true|false>)
+{{en/-}}
+====Allow AIs in multiplayer (experimental)====
+{{en/Feature|0.4|align="right"|text=(since 0.4.5)}}
+Enables new AI in multiplayer games (requires to have Enable New AI (alpha) on)
+:''Possible Settings:'' <span style="color:green">'''On'''</span> or <span style="color:red">'''Off'''</span>
+:''In Openttd.cfg config file:'' (ai_in_multiplayer = <true|false>)
+{{en/-}}
+====Disable trains for computer====
+{{en/Feature|Old|align="right"|text=(since 0.3.2)}}
+The AI competitors are not allowed to use this type of vehicle when the patch is enabled. This also applies to the underlying infrastructure. So if the AI is not allowed to build [[Main/en/trains]], it will not build tracks either. If [[Main/en/#Enable New AI (alpha)|the new AI is '''enabled''']], disabling [[Main/en/trains]], [[Main/en/aircraft]], and [[Main/en/ships]] will have no effect, but disabling road vehicles will essentially destroy the AI's ability to compete (as it cannot yet build any of the previous three).
+This option has been moved from [[Main/en/Configuring patches/Vehicles#Disable trains for computer|Vehicles section]] in 0.3.4.
+:''Possible Settings:'' <span style="color:green">'''On'''</span> or <span style="color:red">'''Off'''</span>
+:''In Openttd.cfg config file:'' (ai_disable_veh_train = <true|false>)
+{{en/-}}
+====Disable road vehicles for computer====
+{{en/Feature|Old|align="right"|text=(since 0.3.2)}}
+The AI competitors are not allowed to use this type of vehicle when the patch is enabled. This also applies to the underlying infrastructure. So if the AI is not allowed to build [[Main/en/buses]], it will not build roads either. If [[Main/en/#Enable New AI (alpha)|the new AI is '''enabled''']], disabling [[Main/en/trains]], [[Main/en/aircraft]], and [[Main/en/ships]] will have no effect, but disabling road vehicles will essentially destroy the AI's ability to compete (as it cannot yet build any of the previous three).
+This option has been moved from [[Main/en/Configuring patches/Vehicles#Disable road vehicles for computer|Vehicles section]] in 0.3.4.
+:''Possible Settings:'' <span style="color:green">'''On'''</span> or <span style="color:red">'''Off'''</span>
+:''In Openttd.cfg config file:'' (ai_disable_veh_roadveh = <true|false>)
+{{en/-}}
+====Disable aircraft for computer====
+{{en/Feature|Old|align="right"|text=(since 0.3.2)}}
+The AI competitors are not allowed to use this type of vehicle when the patch is enabled. This also applies to the underlying infrastructure. So if the AI is not allowed to build [[Main/en/aircrafts]], it will not build aeroports either. If [[Main/en/#Enable New AI (alpha)|the new AI is '''enabled''']], disabling [[Main/en/trains]], [[Main/en/aircraft]], and [[Main/en/ships]] will have no effect, but disabling road vehicles will essentially destroy the AI's ability to compete (as it cannot yet build any of the previous three).
+This option has been moved from [[Main/en/Configuring patches/Vehicles#Disable aircraft for computer|Vehicles section]] in 0.3.4.
+:''Possible Settings:'' <span style="color:green">'''On'''</span> or <span style="color:red">'''Off'''</span>
+:''In Openttd.cfg config file:'' (ai_disable_veh_aircraft = <true|false>)
+{{en/-}}
+====Disable ships for computer====
+{{en/Feature|Old|align="right"|text=(since 0.3.2)}}
+The AI competitors are not allowed to use this type of vehicle when the patch is enabled. This also applies to the underlying infrastructure. So if the AI is not allowed to build [[Main/en/ships]], it will not build ship docks either. If [[Main/en/#Enable New AI (alpha)|the new AI is '''enabled''']], disabling [[Main/en/trains]], [[Main/en/aircraft]], and [[Main/en/ships]] will have no effect, but disabling road vehicles will essentially destroy the AI's ability to compete (as it cannot yet build any of the previous three).
+This option has been moved from [[Main/en/Configuring patches/Vehicles#Disable ships for computer|Vehicles section]] in 0.3.4.
+:''Possible Settings:'' <span style="color:green">'''On'''</span> or <span style="color:red">'''Off'''</span>
+:''In Openttd.cfg config file:'' (ai_disable_veh_ship = <true|false>)
+{{en/-}}
+
+[[Category:en/Settings & Preferences]]
