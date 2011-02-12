@@ -1,0 +1,20 @@
+{{en/Historic|Setting has been removed in 1.1, the speed is now always shown.}}
+
+[[Translation:Main/en/Show vehicle speed]]
+{{en/-}}
+[[Category:en/Settings & Preferences]]
+[[Category:en/Vehicles]]
+
+A [[Main/en/Advanced Settings|setting]] that displays the current vehicle speed in the vehicle information window.
+
+== Description ==
+Once this patch is activated, you'll know at any time how fast your vehicle is moving. The speed will be either displayed in km/h or mph, depending on your settings. You can change the distance units in the [[Main/en/Game options window]].
+
+== Use ==
+This feature is enabled by default. You can disable it through the [[Main/en/Advanced Settings/Interface#Show vehicle speed in status bar|configure patches -> interface]] window or use the following syntax in [[Main/en/openttd.cfg]]:
+
+<pre>
+[patches]
+vehicle_speed = false
+</pre>
+<center>[[File:en/ShowVehicleSpeed.png]]</center>
