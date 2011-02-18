@@ -1,0 +1,49 @@
+[[Translation:Main/en/Screenshot]]
+{{en/-}}
+Une '''capture d'écran''' est une image de ce qui est vu à l'écran. Dans OpenTTD, les captures d'écran sont automatiquement sauvegardées dans des fichiers sous le répertoire d'installation du jeu. Les captures d'écran sont sauvegardées dans un des formats spécifiés ([http://www.wikipedia.org/wiki/fr:Portable Network Graphic PNG], [http://www.wikipedia.org/wiki/fr:Windows bitmap BMP] ou [http://www.wikipedia.org/wiki/fr:PCX PCX]) dans la [[Main/fr/Fenêtre des options du jeu|fenêtre des optiosn du jeu]]. Voyez les [[Main/fr/Format de copie d'écran|formats de capture d'écran]] pour plus de détails.
+
+==Types de capture d'écran==
+''Standard'' ne reprend que ce qui est réellement vu à l'écran (y compris tous les menus ouverts, les fenêtres, les boîtes de dialogue, etc.).
+
+La ''capture d'écran géante'', d'un autre côté, sauvegarde une image de toute la carte au zoom le plus rapproché (sans les fenêtres actuellement ouvertes); il ne tient pas compte de l'emplacement de la caméra utilisateur ou de son niveau de grossissement. Si la carte est très grande, cela prendra un bon moment pour sauvegarder l'image, et produira un fichier volumineux.
+
+==Prendre une capture d'écran==
+[[File:en/screenshot successbox.png|frame|Un message d'une capture d'écran réussie]]
+Il y a deux moyens de prendre une capture d'écran:
+*Ouvrir le menu ''Autres'' ([[File:en/manual html 51cda05b.png|Autres]]) et choisir ''Copie d'écran'' ou ''Copie d'écran de la carte entière''.
+*Appuyez sur ''Ctrl-S'' ou ''Ctrl-G'' sur le clavier pour avoir une copie d'écran normale ou géante, respectivement.
+
+Un message sera bientôt affiché, une fois la capture d'écran effectuée, montrant le nom assigné au fichier, qui est le nom de votre compagnie suivi de la date dans le jeu.
+
+==Description==
+[[Main/fr/OpenTTD|OpenTTD]] a une fonction de capture d'écran intégrée, et il peut faire les sauvegardes dans différents formats de fichier:
+
+:* BMP - Le format [http://fr.wikipedia.org/wiki/Windows_bitmap Bitmap].
+:* PNG - Le format [http://www.libpng.org/pub/png/ Portable Network Graphics] (en anglais).
+:* PCX - Le format de [http://fr.wikipedia.org/wiki/PCX Paintbrush de ZSoft].
+
+Pour prendre une capture d'écran, appuyez sur ''Ctrl-S'' ou maintenez le [[Main/en/Interface/Fr#Autres|bouton Autre]] appuyé et choisissez ''Copie d'écran''.
+
+===Captures d'écran sur les annonces du forum===
+Le format préféré pour charger sur les [http://forum.openttd.org/ forums OpenTTD] est PNG, pour les raisons suivantes.
+
+Les BMP sont assez gros et ne font pas de bons formats à télécharger, pour les autres joueurs. Comme PNG n'est pas aussi connu que les formats GIF ou JPEG, le premier réflexe de la plupart des gens est de convertir le BMP en GIF ou en JPG. OpenTTD n'est pas adapté pour ces deux formats de fichier.
+
+Voyons pourquoi:
+{|
+|[[File:en/Screenshot optimised pngout.png|none|frame|Format PNG (256 couleurs) - 11ko]]
+La capture d'écran PNG avec 256 couleurs n'a aucune perte d'image, car OpenTTD n'utilise que 256 couleurs! C'est la sortie par défaut du format PNG.
+|[[File:en/Screenshot png.png|none|frame|Format PNG (16 millions de couleurs) - 30ko]]
+La capture d'écran PNG en vraies couleurs n'a pas non plus de perte, mais est plus gros car il n'indexe pas les couleurs.
+|-
+|[[File:en/Screenshot jpg.jpeg|none|frame|Format JPG (16 millions de couleurs) - 33ko]]
+La capture d'écran JPG n'est pas la plus fine. Il y a des pertes de couleur qui font que les signaux combinés et de sortie semblent les mêmes.
+|[[File:en/Screenshot gif.gif|none|frame|Format GIF (256 couleurs) - 40ko]]
+La capture d'écran GIF n'a pas de perte d'image, mais le fichier est plus gros qu'un PNG. GIF est toujours limité à 256 couleurs.
+|}
+* Un outil tiers, [http://advsys.net/ken/utils.htm pngout], peut davantage compresser les images png.
+
+
+JPG est plus adapté aux photographies qu'aux images en couleurs distinctes comme OpenTTD.
+
+{{note/Fr|Les fichiers PCX sont une fonctionnalité d'origine car le Transport Tycoon primitif ne pouvait sauvegarder que dans le format PCX. Les fichiers PCX ne se compressent pas bien, l'exemple ci-dessus en PCX faisant 233Ko.}}
