@@ -1,0 +1,94 @@
+[[Translation:Main/en/Build raw material industries]]
+{{en/-}}
+[[Category:fr/Réglages et préférences]]
+[[Category:fr/Construction]]
+
+Cette [[Main/fr/Options avancées|option]] vous permettra d'acheter et soit de prospecter, soit de placer, des industries qui produisent des matériaux de base.
+
+== Description ==
+[[File:en/raw industry construction basic.png|right|frame|Le menu standard pour financer une nouvelle industrie]]
+[[File:en/raw industry construction extended.png|right|frame|Le menu étendu pour financer une nouvelle industrie]]
+
+Normalement, vous ne pouvez qu'[[Main/en/Industries/Fr#Financer de nouvelles industries|acheter des industries]] qui produisent des matières premières, par ex. des usines, des scieries, etc. Quand cette option est activée, vous êtes également autorisés à construire des industries produisant des matériaux bruts comme des mines de charbon, des mines de fer, etc.
+
+Quand la [[Main/fr/Prospection|méthode de construction prospection]] est sélectionnée, vous pourrez acheter une nouvelle industrie du type choisi, mais l'industrie apparaîtra à un endroit aléatoire de la carte.
+
+Cela n'affecte pas quels types d'industries "apparaissent naturellement", seulement celles que vous pourrez acheter.
+
+== Utilisation ==
+
+La construction d'industries primaires est désactivée par défaut. Quand elle est activée, la liste des industries que vous pouvez acheter inclura les industries produisant des matières premières, avec le prix correspondant. Vous pouvez activer cette option via la fenêtre [[Main/en/Options Avancées/Économie/Fr#Méthode de construction manuelle des industries primaires|Configuration avancée -> Économie -> Industries]], ou en utilisant la syntaxe suivante dans [[Main/fr/openttd.cfg|openttd.cfg]]:
+
+<pre>
+[construction]
+raw_industry_construction = 2
+</pre>
+
+0 = aucune, 1 = comme les autres industries, 2 = prospection
+
+Options valides: [ 0 | 1 | 2 ]
+
+Par défaut: 0
+
+Elle peut aussi être positionnée dans la console en utilisant la commande (seulement en jeu mono-joueur):
+
+<pre>
+set raw_industry_construction <value>
+</pre>
+
+==Liste des industries primaires finançables==
+
+{| class="wikitable"
+
+|-
+
+! Nom
+
+! Coût sans inflation
+
+! Notes
+
+|-
+
+| [[Main/fr/Mine de charbon|Mine de charbon]]
+| 4 927 770£
+
+| Produit du charbon à envoyer aux centrales électriques.
+
+|-
+
+| [[Main/fr/Forêt|Forêt]]
+| 4 687 400£
+
+| Produit du bois à envoyer aux scieries.
+
+|-
+
+| [[Main/fr/Plateforme pétrolière|Plateforme pétrolière]]
+| 5 624 880£
+
+| Visiblement, ne peut être construit que sur la mer.
+|-
+
+| [[Main/fr/Ferme|Ferme]]
+| 5 859 250£
+
+| Produit des céréales et du bétail à envoyer aux usines.
+
+|-
+
+| [[Main/fr/Puits de pétrole|Puits de pétrole]]
+| 5 156 140£
+
+| La production peut soit monter, soit décroître, jusqu'à fermer après des années de fonctionnement, sauf si vous utilisez un GRF spécifique créé par SirkoZ [http://grfcrawler.tt-forums.net/details.php?do=details&id=233]
+
+|-
+
+| [[Main/fr/Mine de fer|Mine de fer]]
+| 5 156 140£
+
+| Produit du minerai de fer à livrer aux aciéries.
+|}
+
+Avec l'inflation, le coût d'une industrie spécifique augmentera (ou a déjà augmenté).
+<!-- Ajout de quelques notes, il se peut que d'autres industries soient à lister ici -->
