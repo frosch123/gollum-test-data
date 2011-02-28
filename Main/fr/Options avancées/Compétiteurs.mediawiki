@@ -1,0 +1,69 @@
+[[Translation:Main/en/Advanced Settings/Competitors]]{{en/-}}{{fr/Options Avancées}}
+
+==Fenêtre Configuration avancée: section Concurrents==
+La section Concurrents vous permet de positionner diverses options liées à l'[[Main/fr/Intelligence artificielle|I.A.]] et au [[Main/fr/Multijoueurs|mode multijoueurs]]. le but de chaque option disponible est expliqué ci-dessous. Pour chacune, la variable respective du [[Main/fr/openttd.cfg|fichier de configuration]] est listée, avec ses valeurs possibles.
+{| align="center"
+|- valign="top"
+|__TOC__
+|[[File:fr/Advset competitors.png|frame|left|La section Concurrents de la fenêtre Configuration avancée (0.7.0)]]
+|}
+
+===<u>Intelligence Artificielle</u>===
+====Permettre les IA en multi-joueurs====
+{{fr/Disponibilité|0.4|align="right"|texte=(depuis 0.4.5)}}
+Permet d'avoir des joueurs contrôlés par l'ordinateur dans les parties multijoueurs. Le nombre de joueurs non-humains peut être fixé via la fenêtre [[Main/fr/Difficulté|Difficulté]].
+:''Valeurs possibles:'' <span style="color:green">'''Activé'''</span> ou <span style="color:red">'''Désactivé'''</span>
+:''Dans le fichier de configuration [[Main/fr/openttd.cfg|openttd.cfg]]:'' ([ai] ai_in_multiplayer = <true|false>)
+
+====Désactiver les trains pour l'ordinateur====
+{{fr/Disponibilité|Old|align="right"|texte=(depuis 0.3.2)}}
+L'ordinateur ne peut pas construire des [[Main/fr/Trains|trains]] ou des [[Main/fr/Construction Ferroviaire|infrastructures ferroviaires]].
+Cette option a été déplacée depuis la [[Main/en/Options avancées 0.3.0 - 0.6.3/Véhicules/Fr#Désactiver les trains pour l'ordinateur|section Véhicules]] en 0.3.4.
+:''Valeurs possibles:'' <span style="color:green">'''Activé'''</span> ou <span style="color:red">'''Désactivé'''</span>
+:''Dans le fichier de configuration [[Main/fr/openttd.cfg|openttd.cfg]]:'' ([ai] ai_disable_veh_train = <true|false>)
+
+====Désactiver les véhicules routiers pour l'ordinateur====
+{{fr/Disponibilité|Old|align="right"|texte=(depuis 0.3.2)}}
+L'ordinateur ne peut pas construire des [[Main/fr/Véhicules Routiers|véhicules routiers]] ou des [[Main/fr/Construction Routière|routes]]. Cette option a été déplacée depuis la [[Main/en/Options avancées 0.3.0 - 0.6.3/Véhicules/Fr#Désactiver les véhicules routiers pour l'ordinateur|section Véhicules]]
+:''Valeurs possiblesActi:'' <span style="color:green">'''Activé'''</span> ou <span style="color:red">'''Désactivé'''</span>
+:''Dans le fichier de configuration [[Main/fr/openttd.cfg|openttd.cfg]]:'' ([ai] ai_disable_veh_roadveh = <true|false>)
+
+====Désactiver les aéronefs pour l'ordinateur====
+{{fr/Disponibilité|Old|align="right"|texte=(depuis 0.3.2)}}
+L'ordinateur ne peut pas construire des [[Main/fr/Avions|avions]] ou des [[Main/fr/Aéroports|aéroports]]. Cette option a été déplacée depuis la [[Main/en/Options avancées 0.3.0 - 0.6.3/Véhicules/Fr#Désactiver les aéronefs pour l'ordinateur|section Véhicules]]
+:''Valeurs possibles:'' <span style="color:green">'''Activé'''</span> ou <span style="color:red">'''Désactivé'''</span>
+:''Dans le fichier de configuration [[Main/fr/openttd.cfg|openttd.cfg]]:'' ([ai] ai_disable_veh_aircraft = <true|false>)
+
+====Désactiver les navires pour l'ordinateur====
+{{fr/Disponibilité|Old|align="right"|texte=(depuis 0.3.2)}}
+L'ordinateur ne peut pas construire des [[Main/fr/Bateaux|bateaux]]. Cette option a été déplacée depuis la [[Main/en/Options avancées 0.3.0 - 0.6.3/Véhicules/Fr#Désactiver les navires pour l'ordinateur|section Véhicules]]
+:''Valeurs possibles:'' <span style="color:green">'''Activé'''</span> ou <span style="color:red">'''Désactivé'''</span>
+:''Dans le fichier de configuration [[Main/fr/openttd.cfg|openttd.cfg]]:'' ([ai] ai_disable_veh_ship = <true|false>)
+
+====Nombre d'opcodes avant de suspendre l'IA====
+{{fr/Disponibilité|0.7|align="right"|texte=(depuis 0.7.0)}}
+Baissez cette valeur si l'I.A. fait ralentir le jeu. Augmentez cette valeur si vous trouvez que l'I.A. ne fait rien au lieu de construire vraiment quelque chose. Laissez la valeur à 10000 si vous n'êtes pas sûrs.
+:''Valeurs possibles:'' <span style="color:#00693E">'''5000'''</span> à <span style="color:#00693E">'''250000'''</span>
+:''Dans le fichier de configuration [[Main/fr/openttd.cfg|openttd.cfg]]:'' ([ai] ai_max_opcode_till_suspend = <5000-250000>)
+{{en/-}}
+----
+
+===Autoriser l'envoi d'argent aux autres compagnies===
+{{fr/Disponibilité|0.7|align="right"|texte=(depuis 0.7.0)}}
+Vous permet de donner de l'argent à une autre compagnie.
+:''Valeurs possibles:'' <span style="color:green">'''Activé''</span> ou <span style="color:red">'''Désactivé'''</span>
+:''Dans le fichier de configuration [[Main/fr/openttd.cfg|openttd.cfg]]:'' ([economy] give_money = <true|false>)
+{{en/-}}
+===Permettre d'acheter des actions d'autres compagnies===
+{{fr/Disponibilité|0.7|align="right"|texte=(depuis 0.7.0)}}
+Vous permet d'autoriser ou non la possibilité d'[[Main/en/Économie/Fr#Actions|acheter des actions]] de vos concurrents. Vous devez aussi attendre que la compagnie soit assez vieille avant d'en  acheter 25% ou de la reprendre complètement. Cet âge est fixé à 6 années.
+:''Valeurs possibles:'' <span style="color:green">'''Activé'''</span> ou <span style="color:red">'''Désactivé'''</span>
+:''In Openttd.cfg config file:'' ([economy] allow_shares = <true|false>)
+{{en/-}}
+
+==Dans les versions précédentes==
+===Voir aussi===
+*'''De 0.3.0 à 0.6.3''' - Voyez [[Main/fr/Options avancées 0.3.0 - 0.6.3|Options avancées 0.3.0 - 0.6.3]] pour des informations sur comment modifier les paramètres.
+*'''Pour 0.2.0 et 0.2.1''' - Voyez [[Main/fr/Options avancées 0.2.0|Options avancées 0.2.0]].
+
+[[Category:fr/Réglages et préférences]]
