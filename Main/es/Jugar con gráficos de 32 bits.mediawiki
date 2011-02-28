@@ -1,0 +1,39 @@
+[[Translation:Main/en/Playing with 32 bpp graphics]]<small><<Volver a la [[Main/es/Desarrollo de gráficos de 32 bits|página principal sobre gráficos de 32 bits]] </small>
+{{en/-}}{{es/Disponibilidad|0.6|align="right"}}
+
+==Zum normal==
+# Obtenga los [[Main/es/Lista de archivos descargables de 32 bits|gráficos de 32 bits]] disponibles.
+# Ponga los archivos tar de gráficos de 32 bits en su directorio <code>data</code> de OpenTTD. Es el mismo directorio donde se ponen los archivos [[Main/es/NewGRF|NewGRF]].
+# En su archivo de configuración del programa <code>openttd.cfg</code> (que se puede modificar con un editor de textos a su elección), añada <code>blitter = 32bpp-simple</code> debajo de la sección <code>[misc]</code>. Guarde el archivo. Esta es una forma infalible para conseguir que funcionen los gráficos de 32 bits, si desea más opciones, familiarícese usted mismo con la sección de abajo.
+
+Tenga en cuenta que los archivos tar que aparecen en este wiki sólo serán admitidos por el juego si usted está utilizando la versión para Windows de los gráficos del juego original. Los jugadores que utilizan la versión más antigua para DOS (archivos GRF que se denominan "''trg1.grf, trgc.grf, trgh.grf, trgi.grf'' y ''trgt.grf''") tienen que extraer los archivos tar en el directorio data en primer lugar. Y a continuación, en todas las carpetas presentes en el directorio data/sprites, debe cambiar el nombre de los archivos GRF correspondientes (por ejemplo, ''trg1r'' por ''trg1'', ''trghr'' por ''trgh'' y así con todos).
+
+===Opciones avanzadas del blitter===
+Aunque usted coloque sprites de 32 bits en su directorio <code>data</code>, OpenTTD no los mostrará de forma predeterminada. Le tienen que indicar al juego tiene que use un blitter (o motor de dibujo de sprites) compatible con 32 bits. Para ello se suelen utilizar la línea <code>blitter =</code> en el archivo de configuración <code>openttd.cfg</code>.
+
+Hay diferentes blitters para elegir. Difieren ligeramente en su forma de dibujar los sprites. A continuación se muestra una lista de blitters disponibles y sus propiedades.
+
+;32bpp-simple
+:Más lento, pero seguro. El blitter <code>simple</code> no optimiza en absoluto los datos de los sprites, sólo convierte la paleta de 8 bits a RGB de 32 bits.
+;32bpp-optimized
+:Más rápido.  El blitter <code>optimized</code> codifica las regiones transparentes de los sprites para hacer el dibujo más rápido ya que casi todos los sprites están rodeados por algún área transparente. El blitter <code>optimized</code> también tiene la animación desactivada.
+;32bpp-anim
+:Es el mismo que el blitter <code>optimized</code> excepto que en este la animación está activada.
+
+A veces, por alguna razón el parámetro <code>blitter</code> no se puede utilizar en <code>openttd.cfg</code>. Si fallara el blitter se puede establecer en el binario de OpenTTD el parámetro <code>-b 32bpp-simple</code>, <code>-b 32bpp-anim</code> o <code>-b 32bpp-optimized</code>. El parámetro -h muestra todos blitters disponibles.
+
+==Zum completo==
+* Mira la página principal sobre [[Main/es/Niveles de Zum Extra de 32 bits|niveles de Zum Extra de 32 bits]].
+
+==Únase al desarrollo de nuevos gráficos==
+¿Le gusta jugar con gráficos de 32 bits? ¿Le gustaría contribuir, con el fin de poder conseguir los gráficos de 32bits completos lo antes posible? Necesitamos '''artistas''', '''administradores''' (para realizar tareas manuales, tales como mantener la documentación organizada) y '''programadores''' (que nos ayuden con la programación de las características para permitir nuevas opciones gráficas)...
+
+Para dibujar gráficos de 32 bits para OpenTTD necesita saber cómo modelar en 3D (a menos que ayude con algunas de las tareas en 2D). Para el software de modelado se sugiere el software en código abierto '''Blender''' disponible en [http://blender.org blender.org].
+
+* visite nuestra sección sobre [[Main/es/Documentación de desarrollo de Gráficos de 32 bits|documentación de desarrollo de Gráficos de 32 bits]]
+
+Para más información sobre el desarrollo de gráficos de 32 bits puede navegar por el [http://www.tt-forums.net/viewforum.php?f=36 foro sobre gráficos para OpenTTD] en tt-forums (en inglés). O también puede contactar con [[Archive/en/Ben|Ben Robbins]], uno de los principales miembros de la comunidad gráfica de OpenTTD.
+
+{{es/Caja de navegación de desarrollo gráfico}}
+
+[[Category:es/Nuevos gráficos]][[Category:es/Gráficos de 32 bits]]
