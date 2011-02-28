@@ -1,0 +1,20 @@
+[[Translation:Main/en/Servicing]]
+La '''maintenance''' a lieu quand un véhicule entre dans un [[Main/fr/Dépôts|dépôt]] ou un [[Main/fr/Dépôts|hangar]]. Cela augmente son taux de fiabilité (réduisant les pannes) et la durée de vie active du véhicule.
+
+==Maintenance automatique==
+Les [[Main/fr/Véhicules|véhicules]] devraient automatiquement aller vers un dépôt ou un hangar quand ils atteignent la fin de leur '''intervalle de maintenance'''. cela peut être modifié dans les détails du véhicule, ou dans les options d'évolution.
+
+==Maintenance programmée==
+[[File:en/Scheduled servicing.png|thumb|280px||right|Maintenance programmée]]Vous pouvez aussi faire aller les véhicules au dépôt de façon régulière en [[Main/fr/Permettre les ordres d'aller au dépôt|ajoutant le dépôt aux ordres du véhicule]]. 
+
+Ainsi, vous entretenez le véhicule plus régulièrement et aidez à prévenir les [[Main/fr/Pannes|pannes]]. Cela évite aussi la possibilité qu'un véhicule ait besoin de maintenance à un endroit non souhaité de son trajet (peut-être quand le dépôt le plus proche est très loin).
+
+Ce type de maintenance devrait être programmé avant qu'un train charge sa cargaison, pour s'assurer qu'elle n'est pas ralentie avant d'atteindre sa destination (réduisant le paiement).
+
+Si vous ne voulez pas que le véhicule aille au dépôt chaque fois que la liste d'ordres est exécutée, vous pouvez utiliser l'instruction ''Maintenance'' sur l'ordre d'aller au dépôt - cela fait que l'ordre sera ignoré si l'intervalle de maintenance n'a pas encore expiré.
+
+==Maintenance forcée (uniquement pour les trains)==
+[[File:en/Forced servicing.png|thumb|right|Maintenance forcée dans un sens en utilisant les [[Signaux/Fr#Signaux dépendants|pré-signaux]]]]
+Les trains peuvent être ''forcés'' d'entrer dans un dépôt en disposant les voies de manière à ne pas leur laisser d'autre choix. Comme il y a une importante réduction de vitesse quand un train entre et quitte un dépôt, le nombre de lignes de maintenance devrait être approprié à la quantité de trafic.
+
+[[Category:fr/Véhicules]]
