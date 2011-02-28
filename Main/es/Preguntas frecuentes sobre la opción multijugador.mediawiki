@@ -1,0 +1,52 @@
+[[Translation:Main/en/FAQ multiplayer]]{{en/-}}
+{{es/FAQmenu}}
+
+Este artículo trata sobre las '''preguntas relacionadas con los aspectos multijugador''' de OpenTTD, por ejemplo, unirse al servidor, crear un servidor, jugar en modo multijugador...
+
+__FORCETOC__
+=====El modo multijugador ¿funciona realmente?=====
+:* Sí, el modo [[Main/es/multijugador|multijugador]] es estable desde la versión 0.3.5. Antes de esta versión era casi imposible poder jugar a juegos multijugador por culpa del mal diseño de red del TTD original.
+
+=====¿Cuántos jugadores pueden unirse a una partida OpenTTD?=====
+:* Hasta 255 jugadores pueden participar en una partida multijugador.
+Sin embargo solo se puede abrir hasta 15 empresas. Cada jugador puede jugar con su propia empresa, unirse a otra empresa ([[Main/es/juego cooperativo|juego cooperativo]]) u observar el juego ([[Main/es/modo espectador|modo espectador]]).
+
+=====¿Cómo puedo empezar un juego multijugador?=====
+:* Puede hacerlo a través de la [[Main/es/ventana de multijugador|ventana de multijugador]] o bien usando la siguiente sintaxis en la línea de comandos:
+<pre>openttd -n IP[:port][#playerID]</pre>
+Ejemplo:
+<pre>openttd -n 192.168.0.1:3979#1</pre>
+Se conecta al servidor situado en la IP 192.168.0.1 en el puerto 3979 y se une como el jugador 1.
+
+=====¿Funciona entre distintas plataformas?=====
+:* Sí. Puede, por ejemplo, iniciar el juego en un servidor con MacOS y otros jugadores con Windows, Linux o cualquier otro sistema pueden unirse.
+
+=====¿Qué puerto utiliza OpenTTD?=====
+:* El puerto por defecto es el 3979, pero se puede cambiar a cualquier otro que quiera cuando se inicia un servidor. Si configura su propio servidor detrás de un router, es necesario que transmita el TCP y UDP a ese puerto.
+:* La comunicación con el servidor maestro se realiza a través del puerto 3979 en UDP (entrada+salida) y a través de 3978 en UDP (salida).
+:* Si usted va a unirse a un servidor no es necesario que transmita los puertos ya que las conexiones son únicamente de salida.
+
+=====¿Puedo usar un servidor dedicado para alojar un juego?=====
+:* Es posible ejecutar un servidor dedicado con el parámetro '-D'. Vea [[Main/es/Servidores dedicados|"servidores dedicados"]] para obtener más detalles.
+
+=====¿Qué ancho de banda usa el juego?=====
+:* La tasa de transmisión es de aproximadamente 1,2 kb/seg se subida y 1,2 kb/seg de bajada por cliente. Multiplicando, en un servidor de 10 jugadores, se utilizarán aproximadamente 12 kb/seg de subida y 12 kb/seg de bajada (aunque el número exacto dependerá del número de transmisiones, etc). Por lo tanto, con 10 jugadores, en un servidor 24/7 se consumen 60 GB al mes (30 GB de subida y 30 de bajada) de ancho de banda si los 10 jugadores estuvieran conectados todo el mes.
+
+=====Estoy teniendo problemas con las trampas. ¡Ayuda!=====
+:* Hay una guía sobre las [[Main/es/Trampas en modo multijugador|Trampas en modo multijugador]] para que se proteja usted mismo de los peores elementos. Además, compruebe las [[Main/es/Normas multijugador|normas multijugador]].
+
+=====¿Hay reglas?=====
+:* Hay algunas reglas, sí. Lea las [[Main/es/Normas multijugador|normas multijugador]]. Lamentablemente los servidores no se ejecutan por el Equipo de OpenTTD, y por lo tanto no tienen ningún control sobre ellos. Por lo tanto, si usted tiene algún problema póngase en contacto con la persona que ejecuta el servidor.
+
+=====¿Se pueden ejecutar comandos de la consola de forma automática?=====
+:* Sí, es posible y puede ser bastante útil. La página [[Main/es/Ejecutar scripts de inicio|Ejecutar scripts de inicio]] se lo explicará con más detalle.
+
+=====Inicié un nuevo servidor. Sin embargo, mi juego no aparece en la lista de juegos de mis amigos, incluso después de insertar el servidor de forma manual en la lista. ¿Por qué sucede esto?=====
+:* Parece que hay un problema al iniciar un nuevo servidor con un ordenador conectado a Internet a través de un módem al que pueden conectarse varios equipos ([http://logmeinwiki.com/wiki/Hamachi:Gaming_over_Hamachi]).
+
+=====¿Qué es un error de desincronización?=====
+:* Vea [[Main/en/Multijugador/Es#Error de sincronización|Error de sincronización]].
+
+[[Category:es/Preguntas frecuentes]]
+[[Category:es/Juego]]
+[[Category:es/Multijugador]]
