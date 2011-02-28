@@ -1,0 +1,92 @@
+[[Translation:Main/en/Advanced Settings/Stations]]{{en/-}}{{fr/Options Avancées}}
+
+==Fenêtre Configuration avancée: section Stations==
+La section Stations vous permet de positionner diverses options liées aux gares. Le but des options disponibles est expliqué ci-dessous. Pour chacune, la variable respective du [[Main/fr/openttd.cfg|fichier de configuration]] est listée, ainsi que ses valeurs possibles.
+{{en/-}}
+{| align="center"
+|- valign="top"
+|__TOC__
+|[[File:fr/Advset stations.png|frame|left|La section Stations de la fenêtre Configuration avancée (0.7.0)]]
+|}
+
+===<u>Gestion des cargaisons</u>===
+====Utiliser l'algorithme amélioré de chargement====
+{{fr/Disponibilité|Old|align="right"|texte=(depuis 0.3.5)}}
+Un Chargement amélioré/Fr|algorithme de chargement amélioré]], qui charge seulement un véhicule à la fois jusqu'à ce qu'il soit complet, avant de charger le second véhicule. Si l'option est désactivée, tous les véhicules dans une gare seront chargés simultanément, ce qui peut amener à bloquer sans raison plusieurs quais.
+:''Valeurs possibles:'' <span style="color:green">'''Activé'''</span> ou <span style="color:red">'''Désactivé'''</span>
+:''Dans le fichier de configuration [[Main/fr/openttd.cfg|openttd.cfg]]:'' ([order] improved_load = <true|false>) 
+{{en/-}}
+====Charger les véhicules graduellement====
+{{fr/Disponibilité|0.5|align="right"|texte=(depuis 0.5.0)}}
+Les véhicules chargeront la cargaison sur une période de temps, et non pas instantanément. Si l'option pour afficher les [[Main/fr/Indicateur de chargement|indicateurs de chargement]] est activée, cela sera correctement reflété.
+:''Valeurs possibles:'' <span style="color:green">'''Activé'''</span> ou <span style="color:red">'''Désactivé'''</span>
+:''Dans le fichier de configuration [[Main/fr/openttd.cfg|openttd.cfg]]:'' ([order] gradual_loading = <true|false>) 
+{{en/-}}
+====Livrer la cargaison seulement sur demande====
+{{fr/Disponibilité|Old|align="right"|texte=(depuis 0.2.0)}}
+La cargaison ne sera générée à la gare que quand un véhicule avec la [[Main/fr/Choisir les marchandises|capacité d'emporter cette cargaison]] aura visité la gare. Cela affecte la cote de la gare.
+:''Valeurs possibles:'' <span style="color:green">'''Activé'''</span> ou <span style="color:red">'''Désactivé'''</span>
+:''Dans le fichier de configuration [[Main/fr/openttd.cfg|openttd.cfg]]:'' ([order] selectgoods = <true|false>)
+{{en/-}}
+----
+===Joindre les gares ferroviaires construites côte à côte===
+{{fr/Disponibilité|Old|align="right"|texte=(depuis 0.2.0)}}
+Les gares construites à côté seront [[Main/fr/Joindre les gares ferroviaires|jointes]] tant que la taille de la gare n'est pas trop grande.
+:''Valeurs possibles:'' <span style="color:green">'''Activé'''</span> ou <span style="color:red">'''Désactivé'''</span>
+:''Dans le fichier de configuration [[Main/fr/openttd.cfg|openttd.cfg]]:'' ([station] join_stations = <true|false>)
+{{en/-}}
+===Gares non uniformes===
+{{fr/Disponibilité|Old|align="right"|texte=(depuis 0.3.0)}}
+Vous permet de [[Main/fr/Gares non uniformes|joindre des gares avec différentes orientations]], afin de pouvoir par exemple avoir deux voies verticales et trois horizontales.
+:''Valeurs possibles:'' <span style="color:green">'''Activé'''</span> ou <span style="color:red">'''Désactivé'''</span>
+:''Dans le fichier de configuration [[Main/fr/openttd.cfg|openttd.cfg]]:'' ([station] nonuniform_stations = <true|false>) 
+{{en/-}}
+===Autoriser la construction de stations adjacentes===
+{{fr/Disponibilité|0.6|align="right"|texte=(depuis 0.6.0)}}
+Maintenir la touche Ctrl enfoncée tout en construisant une [[Main/fr/Gares|gare]] directement adjacente à une autre créera une nouvelle gare plutôt que de réunir les nouvelles case(s) avec la station existante.
+:''Valeurs possibles:'' <span style="color:green">'''Activé'''</span> ou <span style="color:red">'''Désactivé'''</span>
+:''Dans le fichier de configuration [[Main/fr/openttd.cfg|openttd.cfg]]:'' ([station] adjacent_stations = <true|false>)
+{{en/-}}
+===Permettre de joindre une station non adjacente===
+{{fr/Disponibilité|0.7|align="right"|texte=(depuis 0.7.0)}}
+Maintenir la touche Ctrl enfoncée tout en construisant une [[Main/fr/Gares|gare]] affichera une boîte de dialogue pour fusionner la gare avec une station existante dans sa [[Main/fr/Zone de captage|zone de captage]] ou créer une nouvelle station.
+:''Valeurs possibles:'' <span style="color:green">'''Activé'''</span> ou <span style="color:red">'''Désactivé'''</span>
+:''Dans le fichier de configuration [[Main/fr/openttd.cfg|openttd.cfg]]:'' ([station] distant_join_stations = <true|false>)
+{{en/-}}
+===Étendue max. des stations===
+{{fr/Disponibilité|Old|align="right"|texte=(depuis 0.3.2)}}
+Quelle [[Main/fr/Changer l'étendue d'une gare|étendue peut avoir une gare]] d'un bout à l'autre. Si vous dessinez un carré autour de la gare, c'est la taille maximale d'un des côtés du carré en cases.
+:''Valeurs possibles:'' <span style="color:#00693E">'''4'''</span> à <span style="color:#00693E">'''64'''</span> <span style="color:red">(Attention: Une valeur haute ralentit le jeu)</span>
+:''Dans le fichier de configuration [[Main/fr/openttd.cfg|openttd.cfg]]:'' ([station] station_spread = <num_val>)
+{{en/-}}
+===Permettre plus d'aéroport par ville, selon les nuisances===
+{{fr/Disponibilité|0.7|align="right"|texte=(depuis 0.7.0)}}
+Avec cette option activée, le nombre d'aéroports qui peuvent être placés au voisinage d'une ville n'est plus limité. À la place, il dépend du niveau de bruit des [[Main/fr/Aéroports|aéroports]], de leur distance au centre ville et de l'attitude de la ville.
+:''Valeurs possibles:'' <span style="color:green">'''Activé'''</span> ou <span style="color:red">'''Désactivé'''</span>
+:''Dans le fichier de configuration [[Main/fr/openttd.cfg|openttd.cfg]]:'' ([economy] station_noise_level = <true|false>)
+{{en/-}}
+===Autoriser des zones de desserte plus réalistes===
+{{fr/Disponibilité|Old|align="right"|texte=(depuis 0.3.5)}}
+Modifie les [[Main/fr/Zone de captage|zones de captage]] pour être davantage [[Main/fr/Desserte modifiée|taillées de façon réaliste]]. Avec cette option activée, la zone de captage d'une case de gare dépend du "type" de case de station dont il s'agit. Par exemple, les gares ferroviaires ont une plus grande zone de captage que les stations de bus, et les aéroports ont des zones de captage encore plus grandes. Avec les aéroports, la taille de la zone de captage varie même en fonction du type d'aéroport, l'aéroport intercontinental ayant la plus vaste.
+:''Valeurs possibles:'' <span style="color:green">'''Activé'''</span> ou <span style="color:red">'''Désactivé'''</span>
+:''Dans le fichier de configuration [[Main/fr/openttd.cfg|openttd.cfg]]:'' ([station] modified_catchment = <true|false>)
+{{en/-}}
+===Autoriser les arrêts de bus sur les routes des municipalités===
+{{fr/Disponibilité|0.6|align="right"|texte=(depuis 0.6.0)}}
+Il sera possible de construire des [[Main/fr/Arrêt routier sur la route|arrêts routiers sur les routes]] appartenant aux [[Main/fr/Ville|villes]].
+:''Valeurs possibles:'' <span style="color:green">'''Activé'''</span> ou <span style="color:red">'''Désactivé'''</span>
+:''Dans le fichier de configuration [[Main/fr/openttd.cfg|openttd.cfg]]:'' ([construction] road_stop_on_town_road = <true|false>) 
+{{en/-}}
+===Autoriser les arrêts de bus sur les routes des concurrents===
+{{fr/Disponibilité|0.7|align="right"|texte=(depuis 0.7.0)}}
+Il sera possible de construire des [[Main/fr/Arrêt routier sur la route|arrêts routiers sur les routes]] appartenant aux compagnies [[Main/fr/Concurrent|concurrentes]].
+:''Valeurs possibles:'' <span style="color:green">'''Activé'''</span> ou <span style="color:red">'''Désactivé'''</span>
+:''Dans le fichier de configuration [[Main/fr/openttd.cfg|openttd.cfg]]:'' ([construction] road_stop_on_competitor_road = <true|false>)
+{{en/-}}
+
+==Dans les versions précédentes==
+===Voir aussi===
+*'''De 0.3.0 à 0.6.3''' - Voyez [[Main/fr/Options avancées 0.3.0 - 0.6.3|Options avancées 0.3.0 - 0.6.3]] pour des informations sur la manière de modifier les options.
+*'''Pour 0.2.0 et 0.2.1''' - Voyez [[Main/fr/Options avancées 0.2.0|Options avancées 0.2.0]].
+
+[[Category:fr/Réglages et préférences]]
