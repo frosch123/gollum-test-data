@@ -1,0 +1,244 @@
+{{es/Traducción|OpenGFX Readme|25}}
+[[Translation:Main/en/OpenGFX Readme]]{{en/-}}{{es/Gráficos de reemplazo de 8 bits|OpenGFX Léame}}
+'''OpenGFX''' es un [[Main/es/Conjuntos básicos de gráficos|conjunto básico de gráficos]] para OpenTTD y es el resultado del [[Main/es/proyecto de Reemplazo de gráficos|reemplazo de gráficos de 8 bits]].
+
+<div style="float:left; padding-right: 10px;">__TOC__</div>
+
+<div style="clear:left;"></div>
+Versión actual (29 de abril de 2010): OpenGFX 0.2.4
+(Este es un resumen del "Léame" [Readme.txt] oficial de la zona de desarrollo ''DevZone'': http://bundles.openttdcoop.org/opengfx/releases/readme.txt)
+
+== Acerca de OpenGFX ==
+OpenGFX es un conjunto de gráficos básico en código abierto para OpenTTD que puede sustituir totalmente el conjunto gráfico básico de TTD. El objetivo principal de OpenGFX es, por lo tanto, proporcionar un conjunto de gráficos libre que permita jugar con OpenTTD sin necesidad de los archivos (con derechos de autor) del CD del TTD. Esto aumenta potencialmente la base de seguidores de OpenTTD y le hace un juego verdaderamente libre: "libre" también en el sentido de "gratis" (distíngase [http://www.wikipedia.org/wiki/es:Freeware "software gratuito"] y [http://www.wikipedia.org/wiki/es:Software libre "software libre"], que en inglés son muy parecidos [http://www.wikipedia.org/wiki/Gratis versus Libre "freeware" y "free software"] ya que "free" tiene los dos significados) y como [http://www.wikipedia.org/wiki/es:Libertad de expresión "libertad de expresión"].
+
+Desde la versión 0.2.0 OpenGFX tiene un conjunto completo de sprites. Las versiones futuras tendrán por objeto mejorar los gráficos.
+
+== Descargar OpenGFX ==
+OpenGFX está disponible en unos cuantos sitios. Este archivo Léame sólo informará de las ubicaciones de descarga oficiales.
+
+No podemos dar soporte de lugares de descarga de terceras partes, y no podemos devolverle su dinero si usted ha pagado por OpenGFX.
+* Si es nuevo en OpenTTD, la forma más sencilla es utilizar el instalador (Windows) o su administrador de paquetes (linux) e instalar OpenTTD, OpenGFX y también OpenSFX.
+* Si es nuevo en OpenTTD y no puede utilizar un instalador o no tienen acceso a los archivos originales de TTD, tendrá que seguir el procedimiento de instalación manual. Esto realmente no es tan difícil como puede parecer, así que no se preocupe demasiado por eso.
+* Si usted ya tiene OpenTTD instalado con los gráficos originales de TTD, la manera fácil para obtener OpenGFX es instalarlo utilizando el servicio para descargar contenidos en línea.
+
+Si desea comprobar la integridad de su grf o comprobar si su grf auto-compilado es el que debería ser, eche un vistazo a opengfx.obg
+
+== Instalar OpenGFX manualmente ==
+# Primero, asegúrese de que ha descargado e instalado por lo menos OpenTTD versión 0.7.0 o posterior.
+# A continuación, descargue el último paquete de OpenGFX. Hay unas pocas fuentes:
+#* la página de desarrollo http://bundles.openttdcoop.org/opengfx
+#* Puedes buscar OpenGFX en uno de los servidores de archivos binarios de OpenTTD; se encuentra en la sección bananas: http://binaries.openttd.org/bananas/ o en el repositorio oficial: http://dev.openttdcoop.org/projects/opengfx32bpp/files/
+# Descomprima el archivo zip/tar en el directorio /data de OpenTTD (véase la sección 4.2 del archivo [Léame.txt/Es|Léame] de OpenTTD para un estudio detallado sobre todos los directorios de datos que OpenTTD reconoce)
+{{es/Pendiente de traducción}}
+
+
+
+* An OpenTTD folder in your user account's home directory:
+    Windows: C:\My Documents (95, 98, ME)
+             C:\Documents and Settings\<username>\My Documents\OpenTTD (2000, XP)
+             C:\Users\<username>\Documents\OpenTTD (Vista, 7)
+    Mac OSX: ~/Documents/OpenTTD
+    Linux:   ~/.openttd
+* The OpenTTD installation directory.
+
+4. Run OpenTTD. Chances are that you'll miss a sound set. Get one (we recommend
+our sister project OpenSFX) and install it into the same directory as OpenGFX.
+
+5. In the main menu of the game, click the Game Options  button. The Game
+Options  dialog will appear.
+
+6. Select OpenGFX  from the drop-down list below Base graphics set  if that's
+not selected already (bottom left of window). Close the window using the Ã— in
+the upper left corner.
+- If you did not install the original TTD base graphics during the installation
+of OpenTTD, you can skip this step.
+- If you installed the original TTD base graphics as well, this is where you can
+switch base graphic sets.
+
+Now that wasn't so hard, was it? Anyways, if you're having trouble getting
+OpenGFX to work, please file a detailed report on what you did, what error
+messages you got and where you got stuck in the OpenGFX release topic
+at TT-forums: http://www.tt-forums.net/viewtopic.php?f=36&t=40162 or
+(preferrably) at our bug tracker at http://dev.openttdcoop.org/projects/opengfx
+
+== Installing or Updating OpenGFX using the Online Content service ==
+
+This method uses the Online content service (BaNaNaS) to download OpenGFX. In
+order to use this, you need a working OpenTTD and again at least OpenTTD version
+0.7.0 or a recent nightly.
+
+1. Start OpenTTD and on the main menu click the Check online content  button. A
+new window will pop up. If OpenTTD doesn't start, follow the manual installation
+procedure.
+
+2. Find the OpenGFX entry from the list at the left. You can use the search box
+in the upper right corner of the window.
+
+3. Click the little square in front of the OpenGFX entry in order to mark it for
+download.
+
+4. Click the Download  button in the bottom right corner. After download, close
+the open windows.
+
+5. In the main menu of the game, click the Game Options  button. The Game
+Options  dialog will appear.
+
+6. Select OpenGFX  from the drop-down list below Base graphics set  if that's
+not selected already (bottom left of window). Close the window using the Ã— in
+the upper left corner.
+
+
+
+== Contributing and reporting bugs ==
+
+If you spot any grapical bugs or glitches in the available graphics, please let
+us know preferrably via our bug
+tracker http://dev.openttdcoop.org/projects/opengfx/issues
+or via the OpenGFX release topic at TT-forums.net:
+http://www.tt-forums.net/viewtopic.php?f=36&t=40162 . Please make sure
+that you're using the latest available version before reporting a bug. You can
+check the Issue Tracker to see if the bug you've found is already reported (or
+fixed!).
+
+If you have made yourself improvements to either graphics or the source code
+itself, please also share that with us either via the bug tracker or the
+development discussion thread
+http://www.tt-forums.net/viewtopic.php?f=26&t=38122&start=0
+
+== Building OpenGFX ==
+
+The OpenGFX source is available in a Mercurial repository or as gzip'ed tarball.
+You can do an anonymous checkout from http://mz.openttdcoop.org/hg/opengfx ,
+e.g. using
+   hg clone http://mz.openttdcoop.org/hg/opengfx
+or obtain the tarball from http://bundles.openttdcoop.org/opengfx/releases.
+   
+Prerequisites to building OpenGFX:
+* mercurial (only when not building from a tarball, available from http://mercurial.selenic.com/wiki/Download?action=show&redirect=BinaryPackages )
+* gcc (the pre-processor is needed)
+* md5sum (linux, mingw) or md5 (mac)
+* nforenum r2281 or better (available from http://www.openttd.org/download-nforenum)
+* grfcodec r2245 or better (available from http://www.openttd.org/download-grfcodec)
+* some gnu utils: make, cat, sed, awk
+and you might additionally want a text editor of your choice and a graphics
+programme suitable to handle palettes. 
+
+On Windows: we advise to get a mingw development environment, download grfcodec,
+nforenum and mercurial from the sources mentioned above)
+For more detailed instructions see our guide at
+http://dev.openttdcoop.org/projects/home/wiki and the very extensive and
+detailed installation instructions on the mingw wiki at
+http://www.mingw.org/wiki/Getting_Started
+
+On Linux: your system should already have most tools, you'll probably only need
+nforenum, grfcodec and mercurial available from the source mentioned above. For
+installation instructions concerning mercurial refer to the manual of your
+distribution.
+
+On Mac: Install the developers tools and get grfcodec and nforenum from the
+source mentioned above. Mercurial is easiest installed via macports: sudo port
+install mercurial
+
+The use of mercurial is strongly encouraged as only that allows to keep track of
+changes.
+
+Once all tools are installed, get a checkout of the repository and you can build
+OpenGFX using make. The following targets are available:
+* all: builds all grfs and the obg file
+* install: build and then copy OpenGFX in your OpenTTD data directory. Use Makefile.local to specify a different path.
+* clean: cleans all generated files
+* mrproper: also cleans generated directories
+* bundle_src: create a source tarball
+* bundle_zip: create a zip archive of OpenGFX
+* bundle_bz2: create a bzip2 archive of OpenGFX
+* bundle_tar: create a tar archive of OpenGFX
+* check: checks the md5 sums of the built grf and obg files against those of the official release versions
+
+Given the usual case that you modify something within OpenGFX and want to test
+that, a simple 'make install' should suffice and you can immediately test the
+changes ingame, if you selected the nightly version of OpenGFX. Given default
+paths, a 'make install' will overwrite a previous nightly version of OpenGFX.
+Mind to re-start OpenTTD as it needs to re-read the grf files.
+
+=== Notes for package maintainers: ===
+
+* Checking for build success: The source releases contain an additional file opengfx-<version>.md5 which indicates the md5 sums of the generated files as released in the binary release. You can check your build by running 'make check'. Mind that you'll overwrite the file with the original md5 sums, if you call 'make bundle_src' or 'make md5'.
+* The source release also contains a Makefile.local and a slightly appended Makefile.def, both supplying additional variable definitions which otherwise would be determined by accessing repository properties.
+* The variable which supplies the install path changed for the sake of consistency and better readability to INSTALL_DIR. The old INSTALLDIR still works but is deprecated.
+
+== License ==
+
+OpenGFX Graphics Replacement Set for OpenTTD Copyright (C) 2007-2009 OpenGFX
+Authors (see below)
+
+This program is free software; you can redistribute it and/or modify it under
+the terms of the GNU General Public License version 2 as published by the Free
+Software Foundation.
+
+This program is distributed in the hope that it will be useful, but WITHOUT ANY
+WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A
+PARTICULAR PURPOSE. See the GNU General Public License
+for more details.
+
+You should have received a copy of the GNU General Public License along with
+this program; if not, write to the Free
+Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301
+USA.
+
+== Credits ==
+
+OpenGFX is created by the following people (in reverse alphabetical order):
+
+* Zuu (Leif Linse)
+* Zephyris (Richard Wheeler)
+* Varivar
+* uzurpator
+* Spaz O Mataz
+* Soeb (Stanislaw Gackowski)
+* skidd13 (Benedikt Brüggemeier)
+* Rubidium (Remko Bijker)
+* Roujin (Manuel Wolf)
+* Red*Star (David Krebs)
+* Raumkraut (Mel Collins)
+* Purno (Mark Leppen)
+* planetmaker (Ingo von Borstel)
+* PikkaBird (David Dallaston)
+* northstar2
+* Mr. X
+* mph (Matthew Haines)
+* mb (Michael Blunck)
+* molace (Zolt¡n Molnar)
+* Lawton27 (Jack Lawton)
+* LordAzamath (Johannes Madis Aasmae)
+* lead@inbox (Serge Saphronov)
+* Jonha
+* Irwe (Alexander Irwe)
+* Gen.Sniper
+* FooBar (Jasper Vries)
+* erikjanp
+* EdorFaus (Frode Austvik)
+* drginaldee
+* DJ Nekkid (Thomas Mjelva)
+* DanMacK (Dan MacKellar)
+* buttercup
+* bubersson (Petr Mikota)
+* Born Acorn (Chris Jones)
+* Bilbo
+* Ben_Robbins_ (Ben Robbins)
+* athanasios (Athanasios Arthur Palaiologos)
+* andythenorth (Andrew Parkhouse)
+* AndersI (Anders Isaksson)
+* Ammler (Marcel Gmür)
+
+A detailed list of who worked on what is available in the file
+docs/authoroverview.csv in the source repository.
+
+Thanks go out to the guys at #openttdcoop for providing the source repository
+and bug tracking services.
+
+==See also==
+* [[Main/en/Graphics Replacement]]
+* [[Main/en/Graphics Replacement FAQ]]
+
+[[Category:es/Gráficos de reemplazo de 8 bits]]
+[[Category:es/Gráficos base]]
