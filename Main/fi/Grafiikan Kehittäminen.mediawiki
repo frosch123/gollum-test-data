@@ -1,0 +1,50 @@
+[[Translation:Main/en/Graphics Development]]
+
+OpenTTD tukee pelin muokkausta '''NewGRF:n''' liitännäisillä. NewGRF voi muuttaa pelattavuutta, korvata olemassa olevaa grafiikkaa ja luoda uutta grafiikkaa. Lisäksi OpenTTD tukee 32bit grafiikkaa, joka korvaa olemassa olevaa 8bit grafiikkaa (joko kannasta tai NewGRF:sta). On olemassa 32bit "täysi-zoom" -haara, joka lisää kaksi suurennustasoa OpenTTD:n. Huomaa kuitenkin, että "täysi-zoom" korvausgrafiikka ei toimi virallisessa ja päivittämättömässä OpenTTD:n versiossa.
+
+{| 
+|-
+|align="center" rowspan="2" style="background-color: #f1f2fe; border: 1px solid #c7c8fe; margin: 0; padding: 1em 1em 0em 1em;"|
+[[File:en/Originalbungalows.png]]
+   
+<font size="4">'''8bit'''</font>
+
+
+|style="background-color: #e7ebff; border: 1px solid #c7c8fe; margin: 0; padding: 1em 1em 0em 1em;"|
+<font size="3">'''NewGRF kehittämisen vihjeen ja niksit'''</font>
+*[[Main/fi/NewGRF kehitystyökalut|NewGRF kehitystyökalut]]
+*[[Main/fi/NewGRF Testaus|NewGRF:n testaus]]
+*[[Main/fi/Yhdenmukaistaminen|Vinkkejä Sprite-grafiikan yhdenmukaistamiseksi]]
+*[[Main/fi/NewGRFYhteensopimattomuus|Muutokset NewGRF:ssa, jotka johtavat pelissä edellisen tallenteen lataamisen yhteensopivuuden hajoamiseen]]
+*'''8bit [[Main/fi/OpenGFX|OpenGFX]] projekti''' (GPL v2 - lisensoitu kanta OpenTTD:n)
+*[http://dev.openttdcoop.org/projects DevZone] - Useiden NewGRF-projektien kotisivu
+*[http://wiki.ttdpatch.net/tiki-index.php?page=NewGraphicsSpecs Wiki NewGRF määrittelyllä]
+|-
+|style="background-color: #e7ebff; border: 1px solid #c7c8fe; margin: 0; padding: 1em 1em 0em 1em;"|
+<font size="3">'''[[Main/en/NewGRF List|NewGRF Lista]] ja [[Main/fi/NewGRF|NewGRF käyttöopas]]'''</font>
+
+:NewGRF muuttaa pelattavuutta ja grafiikkaa. NewGRF:n dokumentointi, asentaminen ja lista muutamasta merkittävästä NewGRF:stä.
+|-
+|align="center" style="background-color: #f1f2fe; border: 1px solid #c7c8fe; margin: 0; padding: 1em 1em 0em 1em;"|
+[[File:en/Bungaloes.png|150px]]
+
+<font size="4">'''32bit'''</font>
+|style="background-color: #e7ebff; border: 1px solid #c7c8fe; margin: 0; padding: 1em 1em 0em 1em;"|
+<font size="3">'''[[Main/fi/32bit Grafiikan kehittäminen|32bit Grafiikan kehittämisen]] dokumentointi'''</font>
+
+:Kehityksen dokumentointi 32bit grafiikalle. Täällä on dokumentointuna kaikki teoriasta (koot, valoisuusmäärittelyt, opetusohjelmat yms.) käytäntöön (materiaalit, tarpeistot).
+
+
+<font size="3">'''Grafiikan kehittämisen seurantapalvelin'''</font>
+
+:Pysy selvillä meneillään olevasta 32bit OpenTTD:stä. Katso mitä on tarkalleen muutettu ja mitä on vielä tehtävänä.
+:[[Main/fi/32bit Grafiikan kehittämisen seurantapalvelin|32bit - Alkuperäinen mittakaava]]
+:[[Main/fi/32bit Grafiikan kehittämisen seurantapalvelin (extra zoom)|32bit - Extra Zoom]]
+
+<font size="3">'''Viimeistellyt grafiikat'''</font>
+
+:[[Main/en/List of downloadable 32 bpp tars|32bit - Alkuperäinen mittakaava]] - Lista viimeistellyista, pakatuista ja julkaistuista 32bit spriteistä, joilla voit pelata OpenTTD:tä heti. 
+:[[Main/en/Playing with 32 bpp graphics|32bpp - Extra Zoom]] - Lista grafiikoista, joissa on kaksi ylimääräistä suurennus tasoa ja informaatiota päivityksestä.
+|}
+
+[[Category:fi/Uudet grafiikat]]
