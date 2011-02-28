@@ -1,0 +1,50 @@
+[[Translation:Main/en/Graphics Development]]
+
+OpenTTD может модифицироваться посредством подключения новых модулей ('''NewGRF'''). NewGRF могут изменять процесс игры, заменять существующую и добавлять новую графику.
+
+Кроме того, OpenTTD поддерживает 32-битную (32bpp) графику, которая в любом случае заменяет существующие 8-битные спрайты, вне зависимости, изначальные или добавленные через NewGRF. Так же существует отдельная ветка, 32-битное «дополнительное приближение» (32bpp «full-zoom»), которая добавляет два дополнительных уровня приближения в игру. Однако заметим, что графика «дополнительного приближения» '''не''' будет работать в официальной непропатченной версии OpenTTD.
+
+{| 
+|-
+|align="center" rowspan="2" style="background-color: #f1f2fe; border: 1px solid #c7c8fe; margin: 0; padding: 1em 1em 0em 1em;"|
+[[File:en/Originalbungalows.png]]
+   
+<font size="4">'''8bpp'''</font>
+
+
+|style="background-color: #e7ebff; border: 1px solid #c7c8fe; margin: 0; padding: 1em 1em 0em 1em;"|
+<font size="3">'''Разработка NewGRF'''</font>
+*[[Main/ru/Инструменты для разработки NewGRF|Инструменты для разработки NewGRF]]
+*[[Main/en/NewGRF Debugging|Исправление ошибок (debugging) в NewGRF (англ.)]]
+*[[Main/en/Alignment|Особенности расположения спрайтов (англ.)]]
+*'''Проект 8-битного (8bpp) [[Main/ru/OpenGFX Прочти меня|комплекта базовой графики OpenGFX]]''' (по лицензии GPL v2 для OpenTTD)
+*[http://dev.openttdcoop.org/projects DevZone] — страница нескольких проектов NewGRF (англ.)
+*[http://wiki.ttdpatch.net/tiki-index.php?page=NewGraphicsSpecs Wiki со спецификацией NewGRF (англ.)]
+|-
+|style="background-color: #e7ebff; border: 1px solid #c7c8fe; margin: 0; padding: 1em 1em 0em 1em;"|
+<font size="3">'''[[Main/en/NewGRF List|Список готовых NewGRF (англ.)]] и [[Main/ru/NewGRF|Руководство по использованию NewGRF]]'''</font>
+
+:NewGRF изменяет процесс игры и графику. Документация по использованию и установке NewGRF. Список некоторых основных NewGRF.
+|-
+|align="center" style="background-color: #f1f2fe; border: 1px solid #c7c8fe; margin: 0; padding: 1em 1em 0em 1em;"|
+[[File:en/Bungaloes.png|150px]]
+
+<font size="4">'''32bpp'''</font>
+|style="background-color: #e7ebff; border: 1px solid #c7c8fe; margin: 0; padding: 1em 1em 0em 1em;"|
+<font size="3">'''Документация по [[Main/ru/Разработка 32 битной графики|разработке 32-битной графики]]'''</font>
+
+:Документация по разработке 32-битной графики. Начиная от теории (размеры, особенности освещения, руководства, и т.д.), заканчивая практикой (материалы, свойства).
+
+<font size="3">'''Отслеживание изменений в разработке графики'''</font>
+
+:Будьте на переднем крае развития 32-битной графики OpenTTD. Смотрите, что конкретно было конвертировано и что осталось на потом.
+:[[Main/en/32bpp graphics development tracker|32bpp — Оригинальный масштаб (англ.)]]
+:[[Main/en/32bpp graphics development tracker (extra zoom)|32bpp — Дополнительное приближение (англ.)]]
+
+<font size="3">'''Готовая графика'''</font>
+
+:[[Main/en/List of downloadable 32 bpp tars|32bpp — Оригинальный масштаб (англ.)]] — Список выпущенной (готовой и упакованной) 32-битной графики, с которую можно использовать в OpenTTD прямо сейчас.
+:[[Main/en/Playing with 32 bpp graphics|32bpp — Дополнительное приближение (англ.)]] — Список графики с двумя дополнительными уровнями приближения и информация о настройке.
+|}
+
+[[Category:en/New Graphics]]
