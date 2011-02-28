@@ -1,0 +1,107 @@
+[[Translation:Main/en/Advanced Settings/Construction]]{{en/-}}{{fr/Options Avancées}}
+
+==Fenêtre des Options avancées: section Construction==
+La section Construction vous permet de positionner diverses options liées à la construction et à l'aménagement du terrain. Le but des options disponibles est expliqué ci-dessous. Pour chacune, la variable respective du [[Main/fr/openttd.cfg|fichier de configuration]] est listée, avec ses valeurs possibles.
+{{en/-}}
+{| align="center"
+|- valign="top"
+|__TOC__
+|[[File:fr/Advset construction.png|frame|left|La section Construction de la fenêtre des Options avancées (1.0.1)]]
+|}
+
+===<u>Signaux</u>===
+====Signaux ferroviaires du côté du sens de conduite====
+{{fr/Disponibilité|Old|align="right"|texte=(depuis 0.2.0)}}
+Indique si les signaux sont affichés du [[Main/fr/Signal du bon côté|côté]] où les véhicules routiers circulent, ou à l'opposé.
+:''Valeurs possibles:'' <span style="color:green">'''Activé'''</span> ou <span style="color:red">'''Désactivé'''</span>
+:''Dans le fichier de configuration openttd.cfg:'' ([construction] signal_side = <true|false>)
+{{en/-}}
+====Activer le GUI des signaux====
+{{fr/Disponibilité|0.6|align="right"|texte=(depuis 0.6.0)}}
+Avec cette option activée, cliquer sur le bouton [[Signaux/Fr|signal] conduira à l'ouverture d'une barre d'outils de signaux supplémentaire, qui vous permet de choisir certains types de signaux (sémaphore, signal lumineux, [[Main/en/Signaux/Fr#Signaux dépendants|pré-signaux]]) directement, sans avoir à boucler entre eux en utilisant la touche Ctrl. Utilisez Ctrl pour choisir vos types de signaux est toujours possible quand cette option est activée.
+:''Valeurs possibles:'' <span style="color:green">'''Activé'''</span> ou <span style="color:red">'''Désactivé'''</span>
+:''Dans le fichier de configuration openttd.cfg:'' ([gui] enable_signal_gui = <true|false>) 
+{{en/-}}
+====Espacements des signaux en mode drag & drop====
+{{fr/Disponibilité|Old|align="right"|texte=(ddepuis 0.3.4)}}
+En utilisant le style "Autorail" de tirer les signaux (ou lors de l'autocomplétude de signaux en utilisant ctrl+tirer), vous pouvez fixer leur densité (placés toutes les X cases) avec cette option. Le nombre de cases de voie vides est égal à la valeur choisie moins un.
+:''Valeurs possibles:'' <span style="color:#00693E">'''1 case'''</span> à <span style="color:#00693E">'''20 cases'''</span>
+:''Dans le fichier de configuration openttd.cfg:'' ([gui] drag_signal_density = <num_val>) 
+{{en/-}}
+====Construire automatiquement des sémaphores avant====
+{{fr/Disponibilité|0.6|align="right"|texte=(depuis 0.6.0)}}
+Fait des sémaphores (ancien style de signalisation) les signaux placés par défaut avant l'année que vous avez configurée via cette option.
+:''Valeurs possibles:'' <span style="color:red">'''0'''</span> à <span style="color:#00693E">'''5000000'''</span>
+:''Dans le fichier de configuration openttd.cfg:'' ([gui] semaphore_build_before = <year>) 
+{{en/-}}
+====Type de signaux construit par défaut====
+{{fr/Disponibilité|0.7|align="right"|texte=(depuis 0.7.0)}}
+Fixe le type de signaux à construire par défaut en utilisant l'ouil de signaux. Choix entre [[Main/en/Signaux/Fr#Signaux de blocs|signaux de bloc]], [[Main/en/Signaux/Fr#Signaux de chemin|signaux de voie]] et signaux de voie unidirectionnels. Si l'[[Main/en/#Activer le GUI des signaux|interface des signaux]] est activée, ce type de signal sera sélectionné par défaut.
+:''Valeurs possibles:'' <span style="color:#00693E">'''Signaux de bloc'''</span>, <span style="color:#00693E">'''Signaux de chemin'''</span> ou <span style="color:#00693E">'''Signaux de chemin à sens unique'''</span>
+:''Dans le fichier de configuration openttd.cfg:'' ([gui] default_signal_type = <0-2>)
+{{en/-}}
+====Cycle de types de signaux====
+{{fr/Disponibilité|0.7|align="right"|texte=(depuis 0.7.0)}}
+Définit quels types de signaux doivent être parcourus lors du cloc avec Ctrl sur un signal prêt à être construit. Choisit de boucler entre tous les types de [[Main/fr/Signaux|signaux]], simplement entre les types de [[Main/en/Signaux/Fr#Signaux de blocs|signaux de bloc]] ou seulement les types de [[Main/en/Signaux/Fr#Signaux de chemin|signaux de voie]].
+:''Valeurs possibles:'' <span style="color:#00693E">'''Signaux de bloc uniquement'''</span>, <span style="color:#00693E">'''Signaux de chemin uniquement'''</span> ou <span style="color:#00693E">'''Tous'''</span>
+:''Dans le fichier de configuration openttd.cfg:'' ([gui] cycle_signal_types = <0-2>)
+{{en/-}}
+----
+===Construction côtière et sur pentes===
+{{fr/Disponibilité|Old|align="right"|texte=(depuis 0.2.0)}}
+Normalement, vous ne pouvez [[Main/fr/Construire en pente|construire des voies et des routes en pente]] que parallèlement à l'inclinaison; avec cette option activée, vous pouvez construire presque tout sur une pente avec des murs de soutien construits automatiquement.
+:''Valeurs possibles:'' <span style="color:green">'''Activé'''</span> ou <span style="color:red">'''Désactivé'''</span>
+:''Dans le fichier de configuration openttd.cfg:'' ([construction] build_on_slopes = <true|false>)
+{{en/-}}
+===Permettre l'aménagement de terrain sous les bâtiments, les voies, etc. (autopente)===
+{{fr/Disponibilité|0.6|align="right"|texte=(depuis 0.6.0)}}
+Cette option allège considérablement les restrictions d'aménagement de terrain et vous permet de modifier le terrain sous des objets, alors que vous auriez dû d'abord supprimer l'objet.
+:''Valeurs possibles:'' <span style="color:green">'''Activé'''</span> ou <span style="color:red">'''Désactivé'''</span>
+:''Dans le fichier de configuration openttd.cfg:'' ([construction] autoslope = <true|false>)
+{{en/-}}
+===Permettre le retrait de plus d'éléments possédés par une ville===
+{{fr/Disponibilité|Old|align="right"|texte=(depuis 0.3.3)}}
+L'attitude de la ville est plus indulgente envers vous quand vous [[Main/fr/Dynamite extra|supprimez]] leur propriété.
+:''Valeurs possibles:'' <span style="color:green">'''Activé'''</span> ou <span style="color:red">'''Désactivé'''</span>
+:''Dans le fichier de configuration openttd.cfg:'' ([construction] extra_dynamite = <true|false>) 
+{{en/-}}
+===Autoriser la construction de ponts très longs===
+{{fr/Disponibilité|Old|align="right"|texte=(depuis 0.2.0)}}
+Vous permet de construire de très [[Main/fr/Pont plus long|longs ponts]], plus longs que précédemment.
+:''Valeurs possibles:'' <span style="color:green">'''Activé'''</span> ou <span style="color:red">'''Désactivé'''</span>
+:''Dans le fichier de configuration openttd.cfg:'' ([construction] longbridges = <true|false>)
+{{en/-}}
+===Les aéroports n'expirent jamais===
+{{fr/Disponibilité|1.0|align="right"|texte=(depuis 1.0.0)}}
+Les aéroports peuvent avoir une année d'expiration, comme les véhicules. Les aéroports expirés ne peuvent plus être construits. Quand cette option est activée, les aéroports n'expirent jamais.
+Cette option a été renommée depuis [[Main/en/#Toujours autoriser les petits aéroports|Toujours autoriser les petits aéroports]] en r16614.
+:''Valeurs possibles:'' <span style="color:green">'''Activé'''</span> ou <span style="color:red">'''Désactivé'''</span>
+:''Dans le fichier de configuration openttd.cfg:'' ([station] never_expire_airports = <true|false>)
+{{en/-}}
+===Autoriser le terrassement sur les bords de la carte===
+{{fr/Disponibilité|0.7|align="right"|texte=(depuis 0.7.0)}}
+Avec cette option activée, la carte n'a pas besoin d'avoir de l'eau tout autour d'elle et vous permet d'aménager ses bords, comme tout autre emplacement ailleurs.
+Sélectionner cette fonctionnalité apporte aussi un ensemble supplémentaire de boutons dans le [[Main/fr/TGP|générateur de carte]] pour choisir le type de bord (eau/forme libre) pour chaque côté de la carte.
+:''Valeurs possibles:'' <span style="color:green">'''Activé'''</span> ou <span style="color:red">'''Désactivé'''</span>
+:''Dans le fichier de configuration openttd.cfg:'' ([construction] freeform_edges = <true|false>)
+{{en/-}}
+===Plantation des arbres durant la partie===
+{{fr/Disponibilité|1.0|align="right"|texte=(depuis 1.0.0)}}
+Avec cette option, vous pouvez activer/désactiver la génération d'arbres en cours de jeu.
+:''Valeurs possibles:'' <span style="color:red">'''Nulle part''' (les scieries ne fonctionneront plus)</span>, <span style="color:#00693E">'''Seulement dans les forêts tropicales'''</span> ou <span style="color:#00693E">'''Partout'''</span>
+:''Dans le fichier de configuration openttd.cfg:'' ([construction] extra_tree_placement = <0-2>)
+{{en/-}}
+
+==Dans les versions précédentes==
+===Toujours autoriser les petits aéroports===
+{{fr/Disponibilité|-0.7|align="right"|texte=(depuis 0.3.2 jusqu'à 0.7.5)}}
+Les petits aéroports ne sont [[Main/fr/Toujours autoriser les petits aéroports|pas supprimés]] de la liste de construction des aéroports quand les plus grands apparaissent. Si cette option est désactivée, vous ne pouvez plus construire de petits aéroports dès que les grands aéroports deviennent disponibles.
+Cette option a été renommée en [[Main/en/#Les aéroports n'expirent jamais|Les aéroports n'expirent jamais]] en r16614.
+:''Valeurs possibles:'' <span style="color:green">'''Activé'''</span> ou <span style="color:red">'''Désactivé'''</span>
+:''Dans le fichier de configuration openttd.cfg:'' ([station] always_small_airport = <true|false>) 
+{{en/-}}
+===Voir aussi===
+*'''De 0.3.0 à 0.6.3''' - Voyez [[Main/fr/Options avancées 0.3.0 - 0.6.3|Configurer les ajouts]] pour plus d'information sur comment modifier les paramètres.
+*'''Pour 0.2.0 et 0.2.1''' - Voyez [[Main/fr/Options avancées 0.2.0|Configurer les options en 0.2.0]].
+
+[[Category:fr/Réglages et préférences]]
