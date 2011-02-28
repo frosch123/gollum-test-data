@@ -1,0 +1,23 @@
+[[Translation:Main/en/Never expire vehicles]]{{en/-}}
+Cette [[Main/fr/Options avancées|option]] empêchera les véhicules de devenir "périmés", et leur permet donc de rester disponibles jusqu'à la fin du jeu.
+
+== Description ==
+Normalement, les véhicules ont une durée de commercialisation limitée, tout comme une durée de vie limitée. Quand leur durée de commercialisation expire, ils ne peuvent plus être achetés ou remplacés, et tout véhicule de ce type en jeu se détériorera lentement.
+
+Cette option garantit que les véhicules sont toujours disponibles. Ainsi, vous pouvez conserver une locomotive à vapeur Kirby et la faire fonctionner à côté d'un beau monorail tout neuf.
+
+Si vous activez cette option '''avant de démarrer un jeu''', alors elle sera active pour tous les jeux suivants, à moins que vous ne désactiviez l'option de sauvegarder automatiquement la configuration.
+
+Vous pouvez aussi activer cette option pendant un '''jeu déjà en cours'''. Elle ne s'appliquera alors qu'à ce jeu, et à partir de ce moment, vous n'aurez plus aucun véhicule périmé. Pour obtenir cela, ouvrez la [[Main/fr/Console|console]] et tapez <code>resetengines</code>.
+
+== Utilisation ==
+Ce paramètre est désactivé par défaut. Pour pouvez l'activer via la fenêtre [[Main/fr/Options avancées/Véhicules|Configuration avancée/Véhicules]], ou utilisez la syntaxe suivante dans [[Main/fr/Openttd.cfg|openttd.cfg]]:
+<pre>
+[patches]
+never_expire_vehicles = true
+</pre>
+
+Notez que la fiabilité des véhicules n'est pas affectée par ce paramètre; les véhicules anciens resteront donc assez peu fiables.
+
+[[Category:fr/Réglages et préférences]]
+[[Category:fr/Véhicules]]
