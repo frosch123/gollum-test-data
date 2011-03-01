@@ -1,0 +1,105 @@
+[[Translation:Main/en/Scenarios Team]]
+L'équipe de scénarios est un ensemble de personnes dédiées à faire évoluer la [[Main/fr/Liste des scénarios de joueurs|liste des scénarios de joueurs]]. N'importe qui est libre de la rejoindre. En fait, cette équipe a besoin de votre aide pour mettre à jour la base de données des scénarios, afin que tout le monde puisse y chercher et télécharger de nouveaux scénarios facilement.
+
+==Buts principaux du projet==
+
+* Faire en sorte que le plus possible d'auteurs de scénario le rejoignent et copient leur scénario depuis [http://www.tt-forums.net/viewforum.php?f=60 les forums] dans [[Main/fr/Liste des scénarios de joueurs|le wiki]].
+* Mettre à jour la base de données des scénarios quand c'est nécessaire.
+* Maintenir l'esthétique de la base de données.
+* Collaborer pour créer une base de données aisée pour les débutants de scénarios librement téléchargeables pour OpenTTD.
+
+== Liste des choses à faire pour le projet ==
+Tandis que le projet sort de terre, il y a un nombre croissant de choses à faire et, sans communication correcte ni documentation, notre travail ne sera pas plus facile. Pour cela, nous avons créé une [[Main/fr/Liste à faire de l'équipe de scénarios|liste à faire]].
+
+==Rejoignez-nous!==
+
+Chacun est libre de rejoindre l'équipe de scénarios. Pour montrer votre aide, allez ajouter <code><nowiki>{{en/Userbox Scenarios Team}}</nowiki></code> à votre page utilisateur. Faire cela vous incluera dans la [[Category/en/Scenarios Team members|catégorie des membres]] et affichera une boîte utilisateur sur votre page. Si vous le désirez, vous pouvez aussi ajouter votre nom en bas de la liste des membres du projet.
+
+==Projets de scénario==
+
+Si vous travaillez sur un gros scénario ou prévoyez de le faire, peut-être comme membre d'une équipe projet, soyez libre de démarrer une page de projet pour cela ici. La page fournira une information de base sur ce qui est prévu pour la carte, où elle se situe, etc. Les pages de projet pourraient/devraient aussi être utilisées pour organiser le développement, suivre les changements et discuter de certaines caractéristiques de la carte.
+
+Le premier projet de scénario est le [[Main/fr/Équipe de scénarios/Projet de carte Cindini|projet de carte Cindini]]. Beaucoup d'efforts ont été mis dans ce projet pour en faire une sorte d' 'état de l'art', afin qu'il puisse servir de référence pour d'autres projets de scénario dans le futur.
+
+:;[[Main/fr/Équipe de scénarios/Projet de carte Cindini|Projet de carte Cindini]]
+::La page de projet pour la carte de Cindini de [[Archive/en/Whopper|Whopper]], encore non terminée.
+
+==Information utile pour les membres==
+
+===Chefs de projet===
+
+* [[Archive/en/Jupix|Jupix]] [http://www.tt-forums.net/profile.php?mode=viewprofile&u=6127 *], du moins temporairement
+* [[Archive/en/T-Unit|T-Unit]] [http://www.tt-forums.net/profile.php?mode=viewprofile&u=16437 *]
+
+===Membres du projet===
+
+''Une liste complète est disponible sous [[Category/en/Scenarios Team members]].''
+
+*[[Archive/en/Sleepie|Sleepie]] [http://www.tt-forums.net/profile.php?mode=viewprofile&u=15521 *]
+*[[Archive/en/Tycoonjamie|Tycoonjamie]] [http://www.tt-forums.net/profile.php?mode=viewprofile&u=11355 *]
+*[[Archive/en/^Duffy^|^Duffy^]]
+*[[Archive/en/Luukland|Luukland]] [http://www.tt-forums.net/profile.php?mode=viewprofile&u=18632 *]
+*[[Archive/en/Chrill|Chrill]] [http://www.tt-forums.net/memberlist.php?mode=viewprofile&u=5436 * ]
+
+===Procédure pour ajouter un scénario===
+
+# Prenez une copie d'écran montrant la mini-carte de votre scénario (de préférence de taille moyenne, en PNG). [http://wiki.openttd.org/index.php/Image:Scn-echo-minimap.png Exemple]
+# Prenez une image d'écran montrant un détail que vous aimez à propos du scénario que vous listez. De nouveau, de préférence de taille moyenne, et en PNG.
+[http://wiki.openttd.org/index.php/Image:Scn-echo-screenshot.png Exemple]
+# Nommez les fichiers ci-dessus logiquement comme dans l'exemple proposé, et téléchargez-les sur le wiki [[Main/en/Special:Upload|ici]].
+# Allez dans une page de catégorie à laquelle correspond votre page, un bon début serait ici: [[Main/fr/Scénario par climat|Scénario par climat]].
+## Éditez la page de catégorie et ajoutez le code suivant: '''<code><nowiki>{{Scenario:Nom de votre scénario}}</nowiki></code>'''. Regardez simplement le code existant, et cela devrait être assez simple.'''(N.B.: Souvenez-vous que la capitalisation est importante - <nowiki>sub-arctique</nowiki> ne fonctionne pas, mais [[Main/en/Climat/Fr#Subarctique|Subarctique]] oui).'''
+## Appuyez sur le bouton de prévisualisation; vous devriez voir une ligne en rouge avec le nom de votre scénario. Ajoutez alors un résumé de vos changements et sauvegardez la page.
+# Cliquez sur le lien en rouge que vous venez d'ajouter pour commencer un nouvel article pour votre scénario.
+## Copiez un scénario vide dans l'article depuis le bloc de code ci-dessous. Décrivez votre scénario en remplissant les informations appropriées dans le modèle vide.
+## Appuyez sur le bouton de prévisualisation pour vérifier vos changements puis sauvegardez la page. Elle sera maintenant incluse dans chaque page avec le code depuis l'étape 4.1.
+## Rechargez la page de la catégorie où vous avez préalablement ajouté le bout de code et vérifiez que tout fonctionne comme prévu (si non, ne paniquez pas - annulez simplement vos changements et contactez quelqu'un de l'équipe de scénarios pour vous aider).
+# Ajoutez le scénario sous toutes les catégories appropriées en répétant depuis l'étape 4.1.
+
+En ajoutant des scénarios aux listes, rappelez-vous de mettre à jour le compteur de scénarios et la liste des ajouts récents.
+
+===Hébergement de scénarios===
+Merci de ne '''pas''' télécharger vos fichiers de scénario (*.scn) dans le wiki. Tant qu'une solution définitive n'a pas été trouvée et n'est pas prête, merci d'héberger vos fichiers ailleurs, comme sur [http://www.tt-forums.net/viewforum.php?f=60 les forums TT], où la plupart des scénarios actuels sont stockés. Vous pouvez aussi demander à [[Archive/en/Jupix|Jupix]] d'héberger vos fichiers. Si vous avez plus de questions sur ce sujet, merci de les poser [[Archive/en/List of player-made scenarios|ici]] (en anglais).
+Merci.
+
+===Modèle de scénario===
+
+<pre>
+<nowiki>
+{{scenario
+|title=Votre scénario
+|minimap=nom-de-votre-minicarte.png
+|screenshot=nom-de-votre-image-écran.png
+|description=Quelques mots sur le scénario. Géographie, stratégies différentes, etc.
+|difficulty=Facile/Normal/Difficile
+|setting=[[Main/en/Climat/Fr[#Tempéré|Tempéré]] / [[Main/en/Climat/Fr#Subtropical|Subtropical]] / [[Main/en/Climat/Fr#Subarctique|Subarctique]] / [[Main/en/Climat/Fr#Pays des jouets|Pays des jouets]]
+|size=256x256
+|relief=Très plat / Plat / Vallonné / Montagneux / Mixte
+|towns=Faible/Normal/Élevé (le paramètre "Nb. de villes")
+|industries=Faible/Normal/Élevé (le paramètre "Nb. d'industries")
+|realworld=Votre scénario est-il basé sur un endroit existant? Où? (utilisez "[http://www.wikipedia.org/wiki/fr:Endroit Endroit]" si oui).
+|version=votre version de OpenTTD
+|author=[[Archive/en/auteur|auteur]]
+|download_url=http://url.to.your/scenario.scn
+}}
+</nowiki>
+</pre>
+
+===Questions souvent posées===
+
+:;Où télécharger/héberger les .scn?
+::Nous ne savons pas encore. Nous savons que nous ne pouvons '''pas''' les héberger sur le wiki et que l'administration cherche actuellement à créer un autre moyen de centraliser les fichiers. Pendant ce temps, nous nous lions à ce à quoi se lient les auteurs sur [http://www.tt-forums.net/viewforum.php?f=60 les forums]. Dans le cas d'un scénario entièrement nouveau, ils peuvent être postés d'abord sur les forums puis liés à la page.
+
+:;Qu'y a-t-il à propos d'un système de classement des scénarios?
+::Cela n'est pas du tout possible avec MediaWiki. Pour réaliser un tel système, nous aurions besoin d'un script personnalisé quelconque.
+
+:;J'ai des idées/suggestions/retours sur le projet. Où puis-je les poster?
+::Pour centraliser toutes les discussions sur ce projet dans un seul endroit, merci de les poster sur [[Archive/en/List of player-made scenarios]] (en anglais).
+
+===Ressources diverses===
+
+:;[[Main/fr/Équipe de scénarios/Scénarios morts|Scénarios morts]] 
+::Ces scénarios ont été dans la liste des scénarios des joueurs, mais leur hébergeur a cessé de fonctionner. Tous les modèles de scénarios morts devraient être déplacés ici, si jamais un lien fonctionnant pouvait être créé et le scénario réintégré dans la liste.
+
+:;[[Main/fr/Équipe de scénarios/Scénarios maintenus|Scénarios maintenus]]
+::Cette page sert pour un accès de maintenance rapide vers toutes les pages de l'espace de nommage Scenario. Elle contient une table avec tous les scénarios, triés par auteur et nom de scénario.
