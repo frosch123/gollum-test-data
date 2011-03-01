@@ -1,0 +1,35 @@
+[[Translation:Main/en/NewGRF Debugging]]{{en/-}}{{es/Tabla de contenido}}
+
+{{es/Disponibilidad|1.1}}
+
+== Activar las herramientas de desarrollo para newgrf ==
+Desde OpenTTD r19723 (y posteriores) se introdujo una serie de herramientas de depuración para los desarrolladores de (new)GRF. Para que sean accesibles estas herramientas de depuración se deben activar a través de una opción oculta, a través de la [[Main/es/Consola|consola]]:
+<pre>
+set newgrf_developer_tools 1
+</pre>
+
+A continuación, las herramientas de las que se dispone:
+
+==Herramienta Alineador de sprites==
+Hay un sencillo Alineador auxiliar de sprites disponible en el menú "Información" de la barra de menú principal.
+
+La herramienta de alineación de sprites no almacena los nuevos desplazamientos en ningún sitio, de modo que tan pronto como el sprite se vuelve a cargar los desplazamientos se habrán ido (use una caché de sprites más grande, si esto ocurre). También con cualquier carga de gráficos NewGRF (nuevos juegos, cargar juegos o aplicar cambios en la configuración de NewGRF) borra la caché de sprites y por lo tando se restablecen los desplazamientos.
+[[File:es/sprite aligner 1.png|frame|none|Acceder a la herramienta Alineador de sprites.]]
+
+Se ha incluido un "Selector" para ayudarle a encontrar el sprite que necesite. Este le mostrará una lista de los sprites utilizados en un sitio determinado de la pantalla, pulse sobre cada uno de los elementos de la lista hasta encontrar el que esté buscando.
+[[File:es/sprite aligner 2.png|frame|none|La herramienta Alineador de sprites en uso.]]
+
+== Herramienta Inspeccionar variables y propiedades ==
+Se proporciona una herramienta de depuración para las variables y propiedades. Cada tipo de objeto incluye una amplia gama de variables y propiedades. Algunas propiedades no se muestran por ser evidentes, ya sea en el juego (por ejemplo, el nombre del vehículo), o en el nfo para la acción 0.
+
+La ventana de depuración para la industria incluye los valores de los 16 lugares de almacenamiento persistentes. Esto permite a los programadores de la industria depurar complejas variaciones de cadenas resolviendo los valores de almacenamiento (sólo posible para las industrias, vehículos, etc; las casas no tienen almacenamiento persistente).
+
+Se puede acceder a la ventana de depuración de las variables a través de la herramienta Información sobre el terreno para todos los newGRF que no sean de vehículos (Observe el icono de depuración, con un bicho, en la esquina superior derecha de la ventana de información sobre el terreno).
+[[File:es/variable debug1.png|frame|none|Acceder a la herramienta Información sobre el terreno.]]
+
+[[File:es/variable debug2.png|frame|none|La ventana de inspección aparece al presionar el botón con el "bicho".]]
+
+Se puede acceder directamente a la ventana de depuración de las variables de los vehículo a través de la ventana del vehículo (presionando el icono con el "bicho").
+[[File:es/vehicle debug.png|frame|none|Inspeccionando la variables de un tren.]]
+
+[[Category:es/NewGRF]]
