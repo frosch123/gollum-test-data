@@ -1,0 +1,283 @@
+[[Translation:Main/en/Diff custom helper script]]
+{{en/-}}
+Sauvegardez-le quelque part sur votre serveur web (c'est du simple php)
+<pre>
+<?php
+// créé par thomasfischer.biz
+$dc="0,0,3,4,500,4,0,0,0,0,3,0,0,0,0,0,0,0";
+if(isset($_POST['dc']))
+ $dc = $_POST['dc'];
+
+$ar = explode(",", $dc);
+
+if(isset($_POST['o0']))
+{
+echo "diff_custom = ";
+echo $_POST['o0'].",";
+echo $_POST['o1'].",";
+echo $_POST['o2'].",";
+echo $_POST['o3'].",";
+echo $_POST['o4'].",";
+echo $_POST['o5'].",";
+echo $_POST['o6'].",";
+echo $_POST['o7'].",";
+echo $_POST['o8'].",";
+echo $_POST['o9'].",";
+echo $_POST['o10'].",";
+echo $_POST['o11'].",";
+echo $_POST['o12'].",";
+echo $_POST['o13'].",";
+echo $_POST['o14'].",";
+echo $_POST['o15'].",";
+echo $_POST['o16'].",";
+echo $_POST['o17'];
+die(0);
+}
+
+// opui, mauvais style de programmation, mais rapide à écrire
+?>
+
+<h1>diff_custom helper</h1>
+
+<form name='diff_import' method='post' action=''>
+<table border='1'>
+<tr><td>diff_custom = </td><td><input type="text" name="dc" value="<?=$dc?>" style="width:250px;"><input type='submit'></td></tr>
+</table>
+</form>
+
+<table border='1'>
+<form name='diff_custom' method='post' action=''>
+
+<tr>
+<td>Nombre maximal de concurrents (IA)</td>
+<td>
+<select name='o0'>
+ <option <?=($ar[0]==0?'selected':'')?>>0</option>
+ <option <?=($ar[0]==1?'selected':'')?>>1</option>
+ <option <?=($ar[0]==2?'selected':'')?>>2</option>
+ <option <?=($ar[0]==3?'selected':'')?>>3</option>
+ <option <?=($ar[0]==4?'selected':'')?>>4</option>
+ <option <?=($ar[0]==5?'selected':'')?>>5</option>
+ <option <?=($ar[0]==6?'selected':'')?>>6</option>
+ <option <?=($ar[0]==7?'selected':'')?>>7</option>
+</select>
+</td>
+</tr>
+
+<tr>
+<td>Moment de démarrage des concurrents</td>
+<td>
+<select name='o1'>
+ <option <?=($ar[1]==0?'selected':'')?> value='0'>maintenant</option>
+ <option <?=($ar[1]==1?'selected':'')?> value='1'>après 3 mois</option>
+ <option <?=($ar[1]==2?'selected':'')?> value='2'>après 6 mois</option>
+ <option <?=($ar[1]==3?'selected':'')?> value='3'>après 9 mois</option>
+</select>
+</td>
+</tr>
+
+<tr>
+<td>Nombre de villes</td>
+<td>
+<select name='o2'>
+ <option <?=($ar[2]==0?'selected':'')?> value='0'>très bas</option>
+ <option <?=($ar[2]==1?'selected':'')?> value='1'>bas</option>
+ <option <?=($ar[2]==2?'selected':'')?> value='2'>normal</option>
+ <option <?=($ar[2]==3?'selected':'')?> value='3'>élevé</option>
+</select>
+</td>
+</tr>
+
+<tr>
+<td>Nombre d'industries</td>
+<td>
+<select name='o3'>
+ <option <?=($ar[3]==0?'selected':'')?> value='0'>très bas</option>
+ <option <?=($ar[3]==1?'selected':'')?> value='1'>bas</option>
+ <option <?=($ar[3]==2?'selected':'')?> value='2'>normal</option>
+ <option <?=($ar[3]==3?'selected':'')?> value='3'>élevé</option>
+</select>
+</td>
+</tr>
+
+<tr>
+<td>Montant maximal initial du prêt</td>
+<td>
+<select name='o4'>
+ <option <?=($ar[4]==200?'selected':'')?> value='200'>400k $</option>
+ <option <?=($ar[4]==250?'selected':'')?> value='250'>500k $</option>
+ <option <?=($ar[4]==300?'selected':'')?> value='300'>600k $</option>
+ <option <?=($ar[4]==350?'selected':'')?> value='350'>700k $</option>
+ <option <?=($ar[4]==400?'selected':'')?> value='400'>800k $</option>
+ <option <?=($ar[4]==450?'selected':'')?> value='450'>900k $</option>
+ <option <?=($ar[4]==500?'selected':'')?> value='500'>1M $</option>
+</select>
+</td>
+</tr>
+
+
+<tr>
+<td>Taux d'intérêt initial</td>
+<td>
+<select name='o5'>
+ <option <?=($ar[5]==2?'selected':'')?> value='2'>2%</option>
+ <option <?=($ar[5]==3?'selected':'')?> value='3'>3%</option>
+ <option <?=($ar[5]==4?'selected':'')?> value='4'>4%</option>
+ <option <?=($ar[5]==5?'selected':'')?> value='5'>5%</option>
+</select>
+</td>
+</tr>
+
+
+
+<tr>
+<td>Coûts de fonctionnement des véhicules</td>
+<td>
+<select name='o6'>
+ <option <?=($ar[6]==0?'selected':'')?> value='0'>bas</option>
+ <option <?=($ar[6]==1?'selected':'')?> value='1'>moyen</option>
+ <option <?=($ar[6]==2?'selected':'')?> value='2'>élevé</option>
+</select>
+</td>
+</tr>
+
+
+<tr>
+<td>Vitesse de construction des concurrents</td>
+<td>
+<select name='o7'>
+ <option <?=($ar[7]==0?'selected':'')?> value='0'>très lente</option>
+ <option <?=($ar[7]==1?'selected':'')?> value='1'>lente</option>
+ <option <?=($ar[7]==2?'selected':'')?> value='2'>moyenne</option>
+ <option <?=($ar[7]==3?'selected':'')?> value='3'>rapide</option>
+</select>
+</td>
+</tr>
+
+
+<tr>
+<td>Intelligence des concurrents</td>
+<td>
+<select name='o8'>
+ <option <?=($ar[8]==0?'selected':'')?> value='0'>faible</option>
+ <option <?=($ar[8]==1?'selected':'')?> value='1'>moyenne</option>
+ <option <?=($ar[8]==2?'selected':'')?> value='2'>haute</option>
+</select>
+</td>
+</tr>
+
+
+<tr>
+<td>Pannes des véhicules</td>
+<td>
+<select name='o9'>
+ <option <?=($ar[9]==0?'selected':'')?> value='0'>aucune</option>
+ <option <?=($ar[9]==1?'selected':'')?> value='1'>faibles</option>
+ <option <?=($ar[9]==2?'selected':'')?> value='2'>normales</option>
+</select>
+</td>
+</tr>
+
+
+<tr>
+<td>Multiplicateur de subvention</td>
+<td>
+<select name='o10'>
+ <option <?=($ar[10]==0?'selected':'')?> value='0'>1.5 x</option>
+ <option <?=($ar[10]==1?'selected':'')?> value='1'>2.0 x</option>
+ <option <?=($ar[10]==2?'selected':'')?> value='2'>3.0 x</option>
+ <option <?=($ar[10]==3?'selected':'')?> value='3'>4.0 x</option>
+</select>
+</td>
+</tr>
+
+
+<tr>
+<td>Coût de construction</td>
+<td>
+<select name='o11'>
+ <option <?=($ar[11]==0?'selected':'')?> value='0'>bas</option>
+ <option <?=($ar[11]==1?'selected':'')?> value='1'>moyen</option>
+ <option <?=($ar[11]==2?'selected':'')?> value='2'>élevé</option>
+</select>
+</td>
+</tr>
+
+
+<tr>
+<td>Type de terrain</td>
+<td>
+<select name='o12'>
+ <option <?=($ar[12]==0?'selected':'')?> value='0'>très bas</option>
+ <option <?=($ar[12]==1?'selected':'')?> value='1'>normal</option>
+ <option <?=($ar[12]==2?'selected':'')?> value='2'>élevé</option>
+ <option <?=($ar[12]==3?'selected':'')?> value='3'>montagneux</option>
+</select>
+</td>
+</tr>
+
+
+<tr>
+<td>Quantité de mer/lacs</td>
+<td>
+<select name='o13'>
+ <option <?=($ar[13]==0?'selected':'')?> value='0'>très faible</option>
+ <option <?=($ar[13]==1?'selected':'')?> value='1'>faible</option>
+ <option <?=($ar[13]==2?'selected':'')?> value='2'>moyenne</option>
+ <option <?=($ar[13]==3?'selected':'')?> value='3'>élevée</option>
+</select>
+</td>
+</tr>
+
+
+<tr>
+<td>Économie</td>
+<td>
+<select name='o14'>
+ <option <?=($ar[14]==0?'selected':'')?> value='0'>Stable</option>
+ <option <?=($ar[14]==1?'selected':'')?> value='1'>Fluctuante</option>
+</select>
+</td>
+</tr>
+
+
+<tr>
+<td>Demi-tour des trains</td>
+<td>
+<select name='o15'>
+ <option <?=($ar[15]==0?'selected':'')?> value='0'>En bout de ligne et aux gares</option>
+ <option <?=($ar[15]==1?'selected':'')?> value='1'>En bout de ligne seulement</option>
+</select>
+</td>
+</tr>
+
+
+<tr>
+<td>Catastrophes</td>
+<td>
+<select name='o16'>
+ <option <?=($ar[16]==0?'selected':'')?> value='0'>non</option>
+ <option <?=($ar[16]==1?'selected':'')?> value='1'>oui</option>
+</select>
+</td>
+</tr>
+
+
+<tr>
+<td>Attitude de la municipalité envers les restructurations de zone</td>
+<td>
+<select name='o17'>
+ <option <?=($ar[17]==0?'selected':'')?> value='0'>Permissive</option>
+ <option <?=($ar[17]==1?'selected':'')?> value='1'>Tolérante</option>
+ <option <?=($ar[17]==2?'selected':'')?> value='2'>Hostile</option>
+</select>
+</td>
+</tr>
+
+
+<tr><td colspan='2' align='center'><input type='submit'></td></tr>
+
+</table>
+
+<small>Vous trouverez la source de ce script <a href="index.php.txt">ici</a>. Utilisez-le et modifiez-le librement.
+</pre>
