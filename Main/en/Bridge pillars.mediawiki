@@ -1,0 +1,18 @@
+[[Translation:Main/en/Bridge pillars]]
+{{en/-}}
+[[Category:en/Settings & Preferences]]
+
+The bridge pillars [[Main/en/Advanced Settings|setting]] can enable/disable the bridge pillars displayed when a [[Main/en/Higher bridges|higher bridge]] is built.
+
+==Description==
+With this patch enabled, every time the user builds a higher bridge (a bridge built more than one tile away from the ground), the pillars underneath will be displayed going all the way to the ground.  This option is purely graphical and does not affect the ability to build road/rail under the bridge.
+
+== Use ==
+This feature is enabled by default. There is no in-game configuration option for this patch. You can disable this patch by using the following syntax in [[Main/en/openttd.cfg]]:
+
+<pre>
+[patches]
+bridge_pillars = false
+</pre>
+
+<center>[[File:en/Bridge Pillars.png|center|none|frame|1. - Above: Bridge Pillars disabled. Below: Bridge Pillars enabled.]]</center>
