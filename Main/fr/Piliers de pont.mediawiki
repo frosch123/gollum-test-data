@@ -1,0 +1,18 @@
+[[Translation:Main/en/Bridge pillars]]
+{{en/-}}
+[[Category:fr/Réglages et préférences]]
+
+L'[[Main/fr/Options avancées|option]] piliers de pont permet d'activer/désactiver l'affichage des piliers de pont quand un [[Main/fr/Pont plus haut|pont plus haut]] est construit.
+
+==Description==
+Avec cette option activée, chaque fois que l'utilisateur construit un pont plus haut (un pont construit à plus d'une case au-dessus du sol), les piliers sous lui seront affichés jusqu'au sol. Cette option est purement graphique et n'affecte pas la possibilité de construire des voies/routes sous le pont.
+
+== Utilisation ==
+Cette option est activée par défaut. Il n'y a pas d'option de configuration dans le jeu pour elle. Vous pouvez la désactiver en utilisant la syntaxe suivante dans [[Main/fr/openttd.cfg|openttd.cfg]]:
+
+<pre>
+[patches]
+bridge_pillars = false
+</pre>
+
+<center>[[File:en/Bridge Pillars.png|center|none|frame|1. - En haut: Piliers de pont désactivés. En bas: Piliers de pont activés]]</center>
