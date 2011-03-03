@@ -1,0 +1,16 @@
+[[Translation:Main/en/Wait for pbs path]]
+{{en/-}}
+Sets the wait-time in days for a path reservation. After this time-out, trains will turn around to see if there is an alternative route. 
+
+Possible values are between 2 (default is 30) and 255. A value of 255 is special as it indicates that a train wait forever at the signal without turning.
+
+== See Also ==
+
+* [[Main/en/Openttd.cfg]]
+* [[Main/en/Wait oneway signal]]
+* [[Main/en/Wait twoway signal]]
+
+[[Category:en/Settings & Preferences]]
+[[Category:en/Railways]]
+[[Category:en/Construction]]
+{{stub}}
