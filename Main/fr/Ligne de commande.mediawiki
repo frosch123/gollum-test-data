@@ -1,0 +1,82 @@
+[[Translation:Main/en/Command line]]
+La '''ligne de commande''' est la commande du système d'exploitation pour lancer le jeu. Elle peut comprendre des paramètres pour ajuster la manière dont le jeu fonctionne. Toutes les versions de [[Main/fr/OpenTTD|OpenTTD]] supportent les options de ligne de commande.
+
+== Options de l'invite de commande ==
+Utilisez {{c|openttd [paramètre(s)]|}}.
+
+{| border=1 width=100%
+!width="225"|Paramètre
+!Description
+|-
+|{{c|-h|}}|| Liste les options de la commande OpenTTD.
+|-
+|{{c|-v <pilote>|}}|| Fixe le pilote vidéo de OpenTTD. Selon votre construction, les pilotes valides peuvent inclure:<br />
+{{c|null|}} pour aucune vidéo (crash)<br />
+{{c|sdl|}} pour une vidéo SDL<br />
+{{c|win32|}} pour une vidéo Windows
+|-
+|{{c|-s <pilote>|}}|| Fixe le pilote de son de OpenTTD. Selon votre construction, les pilotes valides peuvent comprendre<br />
+{{c|null|}} pour aucun son<br />
+{{c|sdl|}} pour du son SDL<br />
+{{c|win32|}} pour du son Windows
+|-
+|{{c|-m <pilote>|}}|| SFixe le pilote de musique de OpenTTD. Selon votre construction, les pilotes valides peuvent inclure<br />
+{{c|null|}} pour aucune musique<br />
+{{c|dmusic|}} pour DirectMusic<br />
+{{c|win32|}} pour MIDI Windows<br />
+{{c|extmidi|}} pour MIDI externe<br />
+{{c|bemidi|}} pour MIDI BeOS
+|-
+|{{c|-r <xres>x<yres>|}}|| Fixe la résolution de OpenTTD
+|-
+|{{c|-t <année>|}}|| Fixe l'année de démarrage
+|-
+|{{c|-d <niveau>|}}  
+:{{c|1=-d ai=<niveau>|2=}}
+:{{c|1=-d driver=<niveau>|2=}}
+:{{c|1=-d grf=<niveau>|2=}}
+:{{c|1=-d misc=<niveau>|2=}}
+:{{c|1=-d net=<niveau>|2=}}
+:{{c|1=-d spritecache=<niveau>|2=}}
+|Fixe les niveaux de débogage. Utilisez un nombre entre 0 et 9, où 9 est le plus verbeux.
+:pour des informations de débogage de l'I.A. uniquement
+:pour des informations de débogage des pilotes uniquement (son, musique, graphique)
+:pour des informations de débogage de NewGRF uniquement
+:pour des informations de débogage diverses
+:pour des informations de débogage du réseau uniquement
+:pour des informations de débogage du cache des sprites uniquement
+|-
+|{{c|-e|}}|| Démarre l'éditeur de scénario.
+|-
+|{{c|-g [jeu]|}}|| Si aucun jeu n'est spécifié, démarre immédiatement une nouvelle partie. Si un jeu est spécifié, charge immédiatement la partie. Note: -g peut charger aussi bien des sauvegardes que des scénarios.
+|-
+|{{c|-G <graine>|}}|| Fixe la graine aléatoire.
+|-
+|{{c|-n [ip:port#joueur]|}}|| Démarre une partie en réseau.
+|-
+|{{c|-D|}}|| Démarre un serveur dédié.
+|-
+|{{c|-f|}}|| Duplique en tâche de fond (serveur dédié uniquement).
+|-
+|{{c|-c <fichier>|}}|| Utilise un fichier de configuration différent au lieu de openttd.cfg.
+|}
+
+==Aide pour les utilisateurs Windows==
+Il y a deux moyens d'ajouter des paramètres de ligne de commande:
+
+===La méthode du raccourci===
+*Faites un raccourci vers {{c|openttd.exe|}}
+*Faites un clic droit sur le raccourci et choisissez Propriétés. La première boîte de dialogue devrait vous afficher quelque chose comme: {{c|C:\Jeux\openttd.exe|}}
+*Mettez des guillemets autour du texte: {{c|"C:\Jeux\openttd.exe"|}}
+*Ajoutez les paramètres après, en dehros des guillemets: {{c|"C:\Jeux\openttd.exe" -m|}}
+*Pour ajouter des modificateurs, insérez-les un espace après le paramètre: {{c|"C:\Jeux\openttd.exe" -n 127.12.13.1|}}
+*Séparez les paramètres multiples par des espaces: {{c|"C:\Jeux\Openttd.exe" -m -s null|}}
+*Une fois terminé, lancez le jeu en utilisant le raccourci
+
+===La méthode DOS===
+Elle requiert une connaissance basique de [http://www.wikipedia.org/wiki/List_of_DOS_commands DOS] (en anglais). Si vous n'en avez pas, utilisez la méthode du raccourci.
+*Démarrez l'invite MS-DOS.
+*Allez à l'emplacement de openttd.exe.
+*Faites comme ci-dessus, mais sans les guillemets.
+
+[[Category:fr/Réglages et préférences]]
