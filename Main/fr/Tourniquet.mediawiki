@@ -1,0 +1,45 @@
+[[Translation:Main/en/Roundabout]]{{en/-}}{{fr/Menu de Croisements}}
+Le '''tourniquet''' consiste en un chemin circulaire mono-sens avec différentes entrées et sorties.
+[[File:en/Roundabout.png|none|frame|Jonction tourniquet]]
+
+{{Template:Critère de jonction/Fr|Peu coûteux|1|0|0|0|0||0|0|0|1|||Les trains en panne affectent toute la jonction.|
+*Peut gérer deux trains à la fois
+*Si vous l'agrandissez, vous pouvez créer un tourniquet à 8 voies
+*Causera des embouteillages
+*Zone: 6 x 6
+}}
+
+===Tourniquet avec signaux de voie (PBS)===
+Construire un tourniquet avec PBS à ses entrées permettra à plusieurs trains d'utiliser la jonction. Comme il n'y a pas de signaux sur la boucle, les blocages deviennent impossibles.
+
+[[File:en/Roundabout pathsignals.png|none|frame|Tourniquet avec signaux de voie aux entrées.]]
+Le train de marchandises [A] passe la jonction depuis le coin en haut à droite vers le coin en bas à gauche (1 vers 3). cela n'affecte ni le train de passagers [B] (3 vers 4), ni le train de bétail [C] (4 vers 1).
+
+{{Template:Critère de jonction/Fr|Peu coûteux|1|0|0|0|0||0|0|0||3||Impossible|
+*Peu coûteux, prend peu de place et est relativement efficace}}
+
+====Tourniquet avec PBS et ponts====
+Cette petite modification permet aux trains se croisant de ne pas interférer entre eux.
+
+[[File:en/Roundabout pathsignals bridges.png]]
+
+Sans les ponts, les deux trains de céréales [A] et d'acier [B] iraient sur le tourniquet, amenant un des trains à attendre que l'autre ait passé. Les voies additionnelles pour les trains ne vont que tout droit, augmentant encore l'efficacité du tourniquet, sans besoin d'espace additionnel!
+{{Template:Critère de jonction/Fr|Peu coûteux|1|0|1|0|0||0|0|0||3||Impossible|}}
+
+===Variantes===
+*Quand vous l'agrandissez, vous créez un tourniquet à 8 voies
+[[File:en/Basic Roundabout 8-way.png|none|frame|Le même tourniquet (mais à 8 voies).]]
+
+===Tourniqué divisé===
+
+Cette modification permet aux trains de passer plus vite.
+
+[[File:en/Split Roundabout.png|none|frame|Jonction tourniquet]]
+
+{{Template:Critère de jonction/Fr|Peu coûteux|1|0|0|0|0||0|0|0|1|||Les trains en panne affectent toute la jonction.|
+*Peut gérer jusqu'à 7-8 trains à la fois
+*Peu de chance de causer des embouteillages s'il y a moins de 8 trains
+*Zone: 33 x 33
+}}
+
+[[Category:fr/Jonctions ferroviaires]]
