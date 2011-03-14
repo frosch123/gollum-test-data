@@ -1,0 +1,263 @@
+[[Translation:Main/en/Comparison of OpenTTD and TTDPatch features]]
+'''Ici se trouve une comparaison rapide entre les fonctionnalités de OpenTTD et de TTDPatch'''
+
+Si vous êtes un '''utilisateur habituel de TTDPatch''', vous aurez remarqué que de nombreuses choses semblables sont implémentées différemment dans OpenTTD. Toutes les fonctionnalités ne sont pas [[Main/fr/Interopérabilité|compatibles]] avec [[Main/fr/TTDPatch|TTDPatch]].
+*[[Main/fr/Interopérabilité|Guide rapide de conversion des sauvegardes]]
+
+==Fonctionnalités partagées par TTDPatch et OpenTTD==
+Ces fonctionnalités sont exactement les mêmes que dans TTDPatch. Certaines doivent être activées manuellement; voyez [[Main/fr/Options avancées|Configuration avancée]].<br/>
+{{note/Fr|La liste est encore incomplète!}}
+*[[Main/fr/Docks|Canaux]] / [[Main/fr/Docks|Écluses]] / Rivières
+*[[Main/fr/Changer l'étendue d'une gare|Changer l'étendue d'une gare]]
+*Gares plus longues / plus de quais
+*Possibilité de réunir des stations (de même taille ou longueur)
+*[[Main/fr/Train de mammouth|Trains de mammouth]]
+*[[Main/fr/Train à locomotives multiples|Train à locomotives multiples]]
+*[[Main/fr/Construire en pente|Construire sur des pentes/côtes]]
+*Ordres d'aller au dépôt
+*[[Main/fr/Pont plus long|Ponts plus longs]]
+*[[Main/fr/Pont plus haut|Ponts plus hauts]]
+*[[Main/en/Signaux/Fr#Signaux dépendants|Pré-signaux]]
+*[[Main/en/Signaux/Fr#Semaphores|Sémaphores]]
+*Ordres [[Main/fr/Sans arrêt|sans arrêt]] avancés
+*[[Main/en/Ordres/Fr#Ordres partagés|Ordres partagés]]
+*[[Main/en/Ordres/Fr#Copier des ordres|Copier des ordres]]
+*Triche de [[Main/fr/Croisement de tunnels|croisement des tunnels]]
+*Planter plusieurs arbres sur une case
+*[[Main/fr/Soudoyer les autorités|Corrompre]] la municipalité
+*Pas de maintenance des trains
+*Pas d'inflation
+*[[Main/fr/Chargement complet d'une cargaison|Chargement complet d'une cargaison]]
+*Option de choix des marchandises
+*Nouvelle date de démarrage
+*Modifier l'intervalle de maintenance par défaut pour les véhicules
+*Changer le nombre maximal de véhicules par joueur
+*Davantage de monnaies (incluant l'introduction de l'euro en 2002)
+*Journaux en couleur après une certaine date
+*[[Main/fr/Chemin de fer électrifié|Chemin de fer électrifié]] (Type supplémentaire, comparé aux types de remplacement dans TTDPatch. Mais 8 types de voies indépendants sont présents dans TTDPatch).
+*[[Main/fr/Couleur de compagnie|Couleurs de compagnie]] doubles
+*Nouveaux sons
+*[[Main/fr/Maisons NewGRF|Maisons NewGRF]]
+*[[Main/fr/Industries NewGRF|Industries NewGRF]]
+*Possibilité de trier les listes de véhicules selon différentes propriétés
+*Vendre des trains complets
+*Construction améliorée de ponts
+*Chargement / déchargement progressif
+*Nouveaux types de cargaison
+*[[Main/fr/Arrêt routier sur la route|Arrêt routier sur la route]] (par mart3p)
+*[[Main/fr/Tramways|Tramways]]
+*[[Main/en/Aménagement Paysager/Fr#Autonivellement|Auto-nivellement]] (changement de pente sur des cases non vides)
+*IHM de sélection du type de signaux
+*[[Main/fr/Encore une autre évolution PBS|Signaux basées sur le chemin (PBS)]]
+*Signaux qui n'arrêtent sur les provenances d'un côté
+*Davantage d'aéroports par ville
+
+==Fonctionnalités qui sont significativement différentes dans OpenTTD==
+{{fr/Note|La liste est actuellement incomplète}}
+*[[Main/fr/Points de contrôle|Points de passage]]
+*[[Main/fr/IA:Page principale|Nouvelle IA]]
+*Deux nouveaux [[Main/fr/Ponts|ponts]] au lieu d'augmenter la vitesse limite des ponts
+*[[Main/fr/Glisser-déposer|Glisser-déposer]] pour la plupart des outils
+*[[Main/fr/Convertir une ligne|Convertir des voies]] (depuis et vers des rails, des monorails et du maglev)
+*[[Main/fr/Vendre un train complet|Vendre un train complet]]
+*Nouveaux boutons dans l'IHM au lieu de raccourcis
+*Signaux glissés-déposés (auto-[[Main/fr/Signaux|signaux]])
+*Configurer la plupart des [[Main/fr/Options avancées|options avancées]] dans le jeu
+*Barre d'outils d'[[Main/fr/Aménagement Paysager|aménagement du paysage]]
+*Intervalles de maintenance en pourcentage de la fiabilité maximale
+*Taux de performance plus détaillés
+*[[Main/fr/Vue supplémentaire|Vue supplémentaire]]
+*Possibilité de [[Main/fr/Déplacer le quartier général de la compagnie|déplacer le quartier général de la compagnie]]
+*Triche du [[Main/en/Triche/Fr#Bulldozer magique|bulldozer magique]] pour supprimer les industries, etc.
+*Le [[Main/fr/Remplacement de véhicules|remplacement automatique]] dans OpenTTD utilise une sélection manuelle. Cela diffère de TTDPatch qui utilise une sélection automatique basée sur les critères fournis via NewGRF
+*[[Main/fr/Cloner un véhicule|Cloner un véhicule]] est disponible pour tous les types de véhicule dans OpenTTD, et seulement pour les trains dans TTDPatch
+*Suppression de case/quai de gare
+*Construction directe de gares non connectées (appelées aussi [[Main/fr/Gares jointes à distance|gares jointes à distance]])
+
+==Fonctionnalités de TTDPatch actuellement absentes de OpenTTD==
+
+{{note/Fr|La liste est actuellement incomplète!}}
+
+*Version à faible mémoire
+*Routes abandonnées
+*Caténaires sur un troisième type de voie
+*Signaux ne laissant passer que les trains ou types de trains sélectionnées (signalisation restrictive)
+*Signaux passant à l'état vert/rouge selon divers états de la carte (signalisation programmable)
+*Têtes de pont non droites et en jonction (têtes de pont personnalisées)
+*Sélection des catastrophes qui peuvent se produire
+*Création automatique de configurations de [[Main/en/Signaux/Fr#Signaux dépendants|pré-signaux]]
+*Panaches de fumée configurables pour les locomotives à vapeur
+*Paramètres du modèle d'accélération indépendants pour toutes les puissances motrices
+*~25 contrôles de croissance des villes différents
+
+==Fonctionnalités disponibles uniquement dans OpenTTD==
+
+{{note/Fr|La liste est actuellement incomplète!}}
+
+*Cartes plus grandes (jusqu'à 2048x2048 ou même plus avec des ajouts)
+*Dates d'introduction des véhicules plus tardives que 2050
+*Co-existence de différents ensembles de véhicules et 65000 véhicules différents par type (pool de véhicules)
+*255 clients réseau maximum
+*15 compagnies maximum
+*Administration de 15 connexions de réseau maximum
+*16 types de rail définissables par NewGRF maximum
+*Chargement commode en jeu de contenu en ligne (NewGRF, IA, cartes d'altitude, scénarios)
+*Cases d'aéroport NewGRF et aéroports pouvant être tournés (avec des NewGRFs)
+*Descriptions de NewGRF traduisibles et versionnage des NewGRF
+
+==Voir aussi==
+*[[Main/fr/Feuille de route|Feuille de route]] &mdash; Les feuilles de route
+*[[Main/fr/Fonctionnalités demandées|Fonctionnalités demandées]] &mdash; Liste des suggestions demandées
+*[[Main/fr/Développements récents et actuels|Développements récents et actuels]] &mdash; Fonctionnalités récemment ajoutées dans les versions et les branches
+*[[Main/fr/À faire NewGRF|À faire dans NewGRF]] &mdash; Une liste des fonctionnalités souhaitées pour NewGRF par les développeurs
+*[[Main/fr/Comparaison entre OpenTTD et TTDPatch|Comparaison des fonctionnalités de OpenTTD et TTDPatch]] &mdash; Liste complète des fonctionnalités
+*[[Main/fr/Nocturne intégré a minima|Mini intégré a minima]] &mdash; La liste des ajouts de la version nocturne précédente
+
+== Tableau de comparaison (non exhaustif) ==
+
+{|border="1" align="center"
+!Fonctionnalité 
+!style="padding:4px"|OpenTTD
+!style="padding:4px"|TTDPatch
+!Notes
+|- 
+|colspan="4" style="background:#ccc"| Construction
+|-
+| Fondations sur demi-case
+| style="background: lime" | Fait
+| style="background: red" | Non fait
+| (Appelé aussi fondations anti zig-zag)
+|
+|-
+| [[Main/en/Aire de chargement/Fr#Multistop|Multistop pour véhicules routiers]]
+| style="background: lime" | Fait
+| style="background: red" | Non fait
+| 
+|-
+| [[Main/fr/Tête de pont personnalisée|Têtes de pont personnalisées]]
+| style="background: yellow" |  Souhaité
+| style="background: lime" |  Fait
+| travail en cours par peter1138 [http://www.tt-forums.net/viewtopic.php?t=20211 Sujet des forums TT]
+|-
+| Construction de pont améliorée
+| style="background: lime" |  Fait
+| style="background: yellow" |  Souhaité
+|
+|-
+| Construire des voies sur les entrées de tunnel
+| style="background: red" | Non fait
+| style="background: lime" | Fait
+| Toutes les directions de voie sont permises. La construction automatique de voie pour els dépôts est aussi supportée.
+|-
+|colspan="4" style="background:#ccc"| Général
+|-
+| Fonctionnement en [[Main/fr/Multijoueurs|multijoueurs]]
+| style="background: lime" | Fait
+| style="background: yellow" | Souhaité
+|
+|-
+| [[Main/fr/Taille de la carte|Cartes plus grandes]]
+| style="background: lime" | Fait
+| style="background: red" | Non fait
+| Possible, mais requiert de grosses quantités de travail dans la correction.
+|-
+| Auxiliaires
+| style="background: red" | Non fait
+| style="background: lime" | Fait
+| 
+|-
+|colspan="4" style="background:#ccc"| IHM
+|-
+| [[Main/fr/Vue supplémentaire|Vue supplémentaire]]
+| style="background: lime" | Fait
+| style="background: red" | Non fait
+|
+|-
+| Amélioration des visages des joueurs
+| style="background: lime" | Fait
+| style="background: yellow" | Souhaité
+| [http://www.tt-forums.net/viewtopic.php?t=34133 Sujet des forums TT]
+|
+|-
+| Outil [[Main/fr/Autorail|Autorail]]
+| style="background: lime" | Fait
+| style="background: red" | Non fait
+|
+|-
+| Tirer les voies ferrées dans n'importe quelle direction
+| style="background: lime" | Fait
+| style="background: lime" | Fait
+| 
+|-
+| Outil de mesure
+| style="background: lime" | Fait
+| style="background: red" | Non fait
+| [http://www.tt-forums.net/viewtopic.php?t=24551&start=40 Sujet des forums TT]
+|-
+|colspan="4" style="background:#ccc"| NewGRF
+|-
+| Graphiques de voie/route dépendants de la date (newroutes)
+| style="background: lime" | Fait
+| style="background: yellow" | Souhaité
+|
+|-
+| Nouvelles maisons
+| style="background: lime" | Fait
+| style="background: lime" | Fait
+|
+|-
+| Nouvelles cargaisons
+| style="background: lime" | Fait
+| style="background: lime" | Fait
+|
+|-
+| Nouvelles industries
+| style="background: lime" | Fait
+| style="background: lime" | Fait
+|
+|-
+|colspan="4" style="background:#ccc"| Véhicules
+|-
+| Nouveaux [[Main/fr/Aéroports|aéroports]]
+| style="background: lime" | Fait
+| style="background: yellow" | Souhaité
+| En cours de réalisation comme une nouvelle fonctionnalité NewGRF par Csaboka.
+|-
+| [[Main/fr/Encore une autre évolution PBS|Signalisation basée sur les voies]]
+| style="background: lime" | Fait
+| style="background: lime" | Fait
+| 
+|-
+| Nouvelles [[Main/fr/Détermination de chemin|déterminations de chemin]]
+| style="background: lime" | Fait
+| style="background: Yellow" | Souhaité
+| En cours par Eis_os
+|-
+| Restrictions de trajet aux signaux
+| style="background: yellow" | Souhaité
+| style="background: lime" |  Fait
+| Le MiniIN restreint en fonction de la vitesse maximale, avec des paramètres globaux (rapide/moyen/lent). TTDPatch restreint sur les critères suivants: puissance, poids, longueur, ordre suivant, vitesse maximale, et statut du signal voisin; en combinant un ou plusieurs de ceux-ci avec ou, et et ou exclusif; avec des paramètres de pré-signaux.
+|-
+| Signaux programmables
+| style="background: yellow" | Souhaité
+| style="background: lime" | Fait
+| Permet à l'utilisateur de restreindre le passage des trains en fonction de l'état des autres signaux, quais de gare, etc. Par exemple, si un signal de ligne principale est rouge, le signal de la ligne de dérivation peut être mis automatiquement à rouge et donc permettre de donner la priorité à certaines voies. Voyez le [http://wiki.ttdpatch.net/tiki-index.php?page=ProgrammableSignals:Alpha wiki TTDP]
+|-
+| État des signaux orange
+| style="background: yellow" | Souhaité
+| style="background: yellow" | Souhaité
+|
+|-
+| Nouveaux signaux
+| style="background: red" | Non fait
+| style="background: lime" | Fait
+|
+|-
+| Nouveaux objets (eyecandy)
+| style="background: lime" | Fait
+| style="background: lime" | Fait
+|
+|}
+
+[[Category:fr/Développement]]
+[[Category:fr/Jouer]]
