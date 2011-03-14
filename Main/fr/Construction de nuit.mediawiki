@@ -1,0 +1,109 @@
+[[Translation:Main/en/Nightly build]]{{en/-}}
+Cet article décrit une version spéciale du jeu appelée 'Nocturne'. Il vous introduit au phénomène, vous dit où l'obtenir, comment le monter et le faire tourner, et inclut quelques informations s'y rapportant.
+
+== Cette chose nocturne, de quoi s'agit-il? ==
+Le développeur OpenTTD [[Archive/en/Rubidium|Rubidium]] décrit une nocturne comme: "une image du développement menant à la prochaine version majeure stable".
+
+Dans un langage plus clair, la ''nocturne courante'' est la toute dernière version de OpenTTD disponible au téléchargement depuis la [http://nightly.openttd.org/ page web de OpenTTD]. Elle inclut les dernières nouvelles fonctionnalités, mais peut aussi inclure les tout derniers bogues.
+
+=== Mais pourquoi l'appelez-vous 'nocturne'? ===
+Une 'nocturne' est appelée ainsi parce qu'une nouvelle version est générée et rendue disponible au téléchargement ''chaque nuit'' (autour de 19h GMT, soit 7 am GMT pour ceux utilisant une horloge à 12 heures).
+
+=== Quels sont ses avantages et inconvénients? ===
+Un avantage majeur et que vous pouvez utiliser tout ce qui n'est pas encore disponible dans la dernière version stable. Un inconvénient mineur est qu'une nocturne peut contenir un bogue grave affectant la jouabilité. Mais ce n'est pas vraiment un problème, n'est-ce pas? Vous pouvez obtenir une autre nocturne le lendemain (ou cette nuit?), qui fonctionnera certainement mieux!
+
+D'un autre côté, une nocturne inclut en général les dernières corrections de bogue. De ce point de vue, une nocturne est en général plus stable que la dernière version stable!
+
+=== Installation d'une nocturne; est-ce difficile? ===
+Non, pas du tout. Bien qu'une nocturne n'inclut pas un installeur, son installation n'est vraiment pas difficile. Il y a deux options, l'installer manuellement ou utiliser une mise à jour automatique. Continuez à lire, et je vous guiderai dans ce processus juste après!
+
+== Mises à jour automatiques ==
+Certaines mises à jour automatiques, comme OpenTTD Auto Update, n'ont besoin d'être paramétrés qu'une fois, et ils mettront ensuite facilement à jour, sans problème, la dernière nocturne. Voyez la page des [[Main/fr/Mises à jour de OpenTTD|mises à jour de OpenTTD]] pour plus d'information sur les mises à jour automatiques.
+
+== Où l'obtenir? ==
+Vous pouvez obtenir par vous-mêmes une copie de la dernière nocturne sur la [http://nightly.openttd.org/ page de téléchargement des nocturnes]. Merci de lire l'information en haut de la page, car cela peut vous être utile. Ensuite, choisissez la nocturne pour votre système d'exploitation et sauvegardez l'archive compressée à un emplacement où vous le retrouverez plus tard.
+
+Si vous voulez utiliser des nocturnes plus anciennes, vous trouverez des versions compilées sur [http://binaries.openttd.org/ binaries.openttd.org].
+
+== Extraire l'archive ==
+Comme vous venez de télécharger une archive compressée, vous devez en extraire le contenu. Vous vous rappelez de l'endroit où vous avez déposé l'archive? Le processus exact dépend de votre système d'exploitation et est décrit ci-dessous pour les principaux.
+
+==== Windows ====
+Windows XP ou supérieur peut extraire un fichier zip par défaut. Pour les versions plus anciennes, vous aurez besoin d'un outil supplémentaire comme [http://www.7-zip.org/ 7-Zip], qui est libre. Des programmes comme WinZIP ou WinRAR conviendront aussi parfaitement.
+
+Dans tous les cas, vous devez d'abord trouver un endroit pour mettre le contenu. Il est préférable de créer un nouveau répertoire pour y mettre ces nouveaux fichiers de jeu.
+
+Ensuite, le moyen le plus simple pour extraire l'archive est d'utiliser la méthode glisser-déposer. Double-cliquez sur le fichier téléchargé précédemment pour voir ce qu'il contient. Vous aurez aussi ouvert le répertoire que vous venez de créer. Assurez-vous de voir les deux fenêtres. Sélectionnez alors tout le contenu de l'archive zip et tirez-le dans votre nouveau répertoire. Et voilà! Lisez alors la prochaine section; le jeu ne fonctionne pas encore!
+
+==== Linux ====
+
+Pour extraire une archive .deb, utilisez:
+dpkg -x openttd-trunk-blah.deb
+
+Pour extraire un fichier .tar.bz2, utilisez:
+tar -xjf openttd-trunk-blah.tar.bz2
+
+Pour extraire un fichier .tar.gz, utilisez:
+tar -xzf openttd-trunk-blah.tar.gz
+
+Pour extraire un fichier .zip, utilisez:
+unzip openttd-trunk-blah.zip
+
+Vous pourrez avoir besoin d'installer certains paquets non installés par défaut sur votre distribution, afin de faire fonctionner les commandes ci-dessus.
+
+Sinon, des programmes avec IHM comme ark (KDE) et file-roller (GNOME) existent pour extraire des archives.
+
+===== Ubuntu =====
+Choisissez le fichier deb Debian Lenny et, quand vous y êtes invité, choisissez d'ouvrir le fichier avec GDebi; toutes les dépendances nécessaires seront installées automatiquement.
+
+Les fichiers du jeu seront copiés sois dans /usr/share/games/openttd/data ou dans ~/.openttd/data.
+
+Si vous voulez de la musique, vous devez installer le paquet timidity depuis les dépôts.
+
+{{fr/Note|Si GDebi de plaint de ne pas trouver une dépendance, essayez la version Etch.
+Évidemment, cela devrait aussi fonctionner sur les autres systèmes basés sur Debian.}}
+
+==== OSX ====
+
+OSX extraira un fichier .tar.gz ou .zip quand vous l'ouvrirez (double-clic sur Finder, cliquez dans la pile 'Téléchargements').
+
+== Copier les fichiers de graphique et de musique ==
+Toutes les installations de OpenTTD nécessitent des données graphiques et de son; ce peuvent être soit les graphismes d'origine, ou OpenGFX ou OpenSFX. Avoir au moins un de ces ensembles graphique et de son est obligatoire. Vous devez télécharger/copier les fichiers dans le répertoire /data du répertoire où vous venez d'extraire les nouveaux fichiers du jeu.
+
+Si vous voulez utiliser les graphiques d'origine, alors les fichiers nécessaires sont:
+* trg1r.grf
+* trgcr.grf
+* trghr.grf
+* trgir.grf
+* trgtr.grf
+* sample.cat 
+
+De plus, vous pouvez vouloir copier la musique d'origine du jeu. Pour cela, vous devez copier le répertoire /gm depuis le CD de TTD vers le répertoire où vous venez d'extraire les nouveaux fichiers du jeu (ne le mettez pas dans le répertoire /data!).
+
+Maintenant, vous être presque prêts à y aller. Ce n'était pas si dur, n'est-ce pas?
+
+== openttd.cfg ==
+OpenTTD a l'habitude de mettre le fichier de configuration (openttd.cfg) quelque part sous le répertoire personnel de votre compte (soit Mes documents sous Windows). Vous en avez probablement déjà un.
+
+Souvenez-vous que la version nocturne peut contenir des bogues; vous voudrez donc certainement aussi conserver une version stable déjà installée. Il ne serait donc pas raisonnable de laisser la nouvelle nocturne écraser l'ancien openttd.cfg correct; c'est du moins mon avis personnel. Certains ont plusieurs versions nocturnes sur leurs disques durs, chacune avec son propre openttd.cfg.
+
+Comment faire cela? Eh bien, c'est aussi assez facile. Deux options pour cela:
+
+* Créez un nouveau fichier vide dans le répertoire où vous avez extrait les nouveaux fichiers du jeu, et appelez-le ''openttd.cfg''.
+* Copiez le openttd.cfg depuis votre répertoire personnel dans votre nouveau répertoire nocturne.
+
+Dans les deux cas, OpenTTD mettra à jour le fichier pour correspondre à toutes les nouvelles options disponibles dans la nouvelle nocturne.
+
+==Bogues dans la nocturne==
+Si vous pensez avoir trouvé un bogue, téléchargez une copie de la dernière nocturne construite (ou compilez vous-mêmes une version) et vérifiez si le bogue y est toujours.
+
+Si c'est le cas, merci de vérifier '''d'abord''' [http://bugs.openttd.org/ le site web Flyspray de OpenTTD (http://bugs.openttd.org/)] pour vous assurer que le bogue n'a pas déjà été signalé. Si vous n'en trouvez pas trace, créez-en un sur le site de Flyspray.
+
+== Nouvelles fonctionnalités dans les nocturnes ==
+Comme écrit plus haut, les nocturnes contiennent de nouvelles  fonctionnalités qui ne sont pas disponibles dans les dernières versions stables ou bêta. Pour avoir une liste des fonctionnalités ajoutées depuis la dernière version stable, voyez [[Main/fr/Nouvelles fonctionnalités depuis 0.7.0|Nouvelles fonctionnalités depuis 0.7.0]]. Vous pouvez aussi vérifier la [[Main/fr/Feuille de route|Feuille de route]] pour voir les fonctionnalités à ajouter aux prochaines versions. Actuellement, les fonctionnalités pour la prochaine version sont sur la page [[Main/fr/Feuille de route 1.1|Feuille de route 1.1]].
+
+== Voir aussi ==
+* [[Main/fr/Directives des constructions nocturnes|Directives des constructions nocturnes]]
+
+[[Category:fr/Développement]]
+[[Category:fr/Installation]]
