@@ -1,0 +1,13 @@
+[[Translation:Main/en/Full load any cargo]]
+{{en/-}}
+Une [[Main/fr/Options avancées|option]] qui modifie le comportement de chargement des [[Main/fr/Trains|trains]] pour les faire quitter une gare si tous les types de cargaison sont pleins.
+
+== Description ==
+Quand vous [[Main/fr/Ordres|indiquez à un train]] de se charger à une gare, il attend normalement jusqu'à ce que chaque type de cargaison soit plein. Supposons que vous avez un train avec 5 wagons de passagers et 2 de courrier. Même s'il ne peut pas prendre plus de passagers, le train attendra jusqu'à ce que tous les fourgons postaux soient pleins également. Utilisez cette option pour désactiver ce comportement.
+
+== Utilisation ==
+L'option est activée par défaut. Vous pouvez la désactiver via la fenêtre [[Main/fr/Options avancées/Stations|Configuration avancée -> Stations]] ou en utilisant la syntaxe suivante dans [[Main/fr/openttd.cfg|openttd.cfg]]:
+<pre>[patches]
+full_load_any = false</pre>
+
+[[Category:fr/Réglages et préférences]]
