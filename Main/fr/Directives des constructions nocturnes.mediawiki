@@ -1,0 +1,39 @@
+[[Translation:Main/en/Nightly build guidelines]]
+{{en/-}}
+==Directives de construction nocturne==
+Comme le nommage actuel des nocturnes et leur contenu est un peu en pagaille, vous trouverez ci-dessous les directives officielles pour elles.
+
+===Nom===
+Le nom devrait identifier de façon uniforme le type de système et pour quelle révision la nocturne a été faite.
+:*OpenTTD: '''"OTTD-<système>-nightly-r<révision>.<extension>"'''. Par ex. ''OTTD-win32-nightly-r3794.zip''.
+:*Strgen: '''"strgen-<système>.<extension>"'''. Par ex. ''strgen-win32.zip''.
+
+===Changements de OpenTTD===
+OpenTTD lui-même devrait être modifié pour refléter correctement la nature de la nocturne. Cela veut dire ajouter le tag nocturne comme son identifiant (déjà fait sur les systèmes qui utilisent makefile pour la compilation).
+:*Révision: la révision courante pour laquelle la nocturne a été faite; par ex. "r3794"
+:*Barre de titre: inclut le nom et la révision du programme au format '''OpenTTD (AAAA-MM-JJ) - r<révision>'''
+:*Propriétés de l'exécutable (si applicable): si votre système supporte les propriétés d'exécutables comme sur Windows, changez ce qui suit pour suivre les directives ci-dessous:
+:*Version de fichier: version actuelle de OpenTTD, par ex. 0.4.0.1
+:*Version de produit: version actuelle de OpenTTD plus révision; par ex. '''"0.4.0.1 r<rév>"'''
+:*Construction spéciale: affiche que c'est une nocturne: ''''"Nightly Build of YYYY-MM-DD"''''
+
+===Compilation===
+La compilation devrait être faire sans aucune information DEBUG (par ex. en mode version) mais avec ASSERTIONS activé. PNG et ZLIB ont aussi à être activés.
+
+===Contenu des fichiers de OpenTTD===
+:*Exécutable openttd
+:*COPYING
+:*readme.txt
+:*docs\console.txt
+:*docs\multiplayer.txt
+:*répertoire data (data\*.grf, data\opntitle.dat)
+:*répertoire lang (lang\*.lng)
+
+===Contenu des fichiers de Strgen===
+:*Exécutable strgen
+:*COPYING
+:*readme.txt
+:*lang\english.txt
+:*docs\Howto_compile_lng_files_from_CLI.txt
+
+[[Category:fr/Développement]]
