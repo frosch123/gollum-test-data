@@ -1,0 +1,45 @@
+[[Translation:Main/en/NewGRF Debugging]]{{en/-}}
+{{fr/Table des matières}}
+
+{{fr/Disponibilité|1.1}}
+
+== Activer les outils de développeur NewGRF ==
+OpenTTD r19723 et suivants a introduit un certain nombre d'outils de débogage pour les développeurs (New)GRF. Afin de les rendre accessibles, les outils de débogage doivent être activés via un paramètre caché; le mieux est de le faire via la [[Main/fr/Console|console]]:
+<pre>
+set newgrf_developer_tools 1
+</pre>
+
+Ainsi, un certain nombre d'outils deviennent disponibles.
+
+== Outil d'alignement de sprite ==
+Une simple aide à l'alignement des sprites disponible depuis le menu 'Information' de la barre d'outils principale.
+
+L'outil d'alignement des sprites ne stocke nulle part les nouveaux décalages; donc, dès que le sprite est rechargé, les décalages sont perdus (utilisez un cache de sprites plus gros si cela arrive). De même, tout ce qui recharge les NewGRFs (nouvelles parties, chargement de jeu ou (ré)application de NewGRFs) vide le cache des sprites et réinitialise donc les décalages.
+
+Un 'ramasseur' est inclut pour vous aider à trouver les sprites nécessaires. Il listera les sprites utilisés à un endroit particulier de l'écran, essayant chaque élément de la liste jusqu'à ce que vous ayez trouvé celui que vous cherchez.
+
+'''Accéder à l'outil d'alignement des sprites'''
+
+[[File:en/sprite aligner 1.png]]
+
+
+'''L'outil d'alignement des sprites en action'''
+
+[[File:en/sprite aligner 2.png]]
+
+== Outil d'inspection des variables/propriétés ==
+Un outil de débogage pour les variables et les propriétés est fourni. Un vaste choix de variables et de propriétés est inclus pour chaque type d'objet. Certaines propriétés ne sont pas affichées car elles sont déjà évidentes, soit dans le jeu (par exemple, le nom d'un véhicule), ou dans le nfo pour l'action 0.
+
+La fenêtre de débogage des industries inclut la valeur de 16 emplacement de stockage persistants. Cela permet aux codeurs d'industrie de déboguer des variations complexes de chaîne en stockant des valeurs (possible uniquement pour les industries; les véhicules, les maisons, etc. n'ont pas de stockage permanent).
+
+La vue de débogage pour les variables peut être accédée via l'outil d'information sur une case de terrain pour tous les NewGRFs qui ne traitent pas des véhicules (remarquez l'icône de débogage dans le coin haut droit de la fenêtre d'information sur le terrain):
+
+[[File:en/variable debug1.png]]
+
+[[File:en/variable debug2.png]]
+
+
+Le débogage des variables de véhicule est accédé directement via la fenêtre du véhicule.
+[[File:en/vehicle debug.png]]
+
+[[Category:fr/NewGRF]]
