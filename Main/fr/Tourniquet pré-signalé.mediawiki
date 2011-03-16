@@ -1,0 +1,26 @@
+[[Translation:Main/en/Pre-Signaled Roundabout]]
+{{en/-}}{{fr/Menu de Croisements}}
+
+Le tourniquet pré-signalé est une combinaison d'idées. La première idée est le [[Main/en/Construction de dépôts/Fr#Configurations avancées de dépôt|dépôt de ligne principale avancé]], qui utilise les signaux pour donner la priorité aux trains voyageant sur les lignes principales. La seconde idée est votre [[Main/fr/Tourniquet|tourniquet]] de base. Une des failles du tourniquet est qu'il ne peut gérer que 2 trains à la fois. cette version un peu plus grande peut gérer 4 trains. De plus, les trains tournant à droite n'ont pas besoin d'entrer sur le tourniquet, mais passent plutôt sur les voies extérieures. Donc même si 4 trains sont sur la boucle intérieure, d'autres trains peuvent encore tourner à droite. La seconde faille du tourniquet basique est qu'il n'y a pas de préférence donnée entre les trains sortant ou entrant. En utilisant le choix de priorisation par pré-signal décrit dans [[Main/en/Construction de dépôts/Fr#Configurations avancées de dépôt|Dépôt de ligne principale avancé]], nous pouvons donner la préférence aux trains qui sortent de la boucle. Cela réduit fortement la probabilité d'embouteillage (je suis presque certain que la seule cause d'un embouteillage est que quatre trains tournant à gauche entrent dans la boucle exactement au même moment).
+
+[[File:en/PresignaledRoundAbout.png|none|thumb|600px|Tourniquet pré-signalé]]
+
+{{Template:Critère de jonction/Fr|Par paliers|2|0|0|2|0|0|0|0|1|1|2||Les trains en panne affectent toute la jonction.|
+*Les embouteillages sont possibles mais peu vraisemblables (trains longs)
+*Simple à démarrer, la complexité vient plus tard
+*Les signaux complexes peuvent être difficiles à régler
+*Zone: 15 x 15
+}}
+
+===Variantes===
+[[File:en/StartingPresignaledRoundAbout.png|none|thumb|600px|Boucle de démarrage pour le début du jeu]]
+Une avantage supplémentaire est qu'il s'agit d'une jonction qui peut être construite très simple pour démarrer, puis améliorée. Par exemple, vous pouvez démarrer avec une version carrée du tourniquet basique, et plus tard le convertir en sa version pré-signalée. Cela le rend très peu coûteux pour démarrer, et plus tard, quand l'argent sera disponible, le travail pourra être complété.
+
+[[File:en/PresignaledRoundAboutVariant.png|none|thumb|600px|Tourniquet pré-signalé (avancé)]]
+Il peut être un peu plus difficile à construire, mais il semble plus aisé de lui trouver de la place.
+
+[[File:en/No-colide-roundabout-4w.png|none|thumb|600px|Tourniquet pré-signalé (prouvé)]]
+C'est le plus simple à construire. Un train ne peut y entrer que s'il n'y a pas de trains sur les deux tronçons suivants.
+Il a été prouvé qu'aucun blocage (ou embouteillage) ne pouvait survenir. cette vérification a été faite en utilisant des réseaux de Pétri [http://en.wikipedia.org/wiki/Image:Trains.png] (en anglais).
+
+[[Category:fr/Jonctions ferroviaires]]
