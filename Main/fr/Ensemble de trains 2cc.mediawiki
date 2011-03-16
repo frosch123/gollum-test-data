@@ -1,0 +1,1187 @@
+[[Translation:Main/en/2cc TrainSet]]
+{{en/-}}
+Les trains du monde en deux couleurs (ou 3 si vous comptez le gris)
+
+{{fr/Infobox NewGRF|nomEnsemble  = Ensemble de trains 2cc
+|copieEcran   = 2cc TrainSet logo.PNG
+|artiste      = Équipe 2cc
+|codeur       = Équipe 2cc
+|focus        = Trains
+|homepage     = http://users.tt-forums.net/2cc/index.html
+|homepagename = 2cc TrainSet
+|copyright    = GPL v2+
+}}
+
+==Discussion==
+
+La discussion sur le développement de l'ensemble de trains 2cc se trouve sur les [http://www.tt-forums.net/viewtopic.php?f=26&t=43838&start=60 forums TT]. De plus, nous avons une [https://dev.openttdcoop.org/projects/2cctrainset zone de développement] pour tracer les bogues, les fonctionnalités, les fichiers et leurs versions.
+
+[[File:en/2cc logo.png]]
+
+==À propos de l'ensemble==
+
+[[File:en/TGV Thalys.png|frame|TGV Thalys]]
+
+L'ensemble 2cc inclura des trains du monde entier, dessinés en livrée de compagnie bicolore, afin que vous, joueur, puissiez choisir les couleurs de vos trains. Ce qui est unique pour cet ensemble est que les lignes électrifiées sont bien plus coûteuses (par défaut, x10), pour encourager l'utilsiation des trains diésel et à vapeur, notamment à partir du moment où les voies électrifiées deviennent disponibles à une date avancée (autour de 1910). Le troisième type de voie est utilisé pour une autre chose unique: le métro. Le métro a l'avantage de (dé)charger et d'accélérer rapidement, et a une capacité bien plus importante que les trains habituels. Toutefois, les trains du métro sont lents et ne peuvent transporter de fret. Ils sont également incompatibles avec les voies normales. Ainsi, le métro peut être assez utile pour un service de navette dans de grandes métropoles. L'endroit où le métro est très utile, cependant, est la [[Main/fr/Distribution de passagers et cargaisons|distribution de cargaisons]].
+
+Une autre chose au sujet de cet ensemble est les coûts (par défaut) très élevés de fonctionnement, mais cela, uniquement quand ils sont en mouvement. Quand ils attendent, les coûts de fonctionnement restent très bas.
+Notez que sur MU, le coût de fonctionnement est affiché '''par unité'''. Cela veut dire que le prix dans la fenêtre d'achat s'applique à chaque unité du train. Si le prix affiché est 5000$, 5 unités (y compris les deux têtes) coûtent 25 000$.
+
+==Téléchargement==
+
+La dernière version stable de l'ensemble 2cc peut être téléchargée via le système de téléchargement du [[Main/fr/Contenu En-ligne|contenu en ligne]].
+
+Les dernières constructions nocturnes se trouvent sur [http://bundles.openttdcoop.org/2cctrainset/nightlies/LATEST/ bundles.openttdcoop.org/2cctrainset/nightlies/LATEST/].
+
+==Dépendances GRF==
+[[Main/fr/Nutracks|NuTracks]] est la seule dépendance, et peut être téléchargé via la fenêtre de téléchargement du contenu dans le jeu, ou sur [http://bundles.openttdcoop.org/nutracks/nightlies/LATEST/ l'espace de développement]. NuTracks n'est pas vraiment requis, mais est FORTEMENT rzecommandé car il améliorera grandement la jouabilité, et fournira aussi les graphismes appropriés pour les trajets des trains du métro.
+
+==Vitesse de chargement des voitures de passagers==
+
+[[File:en/PRR-GG1.png|frame|PRR GG1]]
+
+L'ensemble 2cc maintient trois types différents de voitures de voyageurs. Chacun a une vitesse de chargement différente basée sur leur rôle dans la vraie vie.
+
+{| class="wikitable" border="1"
+! scope="col" |Type
+! scope="col" |Indicateur de vitesse de chargement
+! scope="col" |Passagers par tic
+! scope="col" |Capacité unitaire typique
+! scope="col" |Vitesse de déplacement typique
+|----
+|Trains inter-cités
+|Lente
+|8 par tic
+|40-50 passagers
+|125mph / 200km/h ou davantage
+|----
+|Trains de banlieue
+|Moyenne
+|20 par tic
+|45-120 passagers
+|60-100mph / 100-160km/h
+|----
+|Trains du métro
+|Haute
+|60 par tic
+|approx. 150 passagers
+|Inférieur à 60mph / 100km/h
+|----
+|}
+
+==Table des véhicules inclus==
+
+Ci-dessous une table de test des véhicules qui sont inclus dans l'ensemble 2cc. Comme nous expérimentons l'auto-génération de cette table pour la garder à jour, elle n'est pas parfaite pour le moment. Elle contient sans doute des erreurs ou quelques véhicules peuvent être mal listés ou oubliés.
+
+''<Dernière édition: Voyageur Un, 08/02/2011. à 12h26 GMT+1>''
+
+
+'''Locomotive à vapeur'''
+[[File:en/AT&SF 5000.png|frame|AT&SF 5000]]
+{| class="wikitable sortable" border="1"
+! scope="col" |Nom
+! scope="col" |Pays
+! scope="col" |Année d'introduction
+|----
+|Le Belge
+|Belgique
+|1835
+|----
+|4-4-0 'American'
+|USA
+|1848
+|----
+|SBB  Ec 2/5
+|Suisse
+|1854
+|----
+|4-6-0 'Ten-wheeler'
+|USA
+|1869
+|----
+|2-8-0 'Consolidation'
+|USA
+|1875
+|----
+|MAV 377
+|Hongrie
+|1885
+|----
+|KkStB 99
+|Autriche
+|1897
+|----
+|Caledonian Railway 439
+|Royaume Uni
+|1899
+|----
+|SBB A 3/5
+|Suisse
+|1902
+|----
+|SBB E 3/3
+|Suisse
+|1902
+|----
+|KkStB 299
+|Autriche
+|1904
+|----
+|NZR X Class
+|Nouvelle Zélande
+|1908
+|----
+|HZ 51
+|Croatie
+|1914
+|----
+|FS 880
+|Italie
+|1916
+|----
+|SNCF 140C
+|France
+|1920
+|----
+|FCNEA 11B 0-8-2
+|Argentine
+|1920
+|----
+|SNCF 141TA
+|France
+|1922
+|----
+|GWR 4900
+|Royaume Uni
+|1924
+|----
+|GWR 5700
+|Royaume Uni
+|1929
+|----
+|NS 6300
+|Hollande
+|1930
+|----
+|AT&SF 5000
+|USA
+|1930
+|----
+|MPC 9P
+|URSS
+|1934
+|----
+|LMS 5MT 'Black Five'
+|Royaume Uni
+|1934
+|----
+|Prussian S.10
+|Allemagne
+|1934
+|----
+|LNER A4 'Gresley'
+|Royaume Uni
+|1935
+|----
+|DSB E
+|Danemark
+|1937
+|----
+|CPR Royal Hudson
+|Canada
+|1937
+|----
+|DB 52
+|Allemagne
+|1937
+|----
+|LNER A1 'Peppercorn'
+|Royaume Uni
+|1948
+|----
+|MPC P36
+|URSS
+|1953
+|----
+|SAR 25
+|Afrique du Sud
+|1953
+|----
+|}
+
+
+'''Locomotive diésel ou gaz'''
+[[File:en/RAI DE43CA Prima.png|frame|RAI DE43CA 'Prima']]
+{| class="wikitable sortable" border="1"
+! scope="col" |Nom
+! scope="col" |Pays
+! scope="col" |Année d'introduction
+|----
+|DB 310 Kof II
+|Allemagne
+|1930
+|----
+|CNJ ALCo-GE-IR Boxcab
+|USA
+|1931
+|----
+|NS 200
+|Hollande
+|1934
+|----
+|DB 270
+|Allemagne
+|1936
+|----
+|SBB Am 4/6
+|Suisse
+|1938
+|----
+|Western Pacific ALCO S-2
+|USA
+|1940
+|----
+|NSWGR 79
+|Australie
+|1940
+|----
+|GNR EMD F3
+|USA
+|1946
+|----
+|UP EMD E8
+|USA
+|1949
+|----
+|EFCB ALCO RS-3
+|Brésil
+|1950
+|----
+|Pennsylvania Railroad RF-16 'Sharknose'
+|USA
+|1950
+|----
+|NS 600
+|Hollande
+|1950
+|----
+|AFE 1500
+|Uruguay
+|1952
+|----
+|Liberia Railways Class 08
+|Libéria
+|1953
+|----
+|CPR 'Trainmaster'
+|Canada
+|1953
+|----
+|VIA Rail FP9
+|Canada
+|1954
+|----
+|MAV M44
+|Hongrie
+|1954
+|----
+|OBB 2060
+|Autriche
+|1954
+|----
+|CNR SW1200
+|Canada
+|1954
+|----
+|MAV M28
+|Hongrie
+|1955
+|----
+|Amtrak FL9
+|USA
+|1956
+|----
+|NMBS/SNCB 83
+|Belgique
+|1956
+|----
+|DB 220 V200
+|Allemagne
+|1956
+|----
+|CSD 720 ChME2
+|Tchécoslovaquie
+|1958
+|----
+|CFR 060-DA
+|Roumanie
+|1959
+|----
+|VR Dr12
+|Finlande
+|1959
+|----
+|BF EMD GL8
+|Brésil
+|1960
+|----
+|EFVM ML4000
+|Brésil
+|1960
+|----
+|MPC TEP60
+|URSS
+|1960
+|----
+|NMBS/SNCB 67
+|Belgique
+|1961
+|----
+|DSB MaK 100
+|Danemark
+|1962
+|----
+|Indian Railways WDM-2
+|Inde
+|1963
+|----
+|BR 14
+|Royaume Uni
+|1964
+|----
+|MPC ChME3
+|URSS
+|1964
+|----
+|MF GM-EMD-J16CW-AC
+|Argentine
+|1965
+|----
+|MPC M62
+|URSS
+|1965
+|----
+|NSWGR 422
+|Australie
+|1969
+|----
+|UP EMD DDA40X
+|USA
+|1969
+|----
+|ENR G22W
+|Égypte
+|1969
+|----
+|Queensland Rail 2100
+|Australie
+|1970
+|----
+|HZ 2062
+|Croatie
+|1972
+|----
+|SJ V4
+|Suède
+|1972
+|----
+|CNR MLW M420W
+|Canada
+|1973
+|----
+|GNR SDP-40F
+|USA
+|1973
+|----
+|China Railways DFH3
+|Chine
+|1976
+|----
+|Panama Canal Railway EMD F40PH
+|Panama
+|1977
+|----
+|CP 1900
+|Portugal
+|1981
+|----
+|VR Dr16
+|Finlande
+|1985
+|----
+|MPC TEP80
+|URSS
+|1988
+|----
+|Australian National AN
+|Australie
+|1992
+|----
+|Amtrak P42DC 'Genesis'
+|USA
+|1992
+|----
+|TCDD DH7000
+|Turquie
+|1994
+|----
+|MF GE U20C
+|Argentine
+|1995
+|----
+|NMBS/SNCB 7800
+|Belgique
+|1997
+|----
+|BR 66
+|Royaume Uni
+|1998
+|----
+|BR 67
+|Royaume Uni
+|1999
+|----
+|RAI DE43CA 'Prima'
+|Iran
+|2002
+|----
+|DB 253 G2000-3 BB
+|Allemagne
+|2003
+|----
+|UZ TEP150
+|Ukraine
+|2006
+|----
+|China Railways HXN5
+|Chine
+|2008
+|----
+|DB 260 Gravita 10BB
+|Allemagne
+|2010
+|----
+|RZD GT1
+|Russie
+|2011
+|----
+|}
+
+
+'''Locomotive électrique'''
+[[File:en/Korail 8200.png|frame|Korail 8200]]
+{| class="wikitable sortable" border="1"
+! scope="col" |Nom
+! scope="col" |Pays
+! scope="col" |Année d'introduction
+|----
+|RhB DE 2/2
+|Suisse
+|1909
+|----
+|NSB EL7
+|Norvège
+|1911
+|----
+|NER EF1
+|Royaume Uni
+|1914
+|----
+|Milwaukee Road ES-2
+|USA
+|1916
+|----
+|Pennsylvania Railroad FF-1
+|USA
+|1916
+|----
+|Milwaukee Road EP-2 Bipolar
+|USA
+|1919
+|----
+|EFE Series E-28
+|Chili
+|1922
+|----
+|OBB 1161
+|Autriche
+|1928
+|----
+|DB 169
+|Allemagne
+|1930
+|----
+|JNR EB10
+|Japon
+|1931
+|----
+|NSB EL10
+|Norvège
+|1931
+|----
+|DB 104
+|Allemagne
+|1933
+|----
+|FS E428
+|Italie
+|1934
+|----
+|Pennsylvania Railroad GG-1
+|USA
+|1935
+|----
+|JNR EF55
+|Japon
+|1936
+|----
+|SAR ES Class
+|Afrique du Sud
+|1936
+|----
+|OBB 1020 'Crocodile'
+|Autriche
+|1940
+|----
+|MPC VL22M
+|URSS
+|1945
+|----
+|NS 1000
+|Hollande
+|1948
+|----
+|BR 77
+|Royaume Uni
+|1953
+|----
+|BR 77 'Metrovic'
+|Royaume Uni
+|1953
+|----
+|MTAB Dm3
+|Suède
+|1953
+|----
+|SBB Ce 4/4
+|Suisse
+|1954
+|----
+|SNCF BB 9004
+|France
+|1954
+|----
+|SBB Ae 6/6
+|Suisse
+|1955
+|----
+|Indian Railways WCM-1
+|Inde
+|1958
+|----
+|FS E646
+|Italie
+|1961
+|----
+|MPC VL41
+|URSS
+|1963
+|----
+|JNR EF64
+|Japon
+|1964
+|----
+|HZ 1141
+|Croatie
+|1967
+|----
+|SAR 6E
+|Afrique du Sud
+|1970
+|----
+|DB 103
+|Allemagne
+|1970
+|----
+|VR Sr1
+|Finlande
+|1973
+|----
+|OBB 1044
+|Autriche
+|1974
+|----
+|SNCF BB 22200
+|France
+|1976
+|----
+|PKP ET41
+|Pologne
+|1977
+|----
+|NS 1600
+|Hollande
+|1980
+|----
+|OBB 1063
+|Autriche
+|1982
+|----
+|MPC VL85
+|URSS
+|1983
+|----
+|MPC VL15
+|URSS
+|1984
+|----
+|China Railways 6K
+|Chine
+|1986
+|----
+|SNCF BB 26000
+|France
+|1989
+|----
+|SBB Re460 'Lok 2000'
+|Suisse
+|1991
+|----
+|China Railways SS6
+|Chine
+|1991
+|----
+|RENFE 252
+|Espagne
+|1992
+|----
+|BR 92
+|Royaume Uni
+|1993
+|----
+|DB 145 TRAXX F140
+|Allemagne
+|1996
+|----
+|JR EH500
+|Japon
+|1997
+|----
+|NMBS/SNCB 13 HLE
+|Belgique
+|1997
+|----
+|TCDD E55200
+|Turquie
+|1998
+|----
+|MTAB IORE
+|Suède
+|2000
+|----
+|DB 182 ES64U 'Taurus'
+|Allemagne
+|2000
+|----
+|UZ DS3
+|Ukraine
+|2003
+|----
+|Korail 8200
+|Corée du Sud
+|2003
+|----
+|KTZ KZ4A
+|Kazakhstan
+|2004
+|----
+|SBB Eem 923
+|Suisse
+|2012
+|----
+|}
+
+
+'''MU diésel ou gaz'''
+[[File:en/CNR Turbo Train.png|frame|CNR Turbo Train]]
+{| class="wikitable sortable" border="1"
+! scope="col" |Nom
+! scope="col" |Pays
+! scope="col" |Année d'introduction
+|----
+|NSWGR Silver City Comet
+|Australie
+|1937
+|----
+|CSD M131
+|Tchécoslovaquie
+|1948
+|----
+|DB VT08
+|Allemagne
+|1952
+|----
+|Queensland Rail 400
+|Australie
+|1955
+|----
+|FS ALn668
+|Italie
+|1956
+|----
+|DB 601 VT11 TEE
+|Allemagne
+|1957
+|----
+|CNR 'Turbo Train'
+|Canada
+|1967
+|----
+|ZS 811
+|Serbie
+|1974
+|----
+|BR 43 IC125
+|Royaume Uni
+|1976
+|----
+|CNR LRC
+|Canada
+|1980
+|----
+|SJ Y2
+|Suède
+|1990
+|----
+|RENFE 594 TRD
+|Espagne
+|1997
+|----
+|BR 168
+|Royaume Uni
+|1997
+|----
+|DB 612 'Regio Swinger'
+|Allemagne
+|1998
+|----
+|DB 642 'Desiro'
+|Allemagne
+|2000
+|----
+|NSB BM93 'Talent'
+|Norvège
+|2001
+|----
+|Arriva Lint 41
+|Danemark
+|2001
+|----
+|Transwa Prospector
+|Australie
+|2004
+|----
+|CityRail Hunter Railcar
+|Australie
+|2006
+|----
+|DSB IC4
+|Danemark
+|2007
+|----
+|HZ 7124
+|Croatie
+|2011
+|----
+|}
+
+
+'''MU électrique'''
+[[File:en/AGV.png|frame|AGV]]
+{| class="wikitable sortable" border="1"
+! scope="col" |Nom
+! scope="col" |Pays
+! scope="col" |Année d'introduction
+|----
+|NS Mat'24
+|Hollande
+|1924
+|----
+|OBB 4041
+|Autriche
+|1929
+|----
+|ATAC ECD 21-30
+|Italie
+|1932
+|----
+|NS Mat'36
+|Hollande
+|1936
+|----
+|NSB BM65
+|Norvège
+|1942
+|----
+|FS ETR300 'Settebello'
+|Italie
+|1952
+|----
+|SBB Rae TEE II
+|Suisse
+|1961
+|----
+|Odakyu 3100 Series 'Romance'
+|Japon
+|1962
+|----
+|JNR Shinkansen Series 0
+|Japon
+|1964
+|----
+|SBB RABDe 510
+|Suisse
+|1965
+|----
+|DSB S-Tog II
+|Danemark
+|1966
+|----
+|DB ET420
+|Allemagne
+|1969
+|----
+|CityRail V DDIU
+|Australie
+|1972
+|----
+|NS Plan Y
+|Hollande
+|1975
+|----
+|VR Sm2
+|Finlande
+|1975
+|----
+|NS ICM 4000
+|Hollande
+|1979
+|----
+|SNCF TGV Sud-Est
+|France
+|1981
+|----
+|SBB RBDe 560
+|Suisse
+|1984
+|----
+|Odakyu 10000 Series 'Romance'
+|Japon
+|1986
+|----
+|MAV BDVmot
+|Hongrie
+|1988
+|----
+|SJ X2000
+|Suède
+|1990
+|----
+|FS ETR500
+|Italie
+|1993
+|----
+|SNCF TGV Duplex
+|France
+|1995
+|----
+|SNCF TGV Thalys
+|France
+|1995
+|----
+|FS ALe426
+|Italie
+|1996
+|----
+|DSB S-Tog IV
+|Danemark
+|1996
+|----
+|NS mDDm 390
+|Hollande
+|1997
+|----
+|JR Shinkansen Series 700
+|Japon
+|1997
+|----
+|NSB BM73
+|Norvège
+|1998
+|----
+|CFL 2200 'Coradia Duplex'
+|Luxembourg
+|1999
+|----
+|CD 680 'Pendolino'
+|République tchèque
+|1999
+|----
+|VR Sm4
+|Finlande
+|1999
+|----
+|BDZ 10 'Desiro'
+|Bulgarie
+|2005
+|----
+|DB 403 ICE-3
+|Allemagne
+|2000
+|----
+|RENFE 120
+|Espagne
+|2001
+|----
+|SBB RABe 523 'Flirt'
+|Suisse
+|2004
+|----
+|CityRail OSCars
+|Australie
+|2007
+|----
+|NTV AGV
+|Italie
+|2011
+|----
+|NS 4800 HSA
+|Hollande
+|2012
+|----
+|NTV AGV Duplex
+|Italie
+|2015
+|----
+|}
+
+
+'''Tramway diésel'''
+[[File:en/DB VT98.png|frame|DB VT98]]
+{| class="wikitable sortable" border="1"
+! scope="col" |Nom
+! scope="col" |Pays
+! scope="col" |Année d'introduction
+|----
+|DB VT133
+|Allemagne
+|1932
+|----
+|DB VT42
+|Allemagne
+|1935
+|----
+|Amtrak Budd RDC
+|USA
+|1949
+|----
+|DB VT98
+|Allemagne
+|1953
+|----
+|VR Dm7
+|Finlande
+|1955
+|----
+|NS DH1
+|Hollande
+|1984
+|----
+|OBB 5047
+|Autriche
+|1987
+|----
+|BR 153 'Super Sprinter'
+|Royaume Uni
+|1991
+|----
+|CD 809
+|République tchèque
+|1996
+|----
+|DB 670
+|Allemagne
+|1996
+|----
+|Lithuanian Railways AR2
+|Lituanie
+|1997
+|----
+|}
+
+
+'''Tramway électrique'''
+[[File:en/CFe 3-3.png|frame|SBB Cfe 3/3]]
+{| class="wikitable sortable" border="1"
+! scope="col" |Nom
+! scope="col" |Pays
+! scope="col" |Année d'introduction
+|----
+|SBB Cfe 3/3
+|Suisse
+|1911
+|----
+|DB ET479
+|Allemagne
+|1930
+|----
+|}
+
+
+'''Métro'''
+[[File:en/Washington 7000.png|frame|Washington 7000]]
+{| class="wikitable sortable" border="1"
+! scope="col" |Nom
+! scope="col" |Pays
+! scope="col" |Année d'introduction
+|----
+|Brooklyn Union Gate Car
+|USA
+|1880
+|----
+|Budapest 1894 stock
+|Hongrie
+|1894
+|----
+|London 1903 stock
+|Royaume Uni
+|1903
+|----
+|Chicago L Northwest Elevated 1907 stock
+|USA
+|1907
+|----
+|Buenos Aires 'Le Brugeoise'
+|Argentine
+|1911
+|----
+|Berlin U-Bahn C II
+|Allemagne
+|1929
+|----
+|New York R1
+|USA
+|1930
+|----
+|London 1938 stock
+|Royaume Uni
+|1938
+|----
+|DB ET171
+|Allemagne
+|1942
+|----
+|Paris M2 840
+|France
+|1957
+|----
+|Budapest Ev3-200
+|Hongrie
+|1960
+|----
+|Oslo T1000
+|Norvège
+|1964
+|----
+|New York R44
+|USA
+|1971
+|----
+|Amsterdam Type M1
+|Hollande
+|1973
+|----
+|Stockholm C8
+|Suède
+|1974
+|----
+|Pyongyang D stock
+|Corée du Nord
+|1975
+|----
+|Helsinki M100
+|Finlande
+|1977
+|----
+|Moscow 81-720
+|URSS
+|1981
+|----
+|Tokyo S01
+|Japon
+|1985
+|----
+|Cairo 1987 stock
+|Égypte
+|1987
+|----
+|DLR P86
+|Royaume Uni
+|1987
+|----
+|Boston 01800
+|USA
+|1993
+|----
+|LA A650
+|USA
+|1993
+|----
+|Amsterdam CAF 90
+|Hollande
+|1997
+|----
+|Paris MP89
+|France
+|1997
+|----
+|Moscow 81-740
+|Russie
+|2003
+|----
+|Oslo MX3000
+|Norvège
+|2007
+|----
+|Osaka 30000
+|Japon
+|2009
+|----
+|Washington 7000
+|USA
+|2013
+|----
+|}
+
+
+'''Maglev'''
+{| class="wikitable sortable" border="1"
+! scope="col" |Nom
+! scope="col" |Pays
+! scope="col" |Année d'introduction
+|----
+|Shanghai Transrapid
+|Chine
+|2004
+|----
+|JR MLX01-901
+|Japon
+|2025
+|----
+|}
+
+==Régions géographiques==
+
+[[File:en/CairoMetro1987.png|frame|Métro du Caire]]
+
+L'ensemble 2cc utilisera des régions géographiques dans le futur, afin que les joueurs puissent sélectionner un choix limité de trains. Quelles régions géographiques seront choisies est encore en discussion.
