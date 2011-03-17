@@ -1,0 +1,41 @@
+<includeonly>
+[[File:en/.{{#switch: {{{1|}}} | non | Non =No_check_{{#switch: {{{2|}}} 
+  | noir   | Noir   = Black 
+  | orange | Orange = Orange 
+  | #default        = Red}}
+|Yes_check_{{#switch: {{{2|}}} 
+  | noir   | Noir   = Black 
+  | orange | Orange = Orange 
+  | rouge  | Rouge  = Red 
+  | bleu   | Bleu   = Blue 
+  | jaune  | Jaune  = Yellow
+  | #default        = Green}}}}.png|{{{size|11px}}}]]</includeonly><noinclude>
+
+==Utilisation==
+Entrez <nowiki>{{</nowiki>'''Vérification/Fr'''|''Oui/Non''|''Couleur''|''taille''<nowiki>}}</nowiki> dans une section d'article. Exemple:
+<pre>
+{{fr/Vérification|Oui}        Par défaut pour oui: vert
+{{fr/Vérification|Non}        Par défaut pour non: rouge
+{{fr/Vérification|Oui|Bleu|taille=50px}}  La taille est optionnelle. Défaut: 11px
+</pre>
+
+Couleurs actuellement disponibles:
+
+<gallery widths=30px heights=30px perrow=7 caption="Vérification oui">
+Image:Yes check Red.png
+Image:Yes check Orange.png
+Image:Yes check Black.png
+Image:Yes check Green.png
+Image:Yes check Blue.png
+Image:Yes check Yellow.png
+</gallery>
+
+<gallery widths=30px heights=30px perrow=7 caption="Vérification non">
+Image:No check Red.png
+Image:No check Orange.png
+Image:No check Black.png
+</gallery>
+
+
+[[Category:fr/Modèles|V]]
+</noinclude>
