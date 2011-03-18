@@ -1,0 +1,1460 @@
+[[Translation:Main/en/32bpp Extra Zoom Levels Files]]
+{{en/-}}
+<small><<Retour à la [[Main/fr/Niveaux de zoom extra 32bpp|page principale des niveaux de zoom extra]] </small> [[File:en/OpenTTD 32bpp.png|32bpp Project|400px|thumb]]
+
+
+==Introduction==
+*([[Main/fr/Niveaux de zoom extra 32bpp|Instructions d'installation de l'ajout]])
+Les graphismes 32bpp ne sont pas distribués avec le jeu ni ne sont téléchargeables par le système de contenu en ligne (Bananas). Donc, pour jouer avec des graphismes 32bpp, vous devez télécharger le contenu vous-mêmes. Le contenu graphique est distribué sous forme de fichiers tar qui contiennent les fichiers png 32bpp et/ou les fichiers de masque 8bpp. Les fichiers tar doivent être placés dans le répertoire data de votre jeu. Les fichiers tar n'ont pas besoin d'être décompactés, car le jeu est capable de lire le format tar (le format de fichier tar est un fichier de type conteneur, qui peut contenir un grand nombre d'autres fichiers, comme un fichier zip ou rar, mais sans compression).
+
+Contrairement à la croyance populaire, vous pouvez aussi jouer avec des graphismes 32bpp avec une version principale ou une version publiée, et il y a un effort continu pour rendre disponibles plus d'ensembles graphiques dans ce but. Mais actuellement, la plupart du contenu est disponible pour l'ajout zoom extra.
+
+Il y a deux raisons pour lesquelles certains fichiers tar ne fonctionnent pas pour votre environnement, qui seront vues plus tard.
+Tout d'abord, pour les impatients qui ne veulent pas lire, mais seulement télécharger, voici deux paquets de graphismes:
+
+==Ensembles/paquets graphiques==
+*[[Main/fr/Ensemble nocturne automatisé 32bits|Ensemble 32bits nocturne automatisé]] Il y a deux ensembles, l'ensemble standard qui est le plus petit, mais devrait marcher dans la plupart des configurations, et un ensemble de développement qui est plus gros, mais peut contenir davantage de problèmes.
+*[http://www.tt-forums.net/viewtopic.php?f=36&t=46682] L'ensemble est vaste, mais un peu dépassé, et fonctionne mieux avec l'ajout zoom extra et en utilisant l'ensemble de base opengfx.
+
+==Tars individuels==
+Les paquets graphiques contiennent une sélection possible des fichiers tar disponibles. Pour certaines catégories, plusieurs alternatives existent. Donc,  si vous voulez composer votre sélection de graphismes, voici une liste des tars, parmi lesquels vous pouvez charger ceux que vous aimez.
+
+===Terrain / Aménagement===
+
+====[[Main/fr/Terrains de sol (Nouveaux graphismes)|Terrain (lien vers le traqueur)]]====
+
+{{Template:Graphique_ZoomExtra_32bpp_Terminé/Fr
+|titre=Terrains de ferme
+|artiste=Ben Robbins
+|codeur=
+|fichier=http://jupix.info/openttd/gfxdev-repo/files/65/Ground%20-%20Fields%20-%20With%20Lines%20-%20v2.tar
+|lien=[http://jupix.info/openttd/gfxdev-repo/index.php?act=file&id=65 Dépôt]
+|notes=Les 9 étapes des champs, avec les lignes
+|org=oui
+|ogfx=oui
+|z0=oui
+|z2=oui
+|màj=26/01/2010
+}}
+
+{{Template:Graphique_ZoomExtra_32bpp_Terminé/Fr
+|titre=Terrains de ferme
+|artiste=Ben Robbins
+|codeur=
+|fichier=http://jupix.info/openttd/gfxdev-repo/files/64/Ground%20-%20Fields%20-%20No%20Lines%20-%20v2.tar
+|lien=[http://jupix.info/openttd/gfxdev-repo/index.php?act=file&id=64 Dépôt]
+|notes=Les 9 étapes des champs, sans lignes
+|org=oui
+|ogfx=oui
+|z0=oui
+|z2=oui
+|màj=25/04/2010
+}}
+
+{{Template:Graphique_ZoomExtra_32bpp_Terminé/Fr
+|image=Image:new_farm_Alltaken.png
+|titre=Les 9 étapes des sprites de champs
+|artiste=[[Archive/en/Alltaken|Alltaken]]
+|codeur=[[Archive/en/Soeb|Soeb]]
+|fichier=http://www.tt-forums.net/viewtopic.php?p=671000#p671000
+|lien=
+|notes=Chacun des liens est une étape différente: <p>
+[[http://www.tt-forums.net/download/file.php?id=112271 1]]
+[[http://www.tt-forums.net/download/file.php?id=112272 2]]
+[[http://www.tt-forums.net/download/file.php?id=112275 3]]
+[[http://www.tt-forums.net/download/file.php?id=112278 4]]
+[[http://www.tt-forums.net/download/file.php?id=112279 5]]
+[[http://www.tt-forums.net/download/file.php?id=112280 6]]
+[[http://www.tt-forums.net/download/file.php?id=112281 7]]
+[[http://www.tt-forums.net/download/file.php?id=112282 8]]
+[[http://www.tt-forums.net/download/file.php?id=112283 9]]</p>
+}}
+
+<br style="clear:both" />
+{{Template:Graphique_ZoomExtra_32bpp_Terminé/Fr
+|titre=Cases tempérées
+|artiste=Ben Robbins
+|codeur=
+|fichier=http://jupix.info/openttd/gfxdev-repo/files/67/Ground%20-%20With%20Lines%20v5.tar
+|lien=[http://jupix.info/openttd/gfxdev-repo/index.php?act=file&id=67 Dépôt] 
+|notes=naturel, nu, rocailleux, accidenté..., avec des lignes
+|org=oui
+|ogfx=oui
+|z0=oui
+|z2=oui
+|màj=25/04/2010
+}}
+
+{{Template:Graphique_ZoomExtra_32bpp_Terminé/Fr
+|titre=Cases tempérées
+|artiste=Ben Robbins
+|codeur=
+|fichier=http://jupix.info/openttd/gfxdev-repo/files/66/Ground%20-%20No%20Lines%20v3.tar
+|lien=[http://jupix.info/openttd/gfxdev-repo/index.php?act=file&id=66 Dépôt]
+|notes=Cases de terrain tempéré, sans lignes
+|org=oui
+|ogfx=oui
+|z0=oui
+|z2=oui
+|màj=25/04/2010
+}}
+
+{{Template:Graphique_ZoomExtra_32bpp_Terminé/Fr
+|titre=Cases arctiques
+|artiste=
+|codeur=
+|fichier=http://jupix.info/openttd/gfxdev-repo/files/LandScape-Ground-Tiles%20Artic.tar
+|lien=[http://jupix.info/openttd/gfxdev-repo/index.php?act=file&id=181 Dépôt] 
+|notes=naturel, nu, rocailleux, accidenté... avec des lignes
+|org=oui
+|ogfx=oui
+|z0=oui
+|z2=oui
+|màj=23/11/2009
+}}
+
+{{Template:Graphique_ZoomExtra_32bpp_Terminé/Fr
+|image=Image:Arctic_grass.png‎
+|titre=Paysage arctique avec pelouse
+|artiste=[[Archive/en/Maquinista|Maquinista]] et [[Archive/en/Ben Robbins|Ben_Robbins_]]
+|codeur=[[Archive/en/Maquinista|Maquinista]] et [[Archive/en/Ben Robbins|Ben_Robbins_]]
+|fichier=http://www.tt-forums.net/download/file.php?id=99773
+|lien=[http://www.tt-forums.net/viewtopic.php?p=764957#p764957]
+|notes=Ce fichier a d'autres cases: [[http://www.tt-forums.net/download/file.php?id=105895]]
+Il a un fichier batch avec des décalages.
+}}
+
+{{Template:Graphique_ZoomExtra_32bpp_Terminé/Fr
+|image=Image:new_grass_arctic_Alltaken.png
+|titre=Paysage arctique sans pelouse
+|artiste=[[Archive/en/Alltaken|Alltaken]]
+|codeur=[[Archive/en/Soeb|Soeb]]
+|fichier=http://www.tt-forums.net/download/file.php?id=87416
+|lien=
+|notes=
+}}
+
+{{Template:Graphique_ZoomExtra_32bpp_Terminé/Fr
+|titre=Cases tropicales et désertiques
+|artiste=
+|codeur=
+|fichier=http://jupix.info/openttd/gfxdev-repo/files/LandScape-Ground-Tiles%20Tropical%20Desert.tar 
+|lien=[http://jupix.info/openttd/gfxdev-repo/index.php?act=file&id=180 Dépôt]
+|notes=naturel, nu, rocailleux, accidenté... avec des lignes
+|org=oui
+|ogfx=oui
+|z0=oui
+|z2=oui
+|màj=23/11/2009
+}}
+
+
+
+<br style="clear:both" />
+{{Template:Graphique_ZoomExtra_32bpp_Terminé/Fr
+|image=Image:new_terrain_desert.png
+|titre=Nouvelles cases de désert
+|artiste=[[Archive/en/Wacki|Wacki]]
+|codeur=[[Archive/en/Wacki|Wacki]] et [[Archive/en/maquinista|maquinista]]
+|fichier=http://www.tt-forums.net/download/file.php?id=112304
+|lien=http://www.tt-forums.net/viewtopic.php?p=795470#p795470
+|notes=
+}}
+
+{{Template:Graphique_ZoomExtra_32bpp_Terminé/Fr
+|image=Image:Tropical landscape.jpg
+|titre=Paysage tropical
+|artiste=[[Archive/en/Ben|Ben Robbins]] et [[Archive/en/habell|habell]]
+|codeur=[[Archive/en/habell|Habell]]
+|fichier=http://www.tt-forums.net/download/file.php?id=97298
+|lien=[http://www.tt-forums.net/viewtopic.php?f=36&p=721162#p721162 Sujet]
+|notes=Il contient aussi un palmier.
+}}
+
+<br style="clear:both" />
+
+====[[Main/fr/Terrains divers (nouveaux graphismes)|Terrains divers (lien vers le traqueur)]]====
+{{Template:Graphique_ZoomExtra_32bpp_Terminé/Fr
+|titre=Sprites divers
+|artiste=Maquinista, Wacki, Habell, Dmh_mac, LordAzamath
+|codeur=Maquinista
+|fichier=http://jupix.info/openttd/gfxdev-repo/files/43/Miscellaneous_sprites.tar
+|lien=[http://jupix.info/openttd/gfxdev-repo/index.php?act=file&id=43 Dépôt]
+|notes=Flèches, palmiers, phares, émetteurs, lampadaires... (les phares devraient être supprimés car ils sont disponibles dans un tar séparé).
+|org=non
+|ogfx=oui
+|z0=oui
+|z2=non
+|màj=23/11/2010
+}}
+{{Template:Graphique_ZoomExtra_32bpp_Terminé/Fr
+|titre=Clôtures
+|artiste=Ben Robbins <br />&nbsp;
+|codeur=
+|fichier=http://jupix.info/openttd/gfxdev-repo/files/156/LandScape-Misc-Fences.tar
+|lien=[http://jupix.info/openttd/gfxdev-repo/index.php?act=file&id=156 Dépôt]
+|notes=Inclut des clôtures de ferme et de chemin de fer (seulement 2 options pour celles de ferme)
+|org=oui
+|ogfx=oui
+|z0=oui
+|z2=non
+|màj=23/02/2010
+}}
+<br style="clear:both" />
+{{Template:Graphique_ZoomExtra_32bpp_Terminé/Fr
+|image=Image:Transmitter2.png
+|titre=Émetteur
+|artiste=[[Archive/en/LordAzamath|LordAzamath]]
+|codeur=[[Archive/en/Maquinista|Maquinista]]
+|fichier=http://www.tt-forums.net/download/file.php?id=109008
+|lien=[http://www.tt-forums.net/viewtopic.php?p=780267#p780267 Sujet du forum]
+|notes=Adapté aux niveaux de zoom extra.
+}}
+<br style="clear:both" />
+====[[Main/fr/Terrains arborés (nouveaux graphismes)|Terrains arborés]]====
+
+{{Template:Graphique_ZoomExtra_32bpp_Terminé/Fr
+|image=Image:1649_z0.png
+|titre=Arbres tempérés de Varivar
+|artiste=[[Archive/en/Varivar]]
+|codeur=[[Archive/en/Maquinista|Maquinista]] et Varivar
+|fichier=http://www.tt-forums.net/download/file.php?id=120093
+|lien=http://www.tt-forums.net/viewtopic.php?p=832692#p832692
+|notes=5 arbres tempérés et bord de route tempéré
+}}
+
+{{Template:Graphique_ZoomExtra_32bpp_Terminé/Fr
+|image=Image:new_trees.png
+|titre=Trois nouveaux arbres tempérés
+|artiste=[[Archive/en/Ben|Ben Robbins]]
+|codeur=[[Archive/en/Soeb|Soeb]]
+|fichier=http://www.tt-forums.net/download/file.php?id=84389
+|lien=
+|notes=
+}}
+<br style="clear:both" />
+
+====[[Main/fr/Eau (nouveaux graphismes)|Eau]]====
+{{fr/Graphique ZoomExtra 32bpp Terminé| titre   = Ligne côtière et mer, avec lignes
+ | artiste = [[Archive/en/Ben]]
+ | codeur  = [[Archive/en/Ben]], [[Archive/en/Maquinista]]
+ | fichier = http://jupix.info/openttd/gfxdev-repo/files/248/32bpp%20-%20Full%20Zoom%20-%20Ground%20-%20Coastline%20and%20Sea%20-%20With%20Lines.tar
+ | lien    = [http://jupix.info/openttd/gfxdev-repo/index.php?act=file&id=248 Dépôt]
+ | notes   = Nécessite le newgrf [http://www.tt-forums.net/viewtopic.php?f=36&t=47288 32bpp-extra]. 
+ | màj     = 22/05/2010
+ | org     = oui
+ | ogfx    = oui
+ | z0      = oui
+ | z2      = non
+}}
+{{fr/Graphique ZoomExtra 32bpp Terminé| titre   = Ligne côtière et mer, sans lignes
+ | artiste = [[Archive/en/Ben]]
+ | codeur  = [[Archive/en/Ben]], [[Archive/en/Maquinista]]
+ | fichier = http://jupix.info/openttd/gfxdev-repo/files/249/32bpp%20-%20Full%20Zoom%20-%20Ground%20-%20Coastline%20and%20Sea%20-%20Without%20Lines.tar
+ | lien    = [http://jupix.info/openttd/gfxdev-repo/index.php?act=file&id=249 Dépôt]
+ | notes   = Nécessite le newgrf [http://www.tt-forums.net/viewtopic.php?f=36&t=47288 32bpp-extra]. 
+ | màj     = 22/05/2010
+ | org     = oui
+ | ogfx    = oui
+ | z0      = oui
+ | z2      = non
+}}
+
+{{fr/Graphique ZoomExtra 32bpp Terminé| titre   = Eau, côtes et case noire
+ | artiste = [[Archive/en/Ben]],[[Archive/en/Habell]],[[Archive/en/Wacki]],[[Archive/en/Maquinista]]
+ | codeur  = [[Archive/en/Ben]], [[Archive/en/Habell]], [[Archive/en/Maquinista]]
+ | fichier = http://jupix.info/openttd/gfxdev-repo/files/55/Coast_tiles.tar
+ | lien    = [http://jupix.info/openttd/gfxdev-repo/index.php?act=file&id=55 Dépôt]
+ | notes = Il contient aussi la case noire (problèmes de compatibilité avec OriginalGfx; voyez [http://www.tt-forums.net/viewtopic.php?f=36&t=47288 32bpp-extra]). Semble se recouvrir avec le [http://jupix.info/openttd/gfxdev-repo/index.php?act=file&id=183 dépôt]
+ | màj = 14/01/2010
+ | org=non
+ | ogfx=oui
+ | z0=oui
+ | z2=non
+}}
+
+<br style="clear:both" />
+===Infrastructure===
+<br style="clear:both" />
+====[[Main/en/Traces des stations (nouveaux graphismes)/Fr#Aéroports|Aéroports]]====
+{{Template:Graphique_ZoomExtra_32bpp_Terminé/Fr
+|image=Image:Airport32.jpeg
+|titre=Aéroport métropolitain
+|artiste=[[Archive/en/LordAzamath|LordAzamath]],[[Archive/en/Maquinista|Maquinista]],[[Archive/en/Antonio1984|Antonio1984]]
+|codeur=[[Archive/en/LordAzamath|LordAzamath]] and [[Archive/en/Maquinista|Maquinista]]
+|fichier=http://jupix.info/openttd/gfxdev-repo/files/227/City%20Airport4.tar
+|lien=[http://jupix.info/openttd/gfxdev-repo/index.php?act=file&id=227 Dépôt]
+|notes=
+|org=oui
+|ogfx=oui
+|z0=oui
+|z2=oui
+}}
+
+{{Template:Graphique_ZoomExtra_32bpp_Terminé/Fr
+|image=Image:Airport32.jpeg
+|titre=Petit aéroport
+|artiste=[[Archive/en/Maquinista|Maquinista]]
+|codeur=[[Archive/en/Maquinista|Maquinista]]
+|fichier=http://jupix.info/openttd/gfxdev-repo/files/228/Small%20Airport.tar
+|lien=[http://jupix.info/openttd/gfxdev-repo/index.php?act=file&id=228 Dépôt]
+|notes=
+|org=oui
+|ogfx=oui
+|z0=oui
+|z2=oui
+}}
+
+{{Template:Graphique_ZoomExtra_32bpp_Terminé/Fr
+|image=Image:Airport32.jpeg
+|titre=Cases d'aéroport
+|artiste=[[Archive/en/LordAzamath|LordAzamath]]
+|codeur=[[Archive/en/LordAzamath|LordAzamath]] et [[Archive/en/Maquinista|Maquinista]]
+|fichier=http://www.tt-forums.net/download/file.php?id=105192
+|lien=[http://www.tt-forums.net/viewtopic.php?p=761368#p761368]
+|notes=Ce fichier sera mis à jour avec le petit aéroport.
+}}
+
+<br style="clear:both" />
+
+====[[Main/fr/Traces des ponts (nouveaux graphismes)|Ponts]]====
+
+{{fr/Graphique ZoomExtra 32bpp Terminé|image=Image:Pantallazo.JPEG
+ | titre   = Nouveaux ponts 32bpp
+ | artiste = [[Archive/en/Maquinista|Maquinista]]
+ | codeur  = [[Archive/en/Maquinista|Maquinista]]
+ | fichier = http://jupix.info/openttd/gfxdev-repo/files/21/32%20bpp%20bridges.tar 
+ |lien=[http://www.tt-forums.net/viewtopic.php?p=797644#p797644 Forum][http://jupix.info/openttd/gfxdev-repo/index.php?act=file&id=21 Dépôt] [http://www.tt-forums.net/download/file.php?id=112785 Ancien téléchargement]
+ | notes = Meilleurs ponts NewGRF, incluant des routes, des voies ferrées et des monorails, et l'ensemble ci-dessous 'Meilleurs ponts'. [http://www.tt-forums.net/viewtopic.php?p=797644#p797644 Plus d'information] <br/>Aussi disponible, ensemble [http://www.tt-forums.net/download/file.php?id=109009 Meilleurs ponts]. [http://www.tt-forums.net/viewtopic.php?f=36&t=36474&start=680 Plus d'info]<br/>Mis à disposition sous CC BY. [http://www.tt-forums.net/download/file.php?id=112788 Ancien téléchargement] Il nécessite de charger un nouveau fichier GRF dans le fichier TAR; ce fichier GRF n'est pas compatible avec le fichier GRF qui dessine de meilleurs piliers.
+<BR>Il y avait un [http://www.tt-forums.net/download/file.php?id=108047 fichier de remplacement] pour l'ensemble de remplacement total des ponts [http://www.tt-forums.net/viewtopic.php?p=775098#p775098 ici]. Il a besoin du fichier GRF de l'ensemble de remplacement total des ponts. Un fichier NewGRF différent avec les pots est prévu.
+*Ce fichier est un fichier GRF+TAR qui dessine de meilleurs piliers:
+[http://www.tt-forums.net/download/file.php?id=109009 4]
+ | màj = 21/06/2009
+ |org=oui
+ |ogfx=oui
+ |z0=oui
+}}
+
+{{Template:Graphique_ZoomExtra_32bpp_Terminé/Fr
+|image=Image:Bridges_32bpp.png
+|titre=Ponts par défaut
+|artiste=[[Archive/en/northstar2| northstar2]]
+|codeur=[[Archive/en/Maquinista|Maquinista]]
+|fichier=http://jupix.info/openttd/gfxdev-repo/files/39/32bpp_fullzoom_bridges.tar
+|lien=[http://www.tt-forums.net/viewtopic.php?f=36&t=36474&start=680 Forum][http://www.tt-forums.net/download/file.php?id=118649 Ancien téléchargement][http://jupix.info/openttd/gfxdev-repo/index.php?act=file&id=39 Dépôt]
+|notes=Inclut des sprites de route, rail et monorail, pas encore de Maglev.
+|org=non
+|ogfx=oui
+|z0=oui
+|z2=non
+}}
+
+
+
+<br style="clear:both" />
+
+====Dépôts====
+
+{{Template:Graphique_ZoomExtra_32bpp_Terminé/Fr
+|image=Image:Transmitter2.png
+|titre=Dépôt de véhicules routiers
+|artiste=[[Archive/en/Brupje|Brupje]]
+|codeur=[[Archive/en/Maquinista|Maquinista]]
+|fichier=http://www.tt-forums.net/download/file.php?id=108438
+|lien=[http://www.tt-forums.net/viewtopic.php?p=777359#p777359 Sujet du forum]
+|notes=[http://www.tt-forums.net/download/file.php?id=96971 Autre dépôt par] [http://www.tt-forums.net/viewtopic.php?p=720906#p720906 Brupje]
+}}
+
+{{Template:Graphique_ZoomExtra_32bpp_Terminé/Fr
+|image=Image:New_rail_depots32.jpeg
+|titre=Nouveaux dépôts ferroviaires
+|artiste=[[Archive/en/j0rdax|j0rdax]]
+|codeur=[[Archive/en/j0rdax|j0rdax]]
+|fichier=http://www.tt-forums.net/download/file.php?id=108065
+|lien=[http://www.tt-forums.net/viewtopic.php?p=775162#p775162]
+|notes=Réduit et rendu superposable.
+}}
+
+<br style="clear:both" />
+====[[Main/fr/Terrains divers (nouveaux graphismes)|Divers]]====
+{{Template:Graphique_ZoomExtra_32bpp_Terminé/Fr
+|image  =Image:Ottdfound1ub0.jpg
+|titre=Fondations
+|artiste=[[Archive/en/gt1750|gt1750]]
+|codeur=[[Archive/en/gt1750|gt1750]]
+|fichier=http://jupix.info/openttd/gfxdev-repo/files/LandScape-Misc-Foundations.tar
+|lien=[http://jupix.info/openttd/gfxdev-repo/index.php?act=file&id=185 Dépôt]
+|notes= inclus dans le newgrf 32bpp-extra; voyez [http://www.tt-forums.net/viewtopic.php?f=36&t=47288 32bpp-extra])
+|org=oui
+|ogfx=oui
+|z0=oui
+|z2=non
+}} 
+ 
+{{Template:Graphique_ZoomExtra_32bpp_Terminé/Fr
+|image  =Image:Ottdfound1ub0.jpg
+|titre=Fondations tempérées
+|artiste=[[Archive/en/gt1750|gt1750]]
+|codeur=[[Archive/en/gt1750|gt1750]]
+|fichier=http://www.tt-forums.net/download/file.php?id=91971
+|lien=
+|notes=Créé avec Adobe Photoshop. Tout emballé et fonctionnel, mais pas 100% poli. [http://www.tt-forums.net/viewtopic.php?p=696338#p696338]
+Ce fichier est seulement compatible avec les graphismes d'origine.
+Version compatible avec openGFX: 
+[http://jupix.info/openttd/gfxdev-repo/index.php?act=file&id=42 Téléchargement]
+}} 
+{{Template:Graphique_ZoomExtra_32bpp_Terminé/Fr
+|image=Image:Ottdfound1ub0.jpg
+|titre=Fondations tropicales
+|artiste=[[Archive/en/gt1750|gt1750]] et [[Archive/en/j0rdax|j0rdax]]
+|codeur=[[Archive/en/gt1750|gt1750]] et [[Archive/en/maquinista|maquinista]]
+|fichier=http://www.tt-forums.net/download/file.php?id=110910
+|lien=http://www.tt-forums.net/viewtopic.php?p=788988#p788988
+|notes=Créé depuis fondations, créé par gt1750, en utilsiant GIMP et les masques de couche. Tout emballé et fonctionnel, mais pas 100% poli.
+Pour OpenGFX uniquement, inclus dans: [http://jupix.info/openttd/gfxdev-repo/index.php?act=file&id=42 lien]
+}}
+
+{{Template:Graphique_ZoomExtra_32bpp_Terminé/Fr
+|image=Image:Wotans_crossings.png
+|titre=Croisements de Wotan
+|artiste=[[Archive/en/Wotan|Wotan]]
+|codeur=[[Archive/en/Maquinista|Maquinista]]
+|fichier=http://jupix.info/openttd/gfxdev-repo/files/49/crossings_wotan_02.tar
+|lien= [http://jupix.info/openttd/gfxdev-repo/index.php?act=file&id=49 Dépôt] [http://www.tt-forums.net/download/file.php?id=97295 Ancien téléchargement]
+|notes=Les feux rouges ne clignotent pas.<!-- Si vous utilisez une asphalte grise, utilisez [http://www.tt-forums.net/download/file.php?id=97295 ce fichier].--> [http://www.tt-forums.net/viewtopic.php?p=721726#p721726 Lien du forum].
+|org=non
+|ogfx=oui
+|z0=oui
+|z2=non
+}}
+
+<br style="clear:both" />
+
+====[[Main/en/Voies de base (nouveaux graphismes)/Fr#Voie ferrée|Voies ferrées (lien vers le traqueur)]]====
+
+{{Template:Graphique_ZoomExtra_32bpp_Terminé/Fr
+|
+|titre=Voies ferrées tempérées (pas de lignes)
+|artiste=[[Archive/en/Ben|Ben Robbins]]
+|codeur=[[Archive/en/Maquinista|Maquinista]]
+|fichier=http://jupix.info/openttd/gfxdev-repo/files/74/Rail%20-%20Without%20Lines%20v2.tar
+|lien=[http://jupix.info/openttd/gfxdev-repo/index.php?act=file&id=74 Dépôt]
+|notes=Voies ferrées sans lignes; ne peut être combiné avec des voies ferrées avec lignes
+|org=oui
+|ogfx=oui
+|z0=oui
+|z2=non
+|màj=03/02/2010
+}}
+
+{{Template:Graphique_ZoomExtra_32bpp_Terminé/Fr
+|
+|titre=Voies ferrées tempérées (avec lignes)
+|artiste=[[Archive/en/Ben|Ben Robbins]]
+|codeur=[[Archive/en/Maquinista|Maquinista]]
+|fichier=http://jupix.info/openttd/gfxdev-repo/files/63/Rail%20-%20With%20Lines%20v2.tar
+|lien=[http://jupix.info/openttd/gfxdev-repo/index.php?act=file&id=63 Dépôt]
+|notes=Voies ferrées avec lignes; ne peut être combiné avec les voies ferrée sans lignes
+|org=oui
+|ogfx=oui
+|z0=oui
+|z2=non
+|màj=03/02/2010
+}}
+
+{{Template:Graphique_ZoomExtra_32bpp_Terminé/Fr
+|
+|titre=Arctique/Tropical
+|artiste=Ben Robbins, Habell, Wacki
+|codeur=Ben Robbins, Habell, Maquinista
+|fichier=http://jupix.info/openttd/gfxdev-repo/files/Railways.tar
+|lien=[http://jupix.info/openttd/gfxdev-repo/index.php?act=file&id=34 Dépôt]
+|notes=Contient des tunnels
+|org=oui
+|ogfx=oui
+|z0=oui
+|z2=non
+|màj=07/02/2010
+}}
+
+{{fr/Graphique ZoomExtra 32bpp Terminé|image=Image:Lumbermill.JPEG
+|titre=Cases de monorail
+|artiste=[[Archive/en/j0rdax|j0rdax]]
+|codeur=[[Archive/en/Maquinista|Maquinista]]
+|fichier=http://jupix.info/openttd/gfxdev-repo/files/264/monorail_temperate_lines_std.tar
+|lien=[http://www.tt-forums.net/viewtopic.php?p=778640#p778640],[http://jupix.info/openttd/gfxdev-repo/index.php?act=file&id=264 Dépôt], [http://www.tt-forums.net/download/file.php?id=108681 ancien]
+|notes=Voici le fichier avec les tunnels: [http://www.tt-forums.net/download/file.php?id=108168]
+|org=oui
+|ogfx=oui
+|z0=oui
+|z2=non
+|màj=10/10/2010
+}}
+
+{{fr/Graphique ZoomExtra 32bpp Terminé|image=
+|titre=Tunnels ferroviaires
+|artiste=
+|codeur=
+|fichier=http://jupix.info/openttd/gfxdev-repo/files/Tunnels.tar
+|lien=[http://jupix.info/openttd/gfxdev-repo/index.php?act=file&id=117 Dépôt]
+|notes=Tempéré
+|org=oui
+|ogfx=oui
+|z0=oui
+|z2=non
+|màj=12/03/2010
+}}
+
+=====[[Main/fr/Voies diverses (nouveaux graphismes)|Voies diverses]]=====
+{{fr/Graphique ZoomExtra 32bpp Terminé|image=Image:Catenaria2.jpg
+|titre=Caténaires/Câbles aériens
+|artiste=[[Archive/en/ArmEagle|ArmEagle]]
+|codeur=[[Archive/en/ArmEagle|ArmEagle]]
+|fichier=http://jupix.info/openttd/gfxdev-repo/index.php?act=file&id=58
+|lien=[http://www.tt-forums.net/viewtopic.php?p=838970#p838970 Sujet du forum]
+|notes=[http://www.tt-forums.net/download/file.php?id=121115 Ancien téléchargement] Le téléchargement depuis le dépôt est seulement ogfx. Une version pour toutes les configurations est comprise dans [http://www.tt-forums.net/viewtopic.php?f=36&t=47288 32bpp-extra] 
+|org=oui
+|ogfx=oui
+|z0=oui
+|z2=non
+|màj=
+}}
+
+{{fr/Graphique ZoomExtra 32bpp Terminé|image=Image:Wotans_signals.jpg
+|titre=Signaux de Wotan
+|artiste=[[Archive/en/Wotan|Wotan]]
+|codeur=[[Archive/en/Maquinista|Maquinista]]
+|fichier=http://jupix.info/openttd/gfxdev-repo/files/45/Wotan_signals4.tar
+|lien=[http://www.tt-forums.net/viewtopic.php?p=770945#p770945][http://www.tt-forums.net/download/file.php?id=107164 Ancien téléchargement][http://jupix.info/openttd/gfxdev-repo/index.php?act=file&id=45 Dépôt]
+|notes=192 fichier PNG. Si vous aimez les signaux de style ancien, vous pouvez utiliser ce [http://www.tt-forums.net/download/file.php?id=105257 fichier]. [http://www.tt-forums.net/viewtopic.php?p=761693#p761693 Liens du forum]. Par Wotan, License: by-nc-sa. Numérotation basée sur le [http://dev.openttdcoop.org/projects/32bpp-extra GRF 32bpp-Extra]
+|org=oui
+|ogfx=oui
+|z0=oui
+|z2=oui
+|màj=30/09/2010
+}}
+
+{{Template:Graphique_ZoomExtra_32bpp_Terminé/Fr
+|image=Image:Subtropical_rails.png‎
+|titre=Voies ferrées du désert
+|artiste=[[Archive/en/habell|Habell]], [[Archive/en/Ben Robbins|Ben Robbins]] et [[Archive/en/Wacki|Wacki]]
+|codeur=[[Archive/en/habell|Habell]]
+|fichier=http://www.tt-forums.net/download/file.php?id=112301
+|lien=[http://www.tt-forums.net/viewtopic.php?p=795469#p795469 sujet]
+|notes=
+}}
+
+{{Template:Graphique_ZoomExtra_32bpp_Terminé/Fr
+|image=Image:Subtropical_rails.png‎
+|titre=Voies ferrées subtropicales
+|artiste=[[Archive/en/habell|Habell]], [[Archive/en/Ben Robbins|Ben Robbins]] et [[Archive/en/Wacki|Wacki]]
+|codeur=[[Archive/en/habell|Habell]]
+|fichier=http://www.tt-forums.net/download/file.php?id=112302
+|lien=[http://www.tt-forums.net/viewtopic.php?p=795469#p795469 sujet]
+|notes=
+}}
+
+{{Template:Graphique_ZoomExtra_32bpp_Terminé/Fr
+|image=Image:Subtropical_rails.png‎
+|titre=Croisements subtropicaux
+|artiste=[[Archive/en/habell|Habell]], [[Archive/en/Ben Robbins|Ben Robbins]] et [[Archive/en/Wacki|Wacki]]
+|codeur=[[Archive/en/habell|Habell]]
+|fichier=http://www.tt-forums.net/download/file.php?id=112303
+|lien=[http://www.tt-forums.net/viewtopic.php?p=795469#p795469 sujet]
+|notes=
+}}
+
+{{Template:Graphique_ZoomExtra_32bpp_Terminé/Fr
+|image=Image:Fences_rail.jpg
+|titre=Clôtures de voie tempérées
+|artiste=[[Archive/en/Maquinista|Maquinista]]
+|codeur=[[Archive/en/Maquinista|Maquinista]]
+|fichier=http://www.tt-forums.net/download/file.php?id=87576
+|lien=
+|notes=Fait avec Inkscape: [http://www.tt-forums.net/viewtopic.php?p=671601#p671601]
+}}
+
+{{Template:Graphique_ZoomExtra_32bpp_Terminé/Fr
+|image=Image:Wotans_waypoints.jpg
+|titre=Points de passage de Wotan
+|artiste=[[Archive/en/Wotan|Wotan]]
+|codeur=[[Archive/en/Maquinista|Maquinista]]
+|lien=
+|fichier=http://www.tt-forums.net/download/file.php?id=94452
+|notes=Il nécessite un fichier GRF: [http://www.tt-forums.net/download/file.php?id=94451]
+}}
+<br style="clear:both" />
+=====Stations=====
+
+{{fr/Graphique ZoomExtra 32bpp Terminé|
+|titre=Gares de Jordax
+|fichier=http://jupix.info/openttd/gfxdev-repo/files/Infrastructure-Stations-Rail.tar
+|lien=[http://jupix.info/openttd/gfxdev-repo/index.php?act=file&id=172 Dépôt]
+|notes = La gare monorail et son dépôt sont dans un fichier TAR différent. 
+|artiste = [[Archive/en/J0rdax|J0rdax]]
+|codeur  = [[Archive/en/Maquinista|Maquinista]]
+|màj     = 22/11/2009
+|org=oui
+|ogfx=oui
+|z0=oui
+|z2=oui
+}}
+
+{{fr/Graphique ZoomExtra 32bpp Terminé|image=Image:Wotans_stations.jpg
+|titre=Gares de Wotan
+|fichier=http://www.mediafire.com/download.php?f51xh5dfc9nqq6c
+|lien=[http://www.tt-forums.net/viewtopic.php?p=898768#p898768 Forum][http://www.tt-forums.net/download/file.php?id=133889 newgrf]
+|notes =  Quelques nouvelles gares et un point de passage; le newgrf doit être activé.
+|artiste = [[Archive/en/Wotan|Wotan]]
+|codeur  = [[Archive/en/Maquinista|Maquinista]]
+|màj     = 23/08/2010
+|org=oui
+|ogfx=oui
+|z0=oui
+}}
+
+<br style="clear:both" />
+
+====Routes====
+
+{| border=1 style="background:#e7ebff;"
+!width=100|Type
+!width=160|Catégorie
+!width=140|liens
+!width=600|Description
+!width=80|Dernière màj
+!width=80|Support original/Open GFX
+|-
+|rowspan=1| sans pelouse   <!--inclus dans le NewGrf. -->
+|Toutes disponibles
+|[http://www.mediafire.com/download.php?mwjxmemzgxz Téléchargement] (10.8MB)
+|Quelques sprites de sol et de routes de ville, par Alltaken.<br />(incomplet; certains codages de png incorrects peuvent amener des problèmes graphiques)
+|
+|{{fr/Vérification|non}}
+|}
+
+{| border=1 style="background:#e7ebff;"
+!width=100|Type
+!width=160|Catégorie
+!width=140|liens
+!width=600|Description
+!width=80|Dernière màj
+!width=80|Support original/Open GFX
+|-
+| Routes
+|
+| [http://jupix.info/openttd/gfxdev-repo/files/Roads%20-%20Artic%20and%20Tropical.tar Téléchargement], [http://jupix.info/openttd/gfxdev-repo/index.php?act=file&id=35 Dépôt]
+|Arctique & tropical
+| 12/03/2010
+!{{fr/Vérification|oui}}  /  {{fr/Vérification|oui}}
+|}
+
+
+{| border=1 style="background:#e7ebff;"
+!width=100|Type
+!width=160|Catégorie
+!width=140|liens
+!width=600|Description
+!width=80|Dernière màj
+!width=80|Support original/Open GFX
+|-
+| Voies de tramway
+|
+|[http://dev.openttdcoop.org/projects/32bpp-extra GRF 32bpp-Extra]
+|fait partie du projet [http://www.tt-forums.net/viewtopic.php?f=36&t=47288 32bpp-extra] (aussi une version opengfx uniquement, sur le [http://jupix.info/openttd/gfxdev-repo/index.php?act=file&id=37 dépôt]). <br /> La fin des voies sans route manque
+| 12/03/2010
+!{{fr/Vérification|oui}}  /  {{fr/Vérification|oui}}
+|-
+|rowspan=4|[[Main/fr/Voies de tunnel (nouveaux graphismes)|Voies de tunnel]]
+| Routes
+| [http://jupix.info/openttd/gfxdev-repo/files/Road%20Temporate%20Tunnels.tar Téléchargement], [http://jupix.info/openttd/gfxdev-repo/index.php?act=file&id=118 Dépôt].
+| Tempéré
+| 12/03/2010
+!{{fr/Vérification|oui}}  /  {{fr/Vérification|oui}}
+|}
+
+{{Template:Graphique_ZoomExtra_32bpp_Terminé/Fr
+|image  = Image:temp_city_roads_tunnels.png
+|titre  = Routes tempérées et de ville v4 - Sans lignes
+|artiste= [[Archive/en/Ben|Ben Robbins]]
+|codeur = [[Archive/en/Ben|Ben Robbins]]
+|fichier= http://jupix.info/openttd/gfxdev-repo/index.php?act=file&id=70
+|lien   = [http://www.tt-forums.net/viewtopic.php?p=839394#p839394]
+|notes  = Does not contain the tunnel entrances.
+|org=oui
+|ogfx=oui
+|z0=oui
+|z2=oui
+}}
+
+{{Template:Graphique_ZoomExtra_32bpp_Terminé/Fr
+|image  = Image:temp_city_roads_tunnels.png
+|titre  =Routes tempérées et de ville v4 - Avec lignes
+|artiste=[[Archive/en/Ben|Ben Robbins]]
+|codeur =[[Archive/en/Ben|Ben Robbins]]
+|fichier=http://jupix.info/openttd/gfxdev-repo/index.php?act=file&id=69
+|lien   =[http://www.tt-forums.net/viewtopic.php?p=839394#p839394]
+|notes  =Ne contient pas les entrées de tunnel.
+|org=oui
+|ogfx=oui
+|z0=oui
+|z2=oui
+}}
+
+{{Template:Graphique_ZoomExtra_32bpp_Terminé/Fr
+|image=‎Image:Arctic_roads_32bpp.png
+|titre=Routes arctiques
+|artiste=[[Archive/en/Maquinista|Maquinista]] et [[Archive/en/Ben Robbins|Ben_Robbins_]]
+|codeur=[[Archive/en/Maquinista|Maquinista]]
+|fichier=http://www.tt-forums.net/download/file.php?id=99821
+|lien=
+|notes=Il fonctionne avec le fichier précédent.
+}}
+
+{{Template:Graphique_ZoomExtra_32bpp_Terminé/Fr
+|image=Image:Tropical roads3.jpg
+|titre=Routes tropicales
+|artiste=[[Archive/en/Ben|Ben Robbins]] et [[Archive/en/habell|habell]]
+|codeur=[[Archive/en/habell|Habell]]
+|fichier=http://www.tt-forums.net/download/file.php?id=97300
+|lien=
+|notes=Une version à l'asphalte bleutée est disponible [http://www.tt-forums.net/download/file.php?id=97299 ici]
+}}
+
+{{Template:Graphique_ZoomExtra_32bpp_Terminé/Fr
+|image=Image:32bpp_desert_roads.png
+|titre=Routes de désert
+|artiste=[[Archive/en/Ben|Ben Robbins]] et [[Archive/en/habell|habell]]
+|codeur=[[Archive/en/habell|Habell]] et [[Archive/en/maquinista|maquinista]]
+|fichier=http://www.tt-forums.net/download/file.php?id=112305
+|lien=[http://www.tt-forums.net/viewtopic.php?p=795470#p795470 sujet]
+|notes=Correction des mauvais pixels.
+}}
+
+{{Template:Graphique_ZoomExtra_32bpp_Terminé/Fr
+|image=Image:newcityroads_Alltaken.png
+|titre=Nouvelles routes de ville
+|artiste=[[Archive/en/Alltaken|Alltaken]]
+|codeur=[[Archive/en/Soeb|Soeb]]
+|fichier=http://www.tt-forums.net/viewtopic.php?f=36&t=36474&p=673192#p673192
+|lien=
+|notes=C'est un lien à poster. Si vos véhicules sont configurés pour conduire à gauche, téléchargez le fichier "cityroads_left_Alltaken.tar". S'ils sont configurés pour conduire à droite, utilisez alors le fichier "cityroads_right_Alltaken.tar".
+}}
+
+
+{{Template:Graphique_ZoomExtra_32bpp_Terminé/Fr
+|image=Image:TramTracks32.JPEG
+|titre=Voies de tramway
+|artiste=[[Archive/en/Maquinista|Maquinista]] & [[Archive/en/Ben|Ben Robbins]]
+|codeur=[[Archive/en/Maquinista|Maquinista]]
+|fichier=http://www.tt-forums.net/download/file.php?id=111989
+|lien=[http://www.tt-forums.net/viewtopic.php?p=793773#p793773 Sujet du forum]
+|notes=Les dépôts ne sont pas codés.
+}}
+
+
+{{Template:Graphique_ZoomExtra_32bpp_Terminé/Fr
+|image=Image:Arrows.JPEG
+|titre=Flèches
+|artiste=[[Archive/en/Maquinista|Maquinista]]
+|codeur=[[Archive/en/Maquinista|Maquinista]]
+|fichier=http://www.tt-forums.net/download/file.php?id=109238
+|lien=[http://www.tt-forums.net/viewtopic.php?p=781837#p781837 Sujet du forum]
+|notes=Vous pouvez utiliser à la place:
+*[http://www.tt-forums.net/download/file.php?id=109239 Une flèche]
+*[http://www.tt-forums.net/download/file.php?id=109240 Flèches vertes]
+Ces flèches ont été modélisées avec Inkscape.
+}}
+<br style="clear:both" />
+=====Arrêts de bus / Terminaux de poids-lourds=====
+{| border=1 style="background:#e7ebff;"
+!width=100|Type
+!width=160|Catégorie
+!width=140|liens
+!width=600|Description
+!width=80|Dernière màj
+!width=80|Support original/Open GFX
+|-
+|rowspan=4|[[Main/fr/Traces des stations (nouveaux graphismes)|Traces des stations]]
+| Arrêts de bus / Terminaux de poids-lourds
+| [http://jupix.info/openttd/gfxdev-repo/files/Infrastructure-Stations-Road.tar Téléchargement], [http://jupix.info/openttd/gfxdev-repo/index.php?act=file&id=174 Dépôt]
+| Les arrêts routiers ne sont aps codés.
+| 22/11/2009
+!{{fr/Vérification|oui}}  /  {{fr/Vérification|oui}}
+|}
+
+
+{{Template:Graphique_ZoomExtra_32bpp_Terminé/Fr
+|image=Image:Arrows.JPEG
+|titre=Stations de véhicules routiers
+|artiste=[[Archive/en/Maquinista|Maquinista]]
+|codeur=[[Archive/en/Maquinista|Maquinista]]
+|fichier=http://www.tt-forums.net/download/file.php?id=109286
+|lien=[http://www.tt-forums.net/viewtopic.php?p=782165#p782165 Sujet du forum]
+|notes=Ce fichier contient les stations de camions:
+*[http://www.tt-forums.net/download/file.php?id=109287 1]
+}}
+
+<br style="clear:both" />
+
+====Terminaux de navires====
+
+{| border=1 style="background:#e7ebff;"
+!width=100|Type
+!width=160|Catégorie
+!width=140|liens
+!width=600|Description
+!width=80|Dernière màj
+!width=80|Support original/Open GFX
+|-
+| Docks et cales sèches
+|
+| [http://jupix.info/openttd/gfxdev-repo/files/Infrastructure-Stations-Sea.tar Téléchargement], [http://jupix.info/openttd/gfxdev-repo/index.php?act=file&id=173 Dépôt]
+| Cases de sol uniquement
+| 01/12/2009
+!{{fr/Vérification|oui}}  /  {{fr/Vérification|oui}}
+|}
+<br style="clear:both" />
+
+===Bâtiments (sauf les gares)===
+{| border=1 style="background:#e7ebff;"
+!width=100|Type
+!width=160|Catégorie
+!width=140|liens
+!width=600|Description
+!width=80|Dernière màj
+!width=80|Support original/Open GFX
+|-
+|rowspan=1|[[Main/fr/Bâtiments industriels (nouveaux graphismes)|Industriel]]
+| Industries par défaut
+| [http://jupix.info/openttd/gfxdev-repo/files/Buildings-Industries-Defaults.tar Téléchargement], [http://jupix.info/openttd/gfxdev-repo/index.php?act=file&id=158 Dépôt] 
+| 
+| 12/03/2010
+!{{fr/Vérification|oui}}  /  {{fr/Vérification|oui}} 
+|}
+
+{{Template:Graphique_ZoomExtra_32bpp_Terminé/Fr
+|image=Image:new_tropical_bank.png
+|titre=Nouvelle banque arctique/tropicale
+|artiste=[[Archive/en/LordAzamath|LordAzamath]]
+|codeur=[[Archive/en/Soeb|Soeb]]
+|fichier=http://www.tt-forums.net/download/file.php?id=85254
+|lien=
+|notes=Le décalage a été amélioré par [[Archive/en/LordAzamath|LordAzamath]].
+}}
+
+{{Template:Graphique_ZoomExtra_32bpp_Terminé/Fr
+|image=Image:ArcticPrintingWorks_scrn.jpg‎
+|titre=Industries de Varivar
+|artiste=[[Archive/en/Varivar|Varivar]]
+|codeur=[[Archive/en/Maquinista|Maquinista]]
+|fichier=http://www.tt-forums.net/download/file.php?id=108755
+|lien=[http://www.tt-forums.net/viewtopic.php?p=779044#p779044]
+|notes=Châteaux d'eau, usine de marchandises et imprimeries.
+}}
+
+{{Template:Graphique_ZoomExtra_32bpp_Terminé/Fr
+|image=Image:Lumbermill.JPEG
+|titre=Scieries
+|artiste=[[Archive/en/Wacki|Wacki]]
+|codeur=[[Archive/en/Maquinista|Maquinista]]
+|fichier=http://www.tt-forums.net/download/file.php?id=112453
+|lien=[http://www.tt-forums.net/viewtopic.php?p=796110#p796110]
+|notes=C'est une scierie
+}}
+
+{{Template:Graphique_ZoomExtra_32bpp_Terminé/Fr
+|image=Image:Power station.JPEG
+|titre=Centrale électrique
+|artiste=[[Archive/en/j0rdax|j0rdax]]
+|codeur=[[Archive/en/j0rdax|j0rdax]] & [[Archive/en/Maquinista|Maquinista]]
+|fichier=http://www.tt-forums.net/download/file.php?id=108432
+|lien=[http://www.tt-forums.net/viewtopic.php?p=777256#p777256]
+|notes=Centrale électrique
+}}
+
+{{Template:Graphique_ZoomExtra_32bpp_Terminé/Fr
+|image=Image:steelmill_ade_v1.jpg
+|titre=Aciérie par aDe
+|artiste=[[Archive/en/ade|ade]]
+|codeur=[[Archive/en/ade|ade]]
+|fichier=http://www.tt-forums.net/download/file.php?id=94460
+|lien=
+|notes=
+}}
+
+{{Template:Graphique_ZoomExtra_32bpp_Terminé/Fr
+|image=Image:ottd_vfx.JPEG
+|titre=Fumée e centrale électrique et quelques effets
+|artiste=[[Archive/en/Thomash|Thomash]]
+|codeur=[[Archive/en/Thomash|Thomash]] & [[Archive/en/Maquinista|Maquinista]]
+|fichier=http://www.tt-forums.net/download/file.php?id=110025
+|lien=[http://www.tt-forums.net/viewtopic.php?p=785549#p785549]
+|notes=Il y a deux tars avec des [http://www.tt-forums.net/viewtopic.php?p=785871#p785871 explosions]:
+*[http://www.tt-forums.net/download/file.php?id=110098 Explosion de démolition d'une vaste zone]
+*[http://www.tt-forums.net/download/file.php?id=110079 Explosion de destruction basique]
+*[http://www.tt-forums.net/download/file.php?id=110205 Éclair de stock électrique]
+*[http://www.tt-forums.net/download/file.php?id=110206 Éclair électrique de centrale]
+*[http://www.tt-forums.net/download/file.php?id=110207 Fumée diésel]
+*[http://www.tt-forums.net/download/file.php?id=110208 Fumée de panne]
+*[http://www.tt-forums.net/download/file.php?id=110215 Fumée d'avion]
+}}
+
+{{Template:Graphique_ZoomExtra_32bpp_Terminé/Fr
+|image=Image:5-lumbermill-b 172.jpg
+|titre=Scierie ECS
+|artiste=[[Archive/en/dmh mac|dmh_mac]] et [[Archive/en/George|George]]
+|codeur=[[Archive/en/George|George]] et [[Archive/en/Maquinista|Maquinista]]
+|fichier=http://www.tt-forums.net/download/file.php?id=114075
+|lien=[http://www.tt-forums.net/viewtopic.php?p=803427#p803427]
+|notes=Il nécessite le GRF Bois ECS. Nécessite aussi des trains de camion adaptés à ECS.<BR>[http://www.tt-forums.net/download/file.php?id=106260 Voici] la scierie pour la [http://www.tt-forums.net/viewtopic.php?p=766458#p766458 version précédente] du fichier ECS.<BR>
+Davantage d'information sur les fichiers [http://wiki.ttdpatch.net/tiki-index.php?page=ECS Projet de cargaison étendue] par George.
+}}
+
+{{Template:Graphique_ZoomExtra_32bpp_Terminé/Fr
+|image=Image:Printing works ecs 32.jpg
+|titre=Imprimeries ECS
+|artiste=[[Archive/en/George|George]] et [[Archive/en/Raven|Raven]] (8bpp) [[Archive/en/Maquinista|Maquinista]](32 bpp)
+|codeur=[[Archive/en/George|George]] et [[Archive/en/Maquinista|Maquinista]]
+|fichier=http://www.tt-forums.net/download/file.php?id=114461
+|lien=[http://www.tt-forums.net/viewtopic.php?p=805285#p805285]
+|notes=Les mêmes notes que le fichier précédent.
+}}
+
+{| border=1 style="background:#e7ebff;"
+!width=100|Type
+!width=160|Catégorie
+!width=140|liens
+!width=600|Description
+!width=80|Dernière màj
+!width=80|Support original/Open GFX
+|-
+|rowspan=3|[[Main/fr/Bâtiments de ville (nouveaux graphismes)|Villes]]
+| Tempéré
+| [http://jupix.info/openttd/gfxdev-repo/files/Buildings-City-Temprate.tar Téléchargement], [http://jupix.info/openttd/gfxdev-repo/index.php?act=file&id=131 Dépôt]
+| 
+| 12/03/2010
+!{{fr/Vérification|oui}}  /  {{fr/Vérification|oui}} 
+|-
+| Tropical
+| [http://jupix.info/openttd/gfxdev-repo/files/Buildings-City-Tropical.tar Téléchargement], [http://jupix.info/openttd/gfxdev-repo/index.php?act=file&id=132 Dépôt]
+|
+| 12/03/2010
+!{{fr/Vérification|oui}}  /  {{fr/Vérification|oui}} 
+|-
+| Arctique
+| [http://jupix.info/openttd/gfxdev-repo/files/Buildings-City-Artic.tar Téléchargement], [http://jupix.info/openttd/gfxdev-repo/index.php?act=file&id=133 Dépôt]
+|  
+| 12/03/2010
+!{{fr/Vérification|oui}}  /  {{fr/Vérification|oui}} 
+|}
+
+{{Template:Graphique_ZoomExtra_32bpp_Terminé/Fr
+|image=Image:Tropical houses.png
+|titre=Prévisualisation de certaines maisons tropicales de Wacki
+|artiste=[[Archive/en/Wacki|Wacki]]
+|codeur=[[Archive/en/Maquinista|Maquinista]]
+|fichier=http://www.tt-forums.net/download/file.php?id=94902
+|lien=
+|notes=Ce n'est qu'une prévisualisation; elle utilise aussi une vieille version des graphismes.
+}}
+
+{{Template:Graphique_ZoomExtra_32bpp_Terminé/Fr
+|image=Image:Varivar_tropical_houses.jpg
+|titre=Maisons tropicales de Varivar
+|artiste=[[Archive/en/Varivar]]
+|codeur=[[Archive/en/Maquinista|Maquinista]]
+|fichier=http://www.tt-forums.net/download/file.php?id=119757
+|lien=
+|notes=Ce fichier remplace Varivar_Tropical_houses_preview.tar
+}}
+
+{{Template:Graphique_ZoomExtra_32bpp_Terminé/Fr
+|image=Image:Rectangle_tropical_houses.png
+|titre=	Bâtiment tropical rectangulaire
+|artiste=[[Archive/en/Rectangle|Rectangle]]
+|codeur=[[Archive/en/Maquinista|Maquinista]]
+|fichier=http://www.tt-forums.net/download/file.php?id=96450
+|lien=
+|notes=
+}}
+
+{{Template:Graphique_ZoomExtra_32bpp_Terminé/Fr
+|image=Image:Stumpy.png
+|titre= Maisons tempérées de BerberJesus
+|artiste=[[Archive/en/BerberJesus|BerberJesus]]
+|codeur=[[Archive/en/Maquinista|Maquinista]]
+|fichier=http://www.tt-forums.net/download/file.php?id=95003
+|lien=[http://www.tt-forums.net/viewtopic.php?p=711482#p711482 lien du forum]
+|notes= 
+}}
+
+{{Template:Graphique_ZoomExtra_32bpp_Terminé/Fr
+|image=Image:Hotel ttd.jpg
+|titre=Maisons par Northstar2
+|artiste=[[Archive/en/Northstar2|Northstar2]]
+|codeur=[[Archive/en/Northstar2|Northstar2]] et [[Archive/en/Maquinista|Maquinista]]
+|fichier=http://www.tt-forums.net/download/file.php?id=112258
+|lien=[http://www.tt-forums.net/viewtopic.php?p=795218#p795218]
+|notes=Quelques maisons, boutiques, hôtels...<BR>Ce fichier est également nécessaire:
+*[http://www.tt-forums.net/download/file.php?id=119316 1] [http://www.tt-forums.net/viewtopic.php?f=36&t=36474&start=700 (lien du forum)]
+}}
+
+{{Template:Graphique_ZoomExtra_32bpp_Terminé/Fr
+|image=Image:Hq2 32bpp.png
+|titre=QGs 1 & 2
+|artiste=[[Archive/en/Varivar|Varivar]] et [[Archive/en/Dmh mac|Dmh_mac]]
+|codeur=[[Archive/en/Maquinista|Maquinista]]
+|fichier=http://www.tt-forums.net/download/file.php?id=119313
+|lien=[http://www.tt-forums.net/viewtopic.php?f=36&t=36474&start=700]
+|notes=Modèle alternatif avec pelouse: [http://www.tt-forums.net/download/file.php?id=105329]
+}}
+
+{{Template:Graphique_ZoomExtra_32bpp_Terminé/Fr
+|image=Image:Varivar_temperate_buildings.png
+|titre=Bâtiments tempérés de Varivar
+|artiste=[[Archive/en/Varivar|Varivar]]
+|codeur=[[Archive/en/Maquinista|Maquinista]]
+|fichier=http://www.tt-forums.net/download/file.php?id=120094
+|lien=http://www.tt-forums.net/viewtopic.php?p=832692#p832692
+|notes=Contient 6 bâtiments. Si vous avez le fichier "1517-1518.tar", remplacez-le par le fichier "New 32 bpp houses", qui congtient ces maisons dans un nouveau fichier GRF.
+}}
+
+{{Template:Graphique_ZoomExtra_32bpp_Terminé/Fr
+|image=Image:Group of houses.png
+|titre=Maisons et dallage de Ben Robbins
+|artiste=[[Archive/en/Ben|Ben Robbins]]
+|codeur=[[Archive/en/Maquinista|Maquinista]]
+|fichier=http://www.tt-forums.net/download/file.php?id=105267
+|lien=[http://www.tt-forums.net/viewtopic.php?p=761716#p761716]
+|notes=Groupe de maisons, statues et dallages
+}}
+
+{{Template:Graphique_ZoomExtra_32bpp_Terminé/Fr
+|image=Image:32bpp_temperate_buildings_Brupje.png
+|titre=Bâtiments tempérés de Brupje
+|artiste=[[Archive/en/Brupje|Brupje]]
+|codeur=[[Archive/en/Maquinista|Maquinista]]
+|fichier=http://www.tt-forums.net/download/file.php?id=112239
+|lien=[http://www.tt-forums.net/viewtopic.php?p=795146#p795146]
+|notes=Contient 5 bâtiments
+}}
+
+{{Template:Graphique_ZoomExtra_32bpp_Terminé/Fr
+|image=Image:32bpp_arctic_city_buildings.png‎
+|titre=Bâtiments de ville arctiques
+|artiste=[[Archive/en/Varivar|Varivar]]
+|codeur=[[Archive/en/Maquinista|Maquinista]]
+|fichier=http://www.tt-forums.net/download/file.php?id=112256
+|lien=http://www.tt-forums.net/viewtopic.php?p=795218#p795218
+|notes=Contient 2 bâtiments
+}}
+
+{{Template:Graphique_ZoomExtra_32bpp_Terminé/Fr
+|image=Image:Statue2.png
+|titre=Maisons de Dmh_mac et GeekToo
+|artiste=[[Archive/en/Dmh mac|Dmh_mac]] et [[Archive/en/GeekToo|GeekToo]]
+|codeur=[[Archive/en/Maquinista|Maquinista]]
+|fichier=http://www.tt-forums.net/download/file.php?id=109242
+|lien=[http://www.tt-forums.net/viewtopic.php?p=781841#p781841]
+|notes=Si vous avez le fichier "new_town_houses.tar", vous pouvez le supprimer car les nouvelles maisons GRF sont incluses dans "new grf 32bpp houses.tar", en bas de cette section.
+}}
+
+{{Template:Graphique_ZoomExtra_32bpp_Terminé/Fr
+|image=Image:2x2ShoppingMall.png
+|titre=Maisons de J0rdax
+|artiste=[[Archive/en/j0rdax|j0rdax]]
+|codeur=[[Archive/en/Maquinista|Maquinista]]
+|fichier=http://www.tt-forums.net/download/file.php?id=106497
+|lien=[http://www.tt-forums.net/viewtopic.php?p=767526#p767526 Sujet du forum]
+|notes=Ce fichier remplace le fichier "new_town_houses.tar".
+}}
+
+{{Template:Graphique_ZoomExtra_32bpp_Terminé/Fr
+|image=Image:2x2ShoppingMall.png
+|titre=Maisons de LiquidLogic
+|artiste=[[Archive/en/LiquidLogic|LiquidLogic]]
+|codeur=[[Archive/en/Maquinista|Maquinista]]
+|fichier=http://www.tt-forums.net/download/file.php?id=109413
+|lien=[http://www.tt-forums.net/viewtopic.php?p=782920#p782920 Sujet du forum]
+|notes=Fichier TAR.
+}}
+
+{{Template:Graphique_ZoomExtra_32bpp_Terminé/Fr
+|image=Image:Suspension building.PNG
+|titre=Maisons par SunnyBoy
+|artiste=[[Archive/en/SunnyBoy|SunnyBoy]]
+|codeur=[[Archive/en/Maquinista|Maquinista]]
+|fichier=http://www.tt-forums.net/download/file.php?id=110685
+|lien=[http://www.tt-forums.net/viewtopic.php?p=788283#p788283]
+|notes=Fichier TAR.
+}}
+
+{{Template:Graphique_ZoomExtra_32bpp_Terminé/Fr
+|image=Image:1x1fountain new.png
+|titre=Parcs et fontaines
+|artiste=[[Archive/en/DirtY iCE|DirtY iCE]] et [[Archive/en/BerberJesus|BerberJesus]]
+|codeur=[[Archive/en/Maquinista|Maquinista]]
+|fichier=http://www.tt-forums.net/download/file.php?id=111746
+|lien=[http://www.tt-forums.net/viewtopic.php?p=792577#p792577]
+|notes=Fichier TAR.
+}}
+
+{{Template:Graphique_ZoomExtra_32bpp_Terminé/Fr
+|image=Image:Cat.JPEG
+|titre=TTRS3 par Wotan
+|artiste=[[Archive/en/Wotan|Wotan]]
+|codeur=[[Archive/en/Zimmlock|Zimmlock]] et [[Archive/en/Maquinista|Maquinista]] <!--http://www.tt-forums.net/viewtopic.php?t=8878-->
+|fichier=http://www.tt-forums.net/download/file.php?id=105374
+|lien=[http://www.tt-forums.net/viewtopic.php?p=762221#p762221]
+|notes=Il nécessite le fichier TTRS3.
+}}
+
+{{Template:Graphique_ZoomExtra_32bpp_Terminé/Fr
+|image=Image:Houses.jpg
+|titre=TTRS3 par DMH_Mac
+|artiste=[[Archive/en/DMH Mac|DMH_Mac]]
+|codeur=[[Archive/en/Zimmlock|Zimmlock]] et [[Archive/en/Maquinista|Maquinista]] <!--http://www.tt-forums.net/viewtopic.php?t=8878-->
+|fichier=http://www.tt-forums.net/download/file.php?id=109855
+|lien=[http://www.tt-forums.net/viewtopic.php?p=784768#p784768]
+|notes=Il nécessite le fichier TTRS3.
+}}
+
+{{Template:Graphique_ZoomExtra_32bpp_Terminé/Fr
+|image=Image:1506 z0.png
+|titre=Nouvelles maisons 32 bpp
+|artiste=[[Archive/en/j0rdax|j0rdax]], [[Archive/en/Dmh mac|Dmh_mac]] et [[Archive/en/GeekToo|GeekToo]]
+|codeur=[[Archive/en/Maquinista|Maquinista]]
+|fichier=http://www.tt-forums.net/download/file.php?id=109243
+|lien=[http://www.tt-forums.net/viewtopic.php?p=781841#p781841]
+|notes=C'est un fichier TAR avec un GRF et quelques fichiers PNG. Il fonctionne comme un nouveau fichier GRF. Vous devez l'activer dans la fenêtre GRF si vous voulez l'utiliser. [http://www.tt-forums.net/download/file.php?id=95002 licence]<BR>Ce fichier remplace le fichier "new_town_houses.tar".
+}}
+
+<br style="clear:both" />
+{| border=1 style="background:#e7ebff;"
+!width=100|Type
+!width=160|Catégorie
+!width=140|liens
+!width=600|Description
+!width=80|Dernière màj
+!width=80|Support original/Open GFX
+|-
+|rowspan=1|[[Main/fr/Bâtiments de quartier général (nouveaux graphismes)|Quartier général]]
+| Étapes
+| [http://jupix.info/openttd/gfxdev-repo/files/Buildings-HQ.tar Téléchargement], [http://jupix.info/openttd/gfxdev-repo/index.php?act=file&id=161 Dépôt]
+| Toutes les étapes.
+| 26/02/2010
+!{{fr/Vérification|oui}}  /  {{fr/Vérification|oui}} 
+|}
+
+{{Template:Graphique_ZoomExtra_32bpp_Terminé/Fr
+|image=Image:32bpp HQ3.JPEG
+|titre=HQ3
+|artiste=[[Archive/en/Varivar|varivar]] et [[Archive/en/Dhm mac|Dhm_mac]]
+|codeur=[[Archive/en/Maquinista|Maquinista]]
+|fichier=http://www.tt-forums.net/download/file.php?id=109095
+|lien=[http://www.tt-forums.net/viewtopic.php?p=780739#p780739 Sujet du forum]
+|notes=Tempéré, arctique et désertique.
+}}
+
+{{Template:Graphique_ZoomExtra_32bpp_Terminé/Fr
+|image=Image:32bpp HQ3.JPEG
+|titre=HQ4
+|artiste=[[Archive/en/northstar2|northstar2]]
+|codeur=[[Archive/en/Maquinista|Maquinista]]
+|fichier=http://www.tt-forums.net/download/file.php?id=109310
+|lien=[http://www.tt-forums.net/viewtopic.php?p=782318#p782318 Sujet du forum]
+|notes=Si vous préférez, vous pouvze le télécharger sans camion:
+[http://www.tt-forums.net/download/file.php?id=109311 1]
+}}
+
+{{Template:Graphique_ZoomExtra_32bpp_Terminé/Fr
+|image=Image:Transmitter2.png
+|titre=Phare
+|artiste=[[Archive/en/Dmh mac|Dmh_mac]]
+|codeur=[[Archive/en/Maquinista|Maquinista]]
+|fichier=http://www.tt-forums.net/download/file.php?id=109551
+|lien=[http://www.tt-forums.net/viewtopic.php?p=783692#p783692 Sujet du forum]
+|notes=Creative Commons BY-SA.
+}}
+
+<br style="clear:both" />
+
+===Véhicules===
+{| border=1 style="background:#e7ebff;"
+!width=100|Type
+!width=160|Catégorie
+!width=140|liens
+!width=600|Description
+!width=80|Dernière màj
+!width=80|Support original/Open GFX
+|-
+|rowspan=2|[[Main/fr/Véhicules routiers (nouveaux graphismes)|Véhicules routiers]]
+|Camions
+| [http://jupix.info/openttd/gfxdev-repo/files/Vehicles-Road-Trucks.tar Téléchargement], [http://jupix.info/openttd/gfxdev-repo/index.php?act=file&id=159 Dépôt]
+| Terminé; tous les camions sont codés Gen I-III.
+| 25/02/2010
+!{{fr/Vérification|oui}}  /  {{fr/Vérification|oui}}
+|}
+
+{{fr/Fichiers 32Bpp| Titre   = [http://www.tt-forums.net/viewtopic.php?f=36&t=47121&start=0 GRVTS v1.4]
+ | Image = GRVTS_32bpp_Tanker.png
+ | Description = Inclus tous les sprites pour [http://www.tt-forums.net/viewtopic.php?f=26&t=33415&start=0 GRVTS v1.4]. Livré sous licence CC-BY-NC-SA v3.0.
+ | Artiste = Zephyris
+ | Codeur  = Zephyris
+ | Symlink = oui
+ | Màj = 23/02/2010
+}}
+
+{{Template:Graphique_ZoomExtra_32bpp_Terminé/Fr
+|image=Image:varivar_trucks.png
+|titre=Camions CryingCorvus
+|artiste=[[Archive/en/CryingCorvus|CryingCorvus]]
+|codeur=[[Archive/en/habell|habell]]
+|fichier=http://www.tt-forums.net/download/file.php?id=106978
+|lien=http://www.tt-forums.net/viewtopic.php?p=769989#p769989
+|notes=Camions d'acier, de charbon et de bétail. Voici davantage de fichiers:
+*[http://www.tt-forums.net/download/file.php?id=107506 Camions de minerai de fer, de céréales et de caoutchouc]
+*[http://www.tt-forums.net/download/file.php?id=107855 Bétaillères 2 de CryingCorvus]
+*[http://www.tt-forums.net/download/file.php?id=107999 Camions de bois de CryingCorvus]
+}}
+
+{{Template:Graphique_ZoomExtra_32bpp_Terminé/Fr
+|image=Image:varivar_trucks.png
+|titre=Camions de northstar2
+|artiste=[[Archive/en/northstar2|northstar2]]
+|codeur=[[Archive/en/habell|habell]]
+|fichier=http://www.tt-forums.net/download/file.php?id=107993
+|lien=http://www.tt-forums.net/viewtopic.php?p=774908#p774908
+|notes=Camion de nourriture northstar2. Voici davantage de fichiers:
+*[http://www.tt-forums.net/download/file.php?id=107948 Camion de marchandises de Craighead]
+*[http://www.tt-forums.net/download/file.php?id=107962 Camion de papier de Moreland]
+*[http://www.tt-forums.net/download/file.php?id=108001 Fourgon blindé Uhl]
+*[http://www.tt-forums.net/download/file.php?id=113137 Ancien camion-citerne d'eau (avec CryingCorvus)]
+*[http://www.tt-forums.net/download/file.php?id=113138 Ancien camion de nourriture (avec CryingCorvus)]
+}}
+
+{| border=1 style="background:#e7ebff;"
+!width=100|Type
+!width=160|Catégorie
+!width=140|liens
+!width=600|Description
+!width=80|Dernière màj
+!width=80|Support original/Open GFX
+|-
+| Bus
+| [http://jupix.info/openttd/gfxdev-repo/files/Vehicles-Road-Bus%20Right.tar Téléchargement], [http://jupix.info/openttd/gfxdev-repo/index.php?act=file&id=179 Dépôt]  <br />
+[http://jupix.info/openttd/gfxdev-repo/files/Vehicles-Road-Bus%20Left.tar Téléchargement], [http://jupix.info/openttd/gfxdev-repo/index.php?act=file&id=178 Dépôt]
+| Côté droit de la route  <br />  Côté gauche de la route
+| 15/01/2010 <br /> 28/11/2009
+!{{fr/Vérification|oui}}  /  {{fr/Vérification|oui}}
+|}
+
+{{Template:Graphique_ZoomExtra_32bpp_Terminé/Fr
+|image=Image:MPS_Regal_Bus_32bpp_ExtraZoom.png
+|titre=Bus à gauche
+|artiste=[[Archive/en/Teemes|Teemes]] et [[Archive/en/northstar2|northstar2]]
+|codeur=[[Archive/en/Teemes|Teemes]] et [[Archive/en/northstar2|northstar2]]
+|lien=[http://www.tt-forums.net/viewtopic.php?p=797954#p797954]
+|fichier=http://www.tt-forums.net/download/file.php?id=112842
+|notes=Ces bus conduisent du côté gauche de la route. Vous aurez aussi besoin de ce fichier: [http://www.tt-forums.net/download/file.php?id=112840 Northstar2 bus]
+*Le bus MPS Regal est livré sous licence CC-by-3.0. Le fichier original .blend est disponible [http://www.tt-forums.net/download/file.php?id=88077 ici]
+}}
+
+{{Template:Graphique_ZoomExtra_32bpp_Terminé/Fr
+|image=Image:MPS_Regal_Bus_32bpp_ExtraZoom.png
+|titre=Bus à droite
+|artiste=[[Archive/en/Teemes|Teemes]] et [[Archive/en/northstar2|northstar2]]
+|codeur=[[Archive/en/Teemes|Teemes]] et [[Archive/en/northstar2|northstar2]]
+|lien=[http://www.tt-forums.net/viewtopic.php?p=797954#p797954]
+|fichier=http://www.tt-forums.net/download/file.php?id=112535
+|notes=Ces bus conduisent à droite de la route. Vous aurez aussi besoin de ce fichier: [http://www.tt-forums.net/download/file.php?id=112841 Northstar2 bus]
+*Le bus MPS Regal est livré sous licence CC-by-3.0. Le fichier .blend original est disponible [http://www.tt-forums.net/download/file.php?id=88077 ici]
+}}
+
+{{Template:Graphique_ZoomExtra_32bpp_Terminé/Fr
+|image=Image:varivar_trucks.png
+|titre=Camions de Varivar
+|artiste=[[Archive/en/Varivar|Varivar]]
+|codeur=[[Archive/en/Teemes|Teemes]]
+|fichier=http://www.tt-forums.net/download/file.php?id=112899
+|lien=[http://www.tt-forums.net/viewtopic.php?p=798228#p798228]
+|notes=Contient '''8''' camions (nouvelle version '''4''')
+}}
+
+<br style="clear:both" />
+====Trains====
+{| border=1 style="background:#e7ebff;"
+!width=100|Type
+!width=160|Catégorie
+!width=140|liens
+!width=600|Description
+!width=80|Dernière màj
+!width=80|Support original/Open GFX
+|-
+|rowspan=2|[[Main/fr/Véhicules sur rail (nouveaux graphismes)|Véhicules sur rail]] 
+| Trains
+| [http://jupix.info/openttd/gfxdev-repo/files/Vehicles-Rail-Trains.tar Téléchargement], [http://jupix.info/openttd/gfxdev-repo/index.php?act=file&id=176 Dépôt]
+| Trains (contient 2 GRFs pour les tendeurs et des graphiques indépendants).
+| 12/03/2010
+!{{fr/Vérification|oui}}  /  {{fr/Vérification|oui}}
+|-
+| Wagons
+| [http://jupix.info/openttd/gfxdev-repo/files/Vehicles-Rail-Wagons.tar Téléchargement], [http://jupix.info/openttd/gfxdev-repo/index.php?act=file&id=175 Dépôt]
+|
+| 12/03/2010
+!{{fr/Vérification|oui}}  /  {{fr/Vérification|oui}}
+|}
+
+{{fr/Fichiers 32Bpp| Titre   = [http://www.mediafire.com/download.php?ywmxhmujd3m Ensemble de trains espagnols]
+ | Description = Fournit des locomotives et des wagons spécifiques à l'Espagne, en livrée spécifique de l'année <br />Suivez [http://www.tt-forums.net/viewtopic.php?f=67&t=46836 cette version] pour plus d'information et de mise à jour; livré sous licence CC BY-SA.
+ | Artiste = maquinista
+ | Codeur  = maquinista
+ | Symlink = oui                    <!-- NewGRF = support avec le gfx original, non? -->
+ | Màj     = 08/02/2010
+}}
+
+{{Template:Graphique_ZoomExtra_32bpp_Terminé/Fr
+|image=Image:Kirby paul tank32.jpg
+|titre=Citerne Kirby paul
+|artiste=[[Archive/en/Teemes|Teemes]]
+|codeur=[[Archive/en/Teemes|Teemes]]
+|fichier=http://www.tt-forums.net/download/file.php?id=89557
+|lien=
+|notes=Avec couleurs de compagnie. Le fichier blend est inclus dans ce sujet: [http://www.tt-forums.net/viewtopic.php?p=682655#p682655]
+}}
+
+
+{{Template:Graphique_ZoomExtra_32bpp_Terminé/Fr
+|image=Image:teemes_jubilee_32bppv9.png
+|titre=Stanier ("Chaney") Jubilee
+|artiste=[[Archive/en/Teemes|Teemes]]
+|codeur=[[Archive/en/Teemes|Teemes]]
+|fichier=http://www.tt-forums.net/download/file.php?id=98761
+|lien=[http://www.tt-forums.net/viewtopic.php?f=36&t=36474&st=0&sk=t&sd=a&start=280 ici]
+|notes=Pour v9 de l'ajout Niveaux de zoom extra. Livré dans le domaine public sous la licence CC3.0. Le fichier .blend est dispobnible  sur els forums. La '''nouvelle version''' avec un newgrf de tendeur optionnel a le fichier .grf inclus dans le .tar.
+}}
+
+{{Template:Graphique_ZoomExtra_32bpp_Terminé/Fr
+|image=Image:Gresley_a4.png
+|titre=Gresley A4
+|artiste=[[Archive/en/Teemes|Teemes]]
+|codeur=[[Archive/en/Teemes|Teemes]]
+|fichier=http://www.tt-forums.net/download/file.php?id=100603
+|lien=[http://www.tt-forums.net/viewtopic.php?p=738112#p738112]
+|notes=Les règles habituelles s'appliquent: si vous vouelz le tendeur, activer le fichier .ggrf qui est inclus dans le fichier .tar. Pas besoin de l'extraire, OTTD le trouvera dans le .tar.
+}}
+
+{{Template:Graphique_ZoomExtra_32bpp_Terminé/Fr
+|image=Image:wagons_train_partofrails_partofstation.png
+|titre=Wagons, trains, et partiellement voies et gares
+|artiste=[[Archive/en/Ben|Ben Robbins]] et [[Archive/en/Slye Fox|Slye Fox]]
+|codeur=[[Archive/en/Ben|Ben Robbins]]
+|lien=
+|fichier=http://www.tt-forums.net/download/file.php?id=86430
+|notes=Contient tous les wagons sauf les blindés et les voitures de passagers (subacrtique/tropical), un train, une partie des voies ferrées (tempéré) et une gare. Il y a aussi un [http://www.tt-forums.net/download/file.php?id=105905 fichier] avec davantage de cases de voie. [http://www.tt-forums.net/viewtopic.php?p=765040#p765040 Lien du forum]
+}}
+
+{{Template:Graphique_ZoomExtra_32bpp_Terminé/Fr
+|image=Image:buque_spain_set.jpg
+|titre=Ensemble de trains espagnols
+|artiste=[[Archive/en/Maquinista|Maquinista]]
+|codeur=[[Archive/en/Maquinista|Maquinista]]
+|fichier=http://www.tt-forums.net/viewtopic.php?p=838845#p838845
+|lien=http://www.tt-forums.net/viewtopic.php?p=838845#p838845
+|notes=C'est un très gros fichier. Il est hébergé sur des serveurs externes. Il nécessite le fichier GRF de l'ensemble espagnol. Il y a quelque strains codés: 440 (et 470), 594, 450, 260, une voiture plate courte (avec quelques cargaisons), un petit silo, un petit wagon de bétil et un petit wagon.
+}}
+|}
+
+{| border=1 style="background:#e7ebff;"
+!width=100|Type
+!width=160|Catégorie
+!width=140|liens
+!width=600|Description
+!width=80|Dernière màj
+!width=80|Support original/Open GFX
+|-
+|rowspan=1|[[Main/fr/Véhicules aériens (nouveaux graphismes)|Véhicules aériens]] 
+| Avions
+| [http://jupix.info/openttd/gfxdev-repo/files/Vehicles-Air-Planes.tar Téléchargement], [http://jupix.info/openttd/gfxdev-repo/index.php?act=file&id=177 Dépôt]
+| Quelques avions
+| 12/03/2010
+!{{fr/Vérification|oui}}  /  {{fr/Vérification|oui}}
+|-
+|rowspan=1|[[Main/fr/Véhicules maritimes (nouveaux graphismes)|Véhicules maritimes]] 
+|
+|
+|
+|
+|
+|-
+|rowspan=1|[[Main/fr/Véhicules divers (nouveaux graphismes)|Véhicules divers]]
+| Fumée, étincelles, feu, vapeur...
+| [http://jupix.info/openttd/gfxdev-repo/index.php?act=file&id=57 lien]
+| Beaucoup d'effets
+| 12/03/2010
+!{{fr/Vérification|oui}}  /  {{fr/Vérification|oui}}
+|}
+
+{{Template:Graphique_ZoomExtra_32bpp_Terminé/Fr
+|image=Image:Kirby paul tank32.jpg
+|titre=Avions de Pietjeklap
+|artiste=[[Archive/en/Pietjeklap|Pietjeklap]]
+|codeur=[[Archive/en/Maquinista|Maquinista]]
+|fichier=http://www.tt-forums.net/download/file.php?id=114072
+|lien=http://www.tt-forums.net/viewtopic.php?p=803427#p803427
+|notes=Quelques avions partageant les sprites.
+}}
+
+<br style="clear:both" />
+===Divers===
+
+{{Template:Graphique_ZoomExtra_32bpp_Terminé/Fr
+|image=Image:Kirby paul tank32.jpg
+|titre=Dumée, étincelles, feu, vapeur.
+|artiste=[[Archive/en/Teemes|Teemes]], [[Archive/en/Tomash|Tomash]]
+|codeur=[[Archive/en/Teemes|Teemes]], [[Archive/en/Maquinista|Maquinista]]
+|fichier=http://jupix.info/openttd/gfxdev-repo/files/57/Vehicles-Effects.tar
+|lien=[http://jupix.info/openttd/gfxdev-repo/index.php?act=file&id=57 Dépôt] [http://www.tt-forums.net/download/file.php?id=90163 Ancien téléchargement]
+|notes=[http://www.tt-forums.net/download/file.php?id=89561 Version moins transparente]
+|org=oui
+|ogfx=oui
+|z0=oui
+|z2=oui
+}}
+<br style="clear:both" />
+====[[Main/fr/IHM (nouveaux graphismes)|IHM]]====
+{{Template:Graphique_ZoomExtra_32bpp_Terminé/Fr
+|image=Image:toolbar3.png
+|titre=Barre principale et sélecteurs
+|artiste=Joed, Athanasios, [[Archive/en/Ben|Ben Robbins]] 
+|codeur=[[Archive/en/GeekToo|GeekToo]], [[Archive/en/Soeb|Soeb]] 
+|lien=[http://www.tt-forums.net/viewtopic.php?f=36&p=644152#p644152], [http://jupix.info/openttd/gfxdev-repo/index.php?act=file&id=44 Dépôt]
+|fichier=http://jupix.info/openttd/gfxdev-repo/files/GUI-Toolbar%20and%20Selectors.tar
+|notes=Sélection de cases, curseurs, icônes...
+|màj=23/11/2009
+|org=oui
+|ogfx=oui
+|z0=oui
+|z2=oui
+}}
+
+{{Template:Graphique_ZoomExtra_32bpp_Terminé/Fr
+|image=Image:new_cm_faces.png
+|titre=Visages de dirigeants de compagnie v3
+|artiste=[[Archive/en/Ben|Ben Robbins]]
+|codeur=[[Archive/en/Ben|Ben Robbins]]
+|fichier=http://jupix.info/openttd/gfxdev-repo/files/GUI-Company%20Mangers%20Faces.tar
+|lien=[http://jupix.info/openttd/gfxdev-repo/index.php?act=file&id=68 Dépôt]
+|notes=Visages, habits, bijoux...
+|màj=08/02/2010
+|org=oui
+|ogfx=oui
+|z0=oui
+|z2=oui
+}}
+
+
+{{fr/Navbox Développement graphique}}
+
+[[Category:fr/Nouveaux graphiques]][[Category:fr/Graphismes 32bpp]]
