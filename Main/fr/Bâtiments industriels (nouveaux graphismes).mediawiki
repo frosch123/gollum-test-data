@@ -1,0 +1,388 @@
+[[Translation:Main/en/Industrial Buildings (New Graphics)]]
+{{en/-}}
+{{fr/Table des matières gauche}}
+<small><<Retour à [[Main/fr/Traqueur de développement de graphismes 32bpp (zoom extra)|Traqueur de développement de graphismes 32bpp (zoom extra)]]</small>
+
+
+Voici le traqueur des graphiques de '''bâtiments industriels''' 32bpp pour "Niveau de zoom extra". Voyez ci-dessous ce qui a été fait et ce qui reste encore à faire. La page a été divisée par chaînes de production.
+
+
+<!-- merci de mettre à jour la barre de progression après avoir édité ici: 
+http://wiki.openttd.org/?title=Template:Barre de progression du tracker 32bpp/Fr&action=edit 
+-->
+<div><div style="display: table-cell; width:100%">{{fr/Barre de progression du traqueur 32bpp|industriels}}</div><div style="display: table-cell">[<span class="plainlinks">[http://wiki.openttd.org/?title=Template:Barre de progression du traqueur 32bpp/Fr&action=edit edit]</span>]</div></div>
+
+
+{{fr/Clé de sprite du tracker}}
+
+
+
+
+
+
+=== Charbon/Centrale électrique ===
+
+{| border=1 style="background:#e7ebff;"
+!
+!width=350px|[[Main/fr/Mine de charbon|Mine de charbon]] (2011-2025)
+!width=350px|[[Main/fr/Centrale électrique|Centrale électrique]] (2045-2054)
+|-
+!Original
+|[[File:en/Coalmine.png]]<BR>Sprites nécessaires:<BR>[[File:en/Coal mine.png]]
+|[[File:en/PowerStationOriginal.png]]<BR>Sprites nécessaires:<BR>[[File:en/Power station.png]]
+|-
+!Mise à jour
+|[[File:en/Coal mine.png|350px]]
+|[[File:en/32bpp powerplants2.png|350px]]
+[http://www.tt-forums.net/download/file.php?id=82238 Ancien fichier blend de LordAzamath] 
+[http://www.tt-forums.net/viewtopic.php?p=646445#p646445 Sujet du forum]
+|-
+!Date de dernière mise à jour
+| [http://www.tt-forums.net/viewtopic.php?p=862608#p862608 Sujet du forum]
+| Samedi 8 décembre 2007 20h41 voir notes ci-dessous
+|-
+!Remodelé par
+| {{en/User|Zephyris}}
+| {{en/User|LordAzamath}} & {{en/User|J0rdax}}
+|-
+!État
+| {{fr/Statut du sprite du traqueur|z0 = fait |z1 = fait |z2 = fait}}
+| {{fr/Statut du sprite du traqueur|z0 = fait |z1 = fait |z2 = fait}}
+|}
+
+'''NOTES:'''
+* Les cases en bas de la mine de charbon sont partagées avec l'usine agroalimentaire et la mine de cuivre, et c'est fait (z0,Z1,Z2)
+* La centrale électrique a été remodelée par j0rdax le 30/03/2009
+
+=== Fer ===
+
+{| border=1 style="background:#e7ebff;"
+! 
+!width=350px|[[Main/fr/Mine de fer|Mine de fer]] (2293-2340)
+!width=350px|[[Main/fr/Aciérie|Aciérie]] (2118-2139)
+|-
+!Original
+|[[File:en/Ironoremine.png]]
+|[[File:en/Steelmill.png]] 
+|-
+!Mise à jour
+|[http://www.tt-forums.net/viewtopic.php?p=864661#p864661 Sujet du forum]
+|[[File:en/Ade steelmill v1.jpeg|350px]]
+|-
+!Date de dernière mise à jour
+|15/03/2010
+|16/07/2008
+|-
+!Remodelé par
+|{{en/User|Zephyris}}
+|{{en/User|ade}}
+|-
+!État
+| {{fr/Statut du sprite du traqueur|z0 = fait      |z1 = fait      |z2 = fait      }}
+| {{fr/Statut du sprite du traqueur|z0 = fait      |z1 = non réclamé |z2 = non réclamé }}
+|}
+Les aciéries n'ont pas terminé les étapes de construction.
+
+=== Bois ===
+
+''[[Archive/en/Maquinista/ECS wood 32 BPP|Voir aussi: Industries du bois ECS]]''
+{| border=1 style="background:#e7ebff;"
+! 
+!width=350px|[[Main/fr/Scierie|Scierie]] (2061-2071)
+!width=350px|[[Main/fr/Forêt|Forêt]] (2072-2077)
+|-
+!Original
+|[[File:en/Sawmill.png]]<BR>
+Sprites nécessaires:<BR>
+[[File:en/Wood2.png]]
+|[[File:en/Forest(industry).png]]<BR>
+Sprites nécessaires:<BR>
+[[File:en/Wood1.png|350px]]
+|-
+!Date de dernière mise à jour
+|
+|
+|-
+!Remodelé par
+| {{en/User|Wacki}}
+| {{en/User|Varivar}}
+|-
+!État
+| {{fr/Statut du sprite du traqueur|z0 = fait      |z1 = fait      |z2 = fait      }}
+| {{fr/Statut du sprite du traqueur|z0 = fait      |z1 = non réclamé |z2 = non réclamé }}
+|}
+*Forêt tempérée: La case de sol est terminée avec tous les niveaux de grossissement.
+
+=== Ferme ===
+
+{| border=1 style="background:#e7ebff;" 
+!
+!width=350px|[[Main/fr/Ferme|Ferme]] (2106-2117)
+!width=350px|[[Main/fr/Usine|Usine]] (2140-2152)
+|-
+!Original
+|[[File:en/Farm.png]]<BR>Sprites nécessaires:<BR>[[File:en/Farm2.png]]
+|[[File:en/Factory.png]]<BR>Sprites nécessaires<BR>[[File:en/Factory2.png]]
+|-
+!Mise à jour
+|
+|[[File:en/Goods factory 32bpp.png|300px]]
+|-
+!Date de dernière mise à jour
+| 
+|04/04/2009
+|-
+!Remodelé par
+| {{en/User|Antonio1984}}
+| {{en/User|Varivar}}
+|-
+!État
+| Tempéré:<BR>{{fr/Statut du sprite du traqueur|z0 = fait      |z1 = fait      |z2 = fait      }}Tropical:<BR>{{fr/Statut du sprite du traqueur|z0 = non réclamé |z1 = non réclamé |z2 = non réclamé }}
+| {{fr/Statut du sprite du traqueur|z0 = fait      |z1 = fait      |z2 = fait      }}
+|}
+Notes: Les sprites tropicaux peuvent être copiés depuis les tempérés, à moins qu'il ne soit créé des sprites spécifiques pour le climat tropical.
+
+=== Fourniture de pétrole ===
+
+{| border=1 style="background:#e7ebff;" 
+!
+!width=350px|[[Main/fr/Puits de pétrole|Puits de pétrole]] (2173-2179)
+!width=350px|[[Main/fr/Plateforme pétrolière|Plateforme pétrolière]] (2096-2105)
+|-
+!Original
+|[[File:en/Oilwells.png]]<BR>
+Sprites nécessaires:<BR>
+[[File:en/Oil2.png|350px]]
+|[[File:en/Oilrig.png]]
+|-
+!Mise à jour
+| [[File:en/Oil pump.gif|350px]] 
+|
+|-
+!Date de dernière mise à jour
+| 05/02/2010 [http://www.tt-forums.net/viewtopic.php?p=861833#p861833 sujet du forum] [http://www.tt-forums.net/viewtopic.php?p=861914#p861914 codé]
+|
+|-
+!Remodelé par
+| {{en/User|Zephyris}}
+|
+|-
+!État
+| {{fr/Statut du sprite du traqueur|z0 = fait      |z1 = fait      |z2 = fait      }}
+| {{fr/Statut du sprite du traqueur|z0 = non réclamé |z1 = non réclamé |z2 = non réclamé }}
+|}
+Sol avec pompe à pétrole dans le désert: souhaité.
+
+=== Papier ===
+
+{| border=1 style="background:#e7ebff;"
+!
+!width=350px|[[Main/fr/Imprimerie|Imprimerie]] (arctique) (2153-2172)
+!width=350px|[[Main/fr/Papeterie|Papeterie]] (arctique) (2200-2214)
+|-
+!Original
+| [[File:en/Printworks.png]]<BR>Sprites nécessaires<BR>[[File:en/Printing works.png]]
+| [[File:en/Papermill.png]]<BR>Sprites nécessaires<BR>[[File:en/Paper2.png]]
+|-
+!Mise à jour
+| [[File:en/printing works 32bpp.png|300px]]
+| [[File:en/Paper factory.png|300px]]
+|-
+!Date de dernière mise à jour
+| 14/03/2009
+| [http://www.tt-forums.net/viewtopic.php?f=36&t=14549&p=863966#p863966 Sujet du forum]
+|-
+!Remodelé par
+| {{en/User|Varivar}}
+| {{en/User|Zephyris}}
+|-
+!État
+| {{fr/Statut du sprite du traqueur|z0 = fait      |z1 = non réclamé |z2 = non réclamé }}
+| {{fr/Statut du sprite du traqueur|z0 = fait      |z1 = fait      |z2 = fait      }}
+|}
+
+=== Banques ===
+
+{| border=1 style="background:#e7ebff;"
+!
+!width=350px|Banque (tempéré) (2180-2183)
+!width=350px|Banque (tropical, arctique) (2184-2187)
+|-
+!Original
+|[[File:en/Bank.png]]
+|[[File:en/Tropicalbank.png]]
+|-
+!Mise à jour
+|
+|[[File:en/Tropical Bank by LordAzamath.png]]
+|-
+!Date de dernière mise à jour
+|
+|31/08/2007
+|-
+!Remodelé par
+|
+| {{en/User|LordAzamath}}
+|-
+!État
+| {{fr/Statut du sprite du traqueur|z0 = non réclamé |z1 = non réclamé |z2 = non réclamé }}
+| {{fr/Statut du sprite du traqueur|z0 = fait      |z1 = non réclamé |z2 = non réclamé }}
+|}
+
+=== Joaillerie ===
+
+{| border=1 style="background:#e7ebff;"
+!
+!width=350px|[[Main/fr/Mine d'or|Mine d'or]] (arctique) (2266-2292)
+!width=350px|[[Main/fr/Mine de diamant|Mine de diamant]] (tropical) (2214-2265)
+|-
+!Original
+|[[File:en/Goldmine.png]]<BR>Sprites nécessaires:<BR>[[File:en/Gold mine.png]]
+|[[File:en/Diamondmine.png]] 
+|-
+!Mise à jour
+|[http://www.tt-forums.net/viewtopic.php?p=865407#p865407 forum post]
+|[http://www.tt-forums.net/viewtopic.php?f=36&t=14549&p=866187#p866187 forum post]
+|-
+!Date de dernière mise à jour
+| 
+| 
+|-
+!Remodelé par
+| 
+| 
+|-
+!État
+| {{fr/Statut du sprite du traqueur|z0 = non réclamé |z1 = non réclamé |z2 = non réclamé }}
+| {{fr/Statut du sprite du traqueur|z0 = non réclamé |z1 = non réclamé |z2 = non réclamé }}
+|}
+
+=== Eau ===
+
+{| border=1 style="background:#e7ebff;"
+!
+!width=350px|[[Main/fr/Réserve d'eau|Source d'eau]] (tropical) (2344-2346)
+!width=350px|[[Main/fr/Château d'eau|Château d'eau]] (tropical)  (2347-2352)
+|-
+!Original
+|[[File:en/water supply.gif]]  <BR>Sprites nécessaires<BR>[[File:en/Water supply.png]]
+|[[File:en/water tower.gif]] <BR>Sprites nécessaires<BR>[[File:en/Deposito agua.png]]
+|-
+!Mise à jour
+|
+|[[File:en/Watertower 32bpp.png]] 
+|-
+!Date de dernière mise à jour
+| 
+|31/08/2008
+|-
+!Remodelé par
+| 
+| {{en/User|Varivar}}
+|-
+!État
+| {{fr/Statut du sprite du traqueur|z0 = non réclamé |z1 = non réclamé |z2 = non réclamé }}
+| {{fr/Statut du sprite du traqueur|z0 = fait      |z1 = fait      |z2 = fait      }}
+|}
+
+=== Plantations ===
+
+{| border=1 style="background:#e7ebff;"
+!
+!width=350px|[[Main/fr/Plantation fruitière|Plantation fruitière]] (tropical) 
+!width=350px|[[Main/fr/Plantation d'hévéa|Plantation d'hévéas]] (tropical)
+|-
+!Original
+|[[File:en/Fruitplantation.png]] 
+|[[File:en/Rubberplantation.png]] 
+|-
+!Mise à jour
+|[[File:en/2342 z0.png]]
+|  
+|-
+!Date de dernière mise à jour
+| 
+| 
+|-
+!Remodelé par
+| {{en/User|northstar2}}
+| {{en/User|northstar2}}
+|-
+!État
+| {{fr/Statut du sprite du traqueur|z0 = fait      |z1 = fait      |z2 = fait      }}
+| {{fr/Statut du sprite du traqueur|z0 = souhaité       |z1 = non réclamé |z2 = non réclamé }}
+|}
+
+
+'''Case de sol: faite'''
+
+=== Raffinerie / Cuivre ===
+
+{| border=1 style="background:#e7ebff;"
+!
+!width=350px|[[Main/fr/Raffinerie|Raffinerie]] (2078-2095)
+!width=350px|[[Main/fr/Mine de cuivre|Mine de cuivre]] (tropical)
+|-
+!Original
+|[[File:en/Oilrefinery.png]]<BR>Sprites nécessaires:<BR>[[File:en/Oil3.png]]
+|[[File:en/Copperoremine.png]]<BR>Sprites nécessaires:<BR>[[File:en/Cooper.png]]
+|-
+!Mise à jour
+|
+|
+|-
+!Date de dernière mise à jour
+|
+| 
+|-
+!Remodelé par
+|
+| 
+|-
+!État
+| {{fr/Statut du sprite du traqueur|z0 = non réclamé |z1 = non réclamé |z2 = non réclamé }}
+| {{fr/Statut du sprite du traqueur|z0 = non réclamé |z1 = non réclamé |z2 = non réclamé }}
+|}
+'''NOTES:'''
+*Les bureaux sont aussi utilisés par certains héliports.
+*Les cases du bas sont complètes, car elles sont de même type que les [http://wiki.openttd.org/wiki/index.php/Image:1420_z0.png cases de béton] utilisées dans les métropoles.
+*La mine de cuivre utilise un élément animé. La poulie doit être tournée trois fois.
+*Les cases du bas de la mine de cuivre sont partagées avec la mine de charbon et l'usine agroalimentaire, et c'est fait.
+
+=== Nourriture/Scierie2 ===
+
+{| border=1 style="background:#e7ebff;"
+!
+!width=350px|[[Main/fr/Usine agroalimentaire|Usine agroalimentaire]] (arctique, tropicale) 
+!width=350px|[[Main/fr/Scierie de construction|Scierie de construction]] (tropicale)
+|-
+!Original
+|[[File:en/Foodprocplant.png]]<BR>Sprites nécessaires:<BR>[[File:en/Food.png]]
+|[[File:en/Lumbermill.png]]<BR>Sprites nécessaires:<BR>[[File:en/LumberMill2.png]]
+|-
+!Mise à jour
+|  
+|  
+|-
+!Date de dernière mise à jour
+|  
+|  
+|-
+!Remodelé par
+|  
+|  
+|-
+!État
+| {{fr/Statut du sprite du traqueur|z0 = non réclamé |z1 = non réclamé |z2 = non réclamé }}
+| {{fr/Statut du sprite du traqueur|z0 = non réclamé |z1 = non réclamé |z2 = non réclamé }}
+|}
+
+
+'''NOTES:'''
+*Les cases du bas de l'usine agroalimentaire sont partagées avec la mine de charbon et celle de cuivre.
+*La scierie de construction tropicale est placée sur la pelouse tropicale. C'est une bonne idée s'il y a un espace entre les bords des cases et le mur. Cela évitera les problèmes de couverture du gazon des cases environnantes.
+
+
+{{fr/Navbox Développement graphique}}
+
+[[Category:fr/Nouveaux graphiques]][[Category:fr/Traqueur des progrès de développement - Zoom extra]]
