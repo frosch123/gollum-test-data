@@ -1,0 +1,541 @@
+[[Translation:Main/en/Game mechanics]]{{en/-}}{{tabla de contenido/Es}}
+
+Aquí puedes encontrar información acerca de cómo OpenTTD calcula la puntuación de las empresas en el juego.
+
+Si siempre ha querido saber cómo se califican las [[Main/en/Stations|estaciones]] que ha construido, o cómo funciona la distribución de bienes, ¡Aquí se lo vamos a explicar!
+
+==Calificación del jugador==
+
+Cada apartado de la calificación del jugador es una función lineal, así, por ejemplo, si consigue el 50% del objetivo de un apartado tendrá el 50% de los puntos que tiene asignados ese apartado.
+
+Cuando el apartado se refiere a importes monetarios, este se convierte en la moneda del juego actual, aunque internamente estas cantidades se almacenan como libras. (Aunque cambie la unidad monetaria del juego, usando € por ejemplo, lo que usted ve es sólo un múltiplo asignado para el funcionamiento del juego, en el caso del euro el multiplicador es 2. No se corresponde a valores de cambio reales, 1 £ equivale a 2 € en el juego, aunque el [http://es.finance.yahoo.com/conversor-divisas/convert?amt=1&from=GBP&to=EUR&submit=Convertir cambio real de 1 £ es distinto]).
+
+{| {{en/Wikitable}}
+|- style="background:#efefef"
+! Apartado !! Objetivo !! Puntos (mín.) !! Puntos (máx.)
+|-
+|Número de vehículos||>=120||0 puntos por 0 vehículos||100 puntos por al menos 120 vehículos
+|-
+|Número de partes de estación (casillas) que posee el jugador||>=80||0 puntos por 0 casillas||100 puntos por al menos 80 casillas
+|-
+|Mínimo beneficio de los vehículos con al menos dos años de antigüedad||>=20.000 €||0 puntos por pérdidas o por 0 €||100 puntos por al menos 20.000 €
+|-
+|Mínimo ingreso mensual ganado en los últimos 3 años||>=100.000 €||0 puntos por 0 €||50 puntos por al menos 100.000 €
+|-
+|Máximo ingreso mensual ganado en los últimos 3 años||>=200.000 €||0 puntos por 0 €||100 puntos por al menos 200.000 €
+|-
+|Unidades de carga entregadas en el último año||>=40.000||0 puntos por 0 unidades||400 puntos por al menos 40.000 unidades
+|-
+|Número de tipos de carga entregadas en el último trimestre||>=8||0 puntos por 0 tipos de carga||50 puntos por al menos 8 tipos de carga
+|-
+|Dinero actual en el banco||>=20.000.000 €||0 puntos por 0 €||50 puntos por al menos 20 millones de €
+|-
+|Deuda actual con el banco||0 €||0 puntos por más de 500.000 €||50 puntos por 0 €
+|-
+! Totales !!!! 0 puntos !! 1.000 puntos
+|}
+
+<table>
+<tr valign="top"><td style="background:none; border:0px">
+{| {{en/Wikitable}}
+|- style="background:#efefef"
+!colspan="2"|Tabla de calificación de la empresa
+|- style="background:#efefef"
+!Calificación!!Rango
+|-
+|De 0 a 127||Ingeniero
+|-
+|De 128 a 255||Gerente de tráfico
+|-
+|De 256 a 383||Coordinador de transporte
+|-
+|De 384 a 511||Supervisor de ruta
+|-
+|De 512 a 639||Director
+|-
+|De 640 a 767||Jefe ejecutivo
+|-
+|De 768 a 895||Director general
+|-
+|De 896 a 959||Presidente
+|-
+|De 960 a 1000||Magnate
+|}
+</td><td style="background:none; border:0px">
+{| {{en/Wikitable}}
+|- style="background:#efefef"
+!colspan="2"|Tabla de calificación en 2050
+|- style="background:#efefef"
+!Calificación!!Rango
+|-
+|De 0 a 319||Hombre de negocios
+|-
+|De 320 a 447||Empresario
+|-
+|De 448 a 575||Industrial
+|-
+|De 576 a 703||Capitalista
+|-
+|De 704 a 831||Magnate
+|-
+|De 832 a 959||Potentado
+|-
+|De 960 a 1000||Magnate del siglo
+|}
+</td></tr></table>
+
+==Calificación de las estaciones==
+En esta sección se muestran los factores que afectan a las calificaciones de las estaciones. Todos los cálculos se hacen por separado para cada estación y dependiendo del tipo de carga.
+
+{| {{en/Wikitable}}
+|- style="background:#efefef"
+!Factores!!Condiciones!!Puntos de calificación!!Calificación en %
+|-
+|Velocidad máxima del último [[Main/es/Vehículos|vehículo]] que entró en la estación || Mínimo 85 km/h (52 mph)|| (Velocidad(km/h)-85)/4 || De 0% a 17%
+|-
+|rowspan="3"|Edad en años del último vehículo que entró en la estación || 2 || 10|| 4%
+|-
+| 1 || 20 || 8%
+|-
+| 0 || 33 || 13%
+|-
+|rowspan="4"|Días desde la última carga <br/>Multiplique los días en la columna de "condiciones" por 4 si el último vehículo era un [[Main/es/Barcos|barco]].<br/><small>(Nota: Si el vehículo estaba listo para recoger una carga pero no había carga en la estación, se considera como una carga de todos modos)</small>|| De 32,5 a 52,5 || 25 || 10%
+|-
+| De 17,5 a 32,5 || 50 || 20%
+|-
+| De 10 a 17,5  || 95 || 37%
+|-
+| Menos de 10 || 130 || 51%
+|-
+|rowspan="6"|Unidades de carga esperando en la estación || Más de 1500 || -90 || -35%
+|-
+| De 1001 a 1500 || -35 || -14%
+|-
+| De 601 a 1000 || 0 || 0%
+|-
+| De 301 a 600 || 10 || 4%
+|-
+| De 101 a 300 || 30 || 12%
+|-
+| Menos de 100 || 40 || 16%
+|-
+|Estatua del fundador de la [[Main/es/Empresa|empresa]] en el [[Main/es/Pueblo|pueblo]] de la estación||Construida||26|| 10%
+|-
+|Pequeña campaña publicitaria||Estación dentro del rango de 10 casillas del centro de la ciudad||+64|| +25%
+|-
+|Mediana campaña publicitaria||Estación dentro del rango de 15 casillas del centro de la ciudad||+112|| +44%
+|-
+|Gran campaña publicitaria||Estación dentro del rango de 20 casillas del centro de la ciudad||+160|| +63%
+|-
+|Vehículo de carretera estrellado||Estación a menos de 22 casillas del accidente ||-160|| -63%
+|-
+|Tren estrellado||Estación a menos de 30 casillas del accidente ||-160|| -63%
+|}
+Divida el total de puntos de calificación entre 255 para obtener la calificación en porcentaje. La calificación máxima posible (255 puntos) es de 100%.
+
+Las campañas de publicidad tienen efectos instantáneos (como un "turbo"), suponen un impulso temporal para mejorar la calificación de sus estaciones más cercanas. La calificación poco a poco ira decayendo hasta recuperar gradualmente su calificación real.
+
+Cada 2,5 días las estaciones calculan su calificación; estas calificaciones no pueden cambiar en más de 2 puntos por cada ciclo.
+
+==Carga entregada en las estaciones==
+Las estaciones pueden admitir un máximo de carga por mercancía según su calificación.
+
+En cada ciclo de 2,5 días sólo puede haber un máximo de 2 estaciones con carga asignada para cada tipo de carga que entrega una industria. Si hay más de dos estaciones con un mismo valor máximo para el tipo de carga actual, entonces la entrega dependerá del orden interno de las estaciones que reciben la carga.
+
+Si sólo hay una estación posible, entonces la cantidad entregada será: la carga_producida x calificación_estación_en_porcentaje, redondeado al número entero siguiente (por ejemplo, una mina produce 133 toneladas de carbón y la estación tiene calificación de 67%, el calculo es: 133 x 0,67 = 82 toneladas de carbón).
+
+Para 2 estaciones el cálculo es más complejo. En primer lugar la calificación en puntos de la segunda estación se divide por 2 para los siguientes cálculos locales.
+
+La cantidad disponible para la estación 1 se calcula de la siguiente manera: (calificación_estación1_en_porcentaje x (carga_producida + 1)) / (calificación_estación1_en_porcentaje + calificación_estación2_en_porcentaje)
+
+Si las estaciones tienen calificaciones similares se le asignará aproximadamente 2/3 de la producción, incrementándose con grandes diferencias en la calificación. Este resultado está sujeto después a los mismos cálculos que se aplicaron en el caso de una sola estación y entregado en la estación 1. Si la estación 1 no recibe la cantidad total disponible para ella, la parte que falta no se transportará a ninguna otra.
+
+El resto de la producción está sujeto, en su caso, a los mismos cálculos que se aplicaron en el caso de una sola estación y entregado en la estación 2.
+
+==Calificación de la autoridad local==
+Las calificaciones limitan las acciones que puede llevar a cabo un jugador; éste empieza con una calificación de +500 y cambia según sus diferentes actuaciones.
+
+A modo de ejemplo, si destruye unos ~200 árboles y luego vuelve a plantarlos, hará que su calificación primero baje a -1000 (el mínimo) y después suba tan solo hasta 220.
+
+<table>
+<tr valign="top"><td style="background:none; border:0px">
+{| {{en/Wikitable}}
+|- style="background:#efefef"
+!Puntos de calificación!!Calificación de la autoridad local
+|-
+| De -1000 a -400 || Espantoso
+|-
+| De -399 a -200 || Muy pobre
+|-
+| De -199 a 0 || Pobre
+|-
+| De 0 a 200 || Mediocre
+|-
+| De 201 a 400 || Bueno
+|-
+| De 401 a 600 || Muy bueno
+|-
+| De 601 a 800 || Excelente
+|-
+| De 801 a 1000 || Excepcional
+|}
+</td><td style="background:none; border:0px">
+{| {{en/Wikitable}}
+|- style="background:#efefef"
+!Acción del jugador!!Calificación necesaria*!!Efectos en la calificación
+|-
+|Construir una estación|| -200 || --
+|-
+|Destruir un casilla 'final' de una carretera|| 16 / 64 / 112 ||-18, bajando hasta -100.
+|-
+|Destruir una casilla 'intermedia' de una carretera|| 16 / 64 / 112 ||-50, bajando hasta -100.
+|-
+|Destruir un túnel o un puente de ciudad|| 144 / 208 / 400 ||-250, bajando hasta 0.
+|-
+|Destruir un edificio|| De 40 a 300 ||-40, bajando hasta -300.
+|-
+|Plantar un árbol en una casilla vacía|| -- ||+7, subiendo hasta 220.
+|-
+|Eliminar árboles|| -- ||-35 por casilla.
+|-
+|Soborno con éxito|| -- ||+200, subiendo hasta 800.
+|-
+|Soborno sin éxito|| -- ||Se establece en -50.
+|}
+<nowiki>*</nowiki> En la columna "calificación necesaria" los valores separados por barras se corresponde con las opciones "Permisiva / Tolerante / Hostil" del parámetro "Actitud de las autoridades ante cambios en el terreno" del [[Main/es/dificultad|nivel de dificultad]].
+</td></tr></table>
+
+Cada mes las calificaciones de los jugadores cambian automáticamente:
+* La calificación '''sube 5 puntos''' si ésta es menor de 200.
+* La calificación '''sube 12 puntos''' por cada estación que transfiera carga en los últimos 50 días.
+* La calificación '''baja 15 puntos''' por cada estación que no transfiera carga en los últimos 50 días.
+
+'''Ejemplo:'''
+
+Un jugador quiere construir una estación, pero no puede porque tiene una calificación de -300 (Muy pobre), además posee en la ciudad 2 estaciones activas y 1 estación inactiva (que no tiene uso).
+La calificación cambia cada mes según en el siguiente cálculo:
+
+5 puntos + 2 x 12 puntos - 15 puntos = 5+24-15 = 14 puntos gana el jugador cada mes.
+
+Como a de esperar a que su calificación llegue a -199 (Pobre) para poder construir la estación, deberá esperar 8 meses [(300-199)/14 = 7,21 redondeando 8] para que las autoridades locales le den permiso.
+
+Los códigos para las calificaciones de los pueblos se encuentra en los archivos town.h, town_cmd.c, tree_cmd.c, y road_cmd.c.
+
+==Producción de la industria==
+El juego determina la cantidad de carga que una [[Main/es/Industrias|industria]] produce al mes. Esta tabla enumera las posibles producciones iniciales con la opción de [[Main/es/Opciones avanzadas/Economía|economía fluctuante]] activa. La producción puede multiplicarse por 8 o 9 (incluso a veces por 10 con los bosques).
+
+{| {{en/Wikitable}}
+|- style="background:#efefef"
+!Industria!!Carga producida!!Producción inicial
+|-
+|Mina de carbón||Carbón||De 56 a 176 toneladas
+|-
+|Bosque||Madera||De 48 a 152 toneladas
+|-
+|Plataforma petrolífera||Petróleo||De 56.000 a 176.000 litros 
+|-
+|Granja||Grano<br/>Ganado||De 40 a 112 toneladas<br/>De 40 a 112 cabezas
+|-
+|Mina de cobre||Mineral de cobre||De 56 a 112 toneladas
+|-
+|Pozos petrolíferos||Petróleo||De 48.000 a 152.000 litros
+|-
+|Mina de hierro||Mineral de hierro||De 40 a 112 toneladas
+|-
+|Banco||Valores||De 24 a 64 bolsas
+|- style="background:#efefef"
+|colspan="3"|
+|-
+|Mina de oro||Oro||De 24 a 80 bolsas
+|- style="background:#efefef"
+|colspan="3"|
+|-
+|Mina de diamantes||Diamantes||De 24 a 80 bolsas
+|-
+|Plantación de fruta||Fruta||De 40 a 112 toneladas
+|-
+|Plantación de caucho||Caucho||De 40.000 a 112.000 litros 
+|-
+|Suministro de agua||Agua||48.000 a 152.000 litros
+|-
+|Granja (tropical)||Maíz||De 40 a 128 toneladas
+|-
+|Aserradero (tropical)||Madera||De 180 a 225 toneladas (si tiene árboles disponibles)
+|- style="background:#efefef"
+|colspan="3"|
+|-
+|Bosque de algodón dulce||Algodón dulce||De 48 a 152 toneladas
+|-
+|Granja de pilas||Pilas||De 40 a 128 pilas
+|-
+|Pozos de cola||Cola||De 48.000 a 136.000 litros
+|-
+|Fuentes de plástico||Plástico||De 56.000 a 160.000 litros
+|-
+|Generador de burbujas||Burbujas||De 48 a 152 burbujas
+|-
+|Cantera de caramelos||Caramelos||De 40 a 112 toneladas
+|-
+|Mina de azúcar||Azúcar||De 40 a 128 toneladas
+|}
+
+===Cambios en la producción===
+Cada mes el juego cambia aleatoriamente la producción de algunas industrias. 
+
+====Reglas para la economía normal (por defecto o como en TTD)====
+En mapas de tamaño 256x256 solo es posible un cambio al mes (sólo cambia una industria). Este número varía muy bien según el tamaño del mapa desde que se introdujo la propiedad "cambios en la producción diaria".
+
+Igual que con la economía suave, las industrias entregan la carga en las estaciones 8, 9 ó 10 veces al mes (sólo los bosques alcanzan la producción más alta: más de 400t).
+
+No obstante las producciones están limitadas a 6 niveles de producción: muy bajo, bajo, normal (cuando se inicia un juego o cuando se construye una nueva industria), alto, alto x2 y muy alto.
+Los cambios en la producción entre estos niveles son una disminución del 50% (a la mitad) o un incremento del 100% (al doble).
+
+Ejemplos de niveles de producción:
+*Una mina de carbón: muy bajo (de 32 a 40 toneladas al mes), bajo (de 64 a 72), normal (de 120 a 135), alto (de 240 a 270), alto x2 (de 480 a 540) y muy alto (de 960 a 1080).
+*Un bosque: muy bajo (de 32 a 64 toneladas al mes), bajo (de 35 a 70), normal (de 78 a 117), alto (de 208 a 260), alto x2 (de 416 a 468 (520 si es x10)) y muy alto (de 832 a 936 (1040 x10)).
+*Una mina de oro: muy bajo (de 12 a 18 bolsas al mes), bajo (de 32 a 40), normal (de 56 a 63), alto (de 112 a 126), alto x2 (de 224 a 252) y muy alto (de 448 a 504).
+
+
+Para simplificar las cosas, vamos a ver cuáles son las posibilidades para mapas de 256x256 (un cambio máximo al mes, o lo que es lo mismo, solo cambia la producción una industria al mes):
+
+*La posibilidad de que se produzca un cambio en la producción cada mes es de:
+** un 50% para que disminuya una industria que solo puede disminuir (actualmente solo los pozos petrolíferos del clima templado) o
+** un 50% por 1/3 (=16.7%) para que otras industrias (que no solo disminuyen) tengan cambios en la producción.
+
+*Si se produce un cambio en la producción (aprox. un 16,7% de probabilidades al mes):
+** Para una industria que tiene un servicio pobre o nulo (con menos de un 60% de su producción transportada): '''33%''' de posibilidades de que incremente, '''67%''' de posibilidades de que disminuya.
+** Para una industria que tiene un buen servicio (superior al 60%): '''67%''' de posibilidades de que incremente, '''33%''' de posibilidades de que disminuya.
+** No hay bonificación por un servicio excelente con la [[Main/en/Opciones avanzadas/Economía/Es#Activar economía suave (cambios más pequeños)|economía suave]].
+
+
+*Para calcular la probabilidad de un cambio en particular, es decir, 50% x 1/3 x 33% = 5,56%:
+** Para una industria con servicio pobre: Un '''5,56%''' de posibilidades de que se produzca un incremento en la producción y un '''11,12%''' de probabilidades de que se produzca una disminución, al mes.
+** Para una industria con buen servicio: Un '''11,12%''' de probabilidades de que se produzca un incremento en la producción y un'''5,56%''' de probabilidades de que se produzca una disminución, al mes.
+
+====Reglas para la economía suave====
+:''Distíngase [[Main/en/Opciones avanzadas/Economía/Es#Activar economía suave (cambios más pequeños)|economía suave]] (opciones avanzadas) y [[Main/en/Dificultad/Es#Economía|economía estable]] (opciones de dificultad)''
+
+*La posibilidad de un cambio en la producción cada mes es del '''4,5%''', es decir, el 4,5% de las industrias productoras, de la lista de industrias, cambia su producción.
+
+
+*Si una producción cambia puede ocurrir lo siguiente:
+** Para una industria que tiene un servicio pobre o nulo (cuando se transporta menos del 60% de su producción): un '''33%''' de posibilidades de que se incremente, un '''67%''' de posibilidades de que disminuya. 
+** Para una industria que tiene un buen servicio (superior al 60%): un '''67%''' de posibilidades de que se incremente, un '''33%''' de posibilidades de que disminuya. 
+** Para una industria que tiene un servicio excelente (superior al 80%): un '''83%''' de posibilidades de que se incremente, un '''17%''' de posibilidades de que disminuya.
+
+
+*Estos dos factores se multiplican entre sí, es decir, 4,5% x 33% = 1,5%:
+** Servicio pobre o nulo: '''1.5%''' de que se incremente y '''3.0%''' de que disminuya.
+** Buen servicio: '''3.0%''' de que se incremente y '''1.5%''' de que disminuya.
+** Servicio excelente: '''3.75%''' de que se incremente y '''0.75%''' de que disminuya.
+
+
+*Con la opción [[Main/es/Economía suave|economía suave]] activada, los cambios en la producción al mes son entre el 3 y el 23%:
+**Las industrias con producciones muy bajas, (de 12 a 40 toneladas al mes) tendrán cambios mayores.
+**Las industrias primarias producen carga 8 ó 9 veces al mes (ó 10 veces si se trata de los bosques de alta producción). La producción mensual de las industrias es el ''valor base'' multiplicado por 8 ó 9 (ó 10 para los bosques de alta producción).  Por ejemplo, en una mina de carbón, el ''valor base'' de entrega de mineral de carbón es de 15 toneladas, con lo que se calcula que la producción mensual es de 120 ó 135 toneladas. Este ''valor base'' tiene un tope de 255, por lo que la máxima producción mensual posible para cualquier industria es de 2040 ó 2295 (ó 2550 para un bosque de alta producción). [http://www.tt-forums.net/viewtopic.php?p=163733&sid=2128541ce7feb1a96a454f56152123a2#p163733 Ref]
+
+====Ejemplos====
+Si una mina de carbón tiene un 70% de su producción transportada, tendrá una probabilidad del '''3%''' (4,5% x 67%) de un incremento en la producción desde el 3-23% y una probabilidad del '''1,5%''' (4,5% x 33%) de una disminución desde el 3-23% (pero 13% de promedio).
+
+(1 + (0,03 - 0,015) x 0,13)^12 - 1 = 0,0237 (ó '''2,37%''')
+
+La mina de carbón crecerá un promedio del 2,37% después del primer año.<br/>
+(1,0237 ^20) - 1 = 59,6% después de veinte años.<br/>
+(1,0237 ^50) - 1 = 321,8% ó '''3,22 veces''' después de cincuenta años.<br/>
+(1,0237 ^100) - 1 = '''10,35 veces''' después de cien años.<br/>
+
+
+Una industria con un ratio de más del 80%, tiene una probabilidad del '''3,75%''' de incrementar la producción y un '''0,75%''' de disminuirla.
+
+(1 + (0,0375 - 0,0075) x 0,13)^12 - 1 = 0,0478 (ó '''4,78%''')
+
+La industria crecerá un promedio del 4,78% después del primer año.<br/>
+(1,0478 ^20) - 1 = '''2,54 veces''' después de veinte años.<br/>
+(1,0478 ^50) - 1 = '''10,32 veces''' después de cincuenta años.<br/>
+(1,0478 ^100) - 1 = '''106,62 veces''' después de cien años.<br/>
+
+Para industrias con un buen servicio, son necesarios '''29,6 años''' de promedio '''para doblar'''; con un servicio excelente son necesarios '''14,8 años'''. Si para el juego un día dura 2,36 segundos, el '''tiempo necesario para doblar''' la producción con un buen servicio es de '''7,1 horas'''; con un servicio excelente será de '''3,6 horas'''. Para ir desde una producción inferior cercana a 100 hasta una máxima cercana a 2100 necesitará '''130 años''' con un buen servicio y '''65 años''' con un servicio excelente.  
+
+Sin embargo, en el juego puede encontrarse con industrias que cambian su ritmo de producción muy aleatoriamente. Debe tener en cuenta, que los ejemplos anteriores sólo se cumplen cuando se observan muchas industrias en un largo periodo de tiempo; individualmente cada industria puede desviarse de estos promedios. Estadísticamente hablando, 6 de cada 10 industrias no pasará de 100 a 2100 incluso con el mejor servicio durante 65 años. Cerca de 1 de cada 9 industrias incluso bajará su producción con un servicio de transporte del 60-80% de su producción durante 50 años. La 
+
+Para obtener una mayor capacidad de respuesta de las industrias, adapte el número de vagones a la producción de la industria (para la producción menor debe utilizar dos vagones). La [[Main/en/órdenes/Es#Carga completa|orden "carga completa"]] se usa normalmente para estos trenes de carga.
+
+
+'''Nota:'''  La fórmula exacta se puede ver en "[http://vcs.openttd.org/svn/browser/trunk/src/industry_cmd.cpp#L2151 ChangeIndustryProduction()]" en el archivo industry_cmd.cpp.
+
+==Tarifas de pago por carga==
+El dinero que usted recibe por la entrega de la carga se basa en cuatro factores: la cantidad de carga que entrega, el valor de la carga, la distancia a la que se entrega, y el tiempo que transcurre hasta que la entrega.
+
+{| {{en/Wikitable}}
+|- style="background:#efefef"
+!Carga!!Unidades!!Plazo pronta entrega (días)!!Plazo entrega tardía (días)!!Pago inicial por la carga (euros)
+|-
+|[[Main/es/Pasajeros|Pasajeros]]|| ||Inmediato||24||78 €
+|-
+|[[Main/es/Objetos de valor|Objetos de valor]]||Bolsas||1||32||182 €
+|-
+|[[Main/es/Ganado|Ganado]]||Cabezas||4||18||106 €
+|-
+|[[Main/es/Grano|Grano]]||Toneladas||4||40||116 €
+|-
+|[[Main/es/Mercancías|Mercancías]]||Cajas||5||28||150 €
+|-
+|[[Main/es/Carbón|Carbón]]||Toneladas||7||No hay||144 €
+|-
+|[[Main/es/Acero|Acero]]||Toneladas||7||No hay||138 €
+|-
+|[[Main/es/Mineral de hierro|Mineral de hierro]]||Toneladas||9||No hay||124 €
+|-
+|[[Main/es/Madera|Madera]]||Toneladas||15||No hay||122 €
+|-
+|[[Main/es/Petróleo|Petróleo]]||Miles de litros||25||No hay||108 €
+|-
+|[[Main/es/Correo|Correo]]||Bolsas||20||90||110 €
+|- style="background:#efefef"
+!colspan="5" align="center"|Específico del clima subártico
+|-
+|[[Main/es/Trigo|Trigo]]||Toneladas||4||40||116 €
+|-
+|[[Main/es/Papel|Papel]]||Toneladas||7||60||132 €
+|-
+|[[Main/es/Oro|Oro]]||Bolsas||10||40||142 €
+|-
+|[[Main/es/Alimentos|Alimentos]]||Toneladas||Inmediato||30||138 €
+|- style="background:#efefef"
+!colspan="5" align="center"|Específico del clima subtropical
+|-
+|[[Main/es/Caucho|Caucho]]||Miles de litros||2||20||108 €
+|-
+|[[Main/es/Fruta|Fruta]]||Toneladas||Inmediato||15||102 €
+|-
+|[[Main/es/Maíz|Maíz]]||Toneladas||4||40||106 €
+|-
+|[[Main/es/Madera|Madera]] tropical||Toneladas||15||No hay||194 €
+|-
+|[[Main/es/Mineral de cobre|Mineral de cobre]]||Toneladas||12||No hay||118 €
+|-
+|[[Main/es/Agua|Agua]]||Miles de litros||20||80||114 €
+|-
+|[[Main/es/Diamantes|Diamantes]]||Bolsas||10||No hay||142 €
+|- style="background:#efefef"
+!colspan="5" align="center"|Específico del clima fantasía
+|-
+|[[Main/es/Azúcar|Azúcar]]||Toneladas||20||No hay||108 €
+|-
+|[[Main/es/Juguetes|Juguetes]]|| ||25||No hay||136 €
+|-
+|[[Main/es/Pilas|Pilas]]|| ||2||30||106 €
+|-
+|[[Main/es/Dulces|Dulces]]||Toneladas||8||40||150 €
+|-
+|[[Main/es/Caramelos|Caramelos]]||Toneladas||14||60||116 €
+|-
+|[[Main/es/Cola|Cola]]||Kilolitros||5||75||118 €
+|-
+|[[Main/es/Algodón dulce|Algodón dulce]]||Toneladas||10||25||122 €
+|-
+|[[Main/es/Burbujas|Burbujas]]|| ||20||80||124 €
+|-
+|[[Main/es/Plástico|Plástico]]||Kilolitros||30||No hay||108 €
+|-
+|[[Main/es/Refrescos|Refrescos]]|| ||30||50||152 €
+|}
+
+Los valores del "pago inicial por la carga" son por la entrega de 100 piezas de carga a la distancia de una casilla. El pago se eleva con la inflación a medida que el juego avanza.
+
+
+Penalizaciones por entrega tardía:
+*Por cada día que pasa desde el plazo de '''pronta entrega''' hasta que se entrega la carga, sufre una penalización del '''0,4%'''.
+*Por cada día que pasa desde el plazo de '''entrega tardía''' hasta que se entrega la carga, sufre una penalización adicional del '''0,4%''' (sumando ambas un 0,8%).
+*La máxima penalización es del '''88%'''.
+
+
+'''Ejemplos''' (sin inflación):
+
+Entrega de 200.000 litros de petróleo a 20 casillas de distancia tardando 10 días:<br/>
+2 x 108 € x 20 casillas x 100% = 4.320 €
+
+Entrega de 100 bolsas de correo a 100 casillas de distancia tardando 100 días:<br/>
+1 x 110 € x 100 casillas x (1 - 80x0,004 - 10x0,004) = 11.000 € x 0,64% = 7.040 €
+
+
+'''Notas:'''
+* La fórmula exacta es mucho más complicada y un poco más precisa, debido a errores de redondeo en la conversión de grandes valores. Vea economy.cpp ''(GetTransportedGoodsIncome)'' e [[Main/es/ingresos por carga|ingresos por carga]].
+
+* La distancia se mide por el número de casillas entre las estaciones; ni desde las industrias ni por la distancia que recorren los vehículos. Se calcula sumando las diferencias de coordenadas x e y de la casilla de origen y la casilla de destino, no por la distancia en línea recta.
+
+==Velocidad de los vehículos==
+El juego tiene muchas reglas para que los vehículos se muevan de una manera bastante realista. Un vehículo que viaja a 160 km/h (100 mph) cruzará 5,6 casillas al día.
+
+Esto significa que a efectos del cálculo de la velocidad de un vehículo, una casilla mide ¡686 kilómetros (429 millas) de largo!
+
+
+==== Aeronaves ====
+*Por defecto las [[Main/es/Aeronaves|aeronaves]] vuelan a un cuarto de su velocidad real de vuelo (esto se puede cambiar en las [[Main/es/Opciones avanzadas/Vehículos|opciones avanzadas]]).
+*Las aeronaves aceleran alrededor de 200 km/h al día. Esto varía por aeronave.
+*Los aviones averiados vuelan a 345 km/h.
+*Durante el rodaje por el [[Main/en/Airport|aeropuerto]] la velocidad está limitada a 154 km/h.
+
+==== Vehículos de carretera ====
+*Los [[Main/es/Vehículos de carretera|vehículos de carretera]] aceleran 37 km/h por día.
+*Girarán en las curvas a la mitad de su velocidad máxima.
+*Aceleran un extra de 74 km/h por día en pendiente hacia abajo.
+*Cuando suben una pendiente, reducen su velocidad un 10% 4 veces por casilla, hasta alcanzar una velocidad en subida de 34 km/h, para todos los vehículos de carretera.
+
+(Nota: Esto no se aplica cuando se utiliza el "Modelo de aceleración para vehículos de carretera" mejorado)
+
+==== Barcos ====
+*Los [[Main/es/Barcos|barcos]] aceleran 37km/h por día.
+*Un barco "parado" vuelve a su última velocidad instantáneamente.
+
+==== Trenes ==== 
+(con la [[Main/en/Opciones avanzadas/Es#Modelo de aceleración de trenes|opción avanzada "modelo de aceleración de trenes"]] [[Main/es/aceleración realista|realista]])<br>
+*Los [[Main/es/Trenes|trenes]] no se ven afectados por las pendientes si son suficientemente potentes.
+*Están limitados a una velocidad de 61km/h cuando entran y salen de los depósitos.
+*Pueden tomar una curva de 45° sin penalización de velocidad.
+*Cuando toman 2 o más curvas de 45° en la misma dirección, la velocidad máxima esta limitada de la siguiente manera:
+{| {{en/Wikitable}}
+|- style="background:#efefef"
+!rowspan=2|Casillas entre<br>dos curvas!!colspan=3|Velocidad máxima (km/h)
+|- style="background:#efefef"
+!Ferrocarril!!Monorraíl!!Maglev
+|-
+|0 (giro de 90°)||61||91||121
+|-
+|1||88||132||176
+|-
+|2||111||166||221
+|-
+|3||132||198||264
+|-
+|4||151||226||301
+|-
+|5||168||252||336
+|-
+|6||183||274||365
+|-
+|7||196||294||392
+|-
+|8||207||310||413
+|-
+|9||216||324||432
+|-
+|10||223||334||445
+|-
+|11||228||342||456
+|-
+|12+||231||346||461
+|}
+*La aceleración del tren y su velocidad máxima se ven afectadas por: su potencia, la velocidad a la que circula, la masa total del tren y si la vía está en pendiente o no.
+*La aceleración de los trenes que no son MagLev (de Levitación Magnética) es la siguiente = 37 x(0,55 x Potencia / Velocidad - 1,3 x Masa + 60 x núm_vagones + 0,0035 x Masa x Velocidad + 0,24 x Velocidad^2 - 60 x Masa_vagones_pendiente_ascendente + 60 x Masa_vagones_pendiente_descendente) / Masa (km/h por día)
+*La aceleración de los trenes MagLev (trenes de Levitación Magnética) es = 37 x (0,022 x Potencia - 0,24 x Velocidad^2 - 60 x Masa_vagones_pendiente_ascendente + 60 x Masa_vagones_pendiente_descendente) / Masa (km/h por día)
+*El frenado es el doble que la aceleración, excepto al entrar a un depósito o a una estación.
+*Los límites de velocidad sólo se aplican cuando todos los giros se producen dentro de la longitud del tren:
+[[File:en/speed-limits.png]]
+
+''Vea también: [[Main/es/Aceleración realista|Aceleración realista]] y [[Main/es/curvas|curvas]].''
+
+Vea los archivos aircraft_cmd.c, roadveh_cmd.c, ship_cmd.c, train_cmd.c y vechicle.c para conocer el código de programación.
+
+[[Category:es/Juego]]
+[[Category:es/Desarrollo]]
