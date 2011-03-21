@@ -1,0 +1,384 @@
+[[Translation:Main/en/Ground Terrain (New Graphics)]]
+{{en/-}}
+{{fr/Table des matières gauche}}
+<small><<Retour à [[Main/fr/Traqueur de développement de graphismes 32bpp (zoom extra)|Traqueur de développement de graphismes 32bpp (zoom extra)]]</small>
+
+Voici le traqueur des graphismes de "niveau de zoom extra" 32bpp pour les "terrains de sol". Voyez ci-dessous ce qui a été fait et ce qui reste à faire.
+
+
+<!-- merci de mettre à jour la barre de progression après avoir édité ici: 
+http://wiki.openttd.org/?title=Template:Barre_de_progression_du_traqueur 32bpp/Fr&action=edit 
+-->
+<div><div style="display: table-cell; width:100%">{{fr/Barre de progression du traqueur 32bpp|terrain de sol}}</div><div style="display: table-cell">[<span class="plainlinks">[http://wiki.openttd.org/?title=Template:Barre de progression du traqueur 32bpp/Fr&action=edit edit]</span>]</div></div>
+
+
+{{fr/Clé de sprite du tracker}}
+
+
+<onlyinclude> <!-- ogfx1_base Sprites: 3924-3942,4061 + concrete? #sprites:20 + concrete? -->
+== Divers ==
+{| border="2" style="background:#e7ebff;"
+!
+!width=128px|Nu <br /> (3924-3942)
+!width=128px|Béton
+|-
+!Original
+|[[File:en/Tile Bare.png]]
+|[[File:en/Tile Concrete.png]]
+|-
+!Mises à jour
+|[[File:en/Bare new Ben.png|128px]]
+|[[File:en/1420 z0.png|128px]]
+|-
+!Remodelé par
+|{{en/User|Ben_Robbins}}
+|{{en/User|Ben_Robbins}}
+|-
+!Date de dernière mise à jour
+|25/01/2010
+|25/01/2010
+|-
+!État
+| {{fr/Statut du sprite du traqueur|z0 = fait |z1 = fait |z2 =fait }}
+| {{fr/Statut du sprite du traqueur|z0 = fait |z1 = fait |z2 = fait }}
+|}
+
+== Tempéré ==   <!-- ogfx1_base Sprites: 3943-4060,4062-4069 #sprites:126 -->
+{| border="2" style="background:#e7ebff;"
+!
+!width=128px|Nu 1 <br /> (3943-3961)
+!width=128px|Nu 2 <br /> (3962-3980)
+!width=128px|Terrain <br /> (3981-3999)
+!width=128px|Accidenté <br /> (4000-4022)
+!width=128px|Rocailleux <br /> (4062-4069)
+|-
+!Original
+|[[File:en/Tile Bare Temperate.png]]
+|[[File:en/Tile Bare Temperate2.png]]
+|[[File:en/Tile Temperate.png]]
+|[[File:en/Tile Bumpy Temperate.png]]
+|[[File:en/Tile Rocks Temperate.png]]
+|-
+!Mises à jour
+|[[File:en/Temperate Bare new Ben.png|128px]]
+|[[File:en/Temperate Bare2 new Ben.png|128px]]
+|[[File:en/Temperate Ground new Ben.png|128px]]
+|[[File:en/Temperate Bumpy new Ben.png|128px]]
+|[[File:en/Temperate Rocks new Ben.png|128px]]
+|-
+!Remodelé par
+|{{en/User|Ben_Robbins}}
+|{{en/User|Ben_Robbins}}
+|{{en/User|Ben_Robbins}}
+|{{en/User|Ben_Robbins}}
+|{{en/User|Ben_Robbins}}
+|-
+!Date de dernière mise à jour
+|25/01/2010
+|25/01/2010
+|25/01/2010
+|25/01/2010
+|25/01/2010
+|-
+!État
+| {{fr/Statut du sprite du traqueur|z0 = fait |z1 = fait |z2 = fait }}
+| {{fr/Statut du sprite du traqueur|z0 = fait |z1 = fait |z2 = fait }}
+| {{fr/Statut du sprite du traqueur|z0 = fait |z1 = fait |z2 = fait }}
+| {{fr/Statut du sprite du traqueur|z0 = fait |z1 = fait |z2 = fait }}
+| {{fr/Statut du sprite du traqueur|z0 = fait |z1 = fait |z2 = fait }}
+|}
+
+== Tropical ==
+{| border="2" style="background:#e7ebff;"
+!
+!width=128px|Nu 1
+!width=128px|Nu 2
+!width=128px|Tropical
+!width=128px|Accidenté
+|-
+!Original
+|[[File:en/Tile Bare Tropical.png]]
+|[[File:en/Tile Bare Tropical2.png]]
+|[[File:en/Tile Tropical.png]]
+|[[File:en/Tile Bumpy Tropical.png]]
+|-
+!Mises à jour
+|
+|
+|[[File:en/38 z0.png|128px]]
+|[[File:en/61 z0.png|128px]]
+|-
+!Remodelé par
+|{{en/User|}}
+|{{en/User|}}
+|{{en/User|Ben_Robbins}} & {{en/User|Habell}}
+|{{en/User|Ben_Robbins}} & {{en/User|Habell}}
+|-
+!Date de dernière mise à jour
+|
+|
+|
+|
+|-
+!État
+| {{fr/Statut du sprite du traqueur|z0 = non réclamé |z1 = non réclamé |z2 = non réclamé }}
+| {{fr/Statut du sprite du traqueur|z0 = non réclamé |z1 = non réclamé |z2 = non réclamé }}
+| {{fr/Statut du sprite du traqueur|z0 = fait        |z1 = non réclamé |z2 = non réclamé }}
+| {{fr/Statut du sprite du traqueur|z0 = fait        |z1 = non réclamé |z2 = non réclamé }}
+|}
+.
+{| border="2" style="background:#e7ebff;"
+!
+!width=128px|Désert 1
+!width=128px|Désert 2
+!width=128px|Rochers
+|-
+!Original
+|[[File:en/Tile Desert Tropical.png]]
+|[[File:en/Tile Desert Tropical2.png]]
+|[[File:en/Tile Rocks Tropical.png]]
+|-
+!Mises à jour
+|
+|[[File:en/Desert Normal new Wacki.png|128px]]
+|[[File:en/84 z0.png|128px]]
+|-
+!Remodelé par
+|{{en/User|}}
+|{{en/User|Wacki}}
+|{{en/User|Ben_Robbins}} & {{en/User|Habell}}
+|-
+!Date de dernière mise à jour
+|
+|
+|
+|-
+!État
+| {{fr/Statut du sprite du traqueur|z0 = non réclamé |z1 = non réclamé |z2 = non réclamé }}
+| {{fr/Statut du sprite du traqueur|z0 = fait        |z1 = non réclamé |z2 = non réclamé }}
+| {{fr/Statut du sprite du traqueur|z0 = fait        |z1 = non réclamé |z2 = non réclamé }}
+|}
+
+== Arctique ==
+{| border="2" style="background:#e7ebff;"
+!
+!width=128px|Nu 1 <br /> (arctic:  0-18)
+!width=128px|Nu 2 <br /> (arctic: 19-37)
+!width=128px|Arctique <br /> (arctic: 38-56)
+!width=128px|Accidenté <br /> (arctic: 73-95)
+!width=128px|Neige 1
+|-
+!Original
+|[[File:en/Tile Bare Arctic.png]]
+|[[File:en/Tile Bare Arctic2.png]]
+|[[File:en/Tile Arctic.png]]
+|[[File:en/Tile Bumpy Arctic.png]]
+|[[File:en/Tile Snow Arctic.png]]
+|-
+!Mises à jour
+|[[File:en/0 z0.png|128px]]
+<!--:[[File:en/Tile Arctic Bare.png|75px]]
+:[[File:en/Tile Arctic Bare1 001.png|75px]]-->
+|[[File:en/Tile Arctic Bare2.png|75px]]
+:[[File:en/Tile Arctic Bare2 001.png|75px]]
+|[[File:en/38 artic z0.png|128px]]
+|[[File:en/73 z0.png|128px]]
+|[[File:en/Tile Arctic Snow.png|75px]]
+:[[File:en/Tile Arctic Snow1 001.png|75px]]
+|-
+!Remodelé par
+|{{en/User|Maquinista}}
+|{{en/User|Alltaken}}
+|{{en/User|Maquinista}} & {{en/User|Ben_Robbins}}
+|{{en/User|Maquinista}} & {{en/User|Ben_Robbins}}
+|{{en/User|Alltaken}}
+|-
+!Date de dernière mise à jour
+|09/07/2005
+|09/07/2005
+|01/10/2008
+|01/10/2008
+|09/07/2005
+|-
+!État
+| {{fr/Statut du sprite du traqueur|z0 = fait     |z1 = fait        |z2 = fait }}
+| {{fr/Statut du sprite du traqueur|z0 = fait     |z1 = fait        |z2 = fait }}
+| {{fr/Statut du sprite du traqueur|z0 = fait     |z1 = fait        |z2 = fait }}
+| {{fr/Statut du sprite du traqueur|z0 = fait     |z1 = fait        |z2 = fait }}
+| {{fr/Statut du sprite du traqueur|z0 = souhaité |z1 = non réclamé |z2 = non réclamé }}
+|}
+.
+{| border="2" style="background:#e7ebff;"
+!
+!width=128px|Neige 2
+!width=128px|Neige 3
+!width=128px|Neige 4
+!width=128px|Rochers
+|-
+!Original
+|[[File:en/Tile Snow Arctic2.png]]
+|[[File:en/Tile Snow Arctic3.png]]
+|[[File:en/Tile Snow Arctic4.png]]
+|[[File:en/Tile Rocks Arctic.png]]
+|-
+!Mises à jour
+|[[File:en/Tile Arctic Snow2.png|75px]]
+:[[File:en/Tile Arctic Snow2 001.png|75px]]
+|[[File:en/Tile Arctic Snow3.png|75px]]
+:[[File:en/Tile Arctic Snow3 001.png|75px]]
+|[[File:en/Tile Arctic Snow4.png|75px]]
+|[[File:en/A Rocks new Ben.png|128px]]
+|-
+!Remodelé par
+|{{en/User|Alltaken}}
+|{{en/User|Alltaken}}
+|{{en/User|Alltaken}}
+|{{en/User|Maquinista}} & {{en/User|Ben_Robbins}}
+|-
+!Date de dernière mise à jour
+|09/07/2005
+|09/07/2005
+|09/07/2005
+|
+|-
+!État
+| {{fr/Statut du sprite du traqueur|z0 = souhaité |z1 = non réclamé |z2 = non réclamé }}
+| {{fr/Statut du sprite du traqueur|z0 = souhaité |z1 = non réclamé |z2 = non réclamé }}
+| {{fr/Statut du sprite du traqueur|z0 = souhaité |z1 = non réclamé |z2 = non réclamé }}
+| {{fr/Statut du sprite du traqueur|z0 = fait     |z1 = non réclamé |z2 = non réclamé }}
+|}
+
+== Pays des jouets ==
+{| border="2" style="background:#e7ebff;"
+!
+!width=128px|Nu
+!width=128px|Tempéré
+!width=128px|Accidenté
+!width=128px|Rochers
+!width=128px|Côte
+|-
+!Original
+|[[File:en/Toyland sprite - 01.png]]
+|[[File:en/Toyland sprite - 02.png]]
+|[[File:en/Toyland sprite - 04.png]]
+|[[File:en/Toyland sprite - 05.png]]
+|[[File:en/Toyland sprite - 06.png]]
+|-
+!Mises à jour
+|
+|
+|
+|
+|
+|-
+!Remodelé par
+|{{en/User|}}
+|{{en/User|}}
+|{{en/User|}}
+|{{en/User|}}
+|{{en/User|}}
+|-
+!Date de dernière mise à jour
+|
+|
+|
+|
+|
+|-
+!État
+| {{fr/Statut du sprite du traqueur|z0 = non réclamé |z1 = non réclamé |z2 = non réclamé }}
+| {{fr/Statut du sprite du traqueur|z0 = non réclamé |z1 = non réclamé |z2 = non réclamé }}
+| {{fr/Statut du sprite du traqueur|z0 = non réclamé |z1 = non réclamé |z2 = non réclamé }}
+| {{fr/Statut du sprite du traqueur|z0 = non réclamé |z1 = non réclamé |z2 = non réclamé }}
+| {{fr/Statut du sprite du traqueur|z0 = non réclamé |z1 = non réclamé |z2 = non réclamé }}
+|}
+
+
+== Fermes ==   <!-- ogfx1_base Sprites: 4126-4296, #sprites:171 -->
+{| border="2" style="background:#e7ebff;"
+!
+!width=128px|Ferme 1
+!width=128px|Ferme 2
+!width=128px|Ferme 3
+!width=128px|Ferme 4
+!width=128px|Ferme 5
+|-
+!Original
+|[[File:en/Tile Farm1.png]]
+|[[File:en/Tile Farm2.png]]
+|[[File:en/Tile Farm3.png]]
+|[[File:en/Tile Farm4.png]]
+|[[File:en/Tile Farm5.png]]
+|-
+!Mises à jour
+|[[File:en/Tile Farm1new.png]]
+|[[File:en/Tile Farm2new.png]]
+|[[File:en/Tile Farm3new.png]]
+|[[File:en/Tile Farm4new.png]]
+|[[File:en/Tile Farm5new.png]]
+|-
+!Remodelé par
+|{{en/User|Ben_Robbins}}
+|{{en/User|Ben_Robbins}}
+|{{en/User|Ben_Robbins}}
+|{{en/User|Ben_Robbins}}
+|{{en/User|Ben_Robbins}}
+|-
+!Date de dernière mise à jour
+|25/01/2010
+|25/01/2010
+|25/01/2010
+|25/01/2010
+|25/01/2010
+|-
+!État
+| {{fr/Statut du sprite du traqueur|z0 = fait |z1 = fait |z2 = fait }}
+| {{fr/Statut du sprite du traqueur|z0 = fait |z1 = fait |z2 = fait }}
+| {{fr/Statut du sprite du traqueur|z0 = fait |z1 = fait |z2 = fait }}
+| {{fr/Statut du sprite du traqueur|z0 = fait |z1 = fait |z2 = fait }}
+| {{fr/Statut du sprite du traqueur|z0 = fait |z1 = fait |z2 = fait }}
+|}
+.
+{| border="2" style="background:#e7ebff;"
+!
+!width=128px|Ferme 6
+!width=128px|Ferme 7
+!width=128px|Ferme 8
+!width=128px|Ferme 9
+|-
+!Original
+|[[File:en/Tile Farm6.png]]
+|[[File:en/Tile Farm7.png]]
+|[[File:en/Tile Farm8.png]]
+|[[File:en/Tile Farm9.png]]
+|-
+!Mises à jour
+|[[File:en/Tile Farm6new.png]]
+|[[File:en/Tile Farm7new.png]]
+|[[File:en/Tile Farm8new.png]]
+|[[File:en/Tile Farm9new.png]]
+|-
+!Remodelé par
+|[[Archive/en/Ben Robbins|Ben]]
+|[[Archive/en/Ben Robbins|Ben]]
+|[[Archive/en/Ben Robbins|Ben]]
+|[[Archive/en/Ben Robbins|Ben]]
+|-
+!Date de dernière mise à jour
+|25/01/2010
+|25/01/2010
+|25/01/2010
+|25/01/2010
+|-
+!État
+| {{fr/Statut du sprite du traqueur|z0 = fait |z1 = fait |z2 = fait }}
+| {{fr/Statut du sprite du traqueur|z0 = fait |z1 = fait |z2 = fait }}
+| {{fr/Statut du sprite du traqueur|z0 = fait |z1 = fait |z2 = fait }}
+| {{fr/Statut du sprite du traqueur|z0 = fait |z1 = fait |z2 = fait }}
+|}
+
+</onlyinclude></onlyinclude>
+
+{{fr/Navbox Développement graphique}}
+
+[[Category:fr/Nouveaux graphiques]][[Category:fr/Traqueur des progrès de développement - Zoom extra]]
