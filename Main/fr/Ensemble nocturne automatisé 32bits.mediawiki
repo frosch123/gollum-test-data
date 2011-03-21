@@ -1,0 +1,40 @@
+[[Translation:Main/en/32bit automated nightly bundle]]
+{{en/-}}
+Le [http://jupix.info/openttd/gfxdev-nightlies/ compilateur de l'ensemble nocturne 32 bits automatisé] est un script, lancé quotidiennement, qui prend un certain type de graphiques depuis le [[Main/fr/Dépôt de fichiers de développement de graphismes 32bpp|dépôt de fichiers de développement graphique]] et les empaquette dans des tars qui peuvent être utilisés par les utilisateurs comme un ensemble de graphismes.
+
+Le script compile actuellement deux sortes de paquets: une version standard et une version de développement.
+
+L'ensemble nocturne n'est pas équivalent au [[Main/fr/Projet de conversion de l'ensemble de base 32bits|projet de conversion de l'ensemble de base 32 bits]], et le contenu n'est pas forcément interchangeable. Le projet de remplacement de l'ensemble de base a ses propres standards et présentera ses propres paquets de version le futur.
+
+==Exigences pour l'inclusion==
+
+Spécifiquement, le script prend les graphismes qui répondent aux exigences suivantes:
+
+* Le type est positionné à "[[Main/fr/Format tar standard 32 bits|tar standard]]".
+* Le statut est mis à "released".
+
+Les sprites qui iraient sous  "32bpp-extra" ne sont pas inclus et doivent être téléchargés depuis la page du projet 32bpp-extra.
+
+Il y a une liste noire en effet - les entrées du dépôt ajoutées dans cette liste sont pour la plupart des doublons, ou semblables.
+
+Les sprites doivent être archivés dans le tar de la manière habituelle (en utilisant une des structures de répertoire compatibles du jeu). Le script comprendra la structure du répertoire et organisera les sprites en accord avec elle. Si vous avez des ressources regroupées (.blends, textures, photos ou autres), ou des informations utilisateur dans votre tar, ne vous inquiétez pas, ce script les ignorera et n'organisera et ne regroupera que les png.
+
+===Version de développement===
+
+La version de  développement a des exigences moins strictes. En plus de ci-dessus, elle comprend les tars qui sont "visuellement non terminés", les "sources manquantes" ou en "test".
+
+==Fonctionnalité==
+
+Le script triera les sprites dans le [[Main/fr/Format tar standard 32 bits|format tar standard 32 bits]] Ce comprend les liens symboliques et tout ce qui rend le paquet jouable sur n'importe quel ensemble de base. Le paquet devrait aussi être jouable sans un binaire -EZ, mais manifestement, vous avez besoin de -EZ pour les niveaux de zoom les plus rapprochés.
+
+==Voir aussi==
+
+* [[Main/fr/Dépôt de fichiers de développement de graphismes 32bpp|Dépôt de fichiers de développement de graphismes 32bpp]]
+
+==Liens externes==
+
+* [http://jupix.info/openttd/gfxdev-nightlies/ ensemble nocturne 32 bits automatisé]
+
+{{fr/Navbox Développement graphique}}
+
+[[Category:fr/Nouveaux graphiques]][[Category:fr/Graphismes 32bpp]][[Category:fr/Ressources du développeur de graphismes|E]]
