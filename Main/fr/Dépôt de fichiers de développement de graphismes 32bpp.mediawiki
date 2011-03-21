@@ -1,0 +1,58 @@
+[[Translation:Main/en/32bit Graphics Development File Repository]]
+{{en/-}}
+Le début de mars 2009 vit la publication d'un [http://jupix.info/openttd/gfxdev-repo/ dépôt de fichiers public] pour l'effort de [[Main/fr/Développement de graphismes 32bits|développement de graphismes 32bits]]. Le dépôt a été écrit et est hébergé et administré par [[Archive/en/Jupix]]. Il est ouvert aux suggestions et conseils sur les [http://www.tt-forums.net/viewtopic.php?f=36&t=42293 forums TT].
+
+Il a commencé avec un simple outil d'hébergement de fichiers qui reprenait les téléchargements et affichait des listes de fichiers pour les utilisateurs. Depuis, beaucoup d'autres fonctionnalités ont été implémentées, et il supporte actuellement:
+
+* ajout, édition et suppression d'entrées de fichier, évidemment
+* catégorisation des entrées
+* recherche par un ou plusieurs mots-clés ou une phrase, ou utilisation de filtres sur une liste de tout ce qui y est hébergé
+* duplication des entrées en travaux dérivés
+
+De plus, Jupix a écrit quelques outils autour du dépôt, y compris le compilateur d'[[Main/fr/Ensemble nocturne automatisé 32bits|ensemble nocturne 32 bits automatisé]] et un outil de différences pour supprimer les doublons.
+
+Pour une information sur comment utiliser les fonctionnalités du dépôt, lisez le [[Main/fr/Manuel utilisateur du dépôt de fichiers de développement graphique 32bpp|manuel utilisateur]].
+
+==Directives de contenu==
+
+===Audience cible: développeurs===
+
+Le dépôt est pour les développeurs graphiques 32 bits. Le but est d'avoir un seul endroit pour tous les fichiers de développement pour le [[Main/fr/Projet de conversion de l'ensemble de base 32bits|projet de conversion de l'ensemble de base 32 bits]], et aussi d'héberger gratuitement tout le reste de l'effort de développement 32 bits, d'après le principe que tôt ou tard, tous les artistes perdent leur intérêt, et qu'à moins que leurs fichiers de travail ne puissent être trouvés dans un dépôt tel que celui-ci, ils ne pourront jamais être améliorés par la suite. Tous les fichiers hébergés dans un endroit centralisé rendent aussi plus facile la gestion de version et la distribution.
+
+En d'autres termes, si vous êtes un artiste, vous devriez télécharger absolument tout ce qui a un rapport avec vos travaux... Textures, modèles, sprites, plans, fichiers lisez-moi, tout. Et toutes les versions, également. Les travaux tout juste commencés, ou en cours, les versions de test et les finales. Plus il y a de contenu, mieux ce sera pour le projet - si quelqu'un veut changer quelque chose, ils peut certainement le faire! C'est l'esprit d'un jeu ouvert.
+
+Si vous vous inquiétez de savoir si vous devriez charger des données "inutiles" ou dupliquées, ne le faites pas - les administrateurs s'occupent de conserver le dépôt oprganisé.
+
+===Format de paquet===
+
+Tous les tars devraient être empaquetés dans le [[Main/fr/Format tar standard 32 bits|format tar standard 32 bits]] et inclure les sources et les sprites z0, z1 et z2. Les sources sont supprimées des paquets de version à destination des joueurs.
+
+Les tars devraient contenir les modèles individuels. Cette règle de base est basée sur la supposition que l'audience cible du dépôt est les développeurs cherchant soit à modifier quelque chose dans un modèle, ou à lancer pngcodec sur un  modèle. Donc, plus il y a de modèles dans un ensemble, plus il faut faire de téléchargement sur une connexion WLAN lente, et plus il est difficile de trouver juste le bon .blend, par exemple.
+
+===Exemple d'entrée===
+
+Jetez un œil à la [http://jupix.info/openttd/gfxdev-repo/index.php?act=file&id=195 mine de fer par Zephyris]. C'est un exemple d'une entrée de dépôt correcte. Le type d'entrée et le statut sont positionnés correctement, l'information de licence est disponible et vérifiable ([[Main/fr/Licence graphique 32 bits|via le wiki]]), les notes donnent assez d'information, une capture d'écran est présente et de bonne qualité, tous ceux qui sont liés au développement de l'élément ont les droits d'écriture et, le plus important, le fichier lui-même est un [[Main/fr/Format tar standard 32 bits|tar standard]] avec les sources et les sprites pour tous les niveaux de zoom inclus.
+
+===Distribuer le contenu aux joueurs===
+
+Les gros ensembles pour les joueurs iront heureusement dans le système de livraison du contenu en ligne interne au jeu, dans le futur. Actuellement, l'[[Main/fr/Ensemble nocturne automatisé 32bits|ensemble nocturne automatisé 32 bits]] fournit une méthode pour publier les graphiques à l'utilisateur final dans un format facile à utiliser. Les ensembles peuvent aussi être construits manuellement.
+
+==Devenir administrateur==
+
+Des contributeurs sont nécessaires dans le dépôt pour réaliser des tâches d'administration sur les entrées. Le contenu doit  rester organisé et les directives de format doivent être respectées. [http://www.tt-forums.net/ucp.php?i=pm&mode=compose&u=6127 Contactez Jupix sur les forums TT] et il vous déclarera.
+
+==Tâches pour les administrateurs==
+
+* Assurez-vous que l'information de l'entrée est à jour: licence, statut et notes.
+* Parcourez les entrées avec status="To be split up" et divisez-les en éléments séparés (toute la liste des fichiers / filtres sont des fonctionnalités utiles, dans cette tâche).
+* Téléchargez les paquets sources/sprites et combinez-les en un [[Main/fr/Format tar standard 32 bits|format tar standard 32 bits]].
+* Assurez-vous que les entrées sont listées dans la bonne catégorie.
+
+==Voir aussi==
+
+* [[Main/fr/Manuel utilisateur du dépôt de fichiers de développement graphique 32bpp|Manuel utilisateur pour le dépôt]]
+
+
+{{fr/Navbox Développement graphique}}
+
+[[Category:fr/Nouveaux graphiques]][[Category:fr/Graphismes 32bpp]][[Category:fr/Ressources du développeur de graphismes|R]]
