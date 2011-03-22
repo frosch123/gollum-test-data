@@ -1,0 +1,38 @@
+{{en/Historic|This article describes first approach to path based signalling in OpenTTD. This system is no longer available. To get similar functionality in recent versions of OpenTTD, see [[Main/en/Yet Another PBS Patch]]}}
+
+==Introduction==
+Path Based Signaling (or PBS for short) is a new feature in OpenTTD that allows you to have more than one train in a signal block. A screenshot of this in action can be seen below, where three trains are sharing a signal block.
+
+<center>[[File:en/Pbs1.png|center|none|frame|Three trains sharing a PBS block]]</center>
+
+==Using PBS==
+All you need to achieve this is to turn on [[Main/en/New global pathfinding|New Pathfinding]] and to turn off [[Main/en/Yet Another Pathfinder]] for trains, and then build PBS signals at the junctions.If you have a look at this screenshot of the same place slightly later, you have to build special signals to use PBS.
+
+<center>[[File:en/Pbs2.png|center|none|frame|The PBS block]]</center>
+
+To create these signals, just place normal signals, then press Ctrl and click on them four times, as if placing pre-signals.
+
+==Autoplacement of Signals==
+To prevent players from getting [http://www.wikipedia.org/wiki/Repetitive_strain_injury RSI], a feature has been added so you only need to place an entrance and exit PBS signal, and the rest will be automatically converted to PBS signals. To do this, just place normal signals where you want your PBS signals to be, and convert an entrance and exit signal to PBS signals.
+
+The animation below shows you how to do this.
+
+<center>[[File:en/Pbs.gif|center|none|frame|Autoplacement animation]]</center>
+
+There is one problem with autoplacement. Once you have created the PBS block, you will have to destroy all the signals in order to remove the PBS feature.
+
+==Viewing reserved path of trains==
+The original patches for PBS showed the paths that trains had reserved, and a number of people liked this idea to help with debugging their junctions. The version that was merged into the game still has this option, but it is disabled by default. In order to use it please run the game with the PBS debug level set to 1 or greater. You can do this by passing "-d pbs=1" as a [[Main/en/Command line|command line option]] or you can set it via the [[Main/en/Console|console]] with "debug_level pbs=1" (to turn it off change the 1 to a 0).
+
+==Other notes==
+If you try and modify a live PBS junction it is quite likely that a train crash will occur. As such you should stop all trains before they enter the junction if you need to modify it.
+
+This flavour of Path Based Signaling is not available in OpenTTD stable releases but is available in very old [[Main/en/Nightly build|nightlies]]. If you wish to use PBS use older nightlies (latest version including PBS is r3464).  Alternatively, you may download [http://www.tt-forums.net/viewtopic.php?f=33&t=36127 Gonozal's patchpack] or the [[Main/en/Mini Integrated Nightly]] (discontinued as of 31 dec 2006) which includes PBS among a number of other patches, or compile your own version using the PBS patch which can also be downloaded from the forums.[http://www.tt-forums.net/viewtopic.php?f=33&t=36107] (Old PBS patch: [http://www.tt-forums.net/viewtopic.php?t=14154])
+
+== See also ==
+* [[Main/en/Yet Another PBS Patch]]
+* [[Main/en/Advanced path signal layouts]]
+
+[[Category:en/Construction]]
+[[Category:en/Railways]]
+[[Category:en/Settings & Preferences]]
