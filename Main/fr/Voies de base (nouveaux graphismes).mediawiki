@@ -1,0 +1,299 @@
+[[Translation:Main/en/Base Tracks (New Graphics)]]
+{{en/-}}
+{{fr/Table des matières gauche}}
+<small><<Retour à [[Main/fr/Traqueur de développement de graphismes 32bpp (zoom extra)|Traqueur de développement de graphismes 32bpp (zoom extra)]]</small>
+
+Voici le traqueur de graphismes de "Niveau de zoom extra" 32bpp des '''voies de base'''. Voyez ci-dessous ce qui a été fait et ce qui reste à faire.
+
+
+<!-- merci de mettre à jour la barre de progression après avoir édité ici: 
+http://wiki.openttd.org/?title=Template:Barre_de_progression_du_traqueur_32bpp/Fr&action=edit 
+-->
+<div><div style="display: table-cell; width:100%">{{fr/Barre de progression du traqueur 32bpp|voies de base}}</div><div style="display: table-cell">[<span class="plainlinks">[http://wiki.openttd.org/?title=Template:Barre_de_progression_du_traqueur_32bpp/Fr&action=edit edit]</span>]</div></div>
+
+
+{{fr/Clé de sprite du tracker}}
+
+
+<onlyinclude>
+== Routes ==
+{| border=1 style="background:#e7ebff;"
+!
+!width=250| Toutes les routes de ville, y compris les passages à niveau
+!width=250| Toutes les routes tempérées, y compris les passages à niveau
+!width=250| Toutes les routes enneigées, y compris les passages à niveau
+|-
+!Original
+|[[File:en/road1313.png]]
+|[[File:en/road1332.png]]
+|[[File:en/road1351.png]]
+|-
+!Mise à jour
+|[[File:en/cityroad 1313.png|250px]]
+|[[File:en/temperateroad1332.png|250px]]
+|
+|-
+|-
+!Remodelé par
+|[[Archive/en/Ben Robbins|Ben]]
+|[[Archive/en/Ben Robbins|Ben]]
+|
+|-
+!État
+| {{fr/Statut du sprite du traqueur|z0 = fait      |z1 = fait      |z2 = fait }}
+| {{fr/Statut du sprite du traqueur|z0 = fait      |z1 = fait      |z2 = fait }}
+| {{fr/Statut du sprite du traqueur|z0 = non réclamé |z1 = non réclamé |z2 = non réclamé }}
+|}
+.
+{| border=1 style="background:#e7ebff;"
+!
+!width=250| Toutes les routes arctiques, y compris les passages à niveau
+!width=250| Toutes les routes tropicales, y compris les passages à niveau
+!width=250| Toutes les routes de désert, y compris les passages à niveau
+|-
+!Original
+|[[File:en/road c 211.png]]
+|[[File:en/road h 388.png]]
+|[[File:en/road h 199.png]]
+|-
+!Mise à jour
+|[[File:en/Articroad1332.png|250px]]
+|[[File:en/388 z0.png|250px]]
+|[[File:en/199 z0.png|250px]]
+|-
+!Remodelé par
+|[[Archive/en/Ben Robbins|Ben]] , Wotan, Maquinista & Habell
+|[[Archive/en/Ben Robbins|Ben]] , Wotan, Maquinista & Habell
+|[[Archive/en/Ben Robbins|Ben]] , Wacki & Habell
+|-
+!État
+| {{fr/Statut du sprite du traqueur|z0 = fait |z1 = fait |z2 = fait }}
+| {{fr/Statut du sprite du traqueur|z0 = fait |z1 = fait |z2 = fait }}
+| {{fr/Statut du sprite du traqueur|z0 = fait |z1 = fait |z2 = fait }}
+|}
+*Désert: Il n'y a pas de passages à niveau et de tunnels. Certaines cases montrent du sable entre les cases.
+
+{| border=1 style="background:#e7ebff;"
+!
+!width=250| routes de ville, y compris les passages à niveau
+!width=250| Toutes les routes du pays des jouets, y compris les passages à niveau
+!width=250| Voies de tramway
+|-
+!Original
+|[[File:en/road t 134.png]]
+|[[File:en/road t 153.png]]
+| 
+|-
+!Mise à jour
+|
+|
+|
+|-
+!Remodelé par
+|
+|
+|[[Archive/en/Maquinista|Maquinista]]
+|-
+!État
+| {{fr/Statut du sprite du traqueur|z0 = non réclamé |z1 = non réclamé |z2 = non réclamé }}
+| {{fr/Statut du sprite du traqueur|z0 = fait      |z1 = fait      |z2 = fait }}
+| {{fr/Statut du sprite du traqueur|z0 = fait      |z1 = fait      |z2 = fait }}
+|}
+
+
+== Rail ==
+=== Voie ferrée ===
+{| border=1 style="background:#e7ebff;"
+!
+!width=250| Voie ferrée tempérée
+!width=250| Voie ferrée enneigée
+!width=250| Voie ferrée arctique
+|-
+!Original
+|[[File:en/railway1011.png]]
+|[[File:en/railway1037.png]]
+|[[File:en/railway c169.png]]
+|-
+!Mise à jour
+|[[File:en/Railway temperate 1011.png|250px]]
+|
+|
+|-
+!Date de dernière mise à jour
+|
+|
+|
+|-
+!Remodelé par
+|Ben_Robbins_
+|
+|
+|-
+!État
+| {{fr/Statut du sprite du traqueur|z0 = fait      |z1 = fait      |z2 = fait }}
+| {{fr/Statut du sprite du traqueur|z0 = non réclamé |z1 = non réclamé |z2 = non réclamé }}
+| {{fr/Statut du sprite du traqueur|z0 = fait      |z1 = souhaité      |z2 = souhaité  }}
+|}
+.
+{| border=1 style="background:#e7ebff;"
+!
+!width=250| Voie ferrée tropicale
+!width=250| Voie ferrée du désert
+!width=250| Voie ferrée du pays des jouets
+|-
+!Original
+|[[File:en/railway h157.png]]
+|[[File:en/railway h407.png]]
+|[[File:en/railway t180.png]]
+|-
+!Mise à jour
+|[[File:en/157 z0.png|250px]]
+|[[File:en/407 z0.png|250px]]
+|
+|-
+!Remodelé par
+|Habell et Ben_Robbins_
+|Habell et Wacki
+|
+|-
+!État
+| {{fr/Statut du sprite du traqueur|z0 = fait      |z1 = souhaité       |z2 = souhaité }}
+| {{fr/Statut du sprite du traqueur|z0 = fait      |z1 = souhaité       |z2 = souhaité }}
+| {{fr/Statut du sprite du traqueur|z0 = non réclamé |z1 = non réclamé |z2 = non réclamé }}
+|}
+
+
+=== Monorail ===
+{| border=1 style="background:#e7ebff;"
+!
+!width=250| Monorail tempéré
+!width=250| Monorail enneigé
+!width=250| Monorail arctique
+|-
+!Original
+|[[File:en/monorail 1093.png]]
+|[[File:en/monorail 1119.png]]
+|[[File:en/monorail c121.png]]
+|-
+!Mise à jour
+|[[File:en/j0rdax Monorail 1093.png|250px]]
+|
+|
+|-
+!Date de dernière mise à jour
+|05/03/2009
+|
+|
+|-
+!Remodelé par
+|j0rdax
+|
+|
+|-
+!État
+| {{fr/Statut du sprite du traqueur|z0 = fait      |z1 = fait      |z2 = fait }}
+| {{fr/Statut du sprite du traqueur|z0 = non réclamé |z1 = non réclamé |z2 = non réclamé }}
+| {{fr/Statut du sprite du traqueur|z0 = souhaité       |z1 = souhaité       |z2 = souhaité }}
+|}
+.
+{| border=1 style="background:#e7ebff;"
+!
+!width=250| Monorail tropical
+!width=250| Monorail du désert
+!width=250| Monorail du pays des jouets
+|-
+!Original
+|[[File:en/monorail h109.png]]
+|[[File:en/monorail h433.png]]
+|[[File:en/monorail t212.png]]
+|-
+!Mise à jour
+|
+|
+|
+|-
+!Date de dernière mise à jour
+|
+|
+|
+|-
+!Remodelé par
+|
+|
+|
+|-
+!État
+| {{fr/Statut du sprite du traqueur|z0 = souhaité       |z1 = souhaité       |z2 = souhaité }}
+| {{fr/Statut du sprite du traqueur|z0 = souhaité       |z1 = souhaité       |z2 = souhaité }}
+| {{fr/Statut du sprite du traqueur|z0 = non réclamé |z1 = non réclamé |z2 = non réclamé }}
+|}
+
+=== MagLev ===
+{| border=1 style="background:#e7ebff;"
+!
+!width=250| Rail de MagLev tempéré
+!width=250| Rail de MagLev enneigé
+!width=250| Rail de MagLev arctique
+|-
+!Original
+|[[File:en/maglev 1175.png]]
+|[[File:en/maglev 1201.png]]
+|[[File:en/maglev c284.png]]
+|-
+!Mise à jour
+|
+|
+|
+|-
+!Date de dernière mise à jour
+|
+|
+|
+|-
+!Remodelé par
+|
+|
+|
+|-
+!État
+| {{fr/Statut du sprite du traqueur|z0 = non réclamé |z1 = non réclamé |z2 = non réclamé }}
+| {{fr/Statut du sprite du traqueur|z0 = non réclamé |z1 = non réclamé |z2 = non réclamé }}
+| {{fr/Statut du sprite du traqueur|z0 = non réclamé |z1 = non réclamé |z2 = non réclamé }}
+|}
+.
+{| border=1 style="background:#e7ebff;"
+!
+!width=250| Rail de MagLev tropical
+!width=250| Rail de MagLev du désert
+!width=250| Rail de MagLev du pays des jouets
+|-
+!Original
+|[[File:en/maglev h272.png]]
+|[[File:en/maglev h459.png]]
+|[[File:en/maglev t244.png]]
+|-
+!Mise à jour
+|
+|
+|
+|-
+!Date de dernière mise à jour
+|
+|
+|
+|-
+!Remodelé par
+|
+|
+|
+|-
+!État
+| {{fr/Statut du sprite du traqueur|z0 = non réclamé |z1 = non réclamé |z2 = non réclamé }}
+| {{fr/Statut du sprite du traqueur|z0 = non réclamé |z1 = non réclamé |z2 = non réclamé }}
+| {{fr/Statut du sprite du traqueur|z0 = non réclamé |z1 = non réclamé |z2 = non réclamé }}
+|}</onlyinclude>
+
+
+{{fr/Navbox Développement graphique}}
+
+[[Category:fr/Nouveaux graphiques]][[Category:fr/Traqueur des progrès de développement - Zoom extra]]
