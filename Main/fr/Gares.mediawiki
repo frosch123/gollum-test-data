@@ -1,0 +1,37 @@
+[[Translation:Main/en/Stations]]
+[[File:en/Stations.png|right]]
+
+Les '''stations''' sont la partie la plus importante de tout réseau. C'est là que les [[Main/fr/Cargaison|cargaisons]] sont chargées et déchargées depuis les [[Main/fr/Véhicules|véhicules]]. La cargaison est livrée depuis et à des bâtiments dans la [[Main/fr/Zone de captage|zone de captage]] de la gare. Chaque station coûte 50£/100€ par mois en entretien, quelle que soit sa taille.
+
+Chaque mode de transport a son propre type de station:
+*Les '''[[Main/fr/Gares ferroviaires|gares ferroviaires]]''' sont utilisées par les [[Main/fr/Trains|trains]]. Le modèle de gare de base reste le même pour tous les [[Main/fr/Types de chemin de fer|types de voie]].
+*Les '''[[Main/fr/Aéroports|aéroports]]''' sont les points de chargement/déchargement pour les aéronefs. Il y a de nombreux types d'aéroport, y compris des [[Main/fr/Aéroports|héliports]] pour les [[Category/en/Hélicoptères|hélicoptères]].
+*Les '''[[Main/fr/Docks|docks]]''' sont là où vous mouillent vos [[Main/fr/Bateaux|bateaux]].
+*Les '''[[Main/fr/Aire de chargement|aires de chargement]]''' sont là où les [[Main/fr/Bus|bus]] et les [[Main/fr/Véhicules Routiers|camions]] chargement et déchargement leur cargaison.
+
+==Gares combinées==
+Des stations que vous positionnez directement adjacentes (quel que soit leur type) se combineront pour former une station logique. Ainsi, elles partagent leurs cargaisons acceptées, leur nom et leur stock de cargaison à embarquer. Bien entendu, elles conservent leur emplacement physique et leur modèle. Ainsi, par exemple, vous pouvez avoir une gare ferroviaire avec une station de bus attachée - la station de bus partagera un stock de cargaison avec la gare, mais permettra aux passagers d'être pris et déposés par les bus aussi bien que par les trains.
+
+Vous pouvez combiner des stations pour plusieurs raisons:
+*Pour mettre en place un service d'approvisionnement où un mode de transport transfère sa cargaison à un autre, qui l'emporte vers sa nouvelle destination.
+*Pour étendre la [[Main/fr/Zone de captage|zone de captage]] d'une gare (jusqu'à la taille donnée dans le [[Main/en/Options avancées/Stations/Fr#Étendue max. des stations|paramètre]] Taille maximale d'une station).
+*Pour réduire l'affluence à une gare avec des terminaux supplémentaires.
+*Pour réduire les coûts de maintenance qui augmentent avec le nombre de gares.
+
+Il y a une limite à la zone maximale qu'une gare combinée peut couvrir. Par défaut, la limite est de 12x12 cases; elle peut être modifiées dans la [[Main/en/Options avancées/Stations/Fr#Étendue max. des stations|section Stations de la fenêtre de configuration avancée]]. Il est possible de construire une gare séparée directement à côté d'une station de taille maximale en cliquant avec le bouton gauche et la touche Ctrl appuyée sur la case désirée, et en choisissant de créer une gare séparée, comme décrit ci-dessous.
+
+Note pour les joueurs des ''Transport Tycoon'' et ''Deluxe'' originaux: dans OpenTTD, vous pouvez connecter 2 ou plus stations du même type (par ex. gare ferroviaire conventionnelle avec gare monorail), tout comme ''Locomotion de Christ Sawyer'', mais avec une plus grande liberté d'extension.
+
+===Construire des gares non attachées physiquement===
+[[File:en/Join station leftclick.png|thumb|Joindre une gare nouvellement construite en cliquant à gauche avec touche Ctrl enfoncée]]
+
+Des gares combinées n'ont pas besoin d'être adjacentes l'une l'autre - du moins, pas sur le long terme. Vous pouvez construire une chaîne de gares et supprimer les liens intermédiaires de cette chaîne, et les gares "détachées" resteront comme partie de la même gare logique.
+
+Depuis la bêta 1 de la version 0.7.0, vous pouvez aussi construire des gares combinées en faisant un clic gauche avec la touche Ctrl enfoncée, tout en plaçant une nouvelle gare. Une fenêtre s'affichera pour demander quelle station vous voulez rejoindre, ou si vous voulez construire une nouvelle gare. Les stations qui sont trop éloignées du lieu où vous avez cliqué ne seront pas listées. Vous devez aussi tenir la touche Ctrl enfoncée lorsque vous étendez  une partie quelconque de cette gare, et que la nouvelle extension est physiquement adjacente à une partie quelconque de votre gare.
+
+===Supprimer des gares combinées===
+Vous pouvez supprimer un élément d'une gare combinée en utilisant l'outil dynamite, qui ne supprimera qu'une station individuelle, et non l'ensemble. L'exception à cela concerne les gares ferroviaires, pour lesquelles dynamiter une partie de la gare supprimera toutes les autres (ou pas, s'il y a des trains sur l'une d'elles). Pour supprimer ces dernières, vous devez choisir l'outil "construction de gare" [[File:en/Build station.png]] puis le bouton "nettoyage" [[File:en/Toggle clear active.png]] qui vous permettra de supprimer les gares ferroviaires une case à la fois.
+
+Il faut bien faire attention en détruisant une partie d'une gare combinée qui est physiquement séparée du reste de la gare combinée, si vous voulez la remettre en place par la suite. La remplacer simplement créera une nouvelle gare logique séparée - pour la conserver attachée, vous devez soit avoir un lien temporaire vers une des stations attachées, ou, à partir de OpenTTD 0.7.0 bêta 1, utiliser la méthode clic avec touche Ctrl, comme expliqué dans la section précédente.
+
+[[Category:fr/Construction]]
