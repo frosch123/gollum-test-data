@@ -1,0 +1,102 @@
+[[Translation:Main/en/Yet Another PBS Patch]]
+Encore une autre évolution PBS (ou simplement YAPP) est une évolution de signalisation basée sur les chemins (PBS) développée par [[Archive/en/Michi cc|Michi_cc]], qui a été intégrée à la version OpenTTD en r13926. La première version stable contenant cette fonctionnalité est [[Main/fr/OpenTTD 0.7.0|OpenTTD 0.7.0]].
+
+YAPP implémente un système de signalisation réaliste, similaire au [[Main/fr/Signalisation réaliste basée sur les chemins|système PBS proposé par Tekky]], mais sans la double voie bidirectionnelle réaliste. Il n'est pas lié à l'[[Main/en/Old Path Based Signaling|ancien système PBS de OpenTTD (EN)]].
+
+==Fonctionnalités==
+* Fonctionne avec NPF et YAPF.
+* Implémente un système de signaux similaire au [[Main/fr/Signalisation réaliste basée sur les chemins|système PBS proposé par Tekky]] (sans la double voie bidirectionnelle réaliste).
+* Est complètement rétro-compatible, les anciens signaux de bloc et les nouveaux signaux de voie pouvant être utilisés en parallèle.
+* Peut surligner les voies réservées.
+
+==Tutoriel==
+===Les bases===
+Ce paragraphe couvre les fonctionnalités de base de YAPP, et devrait vous permettre de l'utiliser.
+
+====Les signaux====
+[[File:en/Yapp signalgui.png|frame|right|Deux nouveaux types de signaux dans l'[[Interface de sélection des signaux/Fr|IHM des signaux]].]]
+YAPP ajoute deux nouveaux types de signaux au jeu. Ces signaux permettant aux trains de réserver un chemin à travers un signal de bloc avant d'entrer dans le bloc. Si un autre train veut entrer dans le bloc, et réussit à réserver un chemin à travers le bloc, les deux trains peuvent utiliser un signal de bloc en même temps.
+
+Comme mentionné précédemment, il y a deux types de signaux disponibles dans l'[[Main/fr/Interface de sélection des signaux|IHM des signaux]]. Le premier type est un signal de voie basique. Il y a deux choses que vous devez savoir sur ce signal:
+* Placez-le uniquement là où les trains peuvent s'arrêter et attendre en sûreté, sans bloquer des croisements ou autres choses.
+* Les trains peuvent passer via ce signal dans le sens inverse.
+[[File:en/Yapp pbssignal.png|frame|right||Signal de voie]]
+Ce signal sera appelé un ''signal de voie''.
+
+
+Il y a aussi deux choses que vous devez savoir sur le second type de signal:
+* Placez-le uniquement là où les trains peuvent s'arrêter et attendre sûrement, sans bloquer des croisements ou autres.
+* Les trains peuvent passer via ce signal depuis une direction seulement.
+[[File:en/Yapp onewaypbssignal.png|frame|right|Signal de voie unidirectionnel]]
+Ce signal sera appelé ''signal de voie unidirectionnel''.
+
+
+La plupart du temps, il suffira d'utiliser un signal de voie par défaut, car passer un signal dans le sens inverse est pénalisé par la détermination de chemin; cependant, des signaux unidirectionnels peuvent être utiles dans certains cas spécifiques.
+
+
+Les deux nouveaux signaux de voie se comportent de façon un peu différente des types de signaux standards de OpenTTD. Les signaux de voie sont rouges par défaut, et ne passeront au vert que dès qu'un train aura réservé un chemin vers la prochaine position sûre de son trajet. Les positions sûres sont - par définition - en face des signaux, des dépôts et des extrémités de voie. Un signal de voie en sens inverse n'est pas considéré comme une position d'attente sûre, et donc, les chemins sont réservés à travers ces signaux.
+
+Comme une position d'attente sûre est définie en face de chaque signal, vous ne voudrez sans doute pas placer un signal immédiatement derrière un croisement, seulement devant. Cela est dû au fait qu'un train ne doit attendre qu'avant un croisement. Il n'est pas sûr, pour un train, d'attendre à un signal juste après une jonction avant que tout le train ait quitté le croisement, car sinon il bloquerait la jonction en attendant, comme illustré dans l'exemple ci-dessous. C'est un avantage majeur par rapport aux signaux de OpenTTD, où vous devez placer les signaux avant et après les jonctions, ce qui fait que les trains bloquent le croisement en attendant.
+[[File:en/Yapp unsafewaitinglocation.png|frame|center|Le signal indiqué par la flèche est une position d'attente non sûre, car le train sur la jonction bloque maintenant l'autre chemin libre du train venant d'en haut. Il y a un autre emplacement d'attente non sûr sur cette image; pouvez-vous le trouver?]]
+
+====Options de l'ajout====
+[[File:en/Yapp patch-options.png|frame|right|Options de l'ajout YAPP]]
+YAPP ajoute trois options au jeu.
+
+
+Une option est de surligner les voies réservées. Cette option est utile pour vérifier vos jonctions, car vous pouvez voir quels chemins les trains ont réservé via un signal de bloc.
+
+
+Les deux autres options contrôlent comment l'outil de construction des signaux doit se comporter. Vous pouvez fixer le type de signal qui doit être construit par défaut en construisant un nouveau signal avec l'outil des signaux, et modifier quels types de signaux doivent faire partie du cycle en ctrl-cliquant sur un signal déjà existant.
+
+
+Il y a quelques autres options qui ne sont pas disponibles via la fenêtre de configuration avancée. Ce que sont ces options et comment les éditer est couvert ci-dessous sous [[Main/en/#Options avancées de l'ajout|Options avancées de l'ajout]].
+
+===Exemples de base===
+Ci-dessous quelques exemples de modèle de voie qui utilisent les signaux de voie. Des modèles de voies avancés qui ne sont pas recommandés pour les débutants se trouvent sur une [[Main/fr/Signalisation du réseau ferroviaire : agencements complexes|page séparée]].
+
+====Jonction de base====
+Cette jonction de base a maintenant un encours de passage plus important.
+[[File:en/Yapp basicjunction.png|frame|center|Jonction de base pour les trains de longueur maximale 3 cases. Notez l'utilisation de signaux normaux en pleine voie]]
+
+====Gare à double quai basique====
+Avec ce modèle de gare, les trains peuvent utiliser les deux quais en venant d'une des deux directions.
+[[File:en/Yapp basicstation.png|frame|center|Gare basique]]
+
+====Voie unique basique====
+C'est le modèle de base d'une ligne à voie simple qui peut être utilisée dans les deux directions. Une voie unique avec plusieurs points de croisement peut être construite en répétant ce modèle. Un encours de passage plus élevé peut être obtenu avec un [[Main/en/Signalisation du réseau ferroviaire : agencements complexes/Fr#Modèle de voie simple priorisée|modèle amélioré]].
+[[File:en/Yapp single track.png|frame|center|Bloc de construction de base de voie unique. Les signaux vers l'extérieur devraient être mis assez loin des cases de la jonction pour que les trains qui y attendent ne bloquent pas celle-ci]]
+
+===Options avancées de l'ajout===
+YAPP a plusieurs options non accessibles via la fenêtre de configuration avancée. Elles sont sauvegardée dans votre [[Main/fr/openttd.cfg|openttd.cfg]] et peuvent être modifiées soit par un éditeur de texte, ou en cours de jeu via la [[Main/fr/Console|console]] en utilisant la commande "patch". Les changement faits dans openttd.cfg '''n'affecteront pas''' les sauvegardes déjà démarrées; vous devrez utiliser la console pour modifier les valeurs d'une partie en cours.
+
+{| border = "1"
+!colspan="3"| Options avancées
+|-
+| '''Option''' || '''Défaut''' || '''Description'''
+|-
+| pf.wait_for_pbs_path || 30 || Combien de temps attendre une réservation de chemin (en jours). Mettez cette valeur à 255 si vous ne voulez pas que les trains fassent ''jamais'' demi-tour à un signal de voie de leur propre fait.
+|-
+| pf.path_backoff_interval || 20 || Nombre de tics entre les vérifications pour un chemin libre. Augmentez-le si votre machine est lente. Le mettre à 255 désactive la recherche de chemin en avant si vous ne voulez pas utiliser les signaux avancés.
+|-
+| pf.npf.npf_rail_pbs_cross_penalty || 300 || Pénalité de la détermination de chemin pour croiser une case réservée en utilisant [[Main/fr/Nouvelle détermination de chemin globale|NPF]].
+|-
+| pf.npf.npf_rail_pbs_signal_back_penalty || 1500 || Pénalité de la  détermination de chemin pour passer un signal de voie à l'envers en utilisant [[Main/fr/Nouvelle détermination de chemin globale|NPF]].
+|-
+| pf.yapf.rail_pbs_cross_penalty || 300 || Pénalité de la détermination de chemin pour croiser une case réservée en utilisant [[Main/fr/Encore une autre détermination de chemin|YAPF]].
+|-
+| pf.yapf.rail_pbs_station_penalty || 800 || Pénalité de la détermination de chemin pour croiser une case de gare réservée en utilisant [[Main/fr/Encore une autre détermination de chemin|YAPF]].
+|-
+| pf.yapf.rail_pbs_signal_back_penalty || 1500 || Pénalité de la détermination de chemin pour franchir un signal de voie à l'envers en utilisant [[Main/fr/Encore une autre détermination de chemin|YAPF]].
+|-
+| pf.yapf.rail_doubleslip_penalty || 100 || Pénalité de détermination de chemin pour passer par une double erreur d'aiguillage en utilisant [[Main/fr/Encore une autre détermination de chemin|YAPF]].
+|}
+{{fr/Disponibilité|0.7}}
+
+== Voir aussi ==
+* [[Main/fr/Signalisation du réseau ferroviaire : agencements complexes|Modèles avancés avec signalisation de voie]]
+
+[[Category:fr/Construction]]
+[[Category:fr/Chemins de fer]]
+[[Category:fr/Réglages et préférences]]
+[[Category:fr/Développement]]
