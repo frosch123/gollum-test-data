@@ -1,0 +1,341 @@
+[[Translation:Main/en/Stations Tracks (New Graphics)]]
+{{en/-}}
+{{fr/Table des matières gauche}}
+<small><<Retour à [[Main/fr/Traqueur de développement de graphismes 32bpp (zoom extra)|Traqueur de développement de graphismes 32bpp (zoom extra)]]</small>
+
+Voici le traqueur des graphismes de "niveau de zoom extra" 32bpp pour les '''stations'''. Voyez ci-dessous ce qui a déjà été fait et ce qui reste à faire.<br> 
+
+
+<!-- merci de mettre à jour la barre de progression après avoir édité ici: 
+http://wiki.openttd.org/?title=Template:Barre_de_progression_du_traqueur_32bpp/Fr&action=edit 
+-->
+<div><div style="display: table-cell; width:100%">{{fr/Barre de progression du traqueur 32bpp|voies de gare}}</div><div style="display: table-cell">[<span class="plainlinks">[http://wiki.openttd.org/?title=Template:Barre_de_progression_du_traqueur_32bpp/Fr&action=edit edit]</span>]</div></div>{{en/-}}
+<onlyinclude>
+==Aéroports==
+[[File:en/Airport sprites.png]]
+*Bleu: sprites sans modèle.
+*Bleu clair: sprites non codés.
+*Jaune: sprites sans les niveaux de zoom z1 et z2.
+*Rouge: sprites terminés avec les niveaux de zoom z1 et z2, et version sans lignes.
+
+===Primitif===
+{| border=1 style="background:#e7ebff;"
+!  
+! width=200|Cases de sol (2665-2668)
+! width=200|Bâtiments (2669-2675)
+! width=200|Hangars (2657-2658)
+<!--
+|-
+!Original
+|
+|
+|
+-->
+|-
+!Mise à jour
+|
+|
+| [[File:en/2657 z0.png|200px]]
+|-
+!Date de dernière mise à jour
+|
+|
+|
+|-
+!Remodelé par
+| {{en/User|Maquinista}} (basé sur les cases de sol de {{en/User|Ben_Robbins}}).
+|
+| {{en/User|Antonio1984}}
+|-
+!État
+{{fr/Fait}}
+{{fr/Non réclamé}}
+{{fr/Fait}}
+|}
+
+===Moderne===
+{| border=1 style="background:#e7ebff;"
+!  
+! width=200|Cases de sol (2634-2649)
+! width=200|Bâtiments (2650-2654) 
+! width=200|Hangars (2655-2656)
+! width=200|Passerelles (2659-2662)
+<!--
+|-
+!Original
+|
+|
+|
+|
+-->
+|-
+!Mise à jour
+|
+| [[File:en/2654 z0.png|200px]]
+| [[File:en/2655 z0.png|200px]]
+| [[File:en/2660 z0.png|200px]]
+|-
+!Date de dernière mise à jour
+|
+|
+|
+|
+|-
+!Remodelé par
+| {{en/User|LordAzamath}}
+| {{en/User|Antonio1984}}
+| {{en/User|Antonio1984}}
+| {{en/User|Antonio1984}}
+|-
+!État
+{{fr/Fait}}
+{{fr/Souhaité}}
+{{fr/Fait}}
+{{fr/Fait}}
+|}
+{| border=1 style="background:#e7ebff;"
+!  
+! width=200|Clôtures (2663-2664)
+! width=200|Animation de manche à air (2676-2679)
+! width=200|Animation de radar (2680-2691)
+! width=200|Héliport (2633-2633)
+<!--
+|-
+!Original
+|
+|
+|
+|
+-->
+|-
+!Mise à jour
+|
+|
+|
+|
+|-
+!Date de dernière mise à jour
+|
+|
+|
+|
+|-
+!Remodelé par
+| {{en/User|Maquinista}}
+| {{en/User|Maquinista}}
+| {{en/User|j0rdax}}
+| 
+|-
+!État
+{{fr/Fait}}
+{{fr/Fait}}
+{{fr/Fait}}
+{{fr/Non réclamé}}
+|}
+
+Notes:
+* Les sprites pour les aéroports (les sprites en rouge sont faits):
+* Le petit aéroport doit être modélisé dans un modèle unique sans le hangar ou la manche à air, et coupé avec GIMP (ou Photoshop). La manche à air peut être modélisée dans un modèle unique (elle est animée). La modéliser dans le même modèle que l'aéroport rendrait le rendu des sprites trop lent.
+* Les autres aéroports n'ont pas de modèles, et ils peuvent être faits en modélisant les bâtiments un à un.
+* Les stations d'hélicoptère partagent un sprite avec la [[Main/en/Bâtiments industriels (nouveaux graphismes)/Fr#Raffinerie/Cuivre|raffinerie]].
+* Il n'y a pas d'étapes de construction pour ces bâtiments, mais le bâtiment des stations d'hélicoptères (et de la raffinerie) a deux étapes de construction.
+* Les clôtures sont utilisées dans tous les aéroports et les stations d'hélicoptères.
+
+== Véhicules routiers ==
+{| border=1 style="background:#e7ebff;"
+!  
+! width=200|[[Main/en/Aire de chargement/Fr#Zone de chargement de bus|Aire de chargement de bus]]
+! width=200|[[Main/en/Aire de chargement/Fr#Zone de chargement de bus|Arrêt de bus sur la route]]
+! width=200|[[Main/fr/Dépôts|Dépôt]] de [[Main/fr/Véhicules Routiers|véhicules routiers]]
+|-
+!Original
+|[[File:en/Busstation.png]]
+|
+|[[File:en/Road Depot.png]]
+|-
+!Mise à jour
+|[[File:en/Station.png|200px]]
+|
+|[[File:en/Depot 711.png|200px]]
+|-
+!Date de dernière mise à jour
+|15/11/2006
+|15/11/2006 
+|24/11/2006
+|-
+!Remodelé par
+| {{en/User|brupje}}
+| {{en/User|brupje}}
+| {{en/User|brupje}}
+|-
+!État
+{{fr/Fait}}
+{{fr/Fait}}
+{{fr/Fait}}
+|}
+{| border=1 style="background:#e7ebff;"
+!  
+! width=200|[[Main/en/Aire de chargement/Fr#Zone de chargement de poids-lourds|Aire de chargement de poids-lourds]]
+! width=200|[[Main/en/Aire de chargement/Fr#Zone de chargement de poids-lourds|Arrêt de poids-lourds sur la route]]
+! width=200|[[Main/fr/Tramways|Dépôt de tramway]]
+|-
+!Original
+|[[File:en/Lorry.png]]
+|
+|
+|-
+!Mise à jour
+|[[File:en/Truckstation sm.png|200px]]
+|
+|
+|-
+!Date de dernière mise à jour
+|15/11/2006
+|
+|30/03/2010
+|-
+!Remodelé par
+| {{en/User|brupje}}
+|
+| {{en/User|Antonio1984}}
+|-
+!État
+{{fr/Fait}}
+{{fr/Non réclamé}}
+{{fr/Fait}}
+|}
+
+== Trains ==
+===Gares===
+{| border=1 style="background:#e7ebff;"
+! | 
+! width=200| Gare ferroviaire
+! width=200| Gare de monorail
+! width=200| Gare de Maglev
+|-
+!Original
+|[[File:en/Train station rail.png]]
+|[[File:en/Train station monorail.png]]
+|[[File:en/Train station maglev.png]]
+|-
+!Mise à jour
+|[[File:en/New station3.jpeg|200px]]<!--[[File:en/Train station rail new.png]]-->
+|
+|
+|-
+!Date de dernière mise à jour
+|
+|
+|
+|-
+!Remodelé par
+| {{en/User|j0rdax}}
+|
+|
+|-
+!État
+{{fr/Fait-détails}}
+{{fr/Non réclamé}}
+{{fr/Non réclamé}}
+|}
+{| border=1 style="background:#e7ebff;"
+! | 
+! width=200| Point de passage ferroviaire
+! width=200| Point de passage monorail
+! width=200| Point de passage Maglev
+|-
+!Original
+|
+|
+|
+|-
+!Mise à jour
+|
+|
+|
+|-
+!Date de dernière mise à jour
+|
+|
+|
+|-
+!Remodelé par
+|
+|
+|
+|-
+!État
+{{fr/Non réclamé}}
+{{fr/Non réclamé}}
+{{fr/Non réclamé}}
+|}
+
+===Dépôts===
+{| border=1 style="background:#e7ebff;"
+! | 
+! width=200| Dépôt ferroviaire
+! width=200| Dépôt monorail
+! width=200| Dépôt Maglev
+|-
+!Original
+|[[File:en/Rail Depot.png]]
+|[[File:en/Monorail Depot.png]]
+|[[File:en/Maglev Depot.png]]
+|-
+!Mise à jour
+|[[File:en/J0rdax 1065-1066.png|200px]]
+|[http://www.tt-forums.net/viewtopic.php?p=767343#p767343 autres images][[File:en/Depot 7 (semi-colored) 4.png|center|150px]]
+|[[File:en/Depot mag4 120.png|center|150px|]]
+|-
+!Date de dernière mise à jour
+|25/03/2009 [http://www.tt-forums.net/viewtopic.php?p=775162#p775162]
+|Mardi 24 février 2009 19h21
+|10/05/2006
+|-
+!Remodelé par
+| {{en/User|j0rdax}}
+| {{en/User|ZxBiohazardZx}}
+| {{en/User|ZxBiohazardZx}}
+|-
+!État
+{{fr/Fait}}
+{{fr/Fait}}
+{{fr/Souhaité}}
+|}</onlyinclude>
+
+== Bateaux ==
+{| border=1 style="background:#e7ebff;"
+! | 
+! width=200|[[Main/fr/Docks|Dock]]
+! width=200|Dépôt de [[Main/fr/Bateaux|bateaux]]
+! width=200|[[Main/fr/Docks|Bouée]]
+|-
+!Original
+|[[File:en/Dock.png]]
+|[[File:en/Ship yard.png]]
+|[[File:en/Buoy.png]]
+|-
+!Mise à jour
+|[[File:en/Docks3.png|200px]]
+|[[File:en/Depot sea.png|200px]]
+|[[File:en/Buoy 32.png|200px]]
+|-
+!Date de dernière mise à jour
+|03/03/2009
+|
+|
+|-
+!Remodelé par
+| {{en/User|Wotan}}
+| {{en/User|Antonio1984}}
+| {{en/User|Ben_Robbins}}
+|-
+!État
+{{fr/Souhaité}}
+{{fr/Fait}}
+{{fr/Souhaité}}
+|}
+
+{{fr/Navbox Développement graphique}}
+
+[[Category:fr/Nouveaux graphiques]][[Category:fr/Traqueur des progrès de développement - Zoom extra]]
