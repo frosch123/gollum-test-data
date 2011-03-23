@@ -1,0 +1,48 @@
+[[Translation:Main/en/Negative income with feeder service]]
+Il y a deux situations différentes avec les [[Main/fr/Service d'approvisionnement|services d'approvisionnement]] dans lesquelles les véhicules peuvent afficher un revenu négatif (parfois d'un montant très élevé), bien qu'ils participent de façon importante à ce service. Cette page explique ce qui arrive et comment l'éviter.
+
+= Introduction =
+[[File:en/Feeder negative income.png|right|thumb|400px|Un service d'approvisionnement d'une mine de charbon vers une centrale électrique]]
+Considérez l'image comme un exemple de réseau. Le service transporte du charbon depuis la mine à la station A en bas à gauche, via une station B intermédiaire, jusqu'à la centrale électrique en haut à droite utilisant la station C. La première partie du trajet est effectuée par un train, la seconde par des véhicules routiers. Il est vrai que cet exemple est une manière assez stupide de livrée le charbon. Il aurait été bien plus facile et rapide de livrer le charbon en ligne droite en mettant la station B à l'emplacement de la C. Cependant, cela servira d'exemple pour notre sujet.
+
+Les deux cas sont différenciés par la manière dont la cargaison est échangée à la station intermédiaire B.
+{{en/-}}
+
+
+= Ordre de déchargement =
+Quand le train a l'ordre de ''Décharger'' à B, alors il ne sera pas payé. Les véhicules routiers de B vers C recevront tout le bénéfice lors de la livraison à C. Ainsi, le revenu du train restera négatif, sauf s'il a d'autres revenus sur son trajet.
+
+Faites attention que le train devrait avoir aussi ''pas de chargement'' positionné (pour les versions 0.7 et supérieures), sinon, il chargera simplement le charbon tout juste déchargé dans ses wagons, et le ramènera à la mine de charbon (et vous ne serez pas payé pour tous ces efforts).
+
+
+= Ordre de transfert =
+Maintenant, le train a l'ordre de ''transférer'' à B. Cette fois, le train aura un revenu positif, mais ce seront les véhicules routiers qui afficheront un revenu négatif. Voyons comment cela se produit.
+
+Le paiement pour toute la cargaison livrée, quelque soit le moyen par lequel elle est arrivée à destination, est fait via une règle fixe (voyez le détail sur la page des [[Main/en/Mécanique du jeu/Fr#Taux de paiement des livraisons|mécanismes du jeu]]).
+Sommairement,
+* vous êtes payé pour la distance en ligne droite depuis la source (la mine de charbon) jusqu'à la destination (la centrale électrique), et
+* vous êtes pénalisé pour une livraison plus lente de la source à la destination.
+
+Le jeu ne sait pas où le charbon chargé dans le train va. Quand le train arrive à la station B et transfère le charbon, le jeu fait une estimation de combien vous devriez être payé. Il estime que 732£ est un montant raisonnable, et l'assigne au train comme argent virtuel. Ensuite, trois véhicules chargent le charbon et le livrent à la centrale électrique à la station C. Là, le jeu détecte que le charbon a été livré à sa destination finale. Il calcule le paiement exact (environ 711£) pour avoir livré la cargaison depuis la mine de charbon directement à la centrale électrique, en déduit les 732£ déjà payées, et obtient un déficit de 21£. En conséquence, chacun des véhicules routiers doit payer 7£. En d'autres termes, les véhicules payent la facture pour le paiement (apparemment) surestimé du train.
+
+
+= Prédire un revenu négatif =
+Une livraison compliquée avec de multiples bonds est en général une bonne indication d'un revenu négatif. Si vos véhicules font un détour, cela va coûter de l'argent.
+
+Un autre cas fréquent est la vitesse de livraison. Le paiement du train est fait avec les mêmes règles que le paiement final. Comme un train est bien plus rapide qu'une véhicule routier, il sera moins pénalisé pour une livraison lente, c'est-à-dire qu'il obtiendra davantage que ce qu'il aurait obtenu avec la vitesse moyenne du charbon sur tout le trajet. Les véhicules routiers paient aussi pour leur faible vitesse par rapport au train.
+
+
+= Réduire ou prévenir un revenu négatif pour les véhicules dans un système d'approvisionnement =
+== De façon générale ==
+* Essayez de garder des lignes droites de la source à la destination. Non seulement c'est plus rapide, mais cela réduit aussi le risque que des véhicules, sur une partie du trajet, soient payés davantage qu'ils ne le devraient.
+* Essayez de conserver la même vitesse sur tout le trajet, autant que possible. Les véhicules les plus lents payent pour les paiements surestimés des autres.
+
+
+== Cas de l'ordre de transfert ==
+Tout d'abord, comme expliqué ci-dessus, le revenu négatif est fait pour compenser des paiements effectués par avance pour une cargaison à des points intermédiaires du système d'approvisionnement.
+Donc, bien que cela semble un peu étrange, vous serez payé pour toute cargaison livrée. Il n'y a pas vraiment besoin de s'inquiéter de cela.
+
+[[File:en/Feeder systems percentage.png|right|thumb|Paramètre avancé pour réduire les paiements intermédiaires]]
+Si vous n'êtes heureux qu'avec des paiements verts ou jaunes pour tous vos véhicules, vous pouvez réduire ou éliminer les revenus négatifs en modifiant une option avancée. Dans la [[Main/en/Options Avancées/Économie/Fr#Pourcentage du profit de branche à payer dans les systèmes multi-modaux|fenêtre 'Configuration avancée', section 'Économie']], il y a un paramètre "Pourcentage du profit de branche à payer dans les systèmes multi-modaux". Avec lui, vous pouvez réduire le montant touché par chaque véhicule aux stations intermédiaires. En conséquence, il y a davantage d'argent à toucher en fin de trajet, quand le véhicule livre la cargaison à sa destination finale.
+
+Notez qu'il s'agit d'un paramètre global; tous les véhicules utilisant l'ordre de transfert seront affectés par celui-ci.
