@@ -1,0 +1,72 @@
+[[Translation:Main/en/Content Service]]
+{{en/-}}
+{{note/Fr|Vous avez besoin d'au moins [[Main/fr/OpenTTD 0.7.0|OpenTTD 0.7.0]] ou de r15126 pour pouvoir utiliser cette fonction de téléchargement dans le jeu.}}
+
+Le 17 janvier 2009, une nouvelle fonctionnalité a été ajoutée à OpenTTD. Cette fonctionnalité de service de contenu permet de télécharger du contenu depuis un serveur central (content.openttd.org). Les auteurs de NewGRFs, d'IAs, de scénarios, etc. doivent d'abord charger leur travaux sur le [http://content.openttd.org/ site web du service de contenu]. Une fois ceci fait, les joueurs de OpenTTD peuvent facilement télécharger les NewGRFs, IAs, scénarios, etc. ajoutés au serveur central en utilisant l'interface du jeu. Les utilisateurs n'ont besoin que de sélectionner ce qu'ils veulent télécharger; le jeu gère l'installation de tous les fichiers.
+
+==S'inscrire pour un compte==
+Depuis le 22/08/2009, openttd.org utilise un système de gestion des utilisateurs centralisé; donc, si vous avez déjà un compte pour des bogues/traductions/etc., vous pouvez l'utiliser pour BaNaNaS également. Voyez [http://www.openttd.org/en/news/101 ce sujet d'information] ainsi que [http://account.openttd.org account.openttd.org] pour plus d'information. Si vous aviez un ou plusieurs comptes avant le 22/08/2009, vous devez les regrouper dans un compte central, comme expliqué dans le sujet d'information.
+
+Si vous n'avez pas encore de compte, vous devez vous inscrire pour en avoir un sur [http://account.openttd.org/en/signup account.openttd.org/en/signup].
+
+Sur la page d'inscription, remplissez les champs requis. Vous pouvez utiliser votre nom des forums TT, mais ce n'est pas obligatoire. Après avoir rempli le formulaire, cliquez simplement sur le bouton S'inscrire. Après cela, vous serez redirigé vers la page de connexion. Connectez-vous avec le nom et le mot de passe avec lesquels vous venez de vous inscrire.
+
+Une fois connecté, cliquez sur le lien nommé BaNaNaS.
+
+==Ajouter du contenu au service==
+Assurez-vous d'abord d'être connecté.
+
+Cliquez sur le bouton Gestion dans le barre de menu. Si c'est la première fois que vous utilisez le service pour charger votre travail, vous devrez accepter les conditions du service. Lisez-les bien avant de les accepter.
+{{note/Fr|Vous n'êtes autorisé à charger que du contenu dont vous êtes (un des) auteur original!}}
+Maintenant, vous voyez un aperçu de tout le contenu que vous avez chargé précédemment. Bien entendu, cet aperçu est vide si vous utilisez le service pour la première fois. Pour ajouter un nouveau contenu, cliquez sur le bouton Nouveau téléchargement en haut de l'aperçu. Un formulaire s'affichera, dans lequel vous devrez fournir toutes sortes d'information:
+* '''Nom''': Ce sera le nom de vottre NewGRF, IA, scénario, etc. Merci d'y mettre un nom utile, et pas quelque chose comme "Mon scénario", car ce sera le nom affiché dans l'interface de téléchargement du jeu. Assurez-vous de bien entrer le nom, car il ne pourra pas être modifié ensuite. N'y incluez pas de numéro de version de votre contenu.
+* '''Type''': Indique si vous charger un paquet de graphismes de base, un NewGRF, une IA, une bibliothèque d'IA, un scénario ou une carte d'altitudes.
+* '''Version''': La version du contenu que vous chargez. Vous pouvez y mettre ce que vous voulez, mais assurez-vous de garder quelque chose de significatif, qui indique aux utilisateurs quelle version de votre contenu est la plus récente.
+* '''Licence''': La licence que vous voulez ou avez appliquée à votre travail. Vous pouvez choisir une des licences libres disponibles, ou en fournir une personnelle. Plus d'information sur les licences plus loin.
+* '''Fichier''': Le chier contenant votre travail. Davantage sur ce sujet plus loin.
+* '''Description''': Une description de votre travail. Cette description, comme la plupart des informations que vous fournissez, sera affichée dans l'interface de téléchargement du jeu.
+* '''URL''': Une URL vers la page web dédiée au contenu téléchargé, ou une URL vers le sujet approprié des forums TT.
+* '''Version minimale''': La version minimale du jeu nécessaire pour votre travail. En choisissant Nocturne ou Personnalisée, remplissez le numéro de révision nocturne ou le nom et la version du paquet correctif requis dans le champ adjacent.
+* '''Version maximale''': Similaire à l'entrée précédente, mais pour indiquer quelle version du jeu est la dernière sur laquelle votre contenu fonctionne.
+* '''Tags''': Une liste de mots séparés par des virgules décrivant votre contenu. Si vous ajoutez un newgrf de trains, par exemple, alors ajoutez 'train' dans le champ. Voyez l'interface de téléchargement dans le jeu pour plus d'exemples. C'est une bonne habitude de regarder ce que les autres ont utilisé et d'essayer de réutiliser des tags existants, quand c'est possible. Pour les IAs, il y a un [http://www.tt-forums.net/viewtopic.php?f=65&t=41473 sujet du forum] avec quelques décisions concernant les tags. 
+* '''Dépendances''': Si votre contenu requiert d'autres contenus pour fonctionner, merci de le sélectionner ici. Vous pouvez choisir plusieurs entrées de la liste en maintenant la touche Ctrl enfoncée. Si votre contenu n'en requiert pas d'autre, vous pouvez ignorer ce champ.
+
+Une fois toutes ces informations fournies, cliquez simplement sur le bouton Télécharger et attendez jusqu'à ce que votre contenu soit chargé.
+
+===Licences===
+Dans ce champ, vous devez choisir la licence qui s'applique à votre travail. Vous pouvez en choisir une dans les entrées prédéfinies: GPL v2, GPL v3, CC-0 v1.0, CC BY v3.0, CC BY-SA v3.0, CC BY-NC-SA v3.0 ou CC BY-NC-ND v3.0. Si aucune de ces licences ne convient à votre travail, choisissez l'option Personnalisée.
+
+Si vous choisissez cette option, vous devrez fournir la licence avec votre travail. Le texte de la licence doit être dans in fichier appelé soit 'copying.txt', 'copying', 'license.txt' ou 'license'.
+
+Si vous sélectionnez une des licences prédéfinies, vous n'avez pas besoin de fournir un fichier de licence; sinon, le chargement échouera.
+
+===Fichiers à télécharger===
+Si vous ne voulez pas inclure un lisez-moi ou une licence personnalisée, vous pouvez simplement choisir le fichier simple (par ex. .grf, .scn, etc.) ici. Si vous voulez ou devez télécharger plus d'un fichier, vous devez les empaqueter d'abord. Ces paquets peuvent être soit au format ZIP, soir TAR, et éventuellement d'autres formats à venir. RAR n'est pas encore supporté.
+<br />La liste ci-dessous montre quels fichiers sont requis en chargeant les différents types de contenu:
+*'''Graphismes de base''': un fichier .obg file et exactement 6 fichiers .grf dans les paquets de graphismes de base, comme nommés dans le fichier .obg, et avec les mêmes codes de vérification MD5 que définis dans le fichier .obg.
+*'''NewGRFs''': un fichier .grf.
+*'''IAs''': un fichier main.nut et un info.nut.
+*'''Bibliothèques IA''': un fichier library.nut et un main.nut.
+*'''Scénarios''': un fichier .scn.
+*'''Carte d'altitudes''': un fichier .png ou .bmp.
+
+
+Si vous voulez inclure un fichier lisez-moi, il doit être appelé 'readme', 'readme.txt' ou 'readme.pdf'.
+
+==Éditer un contenu existant==
+Vous pouvez éditer les propriétés du contenu que vous avez déjà chargé. Assurez-vous d'être d'abord bien connecté.
+Cliquez sur le bouton gestion de la barre de menu. Vous verrez alors un aperçu de tout le contenu que vous avez téléchargé jusque-là.
+
+Cliquez alors sur le bouton Éditer en face de l'entrée que vous voulez éditer. Un formulaire s'affichera, très similaire à celui pour télécharger un nouveau contenu, à la seule différence que tous les champs ne sont pas disponibles. Vous pouvez alors éditer la description, l'URL, les exigences de version et les dépendances de votre contenu, comme ci-dessus. Cliquez sur le bouton Éditer en bas pour enregistrer les changements effectués. Si vous ne voulez pas sauvegarder vos changements, naviguez simplement ailleurs que cette page.
+
+==Mettre à jour un contenu existant==
+Il n'est pas impensable que vous créiez une nouvelle version de votre contenu, à un moment ou à un autre. En utilisant la fonction de mise à jour, vous pourrez remplacer une ancienne version par une nouvelle. Assurez-vous d'être d'abord connecté.
+Cliquez sur le bouton Gestion dans la barre de menu. Vous verrez alors s'afficher un aperçu de tout le contenu que vous avez déjà chargé.
+
+Cliquez alors sur le bouton Mise à jour en face de l'entrée que vous voulez mettre à jour. Une formulaire s'affichera, semblable à celui pour télécharger un nouveau contenu, à la différence que les champs Nom et Type ne sont pas disponibles. Choisissez alors le fichier à charger et faites les changements nécessaires dans les autres champs. Cliquez alors sur le bouton Charger en bas pour charger la nouvelle version.
+
+==Voir aussi==
+[[Main/fr/Contenu En-ligne|Télécharger du contenu]]
+
+[[Category:fr/Développement]]
+[[Category:fr/Service de contenu]]
