@@ -1,0 +1,45 @@
+[[Translation:Main/en/Playing with 32 bpp graphics]]<small><<Retour à [[Main/fr/Développement de graphismes 32bits|Page principale des graphismes 32 bits]]</small>
+{{en/-}}{{en/Feature|0.6|align="right"}}
+
+==Zoom normal==
+# Obtenez les [[Main/fr/Liste des tars 32bpp  téléchargeables|graphismes 32bpp]] disponibles.
+# Mettes les fichiers tar des graphismes 32bpp dans votre répertoire <code>data</code> de OpenTTD. C'est le même répertoire que là où vous mettez vos fichiers [[Main/fr/NewGRF|NewGRFs]].
+# Dans votre <code>openttd.cfg</code> (librement éditable avec l'éditeur de texte de votre choix), ajoutez <code>blitter = 32bpp-simple</code> sous la section <code>[misc]</code>. Sauvegardez le fichier. C'est le moyen infaillible de faire fonctionner les graphismes 32 bits - si vous voulez plus de choix, familiarisez-vous avec la section qui suit.
+
+Notez que les fichiers tar listés sur ce wiki ne sont acceptés par le jeu que si vous utilisez la version Windows des graphismes originaux du jeu. Les joueurs utilisant l'ancienne version DOS (c'est le cas si les fichiers grf sont appelés "''trg1.grf, trgc.grf, trgh.grf, trgi.grf'' et ''trgt.grf''") doivent extraire les fichiers tar dans le répertoire de données d'abord. Puis tous les répertoires de data/sprites doivent être renommés d'après les fichiers grf correspondants (par ex. ''trg1r'' en ''trg1'', ''trghr'' en ''trgh'', etc.).
+
+===Options avancées du blitter===
+
+Même si vous avez mis les sprites 32bpp dans votre répertoire <code>data</code>, OpenTTD ne les affiche pas par défaut. Il faut indiquer au jeu d'utiliser un blitter compatible 32bpp, appelé aussi moteur d'affichage des sprites. Pour cela, nous utilisons en général la ligne <code>blitter =</code> dans <code>openttd.cfg</code>.
+    
+Il y a plusieurs blitters entre lesquels choisir. Ils diffèrent légèrement sur la manière de dessiner les sprites. Ci-dessous se trouve une liste des blitters disponibles et leurs propriétés.
+
+;32bpp-simple
+:Lent mais fiable. Le blitter <code>simple</code> ne fait aucune optimisation sur les données des sprites, il les convertit juste d'une palette 8bpp vers un RVB 32bpp.
+;32bpp-optimized
+:Plus rapide. Le blitter <code>optimized</code> encode les régions transparentes des sprites à la volée pour les dessiner plus rapidement, puisque presque tous les sprites sont entourés d'au moins une zone transparente. Le blitter optimisé désactive aussi les animations.
+;32bpp-anim
+:C'est le même que le blitter optimisé, mais avec les animations activées.
+
+Quelquefois, pour une raison quelconque, le paramètre <code>blitter</code> de <code>openttd.cfg</code> ne peut pas être utilisé. En remplacelent, le blitter peut être fourni au binaire OpenTTD comme paramètre avec  <code>-b 32bpp-simple</code>, <code>-b 32bpp-anim</code> ou <code>-b 32bpp-optimized</code>. Le paramètre <code>-h</code> liste tous les blitters disponibles.
+
+
+==Zoom complet==
+
+* Voyez la page principale de [[Main/fr/Niveaux de zoom extra 32bpp|Niveaux de zoom extra]].
+
+
+==Rejoindre le développement des nouveaux graphismes==
+
+Cela vous plaît-il de jouer avec les graphismes 32bpp? Aimeriez-vous contribuer afin d'obtenir plus vite l'ensemble des graphismes 32bpp? Nous avons besoin d''''artistes''', d''''administrateurs''' (pour faire les tâches manuelles comme garder la documentation bien organisée) et de '''codeurs''' (pour nous aider à coder les fonctionnalités permettant les nouvelles options graphiques)...
+
+Pour dessiner des graphismes 32bpp pour OpenTTD, vous devez savoir comment modéliser en 3D (à moins que vous n'aidiez pour des tâches en 2D). Pour le logiciel de modélisation, nous suggérons le logiciel libre de 3D '''blender''', disponible sur le [http://blender.org dite de Blender].
+
+* Visitez notre section [[Main/fr/Documentation de développement de graphismes 32bpp|Documentation de développement de graphismes 32bpp]] section.
+
+Pour plus d'information sur le développement 32bpp, vous pouvez naviguer dans le [http://www.tt-forums.net/viewforum.php?f=36 forum des graphismes de OpenTTD sur les forums TT]. Alternativement, vous pouvez contacter [[Archive/en/Ben|Ben Robbins]], un des membres dirigeants de la communauté des graphismes OpenTTD.
+
+
+{{fr/Navbox Développement graphique}}
+
+[[Category:fr/Nouveaux graphiques]][[Category:fr/Graphismes 32bpp]]
