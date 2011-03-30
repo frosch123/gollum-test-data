@@ -1,0 +1,234 @@
+[[Translation:Main/en/Compiling on Mac OS X]]
+==Compilar y desarrollar OpenTTD en MacOSX==
+[[File:en/Terminal Mac OSX.png|left|64px]]
+Vamos a ver una breve guía para empezar, un poquito, en el ''desarrollo'' de OpenTTD para OSX.
+(Nota: si usted no ha instalado nunca nada parecido, necesitará algo de tiempo ya que tendrá que hacer muchas descargas, pero después tendrá acceso a muchos más programas, además de a OpenTTD)
+
+La compilación de OpenTTD requiere el uso de la línea de comandos, así que antes de empezar, debe familiarizarse con la aplicación '''Terminal.app'''. Existen muchos tutoriales sobre Terminal, tienes por ejemplo uno muy breve [http://maczana.es/2008/02/20/tutorial-los-12-comandos-mas-utiles-del-terminal/ aquí] (en español) o [http://macapper.com/2007/03/08/the-terminal-an-introduction/ aquí] (en inglés), también puede consultar [http://www.google.com/search?q=tutorial+terminal+mac+osx&hl=es&lr=lang_es Google] para consultar muchos más.
+'''Todos los comandos que aparecen a continuación se deben escribir usando la aplicación Terminal.'''
+
+La aplicación Terminal se encuentra en <code>/Aplicaciones/Utilidades</code>
+
+==Instalar herramientas para desarrolladores: Xcode==
+[[File:en/Compiling MacOSX 02-Xcode.png|left|64px]]
+En primer lugar es necesario instalar un compilador. Debe instalar '''Xcode''' (10.3+).
+Debe estar en el CD / DVD de instalación de su sistema operativo. También lo puede descargar desde la web de [http://developer.apple.com/ Apple Developer Connection] (registro gratuito obligatorio), tenga en cuenta que tiene más de 500 MB de tamaño. Este incluye, entre muchas otras cosas, gcc (en el paquete ''UNIX Dev Support''), que es el compilador que se utiliza en la mayoría de los proyectos de código abierto, incluyendo OpenTTD.
+
+La aplicación Xcode se instala en <code>/Aplicaciones/Utilidades/Developer/Applications</code>
+
+==Instalar las librerías necesarias==
+Para poder montar OpenTTD desde el código fuente puede ser necesario instalar algunas [http://www.openttd.org/en/development librerías]. Dependiendo de su instalación local tal vez quiera instalar también algún sistema de control de versiones, como ''svn'' o ''mercurial'', con el fin de obtener el último código común de OpenTTD.
+
+Los requisitos mínimos para OpenTTD en Mac son:
+* [http://www.zlib.net/ zlib]
+* [http://www.libpng.org/pub/png/libpng.html libpng] (incluye zlib como dependiente)
+
+Y opcionalmente puede instalar también:
+* [http://www.oberhumer.com/opensource/lzo/ lzo2]
+* [http://www.freetype.org/ freetype2]
+* [http://icu-project.org/ icu]
+
+[http://www.libsdl.org/ SDL] y [http://fontconfig.org/ fontconfig] no son necesarios en mac.
+
+La solución más sencilla para obtener estas librerías es usar [http://www.macports.org/ macports] o bien [http://www.finkproject.org/index.php?phpLang=es fink] que las instalará por usted. También puede compilarlas e instalarlas a partir del código fuente usted mismo. Otra alternativa es visitar las páginas de las librerías y ver si ofrecen listas de versiones binarias compiladas. Al menos fink sí lo hace.
+
+===Usar MacPorts===
+El Proyecto [http://www.macports.org/ MacPorts] es una iniciativa de la comunidad de código abierto para diseñar un sistema fácil de usar para compilar, instalar y actualizar (ya sea con la línea de comandos, con X11 o con software basado en Aqua) código abierto para el sistema operativo Mac OSX. Para descargarlo entre en la página de [http://www.macports.org/install.php descarga] y seleccione dentro del apartado ''Mac OS X Package (.pkg) Installer'' el instalador adecuado a la versión de su SO: [http://distfiles.macports.org/MacPorts/MacPorts-1.9.1-10.6-SnowLeopard.dmg Snow Leopard](10.6), [http://distfiles.macports.org/MacPorts/MacPorts-1.9.1-10.5-Leopard.dmg Leopard](10.5) o [http://distfiles.macports.org/MacPorts/MacPorts-1.9.1-10.4-Tiger.dmg Tiger](10.4)
+[[File:en/Macports ok.png|center|495px|MacPorts se ha instalado correctamente]]
+Se recomienda que actualice Macports después de su instalación y regularmente para mantenerlo al día, utilice el comando:
+ <code>sudo port -v selfupdate</code>
+Como va a instalar librerías en directorios de su sistema, tendrá que hacerlo como administrador a través del comando <code>'''sudo'''</code> (que requerirá que introduzca la contraseña de administrador). Para más información sobre [http://www.sudo.ws/ sudo] consulte [http://www.wikipedia.org/wiki/es:Sudo wikipedia].
+
+====Instalando librerías con MacPorts====
+Antes de instalar cualquier librería, asegúrese de tener acceso a los últimos puertos, actualizando el repositorio local:
+ <code>sudo port selfupdate</code>
+Instale ''[http://www.wikipedia.org/wiki/es:libpng libpng]'' (la librería ''zlib'', que también es necesaria, se instalará de forma automática con ella, por ser un archivo dependiente):
+ <code>sudo port install libpng</code>
+Se le pedirá también que confirme los paquetes requeridos adicionales (como ''libz'', librerías zip).
+
+Para poder luego compilar ''binarios estáticos'' (y poderlos redistribuir), o también por conveniencia suya, es posible que desee instalar también las librerías ''fontconfig'', ''[http://www.wikipedia.org/wiki/es:FreeType freetype]'' e ''icu'':
+ <code>sudo port install fontconfig
+ sudo port install freetype
+ sudo port install icu</code>
+
+Si ha seguido todos los pasos que hemos visto, se habrán instalado en su ordenador las librerías necesarias (tardando algún tiempo) como pre-requisitos para poder compilar OpenTTD por usted mismo.
+
+====Algunas notas sobre MacPorts====
+Si usted quiere compilar binarios para distribuirlos a otras personas, puede que quiera compilar binarios universales. Todos los paquetes MacPort mencionados anteriormente tienen la opción de instalarse como librerías universales, pero se tiene que solicitar en cada instalación:
+ <code>sudo port install zlib +universal</code>
+
+Merece la pena echar un vistazo a la [http://guide.macports.org/#using.port documentación de MacPorts]. Si necesitara por cualquier motivo una versión anterior de una librería, [https://trac.macports.org/wiki/howto/InstallingOlderPort aquí] puede encontrar una breve explicación.
+{{es/Nota| Es posible que desee instalar más herramientas, p.e. ''mercurial'' o ''git'', usando también macports. Lamentamos que algunos incorporan ''inconv'' como archivo dependiente. Eso no es malo, pero acabará con ''dos versiones iconv'' en su disco duro: uno proporcionado por Apple en <code>'''/usr/lib'''</code> y otro instalado por macports en <code>'''/opt/local/lib'''</code>. Esos dos archivos no son compatibles, definen diferentes símbolos y son diferentes versiones. Temporalmente se puede desactivar el ''libiconv'' de macport ("<code>'''sudo port deactivate libiconv'''</code>") de lo contrario podría producirse en ocasiones un fallo de vinculación (vea [http://bugs.openttd.org/task/3313 FS 3313]). Pero esta acción también podría hacer que ''svn'', ''mercurial'' o lo que sea se base en la versión no-utilizable por macport}}
+{{es/Nota| Hay problemas con algunas versiones de ''gcc'' que se suministran por MacPorts. Utilice uno de los compiladores suministrados por Apple, pero con los argumentos del compilador ilegal. Puede cambiar el compilador utilizado con [http://developer.apple.com/mac/library/documentation/Darwin/Reference/ManPages/Xcode-2.5/man8/gcc_select.8.html gcc_select]}}
+
+===Usar fink===
+Fink es básicamente lo mismo que MacPorts, pero puede que no funcione tan bien en las nuevas versiones de OSX. Funciona también con líneas de comandos usando la '''terminal'''.
+
+'''Nota: fink sólo se utiliza para la instalación de ''svn'' y ''libpng''. Aunque es recomendable, no es obligatorio instalar nada más.'''
+
+Fink es una buena herramienta para instalar el software de código abierto de comandos simples. Puede obtener Fink aquí: [http://www.finkproject.org/index.php?phpLang=es http://www.finkproject.org/]. En la sección de [http://www.finkproject.org/download/index.php?phpLang=es descargas].
+[[File:en/Fink ok.png|center|495px|Fink se ha instalado correctamente]]
+
+Antes de instalar cualquier cosa con fink, '''debe actualizarlo''' (incluso si lo acaba de instalar). Esto se debe a que fink necesita mirar algunos archivos locales, para saber la versión del software que debe instalar. Si ha salido una versión nueva del instalador fink, es una tontería usar una versión obsoleta. La actualización puede llevar algún tiempo. DEBE ACTUALIZAR fink con el comando:
+ <code>fink selfupdate</code>
+{{es/Aviso| Si ha instalado ''iconv-dev'' usando Fink, asegúrese de que tiene al menos la '''versión 1.11''' o acceso a filenames/file (partidas guardadas, escenarios ...) si no, no funcionará correctamente.<br/>
+(Puede averiguar la versión de fink con el comando: <code>'''fink --version''')</code>}}
+
+====Instalando el cliente svn con fink====
+Con la instalación de Xcode puede haberse instalado ya el cliente [http://www.wikipedia.org/wiki/es:Subversion svn]. De todas formas sería conveniente actualizarlo, tiene dos opciones:
+
+1) con el comando sudo:
+ <code>sudo port -d install svn</code>
+2) con fink:
+ <code>fink install svn-client</code>
+La instalación de los paquetes que acompañan a svn puede llevarle algún tiempo (bastante mucho muchísimo tiempo, le da tiempo a ir a hacer la "mili" y volver, jeje).
+
+Si su sistema operativo es Mac OSX Leopard (10.5) no necesitará instalarlo (¡menos mal!) puesto que ya lo trae de fábrica, de todas formas, en una ventana de terminal teclee <code>'''svn --version'''</code> para comprobarlo.
+
+====Instalando librerías con fink====
+Necesita enlazar algunas librerías cuando compile. Puede utilizar fink para instalarlas con los siguientes comandos en el terminal:
+ <code>fink install libpng3</code> 
+Se necesita ''libpng3'' para realizar capturas de pantallas en png. En realidad, no lo necesita ahora, pero tenemos planes de futuro, por lo que sería bueno que la consiguiera ya.
+Según cada caso, fink le indicará que necesita instalar un montón de cosas más, basta con pulsar intro (contestar que sí) y Fink descargará e instalará todo.
+La documentación sobre compilación de OpenTTD habla de ''zlib'', pero Mac OSX ya la lleva incorporada, por lo que no hay necesidad de instalarla.
+
+==Obtener el último código de OpenTTD con el servidor svn==
+Ahora tiene que hacer una "copia de trabajo" en su ordenador del código de OpenTTD con su nuevo cliente svn.
+Tenga en cuenta que Openttd trabaja con tres tipos de versiones: ''stable'', ''testing'' y ''nightly'' (o ''Trunk'')
+
+*Los desarrolladores normalmente trabajan con la versión ''trunk/nightly'', pero quizás le interese más obtener la versión ''stable'' (estable) del programa.
+
+Para descargar la última versión ''trunk/nightly'', utilice el terminal y escriba:
+ <code>svn checkout svn://svn.openttd.org/trunk Directorio</code>
+:'''Directorio''' es la carpeta en la que se colocará el código (p.e "Openttd"). Si la carpeta no existe, se creará. Dese cuenta que usted habría tenido que teclear todo un refrito después de instalar svn para poder hacer esto mismo si no dispusiera del comando y la URL que ha escrito.
+
+*Puede desear descargar una versión específica (también de tipo ''trunk/nightly'') añadiendo el número de la versión '''-r#####''' después de '''svn checkout'''.
+ <code>svn checkout -r20198 svn://svn.openttd.org/trunk Directorio</code>
+
+*Si quiere obtener una versión ''stable'' (estable) o ''testing'', puede descargarla directamente de las '''páginas de descargas''' de [http://www.openttd.org www.openttd.org]:
+** Última versión ''stable'': http://www.openttd.org/en/download-stable (seleccione ''sources zip archive'')
+** Última versión ''testing'': http://www.openttd.org/en/download-testing
+** Última versión ''nightly'' (o ''trunk''): http://www.openttd.org/en/download-trunk
+** Todas versiones: http://gb.binaries.openttd.org/binaries/releases/
+[[File:en/Installation 1b sources.png|frame|center|Seleccionando la versión 1.0.2 sin compilar ('sources'=códigos)]]
+
+= Compilar el código =
+Dado que el sistema ''makefile'' está continuamente reescribiéndose, esta sección se divide en dos partes. Elija la conveniente según el tipo de código fuente (''source'') que haya descargado:
+
+==Compilar OpenTTD 0.6.x y posteriores (o revisión 7759 y posteriores) ==
+'''A)''' Para quienes sólo quieren una ''copia de trabajo'' para sí mismos, escriba lo siguiente en una ventana de terminal, si no pase a punto B:
+ <code>cd ~/Downloads/directorio_conteniendo_los_códigos_descargados
+ ./configure
+ make
+ make bundle
+</code>
+:(Si se lía con el comando '''cd''', dele un repaso a algún [http://maczana.es/2008/02/20/tutorial-los-12-comandos-mas-utiles-del-terminal/ tutorial fácil de '''Terminal'''], tenga en cuenta que la primera línea que le hemos puesto es sólo un ejemplo)
+{{es/Aviso| '''Si aparece el error "<code>WARNING: liblzo2 was not detected or disabled</code>"''' 
+
+''(ATENCIÓN: liblzo2 no se detectó o está desactivado)''
+*descargue la última versión de '''lzo''' de http://www.oberhumer.com/opensource/lzo/download/
+*compílelo usted mismo con el '''terminal'''. Entre en el directorio de lzo desde el terminal y ejecute:
+ <code>cd ~/Downloads/directorio_conteniendo_lzo
+ ./configure
+ make
+ sudo make install 
+</code>
+*Vuelve al directorio donde está el código fuente de Openttd y compile de nuevo}}
+
+Después de que el compilador compile todo lo que está comprimido (puede tardar bastante), ¡encontrarás la aplicación '''OpenTTD.app''' en la carpeta! [[File:en/Smile 22px.png]]
+:Ojo: si es la primera vez que lo compilas, deberás [[Main/en/Instalación/Es#Si descarga la versión 1.0.0 para Mac OSX (o posteriores)|instalar archivos gráficos]] adicionales para que funcione.
+
+'''B)''' Para compilar con instrucciones más detalladas (con más opciones) siga leyendo...
+
+===Aplicar un parche===
+Si desea utilizar un parche (un archivo ''patch/diff'') tiene que aplicarlo antes de usar configurar. Esto se hace de la misma forma que en Linux, así que debería leer esto: [[Main/en/Compilar en Linux/Es#Aplicar un parche|Compilar en Linux#Aplicar un parche]]
+
+===Configurar===
+Hay un script de configuración. Se utiliza para averiguar cual es su sistema y generar un '''<code>makefile</code>''' que compile un binario apto para su sistema. Para ejecutarlo, sólo escriba:
+ <code>./configure</code>
+
+Si tiene solicitudes (request) especiales para la generación del makefile, puede usar '''argumentos'''. Use '''help''' para ver una lista completa de opciones disponibles:
+ <code>./configure --help</code>
+
+Ejemplo: si lo que quiere es una '''compilación estática''' (un binario que contenga las partes necesarias de las librerías, y sí no tener que instalarlas en el equipo para poder jugar) tendrá que escribir:
+ <code>./configure --enable-static</code>
+Se pueden añadir '''argumentos múltiples''' como:
+ <code>./configure --enable-static --enable-dedicated</code>
+
+Si no tiene svn, y quiere compilar una revisión de una '''nightly''', configure con (XXXXX es el número de revisión):
+ <code>./configure --revision=rXXXXX</code>
+
+===Compilar===
+Cuando ''configure'' haya creado el ''makefile'', todo lo que necesitará para compilar es escribir:
+ <code>make</code>
+'''Se creará un binario que se colocará en el subdirectorio <code>/bin</code>'''
+
+''Make'' también acepta '''argumentos''' que se ejecutan junto con la compilación:
+
+*Para que tras la compilación '''se inicie''' el juego (funciona en realidad como dos comandos), use:
+ <code>make run</code>
+
+*Para compilar '''creando un paquete''' dentro de un ''directorio de paquete'' (que se creará si no existe). Con esta opción el juego será ejecutable a partir del finder y no sólo desde la terminal, '''creándose una archivo ejecutable para Mac OSX en el subdirectorio <code>/bundle</code>''':
+ <code>make bundle</code>
+[[File:en/Bundle mac osx.png|center|Archivo ejecutable en el directorio bundle]]
+:Ojo: si es la primera vez que lo compilas, deberás [[Main/en/Instalación/Es#Si descarga la versión 1.0.0 para Mac OSX (o posteriores)|instalar archivos gráficos]] adicionales para que funcione.
+
+*Para ver una '''lista de todos los argumentos disponibles''' (como <code>''make run''</code> y <code>''make bundle''</code>), use:
+ <code>make help</code>
+
+''Make'' también acepta '''argumentos estándar'''. El más interesante es la opción <code>'''-j'''</code>.
+
+*Para '''compilar lo más rápido posible''', tenga en cuenta que: Por defecto GCC compila un solo archivo a la vez y usando una CPU/núcleo. Pero se le puede pedir ''compilar varios archivos a la vez'' con la opción <code>'''-j'''</code>. Ejemplo:
+ <code>make bundle -j 4</code>
+Así compilará 4 archivos a la vez, haciendo buen uso de una computadora DualCore. Por lo general, ''tener dos archivos de compilación por cada núcleo es lo más rápido'', mientras compila uno, el otro espera para leer/escribir en el disco.
+
+Nota: las dependencias ''makefile'' tienen que estar configuradas correctamente para que <code>'''-j'''</code> funcione bien. Si bien esto es así para OpenTTD, no asuma esto para otros proyectos o pueden suceder cosas desagradables, como raros errores de compilación.
+
+Si hace frecuentes compilaciones, puede ser que le valga la pena buscar compiladores alternativos. OSX también trae nuevos binarios llvm-gcc, que ofrecen un aumento de la velocidad durante la compilación a costa de unos binarios un poco más lentos. Para activar el conjunto de variables de entorno <code>CC=/Developers/usr/bin/llvm-gcc</code> y <code>CXX=/Developers/usr/bin/llvm-g++</code>
+
+===Compilar binarios universales===
+La compilación de un binario universal se hace añadiendo <code>'''--enable-universal'''</code> a configure:
+ <code>./configure --enable-universal</code>
+Eso si su sistema está configurado correctamente. Realiza entonces una compilación para ''intel'', ''PPC'' y ''PPC970'' (optimizado para esta CPU en particular. Apple la renombró como ''G5''), por lo que no será necesario configurar flags para G5. Static también está habilitado por defecto ya que se supone que el binario se transportará a otro equipo.
+
+Para que esto funcione, necesitará librerías universales. Para obtener más información, vea [[Main/es/Librerías universales|librerías universales]]
+
+==Compilar OpenTTD 0.5.x o anteriores (o revisiones anteriores a la 7759)==
+Para compilar el código fuente, debe usar la terminal para ir a su copia de trabajo y escribir
+ <code>make</code>
+Ahora se compilará OpenTTD. Si de esta manera no se enlaza OpenTTD, pruebe:
+ <code>make CC=gcc-3.3</code>
+
+Si esto falla, intente:
+ <code>make bundle</code>
+A continuación, inicie la aplicación de la ''carpeta de paquete'' <code>'''/bundle'''</code> (en lugar de la carpeta <code>'''/bin'''</code>)
+
+Este fallo puede ocurrir si ha descargado las librerías compiladas para OSX 10.3.x y está utilizando OSX 10.4.x. Para resolverlo correctamente, reemplace la librería por otra compilada para OSX 10.4. Sin embargo de está forma le llevará más tiempo que usando GCC 3.3.
+
+Si desea mover la aplicación que acaba de compilar a otro equipo, deberá instalar  ''sdl'' (y ''libpng'' si la va a usar) en ese equipo también o compilar estáticamente. Apple recomienda las compilaciones estáticas, pero si sólo quiere jugar el juego puede que sea mejor instalar las librerías.
+
+===Compilar estáticamente===
+Para compilar de forma estática, es necesario modificar '''makefile.config'''. Esto se puede hacer con cualquier editor de texto (incluyendo las herramientas para desarrolladores/Xcode). Busque la línea que dice:
+<code>'''STATIC:='''</code>
+y cámbiela por
+<code>'''STATIC:=1'''</code>
+
+Puede ocurrir que no aparezca '''makefile.config''', puesto que se genera la primera vez que ejecuta ''make'', por lo que no existe antes. Aún así puede proporcionar este parámetro, sin que exista ''makefile.config'', ejecutando:
+ <code>make STATIC:=1</code>
+
+Nota: si cambia algo en makefile.config, debe ejecutar
+<code>'''make clean'''</code>
+para estar seguro de deshacerse de cualquier cosa compilada con la vieja configuración
+
+Ya está listo para jugar, después de [[Main/en/Instalación/Es#Si descarga la versión 1.0.0 para Mac OSX (o posteriores)|agregar los archivos GRF de winTTD]].
+
+===Compilar binarios universales===
+'''Necesita por lo menos Xcode 2.1 y OSX 10.4'''
+
+Para compilar los binarios universales, asegúrate de que tienes el derecho de compilaciones cruzadas (right crosscompilers) instalado desde Xcode (por defecto es 10.4u para la parte i386 y 10.3.9 para la parte de PPC. Esto se puede cambiar en Makefile.config)
+a continuación, escriba:
+ <code>make UNIVERSAL_BINARY:=1</code>
+Reemplace UNIVERSAL_BINARY con TRIPLE_BINARY si desea código optimizado para G5 en la parte superior del binario universal normal.
+Si no agrega un argumento a make, entonces se optimizará para la CPU sobre la que se compila, que será siempre la mejor opción a menos que usted se plantee mover el binario a otro equipo.
+
+'''Nota:''' es necesario tener librerías universales (a la hora de escribir, esto se aplica sólo a ''libpng'') si desea hacer binarios universales. Si utiliza la configuración predeterminada de OpenTTD, usted necesitará crear una librería estática (libpng.a) que contiene el código para i386 basado en el 10.4u sdk y la parte ppc que tiene que estar basada en el 10.3.9 sdk.
