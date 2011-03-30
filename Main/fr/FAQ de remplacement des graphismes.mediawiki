@@ -1,0 +1,52 @@
+[[Translation:Main/en/Graphics Replacement FAQ]]
+{{en/-}}
+{{Template:8bpp Graphics Replacement/Fr}}
+Voici quelques questions fréquemment posées, et leurs réponses, sur le projet de remplacement des graphismes 8bpp.
+{{fr/Note|Pour poser une question ou discuter du remplacement des graphismes ou de fonctionnalités avancée,s merci d'utiliser le [http://www.tt-forums.net/viewtopic.php?f&#61;36&t&#61;35310 sujet du forum]. Pour discuter de cette page, merci d'utiliser la [[Archive/en/{{PAGENAME}}|page de discussion]].}}
+
+__TOC__
+
+==Général==
+===Quel est le but de ce projet?===
+OpenTTD repose actuellement sur des graphismes sous droits restrictifs (= "Tous droits réservés"). Ce projet vise à produire et distribuer des graphismes sans ces restrictions. Cela veut dire des médias licenciés comme du logiciel ouvert libre ou du média libre (comme certaines des licences CreativeCommons). Comme telle, les données sont toujours avec des droits, mais cette fois, sans restrictions imposées. Ce projet est appelé "OpenGFX".
+
+===Quelle est l'activité et la progression actuelles du projet?===
+Le projet est actuellement modérément actif, 100% des sprites ayant un remplaçant dessiné. Le développement actuel est focalisé sur l'amélioration et la correction des bogues sur les graphismes. Les derniers développements sont mieux suivis sur le sujet du forum.
+
+===Qu'est-ce que "OpenGFX"?===
+OpenGFX est un nom court et accrocheur donné aux newGRFs de remplacement des graphismes 8bpp alpha et bêta, pour les rendre faciles à trouver dans le menu NewGRF. Cela pourrait être la "marque" de la version finale des graphismes.
+
+==Contributions==
+===Comment puis-je contribuer?===
+Nous recherchons des contributions de dessin et de codage. Si vous avez des graphismes ou un [[Main/fr/NewGRF|NewGRF]] que vous pensez pouvoir être utile, postez-le dans les forums de discussion pour que nous puissions le regarder et l'inclure. Si vous aimeriez aider à coder, vérifiez le tableau de suvi et les discussions sur les graphismes qui n'ont pas encore été codés, et postez le newGRF complété.
+
+===Quel crédit puis-je obtenir?===
+Actuellement, tous les contributeurs à un newGRF obtiennent un crédit dans la description du NewGRF. Une information complète sur les contributions (crédits pour dessiner ou coder sur la base d'un sprite) est disponible en ligne.
+
+===Qui met à jour la table de suivi?===
+Tout le monde! Si vous remarquez quelque chose qui manque, ajoutez-le!
+
+==Versions alpha, bêta et finale==
+===Quelle est la "structure de versions"?===
+*Les versions "alpha" sont des NewGRFs en cours, postés sur les forums de discussion. Ils contiennent, typiquement, des graphismes pour des objets uniques, par exemple un train ou un bâtiment.
+*Les versions "bêta" sont des combinaisons de NewGRFs alpha, qui sont aussi postés sur les forums de discussion. Ils contiennent une collection de graphismes complets pour un groupe d'objets, par exemple le terrain ou l'infrastructure.
+*Les versions "finale" seront une collection complète de tous les sprites nécessaires pour faire tourner OpenTTD. Il n'y a pour le moment aucune version finale disponible.
+
+===Où puis-je trouver les versions alpha et bêta?===
+Regardez les forums de discussion pour y trouver les derniers développements de graphismes. La table de suivi devrait aussi être à jour avec les derniers téléchargements.
+
+==La version finale==
+===Quelle forme prendra la version finale?===
+Il y aura deux "ensembles" de GRFs dans la version finale:
+*trg1r.grf, trgcr.grf, etc. et openttd.grf - Versions "ouvertes" des graphismes d'origine, qui peuvent être utilisés à la place des fichiers de graphismes d'origine.
+*NewGRFs avec fonctionnalités améliorées - Une collection de NewGRFs qui améliorent OpenTTD avec de nouveaux véhicules, bâtiments, etc., dans le style des nouveaux graphismes.
+
+
+
+===Y aura-t-il des "fonctionnalités améliorées"?===
+Oui. Les fonctionnalités améliorées seront fournies de deux manières:
+*Fonctionnalités "pour les yeux", incluses comme une partie de openttd.grf
+*Fonctionnalités d'amélioration de la jouabilité, nouveaux véhicules, bâtiments, etc. qui seront fournis comme des [[Main/fr/NewGRF|NewGRFs]] séparés.
+
+===Qu'arrivera-t-il après la version finale?===
+Nous ferons de meilleurs graphismes! L'intention est que le projet continue, pour améliorer les graphismes et ajouter d'autres fonctionnalités améliorées.
