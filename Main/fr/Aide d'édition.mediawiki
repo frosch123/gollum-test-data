@@ -1,0 +1,220 @@
+[[Translation:Main/en/Editing help]]{{en/-}}{{fr/Table des matières droite}}
+Voici un guide du langage de marquage du wiki. Sentez-vous libre de tester l'un de ceux-ci en éditant le [[Main/fr/Bac à sable|bac à sable]].
+
+*Voyez [http://www.wikipedia.org/wiki/m:Help:Editing  Editing Help] (en anglais) sur Wikipedia pour davantage d'aide.
+<div style="margin: 2em 0em 0em 0em; padding: 0em 1em 1em 1em; border: 1px solid #E1BBFF; background-color: #F5EDFC; font-size:large;">
+==Règles très importantes==
+#Signez toujours avec votre nom en postant un commentaire. Utilisez quatre tildes: "<nowiki>~~~~</nowiki>".
+#Utilisez toujours le bouton '''Prévisualiser''' avant de sauvegarder une page.
+#Lisez le [[Main/fr/Manuel de Style|manuel de style du Wiki OpenTTD]].
+</div>
+
+==Style de texte==
+Utilisez els apostrophes pour mettre le texte en gras ou en italique.
+{|
+!Code
+!Équivalent HTML
+!Résultat
+|-
+|<code><nowiki>''Texte italique''</nowiki></code>||<nowiki><b>Texte italique</b></nowiki>||''Texte italique''
+|-
+|<code><nowiki>'''Texte gras'''</nowiki></code>||<nowiki><b>Texte gras</b></nowiki>||'''Texte gras'''
+|-
+|<code><nowiki>'''''Texte mixte'''''</nowiki></code>||<nowiki><b><i>Texte mixte</i></b></nowiki>||'''''Texte mixte'''''
+|}
+
+==Liens==
+===Liens internes===
+Encapsulez les mots entre double crochets pour en faire un lien vers un article du Wiki OpenTTD (wiki.openttd.org). Séparez le lien du libellé avec une barre verticale ("|"):
+{|
+!Exemple
+!Source
+|-
+|[[Main/fr/Téléchargement]] || <code><nowiki>[[Main/fr/Téléchargement]]</nowiki></code>
+|-
+|[[Main/fr/Téléchargement]]s || <code><nowiki>[[Main/fr/Téléchargement]]s</nowiki></code>
+|-
+|[[Main/fr/Téléchargement|Obtenir les fichiers]] || <code><nowiki>[[Main/fr/Téléchargement|Obtenir les fichiers]]</nowiki></code>
+|}
+
+===Liens wikipedia===
+Comme ci-dessus, mais ajoutez "wikipedia:" devant le lien.
+{|
+!Exemple
+!Source
+|-
+|[http://www.wikipedia.org/wiki/fr:Subversion ] || <code><nowiki>[http://www.wikipedia.org/wiki/fr:Subversion ]</nowiki></code>
+|-
+|[http://www.wikipedia.org/wiki/fr:OpenTTD ]eluxe || <code><nowiki>[http://www.wikipedia.org/wiki/fr:OpenTTD ]eluxe</nowiki></code>
+|-
+|[http://www.wikipedia.org/wiki/fr:OpenTTD OpenTTD] || <code><nowiki>[http://www.wikipedia.org/wiki/fr:OpenTTD OpenTTD]</nowiki></code>
+|-
+|[http://www.wikipedia.org/wiki/m:Help Help sur Méta]||<code><nowiki>[http://www.wikipedia.org/wiki/m:Help Aide sur Méta]</nowiki></code>
+|}
+
+===Liens externes===
+Encapsulez les mots dans de simples crochets pour en faire un lien vers un autre site web. Séparez l'URL du libellé avec un espace (" ").
+{|
+!Exemple
+!Source
+!Notes
+|-
+|[http://www.openttd.org] || <code><nowiki>[http://www.openttd.org]</nowiki></code> || Un lien externe sans description sera automatiquement affiché comme [x]
+|-
+|[http://www.openttd.org OpenTTD] || <code><nowiki>[http://www.openttd.org OpenTTD]</nowiki></code> ||
+|}
+
+==Sections d'article==
+Encapsulez le texte avec des signes d'égalité pour diviser l'article en sections.
+
+<pre><nowiki>=Section principale=
+==Sous-section==
+===Sous-sous-section===
+====Compris?====
+</nowiki></pre>
+
+==Images==
+Téléchargez une image en utilisant le lien [[Main/en/special:upload|upload file]] trouvé dans le menu principal.
+
+Utilisez ce code pour ajouter une image à l'article:
+<pre>[[File:en/.nomfichier|frame|none|libellé]]</pre>
+
+Exemple:
+<pre>[[File:en/longerbridges.png|frame|none|Ponts plus longs]]</pre>
+Résultat:
+[[File:en/longerbridges.png|frame|none|Ponts plus longs]]
+
+*Voyez aussi [http://www.wikipedia.org/wiki/fr:Wikipédia:Description d'une image Syntaxe d'image étendue] sur Wikipédia.
+
+==Tableaux==
+{{fr/Compléter|Nécessite une aide sur le formatage CSS}}
+Tous les codes des tableaux doivent être le premier caractère sur la ligne.
+{|
+!Code
+! Équivalent HTML
+!Résultat
+|-
+|<code><nowiki>{|</nowiki></code>||<nowiki><table></nowiki>||Commence un tableau 
+|-
+|<code><nowiki>!</nowiki></code>||<nowiki><th></nowiki>||Entête de colonne
+|-
+|<code><nowiki>|</nowiki></code>||<nowiki><td></nowiki>||Nouvelle cellule
+|-
+|<code><nowiki>!!</nowiki></code>||<nowiki></th><th></nowiki>||Entête de colonne sur la même ligne
+|-
+|<code><nowiki>||</nowiki></code>||<nowiki></td><td></nowiki>||Nouvelle cellule sur la même ligne
+|-
+|<code><nowiki>|-</nowiki></code>||<nowiki><tr></nowiki>||Nouvelle ligne
+|-
+|<code><nowiki>|}</nowiki></code>||<nowiki><table></nowiki>||Ferme le tableau
+|-
+|
+<pre><nowiki>
+{|
+!Entête1!!Entête2
+|-
+|donnée1
+|donnée2
+|-
+|donnée3||donnée4
+|}</nowiki></pre>
+|
+<pre><nowiki>
+<table><tr>
+<td>Entête1</th><th>Entête2</th></tr>
+<tr>
+<td>donnée1</td>
+<td>donnée2</td>
+<tr>
+<td>donnée3</td><td>donnée4</td>
+</tr></table>
+</nowiki></pre>
+|
+
+{|
+!Entête1!!Entête2
+|-
+|donnée1
+|donnée2
+|-
+|donnée3||donnée4
+|}
+|}
+
+*Voyez aussi [http://www.wikipedia.org/wiki/m:Help:Table Table Help] (en anglais) sur Wikipedia.
+
+==Listes==
+Tous les codes de liste doivent être le premier caractère de la ligne.
+{|
+!width="150"|Code
+!Résultat
+|-
+|<nowiki>#</nowiki>||Élément de liste ordonnée
+|-
+|<nowiki>*</nowiki>||Liste non ordonnée
+|-
+|'''<nowiki>:</nowiki>'''||Indentation
+|-
+|<pre><nowiki>#Étape A
+#Étape B
+#*Conseil
+#Étape C
+##Sous-étape
+##Sous-étape
+#Étape D
+:Note:
+::Texte de la note</nowiki></pre>
+|
+#Étape A
+#Étape B
+#*Conseil
+#Étape C
+##Sous-étape
+##Sous-étape
+#Étape D
+:Note:
+::Texte de la note
+|}
+
+==Modèles==
+{{fr/Compléter}}
+Encapsulez un modèle entre double accolades pour qu'il soit transcrit dans la page.
+<pre>{{nom_modèle|paramètre1|paramètre2}}</pre>
+Dans le fichier du modèle (par ex. [[Template/fr/Suppression]]), accédez aux paramètres avec des accolades triples.
+<pre>{{{1}}} {{{2|défaut}}}</pre>
+
+*Voyez aussi [http://www.wikipedia.org/wiki/m:Help:Template Template help] (en anglais) sur Wikipedia.
+
+==Redirections==
+Utilisez les redirections pour qu'un article renvoie automatiquement sur la lecture d'un autre. Dans cet exemple, [[Main/en/checkpoints]] est automatiquement rédirigé vers [[Main/en/waypoints]]:
+<pre>#REDIRECT [[Main/en/waypoints]]</pre>
+
+==Catégories==
+Ajoutez des articles à une catégorie en ajoutant un lien de catégorie au bas de cet article:
+<pre>[[Category:en/Développement]]</pre>
+
+Affichez la catégorie comme un lien normal en ajoutant deux points:
+<pre>[[Category/en/Développement]]</pre>
+[[Category/en/Développement]]
+
+==Autres codes==
+{|
+!Code
+!Résultat
+|-
+|<nowiki><nowiki>texte</no</nowiki>wiki>||Affiche le texte tel quel
+|-
+|<nowiki><code>texte</code></nowiki>||Affiche le texte avec la fonte utilisée pour le code.
+|-
+|<nowiki><pre>texte</pre></nowiki>||Affiche le texte dans une boîte, avec la fonte de code, et sans formatage de blancs HTML
+|-
+|<nowiki><noinclude>texte</noinclude></nowiki>||Affiche le texte dans une page de modèle, mais pas sur les pages incluses. Utilisé pour les instructions d'utilisation du modèle.
+|-
+|<nowiki><includeonly>texte<includeonly></nowiki>||Affiche le texte sur les pages incluses, mais pas sur la page du modèle. Utile pour les modèles qui ajoutent des articles à des catégories.
+|-
+|<code><nowiki>----</nowiki></code>||Ajoute une barre horizontale.
+|-
+|<code><nowiki>~~~~</nowiki></code>||Ajoute votre signature.
+|}
+
+[[Category:fr/OpenTTD Wiki]]
