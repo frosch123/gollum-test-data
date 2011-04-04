@@ -1,0 +1,18 @@
+<includeonly>{{#if:{{{nodiv|}}}|&nbsp;<span|<div}} style="background:none; padding:0; font-weight:normal; font-size:xx-small;"><!--
+
+-->{{#if:{{{mini|}}}{{{plain|}}}|<!--rien-->|<!--sinon:-->Cette boîte:&#32;}}<!--
+
+-->{{#if:{{{brackets|}}}|&#91;}}<!--
+
+-->[[Main/en/En cours|<span title="Voyez ce modèle">{{#if:{{{mini|}}}|v|view}}</span>]]<!--
+
+-->&nbsp;<span style="font-size:80%;">•</span>&nbsp;[[Main/en/En cours|<span title="Discutez de ce modèle" style="{{{fontstyle|}}}">{{#if:{{{mini|}}}|d|talk}}</span>]]<!--
+
+-->{{#if:{{{noedit|}}}|<!--rien-->|<!--sinon:
+-->&nbsp;<span style="font-size:80%;">•</span>&nbsp;[[Main/en/En cours|<span title="Éditer ce modèle" style="{{{fontstyle|}}};">{{#if:{{{mini|}}}|e|edit}}</span>]]}}<!--
+
+-->{{#if:{{{brackets|}}}|]}}<!--
+
+-->{{#if:{{{nodiv|}}}|<!--alors:
+--></span>&nbsp;|<!--sinon:
+--></div>}}</includeonly>
