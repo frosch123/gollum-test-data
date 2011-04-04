@@ -1,0 +1,30 @@
+[[Translation:Main/en/NewGRFIncompatibility]]
+{{en/-}}
+Cette page est dédiée à la liste des changements aux NewGRFs que les auteurs de NewGRF considèrent comme heurtant la min_compatible_version avec la version réelle de leur newGRF, car ils ont le potentiel de casser une sauvegarde et même de faire planter OpenTTD.
+
+==Qu'est-ce que l'(in)compatibilité==
+Il y a deux sortes de compatibilité:
+* Des changements qui ajoutent simplement des éléments aux NewGRF et n'influencent rien de ce qui existe
+* Des changements qui modifient le comportement de ce qui existe de manière à ce que le chargement d'une sauvegarde fonctionne, mais que la partie continue différemment d'avec la version précédente du NewGRF. C'est une zone grise, mais la sûreté pour conserver une sauvegarde est maintenue.
+* Tout ce qui aboutit à une réinterprétation de l'état d'une partie existante est incompatible. Ce sont les choses importantes à surveiller.
+
+==Changements incompatibles==
+
+===Général pour toutes les fonctionnalités===
+* Changement ou même suppression d'IDs de quelque chose (changer les IDs de (var)action2 est sûr)
+* Changer la signification des paramètres (le plus souvent)
+
+===Véhicules===
+* Modifier la longueur des véhicules
+* Modifier les cargaisons pour un véhicule
+
+===Gares===
+* Modifier l'état voie / non voie des cases
+* Modifier le type de voie des cases
+
+===Industries===
+* Modifier ou supprimer un modèle existant
+* Modifier ou supprimer des cargaisons
+
+===Maisons===
+* Modifier la taille (en cases) des maisons
