@@ -1,0 +1,34 @@
+[[Translation:Main/en/Alignment]]
+== De quoi s'agit-il? ==
+
+L'alignement des sprites peut devenir une vraie plaie, surtout pour les ensembles de trains où les sprites doivent tous troiver un même alignement bien qu'ils puissent avoir des tailles différentes.
+
+== Utiliser les modèles pour pcx et les décalages ==
+
+Une solution pour simplifier le codage et réduire le temps passé à fixer les différents décalages est d'utiliser vraiment un modèle standard dans lequel les sprites sont arrangés dans le fichier image (pcx) puis toujours utilisés avec les mêmes décalages, en utilisant des 'modèles'. [[Main/fr/LisezMoi OpenGFX|OpenGFX]] utilise pour tous les trains un modèle commun qui fonctionne ainsi: Les graphismes d'une locomotive vont dans un fichier graphique séparé avec un modèle commun:
+[[File:en/template singletrain.png]] et les versions remplies avec les sprites mises dedans comme
+[[File:en/temperate asiastar 88.png]] ou [[File:en/monorail x2001 88.png]]
+Faites bien attention que les véhicules sont arrangés de manière à ce que la vue montante est alignée sur le bas et la vue descendante sur le haut du sprite, en général l'arrière du véhicule touche le bord de la boîte bleue alors qu'à l'avant, nous pouvons laisser quelque espace pour les véhicules un peu plus courts. Des ajustements pour les véhicules très courts sont décrits plus loin.
+Alors, nous pouvons écrire les décalages de ces sprites ainsi:
+<pre>
+-1 TRAIN_88.pcx   0   0 01 24  8  -3 -13
+-1 TRAIN_88.pcx   9   0 09 20 22 -13 -11
+-1 TRAIN_88.pcx  32   0 01 17 32 -16 -12
+-1 TRAIN_88.pcx  65   0 09 20 22  -5 -11
+-1 TRAIN_88.pcx  88   0 01 24  8  -3 -11
+-1 TRAIN_88.pcx  97   0 09 20 22 -13 -11
+-1 TRAIN_88.pcx 120   0 01 17 32 -16 -12
+-1 TRAIN_88.pcx 153   0 09 20 22  -5 -11
+</pre>
+ou - pour les sprites symétriques, nous n'avons besoin que de 4 vues en les arrangeant au centre des boîtes bleues:
+<pre>
+-1 TRAIN_88_SYMETRIC.pcx   0   0 01 24  8  -3 -13
+-1 TRAIN_88_SYMETRIC.pcx   9   0 09 20 22 -13 -11
+-1 TRAIN_88_SYMETRIC.pcx  32   0 01 17 32 -16 -12
+-1 TRAIN_88_SYMETRIC.pcx  65   0 09 20 22  -5 -11
+</pre>
+
+== Voyez aussi ==
+*[http://users.tt-forums.net/pikka/wiki/index.php?title=Sprite_templates Schéma d'alignement des sprites de Pikkas]
+*[http://wiki.ttdpatch.net/tiki-index.php?page=Action1 Action1 dans le wiki NewGRF]
+*[http://wiki.ttdpatch.net/tiki-index.php?page=RealSprites Vrais sprites dans le wiki NewGRF]
