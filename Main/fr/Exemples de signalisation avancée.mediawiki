@@ -1,0 +1,96 @@
+[[Translation:Main/en/Advanced signalling examples]]
+''Pour une information générale sur les signaux, et les instructions sur la manière de les construire, voyez l'article principal [[Main/fr/Signaux|Signaux]]''
+
+{{fr/À faire|Arranger tout cela dans un modèle propre d'arrangement de signaux compliqués. Peut-être même tout exporter vers les nouveaux types de [[Main/fr/Croisements|croisements]] ou dans les [[Main/fr/Gares|gares]].}}
+
+[[File:en/Presig3.png|center|frame|Fig 1. - Pré-signaux utilisés à leur plein potentiel.]]
+{{fr/À faire|Expliquer ce qui se passe sur l'image ci-dessus.}}
+
+==Pré-signaux avec un croisement de voies simples==
+Cet exemple vous donnera une bonne idée de l'aide que les pré-signaux peuvent apporter, et un exemple des signaux combinés.
+
+Par exemple, une ligne a deux trains, chacun allant à sa propre gare. Les deux circulent sur une voie unique nord-sud sur une partie de leur trajet. Vous utiliserez des signaux bidirectionnels habituels là où les lignes se rencontrent à la section unique (quatre endroits au total, un pour chaque changement).
+
+Que se passe-t-il si vous voulez qu'une nouvelle voie est-ouest coupe la voie nord-sur? Disons que vous ne voulez pas utiliser de pont, et que votre nouvelle voie est-ouest est à grande vitesse. Elle ne peut pas attendre que les trains du nord ou du sud laissent libre la section unique. Vous faites se croiser les voies, et faites une intersection à 4 voies entourée de signaux normaux. Le problème; les signaux rompent la section de voie nord-sud, ce qui fait qu'un train venant du nord pourrait rencontrer un train venant du sud au feu rouge à l'intersection.
+
+La solution: les pré-signaux. Positionnez les pré-signaux d'entrée (horizontal jaune) là où les trains de la ligne nord-sud se réunissent en une seule voie. Au croisement, mettez des pré-signaux combinés (jaune vertical) sur la ligne nord-sud (vous pouvez conserver les signaux bidirectionnels normaux sur la ligne est-ouest).
+
+Comment cela fonctionne: Appelons les signaux d'entrée sud AB, les signaux composés au croisement X (côté sud) et Y (côté nord), et les signaux d'entrée du nord CD. Un train en direction du nord entrera sur la voie unique en AB. Ab fonctionnent comme des signaux normaux. X devient rouge pour les trains allant au sud. X est un signal de sortie pour Y, donc Y devient aussi rouge pour les trains venant du nord. Y est un signal de sortie pour CD, donc les deux deviennent également rouge pour les trains allant au sud. Dans le même temps, un train est-ouest peut passer. Voici comment cela se passe de l'autre côté: Un train vers le sud entre sur la voie unique en CD. Y devient rouge pour les trains allant au nord, et Y est un signal de sortie pour X, donc X passe au rouge, ce qui un signal de sortie pour AB qui deviennent aussi rouges.
+
+[[File:en/Presig single sect.png|center|frame|Fig 2. - Pré-signaux utilisés pour permettre un croisement sur une voie unique. La capture d'écran illustre le second exemple ci-dessus, où le train entre au signal C. Remarquez que les signaux A et B sont rouges.]]
+
+==Gare pré-signalée optimale==
+Ci-dessous une image d'un modèle de gare pré-signalée "optimale".
+Avec ces signaux, les trains choisiront n'importe quel quai libre et, s'il n'y en a aucun, attendra à l'entrée plutôt que d'en choisir un arbitrairement et attendre que le train le quitte.
+
+[[File:en/Station presigs explained more.png|center|frame|Fig. 3 - Un modèle de gare RoRo "optimale" avec des pré-signaux.]]
+
+'''Explication des types de signaux:'''
+* Les signaux '''1''' à '''12''' sont des pré-signaux de sortie
+* Les signaux '''A''', '''B''', '''C''' et '''D''' sont des signaux combinés
+* Le signal '''E''' est le seul pré-signal (entrée)
+
+'''Comment ils fonctionnent:'''
+* Si les signaux '''1''', '''2''', '''3''' et '''4''' sont rouges, alors le signal '''A''' sera rouge.
+* Si les signaux '''5''', '''6''', '''7''' et '''8''' sont rouges, alors le signal '''B''' sera rouge.
+* Si les signaux '''9''', '''10''', '''11''' et '''12''' sont rouges, alors le signal '''D''' sera rouge.
+* S'il y a un train entre le signal '''A''' et les signaux '''1''', '''2''', '''3''' et '''4''', le signal '''A''' sera rouge.
+* S'il y a un train entre le signal '''B''' et les signaux '''5''', '''6''', '''7''' et '''8''', le signal '''B''' sera rouge.
+* S'il y a un train entre le signal '''C''' et les signaux '''A''' et '''B''', alors le signal '''C''' sera rouge.
+* S'il y a un train entre le signal '''D''' et les signaux '''9''', '''10''', '''11''' et '''12''', alors le signal '''D''' sera rouge.
+* S'il y a un train entre le signal '''E''' et les signaux '''D''' et '''C''', alors le signal '''E''' sera rouge.
+* Si les signaux '''A''' et '''B''' sont rouges, alors le signal '''C''' sera rouge.
+* Si les signaux '''C''' et '''D''' sont rouges, alors le signal '''E''' sera rouge, empêchant l'accès à la gare.
+
+
+Ci-dessous une animation de la manière dont cela fonctionne dans le jeu.
+
+[[File:en/Presigs.gif|center|frame|Fig. 4 - Comment la station RoRo "optimale" fonctionnera avec les pré-signaux.]]
+
+
+Comme le montre l'animation, les trains peuvent choisir n'importe quelle voie sans trop de problèmes.
+
+
+==Un autre exemple==
+[[File:en/Station Leave.jpeg|center|frame|Fig. 5 - Gare avec pré-signaux]]
+
+==Gares "RoRo" avec double entrée==
+Les modèles que nous avons vu ci-dessus sont intéressants dans leur objectif - permettre à beaucoup de trains venant d'un endroit d'entrée efficacement sur un quai libre.
+
+Cependant, de tels modèles de gare peuvent impliquer beaucoup de queue en amont car beaucoup de lignes se réunissent en une seule. Cela peut être un problème particulièrement frustrant si vous gérez de longs trains de fret qui prennent beaucoup de temps pour accélérer après s'être arrêté au signal pour laisser passer un autre train.
+
+Maintenant que vous êtes familiarisé avec la gare RoRo basique ci-dessus, vous pouvez considérer des moyens de réduire cela:
+
+[[File:en/Doubleentryexplained.png|frame|Ce style de gare RoRo permet à plus d'un train d'entrer dans la gare à la fois]]
+
+Le signal de séparation de double entrée est un simple signal combiné qui gère tout le système.
+
+La partie intéressante de ce modèle est que plus d'un train peuvent entrer sur la ligne rouge à la fois!
+
+Si tous les quais sont libres, alors un train venant du bas gauche aura un signal vert sur son entrée, étant dirigé vers un des quais les plus proches, alors qu'en même temps, un train entrant sur la ligne rouge depuis le côté jaune pourrait entrer et aller à un des quais les plus à droite - sans que les deux interfèrent grâce au signal de séparation.
+
+Cela est beaucoup plus efficace que de forcer les quatre voies entrant dans la gare à fusionner en une seule contrôlée par les modèles RoRo standards ci-dessus.
+
+Le train en train d'entrer sur l'image ci-dessus doit être venu de la ligne jaune et être passé par le signal d'entrée, alors que tous les quais disponibles sur la droite du signal de séparation de la double entrée étaient occupés.
+
+Cependant, le signal de séparation de double entrée a vu que le quatrième quai depuis la gauche était libre, car son signal de sortie était vert quand le train est entré dans le système, et il l'a donc dirigé vers ce quai libre.
+
+Si un second train était arrivé sur la ligne rouge, il aurait pu utiliser le quai 3 depuis la droite, maintenant libéré (qui a été libéré après que le premier train est entré dans le système).
+
+==Voies libres==
+[[File:en/SpareTunnel.png|frame|Fig. 6 - Utiliser les pré-signaux pour permettre aux trains d'utiliser les voies disponibles plus efficacement]]
+Supposons que vous avez deux voies menant de deux sources vers le même endroit. Vous voulez que le trafic propre de chaque source ait la priorité sur sa propre voie, mais voulez utiliser la capacité disponible sur une des voies car l'autre est encombrée. cela peut se faire avec les pré-signaux.
+
+Dans le diagramme, les deux voies sont marquées ''A'' et ''B'', menant aux tunnels ''A'' et ''B'' respectivement. La voie ''A'' est celle avec le service le moins fréquent, dont nous voulons utiliser la capacité libre. La voie ''B'' est très encombrée et a besoin d'espace libre, ce que nous pouvons obtenir en déroutant du trafic sur ''A''. Toutefois, ce que nous ne voulons pas est que le trafic B perturbe le service sur ''A'' - en d'autres termes, ''A'' a besoin de la priorité sur son propre tunnel. Nous arrangeons cela en utilisant les pré-signaux.
+
+Supposons que chacun des tunnels est signalé à la sortie opposée de manière à ce que quand un train quitte le tunnel, les signaux de ce côté se libèrent. Donc le signal 1 sera vert quand le tunnel ''B'' sera libre, ce qui entraînera le pré-signal d'entrée ''4'' vert. La partie intéressante vient du fait que le tunnel ''B'' est bloqué, donc ''1'' est vert. Dans ce cas, nous voulons qu'un train entrant utilise le tunnel ''A'', mais seulement s'il n'y a pas de train sur la voie ''A'' qui veuille l'utiliser.
+
+Nous connectons les voies comme illustré et plaçons le signal ''3'' comme un signal de sortie vers ''4'', afin qu'un train venant de ''4'' puisse utiliser soit ''3'' ou ''1'', selon celui qui est disponible. Maintenant, nous devons empêcher 3 d'être vert si un train sur ''A'' doit utiliser le tunnel. Pour cela, nous faisons simplement du signal ''2'' un signal de sortie bidirectionnel. Ainsi, s'il y a un train sur le bloc devant sur ''A'' (c.à.d. un avec priorité sur le tunnel), l'arrière du signal sera rouge, sinon il sera bien entendu vert. Ainsi, si nous faisons de ''3'' un signal combiné, il sera rouge dans deux cas:
+# Un train est dans le tunnel ''A''
+# Il y a un train sur la voie ''A'' arrivant pour utiliser le tunnel qui doit obtenir la priorité (car le signal ''2'' sera rouge et apparaîtra comme une sortie pour ''3'' même si ce n'est pas possible avec ce modèle de voie).
+Donc, quand ''3'' est rouge, un train sur ''B'' n'est autorisé à circuler que sur sa propre voie.
+
+De cette manière, les trains sur ''B'' utilisent la voie ''A'' s'il y a de la capacité libre, mais tout véhicule déjà sur ''A'' obtiendra la priorité.
+
+[[Category:fr/Chemins de fer]]
+[[Category:fr/Construction]]
