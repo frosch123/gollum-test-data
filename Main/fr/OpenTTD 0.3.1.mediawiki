@@ -1,0 +1,46 @@
+[[Translation:Main/en/OpenTTD 0.3.1]]
+{{en/-}}
+{{fr/Livraison|prec=OpenTTD 0.3.0|suiv=OpenTTD 0.3.2|date=26/04/2004}}
+
+==Liste des nouvelles fonctionnalités==
+*Fonctionnalité: piliers de pont pour les hauts ponts
+*Fonctionnalité: se souvenir de la sélection des taux de paiement des cargaisons, par défaut pour tous
+*Fonctionnalité: bouton d'avance rapide
+*Fonctionnalité: copie/partage des ordres depuis les trains au dépôt
+*Fonctionnalité: traduction suédoise (par poLiSen)
+*Fonctionnalité: tirer pour construire des canaux
+*Fonctionnalité: peut maintenant avoir plus de 128 villes
+*Fonctionnalité: option pour toujours permettre la construction de petits aéroports
+*Fonctionnalité: journaux en couleur après une certaine date
+*Fonctionnalité: option de construire en pause
+*Fonctionnalité: noms de ville polonais
+*Fonctionnalité: nettoyer une zone fonctionne maintenant dans l'éditeur de scénario
+*Fonctionnalité: glisser&déposer pour les gares
+*Fonctionnalité: démarrage et arrêt plus réalistes des trains
+
+==Liste des corrections de bogue et des changements==
+*Corrigé: shift+touches fléchées défile plus vite (par pasky)
+*Corrigé: [ 941880 ] "monorail en 1985" qui vous permet de construire des monorail/MagLev à n'importe quelle année
+*Corrigé: cotes des villes quand les compagnies sont détruites/fusionnées
+*Corrigé: calcul de la fiabilité des véhicules en trois phases
+*Corrigé: bouton de monde aléatoire dans l'éditeur de scénario ne construit pas de villes, d'industries ni d'arbres
+*Corrigé: charger des mondes sans ville échoue désormais
+*Corrigé: tri des ordres obsolètes après renommage d'une gare
+*Corrigé: meilleur détection des trains pour les ordres de copie
+*Corrigé: [ 938481 ] bogue de la monnaie euro
+*Corrigé: [ 938170 ] Bogue de sélection du dépôt ferroviaire pour Aller à xxx (2)
+*Corrigé: [ 934520 ] défilement et journal dans l'écran de titre
+*Corrigé: cargo_days incorrect pour les trains
+*Corrigé: erreur de limites de tableau avec les vitesses de train en panne
+*Corrigé: les villes détruisent des cases aléatoires autour des maisons
+*Corrigé: titre de la liste des véhicules routiers incorrect pour les concurrents
+*Corrigé: menu des véhicules grisé après une banqueroute
+*Corrigé: suppression de route sélective
+*Corrigé: rend les maisons disponibles en 1920 pour éviter les suspensions
+*Corrigé: durée de la fumée de panne
+*Corrigé: bogue de pente sous les ponts
+*Corrigé: ne pas jouer les sons invalides (corrige le plantage de la reconstruction de routes)
+*Corrigé: affiche la bonne puissance d'un train avec des locomotives multiples
+*Corrigé: dépassement de buffet causé par une chaîne trop longue dans english.lng
+*Corrigé: détruire des choses sans argent
+*Changement: nouvelle structure de répertoires (*.grf+sample.cat dans le sous-répertoire data, *.lng dans le sous-répertoire lang)
