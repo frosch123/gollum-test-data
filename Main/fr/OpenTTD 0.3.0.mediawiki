@@ -1,0 +1,80 @@
+[[Translation:Main/en/OpenTTD 0.3.0]]
+{{en/-}}
+{{fr/Livraison|prec=OpenTTD 0.2.1|suiv=OpenTTD 0.3.1|date=14/04/2004}}
+
+==Nouvelles fonctionnalités==
+*Fonctionnalité: estimation de coût avec Shift
+*Fonctionnalité: ajout d'un correctif pour starting_date, prenant une valeur de la forme aaaa, aaaamm ou aaaammjj.
+*Fonctionnalité: support des trains à locomotives multiples
+*Fonctionnalité: vendre un train complet et tirant la locomotive vers une poubelle spéciale
+*Fonctionnalité: titrer le train complet avec Ctrl dans un dépôt
+*Fonctionnalité: ajout un outil de conversion de rail
+*Fonctionnalité: ajout pour choisir quels types de véhicule l'IA construira
+*Fonctionnalité: meilleurs graphismes des pentes
+*Fonctionnalité: nouvel algorithme de détermination de chemin pour les trains (activé avec new_pathfinding)
+*Fonctionnalité: Ajout d'une correction pour utiliser Timidity pour BeOS
+*Fonctionnalité: la roulette de la souris peut maintenant être utilisée pour défiler dans les fenêtres
+*Fonctionnalité: ajout de l'affichage des coordonnées à la fenêtre d'information du terrain
+*Fonctionnalité: modifie l'intervalle de maintenance par défaut des véhicules
+*Fonctionnalité: changement du nombre maximal de véhicules par joueur
+*Fonctionnalité: ajout de stations non uniformes
+*Fonctionnalité: déplacement de la fenêtre des messages d'erreur à l'écart
+*Fonctionnalité: canaux/ascenseurs de bateaux
+*Fonctionnalité: construit un arbre de type aléatoire
+*Fonctionnalité: construire des arbres sur une zone
+*Fonctionnalité: ajout des profits de véhicules codés en couleur
+*Fonctionnalité: possibilité de fermer les messages d'erreur avec Espace
+*Fonctionnalité: parties en réseau (actuellement non supporté)
+*Fonctionnalité: outil de démolition plus gros
+*Fonctionnalité: deux ponts en plus
+*Fonctionnalité: recherche de dépôt améliorée
+*Fonctionnalité: soudoyer les autorités municipales
+*Fonctionnalité: permettre de construire plusieurs arbres sur une même case
+*Fonctionnalité: ajout de l'option snow_line_height, affectant uniquement les nouvelles parties
+*Fonctionnalité: errmsg_duration contrôle avec quelle longueur les messages d'erreur sont affichés
+*Fonctionnalité: l'option fullscreen_bpp dans [win32] fixe le bpp à utiliser en mode plein écran
+*Fonctionnalité: symbole euro
+*Fonctionnalité: ponts hauts
+*Fonctionnalité: sauvegardes ZLIB (plus petites qu'avant)
+*Fonctionnalité: support des captures d'écran PNG,PCX
+*Fonctionnalité: indique en gris dans les menus surgissants des véhicules si la compagnie n'a pas de véhicules de ce type
+*Fonctionnalité: cliquer sur l'argent affiche les finances
+*Fonctionnalité: (construction OSX) la distribution utilise maintenant le système de paquets d'Apple pour des mises à jour plus faciles
+*Fonctionnalité: (construction OSX) L'application est maintenant une application bien empaquetée
+
+==Liste des corrections de bogue==
+*Changement: ne ralentit pas autant les trains sur les collines
+*Corrigé: le terminal aéroportuaire n'était pas correctement libéré si un avion s'écrasait
+*Corrigé: bogue d'acceptation aux stations corrigé
+*Changement: limite la quantité de tours de radio
+*Changement: raccourci de vitesse modifié de Shift à Tab
+*Corrigé: achat des actions dans une compagnie corrigé
+*Changement: fenêtre des options améliorée avec des pages
+*Corrigé: ne livrer aux gares que les marchandises avec une cote != 0
+*Changement: changement des graphismes d'introduction
+*Changement: tout le matériel du joueur est supprimé lors du chargement d'un scénario
+*Corrigé: ajout des raccourcis F dans l'éditeur de scénario
+*Corrigé: impossible d'élever le terrain près d'un signal
+*Corrigé: les avions étaient affichés à la place des bateaux dans la fenêtre d'aperçu du joueur
+*Corrigé: installeur mis à jour pour tenir compte des sauvegardes plus soigneusement
+*Corrigé: ne pas faire de nouvelle subvention s'il y en a déjà une active pour une compagnie
+*Corrigé: le répertoire des villes affiche parfois de gros nombres
+*Corrigé: correction de bogues en changeant le propriétaire d'éléments (portions de voie qui n'étaient pas toujours détruites)
+*Corrigé: correction du bogue avec les grosses stations dans la détermination de chemin de train
+*Changement: utiliser save/ comme répertoire de sauvegarde sur win32
+*Changement: date modifiée dans la fenêtre des informations
+*Changement: ne pas vérifier si les cases autour d'une station cliquée est une gare, dans l'IHM des ordres
+*Corrigé: supprimer les docks ne produit pas de terrain
+*Corrigé: supprimer un dépôt maritime ne produit pas de terrain
+*Corrigé: une bouée est maintenant traitée comme de l'eau lors d'une inondation
+*Corrigé: correction d'un bogue sur les pré-signaux combinés
+*Corrigé: évite d'aller à 0,0 si un aéroport/dock est supprimé
+*Corrigé: les noms de ville français avaient de mauvaises lettres
+*Corrigé: la liste d'ordres en remplaçant un train ne fonctionnait pas bien
+*Changement: garder le bouton de point de passage appuyé après un placement
+*Corrigé: démarre au milieu de la carte
+*Changement: déplace les périphériques de disque en vas de la liste de win32
+*Corrigé: code de sauvegarde/chargement plus tolérant aux erreurs
+*Corrigé: (construction OSX) tourne maintenant même si SDL n'est pas présent sur le système
+*Corrigé: (construction OSX) fonctionne maintenant sur des systèmes plus anciens que 10.3
+*Corrigé: (construction OSX) paramètres de compilation modifiés pour avoir une application plus stable
