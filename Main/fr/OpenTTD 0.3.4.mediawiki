@@ -1,0 +1,153 @@
+[[Translation:Main/en/OpenTTD 0.3.4]]
+{{en/-}}
+{{fr/Livraison|prec=OpenTTD 0.3.3|suiv=OpenTTD 0.3.5|date=14/09/2004}}
+
+==Liste des nouvelles fonctionnalités==
+*Fonctionnalité: "Aucune" comme option du nombre d'industries dans les paramètres de difficulté
+*Fonctionnalité: Ajoute beaucoup d'industries et de villes aléatoires dans l'éditeur de scénario
+*Fonctionnalité: Ajout des signaux automatiques, tout comme autorail. Peut copier un style de signal, convertir entre signaux et sémaphores, etc. Un grand merci aux bêta-testeurs Dribbel et Testman57 (Darkvater)
+*Fonctionnalité: Ajout du bouton de niveau de terrain dans l'éditeur de scénario (chrishuebsch)
+*Fonctionnalité: Ajout de never_expire_vehicles à l'IHM de configuration (Chris Huebsch)
+*Fonctionnalité: Ajout de nouvelles icônes pour la barre d'outils d'aménagement du paysage (dessinées par sign_de)
+*Fonctionnalité: Ajout du fichier des noms de véhicules originaux. Choisissez-le dans la liste. Les véhicules auront leur vrai nom; toutes les autres chaînes sont en anglais (orudge).
+*Fonctionnalité: Option ajoutée/fortement modifiée par truesatan de la triche de changement de date
+*Fonctionnalité: Option d'alignement de la barre d'outil à gauche/au centre/à droite (TrueLight)
+*Fonctionnalité: Tous les types de sauvegarde de TTDLX sont supportés (.SS1, .SV1, .SV2, .SV0, .SS0).
+*Fonctionnalité: Version alpha d'une nouvelle IA (TrueLight)
+*Fonctionnalité: Auto-détection de serveur sur LAN via udp (Sign)
+*Fonctionnalité: Date de construction d'une gare (visible avec l'outil de Recherche)
+*Fonctionnalité: Triche de changement de climat
+*Fonctionnalité: Le QG d'une compagnie peut maintenant être déplacé ailleurs (au prix de 1% de la valeur de la compagnie). L'au submerge les QG.
+*Fonctionnalité: Menu des concurrents sous les options avancées
+*Fonctionnalité: La copie/partage d'ordres fonctionne maintenant depuis la fenêtre de dépôt maritime pour les bateaux, et depuis celle des hangars pour les avions
+*Fonctionnalité: Fenêtre de paramétrage de la difficulté modifiée (Darkvater)
+*Fonctionnalité: Active/désactive tous les boutons dans les paramètres de message
+*Fonctionnalité: L'exécutable est désormais toujours openttd(.exe)
+*Fonctionnalité: Protection générale autour des sprites
+*Fonctionnalité: Console dans le jeu (sign_de)
+*Fonctionnalité: Les ordres invalides (vides) dans l'agenda sont surlignés en rouge (Celestar)
+*Fonctionnalité: Arbres invisibles en mode transparent (ajout d'une entrée)
+*Fonctionnalité: Option pour trier les véhicules selon différents critères dans la fenêtre de liste des véhicules
+*Fonctionnalité: Fenêtre de détail des performances dans le menu de l'ensemble des compagnies (TrueLight)
+*Fonctionnalité: Affichage du bon crédit pour les artistes graphistes dans la fenêtre À propos.
+*Fonctionnalité: Supprimer les routes de ville a été amélioré.
+*Fonctionnalité: Protection contre les valeurs invalides dans la fenêtre de configuration. Les valeurs resteront entre leurs valeurs min et max
+*Fonctionnalité: Tri des sauvegardes et des scénarios par nom/date
+*Fonctionnalité: Barre d'outil d'aménagement du terrain (dans le menu de plantation des arbres)
+*Fonctionnalité: L'ajout dynamite extra a été un peu modifié
+*Fonctionnalité: Avertissement quand un véhicule a des ordres invalides (celestar)
+*Fonctionnalité: L'eau submerge tout, même les véhicules
+*Fonctionnalité: IHM multijoueurs fonctionnelle (sign_de)
+*Fonctionnalité: [ 976127 ] Pas d'écrasement d'avion à réaction plus fréquent sur les petits aéroports (truesatan)
+*Fonctionnalité: [ 992998 ] Défiler jusqu'à une gare dans les ordres. Ctrl-clic sur les ordres d'un véhicule, et la fenêtre principale défile jusqu'à cette station (chrishuebsch)
+*Fonctionnalité: [ 997115 ] Répertoire des industries amélioré (hampzter)
+*Fonctionnalité: [ 1003350 ] Élément d'information d'introduction de l'euro (dominik81)
+*Fonctionnalité: [ 1009708 ] Intervalles de maintenance en pourcentage. Envoie un véhicule au dépôt après qu'il a perdu X% de sa fiabilité (mivlad)
+*Fonctionnalité: [ 1009710 ] Vue supplémentaire (Dribbel)
+*Fonctionnalité: [ 1024044 ] Affiche le prêt maximal dans la fenêtre des finances (ledow)
+
+==Liste des corrections de bogue==
+*Corrigé: (Unix) le chargement des anciens scénarios (.sv0) fonctionne de nouveau
+*Corrigé: corrections pour CPU 64 bits
+*Corrigé: les gares 64x64 sont maintenant bien colorisées
+*Corrigé: Beaucoup de corrections réseau (sign_de)
+*Corrigé: Beaucoup de corrections de l'IA
+*Corrigé: Tous les scénarios et sauvegardes s'affichent avec leur bon nom
+*Corrigé: Génération automatique de raffineries dans l'éditeur
+*Corrigé: Le répertoire des sauvegardes automatiques n'était pas créé sur MorphOS
+*Corrigé: Nouvelle correction pour le pont en pente, merci à Truelight
+*Corrigé: Raser des objets avec la triche magic_dynamite activée ne diminue pas les cotes de ville
+*Corrigé: Retour de SDL_HWSURFACE à SDL_SWSURFACE (Diablo-3D); meilleures performances
+*Corrigé: ligne de côte près du bord de la carte et près des plateformes pétrolières (Dribbel)
+*Corrigé: Valeur de compagnie non mise à jour immédiatement si la légende est modifiée (vondel)
+*Corrigé: Impossible de détruire un canal sous un pont
+*Corrigé: Désactive l'avance rapide dans les parties en réseau, visuellement (ne marche pas de toutes façons, c'est juste un affichage graphique)
+*Corrigé: Message d'erreur pour 'échec de chargement de la partie' quand il n'y a pas de villes dans un scénario
+*Corrigé: Le jeu ne se met pas en pause quand un dialogue d'enregistrement/chargement est cliqué dans le menu principal
+*Corrigé: Chargement de scénario
+*Corrigé: Rend la vérification du stockage des entiers 100% précis
+*Corrigé: Fuite mémoire dans le système des nouvelles (blathijs)
+*Corrigé: Monorail/maglev devient disponible autour de 1927
+*Corrigé: Léger déplacement des éléments de tri pour qu'ils semblent plus naturels
+*Corrigé: la musique fonctionne finalement sur WinXP. DirectMusic est maintenant par défaut pour un OS >= WinNT4 (WinNT4, Win2k, WinXP), et le pilote MIDI pour les OS inférieurs (Win95, Win98, WinME, etc.)
+*Corrigé: Les anciens scénarios ont une couleur correcte
+*Corrigé: Placer/éditer des signes est maintenant possible en mode pause
+*Corrigé: corrections de la fenêtre de joueur, de Getstring id0 fixes; la fenêtre des finances est maintenant ok
+*Corrigé: Jouer une nouvelle partie avec des scénarios dans la fenêtre fonctionne
+*Corrigé: Possibilité de désactiver certaines options (par ex. intervalle de maintenance par défaut) en les remettant à 0
+*Corrigé: Problèmes autour des droits de transport exclusifs (Celestar)
+*Corrigé: Croisements de voie ferrée en pentes maintenant possibles
+*Corrigé: Plantage aléatoire quand le visage du joueur était affiché dans une fenêtre d'erreur
+*Corrigé: Défilement de la roulette de la souris de temps en temps avec plantage de la barre de défilement
+*Corrigé: Les véhicules routiers ne restent plus coincés aux gares (Truelight + Celestar)
+*Corrigé: Les sauvegardes sont triées avec la date la plus récente en premier par défaut
+*Corrigé: L'éditeur de scénario demande maintenant avant de générer un terrain aléatoire (dominik)
+*Corrigé: Léger écart entre le bouton de gare et le bouton de signal, dans la barre d'outils ferrofiaire
+*Corrigé: Quelques corrections mineures autour de GetTileTrackStatus (blathijs)
+*Corrigé: L'icône de tri pointant vers le bas 'v' tri dans chaque fenêtre la plus petite valeur en premier, '^' la plus haute en premier
+*Corrigé: Démarrer une nouvelle partie en paysage désertique plante le jeu
+*Corrigé: Bogue stupide dans la fenêtre des compagnies si un non-joueur est le premier
+*Corrigé: Deux joueurs non IA en chargeant un scénario
+*Corrigé: Unix utilise le même tri des répertoires et des fichiers que Windows
+*Corrigé: En ajoutant des parties à une gare, la taille limite n'est plus 15x15, mais _patches.station_spread
+*Corrigé: Plantage Win98 lié à la musique/son (orudge)
+*Corrigé: Mauvaise construction de routes en pente pour une future IA/ville
+*Corrigé: Mauvaise détermination de chemin quand la case nord de la gare manque (blathijs)
+*Corrigé: Vous ne pouvez pas prendre la propriété d'une plateforme pétrolière en construisant tout à côté
+*Corrigé: [Makefile] Problème corrigé quand sdl-config wétait nécessaire même sur les systèmes sans SDL
+*Corrigé: [SDL] Correction de performance pour l'animation de palette et le saut de souris (jirif)
+*Corrigé: [SDL] La même résolution était affichée plus d'une fois dans les options du jeu
+*Corrigé: [SDL] Souris plus lisse et correction de performance, comme dans Win32 (jirif)
+*Corrigé: [ 963056 ] Mauvais trains que vous pouvez acheter avec les scénarios
+*Corrigé: [ 972087 ] Plantage de la mini-carte
+*Corrigé: [ 972247 ] Bogue dans '[a] gestion des stations non uniformes étranges' (blathijs)
+*Corrigé: [ 976583 ] Parent_list était trop petit
+*Corrigé: [ 981934 ] Fuite mémoire dans parent_list
+*Corrigé: [ 982666 ] Bogue de Max_loan dans l'éditeur (TrueLight)
+*Corrigé: [ 987888 ] Construction de pont sur les bateaux
+*Corrigé: [ 990770 ] Ajout de zone de livraison de cargaison pour le bogue #989322. (Celstar)
+*Corrigé: [ 992726 ] Pas de plantage de tunnel (Celestar)
+*Corrigé: [ 993339 ] Bogue de placement de phare
+*Corrigé: [ 993374 ] Appuyer sur Alt bloque le jeu *semble un bogue
+*Corrigé: [ 993493 ] Construire sur l'eau
+*Corrigé: [ 993512 ] Pas de construction de canal sous un pont
+*Corrigé: [ 993829 ] Corrections UDP (lucaspiller)
+*Corrigé: [ 994067 ] Les conducteurs de train meurent deux fois (follow)
+*Corrigé: [ 994720 ] Dépôt routier station *bus/poids-lourd (Truelight+Darkvater P)
+*Corrigé: [ 996025 ] _local_player corrigé. Corrections d'accès mémoire erronés (TrueLight)
+*Corrigé: [ 996065 ] Bogue des ponts corrigé de nouveau (Darkvater)
+*Corrigé: [ 996065 ] Étrange pont de deux cases en pentes
+*Corrigé: [ 997303 ] Chaînes vides dans les signes
+*Corrigé: [ 997703 ] Bogue de croisement après un tunnel (blathijs)
+*Corrigé: [ 999592 ] création de répertoire "autosave" (MorphOS/AmigaOS) (Tokai)
+*Corrigé: [ 1001540 ] J'ai perdu tous les wagons. Semi-correction pour les wagons perdus. Mais maintenant, les utilisateurs peuvent au moins régler ce problème. Commande de console: "resetengines"
+*Corrigé: [ 1006530 ] Correction BuildRoadOutsideStation
+*Corrigé: [ 1006715 ] Problèmes du renouvellement automatique
+*Corrigé: [ 1007272 ] Copie des ordres entre bus/camion possible (Celestar)
+*Corrigé: [ 1007630 ] Bogue de pause de l'éditeur de scénario
+*Corrigé: [ 1008605 ] Signaux non mis à jour après le bogue ClearTunnel [ 985920 ] (TrueLight)
+*Corrigé: [ 1009385 ] Trop de parties sauvegardées empêche le chargement
+*Corrigé: [ 1009567 ] des problèmes de cargaison transférée plantent le jeu
+*Corrigé: [ 1009621 ] construire en pause est maintenant une triche plutôt qu'une option (truesatan)
+*Corrigé: [ 1009631 ] Mauvaise vente de locomotives multiples (Bodewes)
+*Corrigé: [ 1010833 ] Activation du bulldozer magique pour supprimer les plateformes pétrolières
+*Corrigé: [ 1012086 ] Pilote ivre (Celestar)
+*Corrigé: [ 1014278 ] TileAddWrap() donnait de mauvais résultats
+*Corrigé: [ 1016954 ] Cached_sprites ne fonctionnait de nouveau plus
+*Corrigé: [ 1022689 ] Bogue en tirant une partie d'un train à locomotives multiples dans 'vendre-tout-le-train'
+*Corrigé: [ 1023971 ] Correction de l'erreur de roulette de la souris dans les vues non zoomables. Le zoom n'aura maintenant lieu que si le pointeur de la souris est soit dans une fenêtre de vue supplémentaire, soit dans la fenêtre principale du jeu (Dribbel)
+*Corrigé: [ 1025836 ] Problème de valeur de la compagnie (de nouveau). Maintenant, la valeur de la compagnie affiche la bonne valeur, y compris TOUT votre argent
+*Corrigé: [ 1025836 ] Les valeurs de compagnies supérieures à int32 passaient en négatif
+*Corrigé: [ 1025836 ] Les ponts longs ont une valeur négative
+*Corrigé: [ 1026271 ] Dépôts de véhicules non transparents avec les bâtiments transparents
+
+==Liste des différents changements==
+*Ajout: Traduction en hollandais
+*Ajout: Algorithme A* généralisé
+*Ajout: Files généralisées (Fifo, Stack, InsSort, BinaryHeap)
+*Changement: 'Terraformation' devient 'Aménagement du terrain'
+*Changement: Modification des options par défaut (côté de la route, unités de distance, monnaie) pour les options les plus couramment utilisées
+*Changement: Désactiver 'Soumettre un rapport' et 'Afficher les détails' dans la fenêtre d'erreur de OpenTTD sous Windows. Actuellement sans intérêt, car aucun développeur n'a de connaissance en assembleur
+*Changement: Suppression de l'option no_train_service. À la place, vous pouvez régler l'intervalle de maintenance par défaut pour tout type de véhicule à 'désactivé'
+*Changement de code: Commentaires ajoutés au code (blathijs)
+*Changement de code: Rend le code de construction de pont plus lisible [ 996244 ] (follow)
