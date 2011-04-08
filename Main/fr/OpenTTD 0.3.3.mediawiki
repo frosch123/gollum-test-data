@@ -1,0 +1,113 @@
+[[Translation:Main/en/OpenTTD 0.3.3]]
+{{en/-}}
+{{fr/Livraison|prec=OpenTTD 0.3.2.1|suiv=OpenTTD 0.3.4|date=14/07/2004}}
+
+==Liste des nouvelles fonctionnalités==
+*Fonctionnalité: (MorphOS/AmigaOS) support du réseau
+*Fonctionnalité: générateur de nom de villes allemand amélioré
+*Fonctionnalité: signes de gare transparents
+*Fonctionnalité: affiche la cargaison totale par type de wagon dans la fenêtre de détail d'un train
+*Fonctionnalité: ponts sur les pentes
+*Fonctionnalité: ajout de la traduction en galicien (par Condex)
+*Fonctionnalité: Dynamite extra, permettant de supprimer les routes, ponts et tunnels appartenant à une ville, au prix d'une pénalité de la cote de popularité
+*Fonctionnalité: triche du bulldozer magique, vous laissant supprimer des industries, des bâtiments, des ponts et des tunnels inamovibles ou appartenant à une ville
+*Fonctionnalité: Activer le bouton 'supprimer' pour les stations
+*Fonctionnalité: IHM de triche (activée par crtl-alt-c). La partie se souvient si vous avez utilisé une triche
+*Fonctionnalité: tri de gare implémenté avec qsort()
+*Fonctionnalité: la liste des stations affiche le nombre de gares détenues par le joueur
+*Fonctionnalité: séparation de l'outil canal/écluse en deux outils, un pour construire des canaux, l'autre des écluses
+*Fonctionnalité: fait que le quartier général génère des passagers et du courrier
+*Fonctionnalité: affiche le nombre de maisons d'une ville dans la fenêtre d'aperçu d'une ville
+*Fonctionnalité: L'information sur le terrain affiche maintenant le type de signal
+*Fonctionnalité: marche arrière de train réaliste
+*Fonctionnalité: ajout du support des CPU 64 bits
+*Fonctionnalité: ajout du niveau de quantité d'eau "très bas", qui est par défaut dans le mode facile
+*Fonctionnalité: accélération réaliste activée; les trains doivent d'abord ralentir puis stopper avant de faire demi-tour
+*Fonctionnalité: (construction MorphOS) diverses petites améliorations pour rendre le jeu plus naturel
+*Fonctionnalité: Alt f bascule maintenant en plein écran (Alt entrée fonctionne toujours)
+*Fonctionnalité: (construction OSX) la commande q affiche la fenêtre de sortie, et la commande f ou entrée bascule en plein écran (Alt et Control fonctionnent également toujours)
+*Fonctionnalité: renouvelle automatique de pasky; renouvelle automatique les véhicules s'il est activé
+*Fonctionnalité: (incomplet) fenêtre d'historique des nouvelles
+*Fonctionnalité: taille de petite carte plus grande
+*Fonctionnalité: noms de ville autrichiens
+*Fonctionnalité: rembourser le plus possible de la dette
+*Fonctionnalité: ajout de la traduction polonaise (par tomek)
+*Fonctionnalité: ajout de la traduction danoise (par Gof.dk)
+*Fonctionnalité: chargeur spécial de grf de pasky. Vous devez les activer dans openttd.cfg en utilisant le paramètre [newgrf]
+*Fonctionnalité: changements d'économie lissés
+*Fonctionnalité: Aller au dépôt de style TTDPatch. Les dépôts maritimes et les hangars d'aviation peuvent être insérés également dans le calendrier
+*Fonctionnalité: possibilité d'ajouter les ordres "Maintenance si nécessaire" (le bouton "Chargement complet" est modifié en "Maintenance" après avoir sélectionné un ordre de dépôt)
+*Fonctionnalité: si un véhicule a des ordres de dépôt dans son agenda, la maintenance automatique est désactivée
+*Fonctionnalité: paramètre d'ajout pour que les hélicoptères soient entretenus automatiquement aux héliports
+*Fonctionnalité: barre d'outils centrée à l'écran
+*Fonctionnalité: tri de la liste de sauvegardes par date
+*Fonctionnalité: permet le défilement dans toutes les directions
+*Fonctionnalité: deux nouveaux aéroports de darkvater (métropolitain en 1980 et international en 1990)
+*Fonctionnalité: Retailler la fenêtre dans toutes les constructions SDL
+*Fonctionnalité: ajout du drapeau MIDI au makefile pour positionner un chemin personnalisé au lecteur MIDI
+
+==Liste des corrections de bogue==
+*Corrigé: supprimer et mettre à jour des voies sous un pont quand un train est sur le pont
+*Corrigé: le bouton de pause n'était pas synchronisé dans les parties en réseau
+*Corrigé: plantage causé par des résolutions d'écran invalides
+*Corrigé: l'IA ne peut pas construire de ponts tubulaires en 1950, etc. Les mêmes restrictions s'appliquent pour elle que pour les joueurs humains
+*Corrigé: les volumes en litre étaient x100 au lieu de x1000
+*Corrigé: la construction de ponts par les villes était perturbée quand elle était exécutée sans être d'abord testéet
+*Corrigé: meilleure découverte de trajet pour l'IA
+*Corrigé: l'IA construit moins de stations de bus en ville
+*Corrigé: Meilleure répartition des industries sur les cartes aléatoires
+*Corrigé: deux industries acceptant les mêmes biens ne peuvent jamais être proches l'une de l'autre
+*Corrigé: détruire un pont (sur l'eau ou un 'pont haut' avec un véhicule dessus)
+*Corrigé: Plantages du jeu en appuyant sur le bouton de construction ferroviaire
+*Corrigé: certains scénarios ont un max_railtype de 0
+*Corrigé: Corrompre la municipalité. Une tentative ratée est maintenant enregistrée dans la sauvegarde
+*Corrigé: 80% de charge CPU en avance rapide
+*Corrigé: Certaines pistes d'aéroport ont été traitées
+*Corrigé: problème de la mini-carte mineur
+*Corrigé: le défilement des stations triées échoue quand il n'y a pas assez de gares
+*Corrigé: sol de désert pour les dépôts dans le désert
+*Corrigé: les trains pouvaient circuler sur le mauvais type de voie sous les ponts
+*Corrigé: gels de capture d'écran
+*Corrigé: mauvais son avec les bateaux
+*Corrigé: la boutique de jouets fermait même si elle était livrée
+*Corrigé: caractères nordiques
+*Corrigé: restauration de l'intervalle de maintenance en rachetant un véhicule
+*Corrigé: plantage avec les cartes de plus de 8 bits > 8
+*Corrigé: OVNI écrasé à un arrêt de bus
+*Corrigé: actions de ville avec des lignes vides
+*Corrigé: train coincé avec la tête dans un dépôt et le bout dans un autre
+*Corrigé: Dispersion optimisée des tours de radio aléatoires
+*Corrigé: le sol sous les arbres n'est parfois pas couvert de neige
+*Corrigé: bouton d'avance rapide dans l'éditeur de scénario
+*Corrigé: le raccourci de capture d'écran ne fonctionne pas dans l'éditeur de scénario
+*Corrigé: permet de détruire un pont si un véhicule est dessous
+*Corrigé: plantage en chargeant un scénario
+*Corrigé: construit des voies sur l'eau
+*Corrigé: bouton d'avance rapide appuyé avec tab
+*Corrigé: les véhicules ne devenaient pas vieux
+*Corrigé: bogue financier avec certains scénarios originaux
+*Corrigé: 'Stoppé' est affiché quand un train s'arrête et que 'Demi-tour' est cliqué
+*Corrigé: bogue de CPU à 100%
+*Corrigé: plantage quand l'IA construit un aéroport
+*Corrigé: joue la mauvaise musique sur l'écran principal
+*Corrigé: l'inflation était trop haute avec un taux d'intérêt à 0
+*Corrigé: ne peut vendre quelque chose si l'argent est TROP négatif
+*Corrigé: bouton d'avance rapide réinitialise
+*Corrigé: bouton de "transformer un train" reste
+*Corrigé: active le défilement avant/arrière avec la souris
+*Corrigé: tous les trains en 1920
+*Corrigé: mauvaise vitesse de panne des hélicoptères
+*Corrigé: bogue d'affichage de la cargaison en attente dans la liste des gares
+*Corrigé: bogue pouvant permettre des rails sur des pentes raides
+*Corrigé: les dépôts ferroviaires et les points de passage ne sont pas submergés par l'eau
+*Corrigé: ajout de l'option en ligne de commande (-i) pour désactiver la vérification grf
+*Corrigé: bogue de signal [ 949929 ]
+
+==Liste des différents changements==
+*Changement: les scénarios ont maintenant l'extension de fichier .scn
+*Changement: le port du réseau par défaut passe de 12345 (trojan connu) à 3979
+*Changement: le croisement de tunnels est maintenant considéré comme une triche
+*Changement: permet aux hélicoptères de se poser de nouveau sur les petits aéroports
+*Changement: les captures d'écrans sont enregistrées sous PERSONAL_DIR (Unix)
+*Changement: les sauvegardes automatiques sont maintenant placées dans save/autosave
+*Changement: le répertoire de sauvegarde par défaut est /save sous Linux
