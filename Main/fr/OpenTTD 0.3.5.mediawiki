@@ -1,0 +1,94 @@
+[[Translation:Main/en/OpenTTD 0.3.5]]
+{{en/-}}
+{{fr/Livraison|prec=OpenTTD 0.3.4|suiv=OpenTTD 0.3.6|date=24/12/2004}}
+
+==Liste des nouvelles fonctionnalités==
+*Fonctionnalité: [Réseau] Nouveau réseau, très stable, beaucoup de nouvelles fonctionnalités
+*Fonctionnalité: [Réseau] liste de serveurs en jeu (avec les serveurs de jeu en ligne la rejoignant)
+*Fonctionnalité: [Réseau] liste de serveurs basée sur le web: http://servers.openttd.org/
+*Fonctionnalité: [Réseau] Ajout du support des serveurs dédiés
+*Fonctionnalité: [Réseau] Protection de triche en multijoueurs
+*Fonctionnalité: [Réseau] Paramétrage des options aussi synchronisé avec le serveur
+*Fonctionnalité: [Réseau] Discussion
+*Fonctionnalité: Paramètres de monnaie personnalisés
+*Fonctionnalité: Listes de véhicules par station
+*Fonctionnalité: Zones de captage de taille plus réaliste
+*Fonctionnalité: Fenêtres collantes
+*Fonctionnalité: Support encore meilleur des fichiers grf
+*Fonctionnalité: Implémentation d'un algorithme de chargement des véhicules amélioré
+*Fonctionnalité: Console encore plus avancée
+*Fonctionnalité: Le jeu compile sous BEOS_SERVER
+*Fonctionnalité: Le jeu compile sous OS/2 (pas de support en réseau)
+*Fonctionnalité: OpenTTD tourne avec les fichiers grf de la version DOS
+*Fonctionnalité: les machines en big-endian (Mac et MorphOS) peuvent charger des sauvegardes du TTD(Patch) original
+*Fonctionnalité: Beaucoup d'autres choses...
+
+==Liste des corrections de bogue==
+*Corrigé: [construction OSX] La musique est maintenant activée par défaut
+*Corrigé: [construction OSX] Fait que les erreurs ouvrent la console
+*Corrigé: [SDL] Ajoute un dialogue de confirmation en quittant la partie
+*Corrigé: Un train peut sortir et entrer dans le même dépôt en même temps, restant ainsi bloqué
+*Corrigé: Plantage en faisant une capture d'écran png avec une résolution bizarre (Tron)
+*Corrigé: Les répertoires sous *nix sont maintenant triés alphabétiquement en ordre croissant (Tron).
+*Corrigé: Ne considère pas une station routière comme une route quand la ville grossit
+*Corrigé: Les locomotives des autres climats n'apparaissent plus quand never_expire_vehicles est activé
+*Corrigé: Les options du jeu (comme le côté de conduite) ne sont pas prises du scénario quand on utilise la commande 'nouvelle partie'
+*Corrigé: Le vérificateur d'ordres détecte maintenant correctement une gare avec des installations invalides
+*Corrigé: IHM améliorée de diverses façons
+*Corrigé: Sauvegarder ou charger une carte ne met plus le jeu en pause
+*Corrigé: Certaines parties de pont n'étaient pas affichées en transparence, dans le mode transparent
+*Corrigé: Démarrer avec l'option -r permet toutes les résolutions (Tron)
+*Corrigé: La détermination de chemin ne voit désormais plus les rails avec un autre propriétaire comme un chemin possible
+*Corrigé: Impossible  de sélectionner un autre format de capture d'écran dans les options du jeu
+*Corrigé: Renommage de ville non souhaité
+*Corrigé: Les véhicules ralentissent sous les ponts si la voie est sur une fondation
+*Corrigé: Vous ne pouvez plus changer le nom d'un point de passage qui appartient à quelqu'un d'autre
+*Corrigé: [ 1090313 ] Les actions sont maintenant vendues quand une compagnie fait banqueroute
+*Corrigé: [ 1087701 ] Il n'est plus possible d'accidenter les trains des autres compagnies en construisant un dépôt près d'une gare (et même plus: les trains n'entrent plus sur des cases qui n'appartiennent pas à leur propriétaire)
+*Corrigé: [ 1087403 ] Les trains accidentés ne sont pas signalés comme ayant maintenant trop peu d'ordres
+*Corrigé: [ 1086375 ] La liste des ordres sauvegardés n'était pas fermée avec un OT_NOTHING,
+*Corrigé: [ 1085255 ] Les docks ont maintenant un bouton pour afficher la zone de captage
+*Corrigé: [ 1070274 ] Trains invisibles. Des macros bizarres et l'optimisation MSVC ne vont pas toujours ensemble (Tron)
+*Corrigé: [ 1068269 ] Le nombre de passagers et de courrier dans la fenêtre des offres de test exclusives est inversé
+*Corrigé: [ 1066504 ] La touche pause met le jeu en pause
+*Corrigé: [ 1066121 ] Réinitialise le nom de fichier après la suppression d'un fichier (dannys9)
+*Corrigé: [ 1066114 ] Code d'erreur dans win32.c Merci Shai
+*Corrigé: [ 1065247 ] Les fenêtres peuvent être placées derrière la barre d'outil
+*Corrigé: [ 1064742 ] Mauvaise chaîne de l'éditeur de menu de la carte
+*Corrigé: [ 1058809 ] Signale toujours une station de bus/poids-lourd comme infranchissable
+*Corrigé: [ 1053397 ] La fenêtre de transformation d'un train reste ouverte
+*Corrigé: [ 1050993 ] Bulle d'aide incorrecte dans la liste des véhicules routiers
+*Corrigé: [ 1048596 ] Les sons monorail et MagLev sont inversés
+*Corrigé: [ 1040119 ] Les wagons inondés dans les dépôts n'explosent plus constamment désormais
+*Corrigé: [ 1035303 ] Bogue sur l'abaissement des voies construites en pente
+*Corrigé: [ 1035066 ] 'Permettre d'aller au dépôt' désactivé, aucun point de passage dans les ordres
+*Corrigé: [ 1034318 ] Placement de signe et boîte de message bleu
+*Corrigé: [ 1033947 ] Mauvaise correspondance entre titres des musiques et chansons
+*Corrigé: [ 1030393 ] Certaines tailles d'écran plantent OTTD. Correction générale du bogue qui permet uniquement les résolutions multiples de 8 en hauteur et en largeur. Utilise aussi la résolution la plus proche possible en plein écran, si la taille de la fenêtre n'a pas une résolution valide (Tron)
+*Corrigé: [ 1030275 ] Les ordres 'Entretien à' sont ignorés après 2090. Après 2090, l'année est remise au 1 janvier 2090, donc la plupart du temps, le dernier entretien est dans le futur et aucun entretien n'est réalisé
+*Corrigé: [ 1029064 ] Construire une station se comporte bizarrement dans certaines situations rares
+*Corrigé: [ 1022227 ] Les bateaux peuvent décharger leur cargaison aux gares sans dock
+*Corrigé: [ 999669 ] Mauvais arbres (pays des jouets) dans les paysages de type subtropical
+*Corrigé: [ 993500 ] Erreur de rendu des ponts hauts
+*Corrigé: [ 991101 ] Un bouton désactivé ne clignote plus
+*Corrigé: [ 985925 ] Le drapeau de démarrage/arrêt dans les dépôts ferroviaires fonctionne toujours, quelle que soit la position de défilement horizontale
+*Corrigé: [ 985439 ] Rail sans propriétaire. Les trains peuvent croiser les voies concurrentes s'il y avait un passage à niveau dessus
+*Corrigé: [ 982611 ] Bogue de détermination de chemin; les trains aiment les tourniquets. Si un train doit faire son entretien, il cherchera maintenant 16 cases le long du trajet au lieu de 12, dans le style Manhattan (blathijs)
+*Corrigé: [ 967096 ] Plein écran. Nouveau bouton 'Plein écran' dans le menu 'Options du jeu' qui vous permet de passer en plein écran en cours de partie
+*Corrigé: [ 958098 ] Plus de blocage de signal de croisement route/rail quand un train fait demi-tour au mauvais moment (oui, notre bogue ouvert depuis le plus long temps a été enfin corrigé :) :) :))
+*Corrigé: [ 926105 ] Bogue Ctrl + d. Le bogue en attente depuis le plus longtemps a été corrigé \o/ 30/03/2004 (Tron)
+*Corrigé: Beaucoup d'autres choses...
+
+==Liste des divers changements==
+*Ajout: 'l' ouvre la barre d'outils d'aménagement du paysage de façon globale
+*Ajout: Fait parfois construire aux villes des rues en pente
+*Ajout: Page d'aide
+*Ajout: Nouveau graphisme de point de passage
+*Ajout: SHIFT+DEL détruit maintenant toutes les fenêtres non vitales (seules restent la barre de statut et la barre principale)
+*Ajout: Windows affiche maintenant la révision et l'information de version dans la barre de titre
+*Ajout: Les fenêtres se chevauchent
+*Changement: [construction OSX] Déplacement des répertoires data et lang dans OpenTTD. Cela concerne aussi le système de paquets, facilitant l'installation et la mise à jour
+*Langue: Ajout de l'espagnol
+*Langue: Ajout du catalan
+*Langue: Ajout de l'islandais
+*Langue: Mise à jour de la plupart des langues
