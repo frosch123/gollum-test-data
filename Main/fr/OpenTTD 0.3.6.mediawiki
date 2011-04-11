@@ -1,0 +1,143 @@
+[[Translation:Main/en/OpenTTD 0.3.6]]
+{{en/-}}
+{{fr/Livraison|prec=OpenTTD 0.3.5|suiv=OpenTTD 0.4.0|date=24/01/2005}}
+
+==Liste des nouvelles fonctionnalités==
+*Fonctionnalité: fenêtres retaillables. Toutes les fenêtres utiles ont déjà été rendues retaillables
+*Fonctionnalité: tableau des meilleurs scores (accessible depuis la fenêtre de difficulté) avec le top 5 des compagnies pour une difficulté donnée (choisir la difficulté dans le menu)
+*Fonctionnalité: score de fin de partie le 1 janvier 2051 où vous serez ajouté au tableau des meilleurs scores si vous avez accumulé assez de point. La partie est en pause pendant ce temps
+*Fonctionnalité: Placement autorail amélioré visuellement
+           En utilisant l'outil autorail, les portions de voie qui vont être construites sont surlignées.
+           Si une pièce est en rouge, cela indique que la combinaison pente/voie est impossible. Cela ne vous dit pas
+           si la construction de la ligne serait possible du fait d'autres obstacles, comme des maisons ou de l'eau.
+*Fonctionnalité: Remplacement automatique des véhicules (accessible depuis les listes de véhicules)
+           Cette fonctionnalité marche essentiellement comme le renouvellement automatique, mais  il vous donnera un nouveau
+           type au lieu du même. Une fois demandé, il remplacera automatiquement les véhicules lors de leur visite à un dépôt.
+           L'IHM pour paramétrer cela a été ajoutée à la fenêtre d'aperçu d'un véhicule (Bjarni)
+*Fonctionnalité: Un compteur pour indiquer combien de véhicules de chaque type vous possédez dans la fenêtre de remplacement automatique des véhicules (Bjarni)
+*Fonctionnalité: L'affichage de la population totale de la carte dans l'affichage de la ville
+*Fonctionnalité: [network] RCon (Connexion à distance)
+           Un serveur peut positionner: 'set rcon_pw <mot_de_passe>' pour activer rcon
+           Un client peut maintenant faire: 'rcon <mot_de_passe> "<commande>"'
+           !!Attention!!: ne donnez pas votre de mot de passe rcon à des personnes en qui vous n'avez pas confiance!
+*Fonctionnalité: raccourcis pour la barre d'outil des docks et des aéroports (voir [[Main/fr/Raccourcis clavier|Raccourcis clavier]])
+*Fonctionnalité: [Réseau] système de bannissement (surtout merci pour guru3) Un serveur peut maintenant bannir des personnes via ClientList en utilisant 'ban', 'unban', 'banlist'.
+*Fonctionnalité: [Réseau] un serveur peut maintenant mettre en pause ou arrêter la pause d'une partie via la console. Utilisez 'pause' et 'unpause'
+*Fonctionnalité: [OS/2] le support de OS/2 est maintenant terminé (corrections pour le réseau, le choix de fichiers, l'entrée au clavier et bien d'autres erreurs mineures)
+*Fonctionnalité: [SDL] Affiche le numéro de révision dans le titre de la fenêtre
+*Fonctionnalité: [Unix] Vérifie quelle version de gcc est présente et ne positionne que les options de compilation disponibles
+*Fonctionnalité: [Windows] CTRL+V (Coller) fonctionne maintenant dans toutes les zones d'édition. Cela comprend 'Ajouter un serveur', la discussion, etc.
+*Fonctionnalité: [Windows] le serveur dédié fonctionne maintenant bien
+*Fonctionnalité: Ajout des raccourcis clavier pour la fenêtre des ordres
+*Fonctionnalité: Les options de transformation des avions ont été restreintes aux valeurs "sûres"
+*Fonctionnalité: permet de fixer les valeurs de production des industries productrices de matières premières dans l'éditeur
+*Fonctionnalité: support de la console pour charger des cartes. Utilisez 'load', 'list_files' et 'goto_dir' pour naviguer et charger des parties
+*Fonctionnalité: Affiche le port du serveur dans la fenêtre d'information de la partie multijoueurs
+*Fonctionnalité: dynamite dans la barre d'outils d'aménagement du paysage (raccourci 'D')
+*Fonctionnalité: IHM de gestion du réseau améliorée avec un point vert si le revenu d'une compagnie est positif (sinon, point rouge), et icône de verrou si la compagnie est protégée par mot de passe
+*Fonctionnalité: Fais que OTTD compile sur Zeta
+*Fonctionnalité: vérification du hachage MD5 pour les fichiers TTD  (les fichiers TTD originaux sont maintenant vérifiés avec une somme MD5 pour déterminer quelle version des fichiers grf est utilisée et pour avertir sur d'éventuelles corruptions de fichier. Merci à ledow pour l'ajout original)
+*Fonctionnalité: Les nouvelles compagnies reçoivent une protection de 5 ans contre l'achat
+*Fonctionnalité: noms de ville norvégiens (Simen Graaten)
+*Fonctionnalité: la vérification des ordres n'est exécutée que pour UN véhicule dans un système de partage d'ordres
+*Fonctionnalité: Les avions de passagers ignorent maintenant la quantité de courrier pour les options "Chargement complet par un seul type"
+*Fonctionnalité: place l'acceptation d'industries multiples proches dans le mode éditeur si les options correspondantes sont activées
+*Fonctionnalité: population dans le libellé des villes (option avancée)
+*Fonctionnalité: liste des crédits défilante (par ordre alphabétique)
+*Fonctionnalité: La fenêtre de train montre maintenant le nombre de véhicules par ligne (mpetrov)
+*Fonctionnalité: [ 1039061 ] Noms de ville suisses (vulvulune)
+*Fonctionnalité: [ 1090950 ] Ajout des résolutions 16:10, surtout pour les portables (doode)
+*Fonctionnalité: [ 1098254 ] Autoriose/interdit les actions. Ajoute une option avancée pour permettre d'acheter/vendre des actions (Hackykid)
+
+==Liste des corrections de bogue==
+*Corrigé: [ 1031451 ] Affiche la zone de captage en achetant un signe
+*Corrigé: [ 1040119 ] Inondation et wagons dans un dépôt
+*Corrigé: [ 1050990 ] Acheter des trains est quelquefois mal pris en compte
+*Corrigé: [ 1084074 ] Messages d'information différés
+*Corrigé: [ 1090495 ] Les pentes sous les ponts hauts n'étaient pas inondées
+*Corrigé: [ 1092473 ] Dans l'éditeur de scénario, quand les arbres sont placés aléatoirement, ils ne plus placés sur les terres des fermes
+*Corrigé: [ 1092661 ] À la création, la barre de défilement de la liste des serveurs n'était pas mise à jour
+*Corrigé: [ 1092707 ] placer des rochers dans l'éditeur de scénario. Vous pouvez placer des rochers sur des arbres et vice-versa
+*Corrigé: [ 1093200 ] Côté de conduite dans les nouvelles parties. Fixer le côté de conduite est possible pendant une partie jusqu'à ce que quelqu'un achète des véhicules routiers. Dans les parties en réseau, seul le serveur peut changer cela
+*Corrigé: [ 1093466 ] plus d'erreurs d'affichage avec de nombreuses cartes dans la liste de scénario lors de la création du serveur
+*Corrigé: [ 1093485 ] Des rochers disparaissent dans l'éditeur de scénario
+*Corrigé: [ 1094092 ] Barres d'outil accessibles au clavier en mode spectateur
+*Corrigé: [ 1095020 ] Quand toutes les stations dans une liste d'ordre d'avion sont démolies, l'avion finit par s'écraser (à cours de carburant)
+*Corrigé: [ 1095143 ] La liste des serveurs permet maintenant d'enregistrer aussi le port
+*Corrigé: [ 1098553 ] Plantage quand tous les véhicules d'une liste de véhicules par gare a été supprimée
+*Corrigé: [ 1099101 ] l'option de l'année de démarrage sort en dépassement. Limiter l'année entre 1920-2090
+*Corrigé: [ 1099225 ] Bogue des listes de véhicules non mise à jour lors de l'acquisition (merci tamlin et mpetrov)
+*Corrigé: [ 1099451 ] Plantages du jeu après le clic sur Renommer (voir aussi bogue 10992). Il n'y avait pas de vérification pour un véhicule non sélectionné
+*Corrigé: [ 1100736 ] mauvaise bulle d'aide pour le bouton de placement de désert
+*Corrigé: [ 1100767 ] avance rapide dans le menu principal
+*Corrigé: [ 1101179 ] Plantage en générant un terrain avec la fenêtre des industries ouverte. Cela se produit aussi pour les villes et la fenêtre d'information sur le terrain
+*Corrigé: [ 1101906 ] Dépassement de texte dans la fenêtre de Configuration avancée
+*Corrigé: [ 1101963 ] console dans le serveur dédié
+*Corrigé: [ 1102275 ] Plantage de jeu en cliquant deux fois "nouveau visage" ou "couleurs de compagnie"
+*Corrigé: [ 1102776 ], [ 1099535 ] Les listes de véhicule sont maintenant redessinées quand un véhicule arrive dans un dépôt. Les listes de véhicule spécifiques aux gares sont maintenant redessinées quotidiennement également (pas seulement la liste maître)
+*Corrigé: [ 1103113 ] changement de la taille de fonte. Le serveur dédié n'avait pas de filtrage de code, 'tab' pouvait conduire à de plus grosses fontes
+*Corrigé: [ 1103187 ] Messages de vérification des ordres maintenant validés avant affichage
+*Corrigé: [ 1103301 ] Voies ferrées en pente non submergées
+*Corrigé: [ 1104350 ] Les trains accidentés n'initient plus le message de véhicule perdu
+*Corrigé: [ 110452 ] Sur les voies horizontales/verticales, vous êtes aussi facturé pour construire/supprimer des signaux sur la voix parallèle de la même case
+*Corrigé: [ 1104969 ] Les messages d'avion dans un hangar sont maintenant revalidés avant affichage
+*Corrigé: [ 1105112 ] Les trains détruits bloquent les croisements
+*Corrigé: [ 1105281 ] la mise à jour de voir plante quand un train est sous un pont
+*Corrigé: [ 1105959 ] Les trains ne pensent plus qu'ils ont une pente quand ils sortent d'un tunnel
+*Corrigé: [ 1105963 ] Les bouées ne peuvent maintenant être supprimées que si aucun bateau ne les a dans son agenda (cela rend les bouées plus utiles dans les parties multijoueurs, car elles ne peuvent pas être supprimées par les autres joueurs si elles sont utilisées)
+*Corrigé: [ 1106354 ] La touche de graphe était confuse
+*Corrigé: [ 1106930 ] placer des signaux avec un tirage de 2x1 est traité comme placer un seul signal
+*Corrigé: [ 1107350 ] la console ignore parfois le caractère retour
+*Corrigé: [ 1108008 ] Bogue de création de scénario; les véhicules sont de la bonne année quand le scénario est sauvegardé
+*Corrigé: [ 1092474 ] petite boîte rouge dans l'éditeur de scénario
+*Corrigé: [ 1099197 ] faire défiler la console plante parfois toute la partie
+*Corrigé: [ 1099209 ] Zone de captage avec les gares glisser&déposer
+*Corrigé: [Réseau] 'kick 1' plante les serveurs dédiés
+*Corrigé: [Réseau] Un serveur ne plante plus quand un client envoie une DoCommand invalide, mais détruit plutôt le client
+*Corrigé: [Réseau] Ajout de la protection de paquets. Ce n'est plus un client ou un serveur
+*Corrigé: [Réseau] Bogue dans le système de lien. L'avertissement échouait sur les systèmes avec plus d'une adresse IP, et que server_bind était active sur l'une d'elles
+*Corrigé: [Réseau] Désactivation de 'money-cheat' (comprendre: le bogue qui donnait à des gens beaucoup d'argent)
+*Corrigé: [SDL] maintenant, le binaire ne se lie jamais à SDL si DEDICATED est positionné
+*Corrigé: [Windows] quelquefois, la roulette de la souris était désactivée sur Windows en utilisant SDL; la réactive
+*Corrigé: un client modifié pouvait essayer de remplacer un véhicule pour un ID de véhicule incorrect et plantait le serveur
+*Corrigé: les listes de remplacement automatique des véhicules sont maintenant redessinées quand un nouveau véhicule devient disponible
+*Corrigé: L'IHM d'achat d'un véhicule montre maintenant correctement les CV plus grands que 32000
+*Corrigé: Correction de l'alias de console, de la fonctionnalité load_game et du chargement
+*Corrigé: message d'erreur correct en essayant de construire une gare ferroviaire sur une station de bus/camion/etc.
+*Corrigé: Boutons d'aménagement du paysage corrects pour les barres d'outil monorail et MagLev
+*Corrigé: un serveur dédié écrit aussi dans le fichier de trace s'il est actif
+*Corrigé: Le paysage de désert ne plante plus
+*Corrigé: L'expansion des villes est un peu plus agressive
+*Corrigé: finalement, zommer ou dézoomer fonctionne toujours
+*Corrigé: correction d'un bogue de discussion (à partir d'un certain moment, personne ne pouvait parler)
+*Corrigé: poids corrigé des trains à double motrice et avec cela, l'accélération (maintenant, les maglev niveau 4 peuvent atteindre leur vitesse maximale et sont plus rapides que les niveaux 3)
+*Corrigé: Les trains pleinement chargés ne sont plus "perdus" après un moment (Hackykid)
+*Corrigé: Les graphes n'étaient pas mis à jour correctement quand un graphe avec une certaine sélection était déjà ouvert et qu'une autre fenêtre de graphe était ouverte
+*Corrigé: en multijoueurs, la liste des clients ne peut être ouverte qu'une fois
+*Corrigé: Le prêt ne compte pas dans la valeur d'une compagnie
+*Corrigé: bogue difficile où on pouvait construire une station PAR-DESSUS une autre
+*Corrigé: Pas de plantage en créant une partie avec les nouveaux noms de ville anglais
+*Corrigé: maintenant, les hélicoptères utiliseront un hangar dans l'agenda pour être remplacés, même s'ils sont réglés pour n'y être qu'entretenus. Comme les hélicoptères sont entretenus aux hélipads, ils n'iront là que qu'ils ont besoin d'être remplacés ou renouvelés. Ils utiliseront aussi un hangar dans un aéroport de l'agenda si nécessaire (Bjarni)
+*Corrigé: seul un serveur peut renommer une ville dans une partie multijoueurs
+*Corrigé: les vraiment très vieilles cartes se chargent de nouveau (Darkvater / TrueLight)
+*Corrigé: Le bouton de changement d'un véhicule est maintenant désactivé quand la capacité de cargaison vaut 0
+*Corrigé: problème serveur où quelques noms de compagnie deviennent faux
+*Corrigé: Les listes de véhicules maritimes sont maintenant bien redessinées
+*Corrigé: un signal reste rouge si une voie est supprimée (Darkvater / Tron / TrueLight)
+*Corrigé: résout un problème d'IA relatif aux ordres
+*Corrigé: démarrer openttd avec -g <nom_invalide> se comporte désormais normalement
+*Corrigé: Le coût d'un renouvellement automatique n'était pas toujours envoyé au bon joueur ;)
+*Corrigé: Renouveler automatiquement des locomotives de trains à motrices multiples coût maintenant le montant correct. C'était avant deux fois le prix correct
+*Corrigé: l'ascenseur dans l'IHM du réseau (liste des serveurs) se met maintenant à jour en défilant (HackyKid)
+*Corrigé: Les accidents de train ne peuvent plus désynchroniser le jeu
+*Corrigé: En détruisant un ordre, le prochain pointeur n'était pas nettoyé, amenant un comportement anormal de temps à autres
+*Corrigé: Vous pouvez maintenant aussi détruire automatiquement les serveurs trouvés en appuyant sur "del"
+*Corrigé: Vous ne pouvez désormais plus détruire des ponts de n'importe quel type de souterrain quand il y a un véhicule dessus
+*Corrigé: votre prêt est maintenant soustrait de la valeur de votre compagnie
+*Corrigé: Beaucoup d'autres choses...
+
+==Liste des différents changements==
+*Ajout: Un tout nouvel ensemble d'icônes
+*Changement: Le renouvellement automatique est maintenant une option côté client plutôt qu'une option de la partie
+*Changement: Supprimer 'fermer TOUTES les fenêtres' de la barre d'outil, car shilft+del le fait
+*Langue: Mise à jour de toutes les langues
