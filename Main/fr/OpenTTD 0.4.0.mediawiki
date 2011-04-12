@@ -1,0 +1,83 @@
+[[Translation:Main/en/OpenTTD 0.4.0]]
+{{en/-}}
+{{fr/Livraison|prec=OpenTTD 0.3.6|suiv=OpenTTD 0.4.0.1|date=15/05/2005}}
+
+==Liste des nouvelles fonctionnalités==
+*Fonctionnalité: Cartes plus grandes. Amusez-vous à jouer en 2048x2048 (64 fois plus grand que d'habitude!)
+*Fonctionnalité: Nouvelle accélération réaliste; devrait être meilleure. Inclut de plus grandes pénalités pour les virages serrés et des limites de vitesse dans les dépôts/gares
+*Fonctionnalité: Il est maintenant possible de construire des stations routières multiples (jusqu'à 8) sur une simple station (multi-bus)
+*Fonctionnalité: Nouvelle détermination de chemin (NPF). Supporte les trains/routes et bateaux basé sur 1*. Plus de détermination de chemin dans le coma
+*Fonctionnalité: Villes/industries/gares/véhicules/signes/ordres/tout dynamique, jusqu'à 64k
+*Fonctionnalité: Tout nouveau chargeur ancien, pour que OpenTTD soit de nouveau compatible avec TTD(Patch). Correct aussi pour l'endian
+*Fonctionnalité: Support NewGRF encore meilleur; sauf pour les rappels, tout fonctionne (ok, presque)
+*Fonctionnalité: Multijoueurs amélioré. Davantage d'options de console, moins de désynchronisation et plus d'amusement
+*Fonctionnalité: OpenTTD protégé de l'interférence des clients piratés, donc il devrait être sûr à jouer à nouveau
+*Fonctionnalité: [ 1093261 ] Sauvegarge des critères de tri de véhicule pour chaque type
+*Fonctionnalité: [ 1107690 ] IHM des ordres retaillable
+*Fonctionnalité: [ 1166978 ] Concentre le clavier sur les boîtes de saisie dans le menu multijoueurs
+*Fonctionnalité: [ 1174313 ] raccourcis du terrain non fonctionnels dans l'éditeur de scénario (D,Q,W,E,R,T,Y,U fltr)
+*Fonctionnalité: Réécriture complète de la console et nouvelles commandes comme ls, save, load, help, etc.
+*Fonctionnalité: Les signes sont affichés avec la couleur du joueur qui les a créés
+*Fonctionnalité: Ajoute une option de triche pour permettre la production d'industries de matières premières en cours de partie
+*Fonctionnalité: L'IHM de remplacement de voie se souvient du type de voie choisi dans le menu déroulant
+*Fonctionnalité: Remplacement automatique amélioré
+*Fonctionnalité: beaucoup d'autres petites choses :D
+
+==Liste des corrections de bogue==
+*Corrigé: [ 1108618 ] Un faux message d'erreur était affiché en essayant de
+*Corrigé: [ 1110407 ] Le jeu ne plante plus quand un fichier NewGRF n'existe pas
+*Corrigé: [ 1112469 ] Nettoyage du terrain pour rien en déplaçant le QG
+*Corrigé: [ 1113037 ] plantage en accédant aux hauts scores dans l'éditeur; cela est maintenant impossible
+*Corrigé: [ 1113399 ] Le jeu ne plante plus quand on fait un clic-droit sur un bouton de Chargement  complet désactivé
+*Corrigé: [ 1114100 ] Le serveur dédié démarre de nouveau
+*Corrigé: [ 1114950 ] Plantage du jeu quelquefois quand il n'y a pas d'industrie sur la carte
+*Corrigé: [ 1115200 ] Dans le menu principal, en démarrant une nouvelle partie alors que le dialogue de chargement de jeu est ouvert, OpenTTD se plaint
+*Corrigé: [ 1117538 ] les ordres sans arrêt ne sont plus sautés accidentellement
+*Corrigé: [ 1116619 ] Génère le bon type de fumée pour les trains diésel
+*Corrigé: [ 1119308 ] Les variables de passagers/courrier maxi sont maintenant sur 32 bits
+*Corrigé: [ 1109400 ] Meilleur test si une chaîne contient une commande de console
+*Corrigé: [ 1108637 ] 'Jouer un scénario' charge maintenant les options du jeu et la difficulté, 'Charger une partie' démarre la partie avec les valeurs sélectionnées par l'utilisateur
+*Corrigé: [ 1143587 ] les wagons des NewGRF peuvent de nouveau être transformés
+*Corrigé: [ 1117730 ] Les valeurs de production des banques de climat tempéré peuvent maintenant être modifiées
+*Corrigé: [ 1118810 ] openttd: ship_cmd.c:642 ... Assertion échouée. Correspondance de carte corrigée dans ship_cmd.c (était implciitement ok avant les plus grandes cartes)
+*Corrigé: [ 1117327 ] Erreur d'assertion sur bannissement. Qaund une compagnie est nettoyée, toutes ses fenêtres doivent être fermées. Pour les listes globales de véhicule, l'index de numéro de station -1 n'était pas pris en compte
+*Corrigé: [ 1114261 ] Accélérer en appuyant sur ALT+TAB (Windows)
+*Corrigé: [ 1149403 ] Les signaux disparaissent après avoir entré du texte et appuyé sur Enttrée! Les signaux dans l'éditeur de scénario n'ont pas de propriétaire, donc l'ignorer
+*Corrigé: [ 1149766 ] Case de pont unique dans le scénario de ville volcanique. Certains ponts ont toujours l'ancienne case unique de pont, mais cela est dû à une croissance de ville incorrecte en lien avec DC_AUTO. Scénario corrigé.
+*Corrigé: [ 1119147 ] Arrêt de la corruption mémoire au démarrage plantant en utilisant MSVC6 optimisé. Contournement de MSVC6 car il est trop stupide, pour son propre bien
+*Corrigé: [ 1101874 ] Le serveur dédié accepte maintenant '-g' (chargement de jeu) en paramètre
+*Corrigé: [ 1155696 ] Plante avec les trémas allemands dans les noms de ville
+*Corrigé: [ 1158618 ] Erreur de segmentation en chargeant une partie, vérification de tableau hors limite
+*Corrigé: [ 1149487 ] La sauvegarde automatique ignore les paramètres
+*Corrigé: [ 1024703 ] Accès infini à A:\ (win32). Ajout [1171208]. Ne demande les disquettes que si l'utilisateur change de répertoire; suppression aussi de la boîte d'erreur OSX qui s'affichait sur certaines machines
+*Corrigé: [ 1095110 ] Outils de création de lac et de désert tirables
+*Corrigé: [ 1172878 ] Bouton "Aller au dépôt" pour les trains: cliquer deux fois passe  à l'ordre suivant
+*Corrigé: [ 1146215 ] La puissance des moteurs n'était pas mise à jour avec le remplacement automatique; il force maintenant une mise à jour du cache
+*Corrigé: [ 1173690 ] Chemin affiché comme "C:\\" dans la fenêtre de sauvegarde/chargement,uniquement en win32
+*Corrigé: [ 1179892 ] l'assertion de suppression de route par glisser&déposer échoue
+*Corrigé: [ 1174237 ] Prêt maximal toujours en euros; utiliser _opt_ptr au lieu de _opt
+*Corrigé: [ 1184201 ] L'IA ordonne à ses véhicules d'utilise run arrêt de camions d'un concurrent
+*Corrigé: [ 1188986 ] La chanson dans l'écran de menu principal devrait boucler en se terminant
+*Corrigé: [ 1188777 ] Sprite #5125 inexistant (pré-signal). Le fichier grf DOS trgi.grf a 6 sprites de moins que celui de Windows
+*Corrigé: [ 1190625 ] Changer la taille de la carte plante le jeu en surbrillance
+*Corrigé: [ 1190896 1184378 ] [NPF] Les trains ignorent leur type de voie (mono, maglev)
+*Corrigé: [ 1202115 ] Cliquer la liste des bateaux à une bouée appelle GetPlayer().
+*Corrigé: [ 1187613 ] Pas de QG présent pour les concurrents: désactiver le bouton 'Voir le QG'
+*Corrigé: [ 1193048 ] Un pré-signal reste rouge quand il n'y a qu'un signal de sortie
+*Corrigé: [ 1185176 ] Un train dans un tunnel n'est pas bien détecté par le code des signaux
+*Corrigé: [newgrf] les rotors des hélicoptères personnalisés sont affichés correctement dans la fenêtre de hangar
+*Corrigé: L'éditeur de scénario peut maintenant gérer mieux les routes faites à la main (essayez de construire un modèle de ville avant de la placer fonctionne finalement bien)
+*Corrigé: [Newgrf] les hélicoptères sont correctement reconnus
+*Corrigé: [remplacement automatique] s'assurer que les avions ne montrent que des avions dans l'IHM de remplacement, et que les hélicoptères n'affichent que les hélicoptères
+*Corrigé: (Contournement?) plantage en générant des cartes tropicales
+*Corrigé: [remplacement automatique] Les tricheurs ne peuvent plus utiliser le remplacement automatique pour obtenir des véhicules qui ne sont pas encore inventés
+*Corrigé: [remplacement automatique] Correction d'un bogue stupide introduit en r1687, faisant planter si quelqu'un essayait de remplacer automatiquement n'importe quoi d'autre qu'un avion
+*Corrigé: étendre les gares ferroviaires au-delà de la taille maximale
+*Corrigé: [remplacement automatique] correction d'une faute de frappe qui empêchait les avions remplacés automatiquement d'aller automatiquement à un hangar
+*Corrigé: Les clients piratés ne peuvent plus être utilisés pour construire des véhicules non encore disponibles
+*Corrigé: Le profit minimal des véhicules était mal calculé pour les taux de performance
+*Corrigé: une station où vous ne faites que décharger n'est plus mauvaise pour votre cote de ville
+*Corrigé: Plantage dans l'éditeur de scénario en aménageant le terrain hors de la carte
+*Corrigé: Le jeu plante si vous passez en plein écran avec le bouton 'Plein écran' en choisissant une résolution de la liste déroulante qui n'est plus valide
+*Corrigé: Le défilement avec les touches fléchées est maintenant plus doux, et défile exactement dans la direction de la case si haut et gauche sont appuyés, par exemple
+*Corrigé: beaucoup d'autres corrections non listées ici
