@@ -1,0 +1,25 @@
+[[Translation:Main/en/OpenTTD 0.4.0.1]]
+{{en/-}}
+{{fr/Livraison|prec=OpenTTD 0.4.0|suiv=OpenTTD 0.4.5|date=21/05/2005}}
+
+==Liste des nouvelles fonctionnalités==
+*Fonctionnalité: Ajoute la commande 'nettoyage' et Ctrl+L pour vider la fenêtre de la console
+*Fonctionnalité: ajoute la possibilité d'imprimer le niveau de débogage courant
+
+==Liste des corrections de bogue==
+*Corrigé: [MacOSX] chemin par défaut du lecteur midi sous mac est maintenant de nouveau correct
+*Corrigé: Makefile mise à jour pour FreeBSD
+*Corrigé: Débordement de texte dans la fenêtre À propos
+*Corrigé: Erreur de lien en compilant comme serveur dédié
+*Corrigé: Ne pas exécuter les commandes vides
+*Corrigé: Rend l'icône de OpenTTD jolie sous Win2K et précédents
+*Corrigé: NetworkUDPRemoveAdvertise n'était pas tout à fait correct
+*Corrigé: Les signes en multijoueurs ne fonctionnent pas
+*Corrigé: Désynchronisations de serveur dédié
+*Corrigé: [ 1197216 ] Erreur: !id de chaîne invalide 0 dans GetString, plantage de fin de partie sur serveur dédié
+*Corrigé: Ne permet pas de renommer quelque chose en rien
+*Corrigé: L'installeur Windows détruit les fichiers du cache des sprites en désinstallant
+*Corrigé: La fenêtre de dépôt n'est pas redessinée quand une locomotive sans train est vendue
+*Corrigé: Ne pas faire défiler le jeu avec les touches fléchées quand la fenêtre de discussion est ouverte
+*Corrigé: Enlever l'avertissement de construction de la version quand les assertions ne sont plus actives
+*Corrigé: Il était possible d'ouvrir plus d'une fenêtre d'arbre
