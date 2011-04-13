@@ -1,0 +1,79 @@
+[[Translation:Main/en/OpenTTD 0.4.8]]
+{{en/-}}
+{{fr/Livraison|prec=OpenTTD 0.4.7|suiv=OpenTTD 0.5.0|date=16/08/2006}}
+
+Révision de livraison: 5863
+
+==Nouvelles fonctionnalités==
+*Fonctionnalité: Ajout des noms de ville italiens car nous avons une traduction italienne officielle
+*Fonctionnalité: Ajout des noms de ville turcs car nous avons une traduction turque officielle
+*Fonctionnalité: Ajout d'un script de configuration entièrement optionnel qui englobe le lourd makefile.config
+
+==Liste des corrections de bogue==
+*Changement de code: Vérifier la présence des fichiers de musique dans le répertoire gm/. Cela devrait aussi résoudre certaines consommations de CPU à 100% pour des utilisateurs
+*Changement de code: [NPF] Désactive totalement NPF pour les bateaux car il détruit toute performance (blathijs). Seulement pour la branche 0.4/ et 0.4.8.
+*Corrigé: Un bateau dans un dépôt doit être arrêté avant d'être cloné
+*Corrigé: Après un changement de répertoire dans 'Jouer un scénario', les scénarios par défaut n'étaient pas affichés dans 'Nouvelle partie' 0.4.8-RC2 (31/07/2006)
+*Corrigé: Certaines combinaisons de train plantaient quand elles étaient déplacées dans le dépôt
+*Corrigé: Signes fléchés inversés dans les entêtes de colonne de la liste multijoueurs pour le tri par nom
+*Corrigé: Le bouton de changement de production d'industrie ne fonctionne pas pour les passagers des plateformes pétrolières
+*Corrigé: Les hélicoptères sont arrêtés au dépôt après un  renouvellement/remplacement automatique
+*Corrigé: MorphOS plante quand vous montez d'un niveau depuis le niveau racine
+*Corrigé: Les sockets UDP étaient utilisées même si la disponibilité du réseau était mise à false
+*Corrigé: Plantage en essayant de construire un type de véhicule qui est mis à un maximum de 0
+*Corrigé: Redessine l'écran en inversant le côté des signaux dans la fenêtre d'options
+*Corrigé: Il était possible de creuser dans un tunnel si certaines combinaisons de voie étaient dessus
+*Corrigé: Un QG ne peut être inondé que pour sa case nord; les trois autres sont immunisées à l'eau
+*Corrigé: Corrigé divers problèmes d'affichage concernant les fondations. Les maisons, la propriété (rail/route/pont/etc.) et le curseur sont maintenant bien alignés
+*Corrigé: Empêche de modifier une case de route quand un travail sur les routes est en cours. Cela règle certains problèmes d'affichage comme "contourner" l'excavation en ajoutant/enlevant des morceaux de route ou en supprimant la portion concernée
+*Corrigé: N'avertit le serveur que de votre adresse IP/réseau (par ex. pas 127.0.0.1) et utilise les bonnes adresses de diffusion
+*Corrigé: l'option '-f' n'est pas valide sur Windows, donc ne pas la montrer dans l'aide
+*Corrigé: [remplacement automatique] Les trains remplacés automatiquement peuvent laisser tous les wagons au dépôt, dans certains cas
+*Corrigé: La mauvaise adresse IP pouvait voir son bannissement annulé, c.à.d. que 'unban 1.2.3.42' pouvait amener à ne plus bannir 1.2.3.4
+*Corrigé: Il était possible de convertir le type de voie d'un pont quand un train est dessus
+*Corrigé: Il était possible de renommer des signes ou des points de passage avec la fenêtre de discussion
+*Corrigé: Être plus strict sur ce que signifie, pour un avion, d'être dans un hangar: ce n'est pas simplement être arrêté sur une case de hangar
+*Corrigé: Si un véhicule routier est dans une case de dépôt routier et arrêté, cela ne veut pas dire qu'il est dans le dépôt. Utiliser le bon test pour cela
+*Corrigé: [IA] L'IA doit envoyer un avion au hangar s'il n'est pas dans un hangar _ou_ n'est pas arrêté, et non pas quand ce n'est pas un hangar _et_ qu'il n'est pas arrêté
+*Corrigé: [IA] L'IA utilisait les informations de la mauvaise industrie en calculant la quantité de marchandises transportée
+*Corrigé: [NTP] Corrige NTP sur les ponts: ne vérifie pas le type de rail sur un pont
+*Corrigé: Texte tronqué dans les listes déroulantes pour arrêter les débordements de texte
+*Corrigé: "Demi-tour erroné de train aux points de passage". En allant à l'ordre suivant d'un train, ne pas considérer le demi-tour si le dernier ordre était un point de passage
+*Corrigé: Démarrer un nouveau scénario ne lie pas les paramètres de difficulté, mais les récupère du scénario lui-même. Ce mode concerne 'Jouer un scénario'
+*Corrigé: Les véhicules sur une case en pente sous un pont sont affectés par la limite de vitesse du pont
+*Corrigé: Problème avec la détermination de chemin d'un train sur les passages à niveau
+*Corrigé: [IA] L'IA n'attend plut pour construire des signaux sous les ponts
+*Corrigé: Rafraîchit la fenêtre de construction de véhicules (si elle est ouverte) en convertissant un dépôt ferroviaire
+*Corrigé: Plantage en triant une liste de serveurs vide
+*Corrigé: Le bouton de la fenêtre de construction d'arbre mis par défaut à un bouton poussoir à l'ouverture, quand aucun type d'arbre n'est sélectionné
+*Corrigé: Le jeu plante quand le clonage/remplacement automatique atteint la limite de trains
+*Corrigé: [NTP] vérification correcte des types de voie sur des cases non entièrement de voie
+*Corrigé: Les trains pouvaient entrer sur certains cases de voie en pente sous les ponts avec le mauvais type de voie
+*Corrigé: S'assure que la mémoire de la carte est nettoyée après son allocation. Cela corrige des déserts aléatoires se produisant parfois
+*Corrigé: Certains comportements étranges avec la sélection de case près des ponts
+*Corrigé: Ne permet pas à PF d'entrer dans un dépôt ferroviaire depuis l'arrière (mises à jour des signaux)
+*Corrigé: Le jeu ne plante plus quand le dernier véhicule desservant une station est détruit
+*Corrigé: Réinitialise le dernier type de voie construit en démarrant une nouvelle partie
+*Corrigé: Les véhicules clonés ont le même intervalle d'entretien que le véhicule d'origine
+*Corrigé: Le jeu ne fait plus d'erreur quand "Beaucoup de villes aléatoires" est sélectionné dans l'éditeur de scénario
+*Corrigé: Bogue obscur de tirage des routes. La commande de construction de route ne renvoyait pas le bon message d'erreur sur pente invalide lors d'une construction de route
+*Corrigé: La banque tempérée n'apparaîtra plus (en cours de partie) dans un paysage tropical. Ce bogue provient du jeu originel.
+*Corrigé: Spécifie la commande de console 'stopall' comme commande de débogage
+*Corrigé: Corrige un problème qui faisait que DeliverGoodsToIndustry ne fonctionnait pas comme attendu
+*Corrigé: Les bateaux et les avions peuvent maintenant aussi être utilisés comme fournisseurs
+*Corrigé: Quand un train à motrices multiples est vendu, les pointeurs n'étaient pas mis à jour correctement, causant des plantages/déconnexions épisodiques
+*Corrigé: Les nouvelles plantations provoquent maintenant la bonne information "... en cours de plantation ..."
+*Corrigé: Les noms de ville danois étaient enregistrés/chargés comme suisses
+*Corrigé: Supprimer les routes aux croisements se faisant sans vérification du propriétaire
+*Corrigé: [remplacement automatique] Corrige le dessin de la liste des trains pour les locomotives obsolètes
+*Corrigé: Des clients/serveurs malicieux pouvaient planter le jeu
+*Corrigé: [remplacement automatique] permet le remplacement de wagons même si la locomotive ne peut pas l'être
+*Corrigé: Certaines opérations impliquant les trains dans un dépôt pouvaient provoquer un plantage
+*Corrigé: [remplacement automatique] le coût de transformation d'un nouveau véhicule s'ajoute au coût de l'animation (le joueur payait toujours pour cela, ce n'était juste pas affiché)
+*Corrigé: [OSX] Problèmes de sauvegarde/chargement résolu pour les binaires universels de OSX 10.3.9
+*Corrigé: Les serveurs illégaux dans la liste du serveur maître pouvaient faire revenir les clients au menu principal, rendant le multijoueurs impossible
+*Corrigé: [NPF] Ne marque pas les cases en déboguant en multijoueurs, car cela cause des désynchronisations
+*Corrigé: Plusieurs corrections à la fenêtre de discussion, avec surtout un dépassement de capacité colmaté
+
+==Voir aussi==
+[[Main/fr/Nouvelles fonctionnalités depuis 0.4.8|Nouvelles fonctionnalités depuis 0.4.8]]
