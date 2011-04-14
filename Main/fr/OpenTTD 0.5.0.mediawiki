@@ -1,0 +1,272 @@
+[[Translation:Main/en/OpenTTD 0.5.0]]
+{{fr/Livraison|prec=OpenTTD 0.4.8|suiv=OpenTTD 0.5.1|date=27/02/2007}}
+
+==Informations générales de la version==
+*Version RC1, 21/12/2006
+*Version RC2, 31/12/2006
+*Version RC3, 08/01/2007
+*Version RC4, 18/01/2007
+*Version RC5, 08/02/2007
+*Version finale, 27/02/2007
+
+Vous pouvez récupérer les étapes depuis [http://sourceforge.net/project/showfiles.php?group_id=103924 SourceForge] et les sources depuis svn://svn.openttd.org/tags/0.5.0(-RCn)
+
+==Nouvelles fonctionnalités==
+* Corrections générales et améliorations au format NewGRF de TTDPatch, les plus notables étant les nouvelles gares, les nouveaux sons, davantage de rappels et I18n
+* Fonctionnalité: Affiche la compatibilité NewGRF des parties en réseau; vert pour compatibilité complète, jaune pour NewGRFs manquants et rouge pour révision invalide (r7505)
+* Fonctionnalité: Charge une liste de NewGRFs depuis la configuration (dans la section [newgrf-static]) qui devraient toujours être chargés (r7490)
+* Fonctionnalité: Double la longueur des indicateurs de cargaison et de cote dans la fenêtre de liste des gares, pour une meilleure visibilité (r7466)
+* Fonctionnalité: fenêtre de paramétrage de NewGRF et navigateur qui permet les modifications et la visualisation des paramètres NewGRF dans le jeu ou dans le menu principal (r7357)
+* Fonctionnalité: Support de l'enregistrement des paramètres NewGRF avec les sauvegardes (r7348)
+* Fonctionnalité: Ajoute le support pour le (dé)chargement progressif des véhicules (r7326)
+* Fonctionnalité: Ajoute l'option de trains de fret, qui est un multiplicateur du poids de la cargaison pour les trains de fret, pour simuler les trains lourds plus longs (r7269)
+* Fonctionnalité: support UNICODE/UTF8, avec l'utilisation (optionnelle) de fontes rendues par Freetype au lieu de sprites. Cela signifie un support complet de Unicode (entrée, rendu, fichiers) et une internationalisation grandement améliorée pour les langues non latines (utf8) (r7182)
+* Fonctionnalité: Ajout des monnaies slovaque, brésilienne et slovène [SF 1243657, 1171147; FS#131] (r7160, r5964)
+* Fonctionnalité: Permet aux villes de construire sur des arbres, dans l'éditeur de scénario [FS#396] (r7152)
+* Fonctionnalité: Permet de construire dessus des types de voie compatibles, par ex. voies normales et électrifiées. En construisant une ligne électrifiée, la ligne normale est mise à jour pour vous (avec un coût) (r7106)
+* Fonctionnalité: Positionnement additionnel pour les longues listes déroulantes avec support de l'ascenseur si la liste ne tient pas toute (r7086)
+* Fonctionnalité: [win32] Se souvient de la taille de la fenêtre entre les redémarrages, en quittant le mode plein écran (r7061)
+* Fonctionnalité: Augmente le tampon des messages de discussion; les messages plus longs que la fenêtre graphique seront coupés vers une nouvelle ligne (r6956)
+* Fonctionnalité: Permet de taper un texte plus long que ce qui est visible pour une zone de saisie; elle défilera correctement, désormais (r6954)
+* Fonctionnalité: Permet aux spectateurs de parler à une équipe (r6933)
+* Fonctionnalité: Autorise " pour être en symboles de console. Les échappe avec \. par ex. \" (r6875)
+* Fonctionnalité: Modifie la fonctionnalité de la fenêtre de discussion. SHIFT+ENTER (SHIFT+T) envoie un message à tous les joueurs, CTRL+ENTER (CTRL+T) envoie un message à tous les coéquipiers, et ENTER (T) est personnalisable (r6824)
+* Fonctionnalité: Le message (Un train est) perdu est maintenant généré immédiatement quand la détermination de chemin ne trouve pas de trajet (r6800)
+* Fonctionnalité: Ajoute un outil de mesure qui affichera les dimensions et les différences de hauteur des divers outils tirables (r6758)
+* Fonctionnalité: Ajout des options de tri à la fenêtre de construction des avions et des trains (r6708)
+* Fonctionnalité: Les listes de dépôt sont maintenant triées, donc le véhicule 1 est toujours le premier et ainsi de suite (r6652)
+* Fonctionnalité: Possibilité de mettre en pause un serveur s'il n'y a pas assez de joueurs connectés. Le paramètre pour cela est 'min_players' (r6628)
+* Fonctionnalité: Possibilité pour les serveurs d'exécuter un script juste après qu'un client s'est connecté, par ex. un MOTD, etc. (r6625)
+* Fonctionnalité: Ajoute les commandes de transformation aux ordres des véhicules (peut seulement être fait dans les ordres d'aller au dépôt) (r6624)
+* Fonctionnalité: Supporte les sous-types de cargaison dans la fenêtre de transformation. Celle-ci a été modifiée pour supporter le retaillage et le défilement (r6601)
+* Fonctionnalité: Les fenêtres de dépôt et de liste de véhicule ont été revues un peu avec plus de boutons, pour inclure 'Autoremplacer tout' (instantanément), 'Vendre tout', 'Démarrer tout' et 'Arrêter tout' (r6542, r6552, r6515)
+* Fonctionnalité: Utiliser Aller au dépôt avec une sélection de contrôles différente modifiera désormais la maintenance/arrêt dans le drapeau du dépôt, au lieu d'annuler l'ordre d'aller au dépôt (r6295)
+* Fonctionnalité: En détectant automatiquement la langue, essaye de correspondre d'abord à langue+territoire (par ex. de_CH), puis simplement la langue (ex. de), et enfin par défaut en_GB (r6290)
+* Fonctionnalité: Ajoute un bouton "Aller au dépôt" pour diverses fenêtres de liste de véhicules (r6229, r6246)
+* Fonctionnalité: Enregistre le maximum de compagnies/clients/spectateurs dans le fichier de configuration (r6170)
+* Fonctionnalité: La barre de statut des véhicules affichera la chaîne d'entête dans différentes couleurs pour discerner visuellement les différences entre un entretien et un arrêt forcé (r6165, r6414)
+* Fonctionnalité: Cliquer sur le contrôle Aller au dépôt fera maintenant que le véhicule fera son entretien de suite au lieu de s'arrêter au dépôt (r6165)
+* Fonctionnalité: Liste des véhicules avec les mêmes ordres partagés, accessible depuis la fenêtre des ordres d'un véhicule donné (r6161)
+* Fonctionnalité: Ajout de -s (source) et -d (destination) à strgen pour spécifier les chemins des fichiers d'entrée et de sortie (r6089)
+* Fonctionnalité: Après avoir enlevé une ferme, ses terres agricoles sont aussi supprimées (avec le temps) [FS#82]
+* Fonctionnalité: Cliquer deux fois sur un bouton d'emplacement dans la petite carte centre sur votre position; cliquer deux fois centre votre vue [FS#54] (r6040)
+* Fonctionnalité: Modifie le format de date original en un format 32 bits basé sur l'année 0. La plus grande date est l'année 5000000AC (r5999)
+* Fonctionnalité: Auto-complétion dans la fenêtre de discussion. Elle complète les noms de joueurs et de villes (dans cet ordre) en utilisant <tab> (r5968)
+* Fonctionnalité: Générateur de noms de ville catalans [FS#261] (r5965)
+* Fonctionnalité: Possibilité de générer des scénarios en important des cartes d'altitude. Elles peuvent être au format PNG ou BMP
+* Fonctionnalité: Nouveau générateur de paysage (optionnel) basé sur TerraGenesis Perlin bruité avec IHM, barre de progression et options de réglage fin (r5946)
+* Fonctionnalité: Filtre pour les boîtes de texte pour ne permettre la saisie que de certains modèles (comme des nombres uniquement) (r5944)
+* Fonctionnalité: [win32] Se souvenir de l'état maximisé de la fenêtre de jeu et le restaurer au démarrage [FS#234] (r5874)
+* Fonctionnalité: Ajoute une icône à l'exécutable openttd SDL (r5872)
+* Fonctionnalité: Permet aussi les rails verticaux et horizontaux sur les pentes raides (r5864)
+* Fonctionnalité: Permet la construction de (certains) rails, routes et rampes de pont sur des cases en pente raide (r5833)
+* Fonctionnalité: Remplacement d'une locomotive sans capacité de cargaison par une avec une capacité de cargaison fera du remplacement automatique une transformation du véhicule pour transporter le type de cargaison du dernier wagon du train (r5465)
+* Fonctionnalité: [OSX] Les macs avec pavé tactile qui supporte le défilement à deux doigts peuvent maintenant utiliser cette fonctionnalité pour se déplacer sur la carte (r5460)
+* Fonctionnalité: Permet de construire des canaux au niveau de la mer, en utilisant ctrl pour passer d'un canal à une case de pleine eau. Cela permet de construire des voies d'eau non élevées au niveau de la mer (utile en multijoueurs) et des digues pour les zones basses (r5403)
+* Fonctionnalité: Ajoute quatre nouveaux [[Main/fr/Aéroports|aéroports]], 2 pour les avions et 2 pour les hélicoptères (r5346)
+* Fonctionnalité: Implémente un défilement horizontal doux des dépôts et des listes de véhicule, pour les trains (r5046)
+* Fonctionnalité: Ajoute une nouvelle détermination de chemin, YAPF. A des performances grandement améliorées et, mieux, une détermination de chemin entièrement configurable (yapf) (r4987)
+* Fonctionnalité: Ajoute une nouvelle commande de console, "players", qui liste les joueurs actuels avec leurs statistiques de base [FS#150] (r4828)
+* Fonctionnalité: La vue de liste des stations peut maintenant être triée et filtrée (par type de cargaison en attente et par services) (r4822)
+* Fonctionnalité: L'analyseur de listes d'entier accepte maintenant un caractère d'espace comme un séparateur d'éléments, avec la virgule, dans openttd.cfg (r4490)
+* Fonctionnalité: Ajout le support des [[Main/fr/Lignes ferroviaires|lignes]] électrifiées comme un type de voie séparée. Les trains électriques ne rouleront pas sur des voies non électrifiées, sauf si l'option avancée est activée (elrails) (r4150)
+* Fonctionnalité: Un nouveau système multi unités de mesure multi langues (r4126)
+* Fonctionnalité: Ajoute la bonne conversion OPENTTD <> LOCALCODE en utilisant iconv. Les sauvegardes avec des caractères spéciaux seront lisibles dans le système de fichier (r4105)
+* Fonctionnalité: Efface la souris quand elle quitte la fenêtre et la redessine quand elle y entre (r4075, r4083)
+* Fonctionnalité: Il est maintenant possible de changer une unique unité dans un train (CTRL+Click sur l'unité dans le dépôt) (r3944)
+* Fonctionnalité: Supprime les informations sur les véhicules quand elles sont périmées (r3757)
+* Fonctionnalité: Sauvegarde les options avancées avec la sauvegarde pour que vous ayez le même comportement en chargeant la partie sur une autre machine/installation (r3726)
+* Fonctionnalité: Ajout de 2cc (deux [[Main/fr/Couleur de compagnie|couleurs de compagnie]]) comme modèles de livrée. Cela remplace la fenêtre de sélection des couleurs originale (r3717, r6455)
+* Fonctionnalité: [OSX] Ajout du support des binaires triples (binaires optimisés pour G3, G5 et i686) (r3674)
+* Fonctionnalité: Permet le remplacement automatique des wagons de train (r3535)
+* Fonctionnalité: Permet le tri des listes de véhicule par modèle ou par valeur (r3528)
+* Fonctionnalité: Permet à la vue de détail des trains d'être retaillée (r3521)
+
+==Liste des corrections de bogue==
+* Changement de code: Permet les commentaires de style standard dans le fichier .ini (Wink) (r6972)
+* Changement de code: Envoie les messages du serveur au format NETWORK_ACTION_SERVER_MESSAGE; ils sont donc de la couleur générale, comme les autres messages du serveur. Les spectateurs parlent en gris (r6932)
+* Changement de code: Change un peu le format des messages texte. Seul le nom de l'envoyeur et du destinataire sont dans la couleur de l'envoyeur, le vrai message est en blanc. Cela devrait améliorer la lisibilité (r6932)
+* Changement de code: Ajoute un contrôle de somme MD5 à nos fichiers de données, et avertit s'ils ne correspondent pas (r6921)
+* Changement de code: Ajout de vérifications de limite strictes dans le système de formatage des chaînes, pour éviter un dépassement de capacité éventuel (r6884)
+* Changement de code: Fait que les menus déroulants tiennent entièrement dans la barre d'outils du haut (r6745)
+* Changement de code: Détermine la longueur de la liste déroulante de la barre d'outils principale en fonction de la longueur des chaînes de cette liste (r6744)
+* Changement de code: Quand les véhicules n'expirent jamais, ils restent à leur fiabilité maximale au lieu de la plus basse, pour les rendre utiles même s'ils sont âgés (r6681)
+* Changement de code: Affiche une capacité plus correcte des wagons articulés dans la liste d'achat de train (r6650)
+* Changement de code: En affichant les bulles  d'aide, positionne correctement celles-ci en prenant en compte les dimensions de la fenêtre et du curseur (r6405)
+* Changement de code: Accélère un peu les curseurs animés pour qu'ils bougent au moins une fois par instant (r6367)
+* Changement de code: Supprime le trieur de véhicules "non triés", car il est totalement inutile (r6270)
+* Changement de code: Supprime le support de MSVC6. Le compilateur était trop stupide et nécessitait trop de contournements. Merci de passer à mingw ou VC2005++ express (r5286)
+* Changement de code: Permet une option dans Makefile.config pour désactiver les processus dans OpenTTD (r5978)
+* Changement de code: [win32] Ajoute une cible x64 native pour les fichiers de projet VS2005 (r5813)
+* Changement de code: [win32] La fenêtre d'exception montrait la dernière date de modification de win32.c plutôt que la dernière date de compilation (r5801)
+* Changement de code: Ajoute les attributs de propriété aux canaux et aux écluses. Cela les rend plus utiles dans les parties multijoueurs, car seul le propriétaire peut les détruire. Cela n'affecte pas leur utilisation (r5084)
+* Changement de code: [OSX] Shark (l'outil de profilage de Xcode) peut maintenant reporter l'utilisation du CPU aux lignes (r3611)
+* Changement de code: Réécriture du système d'assignation des emplacements d'arrêt multiple. Plus accommodant avec les ressources, plusieurs améliorations à l'assignation des emplacements (r3730, r4259)
+* Changement de code: Suppression complète du paramètre obsolète -p (remplacé par -n) (r3508)
+* Corrigé: Les cotes de ville n'étaient pas réinitialisés quand une compagnie faisait faillite (r7433)
+* Corrigé: Avec l'accélération réaliste, la garantie d'une force de freinage minimale est appliquée. Cela assure que le train s'arrêtera en montant (r7425)
+* Corrigé: Modification d'une accélération de "démarrage" résultant en ce que seule une petite partie de la puissance était appliquée; cela entraînait un délai perceptible avant que les trains ne bougent (r7421)
+* Corrigé: Longue attente pour que les fenêtres de message apparaissent. Montre immédiatement un nouveau message présent si aucune fenêtre d'information n'est ouverte, ou vient d'être fermée, au lieu d'attendre l'expiration du délai de la nouvelle en cours [FS*255] (r7402)
+* Corrigé: Supprimer un train dans un dépôt avec le remplacement automatique échoue [FS*418] (r7385)
+* Corrigé: Ne pas mettre à jour les images de véhicule en faisant tourner un train en rond. Pendant ce temps, le train est séparé en parties qui peuvent aboutir à l'utilisation d'images incorrectes (r7378)
+* Corrigé: OpenTTD peut planter dans certaines circonstances quand un véhicule est remplacé automatiquement et qu'une fenêtre d'information est ouverte [FS*332] (r7368)
+* Corrigé: Erreur de segmentation dans le pilote vidéo SDL quand on passe en plein écran et qu'il n'y a  pas de résolutions convenables (r7332)
+* Corrigé: En chargeant une partie depuis un serveur dédié, le joueur local est mis à 0, autorisant théoriquement le serveur dédié à jouer aussi (r7312)
+* Corrigé: les variables TTDPatch sont en endian faible (r7282)
+* Corrigé: Affiche toujours l'excavation des travaux routiers, même au zoom minimal, ou quand "tous les détails" est désactivé (r7240)
+* Corrigé: L'allocation et la destruction de fenêtres se mélangent avec le pointeur de fenêtre réel, pouvant planter OpenTTD [FS*350, SF*1560913] (r7205)
+* Corrigé: Rappel non exécutée pour les non joueurs, selon les changements d'option dans le multijoueurs pour tous les clients; problème de désynchronisation possible (r7190)
+* Corrigé: Le signe de gare (et les coordonnées de la station de base) ne se déplace pas avec la gare quand elle est déplacée en marchant [FS*388] (r7169)
+* Corrigé: La mini-carte place mal les véhicules, parfois [FS*402] (r7166)
+* Corrigé: Certains événements de souris peuvent se perdre avec une forte charge CPU; gère l'entrée de la souris aussitôt au lieu d'attendre la boucle du jeu [FS*221, SF1168820] (r7157)
+* Corrigé: Certains événements clavier peuvent se perdre sous forte charge CPU; les gère sur place plutôt que via des variables globales magiques [FS*279] (r7153)
+* Corrigé: L'option "Position de la barre d'outils principale" n'est pas respectée en démarrant une nouvelle partie ou en chargeant une sauvegarde [FS*172] (r7130)
+* Corrigé: Synchronise les paramètres de renouvellement de véhicule d'un joueur, en rejoignant une partie multijoueurs (r7126)
+* Corrigé: Plusieurs erreurs/problèmes d'affichage liés au multijoueurs et à la banqueroute (surtout côté serveur), et des informations de compagnie non mises à jour (r7125)
+* Corrigé: Cloner un véhicule qui a été transformé se fait au prix des coûts d'entretien, non des nouveaux véhicules [FS*371] (r7115)
+* Corrigé: Ne pas laisser les bateaux entrer dans des cases d'eau partielle sous les ponts; ils voyageraient sur la terre... (r7110)
+* Corrigé: l'IA essaye de construire des routes depuis l'arrière ou le côté d'un arrêt routier ou un dépôt (r7069)
+* Corrigé: Zoomer en arrière près des bords de la carte échouait car le nouveau centre pouvait se trouver hors de la carte [FS*317] (r7047)
+* Corrigé: Le bouton 'Aller à' dans la fenêtre des ordres restait appuyé avec tous les autres boutons quand un ordre existant était modifié [FS*311] (r7046)
+* Corrigé: Les ponts et tunnels de scénario ne pouvaient pas être démolis [FS*200] (r7028)
+* Corrigé: Appuyer sur F1 dans l'éditeur de scénario ne fonctionne pas (r7023)
+* Corrigé: Protection correcte contre la vue d'informations sensibles de la compagnie par des joueurs invalides (par ex. des spectateurs), pouvant conduire à des plantages [FS*292] (r7022)
+* Corrigé: Dans la fenêtre de remplacement de véhicule, la liste de véhicules à gauche n'était pas dessinée quand un véhicule n'était pas sélectionné (r7009)
+* Corrigé: Plantage à la fin du jeu quand la compagnie du serveur fait faillite [FS*369] (r7008)
+* Corrigé: Le panneau de liste des actions dans la fenêtre de la municipalité passe sous la barre de défilement (r6885)
+* Corrigé: Appuyer sur ^D (EOF) dans une console dédiée la fait répéter la dernière commande, au lieu de ne rien faire (r6835)
+* Corrigé: Ne pas ajouter de coût d'entretien aux parties articulées d'un véhicule (r6765)
+* Corrigé: Si un rail n'est pas disponible, ne pas montrer la barre d'outils, même avec le raccourci 'A' (r6740)
+* Corrigé: Appliquer le profit de transfert virtuel uniquement s'il y a un ordre de transfert, plutôt que pour tout ordre de déchargement (r6738)
+* Corrigé: Désactive les boutons de la barre d'outils principale montrant les listes déroulantes de compagnie quand il n'y en a aucune [FS*356] (r6695)
+* Corrigé: Le remplacement automatique peut maintenant utiliser l'argent de la vente de l'ancien véhicule pour acheter le nouveau (r6640)
+* Corrigé: Un trou en boucle qui permet aux docks d'être construits quelque soit la cote de la municipalité (r6477)
+* Corrigé: [win32] Le serveur dédié pouvait écraser le tampon d'entrée du clavier avant qu'il ne soit traité par OpenTTD (r6449)
+* Corrigé: Réinitialise l'emplacement du dernier son car cet emplacement peut être en dehors de la carte quand vous en chargez une autre (plus petite) (r6437)
+* Corrigé: Affiche un message d'erreur en exécutant 'scrollto x' avec x < 0 ou >= MapSize() au lieu de le signaler plus tard [FS*340] (r6435)
+* Corrigé: La zone de captage d'une gare persiste après avoir changé les outils [FS*136] (r6368)
+* Corrigé: Ne réinitialise pas le curseur d'action actuel en centrant sur un dépôt/hangar (r6360)
+* Corrigé: Les ordres d'aller au dépôt des avions peuvent être faussement supprimés quand un dépôt routier ou ferroviaire est supprimé (r6355)
+* Corrigé: À cause de certaines erreurs, la largeur ou la hauteur d'un rectangle de coupure peut devenir 0, ce qui n'est pas important. Cela devrait corriger une assertion tr_s rare et difficile à attraper dans GfxFillRect() (r6351)
+* Corrigé: Ne permet jamais de faire défiler la carte dans le menu principal (les paramètres de défilement n'étaient pas réinitialisés en passant au menu principal) (r6037)
+* Corrigé: Ne jamais mettre le booléen I-am-a-thread à true DANS le processus, les machines à double cœur pourraient basculer [FS*78] (r5977)
+* Corrigé: La croissance d'une ville supprimait des maisons en construction pour faire de la place pour les routes; comportement non souhaité [FS*49] (r5970)
+* Corrigé: Les véhicules routiers clonés ne sont pas transformés vers la bonne cargaison [FS*275] (r5917)
+* Corrigé: Correction d'erreurs dans la fonction FindNearestHangar dans aircraft_cmd.c [FS*235] (r5914)
+* Corrigé: Ordre de tri pour la quantité produite et le pourcentage transporté reversé dans la liste des industries (r5912)
+* Corrigé: Changer les paramètres d'option via la console n'acceptait pas on/off ou true/false [FS*170] (r5903)
+* Corrigé: Calculs de prix différents pour les tunnels selon le point de départ [FS*253] (r5901)
+* Corrigé: Aller au dépôt ne fonctionne pas toujours pour les véhicules routiers [FS*249] (r5898)
+* Corrigé: Un bus essayant de desservir un dépôt d'une autre compagnie [SF1519167] (r5897)
+* Corrigé: Si les véhicules tombent en panne et que l'entretien est désactivé, les véhicules ne peuvent pas entrer dans un dépôt; maintenant, ils iront rapidement à un dépôt s'ils doivent être remplacés (r5888)
+* Corrigé: Suppression incomplète de la propriété d'un joueur par manque d'argent [FS*273] (r5886)
+* Corrigé: Les boîtes < > dans la configuration des options ne se grisent pas quand elles atteignent leur limite (r5714)
+* Corrigé: Vérifie le fichier de configuration pour des valeurs valides et les restreint à leur minimum/maximum dans le jeu [SF1288024] (r3726)
+* Corrigé: Supprime la restriction que la commande de console 'patch' ne peut fonctionner que pour les parties en réseau [SF1366446] (r3723)
+
+==Changements en RC2 depuis RC1==
+Général: Suppression du support pour OSX antérieur à 10.3.9. Mettez à jour ou utilisez la version 0.4.8 (compatible avec OSX 10.2) 
+
+* Changement de code: Réduction drastique de l'utilisation CPU dans certains cas (IA utilisant CheckStationSpreadOut()) (r7585) 
+* Corrigé: Bogue interne en mettant à jour la table animated_tiles à cause de désynchronisations entre des machines (d'endian différent) en multijoueurs (r7631) 
+* Corrigé: La mise à jour des signaux est propagée sur des types de voie incompatibles et, sous certaines circonstances, sur des tunnels avec des voies au-dessus (r7620) 
+* Corrigé: Supprime l'option de barre d'outil de transformation du paysage de la barre d'outils de construction routière dans l'éditeur de scénario [FS#473] (r7586) 
+* Corrigé: Le serveur pouvait, dans certains cas, dire à un client qu'il mettait trop de temps pour se synchroniser, s'il attendait pour rejoindre (r7566) 
+* Corrigé: La suppression de villes dans l'éditeur de scénario ne supprimait pas leurs subventions, pouvant provoquer des plantages [FS#468] (r7563) 
+* Corrigé: L'IHM (d'options) et l'état interne n'étaient pas en accord sur les paramètres de renouvellement automatique [FS#431] (r7561) 
+* Corrigé: Impossible de créer une nouvelle compagnie si plus de 8 clients étaient connectés, même si toutes les 8 compagnies n'étaient pas utilisées (r7560) 
+* Corrigé: Cliquer sur 'Chargement complet' pouvait, dans certains cas, modifier l'ordre du dépôt actuel [FS#456] (r7559) 
+* Corrigé: Ne pas attendre qu'un véhicule accidenté soit enlevé pour commencer à charger les autres [FS#464] (r7558) 
+* Corrigé: corrections de compilation et installation sur MorhpOS (r7548) 
+* Corrigé: Le coût de suppression d'une gare ferroviaire était calculé sur la zone occupée, non sur le nombre de cases réel de la gare (r7547)
+
+===Liste des corrections ayant affecté RC1 ou non présentes en 0.4.8 et corrigées en RC2===
+
+* Fonctionnalité: nouvelles gares: ajout du support des variables 45 et 65
+* Corrigé: [win32] x64 ne compile pas (mauvais paramètres de fichier projet)
+* Corrigé: make install installe openttd.32.bmp pour que la fenêtre SDL ait l'icône OpenTTD
+* Corrigé: problèmes de libfontconfig sur OSX corrigés (est maintenant lié statiquement)
+* Corrigé: certaines changements dans MorphOS pour que OpenTTD compile, empaqueté
+* Corrigé: erreur de segmentation en cliquant sur afficher les fichiers NewGRF du serveur en multijoueurs
+* Corrigé: la section 0xE ne désactive pas le grf actuel si GRFID est celui du grf actuellement actif
+* Corrigé: 'screenshot no_con' ne supprime pas la console de la capture d'écran
+* Corrigé: [win32] window_maximize n'est pas toujours mémorisé (API windows boguée)
+* Corrigé: mauvaises limites de fenêtres calculées pour les chaînes avec {SETX}, causant des menus déroulants trop larges
+* Corrigé: 'Aller au dépôt' ne fonctionne pas pour les hélicoptères allant à un aéroport sans dépôt
+* Corrigé: [yapf] supprime le message 'le train est perdu' si la détermination de chemin se termine au premier signal bidirectionnel rouge
+
+==Changements en RC3 depuis RC2==
+
+* Changement de code: Ajout de la langue lituanienne comme traduction officielle (r7806) 
+* Corrigé: Le script de configuration ne fonctionne pas avec dash, un shell compatible avec sh [FS#485] (r7893) 
+* Corrigé: [OSX] control + Entrée ne passe plus en plein écran, interférant avec la discussion par équipe (r7886) 
+* Corrigé: Décalage des locomotives/wagons par demi-longueur dans la fenêtre de détail; corrige les débordements d'affichage (r7864) 
+* Corrigé: [OSX] Supprime un message de débogage incorrect sur les fichiers grf manquants (r7766) 
+* Corrigé: [SDL] Quelquefois, ALT-TAB peut déclencher l'avance rapide (r7727) 
+
+===Liste des corrections affectant RC2 ou non présentes en 0.4.8 et corrigées en RC3===
+
+* Corrigé: Ne met à jour que les signaux et le cache YAPF sur une action DC_EXEC pour la construction de pont (r7936) 
+* Corrigé: mauvaise marque GRF de TTDPatch mise pour le chargement progressif (r7930) 
+* Corrigé: La fenêtre de nouvelles pouvait planter à cause d'éléments d'information déplacés alors qu'une fenêtre d'information était toujours ouverte (r7823, r7861) 
+* Corrigé: la fenêtre de construction de gare ferroviaire n'était pas bien mise à jour après modification destation_spread (r7812) 
+* Corrigé: Construire un aéroport dont la taille dépasse la taille maximale de station produit un avertissement (r7810) 
+* Corrigé: l'analyse de sécurité NewGRF corrige l'action E (permet unifont.grf) et l'action 0 prop D (pont) (r7795, r7831) 
+* Corrigé: Le message de débogage de l'utilisation de sprite affiche le sprite de démarrage, non pas l'actuel, et ne le fait que pendant l'activation (r7760). 
+* Corrigé: erreur de décalage de 1 dans le calcul date en YMD pour les quatre premières années d'un siècle non divisible par 400 (r7731) 
+* Corrigé: Mauvaise propagation de signal au bout des tunnels, une propagation sur le mauvais type de voie est encore possible (non corrigé) (r7716, r7717, r7718) 
+* Corrigé: OpenTTD ne compile pas sans réseau activé (code de synchronisation newgrf) (r7692) 
+* Corrigé: Action 7 de NewGRF, condition de vérification de GRF 10 n'ignore pas les IDs de GRF inconnus (r7354) 
+* Corrigé: Saut aléatoire en avant et arrière pour une nouvelle graine aléatoire (r7182)
+
+==Changements en RC4 depuis RC3==
+
+* Fonctionnalité: Augmente la taille de tampon des sprites à 2Mo; cela améliorera les performances dans les parties utilisant les fichiers newgrf (r8218)
+* Fonctionnalité: support de OS/2 avec GCC (Watcom est supprimé) (r8042)
+* Changement de code: Ajout des langues japonaise et slovène comme traduction officielle, et séparation du norvégien en Bokmal et Nynorsk (r7987, r8084, r8069)
+* Changement de code: Affiche les messages d'erreur sur nos fichiers de données comme fenêtre surgissante, ou sur stderr si la console est disponible (et pas stdout) (r8013, r8134)
+* Changement de code: Modifie l'ordre de la liste de réseau; les serveurs compatibles avec des fichiers grf absents sont sous les serveurs totalement compatibles, et non en bas (r8118)
+* Corrigé: Renvoie la bonne valeur d'erreur quand une sauvegarde hors processus plante, évitant au serveur d'envoyer des fichiers de taille 0 (r8171)
+* Corrigé: Le client réseau plante quand un serveur envoie une sauvegarde de taille 0 [FS#556] (r8167)
+* Corrigé: Plusieurs corrections de désynchronisation (mise à jour d'arrêt routier incorrecte, bogues de remplacement automatique) [FS#551] (r8137, r8147, r8157)
+* Corrigé: Quelques événements catastrophiques corrigés: l'avion de combat tire de la bonne position, le sous-marin bouge de nouveau (r8140, r8158)
+* Corrigé: messages d'avertissement "dépassement de mémoire des sprites" à cause d'hypothèses incorrectes sur la mémoire requise pour les sprites (r8133)
+* Corrigé: Les bouées sont maintenant construites et numérotées 1..9, non pas 9..1 [FS#538] (r8123)
+* Corrigé: Cliquer sur davantage de nouvelles boucle proprement en arrière dans l'historique des nouvelles, et n'affiche pas le premier élément en double s'il est déjà ouvert (r8049)
+* Corrigé: Plantage en supprimant une ville dans l'éditeur de scénario alors que la fenêtre d'interrogation est ouverte pour une des cases de la ville (r8030)
+* Corrigé: Le dépassement des tics système n'était pas bien géré, provoquant une non-réponse éventuelle entre serveur et client (r8028)
+* Corrigé: La pause automatique interfère avec 'pause_on_join setting' en multijoueurs quand <Shift> est pressé [FS#486] (r8027)
+* Corrigé: Prendre de la cargaison en route fera aussi que le profit virtuel sera déduit pour les trains également (r8026)
+* Corrigé: Accès en lecture hors limites sur le tableau _clients (inoffensif) (r7984) 
+
+===Liste des corrections affectant RC3 ou non présentes en 0.4.8 et corrigées en RC4===
+
+* Changement de code: les fichiers de solution MSVC feront de OpenTTD LE projet de démarrage (r8112)
+* Changement de code: Ajoute la possibilité de charger des sauvegardes sans que les grf correspondent. Permet de charger SEULEMENT les parties dont les GRFIDs correspondent (et pas les MD5SUM); les absents sont toujorus interdits, car ils peuvent planter OpenTTD (r8106)
+* Changement de code: La liste des stations se souvient maintenant des paramètres de tri (r8065)
+* Corrigé: Applique le décalage de type de voie aux graphismes de gare si aucune station personnalisée n'est utilisée; montre le graphisme maglev pour les gares maglev [FS#557] (r8186)
+* Corrigé: ParseConnectionstring n'utilise pas le bon paramètre de port si un joueur l'a aussi spécifié (r8168)
+* Corrigé: N'avertit pas en supprimant des doublons en supprimant des grf non statiques (r8135)
+* Corrigé: Le jeu pouvait planter quand la touche de discussion (<ENTRÉE>) est appuyée trop vite en rejoignant une partie multijoueurs (r8132)
+* Corrigé: Les fenêtres non initialisées appellent WE_DESTROY pour libérer la mémoire dynamique utilisée, évitant les fuites mémoire (r8101, r8119)
+* Corrigé: Affiche le statut activé du GRF après avoir appuyé sur Appliquer dans la fenêtre (r8094)
+* Corrigé: [win32] Les fonctions *nprintf sont erronées, 'len = count' n'était pas géré; maintenant, les chaînes sont toujours terminées par null (r8089, r8090)
+* Corrigé: Division flottante par 0 dans le code YAPF sur Win9x (r8079, r8080)
+* Corrigé: La carte des altitudes plante en changeant l'échelle, ou en utilisant des bitmaps 24bpp [FS#537] (r8070, r8074)
+* Corrigé: La date d'inauguration des compagnies des parties TTDP était fausse [FS#536] (r8071)
+* Corrigé: Une autre correction de plantage de la fenêtre des nouvelles (r8049)
+* Corrigé: Erreur de segmentation dans le code de chargement de newgrf en utilisant certains fichiers newgrf (r7979) 
+
+==Voir aussi==
+Changements après la version: [[Main/fr/Nouvelles fonctionnalités depuis 0.5.0|Nouvelles fonctionnalités depuis 0.5.0]]
+
+Feuille de route originelle: [[Main/fr/Feuille de route 0.5|Feuille de route 0.5]])
+
+==Liens du forum==
+
+* [http://tt-forums.net/viewtopic.php?p=532327 Sujet du forum sur OpenTTD 0.5.0 RC1]
+* [http://tt-forums.net/viewtopic.php?p=535834 Sujet du forum sur OpenTTD 0.5.0 RC2]
+* [http://tt-forums.net/viewtopic.php?p=539340 Sujet du forum sur OpenTTD 0.5.0 RC3]
+* [http://tt-forums.net/viewtopic.php?p=543263 Sujet du forum sur OpenTTD 0.5.0 RC4]
+* [http://tt-forums.net/viewtopic.php?t=30344 Sujet du forum sur OpenTTD 0.5.0 RC5]
+* [http://tt-forums.net/viewtopic.php?t=30669 Sujet du forum sur OpenTTD 0.5.0 (final)]
