@@ -1,0 +1,71 @@
+[[Translation:Main/en/OpenTTD 0.6.1]]
+{{en/-}}
+{{fr/Livraison|prec=OpenTTD 0.6.0|suiv=OpenTTD 0.6.2|date=01/06/2008}}
+
+Vous pouvez obtenir les versions depuis [http://sourceforge.net/project/showfiles.php?group_id=103924 SourceForge].
+
+
+==Nouvelles fonctionnalités majeures==
+* Fonctions non documentées (boguées) supprimées
+* Documentation de fonctionnalités précédemment non documentées
+
+==Journal des changements==
+===0.6.1 (01/06/2008)===
+* Corrigé: Les cases d'industrie disent parfois qu'elles ont besoin d'un 'niveau' de pente quand elles ne veulent pas de pente (r13348)
+* Corrigé: Tentatives de rendre l'ancienne IA plus performante (r13217, r13221, r13222)
+
+===0.6.1-RC2 (21/05/2008)===
+* Corrigé: Ne pas envoyer de commandes rcon sur le serveur pour le premier client, mais les faire exécuter directement sur le serveur (r13137)
+* Corrigé: Pour les locomotives multi-têtes, diviser la puissance et les coûts d'entretien à l'utilisation plutôt qu'au chargement, pour permettre aux valeurs de rappel de bien fonctionner (r13074)
+* Corrigé: Chargement des sauvegardes TTDP avec des rivières dedans [FS#2005] (r13066)
+* Corrigé: Mise à jour de la fenêtre de construction des industries quand l'option raw_industry_construction est modifiée (r13060)
+* Corrigé: Retour arrière sur les changements du poids des motrices multiples -- les valeurs d'origine était correctes (r13023)
+* Corrigé: Débogage impossible avec MSVC 2008 (r12996)
+* Corrigé: La liste utilisée pour trier les GRFs n'était pas libérée (r12993)
+* Corrigé: Les paramètres de difficulté par défaut étaient différents de ceux du TTD original [FS#1977] (r12951)
+* Corrigé: Tous les véhicules seraient disponibles quand un scénario original est joué [FS#1982] (r12948)
+* Corrigé: Ne garder que les 15 premiers bits pour les résultats de rappels non en échec (r12947)
+* Corrigé: Lire/modifier des données invalides dans certaines circonstances (r12943)
+* Corrigé: Erreurs mineures relatives aux cargaisons acceptées/produites par les industries (r12933)
+* Corrigé: Les cotes de ville étaient affectées même après le lancement d'un test (r12920)
+* Corrigé: Inonder des cases de route quand il y a des travaux en cours dessus [FS#1965] (r12919)
+* Corrigé: Ne pas initialiser la structure d'une gare avec tile=0, les bouées ne changeront jamais cette valeur [FS#1960] (r12915)
+* Corrigé: Le jeu plante quand un spectateur/serveur essaye de trouver un véhicule sans propriétaire, quand un NewGRF demande une variable spécifique (r12914)
+* Corrigé: Rapporte un statut de sprite inversé (FD/FE) à NewGRF pour les véhicules manuellement inversés (r12910)
+* Corrigé: Les véhicules vont deux fois au dépôt quand la maintenance automatique interfère avec l'ordre courant [FS#1985] (r12629)
+
+===0.6.1-RC1 (16/04/2008)===
+[http://www.tt-forums.net/viewtopic.php?f=29&t=37339 lien du forum]
+* Corrigé: Les groupes de véhicule, les règles de remplacement des véhicules et les noms des joueurs/compagnies n'étaient pas bien réinitialisés/libérés après une faillite (r12906)
+* Corrigé: Supprime les tramways des sauvegardes dans OTTD sans support de tramway; c'est mieux que de planter [FS#1953] (r12904)
+* Corrigé: GCC sur FreeBSD ne supporte pas -dumpmachine, faisant planter la configuration. Utilisez plutôt g++ [FS#1928] (r12876)
+* Corrigé: Fait que les tests de cote de ville utilisent moins de mémoire et aillent plus vite (r12859)
+* Corrigé: L'utilisation de AutoPtr faite pour (essayer de) construire des objets est très consommatrice (en temps) (r12857, r12855)
+* Corrigé: S'assure que prop 25 est fixé pour tous les véhicules dans la composition avant les autres propriétés, car cela peut provoquer des désynchronisations (r12856)
+* Corrigé: Trop de caténaires dessinés aux entrées de tunnel, au milieu des ponts et sur les cases de gare sans voie (r12853, r12852)
+* Corrigé: Utilise YAPF pour les anciennes sauvegardes avant que YAPF soit introduit (r12845)
+* Corrigé: Le déclencheur de tic d'industrie ne devrait s'activer que tous les 256 tics, et pas à chaque... Nettoie aussi les déclencheurs un peu plus tôt si vous savez qu'ils ne vont pas se produire de nouveau (r12844)
+* Corrigé: Utilisation incohérente de 8/15 bits des résultats de rappel NewGRF en respectant l'implémentation de TTDP de la spécification (r12819, r12818, r12759)
+* Corrigé: Accès hors limites de tableau possible (r12809)
+* Corrigé: Garantit la plage des valeurs de renouvellement automatique dans la commande (r12808)
+* Corrigé: Les véhicules peuvent tomber en panne pendant le chargement et rester en chargement. L'intention du code de panne est de ne pas tomber en panne à vitesse zéro; donc les pannes ne surviennent plus lors d'un chargement [FS#1938] (r12795)
+* Corrigé: [OSX] Dans certains rares cas, en utilisant un écran non calibré, l'espace de couleurs du système ne peut pas être retrouvé. Afficher une erreur quand cela se produit, au lieu de simplement avertir (r12776)
+* Corrigé: Vérification de pente pour NewGRFs échouée (r12759)
+* Corrigé: Vérifie le drapeau TILE_NOT_SLOPED de la case _north_ des maisons multi-cases pour décider si la pente automatique est permise (r12717)
+* Corrigé: Ne pas déplacer les fenêtres sous la barre d'outil en les retaillant, sinon elles passeraient derrière [FS#1904] (r12714)
+* Corrigé: Augmenter la taille par défaut du tampon de sons, seulement pour Vista [FS#1914] (r12708)
+* Corrigé: Ne pas planter très durement sur les sauvegardes non reconnues, retourner simplement au menu d'introduction à la place (r12707)
+* Corrigé: Dans certains cas, un message d'information ne sera pas affiché [FS#1906] (r12683)
+* Corrigé: Supprimer des portions de route pour une ville vous applique deux fois la pénalité prévue [FS#1920] (r12682)
+* Corrigé: Quand un véhicule routier a un arrêt de tramway uniquement dans une ligne de ses ordres plusieurs fois, seul le premier sera sauté [FS#1918] (r12678)
+* Corrigé: La correspondance des couleurs sur les sprites de gare ne fonctionne que pour les couleurs de compagnie [FS#1902] (r12674)
+* Corrigé: Supprime les bouées boguées à la case 0 des anciennes sauvegardes de TTDP (r12642)
+* Corrigé: Possible référence de pointeur NULL en lisant certaines données NewGRF [FS#1913] (r12637)
+* Corrigé: Boucle infinie si votre compilateur décide que les énumérations sont non signées par défaut (r12622)
+* Corrigé: Le bouton de conversion des signaux interdit de tirer des signaux quand l'IHM des signaux est fermée (r12577)
+* Corrigé: Lier une adresse IP spéciale peut faire que OpenTTD ne s'enregistre pas correctement avec le serveur maître, s'il a plusieurs interfaces externes (r12574)
+* Corrigé: min() a des arguments 32bit; restreindre des valeurs de 64bits ne fonctionnera pas (r12572)
+* Corrigé: Les villes ne peuvent pas transformer le terrain quand l'inflation hausse suffisamment les prix d'aménagement (r12564)
+* Corrigé: Ne pas affecter les cotes de ville change selon l'ordre dans lequel nous examinons les gares (r12561)
+* Corrigé: Redessine l'IHM des signaux quand la densité de tirage des signaux change dans l'option, et vice-versa (r12553)
+* Corrigé: Ne pas installer de scénarios dans le répertoire personnel de l'utilisateur courant en lançant 'make install', ce qui est stupide. Simplement, toujours installer les scénarios dans un grand système, à la place (r12542)
