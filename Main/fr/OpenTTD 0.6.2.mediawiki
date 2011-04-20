@@ -1,0 +1,75 @@
+[[Translation:Main/en/OpenTTD 0.6.2]]
+{{en/-}}
+{{fr/Livraison|prec=OpenTTD 0.6.1|suiv=OpenTTD 0.6.3|date=01/08/2008}}
+
+Vous pouvez obtenir les versions depuis [http://sourceforge.net/project/showfiles.php?group_id=103924 SourceForge].
+
+
+==Nouvelles fonctionnalités majeures==
+* Suppression de fonctionnalités non documentées (boguées)
+* Documentation de fonctionnalités précédemment non documentées
+
+==Journal des changements==
+===0.6.2 (01/08/2008)===
+* Corrigé: Les noms de véhicule personnalisés des parties TTD(Patch) étaient perdus (r13884)
+* Corrigé: Le rappel 10 de NewGRF (effet visuel et paramétrage des wagons motorisés) et les opérations de wagons motorisés ne sont pas effectués pour les wagons articulés [FS#2167] (r13870)
+* Corrigé: Dans certains cas, le cache des sprites peut être rempli avec des éléments inamovibles [FS#2153] (r13869)
+* Corrigé: Renvoie la mauvaise portée d'un parent des variables d'industrie (NewGRF) (r13868)
+* Corrigé: Le chargement des sauvegardes de TTD(Patch) depuis la ligne de commande ne fonctionne pas (r13859)
+* Corrigé: Débordement de tampon pour les noms de fichier trop longs fournis avec le paramètre '-g' (r13858)
+* Corrigé: La recherche de type de cargaison était incorrecte pour les fichiers NewGRF version 7 sans table de traduction [FS#2157] (r13855)
+* Corrigé: GetTownByTile() n'est valide que pour les maisons et les routes (r13851)
+* Corrigé: La puissance, le coût d'entretien et la capacité des motrices multiples étaient (trop souvent) doublés dans les journaux par rapport à la fenêtre d'offre (r13844)
+* Corrigé: FreeType peut renvoyer un glyphe coloré même quand un glyphe en niveau de gris est requis [FS#2152] (r13832)
+
+===0.6.2-RC2 (26/07/2008)===
+[http://www.tt-forums.net/viewtopic.php?f=29&t=38621 lien du forum]
+* Corrigé: Construire à travers le mauvais côté d'une station en passant était autorisé [FS#2166] (r13822)
+* Corrigé: Vérifie les changements de longueur d'un véhicule hors d'un dépôt (rappel 0x11) et avertit à ce sujet [FS#2150] (r13816)
+* Corrigé: Plusieurs fuites mémoire mineures. Elles n'ont lieu qu'une seule fois par partie (r13809, 13810)
+* Corrigé: La vérification d'un train attendant de l'autre côté d'un signal de côté bidirectionnel était erronée [FS#2162] (r13806)
+* Corrigé: Certains codes de vérification de la révision étaient désactivés non-intentionnellement (r13776)
+* Corrigé: Garantit la validité d'une NetworkAction (paquet de discussion) émise par un client (r13775)
+* Corrigé: Sélectionner des véhicules de longueur non complète dans l'IHM du dépôt plaçait le "pointeur de la souris" hors du centre du véhicule, rendant difficile de le "viser" [FS#2147] (r13759)
+* Corrigé: la continuation des voies NewGRF devrait toujours marquer un tunnel sur le même axe comme connecté, même quand le tunnel fait face à la mauvaise direction (r13734)
+* Corrigé: L'hypothèse que les cases non au nord d'une maison n'ont pas d'ensemble de bâtiments 1x1 était fausse avec certains NewGRFs. Cela provoquait des différences dans le nombre de maisons, modifiant le rayon de la ville et provoquant des désynchronisations quand les villes s'étendaient (r13729)
+* Corrigé: Désynchronisation possible des paramètres de renouvellement automatique pour les parties de plus de 20 ans (par ex. 4.5+ heures) après le démarrage d'une compagnie (r13718)
+* Corrigé: Tout joueur peut construire de nouvelles compagnies [FS#2144] (r13716)
+* Corrigé: Supprime le unique_id du message que le client a rejoint, car cela ne fait qu'exposer le unique_id plus que nécessaire (r13714)
+* Corrigé: Plantage possible en créant un paquet réseau (r13713)
+* Corrigé: Garantit la restriction des longueurs de nom de compagnie et de président dans les commandes également (r13712)
+
+===0.6.2-RC1 (26/04/2008)===
+[http://www.tt-forums.net/viewtopic.php?f=29&t=38471 Lien du forum]
+* Corrigé: Débordement de tampon possible dans le code de troncature de chaîne (r13700)
+* Corrigé: Gère correctement SETX(Y) en tronquant une chaîne, au lieu de l'ignorer et de renvoyer une chaîne trop longue (r13699)
+* Corrigé: Dans certains cas, le mélangeur (sonore) peut déborder, provoquant des perturbations sonores [FS#2120] (r13695)
+* Corrigé: Ne pas compter sur le fait que les fichiers .tar se terminent toujours pas un bloc de zéros (r13693)
+* Corrigé: S'assurer qu'une commande est lancée dans le contexte du remplacement automatique ou non (r13691)
+* Corrigé: Si les lignes électriques et l'accélération 'réaliste' sont désactivés, toutes les locomotives électriques n'ont pas de puissance au chargement, jusqu'à ce que le véhicule fasse demi-tour, se charge ou aille à un dépôt [FS#2102]
+* Corrigé: Sauver les parties importées de TTD en récession plante à cause de conversions de type erronées (et inutiles) dans le code de sauvegarde [FS#2131] (r13679)
+* Corrigé: Les compagnies inactives des anciennes sauvegardes (TTD) peuvent être marquées actives dans certains cas, ce qui charge alors beaucoup de déchets dans leurs statistiques et autres éléments [FS#2126] (r13676)
+* Corrigé: Fuite mémoire quand les NewGRFs sont désactivés de force et qu'ils définissent des libellés GOTO (r13675)
+* Corrigé: Plantage en dessinant un sprite non réel à cause d'interférences NewGRF [FS#2127] (r13674)
+* Corrigé: Désynchronisation en construisant des trains électriques sur un serveur dédié démarré avec l'électrification désactivée [FS#2122] (r13673)
+* Corrigé: Les bus/camions oublient l'ordre d'aller au dépôt en entrant sur un arrêt routier non en passant [FS#2117] (r13664)
+* Corrigé: Plantage du serveur en bannissant un client par rcon (r13661)
+* Corrigé: Les signaux n'étaient pas mis à jour correctement quand un joueur supprimait une portion de voie inexistante (r13626)
+* Corrigé: Plantage quand on essaye d'élever le coin nord des cases MP_VOID (c.à.d. le coin sud des cases du bord sud de la carte) dans l'éditeur de scénario [FS#2106] (r13624)
+* Corrigé: Seul l'avant d'un véhicule routier devrait être pris en compte pour déterminer en quelles cargaisons un véhicule peut être transformé, plutôt que toutes les cargaisons [FS#2109] (r13622)
+* Corrigé: Si le premier pont ne peut pas être construit pour une longueur donnée, alors aucun des autres ponts ne le peut. Cela signifie effectivement que si quelqu'un remplace le premier pont par un pont qui ne fait que 3 cases de long, alors seuls les autres ponts qui peuvent être de 3 cases de long seront constructibles, mais uniquement s'ils font 3 cases de long [FS#2100] (r13611)
+* Corrigé: Les états de signaux peuvent être propagés à travers des points de passage construits sur un axe orthogonal (r13589)
+* Corrigé: [OSX] 10.5 échoue à basculer en plein écran (r13584)
+* Corrigé: Les véhicules routiers continuent vers la station DT suivante quand ils sont construits à côté [FS#2040] (r13581)
+* Corrigé: Désactive les NewGRFs statiques quand des NewGRFs non statiques les interrogent dans le contexte de parties en réseau. Cela rend impossible aux NewGRFs statiques de désactiver les NewGRFs non statiques, et de 'mauvaises' choses se produisent car les NewGRFs non statiques ne connaissant pas les NewGRFs statiques (r13576)
+* Corrigé: Compter proprement le nombre de cases de maison non nord [FS#2083] (r13518)
+* Corrigé: Utilisation incorrecte de strtoul (r13508)
+* Corrigé: Nettoie la mémoire pour la nouvelle IA lors du chargement d'une sauvegarde, pour qu'elle n'essaye pas d'exécuter des commandes générées dans une sauvegarde différente, ce qui pourrait amener l'IA à tenter de donner des ordres à des gares inexistantes (r13505)
+* Corrigé: Le dessin de sprites partiellement zoomés peut provoquer des verrous mortels ou des plantages (r13502)
+* Corrigé: Déterminer d'abord où construire *exactement* une maison avant de demander à un NewGRF si l'endroit est bon, au lieu d'éventuellement déplacer la maison d'une case une fois que le NewGRF a indiqué que l'emplacement était correct (r13489)
+* Corrigé: Voies non supprimées lors d'une faillite de compagnie, quand il y a un bateau sur la demi-case inférieure (r13488)
+* Corrigé: Laisse les bateaux naviguer sur une demi-case d'eau avec des voies en pente (r13485)
+* Corrigé: Division par zéro quand on appuie sur 'd' (sauter un ordre) quand il n'y a pas d'autres ordres (r13409)
+* Corrigé: Ne pas planter en résolvant les groupes de sprite de véhicule avec zéro sprites (r13397)
+* Corrigé: Dans la liste d'achat, CB36 pour la capacité n'était pas appelé pour la première partie des véhicules routier et ferroviaire (r13385)
+* Corrigé: Le chargement des très anciennes sauvegardes de OpenTTD était erroné (r13373)
