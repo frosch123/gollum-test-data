@@ -1,0 +1,36 @@
+[[Translation:Main/en/OpenTTD 0.7.5]]
+{{en/-}}
+{{fr/Livraison|prec=OpenTTD 0.7.4|suiv=OpenTTD 1.0.0|date=23/12/2009}}
+
+Vous pouvez obtenir cette version depuis [http://www.openttd.org/en/download-stable openttd.org].
+
+==Nouvelles fonctionnalités majeures==
+
+*Corrections de bogues
+*Fenêtre d'aide de Windows
+
+==Journal des changements==
+
+===0.7.5 (23/12/2009)===
+
+Rien
+
+===0.7.5-RC1 (14/12/2009)===
+
+* Ajout: Quelques caractères latins manquants pour l'ensemble OpenGFX (r18431)
+* Changement {{en/Flyspray|3349}}: Recoloriser le générateur de bulles comme toutes les autres industries (r18409)
+* Corrigé: Lire après libération en cas d'absence de connexion réseau ne peut pas être fait avec le serveur de contenu (r18493)
+* Corrigé: [NewGRF] L'initialisation des paiements de cargaison était erroné pour les cargaisons NewGRF {{en/Flyspray|3344}} (r18475)
+* Corrigé: [NonIA] AIOrder::SkipToOrder ne résolvait pas correctement ORDER_CURRENT (r18471)
+* Corrigé: En déplaçant un wagon et seulement la dernière partie d'un véhicule à deux motrices, vous pouvez diviser la locomotive à deux motrices en deux véhicules (r18462)
+* Corrigé: [Windows] Oubli de charger le symbole depuis SDL.dll (r18439)
+* Corrigé: Ne pas lancer la 'protection contre les embouteillages' pour les véhicules dans un dépôt {{en/Flyspray|3360}} (r18428)
+* Corrigé: [Windows] La fenêtre d'aide serait trop large dans certains cas {{en/Flyspray|3327}} (r18424)
+* Corrigé: Dans certains cas, un pointeur peut être laissé inchangé et donc libéré. S'assurer que cela ne se produit pas en garantissant qu'il démarre à NULL au lieu de 'déchets' {{en/Flyspray|3298}} (r18418)
+* Corrigé: Sur les pentes, les modèles de route d'origine et amélioré ne vérifiaient pas leurs exigences de distance minimale {{en/Flyspray|3332}} (r18415)
+* Corrigé: Les aqueducs n'étaient pas influencés par le paramètre 'ponts longs' {{en/Flyspray|3338}} (r18407)
+* Corrigé: Les arrêts routiers en passant n'étaient pas inondés (r18401)
+* Corrigé: [YAPP] Les trains sur les ponts n'étaient pas trouvés, en recherchant l'origine d'une réservation {{en/Flyspray|3345}} (r18392)
+* Corrigé: Les GRFs (invalides) pouvaient déclencher des lectures invalides (r18391)
+* Corrigé: On ne pouvait pas partager d'ordres entre bus transportant des cargaisons différentes (r18380)
+* Corrigé: Un de trop dans les listes de musique préconfigurées {{en/Flyspray|3339}} (r18369)
