@@ -1,0 +1,79 @@
+[[Translation:Main/en/OpenTTD 1.0.1]]
+{{en/-}}
+{{fr/Livraison|prec=OpenTTD 1.0.0|suiv=OpenTTD 1.0.2|date=01/05/2010}}
+
+Vous pouvez obtenir cette version stable depuis [http://www.openttd.org/en/download-stable openttd.org].
+
+==Nouvelles fonctionnalités majeures==
+
+* Corrections de bogue
+* Plusieurs correctifs de sécurité:
+** [http://security.openttd.org/en/CVE-2010-0406 CVE-2010-0406]: Déni de service (serveur) avec fuite de descripteurs de fichier
+** [http://security.openttd.org/en/CVE-2010-0402 CVE-2010-0402]: Déni de service via des commandes mal validées
+** [http://security.openttd.org/en/CVE-2010-0401 CVE-2010-0401]: Contournement des restrictions d'accès, plantage à distance
+
+==Journal des changements==
+
+===1.0.1 (01/05/2010)===
+* Corrigé: Plantage en utilisant restart via rcon (r19722)
+* Corrigé: Fuite d'un descripteur de fichier [[http://security.openttd.org/en/CVE-2010-0406 CVE-2010-0406]] {{en/Flyspray|3785}} (r19695)
+* Corrigé: Plantage quand les fichiers de métadonnées de musique/graphisme étaient illisibles {{en/Flyspray|3774}} (r19674)
+* Corrigé: Le type d'arbre aléatoire ne construisait pas tous les arbres subtropicaux {{en/Flyspray|3792}} (r19724)
+
+===1.0.1-RC2 (22/04/2010)===
+* Corrigé: Désynchronisation en rejoignant la partie du fait de l'utilisation d'une mauvaise variable (r19687)
+* Corrigé: Les archives tronquées n'étaient pas détectées avec zlib 1.2.3. Cela corrige aussi la compatibilité avec zlib 1.2.4, car zlib 1.2.5 est sans bogues (r19686)
+* Corrigé: Les villes avec des modèles de route 3x3 et 2x2 ne pouvaient pas s'étendre (r19683)
+* Corrigé: En rejoignant une partie multi-joueurs, tous les clients avec un ID de compagnie > 0 étaient affichés comme des spectateurs {{en/Flyspray|3775}} (r19680)
+* Corrigé: Le statut du client était mal affiché dans la console (r19678)
+
+===1.0.1-RC1 (17/04/2010)===
+* Fonctionnalité: [NewGRF] Support du code de texte étendu 0x9A 11, affiche les qword (r19570)
+* Fonctionnalité: Donne un message d'erreur plus détaillé en essayant de construire un pont trop long (r19561)
+* Fonctionnalité: Ajoute la limite de vitesse de la voie à la fenêtre d'information sur le terrain (r19556, r19434)
+* Ajout: [NonIA] AIRail::GetMaxSpeed(RailType) pour obtenir la limite de vitesse des types de voie (r19591)
+* Changement: Synchroniser la mise à jour des paquets Debian depuis Debian, mais continuer à construire un paquet unique (r19572)
+* Corrigé: Plantage du serveur dédié si un blitter nul est surchargé et (après quelque temps) qu'il n'y a plus de compagnie 0 lors d'une nouvelle année {{en/Flyspray|3749}} (r19664)
+* Corrigé: Dans certains cas rares, la mise à jour des signaux pouvait être ratée (r19663)
+* Corrigé: Diverses améliorations de la gestion de commande, messages d'erreur manquants (r19658, r19657, r19656, r19655, r19654, r19637, r19633, r19621, r19616, r19605, r19604)
+* Corrigé: La génération des industries échouait pour les grandes cartes et avec beaucoup de types d'industrie (r19652, r19643)
+* Corrigé: Quand une compagnie est vendue, déplacer les clients connectés en spectateurs {{en/Flyspray|3745}} (r19651)
+* Corrigé: Un client n'était pas bien déplacé en rejoignant, par ex. en entrant un mot de passe de compagnie. Cela faisait que le client se retrouvait dans la mauvaise compagnie (d'après le reste des clients) et qu'il était jeté à la première commande {{en/Flyspray|3760}} (r19648)
+* Corrigé: Les trains chargés avec les IDs d'origine n'avaient pas un libellé de type de voie associé, les rendant indisponibles. Pouvait provoquer des désynchronisations si la partie multi-joueurs n'était pas démarrée depuis une sauvegarde {{en/Flyspray|3768}} (r19647)
+* Corrigé: Ne pas permettre de construire des cactus hors du désert ou des arbres tropicaux hors de la zone de forêt tropicale. Cela évite que les gens pensent que planter des arbres tropicaux agrandit la forêt tropicale et donc accroît la place pour construire une scierie de construction {{en/Flyspray|3728}} (r19644, r19635, r19634)
+* Corrigé: Désynchronisation en achetant des compagnies (r19636)
+* Corrigé: Un message de discussion pouvait provoquer des problèmes d'affichage en rejoignant une partie en réseau {{en/Flyspray|3757}} (r19629)
+* Corrigé: Désynchronisation quand une commande est reçue et est dans la file alors que le client commence à rejoindre, par ex. en sauvegardant l'état de la partie. Cela peut survenir de deux manières: avec frame_freq > 1, une commande reçue dans une trame précédente peut n'avoir pas encore été exécutée, ou quand une commande est reçue dans la même trame que la jointure mais avant que la sauvegarde soit faite. Dans les deux cas, le client rejoignant n'aura pas toutes les commandes synchronisées avec le serveur (et les autres clients) (r19620)
+* Corrigé: Les graphes relatifs à la compagnie n'étaient pas mis à jour correctement après modification des couleurs de la compagnie {{en/Flyspray|3763}} (r19615)
+* Corrigé: Lecture invalide possible quand le serveur déplace des clients en spectateurs avant qu'ils aient fini de rejoindre {{en/Flyspray|3755}} (r19613)
+* Corrigé: Plantage en ouvrant une sauvegarde avec un point de passage autour de la version 0.4.0 {{en/Flyspray|3756}} (r19612)
+* Corrigé: Améliore le comportement pour rejoindre; chasse les clients en entrant des mots de passe juste nettoyés, 'connexion perdue' pour les personnes avec le mauvais mot de passe (r19610, r19609, r19608, r19607, r19606)
+* Corrigé: Débogage des désynchronisations; faux positifs dans les vérifications de validité du cache et sauvegarde/chargement du flux de commande (r19619, r19617, r19602, r19601, r19600, r19596, r19593, r19592, r19589, r19587, r19586)
+* Corrigé: La présence de contenu en ligne n'était pas bien mise à jour après chargement, du fait de slash dupliqués dans le chemin (r19600)
+* Corrigé: [NewGRF] Fixer la propriété d'industrie 0x24 à 0 entraîne des noms de station vides (r19590)
+* Corrigé: Plantage en appuyant sur 'h' (sans arrêt) dans la fenêtre d'ordres d'un bateau ou d'un avion {{en/Flyspray|3744}} (r19584)
+* Corrigé: Les graphes n'étaient pas bien mis à jour en basculant les touches (par ex. les compagnies) (r19574)
+* Corrigé: Le bouton Horaires n'était pas automatiquement levé {{en/Flyspray|3739}} (r19571)
+* Corrigé: [NewGRF] Possible débordement de tampon dans le code de chaîne NewGRF (r19569)
+* Corrigé: [NewGRF] Ne pas renvoyer une couleur aléatoire pour les industries inconnues dans la variable 45; TTDPatch ne semble pas mettre la donnée de couleur dans cette case non plus, et cela peut amener des désynchronisations (r19566)
+* Corrigé: Window::OnResize() n'était pas toujours appelé en retaillant une fenêtre, provoquant des fenêtres incorrectes {{en/Flyspray|3730}} (r19563, r19558)
+* Corrigé: Le message d'erreur de construction de pont ne doit pas afficher deux fois le même message (r19560, r19559)
+* Corrigé: [NewGRF] Lors du chargement de NewGRF, stocker les libellés de type de voie dans des données temporaires et exécuter une fois le chargement fini. Cela évite que les véhicules ferroviaires désactivés soient réactivés si la propriété du climat est mise après la propriété du type de voie (r19557, r19502)
+* Corrigé: Graphe des paiements de cargaison mal dimensionné avec beaucoup de cargaisons (r19550, 19543)
+* Corrigé: [NewGRF] Les propriétés mises avant la propriété 08 (maison, industrie, cases d'industrie) devraient être ignorées, et ne pas déclencher la désactivation du NewGRF {{en/Flyspray|3725}} (r19547)
+* Corrigé: Le tri des industries par production était bogué pour les industries NewGRF (r19538)
+* Corrigé: La fenêtre de détail d'un véhicule ne se retaillait pas correctement après transformation d'un véhicule routier en une variante plus longue {{en/Flyspray|3720}} (r19533)
+* Corrigé: Évite de dessiner des industries désactivées sur la petite carte comme des cases de terrain, quand elles sont construites sur l'eau (r19523)
+* Corrigé: Les tunnels, les ponts et les arrêts routiers sont construit avec un seul type de route (r19506)
+* Corrigé: Supprimer le paramètre same_industry_close ne faisait pas ce qui était attendu et posait des problèmes aux NewGRF (r19499)
+* Corrigé: Conserver le nombre de remplissage en clonant les noms des véhicules {{en/Flyspray|3710}} (r19498)
+* Corrigé: [NewGRF] Les octets et les mots étaient étendus avec un signe pour le stockage temporaire/persistant (r19497)
+* Corrigé: Arrêter de réduire la taille de la liste des véhicules après en avoir choisi un avec une description longue (r19480)
+* Corrigé: Implémente un effet sonore personnalisé pour le décollage des hélicoptères {{en/Flyspray|3668}} (r19364)
+* Mise à jour: Type du pluriel en slovaque (r19452)
+
+== Voir aussi ==
+*[http://www.tt-forums.net/viewtopic.php?f=29&t=48198 Sujet du forum sur la 1.0.1-RC2]
+*[http://www.openttd.org/en/news/125 Article d'information sur la 1.0.1-RC2]
+*[http://www.tt-forums.net/viewtopic.php?f=29&t=48143 Sujet du forum sur la 1.0.1-RC1]
+*[http://www.openttd.org/en/news/124 Article d'information sur la 1.0.1-RC1]
