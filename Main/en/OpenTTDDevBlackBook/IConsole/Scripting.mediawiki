@@ -1,0 +1,95 @@
+{{en/DevDoc}}
+This document explains how to use console scripting.
+
+If you want to test the scripts below you must have compiled with DEBUG=1.
+
+==Commands==
+Commands [also called Functions] are used to give the scripter the ability to access some specific aspect of the OpenTTD sourcecode. Currently there are only some basic commands implemented. Therefore we currently only have some access to OpenTTD Functions.
+
+<pre>
+]screenshot
+</pre>
+This command causes OpenTTD to make a screenshot of the current screen. It is immidiately executed and does not return a result.
+
+<pre>
+]random
+result = 41
+</pre>
+This command causes the system to generate a random number. It is immidiately executed and returns a result. If the result isn't assigned to a variable, it gets dumped to the console. If you want to add commands to the console read [[Main/en/OpenTTDDevBlackBook/IConsole/AddFunctions|HOWTO - Add Functions/Commands to the Console]]
+
+==Variables==
+Variables are used to
+* Access OpenTTD defined C Variables
+* Store information which is used by your script
+
+The scripting language can handle the following types of Variables:
+* BOOLEAN [direct memory access]
+* BYTE [direct memory access]
+* UINT16 [direct memory access]
+* INT16 [direct memory access]
+* UINT32 [direct memory access]
+* INT32 [direct memory access]
+* POINTER [direct memory access]
+* STRING [instance based]
+
+Direct memory access? Instance based? Uhm? <br>
+Direct memory access means that the variable's memory position is fixed. This gives you the ability to change OpenTTD owned variables directly from the console.
+Instance based means that if the variable gets changed from the console it gets a new memory address which is pointing to newly allocated memory space. The old memory space is freed only if the variable is only used by the console. So if you add an OpenTTD byte * variable to the console and you try to change its content.. you won't change the string used by OpenTTD but you will change the variable in the console.
+
+Below, variable names are indicated by a "*" 
+
+<pre>
+]*temp_uint16
+*temp_uint16 = 0
+]*temp_uint16 ++
+*temp_uint16 = 1
+]*temp_uint16 --
+*temp_uint16 = 0
+]*temp_uint16 = 32
+*temp_uint16 = 32
+</pre>
+
+Most of the variable types have the ability to perform different actions:
+
+{|
+| function || description
+|-
+|&nbsp;++ || increments the value
+|-
+|&nbsp;-- || decrements the value
+|-
+|&nbsp;= || assigns another value [dont try to use this to copy the value of one variable to another variable]
+|}
+
+If you want to know how to add variables to the console, read [[Main/en/OpenTTDDevBlackBook/IConsole/AddVariables|HOWTO - Add Variables to the Console]]
+
+=Functions [Commands with return values]=
+In some cases, it is neccessary to:
+* copy the value a command returns
+* pass a variable pointer to a command [implemented in console rev 3]
+* copy the value of one variable to another [implemented in console rev 3]
+
+==copy the value a command returns==
+<pre>
+]*temp_uint16 << random
+*temp_uint16 = 41
+</pre>
+But:
+<pre>
+]*temp_uint32 << random
+ERROR: variable type missmatch
+</pre>
+You'll get this error if the returned value of the command does not have the same type as the variable does. A well coded function [random is no example for this :D] could do a trick to detect what type of variable it has to return. [token shifting] Read [[Main/en/OpenTTDDevBlackBook/IConsole/AddFunctions|HOWTO - Add Functions/Commands to the Console]]
+
+==passing a variable pointer to a command==
+<pre>
+]varinfo @*temp_uint16
+</pre>
+
+==copy the value of one variable to another==
+<pre>
+*temp_uint16 << *temp_uint16_2
+</pre>
+
+[[Category:en/OpenTTDDevBlackBook|S]]
+[[Category:en/Console]]
