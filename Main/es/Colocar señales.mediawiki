@@ -1,0 +1,46 @@
+[[Translation:Main/en/Building signals]]{{en/-}}{{es/Tutorial}}
+Tutorial sobre la '''colocación de señales'''. Las señales se utilizan para dirigir los trenes y prevenir choques de trenes.
+
+Este tutorial está diseñado como una introducción básica a la señalización. Para una información en mayor profundidad sobre los tipos de señales y sus diferentes aplicaciones vea [[Main/es/Señales|Señales]].
+__TOC__
+== Colocación de una señal ==
+#Haga clic en el botón '''Construir raíles''' [[File:en/Manual html m772c5b23.png]] de la [[Main/en/Interfaz del juego/Es#Barra de menú|barra de menú]] para mostrar la barra de herramientas ''Construcción de Ferrocarril'':<br/>[[File:es/Railroad Construction.png|none|frame|Barra de herramientas Construcción de Ferrocarril]]
+#Haga clic en el botón '''Construir señales de ferrocarril''' [[File:en/Place signal.png]] de la barra de herramientas ''Construcción de Ferrocarril'' para mostrar la barra de herramientas ''Selección de señales'':<br/>[[File:es/Signal Selection.png|none|frame|Barra de herramientas Selección de señales]]Esta barra de herramientas es muy sencilla de usar. La fila superior tiene las señales mecánicas, y la fila inferior tiene las señales eléctricas. Cada tipo de señal es funcionalmente idéntico el de arriba con el situado de debajo de él, elija la señal según la apariencia que más le guste para su ferrocarril.<br/>Los tipos de señales en esta barra de herramientas son, de izquierda a derecha, la ''Señal de bloque'', ''señal de entrada'', ''señal de salida'', ''señal combo'', ''señal de ruta'', y ''señal de ruta de un sentido''. Si en algún momento usted duda, y no recuerda de qué señal se trata, o quiere saber más acerca del propósito de cada señal, '''mantenga pulsado el botón derecho del ratón''' sobre el botón correspondiente y aparecerá un mensaje de color amarillo dándole algo más de información.
+#Una vez que haya seleccionado un tipo de señal, '''ponga el cursor sobre las vías férreas''', en el punto donde desea colocar su señal.<br/>[[File:en/SignalTutorial2.png|none|frame]]
+#'''Haga clic una vez''' para construir la señal en la vía. Excepto si usted eligió una ''señal de ruta'', se colocará una '''señal de dos sentidos''' (las ''señales de ruta'' sólo pueden usarse para un sentido de la marcha).<br/>[[File:en/Two-way signal.png|frame|left]][[File:en/SignalTutorial3.png|none|frame]]
+#'''Haga clic de nuevo''' para convertir la señal a una '''señal de un solo sentido'''. De esta forma sólo los trenes procedentes de la dirección hacia la que se orienta la señal podrán pasar. Todas los cambios de dirección de las señales son gratuitos.<br/>[[File:en/One-way signal.png|frame|left]][[File:en/SignalTutorial4.png|none|frame]]
+#'''Haga clic de nuevo''' para encarar la señal al sentido opuesto.<br/>[[File:en/SignalTutorial5.png|none|frame]]
+#'''Haga clic de nuevo''' para convertir la señal a una '''señal de dos sentidos'''.<br/>[[File:en/SignalTutorial5b.png|none|frame]]
+
+== Construir una hilera de señales ==
+También es posible construir varias señales del mismo tipo a la vez, haciendo clic-arrastrar a lo largo del tramo de vía en el que desee colocarlas. Sin embargo puede que le resulte más útil hacer clic-arrastrar desde una señal existente, ya que, de este modo, la hilera de señales se construirá en la misma dirección que la primera:
+#Con el botón ''Construir señales de ferrocarril'' [[File:en/Place signal.png]] activado, coloque el cursor sobre una señal existente.<br/>[[File:en/SignalTutorial4.png|none|frame]]
+#Haga clic-arrastrar a lo largo de la vía del tren.<br/>[[File:en/SignalTutorial20.png|none|frame]]
+#Suelte el ratón para colocar las señales.<br/>[[File:en/SignalTutorial21.png|none|frame]]
+
+Cuando coloque señales de este modo, dependiendo del valor que aparezca en el botón '''Densidad del arrastre de señales''' [[File:en/Signal Density.png]] de la barra de herramientas ''Selección de señales'', estas se colocarán cada '''N''' casillas, a lo largo del recorrido del clic-arrastrar (el valor predeterminado de '''N''' es 4).
+
+Puede cambiar la ''Densidad del arrastre de señales'' haciendo clic en las flechas del botón. Tenga en cuenta también que si hace clic-arrastrar partiendo de una señal ya colocada (de entrada, de salida o combo) las señales se colocarán en la misma dirección que la primera.
+
+== Quitar señales ==
+Puede quitar las señales existentes activando el botón '''excavadora''' [[File:en/Toggle clear active.png|Clear button]] de la barra de herramientas ''Construcción de Ferrocarril'' mientras esté abierta la barra de herramientas ''selección de señales''.
+
+El cuadrado blanco se convertirá en rojo, y usted podrá eliminar las señales individualmente haciendo clic sobre ellas o eliminar toda una hilera usando clic-arrastrar a lo largo de un tramo de vías. Haga clic en el botón de nuevo para desactivarlo. También puede usar la tecla '''R''' como atajo.
+
+Esta herramienta también obedece al valor mostrado en el botón '''Densidad del arrastre de señales''' [[File:en/Signal Density.png]] de la barra ''Selección de señales''.
+
+== Tipos de señales ==
+Hay básicamente tres tipos de señales: las [[Main/en/Señales/Es#Señales de bloque|señales de bloque]], [[Main/en/Señales/Es#Señales previas|señales previas]] y las [[Main/en/Señales/Es#Señales de ruta|señales de ruta]]. Las señales previas son un tipo especial de señales de bloque.
+
+Las '''señales de bloque''' sólo permiten que haya un tren al mismo tiempo en un bloque (tramo) entre señales, mientras que las señales de ruta tienen en cuenta a donde se dirige cada tren y permite que hayan varios trenes en un bloque (tramo) entre señales cuando ello sea posible. Un bloque entre señales es aquellos tramos interconectados de vias incluidos entre varias señales: las señales separan de este modo cada bloque. Si no hay ninguna señal separando dos tramos de una vía estos tramos se encuentran en el mismo bloque (y se permitirá un sólo tren en el caso de sean señales de bloque). Tenga en cuenta que no se considerará si los trenes son capaces de viajar por todos los tramos incluídos dentro de un bloque entre señales: siempre que las viás estén conectadas de alguna manera, sin no se interpone una señal, se encuentran en el mismo bloque.
+
+Las señales de bloque normales son las más fáciles de usar. Pueden ser de un solo sentido o de dos (haga clic para crear una señal de dos sentidos, haga clic de nuevo sobre la misma casilla para cambiar a un sólo sentido, haga clic de nuevo una señal de un sólo sentido pero en la otra dirección, haga clic de nuevo para volver a la señal de dos sentidos...).  Las señales de bloque de un solo sentido sólo se pueden atravesar por los trenes que circulan encarados hacia el lado de la luz de la señal y son una manera fácil de crear vías de un solo sentido. unidireccionales. Tenga cuidado con las señales de bloque de dos sentidos: si dos trenes se acercan a este tipo de señal desde ambos sentidos pueden quedar atrapados y crear un [[Main/es/Punto muerto|punto muerto]].
+
+Las '''señales de ruta''' son de dos tipos: de un solo sentido y de dos sentidos. En ambos tipos, los trenes sólo pueden detenerse en la señal si conducen encarados hacia la luz de la señal. Las señales de ruta de un sentido (con el signo rojo y blanco) no se puede cruzar por la parte de atrás. Las señales de ruta de dos sentidos se pueden cruzar por la parte de atrás pero los trenes siempre seguirán conduciendo más allá de la señal. La clave para usar señales de ruta está en asegurarse de que todas las señales permiten que un tren se detenga sin bloquear ninguna intersección. De modo que cuando coloque una señal de ruta, imagine que su tren más largo se detendrá en la señal y fíjese si de esta forma bloquea algo, si es así, la señal está en un lugar equivocado.
+
+Si usted es nuevo jugando con OpenTTD, las señales de ruta son los más fáciles de usar y se pueden construir estaciones y cruces sin muchos problemas. Sólo asegúrese de mantener la "norma" que acabamos de explicar en su cabeza. Las señales de bloque normales se puede usar en configuraciones muy fáciles con sólo dos trenes o en tramos largos ininterrumpidos de un único sentido. Las '''señales previas''' son más complicadas y explicarlas no es el propósito de este tutorial. Para más detalles sobre todos los tipos de señales, incluyendo ejemplos, pueden consultar la sección del manual sobre las [[Main/es/Señales|Señales]].
+
+== Convertir una señal a un tipo distinto ==
+Puede convertir una señal existente a un tipo de señal diferente haciendo clic en el botón '''convertir señal''' [[File:en/Signal Convert.png]] de la barra ''Selección de la señales''. Luego, cuando haga clic en una señal existente se convertirá, de forma gratuita, en el tipo de señal seleccionada en la barra ''selección de señales''.
+
+Para desactivar la conversión de señales (si desea volver al modo normal de colocación de señales, por ejemplo), haga clic de nuevo en el mismo botón [[File:en/Signal Convert.png]].
