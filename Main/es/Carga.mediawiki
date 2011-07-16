@@ -1,0 +1,241 @@
+[[Translation:Main/en/Cargo]]{{en/-}}{{tabla de contenido/Es}}
+:''Para ver un listado de los artículos sobre cargas, consulte la [[Category/es/Carga|categoría carga]]''
+
+En [[Main/es/OpenTTD|OpenTTD]], se considera '''carga''' a todo aquello que se transporta como [[Main/es/Empresa de transporte|empresa]]. Las cargas la producen unas [[Main/es/Industrias|industrias]] y [[Main/es/Pueblo|pueblos]], y las aceptan otras industrias y pueblos.
+
+Las industrias y los pueblos que se encuentren en el [[Main/es/Área de influencia|área de influencia]] de una [[Main/es/Estaciones|estación]] aceptarán cargas y pasajeros en dicha estación, y descargarán su producción en ella para que sea transportada a otra parte. (En algunas industrias sólo algunas casillas aceptan cargas. Vea [[Main/es/Área de influencia|área de influencia]] para más información.)
+
+Los [[Main/es/Pasajeros|pasajeros]] y el [[Main/es/Correo|correo]] también son cargas, aceptadas principalmente en los [[Main/es/Pueblo|pueblos]]. Las distintas casillas con edificios de los pueblos aceptan cantidades distintas de pasajeros y otras cargas. Lo puede comprobar usando la herramienta '''Información sobre terreno''' (botón con el signo de interrogación). Tienen que haber al menos 8 casillas que acepten determinada carga en el área de influencia de una estación para que ésta pueda aceptar esa carga.
+
+Algunas casillas de industrias aceptan pasajeros, pero no los generan (excepto las [[Main/es/Plataforma petrolífera|Plataformas Petrolíferas]]). Por ejemplo, las [[Main/es/Acería|acerías]] tienen muchas casillas que aceptan pasajeros. Además, la Sede de la empresa de transportes acepta y genera algunos pasajeros y correo para de este modo ayudar a los jugadores al comienzo del juego.
+
+Vea los [[Main/es/Ingresos por carga|ingresos por carga]] si quiere información sobre el cálculo de los beneficios.
+
+A continuación se muestran algunos gráficos y tablas que muestran las cargas por clima, quién las produce y quién las acepta.
+
+==Diagramas de flujo==
+:[[File:es/OpenTTD industry-commodity flow chart - Temperate.png|border]]
+
+:[[File:es/OpenTTD industry-commodity flow chart - Sub-arctic.png|border]]
+
+:[[File:es/OpenTTD industry-commodity flow chart - Sub-tropical.png|border]]
+
+:[[File:es/OpenTTD industry-commodity flow chart - Toyland.png|border]]
+
+==Tablas de producción y admisión de cargas==
+:{| {{en/Wikitable}} style="width: 512px; font-size: 90%; margin:2px 4px 2px 0; border:solid 1px #AAAAAA" rules="cols"
+|- 
+| style="background: #ccffcc" colspan="3" align="center"|'''[[Main/en/Clima/Es#Templado|Clima templado]]'''
+|- style="background: #ffdead"
+|style="width: 26%;"| '''Carga'''
+|style="width: 37%;"| '''Producida por'''
+|style="width: 37%;"| '''Aceptada por'''
+|- style="background: #E5FFE5"
+|'''[[Main/es/Acero|Acero]]'''
+|[[Main/es/Acería|Acerías]]
+|[[Main/es/Fábrica|Fábricas]]
+|-
+|'''[[Main/es/Carbón|Carbón]]'''
+|[[Main/es/Mina de carbón|Minas de carbón]]
+|[[Main/es/Central eléctrica|Centrales eléctricas]]
+|- style="background: #E5FFE5"
+|'''[[Main/es/Correo|Correo]]'''
+|[[Main/es/Pueblo|Pueblos]]
+|[[Main/es/Pueblo|Pueblos]], [[Main/es/Plataforma petrolífera|Plataformas petrolíferas]]
+|-
+|'''[[Main/es/Ganado|Ganado]]'''
+|[[Main/es/Granja|Granjas]]
+|[[Main/es/Fábrica|Fábricas]]
+|- style="background: #E5FFE5"
+|'''[[Main/es/Grano|Grano]]'''
+|[[Main/es/Granja|Granjas]]
+|[[Main/es/Fábrica|Fábricas]]
+|-
+|'''[[Main/es/Madera|Madera]]'''
+|[[Main/es/Bosque|Bosques]]
+|[[Main/es/Aserradero|Aserraderos]]
+|- style="background: #E5FFE5"
+|'''[[Main/es/Mercancías|Mercancías]]'''
+|[[Main/es/Fábrica|Fábricas]], [[Main/es/Refinería de petróleo|Refinerías de petróleo]], [[Main/es/Aserradero|Aserraderos]]
+|[[Main/es/Pueblo|Pueblos]]
+|-
+|'''[[Main/es/Mineral de hierro|Mineral de hierro]]'''
+|[[Main/es/Mina de hierro|Minas de hierro]]
+|[[Main/es/Acería|Acerías]]
+|- style="background: #E5FFE5"
+|'''[[Main/es/Objetos de valor|Objetos de valor]]'''
+|[[Main/es/Banco|Bancos]]
+|[[Main/es/Banco|Bancos]]
+|-
+|'''[[Main/es/Pasajeros|Pasajeros]]'''
+|[[Main/es/Pueblo|Pueblos]], [[Main/es/Plataforma petrolífera|Plataformas petrolíferas]]
+|[[Main/es/Pueblo|Pueblos]], [[Main/es/Plataforma petrolífera|Plataformas petrolíferas]]
+|- style="background: #E5FFE5"
+|'''[[Main/es/Petróleo|Petróleo]]'''
+|[[Main/es/Pozos petrolíferos|Pozos petrolíferos]], [[Main/es/Plataforma petrolífera|Plataformas petrolíferas]]
+|[[Main/es/Refinería de petróleo|Refinerías de petróleo]]
+|}
+
+:{| {{en/Wikitable}} style="width: 512px; font-size: 90%; margin:2px 4px 2px 0; border:solid 1px #AAAAAA" rules="cols"
+|- 
+| style="background: #ccccff" colspan="3" align="center"|'''[[Main/en/Clima/Es#Subártico|Subártico]]'''
+|- style="background: #ffdead"
+|style="width: 26%;"| '''Carga'''
+|style="width: 37%;"| '''Producida por'''
+|style="width: 37%;"| '''Aceptada por'''
+|- style="background: #dfefef"
+|'''[[Main/es/Alimentos|Alimentos]]'''
+|[[Main/es/Planta procesadora de alimentos|Planta procesadora de alimentos]]
+|[[Main/es/Pueblo|Pueblos]]
+|-
+|'''[[Main/es/Carbón|Carbón]]'''
+|[[Main/es/Mina de carbón|Minas de carbón]]
+|[[Main/es/Central eléctrica|Centrales eléctricas]]
+|- style="background: #dfefef"
+|'''[[Main/es/Correo|Correo]]'''
+|[[Main/es/Pueblo|Pueblos]]
+|[[Main/es/Pueblo|Pueblos]]
+|-
+|'''[[Main/es/Ganado|Ganado]]'''
+|[[Main/es/Granja|Granjas]]
+|[[Main/es/Planta procesadora de alimentos|Plantas procesadoras de alimentos]]
+|- style="background: #dfefef"
+|'''[[Main/es/Madera|Madera]]'''
+|[[Main/es/Bosque|Bosques]]
+|[[Main/es/Papelera|Papeleras]]
+|-
+|'''[[Main/es/Mercancías|Mercancías]]'''
+|[[Main/es/Imprenta|Imprentas]], [[Main/es/Refinería de petróleo|Refinerías de petróleo]]
+|[[Main/es/Pueblo|Pueblos]]
+|- style="background: #dfefef"
+|'''[[Main/es/Oro|Oro]]'''
+|[[Main/es/Mina de oro|Minas de oro]]
+|[[Main/es/Banco|Bancos]]
+|-
+|'''[[Main/es/Papel|Papel]]'''
+|[[Main/es/Papelera|Papeleras]]
+|[[Main/es/Imprenta|Imprentas]]
+|- style="background: #dfefef"
+|'''[[Main/es/Pasajeros|Pasajeros]]'''
+|[[Main/es/Pueblo|Pueblos]]
+|[[Main/es/Pueblo|Pueblos]]
+|-
+|'''[[Main/es/Petróleo|Petróleo]]'''
+|[[Main/es/Pozos petrolíferos|Pozos petrolíferos]]
+|[[Main/es/Refinería de petróleo|Refinerías de petróleo]]
+|- style="background: #dfefef"
+|'''[[Main/es/Trigo|Trigo]]'''
+|[[Main/es/Granja|Granjas]]
+|[[Main/es/Planta procesadora de alimentos|Plantas procesadoras de alimentos]]
+|- style="background: #dfefef"
+|}
+
+:{| {{en/Wikitable}} style="width: 512px; font-size: 90%; margin:2px 4px 2px 0; border:solid 1px #AAAAAA" rules="cols"
+|- 
+| style="background: #ffffcc" colspan="3" align="center"|'''[[Main/en/Clima/Es#Subtropical|Subtropical]]'''
+|- style="background: #ffdead"
+|style="width: 26%;"| '''Carga'''
+|style="width: 37%;"| '''Producida por'''
+|style="width: 37%;"| '''Aceptada por'''
+|- style="background: #FFFDE0"
+|'''[[Main/es/Agua|Agua]]'''
+|[[Main/es/Suministro de agua|Suministros de agua]]
+|[[Main/es/Torre de agua|Torres de agua]]
+|-
+|'''[[Main/es/Alimentos|Alimentos]]'''
+|[[Main/es/Planta procesadora de alimentos|Plantas procesadoras de alimentos]]
+|[[Main/es/Pueblo|Pueblos]]
+|- style="background: #FFFDE0"
+|'''[[Main/es/Caucho|Caucho]]'''
+|[[Main/es/Plantación de caucho|Plantación de caucho]]
+|[[Main/es/Fábrica|Fábricas]]
+|-
+|'''[[Main/es/Correo|Correo]]'''
+|[[Main/es/Pueblo|Pueblos]]
+|[[Main/es/Pueblo|Pueblos]]
+|- style="background: #FFFDE0"
+|'''[[Main/es/Diamantes|Diamantes]]'''
+|[[Main/es/Mina de diamantes|Minas de diamantes]]
+|[[Main/es/Banco|Bancos]]
+|-
+|'''[[Main/es/Fruta|Fruta]]'''
+|[[Main/es/Plantación de fruta|Plantaciones de fruta]]
+|[[Main/es/Planta procesadora de alimentos|Planta procesadora de alimentos]]
+|- style="background: #FFFDE0"
+|'''[[Main/es/Madera|Madera]]'''
+|[[Main/es/Aserradero|Aserraderos]]
+|[[Main/es/Fábrica|Fábricas]]
+|-
+|'''[[Main/es/Maíz|Maíz]]'''
+|[[Main/es/Granja|Granjas]]
+|[[Main/es/Planta procesadora de alimentos|Plantas procesadoras de alimentos]]
+|- style="background: #FFFDE0"
+|'''[[Main/es/Mercancías|Mercancías]]'''
+|[[Main/es/Fábrica|Fábricas]], [[Main/es/Refinería de petróleo|Refinerías de petróleo]]
+|[[Main/es/Pueblo|Pueblos]]
+|-
+|'''[[Main/es/Mineral de cobre|Mineral de cobre]]'''
+|[[Main/es/Mina de cobre|Mina de cobre]]
+|[[Main/es/Fábrica|Fábricas]]
+|- style="background: #FFFDE0"
+|'''[[Main/es/Pasajeros|Pasajeros]]'''
+|[[Main/es/Pueblo|Pueblos]]
+|[[Main/es/Pueblo|Pueblos]]
+|-
+|'''[[Main/es/Petróleo|Petróleo]]'''
+|[[Main/es/Pozos petrolíferos|Pozos petrolíferos]]
+|[[Main/es/Refinería de petróleo|Refinerías de petróleo]]
+|}
+
+:{| {{en/Wikitable}} style="width: 512px; font-size: 90%; margin:2px 4px 2px 0; border:solid 1px #AAAAAA" rules="cols"
+|- 
+| style="background: #ff9999" colspan="3" align="center"|'''[[Main/en/Clima/Es#Fantasía|Fantasía]]'''
+|- style="background: #ffdead"
+|style="width: 26%;"| '''Carga'''
+|style="width: 37%;"| '''Producida por'''
+|style="width: 37%;"| '''Aceptada por'''
+|- style="background: #FFF0F5"
+|'''[[Main/es/Algodón dulce|Algodón dulce]]''' 
+|[[Main/es/Bosque de algodón dulce|Bosques de algodón dulce]]
+|[[Main/es/Fábrica de dulces|Fábricas de dulces]]
+|-
+|'''[[Main/es/Azúcar|Azúcar]]'''
+|[[Main/es/Mina de azúcar|Minas de azúcar]]
+|[[Main/es/Fábrica de dulces|Fábrica de dulces]]
+|- style="background: #FFF0F5"
+|'''[[Main/es/Burbujas|Burbujas]]'''
+|[[Main/es/Generador de burbujas|Generadores de burbujas]]
+|[[Main/es/Fábrica de refrescos|Fábricas de refrescos]]
+|-
+|'''[[Main/es/Caramelos|Caramelos]]'''
+|[[Main/es/Cantera de caramelos|Canteras de caramelos]]
+|[[Main/es/Fábrica de dulces|Fábricas de dulces]]
+|- style="background: #FFF0F5"
+|'''[[Main/es/Cola|Cola]]'''
+|[[Main/es/Pozos de cola|Pozos de cola]]
+|[[Main/es/Fábrica de refrescos|Fábricas de refrescos]]
+|-
+|'''[[Main/es/Dulces|Dulces]]'''
+|[[Main/es/Fábrica de dulces|Fábrica de dulces]]
+|[[Main/es/Pueblo|Pueblos]]
+|- style="background: #FFF0F5"
+|'''[[Main/es/Juguetes|Juguetes]]'''
+|[[Main/es/Fábrica de juguetes|Fábrica de juguetes]]
+|[[Main/es/Tienda de juguetes|Tiendas de juguetes]]
+|-
+|'''[[Main/es/Pasajeros|Pasajeros]]'''
+|[[Main/es/Pueblo|Pueblos]]
+|[[Main/es/Pueblo|Pueblos]]
+|- style="background: #FFF0F5"
+|'''[[Main/es/Pilas|Pilas]]'''
+|[[Main/es/Granja de pilas|Granjas de pilas]]
+|[[Main/es/Fábrica de juguetes|Fábricas de juguetes]]
+|-
+|'''[[Main/es/Plástico|Plástico]]'''
+|[[Main/es/Fuentes de plástico|Fuentes de plástico]]
+|[[Main/es/Fábrica de juguetes|Fábricas de juguetes]]
+|- style="background: #FFF0F5"
+|'''[[Main/es/Refrescos|Refrescos]]'''
+|[[Main/es/Fábrica de refrescos|Fábrica de refrescos]]
+|[[Main/es/Pueblo|Pueblos]]
+|}
