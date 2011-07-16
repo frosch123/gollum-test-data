@@ -1,0 +1,246 @@
+[[Translation:Main/en/Cargo]]{{en/-}}{{fr/Table des matières}}
+:''Pour une liste des types de cargaison, voyez la [[Category/fr/Cargaison|catégorie Cargaison]]''
+
+Dans [[Main/fr/OpenTTD|OpenTTD]], une '''cargaison''' est ce que vous, en tant que [[Main/fr/Compagnie de transport|compagnie de transport]], transportez. Elles sont produites par les [[Main/fr/Industries|industries]] et les [[Main/fr/Ville|villes]], et elles sont acceptées par d'autres.
+
+Les [[Main/fr/Industries|industries]] et les [[Main/en/Ville/Fr#Bâtiments de la ville|bâtiments de ville]] qui sont dans la [[Main/fr/Zone de captage|zone de captage]] d'une [[Main/fr/Gares|gare]] acceptent des passagers et des cargaisons via cette gare, et placeront leurs cargaisons à la gare pour être livrées ailleurs (dans certaines industries, seules certaines cases peuvent accepter une cargaison. Voyez [[Main/fr/Zone de captage|zone de captage]] pour plus d'information).
+
+Si une cargaison est placée à la gare, sa quantité dépend de la [[Main/en/Mécanique du jeu/Fr#Cote de gare|cote de la gare]] pour ce type de cargaison.
+
+Les [[Main/fr/Passagers|passagers]] et le [[Main/fr/Courrier|courrier]] sont aussi des types de cargaison, principalement produits et acceptés par les [[Main/fr/Ville|villes]]. Différentes cases de bâtiment, dans les villes, acceptent des quantités différentes de passagers et d'autres cargaisons. Les acceptations peuvent être trouvées en utilisant l'outil d'information sur le terrain (point d'interrogation). Si une case ne peut accepter elle-même une cargaison, la quantité est notée 1/8. Il doit y avoir au moins 8/8 d'une cargaison dans la zone de captage d'une gare pour qu'elle accepte cette cargaison.
+
+Certaines cases d'industrie acceptent aussi 1/8 passagers. Les industries, cependant, sauf les [[Main/fr/Plateforme pétrolière|plateformes pétrolières]], ne produisent aucun passager. Le plus notable est que les [[Main/fr/Aciérie|aciéries]]] ont beaucoup de cases 1/8 et peuvent accepter des passagers toutes seules. De plus, le siège de la société accepte et génère quelques passagers et courrier, pour aider les joueurs au tout début du jeu.
+
+Voyez [[Main/fr/Revenu de cargaison|Revenu des cargaisons]] pour plus d'information sur la manière de calculer le revenu.
+
+Ci-dessous se trouvent des graphiques et des tableaux montrant chaque cargaison dans les différents climats, et ce qui les produit et les accepte.
+
+==Tableaux des flux de cargaison==
+:[[File:fr/OpenTTD industry-commodity flow chart - Temperate.png|border]]
+
+:[[File:fr/OpenTTD industry-commodity flow chart - Sub-arctic.png|border]]
+
+:[[File:fr/OpenTTD industry-commodity flow chart - Sub-tropical.png|border]]
+
+:[[File:fr/OpenTTD industry-commodity flow chart - Toyland.png|border]]
+
+==Tableaux de production de biens et d'acceptation==
+:{| {{en/Wikitable}} style="width: 512px; font-size: 90%; margin:2px 4px 2px 0; border:solid 1px #AAAAAA" rules="cols"
+|- 
+| style="background: #ccffcc" colspan="3" align="center"|'''[[Main/en/Climat/Fr#Tempéré|Climat tempéré]]'''
+|- style="background: #ffdead"
+|style="width: 26%;"| '''Cargaison'''
+|style="width: 37%;"| '''Produit par'''
+|style="width: 37%;"| '''Accepté par'''
+|- style="background: #E5FFE5"
+|'''[[Main/fr/Charbon|Charbon]]'''
+|[[Main/fr/Mine de charbon|Mines de charbon]]
+|[[Main/fr/Centrale électrique|Centrales électriques]]
+|-
+|'''[[Main/fr/Marchandises|Marchandises]]'''
+|[[Main/fr/Usine|Usines]], [[Main/fr/Raffinerie|Raffineries]], [[Main/fr/Scierie|Scieries]]
+|[[Main/fr/Ville|Villes]]
+|- style="background: #E5FFE5"
+|'''[[Main/fr/Céréales|Céréales]]'''
+|[[Main/fr/Ferme|Fermes]]
+|[[Main/fr/Usine|Usines]]
+|-
+|'''[[Main/fr/Minerai de fer|Minerai de fer]]'''
+|[[Main/fr/Mine de fer|Mines de fer]]
+|[[Main/fr/Aciérie|Aciéries]]
+|- style="background: #E5FFE5"
+|'''[[Main/fr/Courrier|Courrier]]'''
+|[[Main/fr/Ville|Villes]]
+|[[Main/fr/Ville|Villes]], [[Main/fr/Plateforme pétrolière|Plateformes pétrolières]]
+|-
+|'''[[Main/fr/Bétail|Bétail]]'''
+|[[Main/fr/Ferme|Fermes]]
+|[[Main/fr/Usine|Usines]]
+|- style="background: #E5FFE5"
+|'''[[Main/fr/Pétrole|Pétrole]]'''
+|[[Main/fr/Puits de pétrole|Puits de pétrole]], [[Main/fr/Plateforme pétrolière|Plateformes pétrolières]]
+|[[Main/fr/Raffinerie|Raffineries]]
+|-
+|'''[[Main/fr/Passagers|Passagers]]'''
+|[[Main/fr/Ville|Villes]], [[Main/fr/Plateforme pétrolière|Plateformes pétrolières]]
+|[[Main/fr/Ville|Villes]], [[Main/fr/Plateforme pétrolière|Plateformes pétrolières]]
+|- style="background: #E5FFE5"
+|'''[[Main/fr/Acier|Acier]]'''
+|[[Main/fr/Aciérie|Aciéries]]
+|[[Main/fr/Usine|Usines]]
+|-
+|'''[[Main/fr/Biens de valeur|Biens de valeur]]'''
+|[[Main/fr/Banque|Banques]]
+|[[Main/fr/Banque|Banques]]
+|- style="background: #E5FFE5"
+|'''[[Main/fr/Bois|Bois]]'''
+|[[Main/fr/Forêt|Forêts]]
+|[[Main/fr/Scierie|Scieries]]
+|}
+
+:{| {{en/Wikitable}} style="width: 512px; font-size: 90%; margin:2px 4px 2px 0; border:solid 1px #AAAAAA" rules="cols"
+|- 
+| style="background: #ccccff" colspan="3" align="center"|'''[[Main/en/Climat/Fr#Subarctique|Climat subarctique]]'''
+|- style="background: #ffdead"
+|style="width: 26%;"| '''Cargaison'''
+|style="width: 37%;"| '''Produit par'''
+|style="width: 37%;"| '''Accepté par'''
+|- style="background: #dfefef"
+|'''[[Main/fr/Charbon|Charbon]]'''
+|[[Main/fr/Mine de charbon|Mines de charbon]]
+|[[Main/fr/Centrale électrique|Centrales électriques]]
+|-
+|'''[[Main/fr/Nourriture|Nourriture]]'''
+|[[Main/fr/Usine agroalimentaire|Usines agroalimentaires]]
+|[[Main/fr/Ville|Villes]]
+|- style="background: #dfefef"
+|'''[[Main/fr/Marchandises|Marchandises]]'''
+|[[Main/fr/Imprimerie|Imprimeries]], [[Main/fr/Raffinerie|Raffineries]]
+|[[Main/fr/Ville|Villes]]
+|-
+|'''[[Main/fr/Or|Or]]'''
+|[[Main/fr/Mine d'or|Mines d'or]]
+|[[Main/fr/Banque|Banques]]
+|- style="background: #dfefef"
+|'''[[Main/fr/Bétail|Bétail]]'''
+|[[Main/fr/Ferme|Fermes]]
+|[[Main/fr/Usine agroalimentaire|Usines agroalimentaires]]
+|-
+|'''[[Main/fr/Courrier|Courrier]]'''
+|[[Main/fr/Ville|Villes]]
+|[[Main/fr/Ville|Villes]]
+|- style="background: #dfefef"
+|'''[[Main/fr/Pétrole|Pétrole]]'''
+|[[Main/fr/Puits de pétrole|Puits de pétrole]]
+|[[Main/fr/Raffinerie|Raffineries]]
+|-
+|'''[[Main/fr/Papier|Papier]]'''
+|[[Main/fr/Papeterie|Papeteries]]
+|[[Main/fr/Imprimerie|Imprimeries]]
+|- style="background: #dfefef"
+|'''[[Main/fr/Passagers|Passagers]]'''
+|[[Main/fr/Ville|Villes]]
+|[[Main/fr/Ville|Villes]]
+|-
+|'''[[Main/fr/Blé|Blé]]'''
+|[[Main/fr/Ferme|Fermes]]
+|[[Main/fr/Usine agroalimentaire|Usines agroalimentaires]]
+|- style="background: #dfefef"
+|'''[[Main/fr/Bois|Bois]]'''
+|[[Main/fr/Forêt|Forêts]]
+|[[Main/fr/Papeterie|Papeteries]]
+|}
+
+:{| {{en/Wikitable}} style="width: 512px; font-size: 90%; margin:2px 4px 2px 0; border:solid 1px #AAAAAA" rules="cols"
+|- 
+| style="background: #ffffcc" colspan="3" align="center"|'''[[Main/en/Climat/Fr#Subtropical|Climat subtropical]]'''
+|- style="background: #ffdead"
+|style="width: 26%;"| '''Cargaison'''
+|style="width: 37%;"| '''Produit par'''
+|style="width: 37%;"| '''Accepté par'''
+|- style="background: #FFFDE0"
+|'''[[Main/fr/Minerai de cuivre|Minerai de cuivre]]'''
+|[[Main/fr/Mine de cuivre|Mines de cuivre]]
+|[[Main/fr/Usine|Usines]]
+|-
+|'''[[Main/fr/Diamant|Diamants]]'''
+|[[Main/fr/Mine de diamant|Mines de diamant]]
+|[[Main/fr/Banque|Banques]]
+|- style="background: #FFFDE0"
+|'''[[Main/fr/Nourriture|Nourriture]]'''
+|[[Main/fr/Usine agroalimentaire|Usines agroalimentaires]]
+|[[Main/fr/Ville|Villes]]
+|-
+|'''[[Main/fr/Fruits|Fruits]]'''
+|[[Main/fr/Plantation fruitière|Plantations fruitières]]
+|[[Main/fr/Usine agroalimentaire|Usines agroalimentaires]]
+|- style="background: #FFFDE0"
+|'''[[Main/fr/Marchandises|Marchandises]]'''
+|[[Main/fr/Usine|Usines]], [[Main/fr/Raffinerie|Raffineries]]
+|[[Main/fr/Ville|Villes]]
+|-
+|'''[[Main/fr/Courrier|Courrier]]'''
+|[[Main/fr/Ville|Villes]]
+|[[Main/fr/Ville|Villes]]
+|- style="background: #FFFDE0"
+|'''[[Main/fr/Maïs|Maïs]]'''
+|[[Main/fr/Ferme|Fermes]]
+|[[Main/fr/Usine agroalimentaire|Usines agroalimentaires]]
+|-
+|'''[[Main/fr/Pétrole|Pétrole]]'''
+|[[Main/fr/Puits de pétrole|Puits de pétrole]]
+|[[Main/fr/Raffinerie|Raffineries]]
+|- style="background: #FFFDE0"
+|'''[[Main/fr/Passagers|Passagers]]'''
+|[[Main/fr/Ville|Villes]]
+|[[Main/fr/Ville|Villes]]
+|-
+|'''[[Main/fr/Caoutchouc|Caoutchouc]]'''
+|[[Main/fr/Plantation d'hévéa|Plantations d'hévéas]]
+|[[Main/fr/Usine|Usines]]
+|- style="background: #FFFDE0"
+|'''[[Main/fr/Eau|Eau]]'''
+|[[Main/fr/Réserve d'eau|Réserves d'eau]]
+|[[Main/fr/Château d'eau|Châteaux d'eau]]
+|-
+|'''[[Main/fr/Bois|Bois]]'''
+|[[Main/fr/Scierie de construction|Scieries de construction]]
+|[[Main/fr/Usine|Usines]]
+|}
+
+:{| {{en/Wikitable}} style="width: 512px; font-size: 90%; margin:2px 4px 2px 0; border:solid 1px #AAAAAA" rules="cols"
+|- 
+| style="background: #ff9999" colspan="3" align="center"|'''[[Main/en/Climat/Fr#Pays des jouets|Pays des jouets]]'''
+|- style="background: #ffdead"
+|style="width: 26%;"| '''Cargaison'''
+|style="width: 37%;"| '''Produit par'''
+|style="width: 37%;"| '''Accepté par'''
+|- style="background: #FFF0F5"
+|'''[[Main/fr/Batterie|Batteries]]'''
+|[[Main/fr/Ferme de batterie|Fermes de batteries]]
+|[[Main/fr/Usine de jouet|Usines de jouet]]
+|-
+|'''[[Main/fr/Bulles|Bulles]]'''
+|[[Main/fr/Générateur de bulles|Générateurs de bulles]]
+|[[Main/fr/Usine de boisson gazeuse|Usines de boissons gazeuses]]
+|- style="background: #FFF0F5"
+|'''[[Main/fr/Barbe à papa|Barbe à papa]]''' 
+|[[Main/fr/Forêt de barbe à papa|Forêts de barbe à papa]]
+|[[Main/fr/Usine de bonbons|Usines de bonbons]]
+|-
+|'''[[Main/fr/Coca-Cola|Coca-Cola]]'''
+|[[Main/fr/Source de coca-cola|Sources de coca-cola]]
+|[[Main/fr/Usine de boisson gazeuse|Usines de boissons gazeuses]]
+|- style="background: #FFF0F5"
+|'''[[Main/fr/Boisson gazeuse|Boissons gazeuses]]'''
+|[[Main/fr/Usine de boisson gazeuse|Usines de boissons gazeuses]]
+|[[Main/fr/Ville|Villes]]
+|-
+|'''[[Main/fr/Courrier|Courrier]]'''
+|[[Main/fr/Ville|Villes]]
+|[[Main/fr/Ville|Villes]]
+|- style="background: #FFF0F5"
+|'''[[Main/fr/Passagers|Passagers]]'''
+|[[Main/fr/Ville|Villes]]
+|[[Main/fr/Ville|Villes]]
+|-
+|'''[[Main/fr/Plastique|Plastique]]'''
+|[[Main/fr/Fontaine de plastique|Fontaines de plastique]]
+|[[Main/fr/Usine de jouet|Usines de jouet]]
+|- style="background: #FFF0F5"
+|'''[[Main/fr/Sucre|Sucre]]'''
+|[[Main/fr/Mine de sucre|Mines de sucre]]
+|[[Main/fr/Usine de bonbons|Usines de bonbons]]
+|-
+|'''[[Main/fr/Bonbon|Bonbons]]'''
+|[[Main/fr/Usine de bonbons|Usines de bonbons]]
+|[[Main/fr/Ville|Villes]]
+|- style="background: #FFF0F5"
+|'''[[Main/fr/Caramel|Caramel]]'''
+|[[Main/fr/Carrière de caramel|Carrières de caramel]]
+|[[Main/fr/Usine de bonbons|Usines de bonbons]]
+|-
+|'''[[Main/fr/Jouet|Jouets]]'''
+|[[Main/fr/Usine de jouet|Usines de jouet]]
+|[[Main/fr/Magasin de jouet|Magasins de jouets]]
+|}
