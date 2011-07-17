@@ -1,0 +1,25 @@
+[[Translation:Main/en/Realistic acceleration]]{{en/-}}
+[[File:es/Realistic acceleration config.png|frame|right|Modelo de aceleración de trenes: ''Original'' y ''Realista'']]
+La configuración '''Aceleración Realista''' para trenes ajusta el modelo de aceleración en uno basado en las leyes físicas. La aceleración varía dependiendo del peso del tren, la potencia del motor y la inclinación de la pendiente ascendente o descendente. Es más realista que el modelo original de TTD pero no es perfecto.
+
+La configuración puede activarse o desactivarse en [[Main/en/Opciones avanzadas/Vehículos/Es#Modelo de aceleración de trenes|Opciones avanzadas/Vehículos]].
+
+==Características==
+Cuando usted construya vías de ferrocarril, éstas tienen las siguientes características:
+* Las curvas muy cerradas son muy desfavorables. Las curvas de 90 grados limitan la velocidad a 61 km/h, dos curvas consecutivas de 45 grados en la misma dirección limitan la velocidad a 88 km/h.
+* Para las curvas más suaves, la velocidad máxima se calcula según el número de cambios de dirección a lo largo de la extensión del tren, entre otros factores.
+* Las estaciones y los depósitos tienen también límites de velocidad.
+* Las pendientes pequeñas no afectan demasiado la velocidad.
+* Un tren pesado con una locomotora poco potente no podrá alcanzar la velocidad máxima del motor debido a la fricción. En este caso se pueden utilizar varias locomotoras en un mismo tren.
+
+Los límites de velocidad se multiplican por 1'5 para monoraíles y por 2 para trenes de levitación magnética Maglevs.
+
+==Notas==
+La utilización de la aceleración realista puede ser interesante y divertido si desea aumentar la velocidad optimizada de vías, estaciones y cruces.
+
+==Vea también==
+* [[Main/es/Curvas|Curvas]]
+* [[Main/en/Mecánica del juego/Es#Trenes|Mecánica del juego: Trenes]]
+
+[[Category:es/Configuración y preferencias]]
+[[Category:es/Vehículos]]
