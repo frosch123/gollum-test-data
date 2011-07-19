@@ -1,0 +1,25 @@
+[[Translation:Main/en/Realistic acceleration]]{{en/-}}
+[[File:fr/Realistic acceleration config.png|frame|right|Modéle d'accélération des trains: ''Original'' ou ''Réaliste'']]
+L'ajout '''Accélération réaliste''' pour les trains met en œuvre un modèle d'accélération basé sur la physique. En fonction du poids du train, de la puissance de la locomotive et du degré de la pente, en montée ou en descente, l'accélération sera modifiée. Cela est plus réaliste que l'interprétation d'origine de TTD, sans être parfait.
+
+Cet ajout peut être (dés-)activé dans [[Main/en/Options avancées/Véhicules/Fr#Modèle d'accélération des trains|Options avancées/Véhicules]].
+
+==Caractéristiques==
+Pour la construction de voies ferrées, cela a les conséquences suivantes:
+* Les [[Main/fr/Virage|virages]] très serrés sont très pénalisants. Les courbes à 90 degrés sont une vitesse limite de 61 km/h, deux virages successifs à 45 degrés dans la même direction sont limités à 88km/h.
+* Pour les virages moins prononcés, la vitesse limite est calculée d'après le nombre de changements de direction sur la longueur du train, entre autres.
+* Les dépôts et les gares ont des limites de vitesse.
+* Les petites pentes n'affectent pas beaucoup la vitesse.
+* Un train chargé avec une locomotive faible peut ne pas atteindre la vitesse maximale de la locomotive à cause des frottements. Dans ce cas, un train à locomotives multiples peut servir.
+
+Les vitesses limite sont multipliées par un facteur de 1.5 pour les monorails et de 2 pour les maglevs.
+
+==Notes==
+En utilisant l'accélération réaliste, il est assez intéressant et amusant de construire des voies, des gares et des croisements optimisés pour la vitesse.
+
+==Voir aussi==
+* [[Main/fr/Virage|Virages]]
+* [[Main/en/Mécanique du jeu/Fr#Trains]]
+
+[[Category:fr/Réglages et préférences]]
+[[Category:fr/Véhicules]]
