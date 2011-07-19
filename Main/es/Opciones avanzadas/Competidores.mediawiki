@@ -1,0 +1,69 @@
+{{es/Traducción|Advanced Settings/Competitors|10}}
+[[Translation:Main/en/Advanced Settings/Competitors]]{{en/-}}{{es/Opciones avanzadas}}
+
+==Ventana Opciones avanzadas, sección Competidores==
+The Competitors section allows you to set various options related to the [[Main/en/AI]] and [[Main/en/multiplayer]]. The purpose of the available settings is explained below. For each setting, the respective variable from the [[Main/en/openttd.cfg|config file]] is listed as well, together with its possible values.
+{| align="center"
+|- valign="top"
+|__TOC__
+|[[File:es/Advset competitors.png|frame|left|The Competitors section of the Advanced Settings window (0.7.0)]]
+|}
+
+===<u>Jugadores de la CPU</u>===
+====Permitir IA en multijugador (experimental)====
+{{en/Feature|0.4|align="right"|text=(since 0.4.5)}}
+Enables computer players in multiplayer games. The number of computer players can be set through the [[Main/en/Difficulty|difficulty settings]] window.
+:''Possible Settings:'' <span style="color:green">'''On'''</span> or <span style="color:red">'''Off'''</span>
+:''In [[Main/en/Openttd.cfg]] config file:'' ([ai] ai_in_multiplayer = <true|false>)
+
+====Desactivar trenes para el ordenador====
+{{en/Feature|Old|align="right"|text=(since 0.3.2)}}
+Computer cannot build [[Main/en/trains]] or [[Main/en/railway construction|rail infrastucture]].
+This option has been moved from [[Main/en/Configuring patches/Vehicles#Disable trains for computer|Vehicles section]] in 0.3.4.
+:''Possible Settings:'' <span style="color:green">'''On'''</span> or <span style="color:red">'''Off'''</span>
+:''In Openttd.cfg config file:'' ([ai] ai_disable_veh_train = <true|false>)
+
+====Desactivar vehículos de carretera para el ordenador====
+{{en/Feature|Old|align="right"|text=(since 0.3.2)}}
+Computer cannot build [[Main/en/road vehicles]] or [[Main/en/roadway construction|roads]]. This option has been moved from [[Main/en/Configuring patches/Vehicles#Disable road vehicles for computer|Vehicles section]] in 0.3.4.
+:''Possible Settings:'' <span style="color:green">'''On'''</span> or <span style="color:red">'''Off'''</span>
+:''In Openttd.cfg config file:'' ([ai] ai_disable_veh_roadveh = <true|false>)
+
+====Desactivar aeroplanos para el ordenador====
+{{en/Feature|Old|align="right"|text=(since 0.3.2)}}
+Computer cannot build [[Main/en/aircraft]] or [[Main/en/airports]]. This option has been moved from [[Main/en/Configuring patches/Vehicles#Disable aircraft for computer|Vehicles section]] in 0.3.4.
+:''Possible Settings:'' <span style="color:green">'''On'''</span> or <span style="color:red">'''Off'''</span>
+:''In Openttd.cfg config file:'' ([ai] ai_disable_veh_aircraft = <true|false>)
+
+====Desactivar barcos para el ordenador====
+{{en/Feature|Old|align="right"|text=(since 0.3.2)}}
+Computer cannot build [[Main/en/ships]]. This option has been moved from [[Main/en/Configuring patches/Vehicles#Disable ships for computer|Vehicles section]] in 0.3.4.
+:''Possible Settings:'' <span style="color:green">'''On'''</span> or <span style="color:red">'''Off'''</span>
+:''In Openttd.cfg config file:'' ([ai] ai_disable_veh_ship = <true|false>)
+
+====Número de instrucciones antes de pausar la IA====
+{{en/Feature|0.7|align="right"|text=(since 0.7.0)}}
+Lower this value if the AI is making the game run slow. Increase this value if you find the AI doing a lot of nothing instead of actually building stuff. Leave value at 10,000 if unsure.
+:''Possible Settings:'' <span style="color:#00693E">'''5,000'''</span> to <span style="color:#00693E">'''250,000'''</span>
+:''In Openttd.cfg config file:'' ([ai] ai_max_opcode_till_suspend = <5000-250000>)
+{{en/-}}
+----
+===Permitir enviar dinero a otras empresas===
+{{en/Feature|0.7|align="right"|text=(since 0.7.0)}}
+Allows you to donate money to other companies.
+:''Possible Settings:'' <span style="color:green">'''On'''</span> or <span style="color:red">'''Off'''</span>
+:''In Openttd.cfg config file:'' ([economy] give_money = <true|false>)
+{{en/-}}
+===Permitir comprar acciones de otras empresas===
+{{en/Feature|0.7|align="right"|text=(since 0.7.0)}}
+Allows you to enable or disable the ability to [[Main/en/buying shares|buy shares]] from competitors. You also have to wait for the company to get old enough before buying 25% or a full take over. This age is about 6 years old.
+:''Possible Settings:'' <span style="color:green">'''On'''</span> or <span style="color:red">'''Off'''</span>
+:''In Openttd.cfg config file:'' ([economy] allow_shares = <true|false>)
+{{en/-}}
+
+==En versiones anteriores==
+===Vea también===
+*'''For 0.3.0 to 0.6.3''' - See [[Main/en/Configuring patches]] for information of how to change settings.
+*'''For 0.2.0 and 0.2.1''' - See [[Main/en/Configuring patches in 0.2.0]].
+
+[[Category:es/Configuración y preferencias]]
