@@ -1,0 +1,38 @@
+[[Translation:Main/en/Conditional Orders]]{{en/-}}{{fr/Tutoriel}}{{fr/Table des matières}}
+
+Les ''ordres conditionnels'' permettent un contrôle plus fin que les ordres habituels.
+
+== Utiliser l'interface pour poser un ordre conditionnel ==
+
+L'ordre conditionnel, dans cet exemple, sera d'envoyer un véhicule s'arrêter dans un dépôt quand il sera proche ou aura passé son âge maximal.
+
+===Étapes===
+[[File:en/conditional-orders-step5.png|left]]
+Étape 1.
+Notez les véhicules ayant un âge maximal.
+
+[[File:en/conditional-orders-step1.png|left]]
+Étape 2.
+Tout d'abord, créer vos ordres normaux. Puis ajoutez un ordre d'aller au dépôt. Surlignez ce dernier dans la liste.
+
+[[File:en/conditional-orders-step2.png|left]]
+Étape 3.
+Déroulez le menu "Aller à" et choisissez l'ordre conditionnel.
+
+[[File:en/conditional-orders-step3.png|left]]
+Étape 4.
+Choisissez l'ordre 1 pour sauter à la destination.
+
+[[File:en/conditional-orders-step4.png|left]]
+Étape 5.
+Choisissez l'ordre conditionnel afin de pouvoir l'éditer.
+
+[[File:en/conditional-orders-step6.png|left]]
+Étape 6.
+Fixez la condition à ''
+Set the condition to ''Âge du véhicule'' - ''est inférieur à'' - ''un nombre quelconque''. Dans l'exemple, j'envoie le bus au dépôt un an avant son maximum, pour éviter d'avoir trop de messages "devient vieux".
+<br clear="all" />
+
+===Explication de l'effet de l'ordre===
+[[File:en/Conditional-orders-explanation.png|left]]
+Ce bus va maintenant visiter les deux stations pendant 10 ans. Quand le véhicule aura 11 ans d'âge, il suivra l'ordre 4 et ira s'arrêter au dépôt. Cela est dû au fait que l'ordre 3 sautera à l'ordre 1 tant que sa condition sera vraie. Quand l'âge du véhicule sera de 11 ans, la condition ne sera plus vraie, et l'ordre sera ignoré.
