@@ -1,0 +1,42 @@
+[[Translation:Main/en/Vehicle groups]]
+{{en/-}}
+{{Template:Tutoriel/Fr}}
+
+== Créer des groupes ==
+{{note/Fr|Un véhicule ne peut être que dans un seul groupe à la fois}}
+L'interface pour les groupes peut être trouvée dans la [[Main/fr/Listes de véhicule|liste des véhicules]] si vous avez l'[[Main/fr/Options avancées|option]] '''Utiliser la liste des véhicules avancée''' activée (par défaut, elle est à ''Propre compagnie'', donc vous voyez les groupes pour vos propres véhicules, mais par ceux des concurrents).
+[[File:en/Groups-ungrouped.png|none|frame|La liste des véhicules, avec les groupes à gauche, et les boutons de gestion de groupe légendés]]
+Les boutons sont suffisamment explicites par eux-mêmes.
+
+Nous avons six bus faisant le même trajet (en utilisant les [[Main/en/Ordres/Fr#Ordres partagés|ordres partagés]]), donc faisons-en un groupe pour une gestion plus facile.
+# Cliquez sur le bouton 'Créer un groupe'.
+# Cliquez sur le 'Groupe 0' non nommé pour le sélectionner (notez qu'à droite de son nom, il y a un compteur de 0 véhicules, car il est vide).
+# Cliquez sur le bouton 'Renommer le groupe' et tapez un nouveau nom. Dans ce cas, nous l'avons nommé en fonction du trajet qu'ils partagent.
+[[File:en/Groups-newname.png|center|frame|Créer et nommer un nouveau groupe]]
+
+Nous devons maintenant ajouter des véhicules à notre nouveau groupe.
+* Tirer un véhicule vers le groupe pour l'ajouter.
+* Tirer un véhicule vers le groupe 'véhicules non groupés' pour le supprimer du groupe.
+* Utilisez 'supprimer tous les véhicules' du menu 'gestion de la liste' pour vider complètement un groupe, mais conserver son nom.
+(Les véhicules ne peuvent participer qu'à un groupe du même type: ferroviaires, routiers, aériens ou maritimes.)
+[[File:en/Groups-dragbus.png|center|frame|Ajouter un véhicule pour le groupe]]
+
+Nous pouvons ajouter tous les bus de cette manière, un à un, mais il y a un moyen plus rapide.
+Comme ils partagent tous les mêmes ordres, une fois que l'un d'eux a été ajouté, utilisez le menu 'gestion de la liste' pour 'ajouter les véhicules partagés'.
+Cela ajoute les autres bus avec les mêmes ordres au groupe.
+[[File:en/Groups-addshared.png|center|frame|Ajouter tous les véhicules avec les mêmes ordres à un groupe]]
+
+== Utiliser les groupes ==
+Les groupes fournissent un contexte à la liste des véhicules, comme les ordres partagés, bien qu'ils puissent contenir des véhicules qui effectuent des trajets différents (par exemple, nous pouvons plus tard séparer ces bus et faire en sorte que certains utilisent des ordres de chargement complet, mais nous voulons toujours les traiter tous comme un seul groupe).
+Cela veut dire que nous pouvons effectuer les opérations habituelles sur ces bus en utilisant le menu 'gestion de la liste':
+* [[Main/fr/Remplacement de véhicules|Remplacer les véhicules]] pour les mettre à jour vers un nouveau modèle
+* Les envoyer tous en maintenance, ou au dépôt pour être modifiés manuellement
+
+Nous pouvons aussi utiliser les groupes pour protéger les véhicules d'une mise à jour automatique, si vous avez fixé des règles de remplacement des véhicules pour 'Tous les véhicules'.
+Cliquez sur le bouton 'Pas de remplacement' sous la liste du groupe, qui basculera pour afficher un petit bouclier doré.
+Vous pouvez, par exemple, utiliser cela pour conserver un train à vapeur décoratif sans changement tout en mettant à jour automatiquement toutes les autres locomotives en diésels.
+
+== Introduit ==
+Dans les nocturnes depuis r9874, 19/05/2007; permet aux autres joueurs de l'utiliser depuis r11067, 09/09/2007. Dans la version stable depuis [[Main/fr/OpenTTD 0.6.0|OpenTTD 0.6.0]].
+
+[[Category:fr/Fonctionnalités 0.6.0]]
