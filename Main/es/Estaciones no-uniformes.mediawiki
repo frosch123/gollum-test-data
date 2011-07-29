@@ -1,0 +1,20 @@
+[[Translation:Main/en/Nonuniform stations]]
+Las '''Estaciones no-uniformes''' es una [[Main/es/Opciones avanzadas|opción avanzada]] que permite la construcción de estaciones no uniformes.
+
+== Descripción ==
+Las estaciones no uniformes no tienen que ser rectangulares ni tienen que estar alineadas ni unidas físicamente.
+En [[Main/es/Transport Tycoon Deluxe|Transport Tycoon Deluxe]], el original, todas los andenes de la estación tenían que tener la misma longitud, además de estar en la misma dirección y colocadas en contacto entre sí.
+
+Las estaciones no uniformes es una opción de OpenTTD que cambia todo esto. Gracias a esta opción, los andenes pueden tener diferentes longitudes y las estaciones no tienen que estar ni en la misma dirección ni colocadas juntas, y además, pueden ser de diferente tipo: ([[Main/es/Ferrocarril|ferrocarril normal]], [[Main/es/Monorraíl|monorraíl]] y [[Main/es/MagLev|levitación magnética]]) y todas integradas en una misma estación.
+
+Para crear una estación no-uniforme sólo tiene que colocar las diferentes partes de la estación una junto a la otra (use Ctrl para unir estaciones que no estén en contacto). También es posible quitar casillas sueltas de una estación, en primer lugar haga clic en "construir estación" [[File:en/Build station.png]], después en "retirar" [[File:en/Toggle clear active.png]] y por último en la casilla de la estación que desea eliminar.
+
+== Uso ==
+Esta opción está por defecto activada. Para desactivarla acceda a Opciones avanzadas, Estaciones, [[Main/en/Opciones avanzadas/Estaciones/Es#Estaciones no uniformes|Estaciones no uniformes]] o modifique el archivo de configuración del programa [[Main/es/openttd.cfg|openttd.cfg]] con el siguiente código:
+<pre>[station]
+nonuniform_stations = false</pre>
+[[File:en/nonuniform.png|center|none|frame|Un ejemplo de estación no uniforme.]]
+
+[[Category:es/Configuración y preferencias]]
+[[Category:es/Construcción]]
+[[Category:es/Ferrocarril]]
