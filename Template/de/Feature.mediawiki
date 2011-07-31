@@ -1,0 +1,28 @@
+<noinclude>[[Translation:Template/en/Feature]]</noinclude><includeonly>{{en/VersionBox|{{#ifeq: {{{1|}}}|Old|0|{{#ifexpr: {{{1|}}} < 0|0|{{{1|}}}}}}}|{{#ifeq: {{{1|}}}|Old|99|{{#ifexpr: {{{1|}}} > 0|99|{{#expr:-{{{1|}}}}}}}}}||caption=Verfügbarkeit des Features|text={{{text|}}}|align={{{align|}}}}}</includeonly><noinclude>
+
+=== Template:Feature/De - Benutzung ===
+Gib <nowiki>{{</nowiki>'''Feature/De'''<nowiki> | Versionsnummer}}</nowiki> ein.
+* Unterstütze Versionen: Alt,0.5,0.6,0.7,1.0,1.1 (weitere können einfach hinzugefügt werden).
+* Es funktionieren auch negative Werte (-Alt,-0.5,-0.6,-0.7,-1.0,-1.1)
+* Bislang unveröffentlichte Versionen erscheinen als "nightly".
+* Weitere Einstellungen sind <code>align=</code> und <code>text=</code>
+Nutze für einen Zeitraum {{s|Feature Zeitraum/De}}
+
+=== Beispiele ===
+<pre>{{de/Feature|0.6}}</pre>
+{{de/Feature|0.6}}
+<pre>{{de/Feature|0.7|text=(seit 0.7.2)|align="left"}}
+Beispieltext{{en/-}}</pre>
+{{de/Feature|0.7|text=(seit 0.7.2)|align="left"}}
+Beispieltext{{en/-}}
+<pre>{{de/Feature|1.0|align="right"}}
+Beispieltext{{en/-}}</pre>
+{{de/Feature|1.0|align="right"}}
+Beispieltext{{en/-}}
+<pre>{{de/Feature|1.1}}</pre>
+{{de/Feature|1.1}}
+<pre>{{de/Feature|-0.6|text=(bis 0.6.2)}}</pre>
+{{de/Feature|-0.6|text=(bis 0.6.2)}}
+
+[[Category:de/Vorlagen|F]]
+</noinclude>
