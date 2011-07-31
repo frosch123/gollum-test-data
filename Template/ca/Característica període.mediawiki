@@ -1,0 +1,28 @@
+<noinclude>[[Translation:Template/en/Feature period]]</noinclude><includeonly>{{en/VersionBox|{{#ifeq: {{{1|}}}|Old|0|{{{1|}}}}}|{{#ifeq: {{{2|}}}|Old|0|{{{2|}}}}}|caption=Característica disponible|text={{{text|}}}|align={{{align|center}}}}}</includeonly><noinclude>
+
+
+====Ús de la plantilla====
+Introduïu <nowiki>{{</nowiki>'''Característica_període/Ca'''<nowiki> | Número de versió des de | Número de versió fins a}}</nowiki>
+*Versions compatibles Old,0.5,0.6,0.7,1.0,1.1 (i altres es poden afegir fàcilment)
+*Altres paràmetres són <code>align=</code> i <code>text=</code>
+Veja també {{s|Característica/Ca}}
+
+====Exemples====
+<pre>{{ca/Característica període|0.6|0.7}}</pre>
+{{ca/Característica període|0.6|0.7}}
+<pre>{{ca/Característica període|0.7|1.0|text=(de 0.7.2 fins a 1.0.0)|align="left"}}
+TEXTO{{en/-}}</pre>
+{{ca/Característica període|0.7|1.0|text=(de 0.7.2 fins a 1.0.0)|align="left"}}
+TEXTO{{en/-}}
+<pre>{{ca/Característica període|1.0|1.1|align="right"}}
+TEXTO{{en/-}}</pre>
+{{ca/Característica període|1.0|1.1|align="right"}}
+TEXTO{{en/-}}
+<pre>{{ca/Característica període|0.5|0.7}}</pre>
+{{ca/Característica període|0.5|0.7}}
+<pre>{{ca/Característica període|0.6|1.0|text=(de 0.6.2 fins a 1.0.0)}}</pre>
+{{ca/Característica període|0.6|1.0|text=(de 0.6.2 fins a 1.0.0)}}
+
+
+[[Category:ca/Plantilles|Característica període]]
+</noinclude>
