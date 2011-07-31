@@ -1,0 +1,26 @@
+<noinclude>[[Translation:Template/en/Feature period]]</noinclude><includeonly>{{en/VersionBox|{{#ifeq: {{{1|}}}|Old|0|{{{1|}}}}}|{{#ifeq: {{{2|}}}|Old|0|{{{2|}}}}}|caption=Disponibilité de la fonctionnalité|text={{{texte|}}}|align={{{align|center}}}}}</includeonly><noinclude>
+
+==== Utilisation du modèle====
+Entrez-vous <nowiki>{{</nowiki>'''Disponibilité_période/Fr'''<nowiki> | version à partir de | version jusqu'à}}</nowiki>
+*Versions compatibles Old,0.5,0.6,0.7,1.0,1.1 (d'autres versions peuvent facilement être ajoutés)
+*D'autres paramètres sont <code>align=</code> et <code>texte=</code>
+Voyez-vous aussi {{s|Disponibilité/Fr}}
+
+====Examples:====
+<pre>{{fr/Disponibilité période|0.6|0.7}}</pre>
+{{fr/Disponibilité période|0.6|0.7}}
+<pre>{{fr/Disponibilité période|0.7|1.0|texte=(0.7.2 à 1.0.0)|align="left"}}
+TEXTO{{en/-}}</pre>
+{{fr/Disponibilité période|0.7|1.0|texte=(0.7.2 à 1.0.0)|align="left"}}
+TEXTO{{en/-}}
+<pre>{{fr/Disponibilité période|1.0|1.1|align="right"}}
+TEXTO{{en/-}}</pre>
+{{fr/Disponibilité période|1.0|1.1|align="right"}}
+TEXTO{{en/-}}
+<pre>{{fr/Disponibilité période|0.5|0.7}}</pre>
+{{fr/Disponibilité période|0.5|0.7}}
+<pre>{{fr/Disponibilité période|0.6|1.0|texte=(0.6.2 à 1.0.0)}}</pre>
+{{fr/Disponibilité période|0.6|1.0|texte=(0.6.2 à 1.0.0)}}
+
+[[Category:fr/Modèles|Disponibilité période]]
+</noinclude>
