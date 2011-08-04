@@ -1,0 +1,17 @@
+[[Translation:Main/en/Disable inflation]]
+{{en/-}}
+A [[Main/en/Advanced Settings|setting]] that completely disables [[Main/en/inflation]], meaning all prices will stay constant throughout the game.
+
+
+== Description ==
+All prices stay constant throughout the whole game with this patch. This way you can easily see how much more profit you are making compared to the recent years.
+
+
+== Use ==
+[[Main/en/Inflation]] is enabled by default. You can disable it through the [[Main/en/Configuring patches/Economy|configure patches -> economy]] window (versions prior to 0.7.0) or use the following syntax in [[Main/en/openttd.cfg]]:
+<pre>[patches]
+noinflation = true</pre>
+
+In versions 0.7.0 and later, [[Main/en/inflation]] can be disabled by going to [[Main/en/Advanced Settings/Economy|Advanced Settings > Economy]].
+
+[[Category:en/Settings & Preferences]]
