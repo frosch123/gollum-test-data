@@ -1,0 +1,24 @@
+[[Translation:Main/en/Servicing]]
+'''Onderhoud''' wordt mogelijk als een voertuig een [[Main/nl/depots|garage]] of [[Main/nl/depots|hangar]] binnen gaat. Onderhoud verhoogt de betrouwbaarheid (vermindering van defecten) en de levensduur van het voertuig.
+
+==Automatisch onderhoud==
+[[Main/nl/Voertuigen|Voertuigen]] gaan automatisch naar een garage of hangar als zij het einde van hun '''onderhoudsinterval''' bereiken. Dit kan worden aangepast in de voertuig details, of in de patch opties. 
+
+==Inroosteren onderhoud==
+[[File:en/Scheduled servicing.png|thumb|280px||right|Inroosteren onderhoud]]Je kunt er ook voor zorgen dat voertuigen naar een garage of hangar gaan door een routinematige opdracht toe te voegen met de [[Main/nl/Sta ga naar depot orders toe|ga naar het depot order]] in de orderlijst. 
+
+Op deze wijze zal je voertuig regelmatiger onderhouden worden, en daarmee [[Main/nl/defecten|defecten]] voorkomen. Het voorkomt ook dat een voertuig onderhoud nodig heeft op een ongunstig moment op zijn route (misschien is de dichtstbijzijnde garage ver weg). 
+
+Dit soort onderhoud moet ingeroosterd zijn voordat een trein zijn vracht laadt om zeker te stellen dat de reis niet wordt vertraagd op weg naar zijn bestemming (vermindert de betaling).
+
+Als je niet wilt dat het voertuig elke keer de garage of hangar bezoekt bij het afwerken van de orders, dan kun je er voor kiezen een ''onderhoud'' instructie op te nemen in de ga naar garage order - dit zorgt er voor dat de order wordt genegeerd als de onderhoudsinterval nog niet is verlopen.
+
+=== Voorzichtig ===
+
+Een voertuig met een '''ga naar garage''' order zal ''nooit'' uit zichzelf op zoek gaan naar een garage, ongeacht de instelling van de onderhoudsinterval. Dus als je één '''ga naar garage''' order opneemt, wordt je verantwoordelijk voor al het onderhoud aan dit voertuig.
+
+==Gedwongen onderhoud (alleen voor treinen)==
+[[File:en/Forced servicing.png|thumb|right|Eenzijdig gedwongen onderhoud met gebruik van [[seinen/Nl#voorseinen|voorseinen]]]]
+Treinen kunnen ''gedwongen'' een garage inrijden door de sporen op zo'n manier neer te leggen dat zij geen andere keuze hebben dan de garage binnen te rijden. Aangezien er geen merkbare afname van de snelheid is als een trein een garage binnenrijdt en verlaat, is het noodzakelijk het aantal onderhoudslijnen aan te passen aan de verkeersdrukte op dat spoor.
+
+[[Category:nl/Voertuigen]]
