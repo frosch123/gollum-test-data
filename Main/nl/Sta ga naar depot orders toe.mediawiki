@@ -1,0 +1,29 @@
+[[Translation:Main/en/Allow goto depot orders]]
+'''Sta ga naar depot orders''' is een [[Main/nl/Geavanceerde instellingen|instelling]] dat spelers toestaat een garage/hangar op te nemen in de orderlijst van voertuigen [[Main/nl/orders|orders]]. 
+
+== Beschrijving ==
+[[File:en/Ganaardepotorder1.png|right|frame|"Ga naar depot" order in de voertuigen orderlijst]]
+Als deze optie toegestaan is wordt het mogelijk een depot/garage/hangar op te nemen in de [[Main/nl/Orders|voertuigen orders]]. Dit is te gebruiken om verplicht onderhoud op een bepaald punt in de orders op te nemen (misschien voordat een complexe kruising wordt gepasseerd, waar je niet wil dat je trein - door een defect - stil komt te staan).
+
+== Hoe de ''ga naar depot'' order te gebruiken ==
+Je kunt, net als bij een station, een depot aanklikken in de kaart om op te nemen in de orderlijst, en het voertuig zal dat depot bezoeken als het deze order tegenkomt in de lijst, voordat hij zijn weg vervolgd, net zoals elk ander [[Main/nl/controleposten|controlepost]] of station in de orderlijst. 
+
+Wanneer je een '''ga naar depot''' order selecteert in de orderlijst, zullen de "Volledig laden" en "Lossen" instructieknoppen in het ordervenster veranderen in respectievelijk "Ombouwen" en "Onderhoud".
+
+Als je niet wil dat het voertuig elke keer het depot bezoekt als deze de orderlijst doorloopt, gebruik dan de ''Onderhoud'' instructie: de '''ga naar depot''' order wordt dan genegeerd als de onderhoudsinterval nog niet is verlopen.
+
+Als je wil dat het voertuig wordt [[Main/nl/Voertuig aanpassen|omgebouwd]] in het depot, klik dan op de ''Ombouwen'' instructie knop. Een pop-up venster zal dan verschijnen met de ombouwopties voor dat voertuig.
+
+''Zie ook: [[Main/en/Onderhoud/Nl#Inroosteren onderhoud|Inroosteren onderhoud]]''
+
+== Gebruik ==
+Deze functie staat standaard aan. Je kunt deze uitzetten met de [[Main/nl/Geavanceerde instellingen/Voertuigen|Geavanceerde instellingen -> voertuigen]] venster of de volgende syntax gebruiken in [[Main/en/openttd.cfg]]:
+<pre>[order]
+gotodepot = false</pre>
+
+== Voorzichtig ==
+
+Een voertuig met een '''ga naar depot''' order ergens in de lijst zal ''nooit'' op zoek gaan naar een depot uit zichzelf, ongeacht of de onderhoudsinterval is verlopen. Dus als je één '''ga naar depot''' order opneemt, word je daarmee verantwoordelijk voor al het onderhoud aan dit voertuig. 
+
+[[Category:nl/Instellingen en voorkeuren]]
+[[Category:nl/Voertuigen]]
