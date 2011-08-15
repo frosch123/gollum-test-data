@@ -1,0 +1,48 @@
+[[Translation:Main/en/Replace vehicles]]{{en/-}}{{nl/Tutorial}}
+
+= Handmatig vervangen =
+
+Je kunt een enkel voertuig vervangen zonder de orderlijst te verliezen door de volgende stappen uit te voeren:
+#zend het bedoelde voertuig naar een depot/garage
+#verwijder (verkoop) het voertuig (of alleen de locomotief van een trein)
+#*nu zal de ''eerste'' nieuw locomotief/voertuig dat je bouwt dezelfde orderlijst hebben als de zojuist verwijderde machine
+#bouw het voertuig/de locomotief van het gewenste type (het zal dezelfde orderlijst hebben als de zojuist verwijderde)
+
+= Automatisch vervangen =
+
+Automatisch vervangen is een handige functie die is geïmplementeerd door [[Main/en/Bjarni]] waarmee je een complete vloot van een bepaald type voertuig kunt vervangen door een ander type zonder te hoeven verkopen en vervangen per voertuig. Stel je voor dat je zojuist een netwerk van 40 bussen hebt opgebouwd en er komt een nieuw bustype uit. Dat kost een aanzienlijke hoeveelheid tijd en inspanning om al deze bussen naar een depot te sturen, ze één voor één te verkopen en nieuwe te kopen van het nieuwste type bus. In deze situaties heb je automatisch vervangen nodig. Je kunt treinmodellen vervangen door andere treinmodellen, en wagons kunnen ook worden vervangen. Dit is zeer handig in [[Main/en/NewGRF]] sets waarin nieuwe, snellere wagontypes worden geïntroduceerd als het spel vordert. 
+
+
+Om het ''vervang voertuigen'' scherm te openen, open je eerst de voertuigenlijst van het type voertuig dat je wilt vervangen (treinen zijn te zien in de schermafbeelding hieronder). Dan vanuit het ''Beheer lijst'' menu, klik op ''Vervang voertuigen''.
+[[File:en/voertuigenlijst1.png|frame|none|Waar vind je ''Vervang voertuigen'']]
+
+De ''vervang (voertuig type)'' venster verschijnt, die lijkt op degene die voor de treinen is gebruikt hieronder.
+[[File:en/voertuigenlijst2.png|frame|none|Het ''vervang voertuigen'' venster voor treinen]]
+
+Het linker deel van het venster toont de voertuigen die momenteel in gebruik zijn. Het rechter deel van het venster toont de nieuwe voertuigen die beschikbaar zijn om als vervanger te gebruiken. Je klikt het oude en het nieuwe type om ze te selecteren om de vervanging te definiëren. 
+
+Als je treinen wilt opwaarderen, zijn er verschillende types beschikbaar, en je kunt het type aanpassing kiezen onderaan in het midden van het venster (toont ''Railvoertuigen'' hierboven). Voor treinen kun je ook wisselen tussen vervangen van locomotieven en wagons door te klikken op de ''Aan het vervangen: Motoren'' knop zoals getoond.
+
+Natuurlijk is het niet mogelijk op te waarderen tussen verschillende typen treinen omdat de trein in staat moet zijn het depot binnen te komen en te verlaten als een nieuw type. De uitzondering op deze regel is die van normale naar elektrische treinen (als je elektrisch spoor hebt aangelegd ter plaatse) omdat beide op elektrisch spoor kunnen rijden en in een elektrisch depot kunnen worden gebouwd.
+
+Om te beginnen met het vervangen van de voertuigen nadat je een selectie hebt gemaakt, klik je op ''Start het vervangen''.
+
+Zodra alle voertuigen van een type zijn vervangen, wordt het oude type voertuig grijs in het vervang voertuig venster (zoals te zien is met de ''Floss 47''). Klik hierop en klik dan op ''Stop het vervangen'' om de procedure af te ronden en het oude voertuig verdwijnt uit de lijst links.
+[[File:en/voertuigenlijst3.png|frame|none|Na vervanging van de ''Floss 47'' door de ''SH 125''. Het oude voertuigtype wordt grijs.]]
+
+==Wagon verwijderen==
+In de onderste hoek rechts van het vervang voertuig venster is een knop met het label  ''Wagons verwijderen: Aan/Uit''. Als deze optie op ''Aan'' is gezet, dan zal als een 1-eenheid locomotief (bijvoorbeeld, de Gresley A4) wordt vervangen door een 2-eenheid locomotief (de IC125 bijvoorbeeld), de eerste wagon van de trein worden verkocht om de originele lengte van de trein te behouden. 
+
+Merk op dat dit alleen één kant op werkt; als je een trein vervangt met een twee locomotieven (bijv. IC125 of sommige DMUs) door een enkele locomotief, wordt de totale lengte ingekort. Er wordt geen extra lengte toegevoegd omdat je niet kunt aangeven welke wagon moet worden aangekocht om die lengte terug te krijgen.
+
+==Onderhoud==
+Je voertuigen zullen niet allemaal naar een depot worden gestuurd zodra je op de ''Start vervangen voertuigen'' knop drukt. In plaats daarvan zullen ze worden vervangen bij hun volgende reguliere onderhoudsbeurt in een depot.
+
+Maar als je hebt ingesteld dat ''[[Main/en/Geavanceerde instellingen/Voertuigen/Nl#Disable servicing when breakdowns set to none|onderhoud wordt uitgeschakeld als defecten zijn ingesteld op geen]]'' en ''[[Main/en/Moeilijkheidsgraad/Nl#Voertuigdefecten|voertuigdefecten]]'' is ingesteld op ''geen'', zullen je voertuigen niet naar een depot gaan voor onderhoud. In dat geval gebruikt automatisch vervangen andere regels, afhankelijk van je that case autoreplace uses different rules depending on your fondsen (deze gelden alleen voor OpenTTD 1.0.0 of nieuwer):
+* De te vervangen voertuigen moeten aanpasbaar zijn voor de gevraagde vracht.
+* Het bedrijf moet meer geld hebben dan de (automatische vervang geldlimiet) + 2 * (prijs voor nieuwe voertuigen)<br/>Er wordt geen rekening gehouden met de verkoopprijs van de oude voertuigen. De automatisch vervang geldlimiet is hetzelfde als de automatisch vervangen minimum benodigd geld waarde die je hebt geconfigureerd in Geavanceerde instellingen.
+* De onderhoudsinterval moet zijn bereikt. Zelfs als onderhoud is uitgezet zal een voertuig één keer proberen om te worden vervangen en als dat niet lukt wordt een tweede poging gedaan als de onderhoudsinterval weer is verlopen.
+
+<span style="float: right">[[Main/nl/Voertuig groepen|'''Volgende''': Voertuig groepen]] &raquo;</span>
+
+[[Category:nl/Voertuigen|V]]
