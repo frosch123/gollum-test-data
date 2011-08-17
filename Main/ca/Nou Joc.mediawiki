@@ -1,0 +1,72 @@
+{{ca/Traducció|New game|70}}
+[[Translation:Main/en/New game]]{{en/-}}{{ca/Interfície}}
+Amb aquest botó iniciarà el seu primer joc, probablement. És el primer botó que trobarà al menú principal.
+
+[[File:ca/Main menu new game.png]]
+
+Quan el pressione, apareixerà una nova finestra amb més opcions.
+
+[[File:ca/Worldgenerationdialog.png]]
+
+Ara que ha arribat fins ací, vorem una descripció d'aquestes opcions.
+
+== Opcions ==
+'''[[Main/ca/Clima|Clima]]:'''
+A la fila de dalt hi ha quatre imatges per a seleccionar el clima (o paisatge) que vol usar. D'esquerra a dreta estan el paisatge temperat, el paisatge subàrtic, el paisatge subtropical i el paisatge de joguines.
+
+'''Mida del mapa:'''
+Això indica cóm és de gran el mapa. La mida més petita és de 64 caselles, i la més gran és de 2048 caselles.  El primer número és l'amplada del costat Nord-oest (i Sud-est) i el segon del costat Nord-est (i Sud-oest). Per a un sol jugador 512x512 li donarà un munt d'espai.
+
+'''Data:'''
+Aquesta és la data a la que s'inicia la partida. Per defecte és l'any 1950.
+
+'''Generació de terrenys:'''
+Indica de quina manera es genera el terreny. S'aconsella deixar-la en TerraGenesis.
+
+'''Alçada de la neu:'''
+Només disponible en el clima subàrtic, indica l'altura a la que hi apareix la neu perpètua, pot variar entre 2 i 13.
+
+'''Nre. de pobles:'''
+Per a indicar el nombre de pobles al mapa, encara que això també depén de la mida del mapa. Pot variar entre ''Molt Baix'', ''Baix'', ''Normal'', ''Alt'' i ''Personalitzat''.
+
+'''Nre. d'indústries:'''
+Per a indicar la quantitat d'indústries que hi apareixen. També depén de la mida del mapa.
+
+A partir d'OpenTTD 1.1 pot variar entre ''Només finança'', ''Mínim'', ''Molt Baix'', ''Baix'', ''Normal'' i ''Alt''.
+
+(En OpenTTD 1.0 i anteriors variava entre ''Cap'', ''Molt Baix'', ''Baix'', ''Normal'' i ''Alt'')
+
+''"Només finança"'' significa que haurà de finançar totes les indústries a través del joc.
+
+Amb ''"Mínim"'' s'inicia amb el mínim nombre d'indústries.
+
+Per a la resta (de ''Molt Baix'' a ''Alt'') els valors més baixos són més útils en mapes més grans, mentre que els valors més alts són més útils en mapes petits.
+
+{{ca/Pendent de traducció}}
+
+'''Tipus de terreny:'''
+This is how flat or hilly the terrain is.
+
+'''Planitut:'''
+A smooth map has large fields of even land and slopes are mostly straight lines. A rough map has more changes in height levels and curved slopes.
+
+'''Número aleatori:'''
+This is the map the game plays on. Copy it and paste it if you want to play the same map over again or give to a friend. However the other options in this window also apply and modify the result map. In order to recreate the exact same map you must also set the other options to the values they had when creating the original map. Town names will still be different.
+
+'''Nivell del mar:'''
+A higher sea level will create a map with more sea and less land.
+
+'''Algoritme d'arbres:'''
+This is how the trees are aligned. Keep it where it is, or it wont look good, unless you don't want any trees, which is 'None'.
+
+'''[[Main/ca/Distribució de la varietat|Distribució de la varietat]]:'''
+Gives the option of more variability across the map
+
+'''Vores del mapa:'''
+This is whether you want the map edges to be randomly generated or you manually generating them.
+
+''''Nord-oest /Nord-est/Sud-oest/Sud-est''
+Whether this edge of the map is water or freeform (water and land)
+
+== I per acabar ==
+Now that you have set all your settings, press '''Generate''' to get started! Once the map has been created you will be taken to the [[Main/en/Game interface]].
