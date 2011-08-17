@@ -1,0 +1,27 @@
+<noinclude>[[Translation:Template/en/Feature period]]</noinclude><includeonly>{{en/VersionBox|{{#ifeq: {{{1|}}}|Old|0|{{{1|}}}}}|{{#ifeq: {{{2|}}}|Old|0|{{{2|}}}}}|caption=Mogelijkheid beschikbaar van |text={{{text|}}}|align={{{align|center}}}}}</includeonly><noinclude>
+
+====Template:Kenmerken_periode gebruik====
+Kopieer de volgende code om deze template te gebruiken: <nowiki>{{</nowiki>'''Kenmerken_periode'''<nowiki> | Vanaf versienummer | T/m versienummer }}</nowiki>
+*Ondersteunde versies: Oud,0.5,0.6,0.7,1.0,1.1 (andere versies kunnen gemakkelijk toegevoegd worden).
+*Enkele andere parameters: <code>align=</code> en <code>text=</code>
+Zie ook {{s|Kenmerken}}
+
+====Voorbeelden:====
+<pre>{{nl/Kenmerken periode|0.6|0.7}}</pre>
+{{nl/Kenmerken periode|0.6|0.7}}
+<pre>{{nl/Kenmerken periode|0.7|1.0|text=(0.7.2 t/m 1.0.0)|align="left"}}
+TEKST{{en/-}}</pre>
+{{nl/Kenmerken periode|0.7|1.0|text=(0.7.2 t/m 1.0.0)|align="left"}}
+TEKST{{en/-}}
+<pre>{{nl/Kenmerken periode|1.0|1.1|align="right"}}
+TEKST{{en/-}}</pre>
+{{nl/Kenmerken periode|1.0|1.1|align="right"}}
+TEKST{{en/-}}
+<pre>{{nl/Kenmerken periode|0.5|0.7}}</pre>
+{{nl/Kenmerken periode|0.5|0.7}}
+<pre>{{nl/Kenmerken periode|0.6|1.0|text=(0.6.2 t/m 1.0.0)}}</pre>
+{{nl/Kenmerken periode|0.6|1.0|text=(0.6.2 t/m 1.0.0)}}
+
+
+[[Category:nl/Sjablonen|K]]
+</noinclude>
