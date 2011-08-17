@@ -1,0 +1,73 @@
+[[Translation:Main/en/New game]]{{en/-}}{{es/Interfaz}}
+Con este botón iniciará su primer juego, probablemente.
+Es el primer botón que encontrará en el menú principal.
+
+[[File:es/Main menu new game.png]]
+
+Cuando lo pulsa, aparece una nueva pantalla con un montón de opciones.
+
+[[File:es/Worldgenerationdialog.png]]
+
+Ahora que ha llegado hasta aquí, veamos lo que significan las opciones:
+
+==Opciones==
+'''[[Main/es/Clima|Clima]]:'''
+En la fila superior hay cuatro imágenes para seleccionar el clima que usted prefiera.
+De izquierda a derecha encontrará: "Templado", "Subártico", "Subtropical" y "Fantasía" (o Toyland).
+
+'''Tamaño del mapa:'''
+Para indicar cómo de grande quiere que sea el mapa. El tamaño más pequeño es de 64 casillas, mientras que el más grande es de 2048. El primer número es la anchura del lado Noroeste (y Sureste) y el segundo del lado Noreste (y Suroeste).
+
+'''Fecha:'''
+Esta es la fecha de inicio de partida en la que se inicia el juego.
+
+'''Generador de terreno:'''
+Esta es la forma en que la se genera el terreno. Le sugiero que lo deje tal y como está, si ya está en "TerraGenesis".
+
+'''Altura línea nieve:'''
+Sólo disponible con el clima subártico, indica a qué altura aparecen las casillas de nieve perpetua. Varía entre 2 y 13.
+
+'''Nº de pueblos:'''
+Para indicar cuántas ciudades hay en el mapa. Aunque también dependerá del tamaño del mapa. Puede ser: ''muy bajo'', ''bajo'', ''normal'', ''alto'' y ''personalizado''.
+
+'''Nº de industrias:'''
+Para indicar cuántas industrias hay en el mapa. También dependerá del tamaño del mapa.
+
+A partir de OpenTTD 1.0 puede variar entre ''solo fundadas'', ''mínimo'', ''muy bajo'', ''bajo'', ''normal'' y ''alto''.
+
+(En versiones anteriores era: ''ninguno'', ''muy bajo'', ''bajo'', ''normal'' y ''alto'')
+
+''"Solo fundadas"'' significa que habrá de fundar todas las industrias a través del juego.
+
+''"Mínimo"'' significa que empieza con el mínimo número de industrias.
+
+Para el resto de valores (de "muy bajo" a "alto") se consideran más útiles en mapas grandes los valores más bajos y en mapas pequeños los valores más altos.
+
+'''Tipo de terreno:'''
+Controla lo plano o montañoso que debe ser el terreno. La opciones son "Muy llano", "llano", "ondulado", y "montañoso".
+
+'''Suavidad:'''
+Un mapa más "suave" tiene grandes áreas de tierra y las pendientes son en su mayoría líneas rectas. Un mapa más "áspero" tiene más cambios de altura y taludes curvos.
+
+'''Semilla aleatoria:'''
+Este es el mapa del juego. Copie y pegue si quiere jugar el mismo mapa de nuevo o dárselo a un amigo. Sin embargo al aplicar las otras opciones de esta ventana también se modifica el mapa resultante. Si quiere recrear el mapa exactamente también deberá establecer las otras opciones idénticas a los valores que tenían al crear el mapa original, pero los nombres de los pueblos todavía serán diferentes. Pulsando el botón '''Aleatorio" se generará una semilla diferente.
+
+'''Nivel del mar:'''
+Un nivel del mar más alto va a crear un mapa con más mar y menos tierra. las opciones son "Muy bajo", "Bajo", "Medio" y "Alto"
+
+'''Algoritmo árboles:'''
+Controla la alineación de los árboles. Déjelo tal y como está, en "mejorado", para que quede más bonito, a menos que no quiera árboles, en cuyo caso seleccione "Ninguno".
+
+'''[[Main/es/Variedad de distribución|Variedad]]:''' 
+Controla la variabilidad de un mapa, pudiendo ser más uniforme (o regular) o más variable.
+
+'''Bordes del mapa:'''
+Controla si quiere que los bordes de mapa que se generen de forma aleatoria o de forma manual.
+La forma "manual" activa los botones "noroeste, noreste, suroeste, sureste".
+La forma "aleatoria" los desactiva.
+
+'''Noroeste, Noreste, Suroeste, Sureste:'''
+Controla si ese borde del mapa es de "agua" o de "forma libre" (agua o tierra)
+
+==Y para acabar==
+Ahora que ya ha establecido todos los ajustes, ¡pulse en '''Generar''' para empezar! Cuando el mapa se haya creado aparecerá la [[Main/es/Interfaz del juego|interfaz del juego]].
