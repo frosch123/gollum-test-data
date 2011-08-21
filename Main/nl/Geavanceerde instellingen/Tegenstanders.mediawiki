@@ -1,0 +1,64 @@
+[[Translation:Main/en/Advanced Settings/Competitors]]{{en/-}}{{nl/Geavanceerde instellingen}}
+
+==Geavanceerde instellingen venster: Tegenstanders sectie==
+De tegenstanders sectie geeft je de mogelijkheid verschillende opties in te stellen gerelateerd aan [[Main/en/AI]] en [[Main/nl/multiplayer|netwerkspelen]]. Het doel van de beschikbare instellingen is hieronder toegelicht. Voor elke instelling zijn de respectievelijke variabelen van de [[Main/en/openttd.cfg|config file]] opgegeven, tezamen met de mogelijke waarden.
+{| align="center"
+|- valign="top"
+|__TOC__
+|[[File:en/GI tegenstanders.png|frame|left|De tegenstanders sectie van het Geavanceerde instellingen venster (1.1.1)]]
+|}
+
+===<u>Computerspelers</u>===
+====Laat computerspelers toe in netwerkspel====
+{{nl/Kenmerken|0.4|align="right"|text=(0.4.5)}}
+Staat toe om computerspelers toe te laten in netwerkspelen. Het aantal computerspelers kan worden ingesteld met het [[Main/nl/Moeilijkheidsgraad|moeilijkheidsgraad]] venster.
+:''Mogelijke instellingen:'' <span style="color:green">'''Aan'''</span> of <span style="color:red">'''Uit'''</span>
+:''In [[Main/en/Openttd.cfg]] config file:'' ([ai] ai_in_multiplayer = <true|false>)
+====Treinen voor de computer uitschakelen====
+{{nl/Kenmerken|Old|align="right"|text=(0.3.2)}}
+De computer kan geen [[Main/nl/Treinen|treinen]] of [[Main/nl/spoorwegconstructies|spoorwegconstructies]] bouwen.
+Deze opties is verplaatst van de [[Main/en/Configuring patches/Vehicles#Disable trains for computer|voertuigsectie]] in 0.3.4.
+:''Mogelijke instellingen:'' <span style="color:green">'''Aan'''</span> of <span style="color:red">'''Uit'''</span>
+:''In Openttd.cfg config file:'' ([ai] ai_disable_veh_train = <true|false>)
+====Wegvoertuigen voor de computer uitschakelen====
+{{nl/Kenmerken|Old|align="right"|text=(0.3.2)}}
+De computer kan geen [[Main/nl/wegvoertuigen|wegvoertuigen]] of [[Main/nl/Wegconstructies|wegen]] bouwen. Deze optie is verplaatst van de [[Main/en/Configuring patches/Vehicles#Disable road vehicles for computer|voertuigsectie]] in 0.3.4.
+:''Mogelijke instellingen:'' <span style="color:green">'''Aan'''</span> of <span style="color:red">'''Uit'''</span>
+:''In Openttd.cfg config file:'' ([ai] ai_disable_veh_roadveh = <true|false>)
+====Vliegtuigen voor de computer uitschakelen====
+{{nl/Kenmerken|Old|align="right"|text=(0.3.2)}}
+De computer kan geen [[Main/nl/Vliegtuigen|vliegtuigen]] of [[Main/nl/Vliegveld|vliegvelden]] bouwen. Deze optie is verplaatst van de [[Main/en/Configuring patches/Vehicles#Disable aircraft for computer|voertuigsectie]] in 0.3.4.
+:''Mogelijke instellingen:'' <span style="color:green">'''Aan'''</span> of <span style="color:red">'''Uit'''</span>
+:''In Openttd.cfg config file:'' ([ai] ai_disable_veh_aircraft = <true|false>)
+
+====Schepen voor de computer uitschakelen====
+{{nl/Kenmerken|Old|align="right"|text=(0.3.2)}}
+De computer kan geen [[Main/nl/schepen|schepen]] bouwen. Deze optie is verplaatst van de [[Main/en/Configuring patches/Vehicles#Disable ships for computer|voertuigsectie]] in 0.3.4.
+:''Mogelijke instellingen:'' <span style="color:green">'''Aan'''</span> of <span style="color:red">'''Uit'''</span>
+:''In Openttd.cfg config file:'' ([ai] ai_disable_veh_ship = <true|false>)
+====aantal opcodes voordat computerspeler tijdelijk wordt gestopt====
+{{nl/Kenmerken|0.7|align="right"|text=(0.7.0)}}
+Verlaag deze waarde als de AI het spel te veel vertraagd. Verhoog de waarde als je vind dat de AI veel doet maar weinig bouwt. Laat de waarde op 10.000 als je niet zeker weet wat te doen.
+:''Mogelijke instellingen:'' <span style="color:#00693E">'''5.000'''</span> tot <span style="color:#00693E">'''250.000'''</span>
+:''In Openttd.cfg config file:'' ([ai] ai_max_opcode_till_suspend = <5000-250000>)
+{{en/-}}
+----
+===Geld geven aan andere bedrijven toestaan===
+{{nl/Kenmerken|0.7|align="right"|text=(0.7.0)}}
+Staat je toe om geld te geven aan andere bedrijven.
+:''Mogelijke instellingen:'' <span style="color:green">'''Aan'''</span> of <span style="color:red">'''Uit'''</span>
+:''In Openttd.cfg config file:'' ([economy] give_money = <true|false>)
+{{en/-}}
+===Sta het kopen van aandelen van andere bedrijven toe===
+{{nl/Kenmerken|0.7|align="right"|text=(0.7.0)}}
+Staat je toe om de mogelijkheid om [[Main/en/Economie/Nl#Aandelenhandel|aandelen te kopen]] van andere bedrijven in of uit te schakelen. Je moet ook wachten tot het bedrijf oud genoeg is voordat je tot 25% aandelen kunt kopen voor een volledige overname. Dit zal ongeveer 6 jaar zijn.
+:''Mogelijke instellingen:'' <span style="color:green">'''Aan'''</span> of <span style="color:red">'''Uit'''</span>
+:''In Openttd.cfg config file:'' ([economy] allow_shares = <true|false>)
+{{en/-}}
+
+==In vorige versies==
+===Zie ook===
+*'''Voor 0.3.0 tot 0.6.3''' - Zie [[Main/en/Configuring patches]] voor informatie over hoe de instellingen te veranderen.
+*'''Voor 0.2.0 en 0.2.1''' - Zie [[Main/en/Configuring patches in 0.2.0]].
+
+[[Category:nl/Instellingen en voorkeuren|G]]
