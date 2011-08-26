@@ -1,0 +1,288 @@
+[[Translation:Main/en/Advanced Settings/Vehicles]]{{en/-}}{{nl/Geavanceerde instellingen}}
+
+==Geavanceerde instellingen venster: Voertuigen sectie==
+De voertuigen sectie geeft je de mogelijkheid verschillende opties gerelateerd aan treinen, wegvoertuigen, vliegtuigen en schepen in te stellen. Het doel van de beschikbare instellingen wordt hieronder toegelicht. Voor elke instelling, de respectievelijke variabelen van de [[Main/en/openttd.cfg|config file]] zijn in de lijst opgenomen met de mogelijke waarden.
+{| align="center"
+|- valign="top"
+|__TOC__
+|[[File:en/Geavanceerde instellingen venster.png|frame|left|De voertuigen sectie van het Geavanceerde instellingen venster (1.1.1)]]
+|}
+
+===<u>Routebepaling</u>===
+====Routezoeker voor treinen====
+{{nl/Kenmerken|0.6|align="right"|text=(0.6.0)}}
+Selecteer de routezoeker algoritme voor treinen. [[Main/en/Yet Another Pathfinder]] is de standaard en aanbevolen instelling, maar je kunt ook een oudere routezoeker selecteren.
+:''Mogelijke instellingen:'' <span style="color:#00693E">'''NPF'''</span> of <span style="color:#00693E">'''YAPF'''</span> <span style="color:blue">(Aanbevolen)</span>
+:''In [[Main/en/Openttd.cfg]] config file:'' ([pf] pathfinder_for_trains = <0-2>)
+{{en/-}}
+====Verbied treinen en schepen om 90º te draaien====
+{{nl/Kenmerken|Old|align="right"|text=(0.4.0)}}
+Verbied treinen en schepen om scherpe 90 graden hoeken te maken. De NPF of YAPF routezoeker voor treinen moet aan staan om deze optie te laten werken voor treinen.
+:''Mogelijke instellingen:'' <span style="color:green">'''Aan'''</span> of <span style="color:red">'''Uit'''</span>
+:''In Openttd.cfg config file:'' ([pf] forbid_90_deg = <true|false>)
+{{en/-}}
+====Routezoeker voor wegvoertuigen====
+{{nl/Kenmerken|0.6|align="right"|text=(0.6.0)}}
+Selecteer de routezoeker algoritme voor wegvoertuigen. [[Main/en/Yet Another Pathfinder]] is de standaard en aanbevolen instelling, maar je kunt nog steeds de oudere routezoeker selecteren.
+:''Mogelijke instellingen:'' <span style="color:#00693E">'''NPF'''</span> of <span style="color:#00693E">'''YAPF'''</span> <span style="color:blue">(Aanbevolen)</span>
+:''In Openttd.cfg config file:'' ([pf] pathfinder_for_roadvehs = <0-2>)
+{{en/-}}
+====Wachtrijvorming bij wegvoertuigen (met bijwerkingen)====
+{{nl/Kenmerken|Old|align="right"|text=(0.2.0)}}
+Trucks en bussen [[Main/en/road vehicle queueing|vormen een rij]] bij een druk station i.p.v. om te keren.
+:''Mogelijke instellingen:'' <span style="color:green">'''Aan'''</span> of <span style="color:red">'''Uit'''</span>
+:''In Openttd.cfg config file:'' ([pf] roadveh_queue = <true|false>)
+{{en/-}}
+====Routezoeker voor schepen====
+{{nl/Kenmerken|0.6|align="right"|text=(0.6.0)}}
+Selecteer de routezoeker algoritme voor schepen. De originele is de standaard en aanbevolen instelling, maar je kunt een nieuwere selecteren. YAPF voor schepen heeft het voordeel dat er geen boeien nodig zijn voor lange afstanden, maar heeft serieuze problemen met de werking als er een groot aantal schepen worden gebruikt (bijv. meer dan tien).
+:''Mogelijke instellingen:'' <span style="color:#00693E">'''Origineel'''</span> <span style="color:blue">(Aanbevolen)</span>, <span style="color:#00693E">'''NPF'''</span> of <span style="color:#00693E">'''YAPF'''</span> <span style="color:red">(Niet Aanbevolen)</span>
+:''In Openttd.cfg config file:'' ([pf] pathfinder_for_ships = <0-2>)
+{{en/-}}
+----
+===<u>Automatisch vervangen</u>===
+Ben je het zat om alle voertuigen steeds te moeten vervangen elke twintig jaar? Laat deze patch hier voor zorgen. Wanneer je deze inschakelt zullen voertuigen automatisch worden vervangen. Met de volgende instellingen kun je de automatische vervanging aanpassen naar eigen inzicht.
+
+{{nl/Opmerking|Als het voertuig niet een depot ingaat, zal het niet worden vervangen. Je krijgt geen '''voertuig wordt oud'''  waarschuwing!}}
+
+====Vervang voertuig automatisch wanneer deze oud wordt====
+{{nl/Kenmerken|Old|align="right"|text=(0.3.3)}}
+Voertuigen worden automatisch vervangen wanneer zij oud worden, vooropgesteld dat hetzelfde voertuig type nog beschikbaar is om aan te schaffen.
+:''Mogelijke instellingen:'' <span style="color:green">'''Aan'''</span> of <span style="color:red">'''Uit'''</span>
+:''In Openttd.cfg config file:'' ([company] engine_renew = <true|false>)
+{{en/-}}
+====Vernieuw voertuig automatisch ... maanden voor/na max. leeftijd====
+{{nl/Kenmerken|Old|align="right"|text=(0.3.4)}}
+Als automatisch vervangen is ingeschakeld, zal een voertuig automatisch worden vernieuwd, de volgende keer dat het een onderhoudsdepot binnengaat, als het de leeftijd heeft bereikt met een spreiding van het aantal maanden voor of na zijn maximale leeftijd.
+:''Mogelijke instellingen:'' <span style="color:red">'''-12'''</span> tot <span style="color:#00693E">'''12'''</span>
+:* <span style="color:red">-12</span> betekent dat het veortuig wordt vervangen 12 maanden voordat het oud wordt.
+:* <span style="color:#00693E">+12</span> betekent dat het voertuig wordt vervangen 12 maanden nadat het oud wordt.
+:''In Openttd.cfg config file:'' ([company] engine_renew_months = <num_val>)
+{{en/-}}
+====Minimum benodigd geld voor automatisch vernieuwen====
+{{nl/Kenmerken|Old|align="right"|text=(0.3.4)}}
+Als automatisch vervangen is ingeschakeld en een voertuig zal worden vervangen, zal het bedrag dat een speler op dat moment heeft hoger moeten zijn dan deze waarde plus de kosten voor het nieuwe voertuiggeld.
+
+Als de waarde bijvoorbeeld is ingesteld op €200.000, een nieuw voertuig kost €10.000 en je hebt €205.000, dan zal het voertuig niet worden vervangen. In plaats daarvan krijg je een waarschuwing dat automatisch vervangen is mislukt voor dat voertuig.
+:''Mogelijke instellingen:'' <span style="color:red">'''€0'''</span> tot <span style="color:#00693E">'''€4.000.000''' ($8,000,000)</span>
+:''In Openttd.cfg config file:'' ([company] engine_renew_money = <0-2000000>)
+{{en/-}}
+----
+
+===<u>Onderhoud</u>===
+====Interval tussen onderhoud is een percentage====
+{{nl/Kenmerken|Old|align="right"|text=(0.3.4)}}
+Waneer deze schakelaar aan staat, zullen de onderhoudsintervallen worden gebaseerd op het percentage van de maximale betrouwbaarheid i.p.v. op dagen. Bijvoorbeeld, als een motor een maximale betrouwbaarheid heeft van 80% en je stelt de onderhoudsinterval in op 10% dan zal het naar het depot gaan bij 72%.
+:''Mogelijke instellingen:'' <span style="color:green">'''Aan'''</span> of <span style="color:red">'''Uit'''</span>
+:''In Openttd.cfg config file:'' ([vehicle] servint_ispercent = <true|false>)
+{{en/-}}
+====Standaard interval tussen onderhoud voor treinen====
+{{nl/Kenmerken|Old|align="right"|text=(0.3.2)}}
+De standaard onderhoudsinterval wanneer een nieuwe [[Main/en/service interval trains|trein]] wordt gebouwd.
+:''Mogelijke instellingen:'' <span style="color:red">'''uit'''</span> of <span style="color:#00693E">'''15 dagen/%'''</span> tot <span style="color:#00693E">'''800 dagen/%'''</span>
+:''In Openttd.cfg config file:'' ([vehicle] servint_trains = <0, 5-800)
+{{en/-}}
+====Standaard interval tussen onderhoud voor wegvoertuigen====
+{{nl/Kenmerken|Old|align="right"|text=(0.3.2)}}
+De standaard onderhoudsinterval wanneer een nieuw [[Main/en/service interval road vehicles|wegvoertuig]] wordt gebouwd.
+:''Mogelijke instellingen:'' <span style="color:red">'''uit'''</span> of <span style="color:#00693E">'''15 dagen/%'''</span> tot <span style="color:#00693E">'''800 dagen/%'''</span>
+:''In Openttd.cfg config file:'' ([vehicle] servint_roadveh = <0, 5-800)
+{{en/-}}
+====Standaard interval tussen onderhoud voor schepen====
+{{nl/Kenmerken|Old|align="right"|text=(0.3.2)}}
+De standaard onderhoudsinterval wanneer een nieuw [[Main/en/service interval ships|schip]] wordt gebouwd.
+:''Mogelijke instellingen:'' <span style="color:red">'''uit'''</span> of <span style="color:#00693E">'''15 dagen/%'''</span> tot <span style="color:#00693E">'''800 dagen/%'''</span>
+:''In Openttd.cfg config file:'' ([vehicle] servint_ships = <0, 5-800)
+{{en/-}}
+====Standaard interval tussen onderhoud voor vliegtuigen====
+{{nl/Kenmerken|Old|align="right"|text=(0.3.2)}}
+De standaard onderhoudsinterval wanneer een nieuw [[Main/en/service interval aircraft|vliegtuig]] wordt gebouwd.
+:''Mogelijke instellingen:'' <span style="color:red">'''uit'''</span> of <span style="color:#00693E">'''15 dagen/%'''</span> tot <span style="color:#00693E">'''800 dagen/%'''</span>
+:''In Openttd.cfg config file:'' ([vehicle] servint_aircraft = <0, 5-800)
+{{en/-}}
+====Schakel onderhoud uit wanneer defecten uit staan====
+{{nl/Kenmerken|Old|align="right"|text=(0.3.6)}}
+Als je het krijgen van defecten hebt ingesteld op '''geen''', zullen je voertuigen nooit naar een depot gaan voor onderhoud.
+Zelfs als deze instelling is ingeschakeld, zullen voertuigen wel naar het depot gaan voor automatisch vervangen als deze instellingen geactiveerd zijn.
+:''Mogelijke instellingen:'' <span style="color:green">'''Aan'''</span> of <span style="color:red">'''Uit'''</span>
+:''In Openttd.cfg config file:'' ([order] no_servicing_if_no_breakdowns = <true|false>)
+{{en/-}}
+====Helikopters automatisch repareren op helipads====
+{{nl/Kenmerken|Old|align="right"|text=(0.3.3)}}
+Als ingeschakeld, zullen helikopters automatisch worden onderhouden elke keer als zij op een helipad landen. Op deze manier hoef je geen vliegveld te hebben langs de route van de helikopter waar deze naar toe kan gaan voor zijn onderhoud. In vorige versies zat dit in [[Main/en/Configuring patches/Stations#Service helicopters at helipads|de stations sectie]].
+:''Mogelijke instellingen:'' <span style="color:green">'''Aan'''</span> of <span style="color:red">'''Uit'''</span>
+:''In Openttd.cfg config file:'' ([order] serviceathelipad = <true|false>)
+{{en/-}}
+----
+
+===<u>Treinen</u>===
+====Automatisch omdraaien bij seinen====
+{{nl/Kenmerken|1.1|align="right"|text=(1.1.1)}}
+Treinen zullen wel/niet automatisch omdraaien bij rode seinen als er geen vrije route is naar hun bestemming.
+:''Mogelijke instellingen:'' <span style="color:green">'''Aan'''</span> of <span style="color:red">'''Uit'''</span>
+:''In Openttd.cfg config file:'' ([pf] reverse_at_signals = <true|false>)
+{{en/-}}
+====Trein acceleratie model====
+{{nl/Kenmerken|0.7|align="right"|text=(0.7.0)}}
+Selecteer de standaard of een meer [[Main/nl/realistische acceleratie|realistische acceleratie]] berekening voor treinen. Met deze instelling op ''realistisch'' zullen treinen sneller heuvel op rijden, maar langzamer in krappe bochten.
+Deze optie is hernoemd van [[Main/en/Configuring patches/Vehicles#Enable realistic acceleration for trains|sta realistische acceleratie voor treinen toe]].
+:''Mogelijke instellingen:'' <span style="color:#00693E">'''Origineel'''</span> of <span style="color:#00693E">'''Realistisch'''</span>
+:''In Openttd.cfg config file:'' ([vehicle] train_acceleration_model = <0-1>)
+{{en/-}}
+====Hellingsgraad voor treinen====
+{{nl/Kenmerken|1.0|align="right"|text=(1.0.0)}}
+Stelt de hellingsgraad voor treinen in. Treinen zullen meer vaart verminderen op hellingen als deze instelling hoger wordt gezet. Het werkt alleen als het [[Main/nl/realistische acceleratie|realistische acceleratie]] model is geselecteerd.
+:''Mogelijke instellingen:'' <span style="color:red">'''0%'''</span> tot <span style="color:#00693E">'''10%'''</span>
+:''In Openttd.cfg config file:'' ([vehicle] train_slope_steepness = <0-10>)
+{{en/-}}
+====Maximum lengte van treinen====
+{{nl/Kenmerken|1.1|align="right"|text=(1.1.0)}}
+Specificeert de maximaal toegestane lengte van een trein in tegels. Dit vervangt de oude [[Main/nl/mammoettreinen|mammoettreinen]] instelling.
+:''Mogelijke instellingen:'' <span style="color:green">'''1 tegel'''</span> tot <span style="color:green">'''64 tegels'''</span>
+:''In Openttd.cfg config file:'' ([vehicle] max_train_length = <1-64>)
+{{en/-}}
+====Schakel snelheidslimieten voor wagons aan====
+{{nl/Kenmerken|Old|align="right"|text=(0.4.5)}}
+Sommige [[Main/en/NewGRF]]'s hebben wagon snelheidslimieten om ze meer realistisch te maken. Deze optie zet dit aan of uit.
+:''Mogelijke instellingen:'' <span style="color:green">'''Aan'''</span> of <span style="color:red">'''Uit'''</span>
+:''In Openttd.cfg config file:'' ([vehicle] wagon_speed_limits = <true|false>)
+{{en/-}}
+====Schakel elektrische sporen uit====
+{{nl/Kenmerken|0.5|align="right"|text=(0.5.0)}}
+Schakelt elektrische sporen uit. De elektrische treinen zullen op normale sporen rijden als deze instelling actief is en elektrische sporen niet beschikbaar zijn.
+:''Mogelijke instellingen:'' <span style="color:green">'''Aan'''</span> of <span style="color:red">'''Uit'''</span>
+:''In Openttd.cfg config file:'' ([vehicle] disable_elrails = <true|false>)
+{{en/-}}
+====Gewichtsfactor voor vracht om zware treinen te simuleren====
+{{nl/Kenmerken|0.5|align="right"|text=(0.5.0)}}
+Het gewicht van vrachttreinen wordt vermenigvuldigd met de factor die hier wordt ingesteld om zeer zware treinen te simuleren voor meer realisme.
+:''Mogelijke instellingen:'' <span style="color:#00693E">'''1'''</span> tot <span style="color:#00693E">'''255'''</span>
+:''In Openttd.cfg config file:'' ([vehicle] freight_trains = <1-255>)
+{{en/-}}
+====Nieuwe treinorders stoppen de trein standaard ... van het platform====
+{{nl/Kenmerken|1.0|align="right"|text=(1.0.0)}}
+Configureer of nieuwe orders zullen aangeven of een trein stopt aan het begin, in het midden of aan het eind van een platform als standaard. Later kun je deze instelling individueel aanpassen bij het invoeren van de orders.
+:''Mogelijke instellingen:'' <span style="color:#00693E">'''aan het begin'''</span>, <span style="color:#00693E">'''in het midden'''</span> of <span style="color:#00693E">'''aan het einde'''</span>
+:''In Openttd.cfg config file:'' ([gui] stop_location = <0-2>)
+{{en/-}}
+----
+
+===Nieuwe orders zijn standaard 'non-stop'===
+{{nl/Kenmerken|0.7|align="right"|text=(0.7.0)}}
+Met deze instelling ingeschakeld zullen alle nieuw toegewezen orders standaard op '[[Main/en/non-stop]]' worden gezet. Met een non-stop order zullen voertuigen alleen op het station stoppen als dit station is toegewezen in de order, Zij zullen niet stoppen op tussengelegen stations op de route als die niet is toegewezen.
+:''Mogelijke instellingen:'' <span style="color:green">'''Aan'''</span> of <span style="color:red">'''Uit'''</span>
+:''In Openttd.cfg config file:'' ([gui] new_nonstop = <true|false>)
+{{en/-}}
+===Controleer orders van voertuigen===
+{{nl/Kenmerken|Old|align="right"|text=(0.3.4)}}
+Schakelt de optie in om periodiek [[Main/en/Order review system|orders te controleren]] van voertuigen of zij nog valide zijn en op andere condities.
+Deze optie kan worden ingeschakeld voor alle voertuigen, uitgeschakeld voor gestopte voertuigen of uitgeschakeld voor alle voertuigen.
+:''Mogelijke instellingen:'' <span style="color:red">'''nee'''</span>, <span style="color:#00693E">'''ja, maar sluit gestopte voertuigen uit'''</span> of <span style="color:#00693E">'''van alle voertuigen'''</span>
+:''In Openttd.cfg config file:'' ([gui] order_review_system = <0-2>)
+{{en/-}}
+===Waarschuw als inkomsten van een voertuig negatief zijn===
+{{nl/Kenmerken|0.7|align="right"|text=(0.7.0)}}
+Als een voertuiginkomen [[Main/en/train income warning|negatief]] is, zal dit worden gerapporteerd in een nieuwsbericht. Gebruik de [[Main/en/Orders/Nl#Transfer|transfer]] optie bij de voertuigorders als je een [[Main/nl/verladersdienst|verladersdienst]] wilt opzetten.
+Deze optie is hernoemd van [[Main/en/Configuring patches/Vehicles#Warn if a train's income is negative|waarschuwen als een treininkomen negatief is]] in 0.7.0.
+:''Mogelijke instellingen:'' <span style="color:green">'''Aan'''</span> of <span style="color:red">'''Uit'''</span>
+:''In Openttd.cfg config file:'' ([gui] vehicle_income_warn = <true|false>)
+{{en/-}}
+===Waarschuw wanneer een voertuig verdwaald is===
+{{nl/Kenmerken|0.5|align="right"|text=(0.5.0)}}
+Een voertuig wordt [[Main/en/train is lost warning|verdwaald gemeld]] als het geen route kan vinden naar het station van zijn huidige bestemming.
+:''Mogelijke instellingen:'' <span style="color:green">'''Aan'''</span> of <span style="color:red">'''Uit'''</span>
+:''In Openttd.cfg config file:'' ([gui] lost_vehicle_warn = <true|false>)
+{{en/-}}
+===Voertugen verlopen nooit===
+{{nl/Kenmerken|Old|align="right"|text=(0.3.4)}}
+Oude voertuigen zullen beschikbaar blijven om uit te kiezen en [[Main/en/never expire vehicles|nooit verlopen]], dus kun je een Kirby en een Chiamera naast elkaar laten rijden! Bij het inschakelen van deze instelling in een lopend spel, zullen voertuigen die al zijn verdwenen uit de lijst niet opnieuw beschikbaar komen om te kopen.
+:''Mogelijke instellingen:'' <span style="color:green">'''Aan'''</span> of <span style="color:red">'''Uit'''</span>
+:''In Openttd.cfg config file:'' ([vehicle] never_expire_vehicles = <true|false>)
+{{en/-}}
+===Maximaal aantal treinen per bedrijf===
+{{nl/Kenmerken|Old|align="right"|text=(0.3.2)}}
+Stelt het maximaal aantal [[Main/en/max trains|treinen]] in dat een speler kan hebben.
+:''Mogelijke instellingen:'' <span style="color:red">'''0'''</span> tot <span style="color:#00693E">'''5.000'''</span>
+:''In Openttd.cfg config file:'' ([vehicle] max_trains = <0-5000>)
+{{en/-}}
+===Maximaal aantal wegvoertuigen per bedrijf===
+{{nl/Kenmerken|Old|align="right"|text=(0.3.2)}}
+Stelt het maximaal aantal [[Main/en/max road vehicles|wegvoertuigen]] in dat een speler kan hebben.
+:''Mogelijke instellingen:'' <span style="color:red">'''0'''</span> tot <span style="color:#00693E">'''5.000'''</span>
+:''In Openttd.cfg config file:'' ([vehicle] max_roadveh = <0-5000>)
+{{en/-}}
+===Maximaal aantal vliegtuigen per bedrijf===
+{{nl/Kenmerken|Old|align="right"|text=(0.3.2)}}
+Stelt het maximaal aantal [[Main/en/max aircraft|vliegtuigen]] in dat een speler kan hebben.
+:''Mogelijke instellingen:'' <span style="color:red">'''0'''</span> tot <span style="color:#00693E">'''5.000'''</span>
+:''In Openttd.cfg config file:'' ([vehicle] max_aircraft = <0-5000>)
+{{en/-}}
+===Maximaal aantal schepen per bedrijf===
+{{nl/Kenmerken|Old|align="right"|text=(0.3.2)}}
+Stelt het maximaal aantal [[Main/en/max ships|schepen]] in dat een speler kan hebben.
+:''Mogelijke instellingen:'' <span style="color:red">'''0'''</span> tot <span style="color:#00693E">'''5.000'''</span>
+:''In Openttd.cfg config file:'' ([vehicle] max_ships = <0-5000>)
+{{en/-}}
+===Factor voor vliegtuigsnelheden===
+{{nl/Kenmerken|0.6|align="right"|text=(0.6.0)}}
+Stelt de factor in voor de vliegtuigsnelheden in relatie tot spoor, weg en watervoertuigen. In de basis TTD reizen vliegtuigen op een kwart van de grondsnelheid.
+:''Mogelijke instellingen:'' <span style="color:#00693E">'''1/1'''</span> tot <span style="color:#00693E">'''1/4'''</span>
+:''In Openttd.cfg config file:'' ([vehicle] plane_speed = <1-4>)
+{{en/-}}
+===Aantal vliegtuigcrashes===
+{{nl/Kenmerken|1.0|align="right"|text=(1.0.0)}}
+Stelt de waarschijnlijkheid in van vliegtuigcrashes. Door dit op 'geen' te zetten zijn er geen crashes.
+:''Mogelijke instellingen:'' <span style="color:red">'''Geen'''</span>, <span style="color:#00693E">'''Verminderd'''</span> of <span style="color:#00693E">'''Normaal'''</span>
+:''In Openttd.cfg config file:'' ([vehicle] plane_crashes = <0-2>) 
+{{en/-}}
+===Maak het mogelijk om meerdere NewGrf-voertuigsets te gebruiken===
+{{nl/Kenmerken|0.7|align="right"|text=(0.7.0)}}
+Wanneer deze optie is ingeschakeld, laat deze ''[[Main/en/Settings/Dynamic Engines|motorpool]]'' functie meerdere [[Main/en/NewGRF]]-voertuigsets naast elkaar bestaan. Zonder deze functie is het maximaal aantal verschillende voertuigen aanzienlijk gelimiteerd en voertuigensets van hetzelfde type zullen andere voertuigen en functies overschrijven. Opmerking: gebruik van meerdere voertuigensets kan resulteren in zeer hoge of lage aankoopkosten en exploitatiekosten voor voertuigen. Het vermengen van treinen van verschilleden treinsets kunnen grafische fouten veroorzaken. 
+:''Mogelijke instellingen:'' <span style="color:green">'''Aan'''</span> of <span style="color:red">'''Uit'''</span>
+:''In Openttd.cfg config file:'' ([vehicle] dynamic_engines = <true|false>)
+{{en/-}}
+===Wegvoertuig acceleratie model===
+{{nl/Kenmerken|1.1|align="right"|text=(1.1.1)}}
+Selecteer de standaard of een meer [[Main/nl/realistische acceleratie|realistische acceleratie]] berekening voor wegvoertuigen. Met deze instelling op ''realistisch'' zullen wegvoertuigen sneller heuvelopwaarts rijden, maar langzamer door scherpe bochten.
+:''Mogelijke instellingen:'' <span style="color:green">'''Origineel'''</span> of <span style="color:green">'''Realistisch'''</span>
+:''In Openttd.cfg config file:'' ([vehicle] roadveh_acceleration_model = <0-1>)
+{{en/-}}
+===Hellingsgraad voor wegvoertuigen===
+{{nl/Kenmerken|1.1|align="right"|text=(1.1.1)}}
+Stelt de hellingsgraad in van hellingen. Wegvoertuigen zullen meer vertragen als deze instelling op een hogere waarde staat. Het werkt alleen als het [[Main/nl/realistische acceleratie|realistische acceleratie]] model is geselecteerd.
+:''Mogelijke instellingen:'' <span style="color:red">'''0%'''</span> tot <span style="color:green">'''10%'''</span>
+:''In Openttd.cfg config file:'' ([vehicle] roadveh_sloop_steepness = <0-10>)
+{{en/-}}
+===Hoeveelheid rook/vonken===
+{{nl/Kenmerken|1.1|align="right"|text=(1.1.1)}}
+Geeft aan of er geen, origineel of een realistische hoeveelheid rook en vonken zichtbaar moet zijn.
+:''Mogelijke instellingen:'' <span style="color:red">'''Geen'''</span>, <span style="color:green">'''Origineel'''</span> of <span style="color:green">'''Realistisch'''</span>
+:''In Openttd.cfg config file:'' ([vehicle] smoke_ammount = <0-2>)
+{{en/-}}
+==In vorige versies==
+====Sta het bouwen van zeer lange treinen toe====
+{{nl/Kenmerken periode|0.2|1.0|align="right"|text=(0.2.0 t/m 1.0.5) (vervangen door Maximum lengte van treinen)}}
+Vervangen door [[Main/en/#Maximum lengte van treinen|maximum lengte van treinen]].
+{{en/-}}
+
+===Waarschuw wanneer een trein verdwaald is===
+{{nl/Kenmerken periode|0.5|1.0|align="right"|text=(0.5.0 t/m 1.0.0) (vervangen door Waarschuw wanneer een voertuig verdwaald is)}}
+Een trein wordt [[Main/en/train is lost warning|verdwaald gemeld]] als het geen route kan vinden naar het station van zijn huidige bestemming.
+Vervangen door [[Main/en/#Waarschuw wanneer een voertuig verdwaald is|waarschuw wanneer een voertuig verdwaald is]]
+{{en/-}}
+
+===Sta ga naar depot orders toe===
+{{nl/Kenmerken periode|Old|1.0|align="right"|text=(0.2.0 t/m 1.0.0) (is nu standaard toegestaan)}}
+Alle voertuigen kunnen nu standaard een [[Main/nl/Sta ga naar depot orders toe|ga naar depot order in hun schema hebben]].
+{{en/-}}
+
+===Sta dienstregelingen voor voertuigen toe===
+{{nl/Kenmerken periode|0.6|1.0|align="right"|text=(0.6.0 t/m 1.0.0 (is nu standaard toegestaan))}}
+Staat nu standaard toe om [[Main/nl/dienstregeling|een dienstregeling]] voor voertuigen te gebruiken.
+{{en/-}}
+
+===Zie ook===
+*'''Voor 0.3.0 tot 0.6.3''' - Zie [[Main/en/Configuring patches]] voor informatie over hoe de instellingen te veranderen.
+*'''Voor 0.2.0 en 0.2.1''' - Zie [[Main/en/Configuring patches in 0.2.0]].
+
+[[Category:nl/Instellingen en voorkeuren]]
