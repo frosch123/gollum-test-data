@@ -1,0 +1,95 @@
+[[Translation:Main/en/Timetable]]
+== Interface ==
+Dienstregelingen zijn geïntroduceerd in [[Main/en/OpenTTD 0.6.0]] (sinds beta 2). De dienstregeling knop is rechtsboven geplaatst in het order scherm. Alle orders voor het geselecteerde voertuig worden getoond binnen het dienstregelingscherm. Je kan kiezen hoelang een voertuig mag verblijven in een station (in dagen of tikken - configureren via patches) en als je dat wenst, hoelang het mag duren om te reizen tussen punten op zijn route. Er is een telleroverzicht dat aangeeft of een voertuig op tijd is of vertraging heeft opgelopen. 
+
+[[File:en/Dienstregeling1.png|center|frame|De dienstregeling interface]]
+
+{|
+| '''Verander de tijd'''
+|Verandert de tijdsperiode zoals aangegeven in de dienstregeling.
+|Zal een scherm tonen waarin de nieuwe tijdsduur kan worden ingevoerd.
+|-
+| '''Verwijder tijd'''
+|Verwijdert de tijdsperiode.
+|Staat toe dat het voertuig zo lang als nodig kan doen over de gekozen reis.
+|-
+| '''Begindatum'''
+|Stelt de datum in wanneer de dienstregeling zal starten.
+|Toont een venster waarin de begindatum kan worden ingevoerd.
+|-
+| '''Auto-aanvullen'''
+|Vult automatisch de dienstregeling in gebaseerd op de volgende reis.
+|Vult data in voor je, zodat je deze later fijner af kan stemmen.
+|-
+| '''Niet-destructief auto-aanvullen'''
+|Vult automatisch de dienstregeling in gebaseerd op de volgende reis, maar laat wachttijden ongemoeid.
+|Handig als je de dienstregeling wilt aanpassen aan nieuwe reistijden, bijvoorbeeld bij het gebruik van snellere voertuigen op een oude route.
+|-
+| '''Reset vertragingsteller'''
+|Zet de vertragingen op nul.
+|Geeft aan dat het voertuig op tijd rijdt, waardoor het zal stoppen met het inlopen van vertragingen of de reis zal vertragen als het te vroeg aankomt.
+|-
+| '''Verwacht'''
+|Schakelt tussen verwacht en volgens dienstregeling.
+|Toont de tijden dat voertuigen volgens dienstregeling zullen aankomen en de verwachte aankomsttijden; verwachte tijden houden rekening met vertragingen en versnelde reizen.
+|}
+{{waarschuwing/Nl|Het aanzetten van auto-aanvullen haalt eerdere dienstregelingen leeg. Gebruik de niet-destructieve auto-aanvullen optie door ctrl+klikken op de auto-aanvullen knop. }}
+{{opmerking/Nl|Verwachte/volgens dienstregeling tijden zijn alleen beschikbaar voor volledig ingevulde dienstregelingen die al zijn gestart.}}
+
+== Gebruik van dienstregelingen ==
+Dienstregelingen zijn nuttig om te voorkomen dat voertuigen "te dicht achter elkaar" gaan rijden. Verspreiden van je voertuigen helpt om een meer vloeiend transport van vracht van station naar station te krijgen, maar defecten, verkeer en dergelijke vertragingen zullen er vaak voor zorgen dat de voertuigen zich gaan verzamelen in een rij die achter elkaar aan blijft rijden. 
+
+Om dit te demonstreren zullen we een simpel voorbeeld met drie bussen gebruiken die een route rijden tussen drie steden. We starten met bussen met een reeds bestaand routeschema met [[Main/en/Orders/Nl#Gedeelde orders|gedeelde orders]]. Gedeelde orders zijn "zeer" handig hierbij, omdat daarmee de dienstregelingen ook gedeeld zijn. 
+
+Om te starten openen we eerst de dienstregelingen van de eerste bus en gebruiken '''Auto-aanvullen'''. Laat de bussen vervolgens hun reis vervolgen. Als de eerste bus een deel van zijn route heeft gereden zal de dienstregeling gevuld worden met de benodigde dagen/tikken voor dat deel van de route. 
+[[File:en/dienstregeling2.png|center|frame|'Auto-aanvullen' zal meten hoe lang je voertuig nodig heeft om elk onderdeel van de reis af te leggen, en hoe lang wordt stilgestaan in elk station om te laden/lossen.]]
+
+Als het konvooi van nieuwe bussen rijdt, stop de volgende bussen telkens even na elk station, zodat ze netjes gespreid worden over de route (als je een ander aantal voertuigen gebruikt, probeer dan in te schatten wat de beste afstand is tussen de voertuigen. Als een van deze voertuigen aangeeft dat ze te laat zijn aangekomen in een plek, reset dan de vertraging met de knop). Pas als de eerste bus een complete ronde heeft gemaakt zal de dienstregeling geheel zijn gevuld en stopt (in versie 1.1.1) het auto-aanvullen vanzelf. Stop de bussen nu even. 
+
+[[File:en/dienstregeling3.png|center|frame|Ons voorbeeld busroute, volledig automatisch gemeten.]]
+
+Tenzij je erg veel geluk hebt, zal de gemeten tijd die van een perfecte route zijn: geen defecten, geen verkeer, en de bus die op topsnelheid kan rijden tussen elk station. Het is ook waarschijnlijk dat er niet veel vracht is geladen en/of gelost als de stations net nieuw zijn gebouwd. 
+
+Dit betekent dat de dienstregeling erg optimistisch is, omdat dit de ''best mogelijke situatie'' voorstelt, in plaats van de normale situatie. Om dit te corrigeren, selecteer je een onderdeel van de dienstregeling, klik je vervolgens op '''Verander tijd''', en type de nieuwe tijdsduur om een kleine extra ruimte in de dienstregeling toe te voegen. 
+
+[[File:en/dienstregeling4.png|center|frame|Verander de dienstregeling om enige ruimte in de reis- of stoptijden (EN: slack) toe te voegen.]]
+
+Start nu de bussen! Je kunt dit het beste doen terwijl het spel in de Pauzestand staat, om er zeker van te zijn dat ze allemaal tegelijk gaan rijden, anders zal je inspanning om een zorgvuldig gespreid schema te maken voor niets zijn geweest. 
+
+De kans bestaat dat je bij de eerste poging de verkeerde extra ruimte hebt gekozen. Dienstregelingen maken is een vaardigheid die je al doende moet leren, en de optie van een "automatische spreiding van de voertuigen met gedeelde orders" is ([http://bugs.openttd.org/task/1128 nog niet]) voorhanden. Laat de bussen een tijdje rondrijden (het moet lang genoeg zijn om een paar defecten te hebben gehad --- een jaar moet genoeg zijn), en kijk dan wat hun dienstregelingen nu aangeven. 
+
+[[File:en/dienstregeling5.png|center|frame|Zonder genoeg extra ruimte zullen defecten en andere vertragingen leiden tot cumulatieve overschrijdingen van de normale reistijden.]]
+Oh hemel, ondanks dat zeven dagen niet veel is, betekenen deze verschillen in vertragingen dat onze bussen niet meer zo netjes gespreid zijn. Voeg een klein beetje meer ruimte in de dienstregeling toe. '''Klik niet''' op de '''Reset vertragingsteller''' knop; dat maakt dat de bussen vergeten hoe ver zij af zijn van hun gelijkmatig verdeelde doelen, en zorgt er juist voor dat zij de huidige opeenhoping zullen handhaven.
+
+{{opmerking/Nl|Als je bussen nooit te laat zijn, en blijkbaar een lange tijd in stations wachten zonder passagiers te verplaatsen, zul je waarschijnlijk te veel ruimte in de dienstregeling hebben opgenomen.}}
+
+Je bussen zullen nu redelijk goed zijn ingedeeld, en kunnen verder met rust gelaten worden, zodat jij aan een andere route kunt gaan werken. Hier is een voorbeeld hoe het eruit kan zien na vijf jaar snel vooruit gespeeld: 
+[[File:en/dienstregeling6.png|center|frame|Met genoeg ruimte zijn de bussen nog steeds netjes gespreid na een speelperiode van vijf jaar.]]
+
+Ondanks herhaalde defecten, zijn de bussen nog steeds gelijkmatig verdeeld over de gehele route. Maar wat gebeurt er als een nieuw bustype is uitgegeven, en je de bussen [[Main/nl/Voertuig vervangen|gaat vervangen]]?
+[[File:en/dienstregeling7.png|center|frame|Nieuwe, snellere voertuigen zullen begrensd worden bij een onveranderde dienstregeling door te wachten bij stations.]]
+Het goede nieuws is dat de dienstregeling zal blijven werken en je stations regelmatig bussen zullen zien langskomen, in plaats van uren wachten en dan drie bussen tegelijk op het station zien arriveren. Het slechte nieuws is dat je nieuwe, snellere bussen staan te wachten om de tijd synchroon te laten lopen met de dienstregeling die is opgezet voor oude, langzame bussen. Omdat dit geen ''fout'' is (want je bussen houden hun onderlinge afstand, zij vervoeren passagiers en verdienen geld), krijg je ook geen waarschuwing hierover. 
+
+Dit is dus het nadeel van dienstregelingen – ''je moet de dienstregeling updaten als je nieuwe voertuigen gaat invoeren''. Hoeveel werk dit is, zal afhangen van hoeveel gedeelde voertuigen je hebt gebruikt die ook nog zijn gekoppeld aan voorwaardelijke orders, zoals [[Main/en/Orders/Nl#Volledig laden|volledig laden]], en hoe ervaren je bent met het inschatten van de benodigde ruimte. Ik stel voor dat je je voorlopig houdt bij bussen en eventueel post vrachtwagens. 
+
+Het voordeel is dat een van de belangrijkste factoren bij het berekenen van de [[Main/en/Spelmechanisme/Nl#Stationswaardering|waardering van je stations]] (lokale waardering van de vervoersdienst) is, hoe lang heeft het geduurd sinds het laatste voertuig is verschenen. Mensen houden er niet van lang op de bus te moeten wachten, ook al is de bus in feite een treintje van vijf grote, snelle bussen die in een keer met gemak alle negenhonderd passagiers meenemen. Na ongeveer tien jaar (en een beetje vals spelen bij het overslaan van nieuwe busontwerpen voor de bovengenoemde bussen), zijn dit de stationswaarderingen van onze triviale route: 
+
+[[File:en/dienstregeling8.png|center|frame|Regelmatig rijdende bussen houden de beoordeling hoger dan een onregelmatige groep van bussen, ook al kunnen zij de aanvoer van passagiers niet bijhouden.]]
+Drie bussen zijn bij lange na niet genoeg om de station Maaszwaag Bossen te bedienen, maar we voorkomen een slechte beoordeling (en daaraan gekoppeld een gemeenteraad die belemmeringen gaat opleveren voor alles wat we in deze plaats nog willen doen in de toekomst) door op zijn minst een regelmatige dienst aan te bieden. 
+
+=== Beperkingen ===
+De wijze waarop dienstregelingen momenteel zijn ingevoerd, daar is geen algemeen kader voor aan te geven. Elke dienstregeling is relatief voor de tijd dat de dienstregeling van het voertuig het laatst was ingeregeld. Dit maakt dat sommige taken, waarvoor in de echte wereld dienstregelingen worden gebruikt, moeilijk of zelfs onmogelijk:
+*Inregelen van een voertuig dat moet vertrekken net nadat een aansluitende dienst is aangekomen 
+*Inregelen van een vrij spoor in een station voor een express/intercity/highspeed dienst
+*Inregelen van treinen op een druk kruispunt zodat weinig, of slechts een enkele trein moet wachten
+In feite, de meeste taken bij het inregelen van een dienstregeling, anders dan het maken van hoofdroutes tussen voertuigen die met een enkele set van gedeelde orders werken, zijn lastig.
+
+=== Samenvatting ===
+* Dienstregelingen maken is afgestemd op een bepaalde route en voertuigsnelheid. Gebruik het voor bussen en postwagens; treinen zijn beter in te regelen door ze te laten wachten op een volledige lading. Gebruik gedeelde orders. 
+* Gebruik '''Auto-aanvullen''' om een eerste meting te krijgen waarop je je dienstregeling kunt baseren.
+* Spreid je voertuigen handmatig over de route. Reset elke vertraging zodra zij in positie zijn.
+* Voeg ruimte toe en verfijn deze ruimte in de dienstregeling om toe te staan dat weer volgens schema kan worden gereden nadat er vertragingen zijn opgelopen.
+* Laat alle voertuigen tegelijk vertrekken.
+* Herhaal de afstemming nadat je de voertuigen hebt vervangen door nieuwere, snellere versies.
+
+[[Category:en/0.6.0 Features]]
