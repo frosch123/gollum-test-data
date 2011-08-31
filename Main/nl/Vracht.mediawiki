@@ -1,0 +1,247 @@
+[[Translation:Main/en/Cargo]]{{en/-}}{{nl/Inhoudsopgave}}
+:''Voor een lijst met vrachttypen, zie de [[Category/nl/Vracht|vracht categorie]]''
+
+In [[Main/nl/OpenTTD|OpenTTD]], '''vracht''' is wat je, als [[Main/nl/bedrijf|bedrijf]], transporteert. Zij worden geproduceerd door sommige [[Main/nl/industrie|industrieën]] en [[Main/nl/gemeente|steden]], en zij worden door anderen geaccepteerd. 
+
+[[Main/nl/Industrie|Industrieën]] en [[Main/nl/gemeente|stedelijke gebouwen]] die in het [[Main/nl/handelsgebied|handelsgebied]] van een [[Main/nl/stations|station]] liggen aceepteren vracht en passagiers via dit station, en zullen hun vracht afgeven op dit station om elders te worden aangeleverd. (In sommige industrieën kunnen alleen bepaalde vierkanten vracht accepteren. Zie [[Main/nl/handelsgebied|handelsgebied]] voor meer informatie.)
+
+Als een vracht op het station is geplaatst zal de omvang hiervan effect hebben op de [[Main/en/Spelmechanisme/Nl#Stationsrangorde|stationsrangorde]] voor dat type vracht.
+
+[[Main/nl/Passagiers|Passagiers]] en [[Main/nl/Post|post]] zijn ook vrachttypen, voornamelijk geproduceerd en geaccepteerd door [[Main/nl/gemeente|steden]]. Verschillende gebouwvierkanten in steden acceoteren verschillende aantallen passagiers en andere vracht. De acceptatie kan worden gevonden door het [[Main/nl/landinformatie|landinformatie]] gereedschap te gebruiken ( [[File:en/vraagteken.png]] ). Als een vierkant geen vracht van zichzelf kan accepteren, wordt het aantal genoteerd in 1/8'en. Er moet ten minste 8/8 van een vrachttype in een stationshandelsgebied liggen voordat het station die vracht gaat accepteren.
+
+Sommige industrietegels accepteren ook 1/8 passagier. Industrieën zullen echter geen passagiers opleveren, met uitzondering van [[olieplatform/Nl|olieplatforms]. Meest opmerkelijk, [[Main/nl/hoogoven|hoogovens]] hebben vele 1/8 vierkanten en kunnen passagiers van zichzelf ontvangen. Daarnaast accepteert en genereert het bedrijfshoofdkwartier enkele passagiers en postzakken om spelers in het begin van het spel op weg te helpen.
+
+Zie [[Main/nl/vrachtinkomsten|vrachtinkomsten]] voor meer informatie over hoe het inkomen wordt berekend.
+
+Hieronder staan schema's en tabellen die voor elke vracht in elk klimaat aangeven wie deze produceert en accepteert.
+
+==Vracht stroomschema==
+:[[File:en/OpenTTD industry-commodity flow chart - Temperate.png|border]]
+
+:[[File:en/OpenTTD industry-commodity flow chart - Sub-arctic.png|border]]
+
+:[[File:en/OpenTTD industry-commodity flow chart - Sub-tropical.png|border]]
+
+:[[File:en/OpenTTD industry-commodity flow chart - Toyland.png|border]]
+
+==Goederen productie en acceptatie tabellen==
+
+:{| {{en/Wikitable}} style="width: 512px; font-size: 90%; margin:2px 4px 2px 0; border:solid 1px #AAAAAA" rules="cols"
+|- 
+| style="background: #ccffcc" colspan="3" align="center"|'''[[Main/en/Klimaat/Nl#Gematigd|Gematigd]]'''
+|- style="background: #ffdead"
+|style="width: 26%;"| '''Vracht'''
+|style="width: 37%;"| '''Geproduceerd door'''
+|style="width: 37%;"| '''Geaccepteerd door'''
+|- style="background: #E5FFE5"
+|'''[[Main/nl/Kolen|Kolen]]'''
+|[[Main/nl/Kolenmijn|Kolenmijnen]]
+|[[Main/nl/Energiecentrale|Energiecentrales]]
+|-
+|'''[[Main/nl/Goederen]]'''
+|[[Main/nl/Fabriek|Fabrieken]], [[Main/nl/Olieraffinaderij|Olieraffinaderijen]], [[Main/nl/Houtzagerij|Houtzagerijen]]
+|[[Main/nl/Gemeente|Steden]]
+|- style="background: #E5FFE5"
+|'''[[Main/nl/Graan|Graan]]'''
+|[[Main/nl/Boerderij|Boerderijen]]
+|[[Main/nl/Fabriek|Fabrieken]]
+|-
+|'''[[Main/nl/IJzererts|IJzererts]]'''
+|[[Main/nl/IJzermijn|IJzermijnen]]
+|[[Main/nl/Hoogoven|Hoogovens]]
+|- style="background: #E5FFE5"
+|'''[[Main/nl/Post|Post]]'''
+|[[Main/nl/Gemeente|Steden]]
+|[[Main/nl/Gemeente|Steden]], [[Main/nl/Olieplatform|Olieplatforms]]
+|-
+|'''[[Main/nl/Vee|Vee]]'''
+|[[Main/nl/Boerderij|Boerderijen]]
+|[[Main/nl/Fabriek|Fabrieken]]
+|- style="background: #E5FFE5"
+|'''[[Main/nl/Olie|Olie]]'''
+|[[Main/nl/Oliebronnen|Oliebronnen]], [[Main/nl/Olieplatform|Olieplatforms]]
+|[[Main/nl/Olieraffinaderij|Olieraffinaderijen]]
+|-
+|'''[[Main/nl/Passagiers|Passagiers]]'''
+|[[Main/nl/Gemeente|Steden]], [[Main/nl/Olieplatform|Olieplatforms]]
+|[[Main/nl/Gemeente|Steden]], [[Main/nl/Olieplatform|Olieplatforms]]
+|- style="background: #E5FFE5"
+|'''[[Main/nl/Staal|Staal]]'''
+|[[Main/nl/Hoogoven|Hoogovens]]
+|[[Main/nl/Fabriek|Fabrieken]]
+|-
+|'''[[Main/nl/Kostbaarheden|Kostbaarheden]]'''
+|[[Main/nl/Bank|Banken]]
+|[[Main/nl/Bank|Banken]]
+|- style="background: #E5FFE5"
+|'''[[Main/nl/Hout|Hout]]'''
+|[[Main/nl/Bos|Bossen]]
+|[[Main/nl/Houtzagerij|Houtzagerijen]]
+|}
+
+:{| {{en/Wikitable}} style="width: 512px; font-size: 90%; margin:2px 4px 2px 0; border:solid 1px #AAAAAA" rules="cols"
+|- 
+| style="background: #ccccff" colspan="3" align="center"|'''[[Main/en/Klimaat/Nl#Subarctisch|Subarctisch]]'''
+|- style="background: #ffdead"
+|style="width: 26%;"| '''Vracht'''
+|style="width: 37%;"| '''Geproduceerd door'''
+|style="width: 37%;"| '''Geaccepteerd door'''
+|- style="background: #dfefef"
+|'''[[Main/nl/Kolen|Kolen]]'''
+|[[Main/nl/Kolenmijn|Kolenmijnen]]
+|[[Main/nl/Energiecentrale|Energiecentrales]]
+|-
+|'''[[Main/en/Food]]'''
+|[[Main/nl/Voedselfabriek|Voedselfabrieken]]
+|[[Main/nl/Gemeente|Steden]]
+|- style="background: #dfefef"
+|'''[[Main/en/Goods]]'''
+|[[Main/en/Printing Works]], [[Main/nl/Olieraffinaderij|Olieraffinaderijen]]
+|[[Main/nl/Gemeente|Steden]]
+|-
+|'''[[Main/nl/Goud|Goud]]'''
+|[[Main/nl/Goudmijn|Goudmijnen]]
+|[[Main/nl/Bank|Banken]]
+|- style="background: #dfefef"
+|'''[[Main/nl/Vee|Vee]]'''
+|[[Main/nl/Boerderij|Boerderijen]]
+|[[Main/nl/Voedselfabriek|Voedselfabrieken]]
+|-
+|'''[[Main/nl/Post|Post]]'''
+|[[Main/nl/Gemeente|Steden]]
+|[[Main/nl/Gemeente|Steden]]
+|- style="background: #dfefef"
+|'''[[Main/nl/Olie|Olie]]'''
+|[[Main/nl/Oliebronnen|Oliebronnen]]
+|[[Main/nl/Olieraffinaderij|Olieraffinaderijen]]
+|-
+|'''[[Main/nl/Papier|Papier]]'''
+|[[Main/nl/Papierfabriek|Papierfabrieken]]
+|[[Main/nl/Drukkerij|Drukkerijen]]
+|- style="background: #dfefef"
+|'''[[Main/nl/Passagiers|Passagiers]]'''
+|[[Main/nl/Gemeente|Steden]]
+|[[Main/nl/Gemeente|Steden]]
+|-
+|'''[[Main/nl/Tarwe|Tarwe]]'''
+|[[Main/nl/Boerderij|Boerderijen]]
+|[[Main/nl/Voedselfabriek|Voedselfabrieken]]
+|- style="background: #dfefef"
+|'''[[Main/nl/Hout|Hout]]'''
+|[[Main/nl/Bos|Bossen]]
+|[[Main/nl/Papierfabriek|Papierfabrieken]]
+|}
+
+:{| {{en/Wikitable}} style="width: 512px; font-size: 90%; margin:2px 4px 2px 0; border:solid 1px #AAAAAA" rules="cols"
+|- 
+| style="background: #ffffcc" colspan="3" align="center"|'''[[Main/en/Klimaat/Nl#Subtropisch|Subtropisch]]'''
+|- style="background: #ffdead"
+|style="width: 26%;"| '''Vracht'''
+|style="width: 37%;"| '''Geproduceerd door'''
+|style="width: 37%;"| '''Geaccepteerd door'''
+|- style="background: #FFFDE0"
+|'''[[Main/nl/Kopererts|Kopererts]]'''
+|[[Main/nl/Kopermijn|Kopermijnen]]
+|[[Main/nl/Fabriek|Fabrieken]]
+|-
+|'''[[Main/nl/Diamanten|Diamanten]]'''
+|[[Main/nl/Diamantmijn|Diamantmijnen]]
+|[[Main/nl/Bank|Banken]]
+|- style="background: #FFFDE0"
+|'''[[Main/nl/Voedsel|Voedsel]]'''
+|[[Main/nl/Voedselfabriek|Voedselfabrieken]]
+|[[Main/nl/Gemeente|Steden]]
+|-
+|'''[[Main/nl/Fruit|Fruit]]'''
+|[[Main/nl/Boomgaard|Boomgaarden]]
+|[[Main/nl/Voedselfabriek|Voedselfabrieken]]
+|- style="background: #FFFDE0"
+|'''[[Main/nl/Goederen|Goederen]]'''
+|[[Main/nl/Fabriek|Fabrieken]], [[Main/nl/Olieraffinaderij|Olieraffinaderijen]]
+|[[Main/nl/Gemeente|Steden]]
+|-
+|'''[[Main/nl/Post|Post]]'''
+|[[Main/nl/Gemeente|Steden]]
+|[[Main/nl/Gemeente|Steden]]
+|- style="background: #FFFDE0"
+|'''[[Main/nl/Mais|Mais]]'''
+|[[Main/nl/Boerderij|Boerderijen]]
+|[[Main/nl/Voedselfabriek|Voedselfabrieken]]
+|-
+|'''[[Main/nl/Olie|Olie]]'''
+|[[Main/nl/Oliebronnen|Oliebronnen]]
+|[[Main/nl/Olieraffinaderij|Olieraffinaderijen]]
+|- style="background: #FFFDE0"
+|'''[[Main/nl/Passagiers|Passagiers]]'''
+|[[Main/nl/Gemeente|Steden]]
+|[[Main/nl/Gemeente|Steden]]
+|-
+|'''[[Main/nl/Rubber|Rubber]]'''
+|[[Main/nl/Rubberplantage|Rubberplantages]]
+|[[Main/nl/Fabriek|Fabrieken]]
+|- style="background: #FFFDE0"
+|'''[[Main/nl/Water|Water]]'''
+|[[Main/nl/Watervoorraad|Watervoorraden]]
+|[[Main/nl/Watertoren|Watertorens]]
+|-
+|'''[[Main/nl/Hout|Hout]]'''
+|[[Main/nl/Timmerhoutzagerij|Timmerhoutzagerijen]]
+|[[Main/nl/Fabriek|Fabrieken]]
+|}
+
+:{| {{en/Wikitable}} style="width: 512px; font-size: 90%; margin:2px 4px 2px 0; border:solid 1px #AAAAAA" rules="cols"
+|- 
+| style="background: #ff9999" colspan="3" align="center"|'''[[Main/en/Klimaat/Nl#Speelgoedland|Speelgoedland]]'''
+|- style="background: #ffdead"
+|style="width: 26%;"| '''Vracht'''
+|style="width: 37%;"| '''Geproduceerd door'''
+|style="width: 37%;"| '''Geaccepteerd door'''
+|- style="background: #FFF0F5"
+|'''[[Main/nl/Batterijen|Batterijen]]'''
+|[[Main/nl/Batterijenboerderij|Batterijenboerderijen]]
+|[[Main/nl/Speelgoedfabriek|Speelgoedfabrieken]]
+|-
+|'''[[Main/nl/Bubbels|Bubbels]]'''
+|[[Main/nl/Bellenblazer|Bellenblazers]]
+|[[Main/nl/Frisdrankfabriek|Frisdrankfabrieken]]
+|- style="background: #FFF0F5"
+|'''[[Main/nl/Suikerspin|Suikerspin]]''' 
+|[[Main/nl/Suikerspinbos|Suikerspinbossen]]
+|[[Main/nl/Snoepfabriek|Snoepfabrieken]]
+|-
+|'''[[Main/nl/Cola|Cola]]'''
+|[[Main/nl/Colabronnen|Colabronnen]]
+|[[Main/nl/Frisdrankfabriek|Frisdrankfabrieken]]
+|- style="background: #FFF0F5"
+|'''[[Main/en/Fizzy Drinks]]'''
+|[[Main/nl/Frisdrankfabriek|Frisdrankfabrieken]]
+|[[Main/nl/Gemeente|Steden]]
+|-
+|'''[[Main/nl/Post|Post]]'''
+|[[Main/nl/Gemeente|Steden]]
+|[[Main/nl/Gemeente|Steden]]
+|- style="background: #FFF0F5"
+|'''[[Main/nl/Passagiers|Passagiers]]'''
+|[[Main/nl/Gemeente|Steden]]
+|[[Main/nl/Gemeente|Steden]]
+|-
+|'''[[Main/nl/Plastic|Plastic]]'''
+|[[Main/nl/Plasticfonteinen|Plasticfonteinen]]
+|[[Main/nl/Speelgoedfabriek|Speelgoedfabrieken]]
+|- style="background: #FFF0F5"
+|'''[[Main/nl/Suiker|Suiker]]'''
+|[[Main/nl/Suikermijn|Suikermijnen]]
+|[[Main/nl/Snoepfabriek|Snoepfabrieken]]
+|-
+|'''[[Main/nl/Snoep|Snoep]]'''
+|[[Main/nl/Snoepfabriek|Snoepfabrieken]]
+|[[Main/nl/Gemeente|Steden]]
+|- style="background: #FFF0F5"
+|'''[[Main/nl/Toffee|Toffee]]'''
+|[[Main/nl/Toffeegroeve|Toffeegroeven]]
+|[[Main/nl/Snoepfabriek|Snoepfabrieken]]
+|-
+|'''[[Main/nl/Speelgoed|Speelgoed]]'''
+|[[Main/nl/Speelgoedfabriek|Speelgoedfabrieken]]
+|[[Main/nl/Speelgoedwinkel|Speelgoedwinkels]]
+|}
