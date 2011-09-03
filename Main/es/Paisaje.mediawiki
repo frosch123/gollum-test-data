@@ -1,0 +1,88 @@
+[[Translation:Main/en/Landscaping]]{{en/-}}{{es/Tutorial}}{{es/Tabla de contenido}}
+Modificar el '''paisaje''' es el término aplicado a la terraformación del terreno de los escenarios, haciendo uso de la ''herramienta paisaje'', incluyendo bajar, subir y nivelar el terreno.
+
+==Modificar el paisaje==
+Para mostrar la barra de herramientas pulse el botón ''Herramienta paisaje'' [[File:en/Landscaping button.png]] de la [[Main/en/Interfaz del juego/Es#La barra de menú|barra de menú]]. Una vez haga clic aparecerá la barra de herramientas ''Terreno''.
+:[[File:es/Landscaping toolbar.png|none|frame|La barra de herramientas Terreno.]]
+
+==¿Qué hacen todos esos botones?==
+Funciones de los botones (de izquierda a derecha):
+{| {{en/Wikitable}}
+|- style="background:#efefef"
+!width='46'|Botón
+!width='150'|Acción
+!Atajo
+!Descripción
+|-
+|[[File:en/Lower land.png]]
+|'''Botón [[Main/es/Bajar terreno|bajar terreno]]'''
+|Q
+|Baja una esquina de una casilla del terreno.
+|-
+|[[File:en/Raise land.png]]
+|'''Botón [[Main/es/Subir terreno|subir terreno]]'''
+|W
+|Sube una esquina de una casilla del terreno.
+|-
+|[[File:en/Level land.png]]
+|'''Botón nivelar terreno'''
+|E
+|Nivela varios puntos del terreno respecto del primer punto seleccionado.
+|-
+|[[File:en/Clear title.png]]
+|'''Botón demoler'''
+|D
+|Limpia el terreno
+|-
+|[[File:en/Buy land.png]]
+|'''Botón comprar [[Main/es/Tierra|tierra]]'''
+|U
+|Compra tierras para usos futuros, impide el desarrollo del pueblo en esas casillas o su uso por los rivales.
+|-
+|[[File:en/Plant trees.png]]
+|'''Botón plantar árboles.'''
+|I
+|Abre la barra de herramientas Árboles.
+|-
+|[[File:en/Place sign.png]]
+|'''Botón colocar [[Main/es/Cartel|cartel]]'''
+|O
+|
+|}
+
+==Descender el terreno==
+* Seleccione la herramienta [[File:en/Lower land.png]] y pulse en una esquina de una casilla.
+
+La tierra se puede bajar hasta el nivel del mar. Tenga en cuenta que las zonas al nivel del mar son propensas a las inundaciones, y todas las casillas desaparecerán inundadas por el agua.
+También se puede descender una zona de tierra haciendo clic-arrastrar con el ratón. Primero descenderá el punto de partida de la selección una altura, y luego el área seleccionada se nivelará para que coincida con este punto inicial, por lo que es básicamente una combinación de las herramientas bajar y nivelar.
+
+==Elevar el terreno==
+* Seleccione la herramienta [[File:en/Raise land.png]] y pulse en una esquina de una casilla.
+
+Tenga en cuenta que al levantar la parte superior de una montaña, la base de la montaña crecerá también. El gasto no corresponde con la altura, sino con el volumen del cambio. Evite elevar la tierra del mar, ya que es extremadamente costoso y puede llevar a la quiebra a las empresas jóvenes.
+También se puede elevar una superficie de tierra haciendo clic-arrastrar con el ratón. Primero se elevará el punto de partida de la selección una altura, y luego el área seleccionada se nivelará para que coincida con este punto inicial, por lo que es básicamente una combinación de las herramientas subir y nivelar.
+
+==Nivelar el terreno==
+Utilice la herramienta nivelar terreno para allanar la tierra en un área extensa.
+
+* Haga clic y mantenga pulsado el ratón en el punto donde desea empezar. La altura del terreno nivelado será la misma que el punto en el que empiece.
+
+* Arrastre el ratón sobre el área que desee nivelar.
+:[[File:en/Level land before.png|center|none|frame|Vista del área seleccionada.]]
+
+* Cuando esté satisfecho con el área elegida, suelte el botón y el área se nivelará.
+:[[File:en/Level land after.png|center|none|frame|Vista del área después de ser nivelada.]]
+
+* Nota: La herramienta nivelar terreno subirá o bajará tanto terreno como sea posible dentro de su selección. Cualquier casilla cuya altura no se puede cambiar con las herramientas subir o bajar de forma individual, tampoco podrá modificarse con la herramienta nivelar. Además, toda la infraestructura de edificios u otros obstáculos permanecerá en pie cuando el área está nivelada.
+
+==Autopendiente==
+[[File:es/Autoslope.png|right|frame|Opción avanzada ''Autopendiente''.]]
+Este es un configuración avanzada sobre [[Main/es/Construcción|Construcción]], que hace que las restricciones para la terraformación sean menos severas y le permite transformar terrenos con objetos en los que, normalmente, tendría que quitar antes el objeto. Automáticamente agrega o quita cimientos si es necesario.
+{|
+|[[File:es/terraformoff.png|none|thumb|400px|Sin autopendiente]]
+|[[File:en/terraformon.png|none|thumb|400px|Con autopendiente]]
+|}
+
+{{es/Disponibilidad|0.6}}
+
+[[Category:es/Construcción]]
