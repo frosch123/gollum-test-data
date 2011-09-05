@@ -1,0 +1,93 @@
+[[Translation:Main/en/Build raw material industries]]
+{{en/-}}
+[[Category:nl/Instellingen en voorkeuren]]
+[[Category:nl/Constructie]]
+
+Deze [[Main/en/Geavanceerde instellingen/Economie/Nl#Handmatige bouwmethode voor primaire industrieën|instelling]] stelt je in staat om industrieën te kopen of te voorzien en te plaatsen die ruwe materialen maken.
+
+== Beschrijving ==
+[[File:en/nieuwe industrie standaard.png|right|frame|Het standaard betaal nieuwe industrie menu]]
+[[File:en/nieuwe industrie  uitgebreid.png|right|frame|Het uitgebreide betaal nieuwe industrie menu]]
+
+Normaal kun je alleen [[Main/en/Industrie/Nl#Nieuwe industrieën bekostigen|industrieën kopen]] die materialen verwerken, bijv. fabrieken, houtzagerij, etc. Met deze instelling ingeschakeld kun je ook industrieën bouwen die ruwe materialen produceren, zoals kolenmijn, ijzermijn, etc.
+
+Wanneer de [[Main/en/geavanceerde instellingen/Economie/Nl#Handmatige bouwmethode voor primaire industrieën|proberen optie]] is geselecteerd, kun je een nieuwe industrie wel aankopen van het specifieke type, maar deze zal op een willekeurige plek op de kaart verschijnen.
+
+Dit heeft geen effect op de op "natuurlijke wijze verschijnende" industrieën, alleen op diegene die je kunt aankopen.
+
+== Gebruik ==
+
+Constructie van primaire industrieën is standaard niet mogelijk. Als de functie is ingeschakeld, zal de lijst met industrieën die je kunt aankopen ook die industrieën bevatten die ruwe materialen produceren, met de bijpassende kostprijzen. Je kunt deze instelling inschakelen via het [[Main/en/geavanceerde instellingen/Economie/Nl#Handmatige bouwmethode voor primaire industrieën|Geavanceerde instellingen -> Economie -> Industrieën -> Handmatige bouwmethode voor primaire industrieën]] venster of de volgende syntax gebruiken in [[Main/en/openttd.cfg]]:
+
+<pre>
+[construction]
+raw_industry_construction = 2
+</pre>
+
+0 = geen, 1 = als andere industrieën, 2 = proberen
+
+Valide opties: [ 0 | 1 | 2 ]
+
+Standaard: 0
+
+Dit kan ook worden ingesteld in de console met gebruikmaking van het commando (enkele speler spel alleen):
+
+<pre>
+set raw_industry_construction <value>
+</pre>
+
+==Lijst van de stichten primaire industrieën==
+
+{| class="wikitable"
+
+|-
+
+! Naam
+
+! Kosten zonder inflatie
+
+! Opmerkingen
+
+|-
+
+| [[Main/nl/Kolenmijn|Kolenmijn]]
+| £ 4,927,770
+
+| Produceert kolen voor verzending naar een energiecentrale.
+
+|-
+
+| [[Main/nl/Bos|Bos]]
+| £ 4,687,400
+
+| Produceert hout voor verzending naar een houtzagerij.
+
+|-
+
+| [[Main/nl/Olieplatform|Olieplatform]]
+| £ 5,624,880
+
+| Het is duidelijk dat deze alleen op zee kunnen worden gebouwd.
+|-
+
+| [[Main/nl/Boerderij|Boerderij]]
+| £ 5,859,250
+
+| Produceert graan en vee voor verzending naar een fabriek.
+
+|-
+
+| [[Main/nl/Oliebronnen|Oliebronnen]]
+| £ 5,156,140
+
+| Productie kan zowel omhoog als omlaag gaan, totdat deze gesloten wordt na meerdere jaren van productie, tenzij er een specifieke GRF van SirkoZ [http://grfcrawler.tt-forums.net/details.php?do=details&id=233] wordt gebruikt.
+
+|-
+
+| [[Main/nl/IJzermijn|IJzermijn]]
+| £ 5,156,140
+
+| Produceert ijzererts voor verzending naar een hoogoven.
+|}
+
+Met inflatie zullen de kosten van bepaalde industrieën stijgen (of zijn al gestegen).
