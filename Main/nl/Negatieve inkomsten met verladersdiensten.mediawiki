@@ -1,0 +1,48 @@
+[[Translation:Main/en/Negative income with feeder service]]
+Er zijn twee verschillende situaties bij [[Main/nl/Verladersdienst|verladersdiensten]] waar voertuigen een negatief inkomen kunnen vertonen (soms zelfs tot zeer hoge bedragen) ondanks dat zij een belangrijk aandeel hebben in de vervoersdienst. deze pagina legt uit wat er gebeurt en hoe dit te voorkomen.
+
+= Introductie =
+[[File:en/Feeder negative income.png|right|thumb|400px|Een verladersdienst van een kolenmijn naar een energeicentrale.]]
+Beschouw de afbeelding als een voorbeeld van een netwerk. De vervoerder transporteert kolen van de mijn bij station A onderaan links, via een tussenstation B, naar de energiecentrale rechtsboven met gebruikmaking van station C. Het eerste deel van de reis wordt gedaan per trein, het tweede deel met wegvoertuigen. Toegegeven het is een vrij stomme manier om kolen af te leveren. Het zou een stuk gemakkelijker en sneller zijn om de kolen in een rechte lijn af te leveren door station B te verplaatsen naar station C. Echter dit is nodig om ons probleem te verduidelijken.
+
+Beide voorbeelden zijn verschillend in de wijze waarop de vracht wordt overgeladen in het tussenstation B.
+{{en/-}}
+
+= Losorder =
+Wanneer de trein de order heeft om te ''lossen'' op B dan wordt hij daar niet voor betaald. De wegvoertuigen die van B naar C gaan, krijgen alle winst bij aflevering op C. Dus het inkomen van de trein zal negatief zijn, tenzij het nog andere inkomsten heeft op zijn route.
+
+Let op dat de trein ook nog de instelling ''niet laden'' moet hebben (voor versies 0.7 en hoger), anders zal het de zojuist geloste kolen weer terug in de wagons laden, en deze naar de kolenmijn brengen (en zonder voor de moeite te woren betaald).
+
+
+= Transfer order =
+Nu heeft de trein de order om de kolen voor verder ''transfer (vervoer)'' bij B te lossen. Deze keer zal de trein een positief inkomen hebben, maar de wegvoertuigen krijgen een negatief inkomen. Laten we eens kijken wat er gebeurt.
+
+De betaling van alle geleverde vracht zal ongeacht deze zijn bestemming bereikt worden gedaan op basis van een vaste regel (zie voor alle details op de  [[Main/en/spelmechanisme/Nl#Afleverbetalingsrangorde|spelmechanisme]] pagina).
+Basisregel is, dat:
+* je betaald krijgt voor de rechtstreekse afstand tussen bron (de kolenmijn) en bestemming (de energiecentrale), en
+* je krijgt een een boete voor trage aflevering van bron naar bestemming.
+
+Het spel weet niet waar de kolen die in de trein zijn geladen naar toe gaan. Wanneer de trein arriveert op station B en de kolen voor verder veroer lost, maakt het spel een inschatting van hoeveel je zou moeten worden betaald. Het beoordeelt dat 732 Engelse ponden een redelijk bedrag is, en wijst dat virtueel toe aan de trein als inkomen.
+vervolgens nemen drie wegvoertuigen de kolen en leveren die af van de energiecentrale bij station C. Hier detecteert het spel dat de kolen zijn bezorgd op de definitieve bestemming. Het berekent de juiste betaling (rond 711 pond) voor levering van de vracht van de kolenmijn direct naar de energiecentrale, trekt de teveel betaalde 732 pond er van af, en komt op een tekort van 21 pond. Als resultaat daarvan moet elk van de drie wegvoertuigen nog 7 pond betalen.
+Met andere woorden, de wegvoertuigen krijgen de rekening gepresenteerd voor de (blijkbaar) overschatte betaling aan de trein.
+
+= Voorspellen van negatieve inkomsten =
+Een gecompliceerd meervoudige overdracht levering is meestal een goede indicatie van een negatief inkomen. Als je voertuigen een omweg maken, kost je dat geld.
+
+Een andere veel voorkomende situatie is de snelheid van de levering. De betaling aan de trein wordt gedaan met dezelfde regels als de uiteindelijke betaling. Aangezien de trein veel sneller is dan de wegvoertuigen, krijgt het een lagere boete voor trage levering, dat wil zeggen, het krijgt meer dan het had moeten krijgen op basis van de gemiddelde snelheid van de kolen over de gehele route. De wegvoertuigen betalen ook voor de tragere levering in vergelijking tot de trein.
+
+
+= Verminderen of voorkomen van negatieve inkomsten in verladerssystemen =
+== Algemeen ==
+* Probeer om zo recht mogelijke lijnen te maken van bron naar bestemming. Deze zijn niet alleen sneller, zij reduceren ook het risico dat voertuigen voor sommige delen van de reis meer betaald krijgen dan zou moeten.
+* Probeer de snelheid op elk deel van de reis zo gelijk mogelijk te houden. Trage voertuigen betalen de prijs voor overschatting in de betaling op andere delen.
+
+
+== Transfer order situatie ==
+Allereerst, zoals hierboven uitgelegd, ontstaan negatieve inkomsten als gevolg van de compensatie voor eerdere betalingen aan jou voor de vracht die is geleverd aan een tussenstation in het verladers systeem.
+Dus, terwijl het een beetje vreemd lijkt, je krijgt wel betaald voor alle geleverde vracht. Je hoeft je dus niet ongerust te maken.
+
+[[File:en/verladerseconomie.png|right|frame|Geavanceerde instelling voor reduceren van tussentijdse betalingen.]]
+Als je meer tevreden bent met alleen gele en groene betalingen voor alle voertuigen, kun je het negatieve inkomen reduceren of elimineren door de geavanceerde instelling aan te passen. In de [[Main/nl/Geavanceerde instellingen/Economie|'Geavanceerde instellingsvenster', sectie 'Economie']], is een "percentage van de te betalen winst bij overslag van vracht" instelling. Hiermee kun je het bedrag reduceren dat voertuigen krijgen op tussenstations. Als resultaat is er dan meer geld over om aan het eind van de reis te betalen aan de voertuigen die de vracht op de eindbestemming afleveren.
+
+Merk op dat dit een globale instelling is, alle voertuigen die transfer orders gebruiken worden hierdoor beïnvloed.
