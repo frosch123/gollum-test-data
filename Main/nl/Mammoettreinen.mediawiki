@@ -1,0 +1,14 @@
+[[Translation:Main/en/Mammoth trains]]
+Een [[Main/nl/Geavanceerde instellingen|instelling]] die je de mogelijkheid geeft om zoveel [[Main/nl/Treinen|wagons]] als je wilt, toe te voegen aan een [[Main/nl/Treinen|trein]] zolang de trein binnen de 50 tegels blijft (dit aantal varieert bij bepaalde treinsets, maar je kunt 99 wagons hebben bij standaard treinen). De trein zelf kan echter langer zijn, afhankelijk van de lengte van de locomotief. Een uit 1950 stammende gelede klasse Y6b, van de US Set, kan met 99 wagons aangekoppeld de totale lengte van de trein opvoeren tot 51,5 tegels lang, een trein met enkel Lev4 "Chimaera" locomotieven kan tot 100 tegels gaan. Zonder deze patch, kun je tot maximaal 9 wagons gaan per trein. Het treindepot venster wordt verlengd met een horizontale schuifbalk om alle gekoppelde wagons te kunnen tonen. Vergeet niet dat mammoettreinen erg traag kunnen worden door al het aangekoppelde gewicht; dus je zult soms een aantal wagons moeten opofferen en [[Main/en/Multiheaded trains|meer locomotieven aan de treinen koppelen]], of meer krachtigere motoren moeten gebruiken.
+
+== Gebruik ==
+''De functie is vanaf versie 1.1 vervangen door [[Main/en/geavanceerde instellingen/Voertuigen/Nl#Maximum lengte van treinen|maximum lengte van treinen]] bij de geavanceerde instellingen --> voertuigen.''
+Tot en met versie 1.0.5 stond deze functie staat standaard aan. Je kon deze functie uitschakelen via het [[Main/en/Geavanceerde instellingen/Voertuigen/Nl#Sta het bouwen van zeer lange treinen toe|geavanceerde instellingen]] venster (Voertuigen / Sta zeer lange treinen toe) of de volgende syntax gebruiken in [[Main/en/openttd.cfg]]:
+<pre>
+[patches]
+mammoth_trains = false
+</pre>
+[[File:en/MammothTrains.png|center|none|frame|1. - Een mammoettrein slingert door de oase]]
+
+[[Category:nl/Instellingen en voorkeuren]]
+[[Category:nl/Spoorwegen]]
