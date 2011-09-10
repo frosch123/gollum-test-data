@@ -1,0 +1,70 @@
+{{es/Traducción|New global pathfinding|50}}
+[[Translation:Main/en/New global pathfinding]]
+El '''NPF''' ('''New global Pathfinding''', traducido "Nuevo buscador de rutas global") es una  [[Main/es/Opciones avanzadas|opción avanzada]] que usa un algoritmo de búsqueda de rutas (pathfinder) completamente diferente y para todos los  [[Main/es/Vehículos|vehículos]].
+
+'''NPF es reemplazado por [[Main/es/YAPF|YAPF]] a todos los efectos.'''
+
+== Descripción ==
+El NPF funciona para todos los vehículos. Sin embargo, ha sido totalmente superado para todo por otro buscador de rutas (el [[Main/es/YAPF|YAPF]]), que debe utilizar en su lugar.
+
+NPF utiliza un algoritmo A* para encontrar su ruta. Sin embargo, en redes ferroviarias extremadamente complejas consume excesivos recursos de la CPU, por lo que, en máquinas más viejas (y si está usando grandes mapas con una gran cantidad de trenes), a veces se podría reducir el rendimiento.
+
+== Opciones de configuración ==
+NPF tiene las siguientes opciones de configuración:
+
+{|
+|- valign="top"
+|'''npf_max_search_nodes'''||La cantidad máxima de nodos de búsqueda que una sola ejecución de NPF puede considerar. Este límite debe asegurar que el rendimiento se mantiene en niveles aceptables, a costa de no garantizar resultados óptimos. Esto probablemente se corregirá de una forma más sofisticada dentro de poco.
+|- valign="top"
+|'''npf_rail_firstred_penalty'''||La penalización que se aplica cuando la primera señal está de color rojo (y NO es una señal de salida o combinada)
+|- valign="top"
+|'''npf_rail_firstred_exit_penalty'''||La penalización que se aplica cuando la primera señal está de color rojo (y SÍ es una señal de salida o combinada)
+|- valign="top"
+|'''npf_rail_lastred_penalty'''||La penalización que se aplica cuando la última señal está de color rojo
+|- valign="top"
+|'''npf_rail_station_penalty'''||La penalización para casillas de estaciones ferroviarias 
+|- valign="top"
+|'''npf_rail_slope_penalty'''||La penalización para las pendientes de subida de vías ferroviarias
+|- valign="top"
+|'''npf_rail_curve_penalty'''||La penalización para las curvas en las vías ferroviarias
+|- valign="top"
+|'''npf_rail_depot_reverse_penalty'''||La penalización por un retorno al depósito
+|- valign="top"
+|'''npf_buoy_penalty'''||La penalización por ir (pasar por) una boya
+|- valign="top"
+|'''npf_water_curve_penalty'''||La penalización por las curvas para los barcos
+|}
+
+== Uso ==
+{{es/Pendiente de traducción}}
+This feature is disabled by default. You can enable this patch through the [[Main/en/Configuring patches/Vehicles|configure patches -> vehicles]] window or use the following syntax in [[Main/en/openttd.cfg]]:
+<pre>
+[patches]
+new_pathfinding_all = true
+</pre>
+
+The configuration options may only be changed in [[Main/en/openttd.cfg]]:
+
+<pre>
+[patches]
+npf_max_search_nodes = 10000
+npf_rail_firstred_penalty = 1000
+npf_rail_firstred_exit_penalty = 10000
+npf_rail_lastred_penalty = 1000
+npf_rail_station_penalty = 100
+npf_rail_slope_penalty = 100
+npf_rail_curve_penalty = 1
+npf_rail_depot_reverse_penalty = 5000
+npf_buoy_penalty = 200
+npf_water_curve_penalty = 25
+</pre>
+
+== Notes ==
+
+The algorithm is pretty amazing compared to the old system. Because of the penalty for red signals, it's quite easy to build simple load-balancing systems in some cases, especially in front of stations. Take care however when modifying tracks: if there is no path, the trains will try to get as close to the target station as possible and can get very lost doing so.
+
+== See Also ==
+*[[Main/en/Yet Another Pathfinder]] (YAPF)
+
+[[Category:es/Configuración y preferencias]]
+[[Category:es/Vehículos]]
