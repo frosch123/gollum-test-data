@@ -1,0 +1,16 @@
+[[Translation:Main/en/New train pathfinding]]
+A [[Main/en/Advanced Settings|setting]] that slightly updates the pathfinding algorithm for [[Main/en/Trains|trains]].
+
+
+== Description ==
+New Train pathFinder (NTP) is an improvement on the original TTD pathfinder that does not always present the best choice, loses your trains, but has worked fine for 10 years and most of us have learned to live with it. It is always advisable to turn this on since it IS better than the old one and doesn't consume any more resources. The better alternative is to enable [[Main/en/Yet Another Pathfinder|YAPF]].  Enabling YAPF or NPF will override this option.
+
+== Use ==
+This feature is disabled by default. You can enable this patch through the [[Main/en/Configuring patches/Vehicles|configure patches -> vehicles]] window or use the following syntax in [[Main/en/openttd.cfg]]:
+<pre>
+[patches]
+new_pathfinding = true
+</pre>
+
+[[Category:en/Settings & Preferences]]
+[[Category:en/Railways]]
