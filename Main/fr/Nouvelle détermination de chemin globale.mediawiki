@@ -1,0 +1,68 @@
+[[Translation:Main/en/New global pathfinding]]
+
+Une [[Main/fr/Options avancées|option]] qui utilise un algorithme de détermination de chemin complètement différent pour tous les [[Main/fr/Véhicules|véhicules]].
+
+'''NPF est remplacé par [[Main/fr/Encore une autre détermination de chemin|YAPF]] à tous égards.'''
+
+== Description ==
+La Nouvelle détermination de chemin globale (NPF) est une détermination globale de chemin qui fonctionne pour tous les véhicules. Elle utilise un algorithme A* pour trouver son chemin. Il est rapide, il est bon et renverra toujours les meilleurs résultats. Cependant, sur des réseaux ferroviaires extrêmement complexes, il peut être très consommateur en CPU; donc, sur les anciennes machines (et les grandes cartes avec beaucoup de trains), il peut ralentir les performances et donc être désactivé. Si c'est le cas, alors vous voudrez au moins activer la [[Main/fr/Nouvelle détermination de chemin de train|Nouvelle détermination de chemin de train (NTP)]] ou [[Main/fr/Encore une autre détermination de chemin|YAPF]].
+
+===Options de configuration===
+
+NPF a l'ensemble d'options de configuration suivant:
+{|
+|- valign="top"
+|'''npf_max_search_nodes'''||Le nombre maximum de nœuds de recherche qu'une unique exécution de NPF peut prendre. Cette limite devrait garantir que les performances restent à un niveau acceptable, avec la contrepartie de ne plus être parfait. Cela sera probablement corrigé d'une manière plus sophistiquée plus tard.
+|- valign="top"
+|'''npf_rail_firstred_penalty'''||La pénalité à appliquer quand le premier signal est rouge (et que ce n'est pas un signal de sortie ou combiné)
+|- valign="top"
+|'''npf_rail_firstred_exit_penalty'''||La pénalité à appliquer quand le premier signal est rouge (et que c'est un signal de sortie ou combiné)
+|- valign="top"
+|'''npf_rail_lastred_penalty'''||La pénalité à appliquer quand le dernier signal est rouge
+|- valign="top"
+|'''npf_rail_station_penalty'''||La pénalité à appliquer pour les cases de gare ferroviaire
+|- valign="top"
+|'''npf_rail_slope_penalty'''||La pénalité pour les pentes montantes de voie ferrée
+|- valign="top"
+|'''npf_rail_curve_penalty'''||La pénalité pour les virages de voie ferrée
+|- valign="top"
+|'''npf_rail_depot_reverse_penalty'''||La pénalité pour un retour au dépôt
+|- valign="top"
+|'''npf_buoy_penalty'''||La pénalité pour aller (passer par) une bouée
+|- valign="top"
+|'''npf_water_curve_penalty'''||La pénalité à appliquer pour les virages en bateau
+|}
+
+== Utilisation ==
+
+Cette fonctionnalité est désactivée par défaut. Vous pouvez l'activer par la fenêtre [[Main/fr/Options avancées/Véhicules|Configuration avancée -> Véhicules]] ou en utilisant la syntaxe suivante dans [[Main/fr/openttd.cfg|openttd.cfg]]:
+<pre>
+[patches]
+new_pathfinding_all = true
+</pre>
+
+Les options de configuration ne peuvent être modifiées que dans [[Main/fr/openttd.cfg|openttd.cfg]]:
+
+<pre>
+[patches]
+npf_max_search_nodes = 10000
+npf_rail_firstred_penalty = 1000
+npf_rail_firstred_exit_penalty = 10000
+npf_rail_lastred_penalty = 1000
+npf_rail_station_penalty = 100
+npf_rail_slope_penalty = 100
+npf_rail_curve_penalty = 1
+npf_rail_depot_reverse_penalty = 5000
+npf_buoy_penalty = 200
+npf_water_curve_penalty = 25
+</pre>
+
+== Notes ==
+
+L'algorithme est assez joliment surprenant par rapport à l'ancien système. À cause des pénalités sur les feux rouges, il est assez facile de construire des systèmes de partage de charge dans certains cas, surtout en face des gares. Faites toutefois attention lorsque vous modifiez des voies: s'il n'y a pas de chemin, les trains essaieront de s'approcher le plus possible de la gare cible, et pourront ainsi se retrouver perdus.
+
+== Voir aussi ==
+*[[Main/fr/Encore une autre détermination de chemin|Encore une autre détermination de chemin]] (YAPF)
+
+[[Category:fr/Réglages et préférences]]
+[[Category:fr/Véhicules]]
