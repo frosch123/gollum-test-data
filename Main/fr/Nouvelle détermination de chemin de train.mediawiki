@@ -1,0 +1,17 @@
+[[Translation:Main/en/New train pathfinding]]
+
+Une [[Main/fr/Options avancées|option]] qui améliore un peu l'algorithme de détermination du chemin pour les [[Main/fr/Trains|trains]].
+
+
+== Description ==
+Nouvelle détermination de chemin de train (NTP) est une amélioration de la détermination de chemin originale de TTD qui ne présente pas toujours le meilleur choix, perd vos trains, mais a bien fonctionné pendant 10 ans et plus pendant lesquels nous avons appris à vivre avec. Il est toujours recommandé de l'activer, car elle EST meilleure que l'ancienne et ne consomme pas plus de ressources. La meilleure alternative est d'activer [[Main/fr/Encore une autre détermination de chemin|YAPF]]. Activer YAPF ou NPF écrasera cette option.
+
+== Utilisation ==
+Cette fonctionnalité n'est pas activée par défaut. Vous pouvez le faire via la fenêtre [[Main/fr/Options avancées/Véhicules|Configuration avancée -> Véhicules]] ou utiliser la syntaxe suivante dans [[Main/fr/openttd.cfg|openttd.cfg]]:
+<pre>
+[patches]
+new_pathfinding = true
+</pre>
+
+[[Category:fr/Réglages et préférences]]
+[[Category:fr/Chemins de fer]]
