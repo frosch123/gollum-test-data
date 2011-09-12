@@ -1,0 +1,24 @@
+{{es/Contenido histórico|La información de estas páginas se aplica a las versiones '''de la 0.3.0 a la 0.6.3'''.
+:*Para '''0.7.0 y posteriores''' - Vea [[Main/es/Opciones avanzadas|Opciones avanzadas]] para obtener información de cómo cambiar la configuración.
+:*Para '''0.2.0 y 0.2.1''' - Vea [[Main/es/Configurar parches en 0.2.0|Configurar parches en 0.2.0]].}}
+[[Translation:Main/en/Configuring patches]]
+
+[[File:es/0.6.0 configurepatches interface.png|right|frame|La ventana ''Configurar Parches'' (0.6.3-OpenTTD).]]
+La ventana de '''configurar parches''' contiene una serie de ajustes detallados ([[Main/es/Parches|parches]]) que se pueden modificar en el juego, divididos en las siguientes secciones:
+
+*[[Main/es/Configurar parches/Interfaz|Interfaz]]
+*[[Main/es/Configurar parches/Construcción|Construcción]]
+*[[Main/es/Configurar parches/Vehículos|Vehículos]]
+*[[Main/es/Configurar parches/Estaciones|Estaciones]]
+*[[Main/es/Configurar parches/Economía|Economía]]
+*[[Main/es/Configurar parches/Competidores|Competidores]]
+
+El botón de color verde indican que esa opción está activada, por el contrario el color rojo indica que está desactivada. Los botones con flechas cambian el valor entre distintos valores posibles (con un scroll horizontal). Si cliquea en el texto de una de las opciones que tienen botones con flechas, se abrirá un cuadro de diálogo, en el que puede introducir el valor que desee.
+{{en/-}}
+
+== Nueva ventana de opciones avanzadas==
+A partir de la versión 0.7 la ventana "Configurar parches" ha cambiado el nombre por "[[Main/es/Opciones avanzadas|Opciones avanzadas]]" para evitar confusiones entre el [[Main/es/TTDPatch|TTDPatch]] o los parches (en el sentido técnico) con lo que es el código fuente de OpenTTD, que aparece a menudo en la [http://www.tt-forums.net/viewforum.php?f=33 sección de desarrollo de los tt-foros].
+
+Los botones de la parte superior de la ventana se han eliminado y todas las opciones avanzadas se muestran en una estructura de árbol. Esto permite que las subcategorías se pueden expandir y contraer de forma independiente. Los antiguos botones (''Interfaz'', ''Construcción'', ''Vehículos'', ''Estaciones'', ''Economía'' y ''Competidores'') son ahora categorías de nivel superior que pueden a su vez contener subcategorías, por ejemplo la subcategoría ''Trenes'' dentro de la categoría de ''Vehículos''.
+
+[[Category:es/Configuración y preferencias]]
