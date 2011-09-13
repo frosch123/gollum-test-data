@@ -1,0 +1,18 @@
+[[Translation:Main/en/Oil refinery limit]]
+:<small><<Back to the [[Main/en/Openttd.cfg]] (OpenTTD configuration file)</small>
+
+
+'''oil_refinery_limit''' is a variable of Openttd.cfg file:
+
+This option determines the maximum allowed distance (in tiles) from the edge of the map for an Oil Refinery.
+
+<pre>
+[game_creation]
+oil_refinery_limit = 32
+</pre>
+
+'''Valid options:''' [12 <= n <= 48]
+
+'''Default:''' 32
+
+[[Category:en/Settings & Preferences]]
