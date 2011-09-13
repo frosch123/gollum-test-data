@@ -1,0 +1,20 @@
+[[Translation:Main/en/Drag signal density]]
+
+
+[[Category:nl/Instellingen en voorkeuren]]
+[[Category:nl/Constructie]]
+
+Een [[Main/nl/geavanceerde instellingen|geavanceerde instelling]] die de standaard seinafstand instelt bij het slepen van [[Main/nl/Seinen|seinen]].
+
+== Beschrijving ==
+[[File:en/Drag-signals.png|right|280px]]
+Om herhalend werk te voorkomen is iets waar moderne software en software-ontwerpers aan moeten denken. ''Autosignalering'', gemodelleerd volgens ''[[Main/nl/Autorail|autorail]]'' is een van de vele functies van [[Main/nl/OpenTTD|OpenTTD]]. Je kiest een stuk spoor waar je seinen op wilt plaatsen, en met ''Autosignalering'' gebeurt dat voor jou. Voor een uitleg in zijn context, lees er over bij [[Main/nl/Seinen|seinen]].
+
+Deze instelling laat je de dichtheid waarmee gesleepte seinen verschijnen, instellen. Instellen op 2 laat de seinen elke tweede tegel verschijnen, instellen op 10, elke tiende tegels, enzovoorts. ''Autosignalering'' zal ook "automatisch verwijderen" van je seinen verzorgen op het deel dat je hebt geselecteerd.
+
+Terwijl je seinen sleept, kun je door de Ctrl-toets ingedrukt te houden seinen plaatsen op de ingestelde afsctand, en zelfs op bochten, tot het volgende kruispunt.
+
+== Gebruik ==
+[[Main/nl/Sleep seindichtheid|Sleep seindichtheid]] is een integer instelling met een standaard waarde van 4. Het kan ingesteld worden tussen 1 en 20. Je kunt dit veranderen via de [[Main/en/Geavanceerde instellingen/Constructie/Nl#Bij slepen, plaats seinen elke|geavanceerde instellingen -> constructievenster]] of door de volgende syntax in [[Main/en/openttd.cfg]]:
+<pre>[patches]
+drag_signals_density = 3</pre>
