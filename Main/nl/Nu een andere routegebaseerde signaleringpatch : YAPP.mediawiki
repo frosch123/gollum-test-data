@@ -1,0 +1,102 @@
+[[Translation:Main/en/Yet Another PBS Patch]]
+
+Nu een andere '''r'''outege'''b'''aseerde '''s'''ignaleringpatch (of kortweg YAPP) is een routegebaseerde signaleringspatch (RBS) ontwikkeld door [[Archive/en/Michi cc|Michi_cc]], dat is opgenomen in de OpenTTD romp in r13926. De eerste stabiele release waarin deze functies is opgenomen is [[Main/en/OpenTTD 0.7.0]].
+
+YAPP implementeert een realistisch signaleringssysteem, gelijk aan [[Main/en/Realistic Path Based Signalling|Tekky's voorgestelde RBS systeem]], maar zonder het realistische twee-richtingen dubbelspoor. Het is niet gerelateerd aan het [[Main/en/Old Path Based Signaling|oude RBS systeem van OpenTTD]].
+
+==Functies==
+* Werkt met NPF en YAPF.
+* Implementeert een seinsysteem gelijk aan [[Main/en/Realistic Path Based Signalling|Tekky's voorgestelde RBS systeem]] (zonder het realistische twee-richtingen dubbelspoor).
+* Is volledig terug uitwisselbaar, de oude blokseinen en de nieuwe routeseinen kunnen naast elkaar worden gebruikt.
+* Kan het gereserveerde spoor markeren.
+
+==Tutorial==
+===De basis===
+Deze paragraaf beslaat de basis functies van YAPP, en zou je moetn helpen bij het gebruik.
+
+====De seinen====
+[[File:en/seinkeuze1.gif|frame|right|Twee nieuwe seintypes in de [[seinselectie interface/Nl|seinselectie interface]].]]YAPP voegt twee nieuwe seinen toe aan het spel. Deze seinen stellen treinen in staat een route te reserveren voorbij een seinblok voordat de trein dit blok binnenrijdt. Als een andere trein dit blok wil binnenrijden, en erin slaagt een route door dit blok te reserveren, kunnen beide treinen een seinblok gebruiken op hetzelfde moment.
+
+Zoals hiervoor aangegeven zijn er twee seintypes beschikbaar in de [[Main/nl/Seinselectie interface|seinselectie interface]]. Het eerste type is het basis routesein. Er zijn twee dingen die je moet weten over dit sein:
+* Plaats het alleen daar waar treinen kunnen stoppen en veilig wachten zonder een kruising of andere dingen te blokkeren.
+* Treinen kunnen dit sein ook van achteren passeren.
+[[File:nl/routesein.gif|frame|right||RS]]Dit sein wordt een ''routesein (RS)'' genoemd.
+
+
+Er zijn ook twee dingen die je moet weten over het tweede seintype:
+* Plaats het alleen daar waar treinen kunnen stoppen veilig wachten zonder kruisingen en andere dingen te blokkeren.
+* Treinen kunnen dit sein maar van een kant passeren.
+[[File:nl/routesein1r.gif|frame|right|1R RS]]Dit sein wordt een ''eenrichtingsroutesein (1R RS)'' genoemd.
+
+
+Meestal zal het voldoende zijn om een standaard routesein te gebruiken, omdat een sein passeren van achteren wordt afgestraft door de routevinder, echter eenrichtingsrouteseinen kunnen bruikbaar zijn in specifieke gevallen.
+
+
+De twee nieuwe seintypes gedragen zich iets anders dan de standaard OpenTTD seintypes. De routeseinen staan standaard op rood, en gaan alleen op groen zodat een trein een route kan reserveren naar de volgende veilige wachtpositie op zijn route. Veilige wachtposities zijn - per definitie - voor seinen, in depots en spooreinden. de achterkant van een routesein wordt niet beschouwd als een veilige wachtpositie, en daarom wordt de route gereserveerd voorbij deze seinen.
+
+Omdat de voorkant van elk sein is gedefinieerd als een veilige wachtpositie, wil je normaal gesproken geen sein plaatsen direct na een kruising, alleen voor de kruising. Dit omdat het alleen veilig wachten is voor een trein voor de kruising. Het is niet veilig voor een trein om te wachten direct na een kruising als niet de hele trein de kruising heeft vrij gemaakt, omdat hij dan de kruising zou blokkeren terwijl hij staat te wachten, zoals te zien is in het voorbeeld hieronder. Dit is een belangrijk voordeel ten opzichte van standaard OpenTTD seinen, waarbij je seinen voor en na de kruising moet plaatsen, wat de oorzaak is van blokkerende treinen op de kruising.
+[[File:en/seinkeuze2.gif|frame|center|Het sein dat is aangeduid met een pijl is een onveilige wachtpositie, omdat de trein op de kruising nu de anders vrije route voor de trein die van de bovenzijde komt, blokkeert. Er is een tweede onveilige wachtpositie in deze afbeelding. Kun je die ook vinden?]]
+
+====Patch opties====
+[[File:en/reserveer spoor.gif|frame|right|YAPP Patch opties]]YAPP voegt drie nieuwe patch opties toe aan het spel.
+
+
+Een optie is het markeren van gereserveerde sporen. Deze optie is handig bij het oplossen van problemen op je kruisingen, omdat je kunt zien welke routes treinen moeten reserveren langs de seinblokken.
+
+
+De andere twee opties controleren hoe het seinbouwgereedschap zich moet gedragen. Je kunt het seintype instellen dat standaard wordt gebouwd bij het plaatsen van nieuwe seinen met dit gereedschap en je kunt het doorlopen van de seincyclus op een reeds bestaand sein met de Ctrl-toets aanpassen .
+
+
+Er zijn een paar patch opties die niet beschikbaar zijn bij de configureer patches vensters. Wat deze opties zijn, en hoe je deze kunt aanpassen wordt weergegeven onder [[Main/en/#Geavanceerde patch opties|geavanceerde patch opties]].
+
+===Basis voorbeelden===
+Hieronder zijn enkele voorbeeld spoorlayouts waarbij routeseinen zijn gebruikt. Geavanceerde spoorlayouts die niet worden aangeraden voor beginners zijn op een [[Main/nl/geavanceerde routeseinlayouts|aparte pagina]] aangegeven.
+
+====Basis kruising====
+Dit basis kruispunt heeft nu een veel grotere doorvoer.
+[[File:en/Yapp basicjunction.png|frame|center|Basis kruising voor treinen met een maximale lengte van drie tegels. Merk op het gebruik van normale seinen op het gewone spoor.]]
+
+====Basis tweerichtingen station====
+Met deze stationslayout kunnen treinen beide platforms gebruiken bij het binnenrijden vanuit elke richting.
+[[File:en/Yapp basicstation.png|frame|center|Basis station.]]
+
+====Basis enkelspoor====
+Dit is de basis layout van een enkelspoorlijn dat in beide richtingen kan worden gebruikt. Een enkelspoorlijn met verschillende passeerpunten kan worden gebouwd door de layout te herhalen. Verhoogde doorvoer kan worden bereikt met een [[Main/en/Geavanceerde routeseinlayouts/Nl#Geprioriteerde enkelspoor layout|verbeterde layout]].
+[[File:en/Yapp single track.png|frame|center|Basis enkelspoor bouwblok. De buitenste seinen moeten ver genoeg verplaatst zijn van de kruising zodat wachtende treinen de kruising niet kunnen blokkeren.]]
+
+===Geavanceerde patch opties===
+YAPP heeft verschillende opties die niet toegankelijk zijn via het patch instellingsvenster. Deze zijn bewaard in je [[Main/en/openttd.cfg]] en
+kun je veranderen ofwel met een teksteditor of via de [[Main/nl/console|spelconsole]] met gebruik van de "patch" opdracht. Veranderingen die je maakt in openttd.cfg '''hebben geen''' effect op reeds gestarte en bewaarde spellen. Je moet de console gebruiken om de waarden te veranderen bij een lopend spel.
+
+{| border = "1"
+!colspan="3"| Geavanceerde opties
+|-
+| '''Optie''' || '''Standaard''' || '''Beschrijving'''
+|-
+| pf.wait_for_pbs_path || 30 || Hoe lang wachten voor een routereservatie (in dagen). Zet deze waarde op 255 als je niet wilt dat treinen ''steeds'' omdraaien voor een routesein uit zichzelf.
+|-
+| pf.path_backoff_interval || 20 || Tikken tussen het controleren op een vrije route. Verhoog deze waarde als je een trage computer hebt. Zet op 255 om het vooruitkijken voor een route uit te schakelen als je deze geavanceerde seinen niet wilt gebruiken.
+|-
+| pf.npf.npf_rail_pbs_cross_penalty || 300 || Routevinderstraf voor het kruisen van gereserveerde tegels bij het gebruik van [[Main/en/New global pathfinding]].
+|-
+| pf.npf.npf_rail_pbs_signal_back_penalty || 1500 || Routevinderstraf voor het passeren van een routesein van achteren bij gebruik van [[Main/en/New global pathfinding]].
+|-
+| pf.yapf.rail_pbs_cross_penalty || 300 || Routevinderstraf voor het kruisen van gereserveerde tegels bij het gebruik van [[Main/en/Yet Another Pathfinder]].
+|-
+| pf.yapf.rail_pbs_station_penalty || 800 || Routevinderstraf voor het kruisen van een gereserveerde stationstegel bij het gebruik van [[Main/en/Yet Another Pathfinder]].
+|-
+| pf.yapf.rail_pbs_signal_back_penalty || 1500 || Routevinderstraf voor het passeren van een routesein van achteren bij gebruik van [[Main/en/Yet Another Pathfinder]].
+|-
+| pf.yapf.rail_doubleslip_penalty || 100 || Routevinderstraf voor het passeren van een dubbele slip schakelaar bij het gebruik van [[Main/en/Yet Another Pathfinder]].
+|}
+
+
+{{nl/Kenmerken|0.7|0.7.0}}
+
+== Zie ook ==
+* [[Main/nl/Geavanceerde routeseinlayouts|Geavanceerde routeseinlayouts]]
+
+[[Category:nl/Constructie]]
+[[Category:nl/Spoorwegen]]
+[[Category:nl/Instellingen en voorkeuren]]
+[[Category:nl/Ontwikkelingen]]
