@@ -1,0 +1,19 @@
+[[Translation:Main/en/Drag signal density]]
+
+[[Category:en/Settings & Preferences]]
+[[Category:en/Construction]]
+
+A [[Main/en/Advanced Settings|setting]] that sets the default interval of dragged [[Main/en/Signals|signals]].
+
+== Description ==
+[[File:en/Drag-signals.png|right|280px]]
+Avoiding repetitive work is something all modern software and software-designer should think about. ''Autosignals'', modelled after ''[[Main/en/Autorail]]'' is one of many such features of [[Main/en/OpenTTD]]. You just select a piece of rail which you want to signal, and ''Autosignal'' will do that for you. For an explanation in context, read about [[Main/en/Signals]].
+
+This setting will let you change the density at which dragged signals appear. Setting this to 2 will make a signal appear every second tile, setting it to 10, every 10th, etc. ''Autosignal'' will also "autoremove" your signals at the interval selected here.
+
+Whilst dragging signals, you can hold the Ctrl key to place signals at the interval specified, and even round bends, until the next junction/points.
+
+== Use ==
+[[Main/en/Drag signal density]] is an integer setting with a default setting of 4. It can be set anywhere between 1-20. You can change this through the [[Main/en/Configuring patches/Construction|configure patches -> construction]] window or use the following syntax in [[Main/en/openttd.cfg]]:
+<pre>[patches]
+drag_signals_density = 3</pre>
