@@ -1,0 +1,18 @@
+[[Translation:Main/en/Freight trains]]
+:<small><<Back to the [[Main/en/Openttd.cfg]] (OpenTTD configuration file)</small>
+
+
+'''freight_trains''' is a variable of Openttd.cfg file:
+
+The weight of freight trains is multiplied by the multiplier set here to simulate very heavy trains for more realism.
+
+<pre>
+[vehicle]
+freight_trains = 1
+</pre>
+
+'''Valid options:''' [1 <= n <= 255]
+
+'''Default:''' 1
+
+[[Category:en/Settings & Preferences]]
