@@ -1,0 +1,29 @@
+[[Translation:Main/en/Server]]{{en/-}}
+Als je [[Main/nl/multiplayer|multiplayer netwerk spellen]] wilt hosten, moet je de OpenTTD '''server''' opzetten op je computer.
+[[File:en/start server.gif|right]]
+'''1''' In het hoofdmenu, klik op '''Multiplayer'''
+
+'''2''' Klik '''Start Server'''
+
+'''3''' Kies een naam voor jouw spel om anderen te helpen om het te identificeren, en voer dit in bij '''Spelnaam'''
+
+'''4''' Configureer de aanvullende instellingen, zoals hieronder uitgelegd:
+
+'''5''' Klik '''Nieuw spel''' (om een willekeurig, nieuw spel te genereren), of '''Laad spel''' (om verder te gaan met een opgeslagen spel), of '''Speel scenario''', of '''Speel hoogtekaart''', of '''Annuleren'''.
+
+==Instellingen==
+*'''Kies wachtwoord''' stelt een wachtwoord in voor de server zodat alleen gebruikers die het wachtwoord kennen aan jouw spel kunnen meedoen.
+*'''Verbinding''' specificeert of de server alleen LAN gebruik is, of dat het zichzelf adverteert op de meester server zodat het getoond wordt in de internet server lijst.
+*'''Gesproken taal''' is om te verzoeken dat gebruikers een bepaalde taal spreken op jouw server.
+*'''Maximaal aantal spelers''' limiteert het totaal aantal spelers dat wordt toegelaten tot het spel.
+*'''Max bedrijven''' limiteert het aantal bedrijven in een spel.
+*'''Max toeschouwers''' limiteert het aantal toeschouwers dat wordt toegelaten om te kijken (niet-spelers).
+
+==Poorten==
+Als je computer achter een firewall of [http://www.wikipedia.org/wiki/Network_address_translation NAT] router zit, moet je eerst nagaan of de juiste [[Main/en/port|poorten]] (poort 3979 als standaard) open of doorgestuurd worden.
+Je kunt de poort die wordt gebruikt veranderen door "server_port <port>" in te voeren in de spelconsole.
+
+==Speciale server==
+Als je veel spelers verwacht en de machine niet zelf gaat gebruiken om te spelen, kun je OpenTTD starten als een [[Main/en/dedicated server|speciale server]] in plaats van de gebruikelijke interactieve grafische versie.
+
+[[Category:nl/Multispeler]]
