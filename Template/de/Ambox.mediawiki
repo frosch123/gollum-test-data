@@ -1,0 +1,151 @@
+<!-- 
+      Adaptiert vom standarmäßigen Wiki '''Ambox'''
+
+--><noinclude>[[Translation:Template/en/Ambox]]</noinclude><includeonly><div style="{{#IF: {{{Stil|}}} | {{{Stil}}} | margin: 0px 10% 0px 10%; border: 1px solid #aaa; border-left: 10px solid {{#switch:{{{Typ|}}} 
+  | Löschen      =#b22222;
+  | Inhalt       =#f28500;
+  | Stil         =#f4c430;
+  | Bewegen      =#9932cc;
+  | Beschützt    =#bba;
+  | #default     =#1e90ff;
+}} padding: 4px 8px; background:#efefef; min-height: 44px;">}}
+<div style="position: absolute;">[[File:en/.{{#if:{{{Bild|}}}
+  | {{{Bild}}}
+  | {{#switch:{{{Typ|}}}
+    | Löschen    =Deletion.png
+    | Inhalt     =Content.png
+    | Stil       =Edit-clear.png
+    | Bewegen    =Move.png
+    | Beschützt  =Protection.png
+    | #default   =Notice.png
+  }}
+}}|40px]]</div>
+<div style="border: none; padding: 2px 2px 2px 62px;">
+<span style="{{#IF: {{{Text-Stil|}}} | {{{Text-Stil}}} | }}"> {{{Text|}}} </span>
+</div></div><!-- 
+Melden falscher Benutzung von "Typ" Parameter:
+-->{{#switch:{{{Typ|}}}
+|           = <!--Keine Eingabe ist auch gültig --> 
+| Löschen   =
+| Inhalt    = 
+| Stil      =
+| Bewegen   =
+| Beschützt =
+| Notiz     =
+| #default  = <div style="text-align: center;">Dieses Infofenster benutzt einen Ungültigen "Typ={{{Typ|}}}" Parameter und muss in Ordnung gebracht werden.</div>[[Category:de/Falsche Syntax]]
+}}</includeonly><noinclude>
+
+==Benutzung==
+Einfaches Beispiel:
+<pre>
+{{de/Ambox|Text=Irgendein Text.}}
+</pre>
+{{de/Ambox|Text=Irgendein Text}}
+
+ODER:
+<pre>
+{{de/Ambox| Typ = Inhalt
+| Text = Achtung, irgend was ist passiert.
+}}
+</pre>
+{{de/Ambox| Typ = Inhalt | Text = Achtung, irgendwas ist passiert.}}
+
+== Liste verfügbarer Parameter ==
+<pre>
+{{de/Ambox| Typ        = Löschen / Inhalt / Stil / Notiz / Bewegen / Beschützt
+| Bild       = Picture.Png / Picture.Png|alt=Picture (wenn der Parameter nicht funktioniert, wird ein Standard-Bild angezeigt)
+| Text       = Um genau zu beschreiben, was das Problem ist.
+
+| Stil      = Verschiedene Stile. (Sollte am Besten nicht benutzt werden)
+| Text-Stil = Das gleiche wie oben für Text.
+}}
+</pre>
+
+
+=== Verschieden Arten von Infofenstern ===
+
+Die folgenden Beispiele benutzen verschiedene '''Typ''' Parameter, aber keine '''Bild''' Parameter da jeder Parameter sein Standard-Bild benutzt.
+
+
+{{de/Ambox| Typ  = Löschen
+| Text  = Typ=<u>Löschen</u> – Für Artikel, die gelöscht werden müssen, z.B. {{s|Löschen/De}}.
+}}
+{{de/Ambox| Typ   = Inhalt
+| Text  = Typ=<u>Inhalt</u> – Fehler oder Warnungen wegen Inhalt, z.B. {{s|Warnung/De}}.
+}}
+{{de/Ambox| Typ   = Stil
+| Text  = Typ=<u>Stil</u> – Stiländerungen, z.B. {{s|Aufräumen/De}}.
+}}
+{{de/Ambox| Typ   = Notiz
+| Text  = Typ=<u>Notiz</u> – Notizen im Artikel, z.B. {{s|Aktuell/De}}.
+}}
+{{de/Ambox| Typ   = Bewegen
+| Text  = Typ=<u>Bewegen</u> – Veränderungen in Form von Artikel teilen oder zusammenfügen, z.B. {{s|Aufteilen/De}}.
+}}
+{{de/Ambox| Typ   = Beschützt
+| Text  = Typ=<u>Beschützt</u> – Beschützte Seiten, z.B. {{s|Historisch/De}}.
+}}
+
+=== Andere Bilder ===
+
+Die Standard-Bilder (s.O.) werden meistens wegen der Verständlichkeit benutzt. In vielen Fällen ist es angemessener gezielte Bilder zu benutzen. Dieses Beispiel benutzt den '''image''' Parameter um ein gezieltes Bild zu benutzen, das anders von den Standard-Bildern ist.
+
+<pre>{{de/Ambox| Typ  = notice
+| Bild = OpenttdManual.png
+| Text = Beispielbild Beispielbild Beispielbild Beispielbild Beispielbild Beispielbild
+}}</pre>
+
+{{de/Ambox| Typ  = Notiz
+| Bild = OpenttdManual.png
+| Text = Beispielbild Beispielbild Beispielbild Beispielbild Beispielbild Beispielbild
+}}
+
+[[Category:de/Vorlagen|Ambox]][[Category:de/Message-Boxen|Ambox]]
+</noinclude><!--
+
+  CSS if the option will become available
+
+/* Article message box styles */
+table.ambox {
+    margin: 0px 10%;   /* 10% = Will not overlap with other elements */
+    border: 1px solid #aaa; 
+    border-left: 10px solid #1e90ff;    /* Default "notice" blue */
+    background: #fbfbfb; 
+}
+table.ambox + table.ambox {   /* Single border between stacked boxes. */
+    margin-top: -1px;
+}
+.ambox th.mbox-text, 
+.ambox td.mbox-text {            /* The message body cell(s) */
+    padding: 0.25em 0.5em;       /* 0.5em left/right */
+}
+.ambox td.mbox-image {           /* The left image cell */
+    padding: 2px 0 2px 0.5em;    /* 0.5em left, 0px right */
+}
+.ambox td.mbox-imageright {      /* The right image cell */
+    padding: 2px 0.5em 2px 0;    /* 0px left, 0.5em right */
+}
+
+table.ambox-notice {
+    border-left: 10px solid #1e90ff;    /* Blue */
+}
+table.ambox-speedy {
+    border-left: 10px solid #b22222;    /* Red */
+    background: #fee;                   /* Pink */
+}
+table.ambox-delete {
+    border-left: 10px solid #b22222;    /* Red */
+}
+table.ambox-content {
+    border-left: 10px solid #f28500;    /* Orange */
+}
+table.ambox-style {
+    border-left: 10px solid #f4c430;    /* Yellow */
+}
+table.ambox-move {
+    border-left: 10px solid #9932cc;    /* Purple */
+}
+table.ambox-protection {
+    border-left: 10px solid #bba;       /* Gray-gold */
+}
+-->
