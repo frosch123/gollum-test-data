@@ -1,0 +1,147 @@
+<!-- 
+      Adaptación de la plantilla wiki '''Metaplantilla de avisos'''
+
+--><noinclude>[[Translation:Template/en/Ambox]]</noinclude><includeonly><div style="{{#IF: {{{estilo|}}} | {{{estilo}}} | margin: 0px 10% 0px 10%; border: 1px solid #aaa; border-left: 10px solid {{#switch:{{{tipo|}}} 
+  | borrar     =#b22222;
+  | contenido  =#f28500;
+  | estilo     =#f4c430;
+  | fusionar   =#9932cc;
+  | protección =#bba;
+  | #default  =#1e90ff;
+}} padding: 4px 8px; background:#efefef; min-height: 44px;">}}
+<div style="position: absolute;">[[File:en/.{{#if:{{{imagen|}}}
+  | {{{imagen}}}
+  | {{#switch:{{{tipo|}}}
+    | borrar     =Deletion.png
+    | contenido  =Content.png
+    | estilo     =Edit-clear.png
+    | fusionar   =Move.png
+    | protección =Protection.png
+    | #default  =Notice.png
+  }}
+}}|40px]]</div>
+<div style="border: none; padding: 2px 2px 2px 62px;">
+<span style="{{#IF: {{{estilo-texto|}}} | {{{estilo-texto}}} | }}"> {{{texto|}}} </span>
+</div></div><!-- 
+para detectar e informar de uso defectuoso "teclee" parámetro:
+-->{{#switch:{{{tipo|}}}
+|            = <!-- No escribir nada también es una entrada válida --> 
+| borrar     =
+| contenido  = 
+| estilo     =
+| fusionar   =
+| protección =
+| información=
+| #predeter  = <div style="text-align: center;">Esta caja de mensaje está usando un parámetro no válido "tipo={{{tipo|}}}" y se debe fijar otro.</div>[[Category:es/Sintaxis incorrecta]]
+}}</includeonly><noinclude>
+
+==Uso==
+Ejemplo de uso sencillo:
+
+<pre>
+{{es/Metaplantilla de avisos| texto = Cualquier texto.}}
+</pre>
+{{es/Metaplantilla de avisos| texto = Cualquier texto.}}
+O:
+<pre>
+{{es/Metaplantilla de avisos| tipo  = contenido
+| texto = Atención: cualquier texto.
+}}
+</pre>
+{{es/Metaplantilla de avisos| tipo  = contenido | texto = Atención: cualquier texto.}}
+
+== Lista de parámetros disponibles ==
+<pre>
+{{es/Metaplantilla de avisos| tipo         = borrar / contenido / estilo / información / fusionar / protección
+| imagen       = Picture.Png / Picture.Png|alt=Imagen (si el parámetro no se establece, aparecerá el icono predeterminado)
+| texto        = Texto para una caja grande, para poner en la parte superior de los artículos.
+
+| estilo       = Diferente estilo de tabla. (Preferiblemente NO USAR)
+| estilo-texto = Igual que el anterior pero para el texto.
+</pre>
+
+=== Ejemplos según el parámetro "tipo" usado ===
+Los siguientes ejemplos utilizan diferentes valores para el parámetro '''tipo''', pero sin usar el parámetro imagen por lo que se utilizan las imágenes predeterminadas para cada tipo.
+
+{{es/Metaplantilla de avisos| tipo  = borrar
+| texto = tipo=<u>borrar</u> – Cuestiones de borrado, como {{s|Borrar/Es}}.
+}}
+{{es/Metaplantilla de avisos| tipo  = contenido
+| texto = tipo=<u>contenido</u> – Cuestiones de contenido, como {{s|Aviso/Es}} o {{s|Desactualizado/Es}}.
+}}
+{{es/Metaplantilla de avisos| tipo  = estilo
+| texto = tipo=<u>estilo</u> – Cuestiones de estilo, como {{s|Corregir/Es}} o {{s|Traducción/Es}}.
+}}
+{{es/Metaplantilla de avisos| tipo  = información
+| texto = tipo=<u>información</u> – Información para los artículos, como {{s|Nota/Es}} o {{s|Evento actual/Es}}.
+}}
+{{es/Metaplantilla de avisos| tipo  = fusionar
+| texto = tipo=<u>fusionar</u> – Propuestas de fusión o traslado, como {{s|Dividir/Es}}.
+}}
+{{es/Metaplantilla de avisos| tipo  = protección
+| texto = tipo=<u>protección</u> – Protección de páginas, como {{s|Histórico/Es}}.
+}}
+
+=== Otras imágenes ===
+
+Las imágenes predeterminadas mostradas arriba se han fijado, en su mayoría, por conveniencia. En muchos casos es más apropiado usar imágenes más específicas. Estos ejemplos usan el parámetro '''imagen''' para especificar una imagen distinta a las predeterminadas.
+
+<pre>{{es/Metaplantilla de avisos| tipo   = Información
+| imagen = OpenttdManual.png
+| texto  = Algo Algo Algo 
+}}</pre>
+
+{{es/Metaplantilla de avisos| tipo   = Información
+| imagen = OpenttdManual.png
+| texto  = Algo Algo Algo 
+}}
+
+[[Category:es/Plantillas|Metaplantilla de avisos]][[Category:es/Cajas de mensajes|Metaplantilla de avisos]]
+</noinclude><!--
+
+  CSS if the option will become available
+
+/* Article message box styles */
+table.ambox {
+    margin: 0px 10%;   /* 10% = Will not overlap with other elements */
+    border: 1px solid #aaa; 
+    border-left: 10px solid #1e90ff;    /* Default "notice" blue */
+    background: #fbfbfb; 
+}
+table.ambox + table.ambox {   /* Single border between stacked boxes. */
+    margin-top: -1px;
+}
+.ambox th.mbox-text, 
+.ambox td.mbox-text {            /* The message body cell(s) */
+    padding: 0.25em 0.5em;       /* 0.5em left/right */
+}
+.ambox td.mbox-image {           /* The left image cell */
+    padding: 2px 0 2px 0.5em;    /* 0.5em left, 0px right */
+}
+.ambox td.mbox-imageright {      /* The right image cell */
+    padding: 2px 0.5em 2px 0;    /* 0px left, 0.5em right */
+}
+
+table.ambox-notice {
+    border-left: 10px solid #1e90ff;    /* Blue */
+}
+table.ambox-speedy {
+    border-left: 10px solid #b22222;    /* Red */
+    background: #fee;                   /* Pink */
+}
+table.ambox-delete {
+    border-left: 10px solid #b22222;    /* Red */
+}
+table.ambox-content {
+    border-left: 10px solid #f28500;    /* Orange */
+}
+table.ambox-style {
+    border-left: 10px solid #f4c430;    /* Yellow */
+}
+table.ambox-move {
+    border-left: 10px solid #9932cc;    /* Purple */
+}
+table.ambox-protection {
+    border-left: 10px solid #bba;       /* Gray-gold */
+}
+-->
