@@ -1,0 +1,146 @@
+<!-- 
+      Adaptació de la plantilla wiki '''Metacaixa d'avís'''
+
+--><noinclude>[[Translation:Template/en/Ambox]]</noinclude><includeonly><div style="{{#IF: {{{estil|}}} | {{{estil}}} | margin: 0px 10% 0px 10%; border: 1px solid #aaa; border-left: 10px solid {{#switch:{{{tipus|}}} 
+  | esborrar   =#b22222;
+  | contingut  =#f28500;
+  | estil      =#f4c430;
+  | moure      =#9932cc;
+  | protecció  =#bba;
+  | #default   =#1e90ff;
+}} padding: 4px 8px; background:#efefef; min-height: 44px;">}}
+<div style="position: absolute;">[[File:en/.{{#if:{{{imatge|}}}
+  | {{{imatge}}}
+  | {{#switch:{{{tipus|}}}
+    | esborrar   =Deletion.png
+    | contingut  =Content.png
+    | estil      =Edit-clear.png
+    | moure      =Move.png
+    | protecció  =Protection.png
+    | #default   =Notice.png
+  }}
+}}|40px]]</div>
+<div style="border: none; padding: 2px 2px 2px 62px;">
+<span style="{{#IF: {{{estil-text|}}} | {{{estil-text}}} | ;}}"> {{{text|}}} </span>
+</div></div><!-- 
+Per a detectar i informar d'ús defectuós "escriviu" paràmetre:
+-->{{#switch:{{{tipus|}}}
+|            = <!--No escriure res també és una entrada vàlida --> 
+| esborrar   =
+| contingut  = 
+| estil      =
+| moure      =
+| protecció  =
+| informació =
+| #default   = <div style="text-align: center;">Aquesta metacaixa d'avis utilitza un paràmetre no vàlid "tipus={{{tipus|}}}" i s'ha de fixar un altre.</div>[[Category:ca/Sintaxi incorrecta]]
+}}</includeonly><noinclude>
+
+==Ús==
+Exemple d'ús senzill:
+
+<pre>
+{{ca/Metacaixa d'avís| text = Qualsevol text.}}
+</pre>
+{{ca/Metacaixa d'avís| text = Qualsevol text.}}
+O:
+<pre>
+{{ca/Metacaixa d'avís| tipus = contingut
+| text  = Atenció - qualsevol text.
+}}
+</pre>
+{{ca/Metacaixa d'avís| tipus = contingut | text = Atenció - qualsevol text.}}
+
+== Llista de paràmetres disponibles==
+<pre>
+{{ca/Metacaixa d'avís| tipus        = esborrar / contingut / estil / informació / moure / protecció
+| imatge       = Picture.Png / Picture.Png|alt=Imatge (si no s'estableix el paràmetre apareixerà la icona predeterminada)
+| text         = Text per a una caixa gran, per a posar a la part superior dels articles.
+
+| estil         = Diferent estil de taula. (preferiblement NO USAR)
+| estil-text    = igual que l'anterior però referit al text.
+</pre>
+
+=== Exemples segons el paràmetre tipus emprat ===
+Els següents exemples empren diferents valors per al paràmetre '''tipus''', però sense emprar el paràmetre imatge per la qual cosa s'empren les imatges predeterminades per a cada tipus.
+
+{{ca/Metacaixa d'avís| tipus = esborrar
+| text  = tipus=<u>esborrar</u> – Qüestions d'esborrat, com {{s|Esborrar/Ca}}.
+}}
+{{ca/Metacaixa d'avís| tipus = contingut
+| text  = tipus=<u>contingut</u> – Qüestions de contingut com {{s|Avís/Ca}} o {{s|Desactualitzat/Ca}}.
+}}
+{{ca/Metacaixa d'avís| tipus = estil
+| text  = tipus=<u>estil</u> – Qüestions d'estil com  {{s|Corregir/Ca}} o {{s|Traducció/Ca}}.
+}}
+{{ca/Metacaixa d'avís| tipus = informació
+| text  = tipus=<u>informació</u> – Informació per als articles com {{s|Nota/Ca}} o {{s|Succés actual/Ca}}.
+}}
+{{ca/Metacaixa d'avís| tipus = moure
+| text  = tipus=<u>moure</u> – Propostes de fusió o trasllat {{s|Dividir/Ca}}.
+}}
+{{ca/Metacaixa d'avís| tipus = protecció
+| text  = tipus=<u>protecció</u> – Protecció de pàgines com {{s|Històric/Ca}}.
+}}
+
+=== Altres imatges ===
+Les imatges predeterminades mostrades dalt s'han establert, majorment, per conveniència. En molts casos és més apropiat emprar imatges més específiques. Estos exemples empren el paràmetre '''imatge''' per a especificar una imatge diferent a la predeterminada.
+
+<pre>{{ca/Metacaixa d'avís| tipus  = informació
+| imatge = OpenttdManual.png
+| text   = tararí tararà tararí 
+}}</pre>
+
+{{ca/Metacaixa d'avís| tipus  = informació
+| imatge = OpenttdManual.png
+| text   = tararí tararà tararí 
+}}
+
+[[Category:ca/Plantilles|Metacaixa d'avís]][[Category:ca/Caixes de missatges|Metacaixa d'avís]]
+</noinclude><!--
+
+  CSS if the option will become available
+
+/* Article message box styles */
+table.ambox {
+    margin: 0px 10%;   /* 10% = Will not overlap with other elements */
+    border: 1px solid #aaa; 
+    border-left: 10px solid #1e90ff;    /* Default "notice" blue */
+    background: #fbfbfb; 
+}
+table.ambox + table.ambox {   /* Single border between stacked boxes. */
+    margin-top: -1px;
+}
+.ambox th.mbox-text, 
+.ambox td.mbox-text {            /* The message body cell(s) */
+    padding: 0.25em 0.5em;       /* 0.5em left/right */
+}
+.ambox td.mbox-image {           /* The left image cell */
+    padding: 2px 0 2px 0.5em;    /* 0.5em left, 0px right */
+}
+.ambox td.mbox-imageright {      /* The right image cell */
+    padding: 2px 0.5em 2px 0;    /* 0px left, 0.5em right */
+}
+
+table.ambox-notice {
+    border-left: 10px solid #1e90ff;    /* Blue */
+}
+table.ambox-speedy {
+    border-left: 10px solid #b22222;    /* Red */
+    background: #fee;                   /* Pink */
+}
+table.ambox-delete {
+    border-left: 10px solid #b22222;    /* Red */
+}
+table.ambox-content {
+    border-left: 10px solid #f28500;    /* Orange */
+}
+table.ambox-style {
+    border-left: 10px solid #f4c430;    /* Yellow */
+}
+table.ambox-move {
+    border-left: 10px solid #9932cc;    /* Purple */
+}
+table.ambox-protection {
+    border-left: 10px solid #bba;       /* Gray-gold */
+}
+-->
