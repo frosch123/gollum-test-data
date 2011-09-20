@@ -1,0 +1,43 @@
+{{{6|}}}{| width="5px" align={{{3}}} cellpadding="0px" cellspacing="3px"
+| style="border:1px solid #{{{5|c7c8fe}}}; background-color:#{{{4|F8F8FF}}}; border-bottom:0px; " | {{{1}}}
+|-
+|  style="border:solid 1px #{{{5|c7c8fe}}}; background-color:#{{{4|F8F8FF}}}; border-top:0px; padding:0px; padding-left:5px; padding-right:5px;" | <p style="font-size: 85%">{{{2}}}</p>
+|}<noinclude>
+
+==Usage==
+__NOTOC__
+For including images on over of colored backgrounds.
+
+===Parameters===
+*1= image
+*2= text
+*3= align
+*4= background-color hex
+*5= border-color hex
+*6=: [for in-list=yes]
+<pre>
+{{en/Phototable|[[File:en/Image.png]]|text|align|background-color|border-color}}
+</pre>
+or
+<pre>
+{{en/Phototable|[[File:en/Image.png]]|text|align}}
+</pre>
+
+===Example===
+<pre>{{en/Phototable|[[File:en/Main menu new game.png|Main menu]]|OpenTTD's main menu|center}}</pre>
+{{en/Phototable|[[File:en/Main menu new game.png|Main menu]]|OpenTTD's main menu|center}}
+
+===Images without/with Phototable template===
+
+{|border="2" width="100%" cellspacing="4" cellpadding="3" rules="all" style="margin:1em 1em 1em 0; border:solid 1px #AAAAAA;"
+!width='50%' style="background:#efefef;"|Without
+!width='50%' style="background:#efefef;"|With
+|-
+|<nowiki>[[File:en/Face-Grin-120px.png|frame|center|hehe]]</nowiki>
+|<nowiki>{{en/Phototable|[[File:en/Face-Grin-120px.png]]|hehe|center}}</nowiki>
+|-
+| style="background:#c7c8fe;"|[[File:en/Face-Grin-120px.png|frame|center|hehe]]
+| style="background:#c7c8fe;"|{{en/Phototable|[[File:en/Face-Grin-120px.png]]|hehe|center}}
+|}
+
+</noinclude>
