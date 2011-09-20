@@ -1,0 +1,61 @@
+border="2" width="auto" cellspacing="4" cellpadding="3" rules="all" style="margin:1em 1em 1em 0; border:solid 1px #AAAAAA; background-color:#F8F8FF"<noinclude>
+==Use==
+Type '''<code><nowiki>{{</nowiki>Wikitable<nowiki>}}</nowiki></code>''' instead of '''<code>class="wikitable"</code>'''
+
+'''REMEMBER: "wikitable" is not available in this wiki'''
+
+==Example==
+<pre>
+{| {{en/Wikitable}}
+|- style="background:#efefef"
+! Title1
+! Title2
+|-
+| AAA
+| BBB
+|-
+| CCC
+| DDD
+|}
+</pre>
+result:
+{| {{en/Wikitable}}
+|- style="background:#efefef"
+! Title1
+! Title2
+|-
+| AAA
+| BBB
+|-
+| CCC
+| DDD
+|}
+
+And without wikitable:
+<pre>
+{|
+|- style="background:#efefef"
+! Title1
+! Title2
+|-
+| AAA
+| BBB
+|-
+| CCC
+| DDD
+|}
+</pre>
+result:
+{|
+|- style="background:#efefef"
+! Title1
+! Title2
+|-
+| AAA
+| BBB
+|-
+| CCC
+| DDD
+|}
+
+</noinclude>
