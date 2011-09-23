@@ -1,0 +1,17 @@
+<noinclude>'''Broken translation link'''{{en/-}}</noinclude>
+{{es/Metaplantilla de avisos| tipo   = fusionar
+| imagen = mergeto.png
+| texto  =  {{#IF: {{{1|}}} |Se ha sugerido que este artículo o sección se [http://www.wikipedia.org/wiki/es:Wikipedia:Fusiones fusione] en <!--
+                            --> ''[[Main/en/{{NAMESPACE}}:{{{1}}}|{{{1}}}]]''. ([[Main/en/{{NAMESPACE}} talk:{{{1}}}|discusión]]) | No se proporcionó el nombre de la página, arregle esto o quite la plantilla.}} }}<includeonly>{{{2|[[Category:es/Artículos para fusionar|{{PAGENAME}}]]}}}</includeonly><noinclude>
+
+==Uso==
+Escriba <nowiki>{{</nowiki>'''Fusionar en/Es'''|'''Nombre_página'''<nowiki>}}</nowiki>. Ejemplo:
+<pre>{{Template:Fusionar en/Es|Cualquier página}}</pre>
+Además se añadirá el artículo a la [[Category/es/Artículos para fusionar|categoría Artículos para fusionar/Es]].
+
+== ¿Qué plantilla de fusionar se debe utilizar? ==
+* {{s|Fusionar/Es}}.&ndash; para combinar al menos dos artículos sin especificar el lugar.
+* {{s|Fusionar en/Es}}.&ndash; para combinar el contenido del artículo marcado ''en'' el artículo especificado.
+* {{s|Fusionar desde/Es}}.&ndash; el opuesto a {{s|Fusionar en/Es}}; combinar el contenido del artículo especificado en el artículo marcado.
+
+[[Category:es/Plantillas|Fusionar en]][[Category:es/Cajas de mensajes|Fusionar en]]</noinclude>
