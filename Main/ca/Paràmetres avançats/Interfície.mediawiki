@@ -1,0 +1,229 @@
+[[Translation:Main/en/Advanced Settings/Interface]]{{en/-}}{{ca/Paràmetres avançats}}
+
+==Finestra de paràmetres avançats, secció interfície==
+La secció interfície permet configurar diverses opcions relacionades amb la interfície del joc. A continuació s'expliquen cada un dels paràmetres disponibles. Per a cada ajust, es mostra la variable corresponent de l'arxiu de configuració [[Main/ca/Openttd.cfg|openttd.cfg]] amb els seus possibles valors.{{en/-right}}
+{| align="center" style="margin:0;"
+|- valign="top"
+|style="padding: 0; border: 0; background: transparent;"|__TOC__
+|style="border: 0; background: transparent;"|[[File:ca/Advset interface 1.1.1.png|frame|center| La secció Interfície de la finestra de Paràmetres avançats (1.1.1).]]
+|}
+
+===<u>Opcions de pantalla</u>===
+====Utilitza el format de data [llarga] en els jocs desats====
+{{ca/Característica|0.7|float=right|text=(des de 0.7.0)}}
+Et permet triar entre tres tipus de notació de data per a usar en el nom de les partides guardades. 
+:''Valors possibles:'' <span style="color:#00693E">'''llarga (31st Dec 2008)'''</span>, <span style="color:#00693E">'''curta (31-12-2008)'''</span> o <span style="color:#00693E">'''ISO (2008-12-31)'''</span>
+:''En el fitxer de configuració Openttd.cfg:'' ([gui] date_format_in_default_names = <long|short|iso>)
+{{en/-}}
+====Mostra els habitants a l'etiqueta del nom de població====
+{{ca/Característica|Old|float=right|text=(des de 0.3.6)}}
+Mostra els habitants d'una ciutat a la mateixa etiqueta del nom d'una ciutat. Amb aquesta opció vostè no ha d'obrir la finestra d'una ciutat per veure com és de gran.
+:''Valors possibles:'' <span style="color:green">'''Actiu'''</span> o <span style="color:red">'''Inactiu'''</span>
+:''En el fitxer de configuració Openttd.cfg:'' ([gui] population_in_label = <true|false>)
+{{en/-}}
+====Mostra un cartell de mesura quan estiguis utilitzant vàries eines de construcció====
+{{ca/Característica|0.5|float=right|text=(des de 0.5.0)}}
+Mostra informació indicant la longitud, l'àrea i, o l'alçada quan s'utilitzen algunes eines de construcció.
+:''Valors possibles:'' <span style="color:green">'''Actiu'''</span> o <span style="color:red">'''Inactiu'''</span>
+:''En el fitxer de configuració Openttd.cfg:'' ([gui] measure_tooltip = <true|false>)
+{{en/-}}
+====Utilitza indicadors de carregament====
+{{ca/Característica|0.6|float=right|text=(des de 0.6.0)}}
+Aquest paràmetre permet mostrar els [[Main/ca/Indicadors de càrrega|indicadors de càrrega]] quan es carrega o descarrega un vehicle, en percentatge.
+:''Valors possibles:'' <span style="color:red">'''Inactiu'''</span>, <span style="color:#00693E">'''Pròpia companyia'''</span> o <span style="color:#00693E">'''Totes les companyies'''</span>
+:''En el fitxer de configuració Openttd.cfg:'' ([gui] loading_indicators = <0-2>)
+{{en/-}}
+====Mostra la decoració de la companyia====
+{{ca/Característica|0.5|float=right|text=(des de 0.5.0)}}
+Permet establir si es pot utilitzar un color específic (diferent del color de la companyia) per a cada tipus de vehicle (per exemple, per als autobusos). Quan està desactivada tots els vehicles de la companyia tenen el mateix color. Els colors es poden establir a través de ''Companyia''/'' Esquema de colors''i usant els botons de la part superior de la finestra''Nou esquema de colors''.
+:''Valors possibles:'' <span style="color:red">'''Cap'''</span>, <span style="color:#00693E">'''Pròpia companyia'''</span> o <span style="color:#00693E">'''Totes les companyies'''</span>
+:''En el fitxer de configuració Openttd.cfg:'' ([gui] liveries = <0-2>)
+{{en/-}}
+====Mostra les vies reservades====
+{{ca/Característica|0.7|float=right|text=(des de 0.7.0)}}
+Quan està activada, els trams de les vies reservats pels trens es mostren d'un color més fosc. És útil per a depurar i millorar l'ús de [[Main/en/Senyals/Ca#Senyals de camí|senyals de camí]] a les interseccions.
+:''Valors possibles:'' <span :''Valors possibles:'' <span style="color:green">'''Actiu'''</span> o <span style="color:red">'''Inactiu'''</span>
+:''En el fitxer de configuració Openttd.cfg:'' ([gui] show_track_reservation = <true|false>)
+{{en/-}}
+====Agrupa les despeses a la finestra de finances de la companyia====
+{{ca/Característica|0.7|float=right|text=(des de 0.7.0)}}
+Mostra agrupats els ingressos, els costos de manteniment i els costos d'inversió en tres grups, en lloc de tenir una sola llista amb tot barrejat.
+:''Valors possibles:'' <span style="color:green">'''Actiu'''</span> o <span style="color:red">'''Inactiu'''</span>
+:''En el fitxer de configuració Openttd.cfg:'' ([gui] expenses_layout = <true|false>)
+{{en/-}}
+====Color de la terra utilitzat al mapa petit====
+{{ca/Característica|1.0|float=right|text=(des de 1.0.0)}}
+Estableix el color principal del mapa petit com a verd, verd fosc o violat.
+:''Valors possibles:'' <span style="color:green">'''Verd'''</span>, <span style="color:#00693E">'''Verd fosc'''</span> o <span style="color:Fuchsia">'''Violat'''</span>
+:''En el fitxer de configuració Openttd.cfg:'' ([gui] smallmap_land_colour = <0-2>)
+{{en/-}}
+----
+===<u>Interacció</u>===
+====Radi de tall de la finestra====
+{{ca/Característica|Old|float=right|text=(des de 0.3.5)}}
+Distància (ràdio) en píxels en què una finestra que s'arrossega prop d'altra, [[Main/ca/Vores magnètiques d'una finestra|automàticament s'ajusta a la vora]] d'aquesta (o a la vora de la pantalla).
+:''Valors possibles:'' <span style="color:red">'''desactivat'''</span> o <span style="color:#00693E">'''1 píxel'''</span> fins a <span style="color:#00693E">'''32 píxels'''</span>
+:''En el fitxer de configuració Openttd.cfg:'' ([gui] window_snap_radius = <num_val>)
+{{en/-}}
+====Nombre màxim de finestres no-enganxoses====
+{{ca/Característica|0.7|float=right|text=(des de 0.7.0)}}
+Estableix la quantitat de finestres que es poden obrir en qualsevol moment, sense comptar les finestres enganxoses. En obrir més finestres que el límit establert ací, la finestra més antiga es tancarà automàticament.
+:''Valors possibles:'' <span style="color:red">'''desactivat'''</span> o <span style="color:#00693E">'''5'''</span> fins a <span style="color:#00693E">'''255'''</span>
+:''En el fitxer de configuració Openttd.cfg:'' ([gui] window_soft_limit = <num_val>){{en/-}}
+
+====Enllaça la barra d'eines del paisatge a les barres d'eines de vies/carreteres/aigua/aeroports====
+{{ca/Característica|Old|float=right|text=(des de 0.4.0.1)}}
+Al clicar als botons [[File:en/Manual html m772c5b23.png]] [[Main/ca/Construcció de ferrocarrils|Construeix vies]], [[File:en/Manual html ma6d6c8c.png]] [[Main/ca/Construcció de carreteres|Construeix carreteras]], [[File:en/Manual html m2cc0c4cd.png]] [[Main/ca/Construcció de rutes marítimes|Construeix ports]] o [[File:en/Manual html 1ae92703.png]] [[Main/ca/Construcció d'aeroports|Construeix aeroports]] de la barra de menú s'obrirà la barra d'eines ''Creació de paisatge'' al costat de la barra d'eines adient. En tancar-les també es tancarà la barra d'eines ''Creació de paisatge''.
+:''Valors possibles:'' <span style="color:green">'''Actiu'''</span> o <span style="color:red">'''Inactiu'''</span>
+:''En el fitxer de configuració Openttd.cfg:'' ([gui] link_terraform_toolbar = <true|false>){{en/-}}
+
+====Prefereix fer un xat d'equip amb <ENTER>====
+{{ca/Característica|0.5|float=right|text=(des de 0.5.0)}}
+Amb aquesta opció activada, en prémer la tecla Enter, els missatges de xat només s'enviaran als membres de l'equip i no a tots els jugadors.
+:''Valors possibles:'' <span style="color:green">'''Actiu'''</span> o <span style="color:red">'''Inactiu'''</span>
+:''En el fitxer de configuració Openttd.cfg:'' ([gui] prefer_teamchat = <true|false>)
+{{en/-}}
+====Finestra d'avís quan el ratolí és al marc del programa====
+(Error de traducció, en realitat és "Desplaçar la pantalla quan el ratolí està prop de les vores")
+{{ca/Característica|Old|float=right|text=(des de 0.2.0)}}
+En situar el ratolí prop de les vores la pantalla es [[Main/ca/Desplaçament automàtic de la pantalla|desplaçarà automàticament]].
+:''Valors possibles:'' <span style="color:green">'''Actiu'''</span> o <span style="color:red">'''Inactiu'''</span>
+:''En el fitxer de configuració Openttd.cfg:'' ([gui] autoscroll = <true|false>)
+{{en/-}}
+====En desplaçar la pantalla amb el ratolí mou la vista en la direcció contrària====
+{{ca/Característica|Old|float=right|text=(des de 0.4.5)}}
+Inverteix el desplaçament de la finestra quan ens movem amb clic-dreta.
+:''Valors possibles:'' <span style="color:green">'''Actiu'''</span> o <span style="color:red">'''Inactiu'''</span>
+:''En el fitxer de configuració Openttd.cfg:'' ([gui] reverse_scroll = <true|false>)
+{{en/-}}
+====Desplaçament suau de la vista====
+{{ca/Característica|0.6|float=right|text=(des de 0.6.0)}}
+Amb aquest paràmetre activat, quan fem servir ''centra la vista'' o en fer clic en una notícia o al botó ''situació'' d'algunes finestres, la finestra es desplaça suaument en lloc de saltar fins a la nova ubicació.
+:''Valors possibles:'' <span style="color:green">'''Actiu'''</span> o <span style="color:red">'''Inactiu'''</span>
+:''En el fitxer de configuració Openttd.cfg:'' ([gui] smooth_scroll = <true|false>)
+{{en/-}}
+====Desplaçament amb el botó esquerre====
+{{ca/Característica|0.7|float=right|text=(des de 0.7.0)}}
+Amb aquest paràmetre habilitat, pots utilitzar el botó esquerre del ratolí com a "eina mà", és a dir, fer clic i arrossegar el mapa a la pantalla. Aquesta opció no reemplaça el comportament anterior del clic-dreta i arrossegar que continua actiu.
+:''Valors possibles:'' <span style="color:green">'''Actiu'''</span> o <span style="color:red">'''Inactiu'''</span>
+:''En el fitxer de configuració Openttd.cfg:'' ([gui] left_mouse_btn_scrolling = <true|false>)
+{{en/-}}
+
+====Funció de la rodeta del ratolí====
+{{ca/Característica|0.6|float=right|text=(des de 0.6.0)}}
+Defineix l'ús que pots donar-li a la roda del ratolí: si vols utilitzar-la per a ampliar, per a desplaçar-se pel mapa o deshabilitar-la.
+:''Valors possibles:'' <span style="color:#00693E">'''Zoom mapa'''</span>, <span style="color:#00693E">'''Mou el mapa'''</span> or <span style="color:red">'''Inactiu'''</span>
+:''En el fitxer de configuració Openttd.cfg:'' ([gui] scrollwheel_scrolling = <0-2>)
+{{en/-}}
+====Velocitat del mapa amb la rodeta del ratolí====
+{{ca/Característica|0.6|float=right|text=(des de 0.6.0)}}
+Fixa la sensibilitat de la rodeta del ratolí.
+:''Valors possibles:'' <span style="color:#00693E">'''1'''</span> to <span style="color:#00693E">'''15'''</span>
+:''En el fitxer de configuració Openttd.cfg:'' ([gui] scrollwheel_multiplier = <num_val>)
+{{en/-}}
+----
+
+===Mostra la finestra de balanç al finalitzar cada any===
+{{ca/Característica|Old|float=right|text=(des de 0.2.0)}}
+Estableix si es mostra o no la [[Main/ca/Mostrar finestra de balanç al finalitzar l'any|finestra de finances]] al final de l'any.
+:''Valors possibles:'' <span style="color:green">'''Actiu'''</span> o <span style="color:red">'''Inactiu'''</span>
+:''En el fitxer de configuració Openttd.cfg:'' ([gui] show_finances = <true|false>)
+{{en/-}}
+===Duració del missatge d'error===
+{{ca/Característica|Old|float=right|text=(des de 0.3.2)}}
+Quantitat de segons que dura un [[Main/ca/Durada dels missatges d'error|missatge d'error]].
+:''Valors possibles:'' <span style="color:red">'''0 segons'''</span> a <span style="color:#00693E">'''20 segons'''</span>
+:''En el fitxer de configuració Openttd.cfg:'' ([gui] errmsg_duration = <num_val>)
+{{en/-}}
+===Mostra cartells===
+{{ca/Característica|1.1|float=right|text=(des de 1.1.0)}}
+:''Valors possibles:'' <span style="color:#00693E">'''Botó dret'''</span> o <span style="color:#00693E">'''Mantén durant 1 segon'''</span> fins a <span style="color:#00693E">'''5 segons'''</span>
+:''En el fitxer de configuració Openttd.cfg:'' ([gui] hover_delay = <num_val>)
+{{en/-}}
+===Posició de la barra d'eines principal===
+{{ca/Característica|Old|float=right|text=(des de 0.3.4)}}
+[[Main/ca/Posició de la barra d'eines|Ubicació de la barra d'eines]] que conté totes les eines de construcció.
+:''Valors possibles:'' <span style="color:#00693E">'''Esquerra'''</span>, <span style="color:#00693E">'''Centre'''</span> or <span style="color:#00693E">'''Dreta'''</span>
+:''En el fitxer de configuració Openttd.cfg:'' ([gui] toolbar_pos = <0-2>)
+{{en/-}}
+===Posició de la barra d'estat===
+{{ca/Característica|1.1|float=right|text=(des de 1.1.0)}}
+[[Main/ca/Posició de la barra d'estat|Ubicació de la barra d'estat]].
+:''Valors possibles:'' <span style="color:#00693E">'''Esquerra'''</span>, <span style="color:#00693E">'''Centre'''</span> or <span style="color:#00693E">'''Dreta'''</span>
+:''En el fitxer de configuració Openttd.cfg:'' ([gui] statusbar_pos = <0-2>)
+{{en/-}}
+===Posa en pausa automàticament en començar un nou joc===
+{{ca/Característica|0.6|float=right|text=(des de 0.6.0)}}
+En activar aquesta opció s'ajusta automàticament el joc en mode de pausa quan s'inicia un nou joc.
+:''Valors possibles:'' <span style="color:green">'''Actiu'''</span> o <span style="color:red">'''Inactiu'''</span>
+:''En el fitxer de configuració Openttd.cfg:'' ([gui] pause_on_newgame = <true|false>)
+{{en/-}}
+===Utilitza la llista de vehicles avançada===
+{{ca/Característica|0.6|float=right|text=(des de 0.6.0)}}
+La [[Main/ca/llista avançada de vehicles|llista avançada de vehicles]], permet col·locar als vehicles en grups i realitzar-hi certes accions, com ara substitució de vehicles i l'enviament a les cotxeres o al dipòsit.
+:''Valors possibles:'' <span style="color:red">'''Inactiu'''</span>, <span style="color:#00693E">'''Pròpia companyia'''</span> o <span style="color:#00693E">'''Totes les companyies'''</span>
+:''En el fitxer de configuració Openttd.cfg:'' ([gui] advanced_vehicle_list = <0-2>)
+{{en/-}}
+===Mostra horaris en marques en lloc de dies===
+{{ca/Característica|0.6|float=right|text=(des de 0.6.0)}}
+Augmenta la precisió de la característica horaris, on un dia equival al voltant de 74 tics del joc.
+:''Valors possibles:'' <span style="color:green">'''Actiu'''</span> o <span style="color:red">'''Inactiu'''</span>
+:''En el fitxer de configuració Openttd.cfg:'' ([gui] timetable_in_ticks = <true|false>)
+{{en/-}}
+===Mostra l'arribada i la sortida als horaris===
+{{ca/Característica|1.0|float=right|text=(des de 1.0.0)}}
+Activa o desactiva la columna d'arribades i sortides de la finestra d'horaris.
+:''Valors possibles:'' <span style="color:green">'''Actiu'''</span> o <span style="color:red">'''Inactiu'''</span>
+:''En el fitxer de configuració Openttd.cfg:'' ([gui] timetable_arrival_departure = <true|false>)
+{{en/-}}
+===Creació ràpida d'ordres per a vehicles===
+{{ca/Característica|0.7|float=right|text=(des de 0.7.0)}}
+Con este paràmetre activat, l'opció '[[Main/en/Ordres/Ca#Ves a|Ves a]]' de la finestra ''Ordres'' d'un vehicle romandrà activa després de fer clic a una estació. Això permet fer clic amb rapidesa en diverses estación sense haber de clicar el botó 'Ves a' entre estació i estació.
+:''Valors possibles:'' <span style="color:green">'''Actiu'''</span> o <span style="color:red">'''Inactiu'''</span>
+:''En el fitxer de configuració Openttd.cfg:'' ([gui] quick_goto = <true|false>)
+{{en/-}}
+===Tipus de via predeterminada (en un joc nou/joc desat)===
+{{ca/Característica|0.6|float=right|text=(des de 0.6.0)}}
+Estableix quin tipus de ferrocarril utilitzarà com a predeterminat.
+:''Valors possibles:'' <span style="color:#00693E">'''First available'''</span>, <span style="color:#00693E">'''Last available'''</span> or <span style="color:#00693E">'''Most used'''</span>
+:''En el fitxer de configuració Openttd.cfg:'' ([gui] default_rail_type = <num_val>)
+{{en/-}}
+===Desactiva la construcció d'infraestructures quan no hi hagi disponibles vehicles adequats===
+{{ca/Característica|0.6|float=right|text=(des de 0.6.0)}}
+Fa possible l'ús d'algunes eines de construcció, tot i que no hi haja vehicles disponibles per a aquest tipus d'infraestructura.
+:''Valors possibles:'' <span style="color:green">'''Actiu'''</span> o <span style="color:red">'''Inactiu'''</span>
+:''En el fitxer de configuració Openttd.cfg:'' ([gui] always_build_infrastructure = <true|false>)
+{{en/-}}
+===Manté les eines de construcció d'infraestructures quan no hi hagi disponibles vehicles adequats===
+{{ca/Característica|0.7|float=right|text=(des de 0.7.0)}}
+Manté, per exemple, la finestra de construcció d'estacions d'autobusos oberta, després de construir una nova estació d'autobusos. Això li permet posar ràpidament diverses estacions d'autobusos sense haver de fer clic al botó [[Main/en/Construcció de carreteres/Ca#Barra d'eines construcció de carreteres|construeix carreteres]] abans.
+:''Valors possibles:'' <span style="color:green">'''Actiu'''</span> o <span style="color:red">'''Inactiu'''</span>
+:''En el fitxer de configuració Openttd.cfg:'' ([gui] persistent_buildingtools = <true|false>)
+{{en/-}}
+===Les notícies en color apereixen en===
+{{ca/Característica|Old|float=right|text=(des de 0.3.2)}}
+L'any en que els [[Main/ca/Notícies en color|diaris apareixen en color]]. Aquesta opció es va moure des de la secció d'Economia a la versió 0.7.0.
+The year in which [[Main/en/colored newspaper|coloured newspapers]] appear.
+:''Valors possibles:'' <span style="color:#00693E">'''0'''</span> to <span style="color:#00693E">'''5,000,000'''</span>
+:''En el fitxer de configuració Openttd.cfg:'' ([gui] colored_news_year = <year>)
+{{en/-}}
+
+==En versions anteriors==
+{{ca/Contingut històric|}}
+===<u>Opcions de pantalla</u>===
+====Mostra la velocitat del vehicle a la barra d'estat====
+{{ca/Característica|-1.0|float=right|text=(des de 0.2.0 fins a 1.0.5)}}
+Serveix per a [[Main/ca/Mostrar la velocitat del vehicle|mostrar la velocitat del vehicle]] a la barra d'estat de la finestra del vehicle, des d'on es pot aturar o arrencar el vehicle.
+:''Valors possibles:'' <span style="color:green">'''Actiu'''</span> o <span style="color:red">'''Inactiu'''</span>
+:''En el fitxer de configuració Openttd.cfg:'' ([gui] vehicle_speed = <true|false>)
+{{en/-}}
+====Mostra sempre la data llarga a la barra d'estat====
+{{ca/Característica|-1.0|float=right|text=(des de 0.2.0 fins a 1.0.5)}}
+Mostra la [[Main/ca/Data larga a la barra d'estat|data completa]] a la part inferior de la pantalla tot el temps i no només en mode de pausa.
+:''Valors possibles:'' <span style="color:green">'''Actiu'''</span> o <span style="color:red">'''Inactiu'''</span>
+:''En el fitxer de configuració Openttd.cfg:'' ([gui] status_long_date = <true|false>)
+{{en/-}}
+===Veja també===
+*'''Per a les versions 0.3.0 a la 0.6.3''' - Veja [[Main/ca/Configura pedaços|Configura pedaços]].
+*'''Per a les versions 0.2.0 i 0.2.1''' - Veja [[Main/ca/Configura pedaços en 0.2.0|Configura pedaços en 0.2.0]].
+[[Category:ca/Configuració i preferències]]
