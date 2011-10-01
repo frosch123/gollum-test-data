@@ -1,0 +1,29 @@
+<noinclude>[[Translation:Template/en/Feature]]</noinclude><includeonly>{{en/VersionBox|{{#ifeq: {{{1|}}}|Old|0|{{#ifexpr: {{{1|}}} < 0|0|{{{1|}}}}}}}|{{#ifeq: {{{1|}}}|Old|99|{{#ifexpr: {{{1|}}} > 0|99|{{#expr:-{{{1|}}}}}}}}}||caption=Disponibilidad de la característica|text={{{texto|}}}|float={{{float|}}}}}</includeonly><noinclude>
+
+====Uso de la plantilla====
+Introduzca <nowiki>{{</nowiki>'''Disponibilidad/Es'''<nowiki> | Número de versión}}</nowiki>
+*Versiones compatibles Old,0.5,0.6,0.7,1.0,1.1 (y otras se pueden añadir fácilmente)
+*También valores negativos... (-Old,-0.5,-0.6,-0.7,-1.0,-1.1)
+*La versión inédita se mostrará como Nightly.
+*Otros parámetros son <code>float=</code> y <code>texto=</code>
+Para un periodo use {{s|Disponibilidad_periodo/Es}}
+
+====Ejemplos:====
+<pre>{{es/Disponibilidad|0.6}}</pre>
+{{es/Disponibilidad|0.6}}
+<pre>{{es/Disponibilidad|0.7|texto=(desde 0.7.2)|float=left}}
+TEXTO{{en/-}}</pre>
+{{es/Disponibilidad|0.7|texto=(desde 0.7.2)|float=left}}
+TEXTO{{en/-}}
+<pre>{{es/Disponibilidad|1.0|float=right}}
+TEXTO{{en/-}}</pre>
+{{es/Disponibilidad|1.0|float=righ"}}
+TEXTO{{en/-}}
+<pre>{{es/Disponibilidad|1.1}}</pre>
+{{es/Disponibilidad|1.1}}
+<pre>{{es/Disponibilidad|-0.6|texto=(hasta 0.6.2)}}</pre>
+{{es/Disponibilidad|-0.6|texto=(hasta 0.6.2)}}
+
+
+[[Category:es/Plantillas|Disponibilidad]]
+</noinclude>
