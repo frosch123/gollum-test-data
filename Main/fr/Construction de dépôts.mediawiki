@@ -1,0 +1,63 @@
+[[Translation:Main/en/Building depots]]{{en/-}}{{fr/Tutoriel}}{{en/Note|Cette page ne décrit que les dépôts ferroviaires. Il y a aussi des [[Main/fr/Dépôts|dépôts]] pour les autres types de transport.}}
+Ici, vous apprendrez comment '''construire''' (placer, positionner) les '''dépôts''' de façon à ce qu'ils soient alignés avec vos voies.
+Les dépôts sont les endroits où vous construisez vos trains, et ils sont également utilisés par les trains en service pour leur maintenance; assurez-vous donc que les trains peuvent entrer et sortir des dépôts.
+__TOC__
+== Comment placer un dépôt? ==
+#Tout d'abord, vous devez ouvrir la barre d'outils de Construction ferroviaire - cliquez sur le bouton de construction ferroviaire [[File:en/manual html m772c5b23.png]] dans la [[Main/en/Interface du jeu/Fr#La barre de menu|barre de menu]] pour afficher la barre d'outils de construction ferroviaire:<br/>[[File:en/Railroad Construction.png|none|frame|La barre d'outils de construction ferroviaire]]
+#Cliquez sur le bouton '''Construire un dépôt ferroviaire''' ou appuyez sur "'''7'''". Une nouvelle fenêtre avec un choix de directions de dépôt s'ouvrira.<br/>[[File:en/New depot.png|none|frame|Bouton de sélection d'un nouveau dépôt]]
+#'''Choisissez la direction''' face à laquelle vous voulez que se trouve votre dépôt - c'est-à-dire celle par où les trains sortiront vers les voies.<br/>[[File:en/Depot direction.png|none|frame|Feêtre de sélection de la direction d'un dépôt]]
+#Maintenant, vous devez '''positionner le dépôt près de vos voies''', la sortie du dépôt faisant face aux voies. Outre construire sur un terrain plat, vous pouvez aussi [[Main/fr/Construire en pente|construire en pente]].<br/>[[File:en/Depot position.png|none|frame|Choisir une position pour un dépôt]]
+#Une fois que vous êtes satisfait de la position, cliquez sur votre souris pour '''placer le dépôt'''. S'il y a des rails adjacents à ce dépôt, des voies supplémentaires seront automatiquement ajoutées.<br/>[[File:en/New depot placed.png|none|frame|Un dépôt nouvellement construit avec les voies connectées automatiquement]]
+
+Rappelez-vous, vous pouvez toujours '''détruire''' votre dépôt avec l'outil '''Dynamite''' [[File:en/Clear title.png]].
+
+== Où placer un dépôt? ==
+L'emplacement d'un dépôt est une décision stratégique qui vous revient entièrement (vous pouvez toujours planter deux dépôts sur vos lignes et croiser les doigts [[File:en/Smile 22px.png]])
+
+Vous devriez vous assurer que les trains:
+* peuvent '''être révisés efficacement''';
+* '''n'entraîneront pas d'encombrement du trafic''' à cause des révisions.
+
+Voici quelques stratégies pour atteindre ces buts:
+#Faites réviser les trains à intervalles de temps réguliers, ou ajoutez les dépôts dans la liste des ordres des trains. Les dépôts peuvent être ajoutés dans la liste d'ordre d'un train de la même manière que les gares et les points de passage.<br/>[[File:en/Depot at station entrance.png|none|frame|Dépôts à l'entrée d'une gare]][[File:en/Depots-basic.png|none|frame|Dépôts placés sur les voies]]
+#Posez les rails de manière à ce que les trains soient forcés d'entrer dans un dépôt chaque fois qu'ils traversent une gare ou une portion de voie.<br/>[[File:en/Depot end of station.png|none|frame|Dépôts au bout des voies d'une gare. Les trains sont forcés d'être révisés.]][[File:en/Depots-forced.png|none|frame|Dépôts forçant les trains à être révisés]]
+
+Il y a aussi d'autres '''configurations avancées de dépôt''' qui résolvent certains problèmes entraînés par les configurations de base décrites ci-dessus.
+
+Les '''problèmes''' les plus communs liés aux dépôts sont:
+* Les trains rapides ralentissent quand ils entrent ou sortent d'un dépôt, ce qui ralentit les autres trains arrivant. Cela peut conduire à un encombrement, dans un réseau ferroviaire chargé.
+* Les virages brusques souvent utilisés près des dépôts ralentissent aussi les trains.
+* Si le trafic est intense, alors les trains peuvent 's'accumuler' dans les dépôts et y rester longtemps. Par exemple, en plaçant un dépôt au bout d'une gare, si un train entre dans le dépôt, alors un nouveau train peut entrer dans la gare sur la même ligne, bloquant le premier train dans le dépôt. Cela peut continuer jusqu'à ce que plusieurs trains soient bloqués à l'intérieur.
+
+== Configurations avancées de dépôt ==
+*'''Dépôts à voie doublée:''' Cette configuration permet aux trains d'accélérer en entrant ou sortant d'un dépôt, sans ralentir les trains circulant sur les lignes principales:<br/>[[File:en/Depots-at-both-lines.png|none|frame|Dépôts à voie doublée]]
+*'''Révision forcée:''' Il est souvent intéressant de réviser un train après la livraison d'un chargement ou juste avant de charger une nouvelle cargaison. Cela vient du fait que le montant des gains dépend du temps total écoulé entre le chargement de la cargaison jusqu'à sa livraison. Vous préférerez donc charger un train récemment révisé et ne pas l'envoyer en révision pendant la livraison.<br/>Exemple de révision forcée après livraison d'un chargement:<br/>[[File:en/Unload-then-service.png|none|frame|Les trains sont forcés d'être révisés après livraison de la cargaison]]
+:Les autres avantages de cette configuration sont:
+:* Besoin minimal d'espace
+:* Les trains rapides et longs sont ralentis une seule fois pour la révision et le passage en gare
+:* Évite les virages serrés en utilisant l''astuce du dépôt' pour faire tourner les véhicules de 180 degrés (certains joueurs considèrent cela comme non acceptable, car cela est laid et non réaliste)
+*'''Dépôts avec priorité:''' Les trains sortant des dépôts vont moins vite que ceux sur les lignes principales. Avec les [[Main/en/Signaux/Fr#Signaux dépendants|pré-signaux]], vous pouvez faire en sorte que les trains sortant du dépôt attendent que les trains sur les lignes principales soient passés. C'est une bonne idée de comprendre comment fonctionnent les pré-signaux, si vous voulez comprendre COMMENT et POURQUOI cela fonctionne.
+:{|
+|style="border: 1px solid darkgray;"|
+{| align="center"
+|+'''Pré-signaux'''
+|- align="center"
+|style="border: none;"|[[File:en/Entry presignal.png|22px]]
+|style="border: none;"|
+|style="border: none;"|[[File:en/Exit presignal.png|22px]]
+|style="border: none;"|
+|style="border: none;"|[[File:en/Combo presignal.png|22px]]
+|- align="center"
+|style="border: none;"|Pré-signal d'entrée
+|style="border: none;"|&nbsp;&middot;&nbsp;
+|style="border: none;"|Pré-signal de sortie
+|style="border: none;"|&nbsp;&middot;&nbsp;
+|style="border: none;"|Pré-signal combiné
+|}
+|}
+Cette disposition crée une chaîne de pré-signaux remontant le long de votre voie. Dans l'image, un train sur la ligne principale a fait passer au rouge le pré-signal de sortie. Le pré-signal de sortie rouge communique avec pré-signaux combinés et les fait passer au rouge. Le pré-signal d'entrée est rouge puisque son seul pré-signal de sortie est rouge.<br/>[[File:fr/Right-of-way depot.png|none|frame|Dépôt avec priorité. Le train sur la ligne principale a priorité sur les trains sortant du dépôt]]
+
+*Diviser les voies avant la révision est utile quand le trafic est élevé. Les trains ralentissent en entrant dans les dépôts, donc une queue de trains peut se former devant un dépôt. Si les trains sont dirigés vers deux dépôts en utilisant les [[Main/en/Signaux/Fr#Signaux dépendants|pré-signaux]], alors deux trains peuvent être révisés en même temps, permettant un trafic plus important sur cette ligne.<br/>[[File:en/Split-before-servicing.png|none|frame|Cela n'affecte pas la vitesse moyenne sur la voie principale.]]
+<span style="float: right">[[Main/fr/Construction de gares|'''Suivant''': Construire des gares ferroviaires]] &raquo;</span>
+
+[[Category:fr/Construction]]
