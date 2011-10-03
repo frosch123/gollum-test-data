@@ -1,0 +1,18 @@
+{{en/DevDoc}}
+==Adding a squirrel function==
+To make a new C++ function available to the Squirrel code of the NoAI framework, do
+* Implement the function
+** Add the function declaration to one of the classes in ''src/ai/api/ai_*.hpp'',
+** Also add an implementation in the ''.cpp'' file,
+** To make Squirrel aware of the changes, generate a new Squirrel interface file with ''squirrel_export.sh''. Call that script from within the ''src/ai/api'' directory.
+* Recompile OpenTTD in the usual way to make the new function available to the NoAI framework.
+* Write test-cases for the new function in ''bin/ai/regression''.
+** In ''regression.nut'', add Squirrel code that tests your new function, and outputs results.
+** In ''regression.txt'', add the new expected output.
+* Run the regression test by executing ''make regression''. When differences are found, they will be displayed.
+* Add the function to the NoAI changelog in ''src/ai/api/ai_changelog.hpp''.
+
+When all works as expected, you can write some Squirrel code to enjoy using your new function.
+
+[[Category:en/OpenTTDDevBlackBook|N]]
+[[Category:en/Development]]
