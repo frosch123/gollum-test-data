@@ -1,0 +1,148 @@
+Feature XX Towns/Cities
+
+This specification is at Draft stage. There is no current effort to actually implement it.
+The goals of this feature is the control of town growth and town appearance (influence house types to build).
+* Different growth requirements for different cities wrt. cargos.
+* Different towns wrt. present industries and stations.
+* Different growth speeds, including keeping small suburbs in coverage of big towns.
+* Inform AIs about fundamental town growth requirements.
+* This spec is not about controlling individual houses or industries. That is the task of NewHouses and NewIndustries. These features may communicate at some level, but they shall not be required to know each other. Picking house grfs, industry grfs and towncontrol grfs independently should be the main case.
+
+
+== Testcases ==
+Many people envisioned altenative townbehaviours. The goal of a NewGRF should be to cover them, so they can be done via NewGRF rather than patches.
+* [http://www.tt-forums.net/viewtopic.php?f=33&t=56955 latest patch], [[Main/en/Peter1138/Towngrowth Challenge| Peter/Korenn Towngrowth Challenge]], [[Archive/en/Peter1138/Towngrowth Challenge| (Talk)]], [http://www.tt-forums.net/viewtopic.php?t=16072 ancient patch], [http://www.tt-forums.net/viewtopic.php?f=29&t=8378 even more ancient patch]
+** Minimal implementation requirements for these would be:
+*** callback to decide town growth rate, with var 82 and either 60, or 61 with the ability to add new town effects
+*** Cargo requirement information callback
+* [http://tt-foundry.com/misc/town_growth.txt Andy's IRC log]
+* [[Main/en/NewTowns| Some clustering idea (somewhat different)]]
+* TTDPatch's New Town Growth: [http://wiki.ttdpatch.net/tiki-index.php?page=NewTownGrowthMechanism Mechanism], [http://wiki.ttdpatch.net/tiki-index.php?page=NewTownGrowthSwitchesdetails Details], [http://wiki.ttdpatch.net/tiki-index.php?page=NewTownGrowthSwitches Subset of switches]
+
+== VarAction2 Variables ==
+{| border="1"
+|-
+| 40 || Larger town effect
+|-
+| 41 || Town index
+|-
+| 42 || Distance and size of nearest town: DDDDPPPP
+: PPPP Population ''(Note: it's quite easily possible to have towns bigger than 65535. WORD wouldn't suffice)''
+: DDDD Distance (squared euclidian)
+|-
+| 43 || Same as 42, but for nearest "larger" town. Identical to 42 if there are no larger towns.
+|-
+| 44 || Number of industries associated to the town: SSSSTTTT
+: TTTT Total amount
+: SSSS Serviced amount
+|-
+| 45 || Same as 44, but only primary/raw industries.
+|-
+| 46 || Same as 44, but only secondary/processing industries.
+|-
+| 47 || Same as 44, but for stations. (sum of all players)
+|-
+| 60 || Land info of nearby tiles (relative to townsign). Can be used to detect desert and such, also within a certain area -8 .. 7.
+|-
+| 61 || Cargo delivered last month to any station in the town (Parameter = translated cargo bit).
+: Returns FFFFFFFF if the cargo is not present at all.
+: Else it returns: xHHHAAAA
+:: AAAA  Amount last month
+:: HHH   History of last 12 months.
+::: Bit 0 is set if some cargo was delivered/transported last month.
+::: Bit 1 is set if some cargo was delivered/transported two months ago.
+::: ...
+::: Bit 11 is set if some cargo was delivered/transported 12 months ago.
+|-
+| 62 || Same as 61, but with towneffect instead of cargobit. The amounts are multiplied with the town-effect-multiplier as well.
+|-
+| 63 || Same as 61, but for produced cargo of any house or industry in the town.
+|-
+| 64 || Same as 62, but for produced cargo of any house or industry in the town.
+|-
+| 65 || Same as 61, but for transported cargo of any house or industry in the town.
+|-
+| 66 || Same as 62, but for transported cargo of any house or industry in the town.
+|-
+| 67 || Number of industries that accept/produce a given cargo (Parameter = translated cargo bit): AAAAPPPP
+: AAAA Total amount of industries accepting this cargo.
+: PPPP Total amount of industries producing this cargo.
+|-
+| 68 || Same as 67, but with towneffect instead of cargobit.
+|-
+| 82 || Population
+|-
+| 94..9C || Town radii
+|-
+| B6 || Number of buildings
+|-
+| D4 || Remaining months of Road Reconstruction
+|-
+| D5 || Remaining months of Funded Buildings
+|-
+|}
+
+== Callbacks ==
+All callbacks are generic callbacks, and are chained across all Grfs.
+That is if one Grf returns "callback failed", the next Grf is tried. If all callbacks fail, the default behaviour kicks in.
+
+* Decide town growth:
+*: Called periodically, returns some growth speed (signed! :p ).
+*: Variable 10: Random bits
+
+* Decide town radius:
+*: Called periodically. Defines the radii of the town zones, and thus the type of houses which will be build.
+*: Variable 18: Zone to return radius for.
+*: Variable 10: Random bits (same for all zones in one call-series)
+*: Result: Radius (squared euclidian) for the zone.
+*: The radii should be strictly monoton. Therefore a NewGRF should always define all radii or none.
+
+* Decide town found cost and size:
+*: Called when founding a town.
+*: Variable 18: Randomly generated town or manually founded. (Both in game and in scenario editor.)
+*: Variable 10: Random bits
+*: Not sure about the exact result. Also the size is actually already set by the GUI when manually founding.
+*: Nevertheless, var 40, 42, 43 and 60 should be accessible.
+
+* Additonal text in town window:
+*: The text callback is chained slightly different to the other callbacks. While for the other callbacks the chaining stops once there is a result, this callback is always called for all implementing Grfs. The returned texts are then concatenated in the GUI.
+*: Result: Usual offset (0-3FF) for a D0xx text.
+
+* Cargo requirement information callback:
+*: This callback makes the town GUI display the delivered and/or transported cargo class month and can optionally display a text behind the amounts. Like the additional text callback, this callback is also chained across multiple Grfs. However, only one Grf can display an additional text.
+*: Variable 18: xxxxTTCC
+*:: CC translated cargo bit
+*:: TT towneffect
+*: Note: There variable 18 cannot be passed to the 60+ variable easily (as 60+ parameters are only constant). But this is likely no needed as Grfs need to know about their cargos/towneffects for other callbacks anyway.
+*: Register 100: TTTTDDDD
+*:: DDDD: D0xx text for delivered cargo.
+*:: TTTT: D0xx text for transported cargo.
+*: Result:
+{| border="1" style="margin-left: 90px;"
+|-
+! Bits !! Value !!
+|-
+|rowspan="4"| 0 - 1 || 0 || Show delivered cargo amounts if climate defaults require this.
+|-
+| 1 || Hide the amounts, unless another Grf wants to display them.
+|-
+| 2 || Show the amounts.
+|-
+| 3 || Show the amounts including an additional text from register 100.
+|-
+| 2 || 4 || The cargo is required regulary for growth.
+|-
+| 3 || 8 || The cargo is required in big amounts for growth.
+|-
+| 4 || 10 || The cargo requirement is very important.
+|-
+| 5- 7 || || (reserved)
+|-
+| 8 - 12 || || Same as bit 0-4, but for transport instead of delivery.
+|-
+| 13 - 14 || || (reserved)
+|-
+|}
+
+== Persistent storage ==
+Persistent storage for towns has been implemented. See http://newgrf-specs.tt-wiki.net/wiki/Storages#Persistent_storage_accessed_by_GRFID
