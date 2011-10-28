@@ -1,0 +1,47 @@
+[[Translation:Main/en/Convert rail]]{{en/-}}{{Template:Tutorial/Es}}
+==Convertir a otro tipo de ferrocarril==
+Para seleccionar el [[Main/es/Tipos de ferrocarril|tipo de ferrocarril]] al que desea convertir, haga clic sobre el botón de construir ferrocarriles del menú principal y manténgalo presionado: se desplegará un menú con las distintas opciones. Elija la que considere adecuada. 
+[[File:es/Convert rail menu.png|none]]
+Aparecerá una de las siguientes barras de herramientas:
+[[File:es/Railroad Construction.png|none|frame|La [[Construcción de ferrocarriles/Es#Barra de herramientas Construcción de ferrocarril|barra de herramientas Construcción de ferrocarril]].]]
+[[File:es/Electrified Railway Construction.png|none|frame|La barra de herramientas Construcción Línea eléctrica de ferrocarril.]]
+[[File:es/Monorail Construction.png|none|frame|La barra de herramientas Construcción de Monorraíl.]]
+[[File:es/Maglev Construction.png|none|frame|La barra de herramientas Construcción de Maglev.]]
+Con el botón [[File:en/Convert rail.png]] '''convertir/actualizar tipo de ferrocarril''' se activará una herramienta de tipo arrastrar-y-soltar que le permite convertir un tipo de ferrocarril a otro (ferrocarril, ferrocarril eléctrico, monorraíl o maglev). Esta, se puede utilizar con las [[Main/es/Construir vías|vías]], los [[Main/es/Construir depósitos de trenes|depósitos]], los [[Main/es/puentes|puentes]], los [[Main/es/Túneles|túneles]], las [[Main/es/Estaciones|estaciones]] y los [[Main/es/Puntos de ruta|puntos de ruta]].
+
+* Puentes y túneles: Elija una de los extremos.
+
+* Estaciones: Tiene que convertir cada una de las casillas de un mismo andén, ya que se pueden combinar diferentes tipos de ferrocarril en una misma estación ([[Main/es/Estaciones no-uniformes|estaciones no-uniformes]]).
+
+* Asegúrese de que la línea esté libre de trenes. Los trenes que ya tiene funcionando deben enviarse a la estación para [[Main/es/vender un tren entero|venderse]] (excepto cuando convierta una línea de [[Main/es/Ferrocarril|ferrocarril normal]] a [[Main/es/Ferrocarril eléctrico|ferrocarril eléctrico]], puesto que pueden seguir circulando).
+
+* Puede convertir las vías bajo los trenes, de ferrocarril normal a ferrocarril eléctrico. No es necesario que las vías estén vacías.
+
+* Sólo puede convertir a los tipos de ferrocarril que están disponibles.
+[[File:en/Convert station.png|left|frame|Tipos de ferrocarril mezclados]]
+[[File:en/Convert rail tunnel.png|none|frame|Tipos de ferrocarril mezclados]]
+
+==Convertir depósitos==
+{{es/Nota|Sólo los [[Main/es/Depósitos|depósitos]] vacíos se pueden convertir (a no ser que el tipo de ferrocarril sea compatible)}}
+
+==Vías no-diagonales==
+En OpenTTD sólo puede haber un tipo de ferrocarril en cada casilla (excepto en el caso de trenes normales y trenes eléctricos), por lo que es posible que tenga que reconstruir su ferrocarril si usted quiere mezclar diferentes tipos de vías en trayectos no-diagonales (horizontales y/o verticales).
+[[File:en/Convert rail close.png|left|frame|Demasiado cerca para mezclar diferentes tipos de vías.]]
+[[File:en/Convert rail good.png|none|frame|Use casillas separadas para los diferentes tipos de vías.]] 
+
+==Consejos==
+* Para ahorrar tiempo cuando convierta un tren con muchas órdenes, envíelo a un depósito del tipo antiguo y [[Main/es/Vender un tren entero|véndalo]]. Con la ventana del depósito todavía abierta, convierta el depósito al nuevo tipo, y el siguiente tren que construya tendrá todas las órdenes del tren anterior. La ventana del depósito debe permanecer abierta a lo largo de esta operación. Tenga en cuenta que sólo puede convertir un único tren al mismo tiempo usando este método, aunque puede volver a convertir el depósito vacío al tipo antiguo, y repetir la operación con la misma estación.
+
+* Si la conversión es a un tipo de ferrocarril compatible (por ejemplo, de ferrocarril normal a [[Main/es/Ferrocarril eléctrico|Ferrocarril eléctrico]]), la actualización de los trenes no serà urgente, ya que los trenes de vapor y diésel funcionan a la perfección en las vías electrificadas. Los trenes eléctricos, sin embargo, no podrán circular sobre vías sin electrificar.
+
+* El reemplazo de vehículos ([[Main/en/Reemplazar vehículos/Es#Autoreemplazar|autoreemplazar]]) no funciona con depósitos cruzados.
+
+* Puede utilizar la orden [[Main/en/Órdenes/Es#Ir a|Ir al depósito]] para todos los trenes que utilizan la línea que desea convertir o usar la lista de vehículos desde la que se pueden enviar todos los trenes (o a un grupo) al depósito más cercano.
+
+==Vea también==
+*[[Main/es/Construcción de ferrocarriles|Construcción de ferrocarriles]]
+*[[Main/es/Estaciones no-uniformes|Estaciones no-uniformes]]
+*[[Main/en/Opciones avanzadas/Vehículos/Es#Desactivar raíles eléctricos|Desactivar raíles eléctricos]]
+
+[[Category:es/Construcción]]
+[[Category:es/Ferrocarril]]
