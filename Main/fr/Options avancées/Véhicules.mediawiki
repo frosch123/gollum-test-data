@@ -1,0 +1,253 @@
+[[Translation:Main/en/Advanced Settings/Vehicles]]{{en/-}}{{fr/Options Avancées}}
+
+==Fenêtre de Configuration avancée: section Véhicules==
+La section Véhicules vous permet de définir diverses options liées aux trains, aux véhicules routiers, aux avions et aux bateaux. Le but de ces options disponibles est expliqué ci-dessous. Pour chacune, la variable respective du [[Main/fr/openttd.cfg|fichier de configuration]] est indiquée avec ses valeurs possibles.
+{{en/-}}
+{| align="center"
+|- valign="top"
+|__TOC__
+|[[File:fr/Advset vehicles v1.1.3.png|frame|left|La section Véhicules de la fenêtre de Configuration avancée (v1.1.3)]]
+|}
+
+===<u>Routage</u>===
+====Recherche de chemin des trains====
+{{fr/Disponibilité|0.6|align="right"|texte=(depuis 0.6.0)}}
+Sélectionne l'algorithme de détermination du chemin pour les trains. [[Main/fr/Encore une autre détermination de chemin|YAPF]] est la valeur par défaut et l'option recommandée, mais vous pouvez toujours choisir les anciennes déterminations de chemin.
+:''Valeurs possibles:'' <span style="color:#00693E">'''NPF'''</span> ou <span style="color:#00693E">'''YAPF'''</span> <span style="color:blue">(recommandé)</span>
+:''Dans le fichier de configuration [[Main/fr/openttd.cfg|openttd.cfg]]:'' ([pf] pathfinder_for_trains = <0-2>)
+{{en/-}}
+====Interdire aux trains et navires les virages à 90°====
+{{fr/Disponibilité|Old|align="right"|texte=(depuis 0.4.0)}}
+Interdit aux trains et aux navires de faire des virages serrés à 90 degrés. Les déterminations de chemin NPF ou YAPF doivent être activés pour que cette option fonctionne pour les trains.
+:''Valeurs possibles:'' <span style="color:green">'''Activé'''</span> ou <span style="color:red">'''Désactivé'''</span>
+:''Dans le fichier de configuration [[Main/fr/openttd.cfg|openttd.cfg]]:'' ([pf] forbid_90_deg = <true|false>)
+{{en/-}}
+====Recherche de chemin des véhicules routiers====
+{{fr/Disponibilité|0.6|align="right"|texte=(depuis 0.6.0)}}
+Sélectionne l'algorithme de détermination de chemin pour les véhicules routiers. [[Main/fr/Encore une autre détermination de chemin|YAPF]] est le choix par défaut et est recommandé, mais vous pouvez toujours choisir les anciennes déterminations.
+:''Valeurs possibles:'' <span style="color:#00693E">'''NPF'''</span> ou <span style="color:#00693E">'''YAPF'''</span> <span style="color:blue">(recommandé)</span>
+:''Dans le fichier de configuration [[Main/fr/openttd.cfg|openttd.cfg]]:'' ([pf] pathfinder_for_roadvehs = <0-2>)
+{{en/-}}
+====Mise en file Véhicules Routiers (+ effets quantiques)====
+{{fr/Disponibilité|Old|align="right"|texte=(depuis 0.2.0)}}
+Les camions et les bus [[Main/fr/File d'attente des véhicules routiers|font la queue]] à une gare encombrée plutôt que de tourner en rond autour.
+:''Valeurs possibles:'' <span style="color:green">'''Activé'''</span> ou <span style="color:red">'''Désactivé'''</span>
+:''Dans le fichier de configuration [[Main/fr/openttd.cfg|openttd.cfg]]:'' ([pf] roadveh_queue = <true|false>)
+{{en/-}}
+====Recherche de chemin des navires====
+{{fr/Disponibilité|0.6|align="right"|texte=(depuis 0.6.0)}}
+Choisit l'algorithme de détermination de chemin pour les navires. L'original est le choix par défaut et est la valeur recommandée, mais vous pouvez choisir uns des nouvelles déterminations. YAPF pour les bateaux a l'avantage de ne pas avoir à utiliser de bouées sur les longues distances, mais a de gros problèmes de performance quand un grand nombre de navires est utilisé (c.à.d. plus de 10).
+:''Valeurs possibles:'' <span style="color:#00693E">'''Original'''</span> <span style="color:blue">(recommandé)</span>, <span style="color:#00693E">'''NPF'''</span> ou <span style="color:#00693E">'''YAPF'''</span> <span style="color:red">(non recommandé)</span>
+:''Dans le fichier de configuration [[Main/fr/openttd.cfg|openttd.cfg]]:'' ([pf] pathfinder_for_ships = <0-2>)
+{{en/-}}
+----
+===<u>Renouvellement</u>===
+En avez-vous assez de remplacer tous vos véhicules tous les vingt ans? Laissez cette option le faire pour vous. Quand vous l'activez, les véhicules seront automatiquement remplacés. Avec les options suivantes, vous pouvez définir le renouvellement comme vous le voulez.
+
+{{note/Fr|Si le véhicule n'entre pas dans un dépôt de maintenance, il ne sera pas remplacé. Vous n'obtiendrez pas d'avertissement 'Le véhicule devient trop vieux'!}}
+
+====Renouveler automatiquement les véhicules quand ils sont vieux====
+{{fr/Disponibilité|Old|align="right"|texte=(depuis 0.3.3)}}
+Les véhicules sont automatiquement remplacés quand ils deviennent vieux, pourvu que le même type de véhicule soit disponible à l'achat.
+:''Valeurs possibles:'' <span style="color:green">'''Activé'''</span> ou <span style="color:red">'''Désactivé'''</span>
+:''Dans le fichier de configuration [[Main/fr/openttd.cfg|openttd.cfg]]:'' ([gui] autorenew = <true|false>)
+{{en/-}}
+====Auto-renouveler les véhicules ... mois avant/après l'âge maximum====
+{{fr/Disponibilité|Old|align="right"|texte=(depuis 0.3.4)}}
+Si le renouvellement automatique est activé, un véhicule est remplacé automatiquement la prochaine fois qu'il entrera dans un dépôt de maintenance et que son âge aura atteint le nombre de mois avant ou après son âge maximal.
+:''Valeurs possibles:'' <span style="color:red">'''-12'''</span> à <span style="color:#00693E">'''12'''</span>
+:* <span style="color:red">-12</span> signifie que le véhicule sera remplacé 12 mois avant de devenir trop vieux.
+:* <span style="color:#00693E">+12</span> signifie que le véhicule sera remplacé 12 mois après être devenu trop vieux.
+:''Dans le fichier de configuration [[Main/fr/openttd.cfg|openttd.cfg]]:'' ([gui] autorenew_months = <num_val>)
+{{en/-}}
+====Argent minimum avant auto-renouvellement====
+{{fr/Disponibilité|Old|align="right"|texte=(depuis 0.3.4)}}
+Si le renouvellement automatique est activé et qu'un véhicule est prêt à être remplacé, la quantité d'argent du joueur doit excéder cette valeur plus le coût du nouveau véhicule.
+Si la valeur est, par exemple, 200 000£, qu'un nouveau véhicule coûte 10 000£ et que vous avez 205 000£, le véhicule ne sera pas remplacé. À la place, vous aurez un avertissement que le renouvellement automatique a échoué pour ce véhicule.
+:''Valeurs possibles:'' <span style="color:red">'''0£'''</span> à <span style="color:#00693E">'''4 000 000£''' (8 000 000$)</span>
+:''Dans le fichier de configuration [[Main/fr/openttd.cfg|openttd.cfg]]:'' ([gui] autorenew_money = <0-2000000>)
+{{en/-}}
+----
+===<u>Entretien</u>===
+====Les intervalles de service sont en pourcentage====
+{{fr/Disponibilité|Old|align="right"|texte=(depuis 0.3.4)}}
+Quand cette option est activée, les intervalles de maintenance sont exprimés en pourcentage de la fiabilité maximale plutôt qu'en jours. Par exemple, si une locomotive a  une fiabilité maximale de 80% et que vous positionnez l'intervalle de maintenance à 10%, alors elle retournera au dépôt à 72%.
+:''Valeurs possibles:'' <span style="color:green">'''Activé'''</span> ou <span style="color:red">'''Désactivé'''</span>
+:''Dans le fichier de configuration [[Main/fr/openttd.cfg|openttd.cfg]]:'' ([vehicle] servint_ispercent = <true|false>)
+{{en/-}}
+====Intervalle d'entretien par défaut pour les trains====
+{{fr/Disponibilité|Old|align="right"|texte=(depuis 0.3.2)}}
+L'intervalle de maintenance par défaut quand un nouveau [[Main/fr/Intervalle de maintenance des trains|train]] est construit.
+:''Valeurs possibles:'' <span style="color:red">'''désactivé'''</span> ou <span style="color:#00693E">'''15 jours/%'''</span> à <span style="color:#00693E">'''800 jours/%'''</span>
+:''Dans le fichier de configuration [[Main/fr/openttd.cfg|openttd.cfg]]:'' ([vehicle] servint_trains = <0, 5-800)
+{{en/-}}
+====Intervalle d'entretien par défaut pour les véhicules routiers====
+{{fr/Disponibilité|Old|align="right"|texte=(depuis 0.3.2)}}
+L'intervalle de maintenance par défaut quand un nouveau [[Main/fr/Intervalle de maintenance des véhicules routiers|véhicule routier]] est construit.
+:''Valeurs possibles:'' <span style="color:red">'''désactivé'''</span> ou <span style="color:#00693E">'''15 jours/%'''</span> à <span style="color:#00693E">'''800 jours/%'''</span>
+:''Dans le fichier de configuration [[Main/fr/openttd.cfg|openttd.cfg]]:'' ([vehicle] servint_roadveh = <0, 5-800)
+{{en/-}}
+====Intervalle d'entretien par défaut pour les navires====
+{{fr/Disponibilité|Old|align="right"|texte=(depuis 0.3.2)}}
+L'intervalle de maintenance par défaut quand un nouveau [[Main/fr/Intervalle de maintenance des bateaux|bateau]] est construit.
+:''Valeurs possibles:'' <span style="color:red">'''désactivé'''</span> ou <span style="color:#00693E">'''15 jours/%'''</span> à <span style="color:#00693E">'''800 jours/%'''</span>
+:''Dans le fichier de configuration [[Main/fr/openttd.cfg|openttd.cfg]]:'' ([vehicle] servint_ships = <0, 5-800)
+{{en/-}}
+====Intervalle d'entretien par défaut pour les aéronefs====
+{{fr/Disponibilité|Old|align="right"|texte=(depuis 0.3.2)}}
+L'intervalle de maintenance par défaut quand un nouvel [[Main/fr/Intervalle de maintenance des avions|avion]] est construit.
+:''Valeurs possibles:'' <span style="color:red">'''désactivé'''</span> ou <span style="color:#00693E">'''15 jours/%'''</span> à <span style="color:#00693E">'''800 jours/%'''</span>
+:''Dans le fichier de configuration [[Main/fr/openttd.cfg|openttd.cfg]]:'' ([vehicle] servint_aircraft = <0, 5-800)
+{{en/-}}
+====Désactiver l'entretien quand les pannes sont inactives====
+{{fr/Disponibilité|Old|align="right"|texte=(depuis 0.3.6)}}
+Si vous avez désactivé les pannes et activé cette option, vos véhicules n'iront jamais au dépôt pour une maintenance. Même si cette option est activée, les véhicules iront toujours au dépôt pour un renouvellement automatique et/ou un remplacement, si ces options sont activées.
+:''Valeurs possibles:'' <span style="color:green">'''Activé'''</span> ou <span style="color:red">'''Désactivé'''</span>
+:''Dans le fichier de configuration [[Main/fr/openttd.cfg|openttd.cfg]]:'' ([order] no_servicing_if_no_breakdowns = <true|false>)
+{{en/-}}
+====Entretenir automatiquement les hélicoptères à l'héliport====
+{{fr/Disponibilité|Old|align="right"|texte=(depuis 0.3.3)}}
+Si l'option est activée, les hélicoptères seront révisés automatiquement chaque fois qu'ils arriveront à  un hélipad. Ainsi, vous n'aurez pas besoin d'avoir un aéroport sur le trajet de l'hélicoptère pour sa maintenance. Dans les versions précédentes, cette option se trouvait sous la [[Main/en/Options avancées 0.3.0 - 0.6.3/Stations/Fr#Réviser les hélicoptères à l'hélipad|section Gares]].
+:''Valeurs possibles:'' <span style="color:green">'''Activé'''</span> ou <span style="color:red">'''Désactivé'''</span>
+:''Dans le fichier de configuration [[Main/fr/openttd.cfg|openttd.cfg]]:'' ([order] serviceathelipad = <true|false>)
+{{en/-}}
+----
+
+===<u>Trains</u>===
+====Modèle d'accélération des trains====
+{{fr/Disponibilité|0.7|align="right"|texte=(depuis 0.7.0)}}
+Choisit le mode de calcul par défaut ou une [[Main/fr/Accélération réaliste|accélération plus réaliste]] pour les trains. Avec cette option mise à ''réaliste'', les trains circuleront plus vite en montant, mais moins vite dans les virages serrés.
+Cette option a été renommée depuis [[Main/en/Options avancées 0.3.0 - 0.6.3/Véhicules/Fr#Activer l'accélération réaliste pour les trains|Activer l'accélération réaliste pour les trains]].
+:''Valeurs possibles:'' <span style="color:#00693E">'''Original'''</span> ou <span style="color:#00693E">'''Réaliste'''</span>
+:''Dans le fichier de configuration [[Main/fr/openttd.cfg|openttd.cfg]]:'' ([vehicle] train_acceleration_model = <0-1>)
+{{en/-}}
+====Inclinaison des pentes pour les trains====
+{{fr/Disponibilité|1.0|align="right"|texte=(depuis 1.0.0)}}
+Fixe la raideur des pentes; les trains ralentiront davantage sur des pentes si ce paramètre est fixé à une valeur haute. Elle ne s'applique que si le mode [[Main/fr/Accélération réaliste|accélération réaliste]] est choisi.
+:''Valeurs possibles:'' <span style="color:red">'''0%'''</span> à <span style="color:#00693E">'''10%'''</span>
+:''Dans le fichier de configuration [[Main/fr/openttd.cfg|openttd.cfg]]:'' ([vehicle] train_slope_steepness = <0-10>)
+{{en/-}}
+====Permettre la construction de très longs trains====
+{{fr/Disponibilité|Old|align="right"|texte=(depuis 0.2.0)}}
+Vous pouvez construire des trains extrêmement longs, alias [[Main/fr/Train de mammouth|train mammouth]].
+:''Valeurs possibles:'' <span style="color:green">'''Activé'''</span> ou <span style="color:red">'''Désactivé'''</span>
+:''Dans le fichier de configuration [[Main/fr/openttd.cfg|openttd.cfg]]:'' ([vehicle] mammoth_trains = <true|false>)
+{{en/-}}
+====Avertir qu'un train est perdu====
+{{fr/Disponibilité|0.5|align="right"|texte=(depuis 0.5.0)}}
+Un train sera [[Main/fr/Avertissement train perdu|signalé perdu]] s'il ne peut pas trouver de chemin vers la gare vers laquelle il se dirige actuellement.
+:''Valeurs possibles:'' <span style="color:green">'''Activé'''</span> ou <span style="color:red">'''Désactivé'''</span>
+:''Dans le fichier de configuration [[Main/fr/openttd.cfg|openttd.cfg]]:'' ([gui] lost_train_warn = <true|false>)
+{{en/-}}
+====Activer vitesse limite des wagons====
+{{fr/Disponibilité|Old|align="right"|texte=(depuis 0.4.5)}}
+Certains [[Main/fr/NewGRF|NewGRFs]] ont une limite de vitesse pour les wagons, pour les rendre plus réalistes; cette option les active/désactive.
+:''Valeurs possibles:'' <span style="color:green">'''Activé'''</span> ou <span style="color:red">'''Désactivé'''</span>
+:''Dans le fichier de configuration [[Main/fr/openttd.cfg|openttd.cfg]]:'' ([vehicle] wagon_speed_limits = <true|false>)
+{{en/-}}
+====Désactiver les rails électriques====
+{{fr/Disponibilité|0.5|align="right"|texte=(depuis 0.5.0)}}
+Désactive les lignes électrifiées. Les trains électriques circuleront sur les voies normales, si cette option est activée, et les voies électrifiées ne seront pas disponibles à l'achat.
+:''Valeurs possibles:'' <span style="color:green">'''Activé'''</span> ou <span style="color:red">'''Désactivé'''</span>
+:''Dans le fichier de configuration [[Main/fr/openttd.cfg|openttd.cfg]]:'' ([vehicle] disable_elrails = <true|false>)
+{{en/-}}
+====Multiplier le poids pour les trains fret (simule des trains lourds)====
+{{fr/Disponibilité|0.5|align="right"|texte=(depuis 0.5.0)}}
+Le poids des trains de fret est multiplié par le multiplicateur positionné ici pour simuler les trains très lourds, pour davantage de réalisme.
+:''Valeurs possibles:'' <span style="color:#00693E">'''1'''</span> à <span style="color:#00693E">'''255'''</span>
+:''Dans le fichier de configuration [[Main/fr/openttd.cfg|openttd.cfg]]:'' ([vehicle] freight_trains = <1-255>)
+{{en/-}}
+====Les nouveaux ordres arrêtent les trains à la ... du quai par défaut====
+{{fr/Disponibilité|1.0|align="right"|texte=(depuis 1.0.0)}}
+Configure si les nouveaux ordres indiqueront aux trains de s'arrêter près de la fin, du milieu ou du bout du quai, par  défaut. Plus tard, vous pourrez fixer cela individuellement, après la création des ordres.
+:''Valeurs possibles:'' <span style="color:#00693E">'''queue'''</span>, <span style="color:#00693E">'''milieu'''</span> ou <span style="color:#00693E">'''tête'''</span>
+:''Dans le fichier de configuration [[Main/fr/openttd.cfg|openttd.cfg]]:'' ([gui] stop_location = <0-2>)
+{{en/-}}
+----
+===Permettre les ordres d'aller au dépôt===
+{{fr/Disponibilité|Old|align="right"|texte=(depuis 0.2.0)}}
+Tous les véhicules peuvent avoir un [[Main/fr/Permettre les ordres d'aller au dépôt|dépôt dans leur planning]].
+:''Valeurs possibles:'' <span style="color:green">'''Activé'''</span> ou <span style="color:red">'''Désactivé'''</span>
+:''Dans le fichier de configuration [[Main/fr/openttd.cfg|openttd.cfg]]:'' ([order] gotodepot = <true|false>)
+{{en/-}}
+===Les nouveaux ordres sont 'sans-arrêt' par défaut===
+{{fr/Disponibilité|0.7|align="right"|texte=(depuis 0.7.0)}}
+Avec cette option activée, tous les nouveaux ordres d'assignation seront positionnés avec '[[Main/fr/Sans arrêt|sans arrêt]]' par défaut. Avec un ordre sans arrêt, les véhicules ne s'arrêteront qu'à la gare indiquée dans les ordres et non dans les gares intermédiaires sur son trajet, non assignées comme ordre.
+:''Valeurs possibles:'' <span style="color:green">'''Activé'''</span> ou <span style="color:red">'''Désactivé'''</span>
+:''Dans le fichier de configuration [[Main/fr/openttd.cfg|openttd.cfg]]:'' ([gui] new_nonstop = <true|false>)
+{{en/-}}
+===Vérification des ordres des véhicules===
+{{fr/Disponibilité|Old|align="right"|texte=(depuis 0.3.4)}}
+Activez l'option pour [[Main/fr/Système d'examen des ordres|vérifier les ordres]] des véhicules périodiquement, pour les ordres invalides et autres bizarreries.
+Cette option peut être activée pour tous les véhicules, désactivée pour ceux qui sont arrêtés, ou pour tous indistinctement.
+:''Valeurs possibles:'' <span style="color:red">'''non'''</span>, <span style="color:#00693E">'''De tous, sauf ceux stoppés'''</span> ou <span style="color:#00693E">'''De tous les véhicules'''</span>
+:''Dans le fichier de configuration [[Main/fr/openttd.cfg|openttd.cfg]]:'' ([gui] order_review_system = <0-2>)
+{{en/-}}
+===Alerte en cas de profit négatif pour un véhicule===
+{{fr/Disponibilité|0.7|align="right"|texte=(depuis 0.7.0)}}
+Si le revenu d'un véhicule [[Main/fr/Revenu négatif d'un train|est négatif]], cela se rapporté dans les messages des journaux. Utilisez l'option [[Main/fr/Ordres|Transférer|de transfert]] dans la fenêtre des ordres du véhicule si vous voulez mettre en place un [[Main/fr/Service d'approvisionnement|service d'approvisionnement]].
+Cette option a été renommée depuis [[Main/en/Options avancées 0.3.0 - 0.6.3/Véhicules/Fr#Avertir si le revenu d'un train est négatif|Avertir si le revenu d'un train est négatif]] en 0.7.0.
+:''Valeurs possibles:'' <span style="color:green">'''Activé'''</span> ou <span style="color:red">'''Désactivé'''</span>
+:''Dans le fichier de configuration [[Main/fr/openttd.cfg|openttd.cfg]]:'' ([gui] vehicle_income_warn = <true|false>)
+{{en/-}}
+===Les véhicules n'expirent jamais===
+{{fr/Disponibilité|Old|align="right"|texte=(depuis 0.3.4)}}
+Les anciens véhicules restent dans la liste des véhicules que vous pouvez choisir et [[Main/fr/Pas d'expiration des véhicules|ne deviennent jamais obsolètes]]. Lorsque vous activez cette option dans un jeu en cours, les véhicules déjà disparus de la liste ne réapparaîtront pas pour l'achat.
+:''Valeurs possibles:'' <span style="color:green">'''Activé'''</span> ou <span style="color:red">'''Désactivé'''</span>
+:''Dans le fichier de configuration [[Main/fr/openttd.cfg|openttd.cfg]]:'' ([vehicle] never_expire_vehicles = <true|false>)
+{{en/-}}
+===Maximum de trains par joueur===
+{{fr/Disponibilité|Old|align="right"|texte=(depuis 0.3.2)}}
+Fixe la quantité maximale de [[Main/fr/Trains maxi|trains]] qu'un joueur peut avoir.
+:''Valeurs possibles:'' <span style="color:red">'''0'''</span> à <span style="color:#00693E">'''5000'''</span>
+:''Dans le fichier de configuration [[Main/fr/openttd.cfg|openttd.cfg]]:'' ([vehicle] max_trains = <0-5000>)
+{{en/-}}
+===Maximum de véhicules routiers par joueur===
+{{fr/Disponibilité|Old|align="right"|texte=(depuis 0.3.2)}}
+Fixe la quantité maximale de [[Main/fr/Véhicules routiers maxi|véhicules routiers]] qu'un joueur peut avoir.
+:''Valeurs possibles:'' <span style="color:red">'''0'''</span> à <span style="color:#00693E">'''5000'''</span>
+:''Dans le fichier de configuration [[Main/fr/openttd.cfg|openttd.cfg]]:'' ([vehicle] max_roadveh = <0-5000>)
+{{en/-}}
+===Maximum d'avions par joueur===
+{{fr/Disponibilité|Old|align="right"|texte=(depuis 0.3.2)}}
+Fixe la quantité maximale d'[[Main/fr/Avions maxi|avions]] qu'un joueur peut avoir.
+:''Valeurs possibles:'' <span style="color:red">'''0'''</span> à <span style="color:#00693E">'''5000'''</span>
+:''Dans le fichier de configuration [[Main/fr/openttd.cfg|openttd.cfg]]:'' ([vehicle] max_aircraft = <0-5000>)
+{{en/-}}
+===Maximum de bateaux par joueur===
+{{fr/Disponibilité|Old|align="right"|texte=(depuis 0.3.2)}}
+Fixe la quantité maximale de [[Main/fr/Bateaux maxi|bateaux]] qu'un joueur peut avoir.
+:''Valeurs possibles:'' <span style="color:red">'''0'''</span> à <span style="color:#00693E">'''5000'''</span>
+:''Dans le fichier de configuration [[Main/fr/openttd.cfg|openttd.cfg]]:'' ([vehicle] max_ships = <0-5000>)
+{{en/-}}
+===Facteur de vitesse des aéroplanes===
+{{fr/Disponibilité|0.6|align="right"|texte=(depuis 0.6.0)}}
+Fixe la vitesse d'un avion par rapport à celles des véhicules sur rail, sur route ou sur l'eau. Dans le TTD originel, les avions voyageaient à 1/4 de la vitesse terrestre.
+:''Valeurs possibles:'' <span style="color:#00693E">'''1/1'''</span> à <span style="color:#00693E">'''1/4'''</span>
+:''Dans le fichier de configuration [[Main/fr/openttd.cfg|openttd.cfg]]:'' ([vehicle] plane_speed = <1-4>)
+{{en/-}}
+===Nombre d'accidents d'avion===
+{{fr/Disponibilité|1.0|align="right"|texte=(depuis 1.0.0)}}
+Détermine la probabilité d'accidents d'avion. Ils peuvent être désactivés si cette option est positionnée à 'Aucun'.
+:''Valeurs possibles:'' <span style="color:red">'''aucun'''</span>, <span style="color:#00693E">'''réduit'''</span> ou <span style="color:#00693E">'''normal'''</span>
+:''Dans le fichier de configuration [[Main/fr/openttd.cfg|openttd.cfg]]:'' ([vehicle] plane_crashes = <0-2>) 
+{{en/-}}
+===Autoriser les horaires pour les véhicules===
+{{fr/Disponibilité|0.6|align="right"|texte=(depuis 0.6.0)}}
+Vous permet d'utiliser les [[Main/fr/Horaires|horaires]] pour les véhicules.
+:''Valeurs possibles:'' <span style="color:green">'''Activé'''</span> ou <span style="color:red">'''Désactivé'''</span>
+:''Dans le fichier de configuration [[Main/fr/openttd.cfg|openttd.cfg]]:'' ([order] timetabling = <true|false>) 
+{{en/-}}
+===Utiliser plusieurs NewGRF de véhicules===
+{{fr/Disponibilité|0.7|align="right"|texte=(depuis 0.7.0)}}
+Quand elle est activée, cette fonctionnalité ''[[Main/fr/Pool de véhicules|Pool de véhicules]] permet à de multiples ensembles de véhicules [[Main/fr/NewGRF|NewGRF]] de coexister. Sans cela, le nombnre maximal de véhicules différents est très limité et des ensembles de véhicules du même type s'écraseront les véhicules ou les fonctions. Note: utiliser de multiples ensembles de véhicules en même temps peut conduire à des coûts d'achat et der maintenance très bas ou très élevés pour les véhicules. Mélanger des wagons et des trains de différents ensembles de trains peut conduire à des problèmes d'affichage.
+:''Valeurs possibles:'' <span style="color:green">'''Activé'''</span> ou <span style="color:red">'''Désactivé'''</span>
+:''Dans le fichier de configuration [[Main/fr/openttd.cfg|openttd.cfg]]:'' ([vehicle] dynamic_engines = <true|false>)
+{{en/-}}
+
+==Dans les versions précédentes==
+===Voir aussi===
+*'''De 0.3.0 à 0.6.3''' - Voyez [[Main/fr/Options avancées 0.3.0 - 0.6.3|Options avancées 0.3.0 - 0.6.3]] pour une information sur comment modifier les paramètres.
+*'''Pour 0.2.0 et 0.2.1''' - Voyez [[Main/fr/Options avancées 0.2.0|Options avancées 0.2.0]].
+
+[[Category:fr/Réglages et préférences]]
