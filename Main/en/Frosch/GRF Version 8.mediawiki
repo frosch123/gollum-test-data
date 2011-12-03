@@ -1,0 +1,216 @@
+Some proposals for modifications of newgrf specs (grf version 8) to improve usability and extensibility
+
+==Vehicle variable 42 field "cc"==
+Currently: Untranslated cargo.<br>
+Proposal: Translated cargo. The translation table of the grf the varaction2 belongs to will be used. 0xFF if the cargo is not part of it. (like var 47)<br>
+Grf-Version: Does this need bumping? IMO no, as the current behaviour is not useable at all. The change would fit into version 7. OTOH (according to Dalestan) it is a change, so bump needed.<br>
+Implementation: [http://devs.openttd.org/~frosch/diffs/grfv8/70_translated_var42.diff 70_translated_var42.diff]
+
+==Vehicle property 15/10/0C "default cargo"==
+=== Default cargo ===
+Currently: Untranslated cargo.<br>
+Proposal: Translated cargo. If the specified cargo is not present, the first refittable will be used. It's the job of the GRF to check available cargos via action 7, and set other default cargos, if they are not fine with the "first refittable"-rule.<br>
+Note: If the vehicle is refittable, the default cargo must be one of the refittable cargos; else the the "first refittable"-rule applies.<br>
+Implementation: [http://devs.openttd.org/~frosch/diffs/grfv8/82_translate_default_cargo.diff 82_translate_default_cargo.diff]
+
+=== First refittable ===
+Currently: First refittable cargoslot is picked. (That means "lowest number" of untranslated cargo)<br>
+Proposal: Use first refittable cargo wrt. the GRFs cargo translation table. (nitpick: the CTT of the GRF providing the refit mask)<br>
+Grf-Version: Changed behaviour of existing GRFs, so bump needed.<br>
+Implementation: [http://devs.openttd.org/~frosch/diffs/grfv8/86_first_refittable_from_ctt.diff 86_first_refittable_from_ctt.diff]
+
+==Introduce 32bit parameters for 60+x variables==
+This is possible via variable 7B, which one can use to put 32 bits into the accumulator and pass them to any 60+x variable. Esp. useful for vehicle variable 60<br>
+Grf-Version: No bump needed.<br>
+Implementation: [http://devs.openttd.org/~frosch/diffs/grfv8/40_32bit_parameter_esp_var60.diff 40_32bit_parameter_esp_var60.diff]
+
+== No longer fallback stuff for basecost multipliers==
+Implementation: [http://devs.openttd.org/~frosch/diffs/grfv8/50_no_pricebase_fallback.diff 50_no_pricebase_fallback.diff]
+
+== Action 13 ==
+Add a language code to action 13.<br/>
+Implementation: r23391
+
+==Remove 0xFF?? callback results==
+Remove the 0xFF?? downwards-compatibility stuff to support full 15 bit callbacks. (Dalestan's suggestion)<br>
+Grf-Version: Bump needed.<br>
+Implementation: [http://devs.openttd.org/~frosch/diffs/grfv8/20_callback_result.diff 20_callback_result.diff]
+
+== Revise all callback and their allowed result values ==
+
+Goals:
+* Make all callbacks return 15 bit. No 8 bit callbacks.
+* Make boolean callbacks return 0 to 1 instead of zero or non-zero. That way more return values with different meanings can be added later.
+* Check all callback results, whether their values are known/valid. Display an error to the user if not. (This is basically to enforce the previous goal.)
+* Make return values of different but similar callbacks similar.
+
+=== Complete different callback results ===
+
+==== Callback 16: Articulated vehicles ====
+Currently: Bit 0-6 ID, bit 7 reverse flag, 0xFF stop
+# Proposal: Bit 0-13 ID, bit 14 reverse flag, 0x7FFF stop; 0x3F?? and 0x7F?? reserved (Note: 0x7FFF needs 2b))
+# Proposal: Bit 0-6 ID, bit 7 reverse flag, 0xFF stop; 0x7E/0xFE use ID from register 0x100
+Grf-Version: Proposal 1 needs bump to version 8, proposal 2 not necessarily. (apart from general 8->15 bit bump)<br>
+Implementation for proposal 1: [http://devs.openttd.org/~frosch/diffs/grfv8/30_articulated_cb.diff 30_articulated_cb.diff]
+
+==== Callback 22: Industry availability ====
+Currently: Zero to allow construction, non-zero to disallow.
+# Proposal: Return probability (like property 18); 0x00 to disallow; 0x01 - 0xFF for probability, 0x100 to allow with probability from property 22.
+Grf-Version: Bump needed.<br>
+Implementation: [http://devs.openttd.org/~frosch/diffs/grfv8/90_industryprob.diff 90_industryprob.diff]
+
+
+=== Deprecation of callbacks ===
+The callbacks
+* 11: Wagon length
+* 12: Load amount
+are no longer called in grf version 8.
+* Callback 36 is called instead
+* Callback 36 is not called for grf version < 8.
+* The callback flags for callback 11 and 12 have no meaning anymore.
+Note: Callback 10 is kept as it is likely to gain more functionality at some point.
+
+Grf-Version: Bump needed.<br/>
+Implementation:
+[http://devs.openttd.org/~frosch/diffs/grfv8/120_roadvehlen_property.diff 120_roadvehlen_property.diff]
+[http://devs.openttd.org/~frosch/diffs/grfv8/123_deprecate_11.diff 123_deprecate_11.diff]
+[http://devs.openttd.org/~frosch/diffs/grfv8/125_deprecate_12.diff 125_deprecate_12.diff]
+
+=== Boolean results ===
+These callback return boolean results:
+* CB 13: Station availability
+* CB 17: House construction check
+* CB 18: AI construction/purchase selection (partly)
+* CB 21: Trigger building destruction
+* <strike>CB 22: Industry availability (see above)</strike>
+* CB 30/14E/150: Decide drawing default foundations
+* CB 3B: Control special industry effect
+* CB 3C/14F/15D: Disable autosloping
+* CB 3D: Opt out of accepting cargo
+* CB 143: Protect building conditionally
+
+Currently: Most callbacks return zero or non-zero. Some return 0 or 1.<br>
+Proposal: All callback shall return 0 or 1. Other values are considered reserved and trigger error messages when used.<br>
+Grf-Version: Bump needed.<br>
+Implementation: [http://devs.openttd.org/~frosch/diffs/grfv8/100_bool_cbs.diff 100_bool_cbs.diff]
+
+=== Callbacks returning D0xx texts ===
+These callbacks can return D0xx texts:
+* CB 19: Cargo sub-type display
+* CB 1D: Can wagon be attached
+* CB 23: Additional text in purchase screen
+* CB 28: Industry location permissibility
+* CB 2F: Custom shape check
+* CB 31: Start/stop check
+* CB 37: Cargo sub-type display
+* CB 38/15C: Show additional text in fund window
+* CB 3A: Show additional text in industry window
+* CB 149: Land slope check
+* CB 14D: Customized building name
+* CB 155: Extra information about airport layout in the build gui
+* CB 156: Airport layout name
+* CB 157: Objects Land slope check
+
+Currently: Most of the callbacks return 0x00 to 0x3FF for D0xx texts, 0x400 for "default behavior" and other values above 0x400 for special stuff.<br>
+Proposal: Make all callbacks behave like that.<br>
+Grf-Version: Bump needed.<br>
+Implementation: [http://devs.openttd.org/~frosch/diffs/grfv8/60_consistent_slope_check_cb.diff 60_consistent_slope_check_cb.diff] [http://devs.openttd.org/~frosch/diffs/grfv8/65_D0xx_cbs.diff 65_D0xx_cbs.diff]
+
+=== Other callbacks with limited range ===
+The following callbacks do not use all 15 bits for their results:
+* CB 20/27/142/154/15A: Length of animation frame
+* CB 24: Custom station layout
+* CB 32: 32-day callback
+* CB 14A: Decide industry color
+* CB 14B: Decide input cargo types
+* CB 14C: Decide output cargo types
+* CB 15B: Decide colour of building
+
+Proposal: The unused bits will be checked for being zero; else an error message is displayed to the user.<br>
+Grf-Version: No bump needed.<br>
+Implementation: [http://devs.openttd.org/~frosch/diffs/grfv8/110_check_callback_results.diff 110_check_callback_results.diff]
+
+== Revise height variables ==
+There are two units for height in TTD. "Pixels" and "heightlevels". One heightlevel has 8 pixels.
+Various variables report heights in one of those units to NewGRFs. In most cases using 8 bits.
+Many of these variables will break when more-height-levels (more than 16 height levels; up to 256) are added. There is no way around breaking existing NewGRFs in this case.
+
+The goal of GRF version 8 is here to allow NewGRFs handle more heightlevels. Various variables are changed to return heighlevels instead of pixels. (Simliar as GRF version 7 changes many variables to return translated cargobits instead of cargo slots.)
+
+=== Stuff which remains unchanged and will continue to work ===
+* Spritelayouts: Height of bounding boxes is defined in pixels (7 bit unsigned).
+* Object property 16 "building height" (8 bit): Keeps on using heightlevels as unit.
+* Vehicle variable 44 "aircraft altitude" (8 bit): Keeps on using pixels as unit. Values bigger than 0xFF are clamped to 0xFF.
+:Implementation: [http://devs.openttd.org/~frosch/diffs/grfv8/154_var44.diff 154_var44.diff]
+* Vehicle variable 62 "Z difference" (8 bit signed): Keeps on using pixels.
+* Canal variable 80 "height above ground" (8 bit): Keeps on using heighlevels.
+
+=== Stuff which remains unchanged, will somewhat break with more heightlevels, and will remain unfixed/unchanged ===
+* Vehicle variable 9E "Z position" (8 bit unsigned): Keeps on using pixels. Will be silently extended to 32 bit in OpenTTD.
+* Signal variable 60 "Height" (5 bit; not supported by OpenTTD): Will break for more heightlevels.
+
+=== Stuff that changes behaviour in GRF version 8 ===
+==== Action 0 snow line height table ====
+Currently: Pixels, 0x10 - 0x88<br/>
+Proposal: 0x00 - 0xFE (automatically scaled to maximum height level), 0xFF for 'no snow'.<br/>
+Behaviour with more-height-levels and GRF version < 8: Values are scaled automatically. Keeps working.<br/>
+Grf-Version: Bump needed.<br/>
+Implementation: [http://devs.openttd.org/~frosch/diffs/grfv8/130_snowlinetable.diff 130_snowlinetable.diff]
+
+==== Snow line variables ====
+* Variable 17/97 "Fixes snow line height" (not supported by OpenTTD)
+* Variable 20/A0 "Current snow line height"
+Currently: Pixels, 0xFF for 'no snow'<br/>
+Proposal: Height levels, 0xFF for 'no snow'<br/>
+Behaviour with more-height-levels and GRF version < 8: Values bigger than 0xFE get clamped. GRFs are likely to continue working for up to 32 height levels, but will likely break when more are used.<br/>
+Grf-Version: Bump needed.<br/>
+Implementation: [http://devs.openttd.org/~frosch/diffs/grfv8/140_snowvariables.diff 140_snowvariables.diff]
+
+==== Other height variables ====
+* Nearby tile info variables of all features (e.g. industry tile variable 60)
+* Callback 28 variable 8A
+Currently: Pixels<br/>
+Proposal: Height levels<br/>
+Behaviour with more-height-levels and GRF version < 8: Values bigger than 0xFF are clamped to 0xFF. GRFs are likely to continue working for up to 32 height levels, but will likely break when more are used.<br/>
+Grf-Version: Bump needed.<br/>
+Implementation: 
+[http://devs.openttd.org/~frosch/diffs/grfv8/150_nearbyheight.diff 150_nearbyheight.diff]
+[http://devs.openttd.org/~frosch/diffs/grfv8/152_cb28.diff 152_cb28.diff]
+
+==== Callback 144 ====
+Currently: Heightlevel of north corner, 4 bit. (will break for more-height-levels)<br/>
+Proposal: Complete new format for var10: xTHHRRtt
+* x: reserved
+* T: landscape class
+* HH: height of lowest corner in heightlevels
+* RR: 8 random bits
+* tt: various flags: bit 0-2 terrain type; 3-4 water class
+This format is also more consistent with the nearby land info variables.<br/>
+Implementation:
+[http://devs.openttd.org/~frosch/diffs/grfv8/156_cb144.diff 156_cb144.diff]
+
+==== New Action D patch/settings variables 14 "Maximum height level" ====
+Proposal: Maximal allowed height level; currently fixed at 15<br/>
+Grf-Version: No bump needed.<br/>
+Implementation: [http://devs.openttd.org/~frosch/diffs/grfv8/160_patchvar14.diff 160_patchvar14.diff]
+
+== Old proposals, which are already achieved by different means ==
+
+=== Callback 17: House construction check ===
+Currently: Called for one tile, which would be part of the house.<br>
+Proposal: Always call for the north tile.<br>
+Grf-Version: No bump needed.<br>
+Implementation: Already implemented in trunk long ago. 0.7-ish or so.
+
+=== Specify used palette ===
+# Proposal: Append a byte at the end of Action8. 0 = don't care, 1 = dos, 2 = win. (0 is a nice default value) Optional for grf version < 8, mandatory for >= 8.
+# Proposal: 0 = dos, 1 = win, 2 = don't care (like var 0D/8D). Optional for grf version < 8, mandatory for >= 8.
+Implementation: Goal was archived with Action 14.
+
+Handle any non-specified palette as windows palette in order to 'honour' the fact that virtually all old NewGRFs use that - and it's tedious to configure that when always this setting will be needed.<br>
+Implementation: Advanced setting in trunk.
+
+=== Maybe some grf version for compatible grfs? ===
+16 bit for incompatible version<br>
+16 bit for compatible version<br>
+Implementation: Goal was archived with Action 14.
