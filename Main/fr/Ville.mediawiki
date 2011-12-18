@@ -1,0 +1,96 @@
+[[Translation:Main/en/Towns]]{{en/-}}{{fr/Table des matières}}
+Les '''villes''' sont là où vivent les habitants de OpenTTD. Chaque ville a une population qui peut augmenter ou diminuer en fonction de certaines conditions.
+[[File:en/Town.png|thumb|left|436px|La petite ville de Potsdam.]]
+__TOC__{{en/-}}
+==Bâtiments de la ville==
+La plupart des [[Main/en/bâtiment|bâtiments]] dans les villes sont une source de [[Main/en/Passagers]] et de [[Main/en/Courrier]] qui peuvent être transportés vers d'autres villes ou dans la même ville. Pendant une [[Main/en/Économie#Récession|récession économique]], il n'y en a que la moitié du nombre habituel.
+
+Dans certains cas, les bâtiments peuvent aussi accepter d'autres cargaisons comme des Marchandises ou de la Nourriture. Pour qu'une gare accepte ces chargements, les bâtiments de la zone de couverture de la gare doivent accepter un total d'au moins 8/8 du chargement. Utilisez l'outil [[Main/en/information sur le terrain]] pour découvrir les chargements acceptés par les bâtiments individuels.
+
+La population de la ville est calculée en se basant sur le nombre de bâtiments et sur le nombre d'habitants que chaque bâtiment contient.
+
+==Industries de la ville==
+Certaines industries sont situées dans les villes:
+* la [[Main/en/Banque]] peut être trouvée dans des villes de plus de 1200 habitants.
+* le [[Main/en/Château#Eau|château d'eau]] se trouve dans les villes du désert avec un climat subtropical.
+
+==Croissance de la ville==
+La population des villes peut augmenter, fournissant davantage de passagers et de courrier à transporter.
+
+Les villes croissent de deux façons:
+* les bâtiments existants sont démolis par la ville et remplacés par de plus importants. Vous noterez alors que la population de la ville décline temporairement, tandis que le nouveau bâtiment est construit.
+* la ville construit de nouveaux bâtiments sur des cases vides près des routes de la ville.
+
+Quelquefois, de nouveaux bâtiments augmenteront le nombre de chargements acceptés dans une ville (comme des Marchandises).
+
+Au cours du temps, les villes grossiront très lentement, même si aucun service ne leur est fourni; cependant, les joueurs peuvent influencer la croissance d'une ville de différentes manières.
+
+===Conditions générales pour la croissance d'une ville===
+La croissance d'une ville peut être accélérée en chargeant et déchargeant au moins un élément de chargement dans cinq gares au plus dans la zone d'influence de la ville, pendant une période de deux mois. La nature des chargements chargés/déchargés n'importe pas.
+
+Les villes s'étendront physiquement en prolongeant leurs routes vers les zones vides de la carte, puis en construisant de nouveaux bâtiments le long de ces nouvelles routes. Les routes ne peuvent pas être construites sur des voies de chemin de fer en diagonale ou sur des voies avec un signal; faites donc attention à ne pas enfermer vos villes complètement lorsque vous bâtissez votre empire de transport.
+
+[[File:en/Town-nogrow.png|frame|left|Cette ville ne dépassera jamais 215 habitants]]
+[[File:en/Town-grow.png|frame|right|Cette ville grossira rapidement]]
+<br clear="all" />
+
+===Conditions de croissance d'une ville liées au climat===
+====Tempéré, Pays des jouets====
+Il n'y a pas de condition spéciale pour la croissance d'une ville de climat tempéré ou pays des jouets. Chargez et déchargez simplement comme décrit ci-dessus.
+
+====Subarctique====
+Si la case centrale de la ville est au-dessus du niveau de la neige, au moins 1t de nourriture par mois doit être apportée à la vile pour qu'elle croisse rapidement. La fenêtre d'information de la ville montrera la quantité de nourriture récemment livrée.
+
+Les villes croîtront très lentement par elles-mêmes; donc, dans le cas de petites villes qui ne sont pas assez grosses pour accepter de la nourriture, il n'y a qu'à attendre qu'elles grossissent. Comme avec les autres chargements, une gare doit avoir au moins 8/8 acceptations de nourriture dans sa zone de couverture avant d'accepter ce chargement.
+
+La quantité de nourriture livrée n'a aucun effet sur le taux de croissance de la ville.
+
+Si la case centrale n'est pas au-dessus du niveau de la neige, la nourriture n'est pas nécessaire pour la croissance, même si la nourriture est acceptée.
+
+====Subtropical==== 
+Si la case centrale de la ville est dans le désert, au moins 1t de [[Main/en/nourriture]] et 1t d'[[Main/en/eau]] par mois doivent être apportées pour que la ville croisse. La fenêtre d'information de la ville montrera la quantité de nourriture et d'eau livrés récemment.
+
+Les villes croîtront très lentement par elles-mêmes; donc, dans le cas de petites villes qui ne sont pas assez grosses pour accepter de la nourriture, il n'y a qu'à attendre qu'elles grossissent. Comme avec les autres chargements, une gare doit avoir au moins 8/8 acceptations de nourriture dans sa zone de couverture avant d'accepter ce chargement.
+
+[[File:en/Water tower.gif|right]]
+L'eau doit être amenée à une industrie Château d'eau. Les châteaux d'eau peuvent être créés automatiquement dans les villes, ou un joueur peut décider d'en financer un en utilisant le menu "Financer une nouvelle industrie".
+
+La quantité de nourriture et d'eau livrés n'ont aucun effet sur le taux de croissance de la ville.
+
+Si la case centrale de la ville n'est pas dans le désert, la nourriture et l'eau ne sont pas nécessaires pour la croissance; cependant, les châteaux d'eau peuvent quand même exister dans la ville et la nourriture et l'eau être acceptés.
+
+===Conseils pour la croissance d'une ville===
+Dans un climat tempéré, un simple service de bus peut augmenter drastiquement la population d'une ville. Il est judicieux de relier entre elles de petites villes proches avec des services de bus, pour faire grossir leur population, avant qu'une gare ferroviaire ou un aéroport deviennent viables. Autrement, créer une ligne de bus avec une ville plus grosse peut engendrer un taux de croissance encore plus grand.
+
+* Un bus avec un passager depuis l'autre côté de la ville aura le même effet sur la croissance qu'un gros train plein de passagers venant de l'autre côté de la carte.
+* Une ville avec une gare de chargement, où les cargaisons sont prises mais non déposées, grossira aussi.
+* Livrer le chargement "Marchandises" '''n'aura pas''' d'effet spécial sur la croissance de la ville, sous aucun climat.
+* Un joueur peut choisir "Financer de nouveaux bâtiments" depuis la fenêtre de l'Autorité locale. Cela peut amener un accroissement rapide de la population en peu de temps, ou augmenter l'acceptation pour des chargements comme les Marchandises.
+* Les joueurs doivent veiller et s'assurer que les villes ne sont pas encerclées par des voies de chemin de fer, des aéroports, de l'eau, etc.
+* Prolonger les routes d'une ville peut augmenter un peu la probabilité que de nouveaux bâtiments soient construits avec succès, car c'est toujours mieux qu'une ville sans route vide. Si la ville a beaucoup de routes vides, il est très improbable que cela ait un effet tant que la plupart des routes n'ont pas de bâtiment le long d'elles. Les routes devraient être construites régulièrement autour de la ville, plutôt que de s'étendre seulement de certains côtés. Également, la progression des bâtiments de la ville dépendra de la distance de trajet (pas la distance à vol d'oiseau) par route vers le centre de la ville (là où s'affiche le nom de la ville). Une route qui est proche mais ne mène pas au centre de la ville n'aura aucun bâtiment construit le long d'elle.
+
+==Métropoles==
+Une métropole est une forme particulière de ville qui grossira deux fois plus vite qu'une ville normale. Une métropole est aussi plus grosse au début. Il y a deux paramètres qui affectent les métropoles: ''[[Main/en/Configuration Avancée/Économie#Proportion des villes qui deviendront des métropoles]]'' et ''[[Main/en/Configuration Avancée/Économie#Multiplicateur de taille de ville initial]]''.
+
+==Autorité locale de la ville==
+Chaque ville est gérée par une [[Main/en/Autorité locale]] qui détermine quelles actions une [[Main/en/société]] peut entreprendre dans ou près de chaque ville. Couper les arbres (y compris ceux coupés par l'aménagement du paysage ou par le bulldozer) et détruire des industries, des bâtiments, des routes, des tunnels et des ponts de la ville, tout cela diminue la cote de la société dans la ville. Cependant, planter des arbres, graisser des pattes avec succès et fournir des services à la ville (les gares qui ont transféré un chargement dans les 50 derniers jours) augmente la cote de la société. Pour placer une gare, la compagnie doit avoir une cote minimale de -200 (Pauvre).
+
+Utilisez l'outil [[Main/en/Information sur le terrain]] pour déterminer à quelle autorité locale appartient une case (s'il en existe une).
+
+==Villes et NewGRFs==
+Les bâtiments de ville peuvent être modifiés et remplacés par des ensembles NewGRF. Les ensembles NewGRF sont disponibles en offrant une grande variété de changements, depuis l'ajout d'un ou deux bâtiments jusqu'au remplacement total d'une ville. Les ensembles NewGRF peuvent aussi redéfinir quels chargements sont acceptés et produits par les bâtiments de ville. Ils peuvent aussi fournir des industries nouvelles ou modifiées localisées dans ou près des villes.
+
+==Tricherie du bulldozer magique==
+Si la triche [[Main/en/Triches#Bulldozer magique|Bulldozer magique]] est activée, il y a un risque qu'une ville en expansion puisse démolir accidentellement une industrie. Le moyen sûr d'utiliser cette triche est de l'activer, de faire ce pour quoi vous en avez besoin, puis de vous souvenir de la désactiver de nouveau. Le risque se produit si vous la laissez active après l'avoir utilisée, ce qui peut amener des villes à démolir des industries.
+
+==Construction des chaussées de la ville==
+L'intelligence artificielle d'une ville construira automatiquement des routes à mesure que la ville s'étend. L'I.A. mettra toujours un croisement toutes les deux ou trois cases, tant qu'il y a du terrain plat (les croisements ne peuvent pas être construits sur une route en pente). Dans certains cas, trois bâtiments de ville ou plus peuvent être construits le long d'une route droite (sur terrain plat). Cependant, quand la ville s'étend, l'I.A. peut démolir un de ces bâtiments pour faire de la place pour une nouvelle route prolongeant le croisement (même si la route ne s'étend que d'une case depuis le croisement).
+
+Évidemment, si le joueur veut que la ville s'étende de façon plus efficace, il est nécessaire de construire pour la ville des routes et des croisements appartenant au joueur. C'est-à-dire construire les routes longitudinales et latitudinales toutes les trois cases autour de la ville, comme un motif à carreaux, en laissant quatre cases dans chaque bloc pour construire les bâtiments de la ville. Si les croisements s'étendent de plus de deux cases, l'I.A. persistera à construire des croisements sur les propres routes du joueur, entre les croisements existants.
+
+==Autres==
+* [[Main/fr/Nouvelles villes]]
+* [[Main/fr/Noms des villes]]
+
+
+[[Category:fr/Entités]]
