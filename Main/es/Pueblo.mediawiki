@@ -1,0 +1,88 @@
+[[Translation:Main/en/Towns]]{{en/-}}{{es/Tabla de contenido}}
+Los '''Pueblos''' es donde los habitantes de OpenTTD viven. Cada pueblo tiene una población que puede crecer o disminuir dependiendo de ciertas condiciones.
+[[File:en/Town.png|frame|left|El pequeño pueblo de Potsdam.]]
+
+__TOC__
+{{en/-}}
+==Edificios de los pueblos==
+Los [[Main/es/Edificio|edificios]] de los pueblos son una fuente de [[Main/es/Pasajeros|pasajeros]] y [[Main/es/Correo|correo]], que pueden ser transportados a otros pueblos o dentro del mismo pueblo.
+
+En algunos casos los edificios también podrán aceptar otras cargas, como ''Mercancías'' o ''Alimentos''. Para que una estación pueda aceptar estos cargamentos, debe haber un total al menos de 8/8 casillas con edificios que acepten este tipo de carga dentro su ''área de alcance''. Utilice la herramienta [[Main/es/Información sobre el terreno|Información sobre el terreno]] ([[File:en/Manual html 51cda05b.png]]) para conocer el tipo de carga que acepta cada edificio individualmente.
+
+La población del pueblo se calcula en función del número de edificios y cuántos habitantes tiene cada edificio.
+
+==Industrias de los pueblos==
+Ciertas industrias se encuentran dentro de los pueblos:
+* el [[Main/es/Banco|Banco]] se puede encontrar en pueblos con más de 1200 habitantes.
+* la [[Main/es/Torre de Agua|Torre de Agua]] se encuentra en los pueblos del desierto en el clima subtropical.
+
+==Crecimiento del pueblo==
+La población de los pueblos puede aumentar, proporcionando mayor número de pasajeros y correo para transportar.
+
+Los pueblos crecen de dos maneras:
+* Los edificios existentes son demolidas por el pueblo y se sustituyen por edificios más grandes. Usted puede notar que la población del pueblo decrece temporalmente, mientras está construyéndose el nuevo edificio.
+* El pueblo construye nuevos edificios en las casillas vacías que hay junto a sus carreteras.
+
+A veces los nuevos edificios aumentan el número de tipos de carga que acepta un pueblo (como Mercancías).
+
+Las ciudades crecerán durante un tiempo muy lentamente, incluso si no hay un servicio prestado, sin embargo los jugadores pueden influir en el crecimiento del pueblo de varias maneras.
+
+===Condiciones generales para el crecimiento de un pueblo===
+El crecimiento de un pueblo puede acelerarse cargando y descargando como mínimo un tipo de carga en cinco estaciones dentro de la zona de influencia del pueblo, en un período de dos meses. No importa qué tipo cargas son cargadas y descargadas.
+
+Los pueblos se amplían físicamente ampliando primero las carreteras en las áreas vacías del mapa, y construyendo después los nuevos edificios (junto a los caminos creados). Las carreteras no se puede construir sobre vías del tren en diagonal o vías con señales, así que tenga cuidado de no encerrar completamente sus pueblos al construir su imperio de transporte.
+[[File:en/Town-nogrow.png|frame|left|Este pueblo no crecerá más allá de 215 habitantes]]
+[[File:en/Town-grow.png|frame|right|Este pueblo crecerá rápidamente]]
+{{en/-}}
+
+===Condiciones relacionadas con el clima para el crecimiento de un pueblo===
+====Templado, Fantasía (o Toyland)====
+No hay condiciones especiales para crecer en el clima Templado o Fantasía. Simplemente lo que hemos visto antes sobre la carga y descarga.
+
+====Subártico====
+Si la casilla central del pueblo está por encima del nivel de nieve, deberá entregar como mínimo 1 tonelada de alimentos al mes para que el pueblo crezca rápidamente. La ventana de información del pueblo, mostrará la cantidad de alimentos entregados recientemente.
+
+Los pueblos crecen muy lentamente por su cuenta, así que en el caso de pueblos pequeños, que no son suficientemente grandes para aceptar alimentos, lo único que puede hacer es esperar a que crezcan lo suficiente. Como con cualquier otro tipo de carga, una estación necesita tener en su área de influencia de por lo menos 8/8 casillas con demanda de alimentos para poder aceptar alimentos.
+
+La cantidad de alimentos entregados no tiene ningún efecto sobre la velocidad de crecimiento del pueblo.
+
+Si la casilla central no está por encima de la línea de nieve, no será requisito para crecer entregar ninguna cantidad de alimentos, aunque los alimentos serán igualmente aceptados.
+
+====Subtropical====
+Si la casilla central del pueblo está en el desierto, será necesario como mínimo, entregar 1 tonelada de [[Main/es/Alimento|alimentos]] y 1 tonelada de [[Main/es/Agua|agua]] para que el pueblo crezca. La ventana de información del pueblo, mostrará la cantidad de alimento y agua entregada recientemente.
+
+Los pueblos crecen muy lentamente por su cuenta, así que en el caso de pueblos pequeños, que no son suficientemente grandes para aceptar alimentos, lo único que puede hacer es esperar que crezcan. Como con cualquier otro tipo de carga, una estación necesita tener en su área de influencia por lo menos 8/8 casillas con demanda de alimentos para poder aceptar alimentos.
+
+[[File:en/Water tower.gif|right]]
+El agua debe ser entregada en una Torre de Agua. Las torres de Agua se pueden generar de forma automática en los pueblos, o bien un jugador puede optar por fundar una utilizando el menú "Fundar nueva industria".
+
+La cantidad de alimentos y agua entregados no tiene ningún efecto sobre la velocidad de crecimiento del pueblo.
+
+Si la casilla central no está en el desierto, no será requisito para crecer entregar ninguna cantidad de alimentos o  agua, aunque si hay torres de agua en el pueblo, los alimentos y el agua serán igualmente aceptados.
+
+===Consejos para el crecimiento de un pueblo===
+En el clima templado, con un sencillo servicio de autobuses puede aumentar drásticamente la población de un pueblo.
+Es conveniente conectar las pequeñas poblaciones no muy lejanas entre sí, junto con servicios de autobús locales para "tonificar" su población antes de que puedan ser viables una estación de tren o un aeropuerto.
+Por otra parte, crear una ruta de autobús en un pueblo más grande puede producir un índice de crecimiento incluso más alto.
+* Un autobús con un pasajero desde el otro lado del pueblo tendrá el mismo efecto en el crecimiento que un tren lleno de pasajeros grande desde el otro extremo del mapa.
+* Un pueblo con una estación de transferencia donde se recoge pero no se descarga, también crecerá.
+* La carga de "mercancías" '''no afecta''' al crecimiento de los pueblos en ningún clima.
+* Un jugador puede "Pagar la construcción de nuevos edificios" desde la ventana "Autoridad Local". Esto puede producir la aceleración del crecimiento de la población durante un corto periodo de tiempo, o aumentar los tipos de cargas que acepta el pueblo, como las "mercancías".
+* Los jugadores deben de asegurarse de que los pueblos no están cercados por las vías del tren, los aeropuertos, el agua, etc.
+* La ampliación de carreteras de un pueblo puede aumentar ligeramente la posibilidad de construcción de nuevos edificios. Pero si el pueblo tiene ya un montón de carreteras vacías es poco probable que tenga ningún efecto.
+
+==Ciudades==
+Una ciudad es una forma especial de pueblo que crecerá dos veces más rápido que un pueblo normal. Para empezar es más grande. Hay dos ajustes de la configuración del programa que afectan a las ciudades: ''[[Main/en/Opciones avanzadas/Economía/Es#Proporción de pueblos que serán ciudades|Proporción de pueblos que serán ciudades]]'' y ''[[Main/en/Opciones avanzadas/Economía/Es#Multiplicador inicial tamaño de ciudad|Multiplicador inicial tamaño de ciudad]]''.
+
+==Autoridad local del pueblo==
+Cada ciudad está administrada por una [[Main/es/Autoridad local|Autoridad local]] que decide qué acciones de una [[Main/es/Empresa|Empresa]] se pueden hacer en o cerca de cada pueblo. Eliminar árboles (incluidos los eliminados por las herramientas paisaje o demoleción), destruir industrias del pueblo, edificios, carreteras, túneles y puentes baja el ranking de la empresa en la ciudad. Por otro lado, plantar de árboles, sobornar con éxito y proporcionar servicios a la ciudad (estaciones que han transferido carga en los últimos 50 días) mejora el ranking de la empresa. Para poder construir una estación, la empresa debe tener una calificación mínima de -200 (pobre).
+
+Utilice eventualmente la herramienta de información de área para averiguar a qué autoridad local pertenece una casilla.
+
+==Pueblos y NewGRFs==
+Los edificios de los pueblos pueden ser modificados y/o reemplazados por ficheros NewGRF. Los ficheros NewGRF están disponibles ofreciendo un rango de cambios, desde añadir solo un edificio o dos, hasta un reemplazo total de la ciudad. Los ficheros NewGRF pueden también redefinir que cargas son aceptados o producidos por los edificios del pueblo. Los ficheros NewGRF también pueden proveer industrias nuevas o modificar las que se localizan en o cerca de los pueblos.
+
+==Trampa de bulldózer mágico==
+Si la trampa [[Main/en/Trucos/Es#Bulldózer mágico|bulldozer mágico]] está activada, existe el riesgo de que un pueblo en expansión pueda demoler accidentalmente una industria. El modo seguro de usar esta trampa es activarla, hacer lo que necesites con ella, y acordarte de desactivarla después. Si la dejas activada después de usarla existe el riesgo de que los pueblos puedan demoler industrias.
+
+[[Category:es/Entidades]]
