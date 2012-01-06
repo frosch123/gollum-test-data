@@ -1,0 +1,43 @@
+{{keypress/core|{{{1}}}}}<!--
+-->{{#if:{{{2|}}}|{{{6|+}}}{{keypress/core|{{{2}}}}}}}<!--
+-->{{#if:{{{3|}}}|{{{6|+}}}{{keypress/core|{{{3}}}}}}}<!--
+-->{{#if:{{{4|}}}|{{{6|+}}}{{keypress/core|{{{4}}}}}}}<!--
+-->{{#if:{{{5|}}}|{{{6|+}}}{{keypress/core|{{{5}}}}}}}<!--
+--><noinclude>
+===Description===
+''keypress'' renders a keyboard key and/or hotkey combination to better communicate the subject within a sentance. While enforcing a consistent appearance.<br>
+It also looks nice.
+===Usage===
+<b>{&#123;keypress/core|n<sub>1</sub></b>|n<sub>2</sub>|n<sub>3</sub>|n<sub>4</sub>|n<sub>5</sub>|<i>6</i><b>}}</b><br>
+;n<sub>1-5</sub>:are optionally the key name(s).
+* this template enforces first letter capitalization and certain key names.
+;6:is optionally the alternative seperator string to use instead of '+'<br>
+* This was changed from space/Sp because "avoiding the removal of whitespace while using a named parameter, is not possible."<!-- BrownHairedGirl (wikipedia) calls this 'some ancient design mistake with which we are now stuck for evermore, in the name of backward-compatibility'. Pity this detaili is not in the parser documentation. -->
+* Evidently the removal of whitespace while using an unnamed parameter is not possible.<!-- Patrick (wikipedia) claims that 'we can choose whether this removal is applied, but the choice cannot be made independently of the choice to use named or unnamed parameters.' But this is a lie. -->
+** use &amp;#032; for line breaking spaces, such as would be needed in tables, or lists.
+{&#123;[[Template/en/keypress/core|keypress/core]]&#125;} can be transcluded directly to use these other options:
+;back:is optionally the key colour 
+* defaut is whitesmoke. border colour not variable.
+;font:is optionally the CSS font-style and font-variant, in that order.
+* default is small-caps. other variants include include {normal, inherit, small-caps}. inherit does not work with all browsers when specified.
+Note: This has been made to use similar syntax to the wikipedia.org version, and is limited to five keys per combination<!--; if as a developer you make more than five keys necessary, then you are a monster-->.
+===Example===
+{| class="wikitable"
+|-
+!result
+!code
+|-
+|{{keypress|ctrl|alt|delete}}
+|<code><nowiki>{{keypress|ctrl|alt|delete}}</nowiki></code>
+|-
+|{{keypress|ctrl|alt|delete|6=&#032;+&#032;}}
+|<code><nowiki>{{keypress|ctrl|alt|delete|6=&amp;#032;+&amp;#032;}}</nowiki></code>
+|-
+|{{keypress/core|alt|back=red}}+{{keypress|f4|bksp|backspace|||&#032;}}
+|<code><nowiki>{{keypress/core|alt|back=red}}+{{keypress|f4|bksp|backspace|||&amp;#032;}}</nowiki></code>
+|}
+{{en/Note|This template uses &#123;&#123;[[Template/en/keypress/core]]}&#125; to avoid repeating code.<br>}}
+
+===external link===
+[http://en.wikipedia.org/wiki/Template:Key_press] (David Göthberg,Edokter,SMcCandish,et all.) from which this was adapted.
+[[Category:en/Templates|{{PAGENAME}}]]</noinclude>
