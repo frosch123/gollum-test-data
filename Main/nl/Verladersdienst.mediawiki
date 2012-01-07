@@ -1,0 +1,57 @@
+[[Translation:Main/en/Feeder service]]{{en/-}}
+{{nl/Opmerking|Als je een [[Main/nl/Twee-richtingen verladersdienst|twee-richtingen verladersdienst]] wil opstarten kijk dan hier. De methode beschrijft op deze pagina alleen de een-richting verladersdienst.}}
+Een '''verladersdienst''' is, om het simpel te zeggen, een dienst waar voertuigen een soort "ketting" vormen voor het vervoeren van vracht. Bijvoorbeeld, een bus kan passagiers wegbrengen naar een buiten de stad gelegen vliegveld, zodat deze naar een verder gelegen vliegveld aan de andere zijde van de kaart kunnen vliegen om zo meer winst te genereren.
+
+In bepaalde gevallen zullen voertuigen een [[Main/nl/Negatieve inkomsten met verladersdiensten|negatief inkomen]] krijgen, ook al zijn zij een belangrijke schakel in de winstgevende ketting.
+
+[[File:en/Feeder service.png|right|thumb|400px|Bussen verladen passagiers van een nabijgelegen stad naar een vliegveld]]
+
+Bijvoorbeeld, passagiers arriveren op een bushalte en een bus neemt ze mee, de bus brengt ze naar een lokaal vliegveld dat buiten de stad ligt en normaal gesproken geen passagiers accepteert. De bus is ingesteld met '''Transfer''' op ''Overladen en vertrek leeg'' op het vliegveld en de passagiers zullen de bus verlaten en wachten op een vliegtuig om hen op te pikken.
+
+Het is niet altijd zinvol om een punt-naar-punt dienst voor elke mogelijke route in te richten. Vaak is een op knooppunten gebaseerd systeem zinvoller omdat het de druk op je netwerk verlicht en voor passagiers en vracht mogelijk maakt om verschillende soorten vervoer te kiezen om efficiënter van A naar B te reizen. Dit is waar de Transfer knop voor dient.
+
+==Hoe zet je een transferroute op==
+Stel je eens voor dat je een [[Main/nl/Vliegveld|vliegveld]] hebt in een stad en je wilt een [[Main/nl/Bussen|bus]] gebruiken om passagiers uit het stadscentrum naar het vliegveld te brengen. Dit kan eenvoudig worden volbracht: 
+
+Eerst moet het busstation direct naast het vliegveld (er tegenaan). Als er een gat zit tussen de stations zal het spel een andere naam geven aan het busstation en werkt transfer niet.
+
+[[File:en/feeder service wrong.png|none|frame|Dit zal niet werken vanwege de afstand tussen de stations]]
+
+[[Main/nl/Constructie|Zet de route op]] als normaal, en selecteer de ''Transfer'' knop om passagiers te vertellen dat ze moeten wachten op het vliegveld voor een vlucht. Om te voorkomen dat de bus passagiers steelt van het vliegtuig, selecteer je ook ''lossen''. Vanaf OpenTTD 0.7.0 selecteer ''niet laden'' en ''transfer'' uit de uitklapmenu's. Vanaf OpenTTD 1.1.1 is de transfer optie ook gekoppeld aan ''leeg vertrekken'' en hoef je de ''niet laden'' optie niet meer aan te klikken. Nu geeft de order de volgende regel ''Overladen en vertrek leeg''. 
+
+[[File:en/feeder service correct.png|none|frame|Correct opgezet, het station toont nu de bus en vliegtuig symbolen]]
+
+Op deze manier zal de bus altijd passagiers naar het vliegveld brengen voor verder transport.
+
+==Hoe zet je een meer complex systeem op?==
+[[File:en/Complex feeder system.png|right|thumb|400px|Complex verladerssysteem. Bussen brengen passagiers naar een nabijgelegen trein station. De shuttle trein pikt ze op en transporteer ze naar het vliegveld.]]
+Je zult opmerken dat (en je verwonderen waarom) je ''transfer'' kunt combineren met ''volledig laden'' en ''lossen'' (of ''niet lossen'' respectievelijk). Dit akn worden gebruikt om meer complexe verladerssystemen op te zetten.
+Stel je voor, je hebt datzelfde vliegveld als in het voorbeeld hierboven. Dit vliegveld heeft een aantal [[Main/nl/gemeente|plaatsen]] om zich heen, en je wilt graag een shuttle[[Main/nl/treinen|trein]] die door alle dorpen gaat om passagiers op te pikken.
+
+* Het eerste dorp krijgt een normale (niet-gemarkeerde) order, en dus een aantal passagiers stappen in.
+* In het tweede dorp wil je dat er mensen instappen, maar dat er niemand de bus verlaat. Dus nu stel je de order in als ''Overladen en neem vracht mee'' order, waardoor er passagiers worden gelost, maar vervolgens weer ingeladen, m.a.w.: alleen opgepikt.
+* Alle volgende stops krijgen dezelfde order.
+* Het vliegveld krijgt de ''Overladen en vertrek leeg'' order.
+
+op deze wijze zullen alle mensen van alle haltes worden afgezet op het vliegveld en aan boord gaan van hun vliegtuigen.
+
+Een ander aantrekkelijk aspect is om een lokaal busnetwerk in te zetten om vanuit de hele stad passagiers op te pikken en naar een centraal treinstation te brengen. De overladen en vracht meenemen functie is zinvol als een voertuig vracht op zal pikken van diverse regionale stations en deze aflevert op een bestemming ver weg, net zoals treinen in de echte wereld doen.
+
+
+
+
+
+
+
+
+=== Versnellen van een complexe verladersdienst ===
+[[File:en/No unload take cargo.png|right]]
+Vanaf '''versie 0.7.0''' kun je shuttle voertuigen de ''Niet lossen en neem vracht mee'' order geven op alle dorpen. Dit doet hetzelfde als de ''overladen en neem vracht mee'' order (zie het voorbeeld hierboven), maar voorkomt dat passagiers eerst uitstappen (m.a.w. ''overladen'') en weer op de bus stappen. Dit maakt de verladersdienst sneller en realistischer, omdat de trein alleen nieuwe passagiers oppikt, terwijl de passagiers van vorige stations blijven zitten.
+{{nl/Kenmerken|0.7|text= 0.7}}
+
+== AI's die verladers systemen bouwen ==
+* [http://www.tt-forums.net/viewtopic.php?f=65&t=41518 PAXLink] gebruikt lokale bussen om passagiers baar hun vliegveld te brengen.
+
+[[Category:nl/Spelen|V]]
+[[Category:nl/Voertuigen|V]]
+[[Category:nl/Instellingen en voorkeuren|V]]
