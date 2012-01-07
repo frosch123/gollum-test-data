@@ -1,0 +1,50 @@
+[[Translation:Main/en/Feeder service]]{{en/-}}
+{{fr/Note|Si vous voulez créer un [[Main/fr/Service d'approvisionnement à double sens|service d'approvisionnement à double sens]], alors regardez ici. La méthode décrite sur cette page ne fonctionne que dans un sens.}}
+Un '''service d'approvisionnement''' est, dit simplement, un service où un véhicule effectue un "relai" avec la cargaison. Par exemple, un bus peut transporter des passagers vers un aéroport hors de la ville, afin qu'ils puissent survoler la carte afin d'augmenter leur revenu.
+
+Dans certains cas, les véhicules peuvent sembler avoir un [[Main/fr/Revenu négatif avec service d'approvisionnement|revenu négatif]] même s'ils sont une partie importante d'une chaîne de profit.
+
+[[File:en/Feeder service.png|right|thumb|400px|Des bus fournissant un aéroport en passagers depuis une ville proche]]
+
+Par exemple, des passagers arrivent à l'arrêt de bus et un bus les embarque pour les emmener à l'aéroport local qui est situé hors de la ville et n'accepte normalement pas de passagers. le bus est configuré pour ''Transférer et rester vide'' à l'aéroport, et les passagers quitteront le bus et attendront un avion pour les prendre.
+
+Il n'est pas toujours souhaitable de faire un service pont à point pour chaque trajet possible. Souvent, un système basé sur un centre est plus rationnel car il facilite le chargement de votre réseau et permet aux passagers et aux cargaisons d'utiliser différents types de transport pour aller de A à B plus efficacement. C'est à cela que sert le bouton de transfert.
+
+==Comment établir un trajet de transfert==
+Imaginez donc que vous avez un [[Main/fr/Aéroports|aéroport]] en ville et que vous voulez utiliser un [[Main/fr/Bus|bus]] pour amener les passagers du centre ville vers l'aéroport. Cela se fait facilement:
+
+Tout d'abord, la station de bus doit être construite tout à côté de l'aéroport, en le touchant. S'il y a un espace entre les gares, le jeu affichera un nom différent pour la station de bus, et le transfert ne fonctionnera pas.
+
+[[File:en/feeder service wrong.png|none|frame|Cela ne fonctionnera pas à cause de l'espace entre les gares]]
+
+[[Main/fr/Construction|Construisez le trajet]] normalement, et choisissez le bouton ''Transférer'' pour indiquer aux passagers d'attendre un vol à l'aéroport. Pour éviter que le bus ne vole les passagers à l'avion, sélectionnez aussi ''Décharger''. Depuis OpenTTD 0.7.0, choisissez ''Pas de chargement'' et ''Transférer'' depuis le menu déroulant. L'ordre affichera alors ''Transférer et laisser vide''.
+
+[[File:en/feeder service correct.png|none|frame|Correctement positionnée, la gare affiche maintenant les symboles du bus et de l'avion]]
+
+Ainsi, le bus amènera toujours les passagers à l'aéroport pour un transport ultérieur.
+
+==Comment établir un système plus complexe==
+[[File:en/Complex feeder system.png|right|thumb|400px|Système d'approvisionnement complexe. Les bus amènent les passagers vers une gare ferroviaire proche. Le train navette les prend et les emmène à l'aéroport]]
+Vous aurez noté que (et vous serez demandé pourquoi) vous pouvez combiner ''Transférer'' avec ''Chargement complet'' et ''Décharger'' (ou ''Pas de chargement'', respectivement). Cela peut être utilisé pour construire des services d'approvisionnement plus complexes.
+Imaginez que vous avez le même aéroport que dans l'exemple ci-dessus. Cet aéroport a un certain nombre de [[Main/fr/Ville|villes]] alentour, et vous aimeriez avoir une navette [[Main/fr/Trains|ferroviaire]] qui passe par tous ces villages pour ramasser les passagers.
+
+* Le premier village a un ordre normal (non-marqué), et embarque donc un certain nombre de personnes.
+* Dans le second village, vous aimeriez que les gens montent mais que personne ne quitte. Vous positionnerez donc un ordre ''transférer et prendre la cargaison'', qui décharge les passagers mais les reprend aussitôt, c'est-à-dire: Charger seulement.
+* Tous les arrêts suivants auront le même ordre.
+* L'aéroport aura ''Transférer et laisser vide''.
+
+Ainsi, tous les gens de tous les arrêts seront amenés à l'aéroport et chargés dans leurs avions.
+
+Un autre aspect qui mérite attention est l'emploi d'un réseau de bus local pour prendre les passagers dans toute la ville vers une gare ferroviaire centrale. Transférer et prendre une cargaison est aussi utile si un véhicule est supposé charger à différentes gares puis livrer à une certaine destination lointaine, tout comme le font les trains dans la réalité.
+
+=== Accélérer un service d'approvisionnement complexe ===
+[[File:en/No unload take cargo.png|right]]
+Depuis la '''version 0.7.0''', vous pouvez donner à vos navettes l'ordre ''Pas de déchargement et charger la cargaison'' dans tous les villages. Cela revient au même que ''Transférer et charger la cargaison'' (voir l'exemple ci-dessus), mais évite aux passagers de débarquer (c.à.d. d'être ''transférés'') puis rechargés. Cela rend le service d'approvisionnement plus rapide et plus réaliste, car le train ne prendra que les nouveaux passagers, alors que ceux des gares précédentes resteront dedans.
+{{fr/Disponibilité|0.7}}
+
+== AIs construisant des systèmes d'approvisionnement ==
+* [http://www.tt-forums.net/viewtopic.php?f=65&t=41518 PAXLink] utilise des bus locaux pour alimenter ses aéroports en passagers.
+
+[[Category:fr/Jouer]]
+[[Category:fr/Véhicules]]
+[[Category:fr/Réglages et préférences]]
