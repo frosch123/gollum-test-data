@@ -1,0 +1,41 @@
+<noinclude>[[Translation:Template/en/Airport]]</noinclude>{| class="toccolours" style="float:right; width:200px; margin-left: 1em;"
+|+ style="font-size: large; margin: inherit;"|'''{{{Fullname}}}'''
+
+| style="text-align:center; background:none;" |
+{| class="toccolours"
+|rowspan="8" style="text-align:center; font-size:smaller;"|[[File:en/.{{{image}}}|{{{imagewidth}}}|left]]
+|&nbsp;'''In gebruik v.a.''' || {{{Entry}}}
+|-
+|&nbsp;'''Startbanen''' || {{{Runways}}}
+|-
+|&nbsp;'''Terminals''' || {{{Ramps}}}
+|-
+|&nbsp;'''Helipads''' || {{{Heli}}}
+|-
+|&nbsp;'''Omvang''' || {{{size}}}
+|-
+|&nbsp;'''[[Main/nl/Depots|Hangars]]''' || {{{hangars}}}
+|-
+|&nbsp;'''[[Main/nl/Handelsgebied|Handelsgebied]]''' || {{{catchment}}}
+|-
+|-
+|&nbsp;'''Geluid''' || {{{noise}}}
+|-
+|}
+
+|}
+
+<noinclude>== Function ==
+Gebruik deze sjabloon om de basiswaarden van een vliegveld of heliport te tonen.
+== Parameters ==
+* {{{Fullname}}} – Bevat de volledige naam van een vliegveld (bijv. "Stedelijk vliegveld")
+* {{{image}}} – Hier staat de naam van de opgeslagen afbeelding (bijv. [[Main/en/Image:Airport c.PNG|Airport_c.PNG]])
+* {{{imagewidth}}} – Definieer de wijdte van de te tonen afbeelding. Als die niet wordt opgegeven wordt de breedte van de afbeelding genomen in {{{image}}}
+* {{{Entry}}} – Geeft het jaar aan van eerste verschijning
+* {{{Runways}}} – Bevat het aantal beschikbare start- en landingsbanen
+* {{{Ramps}}} – Definieer het aantal parkeerposities voor vliegtuigen
+* {{{Heli}}} – Geeft het aantal helipads
+* {{{size}}} – Beschrijft de omvang van het vliegveld in tegels
+* {{{hangars}}} – Definieert het aantal hangers
+* {{{catchment}}} – Bevat de radius van het handelsgebied
+* {{{noise}}} – Hier wordt het geluidsniveau bewaard</noinclude>
