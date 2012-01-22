@@ -1,0 +1,60 @@
+{{ru/Необходимо сделать|поправить ссылки после перевода соответствующих страниц}}
+[[Translation:Main/en/Development]]{{en/-}}{{en/DevDoc}}
+
+==Работа с исходным кодом==
+[[File:ru/BlackBook.png|left]]
+
+* [[Main/ru/Часто задаваемые вопросы разработчика|Часто задаваемые вопросы разработчика]]
+* [[Main/en/Coding style|Стилистика исходного кода]]
+* [[Main/en/Commit style|Commit Message Style Guide]]
+* [[Main/en/Debugging|Отладка]]
+
+==Аспекты разработки OpenTTD==
+
+===HAL (Hardware Abstraction Layer)===
+* Звуковые эффекты
+* Музыка
+* Графика
+
+===Оконная подсистема===
+* [[Main/en/GUI Style Guide|Визуальное оформление пользовательского интерфейса]]
+* [[Main/en/OpenTTDDevBlackBook/Window/UseWindows|Использование оконной подсистемы]]
+* [[Main/en/OpenTTDDevBlackBook/Window/WindowEvents|События, используемые оконной подсистемой]]
+* [[Main/en/OpenTTDDevBlackBook/Window/Colours|Коды цветов в OpenTTD]]
+* [[Main/en/OpenTTDDevBlackBook/Window/WidgetFocus|Фокус элементов интерфейса]]
+
+===Патчи===
+
+* [[Main/en/OpenTTDDevBlackBook/Settings/AddSetting|HOWTO - Add a patch option]]
+
+===Карты/Сценарии===
+
+* [[Main/en/OpenTTDDevBlackBook/Map/MapArray|Массивы, описывающие карту]]
+* [[Main/en/OpenTTDDevBlackBook/Map/SaveGame|Файлы сохраненных игр]]
+* [[Main/en/Directions|Направления на карте]]
+
+===Симуляция===
+
+* [[Main/en/OpenTTDDevBlackBook/Simulation/Vehicles|Транспортные средства]]
+* [[Main/en/OpenTTDDevBlackBook/Simulation/Orders|Задания]]
+* [[Main/en/OpenTTDDevBlackBook/Simulation/Pathfinding|Поиск пути]]
+* [[Main/en/OpenTTDDevBlackBook/Simulation/Ratings|Рейтинги]]
+* [[Main/en/OpenTTDDevBlackBook/Simulation/Train Acceleration|Динамика поездов]]
+
+===Языки и строки===
+
+* [[Main/en/Strings|Строки в OpenTTD]]
+
+===Многопользовательская игра===
+
+*[[Main/en/OpenTTDDevBlackBook/Network/Desync debugging| HOWTO: Отладка рассинхронизации]]
+
+===NoAI===
+* [[Main/en/OpenTTDDevBlackBook/NoAI/Adding a squirrel function|Добавление функций, доступных из Squirrel-кода]]
+
+==См. также==
+* [[Main/en/Roadmap]] &mdash; дорожные карты
+* [[Main/ru/Недавние и последние события|Свежие изменения]] в дереве SVN
+* [[Main/en/NewGRF TODO]] &mdash; список связанных с NewGRF изменений, требующих реализации
+
+[[Category:ru/Разработка]]
