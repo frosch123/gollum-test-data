@@ -1,0 +1,71 @@
+{{de/Übersetzung|Landscaping|99}}
+[[Translation:Main/en/Landscaping]]{{en/-}}{{tutorial/De}}{{de/Inhaltsverzeichnis}}
+
+'''Landschaftsbau''' ist der Oberbegriff für die Formung der Landschaft in den Szenarios mit Hilfe der Landschaftsbau Werkzeuge, einschließlich Erhöhen, Absenken und Ebnen des Landes.
+
+==Landschaftsbau-Werkzeugleiste==
+Klicke auf die ''Landschaftsbau''-Schaltfläche [[File:en/Landscaping button.png]] in der [[Main/de/Spieloberfläche|Menüleiste]], um die Landschaftsbau-Werkzeugleiste zu öffnen.
+
+[[File:en/Landscaping toolbar.png|none|frame|Die Landschaftsbau Werkzeugleiste]]
+
+Überblick über alle Werkzeuge (von links nach rechts) und was sie bewirken:
+
+{| {{en/Wikitable}}
+|- style="background:#efefef"
+!Schaltfläche
+!width='160'|Funktion
+!Tastenkürzel
+!Beschreibung
+|-
+|[[File:en/Lower land.png]]||'''[[Main/en/#Land absenken|Land absenken]]'''||Q
+|
+|-
+|[[File:en/Raise land.png]]||'''[[Main/en/#Land erhöhen|Land erhöhen]]'''||W
+|
+|-
+|[[File:en/Level land.png]]||'''[[Main/en/#Land ebnen|Land ebnen]]'''||E
+|
+|-
+|[[File:en/Clear title.png]]||'''Gebiet räumen'''||D
+|Räumt ein Feld vollständig. Nicht auf jedes Feld anwendbar. 
+|-
+|[[File:en/Buy land.png]]||'''[[Main/de/Land|Land]] kaufen'''||U
+|Reserviert das Land, verhindert Bebauung durch Städte oder Gegenspieler.
+|-
+|[[File:en/Plant trees.png]]||'''Bäume pflanzen'''||I
+|Öffnet das Menü zum Aufforsten von Bäumen.
+|-
+|[[File:en/Place sign.png]]||'''Platziere [[Main/de/Schild|Schilder]]'''||O
+|Platziert Schilder mit Beschriftungen für den Spieler.
+|}
+
+==Land erhöhen==
+* Wähle das [[File:en/Raise land.png]] Werkzeug und klicke dann auf die Ecke eines Feldes.
+Beachte, dass bei Erhöhung eines Berggipfels auch der Fuß des Berges wächst. Die Kosten entstehen nicht durch die Höhe, sondern durch die Änderung des Volumens. Es sollte vermieden werden Land aus dem Meer zu erhöhen, da es extrem teuer ist und noch junge Firmen ruinieren kann.
+Man kann ein ganzes Gebiet anheben indem man die linke Maustaste gedrückt hält, über das gewünschte Gebiet zieht und loslässt. Zuerst wird der Startpunkt der Auswahl um eine Stufe erhöht, dann wird das ausgewählte Gebiet auf dieselbe Höhe wie der Startpunkt gebracht, es handelt sich hier also um eine Kombination von Erhöhen und Ebnen.
+
+==Land absenken==
+* Wähle das [[File:en/Lower land.png]] Werkzeug und klicke dann auf die Ecke eines Feldes.
+Beachte, dass bei Vertiefung eines Loches auch der Umfang des Loches wächst. Die Kosten entstehen nicht durch die Höhe, sondern durch die Änderung des Volumens. Das Land kann bis zum Meeresspiegel abgesenkt werden. Beachte, das Gebiete auf Meereshöhe überflutungsgefährdet sind und das Land weggespült wird.
+Man kann ebenso ein Gebiet absenken, indem man die Linke Maustaste gedrückt hält und ein Gebiet markiert. Zuerst wird der Startpunkt der Auswahl um eine Stufe abgesenkt, dann wird das ausgewählte Gebiet auf dieselbe Höhe wie der Startpunkt gebracht, es handelt sich hier also um eine Kombination von Absenken und Ebnen.
+
+==Land ebnen==
+Nutze das Ebnen Werkzeug, um ein großes Gebiet zu ebnen.
+
+* Halte die Linke Maustaste am Startpunkt gedrückt. Die Höhe des geebneten Landes entspricht nun der des Startpunktes.
+* Ziehe die Maus nun über das Gebiet, das eingeebnet werden soll.
+[[File:en/Level land before.png|center|none|frame|Ansicht wenn das Gebiet ausgewählt ist.]]
+*Wenn du das Gewünschte Gebiet markiert hast, lasse die Taste wieder los, das Gebiet ist nun eben.
+[[File:en/Level land after.png|center|none|frame|Ansicht nachdem das Gebiet geebnet ist.]]
+*Beachte: Das Ebnen Werkzeug wird so viel Land wie möglich in der Auswahl anheben/absenken. Jede Kachel, deren Höhe mit den einzelnen Werkzeugen zum Erhöhen und Absenken nicht geändert werden kann, wird auch nicht vom Ebnen Werkzeug verändert. Darüber hinaus bleibt jegliche Infrastruktur, jedes Gebäude und Hindernis an seinem Platz, wenn der Bereich geebnet wird.
+
+==Landschaftsbau unter Gebäuden==
+[[File:en/Autoslope.png|right|frame|Erweiterte Einstellungen ''Landschaftsbau unter Gebäuden''.]]
+Hierbei handelt es sich um eine erweiterte Einstellung unter [[Main/de/Konstruktion|Konstruktion]], die die Landschaftsbau Restriktionen wesentlich reduziert und Landschaftsbau unter Objekten erlaubt, wo normalerweise zuerst das Objekt entfernt werden müsste. Sie fügt automatisch Fundamente hinzu oder entfernt sie, wenn nötig.
+{|
+|[[File:en/terraformoff.png|none|thumb|400px|ohne Landschaftsbau unter Gebäuden]]
+|[[File:en/terraformon.png|none|thumb|400px|mit Landschaftsbau unter Gebäuden]]
+|}
+
+{{en/Feature|0.6}}
+[[Category:de/Bauen]]
