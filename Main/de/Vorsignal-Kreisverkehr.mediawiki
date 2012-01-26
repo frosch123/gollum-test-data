@@ -1,0 +1,43 @@
+[[Translation:Main/en/Pre-Signaled Roundabout]]
+{{en/-}}{{de/Kreuzungsmenü}}
+Der '''Vorsignal-Kreisverkehr''' ist eine Kombination verschiedener Ideen.
+Die erste Idee ist vom [[Main/en/Zugdepot bauen/De#Erweiterte Depotkonfigurationen|Vorfahrtsdepot]], welches Vorsignale benutzt, um den Zügen auf der Hauptstrecke Vorfahrt zu geben.
+Die zweite Idee ist vom einfachen [[Main/de/Kreisverkehr|Kreisverkehr]]. Einer der nachteile ist, dass er nur 2 Züge gleichzeitig handhaben kann. Diese leicht größere Version kann 4 Züge handhaben.
+Zusätzlich müssen Züge, die Rechts abbiegen, nicht in den Kreisverkehr reinfahren, sondern sie benutzen äußere Wege. D.h., wenn 4 Züge im inneren Kreis sind, können Züge trotzdem noch abbiegen.
+Der zweite Fehler in einem normalen Kreisverkehr ist, dass ausfahrende Züge keine Vorfahrt vor einfahrenden haben. Indem man den Vorsignal-Trick benutzt (siehe [[Main/en/Zugdepot bauen/De#Erweiterte Depotkonfigurationen|Vorfahrtsdepot]]), kann man Züge bevorzugen, die den Kreisverkehr verlassen. Dies verringert die Möglichkeit von Staus. (Ich bin mir sicher, dass nur ein Stau entsteht, wenn 4 zu lange Züge gleichzeitig in den Kreisverkehr einfahren und alle geradeaus oder nach links fahren wollen.)
+
+[[File:en/PresignaledRoundAbout.png|none|thumb|600px|Vorsignal-Kreisverkehr]]
+
+{{Template:Kreuzungskriterien/De|Gestuft|2|0|0|0.5|0|0|0|0|1|1|2||Ausgefallene Züge blockieren ein Segment bis die gesamte Kreuzung.|
+*Stau ist unwahrscheinlich, aber möglich (große Züge).
+*Einfach anzuangen, Komplexität kann auch später kommen.
+*Komplexe Signale sind schwer richtig hinzubekommen.
+*Fläche: 15 x 15
+}}
+
+Ein zusätzlicher Vorteil ist, dass dies eine Kreuzung ist die für den Anfang leicht gebaut werden kann und dann erweitert werden kann. Zum Beispiel kannst du mit der eckigen Version des normalen Kreisverkehrs anfangen, und es dann später in ein Vorsignal-Kreisverkehr umwandeln. Dies macht es am Anfang sehr billig, und wenn man erst später mehr Geld hat kann man die Arbeit erledigen.
+[[File:en/StartingPresignaledRoundAbout.png|none|thumb|600px|Schleife für den Anfang]]
+
+===Variationen===
+[[File:en/PresignaledRoundAboutVariant.png|none|thumb|600px|Vorsignal-Kreisverkehr (verbessert)]]
+Dies ist etwas schwerer zu bauen, aber es ist einfacher irgendwo zu platzieren.
+
+{{Template:Kreuzungskriterien/De|Gestuft|2|0|0|0.5|0|0|0|0|1|1|2||Ausgefallene Züge blockieren ein Segment bis die gesamte Kreuzung.|
+*Stau ist unwahrscheinlich, aber möglich (große Züge).
+*Einfach anzuangen, Komplexität kann auch später kommen.
+*Komplexe Signale sind schwer richtig hinzubekommen.
+*Fläche: 17 x 17
+}}
+
+[[File:en/No-colide-roundabout-4w.png|none|thumb|600px|Vorsignal-Kreisverkehr (bewiesen)]]
+Diese Kreuzung ist einfach zu bauen. Ein Zug fährt nur dann ein, wenn keine Züge auf den nächsten zwei Stufen sind.
+Es ist bewiesen, dass keine Verkehrsinfarkte (oder Staus) entstehen können. Dieser Beweis wurde mit Petri Nets geführt. [http://en.wikipedia.org/wiki/Image:Trains.png]
+
+{{Template:Kreuzungskriterien/De|Günstig|1|0|0|2.5|0|0|0|0|0|1|2||Ausgefallene Züge blockieren ein Segment bis die gesamte Kreuzung.|
+*Stau ist unwahrscheinlich, aber möglich (große Züge).
+*Einfach zu bauen anzuangen
+*Komplexe Signale sind schwer richtig hinzubekommen.
+*Fläche: 12 x 12
+}}
+
+[[Category:Kreuzung/De]
