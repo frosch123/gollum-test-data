@@ -1,0 +1,62 @@
+{{en/Translation|origin=Advanced Roundabout|from=en|to=de|Percentage=99}}
+
+[[Translation:Main/en/Advanced Roundabout]]
+{{en/-}}{{de/Kreuzungsmenü}}
+Im Gegensatz zum normalen [[Main/de/Kreisverkehr|Kreisverkehr]], ist dieser Kreisverkehr eine "Etage" über der standardmäßigen Höhe. Züge können geradeaus und rechts fahren, ohne den Kreis zu betreten.
+
+Manche Probleme können durch [[Main/en/Signale/De#Vorsignale|Vorsignale]] gelöst werden.
+
+[[File:en/Advanced roundabout.png|center|none|frame|Erweiterter Kreisverkehr]]
+
+{{Template:Kreuzungskriterien/De|Teuer (gestuft)|2|1|0|3|1|0|1|0|1|1|2||Ausgefallene Züge blockieren entweder das eine Gleis oder alle Abbiegungen nach links.|
+*Kann viele Züge von Nord-Ost oder Süd-West handhaben.
+*Strecke teilt sich und nur Abbieger nach links müssen den Kreisverkehr selbst benutzen.
+'''Tipps'''
+*Um Züge, die links abbiegen, die volle Geschwindigkeit fahren zu lassen, könnte man den Kreis vergrößern, aber dies verbraucht viel Platz.
+*Wenn man innen einen Kreis in die andere Richtung baust (natürlich Signale anpassen), ist die Effizienz höher, da Züge nur noch in die richtige Richtung fahren müssen anstatt den ganzen Kreisverkehr zu durchfahren, wie oben.
+*Fläche: 16 x 16
+}}
+
+[[File:en/Flying roundabout.png|center|none|frame|"Fliegender" Kreisverkehr]]
+
+*Fläche: 14 x 14
+
+== Erweiterter Kreisverkehr ohne Infarkte ==
+
+[[File:en/4WayNoLock.png]]
+
+{{Template:Kreuzungskriterien/De|Mittel|2|1|1|2|1|0|1|0|0|1|2||Ausgefallene Züge blockieren nur eine Richtung. (Schlimmster Fall: Innerer Kreis, zwischen zwei Segmenten, blockiert 3 links abbiegende Wege)|
+Pro:
+* Hohe Kapazität
+* Steigungen nur für Linksabbieger und eine Gerade (insgesamt 1 rauf und 1 runter)
+* Hält Linksabbieger, bis andere Gleise frei sind (einfahrend und ausfahrend!)
+
+Contra:
+* Längste durchfahrt-"Signal distance": 4/5
+* Längste Linksabbieger-"Signal distance": 7
+
+
+* Fläche: 26 x 26
+}}
+Die Vorsignal-Logik lässt züge nur in den Kreisverkehr, wenn das nächste und eines der anderen Segmente frei sind. So ist sichergestellt, dass die Kreuzung immer geleert werden kann, falls die Züge komplett in die Segmente passen.
+
+
+== Erweiterter Kreisverkehr ohne Infarkte, Kompakt ==
+
+[[File:en/4WayNoLockSmall.png]]
+
+{{Template:Kreuzungskriterien/De|Mittel|3|1|1|2|1|0|1|0|0|1|2||Ausgefallene Züge blockieren nur eine Richtung. (Schlimmster Fall: Innerer Kreis, zwischen zwei Segmenten, blockiert alle links abbiegenden Wege)|
+Pro:
+* Hohe Kapazität
+* Steigungen nur für Linksabbieger und eine Gerade (insgesamt 1 rauf und 1 runter)
+
+Contra:
+* Längste durchfahrt-"Signal distance": 4/5
+* Längste Linksabbieger-"Signal distance": 7
+
+
+* Fläche: 18 x 18
+}}
+
+
+[[Category:de/Kreuzung]]
