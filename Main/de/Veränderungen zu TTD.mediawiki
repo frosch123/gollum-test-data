@@ -1,0 +1,92 @@
+[[Translation:Main/en/Changes from TTD]]{{en/-}}
+Was gibt es in OpenTTD, was es im Originalspiel Transport Tycoon Deluxe nicht gab?
+
+OpenTTD ist dem Vorbild Transport Tycoon Deluxe von Chris Sawyer nachempfunden und erweitert das Spielerlebnis erheblich. Viele neue Features wurden durch [http://www.ttdpatch.net/ TTDPatch] übernommen und eingeführt, während andere wiederum auch im Original so vorkommen. Hier steht also ein [[Main/de/Vergleich zwischen OpenTTD und TTDPatch|Vergleich zwischen OpenTTD und TTDPatch]].
+
+== Erhebliche Verbesserungen ==
+* Multiple Betriebssysteme - eine native Version für Linux, Windows, Mac OS X, OS/2 und weitere
+* Das [[Main/de/Autorail|Autorail]]-Tool erlaubt Dir, Schienen per Drag & Drop in jede Richtung zu verlegen
+* größere Karte, bis hin zu 2048x2048
+* Realistische Szenarien basierend auf digital erhobenen Karten von Google Earth, eine Beschreibung findet sich [http://www.tt-forums.net/viewtopic.php?f=29&t=27052 hier] (englisch) oder als Word-Dokument [http://www.tt-forums.net/download/file.php?id=92633 hier]
+* [[Main/de/Kanal|Kanäle]]/[[Main/de/Schleuse|Schleusen]] - sie erlauben dem Spieler, Wasserwege zu erschaffen, die sich über Landmassen erstrecken und Schiffe darauf fahren zu lassen
+* Größere Bahnhöfe - Bahnhöfe können länger sein und aus mehreren Bahnsteigen bestehen
+* [[Main/de/Ungleichmäßige Bahnhöfe|Ungleichmäßige Bahnhöfe]] - Bahnhöfe können versetzt errichtet werden
+* Die Möglichkeit [[Main/de/Bahnhof verbinden|Bahnhöfe]] (der selben Breite oder Länge) zu verbinden - beim Bau eines Bahnhofs neben einem anderen desselben Typs wird ein einzelner, größerer Bahnhof geschaffen
+* [[Main/de/Wegpunkt|Wegpunkte]] - ein spezieller Gleistyp, der auf sich verzweigenden Routen gebaut werden kann, um einen Zug zu zwingen, eine bestimmte Abzweigung zu nutzen, um sein Ziel zu erreichen
+* [[Main/de/Mammutzug|Mammutzüge]] - Züge können wesentlich länger gebaut werden
+* [[Main/de/Mehrfach-Loks|Mehrfach-Loks]] - Züge können mehr als eine Lokomotive haben, was die Geschwindigkeit beim Ziehen schwerer Lasten oder an Steigungen verbessert
+* [[Main/de/Bau auf Steigungen|Bau auf Steigungen]] und an Küsten - es ist nun möglich, auf Steigungen oder an Küsten zu bauen; die entsprechende Kachel wird für einen gewissen Preis auf eine Ebene angehoben
+* Gehe zu Depot-Auftrag - Erlaubt, einen Auftrag in die Liste für ein Fahrzeug einzufügen, damit dieses zum Depot zurückkehrt
+* [[Main/de/Lange Brücken|Längere Brücken]] - Brücken können über größere Distanzen erbaut werden... natürlich zu einem entsprechenden Preis
+* Höhere Brücken - Brücken können größere Höhenunterschiede überspannen und erlauben dadurch komplexere Netzwerke
+* Drei neue [[Main/de/Brücken|Brücken]] - sie erlauben größere Geschwindigkeiten für moderne Züge
+* [[Main/de/Pre-Signale|Pre-Signale]] ({{keypress|Strg}}+Klick auf bestehende Signale) - wie in [http://www.ttdpatch.net/ TTDPatch] - spezielle Signaltypen zur Errichtung komplexer Streckenlayouts (normalerweise genutzt, um mehrere Bahnsteige zu einer Linie zu verbinden)
+* [[Main/de/Formsignale|Formsignale]] ({{keypress|Strg|D}} zum Bau) - wie in [http://www.ttdpatch.net/ TTDPatch].
+* [[Main/de/Gemeinsame Aufträge|Gemeinsame Aufträge]] und [[Main/de/Auftrag kopieren|Aufträge kopieren]] ("Gehe zu" auf anderes Fahrzeug zum Kopieren, {{keypress|Strg}}+"Gehe Zu" zum Teilen) - Fahrzeuge können nun Aufträge mit anderen Fahrzeugen teilen und Aufträge können durch einfaches Klicken auf andere Fahrzeuge kopiert werden, um Zeit zu sparen
+* [[Main/de/Kreuzende Tunnel|Kreuzende Tunnel]] - Tunnel können nun auf jedem Untergrund gekreuzt werden
+* Mehrere Bäume auf einer Kachel errichten
+* [[Main/de/Behörde bestechen|Stadtverwaltung bestechen]] - wenn die Stadtverwaltung nicht gut auf eine Firma zu sprechen ist, kann diese bestochen werden; zu einem hohen Preis und mit dem Risiko, erwischt zu werden
+* stark verbessertes [[Main/de/Netzwerk-Grafik|Netzwerk- und Internetspiel]] via TCP/IP mit Server-Listen, Kick und Ban, Dedicated Servern, Schutz vor Cheats und Chat
+* das [[Main/de/KI:Hauptseite|KI-Netzwerk]] erlaubt es, neue benutzererstellte KIs zu erschaffen. Die alte (schummelnde) KI wurde entfernt
+* Drei neue Flughafen-Typen ([[Main/de/Metropol-Flughafen|Metropol-]] im Jahr 1980, [[Main/de/Internationaler Flughafen|Internationaler]] im Jahr 1990 und [[Main/de/Interkontinentalflughafen|Interkontinentalflughafen]] im Jahr 2002)
+* [[Main/de/Durchfahrts-Haltestelle|Durchfahrtshaltestellen]] - neuer Haltestellentyp für Fahrzeuge. Ähnlich der wirklichen Haltestelle erlauben es diese Haltestellen Fahrzeugen, Passagiere und Fracht einfach beim Halt am Straßenrand zu laden/entladen
+* [[Main/de/Straßenbahn|Straßenbahnen]] - neuer Typ an Straßenfahrzeugen, welche spezielle Schienen, Haltestellen und Depots benötigen
+
+== Verbesserte Bedienung ==
+*[[Main/de/Schienen-Upgrade|Schienen-Upgrade-Tool]] für Bahn, Einschienenbahn und Magnetschwebebahn - erlaubt es, einfach zwischen den verschiedenen Gleistypen zu wechseln
+* Bau von Bahnhöfen mit Drag & Drop - Bahnhöfe lassen sich einfach mit Drag & Drop an der gewünschten Stelle in der gewünschten Größe errichten
+* [[Main/de/Bau während Pause|Bau während Pause]] - ein optionaler Patch, welcher den Bau im Spiel erlaubt, während dieses pausiert ist
+* Das Mausrad kann (in Windows und Mac OS X) in Menüs zum Scrollen und im Spiel herein-/hinauszoomen benutzt werden
+* Autoscroll (nach links/rechts) - wenn man die Ecke des Bildschirms erreicht, bewegt sich der Kartenausschnitt
+* größeres Zerstören-Tool
+* Bau von Bäumen auf Kacheln
+* [[Main/de/Gesamten Zug verkaufen|Gesamten Zug verkaufen]] auf dem Symbol im Depot - Verkauf des gesamtem Zuges statt nur einzelner Waggons
+* Kostenschätzung mit {{keypress|Shift}} - {{keypress|Shift}} gedrückt halten und für fast jede Aktion werden einem die Kosten vor dem Bau angezeigt
+* Gleise und Straßen durch halten von {{keypress|Strg}} entfernen
+* das Firmenhauptquartier kann verlegt werden (für 1% des Firmenwerts)
+* Autosave zu regelmäßigen Zeitpunkten
+* [[Main/de/Auto-Erneuerung|Auto-Erneuerung]] erlaubt es, alte Fahrzeuge zu ersetzen
+* das Entfernen einzelner Bahnsteige oder gar Kacheln ist möglich
+
+== Neue Optionen ==
+* "Zug nicht warten"-Option
+* [[Main/de/Inflation abschalten|Inflation abschalten]]-Option
+* [[Main/de/Zug voll beladen|Zug voll beladen]]-Option, wie bei [http://www.ttdpatch.net/ TTDPatch] - der Zug verlässt den Bahnhof erst, wenn er komplett beladen ist
+* "Wähle Güter"-Option
+* "Mehrere gleiche Industrien beieinander"-Option
+* "Mehrere Industrien pro Stadt"-Option
+* Benachrichtigung, wenn ein Zug/Fahrzeug unprofitabel ist
+* Benachrichtigung für zerstören/s Zug/Fahrzeug
+* die Möglichkeit, das Startdatum zu setzen, möglich in den Formaten jjjj, jjjjmm, jjjjmmtt
+* [[Main/de/KI-Fahrzeuge abschalten|Bestimme]], welche Fahrzeuge die KI benutzt
+* die Möglichkeit, die Schneefallhöhe auf einer Karte festzulegen
+* das Standard-Wartungsintervall für Fahrzeuge kann verändert werden
+* die maximale Anzahl an Fahrzeugen pro Spieler kann verändert werden
+* Neuer Wegfinde-Algorithmus für Züge
+* [[Main/de/Autoslope|Autoslope]]
+
+== Grafik-/Programmfeatures ==
+* Screenshots in den Formaten .bmp, .png oder .pcx (Auswahl im Menü Spieloptionen)
+* Mehr Währungen (inklusive Euro seit 2002 und einer eigenen, frei wählbaren Währung)
+* Städtenamen in mehr Sprachen
+* Fenstermodus oder Vollbildmodus mit Wahl der Auflösung
+* angeheftete Fenster (diese werden nicht geschlossen, außer bei einem Klick auf "x") und andockende Fenster (Fenster legen sich selbst nebeneinander an, wenn sie gezogen werden)
+* Fenster in der Größe veränderbar
+* Bildwiederholungsrate kann konfiguriert werden
+* Städteverzeichnis sortierbar
+* [[Main/de/Erweiterte Einstellungen|Erweiterte Einstellungen]]
+* Mit {{keypress|Strg}}+Klick auf Geld leihen/zurückzahlen wird der komplette Betrag beglichen
+* [[Main/de/Farbige Zeitung|Farbige Zeitungen]] ab einem bestimmten Datum
+* Spielbeschleunigung (durch "Fast-Forward"-Schaltfläche oder {{keypress|Tab}})
+* zufällige Baumtypen pflanzen
+* [[Main/de/Hotkeys|Hotkeys]] für fast alle Aktionen
+* [[Main/en/Internationalization|Übersetzungen]] für viele Sprachen, jederzeit im Spiel änderbar
+* [[Main/de/NewGRF|neue Grafiken]]
+* [[Main/de/Zusätzliche Ansicht|Zusätzliche Ansichten]] erlauben das Betrachten jedes beliebigen Punktes auf der Karte
+* Fahrzeuggewinne sind farblich markiert
+* ungültige Aufträge in einer Auftragsliste sind in rot markiert und verursachen eine Warnung
+* Option für prozentbasierte Wartungsintervalle. Sende ein Fahrzeug zum Depot, wenn es X% seiner Zuverlässigkeit verloren hat
+* Alle in TTDLX gespeicherten Spiele werden unterstützt (.SS1, .SV1, .SV2, .SV0, .SS0)
+* Firmenbewertungstabelle
+
+Die Details aller Veränderungen lassen sich unter der [[Main/de/Versionsgeschichte von OpenTTD|Versionsgeschichte von OpenTTD]] einsehen.
