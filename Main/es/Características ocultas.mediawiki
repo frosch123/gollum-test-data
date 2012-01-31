@@ -1,0 +1,93 @@
+[[Translation:Main/en/Hidden features]]{{en/-}}{{es/Tabla de contenido}}
+
+Hay muchas características en OpenTTD sin botones en la interfaz gráfica, sin fácil acceso para operar. Para los usuarios más inexpertos, estas son las '''características ocultas'''.
+
+Aquí está la lista de las características ocultas, que son útiles, pero no necesariamente evidentes, incluso para los jugadores experimentados. Siéntase libre de completar y ampliar esta lista.
+
+==Características con la tecla Ctrl==
+La tecla "Ctrl" puede ser muy útil. Mantenerla presionada mientras hace clic puede hacer las tediosas tareas mucho más rápidas.
+
+{| {{en/Wikitable}}
+|- style="background:#efefef"
+!Acción!!Comando
+|-
+|Pedir/pagar el máximo posible de un préstamo||En la ventana de Finanzas, haga CTRL+clic en botón "Pedir préstamo" o "Pagar préstamo".
+|-
+|[[Main/en/Órdenes/Es#Copiar órdenes|Copiar órdenes]]||En la ventana órdenes, clique botón "Ir a", clique en el vehículo con las órdenes que quiere copiar.
+|-
+|[[Main/en/Órdenes/Es#Compartir órdenes|Compartir órdenes]]||En la ventana órdenes, clique botón "Ir a", CTRL+clic en el vehículo con las órdenes que quiere compartir.
+|-
+|Clone un vehículo con [[Main/en/Órdenes/Es#Compartir órdenes|órdenes compartidas]]||Ventana "Depósito", Botón "Clonar vehículo", CTRL+clic en el vehículo con las órdenes que quiere compartir.
+|-
+|Mover varias partes de un tren a la vez en al ventana depósito||Ventana "Depósito", mueva el vagón manteniendo pulsado CTRL.
+|-
+|Centrar la vista en el destino de una orden||Ventana "Órdenes", CTRL+clic en una órden.
+|-
+|Centrar la vista en el destino actual de un vehículo||Ventana "Vehículo", CTRL+clic en la barra de estado (botón de arrancar y parar)
+|-
+|Arrancar o parar vehículo (nightly-r19714)|| CTRL+clic en el vehículo en el mapa para arrancar o parar.
+|-
+|Ver la situación en una ventana de punto de vista extra||CTRL+clic en el botón "Sitio" para ver la situación en una nueva ventana de punto de vista extra en lugar de centrar la vista en la ventana principal.
+|-
+|Colocar [[Main/en/Señales/Es#Señales mecánicas|señales mecánicas]]||Ventana "Construcción de ferrocarril", botón "Construir señales", CTRL+clic en vía de ferrocarril normal.
+|-
+|Colocar [[Main/en/Señales/Es#Señales previas|señales previas]]||Ventana "Construcción de ferrocarril", botón "Construir señales", CTRL+clic en una señal existente.
+|-
+|Colocar varias [[Main/en/Señales/Es#Construir señales de ferrocarril|señales]]||Ventana "Construcción de ferrocarril", botón "Construir señales", CTRL+clic y arrastrar sobre vías de ferrocarril, solo tiene que arrastrar una casilla y se completará toda la línea. También sirve para borrar activando el botón "retirar".
+|-
+|Colocar estaciones pegadas pero sin unir||Mantenga pulsada la tecla CTRL y coloque una estación pegada a otra ya existente para crear una nueva en lugar de ampliar la existente. Necesita activar la opción avanzada [[Main/en/Opciones avanzadas/Estaciones/Es#Unir estaciones de tren unas junto a otras|"Unir estaciones de tren unas junto a otras"]].
+|-
+|Colocar una estación unida a otra existente||Mantenga pulsada la tecla CTRL mientras construye una estación, aparecerá una lista de las estaciones cercanas, elija una y su estación se unirá a ella. También puede "construir una estación separada".
+|-
+|Quitar desierto en el editor de escenarios||Herramienta "Generación de paisaje", botón "definir área desértica", CTRL+clic cambia el desierto por césped.
+|-
+|Girar vehículo||CTRL+clic en el vehículo en la ventana de depósito(¿no funciona?).
+|-
+|Realizar mantenimiento||CTRL+clic en el botón "enviar al depósito" en la ventana del vehículo.
+|-
+|Sigue al vehículo en la vista principal||CTRL+click en el botón "centrar vista en vehículo" en la ventana del vehículo (solo con zoom normal)
+|-
+|Función retirar||Herramientas "Construcción de carreteras" o "Construcción de ferrocarril", mantenga pulsado CTRL para cambiar "consruir" por "retirar" (no funciona con las señales, use R para eso).
+|-
+|Bloquear transparencia||Botón "Opciones", "Opciones de transparencia", CTRL+clic en cualquier botón de la ventana "Opciones de transparencia" bloquea esa opción y el botón 'x' no la afectará (permanecerá en su estado)
+|-
+|Mostrar horarios en lugar de órdenes||CTRL+clic en el botón órdenes
+|-
+|Mostrar la lista de un tipo de vehículos pero sin que aparezca la lista de grupos||CTRL+clic cuando abra la lista de vehículos (trenes, vehículos de carretera, aeronaves o barcos) de un jugador.
+|-
+|Quitar un cartel||CTRL+clic en el cartel
+|-
+|Construir el último tipo de puente construido (si es posible)||CTRL + construir puente
+|-
+|Modificadores de órdenes||Ventana "órdenes", botón "Ir a" Pulse CTRL mientras clique en una...
+*estación, para crear una orden de "carga completa de cualquier carga" automáticamente
+*depósito, para crear una orden de "mantenimiento en el depósiro (si es necesario)" (en lugar de "ir a depósito")
+*punto de ruta, para crear una orden "ir sin paradas vía" (o la opción contraria a la que esté activada por defecto en "Opciones avanzadas", "Vehículos", [[Main/en/Opciones avanzadas/Vehículos/Es#Nuevas órdenes son 'sin parada' por defecto|"Nuevas órdenes son 'sin parada' por defecto"]]
+|-
+|Rellenar automáticamente de forma no destructiva||Presione CTRL mientras pulsa el botón de relleno "automático" (en la ventana de "horarios") 
+|-
+|Inicio rápido de nuevo juego||Presione CTRL mientras pulsa el botón de "Nuevo juego" en el menú principal para iniciar directamente un juego sin abrir la ventana "Generación de mundo"
+|}
+
+=Más características=
+{| {{en/Wikitable}}
+|- style="background:#efefef"
+!Acción!!Descripción
+|-
+|Autocompletar Chat||Utilice el tabulador para desplazarse por los nombres de los jugadores y de las ciudades
+|-
+|Ventana Chat||Mayúsculas+Intro (Mayúsculas+T) envía un mensaje a todos los jugadores, CTRL+Intro (CTRL+T) envía un mensaje a todos los compañeros de equipo y Intro (T) es personalizable.
+|-
+|Cancelar construir||Cuando hace clic-arrastrar para crear un objeto pero está en un lugar equivocado, se construirá cuando suelte el botón del ratón. Pero si pulsa antes de soltar el botón del ratón la tecla ESC se cancelará la construcción.
+|-
+|Coste estimado||Mantenga pulsada la tecla Mayúsculas mientras construye cualquier cosa, en lugar de construirse aparece un mensaje. Funciona en casi todas partes. También le permite conocer una estimación de ingresos por vender/eliminar construcciones pulsando Mayúsculas+CTRL (p.e. para eliminar un tramo de vías construido).
+|-
+|Ver situación en el mapa pequeño||Después de haber usado un botón "sitio" para desplazar la ventana principal, si quiere desplazar también el mapa pequeño a ese punto, vuelva a pulsar el botón "sitio".
+|}
+
+* La rueda de ratón permite desplazarse por los listados y hacer zoom en el mapa.
+* Actualizar puente: Construya un nuevo puente sobre el viejo para actualizarlo. Pero tenga en cuenta que no se puede cambiar el tipo, por ejemplo de carretera a ferrocarril, de esta forma. Si está actualizando un puente de un pueblo el nuevo puente debe permitir una velocidad mayor, pero por lo demás puede ser como quiera.
+* [[Main/es/Depurar gráficos NewGRF|Herramientas de desarrollo NewGRF]] (solo nightly)
+* Para desarrolladores de IA: [[Main/en/AI:Necesita saber/Es#Romper mensaje de registro|Romper mensaje de registro]] (solo nightly)
+
+[[Category:es/Juego]]
