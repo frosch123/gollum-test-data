@@ -1,0 +1,94 @@
+[[Translation:Main/en/Hidden features]]{{en/-}}{{fr/Table des matières}}
+
+Il y a de nombreuses fonctionnalités dans OpenTTD sans bouton d'interface ou d'accès facile pour les mettre en œuvre. Pour les joueurs moins expérimentés, ce sont des '''fonctionnalités cachées'''.
+
+Voici une liste des fonctionnalités cachées, qui sont utiles, mais pas forcément évidentes, même pour les joueurs expérimentés. Soyez libres de compléter cette liste.
+
+Cette page ne liste pas les [[Main/fr/Raccourcis clavier|raccourcis clavier]]; voyez là pour cette information.
+
+==Fonctionnalités avec Ctrl==
+La touche Ctrl peut être très utile. La maintenir appuyée tout en cliquant peut accélérer des tâches fastidieuses.
+
+{| {{en/Wikitable}}
+|- style="background:#efefef"
+!Action!!Commande
+|-
+|Emprunter/Rembourser la somme maximale||Fenêtre des finances -> Ctrl + clic du bouton Emprunter/Rembourser
+|-
+|[[Main/en/Ordres/Fr#Copier des ordres|Copier des ordres]]||Fenêtre des ordres -> Aller à -> Clic sur un véhicule
+|-
+|Assigner des [[Main/en/Ordres/Fr#Ordres partagés|ordres partagés]]||Fenêtre des ordres -> Aller à -> Ctrl + clic sur un véhicule
+|-
+|Cloner un véhicule avec des [[Main/en/Ordres/Fr#Ordres partagés|ordres partagés]]||Fenêtre de dépôt -> Cloner un véhicule -> Ctrl + clic sur un véhicule
+|-
+|Déplacer plusieurs parties de train dans un dépôt||Fenêtre de dépôt -> Ctrl + déplacer un wagon
+|-
+|Voir l'emplacement d'un ordre||Fenêtre des ordres -> Ctrl + clic sur un ordre
+|-
+|Voir la destination actuelle d'un véhicule (r19216 / 1.0)||Fenêtre du véhicule -> Ctrl + clic sur la barre de statut Démarrer/Arrêter
+|-
+|Démarrer/Arrêter un véhicule (r19714 / 1.1)|| Ctrl + clic sur le véhicule sur la carte pour le démarrer/l'arrêter
+|-
+|Voir un emplacement dans une vue||Ctrl + clic sur un bouton d'emplacement montre celui-ci dans une nouvelle vue plutôt que de faire défiler la vue principale jusque-là
+|-
+|Placer des [[Main/en/Signaux/Fr#Semaphores|sémaphores]]||Construction ferroviaire -> Construire des signaux -> Ctrl + clic sur une voie ferrée rectiligne
+|-
+|Placer des [[Main/en/Signaux/Fr#Signaux dépendants|pré-signaux]]||Construction ferroviaire -> Construire des signaux -> Ctrl + clic sur un signal déjà existant
+|-
+|Auto-complétion de [[Main/fr/Signaux|signaux]]<br/> (0.6.0)||Construction ferroviaire -> Construire des signaux -> Ctrl + tirer le long d'une voie ferrée droite. Fonctionne aussi pour les supprimer.
+|-
+|Placer des stations adjacentes||Maintenir Ctrl et placer une station à côté d'une autre existante pour en créer une au lieu d'agrandir l'existante. Nécessite que l'option [[Main/en/Options avancées/Stations/Fr#Autoriser la construction de stations adjacentes|Stations adjacentes]] soit positionnée.
+|-
+|Joindre avec une station existante<br/> (r14919 / 0.7.0)||Maintenir Ctrl enfoncée tout en construisant une gare pour obtenir une liste des gares voisines à choisir pour que la nouvelle station soit jointe avec. Vous pouvez toujours choisir de créer une nouvelle gare (adjacente).
+|-
+|Supprimer le désert dans l'éditeur de scénario||Aménagement de terrain -> Outil désert -> Ctrl + clic sur une case
+|-
+|Tourner un véhicule||Ctrl + clic sur un véhicule dans la fenêtre de dépôt [cela ne marche pas?]
+|-
+|Maintenance automatique||Ctrl + clic sur l'icône d'aller au dépôt
+|-
+|Suivre un véhicule||Ctrl + clic sur "Centrer sur le véhicule" dans la fenêtre du véhicule (en zoom normal uniquement)
+|-
+|Fonction de suppression||Outil de construction routière/ferroviaire -> Maintenir Ctrl pour basculer la suppression (sauf pour les signaux - utilisez R pour cela).
+|-
+|Verrouiller la transparence<br/> (0.6.0)||Paramètres de transparence -> Ctrl + clic sur le bouton pour verrouiller l'option de transparence ('x' ne basculera plus, désormais)
+|-
+|Montrer la table des horaires plutôt que les ordres||Ctrl + clic sur le bouton des ordres
+|-
+|Montrer la fenêtre de groupe de véhicules d'un autre type que celui par défaut||Maintenir Ctrl en ouvrant la liste des trains/véhicules routiers/avions/bateaux d'un joueur
+|-
+|Supprimer vos propres signes<br/> (r13501 / 0.6.2)||Ctrl + clic sur le signe
+|-
+|Construire le dernier type de pont si possible<br/> (r14805 / 0.7.0) ||Ctrl + construire un pont
+|-
+|Modificateurs des ordres<br/> (r14827 / 0.7.0) ||Fenêtre des ordres -> Aller à -> Maintenir Ctrl tout en cliquant sur un...
+*station pour créer automatiquement un ordre "Chargement complet par un seul type"
+*dépôt pour créer un ordre "Maintenance au dépôt" (au lieu de "Aller au dépôt")
+*point de passage pour utiliser l'autre option sans arrêt que celle spécifiée par défaut dans les [[Main/en/Options avancées/Véhicules/Fr#Les nouveaux ordres sont 'sans-arrêt' par défaut|options avancées]]
+|-
+|Auto-remplissage non destructif de la table des horaires<br/> (r14592 / 0.7.0) || Maintenir Ctrl en cliquant sur un bouton d'auto-remplissage
+|-
+|Démarrer rapidement un nouveau jeu<br/> (r15690 / 0.7.0)||Maintenir Ctrl appuyé en cliquant sur "Nouveau jeu" dans le menu principal pour démarrer directement un jeu sans ouvrir la fenêtre "Création du monde"
+|}
+
+==D'autres fonctionnalités==
+{| {{en/Wikitable}}
+|- style="background:#efefef"
+!Action!!Description
+|-
+|Auto-complétude des discussions||Utilisez Tab pour basculer entre les noms de joueur et de ville
+|-
+|Fenêtre de discussion||Shift+Entrée (Shift+T) envoie un message à tous les joueurs, Ctrl+Entrée (Ctrl+T) envoie un message à tous les coéquipiers, et Entrée (T) est personnalisable
+|-
+|Annuler une construction||Quand vous cliquez et tirez pour construire un objet, mais à un mauvais emplacement, il sera construit quand vous relâcherez le bouton de la souris. À la place, gardez le bouton enfoncé et appuyez sur Esc pour annuler la construction.
+|-
+|Estimation de coût||Maintenez la touche Shift enfoncée en effectuant une action. Fonctionne à peu près partout. Vous permet aussi d'annuler une construction si vous avez déjà cliqué (par ex. en construisant une voie au mauvais endroit, appuyez simplement sur Shift et relâchez le bouton de la souris).
+|-
+|Voir un emplacement dans la petite carte||Après avoir utilisé le bouton d'emplacement pour faire défiler la fenêtre principale vers cet endroit, cliquez de nouveau pour faire défiler la petite carte vers le même endroit.
+|}
+
+* La roulette de la souris fait défiler les listes ou zoome sur la carte
+* Mises à jour de ponts: Construisez un nouveau pont par-dessus un ancien pour l'améliorer. Vous ne pouvez pas modifier son type, par ex. de route à voir ferrée, ainsi. Si vous améliorez un pont de ville, le nouveau pont doit avoir une vitesse maximale supérieure; à part cela, il peut être ce que vous voulez (0.6.0).
+* [[Main/fr/Débogage de NewGRF|Outils de développement NewGRF]] (versions nocturnes uniquement)
+* Pour les développeurs d'I.A.: [[Main/en/IA:A savoir/Fr#Césure dans un message de log|Césure dans un message de log]] (versions nocturnes uniquement)
+[[Category:fr/Jouer]]
