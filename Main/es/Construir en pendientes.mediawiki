@@ -1,0 +1,35 @@
+[[Translation:Main/en/Build on slopes]]
+[[File:en/build-on-slopes.png|center|frame|right|250px|Un pequeño complejo de estaciones de montaña con la opción de [[Estaciones_no-uniformes/Es|estaciones no uniformes]] activada.]]
+'''Construir en pendientes''' es una opción que hace que la mayoría de las infraestructuras (estaciones y vías de comunicación como vías, carreteras, etc.) se puedan construir con una diferencia de una altura respecto del terreno. Esto es equivalente a construir [http://www.wikipedia.org/wiki/es:muro de contención muros de contención] en la vida real. 
+
+== Descripción ==
+
+Sin esta opción las posibilidades disponibles para la construcción en pendientes (en laderas de montañas, costas, pequeños baches, huecos en el terreno) son muy limitadas: Únicamente se puede construir en paralelo a la pendiente, en cualquier otra dirección está prohibido.
+
+Con esta opción activada, tiene más posibilidades a la hora de construir en pendientes:
+* Las carreteras se pueden construir perpendiculares a la ladera o a la costa.
+* Las vías se pueden construir en cualquier dirección respecto de la ladera o de la costa, a excepción de tramos que tienen su final en el borde en el que están los cimientos.
+* Los depósitos de trenes y de vehículos de carretera, así como las estaciones de autobús y las estaciones de carga para camiones se pueden construir en cualquier dirección, excepto hacia abajo.
+* Las estaciones de ferrocarril (como en la primera imagen) se pueden construir perpendicularmente a una ladera u orilla, es decir, que la inclinación sea la misma a lo largo de toda la estación.
+* Los aeropuertos, helipuertos, la sede de la empresa (y los faros y transmisores en el editor de escenarios) se pueden construidos sobre una pendiente, siempre el desnivel máximo sea de una altura.
+* Todas las vías de transporte, vías de tren ([[Main/es/Ferrocarril|ferrocarril]], [[Main/es/Monorraíl|monorraíl]] y [[Main/es/MagLev|levitación magnética]]) y estaciones se pueden construir sobre los huecos del terreno con un máximo desnivel de una altura.
+* Los puentes se pueden construir en cualquier sitio del mapa del juego y pueden salvar desniveles mayores siempre que la casilla del principio y del final no superen el desnivel de una altura.
+
+Dado que actualmente la IA no es capaz de utilizar correctamente esta característica, está deshabilitada para ella.
+
+El efecto secundario positivo de esta opción es que ahora se pueden construir estaciones con zonas a distintos niveles. Sólo tiene que construir los andenes de las estaciones por separado, por desniveles (por ejemplo puede construir diferentes estaciones, unidas, en la misma ladera de montaña a distintos niveles). Es posible que necesite activar también la opción avanzada [[Main/es/Estaciones no-uniformes|estaciones no uniformes]] para poder disfrutar completamente de esta opción.
+
+== Pendientes más pronunciadas ==
+Desde la versión '''r5864''' (OpenTTD 0.5.0) es posible construir en laderas que están inclinadas totalmente. La vía se puede construir de arriba a abajo o junto a la parte superior o inferior, pero no ambas a la vez.
+[[File:en/Steeperslopesexample.png|center|frame|Un ejemplo de los diferentes métodos de construcción.]]
+
+== Uso ==
+Esta opción está por defecto activada. Puede desactivarla en "Opciones avanzadas", "Construcción", el menú de opciones avanzadas [[Main/en/Opciones avanzadas/Construcción/Es#Permitir la construcción en cuestas y orillas|"Permitir la construcción en cuestas y orillas"]] o editar el archivo de configuración del programa [[Main/es/openttd.cfg|openttd.cfg]] (con el bloc de notas por ejemplo) y escribir el código:
+
+<pre>
+[construction]
+build_on_slopes = false
+</pre>
+
+[[Category:es/Configuración y preferencias]]
+[[Category:es/Construcción]]
