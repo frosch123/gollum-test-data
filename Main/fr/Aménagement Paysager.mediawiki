@@ -1,0 +1,89 @@
+[[Translation:Main/en/Landscaping]]{{en/-}}{{fr/Tutoriel}}{{fr/Table des matières}}
+
+L' '''Aménagement paysager''' se rapporte à la modification intentionnelle des aspects visibles du paysage, notamment via la modification du relief et de la végétation.
+
+== Manipulation du paysage==
+Pour afficher la barre d'outil, appuyez sur le bouton d'aménagement du paysage [[File:en/Landscaping button.png]] dans la [[Main/en/Game interface|barre de menu]]. Une fois cliquée, la barre d'outils de manipulation du paysage apparaît.
+[[File:fr/Landscaping toolbar.png|none|frame|Barre de manipulation du paysage]]
+
+==Qu'est-ce que tous ces boutons font ?==
+Les boutons s'expliquent d'eux-même. De la gauche vers la droite:<br>
+
+{| {{en/Wikitable}}
+|- style="background:#efefef"
+!width='40'|Bouton
+!width='150'|Action
+!|Raccourcis
+!|Description
+|-
+|[[File:en/Clear title.png]]
+|'''Bouton suppression'''
+|D
+|Supprime le contenu d'une case
+|-
+|[[File:en/Lower land.png]]
+|'''Bouton d'abaissement de terrain'''
+|Q
+|
+|-
+|[[File:en/Raise land.png]]
+|'''Bouton d'élevation de terrain'''
+|W
+|
+|-
+|[[File:en/Level land.png]]
+|'''Bouton de nivellement''
+|E
+|
+|-
+|[[File:en/Buy land.png]]
+|'''Bouton d'achat de terrain'''
+|U
+|
+|-
+|[[File:en/Plant trees.png]]
+|'''Bouton de plantation d'arbres'''
+|I
+|Ouvre la barre de plantation d'arbres
+|-
+|[[File:en/Place sign.png]]
+|'''Bouton d'ajout de [[Main/en/sign|Panneaux]]
+|O
+|
+|}
+
+==Élever le terrain==
+* Sélectionnez l'outil [[File:en/Raise land.png]] puis cliquez sur le coin d'une case.
+Soyez attentif au fait que, lorsque vous élevez le haut d'une montagne, la base va aussi s'agrandir. Le prix d'un changement n'est pas en rapport avec la hauteur, mais avec le volume. Évitez d'élever le terrain depuis la mer, c'est extrêmement cher et peu mener les jeunes compagnies à la banqueroute.
+Vous pouvez aussi élever une zone en faisant un cliquer-glisser avec votre souris. Premièrement, la case de départ de la sélection est élevée d'un cran, puis la sélection est nivelée pour s'harmoniser avec le bord de départ. C'est donc tout simplement une combinaison de l'outil d'élévation puis de nivellement.
+
+==Abaisser le terrain==
+* Sélectionnez l'outil [[File:en/Lower land.png]] puis cliquez sur le coin d'une case.
+Le relief peut être abaissé jusqu'au niveau de la mer. Attention : les terrains au niveau de la mer sont susceptibles d'être inondées, ce qui entraîne leur disparition sous l'eau.
+Il est possible d'abaisser une zone en faisant un cliquer-glisser avec votre souris. Premièrement, la case de départ de la sélection est baissée d'un cran, puis la sélection est nivelée pour s'harmoniser avec le bord de départ. C'est donc tout simplement une combinaison de l'outil d'élévation puis de nivellement.
+
+==Nivellement==
+Utilisez le nivellement pour mettre au même niveau une zone entière de terrain.
+
+*Cliquez et maintenez appuyé le bouton de la souris à l'endroit d'où vous souhaitez commencer. L'altitude de nivellement sera l'altitude du point sur lequel vous avez commencé votre clic.
+
+*Glissez le pointeur de la souris pour sélectionner la surface à niveller.
+[[File:en/Level land before.png|center|none|frame|Vue lors de la sélection d'une zone à niveller]]
+
+*Lorsque votre sélection vous satisfait, relâchez le bouton de la souris et la surface sera nivellée.
+[[File:en/Level land after.png|center|none|frame|Vue après le nivellement]]
+
+*Notez que l'outil de nivellement ne va modifier les terrains dans la zone sélectionnée que si cela est possible à l'aide des outils d'élévation ou d'abaissement. En particulier, les structures, infrastructures et obstacles ne sont pas affectés par le nivellement.
+
+*Notez que vous pouvez niveller en diagonal en maintenant CTRL lors de la sélection.
+
+==Autonivellement==
+[[File:en/Autoslope.png|right|frame|Paramétrage avancé ''Autonivellement'']]
+C'est un paramètre avancé sous [[Main/fr/Construction|Construction]] qui réduit notablement les restrictions d'aménagement du paysage et vous permet de niveler sous des objets, alors que vous devriez normalement d'abord les supprimer. Il ajoute et supprime également de façon automatique les fondations, quand c'est nécessaire.
+{|
+|[[File:en/terraformoff.png|none|thumb|400px|Sans autonivellement]]
+|[[File:en/terraformon.png|none|thumb|400px|Avec autonivellement]]
+|}
+
+{{fr/Disponibilité|0.6}}
+[[Category:fr/Construction]]
