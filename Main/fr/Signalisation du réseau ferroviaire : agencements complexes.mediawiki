@@ -1,0 +1,43 @@
+[[Translation:Main/en/Advanced path signal layouts]]
+Cet article traite de certains schémas de voie avancés de [[Main/fr/Encore une autre évolution PBS|YAPP]]. Notez bien que plusieurs de ces modèles de voie sont controversés. Voyez la [[Archive/en/Advanced path signal layouts|page de discussion]] (en anglais) pour plus d'information.
+
+== Modèles de jonctions ==
+====Jonction avancée avec croisement====
+Le croisement augmente la chance qu'un train trouve un chemin, même si la jonction est occupée par un train venant de la direction opposée.
+[[File:en/Yapp advancedjunction.png|frame|center|Essayez cela par vous-mêmes!]]
+
+== Configurations des voies ==
+====Modèle de voie simple priorisée====
+Le modèle [[Main/en/Encore une autre évolution PBS/Fr#Voie simple basique|Voie simple basique]] peut être amélioré pour prioriser les trains allant dans la même direction que le train précédent par rapport aux trains allant dans l'autre direction. Cela se fait en plaçant deux signaux de double voie en face l'un de l'autre sur deux cases. Cela améliore l'encours de l'extension de ligne simple, mais peut potentiellement causer de longues attentes dans une des directions.
+[[File:en/Yapp adv single track.png|frame|center|Voie simple priorisée avec des trains.]]
+
+====Modèle basique de deux voies doubles====
+Très utile si vous voulez changer beaucoup vos modèles de voies. Si vous enlevez une partie de la voie d'un côté, les trains peuvent toujours utiliser l'autre sans devoir modifier les signaux d'abord. Ce modèle n'est pas très efficace car les trains ont tendance à changer de côté souvent, bloquant les jonctions.
+[[File:en/Yapp dualtrack.png|frame|center|Double voie. Tous les signaux sont des endroits d'attente sûrs.]]
+
+====Modèle de trois voies doubles====
+Si vos voies rencontrent des "heures de pointe", ce modèle peut être utile. Il y a une voie dédiée pour chaque direction, et une voie supplémentaire qui peut être utilisée pour les deux.
+[[File:en/Pbs 3track.png|frame|center|Modèle de triple voie double.]]
+
+====Modèle de trois voies doubles priorisées====
+Le modèle de triple voie double peut être modifié en utilisant les idées du modèle de voie simple priorisée. C'est particulièrement utile si la quantité de trains passant dans chaque direction est notablement différent et varie dans le temps. Les deux voies extérieures sont dédiées à chaque direction. La voie du milieu peut être utilisée dans les deux directions, mais les trains allant coup sur coup dans la même direction sont prioritaires sur les trains dans l'autre direction.
+[[File:en/Yapp triple track.png|frame|center|Modèle de triple voie double priorisée. Les distances entre signaux doivent dépasser la longueur d'un train pour être utiles.]]
+
+====Modèle de quadruple voie double====
+Davantage de trafic, davantage de voies. Imaginez le modèle à cinq voies...
+[[File:en/Yapp quadtrack.png|frame|center|Modèle à quadruple voie double.]]
+
+== Modèles de gare ==
+====Gare double sens avancée====
+Dans les gares à double sens fortement utilisées, certaines impasses peuvent survenir. L'utilisation de signaux PBS mono-voie dédient un quai à une direction spécifique, ce qui diminue la probabilité de blocage (la plupart du temps, un blocage a lieu quand tous les quais sont occupés par des trains en attente de chargement dans la même direction, mais que la voie de sortie est obstruée.
+[[File:en/Yapp advancedstation.png|frame|center|Notez l'utilisation de signaux mono-directionnels.]]
+
+====Gare ferroviaire à haute capacité====
+Voici un exemple d'un modèle de [[Main/ro/Gares ferroviaires/Fr#Ro|gare RoRo]] compact et à forte capacité. La plus grande attention a été donnée aux voies d'entrée. Non seulement elles sont faciles à construire, mais aussi efficaces à maintenir. Si de nombreux quais sont libres, les trains les rempliront sans arrêt important.
+
+Vous remarquerez aussi que la gare est divisée en deux côtés. Les véhicules venant du côté A essayeront d'occuper les quais du côté A. De même pour le côté B. Quand le trafic de chargement diminue ou que beaucoup de quais sont remplis, les trains occuperont aussi les côtés adjacents si cela est mieux ou plus rapide. NOTE: cela vaut la peine de construire un [http://wiki.openttdcoop.org/Balancing équilibreur de charge] (en anglais) après cette gare, car les trains n'auront pas le choix entre les deux voies de sortie.
+[[File:en/Roro pbs4.png|frame|center|Gare RoRo de haute capacité]]
+{{fr/Disponibilité|0.7}}
+
+[[Category:fr/Construction]]
+[[Category:fr/Chemins de fer]]
