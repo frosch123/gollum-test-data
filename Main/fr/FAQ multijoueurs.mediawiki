@@ -1,0 +1,50 @@
+[[Translation:Main/en/FAQ multiplayer]]{{en/-}}
+{{fr/MenuFAQ}}
+
+'''Questions regardant les aspects multijoueurs de OpenTTD''', par ex. rejoindre le serveur, créer le serveur, jouer une partie...
+
+__FORCETOC__
+=====Le multijoueurs fonctionne-t-il vraiment?=====
+:* Oui, le [[Main/fr/Multijoueurs|multijoueurs]] est stable depuis la version 0.3.5. Jusqu'à cette version, il était quasiment impossible de faire des parties multijoueurs, à cause de la mauvaise conception du réseau du TTD d'origine.
+
+=====Combien de joueurs peuvent rejoindre une partie OpenTTD?=====
+:* Jusqu'à 255 joueurs peuvent participer à une partie multijoueurs. Vous ne pouvez cependant créer que 15 compagnies. Chaque joueur peut soit jouer sa propre compagnie, soit en rejoindre une autre ([[Main/fr/Mode de jeu coopératif|Mode de jeu coopératif]]) ou regarder la partie ([[Main/fr/Mode spectateur|Mode spectateur]]).
+
+=====Comment démarrer une partie multijoueurs?=====
+:* Vous pouvez le faire soit via la [[Main/fr/Multijoueurs|fenêtre multijoueurs]], ou en utilisant la syntaxe suivante en ligne de commande:
+<pre>openttd -n IP[:port][#IDjoueur]</pre>
+Exemple:
+<pre>openttd -n 192.168.0.1:3979#1</pre> se connectera à 192.168.0.1 sur le port 3979 et rejoindra la partie comme joueur 1.
+
+=====Cela fonctionne-t-il sur plusieurs plateformes?=====
+:* Oui. Vous pouvez, par exemple, démarrer un serveur sur MacOS et des joueurs sur Windows, Linux ou un autre système peuvent vous rejoindre.
+
+=====Quel port utilise OpenTTD?=====
+:* Le port par défaut est le 3979, mais vous pouvez le changer en ce que vous voulez en démarrant un serveur. Si vous mettez votre propre serveur derrière un routeur, vous devrez faire suivre à la fois TCP et UDP sur ce port.
+:* La communication avec le serveur maître fonctionne via le port 3979 sur UDP (en entrée et en sortie), et 3978 sur UDP (en sortie).
+:* Si vous rejoignez un serveur, vous n'avez pas besoin de faire suivre aucun port, car les connexions ne seront qu'en sortie.
+
+=====Puis-je utiliser un serveur dédié pour héberger le jeu?=====
+:* Il est possible de lancer un serveur dédié en utilisant l'option '-D'. Voyez [[Main/fr/Serveur dédié|"Serveur dédié"]] pour plus de détails.
+
+=====Combien de bande passante le jeu utilise-t-il?=====
+:* Le taux est d'environ 1,2 ko/sec en émission et 1,2 ko/sec en réception par client. En multipliant cela, un serveur de 10 joueurs utilisera environ 12 ko/sec en entrée et 12 ko/sec en sortie (les nombres exacts dépendent du nombre de retransmissions, etc.). Donc, un serveur 24/7 de 10 joueurs consommera 60Go/mois (30Go en entrée ET 30Go en sortie) de bande passante si les 10 joueurs sont tous connectés pendant le mois complet.
+
+=====J'ai des problème en trichant. Au secours!=====
+:* Il y a un guide pour vous protéger des pires éléments de [[Main/fr/Triche multijoueurs|triche multijoueurs]]. Vérifiez aussi les [[Main/fr/Règles multi-joueurs|règles multijoueurs]].
+
+=====Y a-t-il des règles?=====
+:* Oui, il y a quelques règles. Vous pouvez lire l'article [[Main/fr/Règles multi-joueurs|Règles multijoueurs]]. Toutefois, les serveurs ne sont pas lancés par l'équipe OpenTTD, et ils n'ont pas de contrôle sur eux, quoi qu'il en soit. Ainsi, si vous avez des problèmes, vous devrez contacter la personne qui héberge le serveur.
+
+=====Les commandes de console peuvent-elles être exécutées automatiquement?=====
+:* Oui, c'est possible, et cela peut être très pratique. La page [[Main/fr/Exécuter des scripts de démarrage|Exécuter des scripts de démarrage]] explique cela plus en détails.
+
+=====J'ai démarré un nouveau serveur. Cependant, ma partie ne s'affiche pas dans la liste de mes amis, même après avoir mis manuellement le serveur dans la liste. Que se passe-t-il?=====
+:* Il semble y avoir un problème lors du lancement d'un nouveau serveur depuis une machine connectée à internet via un modem qui peut être relié à plusieurs ordinateurs. Vous pouvez corriger cela en faisant suivre le port numéro 3979 à la fois sur UDP et TCP.
+
+=====Qu'est-ce qu'une erreur de désynchronisation?=====
+:* Voyez [[Main/en/Multijoueurs/Fr#Erreur de désynchronisation|Erreur de désynchronisation]].
+
+[[Category:fr/FAQs]]
+[[Category:fr/Jouer]]
+[[Category:fr/Multijoueur]]
