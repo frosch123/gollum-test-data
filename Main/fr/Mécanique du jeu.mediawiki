@@ -1,0 +1,595 @@
+[[Translation:Main/en/Game mechanics]]{{en/-}}{{fr/Table des matières}}
+
+Vous pourrez trouver ici des informations sur la manière dont OpenTTD calcule les chiffres du jeu.
+
+Vous avez toujours voulu savoir comment la cote d'une gare était déterminée? Comment fonctionnait la distribution des marchandises? Vous le trouverez ici!
+
+==Cote d'une compagnie==
+
+Chaque partie de la cote d'une compagnie est une fonction linéaire, c'est-à-dire que 50% de la cible pour un composant donnera 50% des points alloués pour ce composant. Quand les composants impliquent des montants monétaires, ils sont convertis dans la devise du jeu en cours; en interne, ces quantités sont stockées en quantité de livres sterling.
+
+{| {{en/Wikitable}}
+|- style="background:#efefef"
+! Composant !! Cible !! Points (min) !! Points (max)
+|-
+|Nombre de véhicules||>=120||0 points pour 0 véhicules||100 points pour au moins 120 véhicules
+|-
+|Nombre de parties de gare possédées par la compagnie||>=80||0 points pour 0 parties||100 points pour au moins 80 parties
+|-
+|Profit minimal des véhicules d'au moins 2 ans||>=10 000£||0 points pour une perte ou 0£||100 points pour au moins 10 000£
+|-
+|Revenu mensuel minimal obtenu sur les 3 dernières années||>=50k£||0 points pour 0£||50 points pour au moins 50k£
+|-
+|Revenu mensuel maximal obtenu sur les 3 dernières années||>=100k£||0 points pour 0£||100 points pour au moins 100k£
+|-
+|Unités de cargaison livrées l'année passée||>=40000||0 points pour 0 unités||400 points pour au moins 40000 unités
+|-
+|Nombre de types de cargaisons livrées le trimestre passé||>=8||0 points pour 0 types de cargaison||50 points pour au moins 8 types de cargaison
+|-
+|Trésorerie actuellement en banque||>=10m£||0 points pour 0£||50 points pour au moins 10m£
+|-
+|Prêt actuel de la banque||0£||0 points pour >250k£||50 points pour 0£
+|- style="background:#efefef"
+! Total !!!! 0 points !! 1000 points
+|}
+
+<table>
+<tr valign="top"><td style="background:none; border:0px">
+{| {{en/Wikitable}}
+|- style="background:#efefef"
+!colspan="2"|Table des taux des niveaux de compagnie
+|- style="background:#efefef"
+!Cote!!Titre
+|-
+|0 à 127||Ingénieur
+|-
+|128 à 255||Gestionnaire de trafic
+|-
+|256 à 383||Coordinateur de trafic
+|-
+|384 à 511||Superviseur de route
+|-
+|512 à 639||Directeur
+|-
+|640 à 767||Directeur Général
+|-
+|768 à 895||Vice-président
+|-
+|896 à 959||Président
+|-
+|960 à 1000||Tycoon
+|}
+</td><td style="background:none; border:0px">
+{| {{en/Wikitable}}
+|- style="background:#efefef"
+!colspan="2"|Cote de score final en 2050
+|-
+!Cote!!Titre
+|-
+|0 à 319||Homme d'affaires
+|-
+|320 à 447||Entrepreneur
+|-
+|448 à 575||Industriel
+|-
+|576 à 703||Capitaliste
+|-
+|704 à 831||Magnat
+|-
+|832 à 959||Grand ponte
+|-
+|960 à 1000||Tycoon du Siècle
+|}
+</td></tr></table>
+
+==Cote d'une gare==
+Cette section dévoile les facteurs qui affectent la cote d'une gare. Tous les calculs sont faits séparément pour chaque type de cargaison.
+
+{| {{en/Wikitable}}
+|- style="background:#efefef"
+!Facteur!!Condition!!Points de cote!!% de cote
+|-
+| Vitesse maximale du dernier véhicule entré dans la gare || Supérieure à 85 km/h (52 mph)|| (Vitesse (km/h) - 85) / 4 || 0% à 17%
+|-
+|rowspan="3"|Âge en années du dernier véhicule entré dans la gare || 2 || 10|| 4%
+|-
+| 1 || 20 || 8%
+|-
+| 0 || 33 || 13%
+|-
+|rowspan="4"|Jours depuis le dernier chargement de cargaison <br> Multiplier les jours dans la colonne "Condition" par 4 si le dernier véhicule était un bateau.<br><small>(Note: Si un véhicule était prêt à charger une cargaison mais qu'il n'y en avait pas, il est pris en compte quand même comme un chargement de cargaison)</small>|| 32,5 à 52,5 || 25 || 10%
+|-
+| 17,5 à 32,5 || 50 || 20%
+|-
+| 10 à 17,5  || 95 || 37%
+|-
+| inférieur à 10 || 130 || 51%
+|-
+|rowspan="6"|Unités de cargaison attendant à la gare || Supérieur à 1500 || -90 || -35%
+|-
+| 1001 à 1500 || -35 || -14%
+|-
+| 601 à 1000 || 0 || 0%
+|-
+| 301 à 600 || 10 || 4%
+|-
+| 101 à 300 || 30 || 12%
+|-
+| inférieur à 100 || 40 || 16%
+|-
+|Statue dans la ville de la gare||Construite||26|| 10%
+|-
+|Petite campagne publicitaire||Gare dans les 10 cases du centre de la ville||+64|| +25%
+|-
+|Campagne publicitaire moyenne||Gare dans les 15 cases du centre de la ville||+112|| +44%
+|-
+|Grande campagne publicitaire||Gare dans les 20 cases du centre de la ville||+160|| +63%
+|-
+|Accident de véhicule routier||Gare à moins de 22 cases de l'accident ||-160|| -63%
+|-
+|Train accidenté||Gare à moins de 30 cases de l'accident ||-160|| -63%
+|}
+Divisez le total de points de cote par 255 pour obtenir la cote en pourcentage. La cote maximale possible est 100%. Les campagnes publicitaires fournissent un coup de fouet temporaire instantané aux cotes des stations voisines. L'amélioration chutera graduellement pour revenir aux cotes calculées.
+
+Tous les 2,5 jours, les cotes des gares sont calculées; les cotes ne peuvent pas changer de plus de 2 points par cycle.
+
+==Livraison des Cargaisons aux gares==
+Dans chaque cycle de 2,5 jours, pour chaque type de cargaison et chaque industrie qui la livre, un maximum de 2 gares peuvent récupérer la cargaison produite. S'il y a plus de 2 gares possibles avec la même cote pour le type de cargaison concerné, alors l'obtention de la cargaison dépendra de l'ordre interne des stations.
+
+S'il n'y a qu'une gare possible, alors la quantité livrée sera: quantité_produite * code_de_la_gare_en_pourcentage, arrondi à la valeur entière la plus proche.
+
+S'il y a deux gares possibles, le calcul est plus complexe. Tout d'abord, la cote en points de la deuxième station est divisée par 2 pour les calculs suivants. La quantité disponible à la première gare est calculée ainsi: (code_de_la_gare1_en_points * (quantité + 1)) / (code_de_la_gare1_en_points + cote_de_la_gare2_en_points); pour des cotes similaires, cela reviendra à environ 2/3 de la production, et augmentera pour des différences plus importantes. Le résultat est soumis au même calcul que dans le cas de la gare seule. C'est ce qui est donc livré à la première gare. Si la première station n'obtient pas toute la quantité disponible, alors cette part ne sera pas du tout livrée. Le restant de la production, s'il y en a, est soumis au même calcul que le cas de la station seule et livré à la seconde gare.
+
+==Cote des autorités locales==
+Les cotes limitent certaines actions des joueurs; elles commencent à +500 et peuvent changer en fonction de certaines actions.
+
+Actuellement, vous pouvez abuser le jeu en coupant ~200 arbres puis en les replantant. Cela amène la cote à -1000 (le minimum), puis la rehausse à 220.
+
+<table>
+<tr valign="top"><td style="background:none; border:0px">
+{| {{en/Wikitable}}
+|- style="background:#efefef"
+!Points de cote!!Cote
+|-
+| -1000 à -400 || Épouvantable
+|-
+| -399 à -200 || Très pauvre
+|-
+| -199 à 0 || Pauvre
+|-
+| 0 à 200 || Médiocre
+|-
+| 201 à 400 || Bon
+|-
+| 401 à 600 || Très bon
+|-
+| 601 à 800 || Excellent
+|-
+| 801 à 1000 || Exceptionnel
+|}
+</td><td style="background:none; border:0px">
+{| {{en/Wikitable}}
+|- style="background:#efefef"
+!Action du joueur!!Cote requise*!!Effet sur la cote
+|-
+|Construire une gare|| -200 || nul
+|-
+|Détruire une portion de route 'en bordure'|| 16 / 64 / 112 ||-18, jusqu'à -100.
+|-
+|Détruire une portion de route 'intérieure'|| 16 / 64 / 112 ||-50, jusqu'à -100.
+|-
+|Détruire un tunnel ou un pont de métropole|| 144 / 208 / 400 ||-250, jusqu'à 0.
+|-
+|Détruire un bâtiment|| 40 à 300 ||-40 à -300
+|-
+|Plantez un arbre sur une case vide|| nul ||+7, jusqu'à 220.
+|-
+|Nettoyer une case avec des arbres|| nul ||-35
+|-
+|Corruption réussie|| nul ||+200, jusqu'à 800.
+|-
+|Corruption ratée|| nul ||Passe à -50.
+|}
+<nowiki>*</nowiki> "Cote requise" est listée pour l'option de [[Main/fr/Difficulté|difficulté]] <br>''Attitude de la municipalité à l'égard des restructurations de zone'' <br>positionnée à Laxiste / Tolérant / Hostile.
+</td></tr></table>
+
+Chaque mois, les cotes des joueurs sont automatiquement modifiées:
+* La cote monte de 5 si elle est inférieure à 200.
+* La cote grimpe de 12 pour chaque gare qui a transféré une cargaison dans les 50 derniers jours.
+* La cote baisse de 15 pour chaque gare qui n'a pas transféré de cargaison dans les 50 derniers jours.
+
+
+'''Exemple:'''<br>
+Un joueur a une cote de -300 (Très pauvre), 2 gares actives et 1 inactive, pour une ville.<br>
+5pts + 2 * 12pts - 15pts = 14pts points gagnés chaque mois<br>
+(-200 - -300)pts / 14pts/mo = 8 mois avant que la ville le laisse construire une autre gare.
+
+Le code pour les cotes des villes est dans town.h, town_cmd.c, tree_cmd.c, et road_cmd.c.
+
+==Production des industries==
+Voici comment le jeu détermine combien de cargaison une industrie produira par mois. Cette table liste les productions de départ possibles, régies par l'option [[Main/en/Options Avancées/Économie/Fr#Permettre une économie stable (plus de petits changements)|Économie stable]]. La production est un multiple de 8 ou 9 (quelquefois 10, pour les forêts).
+
+{| {{en/Wikitable}}
+|- style="background:#efefef"
+!Industrie de matière première!!Cargaison produite!!Plage de production initiale
+|-
+|[[Main/fr/Mine de charbon|Mine de charbon]]||[[Main/fr/Charbon|Charbon]]||56 à 176
+|-
+|[[Main/fr/Forêt|Forêt]]||[[Main/fr/Bois|Bois]]||48 à 152
+|-
+|[[Main/fr/Plateforme pétrolière|Plateforme pétrolière]]||[[Main/fr/Pétrole|Pétrole]]||56 à 176
+|-
+|[[Main/fr/Ferme|Ferme]]||[[Main/fr/Céréales|Céréales]] et [[Main/fr/Bétail|bétail]]||40 à 112
+|-
+|[[Main/fr/Mine de cuivre|Mine de cuivre]]||[[Main/fr/Minerai de cuivre|Minerai de cuivre]]||56 à 112
+|-
+|[[Main/fr/Puits de pétrole|Puits de pétrole]]||[[Main/fr/Pétrole|Pétrole]]||48 à 152
+|-
+|[[Main/fr/Mine de fer|Mine de fer]]||[[Main/fr/Minerai de fer|Minerai de fer]]||40 à 112
+|-
+|[[Main/fr/Banque|Banque]]||[[Main/fr/Biens de valeur|Biens de valeur]]||24 à 64
+|-
+|colspan="5"|
+|-
+|[[Main/fr/Mine d'or|Mine d'or]]||[[Main/fr/Or|Or]]||24 à 80
+|-
+|colspan="5"|
+|-
+|[[Main/fr/Mine de diamant|Mine de diamants]]||[[Main/fr/Diamant|Diamants]]||24 à 80
+|-
+|[[Main/fr/Plantation fruitière|Plantation fruitière]]|| [[Main/fr/Fruits|Fruits]]||40 à 112
+|-
+|[[Main/fr/Plantation d'hévéa|Plantation d'hévéa]]||[[Main/fr/Caoutchouc|Caoutchouc]]||40 à 112
+|-
+|[[Main/fr/Réserve d'eau|Réserve d'eau]]||[[Main/fr/Eau|Eau]]||48 à 152
+|-
+|[[Main/fr/Ferme|Ferme]]||[[Main/fr/Maïs|Maïs]]||40 à 128
+|-
+|[[Main/fr/Scierie de construction|Scierie de construction]]||[[Main/fr/Bois|Bois]]||180 à 225 (si des arbres sont disponibles)
+|-
+|colspan="5"|
+|-
+|[[Main/fr/Forêt de barbe à papa|Forêt de barbe à papa]]||[[Main/fr/Barbe à papa|Barbe à papa]]||48 à 152
+|-
+|[[Main/fr/Ferme de batterie|Ferme de batteries]]||[[Main/fr/Batterie|Batterie]]||40 à 128
+|-
+|[[Main/fr/Source de coca-cola|Source de Coca-Cola]]||[[Main/fr/Coca-Cola|Coca-Cola]]||48 à 136
+|-
+|[[Main/fr/Fontaine de plastique|Fontaine de plastique]]||[[Main/fr/Plastique|Plastique]]||56 à 160
+|-
+|[[Main/fr/Générateur de bulles|Générateur de bulles]]||[[Main/fr/Bulles|Bulles]]||48 à 152
+|-
+|[[Main/fr/Carrière de caramel|Carrière de caramel]]||[[Main/fr/Caramel|Caramel]]||40 à 112
+|-
+|[[Main/fr/Mine de sucre|Mine de sucre]]||[[Main/fr/Sucre|Sucre]]||40 à 128
+|}
+
+===Changement de production===
+Chaque mois, le jeu modifie aléatoirement la production de certaines industries.
+====Par défaut / Règles d'économie comme TTD====
+Pour des cartes de 256x256 cases, il y a un changement par mois possible (une seule industrie est modifiée). Le nombre croît proportionnellement à la taille de la carte depuis l'introduction de la fonction "Changements de production journaliers" dans la version r14332.
+
+
+*Depuis l'économie lissée, les industries livrent la cargaison aux stations 8, 9 ou 10 fois par mois (10 uniquement pour les forêts de production de plus de 400t). Cependant, les productions sont limitées à 6 niveaux de production: minimum, bas, normal (avec un jeu juste commencé ou la construction d'une nouvelle industrie), haut, deux fois plus haut et maximum.
+La production change entre ces niveaux avec soit une baisse de 50% (la moitié), soit une augmentation de 100% (le double).
+
+*Exemples:
+**Une mine de charbon: minimum (32 ou 40t par mois), bas (64 ou 72), normal( 120 ou 135), haut (240 ou 270), deux fois plus haut (480 ou 540) et le maximum (960 ou 1080).
+**Une forêt: minimum (32 ou 64t par mois), bas (35 ou 70), normal (78 ou 117), haut (208 ou 260), deux fois plus haut (416 ou 468 ou 520 (= multiplicateur par 10)) et le maximum (832 ou 936 ou 1040).
+**Une mine d'or: minimum (12 ou 18 sacs/mois), bas (32 ou 40), normal (56 ou 63), haut (112 ou 126), deux fois plus haut (224 ou 252) et le maximum (448 ou 504).
+
+
+Pour rendre les choses plus simples, voyons quelles sont les chances sur une carte de 256x256 (1 changement maximum par mois = une industrie au plus change de production par mois):
+
+*La chance qu'il y ait un changement de production par mois est:
+** 50% pour les industries ne faisant que décroître (actuellement, seulement les puits de pétrole de climat tempéré) ou
+** 50% pour 1/3 de chances (=16,7%) qu'une autre industrie (pas en décroissance seule) change de production.
+
+
+*Si un changement de production a lieu (~16,7% de chances par mois):
+** Pour une industrie avec un service pauvre ou inexistant (moins de 60% de sa cargaison transportée): '''33%''' de chance d'augmentation, '''67%''' de chance de baisse.
+** Pour une industrie avec un bon (supérieur à 60%) service: '''67%''' de chance d'augmentation, '''33%''' de chances de baisse.
+** Il n'y a pas de bonus pour un service excellent, dans l'économie par défaut.
+
+
+*Pour calculer la chance d'un changement particulier, par ex. 50% * 1/3 * 33% =  5,56%:
+** Service pauvre: '''5,56%''' qu'un changement possible par mois soit une augmentation, et '''11,12%''' qu'un changement possible par mois soit une baisse.
+** Bon service: '''11,12%''' qu'un changement possible apr mois soit une augmentation et '''5,56%''' qu'un changement possible par mois soit une baisse.
+
+====Règle de l'économie lissée====
+:''Distinguez [[Main/en/Options Avancées/Économie/Fr#Permettre une économie stable (plus de petits changements)|Économie plus stable]] (changements plus petits et plus fréquents) et [[Main/fr/Difficulté|Économie stable]] (paramètre de difficulté)''
+
+*La chance d'un changement de production par mois est de '''4,5%''', par ex. 4,5% des industries productrices de la liste des industries changera de production.
+
+
+*Si un changement de production a lieu:
+** Pour une industrie avec un un service pauvre ou inexistant (moins de 60% de sa cargaison est transportée): '''33%''' de chances d'augmenter, '''67%''' de chances de baisser
+** Pour une industrie avec un bon service (supérieur à 60%): '''67%''' de chances d'augmenter, '''33%''' de baisser
+** Pour une industrie avec un excellent service (supérieur à 80%): '''83%''' de chances d'augmenter, '''17%''' de chances de baisser
+
+
+*Ces deux facteurs sont multipliés ensemble, par ex. 4,5% * 33% = 1,5%:
+** Service faible: '''1,5%''' d'augmenter et '''3%''' de baisser
+** Bon service: '''3%''' d'augmenter et '''1,5%''' de baisser
+** Service excellent: '''3,75%''' d'augmenter et '''0,75%''' de baisser
+
+
+*Avec l'option [[Main/fr/Économie lisse|économie lisse]] activée, les changements de production par mois sont entre 3 et 23%.
+**Les industries avec de très faibles productions (entre 12 et 40 tonnes par mois) auront des changements plus importants.
+**Les industries primaires produisent de la cargaison 8 ou 9 fois (10 fois possible pour les forêts) par mois. La production mensuelle est une 'valeur de base' de l'industrie multipliée 8 ou 9 fois (ou 10 pour les forêts à haute production). Par exemple, la valeur de base pour une mine de charbon est de 15 tonnes, donc la production mensuelle est de 120 ou 135 tonnes. Cette valeur de base est limitée à 255, donc la production mensuelle maximale pour une industrie est de 2040 ou 2295 (ou 2550 - de nouveau - pour les forêts).
+[http://www.tt-forums.net/viewtopic.php?p=163733&sid=2128541ce7feb1a96a454f56152123a2#p163733 Réf.]
+
+====Exemples====
+Si une mine de charbon a 70% de sa production transportée, il y a '''3%''' de chances (4,5% * 67%) que sa production augmente de 3-23%, et '''1,5%''' (4,5% * 33%) qu'elle baisse de 3-23% (mais 13% en moyenne).
+
+(1 + (0,03 - 0,015) * 0,13) ^12 - 1 = 0,0237 ou '''2,37%'''
+
+La mine de charbon grossira en moyenne de 2,37% après la première année<br>
+(1,0237 ^20) - 1 = 59,6% après 20 ans<br>
+(1,0237 ^50) - 1 = 321,8% or '''3,22x''' après 50 ans<br>
+(1,0237 ^100) - 1 = '''10,35x''' après 100 ans<br>
+
+
+Pour une industrie avec un taux de plus de 80%, il y a '''3,75%''' de chances d'augmentation et '''0,75%''' de baisse:<br>
+(1 + (0,0375 - 0,0075) * 0,13) ^12 - 1 = 0,0478 ou '''4,78%'''
+
+L'industrie grossira approximativement de 4,78% après la première année<br>
+(1,0478 ^20) - 1 = '''2,54x''' après 20 ans<br>
+(1,0478 ^50) - 1 = '''10,32x''' après 50 ans<br>
+(1,0478 ^100) - 1 = '''106,62x''' après 100 ans<br>
+
+Pour un bon service, cela prendra '''29,6 années''' en moyenne '''pour doubler'''; avec un service excellent, cela ne prendra que '''14,8 années'''. Si, dans le temps du jeu, un jour prend 2,36 secondes, alors le '''temps pour doubler''' avec un bon service est de '''7,1 heures'''; avec un excellent service, il est de '''3,6 heures'''. Pour que la production passe d'environ 100 aux alentours du maximum de 2100, cela prend '''130 ans''' avec un bon service, et '''65 ans''' avec un excellent.
+
+Cependant, dans le jeu, vous pourrez trouver des industries dont le taux de production change très aléatoirement. Il faut souligner que les exemples ci-dessus ne sont vrais qu'en observant de nombreuses industries dans le temps; individuellement, une industrie peut fortement dévier de ces moyennes. Statistiquement parlant, 6 industries sur 10 n'iront pas de 100 à 2100, même avec le meilleur service, en 65 ans. Environ 1 industrie sur 9 verra même sa production baisser en étant servie à 60-80% de cargaison transportée sur 50 ans.
+
+Pour une plus grande réceptivité des industries, adaptez le nombre de wagons à la production de l'industrie (pour la production la plus faible, vous devriez n'avoir besoin que de deux wagons). Les ordres de [Chargement complet] sont en général utilisés pour de tels trains.
+
+
+'''Note:'''  La formule exacte peut être trouvée sous "[http://vcs.openttd.org/svn/browser/trunk/src/industry_cmd.cpp#L2373 ChangeIndustryProduction()]" dans industry_cmd.cpp.
+
+==Taux de paiement des livraisons==
+Le montant obtenu pour une cargaison livrée est basé sur 4 facteurs: la quantité de cargaison livrée, la valeur de la cargaison, la distance à laquelle vous l'avez livré, et combien de temps vous avez mis pour le faire.
+
+{| {{en/Wikitable}}
+|- style="background:#efefef"
+!Cargaison!!Unités!!Première durée de<br>livraison (jours)!!Dernière durée de<br>livraison (jours)!!Paiement de la cargaison<br>initiale (£)
+|-
+|[[Main/fr/Passagers|Passagers]]|| ||Immédiat||24||39£
+|-
+|[[Main/fr/Biens de valeur|Biens de valeur]]||Sacs||1||32||91£
+|-
+|[[Main/fr/Bétail|Bétail]]||Têtes||4||18||53£
+|-
+|[[Main/fr/Céréales|Céréales]]||Tonnes||4||40||58£
+|-
+|[[Main/fr/Marchandises|Marchandises]]||Caisses||5||28||75£
+|-
+|[[Main/fr/Charbon|Charbon]]||Tonnes||7||Aucune||72£
+|-
+|[[Main/fr/Acier|Acier]]||Tonnes||7||Aucune||69£
+|-
+|[[Main/fr/Minerai de fer|Minerai de fer]]||Tonnes||9||Aucune||62£
+|-
+|[[Main/fr/Bois|Bois]]||Tonnes||15||Aucune||61£
+|-
+|[[Main/fr/Pétrole|Pétrole]]||Kilolitres||25||Aucune||54£
+|-
+|[[Main/fr/Courrier|Courrier]]||Sacs||20||90||55£
+|- style="background:#efefef"
+!colspan="5" align="center"|Spécifique subarctique
+|-
+|[[Main/fr/Blé|Blé]]||Tonnes||4||40||58£
+|-
+|[[Main/fr/Papier|Papier]]||Tonnes||7||60||66£
+|-
+|[[Main/fr/Or|Or]]||Sacs||10||40||71£
+|-
+|[[Main/fr/Nourriture|Nourriture]]||Tonnes||Immédiat||30||69£
+|- style="background:#efefef"
+!colspan="5" align="center"|Spécifique tropical
+|-
+|[[Main/fr/Caoutchouc|Caoutchouc]]||Kilolitres||2||20||54£
+|-
+|[[Main/fr/Fruits|Fruits]]||Tonnes||Immédiat||15||51£
+|-
+|[[Main/fr/Maïs|Maïs]]||Tonnes||4||40||53£
+|-
+|[[Main/fr/Bois|Bois tropical]]||Tonnes||15||Aucune||97£
+|-
+|[[Main/fr/Minerai de cuivre|Minerai de cuivre]]||Tonnes||12||Aucune||59£
+|-
+|[[Main/fr/Eau|Eau]]||Kilolitres||20||80||57£
+|-
+|[[Main/fr/Diamant|Diamants]]||Sacs||10||Aucune||71£
+|- style="background:#efefef"
+!colspan="5" align="center"|Spécifique Pays des jouets
+|-
+|[[Main/fr/Sucre|Sucre]]||Tonnes||20||Aucune||54£
+|-
+|[[Main/fr/Jouet|Jouets]]|| ||25||None||68£
+|-
+|[[Main/fr/Batterie|Batteries]]|| ||2||30||53£
+|-
+|[[Main/fr/Bonbon|Bonbons]]||Tonnes||8||40||75£
+|-
+|[[Main/fr/Caramel|Caramel]]||Tonnes||14||60||58£
+|-
+|[[Main/fr/Coca-Cola|Coca-Cola]]||Kilolitres||5||75||59£
+|-
+|[[Main/fr/Barbe à papa|Barbe à papa]]||Tonnes||10||25||61£
+|-
+|[[Main/fr/Bulles|Bulles]]|| ||20||80||62£
+|-
+|[[Main/fr/Plastique|Plastique]]||Kilolitres||30||Aucune||54£
+|-
+|[[Main/fr/Boisson gazeuse|Boissons gazeuses]]|| ||30||50||76£
+|}
+
+Les valeurs de paiement de la cargaison initiale correspondent à la livraison de 100 pièces de cargaison pour 1 case. Le paiement augmente avec l'inflation, au fur et à mesure que le jeu avance.
+
+
+Pénalités pour livraison en retard:
+*Pour chaque jour après la première durée de livraison auquel vous livrez la cargaison, vous êtes pénalisé de 0,4%.
+*Pour chaque jour après la dernière durée de livraison auquel vous livrez la cargaison, vous êtes pénalisé de 0,4% supplémentaires.
+*La pénalité maximale est de 88%.
+
+
+'''Exemples''' (sans inflation):<br>
+Livraison de 200000 litres de pétrole sur 20 cases en 10 jours:<br>
+2 * 54£ * 20 cases * 100% = 2 160£
+
+Livraison de 100 sacs de courrier sur 100 cases en 100 jours:<br>
+55£ * 100 cases * (1 - 80*0,004 - 10*0,004) = 3 520£
+
+
+'''Notes:'''
+* La formule exacte est bien plus compliquée et légèrement plus juste, à cause des erreurs de conversion lors de la conversion des grandes valeurs discrètes. Voyez economy.cpp (GetTransportedGoodsIncome) et [[Main/fr/Revenu de cargaison|revenu de cargaison]].
+
+* La distance est mesurée entre les cases portant le nom des gares, non des industries ou de la distance parcourue par les véhicules. Elle est calculée en ajoutant les différences de cases en x et y, et non en ligne droite.
+
+==Vitesses des véhicules==
+Le jeu a de nombreuses règles pour que les véhicules se déplacent de manière assez réaliste. Un véhicule voyageant à 160 km/h (100 mph) parcourra 5,6 cases par jour.
+
+Cela veut dire qu'en ce qui concerne la vitesse des véhicules, une case mesure 686 km (429 miles) de côté !
+
+
+==== Avions ====
+*Par défaut, les avions volent au quart de leur vitesse affichée (cela peut être modifié dans les options avancées).
+*Un avion accélère d'environ 200 km/h par jour. Cela dépend des avions.
+*La vitesse des avions en panne est plafonnée à 345 km/h.
+*La vitesse de roulement sur l'aéroport est de 154 km/h.
+
+==== Véhicules routiers ====
+*Les véhicules routiers accélèrent de 37 km/h par jour.
+*Les véhicules routiers prennent les virages à angle droit à la moitié de leur vitesse maximale.
+*Les véhicules routiers accélèrent d'un supplément de 74 km/h par jour en descendant.
+*En grimpant, les véhicules routiers ralentissent de 10% quatre fois par case. Cela s'équilibre avec l'accélération à 34 km/h pour tous les véhicules routiers.
+
+(Note: Cela ne s'applique pas quand vous utilisez le modèle d'accélération des véhicules routiers amélioré.)
+
+==== Bateaux ====
+*Les navires accélèrent de 37 km/h par jour.
+*Un bateau "arrêté" retrouve instantanément sa dernière vitesse.
+
+==== Trains ==== 
+(avec l'[[Main/fr/Accélération réaliste|option d'accélération réaliste]])<br>
+*Les trains ne sont pas affectés par la montée ou la descente de collines, s'ils sont assez puissants.
+*Les trains sont limités, à l'entrée et à la sortie d'un dépôt, à 61 km/h.
+*Les trains peuvent prendre un virage à 45° sans ralentir.
+*Quand ils font deux virages ou plus à 45° dans une même direction, la vitesse maximale est limitée ainsi :
+
+{| style="margin: 1em 1em 1em 0;"    <!-- début des tables intégrées -->
+|-
+
+|    <!-- métrique -->
+{| border="2" width="auto" cellspacing="4" cellpadding="3" rules="all" style="margin: 0; border: solid 1px #AAAAAA; background-color: #efefff;"
+|-
+!rowspan=2  style="background:#efefef"  | Cases entre<br>virage double
+!colspan=3  style="background:#dfdfff"  | Vitesse maxi (km/h)
+|-
+!   style="background:#dfdfff"      | Voie ferrée
+!   style="background:#dfdfff"      | Monorail
+!   style="background:#dfdfff"      | Maglev
+|-
+| style="background:#f8f8ff"    | 0 (virage à 90°)  
+|    61||91||121
+|-
+| style="background:#f8f8ff"    | 1
+|     88||132||176
+|-
+| style="background:#f8f8ff"    | 2
+|    111||166||221
+|-
+| style="background:#f8f8ff"    | 3
+|    132||198||264
+|-
+| style="background:#f8f8ff"    | 4
+|    151||226||301
+|-
+| style="background:#f8f8ff"    | 5
+|    168||252||336
+|-
+| style="background:#f8f8ff"    | 6
+|    183||274||365
+|-
+| style="background:#f8f8ff"    | 7
+|    196||294||392
+|-
+| style="background:#f8f8ff"    | 8
+|    207||310||413
+|-
+| style="background:#f8f8ff"    | 9
+|    216||324||432
+|-
+| style="background:#f8f8ff"    | 10
+|    223||334||445
+|-
+| style="background:#f8f8ff"    | 11
+|    228||342||456
+|-
+| style="background:#f8f8ff"    | 12+
+|    231||346||461
+|}
+
+|    <!-- impérial-->
+{| border="2" width="auto" cellspacing="4" cellpadding="3" rules="all" style="margin: 0; border: solid 1px #AAAAAA; background-color: #ffefef;"
+|-
+!rowspan=2  style="background:#efefef"  | Cases
+!colspan=3  style="background:#efdfdf"  | Vitesse maxi (mi/h)
+|-
+!   style="background:#efdfdf"      | Voie ferrée
+!   style="background:#efdfdf"      | Monorail
+!   style="background:#efdfdf"      | Maglev
+|-
+| style="background:#f8f8ff"    | 0
+|     37|| 56|| 75 
+|-
+| style="background:#f8f8ff"    | 1
+|     54|| 82||109 
+|-
+| style="background:#f8f8ff"    | 2
+|     68||103||137 
+|-
+| style="background:#f8f8ff"    | 3
+|     82||123||164 
+|-
+| style="background:#f8f8ff"    | 4
+|     93||140||187 
+|-
+| style="background:#f8f8ff"    | 5
+|    104||156||208 
+|-
+| style="background:#f8f8ff"    | 6
+|    113||170||226 
+|-
+| style="background:#f8f8ff"    | 7
+|    121||182||243 
+|-
+| style="background:#f8f8ff"    | 8
+|    128||192||256 
+|-
+| style="background:#f8f8ff"    | 9
+|    134||201||268 
+|-
+| style="background:#f8f8ff"    | 10    ||138||207||276 
+|-
+| style="background:#f8f8ff"    | 11    ||141||212||283 
+|-
+| style="background:#f8f8ff"    | 12+   ||143||214||286 
+|}
+
+|}  <!-- fin des tables intégrées -->
+
+*L'accélération d'un train et la vitesse maximale sont affectés par la puissance de la locomotive, la vitesse actuelle, le poids total du train et l'inclinaison de la voie.
+*Accélération d'un train non MagLev = 37 *(0,55 * Puissance / Vitesse - 1,3 * Poids + 60 * #voitures + 0,0035 * Poids * Vitesse + 0,24 * Vitesse^2 - 60 * Poids des voitures sur une pente montante + 60 * Poids des voitures sur une pente descendante) / Poids (km/h/jour)
+*Accélération d'un train MagLev = 37 * (0,022 * Puissance - 0,24 * Vitesse^2 - 60 * Poids des voitures sur une pente montante + 60 * Poids des voitures sur une pente descendante) / Poids (km/h/jour)
+*Freiner est le double de l'accélération, sauf en entrant dans un dépôt ou une gare.
+*Les limites de vitesse ne s'appliquent que quand tous les virages ont lieu sur la longueur du train:
+[[File:en/speed-limits.png]]
+
+''Voir aussi: [[Main/fr/Accélération réaliste|Accélération réaliste]] et [[Main/fr/Virage|Virages]].''
+
+Voyez aircraft_cmd.c, roadveh_cmd.c, ship_cmd.c, train_cmd.c, vechicle.c pour le code.
+
+[[Category:fr/Jouer]]
+[[Category:fr/Développement]]
