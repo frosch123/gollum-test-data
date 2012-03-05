@@ -1,0 +1,41 @@
+<noinclude>[[Translation:Template/en/Airport]]</noinclude>{| class="toccolours" style="float:right; width:200px; margin-left: 1em;"
+|+ style="font-size: large; margin: inherit;"|'''{{{Fullname}}}'''
+
+| style="text-align:center; background:none;" |
+{| class="toccolours"
+|rowspan="8" style="text-align:center; font-size:smaller;"|[[File:en/.{{{image}}}|{{{imagewidth}}}|left]]
+|&nbsp;'''Год появления''' || {{{Entry}}}
+|-
+|&nbsp;'''Полос''' || {{{Runways}}}
+|-
+|&nbsp;'''Терминалов''' || {{{Ramps}}}
+|-
+|&nbsp;'''Вертолётных площадок''' || {{{Heli}}}
+|-
+|&nbsp;'''Размер''' || {{{size}}}
+|-
+|&nbsp;'''[[Main/ru/Депо|Ангаров]]''' || {{{hangars}}}
+|-
+|&nbsp;'''[[Main/ru/Зона покрытия|Зона покрытия]]''' || {{{catchment}}}
+|-
+|-
+|&nbsp;'''Шум''' || {{{noise}}}
+|-
+|}
+
+|}
+
+<noinclude>== Назначение ==
+Используйте этот шаблон, чтобы показать основные параметры аэропорта/вертолётной площадки.
+== Параметры ==
+* {{{Fullname}}} – Содержит полное имя аэропорта (например "Городской аэропорт")
+* {{{image}}} – имя используемого сохранённого изображения (например [[Main/en/Image:Airport c.PNG|Airport_c.PNG]])
+* {{{imagewidth}}} – Ширина показываемого изображения. Если не установлено, то используется ширина изображения, указанного в {{{image}}}
+* {{{Entry}}} – год появления
+* {{{Runways}}} – доступных взлётных полос
+* {{{Ramps}}} – терминалов для самолётов
+* {{{Heli}}} – вертолётных площадок
+* {{{size}}} – размер аэропорта в клетках
+* {{{hangars}}} – ангаров
+* {{{catchment}}} – радиус зоны захвата
+* {{{noise}}} – зарегистрированный уровень шума</noinclude>
