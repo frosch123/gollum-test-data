@@ -1,0 +1,65 @@
+[[Translation:Main/en/Building depots]]{{en/-}}{{de/Tutorial}}
+
+{{de/Hinweis|Diese Seite beschreibt nur Zugdepots. Es gibt auch {{User:Pystro/Template:Link Translation|depots|De|Depots|Depot|Depots}} für die anderen Transporttypen.}}
+Hier wirst Du lernen, wie man '''Zugdepots''' so '''baut''' (platziert, positioniert), dass sie sich deiner Strecke anpassen. Depots sind Gebäude, in denen Du deine Züge baust. Sie werden außerdem von fahrenden Zügen zur Wartung benötigt, stelle also sicher, dass deine Züge in die Depots ein- und wieder daraus ausfahren können.
+
+== Wie baue ich ein Depot? ==
+# Öffne zuerst die Gleisbau-Werkzeugleiste - klicke dazu auf das Gleisbauicon ( [[File:en/manual html m772c5b23.png]] ) in der [[Main/de/Spieloberfläche|Menüleiste]], um die Gleisbau-Werkzeugleiste anzuzeigen:<br/>[[File:en/Railroad Construction.png|none|frame|Die Gleisbau-Werkzeugleiste]]
+# Klicke auf '''Zugdepot bauen''' oder drücke "'''7'''". Ein neues Fenster mit der Ausrichtung des '''Depots''' öffnet sich.<br/>[[File:en/New depot.png|none|frame|'''Zugdepot bauen''' auswählen]]
+# '''Wähle die Ausrichtung''' deines Depots - das ist die Stelle, an der die Züge auf die Gleise gelangen.<br/>[[File:en/Depot direction.png|none|frame|Das Fenster zur Ausrichtung des Depots]]
+# Nun musst Du das Depot '''direkt neben deiner Strecke positionieren''', mit der Ein- und Ausfahrt in Richtung der Gleise. Neben der Errichtung auf ebenem Land kannst Du auch [[Main/de/Bau an Steigungen|auf Steigungen]] bauen.<br/>[[File:en/Depot position.png|none|frame|Die Position für das Depot auswählen]]
+# Sobald Du eine Position ausgewählt hast, klicke einmal, um das Depot zu '''bauen'''. Wenn direkt neben dem Depot Schienen verlaufen, werden zusätzliche Gleise automatisch errichtet.<br/>[[File:en/New depot placed.png|none|frame|Ein neu gebautes Depot mit automatisch verlegten Schienen]]
+
+Du kannst dein Depot jederzeit mit dem '''Dynamit-Werkzeug''' wieder abreißen ( [[File:en/Clear title.png]] ), solange sich keine Züge im Depot befinden.
+
+== Wo baue ich ein Depot? ==
+Wo Du ein Depot errichtest, ist eine strategische Entscheidung, die komplett Dir überlassen wird (Du kannst immer einige Depots entlang deiner Strecke platzieren und auf das Beste hoffen [[File:en/Smile 22px.png]]).
+
+Du solltest dafür sorgen, dass deine Züge
+* effizient '''gewartet''' werden können
+* keine '''Staus''' durch die Wartung erzeugen.
+
+Es gibt einige Strategien, wie diese Ziele erreicht werden können:
+# Schicke deine Züge zu spezifischen Zeitintervallen zur Wartung oder füge Depots in die Auftragsliste der Züge hinzu. Die Depots können dabei der Auftragsliste genau so hinzugefügt werden wie Bahnhöfe und Wegpunkte.<br/>[[File:en/Depot at station entrance.png|none|frame|Depots an der Einfahrt eines Bahnhofs]][[File:en/Depots-basic.png|none|frame|An Schienen errichtete Depots]]
+# Baue Gleise so, dass Züge zum Befahren der Depots gezwungen werden, wenn sie die Passage oder den Bahnhof durchfahren<br/>[[File:en/Depot end of station.png|none|frame|Depots am Ende der Bahnofsgleise. Züge werden zur Wartung gezwungen.]][[File:en/Depots-forced.png|none|frame|Depots, die Züge zur Wartung zwingen]]
+
+Es gibt auch andere '''erweiterte Depotkonfigurationen''', die einige der Probleme lösen, welche in der Basiskonfiguration oberhalb enthalten sind.
+
+Die verbreitetsten '''Probleme''' im Zusammenhang mit Depots sind:
+* Schnelle Züge bremsen stark ab, wenn sie in ein Depot ein- oder daraus ausfahren, was widerum andere Züge abbremst. Dies könnte zu Staus in vielbefahrenen Netzwerken führen.
+* Scharfe Kurven, welche sich oft in der Nähe von Depots befinden, bremsen die Züge ebenfalls aus
+* Wenn auf einer Strecke viel Verkehr herrscht, kann es vorkommen, dass sich Züge in den Depots für lange Zeit "ansammeln". Dies passiert beispielsweise dann, wenn am Ende eines Bahnhofs ein Depot gebaut wurde und ein Zug in das Depot einfährt; danach befährt der nächste Zug dasselbe Gleis und begibt sich ebenfalls zur Wartung ins Depot. Dies kann sich so lange fortsetzen, bis mehrere Züge in einem Depot blockiert sind.
+
+== Erweiterte Depotkonfigurationen ==
+* '''Depots auf beiden Linien: ''' Diese Konfiguration erlaubt es den Zügen, beim Ein- oder Ausfahren abzubremsen bzw. zu beschleunigen, ohne andere Züge auf der Hauptlinie auszubremsen.<br/>[[File:en/Depots-at-both-lines.png|none|frame|Depots auf beiden Linien]]
+* '''Erzwungene Wartung:''' Es macht oftmals Sinn, einen Zug nach Abliefern seiner Fracht oder vor dem neuen Beladen zu warten. Der Grund dafür ist, dass sich das Einkommen des Zuges danach richtet, wie viel Zeit zwischen dem Beladen und dem Entladen der Fracht vergangen ist. So erscheint es von Vorteil, einen frisch gewarteten Zug zu beladen und ihn nicht erneut in ein Depot zu schicken, bis die Fracht am Zielort angekommen ist.<br/>Beispiel einer erzwungenen Wartung nach dem Löschen der Ladung:<br/>[[File:en/Unload-then-service.png|none|frame|Züge werden zur Wartung gezwungen, nachdem sie entladen sind]]
+:Andere Vorteile dieser Konfiguration:
+:* Benötigt wenig Platz
+:* Die schnellen und langen Züge müssen zur Wartung und zum Befahren des Bahnhofs nur einmal abgebremst werden.
+:* Vermeidet scharfe Kurven durch Ausnutzen des "Depot-Tricks", weil Fahrzeuge um 180 Grad gedreht werden (wird von manchen Spielern missachtet, da es unschön aussieht und nicht realistisch ist)
+* '''Vorrang-Depots:''' Züge, die Depots verlassen, fahren wesentlich langsamer als Züge auf der Hauptlinie. Mit [[Main/en/Signale/De#Vorsignale|Vorsignalen]] kann man erreichen, dass Züge, die ein Depot verlassen wollen, auf Züge der Hauptlinie warten. Es empfiehlt sich, den Einsatz von Vorsignalen verstanden zu haben, bevor Du verstehst, ''wie'' und ''warum'' das funktioniert.
+:{|
+|style="border: 1px solid darkgray;"|
+{| align="center"
+|+'''Vorsignale'''
+|- align="center"
+|style="border: none;"|[[File:en/Entry presignal.png|22px]]
+|style="border: none;"|
+|style="border: none;"|[[File:en/Exit presignal.png|22px]]
+|style="border: none;"|
+|style="border: none;"|[[File:en/Combo presignal.png|22px]]
+|- align="center"
+|style="border: none;"|Eingangs-Vorsignal
+|style="border: none;"|&nbsp;&middot;&nbsp;
+|style="border: none;"|Ausgangs-Vorsignal
+|style="border: none;"|&nbsp;&middot;&nbsp;
+|style="border: none;"|kombiniertes Vorsignal
+|}
+|}
+Mit diesem Layout erzeugt man eine Vorsignal-Kette, welche rückwärts entlang deiner Strecke verläuft. Im Bild hat ein Zug auf der Hauptlinie das graue Ausgangs-Vorsignal auf rot geschaltet. Das rote Signal kommuniziert mit den kombinierten Vorsignalen und schaltet diese ebenfalls auf Rot. Das Eingangs-Vorsignal ist rot, weil das einzige zugehörige Ausgangs-Vorsignal rot ist.<br/>[[File:de/Right-of-way depot.png|none|frame|Vorrang-Depot: Der Zug der Hauptlinie erhält Vorrang vor Zügen in den Depots]]
+
+Eine Aufteilung auf zwei oder mehr Gleise vor der Wartung ist dann sinnvoll, wenn der Verkehr auf der Strecke hoch ist. Züge bremsen beim Einfahren in das Depot ab, auf diese Weise kann hinter dem einfahrenden Zug eine Schlange von wartenden Zügen entstehen. Wenn die Züge auf zwei Depots mittels Vorsignalen aufgeteilt werden, können auch zwei Züge gleichzeitig gewartet werden, was die Geschwindigkeit auf der Strecke erhöht.<br/>[[File:en/Split-before-servicing.png|none|frame|Diese Lösung hat keinen Einfluss auf die Durchschnittsgeschwindigkeit der Hauptlinie]]
+<span style="float: right">[[Main/de/Bahnhof bauen|'''Weiter''': Bau von Bahnhöfen]] &raquo;</span>
+
+[[Category:de/Bauen]]
+[[Category:de/Tutorial-Speziell]]
