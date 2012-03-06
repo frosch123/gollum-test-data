@@ -1,0 +1,46 @@
+[[Translation:Main/en/Building signals]]{{en/-}}{{de/Tutorial}}
+'''[[Main/de/Signale|Signale]]''' werden verwendet, um deine Züge zu lenken und Zusammenstöße zu verhindern.
+
+Dieses Tutorial bietet Dir eine Grundeinführung in den Bau und die Benutzung von Signalen. Für weiterführende Informationen über die verschiedenen Signaltypen und deren Anwendungen lies weiter unter [[Main/de/Signale|Signale]].
+
+== Bau eines Signals ==
+# Klicke auf das '''Gleisbau'''-Icon ( [[File:en/Manual html m772c5b23.png]] ) in der [[Main/de/Spieloberfläche|Menüleiste]], um die Gleisbau-Werkzeugleiste anzuzeigen:<br/>[[File:en/Railroad Construction.png|none|frame|Die Gleisbau-Werkzeugleiste]]
+# Klicke auf das '''Signale errichten'''-Icon ( [[File:en/Place signal.png]] ) in der Gleisbau-Werkzeugleiste, um die Signalauswahl anzuzeigen:<br/>[[File:en/Signal Selection.png|none|frame|Die Signalauswahl-Werkzeugleiste]] Diese Werkzeugleiste ist ziemlich einfach zu bedienen. Die obere Reihe enthält Formsignale und die untere Reihe zeigt die Lichtsignale. Jeder Signaltyp ist von der Funktion her identisch mit dem darüber/darunter, Du kannst also das Signal auswählen, welches eher deinen optischen Vorstellungen entspricht.<br/>Von links nach rechts befinden sich in der Werkzeugleiste die Signaltypen ''Blocksignal'', ''Eingangssignal'', ''Ausgangssignal'', ''kombiniertes Signal'', ''Pfadsignal'' und ''einseitiges Pfadsignal''. Wenn Du unsicher sein solltest, welches Signal welches ist oder wenn Du mehr über die Funktion der einzelnen Signale wissen möchtest, klicke mit der rechten Maustaste in der Werkzeugleiste auf das gewünschte Signal und ein Hinweis wird angezeigt, der Dir weitere Informationen bietet; oder lies Dir den Hauptartikel über [[Main/de/Signale|Signale]] durch.
+# Nachdem Du einen Signaltyp ausgewählt hast, '''positioniere deinen Cursor über den Gleisen''', auf denen Du dein Signal errichten willst.<br/>[[File:en/SignalTutorial2.png|none|frame]]
+# '''Klicke einmal''', um ein Signal auf der Strecke zu bauen. ''Wenn du kein Pfadsignal gewählt hast'', wird ein ''Zwei-Wege-Signal'' gebaut. Pfadsignale zeigen immer nur in eine Richtung.<br/>[[File:en/Two-way signal.png|frame|left]][[File:en/SignalTutorial3.png|none|frame]]
+# '''Klicke erneut''', um dein Signal in ein '''Einwegsignal''' umzuwandeln. Nun können nur Züge aus der Richtung das Signal passieren, in die es zeigt, wenn du kein Pfadsignal errichtet hast. Alle Änderungen der Signalausrichtung kosten kein Geld.<br/>[[File:en/One-way signal.png|frame|left]][[File:en/SignalTutorial4.png|none|frame]]
+# '''Klicke erneut''', um das Signal in die entgegengesetzte Richtung zeigen zu lassen.<br/>[[File:en/SignalTutorial5.png|none|frame]]
+# '''Klicke erneut''', um das Signal wieder in ein '''Zwei-Wege-Signal''' umzuwandeln.<br/>[[File:en/SignalTutorial5b.png|none|frame]]
+
+Diese Schritte können beliebig oft wiederholt werden.
+
+== Bau einer Linie von Signalen ==
+Du kannst auch mehrere Signale des selben Typs auf einmal bauen, indem du auf die Stelle auf deiner Strecke klickst, an der Du beginnen möchtest und dann mit dem Cursor und gedrückter Maustaste entlang der Strecke entlangfährst. Nachdem Du die Maustaste wieder loslässt, werden die Signale errichtet. Noch nützlicher könntest Du die Funktion finden, von einem bereits gebauten Signal aus weitere Signale zu positionieren. Die neuen Signale werden genauso ausgerichtet sein wie das Signal, von dem aus Du begonnen hast:
+# '''Platziere''', während das '''Signale errichten'''-Icon ( [[File:en/Place signal.png]] ) ausgewählt ist, '''deinen Cursor über einem bestehenden Signal'''.<br/>[[File:en/SignalTutorial4.png|none|frame]]
+# '''Klicke und ziehe''' die Maus entlang der Strecke.<br/>[[File:en/SignalTutorial20.png|none|frame]]
+# '''Lasse die Maustaste los''', um die neuen Signale zu platzieren.<br/>[[File:en/SignalTutorial21.png|none|frame]]
+
+Abhängig vom Wert, der im Feld '''Signalabstand''' ( [[File:en/Signal Density.png]] ) in der Signalauswahl-Werkzeugleiste angezeigt wird, werden nun Signale in jedem x-ten Feld gebaut (der Standardwert liegt bei 4), wenn eine Linie von Signalen auf diese Art errichtet wird.
+
+Du kannst den Signalabstand jederzeit durch einen Klick auf die kleinen Pfeile des Icons verändern. Beachte auch, dass wenn Du von Eingangs-, Ausgangs- oder kombinierten Signalen aus klickst und ziehst, diese Signale mit derselben Ausrichtung dann auch gebaut werden.
+
+== Umwandlung von Signalen in verschiedene Typen ==
+=== Mit dem Signalumbau-Icon ===
+Du kannst ein bestehendes Signal in einen anderen Signaltypen umwandeln, indem Du das '''Signalumbau'''-Icon ( [[File:en/Signal Convert.png]] ) aus der Signalauswahl-Werkzeugleiste auswählst. Wenn Du nun auf ein bestehendes Signal klickst, wird es kostenfrei in den Signaltyp umgewandelt, der in der Signalauswahl-Werkzeugleiste ausgewählt ist.
+
+Um den Signalumbau auszuschalten (wenn Du zum normalen Bau von Signalen zurückkehren möchtest), klicke erneut auf das Signalumbau-Icon.
+
+=== Mit der Strg-Taste ===
+Einen ähnlichen Effekt erzielst Du, wenn du {{keypress|Strg}} gedrückt hältst, während Du auf ein Signal klickst. Das Signal wechselt durch die verschieden Arten von Vorsignalen und/oder Pfadsignalen. Je nach Einstellung unter ''[[Main/de/Erweiterte Einstellungen|Erweiterte Eistellungen]]->Konstruktion->Signale->Durchlaufen der Signalarten'' kann man Signale mit dieser Methode nur zu einfachen Blocksignalen und Vorsignalen, nur zu Pfadsignalen oder zu allen Signalarten umbauen.
+
+== Signale entfernen ==
+Du kannst bestehende Signale entfernen, indem Du auf das '''Bulldozer'''-Icon ( [[File:en/Toggle clear active.png|Entfernen-Icon]] ) in der Gleiskonstruktions-Werkzeugleiste klickst, während die Signalauswahl-Werkzeugleiste geöffnet ist.
+
+Das weiße Quadrat wird nun rot. Dann kannst Du auf einzelne Signale klicken, um sie zu entfernen oder aber Du klickst auf ein Signal und ziehst bei gedrückter Maustaste entlang einer Strecke, um eine Linie von Signalen zu entfernen, nachdem Du die Maustaste wieder losgelassen hast. Ein nochmaliger Klick auf das Icon wählt ihn wieder ab. Du kannst auch die Abkürzungstaste {{keypress|R}} dazu verwenden.
+
+Dieses Werkzeug verwendet den Wert, der bei '''Signalabstand''' ( [[File:en/Signal Density.png]] ) in der Signalauswahl-Werkzeugleiste eingestellt ist.
+
+<span style="float: right">[[Main/de/Züge kaufen und verkaufen|'''Weiter:''' Züge kaufen und verkaufen]] &raquo;</span>
+
+[[Category:de/Bauen]]
+[[Category:de/Tutorial-Speziell]]
