@@ -1,0 +1,50 @@
+{{de/Übersetzung|FAQ multiplayer|90}}
+[[Translation:Main/en/FAQ multiplayer]]{{en/-}}
+
+'''Allgemeine Fragen die den Multiplayer-Teil von OpenTTD betreffen''', z.B. Probleme beim Betreten oder Erstellen von Servern oder zum allgemeinen Spielablauf.
+
+__FORCETOC__
+=====Funktioniert der Multiplayer-Teil jetzt wirklich?=====
+:* Ja, [[Main/en/Multiplayer|Multiplayer (en)]] läuft stabil seit der Version 0.3.5. Bis zu dieser Version war es kaum möglich den Mehrspieler Part von Transport Tycoon zu benutzen, weil das Design des Netzwerk Programmcodes so schlecht war.
+
+=====Wieviele Spieler können einem OpenTTD-Spiel beitreten?=====
+:* Es können bis zu 255 Spieler an einem Spiel teilnehmen, allerdings können pro Spiel nur 15 Firmen gegründet werden.Jeder Spieler kann entweder seinen eigene Firma gründen (so lange die gesamte Firmenanzahl unter 15 liegt), einer andren Firma beitreten (Co-Op) oder das Spiel nur als Zuschauer verfolgen.
+
+=====Wie starte ich ein Multiplayer-Spiel?=====
+:* Der Mehrspieler-Part kann entweder über das Multiplayer-Fenster bedient werden oder direkt über die Kommandozeile/Shell gestartet werden mit der folgenden Syntax:
+<pre>openttd -n IP[:port][#playerID]</pre>
+Beispiel:
+<pre>openttd -n 192.168.0.1:3979#1</pre> würde zum Server mit der IP 192.168.0.1 auf Port 3979 und tritt dem Spiel als Spieler Nr. #1 bei.
+
+=====Funktioniert das alles plattformunabhängig?=====
+:* Ja. Man kann zum Beispiel einen Server unter MacOS starten und mit einem Windows oder Linux Clienten (oder mit jeglichen anderen OS-Ports von OpenTTD) diesem Server beitreten.
+
+=====Welchen Port benutzt OpenTTD?=====
+:* Standardmäßig ist der Port 3979 eingestellt, aber wenn man einen Server startet kann jeder beliebige Port eingestellt werden. Wenn man einen Server hinter einem Router aufsetzt dann muss das Portforwarding für TCP und UDP auf den jeweiligen Port beachtet werden!
+:* Die Kommunikation mit dem Master-Server arbeitet über Port 3979 über UDP (ein- und ausgehend) und Port 3978 über UDP (ausgehend)
+:* Wenn man einem Spiel nur beitritt, dann braucht man keine Ports weiterzuleiten da alle Verbindungen dann nur ausgehend sind.
+
+=====Kann man einen dedizierten Server aufsetzen?=====
+:* Es ist möglich einen dedizierten Server beim Aufruf mir der Option '-D' zu starten. Weitere Infos unter [[Main/en/Dedicated server|"Dedicated Server" (en)]].
+
+=====Wieviel Bandbreite braucht das Spiel?=====
+:* Es wird pro Client ungefähr 1,2kbyte/s, jeweils im Up- und Downstream verbraucht. Wenn man dies multipliziert, kommt man bei einem 10-Spieler-Server auf ungefähr 12kbyte/s Up- und Downstream jeweils. Genauer lässt sich diese Anagabe nicht verfeinern, aufgrund von Störungen, Wiedervebindungen Doppelübetragenungen, etc. Wenn man das ganze Spiele jedoch weiter treibt, dann würd man bei einem Server mit 10-Spielern der 24 Stunden und 7 Tage die Woche läuft, ungefähr 60GByte pro Monat an Traffic (30GByte Up- und 30GByte Downstream) verbrauchen, vorrausgesetzt die 10-Spieler sind auch die ganze Zeit verbunden.
+
+=====Ich habe Probleme mit Cheatern. Hilfe!=====
+:* Es gibt eine Anleitung um sich vor den bekannten und schlimmsten [[Main/en/multiplayer cheating|Mehrspieler Cheats (en)]] zu beschützen. Beachte die [[Main/en/Multiplayer Rules| Mehrspieler Regeln (en)]].
+
+=====Gibt es denn  überhaupt richtige Regeln?=====
+:* Ja die gibt es. Siehe auch dazu [[Main/en/Multiplayer Rules| Mehrspieler Regeln (en)]]. Allerdings werden fast alle Server nicht von OpenTTD Team betreut und liegen somit außerhlab der Kontrolle von Offiziellen. Wenn es ein ernstahftes Problem gibt dann solltest du denjenigen der den Server betreibt kontaktieren und ihn auf das Problem aufmerksam machen.
+
+=====Können Konsolen-kommandos automatisch ausgeführt werden?=====
+:* Ja, das ist möglich, und es kann auch ziemlich praktisch sein. Die Seite [[Main/en/Running Startup Scripts|Running Startup Scripts (en)]] erklärt das ganze sehr detailliert.
+
+=====Ich habe einen neuen Server gestartet und er erscheint nicht bei meinen Freunden in der Server-Liste, auch nicht nach manuellem Eintragen. Wie kann das passieren?=====
+:* Es gibt öfter ein Problem mit Servern die hinter einem Modem hängen, welches mehreren Rechnern den Zugang zum Internet ermöglicht. Hier hilft meistens das schon agesprochenen Port-Forwaring auf Port 3979 für TCP oder UDP.
+
+=====Was ist ein "desync error"("Desynchronisierungs-Fehler")?=====
+:* Siehe [[Main/en/Multiplayer#Desync error|Desync error (en)]].
+
+[[Category:de/FAQs]]
+[[Category:de/Spielen]]
+[[Category:de/Mehrspieler]]
