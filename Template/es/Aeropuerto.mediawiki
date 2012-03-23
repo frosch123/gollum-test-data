@@ -1,0 +1,42 @@
+<noinclude>[[Category:es/Plantillas|{{PAGENAME}}]]</noinclude>
+<noinclude>[[Translation:Template/en/Airport]]</noinclude>{| class="toccolours" style="float:right; width:200px; margin-left: 1em;"
+|+ style="font-size: large; margin: inherit;"|'''{{{Fullname}}}'''
+
+| style="text-align:center; background:none;" |
+{| class="toccolours"
+|rowspan="8" style="text-align:center; font-size:smaller;"|[[File:en/.{{{image}}}|{{{imagewidth}}}|left]]
+|&nbsp;'''Puesta en servicio''' || {{{Entry}}}
+|-
+|&nbsp;'''Pistas''' || {{{Runways}}}
+|-
+|&nbsp;'''Terminales''' || {{{Ramps}}}
+|-
+|&nbsp;'''Helipuertos''' || {{{Heli}}}
+|-
+|&nbsp;'''Tamaño''' || {{{size}}}
+|-
+|&nbsp;'''[[Main/es/Depósitos|Depósitos]]''' || {{{hangars}}}
+|-
+|&nbsp;'''[[Main/es/Área de influencia|Área de influencia]]''' || {{{catchment}}}
+|-
+|-
+|&nbsp;'''Ruido''' || {{{noise}}}
+|-
+|}
+
+|}
+
+<noinclude>== Function ==
+Use this Template to show the basic values of an airport/a heliport.
+== Parameters ==
+* {{{Fullname}}} – Nombre completo del tipo de aeropuerto (ej. "City Airport")
+* {{{image}}} – There is the name of image saved (e.g. [[Main/en/Image:Airport c.PNG|Airport_c.PNG]])
+* {{{imagewidth}}} – Define the width of the shown image. If it isn't set it uses the width of the image set in {{{image}}}
+* {{{Entry}}} – Año de aparición
+* {{{Runways}}} – Número de pistas disponible
+* {{{Ramps}}} – Número de espacios para aparcamiento de aviones (terminales) disponibles
+* {{{Heli}}} – Número de helipuertos
+* {{{size}}} – Tamaño del aeropuerto en cuadros
+* {{{hangars}}} – Número de [[Main/es/hangar|hangares]]
+* {{{catchment}}} – Radio del área de influencia
+* {{{noise}}} – Nivel de ruido</noinclude>
