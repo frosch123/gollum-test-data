@@ -1,0 +1,198 @@
+[[Translation:Main/en/Templates]]
+Een lijst van gewone '''Sjablonen''' en hun gebruik, klik op de naam van de sjabloon voor verdere documentatie.
+Je kunt een lijst van sjablonen vinden in:
+* [[Main/en/Stijlhandleiding/Nl#Gewone sjablonen|OpenTTD:Stijlhandleiding/Gewone sjablonen]]
+* [[Category/nl/Sjablonen]].
+* Voor een complete lijst van alle sjablonen, zie [[Main/en/Special:Allpages/Template:]].
+
+Kijk ook bij [[Category/en/Editing Resources]] voor andere editing bronnen die beschikbaar zijn.
+__TOC__
+
+== [[Category/nl/Berichtenbox|Berichtenbox sjablonen]] ==
+
+Er zijn 6 types (kleuren) van boxen voor berichten:
+
+<table style="margin: 0px 10% 0px 10%; border: 1px solid #aaa; background:#fbfbfb">
+<tr valign="top">
+<td style="border-left: 10px solid #1e90ff; padding: 2px 0 2px 0.5em;"><div style="width:52px; color:#1e90ff;">'''blauw'''</div></td>
+<td style="border: none; padding: 0.25em 0.9em; width: 100%;}}">[[Main/en/#blue tipe|informatie]]: Lezers/editors moeten hier opletten</td>
+</tr><tr valign="top">
+<td style="border-left: 10px solid #f4c430; padding: 2px 0 2px 0.5em;"><div style="width:52px; color:#f4c430;">'''geel'''</div></td>
+<td style="border: none; padding: 0.25em 0.9em; width: 100%;}}">[[Main/en/#Style type (yellow)|stijl]]: Problemen niet met de inhoud, maar hoe het is vormgegeven/gepresenteerd</td>
+</tr><tr valign="top">
+<td style="border-left: 10px solid #f28500; padding: 2px 0 2px 0.5em;"><div style="width:52px; color:#f28500;">'''oranje'''</div></td>
+<td style="border: none; padding: 0.25em 0.9em; width: 100%;}}">[[Main/en/#Content type (orange)|inhoud]]: Problemen met de inhoud van een artikel, bijv. wat het artikel in feite vertelt</td>
+</tr><tr valign="top">
+<td style="border-left: 10px solid #b22222; padding: 2px 0 2px 0.5em;"><div style="width:52px; color:#b22222;">'''rood'''</div></td>
+<td style="border: none; padding: 0.25em 0.9em; width: 100%;}}">[[Main/en/#Delete type (red)|verwijder]]: Verwijdering</td>
+</tr><tr valign="top">
+<td style="border-left: 10px solid #9932cc; padding: 2px 0 2px 0.5em;"><div style="width:52px; color:#9932cc;">'''paars'''</div></td>
+<td style="border: none; padding: 0.25em 0.9em; width: 100%;}}">[[Main/en/#Move type (purple)|verplaats]]: Samenvoegen, verdelen...</td>
+</tr><tr valign="top">
+<td style="border-left: 10px solid #bba; padding: 2px 0 2px 0.5em;"><div style="width:52px; color:#bba;">'''grijs'''</div></td>
+<td style="border: none; padding: 0.25em 0.9em; width: 100%;}}">[[Main/en/#Protected type (gray)|afgeschermd]]: Pagina is gesloten voor bewerkingen</td>
+</tr>
+</table>
+===Opmerking type (blauw)===
+{| style="border:0px; padding:5px; width=100%;"
+|- valign="top"
+|width=150;|{{en/S|Opmerking/Nl| TEKST }}
+|{{nl/Opmerking| TEKST }}
+|- valign="top"
+|{{en/S|Te doen/Nl| TEKST }}
+|{{nl/Te doen| TEKST |2= }}
+|- valign="top"
+|{{en/S|Uitbreiding/Nl| TEKST }}
+|{{nl/Uitbreiding| TEKST |2= }}
+|- valign="top"
+|{{en/S|Actueel/Nl}}
+|{{nl/Actueel|1= }}
+|}
+
+===Stijl type (geel)===
+{| style="border:0px; padding: 5px; width=100%;"
+|- valign="top"
+|width=150;|{{en/S|Opschonen/Nl}}
+|{{nl/Opschonen|1= }}
+|- valign="top"
+|{{en/S|Vertaling/Nl | Titel in het Engels; percentage}}
+|{{nl/Vertaling||origin=title}}
+|}
+
+===Inhoud type (oranje)===
+{| style="border:0px; padding: 5px; width=100%;"
+|- valign="top"
+|width=150;|{{en/S|waarschuwing/Nl| TEKST }}
+|{{waarschuwing/Nl| TEKST }}
+|- valign="top"
+|{{en/S|Incompleet/Nl}}
+|{{nl/Incompleet|1= }}
+|- valign="top"
+|{{en/S|Verlopen/Nl}} <br> {{en/S|Verlopen/Nl| TEKST }} 
+|{{nl/Verlopen|2= }} 
+|}
+
+===Verwijder type (rood)===
+{| style="border:0px; padding:5px; width=100%;"
+|- valign="top"
+|width=150;|{{en/S|Delete| Reason &#124; User name}}
+|{{en/Delete|3= }} 
+|- valign="top"
+|{{en/S|Vandal}}
+|{{Vandal|1= }}
+|}
+
+===Verplaats type (paars)===
+{| style="border:0px; padding: 5px; width=100%;"
+|- valign="top"
+|width=150;|{{en/S|Samenvoegen/Nl| paginanaam}}
+|{{nl/Samenvoegen|een paginanaam|2= }}
+|- valign="top"
+|width=150;|{{en/S|Samenvoegenin/Nl| paginanaam}}
+|{{nl/Samenvoegenin|een paginanaam|2= }}
+|- valign="top"
+|width=150;|{{en/S|Samenvoegenvan/Nl| paginanaam}}
+|{{nl/Samenvoegenvan|een paginanaam|2= }}
+|- valign="top"
+|{{en/S|Splitsen/Nl|TEKST}}
+|{{nl/Splitsen|TEKST|2= }} 
+|}
+
+===Afgeschermd type (grijs)===
+{| style="border:0px; padding: 5px; width=100%;"
+|- valign="top"
+|width=150;|{{en/S|Historical}}
+|{{en/Historical|1= }} 
+|}
+
+== Specifieke sjablonen ==
+
+{| style="border:0px; padding: 5px; width=100%;"
+|- valign="top"
+|width=150;|{{en/S|Linking}}
+|{{en/Linking}}
+|- valign="top"
+|{{en/S|Suggestions}}
+|{{en/Suggestions|1= }}
+|- valign="top"
+|{{en/S|License|type=your type}}
+|{{en/License|type=PD}}
+|}
+
+== ottd versies ==
+
+{| style="border:0px; padding: 5px; width=100%;"
+|- valign="top"
+| width=150;|{{en/S|FutureFeature}}
+|{{en/FutureFeature}}
+|-
+|{{en/S|Kenmerken/Nl| jouw versie }}
+|{{nl/Kenmerken|1.0|align="center"|text=(1.0.0)}}
+|-
+|{{en/S|Kenmerken_periode/Nl| jouw versie }}
+|{{nl/Kenmerken periode|0.5|1.0|align="center"|text=(0.5 t/m 1.0)}}
+|-
+|{{en/S|nightly| TEKST }}
+|{{nightly| TEKST }}
+|}
+
+== Andere ==
+
+{| style="border:0px; padding:5px; width=100%;"
+| width=150;|{{en/S|Progress bar | 50 }}
+|{{en/Progress bar| 50}}
+|-
+|{{en/S|Progress bar 32bpp tracker | category}}
+|{{en/Progress bar 32bpp tracker|ground terrain}}
+|-
+|{{en/S|Other_languages | ... }}}
+|[[Translation:Main/en/Main Page]]
+|}
+
+== Tekst ==
+{| border=1 cellspacing=0 cellpadding=3 
+!width=150px|Syntax
+!width=55%|Mogelijk resultaat
+|-
+|{{en/S|Forum|Forum|Topic}}
+|Link naar form/topic/post op een TT-forum. Zie [[Template/en/Forum|voorbeelden]].
+|-
+|{{en/S|User|Gebruikersnaam}}
+| {{en/User|Gebruikersnaam}}
+|-
+|{{en/S|Check|Type|Color|Size}}
+|{{en/Check|Yes|Green|20px}} of {{en/Check|No|Red|20px}} of {{en/Check|No|Black|20px}} enz...
+|-
+|{{en/S|Emoticon|Code|Size}}
+|{{en/Emoticon|:)}} of {{en/Emoticon|;)}} of {{en/Emoticon|:((}} enz...
+|}
+
+== Navigatie ==
+
+Zie [[Category/en/Navigation]] voor een lijst van actuele navigatiesjablonen.
+
+=== [[Template/en/Navbox|Navbox]] ===
+
+{{en/Navbox|navbar = off
+|state = off      
+
+|name  = Name 
+|title = Onderverdelen van groepen links
+
+|group1 = groep 1
+|list1 = {{en/Navbox subgroup|group1 = Onderdeel 1
+            |list1  = {{nowrap begin}} Item 1 {{en/·w}} Item 2 {{en/·w}} Item 3 {{nowrap end}}
+
+            |group2 = Onderdeel 2
+            |list2  = {{nowrap begin}} Item 1 {{en/·w}} Item 2 {{en/·w}} Item 3 {{nowrap end}}
+           }}
+
+|group2 = groep 2
+|list2  = {{nowrap begin}} Item 1 {{en/·w}} Item 2 {{en/·w}} Item 3 {{nowrap end}}
+}}
+
+== Verzoek om aanvullende sjablonen ==
+
+Gebruik a.u.b. de [[Archive/nl/Modellen|discussie pagina]] voor verzoeken.
+
+[[Category:nl/Sjablonen|M]][[Category:en/Editing Resources]]
