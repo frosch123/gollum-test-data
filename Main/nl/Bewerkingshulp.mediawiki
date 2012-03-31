@@ -1,0 +1,222 @@
+[[Translation:Main/en/Editing help]]{{en/-}}{{en/TOCright}}
+Hier is een gids over wiki markup taal. Voel je vrij om dit te testen door het te bewerken van in de [[Main/nl/zandbak|zandbak]].
+
+*Zie de [http://nl.wikipedia.org/wiki/Help:Uitleg bewerkingshulp] op Wikipedia voor meer hulp.
+
+<div style="margin: 2em 0em 0em 0em; padding: 0em 1em 1em 1em; border: 1px solid #E1BBFF; background-color: #F5EDFC; font-size:large;">
+==Zeer belangrijke regels==
+#Onderteken altijd met je naam als je een commentaar inzendt. Gebruik vier tildes: <nowiki>~~~~</nowiki>.
+#Gebruik de '''Bewerking ter controle tonen''' knop voordat je een pagina opslaat.
+#Lees de [[Main/nl/Stijlhandleiding|OpenTTD Wiki stijlhandleiding]].
+</div>
+
+==Tekst stijl==
+Gebruik apostrofen om tekst vet of cursief te maken.
+{|
+!Code
+!HTML equivalent
+!Resultaat
+|-
+|<code><nowiki>''Cursieve tekst''</nowiki></code>||<nowiki><b>Cursieve tekst</b></nowiki>||''Cursieve tekst''
+|-
+|<code><nowiki>'''Vette tekst'''</nowiki></code>||<nowiki><b>Vette tekst</b></nowiki>||'''Vette tekst'''
+|-
+|<code><nowiki>'''''Vet en cursief'''''</nowiki></code>||<nowiki><b><i>vet en cursief</i></b></nowiki>||'''''Vet en cursief'''''
+|}
+
+==Linken==
+===Interne links===
+Neem woorden op tussen dubbele rechte haken om een link te maken naar een artikel op de OpenTTD wiki (wiki.openttd.org). Scheidt de link van de op te nemen tekst met een verticale streep ("|"):
+{|
+!Voorbeeld
+!Bron
+|-
+|[[Main/en/Download]] || <code><nowiki>[[Main/en/Download]]</nowiki></code>
+|-
+|[[Main/en/Download]]s || <code><nowiki>[[Main/en/Download]]s</nowiki></code>
+|-
+|[[Main/en/Download|Verkrijg de bestanden]] || <code><nowiki>[[Main/en/Download|Verkrijg de bestanden]]</nowiki></code>
+|}
+
+<!--===Wikipedia links===
+Hetzelfde als hierboven maar voeg "wikipedia:" toe voor de link.
+{|
+!Voorbeeld
+!Bron
+|-
+|[http://www.wikipedia.org/wiki/Subversion ] || <code><nowiki>[http://www.wikipedia.org/wiki/Subversion ]</nowiki></code>
+|-
+|[http://www.wikipedia.org/wiki/OpenTTD ]eluxe || <code><nowiki>[http://www.wikipedia.org/wiki/OpenTTD ]eluxe</nowiki></code>
+|-
+|[http://www.wikipedia.org/wiki/OpenTTD OpenTTD] || <code><nowiki>[http://www.wikipedia.org/wiki/OpenTTD OpenTTD]</nowiki></code>
+|-
+|[http://www.wikipedia.org/wiki/m:Help Help at Meta]||<code><nowiki>[http://www.wikipedia.org/wiki/m:Help Help at Meta]</nowiki></code>
+|}
+Uitgecommentarieerd: Zie ook de Nederlandse en Engelse overlegpagina's -->
+
+===Externe links===
+Zet woorden tussen vierkante haken om naar een andere website te verwijzen. URL en titel worden van elkaar gescheiden met een spatie (" ").
+{|
+!Voorbeeld
+!Bron
+!Opmerking
+|-
+|[http://www.openttd.org] || <code><nowiki>[http://www.openttd.org]</nowiki></code> || Externe link zonder beschrijving wordt automatisch getoond als [x]
+|-
+|[http://www.openttd.org OpenTTD] || <code><nowiki>[http://www.openttd.org OpenTTD]</nowiki></code> ||
+|}
+
+==Artikel secties==
+Zet tekst tussen 'isgelijk' tekens ("=") om een artikel in secties te verdelen.
+
+<pre><nowiki>=Hoofdsectie=
+==Deelsectie==
+===Deeldeelsectie===
+====Begrijp je het?====
+</nowiki></pre>
+
+==Afbeeldingen==
+Upload een afbeelding met de [[Main/en/special:upload|upload bestand]] link in het hoofdmenu.
+
+Gebruik deze code om een afbeeling aan een artikel toe te voegen:
+<pre>[[File:en/.bestandsnaam|frame|none|titel]]</pre>
+
+Voorbeeld:
+<pre>[[File:en/longerbridges.png|frame|none|Langere bruggen]]</pre>
+Resultaat:
+[[File:en/longerbridges.png|frame|none|Langere bruggen]]
+
+*Zie ook [http://en.wikipedia.org/wiki/Help:Extended_image_syntax Uitgebreid afbeeldingssysteem (EN)] op Wikipedia.
+
+==Tabellen==
+{{nl/Uitbreiding|Hulp over CSS-formateren gewenst}}
+Tabel-code moet vooraan op de regel beginnen.
+{|
+!Code
+!HTML equivalent
+!Resultaat
+|-
+|<code><nowiki>{|</nowiki></code>||<nowiki><table></nowiki>||Start een tabel 
+|-
+|<code><nowiki>!</nowiki></code>||<nowiki><th></nowiki>||Kolomtitel 
+|-
+|<code><nowiki>|</nowiki></code>||<nowiki><td></nowiki>||Nieuwe cel
+|-
+|<code><nowiki>!!</nowiki></code>||<nowiki></th><th></nowiki>||Kolomtitel op dezelfde regel
+|-
+|<code><nowiki>||</nowiki></code>||<nowiki></td><td></nowiki>||Nieuwe cel op dezelfde regel
+|-
+|<code><nowiki>|-</nowiki></code>||<nowiki><tr></nowiki>||Nieuwe rij
+|-
+|<code><nowiki>|}</nowiki></code>||<nowiki><table></nowiki>||Sluit tabel af
+|-
+|
+<pre><nowiki>
+{|
+!Kolomtitel1!!Kolomtitel2
+|-
+|gegeven1
+|gegeven2
+|-
+|gegeven3||gegeven4
+|}</nowiki></pre>
+|
+<pre><nowiki>
+<table><tr>
+<td>Kolomtitel1</th><th>Kolomtitel2</th></tr>
+<tr>
+<td>gegeven1</td>
+<td>gegeven2</td>
+<tr>
+<td>gegeven3</td><td>gegeven4</td>
+</tr></table>
+</nowiki></pre>
+|
+
+{|
+!Kolomtitel1!!Kolomtitel2
+|-
+|gegeven1
+|gegeven2
+|-
+|gegeven3||gegeven4
+|}
+|}
+
+*Zie ook [http://nl.wikipedia.org/wiki/Help:Gebruik_van_tabellen Gebruik van Tabellen] op Wikipedia.
+
+==Lijsten==
+Lijst-code moet vooraan op de regel beginnen.
+{|
+!width="150"|Code
+!Resultaat
+|-
+|<nowiki>#</nowiki>||Geordende lijst
+|-
+|<nowiki>*</nowiki>||Ongeordende lijst
+|-
+|'''<nowiki>:</nowiki>'''||Inspringen
+|-
+|<pre><nowiki>#Stap A
+#Stap B
+#*Aanwijzing
+#Stap C
+##Deelstap
+##Deelstap
+#Stap D
+:Opmerking:
+::Opmerking tekst</nowiki></pre>
+|
+#Stap A
+#Stap B
+#*Aanwijzing
+#Stap C
+##Deelstap 
+##Deelstap 
+#Stap D
+:Opmerking:
+::Opmerking tekst
+|}
+
+==Sjablonen==
+{{nl/Uitbreiding}}
+Zet een sjabloon tussen dubbele accolades ("{}") om deze in te voegen tijdens het laden van de pagina.
+<pre>{{sjabloonnaam|parameter1|parameter2}}</pre>
+In het sjabloonbestand (bijvoorbeeld [[Template/en/delete]]), kunnen de parameters met drievoudige accolades worden benaderd.
+<pre>{{{1}}} {{{2|default}}}</pre>
+
+*Zie ook [http://nl.wikipedia.org/wiki/Help:Gebruik_van_sjablonen Gebruik van sjablonen] op Wikipedia.
+
+==Doorverwijzingen==
+Gebruik doorverwijzingen om artikelen automatisch te laten doorverwijzen naar een andere. In dit voorbeeld verwijst [[Main/en/checkpoints]] automatisch naar [[Main/en/waypoints]]:
+<pre>#REDIRECT [[Main/en/waypoints]]</pre>
+
+==Categorieën==
+Voeg artikelen toe aan een categorie door onderaan het artikel een categorielink toe te voegen:
+<pre>[[Category:nl/Ontwikkelingen]]</pre>
+
+Toon de categorie als een gewone link door een dubbele punt toe te voegen:
+<pre>[[Category/nl/Ontwikkelingen]]</pre>
+[[Category/nl/Ontwikkelingen]]
+
+==Andere codes==
+{|
+!Code
+!Resultaat
+|-
+|<nowiki><nowiki>tekst</no</nowiki>wiki>||Zorg dat tekst wordt weergegeven zoals ingevoerd
+|-
+|<nowiki><code>tekst</code></nowiki>||Zorg dat tekst wordt weergegeven met het code-lettertype
+|-
+|<nowiki><pre>tekst</pre></nowiki>||Zorg dat tekst wordt weergegeven in een kader, met het code-lettertype, maar zonder HTML witruimteformatering
+|-
+|<nowiki><noinclude>tekst</noinclude></nowiki>||Geef tekst weer op de sjabloonpagina, maar niet op pagina's waar wordt ingevoegd. Bruikbaar voor gebruiksinstructies voor de sjabloon.
+|-
+|<nowiki><includeonly>tekst<includeonly></nowiki>||Geef tekst weer op pagina's waar wordt ingevoegd, maar niet op de sjabloonpagina. Bruikbaar voor sjablonen die artikelen toevoegen aan categorieën.
+|-
+|<code><nowiki>----</nowiki></code>||Voeg een horizontale balk toe.
+|-
+|<code><nowiki>~~~~</nowiki></code>||Voeg je ondertekening in.
+|}
+
+[[Category:nl/OpenTTD Wiki]]
