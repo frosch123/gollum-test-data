@@ -1,0 +1,48 @@
+[[Translation:Main/en/Convert rail]]{{en/-}}{{Template:Tutorial/Nl}}
+
+==Converteer spoortype==
+Om te selecteren naar welk type van spoor je wilt converteren, klik en hou de spoorweg bouwknop vast in het hoofdmenu. 
+
+[[File:en/Spoorwegmenu2.png|left|frame]] [[File:en/veranderspoor.png|none|frame]]
+
+De [[File:en/Convert rail.png]] '''Verander spoorweg''' knop zal een sleep-en-laat-los knop activeren die je de mogelijkheid geeft je het spoortype te converteren naar een ander spoortype (rail -> monorail -> maglev -> rail). Dit gereedschap kan worden gebruikt bij [[Main/nl/Bouw sporen|rail]], [[Main/nl/Depots bouwen|depots]], [[Main/nl/Bruggen bouwen|bruggen]], [[Main/nl/Tunnels|tunnels]], [[Main/nl/Stations|stations]] en [[Main/nl/Controleposten|controleposten]].
+
+* Bruggen en tunnels: kies één zijde ervan.
+
+* Station: je moet elke tegel van een platform converteren. Je kunt de spoortypen mixen binnen één station ([[Main/nl/Niet-uniforme stations|nonuniforme stations]]).
+
+* Wees er zeker van dat de lijn vrij is van treinen. Treinen de al rijden moet je naar een depot  sturen en dan [[Main/en/Treinen kopen en verkopen/Nl#Hoe verkoop/verwijder ik treinen?|verkopen]] (behalve als converteert van een [[Main/nl/Spoorwegen|normaal spoor]] naar een [[Main/nl/Geëlektrificeerde spoorwegen|elektrisch spoor]]).
+
+* Je kunt spoor onder treinen converteren van [[Main/nl/Spoorwegen|normaal spoor]] naar [[Main/nl/Geëlektrificeerde spoorwegen|elektrisch spoor]]. Dan hoeft de lijn niet leeg te zijn.
+
+* Je kunt alleen converteren naar spoortypes die beschikbaar zijn.
+[[File:en/Convert station.png|left|frame|Gemengde spoortypen]]
+[[File:en/Convert rail tunnel.png|none|frame|Gemengde spoortypen]]
+{{en/-}}
+
+==Converteer depots==
+{{nl/Opmerking|Alleen lege [[Main/nl/Depots|depots]] kunnen worden geconverteerd (tenzij het spoortype uitwisselbaar is)}}
+
+
+==Niet-diagonale sporen==
+In OpenTTD kan per tegel maar één spoortype worden aangelegd (behalve de [[Main/nl/spoorwegen|normale spoorweg]] en de [[Main/nl/geëlektrificeerde spoorwegen|elektrische spoorweg]]); dus het is mogelijk dat je het spoor eerst moet ombouwen als je verschillende spoorlijnen wilt mengen die dicht bij elkaar liggen.
+[[File:en/Convert rail close.png|left|frame|te dichtbij om spoortypen te mengen]]
+[[File:en/Convert rail good.png|none|frame|aparte tegels voor verschillende spoortypen]] 
+{{en/-}}
+
+==Tips==
+* Om tijd te besparen bij het converteren van een trein met veel orders van het ene spoortype naar het andere , stuur je de trein naar een depot van een ouder type en [[Main/en/Sell entire train|verkoop je de hele trein]]. Terwijl het depot venster nog open is, converteer jet het depot naar het nieuwe spoortype, en de volgende trein die je bouwt zal de orders hebben van de vorige trein. Het depot venster moet open blijven staan gedurende deze handeling. Merk op dat je maar één trein op deze wijze kunt converteren met deze methode, maar je kunt ook het lege depot terug converteren naar het oude spoortype en op die wijze een andere trein converteren met hetzelfde depot.
+
+* Om te converteren naar een uitwisselbaar spoortype (b.v. [[Main/nl/geëlektrificeerde spoorwegen|elektrisch spoor]]), hoeven treinen niet onmiddellijk te worden geconverteerd omdat stoom en diesel treinen perfect rijden op elektrisch spoor.  Elektrische treinen, echter, zullen niet doorrijden over niet-elektrisch spoor.
+
+* Voertuig ([[Main/nl/Voertuig vervangen|automatisch]]) vervangen werkt niet met uitgewisselde depots.
+
+* Je kunt de [[Main/nl/Orders|ga naar depot]] order gebruiken voor alle treinen die de lijn gebruiken die je wilt converteren of de voertuiglijst waarmee je alle (of groepen) van treinen naar het meest nabijzijnde depot kunt sturen.
+
+==Zie ook==
+*[[Main/nl/Spoorwegconstructies|Spoorwegconstructies]]
+*[[Main/nl/Niet-uniforme stations|Niet-uniforme stations]]
+*[[Main/en/Advanced Settings/Vehicles|Schakel elektrische sporen uit]]
+
+[[Category:nl/Constructie]]
+[[Category:nl/Spoorwegen]]
