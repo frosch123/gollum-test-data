@@ -1,0 +1,14 @@
+[[Translation:Main/en/Coloured newspaper]]
+{{en/-}}
+A [[Main/en/Advanced Settings|setting]] that changes the date when coloured newspaper messages are being displayed.
+
+== Description ==
+This patch is a purely cosmetic change that allows the newspaper messages to be printed in colour after a certain date, supposedly to coincide with the use of coloured ink in newspaper printing. If you would like to be accurate to real life, the '80s are a good time to start.
+
+== Use ==
+This feature is set to 2000 by default. You can change it through either the [[Main/en/Configuring patches/Economy|configure patches -> Economy]] window for versions 0.6.x and previous, the [[Main/en/Advanced Settings/Interface#Coloured news appears in|Advanced Settings -> Interface]] window in versions 0.7.x and later, or use the following syntax in [[Main/en/openttd.cfg]]:
+<pre>[patches]
+colored_news_year = 2000</pre>
+
+
+[[Category:en/Settings & Preferences]]
