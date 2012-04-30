@@ -1,0 +1,65 @@
+[[Translation:Main/en/OpenTTD 1.1.1]]
+{{en/-}}
+{{fr/Livraison|prec=OpenTTD 1.1.0|suiv=OpenTTD 1.1.2|date=01/06/2011}}
+
+Vous pouvez obtenir cette version depuis [http://www.openttd.org/download-stable/1.1.1 openttd.org].
+
+==Nouvelles fonctionnalités majeures==
+
+* Détermination de chemin plus rapide
+* Affiche un chiffre de la longueur fractionnelle du train dans le dépôt
+* "Ordres automatiques" renommés en "ordres implicites" pour plus de clarté
+* Corrections de bogues
+
+==Journal des changements==
+
+===1.1.1 (01/06/2011)===
+
+* Changement: Les ordres automatiques sont mieux appelés ordres implicites car aucun ordre réel influençant la détermination de chemin n'est ajoutée (r22474, r22473)
+* Correction: N'essayer d'insérer des ordres implicites que pour les véhicules terrestres. Les avions peuvent atteindre des terminaux non prévus en sautant des ordres {{en/Flyspray|4624}} (r22492)
+
+===1.1.1-RC1 (15/05/2011)===
+
+* Fonctionnalité: [NewGRF] Permet de filtrer par ville de l'industrie courante en utilisant la variable d'industrie 0x68 {{en/Flyspray|4591}} (r22434)
+* Changement: Améliore la vitesse de YAPF en améliorant la taille des tables de hachage (r22351, r22350, r22348)
+* Changement: Affiche un chiffre de la longueur fractionnelle des trains dans le dépôt (r22336, r22305, r22304, r22303)
+* Corrigé: Quand la détermination du chemin de l'exécutable échouait, le répertoire de travail était utilisé à la place, contournant la vérification du répertoire autre que personnel {{en/Flyspray|4613}} (r22465)
+* Corrigé: [Windows] Évite un plantage en lançant OpenTTD avec -d depuis une console MSYS {{en/Flyspray|4587}} (r22464)
+* Corrigé: Met à jour la fenêtre de sauvegarde/chargement immédiatement après avoir analysé un nouveau répertoire, pour que les événements empilés atteignent la fenêtre déjà mise à jour {{en/Flyspray|4615}} (r22463)
+* Corrigé: [NewGRF] Les parties c et p des variables de station 40, 41 et 49 étaient incorrectes pour les grandes stations (r22455, r22286)
+* Corrigé: [NewGRF] Mettre à zéro le registre 0x100 comme spécifié avant de résoudre les fondations personnalisées de gare (r22452)
+* Corrigé: Ne pas 'tracer' les NewGRFs dans une capture d'écran quand on est dans le menu {{en/Flyspray|4610}} (r22450)
+* Corrigé: [NewGRF] Quand les GRFs sont désactivés via Action E ou à cause de plantages GRM, afficher aussi une erreur dans l'IHM (r22444, r22443)
+* Corrigé: [NewGRF] Ne pas faire surgir des messages d'erreur NewGRF fatals dans l'écran d'introduction. Les GRFs ne sont pas activés là quoi qu'il en soit, et l'IHM des paramètres GRF n'affichera pas non plus les erreurs (r22442)
+* Corrigé: Les caténaires étaient mal dessinés près des passages à niveau avec fondations (r22437)
+* Corrigé: [NewGRF] Appliquer la propriété de type de voie 12 (graphismes de station) aussi aux sprites de terrain de station de l'action 1 (r22436)
+* Corrigé: La détection des révisions Git renvoie trop de choses quand les marques sont impliquées (r22435)
+* Corrigé: [NewGRF] Quand l'action 14 spécifiait différentes valeurs de la palette, les valeurs étaient traitées avec un OU. Utiliser plutôt la dernière valeur mise (r22416)
+* Corrigé: [Réseau] Vous bannier vous-mêmes via la console à distance plante le serveur {{en/Flyspray|4606}} (r22414)
+* Corrigé: [NewGRF] S'assure que l'ID de l'action2 d'un rappel de fonctionnalité générique est valide (r22409)
+* Corrigé: Vérifie l'année de disponibilité de toutes les maisons, pas simplement des maisons NewGRF, en s'assurant qu'au moins une est disponible dès l'année 0 {{en/Flyspray|4581}} (r22389, r22300, r22299)
+* Corrigé: Quand une partie utilise beaucoup de NewGRFs, le tampon pour stocker cette information dans le PNG est trop petit (r22388)
+* Corrigé: Le receveur de la fenêtre semble renvoyer 'bien fermé' avant d'avoir passé le tampon restant, ce qui fait que OpenTTD pense que toutes les connexions sont 'mal' terminées, c.à.d. sans le paquet 'Je quitte' du client. Laisse donc le client attendre un peu avant d'envoyer le paquet 'Je quitte' et avant de fermer correctement la connexion {{en/Flyspray|4601}} (r22387)
+* Corrigé: Quand la dernière compagnie IA est supprimée, l'état 'mort' n'est pas remis dans la fenêtre de débogage de l'IA {{en/Flyspray|4602}} (r22386)
+* Corrigé: Aucun paquet d'erreur client n'était envoyé aux robots d'administration {{en/Flyspray|4585}} (r22384)
+* Corrigé: La recolorisation des ponts en silicone était mal faite (r22380, r22379, r22378)
+* Corrigé: Plantage en cliquant sur une compagnie supprimée dans la liste déroulante des véhicules {{en/Flyspray|4592}} (r22373)
+* Corrigé: Conserver une meilleur trace de l'ordre dans lequel les clients ont rejoint; un client ne peut empêche de joindre et ils obtiennent le nombre de clients attendant avant lui (r22372, r22370, r22369, r22368, r22367, r22366, r22365, r22364, r22363, r22362, r22361)
+* Corrigé: S'assure que la sauvegarde a complètement et parfaitement fini avant d'en démarrer une nouvelle. Sinon, vous pouvez lancer une sauvegarde qui devrait être marquée comme faite par la précédente qui s'est arrêtée, et donc une autre sauvegarde pourrait être démarrée... et cela pourrait entraîner un verrou mortel {{en/Flyspray|4596}} (r22371)
+* Corrigé: Supprime la liste surgissante des clients quand le client est supprimé (au lieu de sélectionner un autre client, comme avant) (r22360, r22359, r22358)
+* Corrigé: En insérant des ordres automatiques, ne pas créer d'ordres dupliqués consécutifs (r22333, r22332, r22331, r22330, r22329, r22328, r22327)
+* Corrigé: Les destinations des ordres conditionnels étaient mal mises à jour en supprimant des ordres avant les ordres conditionnels, si l'ordre cible était l'ordre juste avant l'ordre conditionnel (r22326)
+* Corrigé: Les ordres sautés des véhicules en insérant des ordres automatiques échouaient (r22324)
+* Corrigé: [NewGRF] En déterminant la transformabilité, utiliser la table de traduction des cargaisons fixant le paramètre GRF refitmask plutôt que le GRF définissant l'action 3 (r22316)
+* Corrigé: Fait sauter les ordres aux véhicules routiers, aux navires et aux avions s'ils quittent un dépôt et se dirigent vers le même de suite; tout comme les trains (r22309)
+* Corrigé: Attendre sur un serveur peut bannir un client, ou plutôt, le client se chasse lui-même du fait d'un paquet inattendu {{en/Flyspray|4574}} (r22308)
+* Corrigé: En dessinant la fenêtre de la municipalité, vérifier si la disponibilité des actions ont changé, et forcer un redessin complet dans ce cas (r22307)
+* Corrigé: Le paramètre 'bords libres' peut être activé quand il y a des bouées sur le bord nord {{en/Flyspray|4580}} (r22297)
+* Corrigé: Réinitialise Window::scrolling_scrollbar en levant les boutons de la barre de défilement {{en/Flyspray|4571}} (r22294)
+
+==Voir aussi==
+
+*[http://www.tt-forums.net/viewtopic.php?f=29&t=54903 Sujet du forum sur 1.1.1]
+*[http://www.openttd.org/en/news/149 Article d'information sur 1.1.1]
+*[http://www.tt-forums.net/viewtopic.php?f=29&t=54534 Sujet du forum sur 1.1.1-RC1]
+*[http://www.openttd.org/en/news/148 Article d'information sur 1.1.1-RC1]
