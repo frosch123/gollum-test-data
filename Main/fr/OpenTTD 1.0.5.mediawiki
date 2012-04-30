@@ -1,0 +1,70 @@
+[[Translation:Main/en/OpenTTD 1.0.5]]
+{{en/-}}
+{{fr/Livraison|prec=OpenTTD 1.0.4|suiv=Feuille de route 1.1|date=20/11/2010}}
+
+Vous pouvez obtenir cette version depuis [http://www.openttd.org/en/download-stable/1.0.5 openttd.org].
+
+==Nouvelles fonctionnalités majeures==
+
+* Alerter l'utilisateur si une sauvegarde compressée avec XZ/LZMA est chargée
+* Charges les ensembles .tar.xz, qui sont mieux compressés
+* Correction de bogues
+
+==Journal des changements==
+
+===1.0.5 (20/11/2010)===
+
+Pas de changements depuis la RC2.
+
+===1.0.5-RC2 (14/11/2010)===
+
+* Corrigé: Lire la mémoire libérée (très) récemment (r21182)
+* Corrigé: L'intervalle de maintenance par défaut des bateaux/avions était inversé {{en/Flyspray|4222}} (r21155)
+* Corrigé: La taille des boutons de tri pour sauvegarder/enregistrer et l'IHM de la liste de construction des véhicules pouvait être trop petite {{en/Flyspray|4221}} (r21151)
+* Corrigé: Plantage de [NewGRF] en désactivant les NewGRFs statiques (en rejoignant ou démarrant un serveur) {{en/Flyspray|4208}} (r21130, r21129, r21128)
+* Corrigé: Limite supérieure de la ligne d'enneigement trop basse {{en/Flyspray|4203}} (r21078)
+* Corrigé: Mauvaise valeur (maximale) affichée pour la graine de génération dans la console du jeu {{en/Flyspray|4192}} (r21075)
+* Corrigé: [Windows] S'assurer qu'un OpenTTD en cours de mise à jour ne tourne pas lors de l'installation {{en/Flyspray|4212}} (r21146)
+* Corrigé: Sous certaines circonstances, le gestionnaire de fichiers des sauvegardes chargées ne pouvait pas être fermé, et la validité de ce qui était géré n'était pas vérifiée dans tous les cas (r21027)
+* Corrigé: Plantage de [NewGRF] en obtenant un ID d'industrie à un décalage qui utilisait certains 'anciens' styles de case d'industrie {{en/Flyspray|4157}} (r20912)
+
+===1.0.5-RC1 (31/10/2010)===
+
+* Changement: Rend OpenTTD compatible avec les sauvegardes compressées en XZ/LZMA, afin que le chargement donne un message d'erreur approprié (r21047)
+* Changement: Permet de faire des ensembles .tar.xz (r21042)
+* Corrigé: Valeur par défaut manquante pour le nombre de villes personnalisé dans les options de génération du monde (r21034)
+* Corrigé: Menu déroulant erroné dans les petites captures d'écran, en les obtenant depuis le menu (r21031)
+* Corrigé: Ne pas laisser le retaillage du bouton dépasser le bas de l'écran {{en/Flyspray|4176}} (r21015)
+* Corrigé: La fenêtre de taux de performance détaillée pouvait être trop étroite {{en/Flyspray|4102}} (r21010)
+* Corrigé: Pour la notation compacte, 1 000 000k et 1 000M seraient affichés selon la valeur initiale (et arrondie plus tard). Fait que tout ce qui sera arrondi à 1 000 000k soit affiché comme 1 000M également (r21009)
+* Corrigé: Ne pas considérer la direction du texte en cherchant des symboles absents (r21007)
+* Corrigé: Les messages de discussion/console sont parfois mélangés à cause de leurs noms LTR dans les traductions RTL et vice-versa {{en/Flyspray|3746}} (r21006, r21004)
+* Corrigé: La taille des boutons de tri pour les ordres et l'IHM de la liste des véhicules pouvait être trop petite (r20997)
+* Corrigé: [NewGRF] Les décalages X et Y dans le paramètre pour les variables d'industrie 60, 61, 62, 63 sont non signés au lieu d'être signés (r20996)
+* Corrigé: En supprimant une gare ferroviaire, ne pas laisser de voie sous les cases non gare (r20990)
+* Corrigé: [NewGRF] Ignorer la variable pour la condition Action7/9 de type 0x0D et 0x0E comme documenté (r20979)
+* Corrigé: Plantage quand, alors que le curseur 'Aller à' est actif, vous ouvrez la liste d'ordres d'un véhicule d'une autre compagnie puis sélectionnez une destination 'Aller à' {{en/Flyspray|4159}} (r20916)
+* Corrigé: Les hélicoptères sont retirés un peu trop tard {{en/Flyspray|4155}} (r20910)
+* Corrigé: Les barres d'outil de route/eau ne sont pas mises à jour quand le premier véhicule de leur type devient disponible {{en/Flyspray|4141}} (r20856)
+* Corrigé: Les boutons de légende de la petite carte doivent tous être de même taille, même si leur contenu ne l'est pas (r20851)
+* Corrigé: Verrou mortel en annulant la génération de la carte sous Windows {{en/Flyspray|3707}} (r20822)
+* Corrigé: Être un peu plus conciliant avec les sauvegardes invalides; ne pas planter sur des chargements liés à des NON TROUVÉS, mais juste afficher l'erreur à l'utilisateur que la sauvegarde est corrompue {{en/Flyspray|3714}} (r20819)
+* Corrigé: Rendre le message de plantage au chargement d'une sauvegarde  plus clair et plus correct {{en/Flyspray|3791}} (r20818)
+* Corrigé: [NewGRF] Serrez/convertir quelques variables de véhicule pour que les NewGRFs obtiennent leur plage spécifiée (r20800, r20799, r20792)
+* Corrigé: [NonIA] Documenter que AITile::HasTransportType ne fonctionne pas pour TRANSPORT_AIR {{en/Flyspray|4117}} (r20798)
+* Corrigé: [NewGRF] Désactiver les maisons sans taille disponibles selon leurs drapeaux de construction (r20797)
+* Corrigé: [NewGRF] S'assurer que toutes les maisons dans un tableau de spécification de maisons sont correctes. Il était possible qu'une partie d'une maison multicases soit copiée car le tableau était plein (r20796)
+* Corrigé: Construire des maisons 2x2 ne marchait pas pour les modèles de route 2x2 sur toutes les tailles de carte (r20791)
+* Corrigé: [NewGRF] Supprimer une vérification fausse pour les maisons NewGRF et qui ne servait à rien pour les maisons d'origine {{en/Flyspray|4118}} (r20790)
+* Corrigé: Corriger des fautes d'orthographe dans les noms des ville slovaques (r20787)
+* Corrigé: Faire une sauvegarde en sortant via kill/Ctrl-C aussi bien qu'en terminant un OpenTTD dédié (r20783)
+* Corrigé: [NonIA] AIEventCompanyAskMerger était déguisé en AIEventCompanyMerger (r20765)
+* Corrigé: [NewGRF] Avertir quand une industrie préalablement construite sur l'eau a été inondée parce que son NewGRF a changé/est absent {{en/Flyspray|4112}} (r20754)
+* Corrigé: Ne pas utiliser les options de nouvelle partie lors de la création de nombreuses villes/industries aléatoires dans l'éditeur de scénario {{en/Flyspray|4094}} (r20712, r20711)
+* Corrigé: Erreurs graphiques en changeant pour une fonte de taille différente alors que la fenêtre de discussion est visible (r20705)
+* Corrigé: Les listes des véhicules non ferroviaires ne pouvaient pas être retaillées horizontalement, causant des troncatures de texte {{en/Flyspray|4123}}, {{en/Flyspray|3955}} (r20174)
+
+== Voir aussi ==
+* [http://www.tt-forums.net/viewtopic.php?f=29&t=50791 Sujet du forum sur 1.0.5-RC1]
+* [http://www.tt-forums.net/viewtopic.php?f=29&t=51158 Sujet du forum sur 1.0.5-RC2]
+* [http://www.tt-forums.net/viewtopic.php?f=29&t=51329 Sujet du forum sur 1.0.5 final]
