@@ -1,0 +1,627 @@
+El archivo oficial en inglés '''Readme.txt''' lo puedes encontrar aquí,
+(Official english '''readme.txt''' can be found here):<br/>
+http://vcs.openttd.org/svn/browser/tags/1.0.2/readme.txt?rev=20000 
+
+[[Translation:Main/en/Readme.txt]]
+<pre>
+OpenTTD LÉAME
+Última actualización: 2010-06-19
+Versión actual:       1.0.2
+------------------------------------------------------------------------
+
+
+Tabla de contenido:
+-------------------
+1.0) Acerca de
+2.0) Contactar
+ * 2.1 Avisar de errores
+3.0) Plataformas compatibles
+4.0) Instalar y ejecutar OpenTTD
+ * 4.1 Archivos de terceros (necesarios)
+ * 4.2 Directorios o carpetas del juego OpenTTD
+ * 4.3 Instalaciones portátiles (medios externos)
+5.0) Características de OpenTTD
+6.0) Archivo de configuración
+7.0) Compilar
+ * 7.1) Librerías necesarias y opcionales
+ * 7.2) Compiladores compatibles
+8.0) Traducir
+ * 8.1 Traducción
+ * 8.2 Vista previa 
+9.0) Solución de problemas
+X.X) Créditos
+
+
+1.0) Acerca de:
+---- ----------
+OpenTTD es un clon de Transport Tycoon Deluxe, un juego popular originalmente
+escrito por Chris Sawyer. Trata de imitar el juego original lo más fielmente
+posible al mismo tiempo que se amplía con nuevas características.
+
+OpenTTD tiene licencia GNU (General Public License versión 2.0). Para obtener
+más información, consulte el archivo 'COPYING'.
+
+
+2.0) Contactar:
+---- ----------
+La forma más fácil de contactar con el equipo de OpenTTD es presentando un 
+informe de errores o publicando comentarios en nuestros foros. También puedes 
+chatear con nosotros en el canal de IRC (OpenTTD en irc.oftc.net).
+
+La página web de OpenTTD es http://www.openttd.org/.
+
+También puede encontrarnos en los foros de OpenTTD:
+http://forum.openttd.org/
+
+
+2.1) Avisar de errores:
+---- ------------------
+Antes de nada compruebe si el error es desconocido. Para ello, mira en el archivo 
+llamado 'known-bugs.txt' [errores-conocidos.txt] que se distribuye con OpenTTD 
+del mismo modo que este readme [léame].
+
+Para llevar un seguimiento de los errores estamos usando un gestor de fallos 
+llamado Flyspray. Puede encontrar el tracker en http://bugs.openttd.org/. Antes 
+de presentar un informe mire en los errores notificados para ver si se trata de un 
+error ya conocido. El archivo 'known-bugs.txt' [errores-conocidos.txt] podría 
+estar un poco anticuado cuando usted lo lea ya que sólo aparecen en él los errores 
+conocidos antes de su publicación y por lo tanto que se han podido documentar. Por 
+eso debe buscar también en los errores solucionados recientemente.
+
+Cuando esté seguro de que se trata de un error sin notificar:
+ * Asegúrese de que está ejecutando una versión reciente, es decir, la última 
+   versión estable o nightly [nocturna], según donde encontrara el error.
+ * Asegúrese de que no está ejecutando un archivo binario no oficial, como un 
+   parche. Cuando está jugando con un parche debe informar del error (bug) en el 
+   hilo del foro relacionado con ese parche.
+ * Que sea reproducible por los desarrolladores. En otras palabras, crear una 
+   partida y guardarla de forma que se pueda volver a reproducir el problema una 
+   vez cargada. Es muy útil que nos proporcione el crash.dmp, crash.sav y 
+   crash.log que se crean tras el error, y una captura de pantalla.
+ * Compruebe si el error ya ha sido notificado a través de nuestro gestor de 
+   fallos (Flyspray). Incluyendo la búsqueda de los informes de fallos 
+   solucionado recientemente por si ya estuviera arreglado.
+
+Después de haber hecho todo eso haga un informe del fallo. Por favor incluya en 
+el informe la siguiente información:
+ * Versión del OpenTTD (POR FAVOR pruebe la última versión del SVN/nightly build)
+ * Detalles del fallo, incluidas las instrucciones sobre cómo se puede repetir.
+ * Plataforma (Win32, Linux, FreeBSD,...) y el compilador (incluyendo la versión) 
+   si ha compilado OpenTTD usted mismo. 
+ * Coloque una partida guardada *y* una captura de pantalla 
+ * Si ese error sólo le ha pasado recientemente anote la última versión sin el 
+   fallo y la primera versión con el fallo. De esa manera lo podemos arreglar más 
+   rápido al mirar los cambios realizados.
+ * Adjunte crash.dmp, crash.log y crash.sav. Estos archivos se crean normalmente 
+   junto con su openttd.cfg. El controlador de fallos le indicará la ubicación.
+
+
+2.2) Informes de pérdida de sincronización:
+---- --------------------------------------
+Como la pérdida de sincronización es difícil de reproducir, OpenTTD tiene la 
+capacidad de registrar todas las acciones realizadas por los clientes para que 
+podamos volver a reproducir después el juego completo, en un esfuerzo para poder 
+mejorar la sincronización. Es necesario activar esta capacidad. Cuando se activa 
+el guardado automático se creará, cuando se construya el mapa, el directorio 
+'save/autosave' (consulte los directorios de OpenTTD para saber 
+dónde encontrarlo). Además, se creará el archivo de registro 'commands-out.log' y 
+se escribirán en él todas las acciones.
+
+Para habilitar la depuración de desincronización usted tiene que establecer el 
+nivel de depuración para 'desync' como mínimo en 1. Para ello, ponga en marcha 
+OpenTTD con '-d desync=<nivel>' como parámetro o escribiendo 'debug_level 
+desync=<nivel>' en la consola interna de OpenTTD.
+Los niveles de depuración de desincronización son:
+ 0: ninguno.
+ 1: escribe los comandos en 'commands-out.log'.
+ 2: como en 1, además chequea y escribe las cachés de los vehículos también.
+ 3: como en 2, además hace un autoguardado mensualmente.
+ 4 y superior: como en 3.
+
+Cuando reinicie OpenTTD se sobreescribe 'commands-out.log'. Pero OpenTTD no 
+eliminará las partidas guardadas (dmp_cmds_*.sav) que se crean por el sistema de 
+depuración de la desincronización, por lo que tiene que eliminarlas, de vez en 
+cuando, usted mismo.
+
+El formato del nombre de las partidas guardadas de desincronización es el 
+siguiente: dmp_cmds_XXXXXXXX_YYYYYYYY.sav. El XXXXXXXX es la representación 
+hexadecimal de la 'semilla' del juego y YYYYYYYY es la representación hexadecimal 
+de la fecha del juego. De este modo se ordenan las partidas guardadas por el juego 
+y luego por la fecha, siendo así más fácil encontrarlos correctamente.
+
+Cuando ocurre una desincronización, con la depuración activada debe crearse un 
+informe de error con los siguientes archivos adjuntos:
+ - commands-out.log que contiene todos los comandos que se ejecutaron
+ - la última partida guardada (búsque la última línea que comienza con 
+   'save: dmp_cmds_' en commands-out.log). Esta partida se usará para comprobar
+   si estamos en condiciones de reproducir la desincronización. De lo contrario 
+   necesitaremos...
+ - la primera partida guardada (búsque la primera línea que comienza con 'save'
+   en la primera parte, hasta el último guión '_' en la misma línea). Necesitamos 
+   esta partida guardada para poder reproducir el error cuando la última partida 
+   no duró el tiempo suficiente. Si ha cargado un escenario o una partida guardada 
+   necesitará adjuntar este archivo.
+ - opcionalmente, puede fijar el guardado automático para el 50%, el 75%, el 85%, 
+   el 90% y el 95% de la progresión del juego. Podemos utilizar estas partidas 
+   guardadas para acelerar la reproducción de la desincronización, pero deberemos 
+   ser capaces de reproducirlas a partir de la primera partida guardada y el 
+   archivo commands-out.log.
+ - en caso de que utilice cualquier NewGRFs debe adjuntarlo a menos que nosotros 
+   mismos podamos encontrarlo fácilmente ,como por ejemplo grfcrawler o si están 
+   en el pack OpenTTDCoop.
+
+NO borre la partida guardada dmp_cmds de una desincronización de la que haya 
+informado hasta que se haya solucionado, ya que si usted, por casualidad, nos 
+envía las partidas mal guardadas no seremos capaces de reproducir la 
+desincronización y por lo tanto no seremos capaces de arreglarla.
+
+
+3.0) Plataformas compatibles:
+---- ------------------------
+OpenTTD ha sido adaptada a distintas plataformas y sistemas operativos. No 
+debería ser muy difícil portarlo a una nueva plataforma. Las plataformas de 
+trabajo en la actualidad son:
+
+  BeOS                 - SDL o Allegro
+  DOS                  - Allegro
+  FreeBSD              - SDL
+  Linux                - SDL o Allegro
+  MacOS X (universal)  - Cocoa video y sound drivers
+  MorphOS              - SDL
+  OpenBSD              - SDL
+  OS/2                 - SDL
+  Windows              - Win32 GDI (faster) o SDL o Allegro
+
+
+4.0) Instalar y ejecutar OpenTTD:
+---- ----------------------------
+La instalación de OpenTTD es bastante sencilla. Ya sea descargando un archivo que 
+tiene que descomprimir en el directorio en el que desee instalar OpenTTD, o 
+descargando un instalador, que automáticamente instalará OpenTTD en el directorio 
+que usted le indique.
+
+OpenTTD busca en varios directorios los archivos que necesita (los directorios 
+se describen en la sección 4.2). Instalar los archivos de terceros en una 
+ubicación compartida tiene la ventaja de que sólo es necesario instalarlos una 
+vez, en lugar de tener que copiarlos en todas las versiones de OpenTTD que tenga.
+Partidas guardadas, capturas de pantalla, etc se guardan según el archivo de 
+configuración (openttd.cfg) que esté en uso. Esto significa que si utiliza un 
+archivo de configuración en uno de los directorios compartidos, las partidas 
+guardadas residirán en el directorio save/ que esté junto al archivo openttd.cfg.
+Si desea guardar las partidas guardadas y capturas de pantalla en el directorio 
+donde está el binario OpenTTD, simplemente coloque su archivo de configuración 
+en ese lugar. Pero si después quita ese archivo de configuración, las partidas 
+guardadas seguirán estando en ese directorio (ver notas en la sección 4.2)
+
+OpenTTD viene sin IA (inteligencia artificial, son otros jugadores controlados 
+por el ordenador), así que si quiere jugar con IA tiene que descargarla. La forma 
+más fácil es a través del botón "Consultar Contenido Online" del menú principal. 
+Puede seleccionar algunos IA por que piense que son compatibles con su estilo de 
+juego. Otra forma es descargar manualmente la IA del foro aunque entonces usted 
+deberá asegurarse de instalar todas las librerías de IAs que sean necesarias; que
+serían automáticamente seleccionadas (y descargadas) si la descargara con la 
+opción "Consultar Contenido Online". Si no tiene una IA, pero ha configurado 
+OpenTTD para que haya una IA funcionando, se mostrará un mensaje como que un IA 
+'bobo' (sin contenido) se ha iniciado.
+
+
+4.1) (Obligatorio) Archivos de terceros:
+---- -----------------------------------
+Antes de ejecutar OpenTTD, es necesario poner los archivos del juego en un 
+directorio llamado data/ que pueden estar ubicado en distintos lugares, vistos 
+en la siguiente sección.
+
+Para usar OpenTTD necesita adquirir algunos archivos de terceros. Para lo que 
+tiene la opción de utilizar los archivos originales de Transport Tycoon Deluxe
+o un set de archivos libre.
+
+NO copies los archivos incluidos en OpenTTD en los directorios "shared" 
+[compartidos] (se explica en las siguientes secciones) más tarde o temprano te 
+aparecerán errores en los gráficos cuando utilices las otras versiones del juego.
+
+4.1.1) Archivos gráficos y de sonido libres
+------ ------------------------------------
+Los archivos libres, divididos en OpenGFX para gráficos, OpenSFX para el sonido y
+OpenMSX para música; se pueden encontrar en:
+ - http://bundles.openttdcoop.org/opengfx/releases/ para OpenGFX
+ - http://bundles.openttdcoop.org/opensfx/releases/ para OpenSFX
+ - http://bundles.openttdcoop.org/openmsx/releases/ para OpenMSX
+Por favor, consulte el readme.txt de cada uno para conocer el procedimiento de 
+instalación. Con el instalador para Windows del juego, opcionalmente, puede 
+descargar e instalar estos archivos.
+
+4.1.2) Archivos gráficos y de sonido de Transport Tycoon Deluxe
+------ --------------------------------------------------------
+Si quieres jugar con los archivos originales de Transport Tycoon Deluxe tienes 
+que copiarlos desde el CD-ROM en el directorio data/. No importa si los copia de 
+la versión para DOS o para Windows de Transport Tycoon Deluxe. El instalador del 
+juego para Windows, opcionalmente, permite copiar estos archivos.
+Debe copiar los archivos siguientes:
+ - sample.cat
+ - trg1r.grf o TRG1.GRF
+ - trgcr.grf o TRGC.GRF
+ - trghr.grf o TRGH.GRF
+ - trgir.grf o TRGI.GRF
+ - trgtr.grf o TRGT.GRF
+
+4.1.3) Música original de Transport Tycoon Deluxe
+------ ------------------------------------------
+Si desea la música de TTD, copie la carpeta gm/ de la versión para Windows de TTD 
+a su carpeta de OpenTTD (pero no en la carpeta data - se explica en las 
+siguientes secciones). La música de la versión DOS no funciona.
+
+4.1.4) IA (inteligencia artificial, jugadores controlados por el ordenador)
+------ --------------------------------------------------------------------
+Si desea utilizar la IA use el descargador de contenido del juego. Si por alguna 
+razón que no es posible o si desea utilizar una IA que no aparece en descarga de 
+contenido, descargue el archivo tar y colóquelo en el directorio ai/. Si la IA 
+necesita libreriás, usted tendrá que descargarlas también y ponerlas en el 
+directorio ai/library/. Todos las IAs y las librerías de IAs incorporadas al 
+sistema de descarga de contenido se puede encontrar en http://noai.openttd.org/
+downloads/. Las IAs y las librerías se pueden encontrar en formato de paquetes 
+.taz.gz. OpenTTD puede leer dentro de archivos tar, pero no puede extraer los 
+archivos .tar.gz por sí solo.
+Para averiguar qué librerías son necesarias para una IA tiene que iniciar la IA 
+y esperar a que aparezca un mensaje de error. Este mensaje le dirá que "no se 
+pudo encontrar la librería 'lib-name'" ["couldn't find library 'lib-name'"]. 
+Descargue esa librería y vuelva a intentarlo.
+
+4.2) Directorios de OpenTTD
+---- ----------------------
+Los archivos gráficos de TTD enumerados en la sección 4.1 "(Obligatorio) Archivos de 
+terceros" pueden ser colocados en lugares distintos:
+        1. El directorio de trabajo actual (desde donde se inició OpenTTD)
+        2. Su directorio personal
+		Windows: C:\My Documents (95, 98, ME)
+		         C:\Documents and Settings\<username>\My Documents\OpenTTD (2000, XP)
+		         C:\Users\<username>\Documents\OpenTTD (Vista, 7)
+                         (y también)
+                         C:\Mis documentos (95, 98, ME)
+		         C:\Documents and Settings\<username>\Mis documentos\OpenTTD (2000, XP)
+		         C:\Usuarios\<username>\Documentos\OpenTTD (Vista, 7)
+		Mac OSX: ~/Documents/OpenTTD
+		Linux:   ~/.openttd
+	3. El directorio compartido
+		Windows: C:\Documents and Settings\All Users\Shared Documents\OpenTTD (2000, XP)
+		         C:\Users\Public\Documents\OpenTTD (Vista, 7)
+                         (y también)
+		         C:\Documents and Settings\Todos los usuarios\Documentos compartidos\OpenTTD (2000, XP)
+ 		         C:\Usuarios\Acceso público\Documentos públicos\OpenTTD (Vista, 7)
+		Mac OSX: /Library/Application Support/OpenTTD
+		Linux:   no disponible
+	4. El directorio binario (donde está el ejecutable OpenTTD)
+		Windows: C:\Program Files\OpenTTD
+		         C:\Archivos de programa\OpenTTD
+		Linux:   /usr/games
+	5. El directorio de instalación (sólo Linux)
+		Linux:   /usr/share/games/openttd
+	6. El directorio de aplicación bundle (sólo Mac OSX)
+		Incluye los archivos OpenTTD (grf+lng) y funcionará siempre y cuando no se toquen
+
+Notas:
+	- Linux en la lista anterior significa .deb, pero la mayoría de rutas de 
+          acceso deberían ser similares para los otros formatos.
+	- Se realiza la misma búsqueda para los archivos NewGRFs y openttd.cfg.
+        - Si no encuentra openttd.cfg, se creará al usar la orden 2, 4, 1, 3, 5.
+        - Las partidas guardadas se guardarán en la ruta relativa al archivo de 
+          configuración sólo si no hay un directorio save/ en las rutas con mayor 
+          prioridad, pero las partidas guardadas automáticamente y las capturas 
+          de pantalla siempre se guardarán en la ruta relativa respecto del 
+          archivo de configuración.
+
+La configuración preferida:
+Coloque los archivos de terceros en el directorio compartido (o en su directorio 
+personal si no tiene permiso de escritura en el directorio compartido) y mueva su 
+archivo de configuración openttd.cfg a su directorio personal (a continuación ponga
+también las partidas guardadas y las capturas de pantalla donde el juego).
+
+4.3) Instalaciones portátiles (soportes externos)
+---- ------------------------------------------
+Puede instalar OpenTTD en soportes externos para poder llevarlo con usted, es 
+decir, utilizando una memoria USB, o un disco duro USB, etc.
+Crear un directorio para guardar el juego (por ejemplo OpenTTD/).
+Copie el archivo binario (OpenTTD.exe, OpenTTD.app, OpenTTD, etc), data/ y tu 
+openttd.cfg en este directorio.
+Puede copiar los binarios para cualquier sistema operativo en este directorio, 
+que le permitirá jugar el juego en casi cualquier ordenador al que se puede 
+conectar el soporte externo.
+Como siempre, los archivos adicionales GRF se almacenan en los directorios data/ 
+(para más detalles, vea la sección 4.1 de nuevo).
+
+
+5.0) Características de OpenTTD:
+---- ---------------------------
+OpenTTD tiene un montón de características que van más allá de la emulación del 
+TTD original. Desafortunadamente, actualmente no hay una lista completa de 
+características, pero hay una lista de características básicas en la web, y 
+algunas características opcionales se pueden controlar mediante el cuadro de 
+diálogo Configuración avanzada. También se implementan algunas de las 
+características conocidas de TTDPatch (http://www.ttdpatch.net/).
+
+Varios controles importantes no estándar:
+
+* Ctrl modifica el funcionamiento de muchos comandos. Por ejemplo hacer Ctrl+clic 
+  con la herramienta construir señales de ferrocarril modifica su comportamiento.
+* Consola del juego. Más información en
+  http://wiki.openttd.org/index.php/Console
+  http://wiki.openttd.org/index.php/Consola/Es
+* Al hacer clic-derecha se muestra información sobre las herramientas.
+
+5.1) Registro de las acciones potencialmente peligrosas:
+---- ---------------------------------------------------
+OpenTTD es un programa complejo, y junto con NewGRF, puede mostrar un 
+comportamiento incorrecto. Pero no solo pueden aparecer problemas por fallos en 
+el código. Hay varias formas en que pueda resultar afectado el juego produciéndose
+un fallo de programa o de sincronización de varios jugadores.
+La siolución más fácil sería prohibir todas las acciones inseguras, pero esto 
+afectaría a la usabilidad de juego para muchos jugadores. Y esto no lo queremos.
+Sin embargo, recibimos informes de errores por este motivo. Para reducir el 
+tiempo dedicado a la solución de estos problemas, estas acciones potencialmente 
+peligrosas se registran en la partida guardada (incluyendo crash.sav). El 
+registro se grava también en el registro de fallos.
+
+Información registrada:
+
+* Añadir / eliminar / cambiar el orden de NewGRFs
+* Cambiar los parámetros de NewGRF, cargar NewGRF compatible
+* Cambiar el modo del juego (editor de escenario - juego normal)
+* Cargar un juego guardado en otro OpenTTD / TTDPatch / versión TTD
+* Ejecutar una versión modificada de OpenTTD
+* Modificar los valores que afectan al comportamiento de NewGRF (entornos no 
+  seguros de la red)
+* Cambiar de paisaje (mediante una trampa)
+* Desencadenar errores NewGRF
+
+No se almacena ninguna información personal.
+
+Se puede mostrar el registro del juego escribiendo 'gamelog' en la consola o 
+mediante la ejecución de OpenTTD en modo de depuración.
+
+
+6.0) Archivo de configuración:
+---- -------------------------
+El archivo de configuración de OpenTTD (openttd.cfg) se encuentra en un formato 
+similar a un .INI de Windows. La mayor parte está sin documentar. Pero casi todos 
+los ajustes se pueden cambiar dentro del juego utilizando la ventana 
+'Configuración avanzada'.
+Cuando no encuentre openttd.cfg busque en los directorios descritos en la sección 
+4.2. Si no existe ninguno, este se creará después de cerrar.
+
+
+7.0) Compilar:
+---- ---------
+Windows:
+  Necesita Microsoft Visual Studio. NET. Abra el archivo de proyecto y deberá 
+  compilarse automáticamente. En caso de que quiera compilarlo con soporte SDL 
+  tiene que añadir SDL en la configuración del proyecto.
+  El soporte para PNG (WITH_PNG) y zlib (WITH_ZLIB) está activado por defecto. 
+  Para que funcione necesita los archivos de desarrollo. Para mejores resultados, 
+  descargue el fichero openttd-useful.zip de 
+  http://www.openttd.org/download-openttd-useful
+  Ponga los archivos cabecera en el directorio include/ de su compilador y los 
+  archivos de librería (.lib) en el directorio lib/
+  Para más ayuda con VS lea docs/Readme_Windows_MSVC.txt.
+
+  También se puede compilar utilizando el Makefile con MSYS/MinGW o Cygwin/MinGW.
+  Por favor, lea el Makefile para más información.
+
+Solaris, FreeBSD, OpenBSD:
+  Use "gmake", pero haga un "./configure" antes de la primera compilación.
+
+Linux/Unix:
+  OpenTTD se puede compilar con GNU "make". Para sistemas no-GNU se usa "gmake".
+  Haga un "./configure" antes de la primera compilación.
+
+MacOS X:
+  Use "make" o Xcode (que realizará un make por usted)
+  Así compilará un binario para su tipo de CPU (PPC/Intel)
+  Haga un "./configure" antes de la primera compilación.
+  Para hacer un binario universal teclee "./configure --enabled-universal"
+  en lugar de "./configure".
+
+BeOS:
+  Use "make", pero haga un "./configure" antes de la primera compilación.
+
+MorphOS:
+  Use "make". Pero para la primera compilación haga "./configure" primero.
+  Tenga en cuenta que se necesita el MorphOS SDK, las actualizaciones más 
+  recientes de libnix (sino las partes C++ de OpenTTD no se compilarán) y la 
+  powersdl.library SDK. Opcionalmente los archivos de desarrollo libz, libpng y 
+  freetype2.
+
+OS/2:
+  Es necesario un entorno GNU completo para compilar la versión OS/2.
+  Consulte el archivo docs/Readme_OS2.txt para obtener más información.
+
+DOS:
+  Es necesario un entorno de desarrollo con DJGPP, así como librerías como 
+  Allegro, zlib y libpng, que pueden ser descargadas desde el sitio web DJGPP.
+  La compilación es sencilla: use make, pero debe hacer un "./configure" antes de 
+  la primera compilación. La construcción binaria cwsdpmi.exe deberá estar en el 
+  mismo directorio que el ejecutable OpenTTD. cwsdpmi.exe se puede encontrar en 
+  el subdirectorio os/dos. Si se compila con stripping (desmontaje) encendido el 
+  binario que se generará no necesitará cwsdpmi.exe añadiendose el cswdstub.exe 
+  al binario OpenTTD.
+
+
+7.1) Librerías necesarias y opcionales:
+---- ----------------------------------
+La siguientes librerías son usadas por OpenTTD para:
+  - libSDL/liballegro: acceso al hardware (video, sonido, ratón)
+  - zlib: (des)compresión de partidas guardadas
+  - liblzo2: (des)compresión de las antiguas partidas guardadas (pre 0.3.0)
+  - libpng: hacer capturas de pantalla y cargar mapa de alturas
+  - libfreetype: cargar las fuentes genéricas y renderizarlas
+  - libfontconfig: buscar fuentes, relaciona nombres de fuentes con las fuentes reales
+  - libicu: control de la escritura de derecha a izquierda (p.e. árabe o persa)
+
+OpenTTD no requiere ninguna de las bibliotecas para estar operativo, pero sin 
+zlib no puede abrir la mayor parte de partidas guardadas o utilizar el sistema de 
+descarga de contenido. Sin libSDL/liballegro en máquinas no-Windows y no-MaxOSX 
+no tendrá interfaz gráfica de usuario, y deberá crearle un servidor dedicado.
+
+
+7.2) Compiladores compatibles:
+---- -------------------------
+Los siguientes compiladores se pueden usar para compilar OpenTTD:
+  - Microsoft Visual C++ (MSVC) 2005 y 2008.
+    La versión 2005 da avisos falsos sobre temas de alcance.
+  - GNU Compiler Collection (GCC) 3.3 - 4.5.
+    Versiones 4.1 y anteriores da avisos falsos sobre variables no inicializadas.
+    Versiones 4.4 y posteriores  da avisos falsos sobre un montón de objetos liberados.
+  - Intel C++ Compiler (ICC) 11.0 y 11.1.
+
+Los siguientes compiladores no se pueden usar para compilar OpenTTD:
+  - Microsoft Visual C++ (MSVC) 2003 y anteriores.
+  - GNU Compiler Collection (GCC) 3.2 y anteriores.
+  - (Open) Watcom.
+
+Si cualquiera de estos compiladores puede compilar OpenTTD, por favor, háganoslo saber.
+
+8.0) Traducir:
+---- ---------
+Vea http://www.openttd.org/development para información actualizada.
+
+El uso del servicio Translator (traductor) en línea, situado en
+http://translator.openttd.org/, es muy recomendable. Para obtener una cuenta 
+basta con seguir las instrucciones del FAQ del sitio web traductor.
+
+Si por alguna razón, el sitio está caído por un período de tiempo más largo, la 
+siguiente información le podría ser de ayuda.
+
+Por favor, ¡póngase en contacto con el administrador de traducciones
+(http://www.openttd.org/contact) antes de comenzar el proceso de traducción!
+Esto evita duplicar el trabajo, por si alguien más ha empezado ya la traducción 
+al mismo idioma.
+
+8.1) Traducción:
+---- -----------
+Así que, una vez que usted haya notificado el equipo de desarrollo sobre su 
+intención de traducir (lo hizo, ¿no? Por supuesto que sí.) puede agarrar
+english.txt (que se encuentra bajo el repositorio SVN /src/lang) y traducirlo.
+
+Debe cambiar las dos primeras líneas del archivo de forma adecuada:
+
+##name Nombre-en-inglés-del-idioma
+##ownname Nombre-nativo-del-idioma
+
+Nota: No modifique las siguientes partes del fichero:
+
+    * Cadenas identificadoras (la primera palabra de cada línea)
+    * Las cadenas de texto que se encuentran entre llaves (como {CADENA})
+    * Las líneas que empiezan con ## (como ##id), como las dos primeras líneas
+      del archivo
+
+8.2) Vista previa:
+---- -------------
+Para ver la traducción en el juego, debe compilar su archivo de idioma con la 
+utilidad strgen. Puede descargar la strgen precompilada desde:
+http://www.openttd.org/download-strgen
+Para compilarlo usted mismo simplemente tome los códigos normales de OpenTTD y 
+compílelos. Durante el proceso de compilación se creará la utilidad strgen.
+
+strgen es una utilidad de línea de comandos. Tiene como parámetro el nombre del 
+archivo del idioma. Ejemplo:
+
+strgen lang/german.txt
+
+Esto da como resultado al compilar german.txt otro archivo llamado german.lng.
+Cualquier cadena que falte se sustituirá por la cadena en inglés. Tenga en cuenta 
+que busca english.txt en el directorio lang, que es donde debería estar también 
+su archivo de idioma.
+
+¡Eso es todo! Ahora debería poder seleccionar el idioma en las opciones de juego.
+
+
+9.0) Solución de problemas
+---- ---------------------
+Para ver todas las opciones de inicio disponibles, inicie OpenTTD con la opción
+"./openttd -h". Puede ayudarle a ajustar algunas configuraciones.
+
+Si el juego se comporta de forma extraña y se siente aventurero puede probar la 
+orden "-d [[<nombre>]=[<nivel>]", donde los niveles más altos proporcionan mayor 
+depuración. La variable "nombre" puede ayudarle a mostrar sólo cierto tipo de 
+mensajes de depuración. Esto está apenas sin documentar así que lo mejor es 
+buscar los diferentes tipos de depuración en el código fuente del archivo debug.c.
+Para más información consulte
+http://wiki.openttd.org/Command_line
+http://wiki.openttd.org/Línea_de_comandos/Es
+
+El problema más frecuente es que falten archivos de datos. Por favor, instale 
+OpenGFX y posiblemente OpenSFX y OpenMSX. Vea la sección 4.1.1 para más 
+información.
+
+El OpenTTD para Ubuntu, sobre todo, puede ser extremadamente lento y se puede 
+congelar en  ciertas circunstancias. Vea known-bugs.txt para obtener más 
+información sobre cómo resolver este problema en su equipo.
+
+En Windows 98 e inferiores es imposible utilizar un servidor dedicado, no se 
+podrá iniciar. Tal vez esto sea lo mejor, ya que estos sistemas operativos no son 
+conocidos por su estabilidad.
+
+Con el añadido de soporte para texto basado en fuentes no-latinas, en la 
+traduccion se puede producir basura (muchos '?') que se mostrará en pantalla. Por 
+favor, abra su archivo de configuración y añada las fuentes necesarias (fuentes 
+pequeñas/medianas/grandes). Puede ser la fuente llamada Tahoma o una ruta de 
+acceso a una fuente.
+
+Cualquier archivo NewGRF utilizado en un juego se almacena dentro de la partida 
+guardada y no se podrá volver a cargar si usted no tiene ese NewGRF disponible. 
+En ese momento aparecerá una lista de los archivos que faltan en la consola, 
+puede utilizar la opción '-d' (en Windows) para ver esta lista. Sólo tiene que 
+encontrar los archivos (Http://grfcrawler.tt-forums.net/) ponerlos en la carpeta 
+data/ y listo para empezar.
+
+
+X.X) Créditos:
+---- ---------
+El equipo OpenTTD (por orden alfabético):
+  Albert Hofkamp (Alberth)       - experto GUI
+  Jean-François Claeys (Belugas) - GUI, nuevas industrias y más
+  Matthijs Kooijman (blathijs)   - Gurú-explorador, revisor a fondo
+  Christoph Elsenhans (frosch)   - Codificador general
+  Loïc Guilloux (glx)            - Experto en Windows
+  Michael Lutz (michi_cc)        - Rutas basadas en señales
+  Owen Rudge (orudge)            - Foro de acogida, soporte OS/2
+  Peter Nelson (peter1138)       - Descendiente espiritual del buen newGRF
+  Remko Bijker (Rubidium)        - Codificador jefe y más cosas
+  Zdeněk Sojka (SmatZ)           - Buscador e identificador de errores
+  José Soler (Terkhen)           - Codificador general
+  Thijs Marinussen (Yexo)        - Estructura IA
+
+Desarrolladores inactivos:
+  Bjarni Corfitzen (Bjarni)      - Soporte MacOSX, códigos y vehículos
+  Victor Fischer (Celestar)      - Programador de todas partes necesario
+  Tamás Faragó (Darkvater)       - Ex Codificador jefe
+  Jaroslav Mazanec (KUDr)        - YAPG (Yet Another Pathfinder God) ;)
+  Jonathan Coome (Maedhros)      - Alto sacerdote del templo de la NewGRF
+  Attila Bán (MiHaMiX)           - WebTranslator 1 y 2
+  Christoph Mallon (Tron)        - Programador, policía de código de corrección
+
+Desarrolladores retirados:
+  Ludvig Strigeus (ludde)        - Autor de OpenTTD, codificador principal (0.1 - 0.3.3)
+  Serge Paquet (vurlix)          - Ayudante de jefe de proyecto, codificador (0.1 - 0.3.3)
+  Dominik Scherer (dominik81)    - Programador jefe, experto GUI (0.3.0 - 0.3.6)
+  Benedikt Brüggemeier (skidd13) - Identificador de errores y revisor de código
+  Patric Stout (TrueBrain)       - Programador (0.3 - pre0.7), sys op (activo)
+
+Agradecimientos:
+  Josef Drexler                  - Por su gran trabajo en TTDPatch.
+  Marcin Grzegorczyk             - Por su trabajo en TTDPatch y su documentación interna y de gráficos de TTD (señales y fundamentos de las vías)
+  Petr Baudiš (pasky)            - Por muchos parches, soporte newgrf, etc.
+  Simon Sasburg (HackyKid)       - por su corrección de errores (hemos sido bendecidos)
+  Stefan Meißner (sign_de)       - Por su trabajo en la consola
+  Mike Ragsdale                  - Instalador del OpenTTD
+  Cian Duffy (MYOB)              - Soporte BeOS / redacción del manual
+  Christian Rosentreter (tokai)  - Soporte MorphOS / AmigaOS
+  Richard Kempton (RichK67)      - Aeropuertos adicionales, implementación inicial de TGP
+  Alberto Demichelis             - Programador en lenguaje Squirrel
+  L. Peter Deutsch               - Implementación en MD5
+  Michael Blunck                 - Por revolucionar TTD con gráficos impresionantes
+  George                         - Canal de gráficos
+  David Dallaston (Pikka)        - Vías del tranvía
+  A todos los traductores        - Por su apoyo para hacer de OpenTTD un juego realmente internacional
+  A los informadores de errores  - Gracias por todos los informes de error
+  Chris Sawyer                   - ¡Por un juego sorprendente!
+
+</pre>
