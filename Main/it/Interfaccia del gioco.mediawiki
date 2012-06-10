@@ -1,0 +1,106 @@
+{{it/Traduzione|Game interface|15}}
+[[Translation:Main/en/Game interface]]{{en/-}}{{it/Indice dei contenuti}}
+==La finestra principale==
+
+[[File:it/Intro screen.png|frame|center|Finestra introduttiva di OpenTTD]]
+
+La finestra principale, mostrata qui sopra, consente di definire le seguenti opzioni:
+
+* '''[[Main/en/Nuova partita]]''': Genera una nuova mappa a caso e comincia una nuova partita.
+* '''[[Main/en/Savegame|Carica partita]]''': Carica una partita precedentemente salvata e l'avvia.
+* '''[[Main/en/Scenario|Gioca scenario]]''': Carica uno scenario e lo avvia.
+* '''[[Main/en/Heightmap|Gioca con heightmap]]''': Carica un'<em>heightmap</em> ed avvia una partita su di esso.
+* '''[[Main/en/Scenario editor|Editor di scenari]]''': Crea o modifica uno scenario.
+* '''[[Main/en/Multiplayer|Multigiocatore]]''': Unisciti ad una partita multigiocatore in corso.
+* '''[[Main/en/Game options window|Opzioni di gioco]]''': Configura le opzioni generali.
+* '''[[Main/en/Difficulty|Difficoltà]]''': Definisci le opzioni che rendono la partita più o meno difficile.
+* '''[[Main/en/Advanced Settings|Impostazioni avanzate]]''': Configura diversi dettagli della simulazione.
+* '''[[Main/en/NewGRF|Impostazioni NewGRF]]''': Configura file di risorse addizionali.
+* '''[[Main/en/Online content|Contenuti online]]''': Scarica ulteriore materiale dalla rete.
+* '''[[Main/en/AI settings|Impostazioni IA]]''': Configura le opzioni del modulo IA (Intelligenza Artificiale).
+* '''Esci''': Abbandona OpenTTD.
+
+==L'interfaccia del gioco==
+Appena hai cominciato una nuova partita, ti sarà mostrata l''''interfaccia del gioco''' principale, mostrata qui sotto. Per giocare passerai la maggioranza del tempo usando questa interfaccia. Essa è suddivisa in tre sezioni: in cima c'è la ''[[Main/en/#La barra del  menù|barra del menù]]'', in mezzo troverai la ''[[Main/en/#Rappresentazione 3D del mondo tramite proiezione isometrica|rappresentazione 3D del mondo tramite proiezione isometrica]]'', mentre in fondo c'è la  ''[[Main/en/#La barar di stato|barra di stato]]''.
+
+[[File:en/interface.png|thumb|center|400px|L'interfaccia principale di gioco.]]
+
+==La barra del menù==
+I bottoni della barra del menù sono divisi in sezioni, descritte qui di seguito. Da sinistra a destra, esse sono: "Controlli del gioco", "Informazioni sulla mappa", "Informazioni sull'industria e la compagnia", "Informazioni sui veicoli", "Zoom", "Costruzioni" e "Varie".
+
+* Puoi scoprire cosa fa ogni bottone facendo il clic col pulsante di destra sul bottone stesso.
+* La maggioranza dei bottoni ha due funzionalità: un singolo clic attiva la funzionalità predefinita, mentre mantenendo premuto il pulsante di  sinistra del mouse apre un sotto-menù.
+[[File:en/Menu bar.png|none|frame|La barra del menù]]
+
+===I controlli del gioco===
+*[[File:en/Pause button.png|Pausa]] '''Bottone di pausa:''' Sospende e riavvia il gioco.
+*[[File:en/Fast Forward button.png|Avanti veloce]] '''Bottone di avanzamento veloce:''' Aumenta la velocità del gioco (quanto più veloce dipende dalla velocita del tuo computer).
+*[[File:en/Options button.png|Opzioni]] '''Bottone delle opzioni:''' Consente l'accesso al menù delle opzioni: ''[[Main/en/Difficulty|Levello di difficoltà]]'', ''[[Main/en/Advanced Options|Opzioni avanzate]]'' e opzioni grafiche.
+*[[File:en/Save Load button.png|Salva/Carica]] '''Bottone per salvare e caricare una partita:''' Consente di accedere il sotto-menù: ''Salava la partita'', ''Carica una partita'', ''Abbandona la partita'' (fa tornare alla schermata d'avvio), e ''Esci'' (chiude OpenTTD e fa tornare al sistema operativo).
+
+===Informazioni sulla mappa===
+*[[File:en/Minimap button.png|Mappa Terrirotio]] '''Bottone della Mappa del Territorio:''' mostra la mappa di tutto il territorio, una visuale aggiuntiva e consente di vedere la lista di tutti i [[Main/en/sings|cartelli]] sul territorio.
+*[[File:en/Town directory button.png|Lista della città]] '''Lista delle [[Main/en/Towns|Città]]:''' Mostra la lista delle città e la loro popolazione.
+*[[File:en/Subsidies button.png|Sussidi]] '''[[Main/en/Sussidi]]:''' Mostra l'elenco delle offerte di sussidio che sono state bandite o vinte dalle varie società.
+*[[File:en/Station list button.png|Elenco delle Stazioni]] '''[[Main/en/Elenco delle stazioni]]:''' Consente di consultare l'eleonco di tutte le stazioni costruita da qualunque giocatore.
+
+{{it/In attesa di traduzione}}
+
+===Informazioni sulla compagnia e sui concorrenti===
+*[[File:en/Finances screen button.png|Finances screen]] '''Finances screen button:''' View the finances screen of any company.
+*[[File:en/Company information button.png|Company Information]] '''[[Main/en/Transport company]] information button:''' View the company information for any company, and have the possibility to share your competitor's success by buying shares in that company
+*[[File:en/Graphs button.png|Graphs]] '''Graphs button:''' View various graphs about companies, their performance and the economy.
+*[[File:en/Company league table button.png|Company league]] '''Company league table button:''' View the company league table showing the rankings of the various players.
+*[[File:en/Industry button.png|Industries]] '''Industry button:''' View a list of industries and their production. You can also prospect or [[Main/en/Industries#Funding New Industries|fund new industries]].
+
+===Informazioni sui veicoli===
+*[[File:en/Train Information button.png|Train list]] '''Train Information:''' View a list of your company's or your competitors' trains.
+*[[File:en/Road Vehicle Information button.png|Road vehicle list]] '''Road Vehicle Information:''' View a list of your company's or your competitors' road vehicles.
+*[[File:en/Ship Information button.png|Ship list]] '''Ship information:''' View a list of your company's or your competitors' ships.
+*[[File:en/Aircraft Information button.png|Aircraft list]] '''Aircraft information:''' View a list of your company's or your competitors' aircraft.
+
+More information on [[Main/en/Vehicle lists]].
+
+===Zoom===
+To magnify or shrink the view in the main 3D world, click on either of the buttons shown below. There are three levels of magnification.  You can also zoom with the mouse scroll wheel.
+*[[File:en/Zoom in button.png|Zoom in]] '''Zoom in button:''' Zoom in. If the button is disabled, you have reached the maximum magnification level.
+*[[File:en/Zoom out button.png|Zoom out]] '''Zoom out button:''' Zoom out. If the button is disabled, you cannot get a larger view of the gameplay area.
+
+===Costruire===
+*[[File:en/Railroad build button.png|Build railroads]] '''Railroad build button:''' Open the [[Main/en/Railway construction|build toolbar for railways and stations]].
+*[[File:en/Road build button.png|Build roads]] '''Road build button:''' Open the [[Main/en/Roadway construction|build toolbar for roads and stations/loading bays]].
+
+By ''clicking and holding'' the Railroad build button, a dropdown appears where you can select the railtype that you want to build. Similarly, the Road build button allows you to chose between normal road and trams (you need to have a tram NewGRF loaded first).
+
+*[[File:en/Dock build button.png|Build docks]] '''Dock build button:''' Open the [[Main/en/Waterway construction|build window for docks and canals]].
+*[[File:en/Airport build button.png|Build airports]] '''Airport build button:''' Open the [[Main/en/Airport construction|build window for airports]].
+
+*[[File:en/Landscaping button.png|Landscape]] '''Landscaping button:''' Open the [[Main/en/Landscaping|landscaping]] toolbar.
+
+The Landscaping button has a dropdown to access the tree and sign placement windows directly, instead of via the landscaping toolbar.
+
+===Varie===
+*[[File:en/Sound Music button.png|Jukebox]] '''Jukebox button:''' Change sound and music settings.
+*[[File:en/News button.png|News]] '''News button:''' Change news and [[Main/en/message settings]]. You can also see a history of news messages.
+*[[File:en/Other button.png|Other]] '''Other button:''' Things that do not fit into other sections: ''[[Main/en/Land area information]]'', ''[[Main/en/Console|Toggle console]]'', ''[[Main/en/AI Debug]]'', ''[[Main/en/Screenshot|Screenshot]]'', ''[[Main/en/Screenshot|Giant screenshot]]'', and ''About OpenTTD''.
+
+==Rappresentazione 3D del mondo tramite proiezione isometrica==
+The OpenTTD world takes the form of a landscape, presented on [http://en.wikipedia.org/wiki/Video_games_with_isometric_graphics isometric projection] (strictly speaking rather [http://en.wikipedia.org/wiki/Dimetric_projection#Three_types_of_axonometric_projections dimetric projection]) for that 3D look.  You will spend most of your time playing here.  The world is divided up into tiles, of which there are many types.  Some are sloped, some are water, some are occupied by buildings, etc. This is where you build your transport empire!
+
+==La barra di stato==
+[[File:en/status-bar.png|none|frame|The status bar]]
+The status bar can be found at the bottom of page, as can be seen in picture 1., and above in picture 3. It is divided into three sections. 
+*On the left you can see the date. It progresses at about 1 day every 2.5 seconds.
+*The middle part, which takes up most of the space, shows various information:
+**The name of your company, initially "Unnamed". After you [[Main/en/name your company]] it will show that name. 
+**[[Main/en/News messages]] pop up out of the status bar. Click on the status bar to display the last message.
+**If you have changed the [[Main/en/message settings]] to "Summary" mode, messages will scroll by here instead of popping up.
+**If you have changed the message settings to "Off" mode, messages will be notified by a red dot.
+**It also shows if the game is paused by saying: "* * PAUSED * *"
+*The right part shows how much money you have. You can change the currency in the [[Main/en/game options window]] by pressing the "Options" button and then "Game options".
+
+You may also hear "status bar" used to refer to the [[Main/en/Status bar|vehicle status bar]].
+
+==Altre fonti==
+* [[Main/en/Hotkeys|Hotkeys (keyboard shortcuts)]]
+* [[Main/en/Other Interface Features]]
