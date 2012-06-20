@@ -1,0 +1,173 @@
+[[Translation:Main/en/Manual of Style]]{{en/-}}
+[[File:fr/StyleGuide.png|left|64px]]
+{{fr/TOCdroite}}
+Cette page liste les règles à respecter pour créer et modifier des articles du wiki [[Main/fr/OpenTTD|OpenTTD]].
+
+Allez voir l'[[Main/fr/Aide d'édition|aide d'édition au wiki]] si c'est la première fois.
+<div style="margin: 2em 0em 0em 0em; padding: 0em 1em 1em 1em; border: 1px solid #E1BBFF; background-color: #F5EDFC;">
+==Règles très importantes==
+<div style="font-size:large">
+#Signez toujours de votre nom quand vous postez un commentaire. Utilisez quatre tildes : <nowiki>~~~~</nowiki>.
+#Utilisez le bouton '''Prévisualiser''' avant de sauvegarder une page.
+#Référez-vous à cette page quand vous modifiez une page.
+</div></div>
+
+==Règles générales==
+*Utilisez le bouton '''Prévisualiser'''.
+*Respectez le format des pages existantes autant que possible.
+*Utilisez notre ''[[Main/en/sandbox|sandbox]]'' pour tester le code.
+*Testez vos pages dans plusieurs navigateurs si possible !
+*Ajoutez un résumé descriptif quand vous modifiez une page.
+*Un « changement mineur » est une correction de typo ou un petit changement qui n'affecte pas la page. Pas de résumé requis.
+
+==Discussion==
+*La discussion et les commentaires de l'éditeur doivent rester uniquement sur la page de discussion.
+*N'éditez pas les pages des autres utilisateurs. Postez sur leur page de discussion.
+*Signez de votre nom à la fin de votre message en ajoutant 4 tildes (<nowiki>~~~~</nowiki>)
+*Indentez votre message avec un double point (:) lorsque vous répondez à un message précédent.
+*Lorsque vous postez une idée, créez une nouvelle section avec le lien '''+''' en haut de la page.
+{|
+!Code!!Résultat
+|-
+|<pre>==Sujet de commentaire==
+contenu de la discussion ~~~~
+:réponse ~~~~</pre>
+|
+'''Sujet de commentaire'''
+----
+contenu de la discussion [[Archive/en/MeusH|MeusH]] 11:21, 6 Juin 2007 (CEST)
+:réponse [[Archive/en/Zojj|Zojj]] 11:21, 6 Juin 2007 (CEST)
+|}
+
+==Titres des articles==
+
+===Singulier ou pluriel===
+Lors de la création d'un article, imaginez ce qui pourrait être recherché.<br>
+par ex., un joueur voulant savoir quelque chose sur les [[Main/fr/Industries|industries]] recherchera plus vraisemblablement « industries », plutôt que « industrie ».
+
+Vous pouvez aussi créer une page de redirection pour que le singulier pointe vers le pluriel :
+<pre>#REDIRECT [[Main/fr/Industries]]</pre>
+
+Dans le doute (ce qui ne devrait pas arriver souvent), utilisez le singulier.
+
+===Majuscules===
+Ne mettez pas de lettre en majuscule dans le titre d'un article, sauf si le titre est un nom propre ou un acronyme. Le wiki mettra automatiquement en majuscule la première lettre.
+
+===Pages n'étant pas en anglais===
+Le titre de l'article doit être dans sa langue, suivi du symbole '''/''' et du code de langue international. Exemples:
+*[[Main/fr/Accueil]] (pour la ''page principale'' en français)
+*[[Main/de/Startseite]] (pour la ''page principale'' en allemand)
+*[[Main/ru/Главная страница]] (pour la ''page principale'' en russe)
+
+Pour un index des articles en d'autres langues dans le Wiki OpenTTD, voyez: [[Category/en/Articles in other languages]]
+
+===Pages de test===
+Quand le [[Main/fr/Bac à sable|bac à sable]] n'est pas suffisant pour votre page de test, vous pouvez créer une page comme un « répertoire » dans votre page utilisateur. Ceci permet de conserver l'espace de nommage principal propre. Exemple:
+*[[Archive/en/Zuu/New Main Page side by side layout]]
+
+===Espaces de nommage===
+Si votre article ne concerne pas directement le jeu, il appartient probablement à un espace de nommage. Exemples:
+*[[Main/fr/Pompe du village]]
+*[[Main/fr/Italie]]
+
+==Contenu de l'article==
+
+===Images===
+Utilisez le format qui convient le mieux. Les fichiers PNG sont le meilleur choix pour la plupart des graphiques de OpenTTD. Typiquement, ce sera:
+{|
+!Code!!Résultat
+|-
+|<pre>[[File:en/longerbridges.png|frame|Titre de l'image]]</pre>
+|[[File:en/longerbridges.png|frame|Titre de l'image]]
+|}
+
+===Captures d'écran annotées===
+[[File:en/WhyPresignals.png|frame|right|Format pour les captures d'écran avec indications]]
+Si vous postez des copies d'écran pour expliquer des concepts du jeu ou des jonctions, vous devez limiter la quantité de texte explicatif dans l'image réelle au minimum, et faire plutôt référence à des parties étiquetées dans le texte principal. Les parties étiquetées devraient l'être dans une couleur contrastée (pour le climat tempéré, le blanc est un bon choix) en utilisant une fonte sans empattement avec anti-crénelage, en gras, sur un fond transparent. Les flèches peuvent être utilisées si nécessaire, mais il vaut mieux positionner l'étiquette à proximité de l'objet à expliquer. L'image à droite est un exemple de ce format (mais rappelez-vous que les étiquettes n'ont pas forcément besoin d'être des lettres ou des nombres, tant qu'ils n'encombrent pas l'image et servent à expliquer ce qui est décrit dans le texte principal).
+
+===Captures d'écran de fenêtres===
+Si vous avez besoin d'inclure l'image d'une fenêtre du jeu, essayez de vous assurer de couper exactement sur les bords de la fenêtre, pour avoir un aspect plus soigné. Les fenêtres de OpenTTD sont des rectangles parfaits, donc cela devrait être assez facile - zoomez si c'est nécessaire.
+
+===Parcours===
+Utilisez les listes ordonnées ou non pour séparer les étapes:
+{|
+!Code!!Résultat
+|-
+|<pre>
+#étape 1
+#étape 2
+#* étape 2 note
+#* étape 2 note</pre>
+|
+#étape 1
+#étape 2
+#* étape 2 note
+#* étape 2 note
+|}
+
+===Version du jeu===
+Concentrez-vous pour écrire des pages du manuel pour la dernière version du jeu, non pour les constructions [[Main/fr/Construction de nuit|nocturnes]]. Les pages de développement peuvent traiter des fonctionnalités nocturnes. Si vous devez absolument inclure une fonctionnalité nocturne, marquez la section avec le modèle {{en/S|nocturne/Fr}}
+
+===Anglais britannique ou américain===
+Le TTD original était britannique, donc:
+*l'anglais britannique est l'anglais officiel de ce wiki.
+*la livre sterling (£) est la monnaie officielle. Vous pouvez placer des dollars ($) entre parenthèses après les quantités en livres.
+*les unités métriques sont officielles. Vous pouvez placer des unités impériales entre parenthèses après les unités métriques.
+
+===Boutons du jeu, éléments de menu, etc.===
+Lorsque vous citez un bouton du jeu, un élément de menu, une commande, etc., l'italique devrait être utilisé, sans guillemets. Par exemple:
+
+Pour ajuster l'option, cliquer sur ''Configurer les options''.
+
+===Utilisation des « méta »-mots===
+Évitez d'utiliser le mot ''wiki'' et d'autres mots décrivant les mécanismes, sauf si c'est absolument nécessaire. Le nom de ce que vous modifiez est ''documentation'', ''manuel'', ''tutoriel'', etc. - le wiki est juste le support pour le publier, donc dans l'idéal, il ne devrait pas être mentionné.
+
+Une chose similaire concerne les choses comme « page », « section » ou « lien », en liant d'autres pages — vous devriez utiliser le titre de la page comme texte du lien. Un bon moyen de décider pour ce genre de choses est de l'imaginer écrit sur un document et de voir si cela a du sens — manifestement, le mot « clic » ne convient pas dans ce contexte.
+
+Nous cherchons à être indépendants du support, de façon à ce que l'information soit utile quel que soit son format final. Bien entendu, les méta-mots peuvent être appropriés s'il s'agit d'un article comme celui-ci sur la manière d'utiliser le wiki.
+
+===Options===
+Utilisez le même format que [[Main/fr/Pont plus long|pont plus long]].
+
+==Modèles==
+===Format des modèles===
+Utilisez le même format que {{en/S|nocturne/Fr}}. Incluez des instructions pour les autres utilisateurs !
+
+Choisissez le plan de couleur le mieux adapté au message que vous voulez véhiculer — rouge pour une perte imminente (par ex. une suppression), jaune pour un avertissement, vert pour une tâche courante, bleu pour une information.
+
+===Modèles courants===
+''Article principal: [[Main/fr/Manuel de Style/Modèles courants]]''
+
+*Vous pouvez trouver ici une liste de modèles: [[Category/fr/Modèles]]
+*Pour plus d'information, voyez: [[Main/fr/Modèles|Modèles]]
+
+==Catégories==
+===Format des catégories===
+Utilisez le même format que [[Category/fr/demandes de suppression]].
+
+===Ajouter un article à une catégorie===
+Ajoutez votre page à une catégorie ou deux si cela est approprié. Cela rend la recherche plus aisée.
+
+Vous pouvez trouver une liste des catégories existantes ici: [[Main/en/Special:Categories]].
+
+Mettez le code tout en bas de l'article.
+<pre>[[Category:en/nom catégorie]]</pre>
+Cependant, vous devriez d'abord vérifier quelle sorte d'articles utilise déjà cette catégorie — par exemple, [[Category/fr/Locomotives]] n'est que pour les articles sur des locomotives spécifiques, pas pour n'importe quel article relatif aux locomotives. L'idée est que si les utilisateurs souhaitent une liste des locomotives « non polluée », ils vont dans la catégorie.
+
+==Scénarios==
+Voyez les instructions ici: [[Main/en/Équipe de scénarios/Fr#Procédure pour ajouter un scénario|Procédure pour ajouter un scénario]].
+Placez les scénarios dans l'espace de nommage scenario :
+*[[Main/fr/Italie]]
+
+==Voir aussi==
+*[http://meta.wikimedia.org/wiki/Help:Editing Syntaxe d'édition de texte dans MediaWiki] (en anglais)
+*[http://en.wikipedia.org/wiki/Wikipedia:Extended_image_syntax Syntaxe d'image étendue] (en anglais)
+*[http://en.wikipedia.org/wiki/Wikipedia:Picture_tutorial Tutoriel d'images] (en anglais)
+*[http://meta.wikimedia.org/wiki/Help:Table Éditer des tables dans MediaWiki] (en anglais)
+*[http://fr.wikipedia.org/wiki/Aide:Tableau Tableaux (aide de Wikipedia)]
+*[http://fr.wikipedia.org/wiki/Aide:Modèle Modèle (aide de Wikipedia)]
+*[http://fr.wikipedia.org/wiki/Aide:Catégorie Catégorie (aide de Wikipedia)]
+*[http://www.mediawiki.org/wiki/Help:Magic_words Mots magiques dans MediaWiki] (en anglais)
+*[http://www.mediawiki.org/wiki/Help:Extension:ParserFunctions Fonctions d'analyse dans MediaWiki] (en anglais)
+
+[[Category:fr/OpenTTD Wiki]]
