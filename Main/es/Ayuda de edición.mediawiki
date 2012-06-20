@@ -1,0 +1,210 @@
+{{es/Traducción|OpenTTD:Editing help|45}}
+[[Translation:Main/en/Editing help]]{{en/-}}{{en/TOCright}}
+Esto es una guía sobre el [http://es.wikipedia.org/wiki/Lenguaje_de_marcado lenguaje de marcas] wiki. Siéntase libre de probar cualquier cosa de lo que pone aquí editando la página de la [[Main/es/Zona de pruebas|zona de pruebas]].
+
+*Vea el artículo sobre [http://es.wikipedia.org/wiki/Ayuda:Cómo_se_edita_una_página cómo se edita una página] de Wikipedia para más ayuda.
+<div style="margin: 2em 0em 0em 0em; padding: 0em 1em 1em 1em; border: 1px solid #E1BBFF; background-color: #F5EDFC; font-size:large;">
+==Normas muy importantes'''==
+#Firme, siempre, con su nombre al publicar un comentario. Utilice cuatro tildes o virgulillas: "<nowiki>~~~~</nowiki>".
+#Siempre use el botón '''Mostrar previsualización''' antes de guardar una página.
+#Consulte el [[Main/es/Manual de Estilo|Manual de Estilo]] durante la edición de páginas.
+</div>
+
+==Formato del texto==
+Use apóstrofos para poner el texto en negrita o en cursivas.
+{|
+!Código
+!Equivalencia en HTML
+!Resultado
+|-
+|<code><nowiki>''Texto en cursivas''</nowiki></code>||<nowiki><b>Texto en cursivas</b></nowiki>||''Texto en cursivas''
+|-
+|<code><nowiki>'''Texto en negrita'''</nowiki></code>||<nowiki><b>Texto en negrita</b></nowiki>||'''Texto en negrita'''
+|-
+|<code><nowiki>'''''Cursivas y negrita'''''</nowiki></code>||<nowiki><b><i>Cursivas y negrita</i></b></nowiki>||'''''Cursivas y negrita'''''
+|}
+
+==Enlaces==
+===Enlaces internos===
+Escriba el enlace entre corchetes dobles <nowiki>("[[Main/en/" y "]]")</nowiki> para ir a un artículo interno de la wiki de OpenTTD (wiki.openttd.org). Separe el título del artículo del texto que desea que se muestre como enlace con una barra vertical ("|"):
+{|
+!Ejemplos
+!Código
+|-
+|[[Main/en/Download]] || <code><nowiki>[[Main/en/Download]]</nowiki></code>
+|-
+|[[Main/en/Download]]s || <code><nowiki>[[Main/en/Download]]s</nowiki></code>
+|-
+|[[Main/es/Descargas|Descargas]] || <code><nowiki>[[Main/es/Descargas|Descargas]]</nowiki></code>
+|-
+|[[Main/es/Descargas|Descargar archivos]] || <code><nowiki>[[Main/es/Descargas|Descargar archivos]]</nowiki></code>
+|}
+
+
+===Enlaces externos===
+Escriba el enlace entre corchetes simples para ir a otro sitio web. Separa la dirección del texto que desees que se muestre como enlace con un espacio (" ").
+{|
+!Ejemplos
+!Código
+!Notas
+|-
+|[http://www.openttd.org] || <code><nowiki>[http://www.openttd.org]</nowiki></code> || Un enlace externo sin texto para mostrar aparecerá referenciado con un número [x]
+|-
+|[http://www.openttd.org OpenTTD] || <code><nowiki>[http://www.openttd.org OpenTTD]</nowiki></code> ||
+|}
+
+==Secciones dentro de un artículo==
+{{es/Pendiente de traducción}}
+Enclose text with equal signs to divide an article into sections.
+
+<pre><nowiki>=Main section=
+==Subsection==
+===Subsubsection===
+====Get the point?====
+</nowiki></pre>
+
+==Images==
+Upload an image using the [[Main/en/special:upload|upload file]] link found in the main menu.
+
+Use this code to add an image to the article:
+<pre>[[File:en/.filename|frame|none|caption]]</pre>
+
+Example:
+<pre>[[File:en/longerbridges.png|frame|none|Longer bridges]]</pre>
+Result:
+[[File:en/longerbridges.png|frame|none|Longer bridges]]
+
+*Also see [http://en.wikipedia.org/wiki/Wikipedia:Extended_image_syntax Extended image syntax] on Wikipedia.
+
+==Tables==
+{{expand|Needs help on CSS formatting}}
+All table code needs to be the first character on the line.
+{|
+!Code
+!HTML equivalent
+!Result
+|-
+|<code><nowiki>{|</nowiki></code>||<nowiki><table></nowiki>||Start a table 
+|-
+|<code><nowiki>!</nowiki></code>||<nowiki><th></nowiki>||Column heading 
+|-
+|<code><nowiki>|</nowiki></code>||<nowiki><td></nowiki>||New cell 
+|-
+|<code><nowiki>!!</nowiki></code>||<nowiki></th><th></nowiki>||Column heading on same line
+|-
+|<code><nowiki>||</nowiki></code>||<nowiki></td><td></nowiki>||New cell on same line
+|-
+|<code><nowiki>|-</nowiki></code>||<nowiki><tr></nowiki>||New row
+|-
+|<code><nowiki>|}</nowiki></code>||<nowiki><table></nowiki>||Close table
+|-
+|
+<pre><nowiki>
+{|
+!Header1!!Header2
+|-
+|data1
+|data2
+|-
+|data3||data4
+|}</nowiki></pre>
+|
+<pre><nowiki>
+<table><tr>
+<td>Header1</th><th>Header2</th></tr>
+<tr>
+<td>data1</td>
+<td>data2</td>
+<tr>
+<td>data3</td><td>data4</td>
+</tr></table>
+</nowiki></pre>
+|
+
+{|
+!Header1!!Header2
+|-
+|data
+|data
+|-
+|data||data
+|}
+|}
+
+*Also see [http://en.wikipedia.org/wiki/Help:Table Table Help] on Wikipedia.
+
+==Lists==
+All list code needs to be the first character on the line.
+{|
+!width="150"|Code
+!Result
+|-
+|<nowiki>#</nowiki>||Ordered list item
+|-
+|<nowiki>*</nowiki>||Unordered list
+|-
+|'''<nowiki>:</nowiki>'''||Indent
+|-
+|<pre><nowiki>#Step A
+#Step B
+#*Hint
+#Step C
+##Substep
+##Substep
+#Step D
+:Note:
+::Note text</nowiki></pre>
+|
+#Step A
+#Step B
+#*Hint
+#Step C
+##Substep 
+##Substep 
+#Step D
+:Note:
+::Note text
+|}
+
+==Templates==
+{{expand}}
+Enclose a template in double curly braces to have it transcluded to the page.
+<pre>{{templatename|parameter1|parameter2}}</pre>
+Inside the template file (e.g. [[Template/en/delete]]), access parameters with triple curly braces.
+<pre>{{{1}}} {{{2|default}}}</pre>
+
+*Also see [http://en.wikipedia.org/wiki/Help:Template Template help] on Wikipedia.
+
+==Redirects==
+Use redirects to have one article automatically forward the read to another. In this example, [[Main/en/checkpoints]] automatically redirects to [[Main/en/waypoints]]:
+<pre>#REDIRECT [[Main/en/waypoints]]</pre>
+
+==Categories==
+Add articles to a category by adding a category link at the bottom of the article:
+<pre>[[Category:en/Development]]</pre>
+
+Display the category as a normal link by adding a colon:
+<pre>[[Category/en/Development]]</pre>
+[[Category/en/Development]]
+
+==Other code==
+{|
+!Code
+!Result
+|-
+|<nowiki><nowiki>text</no</nowiki>wiki>||Make text display as is
+|-
+|<nowiki><code>text</code></nowiki>||Make text display with font used for code.
+|-
+|<nowiki><pre>text</pre></nowiki>||Make text display in a box, with code font, and without HTML whitespace formatting 
+|-
+|<nowiki><noinclude>text</noinclude></nowiki>||Show text on the template page, but not on transcluded pages.  Useful for template usage instructions.
+|-
+|<nowiki><includeonly>text<includeonly></nowiki>||Show text on transcluded pages, but not on the template page.  Useful for templates that add articles to categories.
+|-
+|<code><nowiki>----</nowiki></code>||Add a horizontal bar.
+|-
+|<code><nowiki>~~~~</nowiki></code>||Add your signature.
+|}
+
+[[Category:es/OpenTTD Wiki]]
