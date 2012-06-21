@@ -1,0 +1,171 @@
+[[Translation:Main/en/Manual of Style]]{{en/-}}
+[[File:en/StyleGuide.png|left|64px]]
+{{en/TOCright}}
+Deze pagina geeft een overzicht van het beleid omtrent en maken en bewerken van [[Main/nl/OpenTTD|OpenTTD]] wiki artikelen.
+
+Zie de [[Main/nl/Bewerkingshulp|wiki bewerkingshulp]] als je voor het eerst wikis gaat bewerken.
+
+<div style="margin: 2em 0em 0em 0em; padding: 0em 1em 1em 1em; border: 1px solid #E1BBFF; background-color: #F5EDFC;">
+==Zeer belangrijke regels==
+<div style="font-size:large">
+#Onderteken altijd met je naam als je een commentaar inzendt. Gebruik vier tildes: <nowiki>~~~~</nowiki>.
+#Gebruik de '''Bewerking ter controle tonen''' knop voordat je een pagina opslaat.
+#Refereer aan deze pagina terwijl je pagina's bewerkt.
+</div></div>
+
+==Algemene regels==
+*Gebruik de '''Bewerking ter controle tonen''' knop.
+*Volg het format van bestaande pagina's zoveel mogelijk.
+*Gebruik a.u.b onze [[Main/nl/zandbak|zandbak]] om codes te testen.
+*Test jouw wiki in meerdere browsers als dat mogelijk is!
+*Voeg een beschrijvende samenvatting bij het bewerken van een pagina.
+*Een "kleine bewerking" is een verbetering van typefouten of kleine aanpassingen die geen effect hebben op de pagina. Geen samenvatting vereist.
+
+==Discussie==
+*Commentaar hoort alleen op de overlegpagina's.
+*Bewerk andermans gebruikerspagina niet. Post op hun user_talk pagina.
+*Onderteken je naam aan het eind van de wiki d.m.v. vier tildes. (<nowiki>~~~~</nowiki>)
+*Scheid je bericht met een dubbele punt (:) wanneer je op andermans bericht reageert.
+*Wanneer je een nieuw idee wilt posten maak je een nieuwe sectie aan met behulp van de + knop boven aan de pagina.
+{|
+!Code!!Resultaat
+|-
+|<pre>==Comment topic==
+discussie inhoud ~~~~
+:reply ~~~~</pre>
+|
+'''Inhoud topic'''
+----
+discussie inhoud [[Archive/en/MeusH|MeusH]] 11:21, 6 juni 2007 (CEST)
+:reply [[Archive/en/Zojj|Zojj]] 11:21, 6 juni 2007 (CEST)
+|}
+
+==Titel van een artikel==
+
+===Enkelvoud versus meervoud===
+Wanneer je een artikel maakt moet je je proberen voor te stellen waar mensen op zullen zoeken.
+Bijvoorbeeld: Een speler die wat wil weten over industrieën zal dan zoeken op "industrieën" en niet op "industrie".
+
+Je kunt ook een redirectpagina maken die verwijst van het enkelvoud naar het meervoud:
+
+<pre>#REDIRECT [[Main/en/industries]]</pre>
+
+Wanneer je twijfelt (wat niet vaak zou moeten gebeuren), gebruik enkelvoud.
+
+===Hoofdlettergebruik===
+Gebruik geen hoofdletters in de titel van de wiki, tenzij de titel een eigennaam of acroniem is. De wiki zal de eerste letter van de titel automatisch in een hoofdletter veranderen.
+
+===Niet-engelstalige pagina's===
+De titel van het artikel moet in de eigen taal zijn gesteld, gevold door het symbool '''/''' en zijn internationale taal. Voorbeelden:
+*[[Main/es/Página principal]] (voor ''main page'' in het Spaans)
+*[[Main/de/Startseite]] (voor ''main page'' in het Duits)
+*[[Main/ru/Главная страница]] (voor ''main page'' in het Russisch)
+*[[Main/nl/Hoofdpagina]] (voor ''main page'' in het Nederlands)
+
+Voor een index van artikelen in andere talen in OpenTTD Wiki zie: [[Category/en/Articles in other languages]]
+
+===Test pagina's===
+Als de [[Main/nl/zandbak|zandbak]] niet genoeg is voor jouw testpagina, kan je een pagina als "map" aanmaken op je eigen gebruikerspagina zodat de namespace schoon blijft. Voorbeeld:
+*[[Archive/en/Zuu/New Main Page side by side layout]]
+
+===Naamruimte===
+Als je artikel niet direct gerelateerd is aan OpenTTD, hoort het waarschijnlijk in een naamruimte. Voorbeelden:
+*[[Main/en/Village Pump]]
+*[[Main/en/Italy]]
+
+==Artikel inhoud==
+
+===Afbeeldingen===
+Gebruik elk goed werkend formaat. Het PNG-formaat is de beste keuze voor de OpenTTD grapichs. Dit is gewoonlijk:
+{|
+!Code!!Resultaat
+|-
+|<pre>[[File:en/longerbridges.png|frame|Afbeelding tekst]]</pre>
+|[[File:en/longerbridges.png|frame|Afbeelding tekst]]
+|}
+
+===Annotatie schermafdrukken===
+[[File:en/WhyPresignals.png|frame|right|Format voor labels van schermafdrukken]]
+Als je een concept of een knooppunt wilt uitleggen moet je ervoor zorgen dat de tekst onder de afbeelding beperkt blijft tot een minimum. Gelabelde onderdelen moet weergeven worden in een contrasterende kleur(voor het gematigd klimaat is wit perfect). Gebruik altijd een anti-aliased vetgedrukt Sans-Serif lettertype op een transparante achtergrond. De afbeelding aan de rechterkant is een voorbeeld.
+
+===Schremafdrukken van Windows===
+Als je een schermafdruk wilt toevoegen aan je artikel moet je ervoor zorgen dat je hem zo verkleint dat de randen van het venster niet meer zichtbaar zijn voor een professionele look. OpenTTD vensters zijn perfecte rechthoeken dus dat moet niet moeilijk zijn - inzoomen wanneer nodig.
+
+===Doorlopende lijsten===
+Je kan geordende of ongeordende lijsten maken:
+{|
+!Code!!Resultaat
+|-
+|<pre>
+#stap 1
+#stap 2
+#* stap 2 opmerking
+#* stap 2 opmerking</pre>
+|
+#stap 1
+#stap 2
+#* stap 2 opmerking
+#* stap 2 opmerking
+|}
+
+===Spelversie===
+Concentreer je in je artikel alleen op de laatste versie van de stable game, geen [[Main/en/nightly]] builds. Op de Development pagina's kan je de functies van de nightly build discusseren. Als je echt een nightly functie van een nightly build in je artikel wilt zetten markeer je deze met een nightly}} template.
+
+===Brits versus Amerikaans Engels ===
+De originele OpenTTD was in het Brits, dus:
+*Brits Engels is de officiële taal van deze wiki.
+*Britse pond is de officiële valuta van deze wiki(eventueel zet je tussen haakjes de waarde van het van de Amerikaanse valuta).
+*Gebruikt het Metrische meetsysteem(eventueel zet je tussen haakjes de waarde van het Imperiale syteem).
+
+===In-spel knoppen, menu onderwerpen, etc===
+Wanneer je een in-game knop, menu item, command etc. noemt moet je deze schuingedrukt plaatsen, zonder aanhalingstekens.
+
+===Gebruik van "meta" woorden===
+Vermijd het gebruik van het woord ''wiki'' en andere woorden het beschrijven van de mechanica, tenzij het absoluut noodzakelijk is. De naam van wat je aan het bewerken is ''documentatie'', ''handleiding'', ''leerprogramma'' etc. - de wiki is slechts het medium voor de aanlevering, idealiter moet niet worden vermeld.
+
+Een soortgelijke zaak geldt ook voor dingen als "pagina", "sectie" of "link" bij het linken naar andere pagina's - je moet de pagina's titel te gebruiken als de link van de tekst. Een goede manier om te beslissen over dit soort zaken is om het voor te stellen als een gedrukt document en als het zinvol is dit te zien. - blijkbaar heeft het woord "klik" geen zin in die context.
+
+We streven naar media-onafhankelijke informatie. Natuurlijk kunnen meta woorden nuttig zijn als het over hoe de wiki te gebruiken gaat.
+
+===Patches===
+Doe dit hetzelfde zoals gedaan is bij: [[Main/en/longer bridges]](EN).
+
+==Sjablonen==
+===Sjabloon format===
+Gebruik hetzelfde formaat als {{en/S|nightly}}. Inclusief instructies voor andere gebruikers!
+
+Gebruik een kleur die het beste de boodschap van jouw bericht dekt(geel voor waarschuwingen, groen voor taken, blauw voor informatie).
+
+===Gewone sjablonen===
+''Belangrijk artikel: [[Main/en/Stijlhandleiding/Nl#Gewone sjablonen|Stijlhandleiding gewone sjablonen]]''
+
+*Je kan een lijst van sjablonen hier vinden: [[Category/en/Templates]] of [[Category/nl/Sjablonen]]
+*Voor meer informatie, zie: [[Main/en/Templates]] of [[Main/nl/Modellen]]
+
+==Categorieën==
+===Artikel verwijderen===
+Gebruik: [[Category/en/requests for deletion]].
+
+===Voeg een artikel toe aan een categorie===
+Voeg je pagina toe aan een categorie (of 2). Dit maak het zoeken makkelijker. Je kan een lijst van categorieen hier vinden: [[Main/en/Special:Categories]].
+
+Plaats deze code aan het eind van een artikel:
+<pre>[[Category:en/categoryname]]</pre>
+
+==Scenario's==
+Zie de instructies hier: [[Main/en/Scenarios Team#Procedure to add a scenario]].
+Plaats het scenario in een naamruimte:
+*[[Main/en/Italy]]
+
+==Zie ook==
+*[http://meta.wikimedia.org/wiki/Help:Editing Text Editing syntax in MediaWiki]
+*[http://en.wikipedia.org/wiki/Wikipedia:Extended_image_syntax Extended image syntax]
+*[http://en.wikipedia.org/wiki/Wikipedia:Picture_tutorial Picture tutorial]
+*[http://meta.wikimedia.org/wiki/Help:Table Editing Tables in MediaWiki]
+*[http://en.wikipedia.org/wiki/Help:Table Table (Wikipedia help)]
+*[http://en.wikipedia.org/wiki/Help:Template Template (Wikipedia help)]
+*[http://en.wikipedia.org/wiki/Help:Category Category (Wikipedia help)]
+*[http://www.mediawiki.org/wiki/Help:Magic_words Magic words in MediaWiki]
+*[http://www.mediawiki.org/wiki/Help:Extension:ParserFunctions ParserFunctions in MediaWiki]
+
+[[Category:nl/OpenTTD Wiki]]
