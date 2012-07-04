@@ -1,0 +1,44 @@
+<noinclude>
+[[Translation:Template/en/Check]]{{en/-}}
+</noinclude>
+<includeonly>
+[[File:en/.{{#switch: {{{1|}}} | no | No =No_check_{{#switch: {{{2|}}} 
+  | black  | Black  = Black 
+  | orange | Orange = Orange 
+  | #default        = Red}}
+|Yes_check_{{#switch: {{{2|}}} 
+  | black  | Black  = Black 
+  | orange | Orange = Orange 
+  | red    | Red    = Red 
+  | blue   | Blue   = Blue 
+  | yellow |Yellow  = Yellow
+  | #default        = Green}}}}.png|{{{size|11px}}}]]</includeonly><noinclude>
+
+==Usage==
+Enter <nowiki>{{</nowiki>'''Check'''|''Yes/No''|''Color''|''size''<nowiki>}}</nowiki> inside an article section. Example:
+<pre>
+{{en/Check|Yes}                  Defaults to Yes green
+{{en/Check|No}                   Defaults to No  red
+{{en/Check|Yes|Blue|size=50px}}  Size is optional Default to 11px
+</pre>
+
+current available colors:
+
+<gallery widths=30px heights=30px perrow=7 caption="Yes check">
+Image:Yes check Red.png
+Image:Yes check Orange.png
+Image:Yes check Black.png
+Image:Yes check Green.png
+Image:Yes check Blue.png
+Image:Yes check Yellow.png
+</gallery>
+
+<gallery widths=30px heights=30px perrow=7 caption="No check">
+Image:No check Red.png
+Image:No check Orange.png
+Image:No check Black.png
+</gallery>
+
+
+[[Category:en/Templates|C]]
+</noinclude>
