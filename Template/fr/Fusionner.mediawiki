@@ -1,0 +1,20 @@
+<noinclude>
+'''Broken translation link'''{{en/-}}</noinclude>
+{{ambox
+| type  = move
+| image = merge.png
+| text  =  {{#IF: {{{1|}}} |
+Il a été suggéré que le contenu de cet article et de ''[[Main/en/{{NAMESPACE}}:{{{1}}}|{{{1}}}]]'' soient <span class="plainlinks">[http://fr.wikipedia.org/wiki/Wikip%C3%A9dia:Pages_%C3%A0_fusionner fusionné]</span> dans un nouvel article. ([[Main/en/{{NAMESPACE}} talk:{{{1}}}|Discuter]]) | Aucun nom de page n'a été fourni, réglez ceci ou supprimez ce modèle
+}} }}<includeonly>{{{2|[[Category:en/Articles à unifier|{{NOMDELAPAGE}}]]}}}</includeonly><noinclude>
+
+==Utilisation==
+Écrire <nowiki>{{</nowiki>'''Fusionner'''|'''Nom de la page'''<nowiki>}}</nowiki>. Exemple :
+<pre>{{Template:Fusionner|Quelques pages}}</pre>
+Cela ajoutera l'article à [[Category/fr/Articles à fusionner]].
+
+==Quel modèle de fusion devrais-je utiliser ?==
+* {{s|Fusionner/Fr}} &ndash; pour fusionner au moins deux articles en un emplacement indéterminé.
+* {{s|FusionnerA/Fr}} &ndash; pour fusionner le contenu d'un article particulier ''vers'' un article déterminé.
+* {{s|FusionnerDepuis/Fr}} &ndash; l'opposé de {{s|FusionnerA/Fr}} : le contenu de l'article spécifié devrait être fusionné à cet article.
+
+[[Category:fr/Modèles|M]][[Category:fr/Infobox|M]]</noinclude>
