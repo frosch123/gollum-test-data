@@ -1,0 +1,90 @@
+{{en/Warning|Savegames which are created with this branch might no longer work in subsequent versions. They will for sure not work in trunk, even after IS has been merged into trunk.<br>Also, please bear in mind that savegames from trunk might not work in the patched version}}
+
+Infrastructure sharing is a patch in development from a few users.
+
+Originally proposed and written by Gedemon it was subsequently maintained by a few other users [http://www.tt-forums.net/viewtopic.php?f=33&t=37455]. Currently there's a re-write in progress. Look at the tt-forums thread and post suggestions there or here ;) If you find problems, please always state the patch version or - if accessing the repo - the revision which you used. 
+
+==Contact==
+Developers: Hirundo (aka Swallow), Aali, Ammler, planetmaker
+
+Forums: [http://www.tt-forums.net/viewtopic.php?f=33&t=42254 Infrastructure Sharing]
+
+IRC: [irc://irc.oftc.net/openttd.is #openttd.is] and [irc://irc.oftc.net/openttdcoop.devzone #openttdcoop.devzone]
+
+Development Portal: http://mz.openttdcoop.org/is2/
+
+==Sources==
+Mercurial Repository: http://mz.openttdcoop.org/hg/is2
+
+A patch against OpenTTD trunk can be found at the [http://bundles.openttdcoop.org/is2/trunk-patches/ development portal].
+
+==Tags (Releases)==
+
+===IS2.1.1 (r18667/hIS2.1.1) ===
+*[http://openttd.ammler.ch/is2/{{en/ISTag}}/openttd-is2-{{en/ISTag}}-windows-win32.zip Win32]
+*[http://openttd.ammler.ch/is2/{{en/ISTag}}/openttd-is2-{{en/ISTag}}-windows-win64.zip Win64]
+*[http://openttd.ammler.ch/is2/{{en/ISTag}}/openttd-is2-{{en/ISTag}}-windows-win9x.zip Win9x]
+*[http://openttd.ammler.ch/is2/{{en/ISTag}}/openttd-is2-{{en/ISTag}}-macosx-universal.zip MacOSX]
+*[http://openttd.ammler.ch/is2/{{en/ISTag}}/openttd-is2-{{en/ISTag}}-linux-generic-i686.tar.bz2 Linux 32Bit]
+*[http://openttd.ammler.ch/is2/{{en/ISTag}}/ All Platforms]
+
+
+===IS2.1 (r18637/hIS2.1) ===
+
+*[http://openttd.ammler.ch/is2/IS2.1/ All Platforms]
+
+===IS2.0-beta5 (r17973/h1767ebc9) ===
+
+*[http://openttd.ammler.ch/is2/IS2.0-beta5/ All Platforms]
+
+===IS2.0-beta4 (hh2d98b8a5) ===
+
+*[http://openttd.ammler.ch/is2/IS2.0-beta4/ All Platforms]
+
+===IS2.0-beta3 (r16532M/h56a047d6)===
+
+*[http://openttd.ammler.ch/is2/IS2.0-beta3/ All Platforms]
+
+===IS2.0-beta2 (r16141M/h4cd407da)===
+
+*[http://openttd.ammler.ch/is2/IS2.0-beta2/ All Platforms]
+
+===IS2.0-beta1 (hb40dd43f)===
+
+==Advanced Settings (Global)==
+{| border = "1"
+!colspan="4"| Advanced options
+|-
+| rowspan="11" |[[File:en/IS2 advSettings.png]] ||'''Option''' (sharing.) || '''Default''' || '''Description'''
+|-
+| enable_sharing || false || enables sharing feature
+|-
+| individual_allowed || false || enable individual settings (see next 2 images
+|-
+| new_individual_delay || 12 || delay (in months) until individual changes take effect
+|-
+| rail_sharing || none || enables sharing of rail, +depot, +station or all
+|-
+| road_sharing || false || enables road stops and depot sharing
+|-
+| water_sharing || false || enables docks and ship depot sharing
+|-
+| rail_fee || 100 || daily fee per 1000tons
+|-
+| road_fee || 100 || road stops fee per day
+|-
+| water_fee || 100 || daily fee for docks
+|-
+| air_fee || 100 || daily fee for airports
+|}
+
+==Individual Settings==
+{|
+|-
+| [[File:en/IS2 indSettings.png]]
+|- 
+| [[File:en/IS2 compSettings.png]]
+|}
+
+
+IT DOESENT'T WORK
