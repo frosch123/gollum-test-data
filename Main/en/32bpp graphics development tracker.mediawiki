@@ -1,0 +1,2966 @@
+{{outdated| You may want to check the equivalent [[Main/en/32bpp graphics development tracker (extra zoom)|full zoom]] project which is in a more advanced stage}}
+[[Translation:Main/en/32bpp graphics development tracker]]
+The following is a partial list of graphics that are needed to replace the original TTDX graphics.
+
+<!--
+ ## In making additions, please follow these standards: ##
+
+ * Do not scale original graphics upwards
+ * Upload new graphics in high resolution, with transparent background
+ * Scale vehicles down to 32px wide
+ * Scale 1x1 buildings to 64px wide
+ * Scale 2xY buildings to 128px wide
+ * Scale all larger buildings to 192px wide
+ * Link authors if possible
+ * Do not post WIPs! Only graphics that are available for download on the 32bpp tars list (in other words, available to the general public), qualify as "DONE".
+ * Do not post Extra Zoom graphics! This is a list of graphics for official OTTD builds.
+-->
+
+{| border="2" style="background:#e7ebff;"
+!
+!Original
+!32bpp
+!Credits
+!Status
+|-
+!colspan="5"|Ground tiles - Misc
+|-
+!Water
+|align="center"|[[File:en/Water Tile.png]]
+|
+|[[Archive/en/?]]
+{{en/Done}}
+|-
+!Bare
+|align="center"|[[File:en/Tile Bare.png]]
+|
+|
+{{en/Unclaimed}}
+|-
+!Concrete
+|align="center"|[[File:en/Tile Concrete.png]]
+|align="center"|[[File:en/1420 z0.png|64px]]
+|[[Archive/en/ben|Ben_Robbins_]]
+{{en/Done}}
+|-
+!Stone
+|align="center"|[[File:en/Tile Stone.png]]
+|
+|
+{{en/Unclaimed}}
+|-
+!colspan="5"|Ground tiles - Temperate
+|-
+!Transition 1
+|align="center"|[[File:en/Tile Bare Temperate.png]]
+|align="center"|[[File:en/Temperate Bare new Ben.png|64px]]
+|[[Archive/en/ben|Ben_Robbins_]]
+{{en/Done}}
+|-
+!Transition 2
+|align="center"|[[File:en/Tile Bare Temperate2.png]]
+|align="center"|[[File:en/Temperate Bare2 new Ben.png|64px]]
+|[[Archive/en/ben|Ben_Robbins_]]
+{{en/Done}}
+|-
+!Grass
+|align="center"|[[File:en/Tile Temperate.png]]
+|align="center"|[[File:en/Temperate Ground new Ben.png|64px]]
+|[[Archive/en/ben|Ben_Robbins_]]
+{{en/Done}}
+|-
+!Bumpy
+|align="center"|[[File:en/Tile Bumpy Temperate.png]]
+|align="center"|[[File:en/Temperate Bumpy new Ben.png|64px]]
+|[[Archive/en/ben|Ben_Robbins_]]
+{{en/Done}}
+|-
+!Rocky
+|align="center"|[[File:en/Tile Rocks Temperate.png]]
+|align="center"|[[File:en/Temperate Rocks new Ben.png|64px]]
+|[[Archive/en/ben|Ben_Robbins_]]
+{{en/Done}}
+|-
+!Shores
+|align="center"|[[File:en/Tile Shore Temperate.png]]
+|
+|
+{{en/Unclaimed}}
+|-
+!colspan="5"|Ground tiles - Arctic
+|-
+!Transition 1
+|align="center"|[[File:en/Tile Bare Arctic.png]]
+|
+|
+{{en/Unclaimed}}
+|-
+!Transition 2
+|align="center"|[[File:en/Tile Bare Arctic2.png]]
+|
+|
+{{en/Unclaimed}}
+|-
+!Grass
+|align="center"|[[File:en/Tile Arctic.png]]
+|
+|
+{{en/Unclaimed}}
+|-
+!Bumpy
+|align="center"|[[File:en/Tile Bumpy Arctic.png]]
+|
+|
+{{en/Unclaimed}}
+|-
+!Rocky
+|align="center"|[[File:en/Tile Rocks Arctic.png]]
+|
+|
+{{en/Unclaimed}}
+|-
+!Snow transition 1
+|align="center"|[[File:en/Tile Snow Arctic.png]]
+|
+|
+{{en/Unclaimed}}
+|-
+!Snow transition 2
+|align="center"|[[File:en/Tile Snow Arctic2.png]]
+|
+|
+{{en/Unclaimed}}
+|-
+!Snow transition 3
+|align="center"|[[File:en/Tile Snow Arctic3.png]]
+|
+|
+{{en/Unclaimed}}
+|-
+!Snow
+|align="center"|[[File:en/Tile Snow Arctic4.png]]
+|
+|
+{{en/Unclaimed}}
+|-
+!Shores
+|align="center"|[[File:en/Tile Shore Arctic.png]]
+|
+|
+{{en/Unclaimed}}
+|-
+!colspan="5"|Ground tiles - Tropical
+|-
+!Transition 1
+|align="center"|[[File:en/Tile Bare Tropical.png]]
+|
+|
+{{en/Unclaimed}}
+|-
+!Transition 2
+|align="center"|[[File:en/Tile Bare Tropical2.png]]
+|
+|
+{{en/Unclaimed}}
+|-
+!Grass
+|align="center"|[[File:en/Tile Tropical.png]]
+|align="center"|[[File:en/38 z0.png|64px]]
+|Ben_Robbins_ and Habell
+{{en/Done}}
+|-
+!Bumpy
+|align="center"|[[File:en/Tile Bumpy Tropical.png]]
+|align="center"|[[File:en/61 z0.png|64px]]
+|Ben_Robbins_ and Habell
+{{en/Done}}
+|-
+!Rocky
+|align="center"|[[File:en/Tile Rocks Tropical.png]]
+|align="center"|[[File:en/84 z0.png|64px]]
+|Ben_Robbins_ and Habell
+{{en/Done}}
+|-
+!Desert transition 1
+|align="center"|[[File:en/Tile Desert Tropical.png]]
+|
+|
+{{en/Unclaimed}}
+|-
+!Desert
+|align="center"|[[File:en/Tile Desert Tropical2.png]]
+|align="center"|[[File:en/Desert Normal new Wacki.png|64px]]
+|Wacki
+{{en/Done}}
+|-
+!Bumpy desert
+|
+|
+|
+{{en/Unclaimed}}
+|-
+!Shores
+|align="center"|[[File:en/Tile Shore Tropical.png]]
+|
+|
+{{en/Unclaimed}}
+|-
+!colspan="5"|Ground tiles - Farms
+|-
+!Farm field 1
+|align="center"|[[File:en/Tile Farm1.png]]
+|align="center"|[[File:en/Tile Farm1new.png|64px]]
+|Alltaken
+{{en/Done}}
+|-
+!Farm field 2
+|align="center"|[[File:en/Tile Farm2.png]]
+|align="center"|[[File:en/Tile Farm2new.png|64px]]
+|Alltaken
+{{en/Done}}
+|-
+!Farm field 3
+|align="center"|[[File:en/Tile Farm3.png]]
+|align="center"|[[File:en/Tile Farm3new.png|64px]]
+|Alltaken
+{{en/Done}}
+|-
+!Farm field 4
+|align="center"|[[File:en/Tile Farm4.png]]
+|align="center"|[[File:en/Tile Farm4new.png|64px]]
+|Alltaken
+{{en/Done}}
+|-
+!Farm field 5
+|align="center"|[[File:en/Tile Farm5.png]]
+|align="center"|[[File:en/Tile Farm5new.png|64px]]
+|Alltaken
+{{en/Done}}
+|-
+!Farm field 6
+|align="center"|[[File:en/Tile Farm6.png]]
+|align="center"|[[File:en/Tile Farm6new.png|64px]]
+|Alltaken
+{{en/Done}}
+|-
+!Farm field 7
+|align="center"|[[File:en/Tile Farm7.png]]
+|align="center"|[[File:en/Tile Farm7new.png|64px]]
+|Alltaken
+{{en/Done}}
+|-
+!Farm field 8
+|align="center"|[[File:en/Tile Farm8.png]]
+|align="center"|[[File:en/Tile Farm8new.png|64px]]
+|Alltaken
+{{en/Done}}
+|-
+!Farm field 9
+|align="center"|[[File:en/Tile Farm9.png]]
+|align="center"|[[File:en/Tile Farm9new.png|64px]]
+|Alltaken
+{{en/Done}}
+|-
+!colspan="5"|Foundations
+|-
+!Temperate
+|align="center"|[[File:en/found997.png]]
+|
+|
+{{en/Unclaimed}}
+|-
+!Arctic
+|align="center"|[[File:en/found c 335.png]]
+|
+|
+{{en/Unclaimed}}
+|-
+!Tropical
+|align="center"|[[File:en/found h 524.png]]
+|
+|
+{{en/Unclaimed}}
+|-
+!Toyland
+|align="center"|[[File:en/found t 550.png]]
+|
+|
+{{en/Unclaimed}}
+|-
+!colspan="5"|Farm fences
+|-
+!Wooden fence
+|align="center"|[[File:en/WoodenFarmFences.png]]
+|
+|
+{{en/Unclaimed}}
+|-
+!Hedge/wooden fence
+|align="center"|[[File:en/Hedge-WoodenFarmFences.png]]
+|
+|
+{{en/Unclaimed}}
+|-
+!Hedge 1
+|align="center"|[[File:en/Hedge1FarmFences.png]]
+|
+|
+{{en/Unclaimed}}
+|-
+!Hedge 2
+|align="center"|[[File:en/Hedge2FarmFences.png]]
+|
+|
+{{en/Unclaimed}}
+|-
+!Hedge 3
+|align="center"|[[File:en/Hedge3FarmFences.png]]
+|
+|
+{{en/Unclaimed}}
+|-
+!Stone fence
+|align="center"|[[File:en/StoneFarmFences.png]]
+|
+|
+{{en/Unclaimed}}
+|-
+!colspan="5"|Rail fences
+|-
+!Temperate
+|align="center"|[[File:en/fence1301.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!Arctic
+|align="center"|[[File:en/ArcticRailFence.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!Tropical
+|align="center"|[[File:en/TropicalRailFence.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!Toyland
+|align="center"|[[File:en/ToylandRailFence.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!colspan="5"|Roads
+|-
+!City
+|align="center"|[[File:en/road1313.png]]
+|align="center"|[[File:en/1313 z0.png|64px]]
+|Ben_Robbins_
+{{en/Done}}
+|-
+!Temperate
+|align="center"|[[File:en/road1332.png]]
+|align="center"|[[File:en/1332 z0.png|64px]]
+|Ben_Robbins_
+{{en/Done}}
+|-
+!Arctic
+|align="center"|[[File:en/road c 211.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!Arctic snow
+|align="center"|[[File:en/road1351.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!Tropical
+|align="center"|[[File:en/road h 388.png]]
+|align="center"|[[File:en/388 z0.png|64px]]
+|Ben_Robbins_ and Habell
+{{en/Done}}
+|-
+!Tropical desert
+|align="center"|[[File:en/road h 199.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!Toyland
+|align="center"|[[File:en/road t 153.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!Toyland city
+|align="center"|[[File:en/road t 134.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!colspan="5"|Road tunnel entrances
+|-
+!Temperate
+|align="center"|[[File:en/tunnel2389 2390.png]]
+|align="center"|[[File:en/Temperate tunnel2389 2390.png|64px]]
+|Ben_Robbins_
+{{en/Done}}
+|-
+!Arctic
+|align="center"|[[File:en/tunnel c238 c239.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!Arctic snow
+|align="center"|[[File:en/tunnel2421 2422.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!Tropical
+|align="center"|[[File:en/tunnel h226 h227.png]]
+|align="center"|[[File:en/Tropical tunnel.png|64px]]
+|Ben_Robbins_ and Habell
+{{en/Done}}
+|-
+!Tropical desert
+|align="center"|[[File:en/tunnel h509 h510.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!Toyland
+|align="center"|[[File:en/tunnel t1170 t1171.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!colspan="5"|Railways
+|-
+!Temperate
+|align="center"|[[File:en/railway1011.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!Arctic
+|align="center"|[[File:en/railway c169.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!Arctic snow
+|align="center"|[[File:en/railway1037.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!Tropical
+|align="center"|[[File:en/railway h157.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!Tropical desert
+|align="center"|[[File:en/railway h407.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!Toyland
+|align="center"|[[File:en/railway t180.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!colspan="5"|Monorail
+|-
+!Temperate
+|align="center"|[[File:en/monorail 1093.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!Arctic
+|align="center"|[[File:en/monorail c121.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!Arctic snow
+|align="center"|[[File:en/monorail 1119.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!Tropical
+|align="center"|[[File:en/monorail h109.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!Tropical desert
+|align="center"|[[File:en/monorail h433.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!Toyland
+|align="center"|[[File:en/monorail t212.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!colspan="5"|MagLev
+|-
+!Temperate
+|align="center"|[[File:en/maglev 1175.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!Arctic
+|align="center"|[[File:en/maglev c284.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!Arctic snow
+|align="center"|[[File:en/maglev 1201.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!Tropical
+|align="center"|[[File:en/maglev h272.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!Tropical desert
+|align="center"|[[File:en/maglev h459.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!Toyland
+|align="center"|[[File:en/maglev t244.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!colspan="5"|Railway tunnel entrances
+|-
+!Temperate
+|align="center"|[[File:en/RailTemperateTunnel 2365 2366.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!Arctic
+|align="center"|[[File:en/RailArcticTunnel c230 c231.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!Arctic snow
+|align="center"|[[File:en/RailSnowTunnel 2397 2398.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!Tropical
+|align="center"|[[File:en/RailTropicalTunnel h218 h219.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!Tropical desert
+|align="center"|[[File:en/RailDesertTunnel h485 h486.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!Toyland
+|align="center"|[[File:en/RailToylandTunnel t1146 t1147.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!colspan="5"|Monorail
+|-
+!Temperate
+|align="center"|[[File:en/MonorailTemperateTunnel.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!Arctic
+|align="center"|[[File:en/MonorailArcticTunnel.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!Arctic snow
+|align="center"|[[File:en/MonorailSnowTunnel.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!Tropical
+|align="center"|[[File:en/MonorailTropicalTunnel.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!Tropical desert
+|align="center"|[[File:en/MonorailDesertTunnel.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!Toyland
+|align="center"|[[File:en/MonorailToylandTunnel.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!colspan="5"|MagLev
+|-
+!Temperate
+|align="center"|[[File:en/MagLevTemperateTunnel.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!Arctic
+|align="center"|[[File:en/MagLevArcticTunnel.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!Arctic snow
+|align="center"|[[File:en/MagLevSnowTunnel.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!Tropical
+|align="center"|[[File:en/MagLevTropicalTunnel.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!Tropical desert
+|align="center"|[[File:en/MagLevDesertTunnel.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!Toyland
+|align="center"|[[File:en/MagLevToylandTunnel.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!colspan="5"|Train stations
+|-
+![[Main/en/Railway construction]]
+|align="center"|[[File:en/Train station rail.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+![[Main/en/Monorail]]
+|align="center"|[[File:en/Train station monorail.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+![[Main/en/MagLev]]
+|align="center"|[[File:en/Train station maglev.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!colspan="5"|Train depots
+|-
+!Railway
+|align="center"|[[File:en/Rail Depot.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!Monorail
+|align="center"|[[File:en/Monorail Depot.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!MagLev
+|align="center"|[[File:en/Maglev Depot.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!colspan="5"|Road vehicle bays
+|-
+![[Main/en/Loading Bays|Bus station]]
+|align="center"|[[File:en/Busstation.png]]
+|
+|
+{{en/Unclaimed}}
+|-
+![[Main/en/Loading Bays|Freight loading bay]]
+|align="center"|[[File:en/Lorry.png]]
+|
+|
+{{en/Unclaimed}}
+|-
+![[Main/en/depots]]
+|align="center"|[[File:en/Road Depot.png]]
+|
+|
+{{en/Unclaimed}}
+|-
+!colspan="5"|Ship stops
+|-
+![[Main/en/Water Transport Tiles]]
+|align="center"|[[File:en/Dock.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+![[Main/en/Ships|Ship]] Depot
+|align="center"|[[File:en/Ship yard.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!colspan="5"|Airports
+|-
+![[Main/en/Airports]]
+|align="center"|[[File:en/Small airport.png|192px]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+![[Main/en/Airports]]
+|align="center"|[[File:en/Commuterairport.png|192px]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+![[Main/en/Airports]]
+|align="center"|[[File:en/City airport.png|192px]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+![[Main/en/Airports#Metropolitan airport]]
+|align="center"|[[File:en/Metropolitan airport.png|192px]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+![[Main/en/Airports#International airport]]
+|align="center"|[[File:en/International airport.png|192px]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+![[Main/en/Intercontinental airport]]
+|align="center"|[[File:en/Intercontinentalairport.png|192px]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+![[Main/en/Airports]]
+|align="center"|[[File:en/Heliport.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!colspan="5"|Buildings - Industries
+|-
+![[Main/en/Coal Mine]]<br />(temperate)
+|align="center"|[[File:en/Coalmine.png|192px]]
+|
+|
+{{en/Unclaimed}}
+|-
+![[Main/en/Iron Ore Mine]]<br />(temperate)
+|align="center"|[[File:en/Ironoremine.png|192px]]
+|
+|
+{{en/Unclaimed}}
+|-
+![[Main/en/Copper Ore Mine]]<br />(tropical)
+|align="center"|[[File:en/Copperoremine.png|192px]]
+|
+|
+{{en/Unclaimed}}
+|-
+![[Main/en/Gold Mine]]<br />(arctic)
+|align="center"|[[File:en/Goldmine.png|192px]]
+|
+|
+{{en/Unclaimed}}
+|-
+![[Main/en/Diamond Mine]]<br />(tropical)
+|align="center"|[[File:en/Diamondmine.png|192px]]
+|
+|
+{{en/Unclaimed}}
+|-
+![[Main/en/Power Station]]<br />(temperate)
+|align="center"|[[File:en/PowerStationOriginal.png|192px]]
+|align="center"|[[File:en/32bpp powerplants.png|192px]]
+|[[Archive/en/LordAzamath|LordAzamath]]
+{{en/Done}}
+|-
+![[Main/en/Steel Mill]]<br />(temperate)
+|align="center"|[[File:en/Steelmill.png|192px]]
+|align="center"|[[File:en/32bpp steelmill.png|192px]]
+|ade (http://ade.se)
+{{en/Done}}
+|-
+![[Main/en/Sawmill]]<br />(temperate)
+|align="center"|[[File:en/Sawmill.png|192px]]
+|
+|
+{{en/Unclaimed}}
+|-
+![[Main/en/Forest]]<br />(temperate)
+|align="center"|[[File:en/Forest(industry).png|192px]]
+|
+|
+{{en/Unclaimed}}
+|-
+![[Main/en/Farm]]
+|align="center"|[[File:en/Farm.png|192px]]
+|
+|
+{{en/Unclaimed}}
+|-
+![[Main/en/Factory]]
+|align="center"|[[File:en/Factory.png|192px]]
+|
+|
+{{en/Unclaimed}}
+|-
+![[Main/en/Oil Wells]]
+|align="center"|[[File:en/Oilwells.png]]
+|
+|
+{{en/Unclaimed}}
+|-
+![[Main/en/Oil Rig]]
+|align="center"|[[File:en/Oilrig.png]]
+|align="center"|[[File:en/Oil Rig temperate 32bpp.png]]
+|[[Archive/en/Wacki|Wacki]]
+{{en/Done}}
+|-
+![[Main/en/Oil Refinery]]
+|align="center"|[[File:en/Oilrefinery.png|192px]]
+|
+|
+{{en/Unclaimed}}
+|-
+![[Main/en/Paper Mill]]<br />(arctic)
+|align="center"|[[File:en/Papermill.png|192px]]
+|align="center"|[[File:en/PaperMill.png|192px]]
+|BerberJesus
+{{en/Done}}
+|-
+![[Main/en/Printing Works]]<br />(arctic)
+|align="center"|[[File:en/Printworks.png|192px]]
+|
+|
+{{en/Unclaimed}}
+|-
+![[Main/en/Bank]]<br />(temperate)
+|align="center"|[[File:en/Bank.png]]
+|
+|
+{{en/Unclaimed}}
+|-
+![[Main/en/Bank]]<br />(tropical, arctic)
+|align="center"|[[File:en/Tropicalbank.png]]
+|align="center"|[[File:en/Tropical Bank by LordAzamath.png|192px]]
+|[[Archive/en/LordAzamath|LordAzamath]]
+{{en/Done}}
+|-
+![[Main/en/Water Supply]]<br />(tropical)
+|align="center"|[[File:en/water supply.gif]]
+|
+|
+{{en/Unclaimed}}
+|-
+![[Main/en/Water Tower]]<br />(tropical)
+|align="center"|[[File:en/water tower.gif]]
+|align="center"|[[File:en/Watertower 32bpp.png|64px]]
+|Varivar
+{{en/Done}}
+|-
+![[Main/en/Fruit Plantation]]<br />(tropical)
+|align="center"|[[File:en/Fruitplantation.png|192px]]
+|
+|
+{{en/Unclaimed}}
+|-
+![[Main/en/Rubber Plantation]]<br />(tropical)
+|align="center"|[[File:en/Rubberplantation.png|192px]]
+|
+|
+{{en/Unclaimed}}
+|-
+![[Main/en/Food Processing Plant]]<br />(arctic, tropical)
+|align="center"|[[File:en/Foodprocplant.png|192px]]
+|
+|
+{{en/Unclaimed}}
+|-
+!colspan="5"|Buildings - Rural buildings
+|-
+!1&times;1 cinema
+|align="center"|[[File:en/Cinema.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!1&times;1 tall
+|align="center"|[[File:en/Tallcottage.png]]
+|
+|
+{{en/Unclaimed}}
+|-
+!1&times;1 short
+|align="center"|[[File:en/Smalloldcottage.png]]
+|align="center"|[[File:en/BerberJesus - 001.png|64px]]
+|BerberJesus
+{{en/Done}}
+|-
+!1&times;1 church
+|align="center"|[[File:en/Church.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!1&times;1 stumpy
+|align="center"|[[File:en/Smalloldcottage2.png]]
+|align="center"|[[File:en/Stumpy.png|64px]]
+|Berberjezus
+{{en/Done}}
+|-
+!1&times;1 office block
+|align="center"|[[File:en/Greyflats.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!1&times;1 group of houses
+|align="center"|[[File:en/3townhouse.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!2&times;1 hotel
+|align="center"|[[File:en/Hotel.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!1&times;1 country house
+|align="center"|[[File:en/Modernhouse.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!1&times;1 country house 2
+|align="center"|[[File:en/Modernhouse2.png]]
+|
+|
+{{en/Unclaimed}}
+|-
+!1&times;1 group of town houses
+|align="center"|[[File:en/3townhouseandgarden.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!1&times;1 pair of town houses
+|align="center"|[[File:en/2townhouseandgardens.png]]
+|
+|
+{{en/Unclaimed}}
+|-
+!colspan="5"|Buildings - Town buildings
+|-
+!1&times;1 Flats
+|align="center"|[[File:en/Flats4.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!1&times;1 park #1
+|align="center"|[[File:en/Park001.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!1&times;1 park #2
+|align="center"|[[File:en/Park002.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!2&times;2 American football stadium
+|align="center"|[[File:en/Americanfootballstadium.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!1&times;1 tall flats
+|align="center"|[[File:en/Talltownhouseflats.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!1&times;1 shops
+|align="center"|[[File:en/Smallshop.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!1&times;1 shops
+|align="center"|[[File:en/ModernShops.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!2&times;2 Football Stadium
+|align="center"|[[File:en/Soccerstadium.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!colspan="5"|Buildings - City buildings
+|-
+!1&times;1 warehouse
+|align="center"|[[File:en/Smallwarehouse.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!1&times;1 Futuristic office block
+|align="center"|[[File:en/Futuristictower.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!1&times;1 Modern office block
+|align="center"|[[File:en/Modernofficetower.png]]
+|
+|
+{{en/Unclaimed}}
+|-
+!1&times;1 office tower
+|align="center"|[[File:en/Officetower.png]]
+|
+|
+{{en/Unclaimed}}
+|-
+!1&times;1 office tower white
+|align="center"|[[File:en/1423 orig.png]]
+|
+|
+{{en/Unclaimed}}
+|-
+!1&times;1 row of flats
+|align="center"|[[File:en/Flats.png]]
+|
+|
+{{en/Unclaimed}}
+|-
+!1&times;1 theater
+|align="center"|[[File:en/Theater.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!1&times;1 Glasgow building
+|align="center"|[[File:en/Overhangflats.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!1&times;1 courtyard flats
+|align="center"|[[File:en/Flats2.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!1&times;1 tall office block
+|align="center"|[[File:en/Talloffices.png]]
+|
+|
+{{en/Unclaimed}}
+|-
+!1&times;1 Clydesdale Bank Building
+|align="center"|[[File:en/Modernofficeblock.png]]
+|
+|
+{{en/Unclaimed}}
+|-
+!1&times;1 Shops and offices
+|align="center"|[[File:en/Shopsandoffices2.png]]
+|
+|
+{{en/Unclaimed}}
+|-
+!1&times;1 Shops and offices
+|align="center"|[[File:en/Shopsandoffices.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!1&times;1 town houses with garden
+|align="center"|[[File:en/2townhouseandgarden.png]]
+|
+|
+{{en/Unclaimed}}
+|-
+!1&times;1 Flats
+|align="center"|[[File:en/Flats3.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!1&times;1 Swiss style house
+|align="center"|[[File:en/Swissstylehouse.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!1&times;1 house and pool
+|align="center"|[[File:en/Houseandpool.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!1&times;1 2 compact cottages
+|align="center"|[[File:en/2smallcotteges.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!2&times;2 shopping mall
+|align="center"|[[File:en/Shopping Mall.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!1&times;1 hanging glass building
+|align="center"|[[File:en/Tall Yellow-Glass Hanging Building.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!1&times;1 cottage
+|align="center"|[[File:en/Smaleroldcottage.png]]
+|
+|
+{{en/Unclaimed}}
+|-
+!1&times;1 fountain
+|align="center"|[[File:en/1x1fountain8yu.gif]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!1&times;1 statue
+|align="center"|[[File:en/1x1 Statue.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!1&times;1 office block
+|align="center"|[[File:en/1460.png]]
+|
+|
+{{en/Unclaimed}}
+|-
+!colspan="5"|Buildings - New buildings
+|-
+!2&times;1 Office Building
+|colspan="2" align="center"|[[File:en/4-highriseb 521.png|256px]]
+|dmh_mac
+{{en/Done}}
+|-
+!1&times;1 Small house
+|colspan="2" align="center"|[[File:en/smallhome3.jpeg|64px]]
+|Processor(POL)
+{{en/Done}}
+|-
+!Commercial Twins
+|colspan="2" align="center"|[[File:en/Gorre largeoffices.png|256px]]
+|[[Archive/en/Gorre|Gorre]]
+{{en/Done}}
+|-
+!1&times;1 Family House
+|colspan="2" align="center"|[[File:en/Gorre familyhouse a.png|64px]]
+|[[Archive/en/Gorre|Gorre]]
+{{en/Done}}
+|-
+!4x2 Primary School
+|colspan="2" align="center"|[[File:en/Gorre school.png|256px]]
+|[[Archive/en/Gorre|Gorre]]
+{{en/Done}}
+|-
+!English Village House 1
+|colspan="2" align="center"|[[File:en/English Village h1.png|64px]]
+|Aracirion
+{{en/Done}}
+|-
+!English Village House 2
+|colspan="2" align="center"|[[File:en/English Village h2.png|64px]]
+|Aracirion
+{{en/Done}}
+|-
+!Construction crane
+|colspan="2" align="center"|[[File:en/Gorre crane a.png|256px]]
+|[[Archive/en/Gorre|Gorre]]
+{{en/Done}}
+|-
+!colspan="5"|Buildings - Tropical buildings
+|-
+!1&times;1 houses #1
+|align="center"|[[File:en/1x1 houses trop1.png]]
+|align="center"|[[File:en/1x1housetrop1.png|64px]]
+|[[Archive/en/Wacki|Wacki]]
+{{en/Done}}
+|-
+!1&times;1 houses #2
+|align="center"|[[File:en/1x1 houses trop2.png]]
+|align="center"|[[File:en/1x1housetrop2.png|64px]]
+|[[Archive/en/Wacki|Wacki]]
+{{en/Done}}
+|-
+!1&times;1 houses #3
+|align="center"|[[File:en/1x1 houses trop3.png]]
+|align="center"|[[File:en/1x1housetrop3.png|64px]]
+|[[Archive/en/Wacki|Wacki]]
+{{en/Done}}
+|-
+!1&times;1 houses #4
+|align="center"|[[File:en/1x1 houses trop4.png]]
+|align="center"|[[File:en/1x1housetrop4.png|64px]]
+|[[Archive/en/Wacki|Wacki]]
+{{en/Done}}
+|-
+!1&times;1 houses #5
+|align="center"|[[File:en/1x1 houses trop5.png]]
+|align="center"|[[File:en/1x1housetrop5.png|64px]]
+|[[Archive/en/Wacki|Wacki]]
+{{en/Done}}
+|-
+!1&times;1 houses #6
+|align="center"|[[File:en/1x1 houses trop6.png]]
+|align="center"|[[File:en/1x1housetrop6.png|64px]]
+|[[Archive/en/Wacki|Wacki]]
+{{en/Done}}
+|-
+!1&times;1 houses #7
+|align="center"|[[File:en/1x1 houses trop7.png]]
+|align="center"|[[File:en/1x1housetrop7.png|64px]]
+|[[Archive/en/Wacki|Wacki]]
+{{en/Done}}
+|-
+!1&times;1 houses #8
+|align="center"|[[File:en/1x1 houses trop8.png]]
+|align="center"|[[File:en/1x1housetrop8.png|64px]]
+|[[Archive/en/Wacki|Wacki]]
+{{en/Done}}
+|-
+!1&times;1 flats #1
+|align="center"|[[File:en/1x1 flats trop1.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!1&times;1 flats #2
+|align="center"|[[File:en/1x1 flats trop2.png]]
+|align="center"|[[File:en/1x1flatstrop2.png|64px]]
+|[[Archive/en/Wacki|Wacki]]
+{{en/Done}}
+|-
+!1&times;1 flats #3
+|align="center"|[[File:en/1x1 flats trop3.png]]
+|
+|
+{{en/Unclaimed}}
+|-
+!1&times;1 flats #4
+|align="center"|[[File:en/1x1 flats trop4.png]]
+|
+|
+{{en/Unclaimed}}
+|-
+!1&times;1 flats #5
+|align="center"|[[File:en/1x1 flats trop5.png]]
+|align="center"|[[File:en/1x1flatstrop5.png|64px]]
+|[[Archive/en/Wacki|Wacki]]
+{{en/Done}}
+|-
+!1&times;1 flats #6
+|align="center"|[[File:en/1x1 flats trop7.png]]
+|align="center"|[[File:en/Trop7 fin copy.png|64px]]
+|[[Archive/en/Rectangle|Rectangle]]
+{{en/Done}}
+|-
+!2&times;1 flats
+|align="center"|[[File:en/2x1 flats trop6.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!colspan="5"|Buildings - Arctic buildings
+|-
+!1&times;1 Small Flat 1
+|align="center"|[[File:en/1x1smallflat1.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!1&times;1 Small Flat 2
+|align="center"|[[File:en/1x1smallflat2.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!1&times;1 Small House 1
+|align="center"|[[File:en/1x1smallhouse1.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!colspan="5"|Buildings - Headquarters
+|-
+!Engineer
+|align="center"|[[File:en/HQ1.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!Traffic Manager
+|align="center"|[[File:en/HQ2.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!Transport Coordinator
+|align="center"|[[File:en/HQ3.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!Director
+|align="center"|[[File:en/HQ4.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!Chairman
+|align="center"|[[File:en/HQ5.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!colspan="5"|Rail vehicles - Locomotives Temperate
+|-
+!Jinty 3F
+|align="center"|[[File:en/TTOJinty.png]]
+|align="center"|[[File:en/Ben Robbins Jinty.jpeg|32px]]
+|[[Archive/en/ben|Ben Robbins]]
+{{en/Done}}
+|-
+!Collett Pannier Tank (Steam)
+|align="center"|[[File:en/Kirbypaultank.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!Stanier 'Crab' (Steam)
+|align="center"|[[File:en/Chaneyjubilee.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!Stanier 'Jubilee' (Steam)
+|align="center"|[[File:en/Chaneyjubilee.png]]
+|align="center"|[[File:en/2910 z0.png|32px]]
+|[[Archive/en/Teemes|Teemes]]
+{{en/Done}}
+|-
+!Gresley 'D49' (Steam)
+|align="center"|[[File:en/Chaneyjubilee.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!Gresley 'A3' (Steam)
+|align="center"|[[File:en/Chaneyjubilee.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!Gresley 'A4'  (Steam)
+|align="center"|[[File:en/Ginzua4.png]]
+|align="center"|[[File:en/Ben Robbins A4 Gresley.jpeg|32px]]
+|[[Archive/en/ben|Ben Robbins]]
+{{en/Done}}
+|-
+!Bullied 'Q1'  (Steam)
+|align="center"|[[File:en/Chaneyjubilee.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!BR '8P' 1954 (Steam)
+|align="center"|[[File:en/Chaneyjubilee.png]]
+|align="center"|[[File:en/Ben Robbins 9 BR 8P 1954.jpeg|32px]]
+|[[Archive/en/ben|Ben Robbins]]
+{{en/Done}}
+|-
+!Metro Cammell Class 101 DMU (Diesel)
+|align="center"|[[File:en/Manleymoreldmu.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!'Sprinter Class 158' (Diesel)
+|align="center"|[[File:en/Dash.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!BR/Sulzer Class '25'  (Diesel)
+|align="center"|[[File:en/Shhendry25.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!EE Class '37' (Diesel)
+|align="center"|[[File:en/Uu37.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!Brush Class '47' (Diesel)
+|align="center"|[[File:en/Floss47.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!HST '125' (Diesel)
+|align="center"|[[File:en/Sh125.png]]
+|align="center"|[[File:en/Class125.png|32px]]
+|[[Archive/en/ben|Ben Robbins]]
+{{en/Done}}
+|-
+!BR Class '86' (Electric)
+|align="center"|[[File:en/Sh30.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!BR Class '87' (Electric)
+|align="center"|[[File:en/Sh30.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!'T.G.V' (Electric)
+|align="center"|[[File:en/Tim.png]]
+|align="center"|[[File:en/Ben Robbins Tgv3.jpeg|32px]]
+|[[Archive/en/ben|Ben Robbins]]
+{{en/Done}}
+|-
+!'Eurostar' (Electric)
+|align="center"|[[File:en/Asiastar.png]]
+|align="center"|[[File:en/Ben Robbins Eurostar3.jpeg|32px]]
+|[[Archive/en/ben|Ben Robbins]]
+{{en/Done}}
+|-
+!'X2001' (Monorail)
+|align="center"|[[File:en/X2001.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!'Millennium Z1' (Monorail)
+|align="center"|[[File:en/Millenniumz1.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!Lev1 'Leviathan' (MagLev)
+|align="center"|[[File:en/Lev1leviathan.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!Lev2 'Cyclops' (MagLev)
+|align="center"|[[File:en/Lev2cyclops.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!Lev3 'Pegasus' (MagLev)
+|align="center"|[[File:en/Lev2cyclops.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!Lev4 'Chimaera' (MagLev)
+|align="center"|[[File:en/Lev4chimaerarhead.png]]
+|align="center"|[[File:en/Ben Robbins Maglev3.jpeg|32px]]
+|[[Archive/en/ben|Ben Robbins]]
+{{en/Done}}
+|-
+!colspan="5"|Rail vehicles - Locomotives Arctic/Tropical
+|-
+!MJS 250 (Diesel)
+|align="center"|[[File:en/Mjs250.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!BC 2-8-0 (Steam)
+|align="center"|[[File:en/Wills280.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!CS 4000 (Diesel)
+|align="center"|[[File:en/Cs4000.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!CS 2400 (Diesel)
+|align="center"|[[File:en/Cs2400.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!Centennial (Diesel)
+|align="center"|[[File:en/Centennial.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!Kelling 3100 (Diesel)
+|align="center"|[[File:en/Kelling3100.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!Turner Turbo (Diesel)
+|align="center"|[[File:en/Turnerturbo.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!MJS 1000 (Diesel)
+|align="center"|[[File:en/Mjs1000.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!colspan="5"|Rail vehicles - Locomotives Toyland
+|-
+!Ploddyphut Choo-Choo
+|align="center"|[[File:en/Ploddyphutchoochoo.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!Powernaut Choo-Choo
+|align="center"|[[File:en/Powernautchoochoo.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!Mightymover Choo-Choo
+|align="center"|[[File:en/Mightymoverchoochoo.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!Ploddyphut Diesel
+|align="center"|[[File:en/Ploddyphutdiesel.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!Powernaut Diesel
+|align="center"|[[File:en/Powernautdiesel.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!Wizzowow Z99
+|align="center"|[[File:en/Wizzowowz99.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!Wizzowow Rocketeer
+|align="center"|[[File:en/Wizzowowrocketeer.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!colspan="5"|Rail vehicles - Wagons
+|-
+!Passenger Carriage
+|align="center"|[[File:en/Passengercarriage.png]]
+|align="center"|
+|[[Archive/en/ben|Ben Robbins]]
+{{en/Done}}
+|-
+!Passenger Carriage
+|align="center"|[[File:en/Passengercarriagex.png]]
+|align="center"|
+|[[Archive/en/ben|Ben Robbins]]
+{{en/Done}}
+|-
+!Mail Van
+|align="center"|[[File:en/Mailvan.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!Coal Truck
+|align="center"|[[File:en/Coaltruck.png]]
+|align="center"|[[File:en/Coal Waggon.png|32px]]
+|Slye_Fox
+{{en/Done}}
+|-
+!Oil Tanker
+|align="center"|[[File:en/Oiltanker.png]]
+|align="center"|[[File:en/Oil Tanker.png|32px]]
+|Slye_Fox
+{{en/Done}}
+|-
+!Livestock Van
+|align="center"|[[File:en/Livestockvan.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!Goods Van
+|align="center"|[[File:en/Goodsvan.png]]
+|align="center"|
+|[[Archive/en/ben|Ben Robbins]]
+{{en/Done}}
+|-
+!Grain Hopper
+|align="center"|[[File:en/Grainhopper.png]]
+|align="center"|[[File:en/Grain Hopper.png|64px]]
+|Slye_Fox
+{{en/Done}}
+|-
+!Wood Truck
+|align="center"|[[File:en/Woodtruck.png]]
+|align="center"|[[File:en/Wood Wagon.png|64px]]
+|Slye_Fox
+{{en/Done}}
+|-
+!Iron Ore Hopper
+|align="center"|[[File:en/Ironorehopper.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!Steel Truck
+|align="center"|[[File:en/Steeltruck.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!Armoured Van
+|align="center"|[[File:en/Armouredvan.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!Food Van
+|align="center"|[[File:en/Foodvan.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!Paper Truck
+|align="center"|[[File:en/Papertruck.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!Copper Ore Hopper
+|align="center"|[[File:en/Copperorehopper.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!Water Tanker
+|align="center"|[[File:en/Watertanker.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!Fruit Truck
+|align="center"|[[File:en/Fruittruck.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!Rubber Truck
+|align="center"|[[File:en/Rubbertruck.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!colspan="5"|Rail vehicles - Wagons Toyland
+|-
+!Candyfloss Hopper
+|align="center"|[[File:en/Candyflosshopper.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!Toffee Hopper
+|align="center"|[[File:en/Toffeehopper.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!Bubble Van
+|align="center"|[[File:en/Bubblevan.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!Cola Tanker
+|align="center"|[[File:en/Colatanker.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!Sweet Van
+|align="center"|[[File:en/Sweetvan.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!Toy Van
+|align="center"|[[File:en/Toyvan.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!Battery Truck
+|align="center"|[[File:en/Batterytruck.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!Fizzy Drink Truck
+|align="center"|[[File:en/Fuzzydrinktruck.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!Sugar Truck
+|align="center"|[[File:en/Sugartruck.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!Plastic Truck
+|align="center"|[[File:en/Plastictruck.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!colspan="5"|Road vehicles - Buses
+|-
+!MPS Regal Bus
+|align="center"|[[File:en/Bus-MPS Regal.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!Leyland Leopard Bus
+|align="center"|[[File:en/Bus-Hereford Leopard.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!Foster Bus
+|align="center"|[[File:en/Bus-foster.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!Foster MkII Superbus
+|align="center"|[[File:en/Bus-Foster MkII Superbus.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!Ploddyphut MkI Bus
+|align="center"|[[File:en/Ploddyphut MkI Bus.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!Ploddyphut MkII Bus
+|align="center"|[[File:en/Ploddyphut MkII Bus.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!Ploddyphut MkIII Bus
+|align="center"|[[File:en/Ploddyphut MkIII Bus.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!colspan="5"|Road vehicles - Trucks
+|-
+!Balogh Coal Truck
+|align="center"|[[File:en/Balogh Coal Truck.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!Uhl Coal Truck
+|align="center"|[[File:en/Uhl Coal Truck.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!DW Coal Truck
+|align="center"|[[File:en/DW Coal Truck.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!MPS Mail Truck
+|align="center"|[[File:en/MPS Mail Truck.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!Reynard Mail Truck
+|align="center"|[[File:en/Reynard Mail Truck.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!Perry Mail Truck
+|align="center"|[[File:en/Perry Mail Truck.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!MightyMover Mail Truck
+|align="center"|[[File:en/MightyMover Mail Truck.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!Powernaught Mail Truck
+|align="center"|[[File:en/Powernaught Mail Truck.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!Wizzowow Mail Truck
+|align="center"|[[File:en/Wizzowow Mail Truck.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!Witcombe Oil Tanker
+|align="center"|[[File:en/Witcombe Oil Tanker.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!Foster Oil Tanker
+|align="center"|[[File:en/Foster Oil Tanker.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!Perry Oil Tanker
+|align="center"|[[File:en/Perry Oil Tanker.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!Talbott Livestock Van
+|align="center"|[[File:en/Talbott Livestock Van.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!Uhl Livestock Van
+|align="center"|[[File:en/Uhl Livestock Van.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!Foster Livestock Van
+|align="center"|[[File:en/Foster Livestock Van.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!Balogh Goods Truck
+|align="center"|[[File:en/Balogh Goods Truck.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!Craighead Goods Truck
+|align="center"|[[File:en/Craighead Goods Truck.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!Goss Goods Truck
+|align="center"|[[File:en/Goss Goods Truck.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!Hereford Grain Truck
+|align="center"|[[File:en/Hereford Grain Truck.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!Thomas Grain Truck
+|align="center"|[[File:en/Thomas Grain Truck.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!Goss Grain Truck
+|align="center"|[[File:en/Goss Grain Truck.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!Witcombe Wood Truck
+|align="center"|[[File:en/Witcombe Wood Truck.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!Foster Wood Truck
+|align="center"|[[File:en/Foster Wood Truck.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!Moreland Wood Truck
+|align="center"|[[File:en/Moreland Wood Truck.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!MPS Iron Ore Truck
+|align="center"|[[File:en/MPS Iron Ore Truck.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!Uhl Iron Ore Truck
+|align="center"|[[File:en/Uhl Iron Ore Truck.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!Chippy Iron Ore Truck
+|align="center"|[[File:en/Chippy Iron Ore Truck.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!Balogh Steel Truck
+|align="center"|[[File:en/Balogh Steel Truck.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!Uhl Steel Truck
+|align="center"|[[File:en/Uhl Steel Truck.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!Kelling Steel Truck
+|align="center"|[[File:en/Kelling Steel Truck.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!Balogh Armoured Truck
+|align="center"|[[File:en/Balogh Armoured Truck.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!Uhl Armoured Truck
+|align="center"|[[File:en/Uhl Armoured Truck.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!Foster Armoured Truck
+|align="center"|[[File:en/Foster Armoured Truck.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!Foster Food Van
+|align="center"|[[File:en/Foster Food Van.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!Perry Food Van
+|align="center"|[[File:en/Perry Food Van.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!Chippy Food Van
+|align="center"|[[File:en/Chippy Food Van.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!Uhl Paper Truck
+|align="center"|[[File:en/Uhl Paper Truck.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!Balogh Paper Truck
+|align="center"|[[File:en/Balogh Paper Truck.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!MPS Paper Truck
+|align="center"|[[File:en/MPS Paper Truck.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!MPS Copper Ore Truck
+|align="center"|[[File:en/MPS Copper Ore Truck.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!Uhl Copper Ore Truck
+|align="center"|[[File:en/Uhl Copper Ore Truck.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!Goss Copper Ore Truck
+|align="center"|[[File:en/Goss Copper Ore Truck.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!Uhl Water Tanker
+|align="center"|[[File:en/Uhl Water Tanker.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!Balogh Water Tanker
+|align="center"|[[File:en/Balogh Water Tanker.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!MPS Water Tanker
+|align="center"|[[File:en/MPS Water Tanker.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!Balogh Fruit Truck
+|align="center"|[[File:en/Balogh Fruit Truck.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!Uhl Fruit Truck
+|align="center"|[[File:en/Uhl Fruit Truck.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!Kelling Fruit Truck
+|align="center"|[[File:en/Kelling Fruit Truck.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!Balogh Rubber Truck
+|align="center"|[[File:en/Balogh Rubber Truck.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!Uhl Rubber Truck
+|align="center"|[[File:en/Uhl Rubber Truck.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!RMT Rubber Truck
+|align="center"|[[File:en/RMT Rubber Truck.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!MightyMover Sugar Truck
+|align="center"|[[File:en/MightyMover Sugar.gif]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!Powernaught Sugar Truck
+|align="center"|[[File:en/Powernaught Sugar.gif]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!Wizzowow Sugar Truck
+|align="center"|[[File:en/Wizzowow Sugar.gif]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!MightyMover Bubble Truck
+|align="center"|[[File:en/MightyMover Bubble.gif]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!Powernaught Bubble Truck
+|align="center"|[[File:en/Powernaught bubble.gif]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!Wizzowow Bubble Truck
+|align="center"|[[File:en/Wizzowow Bubble.gif]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!MightyMover Battery Truck
+|align="center"|[[File:en/MightyMover Battery.gif]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!Powernaught Battery Truck
+|align="center"|[[File:en/Powernaught Battery.gif]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!Wizzowow Battery Truck
+|align="center"|[[File:en/Wizzow Battery.gif]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!MightyMover Sweet Truck
+|align="center"|[[File:en/MightyMover Sweet.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!Powernaught Sweet Truck
+|align="center"|[[File:en/Powernaught Sweet.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!Wizzowow Sweet Truck
+|align="center"|[[File:en/Wizzow Sweet.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!MightyMover Toy Van
+|align="center"|[[File:en/MightyMover Toy.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!Powernaught Toy Van
+|align="center"|[[File:en/Powernaught Toy.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!Wizzowow Toy Van
+|align="center"|[[File:en/Wizzow Toy.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!MightyMover Candyfloss Truck
+|align="center"|[[File:en/CandyflossTruck.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!Powernaught Candyfloss Truck
+|align="center"|[[File:en/CandyflossTruck.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!Wizzowow Candyfloss Truck
+|align="center"|[[File:en/CandyflossTruck.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!MightyMover Fizzydrink Truck
+|align="center"|[[File:en/MightyMover FizzyDrink.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!Powernaught Fizzydrink Truck
+|align="center"|[[File:en/Powernaught FizzyDrink.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!Wizzowow Fizzydrink Truck
+|align="center"|[[File:en/Wizzowow FizzyDrink.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!MightyMover Plastic Truck
+|align="center"|[[File:en/MightyMover plastic.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!Powernaught Plastic Truck
+|align="center"|[[File:en/Powernaught plastic.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!Wizzowow Plastic Truck
+|align="center"|[[File:en/Wizzowow plastic.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!MightyMover Toffee Truck
+|align="center"|[[File:en/MightyMover toffee.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!Powernaught Toffee Truck
+|align="center"|[[File:en/Powernaught toffee.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!Wizzowow Toffee Truck
+|align="center"|[[File:en/Wizzowow toffee.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!MightyMover Cola Truck
+|align="center"|[[File:en/MightyMover Cola.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!Powernaught Cola Truck
+|align="center"|[[File:en/Powernaught Cola.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!Wizzowow Cola Truck
+|align="center"|[[File:en/Wizzow Cola.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!colspan="5"|Aircraft
+|-
+!Sampson U52<br />(Junkers J52)
+|align="center"|[[File:en/JunkersJU52.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!Coleman Count<br />(Vickers Viscount)
+|align="center"|[[File:en/DouglasDC-3Dakota.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!FFP Dart<br />(Aérospatiale SE-310 Caravelle)
+|align="center"|[[File:en/AërospatialeSE-310Caravelle.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!Yate Haugan<br />(Concorde)
+|align="center"|[[File:en/BAC-AërospatialConcorde.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!Bakewell Cotswald LB-3<br />(DC-3 Dakota)
+|align="center"|[[File:en/DouglasDC-3Dakota.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!Bakewell Luckett LB-8<br />(McDonnell Douglas DC-8)
+|align="center"|[[File:en/McDonnellDouglasDC-8.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!Bakewell Luckett LB-9<br />(McDonnell Douglas DC-9)
+|align="center"|[[File:en/McDonnellDouglasDC-9.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!Bakewell Luckett LB80<br />(McDonnell Douglas MD80)
+|align="center"|[[File:en/McDonnellDouglasMD80.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!Bakewell Luckett LB-10<br />(McDonnell Douglas DC-10)
+|align="center"|[[File:en/McDonnelDouglasDC-10.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!Bakewell Luckett LB-11<br />(McDonnell Douglas MD-11)
+|align="center"|[[File:en/McDonnellDouglasMD-11.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!Yate Aerospace YAC 1-11<br />(British Aerospace BAC 1-11)
+|align="center"|[[File:en/BritishAerospaceBAC1-11.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!Darwin 100<br />(Boeing 727)
+|align="center"|[[File:en/Boeing727.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!Darwin 200<br />(Boeing 737)
+|align="center"|[[File:en/Boeing737.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!Darwin 300<br />(Boeing 747)
+|align="center"|[[File:en/Boeing747.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!Darwin 400<br />(Boeing 757)
+|align="center"|[[File:en/Boeing757.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!Darwin 500<br />(Boeing 767)
+|align="center"|[[File:en/Boeing767.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!Darwin 600<br />(Boeing 777)
+|align="center"|[[File:en/AirbusA330.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!Guru Galaxy<br />(Lockheed L-1011 Tristar)
+|align="center"|[[File:en/LockheedTristar.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!Airtaxi A21<br />(Airbus A300)
+|align="center"|[[File:en/AirbusA300.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!Airtaxi A31<br />(Airbus A310)
+|align="center"|[[File:en/AirbusA300.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!Airtaxi A32<br />(Airbus A320)
+|align="center"|[[File:en/AirbusA320.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!Airtaxi A33<br />(Airbus A330)
+|align="center"|[[File:en/AirbusA330.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!Yate Aerospace YAe46<br />(British Aerospace BAe 146)
+|align="center"|[[File:en/BritishAerospaceBAe46.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!Dinger 100<br />(Fokker 100)
+|align="center"|[[File:en/Fokker100.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!AirTaxi A34-1000<br />(unknown/futuristic, A380?)
+|align="center"|[[File:en/AirTaxiA34-1000.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!Yate Z-Shuttle<br />(unknown/futuristic)
+|align="center"|[[File:en/YateZ-Shuttle.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!Kelling K1<br />(unknown/futuristic)
+|align="center"|[[File:en/KellingK1.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!Kelling K6<br />(unknown/futuristic)
+|align="center"|[[File:en/KellingK6.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!Kelling K7<br />(unknown/futuristic)
+|align="center"|[[File:en/KellingK7.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!Darwin 700<br />(possibly 787?)
+|align="center"|[[File:en/Darwin700.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!FFP Hyperdart 2<br />(unknown/futuristic)
+|align="center"|[[File:en/FFPHyperdart2.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!Dinger 200<br />(unknown/futuristic)
+|align="center"|[[File:en/Dinger200.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!Dinger 1000<br />(unknown/futuristic)
+|align="center"|[[File:en/Dinger1000.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!Tricario Helicopter<br />(Sikorsky S-62)
+|align="center"|[[File:en/SikorskyHelicopter.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!Guru X2 Helicopter<br />(Unknown/futuristic)
+|align="center"|[[File:en/GuruX2Helicopter.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!Ploddyphut 100
+|align="center"|[[File:en/Ploddyphut100.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!Ploddyphut 500
+|align="center"|[[File:en/Ploddyphut500.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!Flashbang X1
+|align="center"|[[File:en/Flashbang X1.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!Juggerplane M1
+|align="center"|[[File:en/JuggerplaneM1.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!Flashbang Wizzer
+|align="center"|[[File:en/Flashbangwizzer.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!Powernaut Helicopter
+|align="center"|[[File:en/Powernauthelicopter.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!colspan="5"|Ships
+|-
+!MPS Passenger Ferry
+|align="center"|[[File:en/Ferry.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!FFP Passenger Ferry
+|align="center"|[[File:en/Ferry.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!Bakewell 300 Hovercraft
+|align="center"|[[File:en/Hovercraft.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!Yate Cargo ship
+|align="center"|[[File:en/CargoShip.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!Bakewell Cargo ship
+|align="center"|[[File:en/CargoShip.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!MPS Oil Tanker
+|align="center"|[[File:en/OilTanker.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!CS-Inc. Oil Tanker
+|align="center"|[[File:en/OilTanker.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!Chugger-Chug Passenger Ferry
+|align="center"|[[File:en/Toylandpassengership.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!Shivershake Passenger Ferry
+|align="center"|[[File:en/Toylandpassengership.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!Mightymover Cargo ship
+|align="center"|[[File:en/Toylandcargoship.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!Powernaut Cargo ship
+|align="center"|[[File:en/Toylandcargoship.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!colspan="5"|Miscellaneous vehicles
+|-
+!Small UFO
+|align="center"|
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!Large UFO
+|align="center"|
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!Fighter
+|align="center"|
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!Combat aircraft
+|align="center"|[[File:en/Combat aircraft.jpeg]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!Submarine
+|align="center"|[[File:en/Submarine.jpeg]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!colspan="5"|GUI - Game toolbar
+|-
+!Pause
+|align="center"|[[File:en/01 pause.png]]
+|align="center"|
+|JoeD / GeekToo
+{{en/Done}}
+|-
+!Fastforward
+|align="center"|[[File:en/02 fastforward.png]]
+|align="center"|
+|JoeD / GeekToo
+{{en/Done}}
+|-
+!Options
+|align="center"|[[File:en/03 options.png]]
+|align="center"|
+|JoeD / GeekToo
+{{en/Done}}
+|-
+!Save
+|align="center"|[[File:en/04 savegame.png]]
+|align="center"|
+|JoeD / GeekToo
+{{en/Done}}
+|-
+!Map
+|align="center"|[[File:en/05 map.png]]
+|align="center"|
+|JoeD / GeekToo
+{{en/Done}}
+|-
+!Town Directory
+|align="center"|[[File:en/06 towndirectory.png]]
+|align="center"|
+|JoeD / GeekToo
+{{en/Done}}
+|-
+!Subsidies
+|align="center"|[[File:en/07 subsidies.png]]
+|align="center"|
+|JoeD / GeekToo
+{{en/Done}}
+|-
+!Stations
+|align="center"|[[File:en/08 stations.png]]
+|align="center"|
+|JoeD / GeekToo
+{{en/Done}}
+|-
+!Finance
+|align="center"|[[File:en/09 finance.png]]
+|align="center"|
+|JoeD / GeekToo
+{{en/Done}}
+|-
+!Company Info
+|align="center"|[[File:en/10 companyinfo.png]]
+|align="center"|
+|JoeD / GeekToo
+{{en/Done}}
+|-
+!Graphs
+|align="center"|[[File:en/11 graphs.png]]
+|align="center"|
+|JoeD / GeekToo
+{{en/Done}}
+|-
+!League Table
+|align="center"|[[File:en/12 leaguetable.png]]
+|align="center"|
+|JoeD / GeekToo
+{{en/Done}}
+|-
+!Fund Industry
+|align="center"|[[File:en/13 fundindustry.png]]
+|align="center"|
+|JoeD / GeekToo
+{{en/Done}}
+|-
+!Train
+|align="center"|[[File:en/14 train.png]]
+|align="center"|
+|JoeD / GeekToo
+{{en/Done}}
+|-
+!Vehicle
+|align="center"|[[File:en/15 vehicle.png]]
+|align="center"|
+|JoeD / GeekToo
+{{en/Done}}
+|-
+!Ship
+|align="center"|[[File:en/16 ship.png]]
+|align="center"|
+|JoeD / GeekToo
+{{en/Done}}
+|-
+!Plane
+|align="center"|[[File:en/17 plane.png]]
+|align="center"|
+|JoeD / GeekToo
+{{en/Done}}
+|-
+!Zoom In
+|align="center"|[[File:en/18 zoomin.png]]
+|align="center"|
+|JoeD / GeekToo
+{{en/Done}}
+|-
+!Zoom Out
+|align="center"|[[File:en/19 zoomout.png]]
+|align="center"|
+|JoeD / GeekToo
+{{en/Done}}
+|-
+!Rail
+|align="center"|[[File:en/20 rail.png]]
+|align="center"|
+|JoeD / GeekToo
+{{en/Done}}
+|-
+!Road
+|align="center"|[[File:en/21 road.png]]
+|align="center"|
+|JoeD / GeekToo
+{{en/Done}}
+|-
+!Seaport
+|align="center"|[[File:en/22 seaport.png]]
+|align="center"|
+|JoeD / GeekToo
+{{en/Done}}
+|-
+!Airport
+|align="center"|[[File:en/23 airport.png]]
+|align="center"|
+|JoeD / GeekToo
+{{en/Done}}
+|-
+!Landscape
+|align="center"|[[File:en/24 landscape.png]]
+|align="center"|
+|JoeD / GeekToo
+{{en/Done}}
+|-
+!Sound
+|align="center"|[[File:en/25 soundmusic.png]]
+|align="center"|
+|JoeD / GeekToo
+{{en/Done}}
+|-
+!News Reports
+|align="center"|[[File:en/26 newsreports.png]]
+|align="center"|
+|JoeD / GeekToo
+{{en/Done}}
+|-
+!Land Info
+|align="center"|[[File:en/27 landinfo.png]]
+|align="center"|
+|JoeD / GeekToo
+{{en/Done}}
+|-
+!colspan="5"|GUI - Landscape toolbar
+|-
+!Lower Land
+|align="center"|[[File:en/28 lowerland.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!Raise Land
+|align="center"|[[File:en/29 raiseland.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!Level Land
+|align="center"|[[File:en/30 levelland.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!Clear
+|align="center"|[[File:en/31 clear.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!Buy Land
+|align="center"|[[File:en/32 buyland.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!Place Trees
+|align="center"|[[File:en/33 placetrees.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!Place Sign
+|align="center"|[[File:en/34 placesign.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!colspan="5"|GUI - Pointers
+|-
+!Pointer
+|align="center"|[[File:en/pointers0.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!Loading
+|align="center"|[[File:en/pointers1.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!Goto(1)
+|align="center"|[[File:en/pointers716.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!Goto(2)
+|align="center"|[[File:en/pointers717.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!Goto(3)
+|align="center"|[[File:en/pointers718.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!Help
+|align="center"|[[File:en/pointers719.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!Place HQ
+|align="center"|[[File:en/pointers720.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!colspan="5"|GUI - Airport toolbar
+|-
+!Build Airport
+|align="center"|[[File:en/Airport construction.png]] <!-- Image:Build airport.png is broken, TODO: replace -->
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+!Clear Land
+|align="center"|[[File:en/Clear title.png]]
+|align="center"|
+|
+{{en/Unclaimed}}
+|-
+|}
+
+<!--
+ ## template for new categories: ##
+
+|-
+!colspan="5"|
+|-
+!
+|align="center"|
+|align="center"|
+|
+|
+-->
+
+
+{{en/Navbox Graphics Development}}
+
+[[Category:en/New Graphics]][[Category:en/32bpp Graphics Developer resources|D|]] [[Category:en/Development]]
