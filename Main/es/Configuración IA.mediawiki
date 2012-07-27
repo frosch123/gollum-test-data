@@ -1,0 +1,55 @@
+[[Translation:Main/en/AI settings]]{{en/-}}{{es/Tabla de contenido}}
+
+Desde la versión 0.7.0, se ha introducido el llamado [http://www.wikipedia.org/wiki/es:framework framework] InoA (Inteligencia no Artificial) en OpenTTD, que permite a los usuarios crear sus propias [[Main/es/IA:Página principal|IA]] (inteligencias artificiales). Estas IA se pueden controlar con ventana ''Configuración de la IA''.
+{|
+|[[File:es/AIsettings empty.png|frame|none|La ventana ''Configuración de la IA''.]]
+|__TOC__
+|}
+==Descargar inteligencias artificiales==
+En primer lugar, tiene que descargar algunas IA a través del sistema de [[Main/es/contenido online|contenido en línea]]. Haga clic en el botón ''Consultar Contenido Online'' de la ventana ''Configuración de la IA'' para descargarlos.
+[[File:es/Downloading AI.png|frame|none|La ventana ''Descarga de contenido''.]]
+
+Se pueden encontrar más IA adicionales en el [http://www.tt-forums.net/viewforum.php?f=65 foro sobre InoA] (Inteligencia no Artificial). Si utiliza el sistema de contenido online, se seleccionarán automáticamente las ''librerías de IA'' necesarias para esa IA. Pero si descarga una IA de otra parte, desde el foro o desde otros lugares, deberá asegurarse de descargar también las versiones correctas de de las librerías necesarias para esa IA, a no ser que ya las tenga.
+
+==Seleccionar una IA==
+Después de descargar una o varias IA, haga clic en el botón ''Ajustes de la IA'' del menú principal. Allí puede configurar el ''número máximo de jugadores'' y a continuación elegir una IA para cada ranura de empresa seleccionable (de color amarillo).
+Haga clic en una de las ranuras de empresa seleccionables (se pondrá de color blanco) y a continuación haga clic en el botón ''Seleccionar IA''. Aparece la ventana ''IA disponibles'' con una lista de las IA descargadas. Elija una y haga clic en ''Aceptar''.
+[[File:es/select AI.png|frame|none|Ventana ''IA disponibles'', con las IA descargadas.]]
+
+==Configurar una IA==
+Para configurar las IA elegidas en cada ranura de empresa, selecciónela y pulse el botón ''Configurar'' de la ventana ''Configuración de la IA''.
+Se abrirá la ventana ''Parámetros de la IA''.
+[[File:es/AI configuration.png|frame|none|Ventana ''Parámetros de la IA''.<br/>
+'"The amount of days after the start of the last AI, this AI will start (give or take)."'<br/>
+"Cantidad de días después del inicio de la última IA, para que se inicie esta IA (más o menos)"]]
+
+Estos parámetros (excepto el primero) varían para cada IA según sus autores y determinan el estilo de juego. Usted puede utilizar varias instancias de la misma IA con diferentes ajustes.
+
+Cada IA se iniciará automáticamente después de una determinada cantidad de días (que se indica en el primer parámetro y puede variar entre 1 y 3600 días).
+
+==Usar la consola==
+Puede utilizar [[Main/es/consola|consola]] durante el juego para iniciar y detener las IA.
+
+Comandos de la consola para el manejo de las IA:
+
+'''list_ai'''.- lista las IA actualmente instaladas.
+
+'''rescan_ai'''.- escanea la carpeta AI para buscar las IA, esto es necesario, por ejemplo, si ha instalado una IA nueva mientras estaba jugando una partida.
+
+'''start_ai''' ''<nombre_IA> <parámetros>''.- se inicia la siguiente IA inmediatamente.
+Si se indica un <nombre_IA>, esta IA se carga en lugar de la establecida en la ventana ''Configuración de la IA''.
+Los <parámetros> establecen el comportamiento de las IA, del mismo modo que el botón ''Configurar'' de ventana ''Configuración de la IA''.
+Ejemplo:
+ start_ai admiralai use_planes=0,use_trains=1
+
+'''reload_ai <ranura_de_empresa>'''.- elimina la empresa que figura en la <ranura_de_empresa> indicada, y reinicia la IA. El botón ''Recarga la IA'' de la [[Main/es/Ventana de depuración de la IA|ventana de depuración de la IA]] hace lo mismo.
+
+'''stop_ai <ranura_de_empresa>'''.- detiene la IA de determinada ranura de empresa, y a continuación, elimina la empresa.
+
+==Vea también==
+*[[Main/es/IA:Página principal|Página principal de la IA]].-  útil si desea desarrollar su propia inteligencia artificial.
+*[[Main/es/Contenido online|El sistema de contenido en línea]]
+*[[Main/es/Preguntas frecuentes sobre IA|Preguntas frecuentes sobre IA]]
+*[http://code.google.com/p/ottd-noai-pathzilla/wiki/Installation Cómo instalar PathZilla] (en inglés).- Escrito específicamente para la IA PathZilla, pero que puede ser aplicable a cualquier IA disponible a través del sistema de contenido en línea.
+
+{{es/Disponibilidad|0.7}}
