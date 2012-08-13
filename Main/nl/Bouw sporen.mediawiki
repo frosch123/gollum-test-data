@@ -1,0 +1,70 @@
+[[Translation:Main/en/Building tracks]]{{en/-}}{{nl/Tutorial}}
+
+<!-- for search bot mainly -->
+In deze tutorial leer je de nodige vaardigheden om '''sporen aan te leggen''' en vervolgens om '''sporen te verwijderen'''.
+
+__TOC__
+==Hoe leg ik sporen aan?==
+
+Om the beginnen, moet je eerst de werkbalk ''Bouw spoorwegen'' openen - klik hiervoor op de knop ''Bouw spoorwegen'' [[File:en/manual html m772c5b23.png]] in de [[Main/en/spelinterface/Nl#De menubalk|menubalk]]:
+
+[[File:nl/Bouw spoorwegen.png|none|frame|De werkbalk ''Bouw spoorwegen'']]
+
+Naast het aanleggen van sporen op vlakke terreinen kan er ook [[Main/nl/Bouwen op hellingen|gebouwd worden op hellingen]]. Er zijn 2 manieren om dit te doen:
+* Door gebruik te maken de eerste 4 knoppen om in 1 richting sporen aan te leggen (gemakkelijk, maar traag)
+* Door gebruik te maken van de autorail tool (iets minder makkelijker, maar veel sneller)
+
+== Bouwen met de gerichte spoor knoppen ==
+
+Druk op een van de knoppen in de werkbalk '''bouw spoorwegen''' ( [[File:en/spoorbouwen2.png]] ). Het voorbeeld gebruikt de 4e knop.
+
+=== Spoor aanleggen ===
+#Plaats de cursor boven de tegel waar je je spoor wilt beginnen en druk op de linker muisknop.<br/>[[File:en/spoorbouwen3.png|none|frame|Nieuw spoor aanleggen]]
+#Sleep de cursor naar waar het spoor moet eindigen.<br/>[[File:en/spoorbouwen4.png|none|frame|Nieuw spoor aanleggen]]
+#Laat de muisknop los en het spoor zal verschijnen.<br/>[[File:en/spoorbouwen5.png|none|frame|Je nieuwe spoor]]
+
+=== Spoor verwijderen === 
+Om spoor te verwijderen '''selecteer je het Verwijder gereedschap''' ( [[File:en/bulldozer.png|Verwijder knop]] ). Het witte spoor zal nu rood worden. Nu kun je over bestaande sporen '''klikken en slepen''' om ze te verwijderen. Klik nogmaals op de Verwijder knop om het uit te zetten. Je kunt ook de '''R''' knop als sneltoets gebruiken.
+
+== Het gebruik van de Autorail tool ==
+Om te beginnen kies je de '''Autorail''' knop ( [[File:en/autospoor.png|Autorail knop]] ) uit de werkbalk '''bouw spoorwegen'''. De cursor verandert om de Autorail te representeren.
+[[File:en/spoorbouwen6.png|none|frame|Selecteren van de Autorail functie]]
+
+=== Spoor plaatsen ===
+# Het plaatsen van horizontale/verticale rechte stukken (in de richting van het grid) is het makkelijkst. Plaats de cursor over een willekeurig vlak en '''klik & sleep''' in de richting van de vlakken. De witte lijnen representeren je toekomstige spoor.<br/>Je kunt nu in een vlak klikken en de muis in allerlei richtingen bewegen om een gevoel te krijgen hoe het nieuwe spoor gebouwd gaat worden.<br/>[[File:en/AutorailTut2.png|none|frame|Een recht stuk spoor leggen]]
+#Laat de muisknop los en je hebt een recht stuk spoor gebouwd.<br/>[[File:en/AutorailTut3.png|none|frame|Een vers gebouwd stuk nieuw spoor]]
+#Diagonaal spoor plaatsen is hetzelfde: '''klik & sleep''' van het ene vlak naar het andere. Je zult hierbij zien dat diagonaal spoor maar een half vlak beslaat, in tegenstelling tot horizontaal / vertikaal spoor. Je kunt dus twee diagonalen binnen één vlak plaatsen.<br/>[[File:en/AutorailTut4.png|none|frame|Een diagonaal stuk spoor leggen]]
+#De Autorail tool werkt ook prima met heuvelachtig terrein, omdat het je precies laat zien hoe je spoor eruit zal zien in heuvelachtig landschap.
+:{|
+| [[File:en/AutorailTut5.png|none|frame|Stukken spoor leggen over heuvelachtig terrein]]
+| [[File:en/AutorailTut6.png|none|frame|Een stuk spoor over de heuvels]]
+|}
+=== Spoor verwijderen ===
+Er zijn twee manieren om spoor te verwijderen (eigenlijk drie, maar [[File:en/Clear title.png|Dynamiet]] tellen we even niet mee)
+
+*De makkelijke manier is het inhouden van de CTRL toets.
+
+#Om '''een stuk spoor''' te verwijderen, '''houd CTRL ingedrukt''' en '''klik & sleep''' over een bestaand stuk spoor. Dit werkt precies zo als het leggen van spoor.<br/>[[File:en/AutorailTut7.png|none|frame|Een stuk spoor verwijderen (met CTRL)]]
+#Laat de muisknop los en het spoor wordt afgebroken en verkocht.<br/>[[File:en/AutorailTut8.png|none|frame|Een zojuist verwijderd stuk spoor]]
+
+*De tweede methode is het selecteren van de '''Verwijder tool''' ( [[File:en/bulldozer.png|Verwijder knop]] ). De witte spoor-lijnen worden nu rood. Nu kun je bestaand spoor met '''klik & sleep''' over het bestaande spoor verwijderen. Een tweede klik op de knop zet het verwijderen weer uit. Je kunt ook de '''R''' toets gebruiken. Let op dat bij twee diagonalen in hetzelfde vlakje je goed moet mikken om het juiste stuk spoor weg te halen.
+:[[File:en/AutorailTut11.png|none|frame|Een stuk spoor verwijderen met de verwijder knop]]
+
+== Verbinding types ==
+Er zijn twee hoeken waaronder spoor verbonden kan worden.
+
+===45&#176;=== 
+Hieronder staat een voorbeeld van een 45&#176; connectie. Een trein kan één zo'n verbinding passeren passeren zonder dat hij hoeft te vertragen. Een tweede hoek van 45&#176; binnen de lengte van de trein zorgt ervoor dat de trein wel vertraagt.
+[[File:en/AutorailTut9.png|frame|none|45&#176; spoorverbindingen]]
+
+===90&#176;===
+Dit is een voorbeeld van een 90&#176; connectie. '''Een trein wordt aanzienlijk vertraagd''' als het zo'n verbinding passeert!
+
+Als in de geavanceerde instellingen "Verbied treinen en schepen om 90&#176; bochten te maken" aangezet is, dan zullen treinen zulke bochten niet maken. Ze zullen dan stoppen en omdraaien alsof het einde van het spoor bereikt is.
+[[File:en/AutorailTut10.png|frame|none|90&#176; spoorverbindingen]]
+
+Na wat oefenen word je vanzelf handig in het leggen van spoor als je de '''A''' (auto spoor), Ctrl+A (Spoor verwijderen) en '''D''' (dynamiet, bom) sneltoetsen onthoudt. De '''X''' toets is ook er handig, want die maakt gebouwen doorzichtig. Zie ook de [[Main/nl/Sneltoetsen|sneltoetsenlijst]].
+
+<span style="float: right">[[Main/nl/Depots bouwen|'''Volgende''': Depots bouwen]] &raquo;</span>
+
+[[Category:nl/Spoorwegen]]
