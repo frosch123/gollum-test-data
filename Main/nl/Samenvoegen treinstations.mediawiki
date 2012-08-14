@@ -1,0 +1,44 @@
+[[Translation:Main/en/Join train stations]]
+Een [[Main/nl/geavanceerde instellingen|geavanceerde instelling]] die je de mogelijkheid geeft om een nieuw treinstation te bouwen direct naast een bestaande.
+
+
+== Beschrijving ==
+Al een treinstation staan en je wilt er ander platform aan toevoegen? Of je wilt de platforms langer maken zonder het hele station te moeten herbouwen? Dan moet je deze patch inschakelen! Elk platform dat je toevoegt moet dezelfde breedte hebben als het originele station. En als de platforms langer wilt maken moet je een station koppelen met dezaelfde aantal platforms.
+
+{{nl/Opmerking|Een goede aanvulling op deze patch is [[Main/nl/niet-uniforme stations|niet-uniforme stations]], waarmee je elk vreemd station wat je maar kunt bedenken aan elkaar kunt koppelen.}}
+
+== Gebruik ==
+Deze functie staat standaard aan. je kunt hem uitschakelen met deze patch via het [[Main/en/Geavanceerde instellingen/Stations/Nl#Bouwen van aangrenzende stations toestaan|geavanceerde instellingen -> stations]] venster of gebruik de volgende syntax in [[Main/en/openttd.cfg]]:
+<pre>[patches]
+join_stations = false</pre>
+
+<center>[[File:en/joinTrainStations.png]] [[File:en/joinTrainStations2.png]]</center>
+
+== Hints & tips ==
+Met [[Main/nl/bouwen op hellingen|bouwen op hellingen]] ingeschakeld kun je zlefs stations op meerdere niveau's bouwen.
+
+<center>[[File:en/joinTrainStations3.png|center|none|frame|'''Voeg stations samen op verschillende niveau's om een multiniveaustation te krijgen''']]</center>
+
+Inschakelen van nonuniforme stations geeft je veel meer vrijheid, hoewel elk station moet passen binnen een vierkant waarvan de afmeting is bepaald onder de geavanceerde instellingen/stations/maximale stationsomvang.
+
+<center>[[File:en/Nonuniformstation129.png|center|none|frame|'''Een enkel station met nonparallele platforms''']]</center>
+
+=== Verwijderen van delen van stations ===
+
+Het is zelfs mogelijk om een station te bouwen waarvan de delen niet met elkaar verdonden zijn. Stel je voor dat je het helipad met de bulldozer verwijdert uit het vorige station.
+
+Als je een tegel uit een treinstation weghaalt met de bom [[File:en/Clear title.png]], zullen alle stationsvierkanten die aan die tegel vastzitten worden vernietigd, ongeacht het treintype (rail, monorail, MagLev).
+
+Met de verwijderknop [[File:en/Toggle clear active.png]] haal je een enkele tegel weg uit het station!
+
+[[File:en/Cut-through station.png|center|frame|De tegel met het stationsgebouw is weggehaald en vervangen door een spoorstuk.]]
+
+=== Uitbreiden van stations ===
+
+Je kunt tot 8 truck laadperrons of bushaltes samenvoegen, zie ook: [[Main/nl/Laadperrons|multistop]].
+
+Als je niet tevreden bent met het handelsgebied van je station, kun je dit vergroten: beslis in welke richting je wilt vergroten. Voeg een bushalte toe in die richting. Bouw een truck laadperron verder in die richting. Nu vernietig je de budhalte, en bouwt het verderop weer terug, maar nog steeds samengevoegd. I hoop dat je snapt hoe dat werkt. Deze aanpak, met een stationsomvang van 64, kan zeer ver gaan.
+
+[[Category:nl/Constructie|S]]
+[[Category:nl/Instellingen en voorkeuren|S]]
+[[Category:nl/Spoorwegen|S]]
