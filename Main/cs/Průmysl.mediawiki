@@ -1,0 +1,386 @@
+[[Translation:Main/en/Industries]]{{en/-}}{{en/Table of contents}}
+
+:''This article is about the concept of an industry in OpenTTD.  For a categorised list of industries, refer to [[Category/en/Industries]]''
+
+'''Industries''' are entities that produce specific [[Main/en/cargo]]s and/or services. There are three types of Industry in OpenTTD; Primary, Secondary and Tertiary. Primary industries, such as mines, provide resources without requiring anything. These resources are then transported by a [[Main/en/Transport Company|transport company]] to a Secondary Industry. Sometimes, Secondary Industries will provide a resource that will either be transported to Towns (goods or food), or to a Tertiary industry. 
+
+Your company only ''transports'' cargo on behalf of the manufacturers. Any profits you make are purely from the transportation fees you charge, not from the sale of the cargo.
+
+The industry windows shows two numbers about the production of each cargo type that is created by the industry, these are total values from the last month. The first one is the produced amount. It varies due to internal factors of the industry. During an [[Main/en/Economy#Recession|economic recession]] there's only half of the usual production.
+
+The second value is the percentage of the produced amount that has been delivered to the nearby stations for distribution. Industries may decide to keep back part of the production and not deliver it to any station.
+
+[[File:en/Industry window.png|frame|center|Industry window of a coal mine]]
+
+The growth of the output of primary industries depends upon the percentage of cargo transported away from them. The more you transport, the faster it grows in the long term on average.
+
+Details on the calculation of the mentioned numbers can be found on the [[Main/en/game mechanics]] page.
+
+__TOC__
+
+==Tabulka průmyslu podle klimatu==
+<table><tr><td valign="top" style="padding:0px; border:none; background-color:transparent;">
+  {| {{en/Wikitable}} style="margin:2px 4px 2px 0; border:solid 1px #AAAAAA" rules="cols"
+  |- 
+  | style="background: #ccffcc" colspan="3" align="center"| '''Mírné klima'''
+  |- style="background: #ffdead"
+  | '''Průmysl'''
+  | '''Přijímá'''
+  | '''Produkuje'''
+  |- style="background: #E5FFE5"
+  |[[Main/cs/Banka|Banka]]
+  |[[Main/cs/Ceniny|ceniny]]
+  |[[Main/cs/Ceniny|ceniny]]
+  |-
+  |[[Main/cs/Uhelný důl|Uhelný důl]]
+  |nic
+  |[[Main/cs/Uhlí|Uhlí]]
+  |- style="background: #E5FFE5"
+  |[[Main/cs/Továrna|Továrna]]
+  |[[Main/cs/Dobytek|dobytek]],<br/>[[Main/cs/Zrní|zrní]],<br/>[[Main/cs/Ocel|ocel]]
+  |[[Main/cs/Zboží|zboží]]
+  |-
+  |[[Main/cs/Farma|Farma]]
+  |nic
+  |[[Main/cs/Zrní|zrní]],<br/>[[Main/cs/Dobytek|dobytek]]
+  |- style="background: #E5FFE5"
+  |[[Main/cs/Les|Les]]
+  |nic
+  |[[Main/cs/Dřevo|dřevo]]
+  |-
+  |[[Main/cs/Důl na železnou rudu|Důl na železnou rudu]]
+  |nic
+  |[[Main/cs/Železná ruda|železnou rudu]]
+  |- style="background: #E5FFE5"
+  |[[Main/cs/Rafinerie|Rafinerie]]
+  |[[Main/cs/Ropa|ropa]]
+  |[[Main/cs/Zboží|zboží]]
+  |-
+  |[[Main/cs/Ropná plošina|Ropná plošina]]
+  |[[Main/cs/Cestující|cestující]]
+  |[[Main/cs/Ropa|ropu]],<br/>[[Main/cs/Cestující|cestující]]
+  |- style="background: #E5FFE5"
+  |[[Main/cs/Ropný vrt|Ropný vrt]]
+  |nic
+  |[[Main/cs/Ropa|ropu]]
+  |-
+  |[[Main/cs/Elektrárna|Elektrárna]]
+  |[[Main/cs/Uhlí|uhlí]]
+  |nic
+  |- style="background: #E5FFE5"
+  |[[Main/cs/Pila|Pila]]
+  |[[Main/cs/Dřevo|dřevo]]
+  |[[Main/cs/Zboží|zboží]]
+  |-
+  |[[Main/cs/Ocelárna|Ocelárna]]
+  |[[Main/cs/Železná ruda|železnou rudu]]
+  |[[Main/cs/Ocel|ocel]]
+  |}
+</td><td valign="top" style="padding:0px; border:none; background-color:transparent;">
+  {| {{en/Wikitable}} style="margin:2px 4px 2px 0; border:solid 1px #AAAAAA" rules="cols"
+  |- 
+  | style="background: #ccccff" colspan="3" align="center"| '''Sub-arktické klima'''
+  |- style="background: #ffdead"
+  | '''Průmysl'''
+  | '''Přijímá'''
+  | '''Produkuje'''
+  |- style="background: #dfefef"
+  |[[Main/cs/Banka|Banka]]
+  |[[Main/cs/Zlato|zlato]]
+  |nic
+  |-
+  |[[Main/cs/Uhelný důl|Uhelný důl]]
+  |nic
+  |[[Main/cs/Uhlí|uhlí]]
+  |- style="background: #dfefef"
+  |[[Main/cs/Potravinářský závod|Potravinářský závod]]
+  |[[Main/cs/Dobytek|dobytek]],<br/>[[Main/cs/Pšenice|pšenici]]
+  |[[Main/cs/Jídlo|jídlo]]
+  |-
+  |[[Main/cs/Farma|Farma]]
+  |nic
+  |[[Main/cs/Pšenice|pšenici]],<br/>[[Main/cs/Dobytek|dobytek]]
+  |- style="background: #dfefef"
+  |[[Main/cs/Les|Les]]
+  |nic
+  |[[Main/cs/Dřevo|dřevo]]
+  |-
+  |[[Main/cs/Papírna|Papírna]]
+  |[[Main/cs/Dřevo|dřevo]]
+  |[[Main/cs/Papír|papír]]
+  |- style="background: #dfefef"
+  |[[Main/cs/Rafinerie|Rafinerie]]
+  |[[Main/cs/Ropa|ropa]]
+  |[[Main/cs/Zboží|zboží]]
+  |-
+  |[[Main/cs/Tiskárna|Tiskárna]]
+  |[[Main/cs/Papír|papír]]
+  |[[Main/cs/Zboží|zboží]]
+  |- style="background: #dfefef"
+  |[[Main/cs/Ropný vrt|Ropný vrt]]
+  |nic
+  |[[Main/cs/Ropa|ropa]]
+  |-
+  |[[Main/cs/Elektrárna|Elektrárna]]
+  |[[Main/cs/Uhlí|uhlí]]
+  |nic
+  |- style="background: #dfefef"
+  |[[Main/cs/Zlatý důl|Zlatý důl]]
+  |nic
+  |[[Main/cs/Zlato|zlato]]
+  |}
+ </td><td valign="top" style="padding:0px; border:none; background-color:transparent;">
+  {| {{en/Wikitable}} style="margin:2px 4px 2px 0; border:solid 1px #AAAAAA" rules="cols"
+  |- 
+  | style="background: #ffffcc" colspan="3" align="center"| '''Tropické klima'''
+  |- style="background: #ffdead"
+  | '''Průmysl'''
+  | '''Přijímá'''
+  | '''Produkuje'''
+  |- style="background: #FFFDE0"
+  |[[Main/cs/Banka|Banka]]
+  |[[Main/cs/Diamanty|diamanty]]
+  |nic
+  |-
+  |[[Main/cs/Diamantový důl|Diamantový důl]]
+  |nic
+  |[[Main/cs/Diamanty|diamanty]]
+  |- style="background: #FFFDE0"
+  |[[Main/cs/Továrna|Továrna]]
+  |[[Main/cs/Kaučuk|kaučuk]],<br/>[[Main/cs/Měděná ruda|měděnou rudu]],<br/>[[Main/cs/Dřevo|dřevo]]
+  |[[Main/cs/Zboží|zboží]]
+  |-
+  |[[Main/cs/Farma|Farma]]
+  |nic
+  |[[Main/cs/Kukuřice|kukuřici]]
+  |- style="background: #FFFDE0"
+  |[[Main/cs/Pila|Pila]]
+  |nic
+  |[[Main/cs/Dřevo|dřevo]]
+  |-
+  |[[Main/cs/Důl na měděnou rudu|Důl na měděnou rudu]]
+  |nic
+  |[[Main/cs/Měděná ruda|měděnou rudu]]
+  |- style="background: #FFFDE0"
+  |[[Main/cs/Rafinerie|Rafinerie]]
+  |[[Main/cs/Ropa|ropu]]
+  |[[Main/cs/Zboží|zboží]]
+  |-
+  |[[Main/cs/Ropná plošina|Ropná plošina]]
+  |[[Main/cs/Cestující|cestující]]
+  |[[Main/cs/Ropa|ropa]],<br/>[[Main/cs/Cestující|cestující]]
+  |- style="background: #FFFDE0"
+  |[[Main/cs/Potravinářský závod|Potravinářský závod]]
+  |[[Main/cs/Ovoce|ovoce]],<br/>[[Main/cs/Kukuřice|kukuřici]]
+  |[[Main/cs/Jídlo|jídlo]]
+  |-
+  |[[Main/cs/Ovocný sad|Ovocný sad]]
+  |nic
+  |[[Main/cs/Ovoce|ovoce]]
+  |- style="background: #FFFDE0"
+  |[[Main/cs/Kaučuková plantáž|Kaučuková plantáž]]
+  |nic
+  |[[Main/cs/Kaučuk|kaučuk]]
+  |-
+  |[[Main/cs/Zdroj vody|Zdroj vody]]
+  |nic
+  |[[Main/cs/Voda|vodu]]
+  |- style="background: #FFFDE0"
+  |[[Main/cs/Vodojem|Vodojem]]
+  |[[Main/cs/Voda|vodu]]
+  |nic
+  |}
+ </td><td valign="top" style="padding:0px; border:none; background-color:transparent;">
+  {| {{en/Wikitable}} style="margin:2px 4px 2px 0; border:solid 1px #AAAAAA" rules="cols"
+  |- 
+  | style="background: #ff9999" colspan="3" align="center"| '''Toyland'''
+  |- style="background: #ffdead;"
+  | '''Průmysl'''
+  | '''Přijímá'''
+  | '''Produkuje'''
+  |- style="background: #FFF0F5"
+  |[[Main/cs/Les cukrové vaty|Les cukrové vaty]]
+  |nic
+  |[[Main/cs/Cukrová vata|cukrovou vatu]]
+  |-
+  |[[Main/cs/Továrna na sladkosti|Továrna na sladkosti]]
+  |[[Main/cs/Cukr|cukr]],<br/>[[Main/cs/Karamel|karamel]],<br/>[[Main/cs/Cukrová vata|cukrovou vatu]]
+  |[[Main/cs/Bonbóny|bonbóny]]
+  |- style="background: #FFF0F5"
+  |[[Main/cs/Farma na baterie|Farma na baterie]]
+  |nic
+  |[[Main/cs/Baterie|baterie]]
+  |-
+  |[[Main/cs/Kolové studny|Kolové studny]]
+  |nic
+  |[[Main/cs/Kola|kolu]]
+  |- style="background: #FFF0F5"
+  |[[Main/cs/Hračkářství|Hračkářství]]
+  |[[Main/cs/Hračky|hračky]]
+  |nic
+  |-
+  |[[Main/cs/Továrna na hračky|Továrna na hračky]]
+  |[[Main/cs/Plast|plast]],<br/>[[Main/cs/Baterie|baterie]]
+  |[[Main/cs/Hračky|hračky]]
+  |- style="background: #FFF0F5"
+  |[[Main/cs/Plastové fontány|Plastové fontány]]
+  |nic
+  |[[Main/cs/Plast|plast]]
+  |-
+  |[[Main/cs/Sodovkárna|Sodovkárna]]
+  |[[Main/cs/Kola|kolu]],<br/>[[Main/cs/Bubliny|bubliny]]
+  |[[Main/cs/Limonáda|limonádu]]
+  |- style="background: #FFF0F5"
+  |[[Main/cs/Generátor bublin|Generátor bublin]]
+  |nic
+  |[[Main/cs/Bubliny|bubliny]]
+  |-
+  |[[Main/cs/Karamelolom|Karamelolom]]
+  |nic
+  |[[Main/cs/Karamel|karamel]]
+  |- style="background: #FFF0F5"
+  |[[Main/cs/Cukerný důl|Cukerný důl]]
+  |nic
+  |[[Main/cs/Cukr|cukr]]
+  |}
+</td></tr></table>
+
+==Založení nového průmyslu==
+
+Pro bohatou dopravní společnost je možné financovat stavbu nového průmyslu, který bude vystavěn na místě, které si vyberete. Nicméně tato investice se vám nevrátí, mimo příjmu za přepravu nákladu. I když jste stavbu průmyslu financovali vy, nemůžete jej zbourat, takže rozmyslete si jeho umístění!
+
+Normálně můžete financovat pouze tento [[Main/en/Kategorie:Průmysl|průmysl]]:
+
+{| {{en/Wikitable}}
+!colspan=4 style="background:#ccffcc"|Mírné klima
+|-
+| rowspan=7 valign="top"| [[File:en/Fund Industry template.png]]
+| style="background:#efefef" | '''Jméno'''
+| style="background:#efefef" | <span style="white-space:nowrap">'''Cena''' (bez inflace)</span>
+| style="background:#efefef" | '''Poznámky'''
+|-
+| [[Main/cs/Elektrárna|Elektrárna]]
+| £703,125<span style="white-space:nowrap"> </span>($1,406,250)
+| Přijímá [[Main/cs/Uhlí|uhlí]] z [[Main/cs/Uhelný důl|uhelných dolů]].
+|-
+| [[Main/cs/Pila|Pila]]
+| £656,250<span style="white-space:nowrap"> </span>($1,212,500)
+| Přijímá [[Main/cs/Dřevo|dřevo]] z [[Main/cs/Les|lesů]]. Produkuje [[Main/cs/zboží|zboží]].
+|-
+| [[Main/cs/Rafinerie|Rafinerie]]
+| £714,843<span style="white-space:nowrap"> </span>($1,429,686)
+| Může být vybudována pouze blízko pobřeží. Přijímá [[Main/cs/Ropa|ropu]] z [[Main/cs/Ropná plošina|ropných plošin]] nebo [[Main/cs/Ropný vrt|ropných vrtů]].
+|-
+| [[Main/cs/Továrna|Továrna]]
+| £609,375<span style="white-space:nowrap"> </span>($1,218,750)
+| Přijímá [[Main/cs/Zrní|zrní]] a [[Main/cs/Dobytek|dobytek]] z [[Main/cs/Farma|farm]] a [[Main/cs/Ocel|ocel]] z [[Main/cs/Ocelárna|oceláren]]. Produkuje [[Main/cs/Zboží|zboží]].
+|-
+| [[Main/cs/Ocelárna|Ocelárna]]
+| £629,882<span style="white-space:nowrap"> </span>($1,259,764)
+| Příjímá [[Main/cs/Železná ruda|železnou rudu]] z [[Main/cs/Důl na železnou rudu|dolů na železnou rudu]], které mění na [[Main/cs/Ocel|ocel]].
+|-
+| [[Main/cs/Banka|Banka]]
+| £747,070<span style="white-space:nowrap"> </span>($1,494,140)
+| Příjímá a produkuje [[Main/cs/Ceniny|ceniny]].
+|-
+!colspan=4 style="background:#ccccff"|Sub-arktické klima
+|-
+| rowspan=7 valign="top"| [[File:en/Fund Industry subarctic.png]]
+| style="background:#efefef" | '''Name'''
+| style="background:#efefef" | <span style="white-space:nowrap">'''Cost''' (without inflation)</span>
+| style="background:#efefef" | '''Notes'''
+|-
+| [[Main/en/Power Station]]
+| £703,125<span style="white-space:nowrap"> </span>($1,406,250)
+| Accepts [[Main/en/Coal]] from [[Main/en/Coal Mine]]s
+|-
+| [[Main/en/Oil Refinery]]
+| £714,843<span style="white-space:nowrap"> </span>($1,429,686)
+| These may only be built on or very near the coast. Accepts [[Main/en/Oil]] from [[Main/en/Oil Wells]].
+|-
+| [[Main/en/Printing Works]]
+| £609,375<span style="white-space:nowrap"> </span>($1,218,750)
+| Accepts [[Main/en/Paper]] from [[Main/en/Paper Mill]] and produces [[Main/en/Goods]].
+|-
+| [[Main/en/Food Processing Plant]]
+| £603,515<span style="white-space:nowrap"> </span>($1,307,030)
+| Accepts [[Main/en/Livestock]] and [[Main/en/Wheat]] and produces [[Main/en/Food]].
+|-
+| [[Main/en/Paper Mill]]
+| £665,039<span style="white-space:nowrap"> </span>($1,330,078)
+| Accepts [[Main/en/Wood]] and produces [[Main/en/Paper]].
+|-
+| [[Main/en/Bank]]
+| £442,382<span style="white-space:nowrap"> </span>($884,764)
+| Accepts [[Main/en/Gold]].
+|-
+!colspan=4 style="background:#ffffcc"|Tropical
+|-
+| rowspan=7 valign="top"| [[File:en/Fund Industry subtropical.png]]
+| style="background:#efefef" | '''Name'''
+| style="background:#efefef" | <span style="white-space:nowrap">'''Cost''' (without inflation)</span>
+| style="background:#efefef" | '''Notes'''
+|-
+| [[Main/en/Oil Refinery]]
+| £714,843<span style="white-space:nowrap"> </span>($1,429,686)
+| Accepts [[Main/en/Oil]] from [[Main/en/Oil Rig]]s and produces [[Main/en/Goods]].
+|-
+| [[Main/en/Food Processing Plant]]
+| £603,515<span style="white-space:nowrap"> </span>($1,307,030)
+| Accepts [[Main/en/Fruit]]s from [[Main/en/Fruit Plantation]] and [[Main/en/Maize]] from [[Main/en/Farm]] and produces [[Main/en/Food]].
+|-
+| [[Main/en/Bank]]
+| £442,382<span style="white-space:nowrap"> </span>($884,764)
+| Accepts [[Main/en/Diamonds]] from [[Main/en/Diamond Mine]]s.
+|-
+| [[Main/en/Water Tower]]
+| £336,914<span style="white-space:nowrap"> </span>($673,828)
+| Acceps [[Main/en/Water]] from [[Main/en/Water Supply]].
+|-
+| [[Main/en/Factory]]
+| £609,375<span style="white-space:nowrap"> </span>($1,218,750)
+| Accepts [[Main/en/Rubber]] from [[Main/en/Rubber Plantation]]s, [[Main/en/Copper Ore]] from [[Main/en/Copper Ore Mine]]s and [[Main/en/Wood]] from [[Main/en/Lumber Mill]]. Produces [[Main/en/Goods]].
+|-
+| [[Main/en/Lumber Mill]]
+| £395,507<span style="white-space:nowrap"> </span>($791,014)
+| Produces [[Main/en/Wood]].
+|-
+!colspan=4 style="background:#ff9999"|Toyland
+|-
+| rowspan=5 valign="top"| [[File:en/Fund Industry toyland.png]]
+| style="background:#efefef" | '''Name'''
+| style="background:#efefef" | <span style="white-space:nowrap">'''Cost''' (without inflation)</span>
+| style="background:#efefef" | '''Notes'''
+|-
+| [[Main/en/Sweet Factory]]
+| £603,515<span style="white-space:nowrap"> </span>($1,207,030)
+| Accepts [[Main/en/Sugar]], [[Main/en/Toffee]] and [[Main/en/Candyfloss]]. Produces [[Main/en/Sweets]].
+|-
+| [[Main/en/Toy Shop]]
+| £389,648<span style="white-space:nowrap"> </span>($779,296)
+| Accepts [[Main/en/Toys]] from [[Main/en/Toy Factory]].
+|-
+| [[Main/en/Toy Factory]]
+| £477,539<span style="white-space:nowrap"> </span>($955,078)
+| Accepts [[Main/en/Plastic]] from [[Main/en/Plastic Fountains]] and [[Main/en/Batteries]] from [[Main/en/Battery Farm]]. Produces [[Main/en/Toys]].
+|-
+| [[Main/en/Fizzy Drink Factory]]
+| £518,554<span style="white-space:nowrap"> </span>($1,037,108)
+| Accepts [[Main/en/Cola]] from [[Main/en/Cola Wells]] and [[Main/en/Bubbles]] from [[Main/en/Bubble Generator]]. Produces [[Main/en/Fizzy Drinks]].
+|}
+
+To fund a new industry in-game, hold down the ''Industries'' toolbar button [[File:en/Manual html m4d6ba21e.png]] (see ''Company and industry information'' on the [[Main/en/Game interface|Game interface]] page) and select ''Fund New Industry''.
+
+Several settings change the rules of building new industries:	
+* [[Main/en/Build raw material industries]]
+* [[Main/en/Multiple industries per town]]
+* [[Main/en/Same industries close]]
+
+==Prospecting New Industries==
+As of version 0.6.1, you now can ''prospect'' new industries. Funding new industries and prospecting have two major differences.  Firstly, prospecting is only used for primary industries (i.e. raw materials), and secondly, you cannot set the place for a prospected industry - it will be set up wherever your prospectors first discover the correct natural resources. 
+
+You can enable this feature in-game from patch settings window ''economy'' tab, ''Manual primary industry constructing method'' which can be on three settings: ''none'', ''as other industries'' and ''prospecting'' (default).
+
+[[File:en/Coalmine.png|center|frame|The Coal Mine is just one of the many OpenTTD industries.]]
+
+[[Category:en/Industries]][[Category:cs/Články v českých]]
