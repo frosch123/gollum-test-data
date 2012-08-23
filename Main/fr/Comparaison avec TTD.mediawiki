@@ -1,0 +1,98 @@
+{{fr/Traduction|OpenTTD:Changes from TTD|0}}
+[[Translation:Main/en/Changes from TTD]]{{en/-}}
+=Quoi de neuf dans OpenTTD vis à vis de Transport Tycoon Deluxe ?=
+
+OpenTTD a été conçu d'après le jeu original Transport Tycoon Deluxe par Chris Sawyer. De trés nombreuses améliorations ont été apportées pour enrichir l'expérience de jeu. Beaucoup de fonctionnalitées sont issues de [http://www.ttdpatch.net/ TTDPatch] alors que d'autres sont nouvelles. Vous pouvez aussi consulter la [[Main/en/Comparaison entre OpenTTD et TTDPatch]].
+
+==Améliorations significatives==
+
+* Multiple ports - Des versions Linux, Windows, Mac OS X, OS/2 natives entres autres
+* [[Main/en/Autorail|Outil de construction d'Autorail]] - Outil permettant de générer des chemins de fer dans toutes les directions par un simple cliquer-glisser
+* Une taille de carte élargie jusqu'à 2048 x 2048 
+* Des scénarios réalistes basés sur des données d'altitudes réelles fournies par le service Google Earth, forum : http://www.tt-forums.net/viewtopic.php?f=29&t=27052 ou sur un document Word à jour : http://www.tt-forums.net/download/file.php?id=92633
+* [[Main/en/Water Transport Tiles]]/[[Main/en/Water Transport Tiles]] - Possibilité de créer des voies naviguables et de forcer les bateaux à les emprunter.
+* Plus grandes stations - Les stations peuvent être plus longues.
+* [[Main/en/Nonuniform stations|Non-uniform stations]] - Stations can be built slightly offset.
+* Possibilité de [[Main/en/Join train stations|joindre des stations]] (de même largeur ou longeur) - Contruire une station adjacente à une autre du même type, dans la longueur ou la largeur définie une unique station plus imposante.
+* [[Main/en/Waypoints|Point de contrôle]] - Un nouvel élément des voies de chemin de fer permettant de préciser une route précise qu'un train doit emprunter dans son parcours.
+* [[Main/en/Mammoth trains|Mammoth trains]] - Les trains peuvent être plus long.
+* [[Main/en/Multiheaded trains|Multi-headed trains]] - Trains can have more than one engine to help increase the speed when carrying heavy loads, power up hills etc.
+* [[Main/en/Build on slopes|Build on slopes]] and coasts - It's possible to build on the slopes of the coastline or hills; the relevant tile is filled to a flat height for a certain cost.
+* Goto depot order - Allows insertion of an order instructing a vehicle to return to the depot.
+* [[Main/en/Longer bridges|Longer bridges]] - Bridges can span greater distances... at a price.
+* Higher bridges - Bridges can span over greater heights enabling more complex networks.
+* Three new [[Main/en/Bridges|bridges]] - To enable greater use of the higher speed trains.
+* [[Main/en/Signals#Pre-signals]] (CTRL-click on existing signals) - As [http://www.ttdpatch.net/ TTDPatch] - special signals to aid building complex track layouts (usually used when there are many platforms connected to a single train line).
+* [[Main/en/Signals#Semaphores]] (CTRL-D to place them) - As [http://www.ttdpatch.net/ TTDPatch].
+* [[Main/en/Orders#Shared Orders|Order sharing]] and [[Main/en/Orders#Copying orders|copying]] ("goto" on other vehicle to copy, ctrl+"goto" to share) - Vehicles can now share orders with order changes propagating to all vehicles, and orders can just be copied by clicking on any other vehicle to save time.
+* [http://www.ttdpatch.net/ TTDpatch]-compatible Non-stop handling - Exactly as it says on the tin.
+* [[Main/en/Crossing tunnels|Crossing tunnels]] - Tunnels may now cross over each other underground.
+* Build many trees on one tile
+* [[Main/en/Bribe authority|Bribe the town authority]] - If your townsmen hate you, you can bribe the local authority to help you but it's expensive and runs the risk of you being caught.
+* Much improved [[Main/en/Multiplayer|networking and internet play]] by TCP/IP, including server lists, kick/ban, dedicated server, cheat protection and chat.
+* [[Main/en/AI:Main Page|AI framework]] allowing for new, user made AIs. The old (cheating) AI was removed.
+* Three new types of airport ([[Main/en/Airports#Metropolitan airport|metropolitan]] in 1980, [[Main/en/Airports#International airport|international]] in 1990 and [[Main/en/Intercontinental airport|intercontinental]] in 2002).
+* [[Main/en/Drive-through Road Stops]] - New kind of station for road vehicles. Much like a traditional real-life "bus stop", these new stations allow road vehicles to load/unload passengers and cargo simply by stopping by the side of the road.
+* [[Main/en/Tramways]] - New kind of road vehicles (like bus) and require special tracks, stops and depots for them.
+
+==Better usability==
+
+* [[Main/en/Convert rail|Convert rail]] tool (to rail, monorail, maglev) - To enable you to easily switch your tracks to the latest technology.
+* Build stations with drag & drop - Rather than guess at the size or count the tiles, just drag and drop the station over the desired area and it is built for you.
+* [[Main/en/Build in pause|Build while paused]] - An optional patch that allows building while the game is paused.
+* Mouse wheel can be used to scroll in menus and to zoom in/out on win32 and Mac OS X
+* Autoscroll (to left/right) - when you reach the edge of the screen, it moves across.
+* Bigger demolish tool
+* Plant trees on area
+* [[Main/en/Sell entire train|Sell whole train]] by dragging to dynamite trashcan - Sells the whole train instead of just a single carriage.
+* Cost estimation with Shift - Holding Shift on almost any action will show you how much it will cost you before you do it.
+* Road and rail removing by dragging
+* Company HQ can now be moved somewhere else (cost 1% of company value)
+* Autosave at a regular interval
+* [[Main/en/Advanced Settings/Vehicles#Autorenew|Autorenew]]/replace vehicles that are nearing their end of life
+* It's now possible to remove a platform from a station by clicking on the station tool and then on the remove tool, then on the platform you want to remove.
+
+==New options==
+
+* "No train service" option
+* [[Main/en/Disable inflation|Disable inflation]] option
+* [[Main/en/Full load any cargo|Full load any]] option, as in [http://www.ttdpatch.net/ TTDPatch] - Your train will leave the station if ANY of its cargos are full.
+* "[[Main/en/Select goods]]" option
+* "Multiple similar industries in close proximity" option
+* "Multiple industries per town" option
+* News item for "train is unprofitable"
+* News item for "train is lost"
+* Ability to set the starting date, takes a value on the form yyyy, yyyymm or yyyymmdd.
+* [[Main/en/Disable AI vehicles|Select]] what vehicle types the AI will build
+* Ability to choose snowline height
+* Change default servicing interval for vehicles
+* Change maximum number of vehicles per player
+* New pathfinding algorithm for trains
+* [[Main/en/Landscaping#Autoslope]]
+
+==Graphical/interface features==
+
+* Screenshots can be BMP, PNG or PCX (select in game options menu)
+* More currencies (including Euro introduction in 2002 and your own custom currencies)
+* More townname languages
+* Windowed mode or fullscreen including resolution selection.
+* Sticky windows (don't close unless you close them yourself) and snappy windows (windows align themselves against each other when dragged).
+* Resizeable windows
+* Refresh rate configuration setting
+* Town directory sorting
+* [[Main/en/Advanced Settings]] configuration window
+* Use Ctrl-click to repay full loan or take out full loan
+* [[Main/en/Coloured newspaper|Color newspaper]] after a certain date
+* Game speed increase (through fast forward button or by pressing Tab)
+* Plant a random tree type
+* [[Main/en/Hotkeys|Hotkeys]] for almost every action
+* [[Main/en/Internationalization|Translations]] into a multitude of languages, selectable in-game at any point.
+* [[Main/en/NewGRF|Loading new graphics sets]]
+* Bring up an [[Main/en/Extra Viewport|extra viewport]] showing any part of the map
+* Color-coded vehicle profits
+* Invalid orders in a vehicle's schedule are highlighted in red and generate a warning
+* Option for percent-based service intervals. Send a vehicle to depot after it has lost X% of its reliability
+* All TTDLX save games are supported (.SS1, .SV1, .SV2, .SV0, .SS0). 
+* High score table
+
+For details of every change, see [[Main/en/OpenTTD Release History]]
