@@ -1,0 +1,207 @@
+This page is meant to give AI authors and players alike a guide at hand on judging the completeness and competitiveness of AIs.
+
+== Simple test ==
+Grab the corresponding map, load it, start the AI (console: start_ai <name of AI>) and wait for 10 years. Judge the result by the following:
+* Crash: -5 points
+* running unprofitable or doing nothing: 0 points
+* otherwise (i.e. making profit): points as indicated
+
+=== Vehicle capabilities ===
+* Ships: 5 points
+** [http://www.tt-forums.net/download/file.php?id=147081 Savegame (v1)] for this test
+* Road vehicles: 5 points
+** realistic accelration (7% slope), original vehicles
+** [http://www.tt-forums.net/download/file.php?id=147082 Savegame (v1)] for this test
+* Rail vehicles: 5+5 points (5 for usage, addition 5 for using more than point to point connections)
+** realistic acceleration (3% slope), original vehicles
+** [http://www.tt-forums.net/download/file.php?id=147083 Savegame (v1)] for this test
+* Aircraft: 5 points
+** [http://www.tt-forums.net/download/file.php?id=147084 Savegame (v1)] for this test
+
+=== Game I ===
+This game features all vehicle kinds, is a rough landscape with original vehicle acceleration, 
+
+== AI Comparison ==
+{|cellpadding="3" cellspacing="0" border="1" class="wikitable sortable"
+ ! scope="col" | AI
+ ! scope="col" | Result
+ ! scope="col" | [http://www.tt-forums.net/download/file.php?id=147081 Ship only (v1)]
+ ! scope="col" | [http://www.tt-forums.net/download/file.php?id=147082 RV only (v1)]
+ ! scope="col" | [http://www.tt-forums.net/download/file.php?id=147083 Trains only (v1)]
+ ! scope="col" | [http://www.tt-forums.net/download/file.php?id=147084 Aircraft only (v1)]
+ |-
+ | ''ideal AI''
+ | 25
+ | 5
+ | 5
+ | 10
+ | 5
+ |-
+ |AdmiralAI v25
+ | 15
+ | 0
+ | 5
+ | 5
+ | 5
+ |-
+ |AIAI iota10
+ | 15
+ | 0
+ | 5
+ | 5
+ | 5
+ |-
+ |AroAI v1.2
+ | 0
+ | 0
+ | 0
+ | 0
+ | 0
+ |-
+ |ChooChoo v394
+ | -10
+ | -5
+ | -5
+ | 5
+ | -5
+ |-
+ |Chopper v7
+ | 0
+ | 0
+ | 0
+ | 0
+ | 0
+ |-
+ |CluelessPlus v25
+ | 10
+ | 0
+ | 5
+ | 0
+ | 5
+ |-
+ |Convoy v11
+ | 0
+ | 0
+ | 0
+ | 0
+ | 0
+ |-
+ |Denver & Rio Grande v1
+ | 0
+ | 0
+ | 0
+ | 0
+ | 0
+ |-
+ |DictatorAI v104
+ | 10
+ | 0
+ | 5
+ | 0
+ | 5
+ |-
+ |gelignAIte v1.1
+ | 0
+ | 0
+ | 0
+ | 0
+ | 0
+ |-
+ |MailAI v20110726
+ | 5
+ | 0
+ | 5
+ | 0
+ | 0
+ |-
+ |MogulAI v5900
+ | 5
+ | 0
+ | 5
+ | 0
+ | 0
+ |-
+ |NoCAB v498
+ | 25
+ | 5
+ | 5
+ | 10
+ | 5
+ |-
+ |OtviAI v396
+ | 5
+ | 0
+ | -5
+ | 10
+ | 0
+ |-
+ |PathZilla v6
+ | 5
+ | 0
+ | 5
+ | 0
+ | 0
+ |-
+ |PAXLink v14
+ | 0
+ | 0
+ | 0
+ | 0
+ | 0
+ |-
+ |RoadRunner v6
+ | 5
+ | 0
+ | 5
+ | 0
+ | 0
+ |-
+ |rocketAI v1
+ | 0
+ | 0
+ | 0
+ | 0
+ | 0
+ |-
+ |Rondje om de kerk v385
+ | 0
+ | 0
+ | 0
+ | 0
+ | 0
+ |-
+ |SimpleAI v6
+ | 15
+ | 0
+ | 5
+ | 5
+ | 5
+ |-
+ |Terron AI v203
+ | 10
+ | 0
+ | 5
+ | 0
+ | 5
+ |-
+ |trAIns v2
+ | 5
+ | 0
+ | 0
+ | 5
+ | 0
+ |-
+ |Trans AI v100307
+ | 15
+ | 5
+ | 5
+ | 0
+ | 5
+ |-
+ |WrightAI v3
+ | 5
+ | 0
+ | 0
+ | 0
+ | 5
+|}
