@@ -1,0 +1,17 @@
+[[Translation:Main/en/Longer bridges]]
+{{en/-}}
+[[Category:fr/Réglages et préférences]]
+[[Category:fr/Construction]]
+
+Une [[Main/fr/Options avancées|option]] qui vous permet de construire des [[Main/fr/Ponts|ponts]] plus longs que prévus à l'origine.
+
+== Description ==
+Quand vous activez cette option, vous pouvez faire des ponts de 100 cases de long. Cela n'est possible qu'avec des ponts qui ont une longueur maximale normale d'au moins 16. Vous devez aussi prendre en compte que le prix pour des ponts plus longs augmente considérablement. Cette option étend le pont en bois, les ponts suspendus en acier et les ponts tubulaires.
+
+== Utilisation ==
+Cette option est désactivée par défaut. Vous pouvez l'activer via la fenêtre [[Main/en/Options avancées/Construction/Fr#Autoriser la construction de ponts très longs|Configuration avancée -> Construction]] ou avec la syntaxe suivante dans [[Main/fr/openttd.cfg|openttd.cfg]]:
+
+ [patches]
+ longbridges = true
+
+[[File:en/Longerbridges.png|center]]
