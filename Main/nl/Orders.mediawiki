@@ -1,0 +1,210 @@
+[[Translation:Main/en/Orders]]{{en/-}}{{nl/Inhoudsopgave}}
+:''Deze tutorial geeft uitleg over de orders voor de versie [[Main/en/OpenTTD 0.7.0]] en later. Als je een oudere versie gebruikt van OpenTTD kijk dan in het artikel:'' '''[[Main/en/Orders (old)|Orders (oud)(EN)]]'''
+
+'''Orders''' zijn fundamenteel om OpenTTD succesvol te kunnen spelen. [[Main/nl/Conditionele orders|Conditionele orders]] zijn uitgebreide orders die je de mogelijkheid geven extra controle over het spel te hebben. Als je geen orders toedeelt zullen je [[Main/nl/Voertuigen|voertuigen]] doelloos rondrijden en je hebt dan erg veel geluk als zij geld voor je verdienen.  Om succesvol [[Main/nl/vracht|vracht]] te laden en te lossen (wat in feite het doel is van het spel), zul je orders aan je voertuigen moeten toedelen.  Dit zijn instructies zoals "ga hier naar toe, laad die vracht, en breng die daar naar toe".
+
+==Orders geven==
+Je kunt elk voertuig dat je bezit orders toedelen. Je chauffeurs zullen trachten deze orders op te volgen (hoewel ze verdwaald kunnen raken als je netwerk slecht ontworpen is, maar dat is een apart onderwerp). Om orders toe te delen:
+
+*Zoek en klik op het voertuig waar je een order aan wilt geven. Het voertuig kan in een garage staan als je het voertuig net hebt gekocht, of het kan al onderweg zijn. Voor een trein is het voldoende om op een van de wagons te klikken; dat heeft hetzelfde effect. Dit zal het voertuigscherm tonen.
+
+*Klik de ''Orders'' knop. Dit zal het Orderscherm tonen, waarin elke order zal staan die het voertuig op dit moment heeft.
+
+*Klik ''[[Main/en/#Ga naar|Ga naar]]'' en klik dan op het station op de kaart waar het voertuig naar toe moet.
+
+*Klik op de order die je zojuist hebt aangemaakt om het te selecteren, en vertel het voertuig dan wat het moet doen op dat station. Bijv., klik ''Volledig laden'' om aan te geven dat het voertuig moet wachten totdat het volledig geladen is op dat station.
+
+==Huidige bestemming==
+Je kunt altijd zien wat de bestemming is van het voertuig in de [[Main/en/status bar|statusbalk]] en ook in het ''Orderscherm''. Aan de linkerkant van een individuele order staat een zwart driehoekje dat naar een order wijst. Dat is de huidige bestemming.
+
+==Orderscherm==
+De volgende knoppen verschijnen: 
+* '''Ga naar'''
+* '''Sla-over'''
+* '''Verwijder'''
+* en andere knoppen voor '''Station instructies'''
+
+===Ga naar===
+Dit is de manier om een voertuig naar een bepaalde locatie te sturen. Het voegt een nieuwe order toe voor de regel die is geselecteerd (die wordt wit aangegeven), of als er geen order is geselecteerd aan het eind van de lijst. Mogelijke bestemmingen om naar toe te gaan zijn: 
+*Je eigen stations, maar alleen die stations waar dit voertuig wordt geaccepteerd. Zo kun je een bus geen opdracht geven om naar een vliegveld te rijden als er geen busstation is (bij)gebouwd. Ook kun je je voertuigen niet naar een station van een tegenstander sturen.
+*[[Main/nl/Depots|Garages/Depots]] als [[Main/en/Geavanceerde instellingen/Voertuigen/Nl#Allow goto depot orders|''Sta '''Ga naar garage''' orders toe'']] is aangegeven in het ''Uitgebreide settings/voertuigen instellingenscherm''. Dit verandert sommige van de andere knoppen – zie Onderhoud en Ombouwen hieronder.
+*Voertuigen van hetzelfde type om hun [[Main/en/#Orders kopi.C3.ABren|orders te kopiëren]] of om [[Main/en/Orders/Nl#Gedeelde orders|gedeelde orders]] te maken. Zie hieronder voor meer informatie.
+*[[Main/nl/Controleposten|Controleposten]]: je kunt een trein naar een bepaalde controlepost sturen om de keuze van spoor te beïnvloeden of om er voor te zorgen dat de trein niet zoek raakt tussen ver uit elkaar gelegen stations. Een [[Main/en/#buoy|boei]] is een soort controlepost voor schepen die een lange afstand moeten afleggen tussen havens. 
+
+De ''Ga naar'' knop heeft de volgende '''opties''':
+* '''Ga naar'''
+* '''Ga naar dichtstbijzijnde garage'''
+* '''[[Main/nl/Conditionele orders|Conditionele order]] sprong'''. Met deze optie is het mogelijk om een station over te slaan, bijvoorbeeld als de trein volgeladen is.
+* '''Orders delen'''. Met deze optie neem je de orders over van een voertuig (van hetzelfde type uiteraard) waar je op klikt met je muis, en deelt deze orders met dat voertuig.
+[[File:en/Ga naar opties.png|frame|none|Ga naar opties.]]
+
+Zie [[Main/en/Quick Goto]] voor sneltoetsen om orders te maken.
+
+===Verwijder===
+Dit zal de geselecteerde order verwijderen uit de lijst; resultaat is dat de dienst aan dit station is geannuleerd met dit voertuig. 
+
+Als de "-- Einde van orders --" regel was geselecteerd, zal de gehele lijst worden verwijderd als op de knop wordt gedrukt. Merk op dat als de regel "-- Einde van gedeelde orders --" heet, deze een ander effect heeft bij verwijderen van gedeelde orders. Zie [[Main/en/#Gedeelde orders|gedeelde orders]] voor de details.
+
+===Sla-over===
+Dit veroorzaakt dat een trein de huidige bestemming zal overslaan en verder gaat naar de volgende order in de lijst. Op ''Sla-over'' drukken terwijl het voertuig op weg is naar zijn laatste order, zorgt ervoor dat deze weer zal starten bij de eerste order.
+
+==Instructies in stations==
+Behalve de knoppen ''sla-over'', ''verwijder'' en ''ga naar'', zijn er nog andere knoppen die exact aangeven wat een voertuig moet doen bij dit station, zoals het laten wachten totdat de vracht volledig is geladen, of forceren dat de vracht wordt gelost.  Voertuigen hebben vanaf versie 1.1.1 ''Alle vracht volladen'', ''Alles lossen'' en een extra ''Non-stop'' knop (in oudere versies was deze laatste non-stop knop de transfer knop voor wegvoertuigen).  Om instructies toe te voegen aan een order, klik je op die order (waardoor de andere knoppen beschikbaar komen), en dan op de instructie (Volledig laden, Lossen, etc.).
+
+Wanneer je een order ''ga naar station ... '' selecteert, zijn de volgende instructies beschikbaar:
+* '''Verander het stopgedrag'''
+* '''Verander het laadgedrag'''
+* '''Verander het los-gedrag'''
+
+Wanneer je een order ''ga naar garage ...'' selecteert, veranderen de beschikbare knoppen:
+* '''Ombouwen''' (in plaats van ''laadgedrag'')
+* '''Onderhoud''' (in plaats van ''los-gedrag'')
+
+==Opties voor het laden==
+Nu is het mogelijk het laden en lossen apart te managen. Je kunt: 
+*''"Laden indien beschikbaar"'' voor alles wat je maar kunt laden met dit voertuig
+*''"Volledig laden"'' voor een volledige lading van alles wat je laden met dit voertuig
+*''"Eén soort vracht volledig laden"'' voor een volledige lading van een soort vracht
+*''"Niet laden"'' om niets te laden
+[[File:en/Laadopties hk.png|frame|none|De laadopties.]]
+
+===Laden indien beschikbaar===
+:Het voertuig zal het station aandoen, de vracht laden die op dat moment beschikbaar is en het station verlaten op weg naar de volgende bestemming. Het is de standaard optie. Niet aanbevolen in het gebruik (behalve voor voertuigen die passagiers en post vervoeren).
+
+===Volledig laden===
+:Dit zorgt er voor dat het voertuig wacht totdat het complete geladen is met vracht voordat deze het station verlaat. Er zijn twee opties:
+:*"Volledig laden", het voertuig zal het station niet eerder verlaten dan dat alle soorten vracht volledig is geladen. (Volledig laden) wordt toegevoegd aan de order. 
+:*"Eén soort vracht volledig laden", het voertuig zal het station verlaten als ten minste een van de vrachtsoorten volledig is geladen. (Eén soort vracht volledig laden) wordt toegevoegd aan de order.
+
+===Niet laden===
+:Het voertuig zal het station aandoen zonder een lading mee te nemen. (Niet laden) wordt toegevoegd aan de order.
+
+==Opties voor het lossen==
+Om te lossen kun je:
+*''"Lossen indien geaccepteerd"'' om alleen lading te lossen die wordt geaccepteerd op dit station
+*''"Alles lossen"'' om alles te lossen
+*''"Transfer"'' om lading te verplaatsen
+*''"Niet lossen"'' om niets te lossen
+[[File:en/Losopties hk.png|frame|none|De los opties]]
+
+===Lossen indien geaccepteerd===
+: Het voertuig zal het station aandoen, zijn lading lossen die hier wordt geaccepteerd en het station weer verlaten op weg naar de volgende bestemming. Het is de standaard optie. Niet aanbevolen in het gebruik (behalve voor passagiers en post).
+
+===Alles lossen===
+:Deze instructie laat het voertuig al zijn lading lossen op dit station. Elke lading die op dit station wordt geaccepteerd zal worden afgehandeld zoals gebruikelijk, m.a.w. je zult hiervoor worden betaald. Elke lading die niet wordt geaccepteerd op dit station zal toch worden gelost en blijft wachten op een voertuig dat dit weer komt oppikken. De lading die wacht op een station wordt aangegeven met ''"Op route van (bron)"'' in het wachtscherm. Dit voertuig zal geen betaling ontvangen voor de vracht die niet wordt geaccepteerd. 
+
+:Deze optie voorkomt niet dat het voertuig nieuwe lading oppikt die staat te wachten op dit station, zonder dat het ''laadgedrag'' is bepaald. M.a.w. je moet aangeven dat deze lading niet weer opgepikt wordt door hetzelfde voertuig als je wilt dat dit door een ander voertuig moet gebeuren (bijvoorbeeld een trein die de aangevoerde kolen verder transporteert naar een energiecentrale). 
+
+===Transfer===
+:Deze optie zal er voor zorgen dat een trein zijn lading lost op een station, ongeacht of die wordt geaccepteerd, net als bij Alles lossen. Echter in dit geval ontvang je een deel van de betaling zodra de vracht verder wordt getransporteerd naar evenredigheid van de afgelegde afstand van deze vracht. Dit is vooral handig bij het gebruik van verzamelstations met zogenaamde [[Main/nl/Verladersdienst|verladersdiensten]] waar de verschillende voertuigen vracht lossen die verder wordt getransporteerd naar de eindbestemming en waarbij deze eerste voertuigen geen negatief resultaat zullen vertonen omdat zij het laatste deel van de route niet afleggen. 
+
+:Deze optie voorkomt niet dat het voertuig nieuwe lading oppikt die staat te wachten op dit station, zonder dat het ''laadgedrag'' is bepaald.
+
+:Standaard zal het voertuig ook vracht verzamelen die staat te wachten zoals gebruikelijk (de order toont "Transfer en laad vracht"). Verwarrend kan zijn dat de inhoudt dat het de vracht die zojuist is gelost ook weer kan oppikken! Dit wil je niet en je kunt dan ook kiezen voor "Niet laden" bij de laadopties (de order wordt dan "Transfer en vertrek leeg"). 
+
+===Niet lossen===
+: Het voertuig zal het station aandoen zonder iets te lossen. "(Niet lossen en …)" wordt toegevoegd aan de order.
+
+:Deze optie voorkomt niet dat het voertuig een nieuwe lading oppikt op dit station, zonder dat het ''laadgedrag'' is bepaald.
+
+==Stop opties==
+Je kunt kiezen voor:
+*''"Ga naar"''
+*''"Ga non-stop naar"''
+*''"Ga via"''
+*''"Ga non-stop via"''
+[[File:en/Non stop hk.png|frame|none|De route-opties.]]
+
+===Non-Stop===
+Het is mogelijk om direct naar een station te gaan. [[Main/en/Non-stop]] voorkomt dat het voertuig stopt op één van de stations waarlangs deze route voert op weg naar zijn bestemming.
+
+===Ga via===
+Het is mogelijk om via een station te rijden (voor elk station is mogelijk hier naar toe te gaan als non-stop). Dit is handig als je wilt dat het station wordt gebruikt als controlepost.
+
+==Onderhoud==
+Deze optie is beschikbaar als je een ''Ga naar … Garage'' order hebt geselecteerd. Dit zorgt ervoor dat het voertuig voor [[Main/en/Servicing|onderhoud]] naar deze garage rijdt. Het kan handig zijn om onderhoud op te nemen in het schema voordat het voertuig nieuwe lading gaat ophalen. 
+[[File:en/Ganaardepotorder1.png|none|frame|De opties van de onderhoudknop]]
+
+==Ombouwen==
+Je kunt een instructie opnemen om een voertuig [[Main/nl/voertuig aanpassen|om te bouwen]] in de orderlijst. Wanneer je deze optie selecteert wordt een scherm getoond waarin je moet kiezen tussen de typen vracht waarvoor dit voertuig moet worden omgebouwd. Deze order is beperkt in het gebruik omdat je normaliter een voertuig slechts één keer ombouwt voor een bepaalde vrachtsoort.
+[[File:en/Ombouwen vracht hk.png|none|frame|Kies de vracht die je wilt laten vervoeren.]]
+
+==Dienstregeling==
+{{nl/Hoofd|Dienstregeling/Nl}}
+Dienstregelingen laten je specificeren hoeveel tijd een voertuig mag gebruiken om elk deel van een route af te leggen, en hoeveel tijd dit voertuig mag stilstaan in elk station. Zie het [[Main/nl/Dienstregeling|dienstregeling]] artikel voor de details hoe je deze dienstregelingen kunt inrichten.
+[[File:en/Dienstregeling hk 1.png|none|frame|De dienstregeling interface]]
+
+==Orders kopiëren==
+Als je een dienst wilt opzetten die door meerdere [[Main/nl/Voertuigen|bussen]] wordt onderhouden, moet je elk voertuig apart dezelfde orders geven. Stel je een busdienst voor waar 5 bussen langs 5 [[Main/nl/stations|stations]] in een stad gaan om een frequente passagiersdienst te onderhouden. Het is dan vervelend om voor elk van die 5 bussen steeds dezelfde stappen te moeten uitvoeren; hiervoor kun je de orders van de ene bus kopiëren naar de andere bussen.
+
+===Instructies===
+#Geef de orders in voor de eerste bus zoals je dat normaal zou doen. 
+#Klik nu op het volgende voertuig, ga naar het orderscherm en druk op ''Ga naar''
+#In plaats van een bestemming aan te klikken zoals bij de eerste bus, '''klik je op de eerste bus''' die zijn orders al heeft gekregen (deze staat nog in de garage of [[Main/nl/Depots|depot]], of is al onderweg naar zijn bestemmingen).
+#Je ziet nu dat het tweede voertuig dezelfde orders heeft gekregen als de eerste.
+
+Om vergissingen te voorkomen, kun je alleen orders naar een voertuig kopiëren als het voertuig nog geen orders heeft. Dit om te voorkomen dat je in een druk bezocht station per ongeluk op een voertuig klikt met bestaande orders en daarmee deze orders zou overschrijven. 
+
+Kopiëren van orders is echter nog niet de beste oplossing want je zou later misschien je orders willen aanpassen en dan moet je dat voor elk voertuig apart gaan doen. Zie de gedeelde orders voor een betere manier om orders in te voeren.
+
+==Gedeelde orders==
+'''Gedeelde orders''' geven je de mogelijkheid om een set van orders met meerdere voertuigen te delen, zodat een aanpassing van de orders voor het ene voertuig, direct door de andere voertuigen, die deze orders delen, wordt overgenomen. Het maakt daarbij niet uit bij welk voertuig de orders worden aangepast – alle voertuigen delen die deze orders delen worden direct gewijzigd.
+
+===Instructies===
+#Open de orderlijst voor het voertuig waar je de orders van een ander voertuig van wilt delen, '''en klik op ''Ga naar'''''.
+#Hou de ''Ctrl'' -toets vast en klik op het andere voertuig dat de orders heeft die je wilt delen. 
+#Of kies de optie ''Orders delen'' in het '''Ga naar'''-menu en klik op het andere voertuig.
+#Nu zullen de twee voertuigen hetzelfde schema delen; zij zijn aan elkaar gekoppeld. Je zult zien dat de orders van het andere voertuig zijn overgenomen en op de laatste regel staat ''--Einde gedeelde orders--''. 
+[[File:en/Ga naar opties.png|frame|right|Ga naar opties.]]
+[[File:en/schema 2 bussen.png|none|frame|De schema's voor de 2 bussen zijn gedeeld]]
+
+Je kunt zoveel voertuigen aan elkaar koppelen als je wilt, er is geen limiet, maar je kunt uiteraard alleen voertuigen van hetzelfde type aan elkaar koppelen omdat zij dezelfde stations zullen aandoen.
+
+===Orders niet meer delen===
+Op een gegeven moment kun je besluiten dat je een voertuig niet meer wilt koppelen aan een gedeeld schema. Het is eenvoudig om alle orders dan te verwijderen, waardoor dit bij alle voertuigen, die aan elkaar gekoppeld zijn, zal worden verwijderd. In plaats daarvan: 
+#Open de orderlijst van het voertuig dat je wilt verwijderen uit de gedeelde orders.
+#Selecteer de laatste regel: ''--Eind gedeelde orders--''.
+#Klik op ''Verwijder''.
+
+Je zult zien dat alle orders nu zijn verwijderd uit de lijst bij dit voertuig, en op de laatste regel staat nu weer ''--Einde van orders--''. Alle orders van de andere voertuigen zijn niet gewijzigd door deze handeling. Nu kun je het voertuig dat uit de koppeling is gehaald weer onafhankelijk van de andere voertuigen nieuwe orders geven zoals normaal. 
+
+===Lijst van voertuigen die deze orders delen===
+Het [[File:en/SharedOrders.png]] icoontje rechts in het orderscherm (of dienstregelingscherm) is de gedeelde orders knop. Het toont een lijst van alle voertuigen die dezelfde orders delen ( [[Main/en/#Gedeelde orders|gedeelde orders]] ) als het huidige voertuig. Dit icoontje zal alleen beschikbaar zijn als het voertuig orders deelt met andere voertuigen. 
+[[File:en/gedeelde orders hk.png|none|frame|Lijst van voertuigen met gedeelde orders]]
+
+===Opmerkingen===
+*In afwijking van orders kopiëren, is het bij gedeelde orders mogelijk dat een voertuig al reeds bestaande orders heeft. Dit is omdat je bij het delen van orders de ''Ctrl'' -toets moet vasthouden, waarmee het niet waarschijnlijk is dat je per ongeluk de orders van het voertuig kwijtraakt. Door dit te doen verliest het voertuig dat je toevoegt aan de gedeelde orders zijn bestaande orders, en heeft alleen de gedeelde orders. 
+*Je kunt de ''Kloon voertuig'' knop (in het garage scherm) of ''Koop een kopie'' knop (van het voertuigscherm) gebruiken om een identieke kopie van een voertuig te maken, maar standaard worden de orders gekopieerd. Als je wilt dat dit voertuig de orders deelt met gekloonde voertuigen, hou dan de ''Ctrl'' -toets vast als je klikt op het voertuig dat je kloont. 
+[[File:en/Kloon voertuig 3.png|none|frame|Kloon voertuig knop.]]
+[[File:en/Kloon in garage hk.png|none|frame|Koop een kopie knop (alleen beschikbaar als het voertuig in de garage staat).]]
+*Met gedeelde orders is er geen "master" set van orders (m.a.w. een voertuig dat de hoofd orderlijst bewaart waaraan de andere worden gekoppeld) die je per ongeluk zou kunnen verwijderen. Zo lang er ten minste een voertuig bestaat met de orders die je wilt, zo lang is de orderlijst aanwezig.
+
+==Orders controleren==
+Wanneer je een groot bedrijf hebt met veel verschillende voertuigen en een stevig netwerk, is het onvermijdbaar dat fouten ontstaan bij sommige orderlijsten. Bijvoorbeeld als je een station weghaalt of als je per ongeluk op een hangar klikt in plaats van op een vliegveld bij het geven van orders aan een vliegtuig. 
+
+Het [[Main/en/Order review system|orderoverzicht system]] draait automatisch op de achtergrond mee en controleert voor typisch problemen die kunnen ontstaan in een orderlijst. In het geval dat zo’n probleem wordt ontdekt, zal het een nieuwsbericht uitgeven dat je informeert over de afwijking, zodat je actie kunt nemen. 
+
+===Te weinig orders in het schema===
+Om een voertuig winst te laten maken is het noodzakelijk ten minste twee stations op te nemen in het schema. Garages of controleposten tellen daarbij niet mee omdat deze niet toestaan hier vracht te laden of te lossen.
+[[File:en/Te weinig orders hk.png|none|frame|"<Voertuig> heeft te weinig orders in het schema".]]
+
+===Dubbele invoer===
+Soms is een station per ongeluk dubbel aangeklikt. Voor de meeste voertuigen veroorzaakt dit problemen bij het zoeken naar de beste route; bijvoorbeeld een vliegtuig dat opstijgt en weer landt bij hetzelfde vliegveld. 
+[[File:en/Dubbele orders hk.png|none|frame|"<Voertuig> heeft dubbele orders".]]
+
+===Ongeldige order===
+Als je een station verwijdert waar een voertuig moet stoppen, zal de geest van de station een tijdje zichtbaar blijven (in de vorm van een grijze stationsnaam). Dit geeft je de mogelijkheid een nieuw station te maken op dezelfde locatie als het oude station welk de naam van het oude station overneemt. Voertuigen zullen naar dit nieuwe station blijven komen (er van uitgaande dat het een juist type is) zonder dat je hun orders hoeft aan te passen. 
+[[File:en/ongeldige order hk.png|frame|none|"Ongeldige order"]]
+
+Echter, als je te lang wacht of geen nieuw station wilt bouwen om het oude te vervangen, zal de geest van het oude station uiteindelijk verdwijnen. Elke order van voertuigen die naar dit station verwijzen wordt vervangen door '''Ongeldige order''' en zal worden overgeslagen in de route van het voertuig.
+
+===Ongeldige stations===
+Als je een deel van een station verwijdert (bijvoorbeeld het busstation dat is gekoppeld aan een treinstation) zal de order niet nietig worden verklaard want het station bestaat nog steeds. Echter, het voertuig kan dit station niet benaderen omdat de juiste faciliteit ontbreekt. Dit leidt er toe dat het voertuig steeds opzoek blijft gaan naar dit station.
+[[File:en/ongeldig station hk.png|frame|none|"<Voertuig> heeft een ongeldig station in zijn orders".]]
+
+==Zie ook==
+* [[Main/nl/Conditionele orders|Conditionele orders]]
+* [[Main/nl/Dienstregeling|Dienstregeling]]
+* [[Main/en/Orders (old)|Orders (oud)(EN)]]
+
+[[Category:nl/Voertuigen]]
