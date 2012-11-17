@@ -1,0 +1,128 @@
+{{en/Translation|origin=Installation
+|from=en
+|to=zh
+|Percentage=50
+}}[[Translation:Main/en/Installation]]{{en/-}}{{zh/目录}}
+__TOC__
+=简介=
+自从推出1.0.0版本开始，OpenTTD的安装程序变得更简单，游戏及图形都完全使用开放源代码，并不需要额外下载基本图形。如要下载OpenTTD，请[http://www.openttd.org/download-stable 点击这里]。
+
+在安装过程中，您需要下载一套[[Main/en/base graphics|基本图形]]。
+
+现在有两套基本图形供玩家下载：
+* 使用[http://zh.wikipedia.org/wiki/开放源代码 开放源代码]的[[Main/en/OpenGFX Readme]]基本图形。如您没有运输大亨的游戏光盘，请下载此套基本图形。
+* 原本在[http://en.wikipedia.org/wiki/Transport_Tycoon 运输大亨]（TTD）光盘上的基本图形。这套基本图形跟OpenGFX不同，这基本图形'''不是'''免费的。
+
+另外，不同的[[Main/en/Operating system|操作系统]]（Windows, MacOSX, Linux）有不同的版本。
+= 安装 =
+'''选择基本图形及操作系统的安装说明:'''
+:<p style="font-size: 90%">''(如你拥有运输大亨里的基本图形，但却不能选择应选用哪套基本图形，你应选择使用在运输大亨光盘上的基本图形。OpenGFX基本图形可以事后安装。但在安装开始时把所有档案都安装（运输大亨基本图形、OpenGFX、 OpenMFX及OpenSFX 档案）是最简单的方法。'')</p>
+
+[[File:en/Installation 1a.png|frame|center|OpenTTD的下载页面: ''www.openttd.org/download-stable'']]
+
+== 在Windows上安装 ==
+===使用运输大亨基本图形===
+# 取得Windows版本的运输大亨。如果你没有游戏光盘，请参见 [http://www.google.com/search?q=transport+tycoon+deluxe 谷歌]。 '''注'''：由于运输大亨的图形是'''有版权'''的，从网上下载运输大亨是非法的。
+# 从[http://www.openttd.org/download-stable 下载页]下载Windows版本的OpenTTD。[[File:en/Installation 1b.png|frame|center|OpenTTD的Windows安装程式]]
+# 安装OpenTTD。选择元件'''OpenTTD'''及'''Copy data from TTD CD-ROM'''。[[File:en/Installation 2.png|frame|center|选择元件]]
+# Tell OpenTTD where to find your运输大亨 files; it should find them automatically if you used the运输大亨 Windows installer, if not point it to the运输大亨光盘 in the drive.
+[[File:en/Installation 3.png|frame|center|Locate运输大亨]]
+# 选择安装OpenTTD的位置。[[File:en/Installation 4.png|frame|center|选择安装位置]]
+# 选择开始选单中的目录 in which you would like to create the program's shortcuts.
+[[File:en/Installation 5.png|frame|center|Chose Start Menu Folder]]
+
+'''7.''' Select Run OpenTTD and click Finish
+[[File:en/Installation 6.png|frame|center|OpenTTD has been installed!]]
+
+===使用OpenGFX基本图形===
+# Download the Windows installer for OpenTTD from the [http://www.openttd.org/ OpenTTD website].[[File:en/Installation 1b.png|frame|center|OpenTTD的Windows安装程式]]
+# 安装OpenTTD.
+# 取消勾选"Copy Game Graphics"来跳过需要运输大亨基本图形的安装程序。[[File:en/Installation 2 gfx.png|frame|center|不使用运输大亨档案的安装设置]]
+#Editing the config file
+::'''4.1.''' Locate [[Main/en/openttd.cfg]]. It is located in:
+ Win XP : "C:\Documents and Settings\<username>\My Documents\OpenTTD"
+ Vista  : "C:\Users\<username>\Documents\OpenTTD"
+ Linux  : "~/.openttd"
+:'''4.2.''' Open [[Main/en/openttd.cfg]] using your favourite plain text editor.
+:'''4.3.''' Locate the [misc] section and add the following (or edit the existing) line to the end of that section:
+ graphicsset = "OpenGFX"
+: The name of the 基本图形 set is listed in it's obg-file and may or may not be identical to the obg's file name.
+[[File:en/Installation 9 grx manual configuration cfg.png|frame|center|Example]]
+:'''4.4.''' Save the changes you made and run OpenTTD.
+
+
+== Installation on Mac OS X ==
+{{en/Note| 1=There were no official binaries for Mac OS X for the 1.0.x branch. However, support has now resumed for the 1.1.x branch, please download the latest '''official''' testing binary (currently 1.1.0 beta5) to make sure any remaining bugs are found}}
+===Using运输大亨基本图形===
+'''1''' Get Transport Tycoon Deluxe for Windows or DOS. If you don't have your 光盘, see [http://www.google.com/search?q=transport+tycoon+deluxe Google]. '''Note''': The original graphics are '''copyrighted''', it may be illegal (in some countries) to download them.
+
+'''2''' Create an '''openttd/''' folder on your computer.
+
+'''3''' OpenTTD requires some files from运输大亨, see [[Main/en/#Files from运输大亨|below]] for what files need to go where.
+
+'''4''' Get the OSX installer for OpenTTD from the [http://www.openttd.org/download-stable downloads page].
+[[File:en/Installation 1b osx.png|frame|center|1.1.2 for Mac OSX]]
+
+'''5''' 启动OpenTTD.
+
+
+:'''Attention:''' To run the original soundtrack, you will need TiMidity and Freepats. See [[Main/en/Compiling on Linux#Playing the soundtrack|Playing the soundtrack]] for more information.
+
+
+:If the music doesn't work, the cause might be the file permissions.
+#Select all of the .gm files in the '''gm/''' folder, press CMD + I to "Get Info".
+#Under "Ownership & Permissions" select "you can: Read & Write".
+#重新启动OpenTTD.
+
+===Using OpenGFX 基本图形===
+# Download the OSX installer for OpenTTD from the [http://www.openttd.org/ OpenTTD website]. You need at least '''version 0.7.0'''.
+# 安装OpenTTD.
+# Skip the step where the installer asks for the运输大亨 files.
+# Consult the [[Main/en/OpenGFX Readme#Manually Installing OpenGFX|OpenGFX Readme]] for further instructions.
+
+== Installation on Linux ==
+
+#Within Software Center of your distribution (or Package Manager), pick OpenTTD
+#Click install
+
+You can now choose either OpenGFX graphics, or use original运输大亨 graphics if you have a copy of original game around.
+OpenGFX is faster and prefered.
+
+===选择OpenGFX基本图形===
+#开始游戏
+#In game main menu go to Check Online Options
+#Check OpenGFX, OpenMSX, OpenSFX; press download, close window
+#In game main menu, select Settings and make sure you are using three packs above
+#Play
+
+===Choosing运输大亨 for 基本图形===
+#Get Transport Tycoon Deluxe for Windows or DOS.  
+* If you don't have your 光盘, see [http://www.google.com/search?q=transport+tycoon+deluxe Google]. 
+*'''Note''': The original graphics are '''copyrighted''', it may be illegal (in USA and some countries) to download them.
+#Create an '''~/openttd/''' directory and put them there.
+
+
+== 从Linux中的代码源手动安装 ==
+参见 [[Main/en/Compiling on (GNU/)Linux and *BSD]]。
+
+= 运输大亨里的档案 =
+If you're installing OpenTTD with the运输大亨 基本图形, OpenTTD requires several original game files from your Transport Tycoon Deluxe installation 光盘.
+
+The following files are mandatory. You need to copy them to the /data directory, which is in your OpenTTD directory. These files contain the graphics and the sound effects:
+* trg1r.grf
+* trgcr.grf
+* trghr.grf
+* trgir.grf
+* trgtr.grf
+* sample.cat
+
+Additionally, you may want to copy the original game music. To accomplish that, you need to copy the /gm/ folder from the运输大亨 光盘 to your OpenTTD directory (don't put it in the data/dir!).
+
+There are a few ways to get these files:
+* Copy the folder and files from the运输大亨 game 光盘 to your OpenTTD /data folder.
+* Unzip a运输大亨 installation zip file, and copy the folders.
+* 安装TTD for Windows in another directory and then copy the folders.
+
+= 参见 =
+* [[Main/en/Installation FAQ|安装常见问题]] (其他安装方法）
+* [[Main/en/OpenGFX Readme]]
