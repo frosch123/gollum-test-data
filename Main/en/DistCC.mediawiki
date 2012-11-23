@@ -1,0 +1,23 @@
+Compiling with DistCC is relatively easy, as long as you compile via the Makefile.
+
+=== What is DistCC? ===
+
+[http://distcc.samba.org/ DistCC] is a small program which allows cross-network compiling. In other words, instead of your PC alone doing to work, it sends out files to be compiled on other hosts. This way you can speed up your compile-time by a lot.
+
+=== How to configure OpenTTD to use DistCC? ===
+
+Simply:
+
+* Run <code>make</code> first, wait till you see the language files compile, then stop it. This is needed so we have a ''Makefile.config''.
+* Open ''Makefile.config''.
+* Goto <code>CC_TARGET=</code>, change this in: <code>CC_TARGET=distcc gcc</code> <- where gcc is your compiler, see note below.
+* Goto <code>CC_HOST</code>, change this in <code>CC_HOST=gcc</code> <- where gcc is your compiler, see note below.
+* Save file, close.
+* Type <code>make -jN</code>, where N is the amounts of CPUs + 1 (or any other number, just don't put it to high).
+
+{{note|Not all compilers can build files that your computer can read. This means you have to be very careful which hosts you use to help you out compiling.
+Gentoo has a nice solution for that: it doesn't use ''gcc'', but, for example, ''i386-linux-pc-gnu-gcc''. Every host that supports this platform has this file, and so distcc can compile perfectly. Not all distros have this solution, so don't be all too surprised if you get weird errors.
+Also, most distros support cross-compiling tools. Installing this on a slave can help out.}}
+
+[[Category:en/Compiling OpenTTD]]
+[[Category:en/Program Descriptions]]
