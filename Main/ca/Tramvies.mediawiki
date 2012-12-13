@@ -1,0 +1,69 @@
+[[Translation:Main/en/Tramways]]{{en/-}}{{ca/Taula de contingut}}
+
+Els '''tramvies''' són una funcionalitat que permet construir vies per a tramvies, que poden ser construïdes sobre carreteres existents o pel terreny. Els gràfics per defecte de les infraestructures dels tramvies van ser creats per [[Main/en/PikkaBird]]. Per a jugar amb tramvies necessites un fitxer [[Main/en/NewGRF]] amb tramvies actiu. Com altres sistemes de transport, els tramvies requereixen la seua pròpia infraestructura, incloent-hi les cotxeres.
+[[File:en/Tramroute.png|thumb|600px|left|Un exemple d’una ruta de tramvia]]
+__TOC__
+{{html-clear-left}}
+
+==Tipus de carreteres==
+Per a seleccionar el tipus de via per a construir, faça clic i mantinga pressionat el botó de construeix carreteres [[File:en/Road build button.png]] del menú principal.
+[[File:ca/Tramwaymenu.png|none|frame|Trie construcció de tramvies]]
+* [[Main/ca/Construir carreteres|Carreteres]] - [[Main/ca/Camions|Camions]] i [[Main/ca/Autobusos|autobusos]] circulen per les carreteres.
+* Tramvies - Els tramvies circulen per les seues vies.
+* Carreteres de doble ús -  Permet circular a camions, autobusos i tramvies, per a això ha de construir la línia de tramvia per damunt d'una carretera.
+
+==Disponibilitat==
+Pel fet que els tramvies són encara una funcionalitat nova per a OpenTTD i [[Main/en/TTDPatch]], no hi ha molts fitxers NewGRF de tramvies totalment complets. Encara que sí que hi ha algunes versions prèvies o de prova que poden trobar-se a la [[Main/en/NewGRF List|llista de GRF]] o a [http://grfcrawler.tt-forums.net/index.php?do=list&cid=105 GRF Crawler]. Per favor, mire també en els [http://www.tt-forums.net/viewforum.php?f=26 TT-Forums] per a trobar més fitxers NewGRF amb tramvies.
+
+Per a construir un tramvia, primer assegure’s de que té algun vehicle del tramvia [[Main/en/NewGRF]] instal·lat i activat:
+*'''Instal·lar:''' Use el botó ''"Contingut en línia"'' del menú principal; escriga com ''marca/anomena filtre:'' '''tram'''; marque els fitxers NewGRF que desitge i descarregue’ls.
+:[[File:ca/Tramways install.png|none|frame|Per a instal·lar fitxers NewGRF.]]
+*'''Activar:''' Use el botó ''"Extensions NewGRF"'' del menú inicial i apareixerà la finestra ''Paràmetres NewGRF'' amb el ''Arxius NewGRF actius'', per a activar nous arxius trie'ls de la llista d'''archius NewGRF inactius'' polse ''"Afegeix"''.
+:[[File:ca/Available NewGRF files.png|none|frame|Polse ''Afegeix'' per afegir arxius a la llista d'arxius actius.]]
+
+===''Sets'' de Tramvies===
+* [[Main/en/Generic Road Vehicle and Tram Set]]
+{{ca/Característica|0.6|text='' - Generic Tram Set''|align="right"}}
+* [[Main/en/Generic Tram Set]] (part de la versió oficial 0.6.0 d'OpenTTD) (Nota, encara que l’autor és el mateix, el primer set no és un superset que inclou al segon: [http://www.tt-forums.net/viewtopic.php?p=643673#p643673]){{en/-right}}
+* [[Main/en/Dutch Tram Set]]
+* [[Main/en/Ligtrail/Tramtracks]]
+* [[Main/en/New Tram Tracks]]
+* [[Main/en/Urban Suspended Monorail]]
+
+==Barra d'eines Construcció de Tramvies==
+Faça clic i mantinga pressionat el botó Construeix carreteres [[File:en/Road build button.png]] de la [[Main/en/Interfície del joc/Ca#La barra de menú|barra de menú]],  i seleccione Construcció de tramvies per a mostrar la barra d'eines Construcció de tramvies.
+[[File:ca/Tramway construction.png|none|frame|Barra d'eines Construcció de tramvies]]
+
+Funcions dels botons (d’esquerra a dreta ):
+
+{|border="2" width="100%" cellspacing="4" cellpadding="3" rules="all" style="margin:1em 1em 1em 0; border:solid 1px #AAAAAA;"
+!width='100' style="background:#efefef;"|Botó
+!width='150' style="background:#efefef;"|Acció
+!style="background:#efefef;"|Abrev.
+!style="background:#efefef;"|Descripció
+|-
+|[[File:en/Build tram.png]]||'''Botons construeix vies per a tramvia'''||1, 2||Construeix una via de tramvia en la direcció triada; ha de fer clic i arrossegar.
+|-
+|[[File:en/Autotram.png]]||'''Botó [[Main/ca/Autotramvia|Autotramvia]]'''||3||Una eina molt eficaç de construir vies de tramvia en qualsevol direcció. Si s’utilitza amb la tecla Ctrl pressionada les elimina fàcilment.
+|-
+|[[File:en/Clear title.png]]||'''Botó [[Main/ca/Paisatge|Enderroca]]'''||4||Borra la casella.
+|-
+|[[File:en/Build roaddepot.png]]||'''Botó construeix [[Main/ca/Cotxeres i depòsits|cotxeres]]'''||5||Obri la finestra per a col·locar depòsits amb l’orientació adequada.
+|-
+|[[File:en/Build busstation.png]]||'''Botó construeix [[Main/en/Estacions/Ca#Estacions de tramvia|estació de passatgers]]'''||6||Obri la finestra per a col·locar estacions de tramvia de passatgers amb l’orientació adequada.
+|-
+|[[File:en/Build truckstation.png]]||'''Botó construeix [[Main/en/Estacions/Ca#Estacions de càrrega|estació de càrrega]]'''||7||Obri la finestra per a col·locar estacions de tramvia de càrrega amb l’orientació adequada.
+|-
+|[[File:en/Build roadbridge.png]]||'''Construeix [[Main/ca/Ponts|pont]]'''||B||Li permet construir ponts.
+|-
+|[[File:en/Build roadtunnel.png]]||'''Construeix un [[Main/ca/Túnels|túnel]]'''||T||Li permet construir túnels.
+|-
+|[[File:en/Toggle clear active.png]]||'''Canvia construeix/treu'''||R (CTRL)||Seleccione una altra eina i després aquesta per a eliminar aqueix element. Pot canviar el seu estat pressionant Ctrl.
+|}
+
+A més de la construcció vies, cotxeres i estacions en terreny pla també es pot [[Main/ca/Construir en pendents|construir en pendents]].
+
+==Comprar tramvies==
+Construïsca unes cotxeres de tramvies i faça clic en elles. Per a adquirir un vehicle polse el botó Nous Vehicles. A continuació, seleccione un vehicle i compre'l. Apareixerà situat a les cotxeres i s’obrirà una finestra de control del vehicle. Done-li ordres o remodele'l, i faça clic en la barra inferior on posa "Parat" per a posar en marxa el Tramvia. Els tramvies només poden donar la volta a l’extrem final de la via.
+
+[[Category:en/0.6.0 Features]]
