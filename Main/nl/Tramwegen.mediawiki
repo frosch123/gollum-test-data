@@ -1,0 +1,73 @@
+[[Translation:Main/en/Tramways]]{{en/-}}{{nl/Inhoudsopgave}}
+
+'''Trams''' vormen een toepassing die je de mogelijkheid geven om [[Main/nl/Tramwegen|tramwegen]] te construeren, welke kunnen worden gebouwd op open grond en op een bestaand wegennet. De standaard tram infrastructurele afbeeldingen zijn geleverd door [[Main/en/PikkaBird]]. Om met trams te kunnen spelen, moet je een actief tramvoertuig hebben [[Main/nl/NewGRF|NewGRF]]. Zoals met andere transport systemen, verlangen trams hun eigen infrastructuur, inclusief [[Main/nl/depots|depots]].
+[[File:en/Tramroute.png|thumb|600px|left|Een voorbeeld van een tram route]]
+__TOC__
+{{html-clear-left}}
+
+===Typen van wegen===
+Om te selecteren welk type van wegen je wilt bouwen, klik en hou je de wegenconstructieknop vast in het hoofdmenu.
+[[File:en/Tramwegen1.png|none|frame|Kies Bouw tramwegen]]
+* [[Main/nl/Wegconstructies|Normale wegen]] - [[Main/nl/Wegvoertuigen|Vrachtwagens]] en [[Main/nl/bussen|bussen]] rijden op deze weg.
+* Tramwegen - Trams rijden op deze weg.
+* Wegen voor beide doeleinden - Staan toe dat zowel vrachtwagens en bussen als trams hier op rijden. Bouw een tramweg direct op een normale weg om dit type te maken.
+
+==Beschikbaarheid==
+Omdat dit een relatief nieuwe toepassing is in OpenTTD en [[Main/en/TTDPatch]], zijn er nog niet veel tram voertuigen GRF's geheel compleet. Er zijn echter een paar pre-releases of test versies welke opgesomd zijn in de [[Main/en/NewGRF List]] of op [http://grfcrawler.tt-forums.net/index.php?do=list&cid=105 GRF Crawler]. Kijk ook even op [http://www.tt-forums.net/viewforum.php?f=26 TT-Forums] voor tram voertuigen sets.
+
+Om een tram te bouwen moet je er eerst voor zorgen dat je enkele [[Main/en/NewGRF]] bestanden hebt '''geïnstalleerd en geactiveerd:'''
+*'''Om te installeren:''' Gebruik de ''"NewGRF-instellingen"'' en de ''"Online inhoud zoeken"'' knop in het startvenster (''Let op: In versie 1.1.1 is het niet meer mogelijk om in een lopend spel nieuwe GRF's te installeren.''); dan type je achter ''tag/naamfilter:'' '''tram'''; je vinkt het gewenste NewGRF bestand aan en download het. 
+:[[File:en/Tramways install.png|none|frame|Om een NewGRF bestand te installeren.]]
+*'''Om te activeren:''' Gebruik de ''"NewGRF-instellingen"'' knop en het NewGRF-instellingen venster verschijnt. Om een nog niet geactiveerd bestand toe te voegen kies je het gewenste bestand en klikt op ''"Toevoegen"''. Het bestand komt dan in de lijst van actieve NewGRF's te staan. Met de knop ''"Wijzigingen doorvoeren"'' neem je deze wijziging op in je algemene NewGRF-instellingen voor elk nieuw spel.
+:{|
+|[[File:en/NewGRF inst venster 111a.png|none|frame|Om een NewGRF bestand te installeren klik je op '''Toevoegen'''.]]
+|}
+===Tram sets===
+* [[Main/en/Generic Road Vehicle and Tram Set]] (or GRVTS)
+* [[Main/en/Generic Tram Set]] (part of the official 0.6.0 release of OpenTTD) (Note that, despite being from the same author, the first set is not a superset of the latter: [http://www.tt-forums.net/viewtopic.php?p=643673#p643673])
+{{en/Feature|0.6}}
+* [[Main/en/Dutch Tram Set]]
+* [[Main/en/Light-rail/Tramtracks]]
+* [[Main/en/New Tram Tracks v0.4.1]]
+* [[Main/en/Urban Suspended Monorail]]
+
+==Bouw tramwegen werkbalk==
+Klik en hou de wegenbouwknop vast [[File:en/Road build button.png]] op de [[Main/en/Spelinterface/Nl#De menubalk|menubalk]], en kies ''Bouw tramwegen'' om de werkbalk te tonen.
+
+[[File:nl/Tramway construction.png|none|frame|De tramwegen werkbalk]]
+
+Functies van de knoppen (van links naar rechts):
+{| {{en/Wikitable}}
+|- style="background:#efefef"
+!width='46'|Knop
+!width='150'|Actie
+!Sneltoets
+!Beschrijving
+|-
+|[[File:en/Build tram.png]]||'''Bouw tramweg knoppen'''||1, 2||Bouwt een tramweg in de geselecteerde richting; je kunt klikken en slepen.
+|-
+|[[File:en/Autotram.png]]||'''Autotram-methode knop'''||3||Een zeer efficiënt gereedschap om tramwegsecties te bouwen in elke richting. Bij gebruik samen met de Ctrl-toets ingedrukt kunnen eenvoudig secties worden verwijderd.
+|-
+|[[File:en/Clear title.png]]||'''[[Main/nl/Terreinvorming|Verwijder object]] knop'''||4||Maakt de tegel leeg van objecten.
+|-
+|[[File:en/Build roaddepot.png]]||'''Bouw [[Main/nl/Depots|tramdepot]] knop'''||5||Opent het depotvenster waarin je de richting van het te bouwen depot kunt aangeven.
+|-
+|[[File:en/Build busstation.png]]||'''Bouw [[Main/nl/Stations|passagiertramhalte]] knop'''||6||Opent het passagierstramhalte venster om de richting van de te bouwen tramhalte aan te geven.
+|-
+|[[File:en/Build truckstation.png]]||'''Bouw [[Main/nl/Stations|vrachttramstation]] knop'''||7||Opent het vrachttramstation venster om de richting van het te bouwen laadperron aan te geven.
+|-
+|[[File:en/Build roadbridge.png]]||'''Bouw [[Main/nl/Bruggen|brug]]'''||B||Staat je toe een brug te bouwen.
+|-
+|[[File:en/Build roadtunnel.png]]||'''Bouw [[Main/nl/Tunnels|tunnel]]'''||T||Staat je toe een tunnel te bouwen.
+|-
+|[[File:en/Toggle clear active.png]]||'''Bulldozer'''||R (CTRL)||Selecteer een ander gereedschap en dan deze knop om het item te verwijderen. Je kunt dit ook doen met de Ctrl-toets.
+|}
+
+Behalve het bouwen op vlakke wegen, kunnen depots en stations ook worden gebouwd op [[Main/nl/Bouwen op hellingen|hellingen]].
+
+Wanneer je tramwegen bouwt, denk er dan aan dat tramwagens een eindlus moeten hebben om terug om te kunnen draaien. Een eindlus wordt gebouwd door een halve tegel met een tramspoor te bouwen. Alhoewel de lus de hele tegel op de kaart lijkt te bedekken, gebruikt het slechts de helft van de tegel. De halve tegel is altijd open aan de zijde van de opening, in feite dus aan de andere kant van de lus. Dit is belangrijk om te weten als je een enkel spoordeel wilt verwijderen. Meer dan een tramwegdeel aanleggen op een tegel maakt een recht of gebogen spoor of een kruising en staat de tram niet toe om te keren.
+
+==Trams bouwen==
+Plaats dan een tramdepot, bouw een tramvoertuig door op ''nieuwe wegvoertuigen'' te klikken, selecteer dan een voertuig en koop het. Het zal worden geplaatst in het tramdepot en het voertuigvenster wordt geopend. Geef het [[Main/nl/orders|orders]], en klik op de balk onderaan met de tekst "Gestopt" om de tram te laten rijden. 
+
+[[Category:en/0.6.0 Features]]
