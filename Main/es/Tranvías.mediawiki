@@ -1,0 +1,70 @@
+[[Translation:Main/en/Tramways]]{{en/-}}{{es/Tabla de contenido}}
+
+Los '''tranvías''' son una funcionalidad que permite construir vías para tranvías, que pueden ser construidas sobre carreteras existentes o por el terreno. Los gráficos por defecto de las infraestructuras de los tranvías fueron creados por [[Main/en/PikkaBird]]. Para jugar con tranvías necesitas un fichero [[Main/en/NewGRF]] con tranvías activo. Como otros sistemas de transporte, los tranvías requieren su propia infraestructura, incluyendo los depósitos. {{html-clear-left}}
+[[File:en/Tramroute.png|thumb|600px|left|Un ejemplo de una ruta de tranvía]]
+__TOC__
+{{html-clear-left}}
+
+==Tipos de carreteras==
+Para seleccionar el tipo de vía para construir, haga clic y mantenga presionado el botón de construir carreteras [[File:en/Road build button.png]] en el menú principal.
+[[File:es/Tramwaymenu.png|none|frame|Elija construcción de tranvía]]
+* [[Main/es/Construir carreteras|Carreteras]] - [[Main/es/Camiones|Camiones]] y [[Main/es/Autobuses|autobuses]] circulan por las carreteras.
+* Tranvías - Los tranvías circulan por sus vías.
+* Carreteras de doble uso -  Permite circular a camiones, autobuses y tranvías, para ello construya la línea de tranvía sobre una carretera.
+
+==Disponibilidad==
+
+Debido a que los tranvías son todavía una funcionalidad nueva para OpenTTD y [[Main/en/TTDPatch]], no hay muchos ficheros NewGRF de tranvías totalmente completos. Aunque sí que existen algunas versiones previas o de prueba que pueden encontrarse en la [[Main/en/NewGRF List|lista de GRF]] o en [http://grfcrawler.tt-forums.net/index.php?do=list&cid=105 GRF Crawler]. Por favor, mire también en los [http://www.tt-forums.net/viewforum.php?f=26 TT-Forums] para encontrar más ficheros NewGRF con tranvías.
+
+Para construir un [[Main/es/Tranvías|tranvía]], primero asegúrese de que tiene algún vehículo del tranvía [[Main/en/NewGRF]] instalado y activado:
+*'''Instalar:''' Use el botón ''"Consultar contenido online"'' del menú principal; escriba como ''etiqueta/nombre de filtro:'' '''tram'''; marque los archivos NewGRF que desee y descárguelos.
+:[[File:es/Tramways install.png|none|frame|Para instalar archivos NewGRF.]]
+*'''Activar:''' Use el botón ''"Configuración NewGRF"'' del menú principal y aparecerá la ventana ''"Configuración de NewGRF"'' con una lista de los ''archivos NewGRF activos'', para activar nuevos archivos pulse seleccionélos de la lista de abajo y pulse ''"Añadir"''.
+:[[File:es/Available NewGRF files.png|none|frame|Pulse ''Añadir''.]]
+
+===Sets de tranvías===
+* [[Main/en/Generic Road Vehicle and Tram Set]]
+* [[Main/en/Generic Tram Set]] (parte de la versión oficial 0.6.0 de OpenTTD) (Note, aunque el autor es el mismo, el primer set no es un superset que incluye al segundo: [http://www.tt-forums.net/viewtopic.php?p=643673#p643673])
+* [[Main/en/Dutch Tram Set]]
+* [[Main/en/Ligtrail/Tramtracks]]
+* [[Main/en/New Tram Tracks]]
+* [[Main/en/Urban Suspended Monorail]]
+
+==Barra de herramientas Construcción de tranvía==
+Haga clic y mantenga presionado el botón Construir carreteras [[File:en/Road build button.png]] de la [[Main/en/Interfaz del juego/Es#La barra de menú|barra de menú]],  y seleccione Construcción de tranvía para mostrar la barra de herramientas Construcción de tranvía.
+
+[[File:es/Tramway construction.png|none|frame|Barra de herramientas Construcción de tranvía]]
+
+Funciones de los botones (de izquierda a derecha):
+{| {{en/Wikitable}}
+|- style="background:#efefef"
+!width='100'|Botón
+!width='150'|Acción
+!Atajo
+!Descripción
+|-
+|[[File:en/Build tram.png]]||'''Botones construir vías para tranvía'''||1, 2||Construye un tranvía en la dirección elegida; debe hacer clic y arrastrar.
+|-
+|[[File:en/Autotram.png]]||'''Botón [[Main/es/Autotranvía|Autotranvía]]'''||3||Una herramienta muy eficaz de construir vías de tranvía en cualquier dirección. Si se utiliza con la tecla Ctrl presionada, las elimina fácilmente.
+|-
+|[[File:en/Clear title.png]]||'''Botón [[Main/es/Paisaje|Demoler]]'''||4||Borra la casilla.
+|-
+|[[File:en/Build roaddepot.png]]||'''Botón construir [[Main/es/Depósitos|depósito]]'''||5||Abre la ventana para colocar depósitos con la orientación adecuada.
+|-
+|[[File:en/Build busstation.png]]||'''Botón construir [[Main/en/Estaciones/Es#Estaciones de tranvía|estación de pasajeros]]'''||6||Abre la ventana para colocar estaciones de tranvía de pasajeros con la orientación adecuada.
+|-
+|[[File:en/Build truckstation.png]]||'''Botón construir [[Main/en/Estaciones/Es#Estaciones de carga|estación de carga]]'''||7||Abre la ventana para colocar estaciones de tranvía de carga con la orientación adecuada.
+|-
+|[[File:en/Build roadbridge.png]]||'''Construir [[Main/es/Puentes|puentes]]'''||B||Le permite construir puentes.
+|-
+|[[File:en/Build roadtunnel.png]]||'''Construir [[Main/en/Túneles|túneles]]'''||T||Le permite construir túneles.
+|-
+|[[File:en/Toggle clear active.png]]||'''Activar construir/quitar'''||R (CTRL)||Seleccione otra herramienta y luego esta para eliminar ese elemento. Puede cambiar su estado presionando Ctrl.
+|}
+
+Además de la construcción vías, depósitos y estaciones en terreno llano también se puede [[Main/es/Construir en colinas|Construir en colinas]].
+
+==Construir tranvías==
+Construya un depósito de tranvías y haga clic en él. Para adquirir un vehículo pulse el botón Nuevos Vehículos. A continuación, seleccione un vehículo y cómprelo. Aparecerá situado en el depósito y se abrirá una ventana de control del vehículo. Dele órdenes o refórmelo, y haga clic en la barra inferior donde pone "Parado" para poner en marcha el Tranvía. Los tranvías sólo puede dar la vuelta en el extremo final de la vía.
+
+[[Category:en/0.6.0 Features]]
