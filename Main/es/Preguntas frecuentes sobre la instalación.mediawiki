@@ -1,0 +1,79 @@
+[[Translation:Main/en/Installation FAQ]]{{en/-}}{{es/FAQmenu}}
+Este artículo trata sobre las '''preguntas más frecuentes sobre la instalación''' de OpenTTD.
+
+==¿Qué necesito para ejecutar OpenTTD?==
+Tendrá que estar ejecutando uno de los [[Main/es/Sistema operativo|sistemas operativos compatibles]]. A continuación, compruebe que su sistema cumple los [[Main/es/requisitos del sistema|requisitos del sistema]].
+
+==¿Cómo se instala OpenTTD?==
+=== En Windows: ===
+:*Muy sencillo, sólo unos pasos:
+:#''Obtenga'' una copia de Transport Tycoon Deluxe para Windows o DOS (Nota: ya no es necesario con [[Main/es/OpenGFX Léame|OpenGFX]] y [[Main/es/Reemplazo de efectos de sonido|OpenSFX]]).
+:#Anote dónde ha instalado o descomprimido el juego.
+:#Obtenga el instalador de Windows para OpenTTD de la página de [http://www.openttd.org/download-stable descargas] (o simplemente el archivo zip completo del mismo lugar).
+:#¡Doble clic!
+:#Indíquele al instalador dónde encontrar los archivos de TTD (o ponga OpenGFX y OpenSFX en el directorio /data del archivo descomprimido).
+:#Ejecute OpenTTD.
+:#Maravíllese de la esplendorosa pantalla de bienvenida.
+
+:Puede también, por supuesto, obtener el [[Main/es/código fuente|código fuente]] y compilarlo usted mismo; esto es sólo el camino más fácil y rápido. ''(Pero si toma el camino más largo... ¿aumentarán sus ingresos por ruta?... ¿O tendrá que esperar al monorraíl?...)
+
+=== En Pocket PC: ===
+Visite [http://www.esoftinteractive.com/forums/viewforum.php?f=23 este foro] para obtener las instrucciones de instalación.
+
+=== En Linux: ===
+* Como con la mayoría de las cosas en Linux, hay varias maneras de obtener una copia de trabajo de OpenTTD:
+:* Puede encontrar OpenTTD dentro del paquete de distribución (como por ejemplo, Aptitude, Yum, Portage y YaST). Para más información sobre el uso de este sistema, consulte el manual de cada paquete de distribución o su página web.
+:* Puede encontrar paquetes para algunas distribuciones en la página del proyecto sourceforge, tales como los achivos .deb y .rpm.
+:* También puede descargar el código fuente y compilar usted mismo el juego. Puede leer cómo hacerlo aquí: [[Main/es/Compilar en Linux|Compilar en Linux]]
+* Ahora que debe tener una copia de OpenTTD, necesitará algunos de archivos de Transport Tycoon Deluxe que contienen imágenes y sonidos: 
+:* Si ha utilizado un paquete para instalar el juego:
+::* Puede insertar el CD-ROM de TTD y copiar los archivos necesarios en su directorio /usr/share/games/openttd/data. (los archivos necesarios se enumeran más adelante)
+::* Si usted tiene un sistema de arranque múltiple que incluye una partición de Windows o si tiene acceso a un sistema Windows a través de red que tienen instalado TTD, puede copiar los archivos necesarios desde el directorio de instalación a /usr/share/games/openttd/data. (los archivos necesarios se enumeran más adelante).
+:::*Si copia los archivos desde otro PC en red, asegúrese de estar en posesión de una licencia para usar los archivos.
+:* Si ha compilado usted mismo el juego:
+::* Puede insertar el CD-ROM de TTD y copiar los archivos necesarios para el directorio ./data en el directorio donde ha compilado el juego. (los archivos necesarios se enumeran más adelante)
+::* Si usted tiene un sistema de arranque múltiple que incluye una partición de Windows o si tiene acceso a un sistema Windows a través de red que tiene instalado TTD, puede copiar los archivos necesarios desde el directorio de instalación al directorio ./data del directorio donde ha compilado el juego (los archivos necesarios se enumeran más adelante).
+:::*Si copia los archivos desde otro PC en red, asegúrese de estar en posesión de una licencia de los archivos
+
+=== En Mac OS X: ===
+
+:*Muy sencillo, sólo unos pasos:
+:#''Obtenga'' una copia de Transport Tycoon Deluxe para Windows o DOS.
+:#Obtenga el instalador'''[*1]''' OSX para OpenTTD de la página de [http://www.openttd.org/download-stable descargas]
+:#Monte la imagen descargada y copie OpenTTD en una carpeta de su elección, por ejemplo /Aplicaciones/OpenTTD/ (se recomienda crear la carpeta vacía y añadirle los archivos).
+:#Cree una carpeta llamada "data" en la carpeta donde colocó OpenTTD y mueva los archivos .grf y sample.cat de su copia de TTD.
+:#[Opcionalmente:] Cree una carpeta "gm" y copie los archivos .gm dentro de ella para obtener los archivos de música'''[*2]'''.
+:#Ejecute OpenTTD.
+'''[*1]''' La última versión compilada disponible para Mac OSX es la [http://gb.binaries.openttd.org/binaries/releases/0.7.5/index.html 0.7.5], después [http://www.openttd.org/en/news/103 Mac OSX ha dejado de estar soportado] por falta de desarrollador. (Puede obtener versiones no oficiales en los foros [http://www.tt-forums.net/viewtopic.php?f=29&t=48329 tt-forums.net], [http://ttdistas.es/descargas ttdistas.es]...)
+
+'''[*2]''' Si tiene problemas para escuchar la música, a veces se resuelven cambiando los permisos de los archivos: Seleccione todos los archivos de la carpeta gm que acaba de crear, haga CMD+I ''Obtener información''. Y luego en el apartado ''Permisos y propietario'' seleccione "Puede" ''Leer y escribir''.
+
+=== En otros sistemas: ===
+:*Si se trata de un sistema operativo tipo Unix, tiene bastantes posibilidades de jugar con OpenTTD en él. Se ejecuta en varios sistemas y arquitecturas diferentes a los mencionados aquí.
+:*Busque en la [[Main/es/Sistema operativo|lista de sistemas operativos]] si hay información sobre su SO.
+:#Asegúrese de que la [http://libsdl.org biblioteca SDL] está disponible para su plataforma e instalada en su sistema.
+:#Descargue el código fuente de OpenTTD y trate de compilar el juego usted mismo.
+:#Agregue una entrada a la [[Main/es/Sistema operativo|lista de sistemas operativos]], aunque no haya tenido éxito.
+
+== ¿Qué archivos necesito de TTD? ==
+:*Si no está utilizando el instalador (o simplemente por curiosidad) tiene que copiar algunos archivos a mano de la versión original de TTD.
+:Archivos necesarios, ponerlos en la carpeta <i>data/</i>:
+::*Archivos gráficos: <b>trg1r.grf</b>, <b>trgcr.grf</b>, <b>trghr.grf</b>, <b>trgir.grf</b>, <b>trgtr.grf</b>
+:::*Si está utilizando la versión DOS de TTD en lugar de la versión Windows, los archivos que debe copiar se llaman igual, pero sin la "R" final, por ejemplo, trg1.grf, etc
+::*Archivo de sonido: <b>sample.cat</b>
+:Si también quiere la música, copie los siguientes archivos a la carpeta <i>gm/</i>:
+::*Archivos de música: <b>*.gm</b>
+::Si no hay ninguna carpeta gm, creéla dentro de la carpeta principal de OpenTTD, y ponga los archivos allí. Tenga en cuenta que la versión DOS de TTD no tiene archivos <b>*.gm</b>.
+
+En los equipos *nix, es necesario asegurarse de que tiene permiso para ver estos archivos anteriores como usuario normal, de lo contrario, sólo será capaz de ejecutar OTTD como root.
+
+Nota: también puede usar los archivos [[Main/es/OpenGFX Léame|OpenGFX]] y [[Main/es/Reemplazo de efectos de sonido|OpenSFX]], que permiten iniciar OpenTTD sin los archivos de TTD. Por favor, lea el artículo [[Main/es/OpenGFX Léame|"OpenGFX Léame"]] cuidadosamente.
+
+==¿Cómo instalar la versión de desarrollo (nightly)? ==
+La versión en desarrollo (nightly) se instala sobre la última versión estable.
+Descargue el archivo de la última versión nigthly, a continuación, instálelo en la carpeta donde instaló su OpenTTD. Es recomendable hacer una copia de seguridad de la última versión estable.
+
+Para jugar siempre la última versión de desarrollo (nightly) puede utilizar un [[Main/es/Actualizadores para OpenTTD|actualizador]], de este modo se actualizará automáticamente a la última versión  [[Main/es/nigthtly|nightly]] cada vez que inicie OpenTTD.
+
+[[Category:es/Preguntas frecuentes]]
+[[Category:es/Instalación]]
