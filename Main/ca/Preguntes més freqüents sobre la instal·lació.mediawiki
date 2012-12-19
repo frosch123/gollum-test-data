@@ -1,0 +1,79 @@
+[[Translation:Main/en/Installation FAQ]]{{en/-}}{{ca/FAQmenu}}
+Aquest article tracta sobre les '''preguntes més freqüents sobre la instal·lació''' d’OpenTTD.
+
+==Què necessite per a executar OpenTTD?==
+Haurà d’estar executant un dels [[Main/ca/Sistema operatiu|sistemes operatius compatibles]]. A continuació, comprove que el seu sistema compleix els [[Main/ca/requisits del sistema|requisits del sistema]].
+
+==Com s’instal·la OpenTTD?==
+=== En Windows: ===
+:*Molt senzill, només uns passos:
+:#''Obtinga'' una còpia de Transport Tycoon Deluxe per a Windows o DOS (Nota: ja no cal amb [[Main/ca/OpenGFX|OpenGFX]] i [[Main/ca/OpenSFX|OpenSFX]]).
+:#Anote on ha instal·lat o descomprimit el joc.
+:#Obtinga l’instal·lador de Windows per a OpenTTD de la pàgina de [http://www.openttd.org/download-stable descàrregues] (o simplement el fitxer zip complet del mateix lloc).
+:#Doble clic!
+:#Indique-li a l’instal·lador on trobar els fitxers de TTD (o instal·le OpenGFX i OpenSFX en el directori /data del joc una vegada descomprimit).
+:#Execute OpenTTD.
+:#Meravelle’s de l’esplendorosa pantalla de benvinguda.
+
+:Pot també, per descomptat, obtenir el [[Main/ca/codi font|codi font]] i compilar-lo vosté mateix; açò és només el camí més fàcil i ràpid. ''(Però si agafa el camí més llarg... augmentaran els seus ingressos per ruta?... O haurà d’esperar al monorail?...)
+
+=== En Pocket PC: ===
+Visite [http://www.esoftinteractive.com/forums/viewforum.php?f=23 aquest fòrum] per a obtenir les instruccions d’instal·lació.
+
+=== En Linux: ===
+* Com amb la majoria de les coses en Linux, hi ha diverses maneres d’obtenir una còpia de treball d’OpenTTD:
+:* Pot trobar OpenTTD dins del paquet de distribució (com per exemple, Aptitude, Yum, Portage i YaST). Per a més informació sobre l’ús d’aquest sistema, consulte el manual de cada paquet de distribució o la seua pàgina web.
+:* Pot trobar paquets per a algunes distribucions en la pàgina del projecte sourceforge, com ara els fitxers .deb i .rpm.
+:* També pot descarregar el codi font i compilar vosté mateix el joc. Llija [[Main/ca/Compilar en Linux|Compilar en Linux]]
+* Ara que ja ha de tenir una còpia d’OpenTTD instal·lada, necessitarà alguns fitxers de Transport Tycoon Deluxe que contenen imatges i sons: 
+:* Si ha utilitzat un paquet per a instal·lar el joc:
+::* Pot inserir el CD-ROM de TTD i copiar els fitxers necessaris al seu directori /usr/share/games/openttd/data. (els fitxers necessaris s’enumeren més endavant)
+::* Si vosté té un sistema d’arrancada múltiple que inclou una partició de Windows o si té accés a un sistema Windows a través d'una xarxa que té instal·lat TTD, pot copiar els fitxers necessaris des del directori d’instal·lació a /usr/share/games/openttd/data. (els fitxers necessaris s’enumeren més endavant).
+:::*Si còpia els fitxers des d’un altre PC en xarxa, assegure’s d’estar en possessió d’una llicència per a usar-los.
+:* Si ha compilat vosté mateix el joc:
+::* Pot inserir el CD-ROM de TTD i copiar els fitxers necessaris per al directori ./data en el directori on ha compilat el joc. (los archivos necesarios se enumeran más adelante)
+::* Si usted tiene un sistema de arranque múltiple que incluye una partición de Windows o si tiene acceso a un sistema Windows a través de red que tiene instalado TTD, puede copiar los archivos necesarios desde el directorio de instalación al directorio ./data del directorio donde ha compilado el juego (els fitxers necessaris s’enumeren més endavant).
+:::*Si còpia els fitxers des d’un altre PC en xarxa, assegure’s d’estar en possessió d’una llicència.
+
+=== En Mac OS X: ===
+:*Molt senzill, només uns passos:
+:#''Obtinga'' una còpia de Transport Tycoon Deluxe per a Windows o DOS.
+:#Obtinga l’instal·lador'''[*1]''' OSX per a OpenTTD de la pàgina de [http://www.openttd.org/download-stable descàrregues]
+:#Munte la imatge descarregada i copie OpenTTD en una carpeta de la seua elecció, per exemple /Aplicacions/OpenTTD/ (es recomana crear la carpeta buida i afegir-li els arxius).
+:#Cregue un directori anomenat "data" dins del directori on va col·locar OpenTTD i moga els fitxers .grf i sample.cat de la seua còpia de TTD.
+:#[Opcionalment:] Cregue un directori  "gm" i còpie els fitxers .gm dins d’ell per a obtenir els fitxers de música'''[*2]'''.
+:#Execute OpenTTD.
+'''[*1]''' L’última versió compilada disponible per a Mac OSX és la [http://gb.binaries.openttd.org/binaries/releases/0.7.5/index.html 0.7.5], després [http://www.openttd.org/en/news/103 Mac OSX ha deixat d’estar suportat] per falta de desenvolupador. (Pot obtenir versions no oficials als fòrums [http://www.tt-forums.net/viewtopic.php?f=29&t=48329 tt-forums.net], [http://ttdistas.es/descargas ttdistas.es]...)
+
+'''[*2]''' Si té problemes per a escoltar la música, a vegades es resolen canviant els permisos dels fitxers: Seleccione tots els fitxers de la carpeta gm que acaba de crear, faça CMD+I ''Obtenir informació''. I després a l’apartat ''Permisos i propietari'' seleccione "Pot" ''Llegir i escriure''.
+
+===En altres sistemes: ===
+:*Si es tracta d’un sistema operatiu tipus Unix, té prou possibilitats de poder jugar amb OpenTTD en ell. S’executa en diversos sistemes i arquitectures diferents dels mencionats ací.
+:*Busque a la [[Main/ca/Sistema operatiu|llista de sistemes operatius]] si n'hi ha informació sobre el seu SO.
+:#Assegure’s de que la [http://libsdl.org llibreria SDL] està disponible per a la seua plataforma i instal·lada en el seu sistema.
+:#Descarregue el codi font d’OpenTTD i tracte de compilar el joc vosté mateix.
+:#Agregue una entrada a la [[Main/ca/Sistema operatiu|llista de sistemes operatius]], encara que no haja tingut èxit.
+
+== Quins arxius necessita de TTD? ==
+:*Si no està utilitzant l’instal·lador (o simplement els vol conèixer per curiositat) ha de copiar alguns fitxers a mà de la versió original de TTD.
+:Fitxers necessaris, posar-los al directori <i>data/</i>:
+::*Fitxers gràfics: <b>trg1r.grf</b>, <b>trgcr.grf</b>, <b>trghr.grf</b>, <b>trgir.grf</b>, <b>trgtr.grf</b>
+:::*Si està utilitzant la versió DOS de TTD en compte de la versió Windows, els fitxers que ha de copiar es nomenen igual, però sense la "R" final, per exemple, trg1.grf, etc
+::*Fitxer de so: <b>sample.cat</b>
+:Si també vol la música, copie els següents arxius a la carpeta <i>gm/</i>:
+::*Fitxers de música: <b>*.gm</b>
+::Si no hi ha cap directori gm, cree'l dins del directori principal d’OpenTTD, i pose-hi els fitxers. Tinga en compte que la versió DOS de TTD no té fitxers <b>*.gm</b>.
+
+En els equips *nix, és necessari assegurar-se de que té permís per a veure aquests fitxers anteriors com a usuari normal, en cas contrari, només serà capaç d’executar OTTD com a root.
+
+Nota: també pot usar els fitxers [[Main/ca/OpenGFX|OpenGFX]] i [[Main/ca/OpenSFX|OpenSFX]], que permeten iniciar OpenTTD sense els fitxers de TTD. Per favor, llija l’article [[Main/ca/OpenGFX Llija’m|"OpenGFX Llija’m"]] cuidadosament.
+
+==Com instal·lar la versió de desenvolupament (nightly)? ==
+La versió de desenvolupament (nightly) s’instal·la sobre l’última versió estable.
+Descarregue el fitxer de l’última versió nigthly, a continuació, instal·le'l dins la carpeta del seu OpenTTD. És recomanable fer una còpia de seguretat de l’última versió estable.
+
+Per a jugar sempre l’última versió de desenvolupament (nightly) pot utilitzar un [[Main/ca/Actualitzadors per a OpenTTD|actualitzador]], d’aquesta manera s’actualitzarà automàticament a l’última versió  [[Main/ca/nigthtly|nightly]]cada vegada que inicie OpenTTD.
+
+
+[[Category:ca/Preguntes més freqüents]]
+[[Category:ca/Instal·lació]]
