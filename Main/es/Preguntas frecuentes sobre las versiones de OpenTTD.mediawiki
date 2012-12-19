@@ -1,0 +1,112 @@
+[[Translation:Main/en/FAQ OpenTTD versions]]{{en/-}}{{es/FAQmenu}}
+OpenTTD es un proyecto en constante evolución, con nuevas características, opciones y mejoras que estén disponibles con regularidad. Si bien la adición frecuente de "juguetes nuevos" para jugar es bien recibida por los más veteranos, puede llegar a ser muy confuso para los recién llegados saber qué diferencias hay entre las distintas versiones, qué se debe instalar y qué esperar en términos de estabilidad de cada versión.
+
+=== ¿Nightly, RC, Trunk...? ¿qué significa todo esto?===
+Entender los términos que utilizan los desarrolladores para referirse a las distintas versiones de OpenTTD es clave para conocer las características (y la estabilidad) que desee para su juego.
+
+====Versión build====
+Una versión "build" (literalmente "construcción", en inglés) es un término genérico que se refiere simplemente a cualquier versión en particular del juego. En la traducción al castellano usaremos en su lugar el término "versión".
+
+Estas versiones "builds" pueden ser oficiales (versiones estables de OpenTTD) o la última versión completa (tal vez con errores) del contenido disponible.  Si usted es un manitas, incluso puede compilar su propia y personalizada versión "build" con diferentes combinaciones de todas las funciones disponibles.
+
+El término "versión" se utilizará en el resto de este documento para hacer referencia a una versión "build" del juego. En otras páginas de esta web quizás encuentre el término en inglés "build" o su traducción literal al castellano "construcción" para referirse al mismo concepto.
+
+====Versión estable (o lanzamiento)====
+Un "lanzamiento" ("release" en inglés) oficial es justo eso: el lanzamiento de una versión estable y completa del juego. En la traducción al castellano usaremos indistintamente "lanzamiento" o "versión estable" del juego.
+
+Aunque puede contener correcciones de errores menores, se espera que no habrá cambios significativos en una versión estable del juego, y cualquier adición de nuevas características será parte de una versión futura.  
+
+Un lanzamiento de OpenTTD es como el lanzamiento (o versión estable) de cualquier paquete de software, y por lo tanto se numera. Por ejemplo, la última versión estable de OpenTTD es la {{version}}.
+Los lanzamientos de versiones que incluyen notables cambios en el juego se denotan con los dos primeros números, según su importancia, mientras que los cambios menores están representados por el tercer número.
+
+====Propuesta de lanzamiento (versión RC o versión de prueba)====
+Una versión "RC" ("Release Candidate", literalmente "lanzamiento candidato") es una versión de prueba (testing-build) que se publica previamente a una nueva versión estable del juego.
+
+En la traducción al castellano usaremos preferentemente "versión RC", "propuesta de lanzamiento" o "versión de prueba" (testing-build). También puede encontrarse la traducción literal "lanzamiento candidato" o incluso "construcción RC" para referirse al mismo concepto.
+
+Puede considerarla como una propuesta de lanzamiento. Una versión RC es un lanzamiento durante su elaboración (previo a un nuevo lanzamiento). Mientras que las características de menor importancia se pueden agregar a un RC, en su mayor parte, la lista de características se congela.
+
+Lo que distingue una RC de una versión estable es simplemente la cantidad de pruebas y corrección de errores que queda por hacer. De una RC se puede esperar que sea bastante estable, pero todavía puede haber errores con algunas funciones.
+
+Una RC se numera de la siguiente forma:
+''[Versión de lanzamiento]-RC[número candidato]''
+
+Por ejemplo, una versión RC de OpenTTD es la ''1.0.0-RC3'' (de 18-Marzo-2010). Una vez que la RC se confirmó lo suficientemente estable, se convirtió en un lanzamiento de pleno derecho como la versión estable 1.0.0.
+
+Las versiones RC siempre deben ser bastante estables, por lo que si hay una disponible, se recomienda usarla y no perderse sus nuevas características esperando que salga el lanzamiento oficial. Una RC es simplemente una versión que le falta un poco de pulido.
+
+====Versión de desarrollo (nightly)====
+Una versión "nightly" es, en general, una versión de trabajo durante la fase de creación. En la traducción al castellano usaremos indistintamente "versión de desarrollo" o "versión nightly". (En otras páginas de esta web quizás encuentre su traducción literal al castellano "versión nocturna" o incluso "construcción nocturna").
+
+Una versión de desarrollo (nightly) contendrá características punteras para OpenTTD (por lo general características previstas para el próximo lanzamiento), pero cabe esperar que sean inestables y con errores. Estas versiones en desarrollo pueden, potencialmente, corromper las partidas guardadas, por lo que debe hacer copia de todos los archivos de datos importantes antes de instalar una versión nightly.
+
+Como sugiere su nombre ("nightly" significa "cada noche" en inglés), se compilan con frecuencia, de modo que las nuevas características de OpenTTD estén disponibles regularmente. Si usted oye hablar de una nueva característica de OpenTTD, pero no la encuentra en su versión estable, lo más probable es que esté incluida en una versión nightly. Sopese los riesgos (que se reducen sustancialmente haciendo copias de seguridad de sus datos ¿entiende la indirecta? {{en/Emoticon|:)}}), e instale una versión nightly si desea una característica que no está aún disponible en una versión estable o en una RC.
+
+Nota: una versión nightly siempre se debe instalar ''sobre una versión estable''. En otras palabras, instale una versión estable o versión RC primero, y a continuación, instale una versión nightly sobre ella.
+
+{{es/Para hacer|''Describir el proceso de instalación y desinstalación de las versiones nightly.''}}
+
+Las versiones nightly siguen un esquema de numeración diferente que las versiones estables. Una versión nightly se numerará como ''r8642'', por ejemplo.
+
+====Versión Trunk====
+[[File:en/version Illustration.gif|frame|right|Cómo se relacionan las versiones Trunk, Branch, Estable, Nightly y RC]]
+El término "trunk" o "tronco" (igual que el tronco de un árbol) se refiere a la línea principal de desarrollo del proyecto OpenTTD. Contrasta con el término "branch" (que significa "rama") explicado más adelante. Una versión trunk contiene el código desarrollado o aprobado por los desarrolladores principales del juego.
+El código contenido en el tronco se anticipa en su camino a una versión estable oficial. Por extensión, el código contenido en el tronco puede considerarse como el código "oficial" de OpenTTD.
+
+Las versiones nightly, como se describe anteriormente, siempre contendrán el código más reciente "en el tronco" o línea principal de desarrollo. Por lo tanto, si usted ve una característica descrita como "en el tronco", puede estar seguro de que estará disponible en la siguiente versión nightly, si no lo está ya.
+
+En las páginas en castellano se usarán preferentemente los términos "versión trunk" (para referirse a las versiones) y "en el tronco" o "en la línea principal" de desarrollo (para referirse a su situación dentro del proyecto general). Aunque también puede encontrarse con otras traducciones como "versión tronco", "versión principal", "en el trunk"...
+
+====Rama o branch SVN====
+Por lo general, una rama o "branch [http://www.wikipedia.org/wiki/es:Subversion SVN]" se crea para desarrollar una función específica, un conjunto de características o funcionalidad que son candidatas para su inclusión en la línea principal de desarrollo (y, eventualmente, en una versión estable), pero sigue estando en gran medida "en libertad vigilada". Las ramas SVN no se han probado con otras nuevas características de OpenTTD y por lo tanto puede dañar o deshacer el trabajo que otros desarrolladores han hecho. El trabajo se realiza en una rama de trabajo independiente del tronco. Véalo otra vez como si fuera un árbol: una rama se origina del tronco, pero luego crece a partir él.
+
+Si una rama SVN se verifica por otros desarrolladores como estable (ella misma y en relación con las características desarrolladas en otras partes) podrá fusionarse más tarde de nuevo en el producto como parte de una versión nightly. Hasta que esto se confirme, sin embargo, no hay garantías de que las características de una branch funcionarán con las de otra. Se recomienda que si desea utilizar las características que se desarrollan en una rama SVN, empiece con la versión en el momento en el que se separó la rama SVN, y luego instale el código de la rama.
+
+Así, por ejemplo, si la versión nightly más reciente se liberó el viernes, pero el código de la rama SVN se ha desarrollado por separado desde el lunes, usted debe trabajar a partir de la versión nightly que se liberó el lunes, y luego instalar la rama SVN sobre esta última.
+
+Como puede ver, las características se compensan: obtiene las características de la rama que desee, pero es probable que '''no''' obtenga las últimas características publicadas en la rama principal o tronco.
+
+Al igual que con las versiones nightly, cabe esperar que las ramas SVN tengan fallos y sean inestables. Además, las ramas SVN normalmente han sido objeto de menos pruebas que la rama principal (esto significa que menos ojos han mirado el código) lo que los hace potencialmente mucho menos estables.
+
+====Parche====
+Un "parche" (en inglés "patch"), en términos generales, es un pequeño código o funcionalidad desarrollada por alguien fuera de los desarrolladores principales del juego. Esto no implica necesariamente que un parche sea de alguna manera inferior al código del tronco, sólo significa que contiene una funcionalidad y/o código que no tiene (todavía) aprobado su inclusión en una futura versión del juego.
+
+Tenga en cuenta que el trabajo en el tronco (y en menor medida, en una rama SVN) se realiza por un conjunto discreto de desarrolladores, y los parches pueden ser creados por cualquier persona. Esto abre grandes posibilidades para la creatividad y nuevas funcionalidades, pero también introduce un factor de riesgo más alto, ya que los parches pueden ser creados por cualquier persona.
+
+Los parches no se pueden instalar directamente como las versiones nightly, han de ser compiladas en la máquina de un usuario.
+
+''Vea también: [http://www.tt-forums.net/viewtopic.php?t=21678 Cómo aplicar parches] en los foros (en inglés).''
+
+====MiniIN====
+[[File:en/miniIN Illustration.gif|frame|right|El MiniIN]]
+''Artículo principal: [[Main/es/MiniIN|MiniIN]]''<br>
+El MiniIN es un entorno de desarrollo, separado de la línea principal de desarrollo, que contiene el código del tronco ''más'' muchos parches de usuarios. Después de la versión 0.5.0, el MiniIN ya no se actualiza con el código tronco. Desde ese momento el MiniIN es la versión 0.5.0 más todos los parches de usuario.
+
+===¿Qué versión de OpenTTD debo instalar?===
+Comience con la última versión  estable (o la versión RC, si la hay). Vaya a la página de [http://www.openttd.org/download-stable descargas] de OpenTTD. La última versión estable siempre debe aparecer allí.
+
+Mucha gente está satisfecha con las versiones principales. Por otro lado, si se enteró de una característica que le gustaría tener, descargue la última [http://nightly.openttd.org/ versión nightly] e instálela sobre su versión estable (recuerde, hacer una copia de seguridad de las partidas guardadas).
+
+Sólo si está realmente seguro de que esa versión la tiene (en cuyo caso, ¿por qué está leyendo esto?) pruebe a instalar una rama SVN.
+
+===Oí hablar de cierta característica. ¿Por qué no aparece en mi juego?===
+Usted podría tener una versión instalada distinta. Muchas de las más nuevas (y a veces mejores) características son sólo parte de la versión nightly (es decir, versión de desarrollo de la línea principal de desarrollo) actual, aunque se está a la espera de que formen parte de la futura versión estable.
+
+Si usted sabe que tiene instalada la versión correcta pruebe a activarla en la ventana de [[Main/es/Opciones avanzadas|Opciones avanzadas]].
+
+===¿Cómo puedo realizar un seguimiento de qué características?===
+*Una visión general de las principales características incluidas o previstas en distintos lanzamientos se pueden encontrar en la [[Main/es/hoja de ruta|hoja de ruta]].
+*Los detalles de los cambios recientes en el tronco se encuentran [http://vcs.openttd.org/svn/log/trunk aquí]
+
+===¿Dónde puedo descargar la versión que quiero?===
+*[http://www.openttd.org/download-stable Versión estable]
+*[http://www.openttd.org/download-testing Versión de prueba (RC)]
+*[http://www.openttd.org/download-trunk Versión nightly]
+
+==Vea también==
+* [[Main/es/Historial de versiones de OpenTTD|Historial de versiones de OpenTTD]]
+* [[Main/es/hoja de ruta|Hoja de ruta sobre el desarrollo]]
+* [[Main/es/MiniIN|MiniIN]]
+* [http://www.tt-forums.net/viewtopic.php?t=21678 Cómo aplicar los parches (en)]
+
+[[Category:es/Preguntas frecuentes]]
