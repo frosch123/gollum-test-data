@@ -1,0 +1,62 @@
+A maior parte do conteúdo sobre este guia sobre o jogo está em inglês, assim '''traduzir seus conteúdos''' pode ser um bom trabalho para jogadores e colaboradores do OpenTTD em português.
+
+Um bom método de trabalho é, primeiro traduzir literalmente os artigos do inglês (ou de outros idiomas) para o português, em seguida, estilizá-lo (usando os próprios esboços em português, revisando a estrutura gramatical das sentenças ...), e, finalmente, adicionar, corrigir ou atualizar o conteúdo.
+
+==Como começar?==
+O primeiro que devemos fazer é criar a página portuguesa.<br/>
+Vejamos passo a passo, uma forma prática de como fazê-lo. 
+*'''1)''' No artigo em inglês adicione o modelo {{s|Other languages}} no início da página:
+<pre>
+'''Broken translation link'''
+</pre>
+:''OBS: Sustitua "Título do artigo em inglês" e "Título do artigo em português" pelos correspondentes.''
+*'''2)''' Selecione todo o código do artigo em inglês (ou outro idioma) e o copie (CTRL+C).
+*'''3)''' Guarde o arquivo, aparecerá a bandeira inglesa (ou outra correspondente ao idioma original) e no lugar da bandeira portuguesa uma mensagem de erro, NÃO SE PREOCUPE, corrigiremos mais tarde.
+*'''4)''' Clique no link em vermelho <span style="color:red">EN</span> que aparece no quadro das bandeiras.
+*'''5)''' Na nova janela de edição, cole o texto que havia copiado (CTRL+V).
+*'''6)''' Vá para o início do texto que você acabou de colar e adicionar o modelo {{s|Tradução/Pt}}:
+<pre>
+{{pt/Tradução|Título do artigo em inglês|0}}
+</pre>
+*'''7)''' Salve. Temos a página em português (embora em inglês). Com a primeira edição que fizemos desaparecerá o erro na caixa de bandeiras.
+*'''8)''' Corrija o parâmetro <code>language_page</code> do modelo {{s|Other languages}} pelo correto:
+<pre>
+|language_page=pt
+</pre>
+
+Agora já só se trata de is passo a passo traduzindo frase a frase, e não se esqueça de salvar quando acabar.
+
+==Traduções incompletas==
+Se por qualquer motivo deixar parte do artigo sem tradução use o modelo {{s|Tradução pendente/Pt}} para separa o texto em português do texto em inglês. Indique também a porcentagem aproximada da tradução no modelo {{s|Tradução/Pt}} que foi colocado no início do texto. 
+
+==Recursos==
+===Recursos do OpenTTD wiki===
+*[[Main/en/Manual of Style|Manual de estilo]]
+*[[Template:Other languages]]
+*[[Template/pt/Tradução]]
+*[[Template/pt/Tradução pendente]]
+*[[Category/pt/Modelos]]
+*[[Category/pt/Caixas de mensagens]]
+*[[Category/pt/Arquivos em Português]]
+
+===Recursos da wikipédia e outros===
+*[http://pt.wikipedia.org/wiki/Wikip%C3%A9dia:Predefini%C3%A7%C3%B5es Wikipédia:Predefinições] ''([http://www.wikipedia.org/wiki/Help:Template ])''
+*[http://pt.wikipedia.org/wiki/Ajuda:Categoria Wikipédia:Categoria] ''([http://www.wikipedia.org/wiki/Help:Category ])''
+*[http://www.wikipedia.org/wiki/Wikipedia:Picture_tutorial Wikipédia:Imagens]
+*[http://pt.wikipedia.org/wiki/Ajuda:Guia_de_edi%C3%A7%C3%A3o/Usar_tabelas Wikipédia:Guia de edição/Usar tabelas] ''([http://www.wikipedia.org/wiki/Help:Table ])''
+*[http://en.wikipedia.org/wiki/Help:List Wikipédia:Listas]
+*[http://www.mediawiki.org/wiki/Help:Magic_words/pt-br Palavras mágicas]
+*[http://www.mediawiki.org/wiki/Help:Extension:ParserFunctions/pt-br ParserFunctions]
+*[http://pt.wikipedia.org/wiki/Ajuda:Guia_de_edição/Formatação Wikipédia:Guia de edição/Formatação]
+*[http://en.wikipedia.org/wiki/Help:Special_characters Caracteres especiais]
+*[http://pt.wikipedia.org/wiki/Anexo:Lista_de_cores Anexo:Lista de cores] ''([http://www.wikipedia.org/wiki/List of colors ])''
+*[http://www.wikipedia.org/wiki/es:HTML ] ''([http://www.wikipedia.org/wiki/HTML ])'', ''([http://www.wikipedia.org/wiki/HTML element ])''
+*''[http://www.wikipedia.org/wiki/Help:Hidden_text ]''
+
+===Ferramentas de tradução===
+*Para dúvidas em inglês: http://www.wordreference.com/
+*Para dúvidas em casteliano:
+:*Dicionário da Real Academia [http://buscon.rae.es/draeI/html/cabecera.htm drae]
+:*Dicionário panhispánico de dúvidas [http://buscon.rae.es/dpdI/ dpd]
+*Traduções automáticas: [https://addons.mozilla.org/es-ES/firefox/addon/7004/ Babelfish Instant Translation] para o navegador [http://www.mozilla-europe.org/es/firefox/ Mozilla Firefox]
+**[http://translate.google.com.br/ Google tradutor]
