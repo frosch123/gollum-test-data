@@ -1,0 +1,164 @@
+This page is to discuss the envisioned re-structuring of the game menu, newgame settings, advanced settings and options.
+See also {{en/Flyspray|5147}}
+
+This is a big task and can certainly be structured into several sub-tasks
+
+== Settings Re-arangement ==
+
+Difficulty settings as they are present now serve little purpose as there are many (advanced) settings which have at least a strong impact as the historic difficulty settings.
+
+=== Move difficulty settings ===
+* Remove current difficulty settings window.
+* Move settings which are not already in mapgen window, or AI settings or whatever... into advanced settings.
+*: The advanced settings dialog is more suitable wrt. extending usability (help texts and more; see below)
+
+This task has some pre-conditions:
+#Add the capability to set the difficulty level explicity for individual NewGRFs, AIs and game scripts.
+#* AI/GS currently can set specific values for their settings wrt. the difficulty profiles.
+#* The profile approach can be further improved by not requiring to fix all settings to the profile.
+#* Allowing AI/GS to define more profiles than easy/medium/hard might be possible, but would also hurt consistency and usuabiltiy wrt. setting up multiple AI/GS.
+#* For NewGRFs the difficulty profile currently does not seem very useful. ECS uses it, but it should likely be better integrated into action14 parameter descriptions, instead of overwriting parameters using action7/9 in later stages. So, for now difficulty profiles might just be dropped for NewGRFs, so that they always get "custom".
+#*Also for AIs it is IMHO more of a chore of defining the same value for every level of difficulty rather than useful feature (opinion of AIAI developer) 
+#Remove all highscores but custom and disable difficulty different from 'custom'.
+#: This includes finding a new place for the highscore window.
+#:* Maybe just on the main screen instead of the current difficulty settings. (this would be a normal place in other games, except highscores are currently not quite meaningful/important in OTTD)
+#:* Maybe in game next to the company league or detailed rating windows.
+#:* On a side note: Company league, detailed rating and highscore might all be possibly become subject to game scripts. (highscore per gamescript instead of per difficulty profile)
+{{en/Progress bar|100|text=completed: Difficulty settings window moved at {{en/Revision|24791}}}}
+
+=== Cleanup game options ===
+The game options contain a few settings which better belong to the advanced settings or new map window. Actually the only settings which would remain, which can not be moved to mapgen or advanced settings, are the these:
+
+* baseset selections (because the controls do not fit the advanced settings).
+* ultra-basic settings like "language", "screen resolution" and "fullscreen"
+* maybe in the future some "font selection"
+* maybe blitter selection if this shall really be in the gui
+* maybe access to the music gui?
+
+=== Remove message/newspaper settings window ===
+
+This item is being addressed with {{en/Flyspray|5361}}.
+
+This a weird hidden window. Esp. it is only available in game.
+* The window should just be dropped, and all options be moved to the adv. settings window.
+* The "set all message types to" button would be dropped.
+*: Noone want to set all message types to "ticker" or "full". The only use-case for the button is to set all to "off", but that does not exactly warrant its existence.
+* The news stuff might become a toplevel-node or a subnode to "interface".
+*: In any case would the "coloured newspaper" be moved into that category.
+* The button from the news-menu would
+** either be removed or
+** would open the advanced settings window with a preset text-filter. The textfilter would be the (translated) category name of the news settings in the tree, with control codes stripped (str_validate).
+*: The first option is the safe way; the second is kind of questionable whether it would turn out well, or just fails :)
+{{en/Progress bar|100|text=completed: News settings window moved at {{en/Revision|24845}}}}
+
+=== Filter for settings ===
+Allow users to apply various filters on the settings:
+* general text string filter (''committed with r24631-24633'', see also [http://www.tt-forums.net/viewtopic.php?f=32&t=62958 forum thread])
+* client/company/game settings
+* settings differing from default values (''commited with r24647'', see also [http://www.tt-forums.net/viewtopic.php?f=32&t=62958 forum thread])
+* settings differing from newgame values (''commited with r24647'', see also [http://www.tt-forums.net/viewtopic.php?f=32&t=62958 forum thread])
+* basic/advanced/expert settings (''committed with r24671'', see also {{en/Flyspray|5355}})
+*: The advanced settings (esp. in its new form) contain a lot of settings, which confuse novice players. So it needs some filtering to hide more advanced settings.
+** These filter options belong into the same dropdown as the "differences to newgame/default values". When you want to see differences, you want to see all, not just "basic" ones.
+** The category would be assigned to every setting via a new key-value-pair in the settings.ini files.
+** "Expert settings" would replace the current "all settings".
+** "Basic settings" should be things which control essential interface and gameplay settings. Most of the current "game options" or "difficutly settings" would go into this category, but also stuff like "infrastructure sharing" or "inflation".
+** "Advanced settings" should be those settings which the average forum user wants to see. This includes detail stuff like "date format in savegame names", "slope steepness for acceleration"... most settings likely go into this category.
+** "Expert settings" should be those settings which usually noone wants to see or change. Examples are "Build on slopes" and "Enable multiple NewGRF engine sets"
+* ...
+{{en/Progress bar|75}}
+
+=== Allow settings presets ===
+Settings presets can mean different things:
+* Store and restore the values of all settings.
+* Store and restore the values of some settings.
+** The preset would just not define values for other settings, which would leave them unchanged.
+** Multiple presets could be applied consecutively to change various setting aspects.
+** Easy via config files, but a GUI for displaying/editing such profiles would likely be complicated.
+
+There are several ways how this could be achieved:
+*Different config files, one per settings pre-set?
+**Allows easy sharing of profiles.
+**Would use a new "settings" subdirectory.
+**Setting profiles could be bundled with GS (on BaNaNaS)
+**GS could possibly enforce usage of certain profiles.
+*Array of values, similar to how NewGRF parameters are stored.
+**Hardly robust wrt. upgrading/using different OpenTTD versions.
+*Different sections in the same config file, similar how NewGRF presets are stored
+
+=== Show deviations from default settings ===
+Using the above filtering for default/newgame setting differences these things are possible:
+* Single player: Check notable settings of old savegames resp. scenarios.
+* Multiplayer: Show differences to user's default settings to allow a quick overview of "what's different".
+
+=== Clearing deviations ===
+* A button to reset settings to default values. (wrt. current filter state)
+* A button to make the current settings the newgame settings. (wrt. current filter state)
+
+These options are quite questionable though (esp. wrt. current game options); this might better be solved via profiles.
+
+=== Editing newgame and remote settings ===
+
+In game you can currently edit the settings of the current game. It might also be useful to edit newgame settings from there.
+* This would include similar filter methods like "deviations to current game".
+* It would likely be a new menu option in the menubar, next to "current game settings".
+* It should be possible to have both windows open.
+* In multiplayer it should be possible to connect to the server and change the newgame settings on the server.
+** Enter the rcon password once.
+** Edit all server settings as if they were local.
+** OTOH only editing adv. settings is not sufficient here. Maybe there should be some server-control panel.
+*** Enter the rcon password once.
+*** Allow kicking/banning.
+*** Opening of newgame settings.
+*** Opening mapgen window to start new game.
+*** Opening NewGRF/AI config. (using the stuff available on the server)
+*** Opening the content window to download stuff for the server.
+*** ....
+
+== Window Re-arangement ==
+
+See also {{en/Flyspray|3826}} and [http://dev.openttdcoop.org/projects/openttd-gui OpenTTD-gui project].
+
+In general the layout could be like
+
+=== Main window layout ===
+# New singleplayer Game
+# Quickstart (uses current new game settings, like current ctrl+click new game)
+# Load game (incl. scenario)
+# Multiplayer
+# Highscores
+# check online content(?)
+# Quit
+
+=== New game dialog (tabs) ===
+
+See also {{en/Flyspray|5147}}
+
+==== Map settings ====
+[[File:en/newgame draft.png|frame|draft of the re-designed new game dialogue]]
+#choice of map generator: heightmap / scenario / terragenesis / original
+#type of map borders
+#map size
+#amount water content, tree content(?)
+#morphology (mountainous,...)
+==== New game settings ====
+# date
+# industry, town and tree(?) quantities
+# driving side
+# town names
+# part of current difficulty settings
+# link to(?) adv. settings, incl. some of current difficulty settings
+==== Newgrf settings ====
+==== AI settings ====
+
+=== User preferences (tabs) ===
+This could be the re-design of the existing game options
+==== general GUI ====
+# base sets
+# language
+# units
+# savegame names / frequency
+# mouse behaviour
+
+==== game related ====
+# UI settings from current adv. settings
