@@ -1,0 +1,34 @@
+[[Translation:Main/en/Advanced Settings]]{{en/-}}{{es/Tabla de contenido}}
+
+En OpenTTD se pueden cambiar una gran cantidad de opciones que afectan al juego. Muchas de estas opciones se pueden cambiar desde la ventana '''Opciones avanzadas''', pero para otras hay que editar el fichero de configuración, [[Main/es/openttd.cfg|openttd.cfg]]. La mayoría de las opciones avanzadas sirven para mejorar el juego o la interfaz gráfica, mientras que otros le dan más poder de intervención en el juego.
+
+==Cambiar las opciones avanzadas==
+[[File:es/advanced options full.png|thumb|left|El árbol de las Opciones avanzadas completamente expandido.]]
+{{es/Opciones avanzadas}}
+La ventana ''Opciones avanzadas'' le permite cambiar la mayoría de las opciones disponibles dentro del juego. Tiene una estructura de árbol, dividida en las siguientes secciones principales:
+
+*[[Main/es/Opciones avanzadas/Interfaz|Interfaz]]
+*[[Main/es/Opciones avanzadas/Construcción|Construcción]]
+*[[Main/es/Opciones avanzadas/Vehículos|Vehículos]]
+*[[Main/es/Opciones avanzadas/Estaciones|Estaciones]]
+*[[Main/es/Opciones avanzadas/Economía|Economía]]
+*[[Main/es/Opciones avanzadas/Competidores|Competidores]]
+
+Los botones se ponen de color verde para mostrar que la opción está activada, y de color rojo para mostrar que está apagada. Con los botones con flechas puede cambiar el valor de algunos parámetros, y al hacer clic en el texto correspondiente (junto a las flechas) se abrirá un cuadro de texto ''Cambiar valor de la opción'', donde puede escribir el valor que desee.
+
+Algunas de las características que existían en las ''Opciones avanzadas'' de versiones anteriores de OpenTTD ahora pueden encontrarse en [[Main/es/Dificultad|Nivel de dificultad]], [[Main/es/Opciones del juego|Opciones del juego]] o [[Main/es/Trucos|Trucos]]. Algunas de ellas incluso se han convertido en rasgos permanentes que no se puede desactivar.{{en/-}}
+
+==Trivialidades==
+La ventana ''Opciones avanzadas'' se llamó anteriormente (hasta 0.6.3-OpenTTD) ventana ''[[Main/es/Configurar parches|Configurar parches]]''. Este nombre proviene de [[Main/es/TTDPatch|TTDPatch]] y se utilizó en OpenTTD durante bastante tiempo.
+
+Desde r14275, el nombre ''Parches'' se abandonó en favor de "Opciones avanzadas" con el fin de evitar la confusión con TTDPatch en general, o con los parches (en el sentido técnico) para el código fuente de OpenTTD que aparecen a menudo en la [http://www.tt-forums.net/viewforum.php?f=33 Sección de Desarrollo de los foros tt-forums].
+
+A partir de r14974 se eliminaron también los botones de la parte superior de la ventana. Desde entonces todas las opciones avanzadas se muestran en una estructura de árbol, lo que permite que las subcategorías se puedan expandir y contraer de forma independiente. Las antiguas fichas (''Interfaz'', ''Construcción'', ''Vehículos'', ''Estaciones'', ''Economía'' y ''Competidores'') son ahora categorías de nivel superior que pueden tener subcategorías (por ejemplo, la subcategoría de ''trenes'' dentro de categoría ''vehículos'').
+
+==Vea también==
+*[[Main/es/Lista de opciones avanzadas|Lista de opciones avanzadas]]
+*[[Main/es/Lista de opciones avanzadas por colocación|Lista de opciones avanzadas por colocación]]
+*[[Main/es/Configurar parches|Configurar parches]].- Para 0.3.0 a 0.6.3.
+*[[Main/es/Configurar parches en 0.2.0|Configurar parches en 0.2.0]].- Para 0.2.0 y 0.2.1.
+
+[[Category:es/Configuración y preferencias]]
