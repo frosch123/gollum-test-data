@@ -1,0 +1,68 @@
+{{ca/Traducció|Climate|50}}
+[[Translation:Main/en/Climates]]
+Hi ha quatre '''climes''' o '''paisatges''': ''temperat'', ''subàrtic'', ''subtropical'' i ''de joguines'' (o ''Toyland''). Cadascun amb un conjunt diferent de gràfics per als edificis i el paisatge, i un conjunt diferent de [[Main/ca/vehicles|vehicles]] i [[Main/ca/indústries|indústries]]. La majoria dels vehicles són compartits entre els climes (el subártico i el subtropical tenen un conjunt idèntic de vehicles). El clima també afecta les característiques del joc com ara els requisits perquè les [[Main/ca/població|poblacions]] creixen, i la seua taxa de creixement.
+
+==Temperat==
+[[File:en/Temperatescreenshot.png|thumb|left|300px|Paisatge temperat]]
+El clima temperat es remunta a l'original Transport Tycoon de 1994. Es basa en el clima del [http://www.wikipedia.org/wiki/ca:Regne Unit Regne Unit], d'on són Chris Sawyer, Foster Simon i John Broomhall, els desenvolupadors de TTD. Això es veu també reflectit en els vehicles, la majoria es basen en els que es veuen normalment en el Regne Unit. També es veu en l'arquitectura (molts edificis del joc són semblants als edificis reals de Glasgow, la llar de Chris Sawyer).
+
+El clima temperat és el clima més popular, ja que compta amb la major varietat de trens i és el més ràpid. Això es reflecteix també en els sets [[Main/ca/NewGRF|NewGRF]], els dos més populars són el [[Main/en/UK Renewal Set]] i el [[Main/en/DBSet]] que funcionen exclusivament en el clima temperat.
+
+Aquest clima té també un dels articles de més valor, el carbó, que és possiblement la càrrega amb la que és més fàcil guanyar diners. A diferència dels "sub-climes", no hi ha requisits d'aliments o aigua perquè puguan créixer les poblacions i molt poques restriccions pel que fa a on es poden ubicar les indústries.
+
+En el fitxer de configuració ''openttd.cfg'' apareix com:
+'''<code>landscape = temperate</code>'''<br clear="all" />
+
+==Subàrtic==
+[[File:en/Subarcticscreenshot.png|thumb|right|300px|Paisatge subàrtic]]
+El clima subàrtic es va afegir al Transport Tycoon Deluxe el 1995 junt amb el Subtropical i el paisatge de joguines. Es basa en [http://www.wikipedia.org/wiki/ca:Amèrica del Nord Amèrica del Nord], segurament [http://www.wikipedia.org/wiki/ca:Canadà Canadà]. Això es veu en l'estil dels trens disponibles i el fet que els noms de les poblacions sigan de tipus britànic (Canadà és un país membre de la Commonwealth).
+
+La característica més cridanera del clima subàrtic és la neu per sobre de determinada alçada. Naturalment, tots els edificis i arbres per sobre de la línia de neu també apareixen coberts de neu.
+
+El clima subàrtic té gràfics diferents dels de les zones temperades i subtropicals, però molts gràfics es tornen a utilitzar, com són els gràfics de les infraestructures. En el clima subàrtic, hi ha noves indústries disponibles, inclosa la del paper o el transport de queviures que s'han de lliurar en els pobles per sobre de la línia de neu perquè puguen créixer. Una petita diferència amb el clima temperat és que els boscos es troben per damunt de la línia de neu.
+
+El clima subàrtic és també bastant popular, però no tant com el clima temperat a causa de les poques opcions de trens. No hi ha trens elèctrics en el subàrtic, i comparteix les locomotores amb el clima subtropical. Hi ha sets de reemplaçament per a aquest clima en particular el [[Main/en/North American Renewal Set]].
+
+En el fitxer de configuració ''openttd.cfg'' apareix com:
+'''<code>landscape = arctic</code>'''<br clear="all" />
+
+{{ca/Pendent de traducció}} 
+
+==Sub-tropical==
+
+[[File:en/Subtropicalscreenshot.png|thumb|300px|left|Sub-tropical climate]]
+The Sub-tropical climate was also introduced with Transport Tycoon Deluxe. It is based in [http://www.wikipedia.org/wiki/Central America Central]/[http://www.wikipedia.org/wiki/South America South America], according to the town names and the choice of [[Main/en/trains]] available. 
+
+This climate has lush rainforests where there is grass growing near water locations, yet barren deserts with cacti where there is no water. Towns located in the desert require food and water to grow, the first of which can be produced by [[Main/en/Food Processing Plant]]s and the other by [[Main/en/Water Supply|Water Sources]] in the desert which must be delivered to a [[Main/en/Water Tower]]. There are quite a few restrictions as to where industries may be placed, most notably Food Processing Plants and Agriculture which must be placed in grassland, [[Main/en/Lumber Mill]]s must be surrounded by Rainforest and Water Sources are only found in the desert. A peculiarity unique to the Sub-tropical is the Lumber Mill, which can only be funded by the player and cuts down trees in the vicinity. If the industry runs out of resources, trees must be replanted by the player. One of the original scenarios from Transport Tycoon Deluxe called "Megarail 1960" was a tropical scenario which taught players about networked railways.
+
+The Sub-tropical climate is not as popular as the temperate climate as the choice of trains in Sub-tropical is the same as it was in Sub-arctic. There is also only one steam locomotive available in the sub-climates.
+
+'''landscape = tropic''' in openttd.cfg.
+<br clear="all" />
+
+==Toyland==
+[[File:en/Toylandscreenshot.png|thumb|right|300px|Toyland climate]]
+
+Toyland is a completely fictional climate containing surreal graphics, emulating a child's world.
+
+Candy and sweets represent buildings and trees, as well as toys replacing goods and trains. Every single graphic in Toyland is new, including roads and rail. The roads simulate a toy race track, while the railways have larger sleepers. All vehicles have silly sounds and faces drawn on them. There is very little choice of vehicles, with only basics provided with low horsepower. 
+
+Toyland is the least liked climate of OpenTTD due to its bright and jarring colours, as well as its overall cheesyness and clichés. This has lead to numerous attempts to reform the climate into a Mars landscape (below), and it will almost certainly be omitted from 32bpp graphics versions of OpenTTD when they are released. All factories and goods are replaced with surreal ones, such as a "[[Main/en/Toffee Quarry]]" and "[[Main/en/Battery Farm]]".
+
+'''landscape = toyland''' in openttd.cfg
+
+==Mars==
+[[File:en/Marsscreenshot.png|thumb|300px|left|Mars climate (Not in OpenTTD)]]
+The Martian "climate" is ''not'' in OpenTTD, as it was curiously omitted from Transport Tycoon Deluxe. It appears only in "Transport Tycoon & World Editor", as the "alternate" graphics set. While the graphics, including the UI, are radically different, the vehicles and industries are identical to the temperate climate, down to the names.
+
+However it is possible to get a GFX file that replaces Toyland with Mars. It's mainly a graphics change but it also keeps all the new trains from Temperate.
+
+This GRF can be found here: http://grfcrawler.tt-forums.net/details.php?do=details&id=39
+
+{{en/-}}
+
+==External Links==
+* [http://i-want-a-website.com/about-tt/ttfaq08.html Climate FAQ]
+
+
+[[Category:ca/Climes]]
