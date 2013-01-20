@@ -1,0 +1,386 @@
+[[Translation:Main/en/Industries]]{{en/-}}{{nl/Inhoudsopgave}}
+
+:''Dit artikel gaat over het concept van een industrie in OpenTTD. Een gecategoriseerde lijst van industrieën kun je vinden in [[Category/nl/Industrie]]''
+
+'''Industrieën''' zijn entiteiten die specifieke ladingen en/of diensten produceren. Er zijn drie soorten industrieën in OpenTTD: primaire, secundaire en tertiaire. Primaire industrieën, zoals mijnen, creëren middelen zonder dat er iets voor nodig is. Deze middelen worden vervolgens vervoerd door een transportbedrijf naar een secundaire industrie. Soms bieden secundaire industrieën een middel aan dat weer vervoerd kan worden naar steden (goederen of voedsel), of naar een tertiaire sector.
+
+Je bedrijf '''vervoert''' slechts vracht voor de fabrikanten. Eventuele winsten die je maakt zijn puur de kosten van het vervoer en niet uit het verkopen van goederen.
+
+De industrie-vensters tonen twee getallen over de productie van elke vrachttype dat wordt gecreëerd door de industrie. Dit zijn de totale waarden van de laatste maand. De eerste is de geproduceerde hoeveelheid, welke varieert als gevolg van interne factoren van de industrie. Tijdens een [[Main/en/Economie/Nl#Recessie|economische recessie]] is er slechts de helft van de normale productie.
+
+De tweede waarde is het percentage van de geproduceerde hoeveelheid dat is geleverd aan de nabijgelegen stations voor de distributie. Industrieën kunnen besluiten om een deel van de productie achter te houden en het niet leveren aan een station.
+
+[[File:en/Industry window.png|frame|center|Industrie-venster van een kolenmijn]]
+
+De groei van de productie van de primaire bedrijfstakken is afhankelijk van het percentage van de vervoerde lading. Hoe meer je vervoert, hoe sneller het groeit in het lange termijn gemiddelde.
+
+Details over de berekening van de genoemde getallen kan gevonden worden in de [[Main/nl/spelmechanisme|spelmechanisme]] pagina.
+
+__TOC__
+
+==Tabel van industrieën per klimaat==
+<table><tr><td valign="top" style="padding:0px; border:none; background-color:transparent;">
+  {| {{en/Wikitable}} style="margin:2px 4px 2px 0; border:solid 1px #AAAAAA" rules="cols"
+  |- 
+  | style="background: #ccffcc" colspan="3" align="center"| '''Gematigd'''
+  |- style="background: #ffdead"
+  | '''Industrie'''
+  | '''Accepteert'''
+  | '''Produceert'''
+  |- style="background: #E5FFE5"
+  |[[Main/nl/Bank|Bank]]
+  |[[Main/nl/Kostbaarheden|Kostbaarheden]]
+  |[[Main/nl/Kostbaarheden|Kostbaarheden]]
+  |-
+  |[[Main/nl/Kolenmijn|Kolenmijn]]
+  |Niets
+  |[[Main/nl/Kolen|Kolen]]
+  |- style="background: #E5FFE5"
+  |[[Main/nl/Fabriek|Fabriek]]
+  |[[Main/nl/vee|Vee]],<br/>[[Main/nl/Graan|Graan]],<br/>[[Main/nl/Staal|Staal]]
+  |[[Main/nl/Goederen|Goederen]]
+  |-
+  |[[Main/nl/Boerderij|Boerderij]]
+  |Niets
+  |[[Main/nl/Graan|Graan]],<br/>[[Main/nl/vee|Vee]]
+  |- style="background: #E5FFE5"
+  |[[Main/nl/Bos|Bos]]
+  |Niets
+  |[[Main/nl/Hout|Hout]]
+  |-
+  |[[Main/nl/IJzermijn|IJzermijn]]
+  |Niets
+  |[[Main/nl/IJzererts|IJzererts]]
+  |- style="background: #E5FFE5"
+  |[[Main/nl/Olieraffinaderij|Olieraffinaderij]]
+  |[[Main/nl/Olie|Olie]]
+  |[[Main/nl/Goederen|Goederen]]
+  |-
+  |[[Main/nl/Olieplatform|Olieplatform]]
+  |[[Main/nl/Passagiers|Passagiers]]
+  |[[Main/nl/Olie|Olie]],<br/>[[Main/nl/Passagiers|Passagiers]]
+  |- style="background: #E5FFE5"
+  |[[Main/nl/Oliebronnen|Oliebronnen]]
+  |Niets
+  |[[Main/nl/Olie|Olie]]
+  |-
+  |[[Main/nl/Energiecentrale|Energiecentrale]]
+  |[[Main/nl/Kolen|Kolen]]
+  |Niets
+  |- style="background: #E5FFE5"
+  |[[Main/nl/Houtzagerij|Houtzagerij]]
+  |[[Main/nl/Hout|Hout]]
+  |[[Main/nl/Goederen|Goederen]]
+  |-
+  |[[Main/nl/Hoogoven|Hoogoven]]
+  |[[Main/nl/IJzererts|IJzererts]]
+  |[[Main/nl/Staal|Staal]]
+  |}
+</td><td valign="top" style="padding:0px; border:none; background-color:transparent;">
+  {| {{en/Wikitable}} style="margin:2px 4px 2px 0; border:solid 1px #AAAAAA" rules="cols"
+  |- 
+  | style="background: #ccccff" colspan="3" align="center"| '''Subarctisch'''
+  |- style="background: #ffdead"
+  | '''Industrie'''
+  | '''Accepteert'''
+  | '''Produceert'''
+  |- style="background: #dfefef"
+  |[[Main/nl/Bank|Bank]]
+  |[[Main/nl/Goud|Goud]]
+  |Niets
+  |-
+  |[[Main/nl/Kolenmijn|Kolenmijn]]
+  |Niets
+  |[[Main/nl/Kolen|Kolen]]
+  |- style="background: #dfefef"
+  |[[Main/nl/Voedselfabriek|Voedselfabriek]]
+  |[[Main/nl/vee|Vee]],<br/>[[Main/nl/tarwe|Tarwe]]
+  |[[Main/nl/Voedsel|Voedsel]]
+  |-
+  |[[Main/nl/Boerderij|Boerderij]]
+  |Niets
+  |[[Main/nl/Tarwe|Tarwe]],<br/>[[Main/nl/vee|Vee]]
+  |- style="background: #dfefef"
+  |[[Main/nl/Bos|Bos]]
+  |Niets
+  |[[Main/nl/Hout|Hout]]
+  |-
+  |[[Main/nl/Papierfabriek|Papierfabriek]]
+  |[[Main/nl/Hout|Hout]]
+  |[[Main/nl/Papier|Papier]]
+  |- style="background: #dfefef"
+  |[[Main/nl/Olieraffinaderij|Olieraffinaderij]]
+  |[[Main/nl/Olie|Olie]]
+  |[[Main/nl/Goederen|Goederen]]
+  |-
+  |[[Main/nl/Drukkerij|Drukkerij]]
+  |[[Main/nl/Papier|Papier]]
+  |[[Main/nl/Goederen|Goederen]]
+  |- style="background: #dfefef"
+  |[[Main/nl/Oliebronnen|Oliebronnen]]
+  |Niets
+  |[[Main/nl/Olie|Olie]]
+  |-
+  |[[Main/nl/Energiecentrale|Energiecentrale]]
+  |[[Main/nl/Kolen|Kolen]]
+  |Niets
+  |- style="background: #dfefef"
+  |[[Main/nl/Goudmijn|Goudmijn]]
+  |Niets
+  |[[Main/nl/Goud|Goud]]
+  |}
+ </td><td valign="top" style="padding:0px; border:none; background-color:transparent;">
+  {| {{en/Wikitable}} style="margin:2px 4px 2px 0; border:solid 1px #AAAAAA" rules="cols"
+  |- 
+  | style="background: #ffffcc" colspan="3" align="center"| '''Tropisch'''
+  |- style="background: #ffdead"
+  | '''Industrie'''
+  | '''Accepteert'''
+  | '''Produceert'''
+  |- style="background: #FFFDE0"
+  |[[Main/nl/Bank|Bank]]
+  |[[Main/nl/Diamanten|Diamanten]]
+  |Niets
+  |-
+  |[[Main/nl/Diamantmijn|Diamantmijn]]
+  |Niets
+  |[[Main/nl/Diamanten|Diamanten]]
+  |- style="background: #FFFDE0"
+  |[[Main/nl/Fabriek|Fabriek]]
+  |[[Main/nl/Rubber|Rubber]],<br/>[[Main/nl/Kopererts|Kopererts]],<br/>[[Main/nl/Hout|Hout]]
+  |[[Main/nl/Goederen|Goederen]]
+  |-
+  |[[Main/nl/Boerderij|Boerderij]]
+  |Niets
+  |[[Main/nl/Mais|Mais]]
+  |- style="background: #FFFDE0"
+  |[[Main/nl/Timmerhoutzagerij|Timmerhoutzagerij]]
+  |Niets
+  |[[Main/nl/Hout|Hout]]
+  |-
+  |[[Main/nl/Kopermijn|Kopermijn]]
+  |Niets
+  |[[Main/nl/Kopererts|Kopererts]]
+  |- style="background: #FFFDE0"
+  |[[Main/nl/Olieraffinaderij|Olieraffinaderij]]
+  |[[Main/nl/Olie|Olie]]
+  |[[Main/nl/Goederen|Goederen]]
+  |-
+  |[[Main/nl/Olieplatform|Olieplatform]]
+  |[[Main/nl/Passagiers|Passagiers]]
+  |[[Main/nl/Olie|Olie]],<br/>[[Main/nl/Passagiers|Passagiers]]
+  |- style="background: #FFFDE0"
+  |[[Main/nl/Voedselfabriek|Voedselfabriek]]
+  |[[Main/nl/Fruit|Fruit]],<br/>[[Main/nl/Mais|Mais]]
+  |[[Main/nl/Voedsel|Voedsel]]
+  |-
+  |[[Main/nl/Boomgaard|Boomgaard]]
+  |Niets
+  |[[Main/nl/Fruit|Fruit]]
+  |- style="background: #FFFDE0"
+  |[[Main/nl/Rubberplantage|Rubberplantage]]
+  |Niets
+  |[[Main/nl/Rubber|Rubber]]
+  |-
+  |[[Main/nl/Watervoorraad|Watervoorraad]]
+  |Niets
+  |[[Main/nl/Water|Water]]
+  |- style="background: #FFFDE0"
+  |[[Main/nl/Watertoren|Watertoren]]
+  |[[Main/nl/Water|Water]]
+  |Niets
+  |}
+ </td><td valign="top" style="padding:0px; border:none; background-color:transparent;">
+  {| {{en/Wikitable}} style="margin:2px 4px 2px 0; border:solid 1px #AAAAAA" rules="cols"
+  |- 
+  | style="background: #ff9999" colspan="3" align="center"| '''Speelgoedland'''
+  |- style="background: #ffdead;"
+  | '''Industrie'''
+  | '''Accepteert'''
+  | '''Produceert'''
+  |- style="background: #FFF0F5"
+  |[[Main/nl/Suikerspinbos|Suikerspinbos]]
+  |Niets
+  |[[Main/nl/Suikerspin|Suikerspin]]
+  |-
+  |[[Main/nl/Snoepfabriek|Snoepfabriek]]
+  |[[Main/nl/Suiker|Suiker]],<br/>[[Main/nl/Toffee|Toffee]],<br/>[[Main/nl/Suikerspin|Suikerspin]]
+  |[[Main/nl/Snoep|Snoep]]
+  |- style="background: #FFF0F5"
+  |[[Main/nl/Batterijenboerderij|Batterijenboerderij]]
+  |Niets
+  |[[Main/nl/Batterijen|Batterijen]]
+  |-
+  |[[Main/nl/Colabronnen|Colabronnen]]
+  |Niets
+  |[[Main/nl/Cola|Cola]]
+  |- style="background: #FFF0F5"
+  |[[Main/nl/Speelgoedwinkel|Speelgoedwinkel]]
+  |[[Main/nl/Speelgoed|Speelgoed]]
+  |Niets
+  |-
+  |[[Main/nl/Speelgoedfabriek|Speelgoedfabriek]]
+  |[[Main/nl/Plastic|Plastic]],<br/>[[Main/nl/Batterijen|Batterijen]]
+  |[[Main/nl/Speelgoed|Speelgoed]]
+  |- style="background: #FFF0F5"
+  |[[Main/nl/Plasticfonteinen|Plasticfonteinen]]
+  |Niets
+  |[[Main/nl/Plastic|Plastic]]
+  |-
+  |[[Main/nl/Frisdrankfabriek|Frisdrankfabriek]]
+  |[[Main/nl/Cola|Cola]],<br/>[[Main/nl/Bubbels|Bubbels]]
+  |[[Main/nl/Frisdrank|Frisdrank]]
+  |- style="background: #FFF0F5"
+  |[[Main/nl/Bellenblazer|Bellenblazer]]
+  |Niets
+  |[[Main/nl/Bubbels|Bubbels]]
+  |-
+  |[[Main/nl/Toffeegroeve|Toffeegroeve]]
+  |Niets
+  |[[Main/nl/Toffee|Toffee]]
+  |- style="background: #FFF0F5"
+  |[[Main/nl/Suikermijn|Suikermijn]]
+  |Niets
+  |[[Main/nl/Suiker|Suiker]]
+  |}
+</td></tr></table>
+
+==Nieuwe industrieën bekostigen==
+
+Het is mogelijk voor een voldoende rijk transportbedrijf om nieuwe industrie te financieren op het moment en waar jij wilt. Hou er wel rekening mee dat je niet onmiddellijk iets terugkrijgt voor je investering (zoals een deel van de winst), maar wel de lading kunt vervoeren. Je wordt ook geen eigenaar, dus je kunt het ook niet vernietigen. Zorg er dus voor dat je 'm op de juiste locatie plant. 
+
+Normaal gesproken kun je alleen de volgende [[Category/nl/Industrie|industrieën]] financieren:
+
+{| {{en/Wikitable}}
+!colspan=4 style="background:#ccffcc"|Gematigd
+|-
+| rowspan=7 valign="top"| [[File:en/industriegematigd.png]]
+| style="background:#efefef" | '''Naam'''
+| style="background:#efefef" | <span style="white-space:nowrap">'''Kosten''' (zonder inflatie)</span>
+| style="background:#efefef" | '''Opmerkingen'''
+|-
+| [[Main/nl/Bank|Bank]]
+| £747.070<span style="white-space:nowrap"> </span>(€1.494.140)
+| Accepteert en produceert [[Main/nl/Kostbaarheden|kostbaarheden]].
+|-
+| [[Main/nl/Energiecentrale|Energiecentrale]]
+| £703.125<span style="white-space:nowrap"> </span>(€1.406.250)
+| Accepteert [[Main/nl/Kolen|kolen]] uit [[Main/nl/Kolenmijn|kolenmijnen]].
+|-
+| [[Main/nl/Fabriek|Fabriek]]
+| £609.375<span style="white-space:nowrap"> </span>(€1.218.750)
+| Accepteert [[Main/nl/Graan|graan]] en [[Main/nl/vee|vee]] uit [[Main/nl/boerderij|boerderijen]] en [[Main/nl/Staal|staal]] uit [[Main/nl/Hoogoven|hoogovens]]. Produceert [[Main/nl/Goederen|Goederen]].
+|-
+| [[Main/nl/Hoogoven|Hoogoven]]
+| £629.882<span style="white-space:nowrap"> </span>(€1.259.764)
+| Accepteert [[Main/nl/IJzererts|ijzererts]] uit [[Main/nl/IJzermijn|ijzermijnen]] welke worden gesmolten tot [[Main/nl/Staal|staal]].
+|-
+| [[Main/nl/Houtzagerij|Houtzagerij]]
+| £656.250<span style="white-space:nowrap"> </span>(€1.212.500)
+| Accepteert [[Main/nl/Hout|hout]] uit het [[Main/nl/Bos|bos]]. Produceert [[Main/nl/Goederen|goederen]].
+|-
+| [[Main/nl/Olieraffinaderij|Olieraffinaderij]]
+| £714.843<span style="white-space:nowrap"> </span>(€1.429.686)
+| Deze kunnen alleen nabij de kust gebouwd worden. Accepteert [[Main/nl/Olie|olie]] van [[Main/nl/Olieplatform|olieplatforms]] of [[Main/nl/Oliebronnen|oliebronnen]].
+|-
+!colspan=4 style="background:#ccccff"|Subarctisch
+|-
+| rowspan=7 valign="top"| [[File:en/industriearctisch.png]]
+| style="background:#efefef" | '''Naam'''
+| style="background:#efefef" | <span style="white-space:nowrap">'''Kosten''' (zonder inflatie)</span>
+| style="background:#efefef" | '''Opmerkingen'''
+|-
+| [[Main/nl/Bank|Bank]]
+| £442.382<span style="white-space:nowrap"> </span>(€884.764)
+| Accepteert [[Main/nl/Goud|goud]].
+|-
+| [[Main/nl/Drukkerij|Drukkerij]]
+| £609.375<span style="white-space:nowrap"> </span>(€1.218.750)
+| Accepteert [[Main/nl/Papier|papier]] uit [[Main/nl/Papierfabriek|papierfabrieken]] en produceert [[Main/nl/Goederen|goederen]].
+|-
+| [[Main/nl/Energiecentrale|Energiecentrale]]
+| £703.125<span style="white-space:nowrap"> </span>(€1.406.250)
+| Accepteert [[Main/nl/Kolen|kolen]] uit [[Main/nl/Kolenmijn|kolenmijnen]].
+|-
+| [[Main/nl/Olieraffinaderij|Olieraffinaderij]]
+| £714.843<span style="white-space:nowrap"> </span>(€1.429.686)
+| Deze kunnen alleen nabij de kust gebouwd worden. Accepteert [[Main/nl/Olie|olie]] van [[Main/nl/Oliebronnen|oliebronnen]].
+|-
+| [[Main/nl/Papierfabriek|Papierfabriek]]
+| £665.039<span style="white-space:nowrap"> </span>(€1.330.078)
+| Accepteert [[Main/nl/hout|hout]] en produceert [[Main/nl/Papier|papier]].
+|-
+| [[Main/nl/Voedselfabriek|Voedselfabriek]]
+| £603.515<span style="white-space:nowrap"> </span>(€1.307.030)
+| Accepteert [[Main/nl/vee|vee]] en [[Main/nl/tarwe|tarwe]] en produceert [[Main/nl/voedsel|voedsel]].
+|-
+!colspan=4 style="background:#ffffcc"|Tropisch
+|-
+| rowspan=7 valign="top"| [[File:en/industrietropisch.png]]
+| style="background:#efefef" | '''Naam'''
+| style="background:#efefef" | <span style="white-space:nowrap">'''Kosten''' (zonder inflatie)</span>
+| style="background:#efefef" | '''Opmerkingen'''
+|-
+| [[Main/nl/Bank|Bank]]
+| £442.382<span style="white-space:nowrap"> </span>(€884.764)
+| Accepteert [[Main/nl/Diamanten|diamanten]] uit [[Main/nl/Diamantmijn|diamantmijnen]].
+|-
+| [[Main/nl/Fabriek|Fabriek]]
+| £609.375<span style="white-space:nowrap"> </span>(€1.218.750)
+| Accepteert [[Main/nl/Rubber|rubber]] uit [[Main/nl/Rubberplantage|rubberplantages]], [[Main/nl/Kopererts|kopererts]] uit [[Main/nl/Kopermijn|kopermijnen]] en [[Main/nl/hout|hout]] uit [[Main/nl/houtzagerij|houtzagerijen]]. Produceert [[Main/nl/Goederen|goederen]].
+|-
+| [[Main/nl/Houtzagerij|Houtzagerij]]
+| £395.507<span style="white-space:nowrap"> </span>(€791.014)
+| Produceert [[Main/nl/hout|hout]].
+|-
+| [[Main/nl/Olieraffinaderij|Olieraffinaderij]]
+| £714.843<span style="white-space:nowrap"> </span>(€1.429.686)
+| Accepteert [[Main/nl/Olie|olie]] uit [[Main/nl/Olieplatform|olieplatformen]] en produceert [[Main/nl/Goederen|goederen]].
+|-
+| [[Main/nl/Voedselfabriek|Voedselfabriek]]
+| £603.515<span style="white-space:nowrap"> </span>(€1.307.030)
+| Accepteert [[Main/nl/Fruit|fruit]] uit [[Main/nl/boomgaard|boomgaarden]] en [[Main/nl/Mais|mais]] van [[Main/nl/boerderij|boerderijen]] en produceert [[Main/nl/voedsel|voedsel]].
+|-
+| [[Main/nl/Watertoren|Watertoren]]
+| £336.914<span style="white-space:nowrap"> </span>(€673.828)
+| Accepteert [[Main/nl/Water|water]] uit [[Main/nl/Watervoorraad|watervoorraad]].
+|-
+!colspan=4 style="background:#ff9999"|Speelgoedland
+|-
+| rowspan=5 valign="top"| [[File:en/industriespeelgoed.png]]
+| style="background:#efefef" | '''Naam'''
+| style="background:#efefef" | <span style="white-space:nowrap">'''Kosten''' (zonder inflatie)</span>
+| style="background:#efefef" | '''Opmerkingen'''
+|-
+| [[Main/nl/Frisdrankfabriek|Frisdrankfabriek]]
+| £518.554<span style="white-space:nowrap"> </span>(€1.037.108)
+| Accepteert [[Main/nl/Cola|cola]] uit [[Main/nl/Colabronnen|colabronnen]] en [[Main/nl/Bubbels|bubbels]] uit [[Main/nl/Bellenblazer|bellenblazers]]. Produceert [[Main/nl/Frisdrank|frisdrank]].
+|-
+| [[Main/nl/Snoepfabriek|Snoepfabriek]]
+| £603.515<span style="white-space:nowrap"> </span>(€1.207.030)
+| Accepteert [[Main/nl/Suiker|suiker]], [[Main/nl/Toffee|toffee]] en [[Main/nl/suikerspin|suikerspin]]. Produceert [[Main/nl/Snoep|snoep]].
+|-
+| [[Main/nl/Speelgoedfabriek|Speelgoedfabriek]]
+| £477.539<span style="white-space:nowrap"> </span>(€955.078)
+| Accepteert [[Main/nl/Plastic|plastic]] uit [[Main/nl/Plasticfonteinen|plasticfonteinen]] en [[Main/nl/Batterijen|batterijen]] uit [[Main/nl/Batterijenboerderij|batterijenboerderijen]]. Produceert [[Main/nl/speelgoed|speelgoed]].
+|-
+| [[Main/nl/Speelgoedwinkel|Speelgoedwinkel]]
+| £389.648<span style="white-space:nowrap"> </span>(€779.296)
+| Accepteert [[Main/nl/speelgoed|speelgoed]] uit [[Main/nl/speelgoedfabriek|speelgoedfabrieken]].
+|}
+
+Om in het spel nieuwe industrie te bouwen hou je de ''Industrieën'' werkbalk knop ingedrukt [[File:en/Manual html m4d6ba21e.png]] (zie ''Bedrijf en industrie informatie'' in de [[Main/nl/Spelinterface|Spelinterface]] pagina) en selecteer ''Financier nieuwe industrie''.
+
+Verschillende patches veranderen de regels voor de bouw van nieuwe industrie:
+* [[Main/nl/Bouw ruw materiaal industrieën|Bouw ruw materiaal industrieën]]
+* [[Main/nl/Meerdere industrieën per gemeente|Meerdere industrieën per gemeente]]
+* [[Main/nl/Dezelfde industrie nabij elkaar|Dezelfde industrie nabij elkaar]]
+
+==Nieuwe industrie proberen==
+Vanaf versie 0.6.1 kun je nieuwe industrieën ''proberen''. Proberen en betalen hebben twee grote verschillen. Ten eerste wordt proberen alleen gebruikt voor primaire industrieën (zoals ruwe materialen), en ten tweede kun je voor een geprobeerde industrie geen plaats bepalen (het wordt geplaatst waar de bron gevonden wordt).
+
+Je kunt deze functie in het spel aanzetten in de geavanceerde instellingen, onder Economie -> Industrieën => Handmatige bouwmethode voor primaire industrieën. Het kan ingesteld worden op ''geen'', ''zoals andere industrieën'' en ''proberen'' (standaard).
+
+[[File:en/Coalmine.png|center|frame|De kolenmijn is slechts één van de vele OpenTTD industrieën]]
+
+[[Category:nl/Industrie]]
