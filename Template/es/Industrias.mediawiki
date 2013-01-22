@@ -1,0 +1,42 @@
+<!--
+Esta es una plantilla para las Industrias. '''NO''EDITAR ESTA PÁGINA ", modifique el artículo específico en su lugar.
+--><noinclude>[[Translation:Template/en/Industries]]{{en/-}}</noinclude><!--
+--><div style="float:right; width:260px; font-size:90%; border:1px solid gray; background-color:#f2f2f2; margin-left:10px; margin-bottom:10px">
+<div style="text-align:center; border-bottom:1px solid gray; padding:5px"><strong>{{{nombre}}}</strong></div>
+<div style="background-color:white; padding:5px">[[File:en/.{{{imagen|Industries.png}}}|center]]</div>
+<div style="border-top:1px solid gray; padding:5px"><strong>Climas:</strong> {{{climas}}}</div>
+<div style="border-top:1px solid gray; padding:5px"><strong>Acepta:</strong> {{{acepta}}}</div>
+<div style="border-top:1px solid gray; padding:5px"><strong>Produce:</strong> {{{produce}}}</div>
+<div style="border-top:1px solid gray; padding:5px"><strong>Notas:</strong> {{{notas|Ninguna}}}</div>
+</div><noinclude>
+
+{{en/-}}
+==Uso==
+Escriba:
+<pre>{{es/Industrias| nombre=
+| imagen=
+| climas=
+| acepta=
+| produce=
+| notas=
+}}</pre>
+
+==Ejemplo==
+Escribir:
+<pre>{{es/Industrias| nombre=Mina de carbón
+| imagen=Coalmine.png
+| climas=[[Main/en/Clima/Es#Templado|Templado]] y [[Main/en/Clima/Es#Subártico|Subártico]]
+| acepta= Nada
+| produce= [[Main/es/Carbón|Carbón]]
+| notas= Ninguna
+}}</pre>
+Da como resultado:
+{{es/Industrias| nombre=Mina de carbón
+| imagen=Coalmine.png
+| climas=[[Main/en/Clima/Es#Templado|Templado]] y [[Main/en/Clima/Es#Subártico|Subártico]]
+| acepta= Nada
+| produce= [[Main/es/Carbón|Carbón]]
+| notas= Ninguna
+}}
+</noinclude><includeonly>
+[[Category:es/Industrias]]</includeonly>
