@@ -1,0 +1,45 @@
+<!--
+This is a Template for Industries. '''DO NOT EDIT THIS PAGE''', edit the specific article instead.
+--><noinclude>[[Translation:Template/en/Industries]]{{en/-}}</noinclude><!--
+--><div style="float:right; width:300px; font-size:90%; border:1px solid gray; background-color:#f2f2f2; margin-left:10px; margin-bottom:10px">
+<div style="text-align:center; border-bottom:1px solid gray; padding:5px"><strong>{{{name|{{PAGENAME}}}}}</strong></div>
+<div style="background-color:white; padding:5px">[[File:en/.{{{image|{{PAGENAME}}.png}}}|center]]</div>
+{{#if:{{{caption|}}}|<div style="text-align:center; background-color:white; padding:5px">{{{caption}}}</div>}}
+{{#if:{{{image2|}}}|<div style="background-color:white; padding:5px">[[File:en/.{{{image2}}}|center]]</div>
+{{#if:{{{caption2|}}}|<div style="text-align:center; background-color:white; padding:5px">{{{caption2}}}</div>}}
+}}<div style="border-top:1px solid gray; padding:5px"><strong>Climates:</strong> {{{climates}}}</div>
+<div style="border-top:1px solid gray; padding:5px"><strong>Accepts:</strong> {{{accepts}}}</div>
+<div style="border-top:1px solid gray; padding:5px"><strong>Produces:</strong> {{{produces}}}</div>
+{{#if:{{{notes|}}}|<div style="border-top:1px solid gray; padding:5px"><strong>Notes:</strong> {{{notes|None}}}</div>}}
+</div><noinclude>
+
+{{en/-}}
+==Usage==
+Type:
+<pre>{{en/Industries| name=
+| image=
+| climates=
+| accepts=
+| produces=
+| notes=
+}}</pre>
+
+==Example==
+Type:
+<pre>{{en/Industries| name=Coal mine
+| image=Coalmine.png
+| climates=[[Main/en/Climates#Temperate]], [[Main/en/Climates#Sub-arctic]]
+| accepts= Nothing
+| produces= [[Main/en/Coal]]
+| notes= None
+}}</pre>
+Result:
+{{en/Industries| name=Coal mine
+| image=Coalmine.png
+| climates=[[Main/en/Climates#Temperate]], [[Main/en/Climates#Sub-arctic]]
+| accepts= Nothing
+| produces= [[Main/en/Coal]]
+| notes= None
+}}
+</noinclude><includeonly>
+[[Category:en/Industries]]</includeonly>
