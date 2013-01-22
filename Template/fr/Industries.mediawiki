@@ -1,0 +1,42 @@
+<!--
+Ceci est un modèle pour les industries. '''NE PAS ÉDITER CETTE PAGE''', éditez plutôt l'article spécifique.
+--><noinclude>[[Translation:Template/en/Industries]]{{en/-}}</noinclude><!--
+--><div style="float:right; width:260px; font-size:90%; border:1px solid gray; background-color:#f2f2f2; margin-left:10px; margin-bottom:10px">
+<div style="text-align:center; border-bottom:1px solid gray; padding:5px"><strong>{{{nom|{{PAGENAME}}}}}</strong></div>
+<div style="background-color:white; padding:5px">[[File:en/.{{{image|Industries.png}}}|center]]</div>
+<div style="border-top:1px solid gray; padding:5px"><strong>Climats:</strong> {{{climats}}}</div>
+<div style="border-top:1px solid gray; padding:5px"><strong>Accepte:</strong> {{{accepte}}}</div>
+<div style="border-top:1px solid gray; padding:5px"><strong>Produit:</strong> {{{produit}}}</div>
+<div style="border-top:1px solid gray; padding:5px"><strong>Notes:</strong> {{{notes|Rien}}}</div>
+</div><noinclude>
+
+{{en/-}}
+==Utilisation==
+Type:
+<pre>{{fr/Industries| nom=
+| image=
+| climats=
+| accepte=
+| produit=
+| notes=
+}}</pre>
+
+==Exemple==
+Type:
+<pre>{{fr/Industries| nom=Mine de charbon
+| image=Coalmine.png
+| climats=[[Main/en/Climat/Fr#Tempéré|Tempéré]], [[Main/en/Climat/fr#Subarctique|Subarctique]]
+| accepte= Rien
+| produit= [[Main/fr/Charbon|Charbon]]
+| notes= Rien
+}}</pre>
+Résultat:
+{{fr/Industries| nom=Mine de charbon
+| image=Coalmine.png
+| climats=[[Main/en/Climat/Fr#Tempéré|Tempéré]], [[Main/en/Climat/Fr#Subarctique|Subarctique]]
+| accepte= Rien
+| produit= [[Main/fr/Charbon|Charbon]]
+| notes= Rien
+}}
+</noinclude><includeonly>
+[[Category:fr/Industries]]</includeonly>
