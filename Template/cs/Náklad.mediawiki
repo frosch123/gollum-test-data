@@ -1,0 +1,31 @@
+<noinclude>[[Translation:Template/en/Cargo]]{{en/-}}</noinclude><!--
+--><div style="float:right; width:15em; font-size:90%; border:1px solid gray; background-color:#f2f2f2; margin-left:1em; margin-bottom:1em">
+<div style="text-align:center; border-bottom:1px solid gray"><strong>{{{name|{{PAGENAME}}}}}</strong></div>
+<div style="padding:1em; background-color:white">[[File:en/.{{{image|Cargo.png}}}|128px|center]]</div>
+<div style="border-top:1px solid gray; padding:0.5em"><strong>Vyrábí:</strong> {{{produced}}}</div>
+<div style="border-top:1px solid gray; padding:0.5em"><strong>Potřebuje:</strong> {{{accepted}}}</div>
+</div><noinclude>
+
+{{en/-}}
+==Použití==
+Type:
+<pre>{{cs/Náklad| name=
+| image=
+| produced=
+| accepted=
+}}</pre>
+
+==Příklad==
+Type:
+<pre>{{cs/Náklad| name=Železo
+| image=Steel.png
+| produced=[[Main/en/Steel Mill|Ocelárna]]
+| accepted=[[Main/en/Factory|Továrna]]
+}}</pre>
+Result:
+{{cs/Náklad| name=Železo
+| image=Steel.png
+| produced=[[Main/en/Steel Mill|Ocelárna]]
+| accepted=[[Main/en/Factory|Továrna]]
+}}
+</noinclude><includeonly>[[Category:en/Cargo]]</includeonly>
