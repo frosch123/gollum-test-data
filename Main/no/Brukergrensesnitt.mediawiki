@@ -1,0 +1,91 @@
+[[Translation:Main/en/Game interface]]{{en/-}}{{no/Innhold}}
+==Hovedskjerm==
+[[File:no/Mainscreen.png|frame|center|OpenTTDs hovedskjerm]]
+På hovedskjermen har man følgende valg:
+* '''[[Main/no/Nytt spill|Nytt spill]]''': Lag et tilfeldig kart og start spillet.
+* '''[[Main/no/Last inn spill|Last inn spill]]''': Last et lagret spill og fortsett å spille.
+* '''[[Main/no/Scenario|Spill scenario]]''': Last et scenario og spill det.
+* '''[[Main/no/Høydekart|Spill høydekart]]''': Last et høydekart og start å spille på det.
+* '''[[Main/no/Rediger scenario|Rediger scenario]]''': Lag eller redigér et scenario.
+* '''[[Main/no/Flerspiller|Flerspiller]]''': Spill flerspiller.
+* '''[[Main/no/Spillinnstillinger|Spillinnstillinger]]''': Konfigurer generelle innstillinger.
+* '''[[Main/no/Vanskelighetsgrad|Vanskelighetsgrad]]''': Velg innstillinger for å gjøre spillet lettere eller vanskeligere.
+* '''[[Main/no/Avanserte innstillinger|Avanserte innstillinger]]''': Konfigurer forskjellige detaljer av spillet.
+* '''[[Main/no/NewGRF-innstillinger|NewGRF-innstillinger]]''': Legg til [[Main/no/NewGRF|NewGRF-er]].
+* '''[[Main/no/Nettinnhold|Se etter innhold på nettet]]''': Last ned tilleggsmateriale.
+* '''[[Main/no/AI-innstillinger|AI-innstillinger]]''': Konfigurer motstanderne. 
+* '''Avslutt''': Gå ut av OpenTTD.
+
+==Spillgrensesnitt==
+Når du starter spillet, vil du bli presentert for '''spillgrensesnittet''', som er vist under. Mesteparten av tiden du spiller vil du bruke her. Det har tre seksjoner: på toppen er ''[[Main/en/#Menylinjen|menylinjen]]'', i midten er ''[[Main/en/#3D isometrisk spillverden|spillkartet]]'' og helt nederst er ''[[Main/en/#Statuslinjen|statuslinjen]]''.
+[[File:en/interface.png|thumb|none|400px|Spillskjermen]]
+
+==Menylinjen==
+Menyen har knapper delt inn i seksjoner som beskrevet under. Seksjonene er fra høyre til venstre: "Spillkontroller", "Kartinformasjon", "Firma- og industriinformasjon", Kjøretøyinformasjon", "Zoom", "Konstruksjon" og "Annet".
+* For å finne ut hva en knapp gjør, kan du høyreklikke på den i spillet.
+* De fleste knappene har to moduser: trykk på de en gang for å få opp standardfunksjonen og hold for å få opp en egen meny.
+[[File:en/Menu bar.png|none|frame|Menylinjen]]
+
+===Spillkontroller===
+*[[File:en/manual html m7fd3f2df.png|Pause]] '''Pause''': Tar pause av og på.
+*[[File:en/manual html m56d46b8f.png|Spol fremover]] '''Spol fremover''': Øker hastigheten på spillet, avhengig av hvor rask maskinen din er.
+*[[File:en/manual html md7ebe52.png|Innstillinger]] '''Innstillinger''': Gir deg tilgang til innstillinger-menyen. ''Spillinnstillinger'', ''Vanskelighetsgrad'', ''Avanserte innstillinger'' og grafikkinnstillinger.
+*[[File:en/manual html m3ad9dba5.png|Lagre/laste]] '''Lagre / laste''': Gir deg tilgang til lagre/laste-menyen: ''Lagre spill'', ''Last inn spill'', ''Avslutt gjeldende spill'' og ''Avslutt OpenTTD''.
+
+===Kartinformasjon===
+*[[File:en/manual html m6cb2b7aa.png|Minikart]] '''Minikart''': Viser verdenskartet i miniatyr.
+*[[File:en/manual html m58c015ad.png|Bykatalogen]] '''[[Main/no/Byer|By]]katalogen''': Viser en liste med byer og populasjonen deres.
+*[[File:en/manual html 54594ccb.png|Subsidier]] '''[[Main/no/Subsidier|Subsidier]]''': Viser en liste med subsidier som tilbys og som allerede har blitt tildelt de forskjellige selskapene.
+*[[File:en/manual html m791b53c3.png|Stasjonlisten]] '''[[Main/no/Stasjonlisten|Stasjonlisten]]''': Gir deg tilgang til en liste med stasjoner, både dine og de andre selskapene sine.
+
+===Firma- og industriinformasjon===
+*[[File:en/manual html 63e6566d.png|Finansskjerm]] '''Finansskjerm''': Viser økonomien til alle firmaer.
+*[[File:en/manual html 12e20f5b.png|Firmainformasjon]] '''[[Main/no/Firma|Firma]]informasjon''': Viser firmainformasjonen til alle selskaper.
+*[[File:en/manual html 36354981.png|Grafer]] '''Grafer''': Viser forskjellige grafer om firmaer og om deres økonomi.
+*[[File:en/manual html 2a553acb.png|Firmarangering]] '''Firmarangering''': Viser en tabell med rangeringen til de forskjellige selskapene.
+*[[File:en/manual html m4d6ba21e.png|Industrier]] '''Industrier''': Viser en liste med industrier og deres produksjon. Du kan også [[Main/en/Industrier/No#Finansiere Nye Industrier|finansiere nye]] industrier.
+
+===Kjøretøyinformasjon===
+*[[File:en/manual html m16a497ce.png|Toginformasjon]] '''Toginformasjon''': Se en liste med dine eller de andre firmaenes tog.
+*[[File:en/manual html m3518e48c.png|Kjøretøyinformasjon]] '''Kjøretøyinformasjon''': Se en liste med dine eller de andre firmaenes kjøretøy.
+*[[File:en/manual html 53123a33.png|Skipinformasjon]] '''Skipinformasjon''': Se en liste med dine eller de andre firmaenes skip. 
+*[[File:en/manual html 442702e6.png|Flyinformasjon]] '''Flyinformasjon''': Se en liste med dine eller de andre firmaenes fly. 
+
+===Zoom===
+For å zoome inn eller ut, trykk på knappene vist under. Det er tre forstørrelses-nivåer. Du kan også zoome med musehjulet eller + og -. 
+*[[File:en/manual html 628b2aa3.png|Zoom inn (+)]] '''Zoom inn''': Zoomer inn. Hvis knappen er deaktivert, kan du ikke zoome lenger inn.
+*[[File:en/manual html m55168bcb.png|Zoom ut (-)]] '''Zoom ut''': Zoomer ut. Hvis knappen er deaktivert, kan du ikke se et større område av kartet.
+
+===Konstruksjon===
+*[[File:en/manual html m772c5b23.png|Bygg jerbane]] '''Bygg jernbane''': Åpner [[Main/no/Konstruer jernbane|verktøylinjen for bygging av jernbane og stasjoner]].
+*[[File:en/manual html ma6d6c8c.png|Bygg veier]] '''Bygg veier''': Åpner [[Main/no/Konstruer veier|verktøylinjen for bygging av veier og stasjoner]].
+*[[File:en/manual html m2cc0c4cd.png|Bygg kaier]] '''Bygg kaier''': Åpner [[Main/no/Konstruer kaier|verktøylinjen for bygging av kaier og kanaler]].
+*[[File:en/manual html 1ae92703.png|Bygg flyplasser]] '''Bygg flyplass''': Åpner [[Main/no/Konstruer flyplasser|verktøylinjen for bygging av flyplasser]].
+*[[File:en/manual html m233f8633.png|Landskap]] '''Landskap''': Åpner [[Main/no/Landskaping|verktøylinjen for landskaping]].
+
+===Annet===
+*[[File:en/manual html m6a2249c4.png|Jukebox]] '''Jukebox''': Endre lyd- og musikkinnstillinger.
+*[[File:en/manual html 2a55c3aa.png|Nyheter]] '''Nyheter''': Endre nyhet-og [[Main/en/Meldingsinnstillinger|meldingsinnstillingene]]. Du kan også se nyhetsloggen.
+*[[File:en/manual html 51cda05b.png|Annet]] '''Annet''': Ting som ikke passer inn i de andre seksjonene: ''Informasjon om landområder'', ''Vis/skjul konsoll'', ''AI feilsøking'', ''Skjermdump'', ''Stor skjermdump'', og ''Om OpenTTD''.
+
+==3D isometrisk spillverden==
+OpenTTD-verdenen tar form som et landskap, presentert med [http://www.wikipedia.org/wiki/Video games with isometric graphics isometrisk projeksjon (en)] (strengt tatt heller [http://www.wikipedia.org/wiki/dimetric projection dimetrisk projeksjon (en)]) for 3D-looken. Mesteparten av tiden du spiller vil du bruke her. Kartet er delt opp i mange typer firkanter. Noen er skråninger, noen er vann, noen er det bygninger på, osv. Dette er hvor du lager transportimperiumet ditt!
+
+==Statuslinjen==
+[[File:en/status-bar.png|none|frame|Statuslinjen]]
+Statuslinjen er på bunnen av siden. Den er delt inn i tre seksjoner. 
+*På venstresiden kan du se datoen. En dag tar 2,5 sekunder med normal fart. 
+*Den midterste delen, som tar opp mesteparten av plassen, viser forskjellig information:
+**Firmanavnet ditt (her unnamed (uten navn)). Etter at du har gitt firmaet ditt et navn, vil dette stå her.
+**Nyhetsmeldinger kommer opp fra statuslinjen. Trykk på linjen for å vise den siste meldingen.
+**Hvis du har stilt [[Main/no/meldingsinnstillinger|meldingsinnstillingene]] til "Sammendrag", vil meldingene gli forbi her fra høyre til venstre istedenfor å komme opp.
+**Hvis du har stilt meldingsinnstillingene til "Av", vil en rød prikk indikere ny melding.
+**Den viser også om spillet er på pause ved å si "* * PAUSE * *"
+*Delen lengst til høyre viser hvor mye penger du har. Du kan endre valutaen i [[Main/no/spillinnstillinger|spillinnstillingene]] ved å trykke "Innstillinger"-knappen og så "Spillinnstillinger".
+
+
+"Statuslinjen" kan også referere til kjøretøystatuslinjen.
+
+==Se også==
+* [[Main/no/Tastatursnarveier|Tastatursnarveier]]
+* [[Main/no/Grensesnittfunksjoner|Grensesnittfunksjoner]]
