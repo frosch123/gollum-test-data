@@ -1,0 +1,26 @@
+{{en/Historic|Information on this page applies '''since 0.3.0 to 0.6.3'''.
+:*for '''0.7.0 and later''' - See [[Main/en/Advanced Settings]] for information of how to change settings.
+:*for '''0.2.0 and 0.2.1''' - See [[Main/en/Configuring patches in 0.2.0]].}}
+
+[[File:en/0.6.0 configurepatches interface.png|right|frame|The ''Configure Patches'' window (0.6.3-OpenTTD)]]
+The '''configure patches window''' Contains a number of detailed settings ([[Main/en/patches]]) you can change in the game, divided up into the following sections:
+
+*[[Main/en/Configuring patches/Interface|Interface]]
+*[[Main/en/Configuring patches/Construction|Construction]]
+*[[Main/en/Configuring patches/Vehicles|Vehicles]]
+*[[Main/en/Configuring patches/Stations|Stations]]
+*[[Main/en/Configuring patches/Economy|Economy]]
+*[[Main/en/Configuring patches/Competitors|Competitors]]
+
+Buttons are green to show the patch is on, red to show it is off. Arrow buttons change the value of the setting like a horizontal scrollbox. Clicking on a patch-line with arrow buttons shown will bring up an edit box, where the desired value can be typed in.
+
+{{en/-}}
+
+== Restructured advanced settings window ==
+In 0.7 these settings have been renamed to [[Main/en/Advanced Settings]] to avoid confusion with [[Main/en/TTDPatch]] or patches (in the technical sense) against the source code of OpenTTD often found in the [http://www.tt-forums.net/viewforum.php?f=33 Development section of tt-forums].
+
+The tabs at the top of the window are removed and all advanced settings are listed in a tree structure. This allows for subcategories that can be expanded and collapsed independently. The former tabs (''Interface'', ''Construction'', ''Vehicles'', ''Stations'', ''Economy'' and ''Competitors'') are now top level categories and they can now have subcategories, for example the subcategory ''Trains'' in ''Vehicles''.
+
+{{en/Feature period|Old|0.6}}
+
+[[Category:en/Settings & Preferences]]
