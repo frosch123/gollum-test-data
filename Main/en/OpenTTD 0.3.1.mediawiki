@@ -1,0 +1,51 @@
+[[Translation:Main/en/OpenTTD 0.3.1]]{{en/-}}
+{{en/OTTDVersions}}
+{{release|prev=OpenTTD 0.3.0|next=OpenTTD 0.3.2|date=2004-04-26}}
+
+You can download this release from [http://www.openttd.org/download-stable/0.3.1 openttd.org].
+
+==Major new features==
+* [[Main/en/Game interface#Game controls]] button
+* Bugfixes
+
+==Changelog==
+===0.3.1 (2004-04-26)===
+* Feature: Bridge pillars for higher bridges
+* Feature: Remember cargo payment rates selection, default to all
+* Feature: Fast forward button
+* Feature: Copy/share orders from trains in depot
+* Feature: Swedish translation
+* Feature: Dragging to construct canals
+* Feature: Can now have more than 128 towns
+* Feature: Always allow building small airports patch
+* Feature: Colourful newspaper after a certain date
+* Feature: Build while paused patch
+* Feature: Polish town names
+* Feature: Clear area now works in scenario editor
+* Feature: Drag&drop stations
+* Feature: More realistic train starting and stopping
+* Change: New directory structure (*.grf+sample.cat in data subdir, *.lng in lang subdir)
+* Fix: Shift+arrows keys scrolls faster
+* Fix: 'Monorail in 1985' which allowed you to build monorail/maglev at any year [SF#941880]
+* Fix: Town ratings when companies are deleted/merged
+* Fix: Vehicle reliability calculation in third phase
+* Fix: Random world button in scenario editor does not build cities, industries, trees
+* Fix: Loading worlds with no towns now fails
+* Fix: Outdated sort order after station renaming
+* Fix: Better train detection for copy orders
+* Fix: Euro currency bug [SF#938481]
+* Fix: Go to xxx road depot selection bug (2) [SF#938170]
+* Fix: Scrolling and newspaper in title screen [SF#934520]
+* Fix: Incorrect cargo_days for trains
+* Fix: Array bounds error with train breakdown speeds
+* Fix: Towns deleting random tiles around houses
+* Fix: Incorrect road vehicle list caption for competitors
+* Fix: Vehicle menu graying after a bankruptcy
+* Fix: Selective road removal
+* Fix: Make houses available in 1920 to prevent hang
+* Fix: Duration of breakdown smoke
+* Fix: Slope bug under bridges
+* Fix: Do not play invalid sounds (fixes road reconstruction crash)
+* Fix: Display correct train power with multihead engines
+* Fix: Buffer overflow caused by too long string in english.lng
+* Fix: Destroying things with no money
