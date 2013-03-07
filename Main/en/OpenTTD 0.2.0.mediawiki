@@ -1,0 +1,70 @@
+[[Translation:Main/en/OpenTTD 0.2.0]]{{en/-}}
+{{en/OTTDVersions}}
+{{release|prev=OpenTTD 0.1.4|next=OpenTTD 0.2.1|date=2004-04-03}}
+
+You can download this release from [http://www.openttd.org/download-stable/0.2.0 openttd.org].
+
+==Major new features==
+* Order improvements
+* [[Main/en/Signals#Pre-signals]]
+* [[Main/en/Mammoth trains]]
+* Bugfixes
+
+==Changelog==
+===0.2 (2004-04-03)===
+* Feature: Autoscroll (only works to left/right)
+* Feature: Train checkpoints, instead of TTDPatch's nonstop handling
+* Feature: TTDPatch compatible nonstop handling
+* Feature: Refresh rate configuration setting
+* Feature: Town directory sorting options
+* Feature: Pre-signals (ctrl-click on existing signals to change signal type)
+* Feature: Show semaphores on the right side if right-sided traffic
+* Feature: Patch options configuration window
+* Feature: Autorail build tool
+* Feature: 'Show yearly finances window' option
+* Feature: 'Signals on drive side' patch
+* Feature: 'Show full date in statusbar' option
+* Feature: Italian translation
+* Feature: Road and rail removal by dragging a selection
+* Feature: News item for 'train is unprofitable'
+* Feature: News item for 'train is lost'
+* Feature: [Windows] Double size mode (Ctrl-d to toggle)
+* Feature: 'Multiple similar industries in close proximity' option
+* Feature: 'Multiple industries per down' option
+* Feature: 'Crossing tunnels' option
+* Feature: Order sharing and copying ('goto' on other vehicle to copy, ctrl+'goto' to share)
+* Feature: Remember last built rail type
+* Feature: 'Debtmax' faster loan management with ctrl key
+* Feature: 'Go to depot' orders option
+* Feature: 'Long bridges' option
+* Feature: 'Select goods' option
+* Feature: 'No train service' option
+* Feature: 'No inflation' option
+* Feature: Automatically detect available resolutions
+* Feature: 'Full load any' option, as in TTDPatch
+* Feature: Automatic detection of available language files
+* Feature: German translation
+* Feature: Finnish town names
+* Feature: Remember custom difficulty settings
+* Feature: Configuration file system
+* Feature: Show vehicle speed in vehicle view windows
+* Feature: Train depot window now has horizontal scrollbar
+* Feature: Mammoth trains
+* Feature: On-the-fly language selection
+* Feature: Load old premade ttd maps (must be renamed to .sv1 extension)
+* Change: Increased number of windows on screen to 20
+* Change: [OSX] Start when doubleclicked
+* Change: [OSX] Significant performance increase
+* Change: Optimized startup time
+* Change: Sorted savegame list
+* Fix: News window was moved strangely when resizing
+* Fix: Fixed sign drawing bug in max zoom out mode
+* Fix: Road vehicles sometimes getting stuck
+* Fix: Connecting tracks behind depot causing incorrect signal behavior
+* Fix: Save/load diskspace bug
+* Fix: Incorrect bridge cost for long bridges
+* Fix: Disallow buoy in north corner
+* Fix: Shift key now increases game speed only when game window is active
+* Fix: Ctrl button now works with SDL driver
+* Fix: Incorrect weight displayed in 'new trains' window
+* Fix: Incorrect train running cost in newspaper
