@@ -1,0 +1,358 @@
+{{en/-}}
+{{en/OTTDVersions}}
+{{release|prev=OpenTTD 1.1.5|next=OpenTTD 1.2.1|date=2012-04-15}}
+
+You can download this release from [http://www.openttd.org/en/download-stable/1.2.0 openttd.org].
+
+==Major new features==
+
+* [[Main/en/Game script]]
+* Aircraft range
+* View textfiles (readmes, changelogs and licenses) of NewGRFs, AIs, Game Scripts and BaseSets in game
+* Infrastructure maintenance
+* Extra zoom - 2x and 4x
+* River generation on creation of map
+* NewGRF v8 support
+* Australian translation
+* Support for 32bpp sprites at extra zoom levels
+* Many, many bug fixes
+
+==Changelog==
+
+===1.2.0 (2012-04-15)===
+
+* Fix: When starting GS or AI, always use the settings of the game, not the new-game settings {{en/Flyspray|5142}} (r24108)
+* Fix: Provide translated comments in the desktop file without language name postfix (r24100)
+* Fix: Cloning orders of aircraft with limited range failed {{en/Flyspray|5131}} (r24086)
+
+
+===1.2.0-RC4 (2012-04-01)===
+
+* Fix: Reversing trains while they were entering or leaving a depot could lead to stuck trains {{en/Flyspray|5093}} (r24078, r24071)
+* Fix: The 'last joined' server was not properly selected anymore {{en/Flyspray|5098}} (r24070)
+* Fix: Immediately start querying the last joined server instead of waiting for the requery loop {{en/Flyspray|5097}} (r24069, r24062)
+* Fix: Make the full snowedness level of houses the same as roads and rails {{en/Flyspray|5121}} (r24064)
+* Fix: With certain versions of GCC and compiler flags the compiler could reorder some code badly causing the 32bpp depot flag not working {{en/Flyspray|5125}} (r24063)
+* Fix: Do not freeze aircraft mid-flight when skipping to an out-of-range destination {{en/Flyspray|5123}} (r24060)
+* Fix: Wrong numbering of string parameters causing wrong capacities to be shown {{en/Flyspray|5124}} (r24058)
+* Fix: Crash when timetabling a maximum travel speed of 0 {{en/Flyspray|5111}} (r24053)
+* Fix: [NewGRF] Imported GRF sounds were inserted into the wrong slots {{en/Flyspray|5107}} (r24052)
+* Fix: [NewGRF] Realsprites inside the action 11 block were not skipped correctly (r24050)
+* Fix: Improve error messages for the placement restrictions of banks, water towers and toy shops {{en/Flyspray|5095}} (r24040)
+
+
+===1.2.0-RC3 (2012-03-18)===
+
+* Feature: Allow display of baseset textfiles (r24037)
+* Feature: Increase the station class limit from 32 to 256 (r24031)
+* Fix: After opening a text window with the monospaced font, all other text started glitching (r24038)
+* Fix: [NoAI] Reset 'is random' status of temporary variable during saveload as it is not always written to when loading an AI which means it wouldd be taking the 'is random' setting of another AI (r24033)
+* Fix: [NoAI] Make AIEngine::IsArticulated return true if the articulated callback flag is set, do not try to run the callback (r24029)
+* Fix: Pass cases down into the list of cargos {{en/Flyspray|5090}} (r24024, r24023, r24022)
+
+
+===1.2.0-RC2 (2012-03-04)===
+
+* Fix: [Script] AI used in names in API for GSOrder {{en/Flyspray|5088}} (r24006)
+* Fix: Improve rounding when converting display speeds to internal speeds {{en/Flyspray|5079}} (r23995)
+* Fix: Also reset the font glyph cache when switching blitters (r23992, r23987)
+* Fix: [NewGRF] Also display the cargo subtype for vehicles which have no capacity, but a subtype {{en/Flyspray|5076}} (r23991)
+* Fix: Zero the offsets of disabled zoomlevels, so they do not influence offset calculations (r23989)
+* Fix: Invalid reads when scaling an odd-sized sprite smaller (r23986)
+* Fix: Inconsistent quit/abandon/exit game/scenario/editor strings {{en/Flyspray|5074}} (r23985)
+* Fix: Fix the order of lights on the helipad {{en/Flyspray|5082}} (r23984)
+* Fix: Tarred heightmaps would not be found {{en/Flyspray|5083}} (r23983)
+* Fix: Do not load a game during UpdateWindows as that might trigger changing the blitter which triggers re-entrant locking (r23980, r23977)
+* Fix: [SDL] Palette update was done too late making switching from 8bpp -> 32bpp look ugly (r23978)
+* Fix: Sprites of different zoom levels were not always padded correctly to a common size (r23976)
+* Fix: Also save the maximum travel speed for the current vehicle order (r23973)
+
+===1.2.0-RC1 (2012-02-19)===
+
+* Feature: [NewGRF] Customisable tunnel portals for rail types (r23952)
+* Feature: Timetabled maximum travel speeds for non-flying vehicles (r23947)
+* Feature: Readme/licence/changelog viewer for AI and game scripts {{en/Flyspray|5047}} (r23936)
+* Feature: [NewGRF] 32bpp sprites in GRFs (r23897)
+* Feature: [NewGRF] Support for RealSprites with multiple zoom levels (r23890)
+* Feature: [NewGRF] Support for container version 2 (r23887)
+* Fix: Refittability should never depend on the current capacity of a vehicle {{en/Flyspray|5070}} (r23965)
+* Fix: Do not look for missing sprites twice during startup {{en/Flyspray|5072}} (r23963)
+* Fix: [Script] Infinite recursion within a script was not caught properly, so they could cause crashes of OpenTTD instead of the AI {{en/Flyspray|5068}} (r23962)
+* Fix: [NewGRF] Make the properties for always/never refittable cargo types not behave incremental, but reset them on reassignment (r23960)
+* Fix: [Network] Do not allow chat messages from pre-active clients. As they have not got the savegame yet, they will not have the interface to send them either (r23958)
+* Fix: [Network] Allow sending chat to pre-active clients as the clients start accepting once they send 'map ok' to the server, which is the same moment we change their status to pre-active {{en/Flyspray|4990}} (r23957)
+* Fix: When the population of a town changes the town view might even have to change size due to different cargo requirements {{en/Flyspray|5062}} (r23953)
+* Fix: [NoGo] Never show GSGoal::Question() to spectators {{en/Flyspray|5063}} (r23950)
+* Fix: Better rounding when converting internal speed to displayed speed (r23945)
+* Fix: Also list DEITY signs in the signlist in the scenario editor {{en/Flyspray|5061}} (r23943)
+* Fix: Infrastructure cache of standard road stops would get messed up when buying a company with them (r23942)
+* Fix: Scale infrastructure cost of rail tracks by the total number of all tracks and not independently for each rail type (r23931)
+* Fix: [Script] Do not close the parameter window when a script starts {{en/Flyspray|4944}} (r23930)
+* Fix: Do not accelerate, for smoke purposes, when you reached the track's maximum speed {{en/Flyspray|5053}}
+* Fix: 32bpp animated blitter was optimised a bit too far regarding not needing to update the colour mapping when (re)initialising the palette {{en/Flyspray|5056}} (r23927)
+* Fix: [NoGo] Some news messages would cause an assertion to be triggered due to a missing proper location for the viewport of the news message, so only allow building when valid data for the viewport is provided or no viewport is used {{en/Flyspray|5054}} (r23924)
+* Fix: Consider only the middle tile of a lock for lock-infrastructure costs. The other two tiles may be owned by other companies. Also do not count the middle tile of a lock as canal, independent of whether it is build on ground or river slope (r23920)
+* Fix: [NewGRF] When determining the first refittable cargotype according to CTT order, do not rely on the GRF assigning the refit_mask property. Also check for GRFs setting the default_cargo or refittable-cargo-classes or -types properties (r23916)
+* Fix: [NewGRF] Do not test validity of cargobits using a mask of cargoslots (r23914)
+* Fix: [NewGRF] When testing whether a engine shall only carry the default cargo, check ctt_include_mask for being empty before applying cargo translation (r23912)
+* Fix: [SDL] Handle the SDL_VIDEOEXPOSE event to solve issues with SDL 1.3 (r23910)
+* Fix: [SDL] Fix keyboard-related segfault when compiling against SDL 1.3 (r23909)
+* Fix: [Makefile] Make sure bin/baseset/openttd.32.bmp is removed on make clean (r23908)
+* Fix: [Makefile] Let "make clean --dry-run" not delete Makefiles (r23907)
+* Fix: [Windows installer] OpenMSX got downloaded to and extracted in the wrong (non-existent) folder {{en/Flyspray|5045}} (r23905)
+* Fix: Memory leak everytime one clicked a savegame in the load GUI (r23901)
+* Fix: [NewGRF] It was not possible to import sounds from a NewGRF later in the load order (r23883)
+* Remove: PNG sprite loader; use 32bpp sprites in a NewGRF (r23898)
+
+===1.2.0-beta4 (2012-02-04)===
+
+* Feature: [NewGRF] Give NewGRF defined level crossings and rail depots access to the townzone (r23866)
+* Feature: [NewGRF] New algorithm (activated via an engine flag) to determine the capacity of vehicles. This allows vehicles to better control the capacity for cargotypes which they know; and let cargo NewGRFs influence the capacity for cargos the vehicle NewGRF does not know, but which the vehicle is refittable to due to cargo classes (r23861)
+* Feature: [NewGRF] Add cargo property 1D to set the capacity multipliers when refitting vehicles, which do not use callback 15 (r23860)
+* Feature: Allow command line options -e and -g to be combined to load saves/scenarios directly into SE (r23839)
+* Feature: [NoGo] Allow querying orders of vehicles {{en/Flyspray|4994}} (r23837)
+* Change: Do not let towns (ever) remove objects {{en/Flyspray|5001}}, {{en/Flyspray|5002}} (r23842)
+* Change: Make signs placed in scenario editor belong to the GS. That way they are always shown in game and are not editable {{en/Flyspray|4999}} (r23835)
+* Fix: Generate industry subsidies again {{en/Flyspray|5039}} (r23876)
+* Fix: [NoGo/NoAI] Scripts with a bad comparator could lock up OpenTTD {{en/Flyspray|5004}} (r23870)
+* Fix: Make the colour of the dropdown items for opening the vehicle list for which the company has no vehicles looking less horrid {{en/Flyspray|5020}} (r23867)
+* Fix: Railtype overlays were drawn 'only transparent' on invisible bridges (r23864)
+* Fix: Inserting conditional orders for ships checked the wrong orders wrt. maximum distance (r23859)
+* Fix: Out of bounds read for slowdown parameter caused desync when railtype >= 4, vehicles were fast, and the original acceleration model was used {{en/Flyspray|5007}} (r23855)
+* Fix: Infrastructure cache could get out of sync when overbuilding a drive through road stop (r23851)
+* Fix: When the network is lagging, you try to copy a vehicle's order but accidentally create a station order and then copy the vehicle's order (before the first command is executed) one could trigger an assertion from the pool {{en/Flyspray|5008}} (r23849)
+* Fix: When removing road or tram from a tram+road stop, the owner of the road stop's cache was updated instead of the owner of the removed infrastructure (r23847)
+* Fix: Infrastructure count for stations was not updated properly on company takeover. And do not count buoys while loading a game either (r23844)
+* Fix: Clear NewGRF vehicle cache when their owner changes (r23841)
+* Fix: Assertion got hit when destroing a dock when a ship was loading {{en/Flyspray|5000}} (r23838)
+* Fix: If a vehicle is not refittable to any cargo in the CTT, then pick the first refittable cargoslot (r23836)
+
+===1.2.0-beta3 (2012-01-21)===
+
+* Feature: [NoGo] Allow to chose the goal question window's title from a (small) set of options {{en/Flyspray|4992}} (r23827)
+* Feature: [NewGRF] Enhance some fatal NewGRF errors with the spritenumber that caused the problem (r23809)
+* Fix: Loading empty GS strings/translations failed {{en/Flyspray|4996}} (r23829)
+* Fix: Return early from SlString() for empty strings, before doing invalid things which surprisingly do not break everything. (r23828)
+* Fix: The detailed performance rating window showed the cargo count of the current quarter instead of the last quarter like the tooltip says {{en/Flyspray|4972}} (r23826)
+* Fix: Removal of towns with 0 population failed during map generation {{en/Flyspray|4951}} (r23819)
+* Fix: [Network] Desync due to different NewGRF version at client and server {{en/Flyspray|4962}} (r23817)
+* Fix: [NewGRF] Textstack was not properly used when storing parameters for the error message window {{en/Flyspray|4969}} (r23803)
+* Fix: Game lobby gui not updated when new company information becomes available {{en/Flyspray|4968}} (r23802)
+* Fix: Reading the UTF-8 BOM from AI/GS files on big-endian machines failed (r23801)
+* Fix: Move 'refitable to' text above custom newgrf text in build vehicle gui {{en/Flyspray|4958}} (r23792)
+* Fix: [NewGRF] Resize text panel for parameter description if it does not fit in 4 lines {{en/Flyspray|4960}} (r23791)
+* Fix: [NewGRF] While we can only show one error per NewGRF, fatal errors should always disable the GRF. Also give those errors precedence over other information (r23789)
+* Fix: [NewGRF] Failure to load newgrf files that use action 0 general prop 15 with a missing language file (r23788)
+* Fix: Crash due to genders used for station name in hangar string of Italian translation {{en/Flyspray|4965}} (r23782)
+* Fix: Under certain circumstances, e.g. a single invalid order, trying to determine the next order state could end up in an infinite loop {{en/Flyspray|4964}} (r23781)
+* Fix: [Network] Missing naming of some errors {{en/Flyspray|4963}} (r23780)
+* Fix: Trim all control codes and the likes from strings being passed into the AI. If the AI would be displaying them later we would be showing those control codes as question marks {{en/Flyspray|4957}} (r23778)
+* Fix: Hide the PCX screenshot format from the options window, if a 32bpp blitter is used (r23775)
+* Fix: [NewGRF] Update all cached train properties if a train vehicle enters a new railtype (r23773)
+
+===1.2.0-beta2 (2012-01-07)===
+
+* Feature: [NewGRF] Allow read-only display of NewGRF parameters, if GRF list may not be edited (r23760)
+* Feature: [NewGRF] Alternate rail type label list (r23758)
+* Feature: Make the default secondary sort method for the server list the number of clients instead of the name (r23710)
+* Feature: Try harder to sort text instead of fancy characters in the server names (r23709)
+* Feature: Make a distinction between fully zoomed in and default zoomed in screenshots {{en/Flyspray|4916}} (r23695)
+* Feature: Add ability to adjust brightness of colour after remapping for 32bpp sprites (r23670)
+* Feature: [GS] GSGoal::Question(), to ask a question to a(ll) company(ies). It can contain random text, and at most 3 buttons from a collection of 17 (r23731)
+* Feature: Australian translation (r23730)
+* Fix: Make default timeouts for certain network states lower and configurable [CVE-2012-0049] {{en/Flyspray|4955}} (r23764)
+* Fix: Check whether a water tile is really empty when overbuilding it with an object {{en/Flyspray|4956}} (r23763)
+* Fix: The check for duplicate town names was not really working {{en/Flyspray|4951}} (r23759)
+* Fix: Missing locking causing crash is extreme case when being in the MP lobby {{en/Flyspray|4938}} (r23752)
+* Fix: [Win32] Work around a possible deadlock when initialising threaded drawing (r23749)
+* Fix: Make vehicle variables A8 and A9 always return 0. Returning cur_image is a potential desyncer due to Action1 in static NewGRFs (r23748)
+* Fix: Also set 'info' to NULL if 'instance' dies (for both AI and GS); avoids invalid memory reads (r23746)
+* Fix: If autorefit fails, count the vehicle capacity nevertheless, if it is already carrying the right thing (r23745)
+* Fix: [NewGRF] Check the version of the right GRF {{en/Flyspray|4923}} (r23744)
+* Fix: [NewGRF] Call CB 15E for all vehicles before actually executing any refit {{en/Flyspray|4906}} (r23743)
+* Fix: Cheating to different climates messes things even more up than changing NewGRFs in-game so it was removed {{en/Flyspray|4939}} (r23733)
+* Fix: When cheating into another company, the SignList was not updated {{en/Flyspray|4942}} (r23728)
+* Fix: Reading memory of a temporary (already deconstructed) object is invalid (r23721)
+* Fix: [Script] Show the script debug window also when the game script crashes {{en/Flyspray|4935}} (r23720)
+* Fix: Extraction of music packs failed {{en/Flyspray|4930}} (r23719)
+* Fix: [AI] Rescanai caused crash when the AI settings of an AI was opened {{en/Flyspray|4936}} (r23718)
+* Fix: Ships going to wrong dock location when moving the dock while the game is paused {{en/Flyspray|4927}} (r23717)
+* Fix: The amount of goals was too low {{en/Flyspray|4928}} (r23699)
+* Fix: Hardcode the original defaults for loading old savegames if they could totally mess with the game's behaviour {{en/Flyspray|4859}} (r23693)
+* Fix: Infrastructure count of canals/locks/ship depots was not updated properly when a company went into bankruptcy or was taken over {{en/Flyspray|4921}} (r23686)
+* Fix: When fitting another engine the cargo capacity of wagons could become lower, causing them to contain more than they should. This caused the cargo transfer from the replaced parts to put even more stuff in the already full wagon. Prevent this from happening by reducing the amount of cargo in the vehicle to the capacity when moving vehicles/wagons around, or when autoreplacing {{en/Flyspray|4912}} (r23683)
+* Fix: Vehicle numbers got misaccounted when autoreplacing failed due to length checks {{en/Flyspray|4914}} (r23681)
+* Fix: [AI] Prevent removal of the (AI) company the local player is in {{en/Flyspray|4915}} (r23680)
+* Fix: [Script] Close the editbox of settings when changing an AI, to avoid invalid memory read/write (r23678)
+* Fix: [Script] Invalidate AI Parameters window when changing AI {{en/Flyspray|4909}} (r23677)
+* Fix: When removing road stops the wrong tile was checked for updating the infrastructure cache {{en/Flyspray|4913}} (r23676)
+* Fix: [Script] The 'Configure' button in the 'AI / Game Configuration' window did not get enabled when activating a GameScript (r23668)
+
+===1.2.0-beta1 (2011-12-24)===
+
+* Feature: Ability to run a game script; a script that controls some of the logic of the game, e.g. to implement goals or tutorials (r23637)
+* Feature: Allow to place locks also on river rapids and restore rivers, if locks are deleted {{en/Flyspray|4872}} (r23512)
+* Feature: Aircraft ranges (r23504)
+* Feature: Configurable linewidth in plots (r23497, r22292)
+* Feature: Add 'view website' button to the online content and NewGRF windows (r23495, r23492)
+* Feature: [NewGRF] Action14 node INFO->URL_ to add an url (r23494)
+* Feature: When looking for missing content, automatically select it so you can easily start the download {{en/Flyspray|4827}} (r23468)
+* Feature: Automatically close the online content window after confirming the download with 'ok' {{en/Flyspray|4827}} (r23467)
+* Feature: Add 'find missing content online' button to 'load savegame' and 'find network game' windows {{en/Flyspray|4827}} (r23465)
+* Feature: [NoAI] AIStation.GetStationCoverageRadius(StationID) (r23453)
+* Feature: Infrastructure maintenance costs (r23415)
+* Feature: Allow to create subsidies for any combination of source and destination types (r23408)
+* Feature: Diagonal dragging the rail conversion tool when pressing CTRL {{en/Flyspray|4841}} (r23338)
+* Feature: Add ability to zoom in to 2x and 4x level (r23316)
+* Feature: Settings to restrict viewport zoom levels (r23314)
+* Feature: An economy.fund_buildingssetting, to disallow funding buildings (r23303)
+* Feature: [NoAI] AITown::GetCargoGoal and AITown::GetGrowthRate to query statistics about a town regarding its growing (r23302)
+* Feature: Show on the GUI when a town grows and what the requirements for growing are (r23300)
+* Feature: [NewGRF] Properties to always include/exclude cargo types from the refit mask (r23291)
+* Feature: A monospaced sprite font for the readme reader (r23288, r23274)
+* Feature: Attempt to show a window for downloading the base graphics set if it is missing (r23244)
+* Feature: In-game (translatable) readme.txt reader {{en/Flyspray|4780}} (r23182, r23178)
+* Feature: [NoAI] AICONFIG_AI_DEVELOPER flags to hide AI settings unless gui.ai_developer_tools is enabled (r23169)
+* Feature: Always draw fences around field tiles {{en/Flyspray|1824}} (r23168)
+* Feature: Support for NewGRF version 8 (r23159)
+* Feature: [NewGRF] Patch/setting variable 14: get the maximum height of the map (r23158)
+* Feature: [NewGRF] Road vehicle property 23 to shorten vehicles without callback usage (r23149)
+* Feature: [NewGRF] Allow passing 32bit parameters to 60+x variables (using var 7B). Currently most useful for vehicle var 60 (r23138)
+* Feature: [NoAI] AICargoList_StationAccepting {{en/Flyspray|3799}} (r23134)
+* Feature: [NewGRF] Property for the rail type name (r23129)
+* Feature: [NoAI] Allow AIs to query the amount of remaining operations for the current tick (r23118)
+* Feature: [NewGRF] Ambient sound effect callback (r23114)
+* Feature: Auto-refitting of vehicles during loading at a station when the vehicle allows it (r23089, r23087)
+* Feature: [NewGRF] Callback to change refit cost depending on old and new cargo type (r23086)
+* Feature: [NewGRF] Use variable 10 to enable vehicle GRFs to draw different sprites on the map and in various GUIs (r23080)
+* Feature: [NewGRF] House callback 0x148 (r23072)
+* Feature: [NewGRF] House variable 0x64 (r23070)
+* Feature: [NewGRF] Long date of last service for vehicles, also available in the purchase list (r23068)
+* Feature: A -q command line option to read a savegame, write some general info and exit (r23065)
+* Feature: [NewGRF] stringscodes 9A 19 and 9A 20 to print 'short volume' and 'short weight' respectively (r23063)
+* Feature: [NewGRF] Allow use of NewGRF text stack during callback 23 (r23040)
+* Feature: Support company colour for the airports' runways {{en/Flyspray|4797}} (r23010)
+* Feature: [NewGRF] Allow to use offsets for all types of action5 except sea shores {{en/Flyspray|4795}} (r23004)
+* Feature: [NewGRF] Action2 variable 0x62 to get curvature/position difference to the n-th vehicle in vehicle chain {{en/Flyspray|2521}} (r22998)
+* Feature: [NewGRF] Allow access to other vehicles in the vehicle chain in VarAction 2 (r22997)
+* Feature: Display autoreplace status in group GUI (r22985)
+* Feature: Display profit icons for groups in the group GUI (r22984)
+* Feature: Display the number of vehicles in the group GUI also for the ALL and DEFAULT groups (r22983)
+* Feature: Allow road corners on steep slopes (r22968)
+* Feature: Allow depots, standard road stops and airports on steep slopes (r22960)
+* Feature: [NewGRF] Allow Action4 to change text IDs 0x00D1 to 0x00E0 for feature 48 (r22954)
+* Feature: [NewGRF] Extended Action1 format to define arbitrary spriteset IDs (r22926)
+* Feature: [NewGRF] Allow referencing spritesets from different Action1 in a single Action2 (r22925)
+* Feature: Allow towns to build bridges over canals and rivers (r22899)
+* Feature: Resize the tree build gui to according to tree size (r22862)
+* Feature: Conditional order depending on remaining lifetime of a vehicle (r22858)
+* Feature: [NewGRF] Allow replacing depot sprites without having to provide rail overlays (r22854)
+* Feature: Display separate ocean and canal speeds in the ship purchase list, if they differ (r22850)
+* Feature: [NewGRF] Bits 8-31 in station variable 43 (r22848)
+* Feature: [NewGRF] Also age wagons and articulated parts (r22816)
+* Feature: [YAPF] Take canal/ocean speed fraction of ships into account (r22801)
+* Feature: Progress bar for scanning NewGRFs (r22797)
+* Feature: [NewGRF] Stringcodes for printing 0-based dates, unsigned words in power units (r22779, r22778)
+* Feature: River generation (r22767)
+* Feature: [NoAI] AITile::GetTownAuthority() (r22764)
+* Feature: [NewGRF] Implement feature 04 property 18 bit 5 (r22746)
+* Feature: [NewGRF] Per vehicle custom cargo ageing period (r22713)
+* Feature: Display option to hide competitors' signs and station names {{en/Flyspray|4701}} (r22708)
+* Feature: Add a menu entry for the sprite bounding box debuging feature in the help menu and enable bounding boxes only in conjunction with the NewGRF developer tools (r22675)
+* Feature: [NewGRF] Provide random bits in var 0x10 for callback 0x3B in all cases {{en/Flyspray|4690}} (r22673)
+* Feature: Do not spawn explosion effects when bulldozing in paused mode. They block the view (r22670)
+* Feature: [NewGRF] Support for the land slope check callback for stations (r22659)
+* Feature: [NewGRF] Custom error messages for object callback 0x157 (r22658)
+* Feature: [NewGRF] More default error messages for the industry shape and location callbacks (r22657)
+* Feature: [NewGRF] Add water class to the 'land info of nearby tiles' vars (r22655)
+* Feature: [NewGRF] Support for ship props 14/15 (ocean/canal speed fraction) (r22639)
+* Feature: [NoAI] Add several functions to AICompany to find out performance information (r22584)
+* Feature: [NewGRF] Persistent storage for towns (r22569)
+* Feature: [NewGRF] Support for station variable 0x69 (r22543)
+* Feature: [NewGRF] Advanced sprite layouts with register modifiers (r22518)
+* Feature: Save heightmap in scenario editor (r22514)
+* Feature: Make the transparency options for industries also affect the effect vehicles created by industries {{en/Flyspray|4625}} (r22506)
+* Feature: [NewGRF] Implement variable 18 for custom station foundations (r22453)
+* Feature: [NewGRF] When NewGRFs are disabled via Action E or due to GRM failure, also display an error in the GUI (r22444)
+* Feature: [NewGRF] Allow to filter by town of the current industry when using industry variable 0x68 {{en/Flyspray|4591}} (r22434)
+* Feature: An advanced setting to specify the default palette to use for NewGRFs without action 14 palette information; this makes the default choice independent from the used base graphics (r22417)
+* Feature: Sort the items in the currency dropdown; separate the 'Custom' item with a horizontal line from the rest (r22312)
+* Feature: Separate default and NewGRF-supplied townnames with a horizontal line and only sort them within these groups (r22312)
+* Feature: [NewGRF] Allow docks to feature company colour (r22293)
+* Feature: Apply the same inflation to the initial loan as to the maximum loan. Note that this is no change to the economy; it only saves players some clicks when starting companies in later years (r22253)
+* Feature: [NewGRF] Make var 0x48 available in CB 0x15C (r22231)
+* Change: [Win32] Move painting the window and doing palette animation into a separate thread (r23482)
+* Change: [SDL] Move 32bpp-anim palette animation to the draw thread instead of the single threaded bit of the game loop. This causes a speedup of up to 15% when animation is turned on with the 32bpp-anim blitter (r23451)
+* Change: Make the company GUI somewhat smaller if there are no shareholders (r23424)
+* Change: [NewGRF v8] Allow translating multiple languages with Action 13 (r23391)
+* Change: Bring Squirrel to 2.2.5; besides some nice bug fixes, it mostly solves the sort() issues (r23383)
+* Change: Move the 'default' overrides out of the base set in order to ensure they all use the same values (r23232)
+* Change: Different directories for base sets and newgrfs. So data to base set or newgrf, and gm to base set (r23219)
+* Change: [NewGRF v8] Do not override rail type prop 1B with prop 09 (r23166)
+* Change: [NewGRF v8] Format of extra callback info for callback 144 (r23157)
+* Change: [NewGRF v8] Use height level units in var 8A of callback 28 (r23155)
+* Change: [NewGRF v8] Use height level units in nearby tile info variables (r23154)
+* Change: [NewGRF v8] Use height level units in variable 20/A0 (r23153)
+* Change: [NewGRF v8] Snow line height table uses values between 0x00 and 0xFF independent of number of height levels (r23152)
+* Change: [NewGRF v8] Deprecate callback 11 and 12, and use callback 36 instead (r23151, r23150)
+* Change: [NewGRF v8] Unify the return values of boolean callbacks, and check the results for validity (r23147)
+* Change: [NewGRF v8] Make callback 22 return a probability to use instead of property 18 (r23146)
+* Change: [NewGRF v8] Determine the 'first' refittable cargo of vehicles using the cargo ordering from the cargo translation table (r23145)
+* Change: [NewGRF v8] Consider the 'default cargotype' properties as indices into the cargo translation table (r23144)
+* Change: [NewGRF v8] Return the translated cargobit in vehicle var 42 (r23143)
+* Change: [NewGRF v8] Unify the return values of callbacks returning D0xx texts (r23142)
+* Change: [NewGRF v8] Invert result bit 10 of callbacks 149 and 157 to make them consistent with other slope check callbacks (r23141)
+* Change: [NewGRF v8] Do no longer apply base cost fallbacks (r23139)
+* Change: [NewGRF v8] New result format for callback 16 (r23137)
+* Change: [NewGRF v8] Deprecate old-style callback results 0xFF?? (r23136)
+* Change: Open the query string window centered as it (almost) always requires your attention {{en/Flyspray|4825}} (r23130)
+* Change: [NewGRF] Enforce that the default cargo type of a vehicle is one of the refittable cargos in case of refittable engines (r23077)
+* Change: Use the currency -> euro conversion rate for currencies that have been replaced with the euro, so when the switch happens the conversion rate at that point is roughly that of the real world conversion rate (r23056)
+* Change: Disable palette animation for pixels with alpha, as the alpha and previous colour information will be lost when the palette is animated (r23016)
+* Change: More suitable default news settings instead of everything on 'full' (r22897)
+* Change: Always use the DOS palette for drawing, remove the '-i' option for palette selection (r22419)
+* Change: Make YAPF the default pathfinder for ships, do not discourage players from using it anymore (r22352)
+* Change: Remove pixel limiter for query strings (r22343)
+* Fix: Dates cut off in the message history {{en/Flyspray|4896}} (r23643)
+* Fix: Fix transparency for steel mill, colour translations in some arctic buildings and a wrongly replaced sprites {{en/Flyspray|4892}} (r23639)
+* Fix: Draw PBS reservations also for bridges and tunnels with railtype overlays (r23586, r23584)
+* Fix: Add missing characters for certain languages and the large font {{en/Flyspray|4870}} (r23582)
+* Fix: Extending a path reservation starting at a partially reserved rail station could fail {{en/Flyspray|4888}} (r23564)
+* Fix: [NoAI] ScriptSign::BuildSign() returned wrong result if the sign name was too long {{en/Flyspray|4886}} (r23516)
+* Fix: Drawing of newspaper headlines used different padding than the initial sizing of the window {{en/Flyspray|4884}} (r23509)
+* Fix: [Squirrel] Provide a proper error message when the _cmp meta-function does not return an integer (r23496)
+* Fix: Make autoreplace, autorenew, cloning and autorefit check all articulated parts of a vehicle to find a shared cargo subtype (r23487)
+* Fix: In case you already have orders, ignore the vehicles when adding an extra order {{en/Flyspray|4770}} (r23484)
+* Fix: Replace OS error messages with internal error messages when that is possible {{en/Flyspray|4594}} (r23480)
+* Fix: Clear the backed up orders of a removed station as well, otherwise one could create orders to a station that was never in the original backupped orders. For example a road vehicle trying to go to a buoy {{en/Flyspray|4876}} (r23464)
+* Fix: Do not assume all industries that cut trees have tile (0,0) and wait until all tiles of an industry are completed before starting to cut trees (r23458)
+* Fix: Mark company window dirty when moving a rail engine creates or deletes a train (r23454)
+* Fix: Some airport functions did not take the layout into account resulting in wrong noise levels or nearests towns {{en/Flyspray|4764}} (r23441)
+* Fix: Perform checks for NFORenum/GRFCodec in configure, including a version check so a proper error can be given when a too old GRFCodec or NFORenum is used {{en/Flyspray|4867}} (r23438)
+* Fix: Recolouring of some animated colours from the Windows (=least consistent) palette went wrong {{en/Flyspray|4868}} (r23433)
+* Fix: Prevent windows to be resized beyond the bounds of the (main) window {{en/Flyspray|4842}} (r23429)
+* Fix: [NoAI] The AIEvent.ET_COMPANY_NEW was only triggered if a company named itself, which seems like a very odd place to do so. Trigger it when the company is created instead (r23398)
+* Fix: Bring some more order in the ordering of the windows, e.g. do not let a save or load dialog get hidden by a news message {{en/Flyspray|4709}} (r23336)
+* Fix: Road vehicle purchase info failed to display vehicles carrying no cargo {{en/Flyspray|4820}} (r23334)
+* Fix: Abort building/moving HQ when clicking on the button again, just like when building rail, stations, etc {{en/Flyspray|4851}} (r23331)
+* Fix: Change the centre of train vehicles to depend on the vehicle length instead of being fixed at 4/8th of the original vehicle length to make sure shortened vehicles do not block tiles they should not block {{en/Flyspray|2379}}, {{en/Flyspray|3569}} (r23290)
+
+==See Also==
+
+*[http://www.openttd.org/en/news/159 The 1.2.0-beta1 news article]
+*[http://www.tt-forums.net/viewtopic.php?f=29&t=57914 The 1.2.0-beta1 forum topic]
+*[http://www.openttd.org/en/news/161 The 1.2.0-beta2 news article]
+*[http://www.tt-forums.net/viewtopic.php?f=29&t=58097 The 1.2.0-beta2 forum topic]
+*[http://www.openttd.org/en/news/163 The 1.2.0-beta3 news article]
+*[http://www.tt-forums.net/viewtopic.php?f=29&t=58275 The 1.2.0-beta3 forum topic]
+*[http://www.openttd.org/en/news/164 The 1.2.0-beta4 news article]
+*[http://www.openttd.org/en/news/165 The 1.2.0-rc1 news article]
+*[http://www.tt-forums.net/viewtopic.php?f=29&t=58592 The 1.2.0-rc1 forum topic]
+*[http://www.openttd.org/en/news/166 The 1.2.0-rc2 news article]
+*[http://www.tt-forums.net/viewtopic.php?f=29&t=58772 The 1.2.0-rc2 forum topic]
+*[http://www.openttd.org/en/news/167 The 1.2.0-rc3 news article]
+*[http://www.tt-forums.net/viewtopic.php?f=29&t=59168 The 1.2.0-rc3 forum topic]
+*[http://www.openttd.org/en/news/168 The 1.2.0-rc4 news article]
+*[http://www.tt-forums.net/viewtopic.php?f=29&t=59346 The 1.2.0-rc4 forum topic]
+*[http://www.openttd.org/en/news/169 The 1.2.0 release news article]
+*[http://www.tt-forums.net/viewtopic.php?f=29&t=59513 The 1.2.0 release forum topic]
