@@ -1,0 +1,30 @@
+<noinclude>
+[[Translation:Template/en/Translation]]{{en/-}}</noinclude>{{ambox
+| type  = style
+| image = Translation.png
+| text  = <strong>Thèid an aiste seo eadar-theangachadh dhan Ghàidhlig on Bheurla thùsail: <includeonly>[{{SERVER}}{{localurl:{{NAMESPACE}}:{{{1}}}|action=view}} {{{1}}}]</includeonly><noinclude>{{{1}}}</noinclude>.</strong>
+<div style="font-size: 90%">
+<div style="margin:auto; text-align:Left;">Ceudad: {{{2|0}}}%
+<div style="width:200px; text-align:Left; border:1px solid #aaa; padding:1px; overflow:hidden;"><span style="width:{{#expr: ({{{2|0}}}/100) * 100}}%; height:2px; background:#7fff00; float:left;">&nbsp;</span><span style="width:{{#expr: 100 - ({{{2|0}}}/100) * 100}}%; height:2px; background:#ff7f50; float:left;">&nbsp;</span></div>
+</div>
+Nach toir thu cuideachadh dhuinn gus piseach a thoirt air [{{SERVER}}{{localurl:{{NAMESPACE}}:{{PAGENAME}}|action=edit}} an eadar-theangachadh seo].
+</div><div style="font-size: 80%">
+* Feuch an cleachd thu [[Main/en/Manual of Style|Styleguide]] airson rudan fhòrmatadh mar bu chòir.
+* Ma tha 100% dhen aiste deiseil, faodaidh tu seo a thoirt air falbh mur mothaich thu mearachdan tuilleadh. Mas tusa a rinn a' chiad eadar-theangachadh, fàg am fiosrachadh seo ann ach an toir duine eile sùil air.</div>
+}}<noinclude>
+
+=== Cleachd an teamplaid seo ===
+Cuir <code><nowiki>{{</nowiki>Eadar-theangachadh/Gd|''tiotail tùsail Beurla''|''Ceudad''<nowiki>}}</nowiki></code> aig toiseadh an aiste gus sealltainn gu bheil e ga h-eadar-theangachadh fhathast.
+
+Thèid na h-aistidhean a chur ris na roinnean-seòrsa [[Category/gd/Ga eadar-theangachadh dhan Ghàidhlig]] is [[Category/gd/Aistidhean sa Ghàidhlig]] gu fèin-obrachail.
+
+=== Nuair a bhios an t-eadar-theangachadh coileanta ===
+Thoir an teamplaid seo air falbh nuair a bhios eadar-theangachadh na h-aiste coileanta.
+
+=== Seall cuideachd air ===
+*[[Category/en/Other languages]]
+*[[Category/gd/Aistidhean sa Ghàidhlig|Roinn-seòrsa: Aistidhean sa Ghàidhlig]]
+*[[Category/gd/Eadar-theangachadh|Roinn-seòrsa: Eadar-theangachadh]]
+
+</noinclude><includeonly>{{ #ifexpr: {{{2|0}}}=100 | |[[Category:gd/Ga eadar-theangachadh dhan Ghàidhlig]]{{ #ifexpr: {{{2|0}}}>10}}}}</includeonly>
+[[Category:gd/Teamplaidean]]
