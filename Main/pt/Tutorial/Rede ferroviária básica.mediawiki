@@ -1,0 +1,45 @@
+[[Translation:Main/en/Tutorial/Basic Network]]{{en/-}}
+{{en/Tabs|3|3
+|Tutorial/Duas Plataformas/Pt|1. Duas Plataformas<!--
+-->|Tutorial/Duas Vias/Pt|2. Duas Vias<!--
+-->|Tutorial/Rede ferroviária básica/Pt|3. Rede ferroviária básica}}
+<div style="padding:.5em 1em 1em 1em; border-top:none; background-color:#f1f2fe; color:#000;">
+{{pt/Tutorial}}
+== Rede ferroviária básica ==
+Agora você pode criar conexões ponto-a-ponto que funcionam muito bem. O próximo passo, logicamente, é combinar essas conexões ponto-a-ponto para... '''Construir sua primeira rede ferroviária!'''
+
+A vantagem das redes ferroviárias é que você pode reutilizar trilhos existentes para vários propósitos. A criação de uma rede não é muito mais que anexar algumas outras pistas para as que você já tem. Nos próximos exemplos, veremos o uso das plataformas na usina de energia para uma segunda mina de carvão.
+
+=== Conectando os trilhos ===
+
+Coloque alguns trilhos e sinais. Não importa onde você vai conectar para sua rede existente, mas alguns lugares são mais práticos que outros. A melhor maneira de aprender isso é só fazendo. Nossa segunda mina de carvão está no norte, os trilhos, obviamente, precisam ir nessa direção. Você já deve saber como fazer uma estação na mina de carvão, é só fazer o que você fez antes. A mesma coisa com os sinais.
+
+A imagem abaixo mostra uma simples maneira de conectar a uma estação existente.
+
+{{en/Phototable|[[File:en/Tutorial network simple.png|400px]]|Uma segunda linha ferroviária conectada na estação da usina de energia. '''(Clique para ampliar)'''|none}}
+
+Note que esse não é a rede ideal. Ela funciona, mas quebra um pouco a regra que os comboios precisam ser capazes esperar qualquer sinal sem bloquear cruzamentos. Imagine um trem de cinco caixas que está indo da usina de energia para a mina de carvão original, ele tem que esperar no primeiro sinal após o cruzamento. Quantas caixas existem para os trens ficarem esperando? É isso mesmo, devido a nova pista, só existem quatro caixas restantes! O trem de cinco caixas irá bloquear a saída da segunda mina de carvão.
+
+Se você não tem muitos comboios, isto não irá causar muitos atrasos. A solução, claro, é tão simples como o problema: mova o sinal uma caixa. Mas como mover? Simplesmente coloque um novo sinal e remova o antigo. Você pode usar a dinamite para remover o sinal, mas isso remove o trilho também. Se você que somente remover o sinal, clique primeiro no botão [[File:en/Place signal.png]] '''Construir sinais ferroviários''', que se situa na barra de ferramentas ''Construir caminhos-de-ferro'' (ou ''Construir ferrovias'') e depois clique no botão [[File:en/Toggle clear active.png]] '''Escavadeira'''. Isso irá mudar a ferramenta de sinal de construir para remover. Clique em um sinal para removê-lo.
+
+'''Aviso''': Removendo sinais em uma rede ativa pode causar colisões de comboios. Se quiser remover sinais sem colisões, primeiro pare todos os comboios que estão na rede em que você quer mudar o sinal. Faça as alterações, e então coloque os comboios para trabalhar um de cada vez.
+
+=== Pontes ===
+
+No último exemplo, tinha uma única trilha para os trens entrarem e saírem da segunda mina de carvão. Se você tiver vários comboios, isso vai ser um problema.
+
+Uma solução seria usar uma ponte, que levaria os comboios que estão saindo da segunda mina de carvão ao outro lado da pista, fazendo com que eles entrem por lá na estação da usina de energia. Você pode construir uma ponte usando o botão [[File:en/Build bridge.png]] '''Construir ponte ferroviária''' que está na barra de ferramentas de construção de ferrovias. Acesse o artigo que explica [[Main/pt/Construindo pontes|como construir pontes]], caso não saiba.
+
+O resultado pode ser semelhando com o da imagem abaixo:
+
+{{en/Phototable|[[File:en/Tutorial network bridge.png|400px]]|Uma ponte na rede ferroviária. '''(Clique para ampliar)'''|none}}
+
+Todas as técnicas básicas que você aprendeu até agora, poderão ser usadas para criar uma rede ferroviária avançada. O menu a direita te dá acesso para instruções detalhadas em vários tópicos. Combinando tudo isso, você pode, eventualmente, fazer designs mais completos, como no exemplo abaixo:
+
+{{en/Phototable|[[File:en/Plufingford Transport, 22nd Mar 2032.png|512px]]|Uma rede avançada que é idêntico ao das técnicas explicadas aqui, só que ... '''Muito maior!''' '''(Clique para ampliar)'''|none}}
+
+<span style="float: left">&laquo; [[Main/pt/Tutorial/Duas Vias|'''Anterior:''' Duas Vias]]</span>
+
+</div>
+[[Category:pt/Tutorial]]
+[[Category:pt/Tutorial de ferrovia avançada]]
