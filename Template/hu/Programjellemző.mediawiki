@@ -1,0 +1,29 @@
+<noinclude>[[Translation:Template/en/Feature]]</noinclude><includeonly>{{en/VersionBox|{{#ifeq: {{{1|}}}|Old|0|{{#ifexpr: {{{1|}}} < 0|0|{{{1|}}}}}}}|{{#ifeq: {{{1|}}}|Old|99|{{#ifexpr: {{{1|}}} > 0|99|{{#expr:-{{{1|}}}}}}}}}||caption=A programjellemző elérhető:|text={{{text|}}}|float={{{float|}}}}}</includeonly><noinclude>
+
+====Template:Programjellemző használata====
+Írd be <nowiki>{{</nowiki>'''Programjellemző'''<nowiki> | verziószám}}</nowiki>
+*Támogatott verziók: Old,0.5,0.6,0.7,1.0,1.1 (és a többi könnyen folytatható).
+*Also negative valors... (-Old,-0.5,-0.6,-0.7,-1.0,-1.1,-1.2)
+*A kiadatlan verziót nightlyként tünteti fel.
+*További paraméterek <code>float=</code> and <code>text=</code>
+Időszak használatára: {{s|Programjellemző időszak}}
+
+====Példák:====
+<pre>{{hu/Programjellemző|0.6}}</pre>
+{{hu/Programjellemző|0.6}}
+<pre>{{hu/Programjellemző|0.7|text=(0.7.2 óta)|float=left}}
+Mintaszöveg önjáró fűnyíró mintamókus fenn a fán. Mintaszöveg önjáró fűnyíró mintamókus fenn a fán. Mintaszöveg önjáró fűnyíró mintamókus fenn a fán. Mintaszöveg önjáró fűnyíró mintamókus fenn a fán.  {{en/-}}</pre>
+{{hu/Programjellemző|0.7|text=(0.7.2 óta)|float=left}}
+Mintaszöveg önjáró fűnyíró mintamókus fenn a fán. Mintaszöveg önjáró fűnyíró mintamókus fenn a fán. Mintaszöveg önjáró fűnyíró mintamókus fenn a fán. Mintaszöveg önjáró fűnyíró mintamókus fenn a fán.{{en/-}}
+<pre>{{hu/Programjellemző|1.0|float=right}}
+Mintaszöveg önjáró fűnyíró mintamókus fenn a fán. Mintaszöveg önjáró fűnyíró mintamókus fenn a fán. Mintaszöveg önjáró fűnyíró mintamókus fenn a fán. Mintaszöveg önjáró fűnyíró mintamókus fenn a fán. {{en/-}}</pre>
+{{hu/Programjellemző|1.0|float=right}}
+Mintaszöveg önjáró fűnyíró mintamókus fenn a fán. Mintaszöveg önjáró fűnyíró mintamókus fenn a fán. Mintaszöveg önjáró fűnyíró mintamókus fenn a fán. Mintaszöveg önjáró fűnyíró mintamókus fenn a fán. {{en/-}}
+<pre>{{hu/Programjellemző|1.1}}</pre>
+{{hu/Programjellemző|1.1}}
+<pre>{{hu/Programjellemző|-0.6|text=(0.6.2-ig)}}</pre>
+{{hu/Programjellemző|-0.6|text=(0.6.2-ig)}}
+
+
+[[Category:hu/Sablonok]]
+</noinclude>
