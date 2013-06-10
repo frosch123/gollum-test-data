@@ -1,0 +1,26 @@
+[[Translation:Main/en/Variety distribution]]
+{{en/-}}
+'''Variety distribution''' is a map generation setting which changes the distribution of low and high areas across the map to create patches of hills, open fields and lakes. Setting its value to '''none''' disables the option. Setting the value to '''medium''' or '''high''' creates a more realistic landsacpe with mountain ranges, open fields, and patches of lakes. Setting the value to '''low''' smooths off mountains and creates a relatively flat landscape.
+
+Variety distribution is best used with [[Main/en/Terrain type|terrain type]] set to '''mountainous''' or '''hilly'''.
+
+{{en/Feature|1.0}}
+
+== Purpose ==
+The original purpose of variety distribution was to create ranges of hills and mountains that change as you move across the landscape. This creates more space for building stations and tracks, and gives the player a more varied construction experience.
+
+== Explanation ==
+If you choose a mountainous landscape with low variety distribution then all of the map will look mountainous. If you chose high variety distribution then you will find areas of flat valleys and areas of high mountain ranges. Variety distribution aims to give more variety and a more "realistic" landscape. Setting variety distribution to medium creates patches of flat area and focuses hills making them easier to build around. Setting a high variety distribution creates ragged mountain ranges which require tunneling and bridges to cross.
+
+== Examples ==
+
+Below are the screenshot of maps generated with different settings for Variety Distribution while keeping all other parameters the same (random seed included)
+
+[[File:en/MapVarietyDistrNone.png|thumb|left|300px|Map with variety distribution set to '''None''']]
+[[File:en/MapVarietyDistrVLow.png|thumb|right|300px|Map with variety distribution set to '''Very Low''']]
+[[File:en/MapVarietyDistrMedium.png|thumb|left|300px|Map with variety distribution set to '''Medium''']]
+[[File:en/MapVarietyDistrVHigh.png|thumb|right|300px|Map with variety distribution set to '''Very High''']]
+
+{{en/-}}
+== Development ==
+Originally, Zephyris started [http://www.tt-forums.net/viewtopic.php?f=32&t=46338 a topic] in the OpenTTD Suggestions forum, and many were interested. {{en/User|peter1138}} then created a patch with some examples of maps created with the patch ([http://www.tt-forums.net/viewtopic.php?p=841457#p841457]). It was later introduced to trunk by peter1138 in [http://hg.openttd.org/openttd/trunk.hg/rev/c3959fffa40a r18541].
