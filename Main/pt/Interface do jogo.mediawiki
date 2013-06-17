@@ -1,0 +1,102 @@
+[[Translation:Main/en/Game interface]]{{en/-}}{{pt/Tabela de conteúdos}}
+==Conteúdo da janela principal==
+[[File:pt/Intro screen.png|frame|center|Tela de introdução do OpenTTD]]
+A janela principal, como vista abaixo, oferece as seguintes opções:
+* '''[[Main/en/Novo jogo]]''': Cria um novo mapa aleatório e começa um jogo.
+* '''[[Main/en/Abrir jogo|Abrir jogo]]''': Abre um jogo salvo.
+* '''[[Main/en/Cenário|Jogar Cenário]]''': Carrega um cenário para jogar.
+* '''[[Main/en/Heightmap|Jogar heightmap]]''': Carrega um heightmap e inicia um jogo nele.
+* '''[[Main/en/Editor de cenário]]''': Cria ou edita um cenário.
+* '''[[Main/en/Multijogador]]''': Entra num jogo com vários jogadores.
+* '''[[Main/en/Janela de opções de jogo|Opções de jogo]]''': Configura opções gerais.
+* '''[[Main/en/Dificuldade]]''': Selecione opções que dificultam ou facilitam o jogo.
+* '''[[Main/en/Configurações avançadas]]''': Configura vários detalhes da simulação.
+* '''[[Main/en/Configurações de NewGRF]]''': Seleciona recursos adicionais de arquivos.
+* '''[[Main/en/Conteúdo Online|Checar conteúdo online]]''': Baixa material adicional de jogo.
+* '''[[Main/en/Configurações de IA]]''': Configura opções de módulos de Inteligência Artificial (IA).
+* '''Quit''': Fecha o OpenTTD.
+
+==Interface de Jogo==
+uma vez que você inicia o jogo, você será apresentado a principal '''Interface de Jogo''', mostrada abaixo. Você irá gastar a maior parte do seu tempo nesta tela (ecrã) enquanto estiver jogando. ela tem três seções: a de cima é a ''[[Main/pt/#The Menu bar|Barra de menus]]'', no meio você encontrará a ''[[Main/pt/#3D isometric gameplay world|Jogabilidade Isométrica do Mundo 3D]]'' e bem abaixo é a ''[[Main/pt/#The Status Bar|Barra de status]]''.
+
+[[File:pt/Apos o inicio.png|thumb|none|400px|Tela (Ecrã) de jogo]]
+
+==A barra de menu==
+A barra de menu se divide nas seções descritas abaixo. As seções são da esquerda para direita: "Controle de jogo", "Informação do mapa", "Informação da empresa e industria", "Informação de veículo", "Zoom", "Construção" e "Outros".
+* Você pode ver o que qualquer botão faz apenas clicando com o botão direto do mouse sobre ele durante o jogo.  
+* A maioria dos botões tem dois modos de operação: clicando uma vez ativa a ação predefinida, enquanto clicar e segurar abre um submenu. .
+[[File:en/Menu bar.png|none|frame|A barra de menu]]
+
+===Controles do jogo===
+*[[File:en/Pause button.png|Pause]] '''Botão de pausa:''' Liga ou desliga a pausa do jogo.
+*[[File:en/Fast Forward button.png|Fast Forward]] '''Botão de avanço rápido:''' Aumenta a velocidade do jogo (depende da velocidade de seu computador).
+*[[File:en/Options button.png|Options]] '''Botão de opções:''' Permite acessar o menu de opções: ''Opções de jogo'', ''Configurações de [[Main/pt/Dificuldade|Dificuldade]]'', ''[[Main/pt/Configurações avançadas|Configurações avançadas]]'', e opções gráficas.
+*[[File:en/Save Load button.png|Save/Load]] '''Botão Salvar / Carregar:''' Permite acessar o menu salvar-carregar: ''Salvar jogo'', ''Carregar jogo'', ''Sair do jogo'' (retornar a tela (ecrã) principal), e ''Sair'' (retornar para seu sistema operacional).
+
+===Informação do mapa===
+*[[File:en/Minimap button.png|Minimapa]] '''Botão minimapa:''' Mostra o mapa do mundo, a visão extra e permite que você veja uma lista de todas as [[Main/pt/placas|placas]] no mapa.
+*[[File:en/Town directory button.png|Town directory]] '''Diretório de [[Main/pt/Cidades|Cidades]]:''' Mostra uma lista de cidades e sua população.
+*[[File:en/Subsidies button.png|Subsídios]] '''[[Main/pt/Subsídios|Subsídios]]:''' Mostra uma lista de subsídios que estão sendo oferecidos e os que foram concedidos as várias empresas.
+*[[File:en/Station list button.png|Lista de estações]] '''[[Main/pt/Lista de estações|Lista de estações]]:''' Permite ver uma lista de estações construídas por qualquer jogador.
+
+===Informação das empresas e indústrias===
+*[[File:en/Finances screen button.png|Tela (Ecrã) de finanças]] '''Botão de Tela (Ecrã) de finanças:''' Exibe a tela (ecrã) das finanças de qualquer empresa.
+*[[File:en/Company information button.png|Informação da empresa]] '''Botão de informação da [[Main/pt/Empresa|empresa]]:''' Exibe as informações das empresas e tem a possibilidade de compartilhar o sucesso de seu concorrente por comprar ações da empresa dele.
+*[[File:en/Graphs button.png|Gráficos]] '''Botão dos gráficos:''' Exibe vários gráficos sobre as empresas, seu desempenho e a economia.
+*[[File:en/Company league table button.png|Competição entre empresas]] '''Botão tabela de competição entre empresas:''' Exibe a tabela de competição entre empresas dos vários jogadores.
+*[[File:en/Industry button.png|Indústrias]] '''Botão de indústrias:''' Exibe uma lista de indústrias e suas produções. Você pode também ter um panorama ou [[Main/en/Indústrias#Fundando Novas Indústrias|fundar novas indústrias]].
+
+===Informação de veículos===
+*[[File:en/Train Information button.png|Lista de trens]] '''Informação sobre trens:''' Exibe uma lista dos seus trens e os de seus concorrentes.
+*[[File:en/Road Vehicle Information button.png|Lista de veículos rodoviários]] '''Informação de veículos rodoviários:'''  Exibe uma lista dos seus veículos rodoviários e os de seus concorrentes.
+*[[File:en/Ship Information button.png|Lista de embarcações]] '''Informação de embarcações:''' Exibe uma lista das suas embarcações e as de seus concorrentes.
+*[[File:en/Aircraft Information button.png|Lista de aeronaves]] '''Informação das aeronaves:''' Exibe uma lista das suas aeronaves e as de seus concorrentes.
+
+More information on [[Main/pt/Listas de veículos|Listas de veículos]].
+
+===Zoom===
+Para aumentar ou diminuir a vista principal do mundo 3D, clique nos botões mostrados abaixo. Esses são os três níveis de ampliação. Você pode também utilizar o zoom com a roda do mouse.
+*[[File:en/Zoom in button.png|Aumentar Zoom]] '''Botão aumentar zoom:''' Aumenta o zoom. Se o botão ficar desativado, você alcançou o nível máximo de aumento. 
+*[[File:en/Zoom out button.png|Diminuir Zoom]] '''Botão diminuir zoom:''' Diminui o zoom. Se o botão ficar desativado, você não pode ter uma visão mais ampla da área do jogo. 
+
+===Construção===
+*[[File:en/Railroad build button.png|Construção de ferrovias]] '''Botão de construção de ferrovias:''' Abre a barra de ferramentas para [[Main/pt/Tutorial/Comboios (Trens)|construção de ferrovias e sinais]].
+*[[File:en/Road build button.png|Build roads]] '''Botão de construção de rodovias:''' Abra o [[Main/pt/Construção de rodovias|barra de ferramentas de contrução para rodovias e estações/zonas de carga]].
+
+''Clicando e segurando'' o botão de construção de ferrovias, um menu suspenso aparece onde é possível selecionar o tipo de ferrovia que você quer construir. Similarmente, o botão de construção de rodovias permite que você escolha entre rodovias normais e bondes (você primeiramente precisa ter carregado o NewGRF de bondes).
+
+*[[File:en/Dock build button.png|Build docks]] '''Botão de construção de docas:''' Abre o [[Main/pt/Construção de docas|janela para construção de docas e canais]].
+*[[File:en/Airport build button.png|Construção de aeroportos]] '''Botão de construção de aeroportos:''' Abre o [[Main/pt/Construção de aeroportos|janela para construção de aeroportos]].
+
+*[[File:en/Landscaping button.png|Paisagismo/pt]] '''Botão de paisagismo:''' Abre a barra de ferramentas de [[Main/pt/Paisagismo|Paisagismo]].
+
+O botão de paisagismo tem um menu suspenso para acessar a janela de colocação de árvores e placas diretamente, ao invés de acessá-lo pela barra de ferramenta de paisagismo.
+
+===Outros===
+*[[File:en/Sound Music button.png|Jukebox/pt]] '''Botão Jukebox:''' Altera as configurações de som e música.
+*[[File:en/News button.png|Notícias/pt]] '''Botão de notícias:''' Altera aparecimento de notícias e [[Main/en/configura as mensagens]]. Você pode também ver o histórico das novas mensagens.
+*[[File:en/Other button.png|Outros/pt]] '''Botão outros:''' Coisas que não se encaixam em outras seções: ''[[Main/pt/Informações sobre a área do terreno|Informações sobre a área do terreno]]'', ''[[Main/pt/Console|Alternar console]]'', ''[[Main/pt/Depuração de IA|Depuração de IA]]'', ''[[Main/pt/Screenshots|Screenshot]]'', ''[[Main/pt/Screenshots|Screenshot gigante]]'', e ''sobre OpenTTD''.
+
+===Especial===
+*[[File:en/ToggleButton.png|Switch Toolbar]] '''Botão barra de ferramentas:''' Permite [[Main/pt/mudar a barra de ferramentas|mudar a barra de ferramentas]] que é dividida em resoluções muito baixas (menor que 460px). O botão é '''apenas visível''' quando a resolução é muito baixa de modo que menos de metade da dimensão de cada botão de barra pode ser exibida. 
+
+==Jogabilidade Isométrica do Mundo 3D==
+O mundo do OpenTTD tem a forma de uma paisagem, apresentada em [http://en.wikipedia.org/wiki/Video_games_with_isometric_graphics projeção isométrica] (estritamente falando, em vez de [http://en.wikipedia.org/wiki/Dimetric_projection#Three_types_of_axonometric_projections projeção dimétrica]) para essa visão em 3D. Você irá gastar a maior parrte do seu tempo jogando aqui. O mundo está dividido em quadrados, os quais são de muitos tipos. Alguns são são inclinados, alguns são água, alguns são ocupados por prédios, etc. Aqui é onde você deve construir seu império dos transportes!
+
+==A barra de status==
+[[File:en/status-bar.png|none|frame|A barra de status]]
+A barra de status pode ser encontrada no topo da página, como pode ser visto na figura 1, e acima da figura 3. Ela é dividida em três seções. 
+*Na esquerda você pode ver a data. Ela avança 1 dia a cada 2,5 segundos.
+*No meio, que contém a maior parte do espaço, são apresentadas várias informações:
+**O nome da sua empresa, inicialmente "Sem nome". Depois que você [[Main/pt/nomear sua empresa|nomear sua empresa]] ela vai mostrar o nome que você deu a ela.
+**[[Main/pt/Notícias|Notícias]] surgem na barra de status. Clique na barra de status para exibir a última notícia. 
+**Se você mudou as [[Main/pt/configurações de mensagens|configurações de mensagens]] para o modo "Resumo", as mensagens irão rolar na barra de status ao invés de surgir na tela.
+**Se você mudar as configurações de mensagens para o modo "Desligado", as mensagens irão ser notificadas por um ponto vermelho.
+**Ela também mostra se o jogo está pausado exibindo: "* * PAUSADO * *"
+*O lado direito mostra quanto dinheiro você tem. Você pode mudar a moeda em [[Main/pt/Janela de opções de jogo|Janela de opções de jogo]] pressionando o botão "Opções" e então "Opções de jogo".
+
+Você também pode ver "barra de status" usado para referir a [[Main/pt/Barra de status|barra de status do veículo]].
+
+==Veja também==
+* [[Main/pt/Atalhos|Atalhos do teclado]]
+* [[Main/pt/Outras características de interface|Outras características de interface]]
