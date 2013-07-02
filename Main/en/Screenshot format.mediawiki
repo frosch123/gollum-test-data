@@ -1,0 +1,24 @@
+[[Translation:Main/en/Screenshot format]]
+:<small><<Back to the [[Main/en/Openttd.cfg]] (OpenTTD configuration file)</small>
+
+
+'''screenshot_format''' is a variable of Openttd.cfg file:
+
+The format to use when taking [[Main/en/screenshot]]s. This is a client-setting only.
+
+==Use==
+
+"BMP" is the default setting.  You may change this setting through the [[Main/en/game options window]] or [[Main/en/openttd.cfg]] with the following syntax:
+
+<pre>
+[misc]
+screenshot_format = <Valid options>
+</pre>
+
+'''Valid options:''' [ <empty> | bmp | png | pcx ]
+
+'''Default:''' <empty>
+
+If an invalid setting is entered, then it will revert to the default.
+
+[[Category:en/Settings & Preferences]]
