@@ -1,0 +1,18 @@
+[[Translation:Main/en/Rightclick emulate]]
+:<small><<Back to the [[Main/en/Openttd.cfg]] (OpenTTD configuration file)</small>
+
+
+'''rightclick_emulate''' is a variable of Openttd.cfg file:
+
+Enables right click emulation on systems that do not have a right mouse button. To use this press ctrl and then click (or hold) the left mouse button to perform actions as if you are clicking the right mouse button. This is a client-setting only.
+
+On OS X if you have an extended Macintosh keyboard the command key is used to instead of the ctrl key.
+
+'''Valid options:''' [ true | false ]
+
+'''Default:''' false
+
+
+''MeusH's comment: Be aware this can make mess with shared orders and many other functions using ctrl+click''
+
+[[Category:en/Settings & Preferences]]
