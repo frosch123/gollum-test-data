@@ -1,0 +1,24 @@
+'''Broken translation link'''
+:<small><< Vissza az [[Main/hu/openttd.cfg|openttd.cfg]]-hez (OpenTTD beállítófájl)</small>
+
+
+A '''screenshot_format''' az openttd.cfg fájl egy változója.
+
+Meghatározza a készített [[Main/hu/Képernyőkép|képernyőképek]] fájlformátumát. Ez csak kliensre vonatkozó beállítás.
+
+==Használata==
+
+Az alapértelmezés a "BMP". Megváltoztathatod a [[Main/hu/Beállítások|Beállítások]] ablakban, vagy az [[Main/hu/Openttd.cfg|openttd.cfg]] fájlban az alábbi szintaxissal:
+
+<pre>
+[misc]
+screenshot_format = <lehetséges értékek>
+</pre>
+
+'''Lehetséges értékek:''' [ <üres> | bmp | png | pcx ]
+
+'''Alapbeállítás:''' <üres>
+
+Ha nem megengedett értéket kap, visszaáll az alapbeállításra.
+
+[[Category:hu/Beállítások és finomhangolás]]
