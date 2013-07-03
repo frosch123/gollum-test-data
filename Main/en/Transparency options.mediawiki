@@ -1,0 +1,94 @@
+[[Translation:Main/en/Transparency options]]{{en/-}}{{en/Table of contents}}
+
+'''Transparency Options''' allows the appearance of buildings and other types of objects to be toggled. The ''Transparency Options'' toolbar can be accessed either by selecting ''Transparency Options'' from the options menu ([[File:en/Options button.png]]), or using {{keypress|ctrl|X}}. All [[Archive/en/Snow Cat/Transparency Options#Locked Transparency Options|unlocked transparency options]] can be quickly toggled on/off by pressing {{keypress|X}}. 
+For each type of object setting the corresponding button in the toolbar or using {{keypress|ctrl}} + ( {{keypress|1|9|6=&nbsp;to&nbsp;}} ) will allow the player to see through it. The current appearance of a type of object can be ''locked'' against being toggled with {{keypress|X}} by applying {{keypress|ctrl|click}} on its option button. Objects can be set to invisible instead of transparent by clicking on the appropriate button in the second row, or by the hotkeys {{keypress|shift|ctrl}} + ( {{keypress|1|9||||&nbsp;to&nbsp;}} ).
+
+===Transparency Options Toolbar===
+[[File:en/TransparencyOptions.png]]<br>
+The Transparency Options toolbar has two rows:
+*The first row defines what map feature is affected, and if it is locked.
+*The second row defines what map feature should be invisible ''or'' transparent when the first row is set.
+
+{| {{en/Wikitable}}
+|- style="background:#efefef"
+!width='''46'''|Button
+!Transparency Shortcut
+!Invisibility Shortcut
+!Description
+|-
+|[[File:en/TransparencyOptions-1.png]]
+|{{keypress|ctrl|1|6=&#32;+&#32;}}
+|{{keypress|shift|ctrl|1}}
+|Toggle transparency for station signs. (appears as 'Transparent station signs' in options menu)
+|-
+|[[File:en/TransparencyOptions-2.png]]
+|{{keypress|ctrl|2|6=&#32;+&#32;}}
+|{{keypress|shift|ctrl|2}}
+|Toggle transparency for trees.
+|-
+|[[File:en/TransparencyOptions-3.png]]
+|{{keypress|ctrl|3|6=&#32;+&#32;}}
+|{{keypress|shift|ctrl|3}}
+|Toggle transparency for houses. (appears as 'Transparent buildings' in options menu)
+|-
+|[[File:en/TransparencyOptions-4.png]]
+|{{keypress|ctrl|4|6=&#32;+&#32;}}
+|{{keypress|shift|ctrl|4}}
+|Toggle transparency for industries.
+|-
+|[[File:en/TransparencyOptions-5.png]]
+|{{keypress|ctrl|5|6=&#32;+&#32;}}
+|{{keypress|shift|ctrl|5}}
+|Toggle transparency for buildings of road and railroad lines, like stations, depots and waypoints.
+|-
+|[[File:en/TransparencyOptions-6.png]]
+|{{keypress|ctrl|6|6=&#32;+&#32;}}
+|{{keypress|shift|ctrl|6}}
+|Toggle transparency for bridges.
+|-
+|[[File:en/TransparencyOptions-7.png]]
+|{{keypress|ctrl|7|6=&#32;+&#32;}}
+|{{keypress|shift|ctrl|7}}
+|Toggle transparency for structures like lighthouses and antennas.
+|-
+|[[File:en/TransparencyOptions-8.png]]
+|{{keypress|ctrl|8|6=&#32;+&#32;}}
+|{{keypress|shift|ctrl|8}}
+|Toggle transparency for catenary.
+|-
+|[[File:en/TransparencyOptions-9.png]]
+|{{keypress|ctrl|9|6=&#32;+&#32;}}
+|{{keypress|shift|ctrl|9}}
+|Toggle transparency for loading indicators.
+|-
+|
+|{{keypress|X}}
+|
+|Toggle transparency if unlocked for all of the above.
+|}
+For all of the above, {{keypress|ctrl|click}} to lock.
+
+===Locked Transparency Options===
+When locked transparency options are makred with an icon ( [[File:en/TransparencyOptions-a.png]] ), and are not affected by the {{keypress|X}} key. Locked options can still be toggled by clicking on the button, or using {{keypress|ctrl}}+({{keypress|1|9|6=&nbsp;to&nbsp;}}). These may be unlocked using {{keypress|ctrl|click}} on the appropriate buttons.
+
+===Invisibility===
+The appearance of objects that are set to invisible instead of transparent are toggled by the same ''Transparency Options'' described above. Objects can be set to be invisible by clicking on the appropriate second row button in the Transparency Options toolbar, or by the hotkeys {{keypress|shift|ctrl}} + ( {{keypress|1|9|6=&nbsp;to&nbsp;}} ).
+
+{{en/Note|The in game description refers to the primary set (first row) of options as toggling ''transparency''. <br \>
+This can be confusing as setting the corresponding secondary (second row) option substitutes ''invisibility'' for effect. It would be accuracte to say that the primary set of options always toggles ''opacity'', and the secondary set toggles the degree of transparancy.<br \>opacity &or; { transparency &or; invisibility }<br \> For consistency the in-game language is preferred.}}
+
+==See also==
+*[[Main/en/Invisible trees]]
+*[[Main/en/Advanced Settings/Interface#Display options]]
+
+==Other display options==
+{{en/Expand|}}
+<!-- needs to be moved into own article? -->
+*Town names displayed
+*Station names displayed
+*Waypoint names displayed
+*Signs displayed
+*Full animation
+*Full detail
+
+[[Category:en/Settings & Preferences]]
