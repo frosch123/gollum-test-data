@@ -1,0 +1,21 @@
+<noinclude>[[Translation:Template/en/Expand]]{{en/-}}</noinclude>{{de/Infofenster| type  = notice
+| image = Paper-plus.png
+| text  = Dieser Artikel muss '''[{{SERVER}}{{localurl:{{NAMESPACE}}:{{PAGENAME}}|action=edit}} erweitert]''' werden.<br/>{{{1|}}}
+<div style="font-size: 80%">
+*Weitere Vorschläge und Anmerkungen hier: [[Archive/en/{{PAGENAME}}|Diskussion]].
+*Benutze das [[Main/de/Styleguide|Styleguide]] um richtig zu editieren.
+*Vergiss nicht diese Vorlage zu entfernen wenn der Artikel erweitert wurde.</div>
+}}<includeonly>{{{2|[[Category:en/Articles to be expanded]]}}}</includeonly><noinclude>
+
+==Vorlage: Benutzung==
+#Erkläre klar und deutlich auf der Diskussionsseite was genau erweitert werden muss.
+#Dann ''<nowiki>{{</nowiki>Erweitern/De|TEXT<nowiki>}}</nowiki>'' in einem Artikel einfügen der erweitert werden muss, mit einer kurzen Erklärung.  
+#*Die Erklärung muss nicht tiefgreifend sein, sie ist nur für den Leser. Die Diskussionsseite ist für Editoren. 
+#*Die Erklärung sollte ein Satz sein, der Sinn ergibt wenn er nach "Dieser Artikel muss erweitert werden" kommt.
+
+==Beispiel==
+<pre>{{de/Erweitern|Braucht eine komplette Liste aller Brücken.}}</pre>
+{{de/Erweitern|Braucht eine komplette Liste aller Brücken.|2=}}
+
+
+[[Category:de/Vorlagen|E]][[Category:de/Message-Boxen|E]]</noinclude>
