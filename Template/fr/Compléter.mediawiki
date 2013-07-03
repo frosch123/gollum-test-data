@@ -1,0 +1,22 @@
+<noinclude>[[Translation:Template/en/Expand]]{{en/-}}</noinclude>{{fr/Fenêtre de message| type  = annonce
+| image = Paper-plus.png
+| texte = Cet article ou cette section doit être [{{SERVER}}{{localurl:{{NAMESPACE}}:{{PAGENAME}}|action=edit}} complété].<br/>{{{1|}}}
+<div style="font-size: 80%">
+*Vous pouvez trouver plus d'informations sur ce qui doit faire exactement dans la [[Archive/en/{{PAGENAME}}|discussion]] pour cet article.
+*N'oubliez pas d'utiliser le [[Main/fr/Manuel de Style|manuel de style]].
+*Supprimer ce modèle une fois que l'article a été complété.</div>
+}}<includeonly>{{{2|[[Category:fr/Articles à completer]]}}}</includeonly><noinclude>
+
+==Utilisation du Template:Compléter==
+#Expliquez d'abord clairement sur la page de discussion ce qui doit être complété en particulier, afin qu'il y ait une base de départ si les gens ont des questions.
+#Puis entrez ''<nowiki>{{</nowiki>Compléter/Fr|notes<nowiki>}}</nowiki>'' dans l'article ou la section qui nécessitent un complément, avec un bref résumé.
+#*Le résumé ne doit pas être trop détaillé - il est pour le lecteur, la page de discussion est pour l'éditeur.
+#*Le résumé devrait être une phrase significative quand elle apparaît dans le contexte juste après "Cet article ou cette section doit être complété." dans le message.
+
+Cela ajoutera l'article à [[Category/fr/Articles à completer]].
+
+==Exemple==
+<pre>{{fr/Compléter|Liste complète des besoins des ponts}}</pre>
+{{fr/Compléter|Liste complète des besoins des ponts|2=}}
+
+[[Category:fr/Modèles]][[Category:fr/Infobox]]</noinclude>
