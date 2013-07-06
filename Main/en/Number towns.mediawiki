@@ -1,0 +1,27 @@
+[[Translation:Main/en/Number towns]]
+:<small><<Back to the [[Main/en/Openttd.cfg]] (OpenTTD configuration file)</small>
+
+
+'''number_towns''' is a variable of Openttd.cfg file:
+
+Sets the frequency of towns created on a new map.
+
+0 = very low<br>
+1 = low<br>
+2 = normal<br>
+3 = high<br>
+4 = custom<br>
+
+The custom setting is modified by the [[Main/en/custom town number]] setting in the <nowiki>[game_creation]</nowiki> section.
+
+<pre>
+[difficulty]
+number_towns = 2
+</pre>
+
+'''Valid options:''' [ 0 | 1 | 2 | 3 | 4 ]
+
+'''Default:''' 2
+
+
+[[Category:en/Settings & Preferences]]
