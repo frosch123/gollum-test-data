@@ -1,0 +1,21 @@
+[[Translation:Main/en/Line reverse mode]]
+:<small><<Back to the [[Main/en/Openttd.cfg]] (OpenTTD configuration file)</small>
+
+
+'''line_reverse_mode''' is a variable of Openttd.cfg file:
+
+Sets whether trains are disallowed to reverse at stations.<br><br>
+true = trains can reverse at end of line only<br>
+false = trains can reverse either at end of line and at stations<br>
+
+<pre>
+[difficulty]
+line_reverse_mode = false
+</pre>
+
+'''Valid options:''' [ true | false ]
+
+'''Default:''' false
+
+
+[[Category:en/Settings & Preferences]]
