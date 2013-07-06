@@ -1,0 +1,21 @@
+[[Translation:Main/en/Max no competitors]]
+:<small><<Back to the [[Main/en/Openttd.cfg]] (OpenTTD configuration file)</small>
+
+
+'''max_no_competitors''' is a variable of Openttd.cfg file:
+
+Sets the number AI competitors in the game.<br><br>
+0 = no competitors will be started by the AI<br>
+1-14 = number of competitors (from 1 to 14) that the AI will create<br>
+
+<pre>
+[difficulty]
+max_no_competitors = 0
+</pre>
+
+'''Valid options:''' [ 0 | 1 <= n <= 14 ]
+
+'''Default:''' 0
+
+
+[[Category:en/Settings & Preferences]]
