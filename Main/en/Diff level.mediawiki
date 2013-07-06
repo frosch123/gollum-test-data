@@ -1,0 +1,25 @@
+[[Translation:Main/en/Diff level]]
+:<small><<Back to the [[Main/en/Openttd.cfg]] (OpenTTD configuration file)</small>
+
+{{en/Historic|'''diff_level''' was last used in OpenTTD 1.2.3.}}
+
+'''diff_level''' is a variable of Openttd.cfg file:
+
+Sets the pre-defined difficulty levels in the game.<br><br>
+0 = easy-mode<br>
+1 = normal-mode<br>
+2 = hard-mode<br>
+3 = custom<br>
+You can edit the custom difficulty by changing the values of the [[Main/en/diff custom]] entry.
+
+<pre>
+[difficulty]
+diff_level = 0
+</pre>
+
+'''Valid options:''' [ 0 | 1 | 2 | 3 ]
+
+'''Default:''' 0
+
+
+[[Category:en/Settings & Preferences]]
