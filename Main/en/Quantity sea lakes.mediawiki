@@ -1,0 +1,24 @@
+[[Translation:Main/en/Quantity sea lakes]]
+:<small><<Back to the [[Main/en/Openttd.cfg]] (OpenTTD configuration file)</small>
+
+
+'''quantity_sea_lakes''' is a variable of Openttd.cfg file:
+
+Sets the sea level, thus, the size of the area covered by seas and lakes on a new map.<br><br>
+0 = very low<br>
+1 = low<br>
+2 = medium<br>
+3 = high<br>
+4 = custom<br>
+The custom setting is modified by the [[Main/en/custom sea level]] setting in the <nowiki>[game_creation]</nowiki> section.
+<pre>
+[difficulty]
+quantity_sea_lakes = 0
+</pre>
+
+'''Valid options:''' [ 0 | 1 | 2 | 3 | 4 ]
+
+'''Default:''' 0
+
+
+[[Category:en/Settings & Preferences]]
