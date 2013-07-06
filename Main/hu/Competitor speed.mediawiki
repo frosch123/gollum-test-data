@@ -1,0 +1,24 @@
+'''Broken translation link'''
+:<small><< Vissza az [[Main/hu/openttd.cfg|openttd.cfg]]-hez (OpenTTD beállítófájl)</small>
+
+
+A '''competitor_speed''' az openttd.cfg fájl egy változója.
+
+Ha a [[Main/hu/max no competitors|versenytársak száma]] nullánál nagyobbra van állítva, a competitor_speed meghatározza az MI (gépi) versenytársak építkezési sebességét.<br><br>
+0 = nagyon lassú<br>
+1 = lassú<br>
+2 = közepes<br>
+3 = gyors<br>
+4 = nagyon gyors<br>
+
+<pre>
+[difficulty]
+competitor_speed = 2
+</pre>
+
+'''Lehetséges értékek:''' [ 0 | 1 | 2 | 3 | 4 ]
+
+'''Alapbeállítás:''' 2
+
+
+[[Category:hu/Beállítások és finomhangolás]]
