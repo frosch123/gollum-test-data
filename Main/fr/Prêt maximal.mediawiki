@@ -1,0 +1,17 @@
+[[Translation:Main/en/Max loan]]
+{{en/-}}
+Fixe le montant initial maximal de prêt pour un nouveau jeu. Toujours en livres sterling. Changer la [[Main/fr/Monnaie|monnaie]] sous la section <nowiki>[locale]</nowiki> ou dans la [[Main/fr/Fenêtre des options du jeu|fenêtre des options du jeu]] modifiera le montant maxuimum du prêt selon le taux de change de la monnaie choisie. Le montant maximal du prêt augmentera avec le temps si l'[[Main/fr/Inflation|inflation]] est activée dans la section <nowiki>[economy]</nowiki>.<br><br>
+100000 = limite minimale<br>
+500000 = limite maximale<br>
+
+<pre>
+[difficulty]
+max_loan = 300000
+</pre>
+
+'''Options valides:''' [ 100000 <= n <= 500000 ] par incréments de 50000
+
+'''Par défaut:''' 300000
+
+
+[[Category:fr/Réglages et préférences]]
