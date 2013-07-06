@@ -1,0 +1,24 @@
+[[Translation:Main/en/Competitor speed]]
+:<small><<Back to the [[Main/en/Openttd.cfg]] (OpenTTD configuration file)</small>
+
+
+'''competitor_speed''' is a variable of Openttd.cfg file:
+
+If [[Main/en/max no competitors|competitors]] are set to greater than zero then, competitor speed sets the speed at which the AI competitors will build.<br><br>
+0 = very slow<br>
+1 = slow<br>
+2 = medium<br>
+3 = fast<br>
+4 = very fast<br>
+
+<pre>
+[difficulty]
+competitor_speed = 2
+</pre>
+
+'''Valid options:''' [ 0 | 1 | 2 | 3 | 4 ]
+
+'''Default:''' 2
+
+
+[[Category:en/Settings & Preferences]]
