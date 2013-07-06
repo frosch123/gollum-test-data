@@ -1,0 +1,25 @@
+[[Translation:Main/en/Number industries]]
+:<small><<Back to the [[Main/en/Openttd.cfg]] (OpenTTD configuration file)</small>
+
+{{en/Historic|Now the [[Main/en/industry density]] variable is used instead.}}
+{{en/Expand|From and till which versions this setting was used.}}
+
+'''number_industries''' is a variable of Openttd.cfg file:
+
+Sets the frequency of industries for a new map.<br><br>
+0 = none<br>
+1 = very low<br>
+2 = low<br>
+3 = normal {default}<br>
+4 = high<br>
+<pre>
+[difficulty]
+number_industries = 3
+</pre>
+
+'''Valid options:''' [ 0 | 1 | 2 | 3 | 4 ]
+
+'''Default:''' 3
+
+
+[[Category:en/Settings & Preferences]]
