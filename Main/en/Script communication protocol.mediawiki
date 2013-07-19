@@ -1,0 +1,72 @@
+{{en/Note|SCP is work in progress. Currently there has not yet been a release to tt-forums nor bananas.}}
+
+Script Communication Protocol (SCP) a protocol for AIs and Game Scripts to communicate with each other. 
+
+
+== The protocol ==
+The idea is that AI and Goal scripts communicate using signs placed in a pre-defined tile in one of the map corners. For now we will refer to this as the 'communication tile'. 
+
+An AI that want to query the Game Script something, place a sign at the communication tile. The NoGo will periodically scan the signs of all companies to see if there are any signs on the communication tile and process those. If a question from a company is found, a response sign will be created using that company ID so that the AI of that company can read it.
+
+For more details on the protocol, see [http://dev.openttdcoop.org/projects/scriptlib-scp/repository/entry/protocol.txt protocol.txt]
+
+== SCP Library ==
+To ease the usage of this protocol, there is a AI and GS library that allows sending commands between Game Scripts and AIs and handling all the low-level stuff of encoding the data into signs and decoding the signs.
+
+=== Command Sets ===
+A command set, is a set of commands that could vaguely correspond to the commands supported by a specific GameScript. However, the idea behind command sets is that if there is one Game Script providing town goals and another providing economical goals, it should be possible to combine those two in a single Game Script without the AI needing to be changed as long as the AI support both the command set "Bobs Economy set" and "Alice Town Set".
+
+So what Bob does is that he publishes a list of commands that his Economy GS supports and also tell AI authors what data the commands expect and what the response is (if any).
+
+Example:
+
+'''Command Set: Bobs Economy Set'''<br/>
+{|border="1"  class="wikitable sortable"
+! scope="col" | Query started by
+! scope="col" | Command name
+! scope="col" class="unsortable"| AI->GS parameters
+! scope="col" class="unsortable"| GS->AI parameters
+! scope="col" class="unsortable"| Parameter description
+|-
+|AI
+|GetEconomy
+|()
+|(economy)
+| economy = integer enum(0 = growth, 1 = stale, 2 = depression)
+|-
+|AI
+|GetPresident
+|()
+|(name, age)
+|name = a string giving the name of the president of the OpenTTD country; age = an integer giving the age of the president
+|-
+|AI
+|ProposeNewIndustry
+|(type, location)
+|(grant)
+|type = industry type id, location = tile index, grant = 1 if new industry was constructed and 0 if not.
+|-
+|GS
+|NewPresident
+|()
+|(name, age)
+|name and age as in GetPresident.
+|}
+
+This means that an AI may issue the command GetPresindent with zero parameters to the Game Script. In response it will get two data values. name and age which will appear at index 0 and 1. The name response will be a string and the age response will be an integer. The ProposeNewIndustry command takes two parameters in the query from the AI to the GS that must appear in the given order and responds with 0 or 1. 
+
+The NewPresident command is a bit different, it is not asked by the AI. Instead the GS send a query to each AI (that has done the handshaking) when there is a new president. The AI will get name of new president as Data[0] and age as Data[1]. 
+
+=== Extra data ===
+In general it is recommended that AIs and GSs are written such that if extra data is sent at the back which is not handled, that data should just be ignored. That allows the GS to in future add new parameters/responses to the end without having to create a new command set for every small addition. All command sets and commands that the GS supports is transmitted to the AI at the handshaking process, and there is also a limit of maximum 255 commands in total. So save creating new command sets for when complete re-designs or breaking of API is required.
+
+=== Documentation ===
+API documentation of the library can be found here:
+[[Main/en/SCPLib doc|SCPLib documentation]]
+
+=== Source ===
+Source code can be found here: http://dev.openttdcoop.org/projects/scriptlib-scp
+
+=== Scripts with SCP support ===
+* NoCarGoal (GS)
+* CluelessPlus (AI)
