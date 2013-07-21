@@ -1,0 +1,16 @@
+====Zoom level boundaries====
+{{en/Feature|1.2|float=right|text=(since 1.2.0)}}
+<!-- todo: check actual availability -->
+Maximum zoom level and minimum zoom level allow you to set the most zoomed-out and most zoomed-in state which the mouse wheel will allow to zoom-in or zoom-out.
+
+The intention is to not need to load all (big) sprites for a certain zoom-in level or not run into a lag on evolved games by preventing to accidentially zoom-out more than usually intended.
+
+
+'''Maximum zoom-in'''
+:''Possible Settings'':<span style="color:green">'''4x, 2x, normal'''</span>
+:''In [[Main/en/openttd.cfg]] config file:'' [gui] zoom_min = <0-2> (0=4x, 1=2x, 2=normal)
+
+'''Maximum zoom-out'''
+:Possible Settings: <span style="color:green">'''2x, 4x, 8x</span>
+:''In [[Main/en/openttd.cfg]] config file:'' [gui] zoom_max = <3-5> (3=2x, 4=4x, 5=8x)
+{{en/-}}
