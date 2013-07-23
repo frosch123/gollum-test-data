@@ -1,0 +1,36 @@
+{| align="left" style="width:33%; font-size:90%; margin:0px; margin-top:5px;" cellpadding="2"
+| colspan="2" style="background-color:#e7ebff; border: 1px solid #c7c8fe; text-align: center; font-size:12px" |'''{{{title}}}'''
+|- style="background-color:#e7ebff;"
+| style="border: 1px solid #c7c8fe; text-align: center; width:80px; height:80px;"|[[Main/en/{{{image|Image:No_image.png}}}|80px]]
+|
+{| style="float:right;"
+| rowspan="5" style="border: 1px solid #c7c8fe; font-size:20px; font-weight:bold; vertical-align:middle; padding-left:1em;"|<!--
+                                                       --><span class="plainlinks">[{{{file}}} Download]</span>
+|org
+|{{#ifeq:{{{org|}}}|yes|{{en/Check|yes}}|{{en/Check|no}}}}
+|-
+|ogfx
+|{{#ifeq:{{{ogfx|}}}|yes|{{en/Check|yes}}|{{en/Check|no}}}}
+|-
+|z0 
+|{{#ifeq:{{{z0|}}}|yes|{{en/Check|yes}}|{{en/Check|no}}}}
+|-
+|z2
+|{{#ifeq:{{{z2|}}}|yes|{{en/Check|yes}}|{{en/Check|no}}}}
+|-
+|Updated
+|{{{updated}}}
+|}
+|- style="background-color:#e7ebff;"
+| style="border: 1px solid #c7c8fe; width:60px"|'''Artist:'''
+| style="border: 1px solid #c7c8fe;"|{{{artist|}}}
+|- style="background-color:#e7ebff;"
+| style="background-color:#e7ebff; border: 1px solid #c7c8fe;"|'''Coder:'''
+| style="background-color:#e7ebff; border: 1px solid #c7c8fe;"|{{{coder|}}}
+|- style="background-color:transparent;"
+| style="border: 1px solid #c7c8fe;"|'''Forum link:'''
+| style="border: 1px solid #c7c8fe;"|{{{link|}}}
+|-
+| colspan="2" style="background-color:#e7ebff; border: 1px solid #c7c8fe;"|{{{notes|Description:}}}
+|-
+|}
