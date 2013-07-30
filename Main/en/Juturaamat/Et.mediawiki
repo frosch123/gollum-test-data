@@ -1,0 +1,99 @@
+[[Translation:Main/en/Juturaamat/Et]]{{en/Võimalus/Et|1.4}}{{en/-}}{{en/Liides/Et}}
+
+Juturaamat on jutulehekülgede kogumik. Seda saab luua GameScriptiga. Kasutusvõimalusi on mitmeid. Seda saab kasutada lihtsalt õpetuste koostamiseks, kuid ka stsenaariumites ja eesmärgiskriptides, et mängu põhjal juttu edasi anda. Raamatu võib luua mängu alguses, kuid ''Game Script''i abil saab lehekülgi lisada ka pärast tegevuste või eesmärkide lõpetamist.
+
+[[File:en/Story-book4 Et.png]]
+
+== GS API ==
+Leheküljed võivad kuuluda kas ettevõttele või olla üldised. Ettevõtted näevad üldiseid lehekülgi ja oma ettevõttele kuuluvaid lehekülgi.
+
+Lüheküljed järjestatakse loomisaja järgi. Kui lehekülg B loodi pärast lehekülge A, siis lehekülg B on alati pärast lehekülge A.
+
+Lehekülgi saab eemaldada, kuid seda ei tohiks üldiselt teha, sest nende eesmärk on olla pigem väljatrükitud lehekülgede moodi. Olemasolevate lehekülgede vahele uusi lehekülgi lisada ei saa.
+
+=== Lehekülje osad ===
+Igal leheküljel on loomise kuupäev ja pealkiri. Ülejäänud sisu lisatakse leheküljele osade kaupa. Iga lehekülje osa on sama lai kui lehekülg, ning vähemalt üks rida pikk. Olemas on kolm erinevat lehekülje osa: kiri, asukoht ja eesmärk. Kirjaga saab näidata kirja allosa. Asukoht viitab kaardil kindlale punktile, ning asukohale klõpsates viiakse mängija vaateaken sinna. Eesmärgiga saab viidata eesmärgile.
+
+Kuna lehekülje ja selle osade loomisel tuleb saata palju andmeid, ei saa seda teha ühe «DoCommand» käsuga. Kõigepealt tuleb teha üks päring, et lehekülg luua, ning seejärel üks päring iga lehekülje osa loomiseks. Soovitatav on luua lehekülg, ning kohe seejärel lehekülje. Raamat ei lähe ise uutele lehekülgedele, kuid API päringuga saab raamatu lehekülge muuta. Sellega tuleks olla ettevaatlik, et juturaamatut mitte kasutajale ebasobival hetkel avada.
+
+=== Meetodid ===
+[http://nogo.openttd.org/api/trunk/classGSStoryPage.html Vaata API dokumentatsiooni]
+
+=== Erinevad viisid juturaamatu programmeerimiseks ===
+# ''GS'' koodi alguses loo ja avalikusta kõik leheküljed (üldiste lehekülgedena). Sedasi saab avalikustada lehekülgi, mida kõik ettevõtted peaksid alati nägema.
+# Tee mängu alguses lihtsalt üks või paar lehekülge (kas üldised või ettevõttele kuuluvad). Kui viimasel leheküljel olev tegevus on valmis, tee uus lehekülg ja kasuta «GSStoryPage.ShowPage» meetodit, et uuele leheküljele minna. Selle meetodiga ei näidata otseselt kõiki lehekülgi, vaid see annab võimaluse juttu erinevaid radu pidi järgida.
+
+== ''Game Script''i koodi näide ==
+Siit saab täielikult töötava näite: http://devs.openttd.org/~zuu/goal-gui/GoalGUI-Test-GS-v2.tar (kuigi mänguna ei paku see pinget)
+
+=== Lehekülje loomine ===
+Järgnev kood loob samasuguse lehekülje, nagu pildil. See kasutab ka ümbrisfunktsiooni «NewStoryPage», mida näeb varsti.
+
+[[File:en/Story-book4 Et.png|pilt üleval]]:
+
+<pre>NewStoryPage(0, GSText(GSText.STR_TITLE1), [
+		[GSStoryPage.SPET_TEXT,     0, GSText(GSText.STR_PAGE1a)],
+		[GSStoryPage.SPET_LOCATION, GSTown.GetLocation(0), GSText(GSText.STR_TOWN_A)],
+		[GSStoryPage.SPET_TEXT,     0, GSText(GSText.STR_PAGE1b)],
+		[GSStoryPage.SPET_LOCATION, GSTown.GetLocation(1), GSText(GSText.STR_TOWN_B)],
+		[GSStoryPage.SPET_LOCATION, GSTown.GetLocation(2), GSText(GSText.STR_TOWN_C)],
+		[GSStoryPage.SPET_GOAL,     goal, null],
+]);
+</pre>
+
+=== Ümbrisfunktsioon ===
+Järgnev funktsioon on meetod lehekülgede loomiseks ja lehekülje osade lisamiseks. See abstrakteerib mitme API päringu tegemise vajaduse–vahest on vaja mitu «DoCommand» käsku, et kõik võrgupaketid saaksid mängijatele üle kantud.
+<pre>/**
+ * See funktsioon loob uue juturaamatu lehekülje koos leheosadega
+ * ja siis avalikustab selle. Kui midagi läheb valesti, siis lehekülg
+ * eemaldatakse ja funktsioon tagastab «false».
+ *
+ * Argumendid: 
+ *  ettevõte, pealkiri, [ [liik, viide, kiri], [liik, viide, kiri], [liik, viide, kiri], ... ]
+ *   või
+ *  ettevõte, pealkiri,   liik, viide, kiri,   liik, viide, kiri,   liik, viide, kiri, ...
+ *
+ * 1) Iga element saadetakse massiivina, milles on kolm ilma nimeta osa. Osad pakitakse massiiviks.
+ * 2) Iga element saadetakse kolme osa järjestusena.
+ */
+function NewStoryPage(company, title, ...)
+{
+	local page_id = GSStoryPage.New(company, title);
+	if (!GSStoryPage.IsValidStoryPage(page_id)) {
+		GSLog.Error("NewStoryPage: Failed to create page");
+		return false;
+	}
+
+	// Convert args to the stacked array format
+	local stacked_array = [];
+	if (vargc == 1) {
+		stacked_array = vargv[0];
+	} else {
+		for (local c = 0; c + 2 < vargc; c+= 3) {
+			stacked_array.append([vargv[c], vargv[c+1], vargv[c+2]]);
+		}
+	}
+
+	// Process element array
+	foreach(element in stacked_array) {
+		local type = element[0];
+		local ref = element[1];
+		local text = element[2];
+
+		local pe = GSStoryPage.NewElement(page_id, type, ref, text);
+		GSLog.Info("PE: " + pe);
+		if (!GSStoryPage.IsValidStoryPageElement(pe)) {
+			GSLog.Error("NewStoryPage: Failed to add element");
+			GSStoryPage.Remove(page_id);
+			return false;
+		}
+	}
+
+	return true;
+}</pre>
+
+== Võimalikud täiendused tulevikus ==
+* Leheküljele vastuste lisamine (näiteks, et luua peatüki valimise lehekülg.)
+
+== Vaata ka ==
+* tt-forums.net [http://www.tt-forums.net/viewtopic.php?f=65&t=66697 foorumiteema]
