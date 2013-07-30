@@ -1,0 +1,27 @@
+[[Translation:Main/en/Iseärasuste jaotus/Et]]
+{{en/-}}
+'''Iseärasuste jaotus''' on kaardi tekitamise seade, mis jaotab madalad ja kõrged alad nii, et tekivad eraldi mäestikud ja järvestikud. Kui väärtus on «Pole», siis iseärasusi ei jaotata. Väärtused «Keskmine» ja «Kõrge» loovad tõetruu maastiku, koos mäestike, tasandike, ning järvestikutega. Väärtus «Madal» teeb maapinna üsna tasaseks.
+
+Iseärasuste jaotus annab parimaid tulemusi, kui «Maapinna tüüp» on «Mägine» või «Künklik».
+
+{{en/Võimalus/Et|1.0}}
+
+== Eesmärk ==
+Iseärasuste jaotamine loodi selleks, et mäestikud vahelduksid, kui kaardil ringi liikuda. Sedasi tekib rohkem ruumi jaamade ja rööbaste jaoks, ning mängijal on huvitavam transpordiliine ehitada.
+
+== Kirjeldus ==
+Kui maastik on mägine, aga iseärasuste jaotus on madal, siis terve kaart on mägine. Kui iseärasuste jaotus on kõrge, siis lisaks mägedele tekivad ka tasased orud ja kõrged, mägised alad. Iseärasuste jaotuse eesmärk on luua tõetruu maastik. Kui iseärasuste jaotus on keskmine, siis tekivad tasased maalapid, ning mäed on rohkem koos, mistõttu on kergem ümber mägede ehitada. Kui iseärasuste jaotus on kõrge, tekivad suured mäestikud, millest üle saamiseks on vaja ehitada tunneleid ja sildu.
+
+== Näited ==
+
+Mõned näited erinevatest iseärasuste jaotuse seadetest, kui teisi parameetreid ei muudeta (sh juhuarvu)
+
+[[File:en/MapVarietyDistrNone.png|thumb|left|300px|Kaart, kus iseärasuste jaotus on '''«Pole»''']]
+[[File:en/MapVarietyDistrVLow.png|thumb|right|300px|Kaart, kus iseärasuste jaotus on '''«Väga madal»''']]
+[[File:en/MapVarietyDistrMedium.png|thumb|left|300px|Kaart, kus iseärasuste jaotus on '''«Keskmine»''']]
+[[File:en/MapVarietyDistrVHigh.png|thumb|right|300px|Kaart, kus iseärasuste jaotus on '''«Väga kõrge»''']]
+
+{{en/-}}
+
+== Arendus ==
+Esimese ettepaneku tegi Zephyris OpenTTD foorumi [http://www.tt-forums.net/viewtopic.php?f=32&t=46338 teemas], ning sellele leidus palju huvilisi. {{en/User|peter1138}} valmistas laienduse, ning tegi loodud kaartidest paar näidet ([http://www.tt-forums.net/viewtopic.php?p=841457#p841457]). Mängu sai see tänu peter1138 tööle alates versioonist [http://hg.openttd.org/openttd/trunk.hg/rev/c3959fffa40a r18541].
