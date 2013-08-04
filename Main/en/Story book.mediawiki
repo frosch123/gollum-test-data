@@ -1,0 +1,112 @@
+{{en/Feature|1.4}}
+
+The Story book is a collection of Story pages that a Game Script can create. It can be used both by pure tutorials but also just about any scenario or goal script which want to build a game story. The complete book can be constructed when the game starts, or the GS can add pages eg. after the completion of a task/goal.
+
+If you want to try out the Story Book in-game, get NoCarGoal via online content download and then start a game with NoCarGoal. (you need nightly r25621 or later)
+
+[[File:en/Story-book4.png]]
+
+== GS API ==
+Pages can be company specific or global. Each company will only show the pages that are either company specific or global.
+
+Pages are stored in a pool but will get an automatic sort value based on creation order. Thus if page B is created after page A, it will always show after A in the story book.
+
+It is possible to remove pages, but in general pages should be seen as printed as soon as you created them. It is not possible to insert pages in between existing pages.
+
+=== Page Elements ===
+All pages display the creation date and its title at the top. All further content is added by appending page elements to a page. A page element uses the full width of the page and one or more lines. Currently there are three types of page elements: text, location and goal. Text allows displaying a section of text. Location will display a link to a location on the map which can be clicked to jump there. Goal allows referring to a goal.
+
+Due to the amount of data to supply when creating a page + page elements it is not possible to do this using a single DoCommand. Instead users need to make one API call to create the page and then one for each element to add. It is recommended that you create a page and then quickly populate it with elements. The book will not automatically progress to new pages, instead you can use an API call to force the book to show a specific page. However, if you do that, do it carefully so that you don't open the story book window when the user do not want that.
+
+=== Methods ===
+[http://nogo.openttd.org/api/trunk/classGSStoryPage.html See API docs]
+
+=== Different ways to program the Story Book ===
+# At startup of GS, create and publish all your pages (as global pages). This can be used if you just want to provide some pages of text which is equal for all companies and all pages should always be visible.
+# Create just one or a few pages at start (of game or company). Later when a task that have been described on the last page is completed, create an additional page and then GSStoryPage.ShowPage to skip to that page. This method allows both to not reveal all pages directly, but also having multiple paths to go in the story depending on whatever you want.
+
+== Example Game Script code ==
+A fully working example can be found here: http://devs.openttd.org/~zuu/goal-gui/GoalGUI-Test-GS-v2.tar (it is not very interesting to play against however)
+
+Additionally, both [http://www.tt-forums.net/viewtopic.php?f=65&t=62212 NoCarGoal] and [http://www.tt-forums.net/viewtopic.php?f=65&t=57963 Neighbours are important] makes use of the Story Book. Both of them uses [http://dev.openttdcoop.org/projects/superlib/repository/entry/story.nut SuperLib.Story] which contain some useful helper methods.
+
+=== Create a page ===
+The following code creates the page as shown in this image below. It uses a wrapper function NewStoryPage which is given later.
+
+[[File:en/Story-book4.png|the image above]]:
+
+<pre>NewStoryPage(0, GSText(GSText.STR_TITLE1), [
+		[GSStoryPage.SPET_TEXT,     0, GSText(GSText.STR_PAGE1a)],
+		[GSStoryPage.SPET_LOCATION, GSTown.GetLocation(0), GSText(GSText.STR_TOWN_A)],
+		[GSStoryPage.SPET_TEXT,     0, GSText(GSText.STR_PAGE1b)],
+		[GSStoryPage.SPET_LOCATION, GSTown.GetLocation(1), GSText(GSText.STR_TOWN_B)],
+		[GSStoryPage.SPET_LOCATION, GSTown.GetLocation(2), GSText(GSText.STR_TOWN_C)],
+		[GSStoryPage.SPET_GOAL,     goal, null],
+]);
+</pre>
+
+=== Wrapper function ===
+The following code implements an atomic method for creating pages and adding page elements to it. Eg. it abstracts away that several API calls are required as the total amount of data will in some cases need several DoCommands / network packets to be transmitted to all clients. You find this method along with a few more useful wrappers in the story module of SuperLib: [http://dev.openttdcoop.org/projects/superlib/repository/entry/story.nut SuperLib.Story]
+<pre>/**
+ * This function creates a new story page with page elements
+ * and finally publishes it. If any part fails, the page
+ * will be removed and the function returns false.
+ *
+ * Args: 
+ *  company, title, [ [type, reference, text], [type, reference, text], [type, reference, text], ... ]
+ *   or
+ *  company, title,   type, reference, text,   type, reference, text,   type, reference, text, ...
+ *
+ * 1) Each element is passed as an array with three unnamed elements. All elements are packed into an array.
+ * 2) Each element is passed as a sequence of three arguments.
+ */
+function NewStoryPage(company, title, ...)
+{
+	local page_id = GSStoryPage.New(company, title);
+	if (!GSStoryPage.IsValidStoryPage(page_id)) {
+		GSLog.Error("NewStoryPage: Failed to create page");
+		return false;
+	}
+
+	// Convert args to the stacked array format
+	local stacked_array = [];
+	if (vargc == 1) {
+		stacked_array = vargv[0];
+	} else {
+		for (local c = 0; c + 2 < vargc; c+= 3) {
+			stacked_array.append([vargv[c], vargv[c+1], vargv[c+2]]);
+		}
+	}
+
+	// Process element array
+	foreach(element in stacked_array) {
+		local type = element[0];
+		local ref = element[1];
+		local text = element[2];
+
+		local pe = GSStoryPage.NewElement(page_id, type, ref, text);
+		GSLog.Info("PE: " + pe);
+		if (!GSStoryPage.IsValidStoryPageElement(pe)) {
+			GSLog.Error("NewStoryPage: Failed to add element");
+			GSStoryPage.Remove(page_id);
+			return false;
+		}
+	}
+
+	return true;
+}</pre>
+
+== Compatibility check ==
+It is worth noting that some initial trunk versions had GSStoryBook, but had a fatal error in the save/load code. This made story pages saved by these versions corrupt. If you load a such save game with a newer version, the story pages (and page elements) will simply be removed. 
+
+The best thing you can do is to avoid using the story book on the affected trunk versions and instead use the same fallback code as you need to support 1.3. (if you don't support 1.3, just set min version as trunk r25621 (or 1.4.x).
+
+To check if story book is available you can use SuperLib.Story.IsStoryBookAvailable() which will only return true on versions with the story book and after the point when the save/load error was fixed.
+
+If you just want to display a body of text, you can use SuperLib.Story.ShowMessage(company, text, title = null) which will use the story book when IsStoryBookAvailable returns true, and otherwise fall back to showing the text in a GSGoal.Query window. The title text will only be used in the story book.
+
+== Possible future extensions ==
+* Allow adding one or more answers for a page. (eg. to allow creating a chapter selection page)
+
+== Se also ==
+* The [http://www.tt-forums.net/viewtopic.php?f=65&t=66697 forum thread] at tt-forums.net
