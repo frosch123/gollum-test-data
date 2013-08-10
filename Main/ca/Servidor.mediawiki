@@ -1,0 +1,30 @@
+[[Translation:Main/en/Server]]{{en/-}}
+Si vosté vol allotjar [[Main/ca/multijugadors|jocs multijugador]] en xarxa primer té que configurar el servidor OpenTTD al seu ordinador.
+[[File:ca/Ottdmulti6.png|right]]
+'''1''' Des del menú principal feu clic al botó '''multijugador'''.
+
+'''2''' Cliqueu a '''Inicia el servidor'''
+
+'''3''' Trieu un nom per al joc per a que els altres puguen identificar-lo: escriviu aquest nom al requadre '''Nom del Joc'''.
+
+'''4''' Configureu els paràmetres addicionals que s'expliquen més avall.
+
+'''5''' Feu clic en '''Nou joc''' (per generar un nou joc a l'atzar), o en '''Carrega un joc''' (per continuar un joc desat), o en '''Juga un escenari''', o en '''Juga un mapa d'alçades''', o en '''Cancel·la'''.
+
+==Paràmetres addicionals==
+*'''Posa una contrasenya.-''' aquest botó li permet fixar una contrasenya per a accedir al servidor, d'aquesta manera només els usuaris que coneixen la contrasenya poden unir-se al teu joc.
+*'''Connexió.-''' especifiqueu si el servidor és per a l'ús exclusiu d'una LAN, o si s'anuncia al servidor mestre de manera que aparegua a la llista de servidors a Internet.
+*'''Idioma parlat.-''' per a demanar als usuaris que parlen una llengua determinada al servidor.
+*'''Màx clients.-''' per a limitar el nombre màxim de clients que poden connectar-se al servidor.
+*'''Màx companyies.-''' per a limitar el nombre màxim d'empreses al joc.
+*'''Màx espectadors.-''' per a limitar el nombre màxim de clients que hi poden connectar-se com a espectadors.
+
+==Ports==
+Si el seu equip està connectat a un [http://www.wikipedia.org/wiki/ca:tallafocs tallafocs] o mitjançant un [http://www.wikipedia.org/wiki/ca:encaminador encaminador] [http://www.wikipedia.org/wiki/en:Network Address Translation NAT], ha de comprovar que estan oberts o redireccionats els ports adequats (el port 3979 per defecte). Podeu canviar el port utilitzat escrivint "server_port <port>" a la [[Main/ca/Consola|consola]] del joc.
+
+==Servidor dedicat==
+Si espera més jugadors però vostè no pensa jugar la partida, pot iniciar OpenTTD com a un [[Main/ca/servidor dedicat|servidor dedicat]] en lloc de l'habitual versió gràfica interactiva.
+
+Si executa el servidor d'ubuntu / debian i vol iniciar / aturar automàticament i guardar el joc, fes un cop d'ull als scripts init.d a https://bitbucket.org/frodus/openttd-init
+
+[[Category:ca/Multijugador]]
