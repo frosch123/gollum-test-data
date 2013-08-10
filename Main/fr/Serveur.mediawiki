@@ -1,0 +1,27 @@
+[[Translation:Main/en/Server]]{{en/-}}
+Si vous voulez héberger des parties multijoueurs en réseau, vous devez paramétrer le '''serveur''' OpenTTD sur votre ordinateur.
+[[File:fr/Ottdmulti6.png|right]]
+#Depuis le menu principal, cliquez sur '''Multijoueur'''
+#Cliquez sur '''Démarrer le serveur'''
+#Donnez un nom à votre partie pour aider les autres à l'identifier, et entrez-le dans la zone '''Nom de la partie'''
+#Configurez les paramètres supplémentaires, expliqués ci-dessous
+#Cliquez sur '''Nouvelle partie''' (pour générer un nouveau jeu aléatoire), ou '''Charger une Partie''' (pour continuer une partie sauvegardée), ou '''Jouer un Scénario''', ou '''Jouer une carte d'altitude''', ou '''Annuler'''
+
+==Paramètres==
+*'''Choisir le mot de passe''' donne un mot de passe au serveur pour que seuls les utilisateurs qui le connaissent puissent rejoindre votre jeu.
+*'''Connexion''' spécifie si le serveur est pour une utilisation LAN uniquement, ou s'il doit être publié vers le serveur maître pour être affiché sur la liste des serveurs internet.
+*'''Clients max''' limite le nombre total de joueurs qui peuvent se connecter.
+*'''Spectateurs max''' limite le nombre de clients qui peuvent se connecter pour regarder sans jouer.
+*'''Langue parlée''' sert à demander que les joueurs parlent une langue particulière sur votre serveur.
+*'''Charger une partie''' sert si vous voulez continuer une partie existante - hors le fait qu'il y a une carte existante, le jeu redémarrera de la même manière que via ''Démarrer la partie'', et les joueurs pourront vous rejoindre.
+
+==Ports==
+Si votre ordinateur est derrière un pare-feu ou un routeur [http://www.wikipedia.org/wiki/fr:Network address translation NAT], vous devez vérifier que les bons [[Main/fr/Port|ports]] (port 3979 par défaut) sont ouverts ou redirigés.
+Vous pouvez modifier le port utilisé en tapant "server_port <port>" dans la console du jeu.
+
+==Serveur dédié==
+Si vous attendez beaucoup de joueurs et n'allez pas vous-même utiliser votre machine pour jouer, vous pouvez démarrer OpenTTD comme [[Main/fr/Serveur dédié|serveur dédié]], plutôt qu'avec la version graphique interactive habituelle.
+
+Si vous exécutez votre serveur sur ubuntu / debian et vous voulez démarrer automatiquement / arrêter et sauvegarder votre jeu, consultez les scripts d'initialisation à https://bitbucket.org/frodus/openttd-init
+
+[[Category:fr/Multijoueur]]
