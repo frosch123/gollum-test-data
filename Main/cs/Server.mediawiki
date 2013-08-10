@@ -1,0 +1,27 @@
+[[Translation:Main/en/Server]]{{en/-}}
+Pokuď jsi se rozhodl, že chceš spustit síťovou hru pro více hráčů, musíš si ji nastavit na svém PC.
+[[File:en/Ottdmulti6 Cz.png|right]]
+#V hlavním menu klikni na '''Více hráčů'''
+#Klikni '''Spustit Server'''
+#Vymysli název svého hry, aby tě ostatní mohli identifikovat, a napiš ho do '''Jméno hry'''
+#Nastav si pokročilé nastavení (po spuštění už některá důležítá nastavení nebudou moci být změněny)
+#Klikni '''Nová hra''' (pro generování náhodných nové hry), nebo '''Nahrá t hru''' (pokračování uložené hry), nebo '''Hrá t mapu''', nebo '''Hrá t z výškové mapy''' nebo '''Zrušit'''.
+
+==Různá nastavení==
+*'''Nastavit heslo''' Pokuď chceš, tak toto nastaví přistupové heslo na tvůj server.
+*'''Připojení''' Nastaví, jestli chceš server pouze přes LAN síť a nebo jestli chceš, aby byl server vidět z venku a ostatní se mohli připojit.
+*'''Max klientů''' Nastaví limit, kolik se může maximálně připojit klientů na jednou.
+*'''Max pozorovatelů''' Nastaví limit, kolik se může maximálně připojit diváků na jednou..
+*'''Jazyk''' Nastaví jazyk serveru. Ovšem doporučuji "Češtinu" :-).
+*'''Nahrát hru''' Použij toto, jestli chceš nahrát již existující nebo uloženou hru. Ovšem toto neuloží hráčům spolešností jejich přistupová hesla do společnosti!!
+
+==Přesměrování portů==
+Pokuď je tvůj pc schovaný za bránou firewall nebo [http://www.wikipedia.org/wiki/Network_address_translation NAT] routerem, musíš na sebe nasměrovat port [[Main/en/port]]s (port 3979 standartní).
+Port můžeš ovšem změnit před spuštěním tvého server v kolonce "Port". Standartní port je tedy 3979 .
+
+==Věnovaný server==
+Pokuď si chceš spustit svůj velký "public" server, doporučuji ho spustit v pozadí pc, viz [[Main/en/dedicated server]].
+
+Pokud provozujete server na Ubuntu / debian a chcete automaticky spustit / zastavit a uložit si hru, podívejte se na skripty init.d na https://bitbucket.org/frodus/openttd-init
+
+[[Category:en/Multiplayer]]
