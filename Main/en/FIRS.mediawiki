@@ -1,0 +1,112 @@
+{{outdated|FIRS 0.9 release changed multiple aspects of FIRS, notably behaviour of supplies for primary industries and the advice on gameplay strategy.  There are also many features in FIRS not documented here.}}
+
+[[Translation:Main/en/FIRS]]
+{{en/Infobox NewGRF|setname= FIRS Industry Replacement Set
+|screenshot=
+|focus= Industry
+|artist=andythenorth and others
+|coder=andythenorth and others
+|category=Industries
+|copyright=GPL v2
+}}
+'''FIRS Industry Replacement Set'''
+
+FIRS is a newGRF providing new industries and cargos for OpenTTD.
+
+Online docs for FIRS can be found at [http://bundles.openttdcoop.org/firs/releases/LATEST/docs/html/get_started.html http://bundles.openttdcoop.org/firs/releases/LATEST/docs/html/get_started.html]
+
+To get FIRS, download it using the in-game content service, or from the #openttdcoop site at the following URL: [http://bundles.openttdcoop.org/firs/ http://bundles.openttdcoop.org/firs/]
+
+
+== Strategy Tips ==
+
+=== Supplies ===
+
+==== Engineering Supplies ====
+
+"Do the steel chain first, send ENSP everywhere, get $$$." &mdash; ''Terkhen''
+
+Call this approach an 'engineering network', as it relies on supplying mines and quarries with engineering supplies, and initially ignores the smaller but more numerous farms.
+
+Two good starting chains are:
+
+* Oil Wells/Oil Rigs (Oil) &rarr; Oil Refinery (Petrol 8/8) &rarr; Machine Shop (ENSP 8/8) &rarr; Oil Wells/Oil Rigs.
+* Coal Mine/Iron Ore Mine (Coal/Iron Ore) &rarr; Steel Mill (Metal 2/8) &rarr; Machine Shop (ENSP 8/8) &rarr; Coal Mine/Iron Ore Mine.
+
+==== Farming Supplies ====
+
+Farming supplies are easier to generate and will have many more customers on the map, so another course to consider is to produce farming supplies from a lime kiln or fertilizer plant and use a [[Main/en/FIRS#Feeder Systems|farm feeder system]] to spread these supplies about. Call this approach a 'farming network'.   However, this setup requires greater initial spending on roads or rail lines, and may be too costly on harder difficulty settings.
+
+==== Manufacturing Supplies ====
+
+Manufacturing supplies help to boost production too, but they work in a different way. The [[Main/en/FIRS#Production Rates|Production Rates]] section below explains the behaviour of secondary industries receiving mixed cargos. For an industry that uses manufacturing supplies, manufacturing supplies must be one of the mixed cargos in order to qualify for the production boost. For example, the textile mill accepts wool, plant fibres and manufacturing supplies. Any combination of wool and plant fibres produces output at a rate of 5t per 8t delivered. Only if manufacturing supplies are delivered as well can the ideal 8t per 8t ratio be achieved.
+
+[[File:en/manufacturing supplies behaviour.png|frame|centre|Production behaviour with manufacturing supplies.]]
+
+To summarize:
+
+* Manufacturing supplies only: 3t per 8t delivered
+* Wool only: 5t per 8t delivered
+* Plant fibres only: 5t per 8t delivered
+* Wool + plant fibres: still 5t per 8t delivered
+* Wool + manufacturing supplies: 5t + 3t = 8t per 8t delivered
+* Plant fibres + manufacturing supplies: 5t + 3t = 8t per 8t delivered
+* All three: still 5t + 3t = 8t per 8t delivered
+
+Hence this is another case where 'supply orders' may be useful. See below.
+
+=== Feeder Systems ===
+
+Farms are good candidates for setting up a feeder system. They provide raw materials like milk, and need farm supplies.
+[[File:en/farm feeder.png|frame|center|Feeder station to and from a number of farms.]]
+In this image, big trucks bring farm supplies to the feeder station and collect the milk from it.
+Small cargo trucks distribute the supplies to all the farms, and small milk trucks drive around along all the farms collecting milk, until fully loaded. Then they bring the milk to the big milk truck at the feeder station.
+
+Whenever you have groups of several industries close together, this setup can be used to distribute supplies (engineering, farming, or manufacturing) from a central point. It's a good technique to use whenever you need to share out supplies from some distant common resource to several industries.
+
+On some map setups, you might use aircraft or ships in these roles; in all cases, you would use large vehicles to perform the bulk transport role, and smaller ones to perform the 'last-mile' distribution or collection for you.
+
+=== Cargo Chart ===
+Flow of cargos between FIRS industries.
+
+[http://www.tt-forums.net/download/file.php?id=137178|Cargo chart for FIRS 0.5.3] by Fry3k (http://www.tt-forums.net/viewtopic.php?p=913596#p913596)
+
+Cargo flow for [[Main/en/FIRS cargos| FIRS 0.7.x]]
+
+Alternative cargo chart for FIRS 1.0: http://blog.openttdcoop.org/files/blog/2013/04/FIRS1.0.png
+
+=== Cargo Priorities ===
+
+Which cargos to deliver first depends on which FIRS economy you are playing, the map terrain and your personal preferences, but here are some factors to consider:
+
+Oil wells have the largest initial production of any industry.  If you see an oil refinery with a machine shop nearby, an oil-petrol-ENSP line is just as good an initial chain to set up as the steel or aluminium chain.
+
+Coal and iron ore mines are the next most prolific, while junk yards are the least. Most farming-type industries are equal, generally producing about 18 tonnes of two cargos. The exceptions are forests, which start out at iron ore mine levels of production, and fishing grounds, which are about half that production level, but tend to be very numerous.
+
+Fishing grounds are individually modest producers, but there are lots of them and they can't receive any maintenance even if you wanted to send them some. The limiting factor on exploiting fishing grounds tends to be the comparative rarity of fishing harbours, and their sometimes strange placement &ndash; e.g. in isolated lakes without fishing grounds. If you do encounter a well-placed harbour, it may be worth at least running it at maintenance level until you can build a fishing fleet. The best way to use ships with FIRS is generally to use straight-line ship-to-shore routes and then transfer the cargo onto faster trains for transport to the often distant fishing harbours.
+
+Do keep an eye out for oil wells, dredging sites and fishing grounds close enough to shore to be within the catchment area of an on-shore station. Delivering engineering supplies becomes much easier in such cases as well. You can let the industry transport its production to shore in its own (invisible) vessels; you may not even need to provide a dock.
+
+[[File:en/no fleet needed.png|frame|center|No fleet needed here!]]
+
+=== Production Rates ===
+
+The production rates of FIRS' secondary industries are affected by the number of ''different'' supply types arriving in a given time period. For example, a lime kiln supplied with 100 tonnes of stone will generate 50 tonnes of output; 25 tonnes of farming supplies and 25 tonnes of chemicals. Allowing for a 50&ndash;75% station rating, that will generate 12&ndash;20 tonnes each of chemicals and farming supplies for you to deliver. This means you may want to size your outgoing delivery trains as small as 10&ndash;40% of the inbound supply trains. There is a compromise level to be chosen so that you transport reasonable amounts of secondary supplies reasonably quickly, without waiting too many months for an over-large delivery train to fill up.
+
+If both primary resources are supplied in the same ''production cycle'', production increases. 50 tonnes of coal plus 50 tonnes of stone to the same lime kiln would produce 50 tonnes each of farming supplies and chemicals; twice as much. Allowing for the station rating, you will then have perhaps 25&ndash;40 tonnes of each cargo type to deliver, and you can then double the size of your delivery trains. In fact, any mix of coal and stone will produce a similar production increase, even 99 tonnes of one and only one tonne of the other.
+
+While there is some variation, to count as part of the same 'production cycle' generally requires cargos to arrive within 30 days of one another. 
+
+Note that this is another case where supply orders become useful; deliver 100 tonnes of coal and stone using a transfer order, then supply them to the lime kiln a tonne each a month, in just the same way as you might handle engineering supplies to a mine. Whenever your larger deliveries of coal or stone arrive, even if they don't appear within 30 days (approx.) of one another, they will still qualify for the increased production rate. Once the kiln gets very busy, and you can be certain both cargos will always arrive in the same 30 day period, you can cancel the supply order as no longer needed.
+
+[[File:en/sample production rates.png|frame|center|Sample production rates for a FIRS stockyard.]] 
+
+Some industries &ndash; including steel mills and aluminium plants &ndash; accept ''three'' different delivery types. This gives several combinations of possible production rates. For example, a steel mill produces 2t per 8t of iron ore delivered, 2t per 8t of coal and 4t per 8t of scrap metal. If you deliver coal and scrap metal, you'll get 2t + 4t = 6t of output per 8t delivered. Coal plus iron ore gives 2t + 2t = 4t per 8t delivered. If you deliver all three, you'll get 2t + 2t + 4t = 8t per 8t delivered. The older and less efficient iron works generates 2t per 8t of iron ore, and 2t per 8t of wood; so even if you deliver both within 30 days, you'll still only get an output rate of 4t per 8t.
+
+Some secondary industries benefit more from the arrival of some materials than others. Again, steel mills and aluminium plants are affected by this; in both cases, one tonne of scrap metal is as good as two tonnes of the industries' other supplies (iron ore, coal, bauxite or chemicals). This is mostly counterbalanced by the fact that scrapyards are initially half as productive as mines. However, that in turn means that growing a scrapyard by bringing it engineering supplies brings twice the benefit. Lumber yards, by comparison, have a 6:2 production ratio between lumber and chemicals; thus if you can only manage one cargo type, delivering processed timber to a lumber mill is three times as effective as delivering chemicals. This is the main reason why setting up a forest&ndash;sawmill&ndash;lumber yard chain should be a high priority when you are running a 'farming network'.
+
+=== Founding New Industries ===
+
+Even when the game settings permit it, founding new industries may be expensive, but there are exceptions for certain town industries such as stores, petrol stations and builders' yards, which are relatively cheap.  Bear in mind that whenever you want to to deliver cargos such as goods, petrol, food, alcohol or building materials, if you can found your own industries you can create a ready-made recipient for these materials at a place of your choosing.
+
+[[Category:en/NewGRF Sets]]
