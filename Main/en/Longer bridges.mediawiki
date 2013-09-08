@@ -1,0 +1,19 @@
+[[Translation:Main/en/Longer bridges]]
+{{en/-}}
+[[Category:en/Settings & Preferences]]
+[[Category:en/Construction]]
+
+{{historic|Currently these are two settings: [[Main/en/Advanced Settings/Construction#Maximum bridge length|Maximum bridge length]] & [[Main/en/Advanced Settings/Construction#Maximum tunnel length|Maximum tunnel length]] }} 
+
+A [[Main/en/Advanced Settings|setting]] that allows you to build longer [[Main/en/bridges]] than originally intended.
+
+== Description ==
+When you enable this patch, you can make some bridges 100 tiles long. This is only possible with bridges that normally have a maximum length of at least 16. You also have to take into account that the price for longer bridges dramatically increases. This patch extends the wooden bridge, the steel suspension bridges, and the tubular bridges.
+
+== Use ==
+This feature is disabled by default. You can enable this patch through the [[Main/en/Advanced Settings/Construction#Allow building very long bridges|configure patches -> construction]] window or use the following syntax in [[Main/en/openttd.cfg]]:
+
+ [patches]
+ longbridges = true
+
+[[File:en/longerbridges.png|center]]
