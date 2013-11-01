@@ -1,0 +1,83 @@
+==OpenGFX BigGUI==
+
+The [https://dev.openttdcoop.org/projects/ogfx-biggui OpenGFX BigGUI NewGRF] by Zephyris et al. provides
+various icons for the OpenTTD GUI in bigger sizes. This is for now meant for screens with general higher resolution, but may also become handy for touchscreeny-ish devices.
+
+This page collects some open issues with the NewGRF and OpenTTD support for it.
+
+For issues with the NewGRF itself (missing sprites and such), take a look at the [https://dev.openttdcoop.org/projects/ogfx-biggui/issues issue tracker of OpenGFX BigGUI].
+
+==jjGUI==
+
+The [http://dev.openttdcoop.org/projects/jjgui jjGUI] project by Juanjo aims at drawing scaleable .svg source graphics. Those .svg files allow to generate sets of .png GUI sprites for high-resolution screens. It runs into the same issues as OpenGFX BigGUI.
+
+The project is to be used with [http://www.tt-forums.net/viewtopic.php?f=33&t=56101 Juanjo's set of patches], which needs TrueType fonts. Those patches try to modify OpenTTD, so the GUI looks okay at different screen resolutions (centering and aligning sprites and strings - see window layout issues below -). Also includes a setting so OpenTTD automatically chooses an appropriate size for different GUI elements: font sizes, button sizes and smaller clickable elements (elements on a list or the arrows on scrollbars).
+
+== Special icon characters ==
+
+Some icons are provided as special text characters and drawn within strings:
+* {TRAIN}, {LORRY}, {BUS}, {PLANE}, {SHIP}, {STATION_FEATURES}
+* {UP_ARROW}, {DOWN_ARROW}
+* {SMALL_UP_ARROW}, {SMALL_DOWN_ARROW}, {SMALL_LEFT_ARROW}, {SMALL_RIGHT_ARROW}
+* {RIGHT_ARROW}
+* {CHECKMARK}
+* {CROSS}
+
+Problem is that these icons do not generally match the font size.
+* The usage of these special chars should be reduced. Where possible, OTTD should draw them as real sprite, not as string.
+* Some of the icons are used heavily mixed with text (esp. the vehicle icons). So however they are coded, they need to be about the same size as the font too look any good.
+
+== Window layout issues ==
+
+* general
+** window close button: vertical size (example: game options)
+** combobox arrow: vertical size
+** scrollbar: enforce buttons to be square
+** column sorting direction arrows: horizontal/vcertical size (are cut with "...")
+
+* adv.settings
+** tree icons: horizontal and vertical size
+** up/down arrows: horizontal and vertical size
+** combobox: horizontal and vertical size
+** expand/collapse all: vertical fill missing
+
+* script/newgrf parameters
+** up/down/combobox: horizontal and vertical size
+
+* content list
+** availability icon: horizontal and vertical size
+
+* sign list
+** verticall center companyicon and text
+
+* face editor
+** vertical centering of text, arrows
+
+* vehicle list (with groups)
+** start/stop all vehicles: vertically center icons
+
+* vehicle list (without groups)
+** profit icon: vertical size
+** start/stop all vehicles: vertically center icons
+
+* autoreplace gui
+** replace icon in list: vertical size
+
+* vehicle gui
+** status bar: vertical fill and centering
+
+* refit gui
+** tree icons: vertical size
+
+* order/timetable gui
+** current order icon: vertical size
+
+* local authority
+** company icon: vertical size
+
+* cheat gui
+** checkboxes/arrows: horizontal vertical size
+** company icon: vertical size and centering
+
+* scenedit toolbar
+** current date: vertical centering
