@@ -1,0 +1,21 @@
+[[Translation:Main/en/Change station spread]]
+{{en/-}}
+[[Category:en/Settings & Preferences]]
+[[Category:de/Bauen]]
+
+
+Um die maximale Bahnhofgröße zu ändern, muss man in die erweiterten Einstellungen, dort unter dem Punkt Bahnhöfe kann man diesen verändern.
+
+
+
+==Beschreibung==
+Die Bahnhofgröße ist die maximale Entfernung zwischen zwei Bahnhofsteilen. Es gibt ein Limit, wie groß ein Bahnhof sein darf. Wenn der Bahnhof diese Größe bereits in einer bestimmten Richtung erreicht, kannst du keine weiteren Teile in dieser Richtung hinzufügen. Mit diesem Patch kannst du die maximale Bahnhofgröße in 4-64 Felder ändern, der maximale Wert wäre größer als der längste Zug, den du haben kannst(~50 Felder). Sei vorsichtig, wenn du nicht die [[Main/en/Yet Another Pathfinder]]-Wegfindung verwendest: Das Spiel könnte langsam und instabil werden, wenn du diesen Wert höher setzt als den Standartwert von 12.
+
+
+
+==Verwendung==
+Die Standart-Bahnhofsgröße ist 12. Du kannst diesen Wert in den [[Main/en/Advanced Settings/Stations#Max station spread|Erweiterten Einstellungen -> Stationen]] oder durch folgende Syntax in der [[Main/en/openttd.cfg]] ändern:
+<pre>[patches]
+station_spread = 12</pre>
+
+<center>[[File:en/changeStationSpread.png|thumb|center|500px|1. - Ein sehr großer Bahnhof.]]</center>
