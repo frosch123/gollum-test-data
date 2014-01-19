@@ -1,0 +1,18 @@
+<includeonly>{{#if:{{{nodiv|}}}|&nbsp;<span|<div}} style="background:none; padding:0; font-weight:normal; font-size:xx-small;"><!--
+
+-->{{#if:{{{mini|}}}{{{plain|}}}|<!--nothing-->|<!--else:-->This box:&#32;}}<!--
+
+-->{{#if:{{{brackets|}}}|&#91;}}<!--
+
+-->[[Main/it/Working on|<span title="View this template">{{#if:{{{mini|}}}|v|view}}</span>]]<!--
+
+-->&nbsp;<span style="font-size:80%;">•</span>&nbsp;[[Main/it/Working on|<span title="Discuss this template" style="{{{fontstyle|}}}">{{#if:{{{mini|}}}|d|talk}}</span>]]<!--
+
+-->{{#if:{{{noedit|}}}|<!--nothing-->|<!--else:
+-->&nbsp;<span style="font-size:80%;">•</span>&nbsp;[[Main/it/Working on|<span title="Edit this template" style="{{{fontstyle|}}};">{{#if:{{{mini|}}}|e|edit}}</span>]]}}<!--
+
+-->{{#if:{{{brackets|}}}|]}}<!--
+
+-->{{#if:{{{nodiv|}}}|<!--then:
+--></span>&nbsp;|<!--else:
+--></div>}}</includeonly>
