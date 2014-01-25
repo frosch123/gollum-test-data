@@ -1,0 +1,21 @@
+{{hu/Történelmi|Az ezen a lapon olvasható információ az OpenTTD '''0.2.0-től 1.0.5-ig''' készült verzióira alapul.<br />
+Az 1.1.0 és fölötti verziókhoz lásd: '''Haladó beállítások''' [[Main/en/Haladó beálltások/Járművek/Hu#Vonatok|Járművek]] - ''Vonatok'' csoportjában: '''Vonatok maximális hossza'''}}
+[[Translation:Main/en/Mammoth trains]]
+:<small><<Vissza az [[Main/hu/Openttd.cfg|Openttd.cfg]]-hez (OpenTTD beállítófájl)</small>
+
+A '''mammoth_trains''' az Openttd.cfg file egy változója:
+
+Egy [[Main/hu/Haladó beállítások|beállítás]], mely azt teszi lehetővé, hogy annyi vagont állíts [[Main/hu/Vonatok|szerelvénybe]], ahány 50 mezőnyi hosszon elfér. Az alapértelmezett állománnyal ez 99, NewGRF-ek használata esetén ettől eltérő lehet: pl. a US Set 1950-es évekből származó Class Y6b-je 99 vagonnal 51,5 mezőnyi hosszú.
+
+A vasúti járműtelep ablaka vízszintes gördítősávval bővült, hogy az összes vagon megjeleníthető legyen. 
+
+Ne feledd, hogy az óriásvonatok kifejezetten lassúak lehetnek a súlyuk miatt, így lehet, hogy érdemes lesz feláldoznod néhány vagont, a szerelvénybe további mozdonyt tenned, vagy erősebb mozdonyt használnod.
+
+== Használat ==
+Alapértelmezés szerint ez az opció be van kapcsolva. Kikapcsolhatod a ''Haladó beállítások - Járművek - Hosszú vonatok engedélyezése''  beállításnál, vagy használd a következő szintaxist az [[Main/hu/openttd.cfg|openttd.cfg]]-ben:
+<pre>
+[patches]
+mammoth_trains = false
+</pre>
+Ha nem engedélyezed a beállítást, legfeljebb 9 vagont csatolhatsz egy vonatba. 
+[[File:en/MammothTrains.png|center|none|frame|1. - Óriásvonat kígyózik az oázisban]]
