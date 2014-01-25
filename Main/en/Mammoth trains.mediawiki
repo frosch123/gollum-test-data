@@ -1,0 +1,19 @@
+{{en/Historic|Information on this page applies '''since 0.2.0 to 1.0.5'''.
+:*for '''1.1.0 and later''' - See [[Main/en/Advanced Settings/Vehicles#Maximum train length|Maximum Train length setting]].}}
+[[Translation:Main/en/Mammoth trains]]
+:<small><<Back to the [[Main/en/Openttd.cfg]] (OpenTTD configuration file)</small>
+
+'''mammoth_trains''' is a variable of Openttd.cfg file:
+
+A [[Main/en/Advanced Settings|setting]] that allows you to add as many [[Main/en/Trains|wagons]] as you can fit into 50 tiles to a [[Main/en/Trains|train]] (this number varies in certain train sets, but you can have 99 wagons with the default trains). The train itself, however, can be longer, depending on how large the locomotive is. A 1950s articulated Class Y6b, from the US Set, hauling 99 wagons can push the train length up to 51 and a half tiles long, a train with only Lev4 "Chimaera" locomotives can go up to 100 tiles. Without this patch, you can only add a maximum of 9 wagons to a train. The train depot window was enhanced with a horizontal scroll bar in order to display all of the additional wagons. Don't forget that mammoth trains can be extremly slow due to all the additional weight, so you may need to sacrifice a couple of wagons and [[Main/en/Multiheaded trains|multihead your trains]], or use more powerful engines.
+
+== Use ==
+This feature is enabled by default. You can disable this patch through the [[Main/en/Advanced Settings/Vehicles#Enable building very long trains|Advanced Settings]] window (Vehicles / Enable building very long trains) or use the following syntax in [[Main/en/openttd.cfg]]:
+<pre>
+[patches]
+mammoth_trains = false
+</pre>
+[[File:en/MammothTrains.png|center|none|frame|1. - A mammoth-train snailing through the oasis]]
+
+[[Category:en/Settings & Preferences]]
+[[Category:en/Railways]]
