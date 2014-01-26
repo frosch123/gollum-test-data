@@ -1,0 +1,45 @@
+[[Translation:Main/en/Server]]{{en/-}}
+If you want to host [[Main/en/multiplayer|multiplayer network games]], you need to set up an OpenTTD '''server''' on your computer. Skip to "Starting the server" if all players will be connected to your home network.
+== If you are using a firewall ==
+For your safety, do ''not'' disable your firewall entirely. Instead, configure it to allow UDP and TCP connections to port '''3979''' ("port opening"). If you want your server to be visible on the public [http://www.openttd.org/en/servers server list] as well (recommended), you will also need to open port '''3978''' to UDP connections only.
+== If you are connecting to the Internet through a router ==
+You need to tell the router to send game data from players outside of your home network to the computer that will be running your OpenTTD server. Else, the data will simply be discarded before it ever reaches the server. This is an example of [http://www.wikipedia.org/wiki/Port forwarding port forwarding]; in this case, '''UDP and TCP''' connections to port '''3979''' will need to be forwarded. (If you can't use port 3979 for some reason, you can make OpenTTD use another port by entering "server_port <number>" into the game's console.)
+
+You will need to consult your router manual or search for instructions specific to your router. Not all router firmware includes this functionality, unfortunately; you will need to purchase a replacement router or install unofficial firmware if this is the case.
+
+Make sure you've instructed the router to send the game data to the correct computer. If you want your server to be visible on the public [http://www.openttd.org/en/servers server list] (recommended), you will also need to forward '''UDP''' connections to port '''3978'''.
+
+== Starting the server ==
+[[File:en/Ottdmulti6.png|right]]
+'''1''' From the Main Menu, click '''Multiplayer'''
+
+'''2''' Click '''Start Server'''
+
+'''3''' Pick a name for your game to help others identify it, and enter it into the '''Game name''' box
+
+'''4''' Configure the additional settings:
+*'''Set Password''' sets a password for the server so that only users who know the password can join your game.
+*'''Connection''' specifies whether the server is for local/private use only, or advertises itself to the master server so it is visible in the internet server list.
+*'''Language Spoken''' is for requesting that users speak a certain language on your server.
+*'''Max clients''' limits the total number of clients (players and spectators) that can connect.
+*'''Max companies''' limits the number of companies at game.
+*'''Max spectators''' limits the number of clients who can connect to watch but not play (not-players).
+
+'''5''' Click '''New Game''' (to generate random new game), or '''Load Game''' (to continue an saved game), or '''Play Scenario''', or '''Play Heightmap''', or '''Cancel'''.
+
+
+==Connecting to the server==
+Players connected to your home network should immediately see your server on the server list and be able to connect easily.
+
+If some players are connecting via the public Internet, however, your server will only appear if you have chosen "Internet (advertise)" under "Connection" (there may be a delay of several minutes before it is visible). Otherwise, they will need to know your router's IP address, or your computer's if you aren't using a router. This can be obtained by visiting https://www.whatismyip.com/.
+
+==Dedicated server==
+If you are expecting many players and aren't going to be using the computer running the server to play yourself, you can start OpenTTD as a [[Main/en/dedicated server]] instead of the usual interactive graphical version.
+
+If you run your server on ubuntu/debian and you want to automatically start/stop and save your game, check out the init.d scripts at https://bitbucket.org/frodus/openttd-init
+
+[[Category:en/Multiplayer]]
+
+
+==Admin port==
+If you want to remotely control your OpenTTD server using a stand-alone program/script, the recommended way is to use the [[Main/en/Server admin port|Admin Port]].
