@@ -1,0 +1,56 @@
+[[Translation:Main/en/Types of railway]]{{en/-}}{{Template:Vasúti pálya típusai/Hu}}
+{{en/TOCleft}}
+{{en/-}}
+'':[[File:en/Searchtool.png|16px]] A vasútépítés módjának részletes ismertetőjét lásd a [[Main/hu/Vasútépítés|Vasútépítés]] cikkben.''
+
+==Áttekintés==
+[[File:hu/Openttd-rail1.png|Vasútépítő menü]]
+
+Az OpenTTD alapkészlete a játék során a vasútépítő menüben négy vasúti rendszer megépítését teszi fokozatosan elérhetővé. Ezek a következők:
+{{en/-}}
+{| cellpadding=10
+|- 
+|[[File:en/NRail1Piece.png|Normál vasút|left]]
+| A [[Main/hu/Normál vasút|normál vasút]] az egyetlen építhető pályatípus a játék javasolt, 1950 körüli kezdetén (sokkal korábbi időponttal indított játék esetén nem érhető el ez sem). Kizárólag gőzmozdonyok és dízel meghajtású vonatok járnak rajta (kivéve, ha a ''Haladó beállítások'' [[Main/en/Haladó beállítások/Járművek/Hu#Villamosított vágányok letiltása|Járművek]] ''Vonatok'' alcsoportjában a ''Villamosított vágányok tiltása'' opciót bekapcsoltad, mert akkor villamosított vonatok is futnak rajta).
+|- 
+| [[File:en/ERail1Piece.png|Electric railway|left]]
+| A [[Main/hu/Villamosított vasút|villamosított vasút]] 1965-től használható. A villamosított vonatok ''csak'' villamosított pályán futnak, feltéve, hogy a Haladó beállításoknál a villamosított pálya építését nem tiltottad meg (ld fentebb). A gőzmozdonyok és a dízelvonatok villamosított pályán is járnak.
+* A játék alapkészletében a villamosított vasút csak [[Main/en/Éghajlatok/Hu#Mérsékelt|mérsékelt éghajlaton]] jelenik meg.
+* [[Main/en/Éghajlatok/Hu#Szubarktikus|Szubarktikus]], [[Main/en/Éghajlatok/Hu#Szubtrópusi|szubtrópusi]] éghajlaton és [[Main/en/Éghajlatok/Hu#Játékvilág|Játékvilágban]] villamosított vasutat akkor építhetsz, ha megfelelő [[Main/hu/NewGRF|NewGRF]]-et alkalmazol.
+|- 
+| [[File:en/Monorail1Piece.png|Monorail|left]]
+| Az [[Main/hu/Egysínű vasút|egysínű vasút]] 1999-ben válik elérhetővé. Csak egysínű vonatok futnak rajta.
+|- valign="top"
+| [[File:en/Maglev1Piece.png|MagLev|left]]
+| A [[Main/hu/Maglev|maglev vasút]] az utolsó, a leggyorsabb vonatok futását 2022-től teszi lehetővé. Csak maglev vonatok futhatnak rajta.
+|}
+
+== Járulékos vasúttípusokat alkalmazó NewGRF-ek==
+[[File:en/Metrotrackset.png|frame|right|Példa az eltérő vasúttípusra: Metro Track Set]]
+Az OpenTTD 1.0.3 kiadása óta számos [[Main/hu/NewGRF|NewGRF]] a felsorolt vasúttípusok több változatát tartalmazhatják, vagy további vasúttípusokat alkalmazhatnak. 
+
+Ha telepítettél ilyen NewGRF-et, a járulékos vasúttípusok ugyanúgy a vasútépítő menübe kerülnek, mint az alapértelmezett vasutak: akár úgy, hogy az alapértelmezett vasúttípus helyén, de akár úgy is, hogy azok mellett, további lehetőségként jelennek meg.
+
+Ha járulékos vasúttípust tartalmazó NewGRF-et alkalmazol, a legtöbb esetben megfelelő vasúti járműveket tartalmazó NewGRF-re is szükséged lesz.
+
+Több vasúttípus-NewGRF (a különböző honlapokon kívül) a játékba épített [[Main/hu/Letölthető tartalmak|tartalomletöltő szolgáltatással]] is letölthető, néhány példa a teljesség igénye nélkül:
+* Metro Track Set ([http://hu.wikipedia.org/wiki/Harmadik_sín harmadik sínt] alkalmaz, továbbá harmadik sínt felsővezetékkel);
+* NuTracks (nem villamosított, villamosított, háromsínes rendszer, valamint háromsínű vasút felsővezetékkel, eltérő sebességhatárokkal, továbbá "tervező" pályatípussal);
+* Universal Rail Type (olyan pályatípus, ami a legtöbb vasúti járművet a járműtelepen is fogadja, ezzel megkönnyíti a mozdonyok átalakítását más vasúttípusra).
+
+A vasúttípus-NewGRF-ek minden közúti NewGRF-fel kompatibilisek, ezt beépített támogató rendszer biztosítja.
+
+==A vasúttípus grafikáját lecserélő NewGRF-ek==
+[[File:en/Transrapidtrackset.png|frame|right|Példa a grafika lecserélésére: Transrapid Track Set]]
+A járulékos vasúttípus-NewGRF-ektől eltérően van néhány régies [[Main/hu/NewGRF|NewGRF]], ami nem a vasút típusán változtat, hanem csak a már meglévő vasúttípus grafikáján. Ezek a NewGRF-ek nem mindig kompatibilisek minden közúti NewGRF-fel, és van köztük olyan is, amely csak meghatározott vonatos NewGRF-fel működik együtt.
+Néhány példa a vasúttípus grafikai lecserélésére:
+* CS Rail Set (a vasúti pálya kinézetét változtatja meg);
+* Monorail Infra Set (betont tesz az egysínű pálya mellé);
+* Narrow Gauge rails (keskeny nyomtávú vasút építését teszi lehetővé az egyes vasúttípusok helyett);
+* Swedish Rails Set (a vasúti pálya kinézetét változtatja meg);
+* Transrapid Track Set (a maglev vasúti pálya kinézetét változtatja meg, hogy hasonlítson a német Transrapid tesztpályára).
+
+
+
+[[Category:hu/Vasút]]
+[[Category:hu/Építés]]
