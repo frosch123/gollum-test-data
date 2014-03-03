@@ -1,0 +1,35 @@
+[[Translation:Main/en/Waterway construction]]{{en/-}}{{es/Tabla de contenido}}
+
+Cuando quiera transportar grandes cantidades de cargas o si las industrias se encuentran en el medio del mar (plataformas petrolíferas, por ejemplo) puede que tenga que utilizar el transporte marítimo, aunque también es bastante más lento.
+
+==Barra de herramientas Construcción de canales==
+Puede empezar a construir pulsando el botón ''construir muelles para barcos'' [[File:en/Manual html m2cc0c4cd.png]] en la [[Main/en/Interfaz del juego/Es#La barra de menú|barra de menú]]. Aparecerá la barra de herramientas ''Construcción de canales''.
+[[File:es/Dock toolbar.png|center|none|frame|La barra de herramientas ''Construcción de canales'']]
+
+Los botones se explican por sí mismos. De izquierda a derecha:
+:*[[File:en/Build canal.png]] '''Botón Construir [[Main/es/Muelles|canales]]'''
+:*[[File:en/Build locks.png]] '''Botón Construir [[Main/es/Muelles|dársenas]]'''
+:*[[File:en/Clear title.png]] '''Botón [[Main/es/Paisaje|Demoler]]'''
+:*[[File:en/Build dockdepot.png]] '''Botón Construir [[Main/es/Depósitos|astilleros]]'''
+:*[[File:en/Build dock.png]] '''Botón Construir [[Main/es/Muelles|muelles]]'''
+:*[[File:en/Place buoy.png]] '''Botón Colocar [[Main/es/Boyas|boya]]'''
+:*[[File:en/Build aqueduct.png]] '''Botón Construir [[Main/en/#Construir acueductos|acueducto]]''' (a partir de [[Main/es/OpenTTD 0.7.0|OpenTTD 0.7.0]])
+
+==Construir muelles==
+Sólo se puede construir un [[Main/es/Muelles|muelle]] en una pendiente que esté junto a una casilla de agua. Esto puede ser tanto a nivel del mar, o una parte de un canal.
+[[File:es/Building Docks 1.png|left]] [[File:es/Building Docks 2.png]]
+
+==Construir acueductos==
+[[File:en/Aqueduct.png|thumb|400px|Acueducto.]]
+Los acueductos son como los puentes, pero para los barcos. A diferencia de los puentes de carretera o de ferrocarril, los extremos de un acueducto no se puede colocar en terreno llano, únicamente en casillas en pendiente. La pendiente tiene que estar en la misma dirección que el acueducto. Además del mismo modo que en los canales, no se puede construir usando cimientos para rectificar las pendientes (vea la característica [[Main/es/Construir en pendientes|construir en pendientes]]).<br style="clear:both;">
+
+==Comprar barcos==
+Para comprar [[Main/es/Barcos|barcos]], construya antes un [[Main/es/Depósitos|astillero]] y haga clic en él. Aparecerá la ventana ''astillero''. Pulse el botón ''Nuevos barcos''. Aparecerá una nueva ventana emergente con una lista de los diferentes barcos que puede comprar. Seleccione uno que considere necesario, y pulse el botón ''comprar barco'' en la parte inferior de la ventana. El barco aparecerá en una de las casillas de la ventana del astillero y se abrirá otra ventana. Dele órdenes o refórmelo si es necesario, y entonces, ¡pulse el botón con el texto rojo "parado" para ponerlo en marcha!
+
+==Funcionamiento de los barcos==
+Para que sus barcos funcionen correctamente, su muelle debe estar situado cerca de, por ejemplo, una refinería de petróleo, de modo que el petróleo se pueda descargar directamente. Si el terreno no le permite hacerlo, puede construir una estación de transferencia donde los barcos descarguen el petróleo y sea transportado después por trenes, por ejemplo. En este caso, usted debe construir una estación de tren junto al puerto (o puede usar el botón CTRL para unir estaciones), de modo que compartan el nombre de la estación. Use la orden de descarga ''[[Main/en/Órdenes/Es#Transferir|transferir]]'' para que descargue el petróleo en la estación de transferencia. Los trenes podrán cargar el petróleo para llevarlo a una refinería.
+
+Tenga en cuenta que debe utilizar la orden ''transferir'' sólo en la estaciones intermedia de transferencia, nunca en el destino final, o la carga se depositará en la estación, sin entregar a la refinería y sin cobrar nada por ello.
+
+[[Category:es/Construcción]]
+[[Category:es/Barcos]]
