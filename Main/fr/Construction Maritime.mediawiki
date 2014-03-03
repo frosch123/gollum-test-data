@@ -1,0 +1,36 @@
+[[Translation:Main/en/Waterway construction]]{{en/-}}{{fr/Table des matières}}
+
+Quand vous voulez transporter de grandes quantités de marchandises ou si les entreprises se situent au milieu de l'océan (comme pour les plate-formes pétrolières) Vous aurez alors besoin d'utiliser les transports maritimes, même si ils sont un peu plus lent...
+==Construction navale==
+Vous pouvez démarrer la construction en appuyant sur le bouton Construction navale [[File:en/Manual html m2cc0c4cd.png]] sur la [[Main/en/Interface#Barre d.27outils principale|barre de menu]]. Une barre d'outils "Construction de voies navigables" apparaîtra alors.
+
+[[File:fr/Dock toolbar.png|center|none|frame|La barre d'outils Construction de voies navigables]]
+
+==Que font tous ces boutons?==
+Les boutons sont explicites. De gauche à droite:<br>
+:*[[File:en/Build canal.png]] '''Bouton Construire des [[Main/fr/Docks|canaux]]'''
+:*[[File:en/Build locks.png]] '''Bouton Construire des [[Main/fr/Docks|écluses]]'''
+:*[[File:en/Clear title.png]] '''Bouton [[Main/fr/Aménagement Paysager|Démolir]]'''
+:*[[File:en/Build dockdepot.png]] '''Bouton Construire un [[Main/fr/Dépôts|dépôt]] naval'''
+:*[[File:en/Build dock.png]] '''Bouton Construire un [[Main/fr/Docks|dock]]'''
+:*[[File:en/Place buoy.png]] '''Bouton Placer une [[Main/fr/Docks|bouée]]'''
+:*[[File:en/Build aqueduct.png]] '''Bouton Construire un [[Main/en/Construction Maritime/Fr#Construire un aqueduc|aqueduc]]''' (depuis [[Main/fr/OpenTTD 0.7.0|OpenTTD 0.7.0]])
+
+==Construire un port==
+Vous ne pouvez construire un [[Main/fr/Docks|port]] que sur une pente reliant la terre à l'eau. Cela peut être au niveau de la mer ou une partie d'un canal.
+[[File:fr/Building Docks 1.png|left]] [[File:fr/Building Docks 2.png]]
+
+==Construire un aqueduc==
+[[File:en/Aqueduct.png|thumb|400px|Aqueduc]]
+Les Aqueducs sont comme des ponts mais pour les bateaux. Mais à la différence des ponts pour routes ou rails, la fin des aqueducs doit être obligatoirement sur une pente. La pente doit aussi être dans la même direction que l'aqueduc et ''ne doit pas'' contenir de canal.<br style="clear:both;">
+
+==Acheter un Bateau==
+Pour construire un [[Main/fr/Bateaux|bateau]], placez un [[Main/fr/Dépôts|dépôt]] à bateau et cliquez dessus. La fenêtre de dépôt s'affichera alors. Sélectionnez "Nouveaux navires". Sélectionnez alors le bateau de votre choix dans la fenêtre qui vient d'apparaître. Cliquez ensuite sur "Acheter" en bas de la fenêtre. Le bateau apparaîtra alors dans un des compartiments de la fenêtre du dépôt accompagné d'une autre fenêtre. Donnez lui des ordres et réaménagez le si nécessaire, cliquez ensuite sur le texte "Stoppé" en rouge pour le faire démarrer!
+
+==Exploitation de bateaux==
+Afin de faire fonctionner correctement vos bateaux, votre dock doit être tout proche, par exemple, d'une raffinerie, afin que le pétrole puisse être déchargé directement. Si la configuration du terrain vous empêche de le faire, vous pouvez construire une station de transfert où le pétrole sera déchargé et transporté ensuite, par exemple par train. Dans ce cas, vous devez construire une gare près du dock (afin qu'ils partagent un nom de station), et utiliser l'ordre ''[[Main/en/Ordres/Fr#Transférer|transférer]]'' pour les bateaux qui amènent le pétrole à cette station. Les trains peuvent alors récupérer ce pétrole pour l'amener à la raffinerie.
+
+Notez que vous devez utiliser l'ordre '[[Main/en/Ordres/Fr#Transférer|transférer]]' seulement aux gares intermédiaires, jamais à la destination finale; sinon, la cargaison ne sera qu'entreposée à la gare et vous ne serez pas payé pour elle.
+
+[[Category:fr/Construction]]
+[[Category:fr/Bateaux]]
