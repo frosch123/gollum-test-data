@@ -1,0 +1,98 @@
+[[Translation:Main/en/FAQ OpenTTD versions]]{{en/-}}
+{{sr/Najčešća pitanja meni}}
+
+OpenTTD je projekat koji se neprestano razvija novim mogućnostima i poboljšanjima, koja se redovno dodaju. Iako je često uvođenje novina nešto na šta su veterani OpenTTD-a navikli, takva praksa može da predstavlja problem novajlijama OpenTTD-a, prilikom izbora verzije igre ili prilikom informisanja koja verzija igre je stabilna, odnosno koje opcije ima određena verzija igre.
+
+=== "Radna verzija?"  "PI?"  "Trank?"  Šta?===
+Razumevanje termina koje programeri koriste za razlikovanje različitih verzija igre je prvi korak ka razlikovanju šta koja verzija igre nosi i kakva je po pitanju stabilnosti.
+
+====Bild====
+"Bild" je opšti pojam koji se koristi za određenu verziju igre. Bild može predstavljati zvaničnu, a samim tim i stabilnu verziju OpenTTD-a ili poslednju verziju igre, gde je moguće da ima bagova. Ako ste tehnički potkovani, možete i sami kompajlirati sopstvenu verziju odnosno bild, u koji ćete uneti opcije i mogućnosti koje se Vama dopadaju.
+
+Termin "bild" ćemo koristiti u nastavku dokumenta i odnosiće se na određenu verziju igre.
+
+====Izdanje====
+Zvanično Izdanje je upravo to -- stabilna, zaokružena verzija igre. Ispravke manjih grešaka su moguće kod Izdanja, ne i ispravke većih grešaka ili nova unapređenja, koja obično dolaze sa novim Izdanjem.  
+
+Poput izdanja bilo kog softvera i izdanja OpenTTD su obeležena odgovarajućim brojem.  Na primer, zadnje izdanje OpenTTD-a je {{version}}. Glavna Izdanja su označena prvom ili drugom cifrom, dok su Manja Izdanja označena trećom cifrom.
+
+====Predloženo Izdanje (PI or testing)====
+U neku ruku, Predložena Izdanja, su Izdanja koja su pred samim finišom. Manja poboljšanja su moguća u ovom stepenu razvoja Izdanja, ali uglavnom, lista poboljšanja ostaje nepromenjena. 
+
+Ono što pravi razliku između Izdanja i Predloženih Izdanja je količina preostalog testiranja i otklanjanja grešaka. Predložena Izdanja su poprilično stabilna, ali postoji mogućnost pojavljivanja bagova.
+
+Predložena Izdanja se obeležavaju na sledeći način: 
+''[Release version] RC[Candidate number]''
+
+Na primer, poslednje Predloženo Izdanje bilo je ''1.2.0 RC3''. Kada se potvrdi da je stabilno Predloženo Izdanje će postati zvanično Izdanje  1.2.0.
+
+Predložena Izdanja su obično uglavnom stabilna, tako da se preporučuje njihova instalacija, nego instaliranje starijeg zvaničnog izdanja, koje nema neke novine, koje Predloženo Izdanje poseduje. Kao što smo rekli Predloženo Izdanje je u osnovi Izdanje, kome treba još poliranja.
+
+====Radna verzija (Nightly)====
+Radne verzije su uopšteno govoreći radovi u toku. Radne verzije sadrže poslednja unapređenja (koja su obično planirana za sledeće Izdanje), ali očekivano je da budu nestabilne i pune bagova. Radne verzije mogu da pokvare snimljene igre, tako da se preporučuje pravljenje rezervnih kopija svih važnih podataka, pre instalacije same Radne verzije.
+
+Kao što im i samo ime kaže, Radne verzije se izdaju često, isto kao što se OpenTTD redovno unapređuje. Ako ste saznali za neko unapređenje, koje se ne nalazi u Vašoj verziji,verovatno je izdato u Radnoj verziji. Uzimajući u obzir rizike (koje će te značajno smanjiti pravljenjem rezervne kopije Vaših podataka {{en/Emoticon|:)}}) i instalirajte Radnu verziju koja sadrši neko unapređenje koje još nije postalo dostupno u Izdanju ili u PI. Poslednju dostupnu Radnu verziju možete preuzeti na http://www.openttd.org/en/download-trunk. Radne verzije ne zahtevaju instalaciju - jednostavno ih raspakujte i pokrenite preko OpenTTD.exe.
+
+Radne verzije imaju drukčije numerisanje od Izdanja. Radne verzije nose oznaku poput:
+''r8642''
+
+====Trank====
+[[File:en/version Illustration.gif|frame|right|How the Trunk, Branches, Releases, Nightlies, and Release Candidates relate]]
+Termin "trank" (nešto poput stabla kod drveta) odnosi se na osnovno razvojno okruženje za programere OpenTTD-a (u suprotnosti sa terminom brenč, koji je opisan niže). Trank sadrži kod koji je programiran ili odobren od strane ljudi koji su razvili igru. Trank sadrži kod za koji se očekuje da se koristiti u zvaničnom Izdanju. U najširem smislu, kod koji se nalazi u tranku, može se smatrati "zvaničnim" kodom OpenTTD.
+
+Goreopisane Radne verzije uvek sadrže poslednji kod iz tranka. Polazeći od toga, ako je neka opcija opisana kao da je "u tranku", sigurno će biti dostupna u sledećoj Radnoj verziji, ako već nije u njoj.
+
+====Brenč ili SVN Brenč====
+Obično "SVN Brenč" je napravljen za specifičnu opciju, više opcija ili mogućnost koja se razvija kao kandidat za uključenje u trank (a samim tim i u Izdanje), ali koji je još uvek na probi. SVN brenčevi nisu testirani sa ostalim, poslednjim unapređenjima OpenTTD-ai samim tim mogu da izazovu greške ili ponište dotadašnji rad programera. Rad na brenču je nezavisan od rada na tranku. Kao i kod drveća brenč (grana) potiče od tranka (stabla), ali raste nezavisno od njega.
+
+Ako drugi programeri potvrde stabilnost SVN brenča, kako njega samog tako i u odnosu na ostala unapređenja koja se nezavisno razvijaju, on će možda biti uključen kao dio Radne verzije. Dok se ovo ne potvrdi, ne postoje garancije da će unapređenja iz jednog brenča raditi sa drugim. Preporuka je da ako želite da iskoristite unapređenja razvijena u nekom SVN brenču, počnete razvoj od tačke gde se SVN brenč odvojio i onda instalirajte kod iz brenča. 
+
+Na primer, ako je poslednja Radna verzija objavljena u petak, a SVN brenč je odvojeno razvijan od ponedeljka, onda bi trebalo da krenete od Radne verzije koja je objavljena u ponedeljak, a tek onda na tu verziju da instalirate SVN brenč.
+
+Kao što vidite, ovo je svojevrsna kompenzacija - dobićete unapređenja iz branča koja hoćete, ali verovatno nećete imati poslednja unapređenja izdata u glavnom brenču odnosno tranku.
+
+Kao i Radne verzije, SVN brenčes su verovatno bagovite i nestabilne. I uz to, SVN brenčes su manje testirane nego glavni brenč (npr. manje ljudi je imalo uvida u kod), što ih čini potencionalno još nestabilnijima.
+
+====Peč====
+"Peč" je, uopšteno govoreći, deo koda ili unapređenje koje je razvio neko van kruga ljudi koji rade na razvoju igre. Ovo nužno ne znači da je peč u bilo kom smislu inferiorniji od trank koda, jednostavno označava da unapređenje i/ili kod koji još nisu uvršteni u buduće Izdanje igre.
+
+Dok radove na tranku (a u manjem obimu i na SVN brenču) vrši odvojena grupa programera, peč može da napravi bilo ko. Ovo otvara mogućnost za veću kreativnosti i funkcionalnost, ali istovremeno povećava rizik jer pečeve može da napravi bilo ko.
+
+Pečevi se ne mogu instalirati kao Radne verzije - moraju se kompajlirati na korisničkovom računaru.
+
+''Za dalja pitanja: [http://www.tt-forums.net/viewtopic.php?t=21678 How to apply patches] na forumu''
+
+====MiniIN====
+{{en/Feature period|Old|0.5}}
+[[File:en/miniIN Illustration.gif|frame|right|The MiniIN]]
+''Članak: [[Main/en/Mini Integrated Nightly]]''<br>
+
+MiniIN je razvojno okruženje odovjeno od tranka, koje sadrži kod iz tranka uz dodate mnoge korisničke pečeve. Posle objavljivanja Izdanja 0.5.0,  MiniIN se više ne nadograđuje trank kodom. Od tad MiniIN predstavlja Izdanje 0.5.0 plus svi korisnički pečevi.
+
+===Koju verziju OpenTTD instalirati?===
+Počnite sa poslednjim Izdanjem (ili Predloženim Izdanjem, ako postoji). Idite na [http://www.openttd.org/download-stable OpenTTD Downloads page]. Poslednja stabilna verzija bi trebala biti dostupna ovde.
+
+Većini ljudi je dovoljno glavno Izdanje. Ako čujete za opciju koju bi želeli da probate, preuzmite Radnu verziju sa [http://nightly.openttd.org/ download the latest nightly] i isprobajte preko vašeg stabilnog Izdanja (prethodno, napravite rezervnu kopiju vaših snimljenih igara!)
+
+Ako mislite da se odlično snalazite sa verzijama (mada se tu već postavlja pitanje, zašto Vi uopšte čitate ovo?) probajte da instalirate SVN brenč bild.
+
+===Čuo sam da neko spominje [x opciju].  Zašto je ja nemam u mojoj igri?===
+Moguće je da imate instaliran neki drugi bild. Mnoge nove (često i dosta bolje) opcije su deo Radne verzije (npr. u Tranku)u datom momentu, te će verovatno postati dio budućeg zvaničnog Izdanja.
+
+Ako ste sigurni da posedujete odgovarajuću verziju, možda je potrebno uključite tu opciju u [[Main/en/Naprednim podešavanjima|Advanced Settings window]].
+
+===Kako da pratim gde su koje opcije dostupne?===
+* Pregled svih glavnih unapređenja uključenih ili planiranih u raznim Izdanjima možete naći u [[Main/en/Roadmap]]s
+* Detalje nedavnih izmena Tranka možete naći ovde na [http://vcs.openttd.org/svn/log/trunk here]
+
+===Gde mogu da preuzmem bild koji želim?===
+* [http://www.openttd.org/download-stable Releases] i [http://www.openttd.org/download-testing Release Candidates]
+* [http://www.openttd.org/download-trunk Nightly builds]
+
+==Pogledati još==
+* [[Main/en/OpenTTD Release History]]
+* [[Main/en/Roadmap|Development Roadmaps]]
+* [[Main/en/Mini Integrated Nightly]]
+* [http://www.tt-forums.net/viewtopic.php?t=21678 How to apply patches]
+
+[[Category:sr/Najčešća pitanja]]
