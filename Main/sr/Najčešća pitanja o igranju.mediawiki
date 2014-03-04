@@ -1,0 +1,120 @@
+[[Translation:Main/en/FAQ gameplay]]{{en/-}}
+{{sr/Najčešća pitanja meni}}
+Ova oblast pokriva najčešća pitanja o igranju.
+
+==Upravljanje osnovnim vrstama saobraćaja==
+=====Vodeni saobraćaj=====
+:*[[Main/en/Waterway construction|Pravljenje dokova]]
+
+=====Vazdušni saobraćaj=====
+:*[[Main/en/Airport construction|Pravljenje aerodroma, kupovina letelica i upravljanje vazdušnim linijama]]
+
+=====Drumski saobraćaj=====
+:*[[Main/en/Roadway construction|Pravljenje drumske linije]]
+
+=====Železnički saobraćaj=====
+:*[[Main/en/Railway construction|Pravljenje železničke linije]]
+:*[[Main/en/Signals|Signalizacija]]
+
+=====Druge saobraćajne građevine=====
+:*[[Main/en/Stations|Stanice]]
+:*[[Main/en/Bridges|Mostovi]]
+:*[[Main/en/Tunnels|Tuneli]]
+=====Najčešća pitanja od sss=====
+P: Kako da napravim prugu sa jednim kolosekom i prugu za maglev vozove? Pokušao sam da kliknem na konvertovanje šina, a zatim na šine, ali ništa se ne dešava!!!<BR>
+O: Ovo je problem sa kojim sam se takođe sreo... Ono što treba da radiš jeste da klikneš i zadržite na ikonici konvertuj šine da bi dobili opciju da izaberete ostale vrste šine. Takođe: Ikona konvertovanje šina služi za konvertovanje šina (npr. za konvertovanje normalnih šina). Za šine za maglev vozove, izaberite maglev prugu i klinkinte na konvertuj prugu i prevucite nove šine preko starih šina.<BR>
+P: Ne prikazuju mi se nove lokomotive!!!!<BR>
+O: Izaberite drugu vrstu pruge, poput elektične, sa jednim kolosekom ili maglev pruge.<BR>
+P: Depo mi ne daje elektične lokomotive!!!!<BR>
+O: Proverite da li ste izabrali depo u opcijama za elektičnu železnicu.
+
+DV
+
+Q: DV?<BR>
+A: DV je skraćenica za drumska vozila.<BR>
+Q: Instalirao sam EGRVT'S i moje konjske zaprege idu 1 km na sat!!!!<BR>
+A: Idite u napredne opcije>vozila i podesite Ubrzanje MV na original.<BR>
+Vazduhoplovi<BR>
+Q: Šta???? Moj spori voz koji ide 140 km na sat ide brže nego moj avion koji ide 300 km na sat????<BR>
+A: Idite u napredne opcije>vozila i podesite brzinu aviona na 1/1.
+
+==Važne radnje==
+:*[[Main/en/Orders|Izdavanje naredbi]]
+
+==Kako ostvariti (veliki) profit==
+:* Proučite 'Transportne cene' (ispod tabelarne ikone [[File:en/Manual html 36354981.png]]) da vidite šta donosi dobar profit
+:* Pronađite velike gradove (u spisku naselja [[File:en/Manual html m58c015ad.png]])kao i fabrike koje imaju najveću proizvodnju (u spisku industrija [[File:en/Manual html m4d6ba21e.png]])
+:* Pravite duge trase, kroz ravnice i bez mnogo krivina (zbog brzine)
+:* Koristite naredbu '[[Main/en/Orders#Full Load|Pun tovar]]' u naredbama vozila
+:* Optimalna udaljenost za prevoz terets je približno 70 dana dostave za terete sa penalima za kašnjenje (putnici, pošta, kvarljiva roba), a oko 130 dana za robu bez penala za kašnjenje (nafta, ugalj, drvo, itd.). Precizna udaljenost varira od tereta do tereta, ali 70 i 130 dana su približne cifre.
+::* Za 70 dana, vozilo će preći razdaljinu jednaku svojoj prosečnoj brzini x 2.5 pločice, a za 130 dana prosečna brzina x 4.5 pločice. Dakle, ako vozilo ima brzinu od 60 km na sat, njegova optimalna distance je 150 pločica za kvarljivu robu i 270 pločica za nekvarljivu. 
+::* Brzina vozila u kilometrima daje množilac od x4 i x7; tako da vozilo sa brzinom od 45 km na sat bi trebalo da pređe 180 ili 315 pločica.
+::* Češće ćete robu isporučivati preblizu, nego predaleko, što je ređa greška.
+
+==Nema robe na mojim stanicama!==
+Podrazumevano, roba iz industrija ne dostavlja se na stanice dok se ne pojavi potražnja.
+Drugim rečima, dok ne pošaljete vozila na stanicu po robu, on se neće pojaviti.
+Na ovaj način se sprečava da dobijete nizak rejting zbog propadanja robe na stanici koju uopšte i ne želite da prevozite.
+
+U naprednim podešavanjima možete da promenite ovo, tako da se sva roba dostavlja na stanice. 
+
+==Zašto roba na mojim stanicama nestaje?==
+Ovo se dešava jer nepružate dovoljno dobru uslugu na stanicama. Što je lošiji rejting  na stanici, manje će se robe biti dostupno na stanici, a u slučajevima gde Vam je rejting ispod 50%, čak će i roba koja je već na stanici početi postepeno da nestaje.
+
+Da bi ste popravili ovaj problem, povećajte rejting. Takođe pročitajte odgovor na sledeće pitanje.
+
+==Kako da povećam 'Lokalni rejting transportnih usluga'==
+:Pročitajte o [[Main/en/Game mechanics#Station rating|staničnom rejtingu]] i [[Main/en/Game mechanics#Local authority rating|gradskom rejtingu]].
+
+==Kako da onemogućim otvaranje i zatvaranje industrija==
+:[http://grfcrawler.tt-forums.net/details.php?do=details&id=244 Manual Industries]
+
+Novija verzija za OpenTTD, 1.1.x (trenutno, samo u radnim verzijama) je dostupna kao ''Manuelne industrije'' u bananama, onlajn dostupnom sadržaju.
+
+==Da li je moguće koristiti kursor iz operativnog sistema umesto onog iz OpenTTD-a?==
+MOguće je, uz par manjih izmena u kodu, ali trenutno ne postoji opcija za to. Alternativno, možete programirati [[Main/en/NewGRF]] da uradi to.
+
+==Kako da premestim glavni i statusnu traku sa alatkama, s obzirom da su centirane na duplom ekranu?==
+U [[Main/en/Advanced Settings/Interface|Naprednim podešavanjima/Interfejs]] postoji opcija da se podesi položaj [[Main/en/Advanced Settings/Interface#Position of the main toolbar|glavne traka sa alatkama]] i [[Main/en/Advanced Settings/Interface#Position of statusbar|statusne traka sa alatkama]] na levo, centralno ili desno.
+
+==Kako da dobijem opet zastarela vozila?==
+Posle 2050 vozila zastarevaju, što znači da Vam više neće biti dostupna. To je loša situacija, ako želite da pokrenete novu uslugu!
+
+Pročitajte [[Main/en/Never expire vehicles]] da bi izbegli ovu situaciju.
+
+==Koliko dugo traje dan u igri u realnom vremenu?==
+Jedan dan traje 2220ms (2.22 skunde) realnog vremena. Prema tome godina traje 810.3 sekundi ili 13.505 minuta.
+
+==Zašto se moja vozila ne servisiraju?==
+Proverite:
+* da su kvarovi uključeni,
+* da je servisiranje, kada su kvarovi isključeni, isključeno,
+* da se depo nalazi u krugu od 20 pločica od rute vašeg vozila.
+
+Zapamtite da '20 pločica' do depoa mora da bude povezano putevima ilil prugom koje će vozilo da koristi. Pružni prelazi, signali, mostovi i ostale prepreke se računaju u ograničenje.
+
+==Kako da omogućim kompjuterske protivnike (AIs) u igri?==
+Počevši od verzije 0.7.0, podrazumevani kompjuterski protivnici su uklonjeni.
+Kao zamenu, možete preuzeti protivnike preko onlajn dostupnog sadržaja ili čak da razvijete sopstvenog AI protivnika!
+Pogledajte
+* Strana [[Main/en/AI settings|AI podešavanja]] objašnjava kako da preuzmete i pokrenete protivnike.
+* [[Main/en/AI:Main Page|AI:Glavna strana]] objašnjava kako da programirate protivnike.
+
+==Kako da onemogućim menjanje pravca lokomotive na signalima?==
+Pogledajte [[Main/en/Disable Train Reversing|onemogućavanje promene pravca lokomotiva]]
+
+==Moja lokomotiva ide u pogrešnom pravcu!!! Zašto?==
+Sistem izbora najbolje putanje je poprilično dobar. Ako Vam se čini da se vozovi kreću u pogrešnom smeru, verovatno ne postoji kraća staza. No, svakako proverite sledeće: 
+* Da li negde nedostaju šine (kod maglev vozova je ovo teško uočljivo)
+* Da li su šine pogrešne/bez elektrifikacije; jedno polje sa šinama na kome nema elektrifikacije može onemogućiti vaš električni voz da stigne do odredišta
+* Da li se na isključivoj putanji vašeg voza nalaze krivine od 90 stepeni, kroz koju oni ne mogu prođu 
+* Da li podešavanja na teži nivo onemogućavaju okretanje lokomotiva na stanicama
+* Da li zaista nema putanje (proverite skretanja sa putanje zbog servisiranja).
+
+==Zašto moji avioni nestaju?==
+Veliki avioni imaju veću šansu da se sruše prilikom sletanja na mali ili prigradski aerodrom. Pročitajte još: [[Main/en/Aircraft#Accidents|avionske nesreće]].
+
+==Zašto moja drumska vozila nestaju?==
+Ako imate brze vozove i pružne prelaze, drumska vozila možda nemaju vremena da pređu prugu pre prolaska voza. U slučaju sudara, vozilo će biti uništeno, a voz će nastaviti svojim putem. Takođe postoji i nesreća sa malim NLO, koja će povremeno da uništi drumsko vozilo.
+
+[[Category:en/Igranje]]
