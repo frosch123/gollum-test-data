@@ -1,0 +1,246 @@
+[[Translation:Main/en/Cargo]]{{en/-}}{{hu/Tartalomjegyzék}}
+:''A rakományfajták listáját lásd a [[Category/hu/Rakomány|Rakomány kategóriában]]''
+
+A '''rakomány''' az, amit az [[Main/hu/OpenTTD|OpenTTD]] egyik [[Main/hu/Szállítási vállalat|szállítási vállalataként]] szállítasz. [[Main/hu/Gazdasági épületek|Gazdasági épületben]] vagy [[Main/hu/Települések|településen]] keletkezhet,  és más település vagy gazdasági épület fogadja el. 
+
+A [[Main/hu/Gazdasági épületek|gazdasági épület]] és a [[Main/hu/Települések|települési épület]], ha [[Main/hu/Állomások|állomás]] [[Main/hu/Vonzáskörzet|vonzáskörzetén]] belül van, ezen az állomáson keresztül fogadja rakományát és az utasokat, és az állomáson helyezi el máshová szállítandó rakományait (Néhány gazdasági épületben az alapterületnek csak néhány mezője képes rakományt fogadni. Bővebb információért lásd a [[Main/hu/Vonzáskörzet|Vonzáskörzet]] fejezetet).
+
+Az állomásra kirakott rakomány és az állomásértékelés összefüggéseit lásd: [[Main/en/Játéktechnika/Hu#Állomások értékelése|Állomások értékelése]].
+
+Az [[Main/hu/Utasok|utasok]] és a [[Main/hu/Levél|levél]] szintén rakománytípusok, főleg a [[Main/hu/Települések|településeken]] keletkeznek és fogadják el. A különböző [[Main/hu/Épület|települési épületek]] eltérő mértékben fogadnak utasokat és levelet. Az elfogadás a [[File:en/Other button.png]] [[Main/hu/Területinformáció|Területinformáció]] eszköz használatával megállapítható. Ha egy rakomány fogadására egyébként alkalmas mező önmagában nem fogadhat rakományt, a Területinformáció eszköz '''nyolcadokban''' jelzi a mennyiséget. Ahhoz, hogy az állomás egy rakománytípust fogadni tudjon, a vonzáskörzetében az elfogadásnak legalább 8/8-adnak kell lennie összesen.
+
+Néhány gazdasági épület (mint pl. a [[Main/hu/Farm|farm]]) egyes mezői szintén 1/8 utas fogadására alkalmasak. A legjelentősebb ebből a szempontból az [[Main/hu/Acélöntő|acélöntő]], melynek több mezője is 1/8 utast fogad. A gazdasági épületek azonban - az [[Main/hu/Olajfúró torony|olajfúró torony]] kivételével - nem adnak utasokat. A cégek [[Main/hu/Székház|székházai]] továbbá utasokat és levelet fogadnak is, adnak is, hogy a játékosokat a játék korai szakaszában ezzel is segítsék.
+
+A rakományszállítás jövedelmének számítási részleteiért lásd: [[Main/en/Játéktechnika/Hu#A szállítás kifizetése|A szállítás kifizetése]].
+
+Az alábbi folyamatábrák és táblázatok éghajlatonként adnak áttekintést a rakománytípusokról.
+
+==A rakományszállítás folyamatábrái==
+<gallery>
+image:Temperate_-_Flow.png|A mérsékelt éghajlat rakományszállítási folyamata
+image:Sub-Arctic_-_Flow.png|A szubarktikus éghajlat rakományszállítási folyamata
+image:Sub-Tropical_-_Flow.png|A szubtrópusi éghajlat rakományszállítási folyamata
+image:Toyland_-_Flow.png|Játékvilág rakományszállítási folyamata
+</gallery>
+
+==Rakomány elfogadása és előállítása éghajlatonként==
+
+:{| {{en/Wikitable}} style="width: 512px; font-size: 90%; margin:2px 4px 2px 0; border:solid 1px #AAAAAA" rules="cols"
+|- 
+| style="background: #ccffcc" colspan="3" align="center"|'''[[Main/en/Éghajlatok/Hu#Mérsékelt|Mérsékelt]]'''
+|- style="background: #ffdead"
+|style="width: 26%;"| '''Rakomány'''
+|style="width: 37%;"| '''Előállítja'''
+|style="width: 37%;"| '''Elfogadja'''
+|- style="background: #E5FFE5"
+|'''[[Main/hu/Acél|Acél]]'''
+|[[Main/hu/Acélöntő|Acélöntő]]
+|[[Main/hu/Gyár|Gyár]]
+|-
+|'''[[Main/hu/Állat|Állat]]'''
+|[[Main/hu/Farm|Farm]]
+|[[Main/hu/Gyár|Gyár]]
+|- style="background: #E5FFE5"
+|'''[[Main/hu/Áru|Áru]]'''
+|[[Main/hu/Gyár|Gyár]], [[Main/hu/Olajfinomító|Olajfinomító]], [[Main/hu/Fűrésztelep|Fűrésztelep]]
+|[[Main/hu/települések|Települések]]
+|-
+|'''[[Main/hu/Búza|Búza]]'''
+|[[Main/hu/Farm|Farm]]
+|[[Main/hu/Gyár|Gyár]]
+|- style="background: #E5FFE5"
+|'''[[Main/hu/Értéktárgyak|Értéktárgyak]]'''
+|[[Main/hu/Bank|Bank]]
+|[[Main/hu/Bank|Bank]]
+|-
+|'''[[Main/hu/Fa|Fa]]'''
+|[[Main/hu/Erdő|Erdő]]
+|[[Main/hu/Fűrésztelep|Fűrésztelep]]
+|- style="background: #E5FFE5"
+|'''[[Main/hu/Levél|Levél]]'''
+|[[Main/hu/Települések|Települések]]
+|[[Main/hu/Települések|Települések]], [[Main/hu/Olajfúró torony|Olajfúró torony]]
+|-
+|'''[[Main/hu/Olaj|Olaj]]'''
+|[[Main/hu/Olajkút|Olajút]], [[Main/hu/Olajfúró torony|Olajfúró torony]]
+|[[Main/hu/Olajfinomító|Olajfinomító]]
+|- style="background: #E5FFE5"
+|'''[[Main/hu/Szén|Szén]]'''
+|[[Main/hu/Szénbánya|Szénbánya]]
+|[[Main/hu/Erőmű|Erőmű]]
+|-
+|'''[[Main/hu/Utasok|Utasok]]'''
+|[[Main/hu/Települések|Települések]], [[Main/hu/Olajfúró torony|Olajfúró torony]]
+|[[Main/hu/Települések|Települések]], [[Main/hu/Olajfúró torony|Olajfúró torony]]
+|- style="background: #E5FFE5"
+|'''[[Main/hu/Vasérc|Vasérc]]'''
+|[[Main/hu/Vasércbánya|Vasércbánya]]
+|[[Main/hu/Acélöntő|Acélöntő]]
+|}
+
+:{| {{en/Wikitable}} style="width: 512px; font-size: 90%; margin:2px 4px 2px 0; border:solid 1px #AAAAAA" rules="cols"
+|- 
+| style="background: #ccccff" colspan="3" align="center"|'''[[Main/en/Éghajlatok/Hu#Szubarktikus|Szubarktikus]]'''
+|- style="background: #ffdead"
+|style="width: 26%;"| '''Rakomány'''
+|style="width: 37%;"| '''Előállítja'''
+|style="width: 37%;"| '''Elfogadja'''
+|- style="background: #dfefef"
+|'''[[Main/hu/Arany|Arany]]'''
+|[[Main/hu/Aranybánya|Aranybánya]]
+|[[Main/hu/Bank|Bank]]
+|-
+|'''[[Main/hu/Állat|Állat]]'''
+|[[Main/hu/Farm|Farm]]
+|[[Main/hu/Konzervgyár|Konzervgyár]]
+|- style="background: #dfefef"
+|'''[[Main/hu/Áru|Áru]]'''
+|[[Main/hu/Nyomda|Nyomda]], [[Main/hu/Olajfinomító|Olajfinomító]]
+|[[Main/hu/Települések|Települések]]
+|-
+|'''[[Main/hu/Sarki búza|Búza]]'''
+|[[Main/hu/Farm|Farm]]
+|[[Main/hu/Konzervgyár|Konzervgyár]]
+|- style="background: #dfefef"
+|'''[[Main/hu/Étel|Étel]]'''
+|[[Main/hu/Konzervgyár|Konzervgyár]]
+|[[Main/hu/Települések|Települések]]
+|-
+|'''[[Main/hu/Fa|Fa]]'''
+|[[Main/hu/Erdő|Erdő]]
+|[[Main/hu/Papírgyár|Papírgyár]]
+|- style="background: #dfefef"
+|'''[[Main/hu/Levél|Levél]]'''
+|[[Main/hu/Települések|Települések]]
+|[[Main/hu/Települések|Települések]]
+|-
+|'''[[Main/hu/Olaj|Olaj]]'''
+|[[Main/hu/Olajkút|Olajút]]
+|[[Main/hu/Olajfinomító|Olajfinomító]]
+|- style="background: #dfefef"
+|'''[[Main/hu/Papír|Papír]]'''
+|[[Main/hu/Papírgyár|Papírgyár]]
+|[[Main/hu/Nyomda|Nyomda]]
+|-
+|'''[[Main/hu/Szén|Szén]]'''
+|[[Main/hu/Szénbánya|Szénbánya]]
+|[[Main/hu/Erőmű|Erőmű]]
+|- style="background: #dfefef"
+|'''[[Main/hu/Utasok|Utasok]]'''
+|[[Main/hu/Települések|Települések]]
+|[[Main/hu/Települések|Települések]]
+|}
+
+:{| {{en/Wikitable}} style="width: 512px; font-size: 90%; margin:2px 4px 2px 0; border:solid 1px #AAAAAA" rules="cols"
+|- 
+| style="background: #ffffcc" colspan="3" align="center"|'''[[Main/en/Éghajlatok/Hu#Szubtrópusi|Szubtrópusi]]'''
+|- style="background: #ffdead"
+|style="width: 26%;"| '''Rakomány'''
+|style="width: 37%;"| '''Előállítja'''
+|style="width: 37%;"| '''Elfogadja'''
+|- style="background: #FFFDE0"
+|'''[[Main/hu/Áru|Áru]]'''
+|[[Main/hu/Gyár|Gyár]], [[Main/hu/Olajfinomító|Olajfinomító]]
+|[[Main/hu/Települések|Települések]]
+|-
+|'''[[Main/hu/Étel|Étel]]'''
+|[[Main/hu/Konzervgyár|Konzervgyár]]
+|[[Main/hu/Települések|Települések]]
+|- style="background: #FFFDE0"
+|'''[[Main/hu/Fa|Fa]]'''
+|[[Main/hu/Favágó|Favágó]]
+|[[Main/hu/Gyár|Gyár]]
+|-
+|'''[[Main/hu/Gumi|Gumi]]'''
+|[[Main/hu/Gumifa-ültetvény|Gumifa-ültetvény]]
+|[[Main/hu/Gyár|Gyár]]
+|- style="background: #FFFDE0"
+|'''[[Main/hu/Gyémánt|Gyémánt]]'''
+|[[Main/hu/Gyémántbánya|Gyémántbánya]]
+|[[Main/hu/Bank|Bank]]
+|-
+|'''[[Main/hu/Gyümölcs|Gyümölcs]]'''
+|[[Main/hu/Gyümölcsültetvény|Gyümölcsültetvény]]
+|[[Main/hu/Konzervgyár|Konzervgyár]]
+|- style="background: #FFFDE0"
+|'''[[Main/hu/Kukorica|Kukorica]]'''
+|[[Main/hu/Farm|Farm]]
+|[[Main/hu/Konzervgyár|Konzervgyár]]
+|-
+|'''[[Main/hu/Levél|Levél]]'''
+|[[Main/hu/Települések|Települések]]
+|[[Main/hu/Települések|Települések]]
+|- style="background: #FFFDE0"
+|'''[[Main/hu/Olaj|Olaj]]'''
+|[[Main/hu/Olajkút|Olajút]]
+|[[Main/hu/Olajfinomító|Olajfinomító]]
+|-
+|'''[[Main/hu/Rézérc|Rézérc]]'''
+|[[Main/hu/Rézércbánya|Rézércbánya]]
+|[[Main/hu/Gyár|Gyár]]
+|- style="background: #FFFDE0"
+|'''[[Main/hu/Utasok|Utasok]]'''
+|[[Main/hu/Települések|Települések]]
+|[[Main/hu/Települések|Települések]]
+|-
+|'''[[Main/hu/Víz|Víz]]'''
+|[[Main/hu/Vízforrás|Vízforrás]]
+|[[Main/hu/Víztorony|Víztorony]]
+|}
+
+:{| {{en/Wikitable}} style="width: 512px; font-size: 90%; margin:2px 4px 2px 0; border:solid 1px #AAAAAA" rules="cols"
+|- 
+| style="background: #ff9999" colspan="3" align="center"|'''[[Main/en/Éghajlatok/Hu#Játékvilág|Játékvilág]]'''
+|- style="background: #ffdead"
+|style="width: 26%;"| '''Rakomány'''
+|style="width: 37%;"| '''Előállítja'''
+|style="width: 37%;"| '''Elfogadja'''
+|- style="background: #FFF0F5"
+|'''[[Main/hu/Buborék|Buborék]]'''
+|[[Main/hu/Buborékgenerátor|Buborékgenerátor]]
+|[[Main/hu/Üditőital-gyár|Üditőital-gyár]]
+|-
+|'''[[Main/hu/Cukor|Cukor]]'''
+|[[Main/hu/Cukorbánya|Cukorbánya]]
+|[[Main/hu/Cukorkagyár|Cukorkagyár]]
+|- style="background: #FFF0F5"
+|'''[[Main/en/Cukorka]]'''
+|[[Main/hu/Cukorkagyár|Cukorkagyár]]
+|[[Main/hu/Települések|Települések]]
+|-
+|'''[[Main/hu/Elem|Elem]]'''
+|[[Main/hu/Elemfarm|Elemfarm]]
+|[[Main/hu/Játékgyár|Játékgyár]]
+|-
+|'''[[Main/hu/Játék|Játék]]'''
+|[[Main/hu/Játékgyár|Játékgyár]]
+|[[Main/hu/Játékbolt|Játékbolt]]
+|- style="background: #FFF0F5"
+|'''[[Main/hu/Kóla|Kóla]]'''
+|[[Main/hu/Kólakút|Kólakút]]
+|[[Main/hu/Üditőital-gyár|Üditőital-gyár]]
+|-
+|'''[[Main/hu/Levél|Levél]]'''
+|[[Main/hu/Települések|Települések]]
+|[[Main/hu/Települések|Települések]]
+|- style="background: #FFF0F5"
+|'''[[Main/hu/Műanyag|Műanyag]]'''
+|[[Main/hu/Műanyagforrás|Műanyagforrás]]
+|[[Main/hu/Játékgyár|Játékgyár]]
+|-
+|'''[[Main/hu/Szénsavas ital|Szénsavas ital]]'''
+|[[Main/hu/Üditőital-gyár|Üditőital-gyár]]
+|[[Main/hu/Települések|Települések]]
+|- style="background: #FFF0F5"
+|'''[[Main/hu/Tejkaramella|Tejkaramella]]'''
+|[[Main/hu/Tejkaramella-fejtő|Tejkaramella-fejtő]]
+|[[Main/hu/Cukorkagyár|Cukorkagyár]]
+|-
+|'''[[Main/hu/Utasok|Utasok]]'''
+|[[Main/hu/Települések|Települések]]
+|[[Main/hu/Települések|Települések]]
+|- style="background: #FFF0F5"
+|'''[[Main/hu/Vattacukor|Vattacukor]]''' 
+|[[Main/hu/Vattacukor-erdő|Vattacukor-erdő]]
+|[[Main/hu/Cukorkagyár|Cukorkagyár]]
+|}
