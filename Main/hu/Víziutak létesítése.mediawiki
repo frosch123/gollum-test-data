@@ -1,0 +1,38 @@
+[[Translation:Main/en/Waterway construction]]{{en/-}}{{hu/Tartalomjegyzék}}
+
+Amikor nagy mennyiségű rakományt akarsz szállítani, vagy tengerben található gazdasági épületek esetén (olajfúró torony például) '''vízi közlekedésre''' lehet szükséged, még ha az meglehetősen lassú is.
+==Víziút-létesítő eszköztár==
+
+A víziutak létesítését a [[Main/hu/Felhasználói felület/Hu#A menüsor|menüsoron]] a '''Víziút építése '''[[File:en/Dock build button.png]] gombra kattintással kezdheted. Amint rákattintottál, a '''Víziutak építése''' eszköztár ugrik elő.
+
+[[File:hu/Dock toolbar.png|center|none|frame]]
+
+Mire jók ezek a gombok? Az ikonok önmagyarázóak. Balról jobbra::<br>
+:*[[File:en/Build canal.png]] '''[[Main/hu/Kikötők|Csatorna]] építése'''
+:*[[File:en/Build locks.png]] '''[[Main/hu/Kikötők|Zsilip]] építése'''
+:*[[File:en/Clear title.png]] '''[[Main/hu/Tájrendezés|Terület megtisztítása]]'''
+:*[[File:en/Build dockdepot.png]] '''[[Main/hu/Járműtelepek|Dokk]] építése'''
+:*[[File:en/Build dock.png]] '''[[Main/hu/Kikötők|Kikötő]] építése'''
+:*[[File:en/Place buoy.png]] '''[[Main/hu/Kikötők|Bója]] építése'''
+:*[[File:en/Build aqueduct.png]] '''[[Main/en/Víziutak létesítése/Hu#Akvaduktok építése|Akvadukt]] építése''' (az [[Main/hu/OpenTTD 0.7.0|OpenTTD 0.7.0]] óta)
+
+==Kikötők építése==
+[[Main/hu/Kikötők|Kikötőt]] csak vízhez kapcsolódó lejtőre építhetsz. Ez lehet akár a tengerszinten, akár magasabban, egy csatorna részeként. [[File:en/Building Docks 1.png|left]] [[File:en/Building Docks 2.png]]
+
+==Akvaduktok építése==
+[[File:en/Aqueduct.png|thumb|400px|Akvadukt]]
+Az akvaduktok olyanok, mint a hidak, csak hajók számára épülnek. A közúti vagy vasúti hidaktól eltérően akvaduktot lejtős mezőkre lehet csak helyezni, sima talajra nem. Ezzel együtt a lejtőknek akvadukt létesítése esetén is helyes irányban kell lenniük. Az akvadukt - a normál csatornához hasonlóan - ''nem'' építhető [[Main/en/Tájrendezés/Hu#Autoslope|alapra, támfalra]].<br style="clear:both;">
+
+==Hajók vásárlása==
+[[Main/hu/Hajók|Hajó]] vásárlásához helyezz el egy [[Main/hu/Járműtelepek|dokkot]], és kattints rá. A dokk ablaka nyílik fel. Válaszd az '''Új hajók''' gombot. Egy újabb ablak ugrik fel a megvásárolható hajók listájával.  Válassz ki egyet, amiről azt gondolod, hogy szükséged lesz rá, majd kattints a '''Megvesz''' feliratra. A hajó megjelenik a dokkban, és megnyílik a hajó ellenőrzőablaka is. Állíts be neki utasításokat, vagy - ha szükséges és lehetséges - alakítsd át, majd kattints a vörös Áll feliratra az elindításához.
+
+==A hajók működése==
+Hajóid megfelelő működése céljából a kirakodásra szolgáló kikötődnek például egy olajfinomító közvetlen közelében kell lennie, így az olajat közvetlenül ki lehet rakni.
+
+Ha a terep ezt nem teszi lehetővé, '''átrakóállomást''' is építhetsz, ahol az olajat ki lehet tölteni a hajókból, és tovább lehet szállítani pl. vonatokkal. Ebben az esetben a vasútállomást a közvetlenül a kikötő mellé kell építened (vagy a kikötő és a vasútállomás csatlakoztatásához  használd a ''Ctrl''-gombot), így azonos állomásnevet fognak viselni.
+
+Átrakóállomás építése esetén a hajók menetrendjében az ''[[Main/en/Utasítások/Hu#Elszállít|Elszállít]]'' utasítást használd kirakásra, a vonatok maguktól átemelik az olajat az olajfinomítóba szállításhoz.
+
+Érdemes megjegyezni, hogy az ''[[Main/en/Utasítások/Hu#Elszállít|Elszállít]]'' utasítás közbeeső állomásra használatos, és sosem végállomásra, mert különben a szállítmány a végállomáson felhalmozódik, és soha nem kapsz pénzt a szállításért.
+[[Category:hu/Építés]]
+[[Category:hu/Hajók]]
