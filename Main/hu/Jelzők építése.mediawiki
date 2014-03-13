@@ -1,0 +1,93 @@
+[[Translation:Main/en/Building signals]]{{en/-}}
+
+{{hu/Oktatás}}
+
+A '''jelzők'''  a vonatok irányítását és a vasúti közlekedés összeomlásának megelőzését szolgálják.
+
+Ez az oldal csak alapvető információkat tartalmaz a jelzőkről. Ha részletesebb leírást szeretnél a különböző jelzőtípusokról és azok alkalmazásáról, lásd [[Main/hu/Jelzők|Jelzők]].
+__TOC__
+===Korlátozás===
+* Jelző nem helyezhető elágazást vagy szintbeli közúti kereszteződést tartalmaző térközbe.
+* Jelző nem helyezhető [[Main/hu/Hidak|hídra]], vagy [[Main/hu/Alagutak|alagútba]]. De [[Archive/en/HackaLittleBit/Tunnel Signals|HackaLittleBit patch-ével]] automatikusan elhelyezett jelzők szimulálhatók.
+
+== Jelzők készítése ==
+#Kattints a '''Vasúti pálya építése''' [[File:en/Manual html m772c5b23.png]] gombra a [[Main/en/Game interface#The Menu bar|menüsorban]], hogy megjelenjen a vasútépítési eszköztár:<br/>[[File:hu/Railroad Construction.png|none|frame|]]
+#Kattints a '''Vasúti jelzők építése''' [[File:en/Place signal.png]] gombra a vasútépítési eszköztárban, hogy megjelenjen a jelzőválasztó eszköztár:<br/>[[File:hu/Signal Selection.png|none|frame|A jelzőválasztó eszköztár]]
+
+Magyarázat (lényegében mindet figyelmen kívül hagyhatod, az irányjelzők kivételével, rájuk van csak szükséged.
+{|
+|colspan=3|'''Jelzőtípusok'''
+
+|-
+|[[File:en/Signal Semaphore.png]]
+|[[File:en/Signal Electric.png]]
+|[[Main/en/Jelzők/Hu#Szakaszjelzők|Szakaszjelző]] (a játékban: normál jelző)
+|-
+|[[File:en/Signal Semaphore Pre-Signal.png]]
+|[[File:en/Signal Electric Pre-Signal.png]]
+|[[Main/en/Jelzők/Hu#Bejárati előjelző|Bejárati előjelző]] (a játékban: bejárati jelző)
+|-
+|[[File:en/Signal Semaphore Exit-Signal.png]]|
+|[[File:en/Signal Electric Exit-Signal.png]]
+|[[Main/en/Jelzők/Hu#Kijárati jelző|Kijárati jelző]]
+|-
+|[[File:en/Signal Semaphore Combo-Signal.png]]
+|[[File:en/Signal Electric Combo-Signal.png]]
+|[[Main/en/Jelzők/Hu#Kombinált jelző|Kombinált jelző]]
+|-
+|[[File:en/Signal Semaphore Path.png]]
+|[[File:en/Signal Electric Path.png]]
+|[[Main/en/Jelzők/Hu#Útvonaljelzők|Standard útvonaljelző]] (a játékban: irányjelző) (ha a vonat hátulról közelíti meg, áthaladhat rajta, a jelzését figyelmen kívül hagyva)
+|-
+|[[File:en/Signal Semaphore Path One-Way.png]]
+|[[File:en/Signal Electric Path.png]]
+|[[Main/en/Jelzők/Hu#Útvonaljelzők|Egyirányú útvonaljelző (a játékban: egyirányú irányjelző)]] (ha a vonat a másik irányból közelíti meg, áthaladása nem lehetséges)
+|}
+{|
+|colspan=2|'''A jelzőválasztó eszköztár további ikonjai'''
+
+|-
+|[[File:en/Signal Convert.png]]|| Jelzőátalakító eszköz - a ''pályán'' található jelző típusát átalakítja a jelzőkezelőn kiválasztottra. Lásd [[Main/en/Jelzők építése/Hu#Jelzők átalakítása más típusúvá| Jelzők építése]]
+|-
+|[[File:en/Signal Density.png]]|| Jelzősűrűség eszköz - azt állítja be, milyen közel kerülnek a jelzők automatikus építése során Lásd [[Main/en/Jelzők építése/Hu#Jelzősor építése| Jelzők építése]]
+|}
+
+A jelzők két fajtája közt működésükben nincs különbség, ízlés kérdése, melyiket használjuk. Általánosságban elmondható, hogy a bal oldalon látható fajta (a szemaforok - régebbi elektromechanikus jelzők) az 1970-es évekig szokásos, a jobbra látható fajta (a modern elektromos fényjelzők) pedig utána. A játékban egy változtatható évszámig, alapértelmezés szerint 1950-ig szemaforok épülnek. Az ''Automatikusan alakjelző épüljön'' nevű beállítás a ''Haladó beállítások'' menü ''Építkezés'' csoportjában, a ''Jelzők'' almenüben található.
+
+#Jelölj ki egy jelzőtípust, majd '''pozicionáld az egérkurzort a vasúti pályán''' oda, ahova kívánod építeni a jelződet.<br/>[[File:en/SignalTutorial2.png|none|frame]]
+#'''Kattints egyszer''' a pályára, a jelző elhelyezéséhez. Ezzel '''kétirányú jelzőt''' fogsz építeni, hacsak nem útvonaljelzőt választottál. Az útvonaljelzők mindig egy irányba néznek.<br/>[[File:en/Two-way signal.png|frame|left]][[File:en/SignalTutorial3.png|none|frame]]
+#''Kattints újra'' a jelző '''egyirányú jelzővé''' alakításához. Így a jelző irányából érkező vonatok tudnak csak áthaladni, hacsak nem standard útvonaljelzőt építettél. Jelző irányát a játék során később is ingyen módosíthatod, ha a jelzőválasztó eszköztáron megfelelő jelzőtípust jelölsz ki, majd a jelzőre kattintasz.<br/>[[File:en/One-way signal.png|frame|left]][[File:en/SignalTutorial4.png|none|frame]]
+#'''Kattints újra''' hogy ellenkezőjére változtasd a jelző irányát<br/>[[File:en/SignalTutorial5.png|none|frame]]
+#'''Kattints újra''' hogy visszakonvertáld a jelződet '''kétirányúvá'''.<br/>[[File:en/SignalTutorial5b.png|none|frame]]
+
+== Jelzősor építése ==
+Egyszerre több jelzőt is tudsz építeni ugyan abból a típusból, úgy hogy az egeret nyomva tartod és végighúzod a pálya teleépíteni kívánt szakaszán. Azonban előfordulhat, hogy hasznosabb, ha egy létező jelző sokszorosítására használod a kihúzást, mivel így létre tudsz hozni egy olyan jelzőkből álló szakaszt melyek mind egy irányba néznek:
+#Amíg a '''Vasúti jelzők építése''' [[File:en/Place signal.png]] eszköztár ki van választva, '''pozicionáld a kurzort a létező jelző főlé'''.<br/>[[File:en/SignalTutorial4.png|none|frame]]
+#'''Klikk, és húzd''' az egeret a vasúti pálya mentén.
+'''Érdemes tudni:''' Ha a Ctrl gomb nyomva tartása mellett egy vagy több térközön át húzod az egeret, automatikusan jelzők kerülnek ki a következő állomásig, jelzőig, vagy a pálya következő elágazásáig.
+<br/>[[File:en/SignalTutorial20.png|none|frame]]
+#'''Felengedve az egeret''' helyükre kerülnek a jelzők.<br/>[[File:en/SignalTutorial21.png|none|frame]]
+
+Azon érték függvényében, mely megtalálható a '''jelzőtelepítés sűrűsége''' [[File:en/Signal Density.png]] gombon a jelző kiválasztó eszköztárban, a jelzők megjelennek minden N-edik játék területegységen (Az N alapértelmezett értéke 4) amikor telehúzol egy pályaszakaszt jelzőkkel.
+
+Meg tudod változtatni a sűrűséget ha klikkelsz a kis nyilacskákra a gombon. Szintén érdemes tudni, hogy ha bejárati, kijárati vagy kombinált jelzőket jelzőket húzol, ez a módszer velük egyező irányba néző szakaszjelzőket eredményez.
+
+== Jelzők eltávolítása ==
+Jelzők eltávolításához kattints a '''Buldózer''' [[File:en/Toggle clear active.png|Clear button]] gombra a vasútépítési eszköztárban, miközben a jelzőválasztó eszköztár nyitva van.
+
+A fehér négyzet vörös négyzetté fog változni. Ekkor lehet kattintani az egyes jelzőkre, egyenként eltávolítva őket, vagy kihúzni egérrel egy szakaszt, mely eltávolítandó. A törlés mód inaktiváláshoz klikkeljünk ismét a buldózer gombra. Használhatod az '''R''' gyorsbillentyűt is.
+
+Ez az eszköz engedelmeskedik a '''jelzőtelepítés sűrűsége''' [[File:en/Signal Density.png]] gombon található értéknek a jelzőválasztó eszköztárban.
+
+
+== Jelzők átalakítása más típusúvá ==
+Át tudsz alakítani létező jelzőket más típusúvá a '''jelző átalakítás''' [[File:en/Signal Convert.png]] gombra kattintva a jelző választó eszköztárban. Ezután ha ráklikkelsz a létező jelzőre, ingyen lecseréli arra ami éppen ki van választva a jelző választó eszköztárban.
+
+Ha ki akarod kapcsolni, klikkelj ismét a jelző átalakítás gombra.
+
+Ha a CTRL gombot nyomva tartod, és egy jelzőre klikkelsz (miközben a jelző átalakítás gomb ki van kapcsolva), végiglépkedhetsz az elérhető jelző típusokon.
+
+Ha a CTRL gombot nyomva tartod, és egy jelzőre klikkelsz (miközben a jelző átalakítás gomb be van kapcsolva), megváltoztatod a jelző stílusát (szemafor, vagy modern jelző) arra ami a jelző választó eszköztárban ki van választva (mint stílus). Ez azonban pénzbe kerül.
+
+
+<span style="float: right">[[Main/hu/Vonatok vétele és eladása|''Következő:'' Vonatok vétele és eladása]]
