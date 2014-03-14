@@ -1,0 +1,49 @@
+[[Translation:Main/en/Convert rail]]{{en/-}}{{Template:Oktatás/Hu}}
+==Sínek átalakítása==
+
+Hogy ki tudd választani, [[Main/hu/Vasút típusai|milyen vasútra]] alakítod át a síneket, kattints a vasútépítő ikonra a főmenün, és tartsd nyomva a gombot.
+[[File:en/Convert rail menu.png|none]]
+Választásodtól függően a következő eszköztárak egyike jelenik meg:
+[[File:hu/Railroad Construction.png|none|frame|[[Vasútépítés/Hu#Vasútépítő eszköztár|A normál vasútépítés eszköztára]]]]
+[[File:en/Electrified Railway Construction.png|none|frame|A villamosított vasútépítés eszköztára]]
+[[File:en/Monorail Construction.png|none|frame|Az egysínű vasútépítés eszköztára]]
+[[File:en/Maglev Construction.png|none|frame|A maglev vasútépítés eszköztára]]
+A [[File:en/Convert rail.png]] '''sínátalakító gomb''' egy '''"kattints és húzz"-eszközt''' aktivál, hogy átalakíthasd a vasutat egyik típusról a másikra (normál -> villamosított -> egysínű -> maglev -> normál). Ez az eszköz [[Main/hu/Vasútépítés|vasútra]], [[Main/hu/Vasúti járműtelep építése|vasúti járműtelepre]], [[Main/hu/Hidak|hidakra]], [[Main/hu/Alagutak|alagutakra]], [[Main/hu/Ellenőrzőpontok|ellenőrzőpontokra]] egyaránt hat.
+
+* Hidak és alagutak átalakítása külön: válaszd az egyik végüket.
+
+* Állomások: a vágány minden mezőjét át kell alakítani. Dönthetsz úgy is, hogy az állomáson többfajta síntípust használsz (ld. [[Main/hu/Rendhagyó állomások|Rendhagyó állomások]]).
+
+* Nyílt pálya átalakítása során győződj meg arról, hogy nincs rajta vonat. A korábban futtatott vonatokat vasúti járműtelepre kell küldeni, és az egész vonatot [[Main/hu/Egész vonatok eladása|el kell adni]] (kivétel ez alól a [[Main/hu/Normál vasút|normál]] vasút [[Main/hu/Villamosított vasút|villamosított]] vasúttá történő átalakítása).
+
+* [[Main/hu/Normál vasút|Normál]] vasutat [[Main/hu/Villamosított vasút|villamosított]] vasúttá akkor is átalakíthatsz, ha vonatok futnak rajta.
+
+* Az átalakítás után ilyen sínek láthatók:
+: [[File:en/Convert station.png|left|frame|Többfajta vasút]]
+[[File:en/Convert rail tunnel.png|none|frame|Többfajta vasút]]
+
+
+
+
+==Átlós sínek==
+Az OpenTTD-ben egy mezőn csak egyfajta sín lehet, a [[Main/hu/Normál vasút|normál]] vasút és a [[Main/hu/Villamosított vasút|villamosított]] vasút kivételével. Így előfordulhat, hogy újra kell építeni a pályát, ha egymáshoz közeli átlós pályákon többfajta sínt akarsz használni.
+[[File:en/Convert rail close.png|left|frame|Túl közeliek a sínek ahhoz, hogy többfajta pályát tudjunk használni]]
+[[File:en/Convert rail good.png|none|frame|A megoldás: külön mezők az eltérő pályatípusokra]] 
+
+==Tippek==
+* Az új pályatípus miatt törölt vonatok helyett beállított új vonatok utasításlistáját nem feltétlenül kell újraírni. A pálya konvertálása előtt küldd a régi vonatokat a járműtelepre, és [[Main/hu/Egész vonatok eladása|add el őket]] mindet. A járműtelepet úgy konvertáld, hogy közben a járműtelep-ablak maradjon nyitva. Az elsőként megvásárolt vonat utasításlistája ugyanaz lesz, mint az előzőleg eladott vonaté.
+:A járműtelep ablakának a művelet során folyamatosan nyitva kell maradnia. Érdemes tudni, hogy ezzel a módszerrel csak egy vonatot tudsz egyszerre átalakítani, de az üres járműtelepet vissza tudod alakítani a régi vasúttípusra, így egyazon járműtelep használatával más vonatot is konvertálni tudsz.
+
+* A gőz- és a dízelmozdonyok remekül futnak villamosított pályán is, így azokat nem feltétlenül kell korszerűsíteni (villanyvonatok viszont nem futnak normál pályán).
+
+* A járműtelep átalakítása során az [[Main/en/Járműcsere/Hu#Automatikus járműcsere|automatikus járműcsere]] nem alkalmazható. A szabály alól egyetlen kivétel, amikor a normál vasúti mozdonyról villamosítottra korszerűsítünk.
+
+* Használhatod a [[Main/en/Utasítások/Hu#Az "Új cél" gomb|"Menj a járműtelepre"]] utasítást minden, az átalakítandó pályán közlekedő vonat számára, vagy használd a járműlistát, ahol minden vonatot (vagy a vonatok egy [[Main/hu/Járműcsoportok|csoportját]]) a legközelebbi járműtelepre tudod küldeni.
+
+==Lásd még==
+*[[Main/hu/Vasútépítés|Vasútépítés]]
+*[[Main/hu/Rendhagyó állomások|Rendhagyó állomások]]
+*[[Main/en/Haladó beállítások/Járművek/Hu#Villamosított vágányok tiltása|Villamosított vágányok tiltása]]
+
+[[Category:hu/Építés]]
+[[Category:hu/Vasút]]
