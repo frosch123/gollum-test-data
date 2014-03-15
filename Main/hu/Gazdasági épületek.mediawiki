@@ -1,0 +1,387 @@
+[[Translation:Main/en/Industries]]{{en/-}}{{hu/Tartalomjegyzék}}
+
+:''Ez a fejezet az OpenTTD gazdasági épületekhez kapcsolódó koncepcióját ismerteti. A gazdasági épületek típusainak részletes ismertetőit a [[Category/hu/Gazdasági épületek|Gazdasági épületek kategóriában]] találod.
+
+'''A gazdasági épületek''' olyan szervezetek, amelyek adott [[Main/hu/Rakomány|rakományt]] és/vagy szolgáltatást állítanak elő. Az OpenTTD-ben három csoportjuk van: az elsődleges, a másodlagos és aharmadlagos gazdasági épületek. Az elsődleges gazdasági épületek, mint a bányák, anélkül állítanak elő nyersanyagot, hogy ehhez bármire szükségük lenne. Ezeket a nyersanyagokat aztán [[Main/hu/Szállítási vállalat|szállítási vállalat]] továbbítja egy másodlagos gazdasági épülethez. A másodlagos gazdasági épületek terméke vagy a településekre kerülnek (mint az áru vagy az étel), vagy harmadlagos gazdasági épületek alapanyagaiként szolgálnak.
+
+Vállalkozásod a gyártók megbízásából szállít: minden nyereséged tisztán az általad felszámított szállítási díjakból adódik, nem pedig a rakomány eladásából.
+
+A gazdasági épület ablaka két számot jelez ki minden ott előállított rakománytípusra, az előző hónap teljes értékei alapján. Az első az előállított mennyiség. Ez a gazdasági épület belső tényezői függvényében változik. [[Main/en/Gazdaság/Hu#Recesszió|Gazdasági válság]] idején ez a szokásos termelés fele.
+
+A második érték azt mutatja, hogy az előállított mennyiségnek milyen arányát adta ki a gazdasági épület a közeli állomásoknak elosztásra. A gazdasági épület úgy is dönthet, hogy a termelés egy részét visszatartja, és nem adja ki egy állomásnak sem.
+
+[[File:en/Industry window.png|frame|center|Szénbánya információs ablaka]]
+
+A gazdasági épületek kibocsátásának növekedése a tőlük elszállított rakomány arányától függ. Minél többet szállítasz el, a növekedés - hosszú idő átlagában - annál gyorsabb. 
+A fent említett számítások részleteit a [[Main/hu/Játéktechnika|Játéktechnika]] oldalon találhatod.
+
+__TOC__
+
+==A gazdasági épületek táblázata tájtípusonként==
+<table><tr><td valign="top" style="padding:0px; border:none; background-color:transparent;">
+  {| {{en/Wikitable}} style="margin:2px 4px 2px 0; border:solid 1px #AAAAAA" rules="cols"
+  |- 
+  | style="background: #ccffcc" colspan="3" align="center"| '''Mérsékelt'''
+  |- style="background: #ffdead"
+  | '''Gazdasági épület'''
+  | '''Elfogad'''
+  | '''Előállít'''
+  |- style="background: #E5FFE5"
+  |[[Main/hu/Acélöntő|Acélöntő]]
+  |[[Main/hu/Vasérc|Vasérc]]
+  |[[Main/hu/Acél|Acél]]
+  |-
+  |[[Main/hu/Bank|Bank]]
+  |[[Main/hu/Értéktárgyak|Értéktárgyak]]
+  |[[Main/hu/Értéktárgyak|Értéktárgyak]]
+  |- style="background: #E5FFE5"
+  |[[Main/hu/Erdő|Erdő]]
+  | --
+  |[[Main/hu/Fa|Fa]]
+  |-
+  |[[Main/hu/Erőmű|Erőmű]]
+  |[[Main/hu/Szén|Szén]]
+  | --
+  |- style="background: #E5FFE5"
+  |[[Main/hu/Farm|Farm]]
+  | ---
+  |[[Main/hu/Búza|Búza]],<br/>[[Main/hu/Állat|Állat]]
+  |-
+  |[[Main/hu/Fűrésztelep|Fűrésztelep]]
+  |[[Main/hu/Fa|Fa]]
+  |[[Main/hu/Áru|Áru]]
+  |- style="background: #E5FFE5"
+  |[[Main/hu/Gyár|Gyár]]
+  |[[Main/hu/Állat|Állat]],<br/>[[Main/hu/Búza|Búza]],<br/>[[Main/hu/Acél|Acél]]
+  |[[Main/hu/Áru|Áru]]
+  |-
+  |[[Main/hu/Olajfinomító|Olajfinomító]]
+  |[[Main/hu/Olaj|Olaj]]
+  |[[Main/hu/Áru|Áru]]
+  |- style="background: #E5FFE5"
+  |[[Main/hu/Olajfúró torony|Olajfúró torony]]
+  |[[Main/hu/Utasok|Utasok]]
+  |[[Main/hu/Olaj|Olaj]],<br/>[[Main/hu/Utasok|Utasok]]
+  |-
+  |[[Main/hu/Olajkút|Olajkút]]
+  | --
+  |[[Main/hu/Olaj|Olaj]]
+  |- style="background: #E5FFE5"
+  |[[Main/hu/Szénbánya|Szénbánya]]
+  | --
+  |[[Main/hu/Szén|Szén]]
+  |-
+  |[[Main/hu/Vasércbánya|Vasércbánya]]
+  | --
+  |[[Main/hu/Vasérc|Vasérc]]
+  |}
+</td><td valign="top" style="padding:0px; border:none; background-color:transparent;">
+  {| {{en/Wikitable}} style="margin:2px 4px 2px 0; border:solid 1px #AAAAAA" rules="cols"
+  |- 
+  | style="background: #ccccff" colspan="3" align="center"| '''Szubarktikus'''
+  |- style="background: #ffdead"
+  | '''Gazdasági épület'''
+  | '''Elfogad'''
+  | '''Előállít'''
+  |- style="background: #dfefef"
+  |[[Main/hu/Aranybánya|Aranybánya]]
+  | ---
+  |[[Main/hu/Arany|Arany]]
+  |-
+  |[[Main/hu/Bank|Bank]]
+  |[[Main/hu/Arany|Arany]]
+  | ---
+  |- style="background: #dfefef"
+  |[[Main/hu/Erdő|Erdő]]
+  | ---
+  |[[Main/hu/Fa|Fa]]
+  |-
+  |[[Main/hu/Erőmű|Erőmű]]
+  |[[Main/hu/Szén|Szén]]
+  | ---
+  |- style="background: #dfefef"
+  |[[Main/hu/Farm|Farm]]
+  | ---
+  |[[Main/hu/Állat|Állat]],<br/>[[Main/hu/Sarki búza|Búza]]
+  |-
+  |[[Main/hu/Konzervgyár|Konzervgyár]]
+  |[[Main/hu/Állat|Állat]],<br/>[[Main/hu/Sarki búza|Búza]]
+  |[[Main/hu/Étel|Étel]]
+  |- style="background: #dfefef"
+  |[[Main/hu/Nyomda|Nyomda]]
+  |[[Main/hu/Papír|Papír]]
+  |[[Main/hu/Áru|Áru]]
+  |-
+  |[[Main/hu/Olajfinomító|Olajfinomító]]
+  |[[Main/hu/Olaj|Olaj]]
+  |[[Main/hu/Áru|Áru]]
+  |- style="background: #dfefef"
+  |[[Main/hu/Olajkút|Olajkút]]
+  | ---
+  |[[Main/hu/Olaj|Olaj]]
+  |-
+  |[[Main/hu/Papírgyár|Papírgyár]]
+  |[[Main/hu/Fa|Fa]]
+  |[[Main/hu/Papír|Papír]]
+  |- style="background: #dfefef"
+  |[[Main/hu/Szénbánya|Szénbánya]]
+  | ---
+  |[[Main/hu/Szén|Szén]]
+  |}
+ </td><td valign="top" style="padding:0px; border:none; background-color:transparent;">
+  {| {{en/Wikitable}} style="margin:2px 4px 2px 0; border:solid 1px #AAAAAA" rules="cols"
+  |- 
+  | style="background: #ffffcc" colspan="3" align="center"| '''Szubtrópusi'''
+  |- style="background: #ffdead"
+  | '''Gazdasági épület'''
+  | '''Elfogad'''
+  | '''Előállít'''
+  |- style="background: #FFFDE0"
+  |[[Main/hu/Bank|Bank]]
+  |[[Main/hu/Gyémánt|Gyémánt]]
+  | --
+  |-
+  |[[Main/hu/Farm|Farm]]
+  | --
+  |[[Main/hu/Kukorica|Kukorica]]
+  |- style="background: #FFFDE0"
+  |[[Main/hu/Favágó|Favágó]]
+  | --
+  |[[Main/hu/Fa|Fa]]
+  |-
+  |[[Main/hu/Gumifa-ültetvény|Gumifa-ültetvény]]
+  | --
+  |[[Main/hu/Gumi|Gumi]]
+  |- style="background: #FFFDE0"
+  |[[Main/hu/Gyár|Gyár]]
+  |[[Main/hu/Gumi|Gumi]],<br/>[[Main/hu/Rézérc|Rézérc]],<br/>[[Main/hu/Fa|Fa]]
+  |[[Main/hu/Áru|Áru]]
+  |-
+  |[[Main/hu/Gyémántbánya|Gyémántbánya]]
+  | --
+  |[[Main/hu/Gyémánt|Gyémánt]]
+  |- style="background: #FFFDE0"
+  |[[Main/hu/Gyümölcsültetvény|Gyümölcsültetvény]]
+  | --
+  |[[Main/hu/Gyümölcs|Gyümölcs]]
+  |-
+  |[[Main/hu/Konzervgyár|Konzervgyár]]
+  |[[Main/hu/Gyümölcs|Gyümölcs]],<br/>[[Main/hu/Kukorica|Kukorica]]
+  |[[Main/hu/Étel|Étel]]
+  |- style="background: #FFFDE0"
+  |[[Main/hu/Olajfinomító|Olajfinomító]]
+  |[[Main/hu/Olaj|Olaj]]
+  |[[Main/hu/Áru|Áru]]
+  |-
+  |[[Main/hu/Olajkút|Olajkút]]
+  | --
+  |[[Main/hu/Olaj]]
+  |- style="background: #FFFDE0"
+  |[[Main/hu/Rézércbánya|Rézércbánya]]
+  | --
+  |[[Main/hu/Rézérc|Rézérc]]
+  |-
+  |[[Main/hu/Vízforrás|Vízforrás]]
+  | --
+  |[[Main/hu/Víz|Víz]]
+  |- style="background: #FFFDE0"
+  |[[Main/hu/Víztorony|Víztorony]]
+  |[[Main/hu/Víz|Víz]]
+  | --
+  |}
+ </td><td valign="top" style="padding:0px; border:none; background-color:transparent;">
+  {| {{en/Wikitable}} style="margin:2px 4px 2px 0; border:solid 1px #AAAAAA" rules="cols"
+  |- 
+  | style="background: #ff9999" colspan="3" align="center"| '''Játékvilág'''
+  |- style="background: #ffdead;"
+  | '''Gazdasági épület'''
+  | '''Elfogad'''
+  | '''Előállít'''
+  |- style="background: #FFF0F5"
+  |[[Main/hu/Buborékgenerátor|Buborékgenerátor]]
+  | --
+  |[[Main/hu/Buborék|Buborék]]
+  |-
+  |[[Main/hu/Cukorbánya|Cukorbánya]]
+  | --
+  |[[Main/hu/Cukor|Cukor]]
+  |- style="background: #FFF0F5"
+  |[[Main/hu/Cukorkagyár|Cukorkagyár]]
+  |[[Main/hu/Cukor|Cukor]],<br/>[[Main/hu/Tejkaramelle|Tejkaramella]],<br/>[[Main/hu/Vattacukor|Vattacukor]]
+  |[[Main/hu/Cukorka|Cukorka]]
+  |-
+  |[[Main/hu/Elemfarm|Elemfarm]]
+  | --
+  |[[Main/hu/Elem|Elem]]
+  |- style="background: #FFF0F5"
+  |[[Main/hu/Játékbolt|Játékbolt]]
+  |[[Main/hu/Játék|Játék]]
+  | --
+  |-
+  |[[Main/hu/Játékgyár|Játékgyár]]
+  |[[Main/hu/Műanyag|Műanyag]],<br/>[[Main/hu/Elem|Elem]]
+  |[[Main/hu/Játék|Játék]]
+  |- style="background: #FFF0F5"
+  |[[Main/hu/Kólakút|Kólakút]]
+  | --
+  |[[Main/hu/Kóla|Kóla]]
+  |-
+  |[[Main/hu/Műanyagforrás|Műanyagforrás]]
+  | --
+  |[[Main/en/Műanyag]]
+  |- style="background: #FFF0F5"
+  |[[Main/hu/Tejkaramella-fejtő|Tejkaramella-fejtő]]
+  | --
+  |[[Main/hu/Tejkaramella|Tejkaramella]]
+  |-
+  |[[Main/hu/Üdítőital-gyár|Üdítőital-gyár]]
+  |[[Main/hu/Kóla|Kóla]],<br/>[[Main/hu/Buborék|Buborék]]
+  |[[Main/hu/Szénsavas ital|Szénsavas ital]]
+  |- style="background: #FFF0F5"
+  |[[Main/hu/Vattacukor-erdő|Vattacukor-erdő]]
+  | --
+  |[[Main/hu/Vattacukor|Vattacukor]]
+  |}
+</td></tr></table>
+
+==Új gazdasági épület alapítása==
+
+Ha közlekedés vállalkozásod elég gazdag ahhoz, hogy új gazdasági épületet építését finanszírozza, az új gazdasági épület akkor és oda fog épülni, amikor és ahova akarod. Befektetésed fejében nem számíthatsz azonnali megtérülésre, nyereségéből sem részesülsz, csak a rakományszállításodból. Abban az értelemben sem válsz a gazdasági épület tulajdonosává, hogy jogot szereznél a lebontására, tehát győződj meg arról, hogy megfelelő helyen alapítod.
+
+Rendesen csak a következő [[Category/hu/Gazdasági épületek|gazdasági épületeket]] alapíthatod:
+
+{| {{en/Wikitable}}
+!colspan=4 style="background:#ccffcc"|Mérsékelt éghajlat
+|-
+| rowspan=7 valign="top"| [[File:en/Fund Industry template.png]]
+| style="background:#efefef" | '''Név'''
+| style="background:#efefef" | <span style="white-space:nowrap">'''Ár''' (infláció nélkül)</span>
+| style="background:#efefef" | '''Megjegyzések'''
+|-
+| [[Main/hu/Erőmű|Erőmű]]
+| £703,125<span style="white-space:nowrap"> </span>($1,406,250)
+| Elfogad: [[Main/hu/Szén|szént]] a [[Main/hu/Szénbánya|szénbányákból]].
+|-
+| [[Main/hu/Fűrésztelep|Fűrésztelep]]
+| £656,250<span style="white-space:nowrap"> </span>($1,212,500)
+| Elfogad: [[Main/hu/Fa|fát]] az [[Main/hu/Erdő|erdőkből]]. Termel: [[Main/hu/Áru|árut]].
+|-
+| [[Main/hu/Olajfinomító|Olajfinomító]]
+| £714,843<span style="white-space:nowrap"> </span>($1,429,686)
+| Tenger partjára vagy közvetlen közelébe építhető. Elfogad: [[Main/hu/Olaj|olajt]] az [[Main/hu/Olajkút|olajkutaktól]] vagy az [[Main/hu/Olajfúró torony|olajfúró tornyoktól]]. Termel: [[Main/hu/Áru|árut]].
+|-
+| [[Main/hu/Gyár|Gyár]]
+| £609,375<span style="white-space:nowrap"> </span>($1,218,750)
+| Elfogad: [[Main/hu/Búza|búzát]] és [[Main/hu/Állat|állatot]] a [[Main/hu/Farm|farmoktól]] és [[Main/hu/Acél|acélt]] az [[Main/hu/Acélöntő|acélöntőktől]]. Termel: [[Main/hu/Áru|árut]].
+|-
+| [[Main/hu/Acélöntő|Acélöntő]]
+| £629,882<span style="white-space:nowrap"> </span>($1,259,764)
+| Elfogad: [[Main/hu/Vasérc|vasércet]] a [[Main/hu/Vasércbánya|vasércbányáktól]]. Termel: [[Main/hu/Acél|acélt]].
+|-
+| [[Main/hu/Bank|Bank]]
+| £747,070<span style="white-space:nowrap"> </span>($1,494,140)
+| Elfogad és termel: [[Main/hu/Értéktárgyak|értéktárgyakat]].
+|-
+!colspan=4 style="background:#ccccff"|Szubarktikus
+|-
+| rowspan=7 valign="top"| [[File:en/Fund Industry subarctic.png]]
+| style="background:#efefef" | '''Név'''
+| style="background:#efefef" | <span style="white-space:nowrap">'''Ár''' (infláció nélkül)</span>
+| style="background:#efefef" | '''Megjegyzések'''
+|-
+| [[Main/hu/Erőmű]]
+| £703,125<span style="white-space:nowrap"> </span>($1,406,250)
+| Elfogad: [[Main/hu/Szén|szént]] a [[Main/hu/Szénbánya|szénbányákból]].
+|-
+| [[Main/hu/Olajfinomító|Olajfinomító]]
+| £714,843<span style="white-space:nowrap"> </span>($1,429,686)
+| Elfogad: [[Main/hu/Olaj|olajt]] az [[Main/hu/Olajkút|olajkutaktól]]. Termel: [[Main/hu/Áru|árut]].
+|-
+| [[Main/hu/Nyomda|Nyomda]]
+| £609,375<span style="white-space:nowrap"> </span>($1,218,750)
+| Elfogad: [[Main/hu/Papír|papírt]] a [[Main/hu/Papírgyár|papírgyártól]]. Termel: [[Main/hu/Áru|árut]].
+|-
+| [[Main/hu/Konzervgyár|Konzervgyár]]
+| £603,515<span style="white-space:nowrap"> </span>($1,307,030)
+| Elfogad: [[Main/hu/Állat|állatot]] és [[Main/hu/Sarki búza|búzát]]. Termel: [[Main/hu/Étel|ételt]].
+|-
+| [[Main/hu/Papírgyár|Papírgyár]]
+| £665,039<span style="white-space:nowrap"> </span>($1,330,078)
+| Elfogad: [[Main/hu/Fa|fát]]. Termel: [[Main/hu/Papír|papírt]].
+|-
+| [[Main/hu/Bank|Bank]]
+| £442,382<span style="white-space:nowrap"> </span>($884,764)
+| Elfogad: [[Main/hu/Arany|aranyat]].
+|-
+!colspan=4 style="background:#ffffcc"|Szubtrópusi
+|-
+| rowspan=7 valign="top"| [[File:en/Fund Industry subtropical.png]]
+| style="background:#efefef" | '''Név'''
+| style="background:#efefef" | <span style="white-space:nowrap">'''Ár''' (infláció nélkül)</span>
+| style="background:#efefef" | '''Megjegyzések'''
+|-
+| [[Main/hu/Olajfinomító|Olajfinomító]]
+| £714,843<span style="white-space:nowrap"> </span>($1,429,686)
+| Elfogad: [[Main/hu/Olaj|olajt]] az [[Main/hu/Olajkút|olajkutaktól]]. Termel: [[Main/hu/Áru|árut]].
+|-
+| [[Main/hu/Konzervgyár|Konzervgyár]]
+| £603,515<span style="white-space:nowrap"> </span>($1,307,030)
+| Elfogad: [[Main/hu/Gyümölcs|gyümölcsöt]] és [[Main/hu/Kukorica|kukoricát]] a [[Main/hu/Farm|farmoktól]]. Termel: [[Main/hu/Étel|ételt]].
+|-
+| [[Main/hu/Bank]]
+| £442,382<span style="white-space:nowrap"> </span>($884,764)
+| Elfogad: [[Main/hu/Gyémánt|gyémántot]] a [[Main/hu/Gyémántbánya|gyémántbányáktól]].
+|-
+| [[Main/hu/Víztorony|Víztorony]]
+| £336,914<span style="white-space:nowrap"> </span>($673,828)
+| Elfogad: [[Main/hu/Víz|vizet]] a [[Main/hu/Vízforrás|vízforrásoktól]].
+|-
+| [[Main/hu/Gyár|Gyár]]
+| £609,375<span style="white-space:nowrap"> </span>($1,218,750)
+| Elfogad: [[Main/hu/Gumi|gumit]] a [[Main/hu/Gumifa-ültetvény|gumifaültetvényekről]], [[Main/hu/Rézérc|rézércet]] a [[Main/hu/Rézércbánya|rézércbányáktól]] és [[Main/hu/Fa|fát]] a [[Main/hu/Favágó|favágóktól]]. Termel: [[Main/hu/Áru|árut]].
+|-
+| [[Main/hu/Favágó|Favágó]]
+| £395,507<span style="white-space:nowrap"> </span>($791,014)
+| Termel: [[Main/hu/Fa|fát]].
+|-
+!colspan=4 style="background:#ff9999"|Játékvilág
+|-
+| rowspan=5 valign="top"| [[File:en/Fund Industry toyland.png]]
+| style="background:#efefef" | '''Név'''
+| style="background:#efefef" | <span style="white-space:nowrap">'''Ár''' (infláció nélkül)</span>
+| style="background:#efefef" | '''Megjegyzések'''
+|-
+| [[Main/hu/Édességgyár|Édességgyár]]
+| £603,515<span style="white-space:nowrap"> </span>($1,207,030)
+| Elfogad: [[Main/hu/Cukor|cukort]] a [[Main/hu/Cukorbánya|cukorbányáktól]], [[Main/hu/Tejkaramella|tejkaramellát]] a [[Main/hu/Tejkaramella-fejtő|tejkaramella-fejtőktől]] és [[Main/hu/Vattacukor|vattacukort]] a[[Main/hu/Vattacukor-erdő|vattacukor-erdőkből]]. Termel: [[Main/hu/Cukorka|cukorkát]].
+|-
+| [[Main/hu/Játékbolt|Játékbolt]]
+| £389,648<span style="white-space:nowrap"> </span>($779,296)
+| Elfogad [[Main/hu/Játék|játékot]] a [[Main/hu/Játékgyár|játékgyáraktól]].
+|-
+| [[Main/hu/Játékgyár|Játékgyár]]
+| £477,539<span style="white-space:nowrap"> </span>($955,078)
+| Elfogad: [[Main/hu/Műanyag|műanyagot]] a [[Main/hu/Műanyagforrás|műanyagforrásoktól]] és [[Main/hu/Elem|elemet]] az [[Main/hu/Elemfarm|elemfarmokról]]. Termel: [[Main/hu/Játék|játékot]].
+|-
+| [[Main/hu/Üdítőital-gyár|Üdítőital-gyár]]
+| £518,554<span style="white-space:nowrap"> </span>($1,037,108)
+| Elfogad: [[Main/hu/Kóla|kólát]] a [[Main/hu/Kólakút|kólakutakról]] és [[Main/hu/Buborék|buborékot]] a [[Main/hu/Buborékgenerátor|buborékgenerátroroktól]]. Termel: [[Main/hu/Szénsavas ital|szénsavas italt]].
+|}
+
+Játék közben gazdasági épület alapításához nyomd meg a [[File:en/Industry button.png]] ''Cég- és gazdasági épület-információ gombot a játék [[Main/en/Felhasználói felület/Hu#Cég- és gazdasági épület-információ|felhasználói felületén]], és válaszd az ''Új gazdasági épület építése'' almenüt.
+
+Új gazdasági épület alapítását a ''Haladó beállítások - [[Main/en/Haladó beállítások/Gazdaság#Gazdasági épületek|Gazdaság]] - Gazdasági épületek'' csoportjában befolyásolja a
+* ''Kézi nyersanyaglelőhely-létesítési módszer'', valamint a
+* ''Több ugyanolyan gazdasági épület településenként''
+beállítás.
+
+
+
+==Új gazdasági épület kutatása==
+A 0.6.1. verzió óta új gazdasági épület ''kutatását'' is finanszírozhatod. Új gazdasági épület alapítása és kutatása közt két fontos különbség is van. Az egyik, hogy a kutatás csak elsődleges gazdasági épületekre használatos (pl. nyersanyag-lelőhelyek), a másik pedig, hogy a kutatott gazdasági épület nem ott jön létre, ahol te kijelölnéd a helyét, hanem ott, ahol a kutatók a megfelelő nyersanyagot megtalálják.
+Ezt a lehetőséget is a ''Haladó beállítások - [[Main/en/Haladó beállítások/Gazdaság#Gazdasági épületek|Gazdaság]] - Gazdasági épületek'' csoportjában befolyásolja a ''Kézi nyersanyaglelőhely-létesítési módszer'' beállítással engedélyezheted.
+
+[[File:en/Coalmine.png|center|frame|A szénbánya az OpenTTD-ben csak egy a sok gazdasági épület között]]
+
+[[Category:hu/Gazdasági épületek]]
+[[Category:hu/Szervezetek]]
