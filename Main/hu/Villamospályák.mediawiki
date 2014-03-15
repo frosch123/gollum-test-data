@@ -1,0 +1,76 @@
+[[Translation:Main/en/Tramways]]{{en/-}}{{hu/Tartalomjegyzék}}
+
+'''Villamospályákat''' puszta talajra vagy már meglévő közútrendszerekre építhetsz. Ahhoz, hogy villamosokkal tudj játszani, aktív villamosjárművekkel működő [[Main/hu/NewGRF|NewGRF]]-re van szükséged. Mint más szállítási rendszerek, a villamosok is saját infrastruktúrát igényelnek, ide értve a [[Main/hu/Járműtelepek|remízeket]] is.
+
+[[File:en/Tramroute.png|thumb|600px|left|Egy villamos-útvonal példaként]]
+__TOC__
+{{html-clear-left}}
+
+===Az út fajtái===
+Az építendő út fajtájának kiválasztásához kattints az '''Út építése''' ikonra a főmenün, és tartsd is az egérgombot lenyomva.
+[[File:en/Tramwaymenu.png|none|frame]]
+* '''Út építése''' - Ezen az úton [[Main/hu/Közúti járművek|közúti járművek]]: tehergépjárművek és buszok futnak.
+* '''Villamospálya építése''' - Ezen az úton futnak a villamosok.
+* ''Kettős célú utak'' - Tehergépjárművek, buszok és villamosok közlekedését teszi lehetővé. Ez a típus közúton létestített villamospályával készíthető el.
+
+==Elérhetőség==
+Miután az OpenTTD és a [[Main/hu/TTDPatch|TTDPatch]] viszonylag új funkciójáról van szó, nincs túl sok befejezett villamos-GRF. Vannak viszont kiadás előtti verziók is, tesztverziók is. Ilyeneket a [[Main/hu/GRF-jegyzék|GRF-jegyzéken]], vagy az angol nyelvű [http://grfcrawler.tt-forums.net/index.php?do=list&cid=105 GRF Crawler]-en találhatsz. Érdemes még körülnézni a [http://www.tt-forums.net/viewforum.php?f=26 TT-Forums] weboldalon is.
+
+Villamos építéséhez győződj meg arról, hogy már '''telepített és aktivált''' villamos járműszettet tartalmazó [[Main/hu/NewGRF|NewGRF]] fájllal  rendelkezel:
+*'''Telepítéshez''' használd a játék üdvözlőképernyőjén a ''Letölthető tartalmak'' gombot, ott írd be a ''Címke/név szűrő'' mezőjébe a '''tram''' szót. Válaszd ki a neked szimpatikus NeWGRF fájlokat, és töltsd le.
+:[[File:en/Tramways install.png|none|frame]]
+*'''Aktiváláshoz''' válaszd a ''NewGRF beállítások'' gombot a játék üdvözlőképernyőjén. A ''NewGRF beállítások'' ablak jelenik meg; ennek bal oldalán az ''aktív NewGRF fájlokat'' fent, az inaktívakat pedig lent. Az inaktívak közül jelöld ki az aktiválandó fájlt, és kattints a  ''Hozzáad'' gombra.
+:[[File:en/Available NewGRF files.png|none|frame]]
+
+===Villamos-szettek===
+(angol nyelvű hivatkozások)
+* [[Main/en/Extended Generic Road Vehicle and Tram Set]]
+* [[Main/en/Generic Tram Set]] (az OpenTTD hivatalos 0.6.0 kiadásának már része) (Note that, despite being from the same author, the first set is not a superset of the latter: [http://www.tt-forums.net/viewtopic.php?p=643673#p643673]){{en/-right}}
+* [[Main/en/Dutch Tram Set]]
+* [[Main/en/Ligtrail/Tramtracks]]
+* [[Main/en/New Tram Tracks]]
+* [[Main/en/Urban Suspended Monorail]]
+
+==A villamospálya-építő eszköztár==
+Kattints az Út építése [[File:en/Road build button.png]] ikonra a menüsoron, és tartsd az egeret lenyomva. Válaszd a ''Villamospálya építését'' az eszköztár megjelenítéséhez.
+
+[[File:en/Tramway construction.png|none|frame]]
+
+(Az eszköztár a [[Main/en/Közutak építése/Hu#Az .C3.BAt.C3.A9p.C3.ADt.C5.91 eszk.C3.B6zt.C3.A1r|közútépítő eszköztárhoz]] hasonlóan működik, az ott leírtak megismétlését ezért itt mellőzzük).
+
+Az ikonok funkciói (balról jobbra):
+{| {{en/Wikitable}}
+|- style="background:#efefef"
+!width='46'|Ikon
+!width='150'|Művelet
+!Gyors-billentyű
+!Leírás
+|-
+|[[File:en/Build tram.png]]||'''Villamospálya építése''' gombok||1, 2||A kiválasztott irányban épít villamospályát egérkattintásra vagy egérhúzásra.
+|-
+|[[File:en/Autotram.png]]||'''Villamospálya építése egyszerűsített módon'''||3||Villamospálya-szakaszok létesítéséhez használható, nagyon hatékony eszköz. Ha lenyomva tartott Ctrl-gombbal kattintasz, könnyen el is távolítja a pálya egyes részeit.
+|-
+|[[File:en/Clear title.png]]||'''[[Main/hu/Tájrendezés|Építmények lerombolása egy mezőről]]'''||4||Megtisztítja a mezőket.
+|-
+|[[File:en/Build roaddepot.png]]||'''[[Main/hu/Járműtelepek|Remíz]] építése'''||5||A ''Remíz helyzete'' ablakot nyitja meg a remíz tájolásához és megépítéséhez.
+|-
+|[[File:en/Build busstation.png]]||'''[[Main/hu/Állomások|Villamos-utasváró]] építése'''||6||A ''Villamosmegálló helyzete'' ablakot nyitja meg a villamos-utasmegálló tájolásához és megépítéséhez.
+|-
+|[[File:en/Build truckstation.png]]||'''[[Main/hu/Állomások|Tehervillamos-állomás]] építése'''||7||A ''Villamosmegálló helyzete'' ablakot nyitja meg a tehervillamos-megálló tájolásához és megépítéséhez.
+|-
+|[[File:en/Build roadbridge.png]]||'''[[Main/hu/Hidak|Híd]] építése'''||B||Híd építését teszi lehetővé.
+|-
+|[[File:en/Build roadtunnel.png]]||'''[[Main/hu/Alagutak|Alagút]] építése'''||T||Alagút építését teszi lehetővé.
+|-
+|[[File:en/Toggle clear active.png]]||'''Váltás építés és felszedés között'''||R (CTRL)||Jelölj ki egy másik eszközt a felsoroltak közül, aztán kattints erre a gombra az eltávolításához, vagy nyomd le a Ctrl-t.
+|}
+
+
+Emellett a [[Main/hu/Építkezés lejtőkön|lejtőn történő építéssel]] kapcsolatban írottak itt is érvényesek.
+
+A pálya építésekor vedd figyelembe, hogy a villamoskocsik a [[Main/en/Beállítások/Hu#Közúti járművek|Beállítások]] menüben megadottak szerint hajtanak a pálya jobb vagy bal oldalán, visszaforduláshoz ''fordítóhurokra'' lehet szükségük. Fordítóhurkot a pálya nyitott végén, fél mezőnyi pálya építésével létesíthetsz (A térképen teljes mezőnyi pályaként jelenik meg, de a fordítóhurok valójában csak fél mezőt foglal el). [[File:hu/Ford%C3%ADt%C3%B3hurok.jpeg|frame|center|Fordítóhurok]]
+
+==Villamosok vásárlása==
+Aztán helyezz el egy remízt, és kattints rá. Válaszd az ''Új járművek'' gombot, és egy újabb ablak ugrik elő az elérhető járművek listájával. Válassz ki egy megfelelőt és kattints a Megvesz feliratra. A villamos megjelenik a remíz-ablakban, és a jármű ellenőrzőablaka is megnyílik. Állíts be neki utasításokat vagy - ha szükséges és lehetséges - alakítsd át, majd kattints a vörös ''Áll'' feliratra az elindításához.
+
+[[Category:hu/Közúti járművek]]
