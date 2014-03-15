@@ -1,0 +1,174 @@
+{{hu/Fordítás|Railway Designs|67}}[[Translation:Main/en/Railway Designs]]{{en/-}}{{hu/Tartalomjegyzék}}
+
+=Vasúthálózatod teherbírása=
+
+Ez az oldal a vasúthálózat terhelhetőségének tisztán elméleti kezelését célozza. Az elágazó- és hálózattervezés sokkal fontosabb. Ezek előrebocsátásával vizsgáljuk meg a vasúthálózat kapacitását befolyásoló tényezőket.
+
+==A jelzőtávolság és a követési távolság==
+
+Ez egy eléggé nyilvánvaló tényező. A túl nagy távolságra elhelyezett jelzők kisebb terhelhetőséget eredményeznek. 
+
+[[File:en/Pat Fig1.png|frame|left|1. ábra: A legkisebb követési távolság négyes jelzőtávolság esetén]]
+Könnyen belátható az is (lásd. 1. ábra), hogy ha a jelzőtávolság N mezőnyi, a legkisebb távolság két teljes sebességű vonat közt sosem lehet kevesebb, mint N+1. Átlós pályán az első jelzőtől minden 2N "félmezőnyit" vagy N "teljes mezőnyit" számítva a legkisebb követési távolság sosem lehet kisebb, mint 2N+1 "félmező", vagy N+0,5 "egész mező".  Amikor a vonatok ilyen közel kerülnek egymáshoz, akkor elérted a pálya elméleti maximális vonatsűrűségét. A gyakorlatban ezt a sűrűséget elérni lehetetlen.
+{{en/-}}
+[[File:en/Pat Fig2.png|frame|right|Figure 2: Hatástalan jelzőtávolság]]
+Az egyik fontos szempont az összhang. Egy pálya kapacitását az határozza meg, hogy melyik jelzőtávolság a legnagyobb. Így egy kétmezőnként jelzőzött pálya, amelyen van egy egyszeri rendhagyó három-vagy négymezős jelzőtávolság, jelentősen csökkent kapacitástól fog szenvedni és valószínűleg torlódást fog okozni (2. ábra). 
+{{en/-}}
+===Az átlós sín===
+[[File:en/Tiles.png|frame|right|A képen lent: 1-es jelzősűrűség átlós, majd egyenes pályán. A képen fent: maximális ("félmezős") jelzősűrűség ferde pályán]][[File:en/Pitagoras.png|frame|right|A Pitagorasz-tétel az OpenTTD-ben]]
+
+Az OpenTTD-ben a vonatok lassabban haladnak ferde pályán (hála SmatZ-nek), ez pedig megnövelt jelzősűrűséget igényel a torlódások elkerülése végett. Fontos, hogy a vonatok legkisebb követési távolsága (nem azonos a jelzőtávolsággal) egyenes és átlós pályán annyira azonosak, amennyire csak lehetséges. Egyébiránt a vonatok torlódhatnak, amikor egyenesről átlós szakaszra, vagy átlósról egyenesre térnek.
+
+Egy gyors kísérlet bemutatta, hogy amíg egy vonat egyenes sínen két mezőnyit halad, ugyanannyi idő alatt egy ugyanolyan sebességű vonat kb. 3 "félmezőnyit" fut átlós pályán. Így automatikus jelzőelhelyezés használata során valószínűleg meg kell növelned a jelzősűrűséget minden átlós pályádon.
+
+A következő példák arra a feltételezésre alapozva születtek, hogy a vonatok hossza is változik átlós pályán. De ez csak néhány NewGRF-re igaz! (Ha minden igaz, ez érvényes a JapanSet-re, de nem érvényes az alapértelmezett vonatokra). 
+
+* 3-as automatikus jelzősűrűséggel telepített jelzősornál a legkisebb vonattávolság 4. Ez átlós pálya esetén 6 "félmezőnyi" követési távolságot jelent, amit 5 "félmezőnyi" jelzőtávolsággal lehet elérni. 
+
+* Egy 2-esre állított automatikus jelzősor esetében a legkisebb vonattávolság 3. Átlós pályára átszámítva a legkisebb követési távolság 4,5 "félmezőnyi". Egy átlós 5 félmezőnyi vonattávolság négy "félmezőnként" elhelyezett jelzőkkel érhető el, vagy egy nagyjából 2-esre állított automatikus jelzősorral. Egy átlós négy "félmezőnyi" vonattávolság három "félmezőnként" elhelyezett jelzővel érhető el (vagy egy automatikus 3-as jelzősor kétszeres elhelyezésével). Bár ennek a jelzőtávolságnak  átlós pályán nincs pontos megfelelője, az egyenes és átlós pálya közti eltérés csak 1/3 mező, és ugyanaz az automatikus jelzőtávolság használható az egyenes és az átlós pályán.
+
+* Az 1-esre állított automatikus jelzőtelepítővel épített jelzősor 2-es követési távolságot eredményez. Ez átlós pályán 3 "félmezőnyi" követési távolságot jelent, ami 2 "félmezőnként" elhelyezett jelzőkkel, vagy 1-esre állított automatikus jelzősor-építéssel érhető el. Itt tehát az egyenes és az átlós automatikus jelzősor-használat azonos.
+{{en/-}}
+
+===Tehát mekkora jelzőtávolságot használjunk?===
+* '''Két mezőnyi jelzőtávolság:'''<BR>A 2-es jelzőtávolság 3-as követési távolságot eredményez, ez pedig optimális gyakorlati megoldás.
+
+*'''Egy mező:''' <BR>Az 1-es jelzőtávolság tele van problémákkal. Még egy egyszerű elágazás is jelzőhézagot okoz. Ferde pályák csatlakoztatása lehetséges lenne ugyan 1-es jelzőtávolság mellett, de ez jelentősen bonyolulttá tenné az építkezést.
+
+*'''Fél mező:''' <BR>A ferde pálya alkalmas dupla sűrűségű jelzőtelepítésre. Elméleti érdeklődése számot tarthat, vagy néhány milliméter levágásával járhat. A legnagyobb hiba természetesen az a félmezős jelzőtávolsággal, hogy a pálya minden egyenes részének nagyobb a jelzőtávolsága.
+
+Bármilyen jelzőtávolságot is válasszunk, legyünk következetesek. Egy nagy kihasználtságú pályán a 2-es jelzőtávolság gyakori torlódásokhoz vezethet. Talán ezért is kisebb a kapacitása, mint egy 3-as jelzősűrűségű pályának!<br style="clear:both;">
+
+==A vonat hossza==
+A vonathossz kétélű fegyver. A hosszú vonat hátránya, hogy a valós gyorsulást elnyújtja, bonyolult és kiterjedt építkezést von maga után. Ugyanakkor a nagyobb vonathossz megnöveli a vasúthálózat maximális rakományszállítási kapacitását. Meg kell jegyezni, hogy az első és hátsó résszel rendelkező mozdonyok esetében az elfoglalt további fél mező miatt a vonathossz is kedvezőtlenebb.  
+
+Nagysebességű hálózaton a tipikus három-öt mezőnyi érték normális. Bár a 4-es vonathosszt is többen kedvelik, mert 2-es jelzőtávolság esetén álló helyzetből rövidebb reakcióidővel gyorsulnak más vonatokhoz képest.
+
+==A terhelhetőség kifejezése számokban==
+===Vonatsűrűség (VS)===
+Hálózatod a vonatok meghatározott számát képes elbírni, és a vonatok azonos hosszát feltételezve meg tudunk néhány képletet határozni.
+Egy pálya '''vonatsűrűsége''' az ezer mezőre jutó vonatok számát fejezi ki, és úgy számítható ki, hogy a pályán közlekedő vonatok számát elosztjuk a pálya hosszával.
+
+A nem optimalizált hálózaton mért tipikus érték négymezőnyi hosszú vonatokra 25 '''VS''' (azaz: 25 vonat 1000 mezőn).
+
+A legmagasabb '''VS''' mérhető a torlódások elszaporodása előtt, úgy, hogy engedjük a vonatokat álló helyzetből felgyorsulni, 
+aztán megmérjük a vonatok közti távolságot, amikor minden vonat elérte a teljes sebességet, és a következő képletet használjuk:
+
+'''1000 / (VS + követési távolság)'''
+
+Ez a '''kritikus vonatsűrűség''' függ a mozdonyok számától és vonóerejétől, a vonat tömegétől, a csúcssebességtől, a jelzőtávolságtól és a vonat hosszától. Miután ez a kritikus vonatsűrűség információkat tartalmaz a gyorsulásról és a csúcssebesség eléréséről, a hálózatod maximális kapacitásáról is adatot tartalmaz. Például az alacsonyabb csúcssebességű vonatok használatával a hálózat könnyebben telítetté válik. Az átlagos követési távolság normál vasút esetében sokkal kisebb, mint egysínű vasút vagy MagLev esetén. A lassú nem jelent egyúttal jobbat is, viszont keveset mondunk, ha azt mondjuk, hogy a csökkentett vonalsűrűség ellensúlyozza a gyors haladást.
+
+Például úgy tapasztaltuk, hogy egy teljes teherrel közlekedő [[Main/hu/Lev4 'Kiméra'|Kiméra]] (vagyis a csúcs-[[Main/hu/Maglev vasút|maglev]]) vonat-vonat távolsága 12, a kritikus vonatsűrűség értékét 1000/16-tal, vagyis 62,5-del adta eredményül. Ezt a példát megismételtük [[Main/hu/T.I.M|T.I.M.]] mozdonnyal villamosított pályán, ami mindössze 6-os vonat-vonat távolságot eredményezett, és 100-as kritikus vonatsűrűséget.
+
+Lehet ugyan a kritikus sűrűség felett is hálózatot üzemeltetni, csak éppen meggondolatlanság.
+
+===Az elméleti maximális vonatsűrűség===
+Egyszerűen fogalmazva: ez a teljesen telített hálózat vonatsűrűsége, a vonatok közti legkisebb távolság esetén. Elérni sosem fogod, de beszéljünk róla. 
+
+Képlete: ''' 1000 / (VH + JT + 1) '''<br/>
+(VH= vonathossz, JT=jelzőtávolság)
+
+Például négy mezős hosszúságú vonatok és 2-es jelzőtávolság az elméleti legmagasabb vonatsűrűség 140-es értékét eredményezi.
+
+==Carrying Capacity (CC)==
+Miután tudjuk, hogy a vonathossz összefügg a vonal terhelhetőségével, a vonatsűrűséget nincs értelme különböző vonathosszokkal kifejezni.
+
+Az eltérő személyes preferenciák miatt a hatékonyság számokban való kifejezéséhez új képletre van szükségünk. Ez a képlet egyszerűen azt fejezi ki, hogy hálózatodon a rakomány hány egysége utazik naponta egy pályán. Ez egyenesen arányos lesz az egy mezőre jutó rakomány átlagával, és a rakomány mozgási sebességével.
+
+<pre>
+CC_day = TC / ( TL + TD ) * v_travel
+CC_day = TC / ( TL + TD ) * v_kmh * 74*2/16/256*1.00584
+CC_day = TC / ( TL + TD ) * v_mph * 74*2/16/256/1.6
+</pre>
+
+'''CC_day''' = terhelhetőség [rakományegység/nap] azt fejezi ki, mennyi rakomány halad át a pálya egy mezőjén egy nap. Ennyi rakomány rakható be a vonal elején, és rakható ki a vonal végén.
+
+'''TC''' = vonatkapacitás [rakományegységben]: mennyi rakományt tud egy vonat vinni.
+
+'''v_travel''' = sebesség [mező/nap], '''v_kmh''' = sebesség [km/h] illetve '''v_mph''' = sebesség [mérföld/óra] a vonat sebessége.
+
+'''TG''' = a vonatok követési távolsága [mező]. Az alacsony vonatsűrűségű pályákon a kritikus követési távolság értéke.
+
+'''TL''' = vonathossz [mező].
+
+A fenti példában a [[Main/hu/Lev4 'Kiméra'|Kiméra]] terhelhetősége:
+<pre>CC_day=47*6*402/16*0,0056=40 utas/nap 
+vagy 
+CC_day=27*6*402/16*0,0056=23 csomag értéktárgy</pre>
+
+A fenti példa [[Main/hu/T.I.M|T.I.M.]] mozdonnyal szerelt vonatának terhelhetősége
+<pre>CC_day=40*6*150/10*0,0056=20 utas/nap
+vagy 
+CC_day=20*6*150/10*0,0056=10 csomag értéktárgy/nap</pre>
+
+A szerzők ezen a részen dolgoznak még.
+
+=Hálózatod hatékonyabbá tétele=
+Most, hogy számokban is kifejeztük azt, amit korábban ösztönösen is megértettünk, hogyan használhatjuk tudásunkat a hálózatunk fejlesztésére? A hálózatoptimalizálás legfőbb aranyszabálya, hogy a vonatok a hálózatban soha ne lassítsanak le. Ennek pedig két lehetséges helye van: a pályaosztás, és a pályegyesítés.
+
+==Pálya kettéosztása==
+A pálya osztásakor győződj meg arról, hogy a normálisnál hosszabb jelzőtávolság nincs az osztópontnál. Ez körültekintő, vagy túlzó jelzőtelepítéssel kivitelezhető.
+
+==Pályaegyesítések==
+
+A pályaegyesítés sajátos problémával szembesít minket. Egy átlagos pályaegyesítésnél a fővonal forgalmát megállíthatja egy szárnyvonali vonat. Társaink már műhelymunkával dolgoznak ezen az [http://www.openttdcoop.org/wiki/Priority elsőbbség] témakörében. Ha a linket követed, megismerkedhetsz a pályaegyesítés elsőbbségi alapelveivel.
+
+Vegyünk például egy tipikus, nem csomóponti pályaegyesítést, egy berakó állomás kijáratánál. 
+
+Egy optimalizált, szoros rendben érkező vonatsor lép be az állomásra, de a berakási idő eltérései miatt ez a rend megborul az állomás végén, és lazább rendben távozó vonatokat kapsz eredményül a kilépésnél két pályán. Ezek közül az egyik vonal a fővonalra csatlakozik, amelyen az átlagos vonatkövetési távolság elég nagy ahhoz, hogy beférjen egy harmadik vonat is. A két vonal egyszerű összekapcsolása nem fog működni, elsőbbségi pályaegyesítés szükséges.
+
+Megjegyzendő, hogy miután a kirakodó vonatok mindig azonos időt töltenek a vágánynál, a vonatok szoros rendjének kialakítása lehetséges, akár a kritikus sűrűség felett is! (3. ábra)[[File:en/Diamond Stream.png|thumb|800px|none|3. ábra: Kirakodóállomás az ágak összegyűjtésével]]
+
+A first-pass merge using a priority block will reduce the traffic ratio from 1:1 to about 3:1 in favour of the main track (Figure 4). Adding a second priority merge straight after the first one would be a futile gesture, since trains on both lines would continue at the same speed and the mainline train would simply claim priority again. Introducing a delay by a loop of track, followed by a second priority merge, will reduce the sideline to a mere trickle of trains and will have filled in most of the available slots on the mainline. Existing solutions would involve a pre-acceleration track, however a cyclotron eliminates the need to lose momentum.
+[[File:en/Priority Merge.png|frame|none|4. ábra: Elsőbbségi pályaegyesítés]]
+
+===Cyclotrons===
+Consider a sideline that loops back on itself after a failed priority merge. A train in this loop would continue to re-test the mainline for entry conditions, once every 8 * '''TL'' tiles until it found a space large enough to merge with the main line. After the cyclotron was empty, the next waiting train could pre-accelerate and be injected into the cyclotron, ready to continue the cycle. This system has some flaws, however, as it has a capacity of one train and there will be many missed opportunities due to the train being in the wrong position in the accelerator. ''[Broken link to Simple Cyclotron removed.]'' Junctions are a large and well-trodden area of openttd; I have restricted myself to unbranched feeder structures. You will find that a highly-optimised stream of trains does NOT weather a junction well.
+
+Refinements to the cyclotron are possible. There is enough space on the track loop to contain two trains, and a system of priority signals will enable a second train to optionally enter the cyclotron. With two trains in the cyclotron, there will be a doubled chance of entering a slot on the mainline. In order to prevent a traffic jam inside the cyclotron (which would be disasterous), some delay tweaking is necessary, but the end result is exceedingly useful.
+
+The injection delay assumes that the second injected train is accelerating from standstill, and there is a small chance that second train has in fact chanced upon the cyclotron entrance at full speed. In this case, the timing will be wrong and the second train will almost certainly cause a jam within the cyclotron (and consequently on the main line). This can be compensated for by some additional signalling to filter out full-speed trains. The filtered out full-speed trains can either be diverted onto a second loop, or simply drained of momentum by a signal. 
+
+A cyclotron incorporating all the optimisations discussed, and some additional fixes, is shown in Figure 5.
+[[File:en/Cyclotron Full.png|thumb|800px|none|5. ábra: full-featured cyclotron]]
+
+'''''Editor's note:''''' Whilst I would like to defend my cyclotron refinements, experimentation has proven that pre-acceleration is a more robust system. The two have been combined in the savegame linked previously.
+{{en/Feature|0.7}}
+
+===Parallel cyclotrons===
+An attempt to minimize the drawbacks of the full featured cyclotron leads to parallel, small, 1-train cyclotrons. In this design, an array of cyclotrons, each handling one train, may be fed simultaneously. They may have different loop size in order to prevent synchronization between the cycling trains, giving more chance to find a slot in the flow of the main line. Each loop still needs it own acceleration lane so the trains enter the loop at full speed. If a train happened to enter the loop at low speed, it would get a chance to join the main line at non-max speed and cause a possibly large traffic jam.
+
+Figure 6 shows a parallel cyclotron with two loops.
+[[File:en/Parallel Cyclotron.png|thumb|800px|none|6. ábra: Parallel cyclotron]]
+
+A savegame with the example given in Figure 6 is available [http://gbizzotto.free.fr/parallel_cyclotron.sav Here] (one of the GRF files used in this savegame is not available for download at the moment) (version 0.7 or higher required to open).
+
+Advantages over the full featured cyclotron:
+* Can handle more than two trains
+* Faster fail-and-retry pace
+* No need to synchronize the looping trains
+* Easier to build and remember
+
+Drawbacks:
+* Bigger when using more than one loop
+
+===Trigger===
+A trigger allows to control when a train may leave the station. This increases the capacity of the track significantly. You can use the trigger to have several trains leave the station at a defined time gap. After they have accelerated, you can merge them to a single track. As the gap between them is always equal, the merge will always succeed.
+
+This set of screenshots shows the trigger itself. The main component is a circle track (A). It is divided into four segments using path based signals. A train travels the circle (B). Two waypoints are used to keep it moving. The length of the train is such that it almost covers three segments of the circle. Finally, each segment has an exit (C). To show the concept, a traffic light has been added to each track. When the train moves, each of the lights will shortly jump to green. 
+
+[[File:en/trigger-a.png|frame|none|A: Segmented circle track]] [[File:en/trigger-b.png|frame|none|B: Segmented circle track with train]] [[File:en/trigger-c.png|frame|none|C: Final trigger with collectors]]
+
+Now the trigger is connected to a high yield station. The station has 16 platform each 9 tiles in length. Four tracks leave the station. Later they are merged to two track:
+
+[[File:en/trigger-d.png|frame|none|Final trigger connected to station]]
+
+Notice how the monorail an the magnetic tracks are connected. Each track leaving the station is connected with one segment of the trigger. Right after this connection a normal signal is placed. This way the trigger is able to stop trains from exiting the station.
+
+Timing in this setup is crucial! Depending on the type and size of trains the exact size of the trigger must be changed. Steel trains are heavy. Hence the trigger must be slow. This is achieved by having very sharp turns in the trigger's circle tracks. As a result, the train travels at 131 kph. 
+
+At a similar station, there are also 16 platforms each with 9 tiles. But the trains transport goods which are much lighter than steel. Hence the trigger's time gaps can be shorter. This is achieved by having a circle track with less sharp turn. As a result, the train travels at 226 kph.
+
+[[File:en/trigger-e.png|frame|none|Faster trigger]]
+
+[[Category:hu/Vasút]]
