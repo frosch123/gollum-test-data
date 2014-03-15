@@ -1,0 +1,95 @@
+[[Translation:Main/en/Landscaping]]{{en/-}}{{hu/Oktatás}}{{hu/Tartalomjegyzék}}
+
+A '''tájrendezés''' (tereprendezés) a talaj alakítását célzó műveletek összefoglaló elnevezése, mely tartalmazza az - elsősorban a tájrendező eszközök használatával megvalósított - talajszint-emelést, -süllyesztést és -egyengetést.
+
+==A tájrendező eszköztár==
+Az eszköztár megjelenítéséhez kattints a '''Tájrendezés''' gombra a [[Main/en/Felhasználói felület/Hu#A menüsor|menüsoron]]. 
+[[File:hu/Landscaping toolbar.png|none|frame]]
+
+==A tájrendező eszköztár ikonjai==
+Az ikonok önmagukért beszélnek. Balról jobbra:<br>
+{| {{en/Wikitable}}
+|- style="background:#efefef"
+!width='46'|Ikon
+!width='150'|Művelet
+!Gyorsbillentyű
+!Leírás
+|-
+|[[File:en/Lower land.png]]
+|'''Talajsüllyesztés'''
+|Q
+| rowspan=3| Bővebb kifejtését ld. alább
+|-
+|[[File:en/Raise land.png]]
+|'''Talajemelés'''
+|W
+|-
+|[[File:en/Level land.png]]
+|'''Talajegyengetés/Hu|Talaj egy szintre hozása'''
+|E
+|-
+|[[File:en/Clear title.png]]
+|'''Terület megtisztítása'''
+|D
+|Építmények lerombolása egy mezőről
+|-
+|[[File:en/Buy land.png]]
+|'''[[Main/hu/Földterület megvétele|Földterület megvétele]]'''
+|U
+|Későbbi hasznosítás céljából, vagy város terjeszkedésének befolyásolására, vagy rivális terjeszkedésének megakadályozására.
+|-
+|[[File:en/Plant trees.png]]
+|'''Faültetés'''
+|I
+|
+|-
+|[[File:en/Place sign.png]]
+|'''[[Main/hu/Felirat|Felirat]] lerakása'''
+|O
+|
+|}
+
+==A talajszint emelése==
+*Jelöld ki a tájrendező eszköztáron a ''Talajszint emelése'' [[File:en/Raise land.png]] ikont, és kattints egy mező sarkára.
+Ügyelj arra, hogy ha '''hegytetőn, hegyoldalban''' emeled a talajszintet, a hegy alja is emelkedni fog. Nem csak a költség lehet bosszantó, de a terep változásának mértéke is. Tartózkodj attól, hogy a '''tengerben''' földet emelj, mert az rendkívül drága, kezdő vállalkozásokat csődbe is vihet.
+
+A földterület szintjét '''egérhúzással''' is megemelheted. Ilyenkor elsőként a kijelölés kezdő mezőjének megemelésére kerül sor, a terület többi része ehhez igazodva emelkedik, lényegében tehát a területemelő és a szintkiegyenlítő eszköz kombinációja.
+
+===Területrendezés 45°-os szögben===
+*A ''Ctrl'' lenyomását és folyamatos nyomva tartását követő egérhúzás 45°-os szögben, '''átlósan''' emeli a területet.
+*Az egérrel kijelölt terület 45°-os szögben elforgatható, ha megnyomod és nyomva tartod a ''Ctrl''-t.
+
+==A talajszint süllyesztése==
+* Válaszd a ''Talajszint süllyesztése'' [[File:en/Lower land.png]] ikont, és kattints egy mező sarkára.
+A föld a tengerszintig süllyeszthető. Tartsd szem előtt, hogy a tengerszint magasságában fekvő területek csuszamlásra hajlamosak, és azokat a víz elmoshatja. 
+
+Földterületet egérkattintás-húzással is süllyeszthetsz. Ilyenkor elsőként a kijelölés kezdő mezőjének süllyesztésére kerül sor, a terület többi része ehhez igazodik, lényegében tehát a területsüllyesztő és a szintkiegyenlítő eszköz kombinációja.
+
+Mint a talajszint emelése során, itt is alkalmazhatod a 45°-os szögben történő területrendezést.
+
+==Talajszint-egyengetés==
+Használd a ''Talaj egy szintre hozása a kijelölt saroknál fogva'' [[File:en/Level land.png]] ikont.
+
+*Kattints az egérrel és tartsd lenyomva azon a ponton, ahol kezdeni szeretnéd: az egyengetett terület magasága egyező lesz a kezdő mező magasságával.
+
+*Húzd az egeret azon a területen, amit el akarsz egyengetni.
+[[File:en/Level land before.png|center|none|frame|Kijelölés esetén ezt láthatjuk...]]
+
+*Ha döntöttél a területről, engedd el az egérgombot, és a terület azonos szintre kerül. 
+[[File:en/Level land after.png|center|none|frame|Egyengetés után]]
+
+*A kijelölés 45°-os elforgatását a területek azonos szintre hozása során is használhatod.
+
+*Érdemes tudni, hogy a talajszint-egyengető eszköz annyi talajt süllyeszt és emel a kijelölt területen, amennyit csak lehet. Az a mező, amelynek szintje egyedi süllyesztéssel vagy emeléssel nem változtatható, a talajszint-egyengető eszköz hatására sem fog módosulni. Az egyengetett területen az infrastruktúra, az épületek és az akadályok (pl. ipari létesítmények, városi stadionok, rádiótorony) a helyükön maradnak.
+
+==Autoslope==
+[[File:en/Autoslope.png|right|frame|Az ''Autoslope'' javasolt beállítása.]]
+A ''Haladó beállítások'' [[Main/hu/Építkezés|Építkezés]] csoportjában beállítható '''Épületek, vágányok stb. alatti tereprendezés engedélyezése''' funkció folytán a tereprendezés korlátai sokkal kevésbé súlyosak, és lehetővé teszi a tereprendezést olyan objektumok alatt, melyeket egyébként el kellene távolítanod. Amennyire szükséges, automatikusan hozzáadja/eltávolítja a támfalat is.
+
+{|
+|[[File:en/terraformoff.png|none|thumb|400px|Autoslope nélkül]]
+|[[File:en/terraformon.png|none|thumb|400px|Autoslope-pal.]]
+|}
+
+{{en/Feature|0.6}}
+[[Category:hu/Építés]]
