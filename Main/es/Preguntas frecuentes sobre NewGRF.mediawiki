@@ -1,0 +1,54 @@
+[[Translation:Main/en/NewGRF FAQ]]{{en/-}}{{es/FAQmenu}}
+{{es/Disponibilidad|texto=(desde 0.4)|0.4}}
+Las respuestas a '''las preguntas y problemas más frecuentes con NewGRF''' (gráficos de reemplazo para OpenTTD). Para obtener más información sobre NewGRF, incluidas las opciones avanzadas, consulte [[Main/es/NewGRF|NewGRF]].
+
+===¿Cómo puedo obtener gráficos diferentes para OpenTTD? (Instalación)===
+Vea la sección sobre cómo jugar con [[Main/es/NewGRF|NewGRF]].
+
+===¿Dónde puedo encontrar archivos .GRF para descargar?===
+Se puede descargar una gran selección de gráficos NewGRF directamente desde OpenTTD, desde el botón de ''[[Main/es/Contenido online|Consultar Contenido Online]]'' del menú principal. En caso de que tenga problemas con la función de descargas del juego, también puede descargarlos manualmente desde el [http://bananas.openttd.org/ sitio web de BaNaNaS].
+
+Sin embargo una gran cantidad de gráficos NewGRF (sobre todo los más antiguos) no están disponibles a través de las descargas Online o el sitio web de BaNaNaS. A continuación tiene una lista de direcciones alternativas donde puede encontrar más NewGRF:
+* [http://grfcrawler.tt-forums.net/ GRFCrawler (en)]
+* [http://www.tt-forums.net/viewforum.php?f=67 TT-Forums.net Foro sobre lanzamientos de gráficos (en)]
+* [[Main/es/Lista NewGRF|Archivos GRF compatibles con OpenTTD]]
+* [http://www.ttdpatch.net/newgrf.html Sitio web de TTD Patch (en)]
+* [[Main/en/Enlaces/Es#Enlaces sobre gráficos|Enlaces sobre gráficos]]
+
+===¿Por qué no están disponibles todos los archivos NewGRF en las descargas Online?===
+Solamente se permite agregar gráficos al contenido en línea a los propios autores de los gráficos. Muchos NewGRF se desarrollaron antes de principios de 2009 y no se han podido incorporar porque sus autores perdieron interés en OpenTTD y no mantienen el contacto (sin la autorización expresa del autor no se puede incorporar ningún contenido). Si usted encuentra un gráfico NewGRF que no esté disponible vía Online, lo mejor que puede hacer para conseguir añadirlo es intentar contactar con alguno de sus autores y pedirle que lo añada.
+
+===He cargado archivos GRF y una partida guardada pero no se han aplicado los cambios, ¿por qué?===
+La [[Main/es/NewGRF|Configuración NewGRF]] ajustada desde el menú principal sólo se aplica a los nuevos juegos (creados aleatóriamente). Los gráficos NewGRF usados se almacenan junto a las partidas y los escenarios guardados. Es una mala idea (en general) cambiar los gráficos NewGRF en una partida o un escenario guardados, por lo tanto, la posibilidad de poderlo hacer ha sido desactivada desde la versión 1.1 de OpenTTD. Tiene más información sobre esta cuestión en el siguiente punto.
+
+===No puedo cambiar los gráficos NewGRF en mi partida, ¿por qué?===
+[[File:es/Newgrf warning.png|frame|right|Advertencia que aparece al cambiar la configuración NewGRF en un juego en funcionamiento.]]
+En la version 1.1, la opción de cambiar los gráficos NewGRF en medio de una partida se ha desactivado. Desde que se incorporaron los gráficos NewGRF a OpenTTD, cambiarlos en los juegos y escenarios salvados existentes producía fallos esenciales. Finalmente se ha fijado impedir el cambio de NewGRF en las partidas salvadas (los escenarios son técnicamente partidas salvadas también, así que esta limitación también se aplica en el editor de escenarios). Si quiere puede consultar los motivos por los que es una mala idea realizar ese cambio en este [http://www.tt-forums.net/viewtopic.php?f=29&t=53881 post de los foros].
+
+La razón de este cambio es que mucha gente ignoraba la advertencia de la ventana de error de color rojo, y luego se quejaba de fallos o problemas con los vehículos, industrias, etc. después de haber modificado la configuración NewGRF en una partida guardada.
+
+Para los desarrolladores gráficos existe una opción de configuración para activar las herramientas de desarrollo newgrf, que permite cambiar los archivos GRF durante el juego (para depuración y pruebas). Esta opción (scenario_developer) sólo está disponible en el archivo [[Main/es/Openttd.cfg|openttd.cfg]] o a través de la [[Main/es/Consola|consola]]. Si decide cambiar esta configuración, por favor, tómese tiempo para leer el mensaje de advertencia que aparece. Sepa también que si se produce un error en el escenario o en la partida guardada, la única solución sería volver a empezar desde cero.
+
+===He cargado un vehículo NewGRF en una partida guardada pero no aparecen los nuevos gráficos, ¿por qué?===
+Parece que a usted no le preocupan los grandes (bueno, quizás no tan grandes) mensajes de advertencia de color rojo, ¿verdad?
+De todas formas, sin extrañarse de que empiecen a pasarle cosas raras, aún puede intentar conseguir que funcione haciendo lo siguiente:
+#  Abra la consola pulsando la tecla situada a la izquierda del '1' del [http://www.wikipedia.org/wiki/es:Distribución del teclado teclado] alfanumérico ('\' en España, '¬' en Hispanoamérica).
+# Escriba “resetengines" seguido de Intro.
+
+Tenga en cuenta que, incluso después de escribir "resetengines, sus vehículos ya existentes seguirán siendo del tipo antiguo. Sin embargo, ahora deberá ser capaz de construir los nuevos tipos de vehículos en sus depósitos.
+
+===He descargado un archivo GRF que da error o provoca que OpenTTD deje de funcionar, ¿por qué?===
+El soporte para archivos NewGRF ha mejorado notablemente en los últimos años de modo que hoy en día casi no hay NewGRF que no funcionan con OpenTTD.
+
+En caso de encontrar un NewGRF que no funciona con OpenTTD, primero debe asegurarse de que está utilizando la [http://www.openttd.org/en/download-stable última versión estable] (o a su elección, la [http://www.openttd.org/en/download-trunk última versión de prueba] o nightly)
+
+En caso de que el NewGRF de su elección todavía no funciona, es muy probable que encuentre más información sobre el tema en los [http://www.tt-forums.net/viewforum.php?f=66 foros sobre gráficos]
+
+Desafortunadamente, no hay manera de saber de antemano qué archivos .grf funcionan con OpenTTD y cuáles no. La única manera de saberlo es instalarlos y comenzar a jugar.
+
+* [[Main/es/Lista NewGRF|Lista de archivos GRF conocidos que son compatibles]]
+
+{{es/Navbox NewGRF}}
+
+[[Category:es/NewGRF]]
+[[Category:es/Preguntas frecuentes]]
