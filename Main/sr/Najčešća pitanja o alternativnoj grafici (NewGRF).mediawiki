@@ -1,0 +1,64 @@
+[[Translation:Main/en/NewGRF FAQ]]{{en/-}}
+{{sr/Najčešća pitanja meni}}
+{{en/Feature|0.4}}
+
+Odgovori na najčešća pitanja i problemi sa zamenom grafike u OpenTTD. Za više informacija o alternativnoj grafici, uključujuću i napredne opcije, pročitajte [[Main/en/Alternativna grafika (NewGRF)]].
+
+===Kako da namestim drukčiju grafiku u OpenTTD? (instalacija)===
+Pročitajte članak [[Main/en/Alternativna grafika (NewGRF)|alternativa grafika]].
+
+===Gde mogu da nađem .GRF fajlove za preuzimanje?===
+
+Možete preuzeti veliki broj NewGRFs direktno iz OpenTTD, preko [[Main/sr/Onlajn sadržaj|Onlajn sadržaja]] ikone u glavnom meniju. Ovi NewGRFs se još mogu preuzeti ručno sa adrese [http://bananas.openttd.org/ BaNaNaS website] u slučaju da imate problema sa preuzimanjem sadržaja preko opcije unutar igre.
+
+Dosta, uglavnom starijih, NewGRFs nije vdostupno preko [[Main/sr/Onlajn sadržaj|Onlajn sadržaja]] ili BaNaNaS sajta. Ispod se nalazi spisak alternativnih izbora NewGRFs.
+
+* [http://grfcrawler.tt-forums.net/ GRFCrawler]
+* [http://www.tt-forums.net/viewforum.php?f=67 TT-Forums.net Graphic Releases forum]
+* [[Main/sr/Spisak GRF|Nesveobuhvatan spisak NewGRF fajlova]]
+* [[Main/en/Linkovi#Grafički linkovi]]
+
+===Zašto nisu svi NewGRFs dostupni preko Onlajn sadržaja?===
+
+Samo tvorcima NewGRFs je omogućeno da ih dodaju u [[Main/sr/Onlajn sadržaj|Onlajn sadržaj]]. Mnogi NewGRFs razvijeni pre 2009. godine se više ne održavaju, jer njihovi autori nisu više zainteresovani za OpenTTD. Jednostavno, za te NewGRFs nema nikoga ko je ovlašćen da doda NewGRF u Onlajn sadržaj.
+
+Ako naiđete na NewGRF koji nije dostupan preo Onlajn sadržaja, najbolje bi bilo da pokušate da kontaktirate (jednog od) autora(e) i pitate da doda NewGRF.
+
+===Učitao sam grf fajlove u OpenTTD i učitao sam snimljenu igru, ali ništa se nije promenilo. Zašto?===
+
+[[Main/sr/NewGRF podešavanja|NewGRF podešavanja]] koja podesite iz Glavnog menija odnose se samo na nove (rendom) partije. NewGRFs korišten u snimljenim partijama i scenarijima sačuvan je u tim fajlovima. Generalno, loša je ideja menjati NewGRFs u snimljenoj igri ili scenariju, tako da je takva opcija onemogućena počev od verzije 1.1. Možete naći više informacija o ovome u sledećem pasusu.
+
+===Zašto ne mogu da promenim NewGRFs u tekućoj partiji?===
+[[File:en/Newgrf warning.png|frame|right|Upozorenje kada menjate NewGRF podešavanja u tekućoj igri.]]
+
+Počev od verzije 1.1, promena NewGRFs u igri je onemogućena. Od kako su se NewGRFs pojavili u OpenTTD, njihovo menjanje u postojećoj snimljenoj igri ili scenariju, pravilo je probleme. Ovo je konačno popravljeno onemogućavanjem promene NewGRFs u postojećoj snimljenoj igri (scenariji su tehnički takođe snimljene igre, tako da se ograničenje odnosi na scenarije u editoru scenarija). Pročitajte [http://www.tt-forums.net/viewtopic.php?f=29&t=53881 ovu temu na tt-forumu] ako vas zanima zašto je promena NewGRFs u postojećoj snimljenoj igri ili scenariju, loša ideja.
+
+Razlog za ovu promenu bio je taj, što je veliki broj ljudi ignorisao upozorenje u crvenom prozoru o grešci i potom se žalio na  pucanje igre ili na probleme sa vozilima, industrijama, itd., posle izmena NewGRF podešavanja u snimljenoj igri.
+
+Za autore scenarija, postoji konfiguracijska opcija koja omogućava u alatkama za stvaranje scenarija, da se dozvoli promena grfs u igri (za otklanjanje grešaka i testiranje). Ova opcija (u programeru scenarija) je dostupna u [[Main/sr/openttd.cfg|openttd.cfg]] ili u [[Main/sr/konzola|konzoli]]. Ako odlučite da promenite ovo podešavanje, molimo Vas da zaista pročitate upozorenje kada se pojavi. Imajte na umu da ako dođe do greške na scenariju ili u snimljenoj igri, jedino rešenje je novi početak.
+
+===Učitao sam NewGRF vozila u moju snimljenu igru, ali promene se ne dešavaju. Zašto?===
+
+Niste obraćali pažnju na crveni prozor za upozorenjem, zar ne?! Nema razloga da se nervirate, ako čudne stvari počnu da se dešavaju i najmanje što možete da probate je sledeće:
+
+# Otvorite OpenTTD konzolu pritiskom na taster ` (taster koji se na većini tastatura nalazi levo od "1").
+# Ukucajte “resetengines" i pritisnite Enter.
+
+Imajte na umu da čak i posle ukucavanja “resetengines", vaša postojeća vozila će biti starog tipa. Međutim, sad bi trealo da možete da napravite nove tipove vozila u vašem depou.  
+
+=== .grf fajl koji sam preuzeo pravi greške ili onemogućava pokretanje OpenTTD. Zašto?===
+
+Podrška za NewGRF se značajno povećala u poslenjih nekoliko godina. Danas, teško da postoji neki NewGRFs koji ne radi sa OpenTTD. U slučaju da naletite na takav slučaj, prvo proverite da li koristite you should first make sure that you are actually using the [http://www.openttd.org/en/download-stable poslednje stabilno izdanje] (ili [http://www.openttd.org/en/download-trunk poslednju radnu verziju]).
+
+U slučaju da NewGRF i dalje ne radi, Više informacija potražite na temi o NewGRF's na [http://www.tt-forums.net/viewforum.php?f=66 TT-Forumu]
+
+Na žalost, ne postoji način da unapred znate koji će .grf fajl raditi sa OpenTTD, a koji neće. Jedini način je da instalirate .grf i da počnete igrati.
+
+* [[Main/sr/Spisak GRF|Spisak poznatih OpenTTD-kompatibilnih GRF fajlova]]
+
+
+
+{{en/Navbox NewGRF}}
+
+[[Category:sr/Alternativna grafika (NewGRF)]]
+[[Category:sr/Najčešća pitanja]]
