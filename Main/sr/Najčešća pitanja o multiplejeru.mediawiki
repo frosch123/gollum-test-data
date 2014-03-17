@@ -1,0 +1,81 @@
+[[Translation:Main/en/FAQ multiplayer]]{{en/-}}
+{{sr/Najčešća pitanja meni}}
+
+'''Pitanja vazana za multiplejer aspekt OpenTTD''', kao što su spajanje sa serverom, kreiranje servera, igranje...  
+
+__FORCETOC__
+
+
+=====Koliko igrača može igrati OpenTTD u multiplejeru?=====
+:* Do 255 igrača može učestvovati u multiplejeru. Međutim, u jenoj igri može biti osnovano samo 15 kompanija. Svaki igrač može da igra sa sopstvenom kompanijom, da se pridruži tuđoj kompaniji ([[Main/sr/kooperativni multiplejer|kooperativni multiplejer]]) ili da gleda partiju ([[Main/sr/Posmatrački mod|posmatrački mod]]).
+
+=====Kako da pokrenem multiplejer?=====
+:* Možete da ga pokrenete ili preko [[Main/sr/multiplejer prozor|multiplejer prozora]] ili koristeći sledeću sintaksu u komandnoj liniji:
+<pre>openttd -n IP[:port][#CompanyID]</pre>
+Primer:
+<pre>openttd -n 192.168.0.1:3979#1</pre> će Vas povezati na adresu 192.168.0.1 na portu 3979 i pridružiti kompaniji broj 1.
+
+=====Da li multiplejer radi na različitim platformama?=====
+:* Da. Možete, na primer, pokrenuti server na MekOS kome se mogu pridružiti igrači koji koriste Vindovs, Linuks ili neki drugi sistem.
+
+=====Koji port koristi OpenTTD?=====
+:* Podrazumevani port jet 3979, ali možete da promeniti na bilo koji kada pokrenete server. Ako koristite sopstveni server iza rutera, potrebno je da forvardujete TCP i UDP na tom portu. 
+:* Komunikacija master-server ide putem porta 3979 preko UDP (dolazno + odlazno) i 3978 preko UDP (odlazno)
+:* Ako se priključujete serveru ne treba da forvardujete portove, jer je veza samo odlazna.
+
+=====Da li mogu da koristim namenski server da bi organizovao multiplejer igru?=====
+:* Moguće je pokrenuti namenski server koristeći '-D' prekidač. Pročitajte [[Main/sr/Namenski server|namenski server]] za više detalja.
+
+=====Koliki je protok potreban za igranje?=====
+:* Približna stopa je 1.2 kbit/sek aplouda i 1.2 kbit/sek daunloda po klijentu. Množeći tako dobijene cifre, server sa deset igrača koristio bi približno 12 kbit/sek aplouda i 12 kbit/sek daunloda (tačne cifre zavise od retransmisije itd.). Polazeći od navedenog, server koji bi radio non-stop, sa desetoricom igrača, potrošio bi 60 GB protoka mesečno (30 GB za daunload i 30 GB za apload) ako je svih 10 igrača u igri čitav mesec. Za jednog igrača, za sat igranja, biće potrebno oko 8 MB protoka, uz dodatak protoka za neophodna preuzimanja.
+
+=====Igra često izbacuje ljude sa servera, kako da rešim to?=====
+Kada se novi igrač poveže, treba da preuzme čitavu mapu. Ako je opcija ''pause_on_join'' isključena, partija neće biti pauzirana. Kada se preuzimanje završi, novi igra treba da sustigne propušteno dok je preuzimanje trajalo.
+Logično, novi igrač treba da ima dovoljno brzu vezi i računar, inače će čitav proces potrajati. 
+
+Da bi imali kontrolu nad trajanjem čitavog procesa, podesite sledeće promenjive: 
+{| class="wikitable" style="text-align:left"
+|+Timing variables for network-play
+|-
+! Variable !! Values !! Meaning
+|-
+| max_join_time || 0-65535 || Maksimalno vreme, u otkucajima, koje klijent ima na raspolaganju da se priključi.
+|-
+| pause_on_join || true/false || Pauzira igru dok se novi igrači ne priključe.
+|-
+| max_download_time || 0-65535 || Maksimalno vreme, u otkucajima, koje klijent ima na raspolaganju da preuzme mapu.
+|-
+| max_lag_time || 0-65535 || Maksimalno vreme, u otkucajima, u kome klijent može da laguje za serverom.
+|}
+Napomena: Sve vrednosti su u okucajima u smislu same igre, odnosno 1/74 dana u igri (1/30 sekunde).
+
+Povećavajte ove vrednosti sve dok vaši saigrači ne budu mogli da se normalno priključe. Ako stavite prevelike vrednosti, postoji opasnost da će saigračima trebati predugo da se povežu ili da će raipati protok. 
+
+Za velike mape preporučuje se uključivanje opcije ''pause_on_join'', jer se njom eliminiše potreba za sustizanjem posle preuzimanjem mape.
+
+=====Imam problem sa varanjem. Pomoć!=====
+:* Postoji vodič kako da se zaštitie od najgorih oblika [[Main/en/varanje u multiplejeru|varanja u multiplejeru]]. Takođe, pročitajte i  [[Main/en/Pravila multiplejera]].
+
+=====Postoje li neka pravila?=====
+:* Da, postoje. Možete ih pročitati na [[Main/en/Pravila multiplejera]]. Međutim, servere ne vode članovi OpenTTD Tima i samim tim, nemaju kontrole nad njima. Ako imate problema, kontaktirajte osobu koja vodi server.
+
+=====Da li se komande iz konzole mogu izvršiti automatski?=====
+:* Da, ovo je moguće i poprilično je zgodno. Na stranici [[Main/en/Korištenje startap skripti]] možete naći više detalja.
+
+=====Pokrenuo sam novi server, međutim on se ne pojavljuje na listama igara kod prijatelja, čak i kada ručno unesemo server na listu. Zašto se ovo dešava?=====
+:* Postoji problem kod pokretanja servera sa računara koji je povezan na internet preko rutera i on se rešava forvardovanjem porta 3979, i UDP i TCP.
+
+=====Šta je to desink greška?=====
+:* Pročitajte [[Main/en/Multipljer#Desink greška|Desink greška]].
+
+=====Moj NewGRFs se ne pojavljuje na serveru=====
+Najoblje je da koristite normalno stonu verziju igre da bi napravili konfiguracijski fajl, a onda kopirajte taj fajl sa NewGRFs na vaš server.
+
+Obratite pažnju na sledeće:
+
+:* Ne kopirajte konfiguracijski fajl ako je server pokrenut (Prema podrazumevanim vrednostima OpenTTD piše konfiguracijski fajl prilikom zatvaranja, preko upravo kopiranog fajla).
+:* Ispravite putanju NewGRFs, \ ne služi za odvajanje direktorijuma na Unix sistemu.
+
+[[Category:sr/Najčešća pitanja]]
+[[Category:sr/Igranje]]
+[[Category:sr/Multiplejer]]
