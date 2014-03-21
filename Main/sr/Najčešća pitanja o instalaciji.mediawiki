@@ -1,0 +1,72 @@
+[[Translation:Main/en/Installation FAQ]]{{en/-}}{{sr/Najčešća pitanja meni}}
+
+Ova oblast pokriva najčešća pitanja vezana za instalaciju OpenTTD-a.
+
+== Šta je potrebno za pokretanje OpenTTD? ==
+Prevashodno je neophodno da koristite bilo koji od [[Main/en/Operating system|podržanih operativnih sistema]]. Zatim proverite da li ispunjavate [[Main/en/Sistemski zahtevi|sistemske zahteve]].
+
+== Kako da instaliram OpenTTD? ==
+=== Na Vindovsu: ===
+:*Jednostavno, u par koraka:
+:#Preuzmite vindovs instalaciju OpenTTD sa sledeće lokacije [http://www.openttd.org/download-stable downloads page] ili preuzmite zipovanu datoteku sa iste lokacije.
+:#Dvoklik!
+:#Izaberite podrazumevana podešavanja i izaberite instalaciju osnovnog paketa fajlova...
+:#Pokrenite OpenTTD.
+:#Uživajte u početnom ekranu.
+
+:Naravno možete i preuzeti [[Main/en/FAQ development#Source code|izvorni kod]],što je ujedno najkraći i najbrži put. ''(ali ako izaberete duži put... zar nećete povećati prihode od prevoza?.. ili je bolje sačekati monorail...)''
+
+=== Na Linuksu: ===
+* Kao i većina stvari na Linuksu, postoje više načina da pokrenete OpenTTD:
+:* Morate naći OpenTTD u sistemskom paketu vaše Linuks distribucije, npr. Aptitude, Yum, Portage i YaST. Za dodatnu pomoć oko korišćenja distribucije proverite uputstvo uz vašu Linuks distribuciju ili posetite odgovarajući vebsajt. Ovo je najprostije jer ćete na taj način istovremeno instalirati i osnovni paket fajlova.
+:* Pakovanja za neke Linuks distribucije možete naći na sledećoj adresi [http://www.openttd.org/download-stable project page], poput .deb i .rpm fajlova.
+:**Kopije osnovog paketa fajlova poput OpenGFX smestite u folder ~/.openttd/data (koga ćete napraviti, ako ne postoji).
+:* Možete preuzeti izvorne fajlove i samostalno kompajlirati igru! Za više informacija pogledajte: [[Main/en/Compiling on (GNU/)Linux and *BSD|Kompajliranje na Linuksu]].
+:**Kopije osnovog paketa fajlova, poput OpenGFX, smestite u folder ~/.openttd/data (koga ćete napraviti, ako ne postoji).
+
+* Instalacija korak po korak na Ubuntu 8.04 i novijim verzijama:
+:* Idite na 'Ubuntu Software Centre'.
+:* Potražite 'openttd'
+:*Instalirajte Openttd kada ga nađete
+:* Možete preuzeti i instalirati zvuk i grafiku same igre
+:** Igra će biti sačuvana u "/usr/share/games/openttd/data"
+:** Sačuvane igre, snimljeni ekrani itd. će biti sačuvani u "/home/{username}/.openttd". (Ovaj direktorijum je možda skriven. Da bi ga videli kliknite 'View' u File Browser u Vašem osnovnom direktorijumu i štiklirajte 'show hidden files').
+
+=== Na Mek OS X: ===
+:*Jednostavno, u par koraka:
+:#''Nabavite'' kopiju [http://www.openttd.org/download-opengfx OpenGFX]
+:#Raspakujte OpenGFX u ~/Documents/OpenTTD/data (napravite direktorijum, ako ne postoji)
+:#Preuzmite OSX OpenTTD paket sa sledeće lokacije [http://www.openttd.org/download-stable downloads page].
+:#Učitajte preuzeti image i kopirajte OpenTTD u folder koji izaberete, npr. /Applications/OpenTTD/ (preporučuje se da folder bude prazan jer će ih instalacija dodati još).
+:#[opciono] Napravite "gm" folderi kopirajte .gm fajlove u njega zbog uživanja u izvornoj midi muzici.'''[*2]'''
+:#Pokrenite OpenTTD!
+:#[opciono]Moćete instalirati zvuk i muziku preko preuzimanja dodatnog sadržaja u samoj igri
+
+=== Na ostalim sistemima: ===
+:*Kod sistema zasnovanih na uniksu postoji velika verovatnoća da ćete moći igrati OpenTTD. OpenTTD podržava različite sisteme i arhitekture koje su spomenute ovde.
+:#Proverite [[Main/en/Operating system|spisak operativnih sistema]] da saznate da li postoji više informacija o vašem operativnom sistemu.
+:#Proverite da li je [http://libsdl.org SDL library] dostupan za vašu platformu i instaliran na vašem sistemu.
+:#Preuzmite izvorni kod OpenTTD i pokušajte da samostalno kompajlirate igru.
+:#Unesite Vaš pokušaj u [[Main/en/Operating system|spisak operativnih sistema]], bez obzira da li ste bili uspešni.
+
+== Da li mogu koristiti originalne TTD fajlove? ==
+
+Ukratko: TTD fajlovi nisu neophodni, besplatna osnovna grafika, zvuk i muzika postoje. No svakako ništa Vas ne sprečava da koristite osnovne fajlove iz TTD:
+
+:*Ako prilikom instalacije ne koristite OpenTTD instaler , (ili ste znatiželjni) potrebno je da ručno kopirate određene fajlove.
+:Neophodne fajlove; smestite u <i>data/</i> folder:
+::* Grafika: <b>trg1r.grf</b>, <b>trgcr.grf</b>, <b>trghr.grf</b>, <b>trgir.grf</b>, <b>trgtr.grf</b>
+:::*Ako koristite DOS verziju TTD, trebaće Vam gore navedeni fajlovi, koji se u tom slučaju ne završavaju na "R", npr. trg1.grf etc.
+::* Zvuk: <b>sample.cat</b>
+:Ako želite i muziku, ''(nužno potrebne MIDI melodije)'' kopirajte sledeće fajlove u <i>gm/</i> folder:
+::* Muzika: <b>*.gm</b>
+::Ako gm folder ne postoji, napravite ga u glavnom openttd folderu i smestite fajlove tu. Imajte na umu da DOS verzija TTD nema  <b>*.gm</b> fajlove.
+
+Na računarima sa *nix operativnim sistemima, biće Vam potrebno odobrenje da vidite gore navedene fajlove kao običan korisnik, u suprotnom jedino ćete moći da pokrenete OpenTTD kao root.
+
+== Šta je sa Radnim verzijama? ==
+Radne verzije se mogu igrati nevezano za stabilne verzije. Preuzmite poslednju radnu verziju, raspakujte ju u novi folder bez instaliranja, a zatim samo pokrenite binary.
+
+Da bi uvek igrali poslednju radnu verziju možete ju [[Main/en/OpenTTD Updaters|ažurirati]] kada pokrenete OpenTTD.
+
+[[Category:sr/Instalacija]]
