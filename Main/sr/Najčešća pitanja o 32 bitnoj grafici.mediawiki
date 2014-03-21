@@ -1,0 +1,35 @@
+[[Translation:Main/en/FAQ 32 bit graphics]]{{en/-}}{{sr/Najčešća pitanja meni}}
+{{en/Feature|1.2}}
+
+Odgovori na najčešća pitanja vezana za 32 bitnu grafiku u OpenTTD.
+
+===Instalirao sa verziju 1.2.x, zašto 32 bitna grafika više ne funkcioniše?===
+
+Metod prikaza 32 bitne grafike u samoj igri promenjen je sa png grafike unutar tar fajlova u [[Main/sr/Alternativna Grafika (NewGRF)|Alternativnu grafiku(NewGRF)]]. Opcija učitavanja 32 bitne grafike iz png/tar fajlova nije dostupna od verzije OpenTTD 1.2.0 i ubuduće.
+
+===Gde mogu da preuzmem NewGRF sa 32 bitnom grafikom?===
+
+Pogledajte [[Main/sr/Spisak 32 bitne alternativne grafike|spisak 32 bitne alternativne grafike]].
+
+===Imao sam mnogo više 32 bitne grafike pre verzije 1.2.0, šta se desilo?===
+
+Mnoga 32 bitna grafika nije konvertovana iz starog formata u NewGRF. Ovaj proces je dugotrajan i zakomplikovan problemima sa dozvolama. Slobodno [http://www.tt-forums.net/viewforum.php?f=36 pomozite], sortiranjem licenci i konvertovanjem preostale GPL licencirane grafike u NewGRF format.
+
+Ako želite da imate svu 32 bitnu grafiku koji ste imali pre (uključujući onu sa nejasnim i ograničavajućim licencama), moraćete sami da odradite konverziju. knuckles88 je postavio [http://www.tt-forums.net/viewtopic.php?p=1026754#p1026754 uputstva] kako da uradite to.
+
+===Učitao sa 32 bitnu grafiku, ali ništa se ne dešava. Zašto?===
+
+Moguće je da 32 bitni NewGRF nije zahtevao 32 bitni blitter ili zahtev za 32 bitni blitter nije bio uspešan. U ovom slučaju morate izaći iz OpenTTD i ručno promeniti blitter u konfiguracijskom fajlu.
+
+Kako da nađete kofiguracijski fajl, objašnjeno je u [[Main/en/Readme.txt|uputstvu]]. Obično se nalazi u OpenTTD folderu, u vašim ličnim datotekama. Nađite <code>openttd.cfg</code> fajl i otvorite ga sa običnim editorom teksta. U odeljku <code>[misc]</code>, pronađite <code>blitter =</code> unos. Zamenite ovu liniju sa <code>blitter = 32bpp-anim</code>, ili alternativno dodajte je kao dodatnu liniju na kraju <code>[misc]</code> odeljka. Snimite fajl i pokrenite OpenTTD.
+
+Ako imate problema sa ovim blitterom (gigra je dosta sporija ili i dalje nema 32 bitne grafike), onda probajte drug dva blittera. Umesto <code>blitter = 32bpp-anim</code> unesite <code>blitter = 32bpp-optimized</code> (isti kao i pre, bez animacija) ili <code>blitter = 32bpp-simple</code> (sporiji, ali pouzdan).
+
+Ako i dalje nemate 32 bitnu grafiku, onda prvo proverite da li uopšte imate 32 bitni NewGRF aktiviran, a potom i da li ste pravilno sledili instrukcije.
+
+
+
+
+
+[[Category:sr/Alternativna grafika (NewGRF)]]
+[[Category:sr/Najčešća pitanja]]
