@@ -1,0 +1,172 @@
+[[Translation:Main/en/NewGRF]]{{en/-}}{{es/Tabla de contenido}}
+'''NewGRF''' es un acrónimo de ''New G''raphics ''R''esource ''F''ile' (Archivo de Recurso de Nuevos Gráficos). Hay dos clases de gráficos de reemplazo. Uno son los NewGRF que se describen aquí (que son mucho más potentes que la mera introducción de más y nuevos gráficos), el otro son los [[Main/es/Jugar con gráficos de 32 bits|gráficos de reemplazo de 32 bits]] que solo sustituyen los gráficos existentes de 8 bits con diferentes gráficos.
+
+NewGRF es la forma de poder introducir en OpenTTD nuevos gráficos, vehículos, edificios, cargas e industrias. Los archivos NewGRF se pueden descargar e instalar en el juego para introducir estas nuevas características. A diferencia de las [[Main/es/Opciones avanzadas|Opciones avanzadas]] que se pueden modificar a mitad de una juego, NewGRF debe instalarse antes de comenzar un nuevo juego con el fin de garantizar un funcionamiento correcto. El nombre "NewGRF" se refiere a las nuevas características añadidas a los archivos GRF (archivos gráficos de Transport Tycoon) que se pueden usar para cambiar los gráficos y el comportamiento del juego. NewGRF es un formato común para OpenTTD y para [[Main/es/TTDPatch|TTDPatch]], y es casi totalmente compatible en ambos.
+
+Para los problemas más comunes con los archivos GRF en OpenTTD, consulte las [[Main/es/Preguntas frecuentes sobre NewGRF|preguntas frecuentes sobre NewGRF]].
+
+==Obtener archivos NewGRF==
+LOs NewGRF son creados por la comunidad de usuarios, y por lo tanto se pueden descargar de muchos sitios en la red. Algunos de los lugares principales donde buscar son:
+
+*Los foros [http://www.tt-forums.net/index.php TTForums.net] (y en particular los foros de desarrollo gráfico de [http://www.tt-forums.net/viewforum.php?f=26 TTDPatch] y de [http://www.tt-forums.net/viewforum.php?f=36 OpenTTD]).- Centro de discusión de la mayor parte del desarrollo de NewGRF.
+
+*[http://grfcrawler.tt-forums.net/ GRFCrawler].- Una base de datos de archivos NewGRF, enlazada con los foros TTForums.
+
+*La [[Main/es/Lista NewGRF|lista NewGRF]] de OpenTTD.- La lista de trabajo de sets de NewGRF de esta wiki de OpenTTD.
+
+*La [http://www.ttdpatch.net/newgrf.html lista NewGRF] de TTDPatch.- La lista de trabajo de sets de NewGRF de la wiki de TTDPatch.
+
+También hay muchos sitios web privados que alojan archivos NewGRF, como pueden ser:
+*La página web [http://george.zernebok.net/newgrf/downloads.html george.zernebok.net]
+*La página web de Pikkabird [http://www.pikkarail.com/ttdp/ pikkarail.com]
+
+Desde el 17 de enero 2009 OpenTTD tiene una función incorporada en el juego para descargar contenidos online, como pueden ser los archivos NewGRF:
+* [[Main/es/Contenido online|Descargue contenidos en línea]] mediante la función que incorpora el juego. (Tenga en cuenta que necesita al menos la versión de OpenTTD 0.7.0 Beta 1 para poder usar esta función. Esta característica no está disponible en versiones anteriores).
+
+==Instalar archivos NewGRF==
+Un NewGRF consiste en un único archivo (con la extensión .grf), por ejemplo "grvts.grf". Para instalar un NewGRF:
+#Descargue el archivo NewGFR (.grf).
+#Coloque el archivo NewGRF en la carpeta <code>data</code> de su instalación de OpenTTD.
+:*Puede encontrar la carpeta data en:
+::<code>%UserProfile%\Documents\OpenTTD\Data</code> (Windows 7 y Windows Vista)
+::<code>%UserProfile%\My documents\OpenTTD\Data</code> (Windows XP)
+::<code>C:/Program Files/OpenTTD/data</code> (Windows, directorio del juego)
+::<code>/usr/share/games/openttd/data/</code> (Linux).- es necesario ajustar el permiso escritura para este directorio.
+::<code>~/.openttd/data</code> (Linux).- puede necesitar crear este directorio antes.
+::<code>~/Documents/OpenTTD/data</code> (OSX).- cree el directorio /data
+
+===¿Versión Windows o DOS?===
+A menudo, se le da a elegir entre dos versiones (Windows o DOS) de un NewGRF. ¿Cuál debe instalar?, depende de los archivos gráficos originales que usted tenga instalados. Si tiene instalados los de la versión DOS de TTD, debe instalar los archivos NewGRF versión DOS. Del mismo modo, si usted tiene instalados los archivos gráficos originales de la versión Windows, deberá instalar los NewGRF versión Windows.
+
+Si usted no sabe qué versión (DOS o Windows) tiene instalada, hay una forma fácil de saberlo. Mire en el directorio data de OpenTTD, allí están almacenados los archivos gráficos originales. Cada versión tiene nombres de archivos distintos:
+* Versión DOS: trg1.grf, trgc.grf, trgh.grf, trgi.grf, trgt.grf
+* Versión Windows:  trg1r.grf, trgcr.grf, trghr.grf, trgir.grf, trgtr.grf (observe la 'r' existente antes de la extensión '.grf'.)
+
+[[Main/es/OpenGFX Léame|OpenGFX]] usa únicamente la paleta windows.
+
+Si instala una versión incorrecta de un archivo NewGRF, el juego funciona, pero los gráficos no aparecen correctamente.
+
+==Activar archivos NewGRF==
+# Inicie OpenTTD.
+# En el menú principal, pulse el botón "[[Main/es/Configuración de NewGRF|Configuración NewGRF]]"<br/>[[File:es/Main window (NewGRF Settings).png|Pulse el botón ''Configuración NewGRF'' del ''Menú principal'']]<br/><br/>
+# Pulse ''Añadir''.<br/>[[File:es/NewGRF settings window (Add).png|Pulse el botón ''Añadir'' de la ventana ''Configuración de NewGRF'']]<br/><br/>
+# Seleccione el archivo NewGRF que desee utilizar y, a continuación, haga clic en ''Añadir a la selección''.<br/>[[File:es/Available NewGRF files window.png|Pulse ''Añadir en la selección'' en la ventana de ''Ficheros NewGRF disponibles'']]<br/><br/>
+# Haga clic en ''Añadir'' para añadir más NewGRF, a continuación, pulse ''Aplicar cambios'' cuando haya terminado.<br/>[[File:es/NewGRF settings window (Apply).png|Pulse ''Aplicar cambios'' de la ventana de ''Configuración de NewGRF'']]<br/><br/>
+
+Ahora, cada vez que inicia un nuevo juego, los NewGRF estarán activos, y cualquier cambio que haga se hará visible.
+
+[[File:en/Newgrfexampless.png|thumb|600px|center|Un pantallazo que muestra el uso de archivos NewGRF con UKRS y Newstations]]
+
+===Botones de las ventanas===
+'''Ventana Configuración de NewGRF'''
+*Cargar programación.-
+*Grabar.-
+*Borrar.-
+*Añadir.- Abre la ventana ''Ficheros NewGRF disponibles''.
+*Retirar.- Borra el archivo NewGRF seleccionado de la lista activa.
+*Mover Arriba.- Mueve el archivo seleccionado hacia arriba en al lista de NewGRF activos.
+*Mover Abajo.- Mueve el archivo seleccionado hacia abajo en al lista de NewGRF activos.
+*Establecer parámetros.- Establece los parámetros para el NewGRF1, por ejemplo para establecer el primer parámetro como 4, el segundo parámetros como 3 y el tercer parámetro como cero, introduzca "4 3 0".
+*Seleccionar paleta.- Activa una u otra paleta (Windows/DOS)
+*Applicar cambios.- Aplica los cambios y cierra la ventana.
+*Consultar Contenido Online.-
+
+El orden de los NewGRF es importante para determinar cómo interactúan diferentes NewGRF. Un NewGRF colocado más alto en la lista anula los efectos de una NewGRF colocado más abajo.
+
+'''Ventana NewGRF disponibles'''
+*Patrón de filtrado.- filtra los NewGRF disponibles.
+*Añadir a la selección.- Añadr el NewGRF seleccionado a la lista de newGRF activos.
+*Actualizar ficheros.- OpenTTD sólo busca archivos NewGRF cuando comienza el juego, con este botón hace que el juego vuelva a examinar la carpeta para verificar si hay archivos nuevos.
+
+===Activar archivos NewGRF durante el juego===
+{{es/Aviso|Este procedimiento no es recomendable y puede provocar un comportamiento inesperado o incluso el fallo del programa.}}
+
+Si bien los nuevos juegos usarán automáticamente los archivos .grf recién instalados, los juegos que hayan sido iniciados con anterioridad requieren los siguientes pasos para incluir los nuevos gráficos:
+
+# Mantenga pulsado el botón ''Opciones'' [[File:en/Manual html md7ebe52.png]] y seleccione la opción ''Configuración NewGRF''.
+# Añada el NewGRF que desee con el botón ''Añadir''
+# Al ''Aplicar cambios'' el programa le preguntará si está completamente seguro. Como precaución puede guardar la partida antes. 
+# Supongamos que está seguro de que quiere hacer estos cambios con el juego en marcha y que el programa no falla.
+# Abra la [[Main/es/consola|consola]] con la tecla situada a la izquierda del "1": la tecla (\) en España o la tecla (¬) en Hispanoamérica.
+# Escriba "resetengines".
+# Cierre la consola pulsando la tecla misma que utilizó para abrirlo.
+
+Tenga en cuenta que, incluso después de escribir "resetengines", sus vehículos comprados con anterioridad seguirán siendo del tipo antiguo. Sin embargo, ahora deberá ser capaz de construir los nuevos tipos de vehículos en sus depósitos.
+
+==Archivo de configuración==
+Una forma alternativa de especificar que archivos NewGRF se utilizan es alterar directamente el archivo de configuración ''openttd.cfg''. Los pasos para hacerlo son los siguientes:
+# Copie el nuevo archivo .grf en el directorio \data.
+# Abra el archivo openttd.cfg del directorio \.
+# Sitúese al final del archivo y añada lo siguiente:
+
+ [newgrf]
+ primerset.grf
+ segundoset.grf
+ tercerset.grf
+
+Donde primerset, segundoset, etc. son los nombres de los archivos .grf. Los archivos se cargarán en el orden especificado... por lo que si segundoset tiene algunas características que también están en primerset, las características del primero se sobrescribirán.
+
+Tenga en cuenta que es una buena costumbre poner todos los archivos NewGRF en un mismo directorio como <code>\data\personal</code> o <code>\data\newgrf</code>. De esta forma es más fácil actualizar OpenTTD, así como la gestionar un gran número de archivos NewGRF.
+
+Tenga cuidado al utilizar subdirectorios del directorio data para almacenar los archivos personalizados NewGRF. Tienes que ajustar la ruta en el archivo openttd.cfg como <code>\personal\newgrffile.grf</code> si la carpeta "personal" es una subcarpeta de la carpeta "data" de OpenTTD.
+
+===Múltiples combinaciones===
+Si desea crear distintas combinaciones de archivos .grf, puede hacer lo siguiente:
+
+ [newgrf]
+ #COMBINACION 1
+ primerset.grf
+ segundoset.grf
+ #COMBINACION 2
+ #otro_primerset.grf
+ #otro_segundoset.grf
+
+Ahora usted puede cambiar de una a otra combinación eliminando la "#" de los .grf de la combinación que desea activar y añadiéndosela a los de la otra combinación.
+
+Las palabras colocadas detrás de # son interpretadas como comentarios, y se omiten.
+
+ [newgrf]
+ #
+ #Trenes
+ #
+ primerset.grf
+ segundoset.grf
+ #
+ #Nuevasestaciones
+ #
+ #tercerset.grf - Lo desactivé por que es defectuoso
+ cuartoset.grf
+ #
+ #Barcos
+ #
+ quintoset.grf
+
+Se pueden probar algunas combinaciones como "DBset + Subarcticoset", "Templadoset + Subtropicalset" y así sucesivamente... aunque por el momento la única combinación que funciona bien es "Templadoset + Subarcticoset" (tenga en cuenta que esta información puede ser obsoleta y no tiene por qué reflejar el estado actual de las cosas; por favor, consulte los foros para conocer la situación actual)
+
+===Parámetros===
+Algunos archivos NewGRF requieren uno o más parámetros. Véase el artículo [[Main/es/Configuración de NewGRF|Configuración de NewGRF]] para información sobre cómo agregar parámetros a un archivo GRF, o haga lo siguiente en su archivo openttd.cfg:
+
+ [newgrf]
+ primersetw.grf           # No requiere ningún parámetro
+ segundosetw.grf 5 3 1250 # Tres parámetros
+ tercersetw.grf=10        # Otra forma de expresar los parámetros
+
+Nota: Como puede ver, cuando hay múltiples parámetros se separan con espacios.
+
+==Compatibilidad y características==
+Los NewGRF son originalmente una característica de [[Main/es/TTDPatch|TTDPatch]] y, como tal, las últimas características de NewGRF no siempre están disponibles en OpenTTD.
+
+Puede consultar qué se prevé hacer y qué se ha hecho en [[Main/es/Para hacer (NewGRF)|Para hacer (NewGRF)]] y en la lista de [[Main/es/Características de NewGRF|Características de NewGRF]].
+
+== Enlaces externos ==
+Otros enlaces para descargar algunos archivos GRF (tenga en cuenta que son para TTDPatch y no todos funcionan en OpenTTD, y que algunos ya están incluidos en OpenTTD; vea las [[Main/es/Características de NewGRF|características de NewGRF]] para ver qué funciona en OpenTTD)
+
+* (en) [http://www.ttdpatch.net/newgrf.html TTDPatch].- Un listado de archivos GRF en la página web de TTDPatch.
+* (en) [http://wiki.ttdpatch.net/tiki-index.php?page=NewGraphicsSpecs NewGraphicSpecs].- Especificaciones del formato GRF
+* (en) [http://www.tt-forums.net/viewtopic.php?t=9376 Foro sobre 'problemas NewGRF']
+
+
+{{es/Navbox NewGRF}}
+
+[[Category:es/Configuración y preferencias]]
+[[Category:es/NewGRF]]
