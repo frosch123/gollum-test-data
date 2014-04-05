@@ -1,0 +1,61 @@
+[[Translation:Main/en/NewGRF]]{{en/-}}{{nl/Inhoudsopgave}}
+
+NewGRF is een Engelse afkorting die staat voor "New Graphics Resource File" en biedt een interface aan om het spel te wijzigen. Niet te verwarren met de [[Main/en/Playing with 32 bpp graphics|32bpp replacement graphics (EN)]], wat alleen bestaande 8bpp graphics vervangt door andere graphics.
+
+Via '''NewGRF''' is het mogelijk om graphics, voertuigen, gebouwen, spoorwegtypes, objecten en industrieën te vervangen of toe te voegen in OpenTTD. Deze NewGRF-bestanden kunnen gedownload en geactiveerd worden in het spel om nieuwe features te introduceren. Terwijl [[Main/nl/Geavanceerde instellingen|geavanceerde instellingen]] je de mogelijkheid bieden om instellingen te veranderen in het spel is het sterk afgeraden om NewGRF's toe te voegen, te verwijderen of hun parameters te veranderen tijdens het spel, dit om de correcte werking van het spel te kunnen garanderen. Kies de GRFs die je wil gebruiken voor je een spel start!
+De naam "NewGRF" verwijst naar de nieuwe features die toegevoegd kunnen worden door GRF-bestanden (Transport Tycoon graphics resource files). Deze maken het mogelijk om bestaande graphics te vervangen en/of veranderingen te maken in het gedrag van het spel. NewGRF is een formaat dat wordt gebruikt in OpenTTD en [[Main/nl/TTDPatch|TTDPatch]], en is bijna volledig compatibel met beide.
+
+Voor een lijst met veelvoorkomende problemen in OpenTTD, raadpleeg de [[Main/en/NewGRF FAQ|NewGRF FAQ (EN)]].
+
+==NewGRFs verkrijgen==
+=== Online content ===
+De meest gebruikte en makkelijkste manier om NewGRFs te verkrijgen is door de in het spel ingebouwde [[Main/nl/Online content|online content download]]. De meeste NewGRFs kunnen hier gevonden worden. Er bestaat ook een NewGRF [http://tt-forums.net/viewforum.php?f=26|ontwikkel forum (EN)] waar je de ontwikkelversies van sommige NewGRFs kunt vinden.
+
+=== Handmatige installatie ===
+Als je gebruik wilt maken van NewGRFs vanaf andere locaties, welke niet beschikbaar zijn via de online content download, dan moet je ze handmatig op de juiste plek zetten. Een NewGRF is een enkel bestand (met de extensie .grf) zoals: "grvts.grf". Om een NewGRF te installeren:
+#Download het NewGRF (.grf) bestand.
+#Verplaats het NewGRF bestand naar de data-directory van je OpenTTD installatie.
+:*Meestal is dit een van de onderstaande:
+::C:\My Documents\data (Windows 95, 98, ME)
+::C:\Documents and Settings\<username>\My Documents\OpenTTD\data (Windows 2000, XP)
+::C:\Users\<username>\Documents\OpenTTD\data (Windows Vista, 7)
+::~/.openttd/data (Linux, BSD)
+::~/Documents/OpenTTD/data (OSX)
+
+==NewGRFs activeren==
+1.   Klik op [[Main/nl/NewGRF|NewGRF instellingen]] in het hoofdmenu.
+[[File:en/Main window (NewGRF Settings).png|Hoofdmenu (NewGRF-instellingen)|center]]
+
+OpenTTD 1.0 en 1.1 zien er anders uit op dit punt, dus laten we beide hieronder zien:
+=== Versie 1.0 en eerder ===
+2.   Klik op "Toevoegen".
+[[File:en/NewGRF settings window (Add).png|NewGRF instellingen venster (Toevoegen)|center]]
+3.   Selecteer het NewGRF bestand dat je wilt gebruiken en klik op "Voeg toe aan selectie".
+[[File:en/Available NewGRF files window.png|Venster met beschikbare NewGRF bestanden|center]]
+4.   Klik op "Toevoegen" om meer NewGRFs toe te voegen, gevolgd door "Toepassen" als je klaar bent.
+[[File:en/NewGRF settings window (Apply).png|NewGRF instellingen venster (Toepassen)|center]]
+
+=== Versie 1.1 ===
+2.   Selecteer een NewGRF uit de 'inactieve NewGRFs' en druk op "Toevoegen" (of dubbelklik erop). Op kleine schermen ziet het er als volgt uit:
+[[File:en/newgrf addnew.png|NewGRF instellingen venster (klein)|center]]
+en op grote schermen verandert dit voor het gemak in:
+[[File:en/newgrf config big.png|NewGRF instellingen venster (groot)|center]]
+3.   Configureer een actieve newgrf parameter, wanneer je dat wilt: Selecteer 'm uit de 'actieve newgrf bestanden' lijst en druk op de 'parameter' knop. Het resultaat zal er ongeveer zo uit zien: [[File:en/newgrf parameter.png|NewGRF parameter window|center]]
+4.   Optioneel kun je ervoor kiezen om je selectie NewGRFs op te slaan, samen met hun geconfigureerde parameters, of zo'n lijst laden door een NewGRF voorkeur te maken:
+[[File:en/newgrf preset.png|Sla een NewGRF voorkeur op|center]]
+
+==Opmerkingen==
+Vanaf nu zal elke keer als je een spel start je keuze van NewGRFs actief worden, inclusief de wijzigingen die je gemaakt hebt. Hou er wel rekening mee deze wijzigingen geen invloed zullen hebben op eerder opgeslagen spellen, NewGRFs zijn een integraal deel van een spel en de lijst van gebruikte NewGRFs zijn er in opgeslagen.
+[[File:en/Newgrfexampless.png|thumb|600px|center|Een screenshot die het gebruik van NewGRF bestanden inclusief UKRS en Newstations laat zien]]
+
+De volgorde van (actieve) NewGRFs is belangrijk om te bepalen hoe verschillende NewGRFs elkaar beïnvloeden. Een NewGRF dat lager in de lijst staat overschrijft de effecten van NewGRFs hoger in de lijst (bv. twee GRFs die hetzelfde gebouw of voertuig vervangen).
+
+== Externe links ==
+
+* [http://grfcrawler.tt-forums.net/ GRFCrawler] Een niet-volledige database van beschikbare NewGRFs (EN)
+* [http://wiki.ttdpatch.net/tiki-index.php?page=NewGraphicsSpecs NewGraphicSpecs] Specificaties van het GRF Formaat (EN)
+* [http://www.tt-forums.net/viewforum.php?f=66 Het NewGRF forum (EN)].
+
+{{en/Navbox NewGRF}}
+
+[[Category:nl/Instellingen en voorkeuren]]
