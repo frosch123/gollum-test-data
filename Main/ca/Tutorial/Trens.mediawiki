@@ -1,0 +1,68 @@
+[[Translation:Main/en/Tutorial/Trains]]{{en/-}}__NOTOC__
+{{en/Tabs|5|3
+|Tutorial/Ca|1. Començament<!--
+-->|Tutorial/Autobusos/Ca|2. Autobusos<!--
+-->|Tutorial/Trens/Ca|3. Trens<!--
+-->|Tutorial/Avions/Ca|4. Avions<!--
+-->|Tutorial/Final/Ca|5. Per a acabar...}}
+<div style="padding:.5em 1em 1em 1em; border-top:none; background-color:#f1f2fe; color:#000;">
+{{Template:Tutorial/Ca}}
+==Crear una ruta de tren==
+Els trens són més ràpids que els vehicles de carretera i tenen una major capacitat, però són més cars i les xarxes de tren requereixen més planificació que les carreteres.
+
+Hi ha diversos tipus de [[Main/ca/Càrrega|càrregues]] i [[Main/ca/Indústria|indústries]] en OpenTTD. El més simple i més rendible és transportar [[Main/ca/Carbó|carbó]] des de les [[Main/ca/Mina de carbó|mines de carbó]] a les [[Main/ca/Central tèrmica|centrals tèrmiques]], pel que començarem per ací. Hi ha un [http://www.cs.helsinki.fi/u/ihonkone/ottd_tut.ogg vídeo] que mostra com.
+
+===Triar la ruta===
+Desplace’s pel mapa fins que trobe una [[Main/ca/Mina de carbó|mina de carbó]] i una [[Main/ca/Central tèrmica|central tèrmicca]] en les proximitats. Per a aquest tutorial dóna el mateix com estiguen de lluny, però tinga en compte que el que més càrrega transporta més ingressos genera, així que, en un joc verdader no voldrà buscar-les massa prop.
+{{en/Phototable|[[File:en/tutorial1.png|400px]]|Central tèrmica amb mines de carbó pròximes|none}}
+
+Si ja les has trobat ara necessitaràs una forma de portar el carbó a la central elèctrica. Usarem un tren (ja que estem en la part sobre trens del tutorial) i a més els trens són capaços de transportar molt carbó i són, probablement, el vehicle més divertit. 
+
+===Construir estacions de tren===
+{{en/Phototable|[[File:ca/Railroad Construction.png]]|Barra d'eines Construcció de ferrocarril|none|6=:}}
+#Òbriga la barra d'eines ''Construcció de Ferrocarril'' i faça clic en el botó [[File:en/RailCnstr.png]].
+#Faça clic en el botó ''Construieix una estació de tren'' [[File:en/RailSt.png]]. Apareixerà la  finestra ''Estacions de tren''. (Recorde que sempre pot fer clicodret sobre qualsevol botó per a obtenir una descripció del que fa).
+{{en/Phototable|[[File:ca/stationgui.png]]|Finestra Estacions de Tren|none|6=:}}
+<ol start="3">
+<li>Fixe el ''Nombre de vies'' en u, i la ''Mida de les andanes'' en tres. Recorde que en cada casella agafen dos vagons. En un joc real pot triar el llarg de la seua estació d’acord amb la longitud dels trens que carregaran allí, és a dir, en una estació de 3 caselles de llarg cap una locomotora i cinc vagons com a màxim.
+<li>Seleccione la millor orientació de la seua estació per a poder construir la via en la direcció correcta entre les indústries.
+<li>Trobe un terreny pla al costat de la Mina de Carbó i faça clic per a col·locar l’estació.
+<li>Construïsca l’altra estació prop de la central tèrmica.
+</ol>
+{{en/Phototable|[[File:en/tutorial2.png|400px]]|Les seues estacions al costat de les indústries|none|6=:}}
+
+===Connectar estacions de tren===
+Ara necessita construir la via entre les estacions: 
+#Faça clic en el botó ''Mode Autorail'' [[File:en/Autorl.png]] de la barra d'eines ''Construcció de Ferrocarril''.
+#Faça clicoarrossegar en línia recta des d’una de les estacions en direcció a l’altra per a posar la via.
+#Afixe més trams de via fins a arribar a l’altra estació (en la captura de pantalla d’exemple es pot construir la via en dos passos amb el mode autorail: primer una xicoteta recta des de l’estació de la mina de carbó i després connectant la central elèctrica).
+{{en/Phototable|[[File:en/tutorial3.png|400px]]|Estacions connectades|none|6=:}}
+
+Si comet un error, pot usar l'eina ''dinamita'' [[File:en/Clear title.png]] per a demolir trams de via.
+
+===Comprar un tren===
+Ara ha de comprar alguns trens, però no pot fer-los aparèixer en les vies per art de màgia, necessita abans construir unes [[Main/ca/Cotxeres i depòsits|cotxeres de trens]].
+
+#Faça clic en el botó ''Construieix unes cotxeres'' [[File:en/TrnDpt.png]] de la barra d'eines ''Construcció de Ferrocarril''. Una nova finestra s’obrirà donant-li l’opció de triar l’orientació.
+#Trie una orientació i el lloc de les cotxeres de manera que l’entrada principal s’oriente cap a la via, com a la captura de pantalla. Automàticament s’afegirà una connexió perquè els seus trens poden entrar i eixir de les cotxeres.
+#Faça clic en les cotxeres que acaba de construir. El menú de cotxeres apareixerà, i tindrà una visió general de tots els trens que hi han dins (en aquests moments no hi haurà cap).
+{{en/Phototable|[[File:ca/tutorial4.png|400px]]|La finestra Cotxeres de tren|none|6=:}}
+<ol start="4">
+<li>Seleccione el botó de ''Nous Vehicles'' en la part inferior de la finestra de les cotxeres. S’obrirà una altra pantalla amb una relació de tots els vehicles disponibles per a vosté en aquest moment. Faça clic en una locomotora de la part superior de la llista, a continuació, faça clic al botó ''Compra Vehicle''. S’obrirà la finestra Tren1.
+<li>Desplace’s cap avall en la finestra de ''Nous Vehicles'' i compre sis vagons pe carbó.
+<li>Oi, error, em vaig equivocar!, vaig voler dir que compre vosté cinc (haurem d’eliminar u! ha! ha!). Arrossege un vagó sobre el botó [[File:en/SellTrainVehicle.png]] i solte'l (es vendrà i li donaran un poc de diners a canvi).
+</ol>
+''Consulte [[Main/ca/Compra de trens|Compra de trens]] per a un tutorial més detallat.''
+
+===Donar ordres===
+#Assigne ordres al tren de la mateixa manera que va fer amb l’autobús en la primera part del tutorial.
+#Hi ha algunes opcions addicionals disponibles per als trens que usarem: En el llistat ''d’ordres'', faça clic en el nom de l’estació de la mina de carbó, i polse en el botó ''Càrrega del tot''. Açò li indica al tren que ha d’esperar fins que estiga ple de carbó abans d’eixir de l’estació.
+#Faça clic en el botó "Parat" situat en la part inferior de la finestra del tren per a posar en marxa el tren.
+
+Enhorabona! Ha construït el seu primer ferrocarril! Després que el tren carregue i entregue el carbó, es donarà compte que guanya molt més diners que amb l’autobús.
+
+Aquest és el tipus més simple de tren del joc, i només permet usar un tren (intente agregar més i veurà que romanen en les cotxeres sense poder eixir). Quan porte un temps jugant i llija alguns tutorials més sobre trens, aprendrà com fer ferrocarrils més complexos, de manera que puguen circular uns quants trens al mateix temps.
+
+<span style="float: right">[[Main/ca/Tutorial/Avions|'''Següent:''' Avions]] &raquo;</span>
+</div>
+[[Category:ca/Tutorial]]
