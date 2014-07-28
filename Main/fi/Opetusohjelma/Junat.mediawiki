@@ -1,0 +1,70 @@
+[[Translation:Main/en/Tutorial/Trains]]{{en/-}}__NOTOC__
+{{en/Tabs|5|3
+|Opetusohjelma/Fi|1. Aloittaminen<!--
+-->|Opetusohjelma/Bussit/Fi|2. Linja-autot<!--
+-->|Opetusohjelma/Junat/Fi|3. Junat<!--
+-->|Opetusohjelma/Lentokoneet/Fi|4. Lentokoneet<!--
+-->|Opetusohjelma/Yhteenveto/Fi|5. Yhteenveto}}
+<div style="padding:.5em 1em 1em 1em; border-top:none; background-color:#f1f2fe; color:#000;">
+{{fi/Tutorial}}
+==Junareitin luominen==
+Junat ovat nopeampia kuin ajoneuvot ja niillä on suurempi kapasiteetti, mutta ne ovat kalliimpia ja rautatieverkostot vaativat enemmän suunnittelua kuin tiet.
+
+OpenTTDssä on useita erilaisia [[Main/fi/Rahti|rahti]] ja [[Main/fi/Teollisuus|teollisuus]] -ketjuja. Yksinkertaisin ja arvokkain ketju on kuljettaa [[Main/fi/Hiili|hiiltä]] [[Main/fi/Hiilikaivos|hiilikaivoksesta]] [[Main/fi/Sähkölaitos|sähkölaitokseen]], joten perustamme tällaisen reitin. Oheisen linkin takaa löytyy [http://www.cs.helsinki.fi/u/ihonkone/ottd_tut.ogg video], joka esittelee tämän.
+
+===Reitin löytäminen===
+Liiku kartalla kunnes löydät hiilikaivoksen ja sähkölaitoksen lähekkäin. Tässä opetusohjelmassa ei ole niin paljon väliä sillä, miten kaukana toisistaan ne ovat, mutta mitä pidemmälle kuljetat rahtia, sitä enemmän se tuottaa, joten oikeassa pelissä et halua valita niitä liian lähekkäin.
+
+{{en/Phototable|[[File:en/tutorial1.png|400px]]|Sähkölaitos ja sen lähellä oleva hiilikaivos|none}}
+
+Nyt olet löytänyt teollisuutta, mutta tarvitsemme vielä keinon saada hiiltä sähkölaitokseen. Käytämme junaa, koska tämä on junia koskeva opetusohjelman osa ja lisäksi ne voivat kuljettaa paljon hiiltä ja ovat luultavasti hauskin kulkuneuvo.
+
+===Juna-aseman rakentaminen===
+{{en/Phototable|[[File:fi/Railroad Construction.png]]|Rautatien rakentaminen -työkalurivi.|none|6=:}}
+#Avaa ''Rautatien rakentaminen''-työkalurivi napsauttamalla [[File:en/RailCnstr.png]] painiketta.
+#Napsauta ''Rakenna juna-asema''-painiketta [[File:en/RailSt.png]]. Aseman rakentamisikkuna ilmestyy esiin. Muista, voit aina napsauttaa hiiren oikeata painiketta, jos haluat kuvauksen mitä mistäkin painikkeesta tapahtuu.
+{{en/Phototable|[[File:fi/stationgui.png]]|Rautatieaseman valintaikkuna|none|6=:}}
+<ol start="3">
+<li>Valitse ''raiteiden lukumäärä'' yhdeksi ja ''asemalaiturin pituus'' kolmeksi. Jokainen "yksikkö" ottaa vastaan yhden vaunun, joten oikeassa pelissä sinun kannattaa valita asemalaiturin pituudeksi sen junan pituus, jonka haluat lastata siellä. Esimerkiksi, jos asemalaiturisi pituus on kolme neliötä, se ottaa vastaan veturin ja kuusi vaunua.
+<li>Valitse asemallesi paras suunta, jotta voit vetää raiteet suoraan kohti teollisuutta.
+<li>Etsi tasaista maata hiilikaivoksen läheltä ja napsauta jälleen rakenna juna-asema -painiketta.
+<li>Rakenna toinen asemasi hiilikaivoksen viereen.
+</ol>
+{{en/Phototable|[[File:en/tutorial2.png|400px]]|Juna-asemasi teollisuuksien vieressä|none|6=:}}
+
+===Juna-asemien yhdistäminen===
+Seuraavaksi sinun tulee rakentaa junarata asemien välille.
+
+#Napsauta ''Autorail''-painiketta [[File:en/Autorl.png]] ''Rautatien rakentaminen'' työkaluriviltä.
+#Vedä raiteet suoraan ensimmäiseltä asemaltasi kohti toista asemaa. 
+#Lisää yhdistäviä raiteita, kunnes saavutat toisen aseman (voit rakentaa kuvankaappauksessa näkyvän radan oikealle käyttäen autorail-työkalua kaksi kertaa - yksi suoralle osuudelle ja toinen lähestyessäsi sähkölaitosta).
+{{en/Phototable|[[File:en/tutorial3.png|400px]]|Asemien yhdistäminen|none|6=:}}
+
+Jos teet virheen, voit käyttää ''dynamiitti''-työkalua [[File:en/Clear title.png]] poistaaksesi paloja radasta.
+
+===Junan lisääminen===
+Seuraavaksi sinun tulee ostaa juna, mutta et voi odottaa sen ilmestyvän taianomaisesti radallesi - sinun tulee rakentaa [[Main/fi/Veturitalli|veturitalli]].
+
+#Napsauta ''Rakenna veturitalli''-painiketta [[File:en/TrnDpt.png]] ''Rautatien rakentaminen'' työkaluriviltä. Uusi ikkuna avautuu, josta voit valita veturitallin suunnan.
+#Valitse veturitallin suunta ja paikka niin, että sen sisäänkäynti osoittaa radalle, kuten kuvankaappauksessa. Raiteet yhdistyvät automaattisesti rakentamaasi veturitalliin, jotta junasi voivat tulla ja mennä veturitalliin.
+#Napsauta juuri rakentamaasi veturitallia. Veturitallivalikko ilmestyy, josta näet yleiskatsauksen kaikista junista, jotka ovat tällä hetkellä veturitallissa - ei ainuttakaan tällä hetkellä.
+{{en/Phototable|[[File:fi/tutorial4.png|400px]]|Veturitallin ikkuna|none|6=:}}
+<ol start="4">
+<li>Valitse Uusia liikennevälineitä -painike veturitalli-ikkunan alareunasta. Uusi ruutu avautuu, josta näet kaikki veturit ja vaunut, joita tällä hetkellä voidaan ostaa. Napsauta listan ensimmäisenä olevaa veturia, jonka jälkeen napsauta ''Osta yksikkö''-painiketta. Junan ikkuna avautuu esiin.
+<li>Selaa uusia liikennevälineitä -ikkunassa alaspäin ja osta viisi hiilivaunua.
+<li>Ops, minun piti sanoa, että osta neljä vaunua - meidän täytyy tuhota yksi vaunu. Napsauta ja vedä yksi vaunuista tämän [[File:en/SellTrainVehicle.png]]-painikkeen päälle ja vapauta painike - vaunu myydään ja saat rahaa takaisin.
+</ol>
+''Katso [[Main/fi/Junien ostaminen|Junien ostaminen]] mikäli haluat tarkempaa tietoa.''
+
+===Määräysten antaminen===
+#Anna junalle määräykset samalla tavalla, kuin annoit bussillesi edellisessä opetusohjelman osassa.
+#Junille on muutamia ylimääräisiä vaihtoehtoja tarjolla, joita myös käytämme. Määräykset listassa, napsauta hiilikaivoksen aseman nimeä ja napsauta ''Täysi lastaus''-painiketta. Tämä kertoo junalle odottaa asemalla, kunnes vaunut ovat täynnä hiiltä ennen kuin se lähtee asemalta.
+#Napsauta ''Pysäytetty''-painiketta junaikkunan alareunassa lähettääksesi junan matkaan.
+
+Onneksi olkoon! Olet juuri rakentanut ensimmäisen junareittisi. Kun juna saapuu sähkölaitokselle vaunut täynnä hiiltä, huomaat kuinka paljon enemmän se tuottaa verrattuna bussilinjaasi.
+
+Tämä on pelin yksinkertaisin junaratatyyppi ja se voi käsitellä vain yhtä junaa (yritä lisätä junia radallesi, niin huomaat vain, että ne pysyvät veturitallissa). Pelattuasi jonkin aikaa ja luettuasi hieman lisää junia koskevia opetusohjelmia, opit kuinka tehdään monimutkaisempia junaratoja, joissa voi kulkea useita junia yhtäaikaa.
+
+<span style="float: right">[[Main/en/Opetusohjelma|'''Seuraava''': Lentokoneet]] &raquo;</span>
+</div>
+[[Category:fi/Opetusohjelma]]
