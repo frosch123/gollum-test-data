@@ -1,0 +1,52 @@
+[[Translation:Main/en/Tutorial/Buses]]{{en/-}}__NOTOC__
+{{en/Tabs|5|2
+|Tutorial/De|1. Spiel beginnen<!--
+-->|Tutorial/Busverbindungen/De|2. Busverbindungen<!--
+-->|Tutorial/Zugverbindungen/De|3. Zugverbindungen<!--
+-->|Tutorial/Flugzeugverbindungen/De|4. Flugzeugverbindungen<!--
+-->|Tutorial/Abschluss/De|5. Abschluss}}
+<div style="padding:.5em 1em 1em 1em; border-top:none; background-color:#f1f2fe; color:#000;">
+{{de/Tutorial}}
+== Einen Busverkehrsbetrieb aufbauen ==
+Hier bekommst Du gezeigt, wie Du in kurzer Zeit eine Busverbindung zwischen zwei Haltestellen aufbaust. 
+
+=== Einen guten Ausgangsort für eine Busverbindung finden ===
+Halte die rechte Maustaste gedrückt und ziehe den Mauszeiger in eine beliebige Richtung, um die Welt zu betrachten. Mit hoher Wahrscheinlichkeit wirst Du eine Ansammlung von Häusern finden, also eine [[Main/de/Stadt|Stadt]]. Der Name der Stadt steht über dem Stadtzentrum, gefolgt von einer Zahl, die die Einwohnerzahl anzeigt. Versuche nun, eine Stadt mit mehr als 500 Einwohnern zu finden.
+{{en/Phototable|[[File:de/tutorial bus 1.png|400px]]|Eine Stadt in Open TTD|none}}
+
+=== Einen Busbahnhof bauen ===
+# Klicke auf die Schaltfläche '''Straßen bauen''' [[File:en/Roadcnstr.png]]. Eine neue Menüleiste mit mehr Schaltflächen erscheint und zeigt Dir alle Werkzeuge an, die Du benötigst, um eine Straßenverbindung aufzubauen.
+# Klicke auf die Schaltfläche '''Busbahnhof bauen''' [[File:en/BsStp.png]]. Ein neuer Auswahlbildschirm erscheint, in dem Du die Ausrichtung des Busbahnhofs auswählen kannst.
+{{en/Phototable|[[File:de/tutorial bus 2.png]]|Auswahlbildschirm für die Ausrichtung einer Haltestelle, sowie Platzierung in der Stadt|none|6=:}}
+<ol start="3">
+<li>Suche in der Nähe von Häusern ein leeres Feld neben einer Straße. 
+<li>Wähle nun die Ausrichtung des Busbahnhofs so, dass die Einfahrt zu Straße zeigt.
+<li>Klicke nun mit der linken Maustaste auf den ausgesuchten Bauplatz, um den Busbahnhof zu bauen. Die rote Zahl, die über den Mauszeiger erscheint, zeigt Dir an, wie viel der Bau gekostet hat. Wenn Du die Ausrichtung korrekt gewählt hast, wird auch automatisch die Straße zur Einfahrt zum Busbahnhof erweitert.
+<li>Wiederhole nun die letzten Schritte, um einen zweiten Busbahnhof an einer anderen Stelle in der Stadt zu bauen.
+</ol>
+{{en/Phototable|[[File:de/tutorial bus 4.png|400px]]|Nachdem Du beide Haltestellen gebaut hast|none|6=:}}
+
+=== Einen Bus kaufen ===
+Um Passagiere zwischen den beiden Busbahnhöfen zu transportieren, benötigst Du natürlich einen Bus. [[Main/de/Busse|Busse]] und alle anderen Straßenfahrzeuge werden im Fahrzeugdepot gebaut.
+#Baue ein Fahrzeugdepot wie einen Busbahnhof auf eine freie Baufläche an eine Straße, indem Du auf die Schaltfläche '''Fahrzeugdepot''' [[File:en/RVDPT.png]] klickst. Versuche, das Depot in der Nähe eines Busbahnhofs zu bauen, die Nähe zu Häusern ist hier aber zu vernachlässigen.
+#Klicke auf das soeben gebaute Fahrzeugdepot und ein Bildschirm erscheint. Hier bekommst Du alle Fahrzeuge angezeigt, die im Depot warten. Aktuell ist das Depot natürlich leer, Du musst also einen Bus kaufen. 
+#Klicke auf die Schaltfläche '''Neue Fahrzeuge''' am unteren Rand des Depotfensters und eine Auswahl von Fahrzeugen erscheint, die Du aktuell erwerben kannst. Ganz oben in der Liste findest Du den ''MPS Regal Bus''.
+{{en/Phototable|[[File:de/tutorial bus 5.png]]|Fahrzeugdepotfenster|none|6=:}}
+<ol start="4">
+<li>Klicke auf den Bus, um diesen auszuwählen und wähle die Schaltfläche '''Fahrzeug kaufen'''. Ein neues Fenster, das '''Fahrzeugfenster''' erscheint.
+<li>Nun besitzt Du einen Bus, der bereit ist, Aufträge anzunehmen. Das Fahrzeugdepotfenster kannst Du vorerst schließen, indem Du auf das ''X'' in der oberen linken Ecke klickst.
+</ol>
+=== Aufträge für den Bus erstellen ===
+#Klicke im Fahrzeugfenster auf die Schaltfläche '''Aufträge''' [[File:en/Orders.png]]. 
+#Klicke auf die Schaltfläche '''Fahre zu''' und der Mauscursor verändert sich. Klicke nun auf einen deiner Busbahnhöfe und der Auftrag erscheint im '''Auftragsfenster''' vom Bus und lautet ''Fahre zu <Busbahnhof>''.
+#Klicke erneut auf '''Fahre zu''' und wähle den zweiten Busbahnhof aus, um diesen zur Auftragsliste hinzuzufügen. Sobald ein Fahrzeug das Ende seiner Auftragsliste erreicht hat, fängt es an, die Liste von oben erneut abzuarbeiten.<br/>[[File:de/tutorial bus 6.png|frame|none|Aufträge zuweisen]]
+#Klicke nun im Fenster auf die '''Statusleiste''' in der in roter Schrift '''Angehalten''' steht. Dein Bus wird nun das Depot verlassen und zwischen den beiden Busbahnhöfen pendeln und Passagiere transportieren.
+{{en/Phototable|[[File:de/Tutorial bus 7.png]]|Der erste Bus erreicht einen Busbahnhof.|none|6=:}}
+
+Herzlichen Glückwunsch - Du hast eine erste Busverbindung aufgebaut. Mit der Zeit werden Passagiere an den Busbahnhöfen warten, um mit dem Bus von einem Busbahnhof zum anderen gefahren zu werden. Wenn Du eine grüne Zahl über einem Busbahnhof siehst, dann ist dies das Einkommen, welches Du mit dem Transport machst.
+
+Der Bus wird womöglich aufgrund der kurzen zurückgelegten Distanz und der geringen Passagieranzahl nicht sehr lukrativ sein. Du musst mehr Transportverbindungen aufbauen, um dein Einkommen zu vergrößern und dein Transportimperium aufzubauen.
+
+<span style="float: right">[[Main/de/Tutorial/Zugverbindungen|'''Weiter''': Zugverbindungen]] &raquo;</span>
+</div>
+[[Category:de/Tutorial-Allgemein]]
