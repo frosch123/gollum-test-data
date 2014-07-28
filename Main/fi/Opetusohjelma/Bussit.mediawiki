@@ -1,0 +1,55 @@
+[[Translation:Main/en/Tutorial/Buses]]{{en/-}}__NOTOC__
+{{en/Tabs|5|2
+|Opetusohjelma/Fi|1. Aloittaminen<!--
+-->|Opetusohjelma/Bussit/Fi|2. Linja-autot<!--
+-->|Opetusohjelma/Junat/Fi|3. Junat<!--
+-->|Opetusohjelma/Lentokoneet/Fi|4. Lentokoneet<!--
+-->|Opetusohjelma/Yhteenveto/Fi|5. Yhteenveto}}
+<div style="padding:.5em 1em 1em 1em; border-top:none; background-color:#f1f2fe; color:#000;">
+{{fi/Tutorial}}
+==Linja-autoreitin luominen==
+Luodaan pelin yksi yksinkertaisimmista kuljetustyypeistä - Matkustajaliikenne tiereiteillä (toisin sanoen Linja-autoreitti)
+
+===Sopivan sijainnin löytäminen===
+Paina ja pidä pohjassa hiiren oikeata näppäintä liikkuaksesi kartalla. Koita löytää talokeskittymä - tämä on [[Main/fi/Kaupungit|kaupunki]]. Jokaisessa kaupungissa on nimi keskellä kaupunkia, jonka perässä on luku suluissa, joka tarkoittaa kaupungin väkilukua. Yritä löytää vähintään 500 asukkaan kaupunki.
+{{en/Phototable|[[File:fi/Opetusohjelma Bussit 1.png|400px|Kaupunki]]|Kaupunki|none}}
+
+===Linja-autoaseman rakentaminen===
+#Paina ''Tien rakentaminen''-painiketta [[File:en/Roadcnstr.png]]. Uusi työkalurivi, jossa on enemmän painikkeita ilmestyy näkyviin. Nämä painikkeet ovat tarkoitettu tie-palveluiden rakentamiseen.
+#Paina ''Rakenna linja-autoasema''-painiketta [[File:en/BsStp.png]]. ''Linja-autoaseman suunta''-ikkuna ilmestyy näkyviin, jonka avulla voit valita asemasi suunnan neljästä eri vaihtoehdosta.
+{{en/Phototable|[[File:fi/Opetusohjelma Bussit 2.png]]|Linja-autoaseman suunnan ja sijainnin valitseminen|none|6=:}}
+<ol start="3">
+<li>Etsi vapaa ruutu tien vierestä, joka on lähellä taloja.
+<li>Valitse asemalle suunta, joka osoittaa tietä kohti. 
+<li>Paina hiiren vasenta painiketta valitsemasi ruudun kohdalla rakentaaksesi linja-autoasemasi tähän. Huomaat punaisen numeron leijuvan ylös päin, mikä tarkoittaa rahamäärää, jonka käytit rakentamiseen. Jos valitsit aseman suunnan oikein huomaat myös, että aseman vieressä kulkevaan tiehen syntyy liittymä linja-autoasemallesi.
+<li>Toista edelliset vaiheet luodaksesi toisen linja-autoaseman eri puolelle kaupunkia.
+</ol>
+{{en/Phototable|[[File:fi/Opetusohjelma Bussit 4.png|400px]]|Kahden linja-autoaseman rakentaminen|none|6=:}}
+
+===Linja-auton ostaminen===
+Liikutellaksesi matkustajia näiden kahden aseman välillä tarvitset tietenkin linja-auton. [[Main/fi/Bussit|Linja-autot]] (ja muutkin ajoneuvot) ostetaan [[Main/fi/Varikot|varikoilla]].
+#Rakenna autovarikko painamalla ''Autovarikko''-painiketta [[File:en/RVDPT.png]] ''Tien rakentaminen työkalurivillä'' ja toimi, kuten linja-autoaseman rakentamisessakin. Yritä rakentaa autovarikko lähelle jompaa kumpaa linja-autoasemaa, mutta rakennusten läheisyydellä ei ole tällä kertaa mitään merkitystä.
+#Napsauta rakentamaasi autovarikkoa. Varikkovalikko avautuu esiin, jossa näet yleissilmäyksen kaikista autovarikolla olevista ajoneuvoista - tällä hetkellä varikko on tyhjä. Muutetaan se ostamalla linja-auto!
+#Valitse ''Uusia ajoneuvoja''-painike autovarikkovalikon alareunasta. Uusi ruutu avautuu esiin, jossa näkyy kaikki ajoneuvot, jotka voidaan tällä hetkellä rakentaa. Ylimpänä löydät linja-auton - ''MPS Regal - Linja-auton'' ollaksemme tarkkoja.
+{{en/Phototable|[[File:fi/Opetusohjelma Bussit 5.png]]|Autovarikon sisällä...|none|6=:}}
+<ol start="4">
+<li>Napsauta linja-autoa valitaksesi sen, jonka jälkeen napsauta ''Osta ajoneuvo''-painiketta. Uusi ajoneuvoikkuna ilmestyy näkyviin.
+<li>Nyt linja-autosi on ostettu ja on valmis vastaanottamaan määräyksiä. Et tarvitse autovarikkoikkunaa enää, joten napsauta x-painiketta ikkunan vasemmasta yläkulmasta sulkeaksesi ikkunan.
+</ol>
+
+===Käskyjen antaminen Linja-autolle===
+#Ajoneuvo-ikkunassa, napsauta ''Ajoneuvon käskyt''-painiketta [[File:en/Orders.png]]. 
+#Napsauta ''Mene''-painiketta, jonka jälkeen napsauta ensimmäistä linja-autoasemaasi ilmestyneen erikoiskursorin avulla. Tämä lisää ensimmäisen ohjeistuksen ajoneuvon käskylistaan. ''Mene <aseman nimi>''. 
+#Napsauta ''mene''-painiketta uudelleen ja lisää toinen asemasi ajoneuvon käskylistaan samalla tavalla. Kun ajoneuvo saavuttaa viimeisen ohjeistuksensa käskylistalta, se palaa automaattisesti alkuun.
+{{en/Phototable|[[File:fi/Opetusohjelma Bussit 6.png]]|Määräysten antaminen.|none|6=:}}
+<ol start="4">
+<li>Ajoneuvo-ikkunassa paina ''toiminnot palkkia'' ikkunan alareunassa, jossa lukee ''Pysäytetty''. Linja-autosi lähtee autovarikolta ja alkaa kulkemaan linja-asemien välillä.
+</ol>
+{{en/Phototable|[[File:fi/Opetusohjelma Bussit 7.png]]|Ensimmäinen linja-autosi on juuri saapumassa linja-automasemalle.|none|6=:}}
+Onneksi olkoon - olet juuri luonut ensimmäisen linja-autoreittisi. Ajan kuluessa matkustajia alkaa kerääntymään linja-autoasemille ja linja-autosi kuljettaa heidät toiselle puolelle kaupunkia. Kun tämä tapahtuu huomaat vihreät numerot, jotka leijuvat ylös linja-autostasi - tuloja!
+
+Linja-autosi ei ole todennäköisesti kovin tuottava, koska se kulkee vain lyhyttä välimatkaa, eikä kuljeta kovin suurta määrää matkustajia. Sinun tulee luoda lisää kuljetuspalveluita kasvattaaksesi tulojasi ja rakentaaksesi keisarikunnan.
+
+<span style="float: right">[[Main/fi/Opetusohjelma/Junat|'''Seuraava''': Junareitin luominen]] &raquo;</span>
+</div>
+[[Category:fi/Opetusohjelma]]
