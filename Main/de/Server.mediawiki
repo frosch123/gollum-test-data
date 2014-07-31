@@ -1,0 +1,28 @@
+[[Translation:Main/en/Server]]{{en/-}}
+
+'''Achtung: Diese Anleitung ist veraltet und gilt nur für OpenTTD-Versionen älter als 1.4.0!'''
+
+Wenn du ein [[Main/en/multiplayer|Multiplayer]]-Spiel hosten willst, musst Du den OpenTTD '''server''' auf deinem Rechner konfigurieren.
+[[File:en/Ottdmulti6.png|right]]
+'''1''' Im Hauptmenü, klicke '''Multiplayer'''
+
+'''2''' klicke '''Starte Server'''
+
+'''3''' Wähle einen Namen für dein Spiel, um es anderen zu erleichtern es zu finden. Nutze dazu das '''Spielname'''-Feld 
+
+'''4''' Stelle die zusätzlichen Optionen ein.
+
+'''5''' Klicke '''Neues Spiel''' (um ein zufälliges neues Spiel zu Erstellen), oder '''Spiel Laden''' (um einen Spielstand fortzusetzen), oder '''Szenario Spielen''', oder '''Spiele Höhenkarte''', oder '''Abbrechen'''.
+
+==Ports==
+Falls du hinter einer Firewall bist, schau ob die korrekten [[Main/en/Port]]s (standardmäßig Port 3979) weitergeleitet werden.
+Du kannst den Port ändern indem du in der [[Main/de/Konsole|Konsole]] "server_port <port>" eingibst.
+
+===Router===
+Die meisten Router besitzen dazu noch eine eigene Firewall. Auch in dieser muss der Port freigegeben werden. Unter Fritz!Box-Routern ist dies unter [http://fritz.box http://fritz.box] möglich.
+
+==Dedicated server==
+Falls du viele Spieler erwartest und deinen Rechner nicht selber benutzen willst, kannst du OpenTTD als [[Main/en/dedicated server| Dedizierten Server]] starten.
+
+Wenn Sie Ihren Server auf Ubuntu/Debian laufen und Sie möchten automatisch starten/stoppen und speichern Sie Ihr Spiel Besuche die init.d-Skripte auf https://bitbucket.org/frodus/openttd-init
+[[Category:en/Multiplayer]]
