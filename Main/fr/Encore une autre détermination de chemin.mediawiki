@@ -1,0 +1,61 @@
+[[Translation:Main/en/Yet Another Pathfinder]]{{en/-}}
+
+'''Encore une autre détermination de chemin (YAPF)''' est le dernier algorithme logiciel utilisé par [[Main/fr/OpenTTD|OpenTTD]] pour contrôler le déplacement des véhicules.
+
+YAPF est la troisième tentative pour créer un algorithme de détermination de chemin pour OpenTTD. Le premier nouvel algorithme était [[Main/fr/Nouvelle détermination de chemin de train|Nouvelle détermination de chemin de train (NTP)]], qui ne fonctionnait que pour les trains. Le deuxième était [[Main/fr/Nouvelle détermination de chemin globale|Nouvelle détermination de chemin globale (NPF)]], qui fonctionne pour tous les véhicules et est un peu plus intelligent, mais plante le système quand beaucoup de véhicules ont été construits. Le but de YAPF est de fournit la puissance et la flexibilité de NPF tout en étant très optimisé sans trop charger le CPU.
+
+Le reste de cet article est destiné aux développeurs.
+
+== Améliorations par rapport à NPF ==
+
+Selon un [http://www.tt-forums.net/viewtopic.php?t=32774 billet du forum par KUDr], il y a trois améliorations majeures dans YAPF par rapport à NPF:
+
+*NPF crée un nœud pour chaque case alors que YAPF étend le nœud en suivant la direction de la voie de la case jusqu'à atteindre quelque chose d'important (gare, point de passage, embranchement, etc.). Cette extension de nœud est appelée un "segment".
+*YAPF met en cache ses segments -  case et direction de voie de début et de fin, coût, dernier signal de case et direction de voie, etc.
+*YAPF a une structure beaucoup plus complexe - il est basé sur des modèles pour permettre au compilateur d'optimiser les appels entre modules de YAPF en ligne.
+
+Ces améliorations accroissent la performance de YAPF par rapport à NPF mais rendent aussi le code plus complexe et difficile à comprendre.
+
+== Réglages ==
+{{fr/Compléter|Completer la configuration}}
+Plusieurs options de YAPF peuvent être réglées. Je ne les décrirai pas toutes parce que ce qu'elles font est clair.
+
+Il y a 4 options (en fait 3) qui sont assez mystérieuses:
+
+rail_look_ahead_max_signals = 10<br>
+rail_look_ahead_signal_p0 = 500<br>
+rail_look_ahead_signal_p1 = -100<br>
+rail_look_ahead_signal_p2 = 5<br>
+
+La première vérifie combien de signaux YAPF doit rechercher en avant de notre train. Les options suivantes sont utilisées pour calculer un tableau de pénalités en utilisant la formule suivante, où le paramètre "i" est la valeur de rail_look_ahead_max_signals :
+
+p=p0 + p1*i + p2*i*i
+
+Donc, nous avons le tableau de pénalités de signaux suivant pour le nombre spécifié dans rail_look_ahead_max_signals comme résultat:
+
+p[]={500,405,320,245,180,125,80,45,20,5}
+
+Maintenant, quelques exemples.
+
+Pour (les premiers) 3 signaux: Rouge,Rouge,Rouge: pénalité=500+405+320=1225
+
+Pour (les premiers) 4 signaux: Rouge,Vert,Rouge,Vert: pénalité=500+0+320+0=820
+
+Le coût final sera ajouté au coût du chemin. Cela peut aider à réduire les embouteillages quand nous avons des trains bloquant un chemin (4 sémaphores à l'avance) et que nous avons un autre chemin.
+
+Ceci relève des affaires internes de YAPF et n'est pas supposé être véritablement réglé. Les développeurs ont fait de gros efforts pour calculer les bonnes valeurs dans p0,p1,p2.
+
+La seule valeur paramétrable est la pénalité pl. L'éventail des valeurs convenables va de -100 à -90. Si vous sortez de cet intervalle, le tableau de pénalités aura des valeurs bizarres et des trains pourraient commencer à aller là où vous ne les attendez pas.
+
+Si vous voulez une répartition plus agressive, essayez p1=-90 et vous obtiendrez le tableau suivant:
+
+p[]={500,415,340,275,220,175,140,115,100,95}
+
+== Projets dépendants ==
+La détermination de chemin est une part très importante de OpenTTD, et introduire une nouvelle détermination signifie des changements massifs dans le code. C'était la raison pour laquelle le développement de certaines fonctionnalités nouvelles a été suspendu jusqu'à ce que YAPF soit terminé. Maintenant que YAPF est achevé, ces projets pourraient reprendre.
+
+=== Signaux de vitesse ===
+C'était un modeste projet pour contrôler quels trains vont sur quelles voies selon leur vitesse, [http://www.tt-forums.net/viewtopic.php?t=24187 Signaux de vitesse]. Pour l'instant, ce projet n'a pas été repris après l'implémentation de YAPF. D'autres corrections qui permettent au joueur de contrôler la détermination de chemin des trains peuvent être trouvés sur [http://www.tt-forums.net/viewforum.php?f=33 les forums de développement].
+
+[[Category:fr/Réglages et préférences]]
+[[Category:fr/Véhicules]]
