@@ -1,0 +1,29 @@
+<noinclude>[[Translation:Template/en/Feature]]</noinclude><includeonly>{{en/VersionBox|{{#ifeq: {{{1|}}}|구버전|0|{{#ifexpr: {{{1|}}} < 0|0|{{{1|}}}}}}}|{{#ifeq: {{{1|}}}|구버전|99|{{#ifexpr: {{{1|}}} > 0|99|{{#expr:-{{{1|}}}}}}}}}||caption=버전 호환성|text={{{text|}}}|float={{{float|}}}}}</includeonly><noinclude>
+
+====Template:기능 사용법====
+<nowiki>{{</nowiki>'''기능/Ko'''<nowiki> | 버전 넘버}}</nowiki> 를 입력하십시오.
+*지원하는 버전 Old,0.5,0.6,0.7,1.0,1.1 (기타 다른 것도 쉽게 추가 가능).
+*음수도 지원... (-Old,-0.5,-0.6,-0.7,-1.0,-1.1,-1.2)
+*공개되지 않은 버전은 개발 버전으로 보임.
+*그 외의 매개변수로는 <code>float=</code>과 <code>text=</code>가 있습니다.
+일정 기간에 한정된 기능은 {{s|Feature_period}} 를 이용합니다.
+
+====예제:====
+<pre>{{ko/기능|0.6}}</pre>
+{{ko/기능|0.6}}
+<pre>{{ko/기능|0.7|text=(since 0.7.2)|float=left}}
+예시 텍스트. 예시 텍스트. 예시 텍스트. 예시 텍스트. {{en/-}}</pre>
+{{ko/기능|0.7|text=(since 0.7.2)|float=left}}
+예시 텍스트. 예시 텍스트. 예시 텍스트. 예시 텍스트. {{en/-}}
+<pre>{{ko/기능|1.0|float=right}}
+예시 텍스트. 예시 텍스트. 예시 텍스트. 예시 텍스트. {{en/-}}</pre>
+{{ko/기능|1.0|float=right}}
+예시 텍스트. 예시 텍스트. 예시 텍스트. 예시 텍스트. {{en/-}}
+<pre>{{ko/기능|1.1}}</pre>
+{{ko/기능|1.1}}
+<pre>{{ko/기능|-0.6|text=(to 0.6.2)}}</pre>
+{{ko/기능|-0.6|text=(to 0.6.2)}}
+
+
+[[Category:en/Templates|Feature]]
+</noinclude>
