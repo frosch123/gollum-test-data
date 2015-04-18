@@ -1,0 +1,134 @@
+This is a random collection of troublesome NewGRF syntax.
+Not all of them necessarily need a new GRF version, some could also be just handled via NML abstraction.
+
+
+== Produced/accepted cargo ==
+Problem:
+* Various properties and callbacks cannot handle more than 2 or 3 accepted/produced cargos.
+
+Affected:
+* Callback 37: Cargo sub-type text.
+* Callback 1F, 2B: Cargo acceptance.
+* Callback 2A, 2C: Accepted cargo types.
+* Callback 14B, 14C: Input/output cargos
+* Industry production callback.
+
+=== Callback 37: Cargo sub-type display ===
+Proposal:
+* Variable 18 byte 0 contains "n" for the n-th input cargo and "0x80+n" for the n-th output cargo.
+
+=== Callback 14B, 14C: Input/output cargos ===
+Proposal:
+* Call the callback also in purchase list for industry-chain view, construction GUI and script information.
+* Additional result bits for
+** always accepted/produced during the whole game
+** always accepted/produced in the current date era (may change after some years)
+** seasonal acceptance/production (predictable multiple changes per year)
+** possibly accepted/produced (more or less randomly, but not predictable without readme)
+* Addtional result bits for accepted cargos:
+** Cargo required (nothing produced without)
+** Main cargo (cargo is processed)
+** Bonus cargo (cargo is not processed, but affects the processing of other cargos; no point in delivery when not delivering something else)
+
+== Childsprite Offsets ==
+Problem:
+* In spritelayouts child sprites are positioned relative to the top-left corner of the parent sprite.
+* This is troublesome if the parent sprite changes, and it dis-allows clipping of the parent sprite.
+* Also, the signedness of the offsets differ: For stations and OTTD-internal spritelayouts they are signed. For Action2Spritelayouts of Industries/houses/objects/... they are unsigned.
+
+Proposal:
+* Position child sprites relatively to same reference point as the parent sprite is positioned, i.e. relative to the bounding box.
+* This is technically already the case for secondary ground sprites.
+* The offsets for child sprites should always be signed.
+
+Related issue:
+* TTD only draws parent sprites, after doing a clipping-test with the viewport bounds.
+* For child sprites no clipping test is done, they are drawn exactly when the parent sprite is drawn.
+* So, currently child sprites may not extent over the bounds of the parent sprite, else they flicker.
+Solution: Check clipping for parent and child sprites independently.
+
+== Action2 ==
+
+=== Callback results ===
+
+==== Callback failure ====
+Problem:
+* Currently callback are failed by returning a (dummy) RealSprite/Production/SpriteLayout result, even if the feature does not have graphics at all.
+* Sometimes failing graphics resolving also makes sense, in which case a callback result is used.
+* Creating these dummy things is tedious.
+
+Proposal:
+* Add a new completely seperate "failure" Action2 type, which fails graphics sprite and callback resolving.
+
+
+==== 32bit callback results ====
+Problem:
+* In some cases 15 bit callback results are quite limiting.
+* Some callbacks use registers 100+x instead to return results.
+
+Ideas:
+* Add some new Action2 types which return 32bit values, or change the existing ones incompatibly.
+* The callback results should be true 32bit, not 31bit. So callback results and Action2 references need to be indicated differently.
+* Those callbacks which currently return a signed value using bit 14 for signedness, should return proper int32 or at least int16, not int15.
+* Maybe callback results and return registers could be unified (see summary below)
+
+
+=== RandomAction2 ===
+Problems:
+* It only supports 128 cases. (power of two and <= 255)
+* Rerandomisation only works inside the graphics chain, not after callback-branching.
+* Rerandomisation with type 83 and 84 for vehicles is completely broken.
+* In NML the dependent/independent stuff is quite complicated, and it is somewhat intransparent to the user how many random bits are actually available.
+
+Proposal:
+* Separate rerandomisation from random choices.
+* Random choices can already be done with VarAction2 using variable 5F (and variable 61 for other vehicles). This would also make things more similar to industries testing random bits of other tiles etc.
+* Rerandomisation would be done via a normal callback, which can test triggers via variables, and returns the bits to rerandomise and the triggers to clear.
+
+Open issue in case of GRF version 9 solution:
+* What should the callback look like?
+
+Solution via NML only:
+* NML generates a check for callback 1, this chains to a dummy RandomAction2 which does only the rerandomisation based on the triggers, and does the same for all cases otherwise (chain to the same next rerandomisation action).
+
+
+=== Extended byte for 60+x vars ===
+Problem:
+* Some 60+x variables accept parameters bigger than 0xFF (actually, maybe it is only vehicle var 60 currently).
+* Currently bigger values can only be passed using variable 7B.
+
+Ideas:
+* Make it an extended byte. This is quite incompatible though, since 0xFF is a popular parameter value for "information about nearby tiles).
+* Possibly extent the nearby-tiles variables to 8bit offsets at the same time, instead of 4bit offset.
+* Maybe it should be a int32 in the first place, instead of extended byte.
+
+
+=== Action2 Summary ===
+Some of these ideas require an entirely different Action2 format. So let's consider what else could be changed, when redesigning it entirely from scratch.
+* Allow more than 256 VarAction2 ids.
+* Drop the special case for "error", instead make the sprite/callback resolving fail immediately.
+* Drop the VarAction2 scopes. Instead prefix every variable with the "scope" (parent, self, more in future), so different scopes can be mixed easily within expressions, without chaining to other Action2.
+* Drop the VarAction2 sizes. Do everything in 32bit, as it is already the case when using registers. Variable access usese and-masks anyway, so the additional masking is somewhat redundant.
+* Drop the special cases for returning computed callback results (this is a bear trap deluxe).
+: Instead allow composing callback results of arbitrary size:
+:: 0..10: return [ word(accumulator) word(0x123) dword(register100) ]
+:: 11..20: chain to spritegroup 123
+:: default: return failure
+* This also simplifies text stack handling a lot, since you can easily compose words and bytes to a stack.
+* If someone finds any use case for explicit "error" handling, one could also add a "error:" to the result switch.
+
+== Units, properties, variables ==
+Rework all variables, properties and callbacks with physical units:
+* Use the same units for all features, variables and properties of the same physical dimension.
+* Extend the range and granularity of the values if needed. (this should consider requirements of smoother movement in zoom-in levels)
+* Granularity should be finer than the (popular) GUI units, so that values are converted more predictable to (nice) km/h and mph values.
+* GUI always rounds values to somewhat nice values (display cost of "1349838 C" as "1350000 C", display "1379 km/h" as "1380 km/h", ...)
+* The old properties using the old units are removed. If there are multiple properties for the same thing, they are removed as well. (stuff like long/short date properties, train weight, RV speed)
+* Since properties are changed incompatibly anyway, reorder the properties of vehicles, so that same things get the same property ID.
+
+Unit suggestions:
+* Speed in 1/10 km-ish/h (10 units = 1 km-ish/h, 16 units = 1 mph)
+* Weight in 1/16 metric tons.
+* Vastly increased range for costs (to avoid the need for base cost multipliers), i.e. always dwords, possibly in cents of pounds or something
+* The previous item somewhat implies to make most of the base costs "1" in normal difficulty. I.e. "cost multipliers" turn into "absolute costs at normal difficulty without inflation".
+* Time stamps/time spans always in "days"? Or do some places only make sense as "year"? (this may run into the "daylength" dilemma)
