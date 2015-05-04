@@ -1,0 +1,86 @@
+[[Translation:Main/en/Development]]
+
+{{ko/번역|origin= Development
+|from  = en
+|to    = ko
+|Percentage = 30
+}}
+
+<div style="background-color: #f1f2fe; border: 1px solid #c7c8fe; margin:0; padding: 1em 1em 2em 1em; text-align:left; border-bottom: none;">
+[[File:en/BlackBook.png|64px|left]]
+<strong style="font-size:1.4em; display:block">OpenTTD 개발 매뉴얼</strong>
+[[Main/ko/OpenTTD|OpenTTD]]는 [http://www.gnu.org/copyleft/gpl.html GPL] 하에 개발되는 오픈 소스 프로젝트입니다. [http://svn.openttd.org/ 소스 코드를 온라인에서 보거나] 최신 소스 코드 트리를 [[Main/en/FAQ development]]을 통해 다운로드받을 수도 있습니다. 소스를 수정하였다면 [http://bugs.openttd.org 패치 트래커]에 코드 변경사항을 담은 [[Main/en/SVN#How do I make a diff file to share my changes with other coders.3F|diff 파일]]을 등록할 수 있습니다.<br />
+</div>
+
+{| cellspacing="3" class="mainpagetable" cellpadding="10px" style="margin:0;"
+|- valign="top"
+|width="33%" style="border: 1px solid #c7c8fe; border-bottom: none;"|
+<font size="3">'''개발'''</font> <!-----------------------Development--------->
+
+[[Main/ko/목표|목표]] - OpenTTD의 장기 목표로, 미래에 OpenTTD 개발이 나아가야 할 길을 정의해주는 미션들입니다.
+
+[[Main/en/Recent and Current Developments]] shows the developments in trunk since the last major release as well as the purpose of the branches in our [[Main/en/FAQ development]] repository.
+
+The [[Main/en/Todo list]] contains tasks which require no detailed knowledge of then OpenTTD code base.
+Look here if you want to get involved with the development of OpenTTD, but are unsure with what task to get started.
+
+The latest changes to the OpenTTD [[Main/en/FAQ development]] tree are on the [http://cia.navi.cx/stats/project/OpenTTD cia.navi.cx service] ([http://cia.navi.cx/stats/project/OpenTTD/.rss?ver=2&medium=unquoted&limit=15 RSS feed also available])
+
+|width="33%" style="border: 1px solid #c7c8fe; border-bottom: none;"|
+<font size="3">'''코딩'''</font>  <!-----------------------Coding--------->
+
+*OpenTTD의 [[Main/ko/개발자|개발자]]들
+*[[Main/en/Coding style|코딩 스타일]] - OpenTTD를 코딩하는 방법
+*[[Main/en/GUI Style Guide|GUI 스타일 가이드]] - 인터페이스의 모습과 느낌
+*[[Main/en/Coding Tools|코딩 툴]] - OpenTTD를 빌드하고 디버그하기 위한 도구
+*[[Main/en/Todo list|할 일 목록]] - 구현되기를 바라는 패치나 기능 목록
+*[http://docs.openttd.org Doxygen] - 코드에 대한 전반적인 안내 문서
+*[[Main/en/Patch Checklist|패치 체크리스트]]
+*[http://bugs.openttd.org/ 버그 트래커]
+
+|width="33%" style="border: 1px solid #c7c8fe; border-bottom: none;"|
+<font size="3">'''하위 프로젝트'''</font> <!-----------------------Subprojects--------->
+
+*[[Main/en/Graphics Development]] - Find out everything about 32bpp graphics, newGrfs, Graphics replacement etc.
+*[[Main/en/AI:Main Page|NoAI]] - a new framework for user-made AIs
+*[[Main/en/Sound Effects Replacement]] - Creating a set of replacement sound effects for the game
+*[[Main/en/Passenger and cargo destinations]] - A new way of handling cargo and passengers allowing specific destinations
+*[[Main/en/Passenger and cargo distribution]] - A new and better way of handling cargo and passengers allowing specific destinations
+|}  <!------------- 3th part ------------->
+{| cellspacing="3" class="mainpagetable" cellpadding="10px" style="background-color: #E7EBFF; border: 1px solid #c7c8fe; margin:0; border-top:none; padding:0; margin-bottom:2em"
+|- valign="top"
+|width="33%" style="border: 1px solid #c7c8fe;"|
+<font size="3">'''Development documentation'''</font>  <!---------Development documentation--------->
+
+*[[Main/en/Development]]
+*[[Main/en/Commit style]]
+*[[Main/en/Doing an OpenTTD release]]
+*[[Main/en/Nightly build]]
+*[[Main/en/Compile Farm]]
+*[[Category/en/Compiling OpenTTD|Compiling OpenTTD]]
+*[[Main/en/OpenTTD Release History]]
+*[[Main/en/Server Admin Port Development]]
+
+|width="33%" style="border: 1px solid #c7c8fe;"|
+<font size="3">'''Help with coding'''</font>  <!------------- Help with coding ------------->
+
+In the list below are some tips, and helpful tidbits to help you code/debug and get your patches to be accepted swiftly and without problems to the source
+*[[Main/en/Coding style]] - to keep a coherent feel of the code, we ask you to code your patches in the following style
+*[[Main/en/Debugging]]
+*[[Main/en/Strings]] - with the string system being not too userfriendly, this might help you on your way
+
+|width="33%" style="border: 1px solid #c7c8fe;"|
+<font size="3">'''Miscellaneous'''</font>  <!------------- Miscellaneous ------------->
+
+* [http://www.openttd.org OpenTTD website]
+* [http://www.tt-forums.net/viewforum.php?f=55 OpenTTD forum]
+* [http://cia.vc/stats/project/OpenTTD CIA Stats]
+* [[Main/en/Todo list]]
+* List of [[Main/en/Requested features|other patches]] (check also [http://www.tt-forums.net/viewforum.php?f=33 dev section of forums])
+* [[Main/en/Rejected features List|Rejected features]]
+* [[Main/en/Miscellaneous suggestions]]
+* [[Main/en/List of patches]]
+|}
+
+
+[[Category:en/Development]]
