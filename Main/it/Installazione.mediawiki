@@ -1,0 +1,139 @@
+<noinclude>{{it/Traduzione|Installation|85}}
+[[Translation:Main/en/Installation]]{{en/-}}{{it/Indice dei contenuti}}
+__TOC__
+
+=Introduzione=
+Fin dalla versione 1.0.0 l'installazione di OpenTTD è stata semplificata, e il gioco completamente (sia il gioco stesso che la sua grafiche) costruito secondo la modalità ''open source''. Per scaricare la versione più aggiornata di OpenTTD [http://www.openttd.org/download-stable clicca qui].
+
+L'installazione può essere leggermente complessa, dato che i file della [[Main/en/base graphics|grafica di base]] non sono distribuiti col gioco. Per questo motivo oltre a [http://www.openttd.org/ scaricare il gioco], dovrai ottenere un set di file di grafica di base.
+
+Attualmente ci sono due set di file di grafica di base che puoi usare:
+* Un set completo e funzionante si trova sul CD di [http://en.wikipedia.org/wiki/Transport_Tycoon Transport Tycoon Deluxe] (TTD). Diversamente da OpenTTD, TTD '''non''' è software libero.
+* Un'alternativa [http://en.wikipedia.org/wiki/Open_source open source] alla grafica di TTD è [[Main/en/OpenGFX Readme]], attualmente completa. Questo set di file di grafica di base è per coloro che non possiedno un CD originale di TTD.
+
+Ci sono inoltre diverse versioni di OpenTTD per vari [[Main/en/Operating system|sistemi operativi]] (Windows, MacOSX, Linux).
+
+= Installazione =
+'''Seleziona le istruzioni di installazione per la grafica di base ed il tuo sistema operativo:'''
+:<p style="font-size: 90%">''(Se hai accesso alla grafica di base di TTD e non sai quale scegliere, usa quest'ultima, OpenGFX può essere facilmente instsallata successivamente. Comunque la maniera più semplice di installare il gioco è quella di usare tutti i file necessari fin dal principio: grafica di base TTD, OpenGFX, OpenMFX e OpenSFX.'')</p>
+
+[[File:en/Installation 1a.png|frame|center|Downloads page of OpenTTD: ''www.openttd.org/download-stable'']]
+
+== Installazione per Windows ==
+===Usando la grafica di base di TTD===
+'''1.''' Ottieni una copia di Transport Tycoon Deluxe per Windows. Se non il tuo CD, prova a cercare su [http://www.google.com/search?q=transport+tycoon+deluxe Google]. '''Nota''': Le grafiche originali sono protette da '''copyright''', può essere illegale (in alcuni paesi) scaricarle.
+
+'''2.''' Scarica l'installatore OpenTTD per Windows dalla [http://www.openttd.org/download-stable pagina di download].
+[[File:en/Installation 1b.png|frame|center|L'installazione di OpenTTD su Windows]]
+
+'''3.''' Installa OpenTTD. Scegli i componenti '''OpenTTD''' e '''Copy data from TTD CD-ROM'''.
+[[File:en/Installation 2.png|frame|center|Scelta dei componenti]]
+
+'''4.''' Fai che OpenTTD trovi dove sono i files di TDD; dovrebbe trovarli automaticamente sei ahi usato l'instasllatore di TDD per Windows, altrimenti specifica il drove del CD.
+[[File:en/Installation 3.png|frame|center|Trova TTD]]
+
+'''5.''' Seleziona la cartella dove installare OpenTTD.
+[[File:en/Installation 4.png|frame|center|Scegli la cartella di destinazione]]
+
+'''6.''' Si consiglia di selezionare il Menù di Avvio dove creare la scorciatoia per OpenTTD.
+[[File:en/Installation 5.png|frame|center|Scegliere il Menù di Avvio]]
+
+'''7.''' Scegli di eseguire OpenTTD e clicca su "Finish".
+[[File:en/Installation 6.png|frame|center|OpenTTD è ora installato!]]
+
+===Usando la grafica OpenGFX===
+'''1.''' Scarica l'installatore di OpenTTD per Windows dal [http://www.openttd.org/ sito OpenTTD].
+[[File:en/Installation 1b.png|frame|center|L'installatore di OpenTTD per Windows.]]
+
+'''2.''' Installa OpenTTD.
+
+'''3.''' Salta la richiesta dei files di TTD: deseleziona l'opzione "Copy Game Graphics" nel menù "Choose Components".
+[[File:en/Installation 2 gfx.png|frame|center|Setup di installazione senza i file TTD]]
+
+'''4.''' Modifica il file di configurazione.
+:'''4.1.''' Trova il file [[Main/en/openttd.cfg]], dovrebbe essere nella seguente cartella (dipende dal sistema operativo usato):
+ Win XP : "C:\Documents and Settings\<username>\My Documents\OpenTTD"
+ Vista  : "C:\Users\<username>\Documents\OpenTTD"
+ Linux  : "~/.openttd"
+:'''4.2.''' Apri il file [[Main/en/openttd.cfg]] nel tuo edito di testo preferito.
+:'''4.3.''' Vai alla sezione [misc] e aggiungi il seguente testo (può darsi che un testo simile ci sia già, nel qual caso modificalo perché sia uguale a quello qui riportato) alla fine di questa sezione:
+ graphicsset = "OpenGFX"
+: Il nome del set di file di grafica di base è salvato nel proprio file ''obg'' e non può essere identico al nome del file obg stesso.
+[[File:en/Installation 9 grx manual configuration cfg.png|frame|center|Esempio]]
+:'''4.4.''' Salva i cambiamenti fatti ed esegui OpenTTD.
+
+== Installazione su Mac OS X ==
+{{it/Nota| 1=Non ci sono file binari per Mac OS X per le versioni 1.0.x. Comunque il supporto è ripreso per le versioni 1.1.x, scarica la più recente versione '''ufficiale''' dei file binari di test (attualmente 1.1.0 beta5) per essere sicuro che gli ultimi bachi siano stati trovati e corretti.}}
+
+===Usando la grafica di base di TTD===
+'''1.''' Ottieni una copia di Transport Tycoon Deluxe per Windows. Se non il tuo CD, prova a cercare su [http://www.google.com/search?q=transport+tycoon+deluxe Google]. '''Nota''': Le grafiche originali sono protette da '''copyright''', può essere illegale (in alcuni paesi) scaricarle.
+
+'''2.''' Crea una cartella '''openttd/''' sul tuo computer.
+
+'''3.''' OpenTTD ha bisogno di alcuni files da TTD, vedi [[Main/en/#Files da TTD|più giù]] per le istruzioni precise su quali file copiare e dove.
+
+'''4.''' Scarica l'installatore per OpenTTD su OSX dalla [http://www.openttd.org/download-stable pagina di download].
+[[File:en/Installation 1b osx.png|frame|center|1.1.2 per Mac OSX]]
+
+'''5.''' Esegui OpenTTD.
+
+:'''Attenzione:''' Per attivare la colonna sonora originale, avrai bisogno diinstallare TiMidity e Freepats. Vedi [[Main/en/Compiling on Linux#Playing the soundtrack|Attivare la colonna sonora]] 
+
+:Se il supporto musicale non funziona può essere a causa dei permessi sui file.
+# Seleziona tutti i file <code>.gm</code> nella cartella '''/gm''', quindi usa CMD + I per vedere le loro "Proprietà".
+# Nella sezione "Proprietà e permessi" scegli "puoi: Leggere e scrivere".
+# Riavvia OpenTTD.
+
+===Usando la grafica OpenGFX===
+# Scarica l'installatore OSX per OpenTTD dal [http://www.openttd.org/ sito OpenTTD]. Assicurati si avere almeno la '''versione 0.7.0''' o una successiva.
+# Installa OpenTTD.
+# Salta i passi dove l'installatore chiede di identificare la posizione dei file TTD.
+# Consulta il file [[Main/en/OpenGFX Readme#Manually Installing OpenGFX|OpenGFX Readme]] per ulteriori informazioni.
+
+== Installazione su Linux ==
+
+# Usando il tuo gestore delle applicazioni per la tua distribuzione (o il gestore di pacchetti), scegli OpenTTD.
+# Fai clic su "Installa".
+
+A questo punto puoi decidere se usare la grafica di base OpenGFX oppure quella originale di TTD, se hai una copia originale del gioco sottomano.
+OpenGFX è più veloce e dovrebbe essere l'opzione preferita.
+
+===Usando la grafica OpenGFX===
+# Avvia il gioco.
+# Nel menù principale, clicca su "Contenuti onlline".
+# Seleziona OpenGFX, OpenMSX, OpenSFX; clicca su "Scarica" e una volta completata l'operazione, chiudi la finestra.
+# Nel menù principale, seleziona "Opzioni di gioco" e assicurati che stia usando i tre pacchetti installati al passo precedente.
+# Gioca.
+
+===Usando la grafica di base di TTD===
+# Ottieni una copia si TRansport Tycoon Deluxe per Windows o DOS.
+* Se non hai la tua copia, cerca su [http://www.google.com/search?q=transport+tycoon+deluxe Google].
+* '''Nota''': Le grafiche originali sono protette da '''copyright''', può essere illegale (in alcuni paesi) scaricarle.
+# Crea una directory '''~/openttd/''' e copia lì tutti i file.
+
+== Installazione manuale su Linux coi sorgenti ==
+Vedi [[Main/en/Compiling on (GNU/)Linux and *BSD|Compilazione del gioco su Linux]].
+
+= Files da TTD=
+Se stai installando OpenTTD con i file della grafica di base di TTD, OpenTTD necessiterà di alcuni file originali dal CD di installazione di Transport Tycoon Deluxe.
+
+I seguenti file sono indispensabili. Li dovrai copiare nella direcotry <code>/data</code>, che si trova nella directory di OpenTTD. Questi file contengono la parte grafica e gli effetti sonori:
+* trg1r.grf
+* trgcr.grf
+* trghr.grf
+* trgir.grf
+* trgtr.grf
+* sample.cat
+
+Inoltre, ti potrebbe interessare mantenere anche la musica originale. Per fare in modo di poterla usare, devi copiare il contenuto della directory <code>/gm/</code> nella directory di OpenTTD (ma non metterli direttamente dentro la directory <code>/data/</code>!).
+
+Ci sono diverse maniere per ottenere questi file:
+* Copia la directory <code>/gm/</code> e tutti i file in essa dal CD di TTD sotto la directory <code>/data</code>.
+* Espandi i file di installazione di TTD, e copia i file e le directory.
+* Installa TTD su Windows in una directory separata e quindi copia i file.
+
+= Ulteriori informazioni =
+* [[Main/en/Installation FAQ|FAQ di installazione]] per altre metodi di installazione.
+* [[Main/en/OpenGFX Readme]]
+
+[[Category:it/Installazione]]
