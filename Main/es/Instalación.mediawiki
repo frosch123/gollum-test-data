@@ -1,0 +1,153 @@
+[[Translation:Main/en/Installation]]{{en/-}}{{es/Tabla de contenido}}
+=Introducción=
+Desde la versión 1.0.0 OpenTTD, la instalación se ha simplificado bastante, el juego se ha hecho completamente (juego y gráficos) en código abierto y están incluidos en el instalador. Para descargar la última versión de OpenTTD [http://www.openttd.org/download-stable clique aquí].
+
+La instalación es muy fácil, aunque se puede complicar un poco ya que existen, en general, dos opciones:
+
+*'''Usar los archivos originales de TTD''' (gráficos, sonido y música) que se encuentran en el CD original de [http://es.wikipedia.org/wiki/Transport_Tycoon Transport Tycoon Deluxe]. ''Pero al contrario que OpenTTD, TTD no es [http://es.wikipedia.org/wiki/Freeware freeware];''
+
+*'''Usar archivos alternativos''' en [http://es.wikipedia.org/wiki/Código_abierto código abierto]: [[Main/es/OpenGFX Léame|OpenGFX]] (gráficos), [[Main/es/Reemplazo de efectos de sonido|OpenSFX]] (sonido) y [[Main/es/OpenMSX|OpenMSX]] (música) que se pueden descargar por separado o junto con el juego. Y como alternativa para aquellos que no tengan el CD original de TTD.
+
+Además existen distintas versiones para las distintas [[Main/es/Sistema operativo|plataformas]] (Windows, MacOSX, Linux).
+
+=Instalación=
+'''Siga las instrucciones de instalación adecuadas, según su sistema operativo y los archivos (gráficos, sonido y música) que vaya a utilizar:'''
+
+:<p style="font-size: 90%">''(Si tiene acceso a los archivos originales de TTD, y todavía no se ha decidido por una de las dos opciones, instale el juego con los gráficos de TTD. OpenGFX se puede instalar fácilmente después. Aunque los más sencillo es instalar el juego con todos los archivos desde un principio: con los archivos de TTD, y también los archivos OpenGFX, OpenSFX y OpenMFX)''</p>
+
+[[File:en/Installation 1a.png|frame|center|Página de descargas del proyecto OpenTTD: ''www.openttd.org/download-stable'']]
+
+== En Windows ==
+'''1.''' Obtenga Transport Tycoon Deluxe para Windows.  Si usted no tiene el CD, consulte [http://www.google.com/search?q=transport+tycoon+deluxe Google] o en [http://www.tt-forums.net/viewtopic.php?t=3407 tt-forums.net].
+:<p style="font-size: 90%">''(Nota: Los gráficos originales tienen copyright, puede ser ilegal, en algunos países, descargarlos de internet)''.<br/>'''Importante:''' si no dispone de los archivos originales de TTD, o no quiere instalarlos, pase directamente al punto '''2'''.</p>
+
+'''2.''' Descargue la '''versión más actual''' del instalador del juego desde la [http://www.openttd.org/download-stable página de descargas] del proyecto OpenTTD. Descargue el apropiado para su '''sistema operativo''' ''(Windows)''. Existen dos opciones, descargar un programa de instalación automático ''(installer)'' o un archivo comprimido ''(zip archive)'', '''elija el instalador'''.
+[[File:en/Installation 1b.png|frame|center|Seleccionando el instalador de la versión 1.0.2 para Windows de 64 bits]]
+
+'''3. Ejecute el instalador''' de OpenTTD. Y dentro del instalador siga los siguientes pasos:
+:'''3.1.''' Acepte la licencia (''"I Agree"'')
+:'''3.2.''' Marque los componentes que desea instalar:
+::*'''OpenTTD.-''' Es el juego.
+::*'''OppenTTD translations.-''' son los idiomas, necesario para jugar en español
+::*'''Copy data from TTD CD-ROM''' (Sólo si dispone de los archivos originales)
+[[File:en/Installation 2.png|frame|center|Opciones para copiar los archivos originales de TTD]]
+
+:'''3.3.''' '''[Opcional:]''' Si desea instalar los archivos alternativos, marque también:
+::*'''Download OpenGFX.-''' Gráficos
+::*'''Download OpenSFX.-''' Sonido.
+::*'''Download OpenMSX.-''' Música.
+[[File:en/Installation 2 all.png|frame|center|Seleccionando todas las opciones: lo mejor.]]
+
+:''('''OJO:''' Recuerde que si no tiene los archivos del TTD, '''OpenGFX''' es imprescindible para que funcione el juego)''
+[[File:en/Installation 2 gfx.png|frame|center|Para los que no tengan los archivos de TTD]]
+
+:'''3.4.''' Si marcó la opción ''"Copy data from TTD"'' aparecerá una ventana para que '''seleccione la ruta donde tiene los ficheros gráficos originales''' de TTD. (si no los tiene, vuelva atrás y desmarque esa opción)
+:<p style="font-size: 90%">''(Debe encontrarlos de forma automática si tiene instalado el juego original de TTD para Windows, si no lo instaló ponga en la ruta la unidad donde esté el CD de TTD, o el directorio donde tenga dichos ficheros)''</p>
+[[File:en/Installation 3.png|frame|center|Pantalla para seleccionar los ficheros originales de TTD]]
+
+:'''3.5.''' Indique la '''ruta donde instalar OpenTTD''' (por defecto <code>C:\Archivos de Programa\OpenTTD</code>)
+[[File:en/Installation 4.png|frame|center|Carpeta de destino, dónde se instalará el juego]]
+
+:'''3.6''' Seleccione la '''carpeta del menú inicio''' de Windows donde queremos que el juego instale sus accesos directos (Por defecto <code>OpenTTD</code>)
+[[File:en/Installation 5.png|frame|center|Carpeta del menú inicio de Windows para accesos directos al juego]]
+
+'''4.''' Si instaló los ficheros originales de TTD, seleccione '''Run OpenTTD now!''' para '''ejecutar OpenTTD''' cuando cierre la ventana y el pulse el botón ''Finish''.
+[[File:en/Installation 6.png|frame|center|¡Instalación completada!]]
+
+'''5.''' Si no instaló los archivos originales de TTD, '''DESMARQUE Run OpenTTD now!''' y pulse el botón ''Finish''.
+[[File:en/Installation 6 gfx.png|frame|center|NO MARQUE Run OpenTTD si no instaló los archivos de TTD]]
+
+'''6.''' Si aparecen los siguientes '''mensajes de error''', no sufra, cierre el programa y '''pase al punto 7'''.
+{| border="0" cellpadding="5" cellspacing="0" align="center"
+|
+{| cellpadding="0" cellspacing="0" border="0" align="center"
+|- align="center"
+|[[File:en/Installation 7 gfx missings.png|370px|thumb|center|Archivos desaparecidos]]
+|[[File:en/Installation 8 gfx error.png|204px|thumb|center|Errrror!]]
+|}
+|}
+'''7. Si no instaló los archivos de TTD debe modificar el archivo de configuración manualmente,''' para que el programa utilice los gráficos que usted le instaló (OpenGFX) y no aparezca el error del punto 6:
+:*Localice el archivo de configuración '''openttd.cfg''' que está situado en:
+ Win XP : "C:\Documents and Settings\<username>\My Documents\OpenTTD"
+ Vista  : "C:\Users\<username>\Documents\OpenTTD"
+En castellano:
+ Win XP : "C:\Documents and Settings\<nombredeusuario>\Mis documentos\OpenTTD"
+ Vista  : "C:\Usuarios\<nombredeusuario>\Documentos\OpenTTD"
+:*y ábralo con el '''Bloc de Notas''' y modifique la variable '''graphicsset''' con el valor '''"OpenGFX"'''
+ graphicsset = "OpenGFX"
+[[File:es/Installation 9 grx manual configuration cfg.png|frame|center|Cambiar el parámetro ''graphicsset'']]
+
+'''8.''' Ejecute '''OpenTTD'''.
+
+== En Mac OS X ==
+{{es/Nota| 1=Durante un periodo de tiempo no hubieron versiones oficiales compiladas para Mac OSX por falta de soporte técnico (versiones 1.0.x). Sin embargo se ha reanudado este soporte en la rama 1.1.x, por favor descargue la última [http://www.openttd.org/en/download-stable versión '''oficial''' estable] para evitar posibles fallos en la compilación.}}
+
+'''1.''' Obtenga Transport Tycoon Deluxe para Windows.  Si usted no tiene el CD, consulte [http://www.google.com/search?q=transport+tycoon+deluxe Google] o en [http://www.tt-forums.net/viewtopic.php?t=3407 tt-forums.net].
+:<p style="font-size: 90%">''(Nota: Los gráficos originales tienen copyright, puede ser ilegal, en algunos países, descargarlos de internet)''.<br/>'''Importante:''' si no dispone de los archivos originales de TTD, o no quiere instalarlos, pase directamente al punto '''2'''.</p>
+
+
+'''2.''' Cree una carpeta '''openttd''' en su ordenador. (Es recomendable crearla dentro de la carpeta Aplicaciones).
+[[File:es/Installation osx 1.png|center|Cree una carpeta ''openttd'']]
+
+'''3.''' OpenTTD necesita algunos archivos del original TTD para funcionar, vea más [[Main/en/#Archivos de TTD|abajo]] qué archivos necesita y dónde instalarlos.
+
+'''4.''' Descargue la '''versión más actual''' del instalador del juego desde la [http://www.openttd.org/download-stable página de descargas] del proyecto OpenTTD. Descargue el apropiado para su '''sistema operativo''' ''(Mac OSX)''.'''.
+[[File:en/Installation 1b osx.png|frame|center|Seleccionando la versión 1.1.2 para Mac OSX]]
+
+'''5.''' Ejecute OpenTTD
+
+:'''5.1. [Opcional:]''' Si no quiere o no puede instalar los archivos originales de TTD sáltese el paso en el que el instalador le pide estos archivos.
+:''('''OJO:''' Recuerde que si no tiene los archivos del TTD, '''OpenGFX''' es imprescindible para que funcione el juego)''
+
+:'''5.2. [Opcional:]'''  Para instalar los archivos OpenGFX consulte [[Main/es/OpenGFX Léame|OpenGFX Léame]].
+
+== En Linux ==
+{{es/Desactualizado|Lea el archivo [[Main/es/Léame.txt|Readme.txt]] para más información.}}
+
+===Gráficos originales de TTD===
+'''1.''' Obtenga Tycoon Deluxe Transporte para Windows o DOS. Si usted no tiene el CD, consulte [http://www.tt-forums.net/viewtopic.php?t=3407 tt-forums.net], o [http://www.google.com/search?q=transport+tycoon+deluxe Google].
+
+'''2.''' Cree una carpeta '''openttd''' en su ordenador.
+
+'''3.''' OpenTTD requiere algunos archivos de TTD, consulte [[Main/en/#Archivos de TTD|más abajo]] para saber qué archivos y dónde.
+
+'''4.''' Descargue OpentTTD de la [http://www.openttd.org/download-stable página de descargas]
+[[File:en/Installation linux 0.png|frame|center|Última versión estable de OpenTTD: ''www.openttd.org/download-stable'']]
+:* ¡También puede descargar el código fuente y compilarlo usted mismo! Vea [[Main/es/Compilar en Linux|compilar en Linux]]
+
+'''5.''' Ejecute OpenTTD.
+
+===Gráficos OpenGFX===
+'''1.''' Cree una carpeta '''openttd''' en su ordenador.
+
+'''2.''' Descargue OpenTTD desde el [http://www.openttd.org/ sitio web de OpenTTD]. Necesita al menos la '''versión 0.7.0'''.
+:* ¡También puede descargar el código fuente y compilarlo usted mismo! Vea [[Main/es/Compilar en Linux|compilar en Linux]]
+'''3.''' Consulte el archivo [[Main/en/OpenGFX Léame/Es#Instalar OpenGFX manualmente|OpenGFX Léame]] para más instrucciones.
+
+= Archivos de TTD =
+Si está instalando OpenTTD con los gráficos originales de Transport Tycoon Deluxe, OpenTTD requiere varios archivos del CD del juego original.
+
+Los siguientes archivos son obligatorios. Es necesario que los copie en el directorio data/, que está en el directorio OpenTTD. Estos archivos contienen los gráficos y los efectos de sonido:
+* trg1r.grf
+* trgcr.grf
+* trghr.grf
+* trgir.grf
+* trgtr.grf
+* sample.cat
+
+Además, puede que desee copiar la música del juego original. Para lograr eso, tiene que copiar la carpeta gm/ del CD de TTD a su directorio OpenTTD (¡pero no lo ponga dentro del directorio data/)
+
+Hay distintas formas de obtener estos archivos:
+* Copie las carpetas y sus archivos del CD del juego TTD a tu directorio OpenTTD.
+* Descomprima un archivo zip de TTD, y copie las carpetas.
+* Instale TTD para Windows en otro directorio y copia las carpetas.
+
+= Vea también =
+* [[Main/es/Preguntas frecuentes sobre la instalación|Preguntas frecuentes sobre la instalación]], para otros métodos de instalación.
+* [[Main/es/OpenGFX Léame|OpenGFX Léame]]
+
+= Enlaces externos =
+Para cualquier otra duda consulte también:
+* [http://www.fametown.com/blog/openttd/ fametown-blog/openttd] blog de ''Eusebio Barriga'' (traductor del juego al español)
+* [http://www.openttd.org/ OpenTTD.org] Página oficial donde podrás descargar OpenTTD (en inglés)
+* [http://vcs.openttd.org/svn/browser/trunk/readme.txt README.txt] Archivo de información de instalación del juego (en inglés)
