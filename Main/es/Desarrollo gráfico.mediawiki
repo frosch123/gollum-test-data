@@ -1,0 +1,49 @@
+[[Translation:Main/en/Graphics Development]]
+OpenTTD permite su modificación gráfica a través de distintos plug-ins '''NewGRF'''. Los NewGRF pueden alterar el juego, sustituir los actuales gráficos existentes e introducir nuevos gráficos.
+Además OpenTTD tiene soporte para gráficos de 32 bits que pueden reemplazar los sprites de 8 bits existentes (cualquiera de los sets básicos o NewGRF). Existe una rama [branch] adicional "Zum Extra" (full-zoom) de 32 bits que añade dos niveles de zum extra a OpenTTD. Tenga en cuenta, sin embargo, que el "Zum Extra" no se incluye en la versión oficial (sin parches) de OpenTTD.
+
+{| 
+|-
+|align="center" rowspan="2" style="background-color: #f1f2fe; border: 1px solid #c7c8fe; margin: 0; padding: 1em 1em 0em 1em;"|
+[[File:en/Originalbungalows.png]]
+   
+<font size="4">'''8bpp'''</font>
+
+
+|style="background-color: #e7ebff; border: 1px solid #c7c8fe; margin: 0; padding: 1em 1em 0em 1em;"|
+<font size="3">'''Consejos y trucos sobre el desarrollo de NewGRF'''</font>
+*[[Main/es/Herramientas de desarrollo para NewGRF|Herramientas de desarrollo para NewGRF]]
+*[[Main/es/Depurar gráficos NewGRF|Depurar gráficos NewGRF]]
+*[[Main/es/Alineación|Consejos sobre alineación de sprites]]
+*'''[[Main/es/OpenGFX Léame|OpenGFX:]]''' Proyecto del '''Conjunto básico de gráficos OpenGFX''' de 8 bits para OpenTTD (Con licencia [http://www.wikipedia.org/wiki/es:GNU General Public License GPL v2])
+*[http://dev.openttdcoop.org/projects DevZone]: Sitio para una serie de proyectos NewGRF (en inglés)
+*[http://wiki.ttdpatch.net/tiki-index.php?page=NewGraphicsSpecs Wiki con especificaciones para NewGRF] (en inglés)
+|-
+|style="background-color: #e7ebff; border: 1px solid #c7c8fe; margin: 0; padding: 1em 1em 0em 1em;"|
+<font size="3">'''Manual de uso de NewGRF y Lista NewGRF'''</font>
+
+:[[Main/es/NewGRF|Documentación sobre uso e instalación de NewGRF]]. Manual para alterar la jugabilidad y los gráficos usando archivos NewGRF.
+:Y una [[Main/es/Lista NewGRF|lista de algunos de los principales gráficos NewGRF]].
+|-
+|align="center" style="background-color: #f1f2fe; border: 1px solid #c7c8fe; margin: 0; padding: 1em 1em 0em 1em;"|
+[[File:en/Bungaloes.png|150px]]
+
+<font size="4">'''32bpp'''</font>
+|style="background-color: #e7ebff; border: 1px solid #c7c8fe; margin: 0; padding: 1em 1em 0em 1em;"|
+<font size="3">'''Documentación sobre el desarrollo de gráficos de 32 bits'''</font>
+
+:Completamente [[Main/es/Desarrollo de gráficos de 32 bits|documentado aquí]], desde la teoría (tamaño, iluminación, especificaciones técnicas, tutoriales, etc) a la práctica (materiales, accesorios).
+
+<font size="3">'''Rastreador del desarrollo gráfico'''</font>
+:Esté al tanto de la evolución actual del OpenTTD de 32 bits. Sepa exactamente lo que ya se ha convertido a 32 bits y lo que queda por hacer.
+:[[Main/es/Rastreador del desarrollo de gráficos de 32 bits|32 bits.- Escala original]]
+:[[Main/es/Rastreador del desarrollo de gráficos de 32 bits (Zum extra)|32 bits.- Zum Extra]]
+
+<font size="3">'''Gráficos acabados'''</font>
+
+:[[Main/es/Lista de archivos descargables de 32 bits|32 bits.- Escala original]]:  Lista de sprites de 32 bits, acabados, empaquetados y puestos a su disposición, con los que ya se puede jugar, en estos momentos.
+:[[Main/es/Niveles de Zum Extra de 32 bits|32 bits.- Zum Extra]]: Lista de gráficos con 2 niveles extra de zum, e información sobre el parche.
+:¡[[Main/es/Jugar con gráficos de 32 bits|Jugar con gráficos de 32 bits]]!
+|}
+
+[[Category:es/Nuevos gráficos]]
