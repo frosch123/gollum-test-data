@@ -1,0 +1,283 @@
+[[Translation:Main/en/Hotkeys]]{{en/-}}{{nl/Inhoudsopgave}}
+
+Dit is een lijst van '''sneltoetsen''' zoals die in het spel gebruikt worden. Afhankelijk van het venster dat je open hebt kan hun functie veranderen. Deze lijst is bijgewerkt tot de laatste versie, dus het kan zijn dat bepaalde toetsen niet werken op oudere versies van OpenTTD. Zie ook de [[Main/en/Hotkeys (most used)|meest gebruikte sneltoetsen (EN)]].
+
+{| align="center" style="border: 0px"
+|valign="top" width="50%" style="background:none; border:0px"|<!-- first column -->
+{| border="2" cellspacing="4" cellpadding="3" rules="all" style="margin:0em 1em 1em 0; border:solid 1px #AAAAAA;"
+|-
+!colspan="2" style="background:#efefef;"|Basis sneltoetsen<!-- Normal ingame ----------->
+|- style="background:#efefef;"
+!width="80"|Toets||Resultaat
+|-
+|Alt + Enter||Volledig scherm aan- en uitschakelen
+|-
+|Tab||Spel versnellen (Toets ingedrukt houden om het spel te versnellen en vervolgens loslaten om de normale snelheid weer aan te nemen)
+|-
+|~ ([[Main/en/Console#Using the console|meestal]])||Toon [[Main/en/console]]. 
+|-
+|Ctrl + Enter||Grootte van console wijzigen naar volledig venster en terug.
+|-
+|Shift + Klik||Laat een schatting van de kosten zien i.p.v. de huidige bouwopdracht.
+|- 
+|colspan="2" style="border-left:1px solid white; border-right:1px solid white" |<!-- Normal ingame ---->
+|- style="background:#efefef;"
+!colspan="2" |In het normale spel (geen menu open)
+|- style="background:#efefef;"
+!Toets||Resultaat
+|-
+|Spatie||Sluit het foutmeldingen / nieuws scherm
+|-
+|Delete||Sluit alle niet-[[Main/en/Other Interface Features#Sticky windows|vastgezette]] vensters
+|-
+|Shift + Delete||Sluit alle vensters, ook degene die [[Main/en/Other Interface Features#Sticky windows|vastgezet]] zijn
+|-
+|Esc||Sluit de actieve tool. Kan ook gebruikt worden om acties te beëindigen die al begonnen zijn door het inhouden van de linker muisknop.
+|-
+|F1/Pause||Pauzeer het spel
+|-
+|F2||Spel opties
+|-
+|F3||Sla het spel op
+|-
+|F4||Kaart
+|-
+|F5||[[Main/nl/Gemeente|Steden]]lijst
+|-
+|F6||[[Main/nl/Subsidie|Subsidie's]]
+|-
+|F7||[[Main/nl/Stationslijst|Stations]]lijst
+|-
+|F8||Financiën
+|-
+|F9||De algemene informatie over je bedrijf (hetzelfde als op het hoofdkwartier klikken)
+|-
+|F10||Winst grafiek
+|-
+|F11||Bedrijfs competitie tabel
+|-
+|F12||Sticht nieuwe industrie
+|-
+|Shift + F1||Je treinen ([[Main/nl/Voertuiglijst|voertuiglijst]])
+|-
+|Shift + F2||Je wegvoertuigen en bussen (voertuiglijst)
+|-
+|Shift + F3||Je schepen (voertuiglijst)
+|-
+|Shift + F4||Je vliegtuigen (voertuiglijst)
+|-
+|Shift + F5/+||Zoom in
+|-
+|Shift + F6/-||Zoom uit
+|-
+|Shift + F7||Opent de [[Main/en/Spoorwegconstructies/Nl#De werkbalk Bouw spoorwegen|spoorconstructie werkbalk]]
+|-
+|Shift + F8||Opent de [[Main/en/Wegconstructies/Nl#Roadway construction toolbar|wegconstructie werkbalk]]
+|-
+|Shift + F9||Opent de [[Main/en/Waterwegconstructies/Nl#Constructing Docks|havenconstructie werkbalk]]
+|-
+|Shift + F10||Opent de [[Main/en/Vliegveldconstructies/Nl#De werkbalk vliegveldconstructies|vliegveldconstructie werkbalk]]
+|-
+|Shift + F11||Plant bomen
+|-
+|Shift + F12||Jukebox
+|-
+|Pijltjestoetsen||Scroll rond op de kaart
+|-
+|Shift + Arrow keys||Scroll sneller
+|-
+|L||Open [[Main/en/Landscaping#Landscaping the land|landschapsbewerking werkbalk]]
+|-
+|M||Laat de minikaart zien
+|-
+|V||Opent een extra kijkvenster
+|-
+|A||Zet [[Main/nl/Autorail|autorail]] mode aan en uit
+|-
+|Z||Zoomt in op de huidige locatie van de muiscursor
+|-
+|C||Centreert het scherm op de huidige locatie van de muiscursor
+|-
+|X||Zet alle doorzichtigheidsopties aan of uit
+|-
+|Ctrl + X||Open het [[Main/en/Transparent buildings|doorzichtigheidsopties]] venster
+|-
+|Ctrl + 1-9||Zet een bepaalde doorzichtigheidsoptie aan of uit
+|-
+|Ctrl + Q||Afsluiten naar OS
+|-
+|Ctrl + S||Maak [[Main/en/Screenshot|schermafdruk]]
+|-
+|Ctrl + G||Maak een schermafdruk van de HELE kaart.<br>'''Let op:''' Dit zal enkele seconden duren en kan erop lijken dat OpenTTD is vastgelopen. Ook zullen deze screenshots ZEER GROOT zijn, 16352x8192 pixels bij een normale kaart en elk screenshot is ongeveer 130MB als BMP, 75MB als PCX en 15MB als PNG, let dus goed op je beschikbare opslagruimte.
+|-
+|Ctrl + B||Bekijk de vensterstructuur (voor grf-ontwikkelaars en andere freaks).
+|}
+
+|valign="top" width="50%" style="background:none; border:0px"| <!-- second column ---------------------------->
+{| border="2" cellspacing="4" cellpadding="3" rules="all" style="margin:0em 1em 1em 0; border:solid 1px #AAAAAA;"
+|- style="background:#efefef;"
+!colspan="2"|Spoorweg aanleggen <!-- Railroad construction ------------->
+|- style="background:#efefef;"
+!width="80"|Toets||Resultaat
+|-
+|1 tot 4||[[Main/nl/Bouw sporen|Bouw sporen]]
+|-
+|5/A||[[Main/nl/Autorail|Autorail]] mode
+|-
+|6||Dynamiet
+|-
+|7||Bouw [[Main/nl/Depots|depot]]
+|-
+|8||Bouw [[Main/nl/Controleposten|controleposten]]
+|-
+|9||Bouw [[Main/nl/Spoorwegstation|spoorwegstation]]
+|-
+|S||Plaats [[Main/nl/Seinen|seinen]]
+|-
+|B||Bouw [[Main/nl/Bruggen|brug]]
+|-
+|T||Bouw [[Main/nl/Tunnels|tunnel]]
+|-
+|R||Verwijderen van objecten aan/uit zetten
+|-
+|C||[[Main/en/convert rail|Rails wijzigen naar actieve type]]
+|-
+|colspan="2" style="border-left:1px solid white; border-right:1px solid white" |<!-- Weg aanleggen ---->
+|- style="background:#efefef;"
+!colspan="2"|Weg aanleggen
+|- style="background:#efefef;"
+!Toets||Resultaat
+|-
+|1-2||Bouw weg
+|-
+|3||Autoroad
+|-
+|4||Dynamiet
+|-
+|5||Bouw [[Main/nl/Bouw garage|garage]]
+|-
+|6||Bouw [[Main/en/Loading Bays#Bus Loading Bay|bus station (EN)]]
+|-
+|7||Bouw [[Main/en/Loading Bays#Lorry Loading Bay|vrachtwagen lospunt (EN)]]
+|-
+|B||Bouw [[Main/en/Bridges|brug (EN)]]
+|-
+|T||Bouw [[Main/nl/Tunnels|tunnel]]
+|-
+|R||Verwijderen van objecten aan/uit zetten
+|-
+|colspan="2" style="border-left:1px solid white; border-right:1px solid white" |<!-- Dock construction ---->
+|- style="background:#efefef;"
+!colspan="2"|[[Main/nl/Havens|Waterwegen aanleggen]]
+|- style="background:#efefef;"
+!Toets||Resultaat
+|-
+|1||Bouw kanaal
+|-
+|2||Bouw sluis
+|-
+|3||Dynamiet
+|-
+|4||Bouw loods
+|-
+|5||Bouw pier (haven)
+|-
+|6||Plaats boei
+|-
+|colspan="2" style="border-left:1px solid white; border-right:1px solid white" |<!-- Airport construction ---->
+|- style="background:#efefef;"
+!colspan="2"|Luchthaven aanleggen
+|- style="background:#efefef;"
+!Toets||Resultaat
+|-
+|1||Bouw [[Main/en/Airports|luchthaven]]
+|-
+|2||Dynamiet
+|-
+|colspan="2" style="border-left:1px solid white; border-right:1px solid white" |<!-- Landscaping ------------>
+|- style="background:#efefef;"
+!colspan="2"|Landschapsbewerking
+|- style="background:#efefef;"
+!Toets||Resultaat
+|-
+|Q||[[Main/en/Landscaping#Lowering land|Land verlagen]]
+|-
+|W||[[Main/en/Landscaping#Raising land|Land verhogen]]
+|-
+|E||[[Main/en/Landscaping#Leveling land|Land gelijkmaken]]
+|-
+|U||[[Main/en/Land|Koop land (EN)]]
+|-
+|D||Dynamiet
+|-
+|I||Open [[Main/en/tree|bomen (EN)]] venster
+|-
+|O||Plaats [[Main/en/sign|markering (EN)]]
+|-
+|colspan="2" style="border-left:1px solid white; border-right:1px solid white" |<!-- Bridge construction -->
+|- style="background:#efefef;"
+!colspan="2"|Bruggen bouwen
+|- style="background:#efefef;"
+!Toets||Resultaat
+|-
+|1-9||Selecteer [[Main/nl/Bruggen|brug]]
+|-
+|colspan="2" style="border-left:1px solid white; border-right:1px solid white" |<!-- Scenario editor ---->
+|- style="background:#efefef;"
+!colspan="2"|Scenario editor
+|- style="background:#efefef;"
+!Toets||Resultaat
+|-
+|F1||Pauzeer spel
+|-
+|F2||Spel opties
+|-
+|F3||Scenario opslaan
+|-
+|F4||Land creatie gereedschap
+|-
+|F5||Stad creatie gereedschap
+|-
+|F6||Industrie creatie gereedschap
+|-
+|F7||Wegen aanleggen
+|-
+|F8||Waterwegen aanleggen
+|-
+|F9||Plant bomen
+|-
+|F10||Plaats [[Main/en/sign|markering]]
+|-
+|F11||Jukebox
+|-
+|F12||Land informatie
+|-
+|colspan="2" style="border-left:1px solid white; border-right:1px solid white" |<!-- Orders --------------->
+|- style="background:#efefef;"
+!colspan="2"|[[Main/en/Orders|Order]] venster
+|- style="background:#efefef;"
+!Toets||Resultaat
+|-
+|D||Order overslaan
+|-
+|F||Order verwijderen
+|-
+|G||Ga-naar order
+|-
+|H||Niet stoppen
+|-
+|J||Alle vracht laden
+|-
+|K||Volledig leegladen
+|-
+|}
+|}
+
+----
+
+'''Geassocieerde Links & Bestanden'''
+
+[http://www.citybuildergames.com/openttdhotkeychart/OpenTTDHotkeyPDF.pdf Kaart met sneltoetsen (EN)] (eenvoudig uit te printen voor eenvoudig terugzoeken)
+
+
+[[Category:nl/Spelen|S]]
