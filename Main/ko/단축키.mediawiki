@@ -1,0 +1,288 @@
+[[Translation:Main/en/Hotkeys]]{{en/-}}{{ko/목차}}
+
+이 목록은 게임에서 사용되는 모든 '''단축키'''들을 기록 해 놓은 것입니다. 각각의 기능은 현재 무슨 창이 열려 있는지에 따라 기능이 달라질 수 있습니다. 단축키늘은 최신 소스에 기반하고 있으므로, 오래된 버전에서는 작동하지 않을 수도 있습니다. [[Main/ko/자주 사용되는 단축키|자주 사용되는 단축키]] 문서도 함께 보십시오.
+이 단축키 목록은 미국 쿼티 자판을 기준으로 작성되었습니다. 만약 단축키가 목록에 적힌 대로 작동하지 않는다면, 미국 쿼티 자판 이미지를 보면서 키가 어디에 위치하여 있는지 살펴보십시오. 그래도 작동하지 않는다면, OpenTTD 폴더 내의 hotkeys.cfg에서 다른 키를 사용하도록 변경할 수 있습니다. 단축키는 여전히 키보드에서 보이는 대로가 아닌 미국 쿼티 자판을 기준으로 작동한다는 사실을 기억하십시오. 
+{{en/-}}
+{| align="center" style="border: 0px" style="text-align: center;"
+|valign="top" width="50%" style="background:none; border:0px"|<!-- first column -->
+{| border="2" cellspacing="4" cellpadding="3" rules="all" style="margin:0em 1em 1em 0; border:solid 1px #AAAAAA;"
+|-
+!colspan="3" style="background:#efefef;"|기본 단축키<!-- Normal ingame ----------->
+|- style="background:#efefef;"
+!width="40"|윈||width="40"|맥||효과
+|-
+|Alt + Enter||Command + Enter||style="text-align: left;"|전체 화면 모드를 활성화하거나 종료합니다.
+|-
+|colspan="2"|[[Main/en/Tab]]||style="text-align: left;"|빨리 감기 (키를 누르면 빨라지고, 키를 놓으면 다시 느려집니다.)
+|-
+|~||§||style="text-align: left;"|[[Main/ko/콘솔|콘솔]]을 띄웁니다. 
+|-
+|colspan="2"|Ctrl + Enter||style="text-align: left;"|[[Main/ko/콘솔|콘솔]]이 모든 화면을 덮게 하거나 작게 합니다.
+|-
+|colspan="2"|Shift + Click||style="text-align: left;"|빌딩 대신에 가격 추정치 창을 뜨게 합니다.
+|- 
+|colspan="2" style="border-left:1px solid white; border-right:1px solid white" |<!-- Normal ingame ---->
+|- style="background:#efefef;"
+!colspan="3" |기본 상태 (아무 창도 열려있지 않음)
+|- style="background:#efefef;"
+!width="40"|Win||width="40"|Mac||Effect
+|-
+|colspan="2"|Space||style="text-align: left;"|뉴스나 경고 메시지를 닫습니다.
+|-
+|Delete||Fn+Del||style="text-align: left;"|고정되지 않은 창을 모두 닫습니다.
+|-
+|Shift + Del||Fn + Shift + Del||style="text-align: left;"|고정된 창까지 모두 닫습니다.
+|-
+|colspan="2"|Esc||style="text-align: left;"|활성화 된 도구를 닫습니다. 또한 마우스를 놓기 전까지의 작업을 중지 할 수 있습니다.
+|-
+|F1/Pause||Fn+F1||style="text-align: left;"|일시 정지
+|-
+|F2||Fn+F2||style="text-align: left;"|게임 설정
+|-
+|F3||Fn+F3||style="text-align: left;"|저장하기
+|-
+|F4||Fn+F4||style="text-align: left;"|지도
+|-
+|F5||Fn+F5||style="text-align: left;"|[[Main/ko/도시|도시]] 목록
+|-
+|F6||Fn+F6||style="text-align: left;"|[[Main/ko/보조금|보조금]]
+|-
+|F7||Fn+F7||style="text-align: left;"|[[Main/ko/역|역]] 목록
+|-
+|F8||Fn+F8||style="text-align: left;"|회사 재정
+|-
+|F9||Fn+F9||style="text-align: left;"|회사 기본 정보 (본사를 클릭할 떄와 같은 정보)
+|-
+|F10||Fn+F10||style="text-align: left;"|경영 수익 그래프
+|-
+|F11||Fn+F11||style="text-align: left;"|회사 성취도 목록
+|-
+|F12||Fn+F12||style="text-align: left;"|산업시설 투자
+|-
+|Shift + F1||Fn+Sft+F1||style="text-align: left;"|내 회사의 모든 열차 목록 ([[Main/ko/차량 목록|차량 목록]])
+|-
+|Shift + F2||Fn+Sft+F2||style="text-align: left;"|내 회사의 모든 자동차/전차 목록 ([[Main/ko/차량 목록|차량 목록]])
+|-
+|Shift + F3||Fn+Sft+F3||style="text-align: left;"|내 회사의 모든 선박 목록 ([[Main/ko/차량 목록|차량 목록]])
+|-
+|Shift + F4||Fn+Sft+F4||style="text-align: left;"|내 회사의 모든 항공기 목록 ([[Main/ko/차량 목록|차량 목록]])
+|-
+|Shift + F5/+||Fn+Sft+F5||style="text-align: left;"|확대
+|-
+|Shift + F6/-||Fn+Sft+F6||style="text-align: left;"|축소
+|-
+|Shift + F7||Fn+Sft+F7||style="text-align: left;"|철도 건설 창
+|-
+|Shift + F8||Fn+Sft+F8||style="text-align: left;"|도로 건설 창
+|-
+|Shift + F9||Fn+Sft+F9||style="text-align: left;"|수로 건설 창
+|-
+|Shift + F10||Fn+Sft+F10||style="text-align: left;"|공항 건설 창
+|-
+|Shift + F11||Fn+Sft+F||style="text-align: left;"|나무 심기
+|-
+|Shift + F12||Fn+Sft+F12||style="text-align: left;"|재즈 주크박스
+|-
+|colspan="2"|Arrow keys||style="text-align: left;"|화면 이동
+|-
+|colspan="2"|Shift + Arrow keys||style="text-align: left;"|빠른 화면 이동
+|-
+|colspan="2"|L||style="text-align: left;"|지형 편집 창
+|-
+|colspan="2"|M||style="text-align: left;"|미니맵
+|-
+|colspan="2"|V||style="text-align: left;"|외부 화면
+|-
+|colspan="2"|A||style="text-align: left;"|자동 건설
+|-
+|colspan="2"|Z||style="text-align: left;"|마우스 포인터 위치로 확대
+|-
+|colspan="2"|C||style="text-align: left;"|마우스 포인터 위치로 이동
+|-
+|colspan="2"|X||style="text-align: left;"|잠기지 않은 투명 설정을 켜거나 끔
+|-
+|colspan="2"|Ctrl + X||style="text-align: left;"|투명 설정 창
+|-
+|colspan="2"|Ctrl + 1-9||style="text-align: left;"|특정한 투명 설정을 켜거나 끔
+|-
+|colspan="2"|Ctrl + U||style="text-align: left;"|텍스트 상자의 텍스트 모두 없애기
+|-
+|colspan="2"|Ctrl + W||style="text-align: left;"|게임 종료 후 메인 메뉴로 나가기
+|-
+|colspan="2"|Ctrl + Q||style="text-align: left;"|운영체제로 나가기
+|-
+|colspan="2"|Ctrl + S||style="text-align: left;"|[[Main/ko/스크린샷|스크린샷]] 찍기
+|-
+|colspan="2"|Ctrl + G|| 전체 맵 [[Main/ko/스크린샷|스크린샷]] 찍기 <br> 
+'''주의!''' 이 행동은 OpenTTD를 몇 초 동안 프리징 상태로 보이게 만들 것입니다. 또한 스크린샷 파일의 크기는 '''거대하다는''' 것을 잊지 마십시오. 각각의 파일은 기본 맵일 때에 16352x8192 픽셀이며 BMP 형식으로는 130 MB, PCX 형식으로는 75MB, PNG 형식으로는 15 MB를 차지합니다. 그러므로 남은 공간을 주시하십시오. :-) 이 단축키는 다른 여러 문제를 발생시켜서 최신 버전에서는 제거되었습니다. 만약 이 기능을 사용하기를 원한다면, hotkeys.cfg 파일을 수정하십시오. 
+|-
+|colspan="2"|Ctrl + B|| 경계 상자의 구조 보이기 (광적으로 관심이 많은 사람이나 NewGRF 제작자를 위한 기능)
+|}
+
+|valign="top" width="50%" style="background:none; border:0px"| <!-- second column ---------------------------->
+{| border="2" cellspacing="4" cellpadding="3" rules="all" style="margin:0em 1em 1em 0; border:solid 1px #AAAAAA;"
+|- style="background:#efefef;"
+!colspan="2"|철도 건설 <!-- Railroad construction ------------->
+|- style="background:#efefef;"
+!width="80"|키||효과
+|-
+|1 to 4||[[Main/ko/선로 건설|선로 건설]]
+|-
+|5 or A||[[Main/ko/자동 건설|자동 건설]] 모드
+|-
+|6||파괴 도구
+|-
+|7||[[Main/ko/차량기지|차량기지]] 건설
+|-
+|8||[[Main/ko/경유지|경유지]] 건설
+|-
+|9||[[Main/ko/철도 역|철도 역]] 건설
+|-
+|S||[[Main/ko/신호기|신호기]] 설치
+|-
+|B||[[Main/ko/다리|다리]] 건설
+|-
+|T||[[Main/ko/터널|터널]] 건설
+|-
+|R||제거 도구 활성화 (철도역, 선로 등)
+|-
+|C||철도 형식 변경
+|-
+|colspan="2" style="border-left:1px solid white; border-right:1px solid white" |<!-- Road construction ---->
+|- style="background:#efefef;"
+!colspan="2"|도로 건설
+|- style="background:#efefef;"
+!키||효과
+|-
+|1-2||[[Main/ko/도로|도로]] 건설
+|-
+|3||자동 건설 모드
+|-
+|4||파괴 도구
+|-
+|5||[[Main/ko/차고지|차고지]] 건설
+|-
+|6||버스 정류장<!-- 버스 정류장 링크가 걸려 있었는데 어디로 걸어야 할 지 몰라서 남겨둡니다.--> 건설
+|-
+|7||화물 터미널<!--같은 이유입니다.--> 건설
+|-
+|B||[[Main/ko/다리|다리]] 건설
+|-
+|T||[[Main/ko/터널|터널]] 건설
+|-
+|R||도로 건설 시 제거 도구
+|-
+|colspan="2" style="border-left:1px solid white; border-right:1px solid white" |<!-- Dock construction ---->
+|- style="background:#efefef;"
+!colspan="2"|수로 건설
+|- style="background:#efefef;"
+!Key||Effect
+|-
+|1||운하 건설
+|-
+|2||갑문 건설
+|-
+|3||파괴 도구
+|-
+|4||정박소 건설
+|-
+|5||항구 건설
+|-
+|6||부표 건설
+|-
+|colspan="2" style="border-left:1px solid white; border-right:1px solid white" |<!-- Airport construction ---->
+|- style="background:#efefef;"
+!colspan="2"|공항 건설
+|- style="background:#efefef;"
+!키||효과
+|-
+|1||[[Main/ko/공항|공항]] 건설
+|-
+|2||파괴 도구
+|-
+|colspan="2" style="border-left:1px solid white; border-right:1px solid white" |<!-- Landscaping ------------>
+|- style="background:#efefef;"
+!colspan="2"|지형 편집
+|- style="background:#efefef;"
+!키||효과
+|-
+|Q||[[Main/ko/지형 편집|지형 낮추기]]
+|-
+|W||[[Main/ko/지형 편집|지형 올리기]]
+|-
+|E||[[Main/ko/지형 편집|지형 평탄화]]
+|-
+|U||소유권 구매
+|-
+|D||파괴 도구
+|-
+|I||나무 심기 창 열기
+|-
+|O||[[Main/ko/팻말|팻말]] 달기
+|-
+|colspan="2" style="border-left:1px solid white; border-right:1px solid white" |<!-- Bridge construction -->
+|- style="background:#efefef;"
+!colspan="2"|다리 건설
+|- style="background:#efefef;"
+!키||효과
+|-
+|1-9||[[Main/ko/다리|다리]] 종류 선택
+|-
+|colspan="2" style="border-left:1px solid white; border-right:1px solid white" |<!-- Scenario editor ---->
+|- style="background:#efefef;"
+!colspan="2"|시나리오 에디터
+|- style="background:#efefef;"
+!키||효과
+|-
+|F1||일시정지
+|-
+|F2||게임 설정
+|-
+|F3||시나리오 저장
+|-
+|F4||지형 생성 도구
+|-
+|F5||도시 생성 도구
+|-
+|F6||산업시설 생성 도구
+|-
+|F7||도로 건설
+|-
+|F8||수로 건설
+|-
+|F9||나무 심기
+|-
+|F10||[[Main/ko/팻말|팻말]] 달기
+|-
+|F11||재즈 주크박스
+|-
+|F12||지형 정보 도구
+|-
+|colspan="2" style="border-left:1px solid white; border-right:1px solid white" |<!-- Orders --------------->
+|- style="background:#efefef;"
+!colspan="2"|[[Main/ko/경로|경로 지정]] 창
+|- style="background:#efefef;"
+!키||효과
+|-
+|D||경로 건너뛰기
+|-
+|F||경로 삭제
+|-
+|G||조건부 경로
+|-
+|H||직행
+|-
+|J||아무 화물이나 가득 싣기
+|-
+|K||모든 화물 하차
+|-
+|}
+|}
+
+----
+
+'''관련 링크 & 파일'''
+
+*PDF 포맷의 [http://www.tt-forums.net/viewtopic.php?f=29&t=57494 단축키 참고 카드] (A4 3-fold 6-col), OpenTTD 1.1.3 기준입니다.
+
+[[Category:ko/게임 플레이]]
