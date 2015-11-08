@@ -1,0 +1,22 @@
+[[Translation:Main/en/Snow line height]]
+:<small><<Back to the [[Main/en/Openttd.cfg]] (OpenTTD configuration file)</small>
+
+
+'''snow_line_height''' is a variable of Openttd.cfg file:
+
+This [[Main/en/Advanced Settings|setting]] allows you to determine at what "altitude" snow will appear.  
+
+After a certain height of tile, all tiles are drawn as snow tiles. This patch enables you to adjust the height above which all tiles will become snow tiles.
+
+The number is the height in tiles above which snow will cover the ground.
+
+<pre>
+[game_creation]
+snow_line_height = 15
+</pre>
+
+'''Valid options:''' [2 <= n <= 253]
+
+'''Default:''' 15
+
+[[Category:en/Settings & Preferences]]
