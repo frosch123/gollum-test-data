@@ -1,0 +1,27 @@
+[[Translation:Main/en/Allow goto depot orders]]
+'''Permitir órdenes de ir al depósito''' es un [[Main/es/Opciones avanzadas|opción]] que permite a los jugardores poner el depósito en las [[Main/es/Órdenes|órdenes]] del vehículo. 
+
+== Descripción ==
+[[File:en/Órden de ir al depósito OpenTTD.png|right|thumb|650px|"Ir al depósito" órden del vehículo en su lista.]]
+Cuando está activada, esta opción permite que tú incluyas el depósito a las órdenes del vehículo. Esto es usable para un mantenimiento compulsivo en un punto particular en las órdenes (quizá antes de un complicado cruce donde tú definitivamente no quieres que un vehículo se averíe ahí.).
+
+Teniendo la órden de ir al depósito en cualquier parte en las órdenes del vehículo se desactiva el mantenimiento automático. Si no encuentra un depósito propio, indepedientemente del intervalo de mantenimiento, cuando pones una órden de ir al depósito, tú eres responsable de todos los mantenimientos del vehículo. 
+
+== Como usar la órden de ir al depósito ==
+Tú puedes acabar de ordenar al vehículo a ir al depósito, como una estación, y el vehículo visitará el depósito cuando vea esa órden en su lista antes de continuar, como cualquier otro [[Main/es/Puntos de ruta|punto de ruta]] o estación en sus órdenes. 
+
+Cuando tú seleccionas la orden de ir al depósito en su lista, la "Carga completa" and "Descargar" botones de instrucción en la ventana de órdenes cambiará respectivamente a "Servicio" y "Reformar".
+
+Si tú no quieres que el vehículo visite el depósito en cualquier ciclo de la lista de órdenes, usa la instrucción ''Servicio'' o ''Servicio si necesita'', cuando no necesite(cuando no se haya cumplido el intervalo de mantenimiento), el vehículo ignorará la órden de ir al depósito.
+
+Si tú quieres que el vehículo sea [[Main/es/Reformar vehículos|reformado]] en el depósito, presiona el botón de instrucción ''reformar''. Una ventana emergente aparecerá mostrando la opciones de reforma que hay para el vehículo.
+
+''Vea también: [[Main/en/Mantenimiento/Es#Mantenimiento Programado|Mantenimiento programado]]''
+
+== Uso ==
+Esta opción está activada por defecto. Puedes desactivarla en [[Main/es/Opciones avanzadas/Vehículos|Configuación -> vehículo]] o usa el siguiente sintaxis en [[Main/es/Openttd.cfg|openttd.cfg]]:
+<pre>[order]
+gotodepot = false</pre>
+
+[[Category:en/Settings & Preferences]]
+[[Category:en/Vehicles]]
