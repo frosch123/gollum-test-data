@@ -1,0 +1,93 @@
+{{de/Übersetzung|Game interface|99}}
+
+[[Translation:Main/en/Game interface]]{{en/-}}{{de/Inhaltsverzeichnis}}
+==Hauptmenü==
+[[File:de/Main menu new game.png|frame|center|OpenTTD Hauptmenü]]
+Das Hauptmenü, das oben zu sehen ist, bietet folgende Möglichkeiten:
+* '''[[Main/en/New game|Neues Spiel]]''': Erzeuge eine neue zufällige Karte und starte das Spiel.
+* '''[[Main/en/Savegame|Spiel laden]]''': Lade ein gespeichertes Spiel und starte dieses.
+* '''[[Main/en/Scenario|Szenario spielen]]''': Lade ein Szenario und spiele dies.
+* '''[[Main/en/Heightmap|Reliefkarte spielen]]''': Lade eine Reliefkarte und spiele diese.
+* '''[[Main/en/Scenario editor|Szenarieneditor]]''': Erzeuge oder bearbeite ein Szenario.
+* '''[[Main/en/Multiplayer|Mehrspieler]]''': Trete einem Mehrspieler-Spiel bei oder erzeuge eins.
+* '''[[Main/en/Game options window|Spieleeinstellungen]]''': Ändere grundlegende Einstellungen des Spiels.
+* '''[[Main/en/Difficulty|Schwierigkeit]]''': Ändere die Schwierigkeitseinstellungen.
+* '''[[Main/en/Advanced Settings|Erweiterte Einstellungen]]''': Ändere Details der Simulation.
+* '''[[Main/en/NewGRF|NewGRF-Einstellungen]]''': Einstellungen für zusätzliche Spielinhalte.
+* '''[[Main/en/Online content|Erweiterungen herunterladen]]''': Lade Erweiterungen herunter.
+* '''[[Main/en/AI settings|Ki-Einstellungen]]''': Stelle die Künstliche-Intelligenz(KI) des Spiels ein.
+* '''Beenden''': Beende OpenTTD.
+
+==Spieloberfläche==
+Sobald du ein Spiel gestartet hast, wird dir die unten gezeigte '''Spieloberfläche''' angezeigt. Die meiste Zeit des Spiels wirst Du in dieser Ansicht verbringen. Die Spieloberfläche besteht aus drei Teilen: Am oberen Bildschirmrand ist die ''[[Main/en/#Menü-Leiste|Menü-Leiste]]'', in der Mitte ist das  ''[[Main/en/#3D Isometrische Spielfeld|3D Isometrische  Spielfeld]]'' und am unterem Bildschirmrand ist die ''[[Main/en/#Die Statusleiste|Statusleiste]]''.
+
+[[File:en/interface.png|thumb|none|400px|1. Der Spiel-Bildschirm]]
+
+==Menü-Leiste==
+Die Menü-Leiste unterteilt sich in folgende Abschnitte von rechts nach links: "Allgemein", "Karten Informationen", "Firmen und Industrie Informationen", "Fahrzeug Informationen", "Zoom", "Konstruktionen" und "Anderes"
+* Mit einem Rechtsklick auf eine Schaltfläche werden Informationen über diese Angezeigt.  
+* Die meisten Schaltflächen haben zwei Funktionen. Eine Standard Funktion die durch Linksklick aktiviert wird und ein Untermenü welches durch ein gedrückt halten der linken Maustaste geöffnet wird.
+[[File:en/Menu bar.png|none|frame|Die Menü-Leiste]]
+
+===Allgemein===
+*[[File:en/manual html m7fd3f2df.png|Pause]] '''Pause''': De-/Aktiviert die Pause.
+*[[File:en/manual html m56d46b8f.png|Vorspulen]] '''Vorspulen''': Erhöht die Spielgeschwindigkeit abhängig von der Leistung deines Computers.
+*[[File:en/manual html md7ebe52.png|Optionen]] '''Optionen''': Ermöglicht den Zugriff auf die Optionsmenüs: ''Spieleinstellungen'', ''[[Main/en/Difficulty|Schwierigkeits]]einstellungen'', ''[[Main/en/Advanced Settings|Erweiterte Einstellungen]]'' und Grafikoptionen.
+*[[File:en/manual html m3ad9dba5.png|Speicher/Laden]] '''Speichern / Lade''': Ermöglicht das ''Spiel Speichern'', ''Spiel Laden'', ''Spiel Beenden'' (zurück zum Hauptmenü), und das ''OpenTTD Beenden'' (Zurück zum Betriebssystem).
+
+===Karten Informationen===
+*[[File:en/manual html m6cb2b7aa.png|Übersichtskarte]] '''Übersichtskarte''': Zeigt die Übersichtskarte, einen extra Blickwinkel und eine Liste aller [[Main/en/signs|Schilder]] auf der Karte.
+*[[File:en/manual html m58c015ad.png|Stadt Liste]] '''[[Main/de/Stadt|Stadt]] Liste''': Zeigt eine Liste aller Städte.
+*[[File:en/manual html 54594ccb.png|Subventionen]] '''[[Main/en/Subsidy|Subventionen]]''': Zeigt einer Liste aller Subventionen, die ausgestellt und vergeben wurden.
+*[[File:en/manual html m791b53c3.png|Stationen Liste]] '''[[Main/en/Station list|Stationen Liste]]''': Zeigt eine Liste aller vom Spieler gebauter Stationen.
+
+===Firmen und Industrie Informationen===
+*[[File:en/manual html 63e6566d.png|Finanzen]] '''Finanzen''': Zeige die Finanzen einer beliebigen Firma.
+*[[File:en/manual html 12e20f5b.png|Firmen Informationen]] '''[[Main/en/Transport company|Firmen]] Information''': Zeige Informationen einer beliebigen Firma. Erlaub außerdem das Kaufen von Aktien einer anderen Firma.
+*[[File:en/manual html 36354981.png|Statistiken]] '''Statistiken''': Unterschiedliche Statistiken zu Firmen und Wirtschaftszweigen.
+*[[File:en/manual html 2a553acb.png|Rangliste]] '''Rangliste''': Zeige die Rangliste aller Firmen und Spieler.
+*[[File:en/manual html m4d6ba21e.png|Industrien]] '''Industrien''': Eine Liste aller Industrien und ihrer Produktion. Außerdem ist das [[Main/en/Industries#Funding New Industries|Gründen neuer Industrien]] möglich.
+
+===Fahrzeug informationen===
+*[[File:en/manual html m16a497ce.png|Zug Liste]] '''Züge''': Eine Liste aller Züge einer Firma.
+*[[File:en/manual html m3518e48c.png|Busse/LKWs]] '''Busse und LKWs''': Eine Liste aller Straßenfahrzeuge einer Firma.
+*[[File:en/manual html 53123a33.png|Schiffe]] '''Schiffe''': Eine Liste aller Schiffe einer Firma.
+*[[File:en/manual html 442702e6.png|Flugzeuge]] '''Flugzeuge''': Eine Liste aller Flugzeuge einer Firma.
+
+Mehr Informationen: [[Main/en/Vehicle lists|Fahrzeug Liste]].
+
+===Zoom===
+Zum Vergrößern oder Verkleiner der Spielwelt klicke auf einen der unten gezeigten Schaltflächen. Es gibt drei Vergrößerungs-Stufen. Du kannst auch durch das Drehen des Mausrades hinaus oder herein Zoomen.
+*[[File:en/manual html 628b2aa3.png|Reinzoomen]] '''Reinzoomen''': Sollte die Schaltfläche ausgegraut sein, hast du die maximale Vergrößerung erreicht.
+*[[File:en/manual html m55168bcb.png|Auszoomen]] '''Auszoomen''': Sollte die Schaltfläche ausgegraut sein, hast du die minimale Vergrößerung erreicht.
+
+===Konstruktionen===
+*[[File:en/manual html m772c5b23.png|Schienen bauen]] '''Schienen bauen''': Öffnet die [[Main/de/Schienenkonstruktion|Schienenkonstruktion Toolbar]].
+*[[File:en/manual html ma6d6c8c.png|Straßen bauen]] '''Straßen bauen''': Öffnet die [[Main/de/Straßenbau|Straßenbau Toolbar]].
+*[[File:en/manual html m2cc0c4cd.png|Hafen bauen]] '''Hafen bauen''': Öffnet die [[Main/en/Waterway construction|Hafenbau Toolbar]].
+*[[File:en/manual html 1ae92703.png|Flughafen bauen]] '''Flughafen bauen''': Öffnet die [[Main/en/Airport construction|Flughafenbau Toolbar]].
+*[[File:en/manual html m233f8633.png|Landschaftgestaltung]] '''Landschaftgestaltung''': Öffnet die [[Main/en/Landscaping|Landschaftgestaltung]] Toolbar.
+
+===Anderes===
+*[[File:en/manual html m6a2249c4.png|Jukebox]] '''Jukebox''': Ändert Ton- und Musik-Einstellungen.
+*[[File:en/manual html 2a55c3aa.png|Neuigkeiten]] '''Neuigkeiten''': Ändert  [[Main/en/message settings|Nachrichteneinstellungen]]. Außerdem ist der Verlauf der Nachrichten einsehbar.
+*[[File:en/manual html 51cda05b.png|Anderes]] '''Anderes''': Funktionen die sonst nirgendwo passen: ''[[Main/en/Land area information|Landinformationen]]'', ''[[Main/en/Console|Konsole]]'', ''[[Main/en/AI Debug|KI-Debbugging]]'', ''[[Main/en/Screenshot|Screenshot]]'', ''[[Main/en/Screenshot|Großer Screenshot]]'', und ''Über OpenTTD''.
+
+==3D Isometrische Spielfeld==
+Die OpenTTD Welt wird in einer [[http://de.wikipedia.org/wiki/Isometrische_Darstellung|Isometrische Darstellung] dargestellt. Die Welt besteht aus Quadraten unterschiedlichster Art, manche sind geneigt, andere Wasser, wieder andere durch Gebäude belegt. Auf dieser Welt baust du dein Transport-Empire.
+
+==Die Statusleiste==
+[[File:en/status-bar.png|none|frame|3. Die Statusleiste]]
+Die Statusleise kann am unterem Rand des Bildschirms gefunden werden und ist in Bild 3 zu sehen.
+*Ganz links ist das aktuelle Datum zu sehen. Ein Tag dauert ungefähr 2,5 Sekunden.
+*Der mittlere Teil zeigt unterschiedliche Informationen:
+**Den Name deines Transport-Unternehmens, welchen du [[Main/en/name your company|festgelegt hast]]-
+**[[Main/en/News messages|Nachrichten]] erscheinen hier als Fenster und durch einen Linksklick kann die letzte Nachricht angezeigt werden.
+**'Pause' wenn das Spiel pausiert ist
+*Der rechte Teil zeigt dir an, wie viel Geld du aktuell hast. Du kannst die Währung in den [[game options window|Optionen] ändern.
+
+Als Statusleiste wird auch manchmal die [[Main/en/Status bar|Fahrzeug Statusleiste]] bezeichnet.
+
+==Zusätzliche Infos==
+* [[Main/en/Hotkeys|Tastaturkürzel]]
+* [[Main/en/Other Interface Features|Andere Interface Funktionen]]
