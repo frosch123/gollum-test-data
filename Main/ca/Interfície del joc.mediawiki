@@ -1,0 +1,93 @@
+[[Translation:Main/en/Game interface]]{{en/-}}{{ca/Taula de contingut}}
+==Contingut del Menú inicial==
+[[File:ca/Intro screen.png|frame|center|Pantalla inicial d'OpenTTD]]
+La pantalla inicial, com hem vist, ofereix les opcions següents:
+* '''[[Main/ca/Nou Joc|Nou Joc]]''': Crear un nou mapa aleatori i començar una partida.
+* '''[[Main/ca/Partides guardades|Carrega un Joc]]''': Carregar una partida guardada i continuar jugant.
+* '''[[Main/ca/Escenari|Juga un Escenari]]''': Carregar un escenari i jugar.
+* '''[[Main/ca/Mapa d'alçades|Juga un mapa d'alçades]]''': Carregar un mapa d’altçades i jugar.
+* '''[[Main/ca/Editor d'Escenaris|Editor d'Escenaris]]''': Crear o editar un escenari.
+* '''[[Main/ca/Multijugador|Multijugador]]''': Unisca’s a un joc multijugador.
+* '''[[Main/ca/Finestra Opcions del Joc|Opcions del Joc]]''': Configurar les opcions generals.
+* '''[[Main/ca/Dificultat|Dificultat (Personalitzable)]]''': Seleccione les opcions que fan el joc més difícil o més fàcil.
+* '''[[Main/ca/Paràmetres avançats|Paràmetres avançats]]''': Configurar diversos detalls de la simulació.
+* '''[[Main/ca/Extensions NewGRF|Extensions NewGRF]]''': Seleccione fitxers de recursos addicionals.
+* '''[[Main/ca/Contingut en línia|Contingut en línia]]''': Descarregar material addicional del joc.
+* '''[[Main/ca/Paràmetres IA|Paràmetres IA]]''': Configure les opcions dels mòduls de IA.
+* '''Surt''': Abandonar OpenTTD.
+
+==Interfície del joc==
+Una vegada que comence un joc, se li presentarà l'interfície del joc'' principal, que es mostra a continuació. Passarà la major part del temps amb aquesta pantalla durant la partida. Té tres seccions: a la part superior està la ''[[Main/en/#La barra de menú|barra de menú]]'', al centre es troba la ''[[Main/en/#La pantalla del joc isomètrica en 3D|pantalla del joc isomètrica en 3D ]]'' i en la part inferior està la ''[[Main/en/#La barra d'estat|barra d’estat]]''
+
+[[File:ca/interface.png|thumb|none|400px|La pantalla del joc]]
+
+==La barra de menú==
+La barra de menú té els botons distribuïts en seccions tal com es descriu a continuació. Les seccions són d’esquerra a dreta: "Controls del joc", "Informació del mapa", "Informació de companyia i indústries", "Informació de vehicles", "Zum", "Construcció" i "Altres".
+* Pot veure el que fa qualsevol botó fent clicodreta sobre ell.
+* La majoria dels botons tenen dos modes de funcionament: amb un sol clic s’activa l’acció predeterminada, polsant i mantenint s’obri un submenú.
+[[File:en/Menu bar.png|none|frame|La barra de menú]]
+
+===Controls del joc===
+*[[File:en/Pause button.png|Interrompre]] '''Interrompre joc:''' Activa o desactiva la pausa.
+*[[File:en/Fast Forward button.png|Avançar ràpidament]] '''Avançar el joc ràpidament:''' Augmenta la velocitat de joc, depenent del ràpid que l’equip siga.
+*[[File:en/Options button.png|Opcions]] '''Opcions:''' Li permet accedir al menú d’opcions: ''Opcions de joc'', ''Configuració de [[Main/ca/Dificultat|dificultat]]'', ''[[Main/ca/Opcions avançades|Opcions avançades]]'', i opcions gràfiques.
+*[[File:en/Save Load button.png|Desa/Carrega]] '''Desar joc, abandonar joc, eixir:''' Permet accedir al menú de desar/carregar: ''Desar joc'', ''Carregar joc'', ''Abandonar joc'' (tornar a la pantalla inicial del joc), i ''Sortir' (o tornar al sistema operatiu).
+
+===Informació del mapa===
+*[[File:en/Minimap button.png|Minimapa]] '''Mostrar mapa:''' Mostra el mapa del món, el visor extra i li permet veure una llista de tots els [[Main/en/signes]] en el mapa.
+*[[File:en/Town directory button.png|Guia de poblacions]] '''Mostrar guia de [[Main/ca/Població|poblacions]]:''' Mostra una llista de les poblacions i el nombre d'habitants.
+*[[File:en/Subsidies button.png|Subsidies]] '''Mostrar [[Main/ca/Subvencions|subvencions]]:''' Mostra una llista de les subvencions que s’ofereixen i s’han atorgat a les distintes companyies.
+*[[File:en/Station list button.png|Station list]] '''Mostrar [[Main/ca/Llista d’estacions|llista d'estacions]]:''' Li permet veure una llista de les estacions construïdes per qualsevol jugador.
+
+===Informació de l’empresa i indústries===
+*[[File:en/Finances screen button.png|Finances]] '''Informació financera de l’empresa:''' Veure la pantalla de finances de qualsevol empresa.
+*[[File:en/Company information button.png|Empresa]] '''Informació general de la [[Main/es/Empresa|empresa]]:''' Veure la informació de companyia de qualsevol empresa. Té la possibilitat de compartir l’èxit del seu competidor mitjançant la compra d’accions de la esmentada societat.
+*[[File:en/Graphs button.png|Grafics]] '''Mostrar gràfics''': Veure diversos gràfics sobre les empreses, el seu marxa i la seua economia.
+*[[File:en/Company league table button.png|Rànquing]] '''Taula de rànquing d’empreses:''' Veure la taula de rànquing amb la classificació dels diferents jugadors.
+*[[File:en/Industry button.png|Indústries]] '''Indústria:''' Veure la llista d’indústries i la seua producció. També pot centrar-les en pantalla o [[Main/en/Industries/Ca#Crear noves indústries|crear noves indústries]]
+
+===Informació de vehicles===
+*[[File:en/Train Information button.png|Trens]] '''Informació de trens:''' Veure una llista dels trens de la seua empresa o dels seus competidors.
+*[[File:en/Road Vehicle Information button.png|Vehicles de carretera]] '''Informació de vehicles de carretera:''' Veure una llista dels vehicles de la seua empresa o dels seus competidors.
+*[[File:en/Ship Information button.png|Vaixells]] '''Informació de vaixells:''' Veure una llista dels vaixells de la seua empresa o dels seus competidors.
+*[[File:en/Aircraft Information button.png|Avions]] '''Informació d’avions:''' Veure una llista dels avions de la seua empresa o dels seus competidors.
+
+Més informació en [[Main/ca/Llista de vehicles|llista de vehicles]].
+
+===Zoom===
+Per a ampliar o reduir el zoom de la pantalla principal, faça clic en qualsevol dels dos botons que es mostren a continuació. Hi ha tres nivells de zoom. També pot fer zoom amb la roda de desplaçament del ratolí.
+*[[File:en/Zoom in button.png|Apropar]] '''Apropar vista:''' Augmentar zoom. Si el botó està desactivat, ja ha arribat al nivell d’ampliació màxima.
+*[[File:en/Zoom out button.png|Allunyar]] '''Allunyar vista:''' Disminuir zoom. Si el botó està desactivat, no pot obtenir una vista més gran de l’àrea del joc.
+
+===Construcció===
+*[[File:en/Railroad build button.png|Construeix vies]] '''Construeix vies:''' Obri la barra d'eines per a la [[Main/ca/Construcció de ferrocarril|construcció de vies de tren i estacions]].
+*[[File:en/Road build button.png|Construeix carreteres]] '''Construeix carreteres:''' Obri la barra d'eines per a [[Main/ca/Construir carreteres|construir carreteres, estacions d'autobús y molls de càrrega per a camions]].
+*[[File:en/Dock build button.png|Build docks]] '''Construeix ports:''' Obri la barra d'eines per a [[Main/ca/Construir rutes marítimes|construir ports per a vaixells i canals]].
+*[[File:en/Airport build button.png|Construeix aeroports]] '''Construeix aeroports:''' Obri la barra d'eines per a [[Main/ca/Construir aeroports|construir aeroports]].
+*[[File:en/Landscaping button.png|Terreny]] '''Terreny:''' Obri la barra d'eines per a la [[Main/ca/Paisatge|modificació del paisatge]].
+
+===Altres===
+*[[File:en/Sound Music button.png|So i música]] '''Finestra de so/música:''' Per a canviar la configuració del so i la música.
+*[[File:en/News button.png|Notícies]] '''Darrers missatges/notícies:''' Per a canviar les [[Main/ca/Preferències dels Missatges|preferències dels missatges]] i notícies. També pot veure l’historial de missatges i notícies.
+*[[File:en/Other button.png|Altres]] '''Altres:''' Coses que no encaixen en altres seccions: ''[[Main/ca/Informació del terreny|Informació del terreny]]'', ''[[Main/ca/Terminal|Canvia al terminal]]'', ''[[Main/ca/Depuració IA|Depuració IA]]'', ''[[Main/ca/Captura de pantalla|captura de pantalla]]'', ''[[Main/es/Captura de pantalla de tot el mapa|Captura de pantalla de tot el mapa]]'', y ''Quant a OpenTTD''.
+
+==La pantalla del joc isomètrica en 3D==
+El món OpenTTD té la forma d’un paisatge, es presenta en [http://www.wikipedia.org/wiki/ca:projecció isomètrica projecció isomètrica] (en sentit estricte [http://www.wikipedia.org/wiki/ca:projecció axonomètrica projecció axonomètrica]) amb aspecte 3D. Vosté passarà la major part del seu temps jugant en ella. El món està dividit en caselles, de les que n'hi han de molts tipus. Algunes estan inclinades, altres són d’aigua, altres estan ocupades per edificis, etc. Ací és on vosté crearà el seu propi imperi del transport!
+
+==La barra d’estat==
+[[File:ca/status-bar.png|none|frame|La barra d’estat]]
+La barra d’estat es pot trobar a la part inferior de la pàgina i, com es pot veure a la següent imatge, es divideix en tres seccions.
+#A l’esquerra es pot veure la data. S’avança al voltant d’1 dia cada 2,5 segons.
+#En la part central, que ocupa la major part de l’espai es mostra informació diversa:
+#*El [[Main/ca/Empresa de transports|nom de la seua empresa]],inicialment sense nom. Quan se’l pose apareixerà aquest.
+#*[[Main/ca/Missatges de notícies|Missatges de notícies]] emergents de la barra d’estat. Faça clic en la barra d’estat per a mostrar l’últim missatge.
+#*Si canvia les [[Main/ca/Preferències dels Missatges|preferències dels missatges]] a mode “resum”, els missatges apareixeran lliscant-se per ací en compte d’eixir en una finestra emergent.
+#*Si canvia les preferències dels missatges a mode “fora”,els missatges es notificaran per un punt roig.
+#* També mostra si el joc està en pausa amb el missatge: "** EN PAUSA **"
+#La part dreta mostra la quantitat de diners que té. Pot canviar la unitat de moneda en la finestra d’opcions del joc polsant en el botó "Opcions" i, a continuació les "opcions de joc".
+
+També pot aparèixer el terme "barra d’estat" per a referir-se a la [[Main/ca/Barra d’estat|barra d’estat del vehicle]].
+
+==Veja també==
+* [[Main/ca/Tecles de mètode abreviat|Tecles de mètode abreviat (atalls de teclat)]]
+* [[Main/ca/Altres característiques de la interfície|Altres característiques de la interfície]]
