@@ -1,0 +1,108 @@
+{{ko/번역|origin= Game_interface
+|from  = en
+|to    = ko
+|Percentage = 15
+}}
+
+[[Translation:Main/en/Game interface]]{{en/-}}{{ko/목차}}
+== 메인 화면 ==
+[[File:en/Intro screenKo.jpeg|frame|center|OpenTTD 시작 화면 ]]
+위의 사진에서 보이는 메인 화면은 몇가지로 나눌 수 있습니다.:
+* '''[[Main/en/New game|새 게임]]''': 새로운 맵을 생성하고 플레이합니다..
+* '''[[Main/en/Savegame|불러오기]]''': 저장되었던 게임을 불러오고 이어서 플레이합니다..
+* '''[[Main/en/Scenario|시나리오 플레이]]''': 시나리오를 가져온 뒤에 플레이합니다.
+* '''[[Main/en/Heightmap|높이맵 플레이]]''': 높이맵을 불러오고 플레이를 합니다..
+* '''[[Main/en/Scenario editor|시나리오 에디터]]''': 시나리오를 만들거나 수정합니다.
+* '''[[Main/en/Multiplayer|멀티 플레이]]''': 멀티 플레이 서버에 접속합니다..
+* '''[[Main/en/Game options window|게임 설정]]''': OpenTTD의 기본설정을 조작합니다..
+* '''[[Main/en/설정]]''': OpenTTD의 설정을 조작합니다..
+* '''[[Main/en/AI settings|인공지능/게임 스크립트 설정]]''': 인공지능의 설정을 조작합니다.
+* '''[[Main/en/NewGRF|NewGRF 설정]]''': 추가적인 NewGRF파일을 설정합니다..
+* '''[[Main/en/Online content|온라인 콘텐츠 다운로드]]''': 추가적인 콘텐츠를 다운로드 합니다..
+* '''[[Main/en/고득점 순위표]]''': 순위표를 보여줍니다..
+* '''종료''': OpenTTD를 종료합니다..
+
+==게임 인터페이스==
+여러분이 새로운 게임을 시작하신다면 아래의 사진처럼 메인 인터페이스가 보이실 겁니다. 여러분은 게임을 플레이하시면서 이 화면을 가장 많이 보시게 될겁니다. 메인 인터페이스는 3가지로 나뉩니다 : 가장 윗 부분에 있는 것은  ''[[Main/en/#The Menu bar|메뉴 바]]''이며 , 화면의 가운데는 ''[[Main/en/#3D isometric gameplay world|3D 게임 플레이 화면]]''이며 가장 아래에 있는 것은 ''[[Main/en/#The Status Bar|상태 바]]''입니다..
+
+[[File:en/interface.png|thumb|none|400px|게임 플레이 화면]]
+
+==메뉴 바==
+메뉴 바는 아래 크림처럼 나누어집니다. 왼쪽부터 오른쪽으로 순서대로 나열하자면 "게임 컨트롤", "지도 정보", "회사 & 산업시설 정보", "차량 정보", "줌(Zoom)", "건설" 그리고 "기타" 이다.
+* 게임 내에서 오른쪽 클릭으로 그 버튼이 무슨일을 하는지 알 수 있다.  
+* 대부분의 버튼들은 두 가지 작동 모드가 있다. 일반적인 클릭 기본저긴 것을 수행하고, 오랫동안 클릭하면 보조 메뉴가 뜬다.
+[[File:en/Menu bar.png|none|frame|The menu bar]]
+
+===게임 컨트롤===
+*[[File:en/Pause button.png|Pause]] '''일시정지:''' 게임을 일시정지 시키거나 풉니다..
+*[[File:en/Fast Forward button.png|Fast Forward]] '''배속:''' 게임의 속도를 높입니다(사용자 컴푸터의 성능에 따라서).
+*[[File:en/Options button.png|Options]] '''설정 버튼:''' 설정창을 엽니다.: ''게임 설정'', ''[[Main/en/난이도]] 설정'', ''[[Main/en/부가 설정]]'', 그래픽 설정.
+*[[File:en/Save Load button.png|Save/Load]] '''저장 / 불러오기 버튼:''' 저장 / 불러오기 창을 엽니다.: ''게임 저장'', ''게임 불러오기'', ''게임종료'' (타이틀 화면으로), ''종료'' (게임을 종료).
+
+===지도 정보===
+*[[File:en/Minimap button.png|Minimap]] '''미니맵:''' 세계 지도를 보여줍니다. 맵 상의 [[Main/en/표지판]]의 목록또한 표시해 줍니다..
+*[[File:en/Town directory button.png|Town directory]] '''[[Main/en/도시]] 지도:''' 도시의 목록과 인구를 표시합니다.
+*[[File:en/Subsidies button.png|Subsidies]] '''[[Main/en/보조급]]:''' 지급 가능한 보조금과 지급된 보조금을 표시합니다.
+*[[File:en/Station list button.png|Station list]] '''[[Main/en/역 목록]]:''' 플래이어에 의해 지어진 역를 표시합니다.
+
+===회사 & 산업시설 정보===
+*[[File:en/Finances screen button.png|Finances screen]] '''Finances screen button:''' View the finances screen of any company.
+*[[File:en/Company information button.png|Company Information]] '''[[Main/en/Transport company]] information button:''' View the company information for any company, and have the possibility to share your competitor's success by buying shares in that company
+*[[File:en/Graphs button.png|Graphs]] '''Graphs button:''' View various graphs about companies, their performance and the economy.
+*[[File:en/Company league table button.png|Company league]] '''Company league table button:''' View the company league table showing the rankings of the various players.
+*[[File:en/Industry button.png|Industries]] '''Industry button:''' View a list of industries and their production. You can also prospect or [[Main/en/Industries#Funding New Industries|fund new industries]].
+
+===차량 정보===
+*[[File:en/Train Information button.png|Train list]] '''열차 정보:''' 자신이나 경쟁자의 열차목록을 표시합니다.
+*[[File:en/Road Vehicle Information button.png|Road vehicle list]] '''차량 정보''' 자신이나 경쟁자의 차량목록을 표시합니다.
+*[[File:en/Ship Information button.png|Ship list]] '''선박 정보:''' 자신이나 경쟁자의 선박정보를 표시합니다.
+*[[File:en/Aircraft Information button.png|Aircraft list]] '''비행기 정보:''' 자신이나 경쟁자의 선박정보를 표시합니다.
+
+더 많은 정보는 [[Main/en/차량 정보]]에서.
+
+===줌(Zoom)===
+게임 플레이 화면을 조정하고 싶으면 아래 두 버튼을 이용하십시오. 마우스 휠로도 화면 조정이 가능합니다.
+*[[File:en/Zoom in button.png|Zoom in]] '''줌 인:''' 화면을 확대합니다. 이 버튼이 비활성화 되어 있으면 화면이 최대로 확대된 것입니다.
+*[[File:en/Zoom out button.png|Zoom out]] '''줌 아웃:''' 화면을 축소합니다. 이 버튼이 비활성화 되어있으면 화면이 최대로 축소된 것입니다.
+
+===건설===
+*[[File:en/Railroad build button.png|Build railroads]] '''Railroad build button:''' Open the [[Main/en/Railway construction|build toolbar for railways and stations]].
+*[[File:en/Road build button.png|Build roads]] '''Road build button:''' Open the [[Main/en/Roadway construction|build toolbar for roads and stations/loading bays]].
+
+By ''clicking and holding'' the Railroad build button, a dropdown appears where you can select the railtype that you want to build. Similarly, the Road build button allows you to chose between normal road and trams (you need to have a tram NewGRF loaded first).
+
+*[[File:en/Dock build button.png|Build docks]] '''Dock build button:''' Open the [[Main/en/Waterway construction|build window for docks and canals]].
+*[[File:en/Airport build button.png|Build airports]] '''Airport build button:''' Open the [[Main/en/Airport construction|build window for airports]].
+
+*[[File:en/Landscaping button.png|Landscape]] '''Landscaping button:''' Open the [[Main/en/Landscaping|landscaping]] toolbar.
+
+The Landscaping button has a dropdown to access the tree and sign placement windows directly, instead of via the landscaping toolbar.
+
+===기타===
+*[[File:en/Sound Music button.png|Jukebox]] '''Jukebox button:''' Change sound and music settings.
+*[[File:en/News button.png|News]] '''News button:''' Change news and [[Main/en/message settings]]. You can also see a history of news messages.
+*[[File:en/Other button.png|Other]] '''Other button:''' Things that do not fit into other sections: ''[[Main/en/Land area information]]'', ''[[Main/en/Console|Toggle console]]'', ''[[Main/en/AI Debug]]'', ''[[Main/en/Screenshot|Screenshot]]'', ''[[Main/en/Screenshot|Giant screenshot]]'', and ''About OpenTTD''.
+
+===특별한 기능===
+*[[File:en/ToggleButton.png|Switch Toolbar]] '''Switch Toolbar button:''' Allows to [[Main/en/switch toolbar|switch the toolbar]] which is splitted under very low resolutions (less than 460px). The button is '''only visible''' when the resolution is very low so that less than half the size of each toolbar button can be displayed.
+
+==3D isometric gameplay world==
+The OpenTTD world takes the form of a landscape, presented on [http://en.wikipedia.org/wiki/Video_games_with_isometric_graphics isometric projection] (strictly speaking rather [http://en.wikipedia.org/wiki/Dimetric_projection#Three_types_of_axonometric_projections dimetric projection]) for that 3D look.  You will spend most of your time playing here.  The world is divided up into tiles, of which there are many types.  Some are sloped, some are water, some are occupied by buildings, etc. This is where you build your transport empire!
+
+==The status bar==
+[[File:en/status-bar.png|none|frame|The status bar]]
+The status bar can be found at the bottom of page, as can be seen in picture 1., and above in picture 3. It is divided into three sections. 
+*On the left you can see the date. It progresses at about 1 day every 2.5 seconds.
+*The middle part, which takes up most of the space, shows various information:
+**The name of your company, initially "Unnamed". After you [[Main/en/name your company]] it will show that name. 
+**[[Main/en/News messages]] pop up out of the status bar. Click on the status bar to display the last message.
+**If you have changed the [[Main/en/message settings]] to "Summary" mode, messages will scroll by here instead of popping up.
+**If you have changed the message settings to "Off" mode, messages will be notified by a red dot.
+**It also shows if the game is paused by saying: "* * PAUSED * *"
+*The right part shows how much money you have. You can change the currency in the [[Main/en/game options window]] by pressing the "Options" button and then "Game options".
+
+You may also hear "status bar" used to refer to the [[Main/en/Status bar|vehicle status bar]].
+
+==See also==
+* [[Main/en/Hotkeys|Hotkeys (keyboard shortcuts)]]
+* [[Main/en/Other Interface Features]]
