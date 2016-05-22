@@ -1,0 +1,117 @@
+[[Translation:Main/en/Dedicated server]]{{en/-}}
+[[File:en/Dedicated server.png|right|frame|Ventana del servidor dedicado]]Un '''servidor dedicado''' es un [[Main/es/Servidor|servidor]] (juego en red) de OpenTTD que no necesita un cliente local dentro del juego. Un servidor dedicado puede funcionar en un computador sin tener abierto el juego.
+
+==Comenzando un servidor dedicado==
+Abre el ejecutable(archivo con que se abre el juego) usando {{c| -D|}} (D mayúscula) en la opción de la [[Main/es/línea de comandos|línea de comandos]].
+
+===Usando sistema operativo Windows===
+Método 1:
+*Crea un acceso directo al archivo {{c|openttd.exe|}}
+*Hacer click el botón derecho en el acceso directo y apreta Propiedades
+*Agrega {{c|-D|}} en el final de la línea de destino (con un espacio después de las comillas).
+*Hacer click en Aplicar.
+*Abre el acceso directo.
+
+
+Método 2:
+*En el menú de inicio abre la opción Ejecutar
+*Escribe: {{c|"c:\(ruta a la carpeta del openttd)\openttd.exe" -D|}}
+*Haga click en Aceptar.
+
+
+===Usando sistema operativo Linux===
+*Abre {{c|openttd -D|}} en un terminal. Si te estás conectando al servidor por vía SSH y le gustaría que funcione cuando cierre sesión debería usar [http://www.gnu.org/software/screen/ Pantalla GNU] o [http://dtach.sourceforge.net/ Dtach].
+
+
+También puedes abrir OpenTTD con la opción -f. Eso significa que el proceso se realizará en el computador, pero la consola no estára disponible. Todas las salida serán enviadas al archivo openttd.log. Tú puedes ver el archivo en la cola -f openttd.log para seguir eventos.
+
+===Usando sistema operativo OS/2===
+*Abre el archivo {{c|dedicated.cmd|}}. Si ejecutas {{c|openttd -D|}}, no verás una ventana de consola y serás incapaz de proprcionarle comandos al programa.
+
+===Usando sistema operativos Mac OS X===
+*Abre Terminal.
+*cd dentro de la carpeta con OpenTTD
+*escribe cd OpenTTD.app/Contents/MacOS/
+*escribe ./openttd -D
+*OpenTTD debería abrirse como un servidor dedicado.
+
+===Usando Docker===
+* Vea https://registry.hub.docker.com/u/bateau/openttd/ para más detalles(en inglés).
+
+==Configurando el servidor==
+Hay tres formas de cambiar las opciones del juego:
+*Abre un juego de un jugador, cambia las opciones, y cierra el juego.
+*Usa los [[Main/es/Consola|comandos de la consola]] para controlar el servidor mientras esté abierto.
+*Edita el archivo [[Main/es/Openttd.cfg|openttd.cfg]] manualmente. Vea [[Main/es/Dificultades personalizadas|dificultades personalizadas]] para algo de ayuda.
+
+Cambia las opciones de servidor en la sección [network] del archivo [[Main/es/Openttd.cfg|openttd.cfg]]:
+*Cambia [[Main/es/Lan internet|lan_internet]] a 0.
+*Cambia [[Main/es/Nombre del servidor|server_name]] para que identifiques el servidor. 
+*Cambia [[Main/es/Anuncio del servidor|server_advertise]] a true (verdadero), solo así será visible en la [[Main/es/Lista de servidores|lista de servidores]]
+*Si tienes múltiples interfaces de red asegúrate de cambiar [[Main/en/server bind ip]].
+*Si te conectas a través de un enrutador(router), asegúrate de abrir el puerto específicado por [[Main/es/Puerto del servidor|server_port]] (para UDP y TCP)
+
+==Controlando el servidor con RCON==
+Configura el servidor dedicado para aceptar comandos [[Main/es/Consola|rcon]]:
+*En la ventana del servidor, escribe {{c|rcon_pw <password>|}}. 
+:Ejemplo: {{c|rcon_pw x8na7f|}}
+
+Conectándote al servidor como un cliente:
+*Abre OpenTTD normalmente.
+*Encuentra el servidor mutijugador en la lista y conéctate.
+*Abre la consola (tecla ~)(ctrl, alt y +).
+*Escribe {{c|rcon <password> "<command>"|}}. 
+:Ejemplo: {{c|rcon x8na7f "kick 5"|}}
+
+==Instalando contenido online==
+Si quieres instalar contenido online usando la descarga de contenido del OpenTTD, puedes hacerlo desde la consola en tu servidor dedicado. El beneficio de usar esto a copiar los archivo manualmente a tu servidor es que automáticamente consiguen todas las dependencias que el autor del contenido declara cuando lo sube al sistema de contenido.
+
+*Primero necesitas cargar la lista de contenido disponible del servidor de contenidos:
+:{{c|content update|}}
+:Espera hasta "Content server connection closed"(Se cerró la conexión al servidor de contenidos) se muestre en la consola.
+
+*Lista todo el contenido disponible
+:{{c|content state|}}
+:La lista de contenido disponible es mostrada. Encuentra el contenido que quiera para descargar y lee sus ID, lo cual está escrito al comienzo de la línea. Ej: 2947 para Simple City Builder(Script de juego).
+
+*Después, selecciona el contenido para descargar usando sus ID:
+:{{c|content select 2947|}}
+
+*Puedes agregar más contenido repitiendo el comando {{c|content select|}}.
+
+*Entonces descarga todo el contenido seleccionado:
+:{{c|content download|}}
+
+Insinuación: Si usas la versión nightly r26000+ o la estable 1.4+, puedes escribir {{c|content state city|}} para solamente buscar el contenido que tenga la palabra city.
+
+==Cargando un juego==
+En la ventana del servidor dedicado (o con rcon):
+*Escrible {{c|ls|}} para encontrar los archivos en la carpeta actual, un número que será junto a cada uno, cual representa un {{c|<number>|}} (número) abajo.
+*Escribe {{c|cd <number>|}} para ir a esa carpeta.
+*Escribe {{c|load <number>|}} para cargar ese archivo.
+
+*También puedes cargar juegos guardados o escenario con la opción {{c|-g "<filename>"|}}, de la línea de comandos. 
+:Ejemplo: {{c|openttd.exe -D -g "scenario/echo.scn"|}}.
+
+
+== Automáticamente empieza/para y gurada tu juego ==
+Si no quieres usar docker: Abre tu servidor dedicado en ubuntu/debian, tú puedes descargarlo e instalarlo en init.d script
+
+Tú conseguirás las sigiuientes funciones:
+* Automáticamente empieza cuando tu caja de servdor arranca.
+* Automáticamente se acaba cuando tu caja de servidor se apaga.
+* Automáticamente se guarda tu juego en intervalos definidos.
+Para más funciones, guía de descarga e instalación, visita: https://bitbucket.org/frodus/openttd-init
+
+Con un confeccionado envase de docker tú conseguirás un probado y trabajado entorno de OpenTTD. 
+En ubuntu 14.04 o más nueva puedes ejecutar: sudo apt-get install docker.io y entonces leer la documentación de la siguiente página:
+https://registry.hub.docker.com/u/bateau/openttd/ (en inglés)
+Importa que es un máquina virtual preconfigurada y embalaje está hecha por el tercer equipo.
+
+
+==Vea También==
+*[[Main/es/Autolimpiar empresas|Autolimpiar empresas]]  en orden para especificar que sucede cuando un jugador está fuera durante el juego y su empresa comienza a estar inactiva.
+*Una pequeña introducción en Firewalls(Cortafuegos) en Servidores Dedicados [http://www.uk2.net/blog/why-is-a-firewall-important-for-your-dedicated-server-2/](en inglés).
+
+[[Category:en/Multiplayer]]
+[[Category:en/Tutorial]]
