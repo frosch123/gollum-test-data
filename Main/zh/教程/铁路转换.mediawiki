@@ -1,0 +1,29 @@
+[[Translation:Main/en/Convert rail]]{{en/-}}{{Template:教程/Zh}}
+==转换铁路==
+要选择转换的铁道类型，点击并按住'''主工具条菜单'''的'''铁路建设'''按钮，会显示铁道类型选项．
+[[File:en/Convert rail menu.png|600px]]<br/>
+选择一个选项后，下列工具条之一会显示：
+[[File:en/Railroad Construction.png|none|frame|标准铁道建设工具条]]
+[[File:en/Electrified Railway Construction.png|none|frame|电气化铁道建设工具条]]
+[[File:en/Monorail Construction.png|none|frame|单轨铁道建设工具条]]
+[[File:en/Maglev Construction.png|none|frame|磁悬浮铁道建设工具条]]
+然后点击　'''转换所有'''　按钮[[File:en/Convert rail.png]] 在已建好的轨道上拖动并释放．此工具可用于　'''铁轨'''　'''车库'''　'''桥梁'''　'''隧道'''　'''车站'''和 '''路点'''．
+*桥梁和隧道：点击它的一端．
+*车站：必须转换每一格站台．不然可能搞混车站内的铁道类型 ([[Main/en/Nonuniform stations|Nonuniform stations]]).
+*确认铁轨上没有火车．运行中的火车请送入车库然后[[Main/en/Sell entire train|出售整列火车]] (除非从标准铁道转成电气化轨道).
+*标准铁道转换为电气化铁路时，标准列车仍可行驶在新转换的路线上，并且在运行时就可以转换．
+*并不是所有铁路在任何年代都可用．
+[[File:en/Convert rail tunnel.png|none|frame|多种铁路类型]]<br/>
+[[File:en/Convert station.png|none|frame|多种铁路类型]]
+
+==斜向的轨道==
+在OpenTTD里，每个格子内通常只能有一种类型的铁道（标准铁道和电气化铁道除外）．
+[[File:en/Convert rail close.png|left|frame|混合的轨道类型，太接近了]]
+[[File:en/Convert rail good.png|none|frame|多种轨道类型使用不同的格子]]
+
+==提示==
+* 如果有列车定制了大量的调度计划，此时需要转换铁路类型．让列车返回车库后整列出售．不要关闭车库窗口，马上转换车库到新的铁路类型，接着购买新车．你会发现新买的列车有之前列车的全部调度计划．记得操作过程中不能关闭车库窗口，同时每次只能用这个办法操作一列火车．当然你可以把车库类型转回来，再开辆旧车进去如法泡制．
+*另外，[[Main/zh/教程/替换车辆|替换车辆]]里的方法对于穿越式的车库无效．
+*可以使用 [[Main/zh/教程/调度任务|调度任务]] 让路线上的车辆进入最近的车库，也可以用　'''车辆列表''' 让所有车辆/指定编组进入最近的车库．
+
+<span style="float: right">[[Main/zh/教程/建造公路|'''下一步:''' 建造公路]] &raquo;</span>
