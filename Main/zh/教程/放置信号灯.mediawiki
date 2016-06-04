@@ -1,0 +1,61 @@
+[[Translation:Main/en/Building signals]]{{en/-}}{{zh/教程}}
+'''[[Main/zh/信号灯|信号灯（点击查看说明）]]''' 用于引导列车行进和防止撞车．本教程将说明如何在铁路上放置/取消信号灯．
+
+__TOC__
+== 限制 ==
+* 不能在铁路交岔口或道路和铁路的交汇点放置信号灯．
+* 不能在桥梁上或隧道内放置信号灯．除非使用 [[Archive/en/HackaLittleBit/Tunnel Signals|模拟隧道桥梁信号补丁]]
+
+== 建造信号灯 ==
+#　点击 '''建造铁路'''　按钮[[File:en/Manual html m772c5b23.png]]显示铁路建造工具条．<br/>[[File:en/Railroad Construction.png|none|frame|铁路建造工具条]]
+# 点击　'''建造信号灯''' [[File:en/Place signal.png]] 显示信号灯选择工具条．<br/>
+[[File:en/Signal Selection.png|none|frame|信号灯选择工具条]]<br/>
+{|
+|-
+|colspan=2|'''信号灯类型'''
+|-
+|[[File:en/Signal Semaphore.png]] 和 [[File:en/Signal Electric.png]]||区块信号灯
+|-
+|[[File:en/Signal Semaphore Pre-Signal.png]] 和 [[File:en/Signal Electric Pre-Signal.png]]||入口预输入信号灯
+|-
+|[[File:en/Signal Semaphore Exit-Signal.png]] 和 [[File:en/Signal Electric Exit-Signal.png]]||出口预输入信号灯
+|-
+|[[File:en/Signal Semaphore Combo-Signal.png]] 和 [[File:en/Signal Electric Combo-Signal.png]]||复合预输入信号灯
+|-
+|[[File:en/Signal Semaphore Path.png]] 和 [[File:en/Signal Electric Path.png]]||双向路线信号灯 (可以双向通行，无信号灯方向默认放行)
+|-
+|[[File:en/Signal Semaphore Path One-Way.png]] 和 [[File:en/Signal Electric Path One-Way.png]]||单向路线信号灯 (不能反向通行)
+|-
+|-
+|colspan=2|'''其他按钮'''
+|-
+|[[File:en/Signal Convert.png]]|| 信号灯转换工具 - 先选择要转换成的信号灯类型，再选此按钮并点击具体地点．
+|-
+|[[File:en/Signal Density.png]]|| 信号灯密度设置 - 设置当使用批量建造信号灯时，信号灯之间的间隔]]
+|}<br/>
+臂板式信号灯和电子信号灯在功能上没有区别 - 这只是个人喜好的问题．一般说来，臂板式信号灯使用到20世纪70年代，而电子信号灯随后开始使用．<br/>
+可以在'''设置'''里 '''公司'''　选项，打开 "在1950年前自动设置臂板式信号灯"．<br/>
+
+#选择一种信号灯类型后，把光标放在铁轨上要建造信号灯的位置．<br/>
+[[File:en/SignalTutorial2.png|none|frame]]
+#　再次点击来建造信号灯．除非你选择路线信号灯（它总是朝向一面），否则将建造一个双向信号灯．<br/>
+[[File:en/Two-way signal.png|frame|left]][[File:en/SignalTutorial3.png|none|frame]]
+#　多次点击信号灯可以在单向模式的不同方向和双向模式间切换．注意：一般双向信号灯为两边各一个，臂板式信号灯切换时还有种靠一边的双向信号灯，灯柱显示高一些．<br/>
+[[File:en/One-way signal.png|frame|left]][[File:en/SignalTutorial4.png|none|frame]]
+<br/>[[File:en/SignalTutorial5.png|none|frame]]
+<br/>[[File:en/SignalTutorial5b.png|none|frame]]
+
+== 建造一长串信号灯 ==
+点击并沿着铁路拖动可以建造一长串选定类型的信号灯．然而，更有用的是，当点击一个已建好的单向信号灯并拖动时，会建造一长串朝向同一方向的单向信号灯．<br/>
+[[File:en/SignalTutorial4.png|none|frame|放置光标在已建好的信号灯上]]
+<br/>[[File:en/SignalTutorial20.png|none|frame|点击并沿铁路拖动]]
+'''注意'''：如果按住Ctrl并拖动，信号灯会沿着拖动方向的铁道线自动生成，直到遇到车站、信号灯或岔道口为止．
+
+#松开鼠标来生成信号灯．根据你在'''信号灯密度设置'''的指定的间距，会自动建造信号灯串．<br/>
+[[File:en/SignalTutorial21.png|none|frame]]<br/>
+'''注意'''如果点击预输入信号灯并拖动，只会建立跟该信号灯同一朝向的区块信号灯．
+
+== 移除信号灯 ==
+打开信号灯选择窗口后，在铁路建造工具条上点击　'''移除按钮'''[[File:en/Toggle clear active.png]]．光标方格会变成红色．接着点击要移除的信号灯或者沿一个方向的铁轨拖动就可以了．再次点击　'''移除按钮'''　取消选择．快捷键 '''R'''．
+
+<span style="float: right">[[Main/zh/教程/买卖列车|'''下一步:''' 买卖列车]] &raquo;</span>
