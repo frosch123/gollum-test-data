@@ -1,0 +1,73 @@
+[[Translation:Main/en/Dedicated server]]
+[[File:en/Dedicated server.png|right|frame|Věnovaný server v okně]] '''Dedicated server''' je OpenTTD hra pro více hráčů ([[Main/en/server]]), 
+který ti může v pozadi volně běžet. 
+Nesmíš ho ale omylem vypnout. 
+Dobré je přes večer přepnout pc do režimu spánku. 
+Tímto zabráníte smazání hesel u všech společností.
+
+==Spuštění serveru==
+Nejprve musíš najlépe na ploše vytvořit zástupce. 
+Přidat mu parametr "-D". (openttd.exe" -D)
+
+===Ve Windowsech===
+První metoda:
+*Vytvoř zástupce na {{c|openttd.exe|}}
+*Pravým tlačítkem klikni na toho zástupce a dej vlasnosti
+*Přidej {{-D|}} do řádku (openttd.exe" -D)
+*Dej na použít
+*Spust zástupce
+
+===V Linuxu===
+* Běh {{c | OpenTTD-D |}} v terminálu. Pokud se připojujete na server pomocí SSH a chcete hru spustit, když odhlásit, měli byste použít [http://www.gnu.org/software/screen/ GNU Screen] nebo [http://dtach.sourceforge. net / dtach].
+
+Můžete také spustit openttd s-f. To znamená, že proces bude probíhat na pozadí, ale konzola bude avaible. Všechny výstup bude zaslán soubor openttd.log. Můžete si zobrazit log s ocasem: tail-f openttd.log sledovat události. (Toto bylo přeloženo přes google překládač)
+
+===V Docker.io ===
+* https://registry.hub.docker.com/u/bateau/openttd/
+
+==Nastavení a nakonfigurování serveru==
+Jsou k dispozici 3 možností jak nastavit možnosti hry:
+*Spust hru pro jednoho hráče, nastav nastavení dle libosti a vypni hru.
+*Použíj konzoli (tlačíto pod ESC) a přímo ve hře více hráčů nastav pomocí konzolových příkazů. (Pouze pro zkušenější uživatele)
+*Změn [[Main/en/openttd.cfg]] soubor ručně.
+Možné aplikace: [http://www.tt-forums.net/viewtopic.php?f=29&t=33967 Web Interface]
+
+
+Změň síťové nastavení v sekci "Network" [[Main/en/openttd.cfg]]:
+*Nastav [[Main/en/lan internet]] na 0.
+*Změň [[Main/en/server name]] na název tvýho serveru, 
+*Nastav [[Main/en/server advertise]] na "true", aby bylo možno najít server listě [[Main/en/server list]]
+*Pokud máte více síťových rozhraní, ujistěte se, že jste nastavili [[Main/en/server bind ip]].
+*Pokuď máte pc za routerem, musíš na sebe nasměrovat přislušný port, který používá OpenTTD (3979) [[Main/en/server port]] ( TCP a UDP)
+
+==Kontrolování serveru přes rcon (Vzdálený admin)==
+Nastavení serveru přes konzoli [[Main/en/Console#Server commands|rcon]] příkazy:
+*Ve věnovaném serveru napiš {{c|rcon_pw <password>|}}. 
+:Příklad: {{c|rcon_pw 12345|}}
+
+
+Připojení na server jako klient:
+*Normálně spust OpenTTD.
+*Najdi svůj server ve vyhledávačí a připoj se na něj.
+*Otevří konzoli (~ klávesa).
+*Napiš {{c|rcon <password> "<command>"|}}. 
+:Příklad: {{c|rcon 12345 "kick 5"|}}
+
+==Nahrávání hry==
+*Zároveň můžeš nahrávat na server uložené hry a scénáře {{c|-g "<názevsouboru>"|}}, Nastavení parametru
+:Příklad: {{c|openttd.exe -D -g "scenario/echo.scn"|}}.
+
+==Automatické spuštění / zastavení a uložte hru==
+
+Je doporučeno použít naše ukotvitelném kontejner, aby si dobře testovány a pracovní prostředí pro OpenTTD. Docker bude magicky dělat všechno pro vás :) v Ubuntu 14.04, nebo novější, můžete spustit: sudo apt-get install docker.io a pak si přečtěte dokumentaci na následující url https://registry.hub.docker.com/u/bateau/openttd/
+
+Pokud nechcete spustit ukotvitelný panel: Spusťte dedikovaný server ubuntu / debian si můžete stáhnout a nainstalovat init.d skript dostanete následující funkce:
+* Automatické spuštění, když váš server box bootup
+* Automatické vypnutí při odstavení serveru box je
+* Automatické ukládání hry v nastaveném intervalu
+Pro více funkcí, nainstalovat a stáhnout průvodce, navštivte: https://bitbucket.org/frodus/openttd-init
+
+==Viz také==
+*[[Main/en/Autoclean companies|Autoclean companies]]   Pro upřesnění, co se stane, když se hráč odhlásí v průběhu hry, a společnost se stane neaktivní
+
+[[Main/en/Kategorie:Více Hráčů]]
