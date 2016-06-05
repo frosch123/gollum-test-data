@@ -1,0 +1,89 @@
+[[Translation:Main/en/Dedicated server]]{{en/-}}
+[[File:en/Dedicated server.png|right|frame|Fenêtre de serveur dédié]]
+Un '''serveur dédié''' est un [[Main/fr/Serveur|serveur]] OpenTTD de jeu en réseau qui n'a pas de client local prenant part au jeu. Un serveur dédié peut tourner en tâche de fond sur une machine.
+
+==Démarrer un serveur dédié==
+Lancez l'exécutable OpenTTD en utilisant l'option de [[Main/fr/Ligne de commande|ligne de commande]] {{c|-D|}} (D majuscule!).
+
+===Sous Windows===
+Méthode 1:
+*Créez un raccourci vers {{c|openttd.exe|}}
+*Faites un clic droit sur le raccourci et cliquez sur Propriétés
+*Ajoutez {{c|-D|}} à la fin de la ligne Cible
+*Cliquez sur Appliquer
+*Lancez le raccourci
+
+
+Méthode 2:
+*Dans le menu de démarrage, cliquez sur Exécuter
+*Entrez: {{c|"c:\(chemin de openttd)\openttd.exe" -D|}}
+*Cliquez sur OK
+
+===Sous Linux===
+*Exécutez {{c|openttd -D|}} dans un terminal. Si vous êtes connecté au serveur via SSH et aimeriez que le jeu tourne même une fois déconnecté, vous devriez utiliser [http://www.gnu.org/software/screen/ GNU Screen] ou [http://dtach.sourceforge.net/ dtach].
+
+Vous pouvez aussi démarrer openttd avec l'option -f. Elle signifie que le processus tournera en tâche de fond, mais qu'aucune console ne sera disponible. Toutes les sorties seront envoyées dans le fichier openttd.log. Vous pouvez afficher la log avec tail: tail -f openttd.log, pour suivre les événements.
+
+===Sous OS/2===
+*Exécutez le fichier {{c|dedicated.cmd|}}. Si vous lancez {{c|openttd -D|}}, vous ne verrez pas de fenêtre de console et serez incapables de passer des commandes au programme.
+
+===Sous Mac OS X===
+*Ouvrez le terminal.
+*allez dans le répertoire contenant OpenTTD
+*tapez cd OpenTTD.app/Contents/MacOS/
+*tapez ./openttd -D
+*OpenTTD devrait démarrer comme serveur dédié.
+
+===Sous Docker.io ===
+* https://registry.hub.docker.com/u/bateau/openttd/
+
+==Configurer le serveur==
+Il y a trois moyens de modifier les options du jeu:
+*Lancez un jeu mono-joueur, modifiez les paramètres, puis fermez le jeu.
+*Utilisez les [[Main/en/Console/Fr#Commandes de la console|commandes de la console]] pour contrôler le serveur alors qu'il fonctionne.
+*Éditez le fichier [[Main/fr/openttd.cfg|openttd.cfg]] manuellement. Voyez [[Main/fr/Difficulté personnalisée|diff_custom]] pour de l'aide.
+Outils disponibles: [http://www.tt-forums.net/viewtopic.php?f=29&t=33967 Interface web]
+
+
+Modifiez les paramètres du réseau dans la section Network de [[Main/fr/openttd.cfg|openttd.cfg]]:
+*Mettez [[Main/en/lan internet]] à 0.
+*Changez [[Main/fr/Nom du serveur|server_name]] pour pouvoir identifier le serveur.
+*Positionnez [[Main/fr/Annonce du serveur|server_advertise]] à true, afin qu'il soit visible sur la [[Main/fr/Liste des serveurs|liste des serveurs]].
+*Si vous avez plusieurs interfaces réseau, assurez-vous de bien fixer [[Main/fr/Adresse IP de lien du serveur|server_bind_ip]].
+*Si vous êtes derrière un routeur, assurez-vous de rediriger le port spécifié par [[Main/fr/Port du serveur|server_port]] (à la fois pour TCP et pour UDP)
+
+==Contrôler le serveur avec rcon==
+Configurez le serveur dédié pour accepter les commandes [[Main/en/Console/Fr#Commandes de la console|rcon]]:
+*Dans la fenêtre du serveur dédié, tapez {{c|rcon_pw <mot-de-passe>|}}. 
+:Exemple: {{c|rcon_pw x8na7f|}}
+
+
+Connectez-vous au serveur comme client:
+*Lancez OpenTTD normalement.
+*Trouvez votre serveur dans la liste multijoueurs et connectez-vous dessus.
+*Ouvrez la console (touche ~).
+*Tapez {{c|rcon <mot-de-passe> "<commande>"|}}. 
+:Exemple: {{c|rcon x8na7f "kick 5"|}}
+
+==Charger une partie==
+Dans la fenêtre du serveur dédié (ou avec rcon):
+*Tapez {{c|ls|}} pour lister les fichiers du répertoire courant. Un nombre sera affiché devant chaque, lequel sera appelé {{c|<nombre>|}} dans la suite.
+*Tapez {{c|cd <nombre>|}} pour aller à ce répertoire.
+*Tapez {{c|load <nombre>|}} pour charger ce fichier.
+*Vous pouvez aussi charger des sauvegardes et des scénarios avec l'option en ligne de commande {{c|-g "<nom-fichier>"|}}.
+:Exemple: {{c|openttd.exe -D -g "scenario/echo.scn"|}}.
+
+==Démarrer automatiquement / arrêter et sauvegarder votre jeu==
+Il est recomanded d'utiliser notre conteneur de docker pour obtenir un environnement bien testé et travailler pour openttd. Docker va magiquement faire toutes les choses pour vous :) En ubuntu 14.04 ou plus récent, vous pouvez exécuter: sudo apt-get install docker.io puis la documentation sur l'URL suivante lire https://registry.hub.docker.com/u/bateau/openttd/
+
+Si vous ne voulez pas courir docker: Exécutez votre serveur dédié dans Ubuntu / Debian, vous pouvez télécharger et installer un script init.d Vous obtiendrez les fonctions suivantes:
+*Démarrer automatiquement lorsque votre boîte démarrage du serveur
+*L'arrêt automatique lorsque la boîte de serveur vous est à l'arrêt
+*Sauver automatiquement votre jeu à un intervalle défini
+Pour plus de fonctions, le guide d'installation et télécharger, visitez le site: https://bitbucket.org/frodus/openttd-init
+
+==Voir aussi==
+*[[Main/fr/Auto-nettoyage des compagnies|Nettoyage automatique des compagnies]] afin de spécifier ce qui doit arriver lorsqu'un joueur se déconnecte au cours d'une partie et que sa compagnie devient inactive.
+
+[[Category:fr/Multijoueur]]
+[[Category:fr/Tutoriel]]
