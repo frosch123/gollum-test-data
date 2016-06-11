@@ -1,0 +1,179 @@
+[[Translation:Main/en/Trains]]{{en/-}}{{en/Table of contents}}
+:'''''[[Main/en/열차 구입]]''' 튜토리얼을 어떻게 기차를 사고, 팔고 개조하는지 알기 위해 봅니다.''
+:''기관차와 객차의 목록을 보기 위해 [[Main/en/카테고리:기차|기차 카테고리]]''
+
+'''기차'''는 아마도 제일 흥미로울 것입니다 — 그리고 확실하게 많이 쓰일 것입니다 — OpenTTD의 [[Main/en/차량|수송의 방법]]에서입니다. 그것들은 빠르고 수송량이 크며 유지비가 적게 듭니다. 
+
+4가지 [[Main/en/선로 종류|선로 종류]]에서 운행할 수 있는 5가지 열차의 종류가 있습니다:
+* [[Main/en/선로|증기 기관차]]
+* [[Main/en/선로|디젤 기관차]]
+* [[Main/en/전기 선로|전기 기관차]]
+* [[Main/en/모노레일]]
+* [[Main/en/자기부상열차]]
+
+Much of their popularity stems from the challenge of building large rail networks that service multiple trains travelling to disparate destinations. 이것은 명예롭고 효율적으로 하는 것은 많은 노력과 전략을 필요로 하지만, 이것이 성취되면 큰 만족감을 느낍니다.
+
+이러한 노력은 4가지 방향의 선로, 신호기, 역사와 경유지와 같은 인프라의 건설에 의해 이루어 집니다(뒤에 있는 두가지는 후에 OpenTTD에서 추가되었습니다) — 그것들은 가까운 무한한 교차로와 역 레이아웃을 만들 수 있습니다. 더 효율적인 디자인은 더 많은 공간을 필요로 하므로 , 이것은 전략적인 결정이 반드시 필요하다는 것입니다.
+
+OpenTTD의 기관차는 트랜스포트 타이쿤과 디럭스 버전에서 그랬던 것 처럼 대부분 실제와 동등한 것을 기초로 한다. 온대 기후의 기차들은 거의 영국에서 찾을 수 있는 기관차의 복제판이다. 아한대 차량들은 캐나다의 차량을 기본으로 한다.그리고 아열대 버전은 중남미 차량에서 유래되었다. 불행하게도, 저작권문제 때문에, 이 게임의 차량들은 트랜스포트 타이쿤에서 미스터리하게 만들어진 차량 이름으로 다시 이름붙여졌고 이러한 가상이름이 OpenTTD에까지 이어졌다. 이름을 실제 원래 이름으로 돌려놓는 것이 가능하다.(NewGRF를 이용해서: «Original vehicle name»).
+
+==기관차와 화차 목==
+
+* [[Main/en/Train Comparison|기차 비교 일람표]]
+* [[Main/en/Carriages Comparison|Carriages comparison table]]
+
+{{Template:VehicleTable/Start}}
+{{Template:VehicleTable/Header|증기 기관차}}
+{{Template:VehicleTable/Row
+|
+*[[File:en/Kirbypaultank.png|Kirby Paul Tank Engine]] [[Main/en/Kirby Paul Tank]]
+*[[File:en/Chaneyjubilee.png|Chaney "Jubilee" Engine]] [[Main/en/Chaney "Jubilee"]]
+*[[File:en/Ginzua4.png|Ginzu "A4" Engine]] [[Main/en/Ginzu "A4"]]
+*[[File:en/Sh8p.png|SH "8P" Engine]] [[Main/en/SH "8P"]]
+|
+*[[File:en/Wills280.png|Wills 2-8-0 Engine]] [[Main/en/Wills 2-8-0]]
+|
+*[[File:en/Wills280.png|Wills 2-8-0 Engine]] [[Main/en/Wills 2-8-0]]
+|
+*[[File:en/Powernautchoochoo.png|Ploddyphut Choo-Choo Engine]] [[Main/en/Ploddyphut Choo-Choo]]
+*[[File:en/Ploddyphutchoochoo.png|Powernaut Choo-Choo Engine]] [[Main/en/Powernaut Choo-Choo]]
+*[[File:en/Mightymoverchoochoo.png|Might Mover Choo-Choo Engine]] [[Main/en/Mightymover Choo-Choo]]
+}}
+{{Template:VehicleTable/Header|디젤 기관차}}
+{{Template:VehicleTable/Row
+|
+*[[File:en/Manleymoreldmu.png|Manley-Morel DMU Engine]] [[Main/en/Manley-Morel DMU]]
+*[[File:en/Shhendry25.png|SH/Hendry "25" Engine]] [[Main/en/SH/Hendry "25"]]
+*[[File:en/Floss47.png|Floss "47" Engine]] [[Main/en/Floss "47"]]
+*[[File:en/Uu37.png|UU "37" Engine]] [[Main/en/UU "37"]]
+*[[File:en/Sh125.png|SH "125" Engine]] [[Main/en/SH "125"]]
+*[[File:en/Dash.png|"Dash" Engine]] [[Main/en/Dash|"Dash"]]
+|
+*[[File:en/Mjs250.png|MJS 250 Engine]] [[Main/en/MJS250]]
+*[[File:en/Kelling3100.png|Kelling 3100 Engine]] [[Main/en/Kelling 3100]]
+*[[File:en/Cs4000.png|CS4000 Engine]] [[Main/en/CS4000]]
+*[[File:en/Cs2400.png|CS2400 Engine]] [[Main/en/CS2400]]
+*[[File:en/Mjs1000.png|MJS 1000 Engine]] [[Main/en/MJS 1000]]
+*[[File:en/Centennial.png|Centennial Engine]] [[Main/en/Centennial]]
+*[[File:en/Turnerturbo.png|Turner Turbo]] [[Main/en/Turner Turbo]]
+|
+*[[File:en/Mjs250.png|MJS 250 Engine]] [[Main/en/MJS250]]
+*[[File:en/Kelling3100.png|Kelling 3100 Engine]] [[Main/en/Kelling 3100]]
+*[[File:en/Cs4000.png|CS4000 Engine]] [[Main/en/CS4000]]
+*[[File:en/Cs2400.png|CS2400 Engine]] [[Main/en/CS2400]]
+*[[File:en/Mjs1000.png|MJS 1000 Engine]] [[Main/en/MJS 1000]]
+*[[File:en/Centennial.png|Centennial Engine]] [[Main/en/Centennial]]
+*[[File:en/Turnerturbo.png|Turner Turbo]] [[Main/en/Turner Turbo]]
+|
+*[[File:en/Ploddyphutdiesel.png|Ploddyphut Diesel]] [[Main/en/Ploddyphut Diesel]]
+*[[File:en/Powernautdiesel.png|Powernaut Diesel]] [[Main/en/Powernaut Diesel]]
+}}
+{{Template:VehicleTable/Header|전기 기관차}}
+{{Template:VehicleTable/Row
+|
+*[[File:en/Sh30.png|SH "30" Engine]] [[Main/en/SH "30"]]
+*[[File:en/Sh40.png|SH "40" Engine]] [[Main/en/SH "40"]]
+*[[File:en/Tim.png|"T.I.M" Engine]] [[Main/en/T.I.M|"T.I.M."]]
+*[[File:en/Asiastar.png|"Asiastar" Engine]] [[Main/en/AsiaStar|"AsiaStar"]]
+|
+없음
+|
+없음
+|
+없음
+}}
+{{Template:VehicleTable/Header|모노레일}}
+{{Template:VehicleTable/Row
+|
+*[[File:en/X2001.png|X2001 Monorail Engine]] [[Main/en/X2001|'X2001']]
+*[[File:en/Millenniumz1.png|Milennium 'Z1' Monorail Engine]] [[Main/en/Millennium Z1|'Millennium Z1']]
+|
+*[[File:en/X2001.png|X2001 Monorail Engine]] [[Main/en/X2001|'X2001']]
+*[[File:en/Millenniumz1.png|Milennium 'Z1' Monorail Engine]] [[Main/en/Millennium Z1|'Millennium Z1']]
+|
+*[[File:en/X2001.png|X2001 Monorail Engine]] [[Main/en/X2001|'X2001']]
+*[[File:en/Millenniumz1.png|Milennium 'Z1' Monorail Engine]] [[Main/en/Millennium Z1|'Millennium Z1']]
+|
+*[[File:en/Wizzowowz99.png|Wizzowow 'Z99' Monorail Engine]] [[Main/en/Wizzowow Z99]]
+}}
+{{Template:VehicleTable/Header|자기부상열차}}
+{{Template:VehicleTable/Row
+|
+*[[File:en/Lev1leviathan.png|MagLev Engine 1: Leviathan]] [[Main/en/Lev1 'Leviathan']]
+*[[File:en/Lev2cyclops.png|MagLev Engine 2: Cyclops]] [[Main/en/Lev2 'Cyclops']]
+*[[File:en/Lev3pegasus.png|MagLev Engine 3: Pegasus]] [[Main/en/Lev3 'Pegasus']]
+*[[File:en/Lev4chimaerarhead.png|MagLev Engine 4: Chimaera (front)]] [[Main/en/Lev4 'Chimaera']]
+|
+*[[File:en/Lev1leviathan.png|MagLev Engine 1: Leviathan]] [[Main/en/Lev1 'Leviathan']]
+*[[File:en/Lev2cyclops.png|MagLev Engine 2: Cyclops]] [[Main/en/Lev2 'Cyclops']]
+*[[File:en/Lev3pegasus.png|MagLev Engine 3: Pegasus]] [[Main/en/Lev3 'Pegasus']]
+*[[File:en/Lev4chimaerarhead.png|MagLev Engine 4: Chimaera (front)]] [[Main/en/Lev4 'Chimaera']]
+|
+*[[File:en/Lev1leviathan.png|MagLev Engine 1: Leviathan]] [[Main/en/Lev1 'Leviathan']]
+*[[File:en/Lev2cyclops.png|MagLev Engine 2: Cyclops]] [[Main/en/Lev2 'Cyclops']]
+*[[File:en/Lev3pegasus.png|MagLev Engine 3: Pegasus]] [[Main/en/Lev3 'Pegasus']]
+*[[File:en/Lev4chimaerarhead.png|MagLev Engine 4: Chimaera (front)]] [[Main/en/Lev4 'Chimaera']]
+|
+*[[File:en/Wizzowowrocketeer.png|Toyland Wizzowow Rocketeer]] [[Main/en/Wizzowow Rocketeer]]
+}}
+{{Template:VehicleTable/Header|화물차}}
+{{Template:VehicleTable/Row
+|
+*[[File:en/Passengercarriage.png|Standard Passenger Carriage]] [[Main/en/Passenger Carriage|승객 수송차량]]
+*[[File:en/Mailvan.png|Standard Mail Van]] [[Main/en/Mail Van|우편 수송차량]]
+*[[File:en/Oiltanker.png|Standard Oil Tanker]] [[Main/en/Oil Tanker|석유 수송차량]]
+*[[File:en/Grainhopper.png|Standard Grain Hopper]] [[Main/en/Grain Hopper|곡물 수송차량]]
+*[[File:en/Goodsvan.png|Standard Goods Van]] [[Main/en/Goods Van|상품 수송차량]]
+*[[File:en/Woodtruck.png|Standard Wood Truck]] [[Main/en/Wood Truck|목재 수송차량]]
+*[[File:en/Armouredvan.png|Standard Armoured Van]] [[Main/en/Armoured Van|귀금속 수송차량]]
+*[[File:en/Steeltruck.png|Standard Steel Truck]] [[Main/en/Steel Truck|철 수송차량]]
+*[[File:en/Coaltruck.png|Standard Coal Truck]] [[Main/en/Coal Car|석탄 수송차량]]
+*[[File:en/Livestockvan.png|Standard Livestock Van]] [[Main/en/Livestock Van|가축 수송차량]]
+*[[File:en/Ironorehopper.png|Standard Iron Ore Hopper]] [[Main/en/Iron Ore Hopper|철광석 수송차량]]
+|
+*[[File:en/Passengercarriagex.png|Tropical and Sub-arctic Passenger Carriage]] [[Main/en/Passenger Carriage|승객 수송차량]]
+*[[File:en/Mailvan.png|Standard Mail Van]] [[Main/en/Mail Van|우편 수송차량]]
+*[[File:en/Oiltanker.png|Standard Oil Tanker]] [[Main/en/Oil Tanker|석유 수송차량]]
+*[[File:en/Grainhopper.png|Standard Grain Hopper]] [[Main/en/Grain Hopper|곡물 수송차량]]
+*[[File:en/Goodsvan.png|Standard Goods Van]] [[Main/en/Goods Van|상품 수송차량]]
+*[[File:en/Woodtruck.png|Standard Wood Truck]] [[Main/en/Wood Truck|목재 수송차량]]
+*[[File:en/Armouredvan.png|Standard Armoured Van]] [[Main/en/Armoured Van|귀금속 수송차량]]
+*[[File:en/Papertruck.png|Tropical and Sub-arctic Paper Truck]] [[Main/en/Paper Truck]]
+*[[File:en/Coaltruck.png|Standard Coal Truck]] [[Main/en/Coal Car|석탄 수송차량]]
+*[[File:en/Livestockvan.png|Standard Livestock Van]] [[Main/en/Livestock Van|가축 수송차량]]
+*[[File:en/Foodvan.png|Tropical and Sub-arctic Food Van]] [[Main/en/Food Van]]
+|
+*[[File:en/Passengercarriagex.png|Tropical and Sub-arctic Passenger Carriage]] [[Main/en/Passenger Carriage|승객 수송차량]]
+*[[File:en/Mailvan.png|Standard Mail Van]] [[Main/en/Mail Van|우편 수송차량]]
+*[[File:en/Oiltanker.png|Standard Oil Tanker]] [[Main/en/Oil Tanker|석유 수송차량]]
+*[[File:en/Grainhopper.png|Standard Grain Hopper]] [[Main/en/Grain Hopper|곡물 수송차량]]
+*[[File:en/Goodsvan.png|Standard Goods Van]] [[Main/en/Goods Van|상품 수송차량]]
+*[[File:en/Woodtruck.png|Standard Wood Truck]] [[Main/en/Wood Truck|목재 수송차량]]
+*[[File:en/Armouredvan.png|Standard Armoured Van]] [[Main/en/Armoured Van]]
+*[[File:en/Rubbertruck.png|Tropcial Rubber Truck]] [[Main/en/Rubber Truck]]
+*[[File:en/Watertanker.png|Tropical Water Tanker]] [[Main/en/Water Tanker]]
+*[[File:en/Copperorehopper.png|Tropical Copper Ore Hopper]] [[Main/en/Copper Ore Hopper]]
+*[[File:en/Foodvan.png|Tropical and Sub-arctic Food Van]] [[Main/en/Food Van]]
+*[[File:en/Fruittruck.png|Tropical Fruit Truck]] [[Main/en/Fruit Truck|과일 수송차량]]
+|
+*[[File:en/Passengercarriagetoyland.png|Standard Passenger Carriage]] [[Main/en/Passenger Carriage]]
+*[[File:en/Mailvanx.png|Standard Mail Van]] [[Main/en/Mail Van]]
+*[[File:en/Colatanker.png|Toyland Cola Tanker]] [[Main/en/Cola Tanker]]
+*[[File:en/Toffeehopper.png|Toyland Toffee Hopper]] [[Main/en/Toffee Hopper]]
+*[[File:en/Sweetvan.png|Toyland Sweet Van]] [[Main/en/Sweet Van]]
+*[[File:en/Plastictruck.png|Toyland Plastic Truck]] [[Main/en/Plastic Truck]]
+*[[File:en/Bubblevan.png|Toyland Bubble Van]] [[Main/en/Bubble Van]]
+*[[File:en/Fuzzydrinktruck.png|Toyland Fuzzy Drink Truck]] [[Main/en/Fizzy Drink Truck]]
+*[[File:en/Sugartruck.png|Toyland Sugar Truck]] [[Main/en/Sugar Truck]]
+*[[File:en/Toyvan.png|Toyland Toy Van]] [[Main/en/Toy Van]]
+*[[File:en/Candyflosshopper.png|Toyland Candyfloss Hopper]] [[Main/en/Candyfloss Hopper]]
+*[[File:en/Batterytruck.png|Toyland Battery Truck]] [[Main/en/Battery Truck]]
+}}
+|}
+
+==차량 충돌 사고==
+기차를 충돌시키는 것이 가능한데 충돌함으로서 충돌한 두 열차가 파괴되고 잠시동안 주변선로가 통과불가능해지며 가까운 역의 등급이 상당히 내려간다. 이것은 [[Main/en/신호기]] 설치를 통해 해결할 수 있다.
+
+열차와 차량이 같이 건널목에 있을 때 열차는 차량을 파괴할 수 있다— 기차는 피해없이 지나가나 너는 차량의 파괴로 인해 똑같이 등급이 하락할 것이다. The level crossings have red warning lights which make road vehicles stop before the crossing. However they don't apply to vehicles which are already on the crossing. With plain or no signalling lights turn on just before the train reaches the crossing, which may be too late for slow or broken down vehicles. With [[Main/en/Signals#Path Signals|path signals]] the lights turn on when the track is reserved for the train. Ample time for the road vehicles can be provided by placing the signals suitably.
+
+[[Category:en/Railways]]
