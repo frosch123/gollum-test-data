@@ -1,0 +1,216 @@
+{{ru/Перевод|Templates|50}} 
+[[Translation:Main/en/Templates]]
+Смотрите список общих '''шаблонов''' и их использование, нажмите на название шаблона для получения подробной информации о шаблоне.
+Вы можете найти список шаблонов в статьях:
+* [[Main/ru/Руководство по стилю/Общие шаблоны|OpenTTD:Руководство по стилю/Общие шаблоны]]
+* [[Category/ru/Шаблоны]].
+* Для получения полного списка всех шаблонов, смотрите [[Main/en/Special:Allpages/Template:]].
+
+Также смотрите другие статьи [[Category/ru/Редактирование ресурсов]]. 
+
+__TOC__
+
+== [[Category/ru/Окна сообщений|Шаблоны окон сообщений]] ==
+
+Существует 6 типов (цветов) сообщений:
+
+<table style="margin: 0px 10% 0px 10%; border: 1px solid #aaa; background:#fbfbfb">
+<tr valign="top">
+<td style="border-left: 10px solid #1e90ff; padding: 2px 0 2px 0.5em;"><div style="width:100px; color:#1e90ff;">'''синий'''</div></td>
+<td style="border: none; padding: 0.25em 0.9em; width: 100%;}}">[[Main/en/#Тип заметка (синий)|заметка]]: Информация, которую должны иметь в виду читатели/редакторы</td>
+</tr><tr valign="top">
+<td style="border-left: 10px solid #f4c430; padding: 2px 0 2px 0.5em;"><div style="width:100px; color:#f4c430;">'''жёлтый'''</div></td>
+<td style="border: none; padding: 0.25em 0.9em; width: 100%;}}">[[Main/en/#Тип стиль (жёлтый)|стиль]]: Проблемы не с содержанием, а с форматированием/представлением</td>
+</tr><tr valign="top">
+<td style="border-left: 10px solid #f28500; padding: 2px 0 2px 0.5em;"><div style="width:100px; color:#f28500;">'''оранжевый'''</div></td>
+<td style="border: none; padding: 0.25em 0.9em; width: 100%;}}">[[Main/en/#Тип контент (оранжевый)|контент]]: Проблемы с контентом в статье, т.е. то, о чём эта статья на самом деле говорит</td>
+</tr><tr valign="top">
+<td style="border-left: 10px solid #b22222; padding: 2px 0 2px 0.5em;"><div style="width:100px; color:#b22222;">'''красный'''</div></td>
+<td style="border: none; padding: 0.25em 0.9em; width: 100%;}}">[[Main/en/#Тип удалить (красный)|удалить]]: Удаление</td>
+</tr><tr valign="top">
+<td style="border-left: 10px solid #9932cc; padding: 2px 0 2px 0.5em;"><div style="width:100px; color:#9932cc;">'''фиолетовый'''</div></td>
+<td style="border: none; padding: 0.25em 0.9em; width: 100%;}}">[[Main/en/#Тип переместить (фиолетовый)|переместить]]: Соединить, разделить...</td>
+</tr><tr valign="top">
+<td style="border-left: 10px solid #bba; padding: 2px 0 2px 0.5em;"><div style="width:100px; color:#bba;">'''серый'''</div></td>
+<td style="border: none; padding: 0.25em 0.9em; width: 100%;}}">[[Main/en/#Тип защищённый (серый)|защищённый]]: Страница защищена от изменений</td>
+</tr>
+</table>
+===Тип заметка (синий)===
+{| style="border:0px; padding:5px; width=100%;"
+|- valign="top"
+|width=150;|{{en/S|Заметка/Ru|текст| ТЕКСТ }}
+|{{ru/Заметка|текст| ТЕКСТ }}
+|- valign="top"
+|{{en/S|Необходимо сделать/Ru|комментарий| ТЕКСТ }}
+|{{ru/Необходимо сделать|комментарий| ТЕКСТ |2= }}
+|- valign="top"
+|{{en/S|Расширить/Ru|заметка| ТЕКСТ }}
+|{{ru/Расширить|заметка| ТЕКСТ |2= }}
+|- valign="top"
+|{{en/S|Текущие событие/Ru}}
+|{{ru/Текущие событие|1= }}
+|}
+
+===Тип стиль (жёлтый)===
+{| style="border:0px; padding: 5px; width=100%;"
+|- valign="top"
+|width=150;|{{en/S|Правка/Ru}}
+|{{ru/Правка|1= }}
+|- valign="top"
+|{{en/S|Перевод/Ru | название оригинала на английском|Процент}}
+|{{ambox
+| type  = style
+| image = Translation.png
+| text  = <strong>Эта статья переводится с английского языка на русский: <includeonly>[{{SERVER}}{{localurl:{{NAMESPACE}}:{{{1}}}|action=view}} {{{1}}}]</includeonly><noinclude>{{{1}}}</noinclude>.</strong>
+<div style="font-size: 90%">
+<div style="margin:auto; text-align:Left;">Процент: {{{2|0}}}%
+<div style="width:200px; text-align:Left; border:1px solid #aaa; padding:1px; overflow:hidden;"><span style="width:{{#expr: ({{{2|0}}}/100) * 100}}%; height:2px; background:#7fff00; float:left;">&nbsp;</span><span style="width:{{#expr: 100 - ({{{2|0}}}/100) * 100}}%; height:2px; background:#ff7f50; float:left;">&nbsp;</span></div>
+</div>
+Пожалуйста, помогите [{{SERVER}}{{localurl:{{NAMESPACE}}:{{PAGENAME}}|action=edit}} улучшить перевод].
+</div><div style="font-size: 80%">
+*Используйте [[Main/en/Manual of Style|руководство по стилю]] для правильного изложения перевода.
+*Помните, что необходимо удалить данный шаблон, когда статья будет полностью переведена.</div>
+}}
+|}
+
+===Тип контент (оранжевый)===
+{| style="border:0px; padding: 5px; width=100%;"
+|- valign="top"
+|width=150;|{{en/S|Внимание/Ru|текст}}
+|{{ru/Внимание|текст}}
+|- valign="top"
+|{{en/S|Не завершено/Ru}}
+|{{ru/Не завершено|1= }}
+|- valign="top"
+|{{en/S|Устарело/Ru}} <br> {{en/S|Устарело/Ru|текст заметки}} 
+|{{ru/Устарело|2= }} 
+|}
+===Тип удалить (красный)===
+{| style="border:0px; padding:5px; width=100%;"
+|- valign="top"
+|width=150;|{{en/S|Удалить/Ru| Причина &#124; Имя пользователя}}
+|{{ru/Удалить|3= }} 
+|- valign="top"
+|{{en/S|Вандал/Ru}} [[Archive/en/frosch|Frosch удалил]]
+|{{Вандал/Ru|1= }} [[Archive/en/frosch|Frosch удалил]]
+|}
+
+===Тип переместить (фиолетовый)===
+{| style="border:0px; padding: 5px; width=100%;"
+|- valign="top"
+|width=150;|{{en/S|Merge| Название страницы}}
+|{{en/Merge|Какое-нибудь название страницы|2= }}
+|- valign="top"
+|width=150;|{{en/S|Mergeto| Название страницы}}
+|{{en/Mergeto|Какое-нибудь название страницы|2= }}
+|- valign="top"
+|width=150;|{{en/S|Mergefrom| Название страницы}}
+|{{en/Mergefrom|Какое-нибудь название страницы|2= }}
+|- valign="top"
+|{{en/S|Split|ТЕКСТ }}
+|{{en/Split|ТЕКСТ |2= }} 
+|}
+
+===Тип защищённый (серый)===
+{| style="border:0px; padding: 5px; width=100%;"
+|- valign="top"
+|width=150;|{{en/S|Исторический/Ru}}
+|{{ru/Исторический|1= }} 
+|}
+
+== Особые шаблоны ==
+
+{| style="border:0px; padding: 5px; width=100%;"
+|- valign="top"
+|width=150;|{{en/S|Linking}}
+|{{en/Linking}}
+|- valign="top"
+|{{en/S|Suggestions}}
+|{{en/Suggestions|1= }}
+|- valign="top"
+|{{en/S|License|type=Ваш тип лицензии}}
+|{{en/License|type=PD}}
+|}
+
+== Версии OTTD ==
+
+{| style="border:0px; padding: 5px; width=100%;"
+! width=150;|Tags 
+!|Result
+|-
+|{{en/S|FutureFeature}}
+|{{en/FutureFeature}}
+|-
+|{{en/S|Feature| Ваша версия }}
+|{{en/Feature|1.0}}
+|-
+|{{en/S|nightly| ТЕКСТ }}
+|{{nightly| ТЕКСТ }}
+|}
+
+== Другие ==
+
+{| style="border:0px; padding:5px; width=100%;"
+! width=150;|Теги 
+!|Результат
+|-
+|{{en/S|Progress bar | 50 }}
+|{{en/Progress bar| 50}}
+|-
+|{{en/S|Progress bar 32bpp tracker | category}}
+|{{en/Progress bar 32bpp tracker|ground terrain}}
+|-
+|{{en/S|Other_languages | ... }}}
+|[[Translation:Main/en/Main Page]]
+|}
+
+== Текст==
+{| border=1 cellspacing=0 cellpadding=3 
+!width=150px| Что набирать 
+!width=55%| Что это даёт 
+|-
+|{{en/S|Forum| Forum &#124; Topic }}
+|{{en/Forum|0|0}}
+|-
+|{{en/S|User| Имя пользователя }}
+| {{en/User| Имя пользователя }} 
+|-
+|{{en/S|Check| Type &#124; Color &#124; Size }}
+|{{en/Check|Yes|Green|20px}} или {{en/Check|No|Red|20px}} или {{en/Check|No|Black|20px}} и т.д...
+|-
+|{{en/S|Emoticon| Code &#124; Size }}
+|{{en/Emoticon|:)}} или {{en/Emoticon|;)}} или {{en/Emoticon|:((}} и т.д...
+|}
+
+== Навигация ==
+
+Смотрите [[Category/en/Navigation]] для списка доступных в настоящее время шаблонов навигации.
+
+
+=== [[Template/en/Navbox|Navbox]] ===
+
+{{en/Navbox|navbar = off
+|state = off      
+
+|name  = Название 
+|title = Список ссылок, разбитых по подгруппам
+
+|group1 = Группа 1
+|list1  =  {{en/Navbox subgroup|group1 = Подруппа 1
+            |list1  = {{nowrap begin}} Элемент 1 {{en/·w}} Элемент 2 {{en/·w}} Элемент 3 {{nowrap end}}
+
+            |group2 = Подруппа 2
+            |list2  = {{nowrap begin}} Элемент 1 {{en/·w}} Элемент 2 {{en/·w}} Элемент 3 {{nowrap end}}
+           }}
+
+|group2 = Группа 2
+|list2  = {{nowrap begin}} Элемент 1 {{en/·w}} Элемент 2 {{en/·w}} Элемент 3 {{nowrap end}}
+}}
+
+
+== Запрос на дополнительные шаблоны ==
+
+Используйте [http://wiki.openttd.org/?title=Talk:Templates&action=edit страницу обсуждения] для запросов.
+
+
+[[Category:ru/Шаблоны|*]][[Category:ru/Редактирование ресурсов]]
