@@ -1,0 +1,218 @@
+[[Translation:Main/en/Editing help]]{{en/-}}{{en/TOCright}}
+Это руководство по синтаксису MediaWiki (Википедия). Как черновик вы можете использовать [[Main/en/sandbox|Песочницу]].
+<div style="margin: 2em 0em 0em 0em; padding: 0em 1em 1em 1em; border: 1px solid #E1BBFF; background-color: #F5EDFC; font-size:large;">
+==Очень важные правила==
+#Всегда подписывайтесь, когда оставляете комментарий. Используйте четыре тильды: "<nowiki>~~~~</nowiki>".
+#Всегда используйте кнопку '''Preview/Сохранить''' перед сохранением страницы.
+#Прочитайте [[Main/ru/Руководство по стилю|OpenTTD wiki Руководство по стилю]].
+</div>
+
+==Стиль текста==
+Используйте апострофы, чтобы сделать шрифт текста наклонным, жирным или смешанным
+{|
+!Код
+!HTML теги
+!Результат
+|-
+|<code><nowiki>''Наклонный текст''</nowiki></code>||<nowiki><b>Наклонный текст</b></nowiki>||''Наклонный текст''
+|-
+|<code><nowiki>'''Жирный текст'''</nowiki></code>||<nowiki><b>Жирный текст</b></nowiki>||'''Жирный текст'''
+|-
+|<code><nowiki>'''''Смешанный текст'''''</nowiki></code>||<nowiki><b><i>Смешанный текст</i></b></nowiki>||'''''Смешанный текст'''''
+|}
+
+==Ссылки==
+===Внутренние ссылки===
+Заключите слово в двойные квадратные скобки, чтобы сделать ссылку на статью в OpenTTD WiKi (wiki.openttd.org). Отделить ссылку с надписью можно вертикальной чертой ("|"):
+{|
+!Пример
+!Код
+|-
+|[[Main/en/Пример]] || <code><nowiki>[[Main/en/Пример]]</nowiki></code>
+|-
+|[[Main/en/Пример]]ы || <code><nowiki>[[Main/en/Пример]]ы</nowiki></code>
+|-
+|[[Main/en/Пример|Что есть]] || <code><nowiki>[[Main/en/Пример|Что есть]]</nowiki></code>
+|}
+
+===Wikipedia ссылки===
+То же самое, но с "wikipedia:" перед ссылкой
+{|
+!Пример
+!Код
+|-
+|[http://www.wikipedia.org/wiki/Пример ] || <code><nowiki>[http://www.wikipedia.org/wiki/Пример ]</nowiki></code>
+|-
+|[http://www.wikipedia.org/wiki/OpenTTD ]eluxe || <code><nowiki>[http://www.wikipedia.org/wiki/OpenTTD ]eluxe</nowiki></code>
+|-
+|[http://www.wikipedia.org/wiki/OpenTTD OpenTTD] || <code><nowiki>[http://www.wikipedia.org/wiki/OpenTTD OpenTTD]</nowiki></code>
+|-
+|[http://www.wikipedia.org/wiki/m:Пример Пример текста]||<code><nowiki>[http://www.wikipedia.org/wiki/m:Пример Пример текста]</nowiki></code>
+|}
+
+===Внешние ссылки===
+Заключите слово в квадратные скобки, чтобы сделать ссылку на другой сайт.
+{|
+!Пример
+!Код
+!Примечание
+|-
+|[http://www.openttd.org] || <code><nowiki>[http://www.openttd.org]</nowiki></code> || Внешние ссылки без описания будут автоматически отображается как [число]
+|-
+|[http://www.openttd.org OpenTTD] || <code><nowiki>[http://www.openttd.org OpenTTD]</nowiki></code> ||
+|}
+
+==Разделы статьи==
+Заключите текст со знаками равенства, чтобы разделит статью на разделы.
+
+<pre><nowiki>=Главный раздел=
+==Подраздел==
+===Поддодраздел===
+====А смысл?====
+</nowiki></pre>
+
+==Изображения==
+Для загрузки изображений, пройдите по ссылке на главной странице. [[Main/en/special:upload|Загрузить файл]]
+
+Используйте этот код для добавления изображения в статью:
+<pre>[[File:en/.Имя|frame|none|Описание]]</pre>
+
+Пример:
+<pre>[[File:en/longerbridges.png|frame|none|Мосты]]</pre>
+Результат:
+[[File:en/longerbridges.png|frame|none|Мосты]]
+
+*См. также [http://www.wikipedia.org/wiki/Wikipedia:Extended_image_syntax Расширенный синтаксис изображений] в Википедии.
+
+==Таблицы==
+{{ru/Расширить|Нужна помощь по CSS форматированию}}
+Все коды для создания таблиц обязательно должны быть первыми символами в строке.
+{|
+!Код
+!HTML теги
+!Результат
+|-
+|<code><nowiki>{|</nowiki></code>||<nowiki><table></nowiki>||Начало таблицы (всегда) 
+|-
+|<code><nowiki>!</nowiki></code>||<nowiki><th></nowiki>||Заголовок столбца
+|-
+|<code><nowiki>|</nowiki></code>||<nowiki><td></nowiki>||Новая ячейка
+|-
+|<code><nowiki>!!</nowiki></code>||<nowiki></th><th></nowiki>||Заголовок столбца в одной строке
+|-
+|<code><nowiki>||</nowiki></code>||<nowiki></td><td></nowiki>||Новые ячейки на одной строке
+|-
+|<code><nowiki>|-</nowiki></code>||<nowiki><tr></nowiki>||Новый ряд
+|-
+|<code><nowiki>|}</nowiki></code>||<nowiki><table></nowiki>||Конец таблицы (всегда)
+|-
+|
+<pre><nowiki>
+{|
+!Заголовок 1!!Заголовок 2
+|-
+|Пример
+|Пример
+|-
+|Пример||Пример
+|}
+|}</nowiki></pre>
+|
+<pre><nowiki>
+<table><tr>
+<td>Заголовок 1</th><th>Заголовок 2</th></tr>
+<tr>
+<td>Пример</td>
+<td>Пример</td>
+<tr>
+<td>Пример</td><td>Пример</td>
+</tr></table>
+</nowiki></pre>
+|
+
+{|
+!Заголовок 1!!Заголовок 2
+|-
+|Пример
+|Пример
+|-
+|Пример||Пример
+|}
+|}
+
+*См. также [http://www.wikipedia.org/wiki/m:Help:Table Справка по таблицам] в Википедии.
+
+==Список==
+Все коды для создания списков обязательно должны быть первыми символами в строке.
+{|
+!width="150"|Код
+!Результат
+|-
+|<nowiki>#</nowiki>||Нумерованный список
+|-
+|<nowiki>*</nowiki>||Маркированный список
+|-
+|'''<nowiki>:</nowiki>'''||Отступ
+|-
+|<pre><nowiki>#Шаг 1
+#Шаг 2
+#*Подсказка
+#Шаг 3
+##Подэтап
+##Подэтап
+#Шаг 4
+:Заметка:
+::Текст заметки</nowiki></pre>
+|
+#Шаг 1
+#Шаг 2
+#*Подсказка
+#Шаг 3
+##Подэтап
+##Подэтап
+#Шаг 4
+:Заметка:
+::Текст заметки
+|}
+
+==Шаблоны==
+{{ru/Расширить}}
+Приложите шаблон в двойные фигурные скобки, чтобы он transcluded на страницу.
+<pre>{{templatename|parameter1|parameter2}}</pre>
+
+*См. также [http://www.wikipedia.org/wiki/m:Help:Template Справка по шаблонам] в Википедии.
+
+==Перенаправления==
+Используйте перенаправление чтобы сразу перенаправить читателя на другую или новую статью (с другим названием).
+Пример: [[Main/en/Checkpoints]] и [[Main/en/Waypoints]]
+<pre>#REDIRECT [[Main/en/waypoints]]</pre>
+
+==Категории==
+Добавьте в статью категории, чтобы перенаправлять игрока в нужный раздел Вики
+<pre>[[Category:en/Development]]</pre>
+
+Чтобы показать категорию на странице как обычьную ссылку добавьте ":"
+<pre>[[Category/en/Development]]</pre>
+[[Category/en/Development]]
+
+==Прочие коды==
+{|
+!Код
+!Результат
+|-
+|<nowiki><nowiki>Текст</no</nowiki>wiki>||Текст, который не должен подвергаться форматированию Вики.
+|-
+|<nowiki><code>Текст</code></nowiki>||Вставить текст в рамку для кода.
+|-
+|<nowiki><pre>Текст</pre></nowiki>||Текст, который не должен подвергаться HTML форматированию.
+|-
+|<nowiki><noinclude>Текст</noinclude></nowiki>||Показать текст на странице шаблона, но не на transcluded страницах. Полезно для использования шаблонов.
+|-
+|<nowiki><includeonly>Текст<includeonly></nowiki>||Показать текст на transcluded страницах, а не на странице шаблона. Полезно для шаблонов, которые добавляют статьи в категории.
+|-
+|<code><nowiki>----</nowiki></code>||Добавить длинную линию по горизонтали во всю страницу.
+|-
+|<code><nowiki>~~~~</nowiki></code>||Добавить подпись.
+|}
+
+[[Category:ru/OpenTTD Вики]]
