@@ -1,0 +1,32 @@
+[[Translation:Main/en/Servicing]]
+'''El mantenimiento''' se realiza cuando un vehículo entra a un [[Main/es/Depósitos|depósito]] o un [[Main/en/hangar]]. Esto prolonga la confiabilidad (reduciendo averías)y aumenta la vida útil del vehículo.
+
+==Mantenimiento automático==
+[[Main/es/Vehículos|Un vehículo]] debe automaticamente ir a un depósito o hangar cuando se cumple el final del [[Main/es/Intervalo de mantenimiento|intervalo de mantenimiento]]. Esto puede ser cambiado en los detalles del vehículo, o en las opciones avanzadas.
+
+==Mantenimiento Programado==
+[[File:en/Órden de ir al depósito OpenTTD.png|right|thumb|650px|Mantenimiento programado, poniendo la orden de ir al depósito en su lista.]]Tú también puedes hacer que los vehículos vayan al depósito a un servicio rutinario por [[Main/es/Permitir órdenes de ir al depósito|sumando el depósito a las órdenes de vehículo]]. 
+
+Con esta orden el vehículo va más regularmente, y puede ayudar a prevenir [[Main/es/Averías|averías]]. Esto también previene la posibilidad de que el vehículo necesite mantenimiento en un punto inconveniente de su ruta (quizá el depósito más cercano esté en una larga vía más allá).
+ 
+Este tipo de mantenimiento debería ser programado antes que un tren cargue para asegurar que la carga no se retrase para llegar a su destino (reduciendo el pago) 
+
+Si tú no quieres que el vehículo vaya al depósito cada vez que las órdenes de la lista son ejecutadas, tú puedes usar la instrucción ''Mantenimiento'' en las órdenes de ir al depósito - esto causa que la orden sea ignorada si el intervalo de mantenimiento todavía no expira. 
+
+'''Opción de siempre ir'''
+
+El vehículo entra al depósito y recibe mantenimiento cuando encuentra la orden del depósito en su lista.
+ 
+'''Mantenimiento cuando necesita'''
+
+El vehículo entra al depósito cuando se cumple su intervalo de mantenimiento y la orden del depósito es la siguiente en su lista.
+ 
+'''Peligro'''
+
+Un vehículo con una orden de ir al deposito en cualquier parte de sus órdenes en que nunca encuentre un depósito propio, independientemente de su intervalo de mantenimiento. Si tú pones una orden de ir al depósito, tú serás responsable de todos los mantenimiento del vehículo. 
+
+==Mantenimiento forzado (sólo para trenes)==
+[[File:en/Mantenimiento forzado.png|thumb|right|350px|Mantenimiento forzado con vías de un solo sentido. Los trenes son obligados a ir al depósito por la forma de la vía.]]
+Los trenes pueden ser "forzados" a entrar a un depósito poniendo vías que hagan que el tren no tenga otra opción que entrar al depósito. Esto genera una notable reducción de velocidad mientras el tren entra y sale del depósito, el número de líneas de mantenimiento debería ser apropiado para la cantidad de tráfico de trenes.
+
+[[Category:es/Vehículos]]
