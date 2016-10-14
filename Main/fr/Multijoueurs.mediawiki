@@ -1,0 +1,108 @@
+[[Translation:Main/en/Multiplayer]]
+{{en/-}}{{fr/Table des matières}}
+[[Main/fr/OpenTTD|OpenTTD]] a un bien meilleur système '''multijoueurs''' que le [http://www.wikipedia.org/wiki/fr:Transport Tycoon Transport Tycoon Deluxe] original. Les [[Main/fr/Serveur|serveurs]] peuvent actuellement gérer jusqu'à 15 compagnies, et jusqu'à 255 clients peuvent être connectés au serveur. Vous pouvez soit jouer avec votre propre compagnie, ou en mode [[Main/fr/Mode de jeu coopératif|coopératif]] avec un autre joueur.
+[[File:en/Mp screen.png|none|thumb|400px|Mode de jeu multi-joueurs]]
+
+==Se connecter à un serveur==
+
+*Entrez dans le mode multi-joueurs en cliquant sur le bouton "Mode multijoueurs" de l'écran d'accueil.
+[[File:en/OpenTTDMultiFR.png|none|frame|Choisir un serveur de jeu]]
+*Pour voir une liste des jeux publics, choisissez "Oui" dans le menu "Publiée" (en haut à gauche) puis cliquez sur le bouton "Trouver un serveur" (en bas à gauche).
+*Entrez votre nom!
+*Choisissez un serveur dans la liste pour voir plus d'information à son sujet.
+*Cliquez sur "Rejoindre le jeu". Une autre fenêtre s'ouvrira.
+
+
+La liste de serveurs à gauche fournit les informations suivantes:
+*'''Nom''': Le nom du serveur, ou simplement l'adresse IP s'il y a un problème de connexion.
+*'''Clients''': Le nombre de clients et de compagnies dans le jeu, par rapport au nombre total possible.
+** '''''Format''''': clients connectés / clients max - compagnies actives / compagnies max
+*'''Icône de verrouillage''': Le serveur est privé et protégé par un mot de passe.
+*'''Point vert/orange/rouge''': La compatibilité du serveur avec votre [[Main/fr/FAQ sur les versions OpenTTD|version]] de OpenTTD ou vos [[Main/fr/NewGRF|NewGRFs]].
+*'''Petit drapeau''': La nationalité de ce serveur.
+
+===Résoudre le problème des NewGRFs manquants===
+SI vous voulez rejoindre un serveur qui est affiché en orange (NewGRF discordants), vous pouvez cliquer sur le bouton ''Paramètres NewGRF'' puis vérifier le contenu en ligne pour voir si les NewGRFs manquants sont disponibles via le système de [[Main/fr/Contenu En-ligne|contenu en ligne]].
+[[File:en/server join bananas.png]]
+
+Si vous ne pouvez toujours pas résoudre certains NewGRFs manquants, vous pouvez essayer de le rechercher en utilisant le [http://grfcrawler.tt-forums.net/ Crawler GRF].
+
+==Entrer dans le jeu==
+Dans l'écran suivant, vous verrez une liste détaillée de qui est déjà en jeu, et plusieurs options sur la manière de rejoindre le jeu.
+[[File:en/Ottdmulti5.png|none|frame|Rejoindre un jeu multi-joueurs]]
+*Cliquez sur "Nouvelle compagnie" pour commencer à jouer depuis le départ, OU
+*Choisissez une compagnie sans icône de verrou et cliquez sur "Rejoindre la compagnie" pour jouer avec cette compagnie, OU
+*Cliquez sur "Regarder le jeu" pour entrer dans le jeu comme spectateur.
+
+
+La liste de compagnies sur la gauche affiche les informations suivantes:
+*'''Nom de la compagnie'''
+*'''Icône de verrou''': La compagnie est privée et protégée par un mot de passe.
+*'''Feu rouge/vert''': Montre s'il y a encore un client de connecté qui joue pour cette compagnie.
+
+
+==Manière de jouer==
+Une fois que vous êtes dans le jeu, la façon de jouer est identique, avec quelques fonctionnalités additionnelles.
+
+Remarquez que le jeu peut parfois se mettre en pause. Cela peut arriver quand de nouveaux joueurs rejoignent le jeu, quand il y a moins que le nombre minimal de clients actifs, ou quand l'administrateur du serveur met manuellement le jeu en pause. Si le jeu est mis en pause, c'est en général affiché dans la barre de statut. La raison apparaît dans la zone de messages, en bas à gauche de l'écran. Vous ne pouvez pas modifier l'état de pause en tant que client. Personne ne peut utiliser le mode d'avance rapide.
+
+===Discuter===
+[[File:en/Ottdmulti9.png|center|none|frame|3. La zone d'affichage de discussion]]
+*Commencez à discuter en appuyant sur Entrée. Une fenêtre de saisie de texte s'ouvrira au-dessus de la barre de statut.
+*Modifiez l'interlocuteur que vous souhaitez en utilisant la liste des clients; voir ci-dessous.
+*Les messages de discussion et de connexion s'affichent en bas à gauche de l'écran. Le texte des joueurs s'affiche dans la couleur de leur compagnie. Le texte des spectateurs est en gris.
+*Ouvrez la [[Main/fr/Console|console]] pour voir l'historique des messages.
+*SHIFT+ENTER (SHIFT+T) envoie un message à tous les joueurs, CTRL+ENTER (CTRL+T) envoie un message à tous les coéquipiers, et  ENTER (T) est personnalisable.
+
+===Liste des clients===
+[[File:en/Ottdmulti7.png|none|frame|La liste des clients]]
+*Ouvrez le menu [[File:en/Manual html 12e20f5b.png]] de liste des compagnies et cliquez sur "Liste des clients" pour voir quels clients sont connectés et pour quelle compagnie ils jouent.
+*Cliquez sur un client pour ouvrir un autre menu avec les options suivantes:
+:*'''Message privé''': Envoie un message de dialogue uniquement au client sélectionné.
+:*'''Parler à la compagnie''': Envoie un message de dialogue à tous les joueurs de la compagnie du client sélectionné.
+:*'''Parler à tous''': Envoie un message de dialogue à tout le monde.
+:*'''Donner de l'argent''': Donne jusqu'à 20 000 000£ au client sélectionné.
+
+La liste des clients informe aussi à qui appartient le serveur. Si le serveur a un nom près de lui, cette personne fait tourner un [[Main/fr/Serveur d'écoute|serveur d'écouter]]. Si le serveur n'a pas de nom, alors c'est un [[Main/fr/Serveur dédié|serveur dédié]].
+
+===Mot de passe d'une compagnie===
+[[File:fr/141 Company Password Input Box.png|none|frame|Entrez votre mot de passe ici]]
+*Pour éviter que des clients non souhaités rejoignent votre compagnie, cliquez sur le bouton de liste des compagnies puis sur le bouton Mot de passe. Entrez-y votre mot de passe.
+*Pour supprimer votre mot de passe, fixez le mot de passe à vide.
+*Le bouton ''Mot de passe par défaut de la compagnie'' permet de définir un mot de passe par défaut qui sera utilisé lors de la création d'une nouvelle compagnie. 
+*Vous devez fixer votre mot de passe sur chaque serveur.
+
+==Changer de compagnie==
+Depuis OpenTTD 0.7.0 (ou plus précisément, depuis r15242), il est possible de changer entre compagnies/spectateur et de créer de nouvelles compagnies sans avoir à joindre de nouveau le jeu.
+
+===Nouvelle compagnie===
+Vous pouvez trouver l'option 'Nouvelle compagnie' dans la liste des compagnies; elle n'est disponible que si vous êtes un spectateur. Si la limite 'max_companies' des serveurs a été atteinte, cette option est grisée.
+[[File:en/Move company create.png|none|frame|Liste des compagnies comme spectateur]]
+
+===Rejoindre une compagnie===
+Chaque fenêtre de compagnie a un bouton pour la rejoindre (affiché uniquement si vous n'êtes pas dans cette compagnie).
+[[File:en/Move company join.png|none|frame|Bouton pour rejoindre une compagnie]]
+Un cadenas affiché à côté du bouton pour rejoindre indique que la compagnie est protégée par mot de passe. Essayer de rejoindre cette compagnie vous demandera le mot de passe.
+[[File:en/Move company join pwprompt.png|none|frame|Compagnie protégée par mot de passe et saisie du mot de passe]]
+
+===Rejoindre les spectateurs===
+Si vous êtes dans une compagnie et voulez regarder un peu, ou prévoyez de démarrer une nouvelle compagnie et devez d'abord rejoindre les spectateurs, la liste des compagnies affichera alors l'élément 'Spectateur', là où 'Nouvelle compagnie' était affiché auparavant.
+Si la limite 'max_spectators' des serveurs a été atteinte, cette option est grisée.
+[[File:en/Move spectate.png|none|frame|Rejoindre les spectateurs]]
+
+==Erreur de désynchronisation==
+Une erreur de désynchronisation a lieu quand un joueur ou plus ne sont plus synchronisés avec le serveur. Après un court moment, le joueur sera éjecté du jeu avec le message suivant:
+
+[[File:en/Desync.png]]
+
+Les désynchronisations sont toujours des bogues dans OpenTTD, qui peuvent être classés en trois catégories: appel de <code>(Interactive)Random()</code> à un mauvais endroit, reconstruction des caches incorrecte, ou erreurs de codage comme un débordement. Elles ne sont PAS causées par un ordinateur trop lent, une connexion internet trop lente, etc.
+
+==Voir aussi==
+*[[Main/fr/Serveur|Serveur]], pour une information pour héberger votre propre jeu.
+*[[Main/fr/FAQ multijoueurs|FAQ multijoueurs]]
+*[[Main/fr/Règles multi-joueurs|Règles multi-joueurs]]
+*[[Main/fr/Mode de jeu coopératif|Mode de jeu coopératif]]
+*[[Main/fr/Auto-nettoyage des compagnies|Auto-nettoyage des compagnies]] pour ce qui peut se produire quand vous vous déconnectez au milieu d'un jeu
+*[[Main/fr/Configuration IA|Configuration I.A.]] si vous voulez jouer contre une ou plus I.A. pour avoir des concurrents
+
+[[Category:fr/Multijoueur]]
