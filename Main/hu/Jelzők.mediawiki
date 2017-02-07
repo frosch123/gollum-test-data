@@ -1,0 +1,145 @@
+[[Translation:Main/en/Signals]]{{en/-}}{{hu/Tartalomjegyzék}}
+:''Gyakorlati bevezetés:'' [[Main/hu/Jelzők építése|Jelzők építése]]
+
+A '''Jelzők''' hasznos eszközök, melyek a [[Main/hu/Vonatok|vonatok]] mozgásának ellenőrzését teszik lehetővé. Ahhoz szükségesek, hogy a [[Main/hu/Vasútépítés|vasúti]] hálózat ne omoljon össze több, mint egy vonat esetén. 
+
+==Szakaszjelzők==
+
+A szakaszjelzők, mint a nevük is mutatja, a pályaszakaszok alapján működnek. Ha a pályaszakasz egy jelző túloldalán foglalt, a szakaszjelző vörös. Ha nem, akkor zöld. A pályaszakasz a pálya jelzővel meg nem szakított része.
+
+===Kétirányú jelzők===
+[[File:en/Two-way signal.png|frame|left]][[File:en/2-way signals.png|frame|right|Kétirányú jelzők egy berakóállomáson]]
+A kétirányú jelzők olyan vasúton használatosak, amin a vonatok ugyanazon a pályán mindkét irányban közlekednek. Használata a vonalvégi állomásoknál a legáltalánosabb, ahol a vonatok az állomásnak ugyanazon a végén járnak be és ki. A jobb oldali példán a jelzők a következő vonatot a szabad rakodórámpához irányítják, és megakadályozzák azt is, hogy a vonat elhagyja a rakodórámpát, ha egy másik vonat útban van.
+
+Ha egy vonatnak két vagy több olyan pályára van lehetősége, melyek mindegyikén kétirányú jelzők vannak, a vonat olyan irányt fog választani, aminek zöld jelzője van. Ha minden jelző vörös, a legegyszerűbb irányt választja, és vár, amíg a jelző vált.
+{{en/-}}
+===Egyirányú jelzők===
+[[File:en/One-way signal.png|frame|left]][[File:en/1-way signal loop.png|frame|right|Egyirányú jelzők hurokpályán]]
+Az egyirányú jelzők a vonat mozgását egy irányra korlátozzák. A jobb oldali példán a jelzők a vonatot körpályára kényszerítik. Ennek két előnye van: a vonatok az állomásokra hatékonyan járnak be és ki, és a pályán kettőnél több vonat is mozoghat.
+
+Amikor egyirányú jelzőket használsz, győződj meg arról, hogy ''minden jelző'' helyes irányba néz. Jó ötlet, ha figyeled az első vonat mozgását az újonnan jelzőkkel ellátott vonalon a céljáig, meggyőződve arról, hogy nem hibáztál.
+
+Ha egy létező kétirányú jelzőt egyirányúra szeretnél átkapcsolni, kattints rá. Kattints rá mégegyszer, ha meg akarod változtatni az irányát. Harmadik kattintás a jelzőt kétirányúra állítja vissza.
+
+Ha egy vonat két vagy több olyan pálya közül választhat, melyek mindegyike egyirányú jelzővel van ellátva, azt a pályát fogja választani, amelyik a célja felé továbbítja. Vagyis megvárja, amíg a céljához vezető pálya jelzője zöldre vált, ahelyett, hogy - szemben a kétirányú jelzőkkel - bármelyik zöld jelzőt választaná.
+
+Ha egy vonat rossz irányból érkezik egy egyirányú jelzőhöz, azonnal megfordul.
+
+
+{{en/-}}
+
+===Előjelzők===
+[[File:en/Station no pre-signals.png|frame|right|Probléma: lehet, hogy a bal oldali vonat előbb hagyja el az állomást]]
+[[File:en/Station with pre-signals.png|frame|right|Oldd meg a problémát előjelzők használatával]]
+
+A jobb felső képen olyan elrendezés látható, amelyben az állomást a szokásos jelzők ellenőrzik. Amikor legalább egy vágány üres, jól működik, mert a jelzők az érkező vonatot mindig szabad vágányra irányítják. De gondolj bele, mi történik, ha minden vágány foglalt, mint a képernyőmentésen. Minden ág vöröset mutat, úgyhogy az érkező vonat a legegyszerűbb utat választja: az egyenest. De tegyük fel, hogy a jobb oldali vonat még mindig az állomáson időzik, miközben a bal oldali vonat elmegy. Az érkező vonat már irányt választott, és arra vár, hogy a másik vonat elinduljon, pedig van egy használható üres vágány! Tehát meg kell állítanunk az érkező vonatot még az elágazás előtt, így akkor fog üres vágányt választani, amikor egy vonat elmegy. Ezért érdemes ''előjelzőket'' használnunk.
+
+Az előjelzők színe nem csak a közvetlenül mögöttük található pályaszakasz állapotán múlik, hanem a vonalon odébb található további előjelzők állásán is. Pontosabban: egy bejárati előjelző akkor mutat zöldet, és csakis akkor, ha van egy zöld kijárati jelző a mögötte lévő szakaszon. Vasúttervezőként fel kell ismerned, melyek az előjelzők, és melyek számítanak kijárati jelzőnek.
+
+{{en/-}}
+====Bejárati előjelzők====
+[[File:en/entry presignal.png|left|60px]]Egy '''bejárati előjelző''' mindaddig zöldet mutat, amíg legalább egy zöld kijárati jelző van a következő pályarészen. Ellenkező esetben vöröset mutat. Ez megelőzi, hogy a vonatok a következő jelzőszakaszba lépjenek, mielőtt használható kijárat adódna. Jó tudni, hogy a vasúti járműtelepek beépített kétirányú jelzővel rendelkeznek (előjelző-összeállításban bejárati előjelzőként működik).
+
+A bejárati előjelzők, ha nincs mögöttük kijárati jelző, normál jelzőként viselkednek. Ez jól jön az olyan kétirányú előjelzőknél, melyeknek csak az egyik irányban szükséges előjelzőként működniük.
+
+{{en/-}}
+====Kijárati jelzők====
+[[File:en/exit presignal.png|60px|left]]A '''kijárati jelzők''' normál jelzőként viselkednek, de szükség van rájuk a bejárati és a kombinált előjelzők megfelelő színének kiváltása miatt.
+{{en/-}}
+
+====Kombinált jelzők====
+[[File:en/station with pre-signals2.png|frame|right|Állomás egy bejárati előjelzővel, két kombinált jelzővel, és négy kijárati jelzővel]]
+[[File:en/combo presignal.png|60px|left]] A '''kombinált jelzőnek''' nevezett harmadik előjelző-típus egyszerűen működik: bejárati és kijárati jelzőként is. Lehetővé teszi, hogy nagy "fákat" építs előjelzőkből, amint az jobbra is látható.
+{{en/-}}
+====Előjelzők építése====
+Előjelző építéséhez válaszd a megfelelő gombot a [[Main/en/Jelzők építése/Hu#Jelzők készítése|jelzőválasztó eszköztáron]]. Ha a játék korábbi verzióját használod, először helyezz el egy normál jelzőt, aztán a ''Ctrl'' nyomva tartása mellett kattintgass a jelzőn az előjelző fajtáin át.
+
+*Jó tudni, hogy egyirányú előjelzőt ugyanúgy tudsz építeni, ahogy normál egyirányú jelzőt. Tartsd szem előtt, hogy a ''Ctrl-klikk''  a jelző (előjelző) típusát váltja, az egyszerű kattintás pedig a jelzés irányát változtatja.
+*A ''Ctrl'' billentyűt használhatod akkor is, ha a jelzőkezelőt engedélyezted. Jelző elhelyezésekor ne felejtsd: a ''Ctrl'' billentyűt nem kell nyomva tartani, különben szemafort kapsz eredményül (lásd [[Main/en/Jelzők építése/Hu#Jelzők átalakítása más típusúvá|Jelzők átalakítása más típusúvá]]).
+{{en/-}}
+
+====Korlátozások====
+[[File:en/PresignalLimitation.png|frame|Az előjelzőkkel kapcsolatos probléma...]]
+*Fontos megjegyzendő a kijárati jelzőkkel kapcsolatban, hogy a bejárati előjelző zöldet jelez egyetlen zöld kijárati jelző hatására akkor is, ha a pálya szerkezete miatt a vonat valójában nem is képes áthaladni a kijárati jelzőn (mint a jobb oldalon látható képen, egy vonat alsó pályán történő behaladása esetén). Ez tönkreteheti a bonyolultabb előjelző-rendszereket, így a tervezés óvatosságot igényel.
+
+*Egy meg nem oldhatóként jegyzett hiba: az eltévedt vonatok figyelmen kívül hagyják a (szakasz)kijárati jelzőket. Az eltévedt vonatok véletlenszerű irányt választanak minden elágazásnál, így figyelmen kívül hagyják a szakasz kijárati jelzőit, és könnyen előfordulhat, hogy teljesen megállítják az előjelzőkkel ellátott elágazások forgalmát.
+{{en/-}}
+
+==Útvonaljelzők ==
+[[File:en/Yapp signalgui.png|frame|right]]
+A játékban két új jelzőtípus van. Ezek a jelzők azt engedik meg a vonatoknak, hogy egy útvonalat legfoglaljanak egy szakaszon át, egészen a következő jelzőig, még mielőtt a szakaszba érnének. Ha egy másik vonat akar a szakaszra hajtani, és sikerül lefoglalnia az útvonalat a szakaszon, az útvonaljelző engedélyezi a vonat szakaszba lépését akkor is, ha a szakasz egy másik pályája ugyanakkor használatban van.
+{{en/-}}
+[[File:en/Signal bloc.png|frame|right|Y-szakasz három ''szakaszjelző'' közt]]
+Vegyünk egy példát. 
+
+Van egy Y-szakaszunk három jelző közt.
+A jobb pályát vonat használja. Vonat érkezik az alsó pályán és a bal pályára akar menni. A szokásos szakaszjelző a szakaszt foglaltnak jelzi (még ha a bal pálya szabad is).
+
+{{en/-}}
+[[File:en/Multiples standard.png|frame|right|Két további szakaszjelzővel az ''Y''-t három szakaszra bontottuk: jobb ág, bal ág, elágazás]]
+Egyfajta megoldás, ha a szakaszt kisebb szakaszokra bontjuk az elágazás után telepített jelzőkkel.{{en/-}}
+[[File:en/Chemin.png|frame|right|Y-szakasz egy ''útvonaljelző'' és két ''szakaszjelző'' közt]]
+
+Ezzel szemben az útvonaljelző engedélyezi az Y-ba alulról érkező vonat belépését, amint az ág, amit próbál lefoglalni (a bal ág) szabaddá válik. Nincs szükség arra, hogy a szakaszt kisebb szakaszokra osszuk, tehát nincs szükség jelzőkre az elágazás után.
+{{en/-}}
+Két dolgot kell tudni erről a jelzőről:
+* Csak olyan helyre tegyük, ahol a vonatok megállhatnak és várakozhatnak anélkül, hogy elágazás forgalmát megakaszthatnák.
+* Ez a  jelző csak egy irányban működik. A másik irányban vagy figyelmen kívül marad, vagy számításba jön, a jelző útvonalától függően (lásd lentebb).
+
+
+[[File:en/Yapp pbssignal.png|frame|left|]]
+* '''Irányjelző''' (PS, PBS): a hátulról érkező vonatok áthaladhatnak rajta.
+{{en/-}}
+[[File:en/Yapp onewaypbssignal.png|frame|left|]]
+* '''Egyirányú irányjelző''' (1PS, 1PBS): a hátulról érkező vonatok '''nem''' haladhatnak át ezen a jelzőn.
+{{en/-}}
+A legtöbb esetben elég az alap irányjelzőt (útvonaljelzőt) használni, mert az útvonalkereső a jelzőn hátulról történő áthaladást bünteti, de az egyirányú irányjelzők is hasznosak lehetnek bizonyos esetekben.
+
+A két új jelzőtípus kicsit eltérően viselkedik a szokásos OpenTTD-s jelzőkhöz képest: az útvonaljelzők alapértelmezés szerint vörösek, és csak abban a pillanatban mutatnak zöldet, amikor egy vonat éppen lefoglalja az útvonalat a következő biztonságos várakozóhelyéig. Biztonságos várakozóhelyek (definiciójuk szerint) jelzők előtt, járműtelepen és pályavégeken vannak. Az útvonaljelző mögötti pályaszakasz nem minősül biztonságos várakozóhelynek, emiatt kerül sor az útvonalak lefoglalására ezeken a jelzőkön át.
+
+Miután minden jelző eleje biztonságos várakozóhelynek számít, általában nem akarsz jelzőt közvetlenül az elágazás után elhelyezni, hanem csak a kereszteződés előtt. Ez azért van, mert csak a kereszteződés előtt biztonságos a vonatnak várakoznia: a vonatnak nem biztonságos várakoznia azelőtt, hogy teljes hosszában a kereszteződést elhagyta volna, mert amíg várakozik, megakaszthatja a kereszteződés forgalmát, amint az alábbi példán látható. Az útvonaljelzőknek ez a fő előnye a szokásos OpenTTD-s jelzőkkel szemben, mert utóbbiak használatakor jelzőt kell a kereszteződés előtt és után elhelyezned, ami viszont azzal jár, hogy a vonatok, amíg várakoznak, megállítják a kereszteződés forgalmát.
+<div style="width:50%;float:left;">[[File:en/Yapp unsafewaitinglocation.png|frame|center|'''Rossz''': a nyíllal jelölt jelző rossz várakozóhely, mert a vonat a kereszteződésben most elállja a fentről érkező vonat egyébként szabad útvonalát. Van ezen a képen egy másik rossz várakozóhely is. Megtalálod?]]</div>
+<div style="width:50%;float:left;">[[File:en/Yappgoodexample.png|frame|center|'''Jó''': A kereszteződés után itt elég hely van ahhoz, hogy egy vonat várakozzon. A következő vonat mindaddig, amíg ez a hely nem vehető igénybe, inkább a kereszteződés előtt fog várakozni, mintsem elállná azt. Ez lehetővé teszi a fentről érkező vonat továbbhaladását.
+]]</div>
+<div style="clear:left;"></div>
+
+
+Lássunk egy másik példát arra, mit lehet ezekkel a jelzőkkel tenni. Ez sokkal jobban működik, mint az előjelzők, mert két vonatod hagyhatja el az állomást egyidőben úgy, hogy ugyanazon a vasúti járműtelepen osztoznak (előjelzőkkel ez nem megoldható, a szakasz közös használata miatt). Ebben a példában egyirányú irányjelzők engedik ki a vonatokat az állomásról, és egyszerű irányjelzők a járműtelepről.
+[[File:en/pathsignal station exit.png|frame|center|Állomás két kijárattal. Érdemes tudni, hogy a vasúti járműtelep előtt nem feltétlenül szükségesek jelzők, mivel a járműtelepeknek beépített jelzőjük van. Azonban a járműtelepek előtt elhelyezett útvonaljelzők, mint itt, elsőbbséget biztosítanak a járműtelepre behaladó vonatok számára.]]
+
+
+====Haladó beállítások====
+[[File:en/Yapp patch-options.png|frame|right|YAPP Advanced Settings]]
+A [[Main/hu/Haladó beállítások| Haladó beállítások]] közül három függ össze az útvonaljelzőkkel.
+
+Az egyik funkció a ''Vágányszakasz foglaltságának jelzése''. Ez hasznos opció az útvonaljelzőkkel ellátott kereszteződések hibaelhárítása során, mert láthatod, hogy a vonataid melyik utakat foglalták le a kereszteződésben.
+
+A másik két funkció a jelzőépítő eszköz működését befolyásolja. Beállíthatod, melyik jelzőtípus legyen alapértelmezett, amikor a jelzőválasztó használatával építesz jelzőt, és beállíthatod a ctrl+klikk hatására váltakozó jelzők fajtáját.
+
+Van még néhány funkció, ami az útvonaljelzőkkel a Haladó beállítások ablakban nem módosítható, csak az ''openttd.cfg''-ben. Ezek és szerkesztésük leírása a [[Main/hu/Speciális útvonaljelző funkciók és beállításaik| Speciális útvonaljelző funkciók és beállításaik]] cikkben olvashatók.
+
+
+===Alappéldák===
+Példaként néhány, útvonaljelzőt használó pályafelépítés következik. Vannak [[Main/hu/Haladó útvonaljelző-elrendezések|haladó útvonaljelző-elrendezések]] is, ezeket kezdő játékosoknak nem javasoljuk.
+
+====Alapkereszteződés====
+Ennek az alapkereszteződésnek most sokkal nagyobb az áteresztőképessége.
+[[File:en/Yapp basicjunction.png|frame|center|Alapkereszteződés legfeljebb három mező hosszúságú vonatok számára (Érdemes megjegyezni az egyszerű pályán a normál jelzők használatát)]]
+
+====Kétirányú alapállomás====
+Ezzel az állomásfelépítéssel a vonatok mindkét vágányt használhatják, bármelyik irányból is érkeznek.
+[[File:en/Yapp basicstation.png|frame|center]]
+{{en/Feature|0.7}}
+
+==Vonatok irányítása==
+A jelzőknek az a célja, hogy megóvják a vonatokat az összeütközéstől, és segítsék őket választani az ugyanazon célhoz vezető különböző pályarészek közt. Ha a vonatot konkrét célhoz akarod irányítani egy adott útvonalon, használd az [[Main/hu/Ellenőrzőpontok|ellenőrzőpontokat]].
+
+==Lásd még (angolul)==
+* [[Main/en/Advanced signalling examples|Példák bonyolult előjelző-rendszerekre]]
+* [[Main/en/Building depots#Advanced depot configurations|Haladó fővonali járműtelepek]]
+* [[Category/en/Train Junctions|Példák]] komplex csomópontokra, amelyek kihasználják az előjelzők előnyeit
+* [http://www.darkcoding.net/misc/openttd-trains-and-signals-for-beginners-a-tutorial/ Jelzők teljesen kezdőknek]
+* [http://kokolokus.de/?s=blog&v=6 A tutorial written by domsson, on the forums] [http://www.tt-forums.net/viewtopic.php?f=29&t=51395 here]
+
+[[Category:hu/Vasút]]
+[[Category:hu/Építés]]
