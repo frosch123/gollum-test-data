@@ -1,0 +1,208 @@
+[[Translation:Main/en/Signals]]{{en/-}}{{es/Tabla de contenido}}
+
+:''Vea el tutorial sobre la [[Main/es/Colocar señales|colocación de señales]] para una introducción práctica a la señalización''
+
+Las '''señales''' son dispositivos útiles que le permiten controlar el movimiento de los [[Main/es/Trenes|trenes]]. Son necesarias para evitar las colisiones en las redes [[Main/es/Construcción de ferrocarriles|ferroviarias]] con varios trenes circulando.
+
+==Construir señales de ferrocarril==
+Para construir señales necesita estar en el modo construir señales. Abra la [[Main/en/Construcción de ferrocarriles/Es#Barra de herramientas Construcción de ferrocarril|barra de herramientas Construcción de Ferrocarril]] y haga clic en el icono construir señales [[File:en/Place signal.png]] para abrir la ventana Selección de señales. Una interfaz avanzada ya está disponible y habilitada por defecto (ver [[Main/en/#Interfaz de señales|interfaz de selección de señales]]).
+[[File:es/Signals-icon2.png|frame|none|Cursor construir señales.]]
+
+Puede realizar las siguientes operaciones en el modo construir señales:
+*Para '''colocar una señal''', haga clic en un tramo libre de vía. Por defecto se coloca una ''señal de dos sentidos'', el tipo básico. Vea más adelante cómo cambiar a un tipo diferente. Si coloca una señal en una casilla compartida por dos vías paralelas, asegúrese de hacer clic en la vía exacta en la que desea colocar la señal.
+*Coloque '''varias señales''' al mismo tiempo haciendo clic en una señal existente y [http://www.wikipedia.org/wiki/es:Arrastrar y soltar arrastrando] el cursor del ratón a lo largo de la vía. Se espaciarán según lo que ponga en el botón [[Main/es/Densidad al arrastrar señales|densidad de arrastre de señales]] y se colocarán orientadas en el mismo sentido que la señal sobre la que inició el arrastre. (tras la versión 0.7, este parámetro se modifica en las [[Main/es/Opciones avanzadas|opciones avanzadas]])
+*Coloque '''varias señales''' a lo largo de una línea entera de vías manteniendo pulsada la tecla Ctrl y arrastrando desde una señal existente. Sólo tiene que arrastrar una casilla y se autocompletará toda la línea, se espaciarán según la [[Main/es/Densidad al arrastrar señales|densidad de arrastre de señales]], hasta que aparezca una estación, otra señal o un cruce. (0.6.0-beta 2 y superior)
+*'''Quite señales''' activando el botón del bulldózer (o excavadora) [[File:en/Toggle clear active.png]] mientras permanece activo el botón construir señales [[File:en/Place signal.png]]. Haga click en la señal no deseada. Puede arrastrar para eliminar varias señales.
+*Convierta la '''[[Main/en/#Señales de dos sentidos|señal de dos sentidos]]''' en una '''[[Main/en/#Señales de un solo sentido|señal de un solo sentido]]''' (o viceversa) haciendo clic en una señal existente. El ciclo completo es: señal de dos sentidos, señal de un sentido, señal de un sentido en el sentido contrario.
+*Cree otros tipos de [[Main/en/#Señales de bloque|señales de bloque]] y [[Main/en/#Señales de ruta|señales de ruta]] haciendo '''Ctrl + clic''' en una señal existente.
+
+===Limitaciones===
+No se puede construir señales:
+*En los cruces de vías (bifurcaciones), o en los cruces con la carretera.
+*Sobre los puentes o dentro de los túneles (aunque existe un [[Archive/en/HackaLittleBit/Tunnel Signals|parche de HackaLittleBit]] que simula la colocación automática de señales dentro de túneles y sobre los puentes).
+
+==Interfaz de señales==
+{{es/Disponibilidad|0.7|align="right"|texto=(desde 0.7.0)}}
+Se ha creado una nueva interfaz de selección de señales, utilizada para seleccionar los tipos de señales, que elimina la necesidad de hacer ctrl+clic, para poder cambiar de tipo de señal.
+
+Si no está activada, haga ''control+clic'' en el icono construir señales [[File:en/Place signal.png]], o bien active esta interfaz en ''Opciones avanzadas/Construcción/Señales'', '''Activar la GUI de señales''' seleccionando la opción "Sí" (en versiones antiguas: en el archivo openttd.cfg establezca <code>enable_signal_gui</code> como <code>true</code>). De este modo, ahora al hacer clic en el botón construir señales aparecerá esta interfaz:
+[[File:es/Signal Selection.png|none|frame|Nueva Interfaz: la ventana Selección de señales]]
+{|
+|-
+|colspan=2|'''Señales mecánicas'''
+|-
+|[[File:en/Signal Semaphore.png]]|| [[Main/en/#Señales de bloque|Señal de bloque]] normal o estándar
+|-
+|[[File:en/Signal Semaphore Pre-Signal.png]]|| [[Main/en/#Señales de entrada|Señal de entrada]]
+|-
+|[[File:en/Signal Semaphore Exit-Signal.png]]|| [[Main/en/#Señales de salida|Señal de salida]]
+|-
+|[[File:en/Signal Semaphore Combo-Signal.png]]|| [[Main/en/#Señales combo|Señal combo]]
+|-
+|[[File:en/Signal Semaphore Path.png]]|| [[Main/en/#Señales de ruta|Señal de ruta]] (se ignora cuando se cruza desde el sentido contrario)
+|-
+|[[File:en/Signal Semaphore Path One-Way.png]]|| [[Main/en/#Señales de ruta|Señal de ruta]] de un sentido (no puede pasar en la dirección contraria)
+|-
+|colspan=2|'''Señales eléctricas''' (o luminosas)
+|-
+|[[File:en/Signal Electric.png]]|| [[Main/en/#Señales de bloque|Señal de bloque]] normal o estándar
+|-
+|[[File:en/Signal Electric Pre-Signal.png]]|| [[Main/en/#Señales de entrada|Señal de entrada]]
+|-
+|[[File:en/Signal Electric Exit-Signal.png]]|| [[Main/en/#Señales de salida|Señal de salida]]
+|-
+|[[File:en/Signal Electric Combo-Signal.png]]|| [[Main/en/#Señales combo|Señal combo]]
+|-
+|[[File:en/Signal Electric Path.png]]|| [[Main/en/#Señales de ruta|Señal de ruta]] (se ignora cuando se cruza desde el sentido contrario)
+|-
+|[[File:en/Signal Electric Path One-Way.png]]|| [[Main/en/#Señales de ruta|Señal de ruta]] de un sentido (no puede pasar en la dirección contraria)
+|-
+|colspan=2|'''Otros iconos'''
+|-
+|[[File:en/Signal Convert.png]]|| Herramienta convertir señal: convierte la señal al tipo activo en esta interfaz. Ver [[Main/en/Colocar señales/Es#Convertir una señal a un tipo distinto|Colocar señales]].
+|-
+|[[File:en/Signal Density.png]]|| Densidad de arrastre de señales: fija la distancia entre señales cuando se colocan multiples señales con arrastrar. Ver [[Main/en/Colocar señales/Es#Construir una hilera de señales|Colocar señales]].
+|}
+'''Nota:''' Cambiar el tipo de señal es gratis, pero cambiar de un dispositivo mecánico a otro eléctrico (o luminoso) y viceversa cuesta dinero. Las señales mecánicas pueden tener su utilidad, al ser señales más visibles para el jugador en algunos casos (sobre todo cuando no puede verse el color de las señales eléctricas por encontrarse de espaldas al espectador). Por lo demás funcionan exactamente igual, una señal eléctrica y la señal mecánica equivalente.
+
+==Señales de bloque==
+{{es/Disponibilidad|Old|align="right"|texto=(desde 0.1.1)}}
+Un bloque de vías se compone de todas las casillas de vías a las que se pueda llegar tras cruzar una señal dada antes de cruzar cualquier otra señal.
+Las señales de Bloque, como su nombre indica, funcionan sobre la base de bloques de vías. Si el bloque de vías en el lado opuesto de una señal está ocupado, la señal está de color rojo. Si no, está en verde.
+
+===Señales de dos sentidos===
+[[File:en/Two-way signal.png|frame|left]][[File:en/2-way signals.png|frame|right|Señales de dos sentidos en una estación de carga.]]
+
+Las señales de dos sentidos se utilizan en vías que tienen trenes que circulan en ambas direcciones. El uso más común es en las estaciones de fin de línea, donde los trenes entran y salen por el mismo extremo de la estación. En el ejemplo de la derecha, las señales dirigen al próximo tren que llegue al andén vacío. También evitan que el tren abandone la estación si hay otro tren ocupando la vía.
+
+Si un tren llega a una bifurcación (o cruce) en el que debe elegir entre dos o más salidas, cada una de ellas con señales de dos sentidos, elegirá la que tenga la señal en verde. Si todas las señales son de color rojo, se dirigirá hacia la señal en la dirección más simple, se detendrá al nivel de la señal y esperará a que la señal cambie a verde.
+{{en/-}}
+
+===Señales de un solo sentido===
+[[File:en/One-way signal.png|frame|left]]
+Las señales de un solo sentido limitan la circulación de trenes a una sola dirección. En el siguiente ejemplo, las señales obligan a los trenes a moverse en círculo. Esto tiene dos ventajas: los trenes entran y salen de las estaciones de manera más eficaz, y pueden haber muchos trenes circulando al mismo tiempo por la misma vía (Siempre que divida esta vía en bloques lo suficiente pequeños para no interrumpir el tráfico, y lo suficientemente grandes para contener un tren entero con la máquina y sus vagones. De ahí la importancia del parámetro "densidad de señales al arrastrar").
+
+Cuando utilice las señales de un solo sentido, asegúrese de que están '''todas''' en la dirección correcta. Es una buena idea observar el primer tren que circule por una nueva línea durante todo el camino hasta su destino final para asegurarse de que no ha cometido ningún error.
+
+Haga clic en una señal existente de dos sentidos para convertirla en señal de un solo sentido. Haga clic otra vez para cambiarla a la dirección contraria (seguirá siendo de un solo sentido). La tercera vez que haga clic volverá a ser una señal de dos sentidos.
+
+Si un tren llega a una bifurcación (o cruce) en el que tiene que elegir entre dos salidas, cada una con una señal de un solo sentido, se dirigirá a la vía que sea más favorable a su destino, sea cual sea el color de las señales (y si hace falta se esperará hasta que la señal cambie a verde), y nunca podrá tomar una vía que tenga una señal de un sentido en la dirección opuesta, aunque esté en verde y la otra esté en rojo (a diferencia de lo que pasa con las señales de dos sentidos).
+
+Si un tren llega por la parte contraria de una señal de un solo sentido, inmeditamente se verá obligado a dar media vuelta.
+[[File:en/1-way signal loop.png|frame|none|Señales de un sentido en un circuito circular.]]
+
+===Señales previas===
+[[File:en/Station no pre-signals.png|frame|right|Un problema serio: el tren de la izquierda puede salir primero, sin que pueda entrar el tren recién llegado.]]
+[[File:en/Station with pre-signals.png|frame|right|Solucione el problema usando las señales previas.]]
+La imagen anterior muestra un diseño en el que la entrada a una estación se controla con señales normales. Siempre que haya un andén vacío, el nuevo tren que llegue se dirigirá a ese andén. Sin embargo, ¿qué es lo que pasa cuando todos los andenes están llenos? (como en la captura de pantalla). Como todas las señales están rojas, el nuevo tren que llegue tomará el camino más fácil, el recto. Pero supongamos que el tren que está en ese andén va a estar en la estación más tiempo que el otro. Mientras tanto el otro tren se marcha. El tren entrante ha bloqueado la entrada al andén vacío y se ha quedado parado esperando a que salga el otro tren ¡a pesar de que ahora hay un andén vacío disponible! Hay que hacer algo para evitar que un tren recién llegado tenga que elegir entre dos señales de color rojo. Para eso tenemos que usar un sistema de señales dependientes entre sí formado por las '''señales previas de entrada''' y las '''señales de salida'''.
+
+Las señales previas son señales que muestran un color dependiendo no sólo del estado (ocupado o vacío) del bloque de vías inmediatamente posterior a ella, sino también según el color de las señales inmediatamente posteriores. En concreto, una señal previa de entrada (si está seguida por señales de salida) muestra una luz verde si, y sólo si, existe al menos una salida de color verde inmediatamente posterior a ella. En un sistema de señales dependientes (o previas) usted debe identificar qué señales deberán ser señales previas de entrada y cuales de salida.
+{{en/-}}
+====Señales de entrada====
+[[File:en/entry presignal.png|left|60px]]Una '''señal previa de entrada''' se pone de color verde, siempre y cuando haya al menos una señal de salida verde en el siguiente bloque de vías. De lo contrario, se muestra de color rojo. Esto evita que los trenes entren en ese bloque (o tramo) hasta que haya una salida disponible. Tenga en cuenta que los depósitos funcionan como si tuvieran incorporada una señal de dos sentidos (funcionan como una señal de entrada en un conjunto de señales dependientes).
+
+Si no hay señales designadas como salidas después de una señal de entrada, se comportará como una señal normal. Esto es conveniente para señales previas de dos direcciones cuando solo se necesita que funcione como tal en uno de los dos sentidos, siendo innecesario su funcionamiento como tal en el sentido contrario.
+{{en/-}}
+====Señales de salida====
+[[File:en/exit presignal.png|60px|left]]Una '''señal de salida''' se comporta de la misma forma que una señal de bloque normal, pero además, es necesaria para que la señal de entrada o combo anterior tenga el color correcto.
+{{en/-}}
+
+====Señales combo====
+[[File:en/station with pre-signals2.png|frame|right|Una estación con 1 señal previa de entrada, 2 señales combo y 4 señales de salida.]]
+[[File:en/combo presignal.png|60px|left]]Hay un tercer tipo de señal previa (o dependiente) que en realidad no introduce ninguna nueva funcionalidad. Se llama '''señal combo''' (o combinada) y simplemente actúa como una señal de entrada y salida al mismo tiempo. Esto le permite construir grandes "árboles" de señales previas como se muestra a la derecha.
+{{en/-}}
+====Construir señales previas====
+Si tiene activo el interfaz de señales: Para construir una señal previa seleccione el botón correspondiente de la barra [[Main/en/#Interfaz de señales|Selección de señales]].
+
+Si no tiene activo el interfaz de señales, en primer lugar construya una señal normal. Luego, con ''Ctrl'' presionada, haga clic en la señal para pasar por los diferentes tipos de señales previas:
+*Tenga en cuenta que usted puede construir una señal previa de una forma similar a como construye señales normales. Recuerde: Presionando ''Ctrl'' y haciendo clic cambia el tipo de señal previa, sin presionar ''Ctrl'' cambia la dirección de la señal.
+*Recuerde que no debe presionar la tecla ''Ctrl'' al construir la primera señal (ya que de este modo se cambia entre señales mecánicas o eléctricas). Tampoco debe usarla si tiene activo el interfaz de señales.
+
+====Limitaciones====
+[[File:en/PresignalLimitation.png|frame|El problema con las señales previas: la señal de entrada está en verde, aunque es imposible salir por la señal de salida que está de color verde.{{en/Emoticon|:€}}]]
+Un punto importante a señalar respecto a las señales de salida es que estas, cuando están de color verde, dan lugar a una señal de entrada de color verde, aunque sea materialmente imposible salir por esa salida debido al diseño del trazado de las vías (como en la imagen de la derecha cuando un tren intente entrar por el carril inferior). Esto puede arruinar las configuraciones más complejas de señales previas, así que tenga el máximo cuidado con su planificación.
+
+''Nota:''' Uno de los errores que se han señalado como «irresolubles» es que los trenes perdidos ignoran las señales de salida. Si se pierde un tren, este elige una dirección aleatoria en cada cruce, ignorando el color de las señales de salida, por lo que fácilmente pueden bloquear completamente las redes con señales previas.
+{{en/-}}
+
+==Señales de ruta==
+{{es/Disponibilidad|0.7|align="right"|texto=(desde 0.7.0)}}
+Las señales de ruta (señales avanzadas en 0.7.x) son dos tipos de señales nuevas. Permiten que los trenes reserven una ruta hasta la señal siguiente antes de entrar en un bloque. Si otro tren quiere entrar en el bloque, y tiene éxito reservando otra ruta distinta dentro del mismo bloque, la señal autorizará al tren a entrar en el bloque, aunque ya haya un tren dentro del bloque circulando por la otra ruta.
+[[File:es/Yapp signalgui.png|frame|none|Los dos nuevos tipos de señales en la [[Interfaz de señales/Es|Interfaz de señales]].]]
+[[File:en/Signal bloc.png|frame|right|Bloque en Y delimitado por tres ''señales de bloque'' normales]]
+Veamos un ejemplo: Tenemos un bloque con forma de Y griega entre tres señales. El ramal derecho está ocupado por un tren. Otro tren llega por el ramal de abajo y quiere ir por el ramal de la izquierda. Si usamos una señal de bloque normal, se considera que el bloque está ocupado (aunque la vía esté libre para ir por la izquierda). 
+{{en/-}}
+[[File:en/Multiples standard.png|frame|right|La Y ha sido fraccionada en tres bloques: rama derecha, rama izquierda e intersección, añadiendo dos ''señales de bloque'' suplementarias]]
+Haría falta entonces fraccionar el bloque en muchos bloques más pequeños añadiendo señales después del cruce.
+{{en/-}}
+[[File:en/Chemin.png|frame|rigth|Bloque en Y delimitado por una ''señal de ruta'' y dos ''señales de bloque'' normales.]]
+Por el contrario, la ''señal de ruta'' autoriza al tren que llega por abajo a entrar en el bloque en Y puesto que la vía de su itinerario (el ramal izquierdo) está libre. No ha sido necesario fraccionar el bloque en muchos bloques pequeñitos (ni ha sido necesario añadir señales después del cruce).
+{{en/-}}
+Hay dos cosas que debe saber acerca de estas señales:
+* Colóquela únicamente donde los trenes puedan detenerse sin bloquear un cruce.
+* La señal solo funciona en un sentido. En el sentido contrario podrá o bien ser ignorada o considerada como una dirección prohibida, según el tipo de ''señal de ruta'' (ver a continuación):
+
+:[[File:en/Yapp pbssignal.png|left|Señal de ruta]]
+'''Señal de ruta''': Los trenes pueden pasar a través de esta señal en el sentido contrario.
+{{en/-}}
+:[[File:en/Yapp onewaypbssignal.png|left|Señal de ruta de un sentido]]
+'''Señal de ruta de un sentido''': Los trenes no pueden pasar a través de esta señal en el sentido contrario.
+{{en/-}}
+La mayoría de las veces será suficiente con utilizar la señal de ruta por defecto, ya que pasar por una señal por la parte posterior se evitará en la medida de lo posible durante la búsqueda de la ruta (por el pathfinder o enrutador del programa), sin embargo, las señales de ruta de un sentido pueden ser útiles en casos concretos.
+
+Los dos nuevos tipos de señales se comportan de una manera un poco diferente a los tipos estándar de señales de OpenTTD. Las señales de ruta están de color rojo por defecto, y sólo se ponen en verde en el caso en que un tren reserve (con éxito) una ruta hasta la siguiente ''posición segura de espera'' de su camino. Las posiciones seguras de espera son, por definición, la parte delantera de las señales, los depósitos y los finales de vía. La parte trasera de una señal de ruta no se considera una posición segura de espera ya que las rutas se reservan justo hasta la siguiente señal.
+
+Puesto que sólo la parte delantera de cada señal se define como una posición segura de espera, lo normal es no colocar una señal de ruta después de un cruce. Únicamente deberá ponerlas delante, ya que sólo es seguro para un tren detenerse ''antes'' de un cruce. No es seguro para el tren esperar en una señal colocada inmediatamente después de un cruce sin que la totalidad del tren haya dejado completamente despejado el cruce, ya que estaría bloqueando el paso mientras espera, como se ilustra en el siguiente ejemplo. Esta es una gran ventaja frente a señales estándar de OpenTTD donde se tiene que poner señales antes y después de los cruces, lo que causa que los trenes bloqueen los cruces mientras esperan.
+[[File:en/Yapp unsafewaitinglocation.png|frame|center|La señal señalada con la flecha está mal ubicada, mientras el tren espera en el cruce bloquea la ruta de acceso del tren que viene por la parte superior. Hay otra señal de ruta mal ubicada en la imagen. ¿Serías capaz de encontrarla?]]
+
+Otro ejemplo de lo que usted puede hacer con señales de ruta, para poder tener dos trenes saliendo de la estación al mismo tiempo y que compartan el mismo depósito (imposible de conseguir con señales previas, que bloquearían el tramo entero). En este ejemplo se han usado señales de ruta de un sentido a la salida de la estación y señales de ruta normales a la salida de los depósitos (para que los trenes puedan entrar al depósito).
+[[File:en/pathsignal station exit.png|frame|center|Dos trenes saliendo al mismo tiempo de un depósito situado a la salida de una estación.]]
+
+====Opciones avanzadas====
+Hay tres nuevas [[Main/es/Opciones avanzadas|Opciones avanzadas]] relacionadas con las ''señales de ruta'':
+[[File:es/Yapp patch-options.png|frame|center|Opciones avanzadas]]
+
+*Una opción es destacar o '''ver las rutas reservadas'''. Esta opción es útil para resolver problemas en las intersecciones con señales de ruta, ya que se pueden ver cuáles son las vías que el tren ha reservado después del cruce.
+
+Las otras dos opciones controlan la forma como se deben comportar la herramienta de construir señales:
+*Puede establecer el '''tipo de señal que se construirá por defecto''' cuando se construya una nueva señal con la herramienta construir señales.
+*También puede '''cambiar entre tipos de señales''' de reemplazo disponibles cuando se hace Ctrl + clic en una señal existente (entre "todas", "solo señales de ruta" y "solo señales de bloque").
+
+Hay algunas opciones suplementarias relacionadas con las señales, que no son accesibles en la ventana de opciones avanzadas. Estas opciones están explicadas en el artículo ''[[Main/es/Opciones y características avanzadas de las señales de ruta|Opciones y características avanzadas de las señales de ruta]]''.
+
+===Ejemplos básicos===
+A continuación se presentan como ejemplo algunos diseños de redes ferroviarias que utilizan señales de ruta. En el artículo ''[[Main/es/Diseños avanzados de señales de ruta|Diseños avanzados de señales de ruta]]'', no recomendado para principiantes, aparecen algunos ejemplos más complejos.
+
+====Cruces básicos====
+Este es un cruce básico con un rendimiento mucho más alto.
+[[File:en/Yapp basicjunction.png|frame|center|Cruce básico para trenes con una longitud máxima de tres casillas. Observe el uso de señales corrientes en la vía normal.]]
+
+====Estación básica de dos andenes====
+Con este diseño de estación, los trenes pueden utilizar ambos andenes cuando vienen de cualquier dirección.
+[[File:en/Yapp basicstation.png|frame|center|Estación básica.]]
+
+==Señales mecánicas==
+{{es/Disponibilidad|Old|align="right"}}
+[[File:en/semaphore.png|frame|left]]
+Las '''señales mecánicas''' son un tipo de señal que no se diferencian de las señales eléctricas (o luminosas). Solamente tienen una apariencia distinta, que les da un aire más antiguo.
+
+Antes de la versión 0.6.0 de OpenTTD estas señales solo podían crearse manteniendo pulsada la tecla ''Ctrl'' al colocar las señales. A partir de la versión 0.6.0 las señales mecánicas se crean en lugar de las señales eléctricas antes de un año dado (1975 de forma predeterminada) y con ''Ctrl'' se construye el otro tipo de señal. Esta característica se controla con el parámetro «Señales mecánicas por defecto antes de» que se encuentra en: ''Opciones avanzadas/Construcción/Señales''. Desde la versión 0.7.0 si se usa la [[Main/en/#Interfaz de señales|interfaz de señales]] se pueden construir en cualquier momento usando el botón correspondiente.
+
+Después de colocarla, Con ''Ctrl''+clic cambia el tipo de señal (señal de bloque, de entrada, de salida, combo, de ruta y de ruta de un sentido). Puede cambiar las señales mecánicas por señales eléctricas usando la herramienta ''convertir señal'' del interfaz de selección de señales, y haciendo ''Ctrl''+clic en una señal existente.
+
+===Historia===
+Las señales mecánicas tienen una larga [http://www.wikipedia.org/wiki/es:señales de ferrocarril#historia historia] en las líneas de ferrocarril. Mucho antes de la llegada de la luz eléctrica se utilizaban para indicar la dirección de los [http://www.wikipedia.org/wiki/es:cambio de agujas cambios de agujas], o si era seguro entrar en el siguiente tramo de vías. Primero eran activadas de manera manual y luego eléctricamente. Es un mecanismo (a veces acompañado de una señal luminosa), que levanta o baja un brazo en función del estado de la vía.
+
+En el original Transport Tycoon, las señales de ferrocarril antes de 1975 son las señales mecánicas, y después, las señales eléctricas. Transport Tycoon Deluxe eliminó esa funcionalidad, pero ha sido recuperada en TTDPatch y en OpenTTD.
+
+==Dirigir los trenes==
+Tenga en cuenta que las señales no son la mejor manera de dirigir a los trenes a sus destinos (sólo sirven para evitar que se estrellen y ayudarlos a elegir entre varias vías que conduzcan al mismo destino). Puede usar los [[Main/es/Puntos de ruta|puntos de ruta]] para eso .
+
+==Vea también==
+* [[Main/es/Ejemplos de señalización avanzada|Ejemplos de señalización avanzada]]
+* [[Main/en/Construir depósitos de trenes/Es#Configuraciones avanzadas|Configuración avanzada de depósitos]]
+* [[Category/es/Cruces de trenes|Cruces de trenes]]: Para ejemplos de cruces complejos que sacan partido de las señales previas.
+* [http://www.darkcoding.net/misc/openttd-trains-and-signals-for-beginners-a-tutorial/ Señales para el completo principiante (en)]
+
+[[Category:es/Ferrocarril]]
+[[Category:es/Construcción]]
