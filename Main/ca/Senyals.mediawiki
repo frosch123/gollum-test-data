@@ -1,0 +1,205 @@
+[[Translation:Main/en/Signals]]{{en/-}}{{ca/Taula de contingut}}
+:''Veja el tutorial sobre la [[Main/ca/Col·locar senyals|col·locació de senyals]] per a una introducció pràctica a la senyalització.''
+
+Els '''senyals''' són dispositius útils que li permeten controlar el moviment dels [[Main/ca/Trens|trens]]. Són necessàries per a evitar les col·lisions en les xarxes [[Main/ca/Construcció de ferrocarrils|ferroviàries]] amb uns quants trens circulant.
+
+==Construir senyals de ferrocarril==
+Per a construir senyals necessita estar en el mode construir senyals. Òbriga la [[Main/en/Construcció de ferrocarrils/Ca#Barra d'eines Construcció de ferrocarril|barra d'eines Construcció de ferrocarril]] i faça clic a la icona construeix senyals [[File:en/Place signal.png]] per a obrir la finestra Selecció de senyals. Una interfície avançada està disponible i habilitada per defecte (veure [[Main/en/#Interfície de senyals|interfície de selecció de senyals]]).
+[[File:ca/Signals-icon2.png|frame|none|Cursor construeix senyals.]]
+
+Pot realitzar les següents operacions en el mode construir senyals:
+*Per a '''col·locar un senyal''', faça clic en un tram lliure de via. Per defecte es col·loca un ''senyal de dos sentits'', el tipus bàsic. Veja més avant com canviar a un tipus diferent. Si col·loca un senyal en una casella compartida per dues vies paral·leles, assegure’s de fer clic en la via exacta en què desitja col·locar el senyal.
+*Col·loque '''diversos senyals''' al mateix temps fent clic en un senyal existent i [http://www.wikipedia.org/wiki/ca:Drag 'n drop arrossegant] el cursor del ratolí al llarg de la via. S’espaiaran segons el que pose en el botó [[Main/ca/Densitat de senyals en arrosegar|densitat de senyals en arrosegar]] i es col·locaran orientades en el mateix sentit que el senyal sobre el qual va iniciar l’arrossegament. (després de la versió 0.7, aquest paràmetre es modifica en els [[Main/ca/Paràmetres avançats|paràmetres avançats]])
+*Col·loque '''diversos senyals''' al llarg d’una línia sencera de vies mantenint polsada la tecla Ctrl i arrossegant des d’un senyal existent. Només ha d’arrossegar una casella i s’autocompletarà tota la línia, s’espaiaran segons la [[Main/ca/Densitat de senyals en arrosegar|densitat de senyals en arrosegar]], fins que aparega una estació, un altre senyal o un encreuament. (0.6.0-beta 2 i superior)
+*'''Lleve senyals''' activant el botó del vehicle eruga (l'excavadora) [[File:en/Toggle clear active.png]] mentres roman actiu el botó construeix senyals [[File:en/Place signal.png]]. Faça clic en el senyal no desitjat. Pot arrossegar per a eliminar diversos senyals.
+*Convertisca el '''[[Main/en/#Senyals de dos sentits|senyal de dos sentits]]''' en un '''[[Main/en/#Senyals d’un sol sentit|senyal d’un sol sentit]]''' (o viceversa) fent clic en un senyal existent. El cicle complet és: senyal de dos sentits, senyal d’un sentit, senyal d’un sentit en el sentit contrari.
+*Cree altres tipus de [[Main/en/#Senyals de tram|senyals de tram]] i [[Main/en/#Senyals de camí|senyals de camí]] fent '''Ctrl + clic''' en un senyal existent.
+
+===Limitacions===
+No es pot construir senyals:
+*En els encreuaments de vies (bifurcacions), o en els encreuaments amb la carretera.
+*Sobre els ponts o dins dels túnels (encara que hi ha un [[Archive/en/HackaLittleBit/Tunnel Signals|pegat de HackaLittleBit]] que simula la col·locació automàtica de senyals dins de túnels i sobre els ponts).
+
+==Interfície de senyals==
+{{ca/Característica|0.7|align="right"|text=(desde 0.7.0)}}
+S’ha creat una nova interfície de selecció de senyals, utilitzada per a seleccionar els tipus de senyals, que elimina la necessitat de fer ctrl+clic, per a poder canviar de tipus de senyal.
+
+Si no està activada, faça ''control+clic'' en la icona construeix senyals de tren [[File:en/Place signal.png]], o bé active aquesta interfície en ''Paràmetres avançats/Construcció/Senyals'', '''Activa la la interfície dels senyals''' seleccionant l’opció "Actiu" (en versions antigues: en el fitxer openttd.cfg establisca <code>enable_signal_gui</code> com <code>true</code>). D’aquesta manera, ara en fer clic en el botó construeix senyals de tren apareixerà aquesta interfície:
+[[File:ca/Signal Selection.png|none|frame|Nova Interfície: la finestra Selecció de senyals]]
+{|
+|-
+|colspan=2|'''Senyals semàfors''' (o mecànics)
+|-
+|[[File:en/Signal Semaphore.png]]|| [[#Senyals de tram|Senyal de tram] normal o estàndard
+|-
+|[[File:en/Signal Semaphore Pre-Signal.png]]|| [[Main/en/#Senyals d’entrada|Senyal d’entrada]]
+|-
+|[[File:en/Signal Semaphore Exit-Signal.png]]|| [[Main/en/#Senyals de sortida|Senyal de sortida]]
+|-
+|[[File:en/Signal Semaphore Combo-Signal.png]]|| [[Main/en/#Senyals combinats|Senyal combinat]]
+|-
+|[[File:en/Signal Semaphore Path.png]]|| [[Main/en/#Senyals de camí|Senyal de camí]] (els trens l'ignoren quan el travessen des del sentit contrari)
+|-
+|[[File:en/Signal Semaphore Path One-Way.png]]|| [[Main/en/#Senyals de camí|Senyal de camí]] d'un sentit (els trens no poden travessar el senyal des del sentit contrari)
+|-
+|colspan=2|'''Senyals elèctrics''' (o lluminosos)
+|-
+|[[File:en/Signal Electric.png]]|| [[Main/en/#Senyals de tram|Senyal de tram]] normal o estàndard
+|-
+|[[File:en/Signal Electric Pre-Signal.png]]|| [[Main/en/#Senyals d’entrada|Senyal d’entrada]]
+|-
+|[[File:en/Signal Electric Exit-Signal.png]]|| [[Main/en/#Senyals de sortida|Senyal de sortida]]
+|-
+|[[File:en/Signal Electric Combo-Signal.png]]|| [[Main/en/#Senyals combinats|Senyal combinat]]
+|-
+|[[File:en/Signal Electric Path.png]]|| [[Main/en/#Senyals de camí|Senyal de camí]] (els trens l'ignoren quan el travessen des del sentit contrari)
+|-
+|[[File:en/Signal Electric Path One-Way.png]]|| [[Main/en/#Senyals de camí|Senyal de camí]] d'un sentit (els trens no poden travessar el senyal des del sentit contrari)
+|-
+|colspan=2|'''Altres icones'''
+|-
+|[[File:en/Signal Convert.png]]|| Eina conversió de senyals: converteix el senyal al tipus actiu en aquesta interfície. Veja [[Main/en/Col·locar senyals/Ca#Convertir un senyal a un tipus distint|Col·locar senyals]].
+|-
+|[[File:en/Signal Density.png]]|| Densitat de senyals en arrossegar: indica la distància entre senyals quan es col·loquen múltiples senyals arrossegant-ne el ratolí. Veja [[Main/en/Col·locar senyals/Ca#Construir una filera de senyals|Col·locar senyals]].
+|}
+'''Nota:''' Canviar el tipus de senyal és gratis, però canviar d’un dispositiu mecànic (semàfor) a un altre elèctric (o lluminós) i viceversa costa diners. Els semàfors poden tenir la seua utilitat, en ser senyals més visibles per al jugador en alguns casos (sobretot quan no es pot veure quin és el color dels senyals elèctrics per trobar-se d’esquena a l’espectador). D’altra banda funcionen exactament igual, un senyal elèctric i el semàfor (mecànic) equivalent.
+
+==Senyals de tram==
+{{ca/Característica|Old|align="right"|text=(desde 0.1.1)}}
+Un tram de vies (o bloc de bloqueig, en argot ferroviari) està format per totes aqueixes caselles de vies a les que es pot arribar després de travessar un senyal donat abans de travessar qualsevol altre senyal.
+Els senyals de tram, com el seu nom indica, funcionen sobre la base de trams de vies. Si el tram de vies situat a l'altre costat d’un senyal està ocupat, el senyal es posarà de color roig. Si no, es posarà verd.
+
+===Senyals de dos sentits===
+[[File:en/Two-way signal.png|frame|left]][[File:en/2-way signals.png|frame|right|Senyals de dos sentits en una estació de càrrega.]]
+
+Els senyals de dos sentits s’utilitzen en vies que tenen trens que circulen en les dues direccions. L’ús més comú és en les estacions de fi de línia, on els trens entren i ixen pel mateix extrem de l’estació. En l’exemple de la dreta, els senyals dirigeixen al pròxim tren que arribe a l’andana buida. També eviten que el tren abandone l’estació si hi ha un altre tren ocupant la via.
+
+Si un tren arriba a una bifurcació (o encreuament) en el que ha de triar entre dues o més eixides, cada una d’elles amb senyals de dos sentits, triarà la que tinga el senyal en verd. Si tots els senyals són de color roig, es dirigirà cap al senyal en la direcció més simple, es detindrà al nivell del senyal i esperarà que el senyal canvie a verd.
+{{en/-}}
+===Senyals d’un sol sentit===
+[[File:en/One-way signal.png|frame|left]]
+Els senyals d’un sol sentit limiten la circulació de trens a una sola direcció. En el següent exemple, els senyals obliguen als trens a moure’s en cercle. Açò té dos avantatges: els trens entren i ixen de les estacions de manera més eficaç, i poden haver-hi molts trens circulant al mateix temps per la mateixa via (Sempre que dividisca aquesta via en blocs prou xicotets per a no interrompre el tràfic, i prou grans per a contenir un tren sencer amb la màquina i els seus vagons. D’ací la importància del paràmetre "densitat de senyals en arrossegar").
+
+Quan utilitze els senyals d’un sol sentit, assegure’s de que estan '''tots''' en la direcció correcta. És una bona idea observar el primer tren que circule per una nova línia durant tot el camí fins al seu destí final per a assegurar-se de que no ha comès cap error.
+
+Faça clic en un senyal existent de dos sentits per a convertir-lo en senyal d’un sol sentit. Faça clic una altra vegada per a situar-lo en direcció contrària (continuarà sent d’un sol sentit). La tercera vegada que faça clic tornarà a ser un senyal de dos sentits.
+
+Si un tren arriba a una bifurcació (o encreuament) en el que ha de triar entre dues eixides, cada una amb un senyal d’un sol sentit, es dirigirà a la via que siga més favorable al seu destí, siga quin siga el color dels senyals (i si fa falta s’esperarà fins que el senyal canvie a verd), i mai podrà prendre una via que tinga un senyal d’un sentit en la direcció contrària, encara que estiga en verd i l’altra estiga en roig (a diferència del que passa amb els senyals de dos sentits).
+
+Si un tren arriba per la part contrària d’un senyal d’un sol sentit, inmeditamente es veurà obligat a donar mitja volta.
+[[File:en/1-way signal loop.png|frame|none|Senyals d’un sentit en un circuit circular.]]
+
+===Senyals previs===
+[[File:en/Station no pre-signals.png|frame|right|Un problema seriós: el tren de l’esquerra pot eixir primer, sense que puga entrar el tren nouvingut.]]
+[[File:en/Station with pre-signals.png|frame|right|Solucione el problema usant els senyals previs.]]
+La imatge anterior mostra un disseny en què l’entrada a una estació es controla amb senyals normals. Sempre que hi haja una andana buida, el nou tren que arribe es dirigirà a aqueixa andana. No obstant això, què és el que passa quan totes les andanes estan plenes? (com en la captura de pantalla). Com tots els senyals estan rojos, el nou tren que arribe prendrà el camí més fàcil, el recte. Però suposem que el tren que està en aqueixa andana va a estar en l’estació més temps que l’altre. Mentrestant l’altre tren marxa. El tren entrant ha bloquejat l’entrada a l’andana buida i s’ha quedat parat esperant que isca l’altre tren ¡a pesar que ara hi ha una andana buida disponible! Cal fer quelcom per a evitar que un tren nouvingut haja de triar entre dos senyals de color roig. Per fer això hem d’usar un sistema de senyals dependents entre si format pels '''senyals previs d’entrada''' i els '''senyals de sortida'''.
+
+Els senyals previs són senyals que mostren un color depenent no sols de l’estat (ocupat o buit) del tram de vies immediatament posterior a ell, sinó també segons el color dels senyals immediatament posteriors. En concret, un senyal previ d’entrada (si està seguit per senyals de sortida) mostra una llum verda si, i només si, hi ha almenys una eixida de color verd immediatament posterior a ell. En un sistema de senyals dependents (o previs) vosté ha d’identificar quins senyals hauran de ser senyals previs d’entrada i quins de sortida.
+{{en/-}}
+====Senyals d’entrada====
+[[File:en/entry presignal.png|left|60px]] Un '''senyal previ d’entrada''' es posa de color verd, sempre que hi haja almenys un senyal de sortida verd en el següent tram de vies. En cas contrari, es mostra de color roig. Açò evita que els trens entren en aqueix bloc (o tram) fins que hi haja una eixida disponible. Tinga en compte que les cotxeres funcionen com si tingueren incorporades un senyal de dos sentits (i funcionen com un senyal d’entrada dins d'un conjunt de senyals dependents).
+
+Si no hi ha senyals designats com a eixides després d’un senyal d’entrada, es comportarà com un senyal normal. Açò és convenient per a senyals previs de dues direccions quan només es necessita que funcione com a tal en un dels dos sentits, sent innecessari el seu funcionament com a tal en el sentit contrari.
+{{en/-}}
+====Senyals de sortida====
+[[File:en/exit presignal.png|60px|left]] Un '''senyal de sortida''' (o d'eixida) es comporta de la mateixa manera que un senyal de tram normal, però a més, és necessàri per a que el senyal d’entrada o combinat anterior tinga el color correcte.
+{{en/-}}
+====Senyals combinats====
+[[File:en/station with pre-signals2.png|frame|right|Una estació amb 1 senyal previ d’entrada, 2 senyals combinats i 4 senyals de sortida.]]
+[[File:en/combo presignal.png|60px|left]] Hi ha un tercer tipus de senyal previ (o dependent) que en realitat no introdueix cap nova funcionalitat. S’anomena '''senyal combinat''' i simplement actua com un senyal d’entrada i d'eixida alhora. Açò li permet construir grans "arbres" de senyals previs com es mostra a la dreta.
+{{en/-}}
+====Construir senyals previs====
+Si té activa l’interfície de senyals: Per a construir un senyal previ seleccione el botó corresponent de la barra [[Main/en/#Interfície de senyals|Selecció de senyals]].
+
+Si no té activa l’interfície de senyals, en primer lloc construïsca un senyal normal. Després, amb ''Ctrl'' pressionat, faça clic en el senyal per a passar pels diferents tipus de senyals previs:
+*Tinga en compte que vosté pot construir un senyal previ d’una forma semblant a com construeix senyals normals. Recorde: Pressionant ''Ctrl'' i fent clic canvia el tipus de senyal previ, sense pressionar ''Ctrl'' canvia la direcció del senyal.
+*Recorde que no ha de pressionar la tecla ''Ctrl'' en construir el primer senyal (ja que d’aquesta manera es canvia entre senyals mecànics o semàfors i senyals elèctrics). Tampoc ha d’usar-la si té activa l’interfície de senyals.
+
+====Limitaciones====
+[[File:en/PresignalLimitation.png|frame|El problema amb els senyals previs: el senyal d’entrada està verd, encara que és impossible eixir pel senyal de sortida que està de color verd.{{en/Emoticon|:€}}]]
+Un punt important a assenyalar respecte als senyals de sortida és que aquestes, quan estan de color verd, donen lloc a un senyal d’entrada de color verd, encara que siga materialment impossible eixir per aqueixa eixida a causa del disseny del traçat de les vies (com en la imatge de la dreta quan un tren intente entrar pel carril inferior). Açò pot arruïnar les configuracions més complexes de senyals previs, així que pare la màxima atenció amb la seua planificació.
+
+''Nota:''' Un dels errors que se han assenyalat com «irresolubles» és que els trens perduts ignoren els senyals de sortida. Si es perd un tren, aquest tria una direcció aleatòria en cada encreuament, ignorant el color dels senyals de sortida, i fàcilment poden bloquejar completament les xarxes amb senyals previs.
+{{en/-}}
+
+==Senyals de camí==
+{{ca/Característica|0.7|align="right"|text=(desde 0.7.0)}}
+Els senyals de camí són dos senyals nous. Permeten que els trens pugan reservar un camí fins al senyal següent abans d’entrar en un tram. Si un altre tren vol entrar en aqueix tram, i té èxit reservant una altre camí diferent dins del mateix tram, el senyal autoritzarà al tren a entrar en el tram, encara que ja hi haja un tren dintre circulant per l’altre camí.
+[[File:ca/Yapp signalgui.png|frame|none|Els dos nous tipus de senyals en la [[Interfície de senyals/Ca|Interfície de senyals]].]]
+[[File:en/Signal bloc.png|frame|right|Bloc en Y delimitat per tres ''senyals de tram'' normals]]
+Vegem un exemple: Tenim un bloc amb forma de Y amb tres ramals entre tres senyals. El ramal situat a la dreta està ocupat per un tren. Un altre tren arriba pel ramal de baix i vol anar pel ramal de l’esquerra. Si usem un senyal de tram normal, es considera que el tram està ocupat (encara que la via estiga lliure per a anar per l’esquerra). 
+{{en/-}}
+[[File:en/Multiples standard.png|frame|right|La Y ha sigut fraccionada en tres trams: branca dreta, branca esquerra i intersecció, afegint dos ''senyals de tram'' suplementaris]]
+Aleshores faria falta fraccionar el bloc en molts trams més xicotets afegint-ne senyals després de l’encreuament.
+{{en/-}}
+[[File:en/Chemin.png|frame|rigth|Bloc en Y delimitat per un ''senyal de camí'' i dos ''senyals de tram'' normals.]]
+Al contrari, el ''senyal de camí'' autoritza al tren que arriba per baix a entrar en el bloc en y ja que la via del seu itinerari (el ramal esquerre) està lliure. No ha sigut necessari fraccionar el bloc en molts blocs xicotets (ni ha sigut necessari afegir-ne senyals després de l’encreuament).
+{{en/-}}
+Hi ha dues coses que ha de saber sobre aquests senyals:
+* Col·loque-la únicament on els trens puguen detenir-se sense bloquejar un encreuament.
+* El senyal només funciona en un sentit. En el sentit contrari podrà o bé ser ignorada o considerada com una direcció prohibida, segons el tipus de ''senyal de ruta'' (explicat a continuació):
+
+:[[File:en/Yapp pbssignal.png|left|Senyal de camí]]
+'''Senyal de camí''': Els trens poden passar travessant aquest senyal en el sentit contrari.
+{{en/-}}
+:[[File:en/Yapp onewaypbssignal.png|left|Senyal de camí d’un sentit]]
+'''Senyal de camí d’un sentit''': Els trens no poden passar travessant aquest senyal en el sentit contrari.
+{{en/-}}
+La majoria de les vegades serà suficient utilitzar el senyal de camí per defecte, ja que passar per un senyal per la part posterior s’evitarà en la mesura que siga possible durant la busca de la ruta (pel pathfinder o cercador de rutes del joc), no obstant això, els senyals de camí d’un sentit poden ser útils en casos concrets.
+
+Els dos nous tipus de senyals es comporten d’una manera un poc diferent als senyals estàndard d’OpenTTD. Els senyals de camí estan de color roig per defecte, i només es posen en verd en el cas en què un tren reserve (amb èxit) una ruta fins a la següent ''posició segura d’espera'' del seu camí. Les posicions segures d’espera són, per definició, la part davantera dels senyals, les cotxeres i els finals de via. La part posterior d’un senyal de camí no es considera una posició segura d’espera ja que les rutes es reserven just fins al següent senyal.
+
+Ja que només la part davantera de cada senyal es defineix com una posició segura d’espera, el normal és no col·locar un senyal de ruta després d’un encreuament. Únicament haurà de posar-les davant, ja que només és segur per a un tren detenir-se ''abans'' d’un encreuament. No és segur per al tren esperar en un senyal col·locada immediatament després d’un encreuament sense que la totalitat del tren haja deixat completament lliure l’encreuament, ja que estaria bloquejant el pas mentres espera, com s’il·lustra en el següent exemple. Aixó és un gran avantatge enfront dels senyals estàndard d’OpenTTD on s’ha de posar senyals abans i després dels encreuaments, i aixó causa que els trens bloquegen els encreuaments mentres esperen.
+[[File:en/Yapp unsafewaitinglocation.png|frame|center|El senyal assenyalat amb la fletxa està mal ubicat: mentres el tren espera en l’encreuament està bloquejant el camí d’accés del tren que ve per la part superior. Hi ha un altre senyal de ruta mal ubicat en la imatge. Series capaç de trobar-lo?]]
+
+Un altre exemple del que pot fer amb senyals de camí, per a poder tenir dos trens eixint de l’estació al mateix temps i que compartisquen les mateixes cotxeres (impossible d’aconseguir amb senyals previs, que bloquejarien el tram sencer). En aquest exemple s’han usat senyals de ruta d’un sentit a l’eixida de l’estació i senyals de ruta normals a l’eixida de les cotxeres (perquè els trens puguen entrar-hi).
+[[File:en/pathsignal station exit.png|frame|center|Dos trens eixint al mateix temps d’unes cotxeres situades a l’eixida d’una estació.]]
+
+====Paràmetres avançats====
+Hi ha tres nous [[Main/ca/Paràmetres avançats|Paràmetres avançats]] relacionats amb els ''senyals de camí'':
+[[File:ca/Yapp patch-options.png|frame|center|Paràmetres avançats]]
+
+*Una opció és '''mostra les vies reservades'''. Aquesta opció és útil per a resoldre problemes en les interseccions amb senyals de camí, ja que es poden veure quines són les vies que el tren ha reservat després de l’encreuament.
+
+Les altres dues opcions controlen la forma com s’han de comportar l'eina de construir senyals:
+*Pot establir el '''tipus de senyal a construir predeterminada''' quan es construïsca un nou senyal amb l'eina construir senyals, triant entre les opcions "Normal" (de tram), "Avançades" (de camí) y "Avançades d'un sentit" (de camí d'un sentit).
+* També pot configurar els senyals disponibles quan es fa Ctrl + clic en un senyal existent, establint '''canvia a través dels tipus de senyals''' entre "totes", "només avançada" (es mostren els senyals de camí) i "només normal" (es mostren els senyals de tram).
+
+Hi ha algunes opcions suplementàries relacionades amb els senyals, que no són accessibles en la finestra de paràmetres avançats. Aquestes opcions estan explicades en l’article ''[[Main/ca/Opcions i característiques avançades dels senyals de camí|Opcions i característiques avançades dels senyals de camí]]''.
+
+===Exemples bàsics===
+A continuació es presenten com a exemple alguns dissenys de xarxes ferroviàries que utilitzen senyals de ruta. En l’article ''[[Main/ca/Dissenys avançats de senyals de camí|Dissenys avançats de senyals de camí]]'', no recomanat per a principiants, apareixen alguns exemples més complexos.
+
+====Encreuaments bàsics====
+Aquest és un encreuament bàsic amb un rendiment molt més alt.
+[[File:en/Yapp basicjunction.png|frame|center|Encreuament bàsic per a trens amb una longitud màxima de tres caselles. Observe l’ús de senyals corrents en la via normal.]]
+
+====Estació bàsica de dos andanes====
+Amb aquest disseny d’estació, els trens poden utilitzar ambdues andanes quan vénen desde qualsevol sentit.
+[[File:en/Yapp basicstation.png|frame|center|Estació bàsica.]]
+
+==Semàfors (o senyals mecánics)==
+{{ca/Característica|Old|align="right"}}
+[[File:en/semaphore.png|frame|left]]
+Els '''semàfors''' o '''senyals mecànics''' són un tipus de senyal que no es diferencien dels senyals elèctrics (o lluminosos). Només tenen una aparença distinta, que els dóna un aire més antic.
+
+Abans de la versió 0.6.0 d’OpenTTD aquests senyals només podien crear-se mantenint polsada la tecla ''Ctrl'' en col·locar els senyals. A partir de la versió 0.6.0 els senyals mecànics es creguen en compte dels senyals elèctrics abans d’un any donat (1975 de forma predeterminada) i amb ''Ctrl'' es construeix l’altre tipus de senyal. Aquesta característica es controla amb el paràmetre «Construir samàfors automàticament abans de» que es troba en: ''Paràmetres avançats/Construcció/Senyals''. Des de la versió 0.7.0 utilitzant la [[Main/en/#Interfície de senyals|interfície de senyals]] es poden construir en qualsevol moment usant el botó corresponent.
+
+Després de col·locar-la, Amb ''Ctrl''+clic canvia el tipus de senyal (senyal de tram, d’entrada, de sortida, combinat, de camí i de camí d’un sentit). Pot canviar els semàfors (senyals mecànics) per senyals elèctrics usant l'eina ''conversió de senyals'' de l’interfície de selecció de senyals, i fent ''Ctrl''+clic en un senyal existent.
+
+===Història===
+Els semàfors (senyals mecànics) tenen una llarga [http://www.wikipedia.org/wiki/ca:ferrocarril història] en les línies de ferrocarril. Molt abans de l’arribada de la llum elèctrica s’utilitzaven per a indicar la direcció dels canvis d’agulles, o si era segur entrar en el següent tram de vies. Primer eren activades de manera manual i després elèctricament. És un mecanisme (a vegades acompanyat d’un senyal lluminós), que alça o baixa un braç en funció de l’estat de la via.
+
+En l’original Transport Tycoon, els senyals de ferrocarril abans de 1975 són els senyals mecànics, i després, els senyals elèctrics. Transport Tycoon Deluxe va eliminar aqueixa funcionalitat, però ha sigut recuperada en TTDPatch i en OpenTTD.
+
+==Dirigir els trens==
+Tinga en compte que els senyals no són la millor manera de dirigir als trens als seus destins (només serveixen per a evitar que s’estavellen i ajudar-los a triar entre unes quantes vies que conduïsquen al mateix destí). Pot usar els [[Main/ca/Punts de control|punts de control]] per a això.
+
+==Veja també==
+* [[Main/ca/Exemples de senyalització avançada|Exemples de senyalització avançada]]
+* [[Main/ca/Configuració avançada de cotxeres|Configuració avançada de cotxeres]]
+* [[Category/ca/Encreuaments de trens|Encreuaments de trens]]: Per a exemples d’encreuaments complexos que trauen partit dels senyals previs.
+* [http://www.darkcoding.net/misc/openttd-trains-and-signals-for-beginners-a-tutorial/ Senyals per al complet principiant (en)]
+
+[[Category:ca/Ferrocarril]]
+[[Category:ca/Construcció]]
