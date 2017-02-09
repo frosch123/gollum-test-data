@@ -1,0 +1,146 @@
+{{de/Übersetzung|Bahnhof|99}}
+
+[[Translation:Main/en/Railway station]]{{en/-}}{{de/Inhaltsverzeichnis}}
+'''Bahnhöfe''' sind der Hauptbestandteil von jedem Eisenbahnnetz. Sie ermöglichen es, jede Fracht auf [[Main/de/Züge|Züge]] zu be- und entladen. Für ein ganzes Schienennetz wird empfohlen die Bahnhöfe etwas abseits von der Hauptlinie zu platzieren. So kommt es nicht zu Verzögerungen bei haltenden oder durchfahrenden Zügen.
+
+
+==Einfache Bahnhöfe==
+Die folgenden Bahnhöfe sind einfach zu bauen und werden ordentlich funktionieren, wenn sie nur von wenigen Zügen benutzt werden. Wenn die Verkehrsdichte steigt, sind die [[Main/en/Bahnhof/De#Erweiterte Bahnhöfe|erweiterten Bahnhöfe]] die bessere Wahl.
+
+===Kopfbahnhöfe===
+Diese Bahnhöfe bilden das Ende einer Bahnlinie. Ein- und Ausfahrt der Züge erfolgen auf derselben Seite. Daher können sich ein- und ausfahrende Züge gegenseitig blockieren. Kopfbahnhöfe werden oft für kleine, einfache Bahnhöfe verwendet oder wenn der Bauplatz einen Ro-Ro-Bahnhof nicht zulässt.
+[[File:en/Terminus.png|center|none|frame|Einfache Kopfbahnhöfe: der linke benutzt [[Signale/De#Blocksignale|Blocksignale]], der rechte [[Main/en/Signale/De#Pfadsignale|Pfadsignale]].]]
+
+===Ro-Ro===
+Ro-Ro steht für Roll-On, Roll-Off (Reinfahren, Rausfahren). Züge fahren an einem Ende des Bahnhofs ein und fahren aus dem anderen heraus. Einfahrende Züge müssen also nicht auf Züge warten, welche den Bahnhof verlassen. Das ist praktisch für ein mittleres Verkehrsaufkommen. Ohne [[Main/en/Signale/De#Vorsignale|Vorsignale]] ist dieser Bahnhof für ein hohes Verkehrsaufkommen (d.h., Bahnhöfe die an Fabriken arbeiten) eher ungeeignet. Das liegt daran, dass sich der nächste ankommende Zug bei Belegung aller Bahnsteige den nächstgelegenen Bahnsteig aussucht und am Zweiwegesignal wartet. Dies kann zu einem Verkehrsinfarkt führen, wenn der blockierende Zug Volllast-Aufträge hat und darauf wartet, dass ein anderer Zug seine Rohstoff[[Main/de/Fracht|fracht]] entlädt.
+[[File:en/Ro-ro1.png|center|none|frame|RoRo-Bahnhof mit zwei Plattformen, der obere benutzt Blocksignale und der untere benutzt Pfadsignale. Man könnte die beiden Gleis-Geraden vor dem unteren Bahnhof weglassen, allerdings dienen diese auch als Bremsweg.]]
+
+===Durchfahrtsbahnhof===
+Ein einfacher Bahnhof, an dem Züge entweder anhalten oder auf dafür vorgesehenen Gleisen durchfahren können. Er enthält Warteplätze für Züge, die von der Hauptlinie abfahren oder auf sie herauf fahren. Es ist wichtig, dass genügend Warteplätze vorhanden sind, falls alle Bahnsteige belegt sind. Hinzu kommt, dass die Warteplätze die gleiche Länge wie der Bahnhof haben sollten, da sie den Bremsweg/die Beschleunigungsstrecke der ein- und ausfahrenden Züge, welche die Hauptlinie blockieren kompensieren müssen.
+
+[[File:en/Drive thru.png|center|none|frame]]
+
+===Kombinierter Kopf- und Roro-Bahnhof===
+Es ist auch möglich Bahnhöfe zu bauen, die gleichzeitig als Kopf- und als Ro-Ro-Bahnhof dienen. Hierfür muss die Schwierigkeitsoption "Zug umkehren" auf "Am Streckenende und in Bahnhöfen" gestellt sein. Züge können von beiden Seiten in den Bahnhof einfahren und ihn zu beiden Seiten auch wieder verlassen.
+
+Während die Pfadsignale hier gut funktionieren, kann es sein, dass durch die Blocksignale Züge steckenbleiben. Das passiert, wenn zwei Züge von gegenüberliegenden Seiten kommen, ihre Einfahrsignale fast gleichzeitig passieren und daher den gleichen Bahnsteig ansteuern wollen. Der erste Zug kann das entsprechende Gleis befahren, aber der zweite Zug bleibt an einem rotem Ausfahrsignal hängen. Deswegen sollte man Blocksignale gar nicht oder nur für Bahnhöfe mit sehr niedrigem Verkehr verwenden.
+[[File:en/Two-way-roro-station.png|center|none|frame|Kombinierter Kopf- und RoRo-Bahnhof, der obere benutzt Blocksignale, der untere benutzt Pfadsignale.]]
+
+===Beutelstation===
+Wenn es keinen Platz gibt Gleise von beiden Seiten des Bahnhofs zu bauen, aber der Bahnhof kein Kopfbahnhof ist, dann ist ein Beutelbahnhof nützlich. Züge fahren von einer Seite ein, drehen um und fahren in die ursprügliche Richtung weiter.
+
+Ein Beutelbahnhof kann nicht auf einer verkehrsreichen Linie gebaut werden, da nur ein Zug in jede Richtung fahren kann und deswegen andere Züge vor dem Bahnhof warten müssen. Dies kann durch Warteplätze gelöst werden, was aber nicht wirklich eine gute Lösung ist. Die Züge müssen dazu noch langsam fahren, wenn sie den Bahnhof verlassen oder in ihn einfahren.
+[[File:en/Polany.jpeg|center|none|frame|Beutelbahnhof, originale Linie oben.]]
+
+==Erweiterte Bahnhöfe==
+In größeren Netzwerken eignen sich obige Bahnhöfe nicht für eine große Menge von Zügen. Man braucht fortgeschrittenere Gleislayouts und Signale.
+
+Was, wenn ein dritter Zug bei einem der obigen Bahnhöfe ankommt? Es sieht, dass beide Zwei-Wege-Signale rot sind, und nimmt deswegen die Zufahrt zum nächstgelegenen Bahnsteig und wartet auf grün. Wird ein anderer Bahnsteig während dieser Zeit frei, so bleibt er frei und wird nicht von dem wartenden Zug genutzt.
+
+Was ist mit den Staus, die wachsen, wenn Züge darauf warten, in den Bahnhof einzufahren? Diese Staus können sich weit nach hinten verlängern und das gesamte Netzwerk blockieren!
+
+===Vorsignale===
+Bahnhöfe mit [[Main/en/Signale/De#Vorsignale|Vorsignale]]n lassen ankommende Züge vor dem Bahnhof warten, bis ein Bahnsteig frei ist.
+[[File:en/Presignalstation.png|center|none|frame|Bahnhof mit Vorsignalen]]
+
+===Wartebucht===
+Eine gute Lösung ist eine kleine Menge von Zügen in einer mehrgleisigen Wartebucht warten zu lassen. Wenn der Bahnhof voll ist, nimmt ein ankommender Zug das nächste leere Gleis in der Wartebucht. Wenn ein Platz im Bahnhof frei wird, fährt einer der Züge in den Bahnhof ein. Stelle sicher, dass der Abstand deiner Signale auf die Länge deiner Züge abgestimmt ist! Die Vorsignale sind optional; sie helfen, wenn deine Wartebucht auch voll ist.
+[[File:en/waitingbay.png|center|none|frame|Wartebucht für 4 Züge mit 6 Waggons.]]
+
+===Schleife===
+Anstelle von Vorsignalen kannst du auch eine Schleife bauen. Wenn ein Zug in den Bahnhof einfährt und sieht, dass alle Zwei-Weg-Signale  ausser der Schleife rot sind (alle Bahnsteige belegt), so nimmt er die Schleife. Er kreist und kreist und wartet auf eine freie Plattform. Ein Problem ist, dass andere Züge die freie Plattform stehlen können, während der andere Zug noch in der Schleife kreist. Vergiss nicht, die Schleife mindestens so groß wie den längsten Zug zu bauen.
+[[File:en/Loop.png|center|none|frame|Schleife für Überlaufkontrolle]]
+
+===Ausweichdepot===
+Ein weiterer Weg, um Kapazitätsengpässe zu regulieren, ist ein "Ausweichdepot". Platziere ein Depot im Zwei-Weg/Ein-Weg-Signal-Aufbau. Depots haben automatisch ein (traditionelles) Zwei-Wege-Signal in sich, also funktionieren sie genau wie Schleifen. Ausweichdepots haben, im Gegensatz zu Schleifen, eine unbegrenzte Kapazität. 
+
+Das beste Layout hat jeweils ein Depot an beiden Enden der Bahnhofszufahrt. Dies reduziert die benötigte Zeit, einen großen Bahnhof zu durchqueren.
+
+[[File:en/Escapedepot.png|center|none|frame|Ausweich-Depots für die Überlauf-Regulierung.]]
+
+===Lange Ausfahrten===
+Normalerweise muß ein Zug anhalten, wenn zwei Züge den Bahnhof gleichzeitig verlassen, und den anderen vorlassen. Dies lässt einen Zug halb im und halb außerhalb des Bahnhof stehen, was den entsprechenden Bahnsteig für andere Züge, die versuchen einzufahren, unbenutzbar macht. Lange Ausfahrten erlauben dem Zug den Bahnhof vollständig zu verlassen, ehe er auf ein rotes Signal stößt. Dies macht den Bahnsteig für einen anderen Zug frei. Beachte die Länge der Ausfahrt! Im Beispiel paßt ein Zug mit 10 "Stellen" ordentlich zwischen die Signale.
+[[File:en/Longexit.png|center|none|frame|Lange Ausfahrten für die Überlauf-Regulierung]]
+
+===Lange Ausfahrten, priorisiert===
+[[Main/de/Mammutzüge|Mammutzüge]] dazu zu bringen, einen verkehrsreichen Bahnhof rechtzeitig zu verlassen, kann herausfordernd sein. Indem du Vorsignale benutzt, kannst du Ausfahrten priorisieren, um Züge auf schnelleren Strecken früher abfahren zu lassen. Im Bild unten wird den oberen 5 Ausfahrten (da sie die Strecke länger blockieren) und der unteren Ausfahrt (da Züge auf spitzen Kurven langsamer fahren) eine niedrigere Priorität zugeordnet. Dies funktioniert, da die Züge an Ausfahrten mit niedriger Priorität auf ein grünes Ausfahrsignal warten, wenn ein Zug das zweite Signal auf der Rückkehrstrecke passiert. Züge auf den anderen Strecken verlassen den Bahnhof, wenn der abfahrende Zug das erste Signal wie üblich verlässt. 
+[[File:en/Priorityexit.png|center|none|frame|Lange Ausfahrten mit Prioritäten-Signalen]]
+
+===Lange Einfahrten===
+Wenn du mit [[Main/de/Realistische Beschleunigung|realistischer Beschleunigung]] spielst, verlangsamen schnellere Züge früher ehe sie im Bahnhof anhalten. Dies kann den folgenden Zug beim Einfahren ausbremsen. Indem du ein paar Gleisteile vor dem Bahnhof einfügst, kannst du dieses Problem lösen.
+[[File:en/Longentrance.png|center|none|frame|Lange Einfahrt für den realistische Beschleunigung-Patch]]
+
+===Doppelte Einfahrt===
+Dies ist ein Design, das für Bahnhöfe benutzt wird, die eine riesige Menge von Zügen verarbeiten (z.B. Bahnhöfe, die Fabriken wie Lebensmittelverarbeitungswerke beliefern). Züge, die von einem Ort kommen können, wenn nötig, Bahnsteige benutzen, die für andere Züge bestimmt waren. Benutze hierbei Vorsignale!
+[[File:en/Doubleentrance.png|center|none|frame|Doppelte Einfahrt. Die vier Plattformen sind in zwei Gruppen unterteilt, die jeweils eine Einfahrtstrecke bedienen. Die [[Signale/De#Kombinationssignale|Kombinationssignale]] zwischen den Kreuzungen erlauben den Zügen, von beiden Einfahrten gleichzeitig einzufahren, ohne dass sie sich gegenseitig blockieren, erlauben aber Zügen, zur anderen Gruppe zu fahren, wenn kein Bahnsteig in der eigenen Gruppe frei ist.]]
+[[File:en/DoubleEntrance2.png|center|none|frame|Schnellere doppelte Einfahrt, die scharfe Kurven vermeidet (für Zuglänge <=5)]]
+
+===Feeder-Bucht===
+Wenn dein Schienennetz große Züge für lange Strecken hat, kann es kostenmäßig sehr effektiv sein, wenn du die Ladebahnhöfe mit mehr Fracht von nahen Industrien "zufütterst". Denn je weiter die Fracht transportiert wird, desto mehr Geld bekommst du. Im abgebildeten Bahnhof gibt es vier kleine Buchten, um Kohle von nahegelegenen Minen umzuladen. Große Züge liefern diese Kohle dann zu weit entfernten Kraftwerken. 
+
+[[File:en/Feederstation.png|center|none|frame|Bahnhof mit vier Zubringern]]
+
+===Priorisierter Durchfahrtsbahnhof===
+
+Diese Bahnhöfe sind in der Mitte einer Strecke und Züge können sie passieren, ohne wertvolle Plattformen zu verbrauchen. Signalisieren macht hier einen ausschlaggebenden Unterschied - du kannst der Hauptstrecke oder den anhaltenden Zügen die Priorität geben.
+
+Dieser Bahnhof gibt die Priorität den Zügen, die ihn verlassen.
+[[File:en/Station priority.png|center|none|thumb|700px|Priorität dem Bahnhof]]
+
+Dieser Bahnhof gibt die Priorität der Hauptstrecke.
+[[File:en/Mainline priority.png|center|none|thumb|700px|Priorität der Hauptstrecke. Veränderungen sind mit den roten Kreisen markiert.]]
+
+===Ro-Ro-/Endbahnhof===
+====Prinzip====
+Diese Art Bahnhof ist ein Gemisch aus Ro-Ro-Bahnhof und Endbahnhof. Im Wesentlichen ist es ein Endbahnhof, der es dem Zug ermöglicht, ihn zu verlassen ohne den weiteren, einfahrenden Verkehr zu stören. Er kann benutzt werden, um einen Kopfbahnhof zu verbessern und ihn effizienter zu machen. Änderungen dieses Designs könnten die Anzahl der Plattformen erhöhen, um mehr Züge gleichzeitig handzuhaben. Das Beispiel wurde mit Vorsignalen signalisiert für eine größere Effizienz. 
+[[File:en/Alternative RoRoTerminus.png|center|none|frame|Eine Mischung zwischen einem Ro-Ro- und einem Endbahnhof.]]
+Diese Bauweise ermöglicht es den Zügen, den Bahnhof gleichzeitig zu betreten und zu verlassen. Natürlich benutzt sie ein wenig mehr Platz als ein normaler Endbahnhof.
+
+====Variationen====
+[[File:en/Advanced Terminus Station.png|center|thumb|550px|Erweiterter Endbahnhof mit 2 Buchten, der obere mit Blocksignalen, der untere mit Pfadsignalen.]]
+
+[[File:en/Adv terminus 4tr.png|center|thumb|550px|Erweiterter Bahnhof mit 4 Buchten.]]
+
+[[File:ro/Ro.png|center|thumb|550px|Weitere Variationen der gleichen Idee.]]
+
+====Riesiger Ro-Ro-Endbahnhof====
+
+Natürlich ist es möglich die Anzahl der Plattformen eines Ro-Ro-Endbahnhofs zu vergrößern. Du kannst ihn so groß machen, wie du willst, sofern es der Platz zulässt.
+[[File:en/epicterminus.png|center|thumb|550px|Erweiterter Bahnhof mit 10 Buchten.]]
+
+Unten ist ein effizienteres Design mit zwei Gleisen, die eine Eingangs- und eine Ausgangsstrecke teilen. Es braucht halb so viel Platz fast ohne Kapazitätsabfall. Wenn du ohne [[Main/de/Realistische Beschleunigung|realistische Beschleunigung]] spielst, ist es wichtig, dass die Richtungen nicht vertauscht werden. Sonst würden Züge Hügel steigen müssen und dabei die Strecke unnötig lange blockieren.
+[[File:en/sharedepicterminus.png|center|thumb|550px|Leicht erweiterter Bahnhof mit 10 Buchten.]]
+
+Hier Brücken anstatt Tunnel.
+[[File:en/8 platform station.png|center|none|frame|Eine hoch-Durchsatz Ro-Ro-Endbahnhof Mischung.]]
+
+Dies ist ein riesiger Ro-Ro-Endbahnhof für sehr verkehrsreiche Strecken. Es gibt hier zwei Strecken einwärts und zwei Strecken auswärts. Es können bis zu vier Züge gleichzeitig fahren.
+[[File:en/Compact terminus.jpeg|center|none|frame|Eine sehr verkehrsreiche Ro-Ro-Endbahnhof Mischung.]]
+
+===Erweiterter kombinierter Ro-Ro-Endbahnhof===
+Wie Züge bei einem standardmäßigem Ro-Ro Bahnhof an einem Ende ein- und am anderen Ende ausfahren, so müssen auch hier einfahrende Züge nicht auf ausfahrende Züge warten. Dieser Bahnhof ist so gestaltet, dass durchfahrende Züge durch den Bahnhof durchfahren ohne dafür leere Bahnsteige zu benutzen und anhaltende Züge zu blockieren. Er kann in beide Richtungen verlassen werden und somit auch als Endbahnhof dienen, wenn Züge in Bahnhöfen die Fahrtrichtung nicht umkehren können. Er beinhaltet auch Ausweichdepots, damit er kurzfristige Lastspitzen aushalten kann, auch wenn dort kein Platz für weitere Bahnsteige ist. Dieser Bahnhof ist aus einem effizientem, schnellem, erweitertem Bahnhof und einem, der kostbaren Platzverbrauch vermeidet, gestaltet.
+
+[[File:en/Advanced ro-ro terminus.png|center|thumb|550px|Ein kombinierter Ro-Ro- und Endbahnhof, der für möglichst viel Verkehr bei wenig Platz designed ist.]]
+
+===Kreisverkehr-Bahnhof===
+Der Kreisverkehr-Bahnhof kann eine riesige Menge an kleinen Zügen handhaben.
+
+[[File:en/roundabout station.png|center|thumb|700px|Ein doppelter Kreisverkehr-Bahnhof.]]
+
+==NewGRF Bahnhöfe==
+[[File:en/Newstationsgui.png|right]][[Main/de/NewGRF|NewGRF]] bzw. Neue Bahnhöfe (im Original "newstations") sind verfügbar, nachdem du eine newstations-GRF-Datei aktiviert hast. Erst dann hast du Zugang zur neuen Oberfläche zum Bahnhofsbau.
+
+Der neue Modus hat ein Dropdown-Feld mit Bahnhofsgruppen. Jede Gruppe hat eine Anzahl von Bahnhofsfeldern zum Auswählen. Wähle ein Bahnhofsfeld und es wird im Orientationsfeld eine Vorschau gezeigt. Manche Bestandteile Neuer Bahnhöfe erlauben es den Zügen nicht einzufahren; sie dienen zur optischen Gestaltung mit Bahnhofsgebäuden, Prellböcken, etc. Beim Bau Neuer Bahnhöfe ist zu beachten, dass manche Felder nur eine begrenzte Anzahl von Gleisen oder Quadraten erlauben. Die Abmessungen, die nicht erlaubt sind, werden grau hinterlegt und können nicht ausgewählt werden. Manche Neue Bahnhöfe liefern mehr visuelle Effekte als andere. Zum Beispiel kommen bei Michael Bluncks Neuen Bahnbahnhöfen Passagiere auf den Plattformen zusammen, wenn die wartende Fracht zunimmt. 
+
+Wenn das Bahnhofset NewGRF-Wegpunkte beinhaltet, öffnet sich das Wegpunktemenü, wenn man draufklickt. Du wirst von jedem möglichen Wegpunkt ein Anzeigebeispiel bekommen. Die meisten Wegpunkte haben ein Einführungs- und ein Ersetzungsdatum, zu dem das Wegpunkt-Design durch neuere Versionen ausgewechselt wird. Allerdings verändern sich bereits gebaute Wegpunkte nicht mehr, also sorgt diese Funktion für Abwechslung in deinem Netzwerk. 
+
+Neue Bahnhöfe verhalten sich genauso wie normale Bahnhöfe; der einzige Unterschied sind die Nicht-Gleis Felder, die die Züge blockieren.
+[[File:en/NewGRFstation.png|center|none|frame|NewGRF Farm-Bahnhof]]
+
+==Siehe auch==
+*[[Main/de/Beispiele der erweiterten Signalisierung|Beispiele der erweiterten Signalisierung]]
+
+[[Category:de/Bauen]]
+[[Category:de/Eisenbahn]]
+
+{{de/Während Übersetzung}}
