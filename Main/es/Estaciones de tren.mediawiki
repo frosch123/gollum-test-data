@@ -1,0 +1,161 @@
+[[Translation:Main/en/Railway station]]{{en/-}}{{tabla de contenido/Es}}
+Las '''estaciones de tren''' es el componente principal de cualquier red ferroviaria. Permiten la carga y descarga de pasajeros y cargas en los [[Main/es/Trenes|trenes]]. Para su red, lo mejor es situar su estación fuera de la vía principal para evitar un tráfico innecesario dentro de la estación (estaciones [http://www.wikipedia.org/wiki/es:Estación de ferrocarril#Confifuración pasantes]) causando retrasos en los trenes que se vean obligados a pasar por allí.
+
+==Estaciones básicas==
+Las siguientes estaciones son fáciles de construir y funcionan bastante bien cuando sólo dan servicio a un puñado de trenes. Cuando aumenta la densidad del tráfico, es posible que quiera probar un diseño de [[Main/en/#Estaciones avanzadas|estación avanzada]].
+
+===Estación de término===
+Las '''estaciones de término''' (o [http://www.wikipedia.org/wiki/es:Estación de ferrocarril#Configuración terminales]) están al final de una línea de ferrocarril. Los trenes salen y entran por el mismo lado, por lo que podrían quedar bloqueados por trenes procedentes o con destino en la estación. A menudo se utilizan para estaciones pequeñas y sencillas, o cuando el espacio disponible no permite la construcción de una estación de un solo sentido.
+[[File:en/Terminus.png|center|none|frame|Estación de término: La de la izquierda utiliza [[Señales/Es#Señales de bloque|señales de bloque]], y la de la derecha [[Main/en/Señales/Es#Señales de ruta|señales de ruta]].]]
+
+===Estación de un solo sentido===
+(Llamadas de forma bastante desafortunada en la versión inglesa de esta web como "Estaciones [http://www.wikipedia.org/wiki/es:Ro-Ro Ro-Ro]", "[http://www.wikipedia.org/wiki/es:Desodorante Roll-On]/Roll-Off", "Rolonrolof" o "de carga rodada")
+
+Las '''estaciones de un solo sentido''' o ''estaciones en línea'' son aquellas estaciones en las que los trenes entran por un extremo y salen por el otro. Se trata pues de un tipo particular de estación [http://www.wikipedia.org/wiki/es:Estación de ferrocarril#Configuración pasante].
+
+Los trenes que entran en la estación no bloquean la salida de los que salen. Esto funciona para un tráfico de mediana intensidad, pero sin [[Main/es/señales previas|Señales previas]] se pueden crear problemas en las estaciones con tráfico denso (por ejemplo, las estaciones próximas a las fábricas) ya que cuando todos los andenes estén llenos, el tren esperará en el andén situado más cercano a la entrada bloqueando el acceso al resto de trenes. Esto puede provocar un embotellamiento si el tren de la estación tiene órdenes de carga completa y está esperando la [[Main/es/Carga|carga]] proveniente de otro tren que no puede acceder a la estación.
+[[File:en/Ro-ro1.png|center|none|frame|Estaciones de un solo sentido con dos andenes, la superior con señales de bloque, la inferior con señales de ruta. Puede quitar las dos casillas de vías situadas en las entradas de la estación inferior, aunque también tienen un efecto de espacio de frenado.]]
+
+===Estación con vías sin andén===
+La '''estación con vías sin andén''' ('''con vías sin parada''' o '''con ramal o apartadero''') es una estación básica que permite que pasen trenes sin detenerse en los andenes.
+
+En este ejemplo se incluye zonas de espera (o entradas y salidas largas) que son de igual longitud que la estación, para que los trenes salgan o entren a la vía principal y que: 1) ayuden a reducir o anulen la desaceleración causada por los trenes que pasan por la vía principal; 2) dejen espacio para que los trenes entrantes puedan esperar sin bloquear la vía principal en caso de que todos los andenes de la estación en una dirección estén ocupados.
+[[File:en/Drive thru.png|center|none|thumb|700px|Estación con vías sin anden.]]
+
+Para construirla: construir primero una parte, dejar el espacio para la vía principal (sin andenes) y construir la otra parte pulsando la tecla ''CTRL''; aparecerá La ventana ''Unir estación'' en la que deberemos seleccionar el nombre de la estación que acabamos de contruir.
+[[File:es/Drive thru2.png|center|none|frame|Al construir la segunda parte de la estación (pulsando CTRL) aparece la ventana unir estación.]]
+
+===Estación de dos sentidos===
+La estación '''de dos sentidos''' o '''combinada''' (que funciona tanto como una estación de término o como una estación de un sentido), permite que los trenes puedan entrar o salir por cualquiera de los dos extremos. Se trata de otro tipo de estación pasante.
+
+Aunque luego pueden estar situadas en vías en las que se circula en un único sentido: El tren al llegar puede acceder a cualquier andén que esté libre, pero al salir únicamente puede hacerlo a una vía de sentido único favorable a su sentido de la marcha.
+
+Para que los trenes puedan salir y entrar por el mismo lado es necesario que la configuración de dificultad "Marcha atrás trenes" esté establecida como "Al final de tren y estaciones".
+
+Mientras que esta configuración funciona muy bien usando señales de ruta, el uso de señales de bloque puede hacer que los trenes se bloqueen. Esto sucede si dos trenes que vienen de direcciones opuestas pasan la señal de entrada casi simultáneamente y quieren incorporarse al mismo andén. El primer tren podrá entrar, mientras que el segundo tren quedará bloqueado delante de una señal de salida de color rojo. Por lo tanto usted debe intentar evitar este diseño con señales de bloque o utilizarlas solamente para estaciones con poco tráfico.
+[[File:en/Two-way-roro-station.png|center|none|frame|Estación de dos sentidos, la de arriba con señales de bloque, la de abajo con señales de ruta.]]
+
+===Estación en saco===
+La '''estación en saco''' puede ser útil cuando se queda sin espacio para construir una estación con accesos desde ambos lados, pero la estación no es una estación terminal sino una estación pasante. El tren entra en la estación, da media vuelta dentro de la estación, sale y se incorpora a la misma vía por la que entró con el sentido inicial de la marcha.
+
+La estación en saco no se puede construir en una línea con un tráfico denso, ya que sólo puede haber un tren en cada dirección, y los otros trenes deben esperar a que el andén de la estación quede libre. 
+
+Se puede hacer un arreglo con una playa de vías de espera, pero tampoco funcionará demasiado bien, ya que los trenes tienen que disminuir su velocidad para entrar y salir.
+[[File:en/Polany.jpeg|center|none|frame|Estación en saco, la linea principal está arriba.]]
+
+==Estaciones avanzadas==
+Para redes más grandes, las estaciones anteriores probablemente no serán capaces de dar servicio a todos los trenes que se les asignen. Necesitará usar diseños de vías avanzados y señales.
+
+¿Qué sucede cuando un tercer tren llega a una de las estaciones anteriores y están todos los andenes ocupados? Las señales de los dos andenes están de color rojo, por lo que el tren se dirige a la más cercana y espera a que cambie el color. Si se vacía el otro andén, el tercer tren continuará esperando ¡con un andén vacío!
+
+¿Y qué pasa con las colas de trenes que se forman para entrar a una estación? Estas colas pueden llegar cada vez más lejos, ¡y pueden incluso llegar a colapsar la red entera!
+
+===Con señales previas===
+Las '''estaciones con [[Main/en/Señales/Es#Señales previas|señales previas]]''' hacen que los trenes esperen fuera de la estación hasta que haya un andén libre.
+[[File:en/Presignalstation.png|center|none|frame|Estación con señales previas]]
+
+===Con playa de vías de espera===
+Una buena solución para tener una cola de trenes esperando para entrar en una estación sin colapsar una red es una '''[http://www.wikipedia.org/wiki/es:Playa de maniobras playa de vías] de espera'''.
+
+Si la estación está llena, un tren que llegue se sitúa en la vía vacía más próxima dentro de la playa de vías. Cuando queda libre un andén en la estación, uno de los trenes que espera lo ocupará. Asegúrese de que el tren quepa entre las señales.
+
+Aunque las señales previas son opcionales, pueden ser de ayuda si su playa de vías se llena también.
+[[File:en/waitingbay.png|center|none|frame|Playa de vías de espera para 4 trenes de 6 vagones.]]
+
+===Con bucle de desbordamiento===
+En lugar de utilizar señales previas, puede crear un lazo o '''bucle de desbordamiento'''. Cuando un tren llega a la estación y se encuentra con todas las señales de dos sentidos de los andenes de color rojo excepto el bucle, tomará este. Continuará dando vueltas en el bucle hasta que un andén quede libre. Un problema de este sistema es que otros trenes que lleguen después pueden robarle el andén libre y que el primer tren continúe dando vueltas. Recuerde hacer el bucle lo suficientemente grande como para que quepa el tren de mayor longitud.
+[[File:en/Loop.png|center|none|frame|Bucle de control de desbordamiento]]
+
+===Con depósito de escape===
+Otra forma de controlar el desbordamiento de una estación es '''con un depósito de escape'''. Coloque un depósito entre la señal de un sentido en la vía de entrada y las señales de dos sentidos de acceso a la estación. Los depósitos actúan como si tuvieran una señal de dos sentidos incorporada lo que hace que, con este diseño, se comporten igual que un bucle de desbordamiento. Los depósitos de Escape, a diferencia de los bucles, tienen una capacidad ilimitada.
+
+El mejor diseño es con un depósito en ambos extremos de la entrada de la estación. (Esto reducirá el tiempo necesario para cruzar una gran estación)
+[[File:en/Escapedepot.png|center|none|frame|Depósitos de escape para control de desbordamiento.]]
+
+===Con salidas largas===
+Normalmente, cuando dos trenes salen de una estación a la vez, uno debe parar y ceder el paso al otro. Esto deja la mitad del tren dentro de la estación, haciendo que no pueda utilizarse el andén por los otros trenes que están intentando entrar en la estación. Las '''salidas largas''' permiten que el tren salga de la estación por completo antes de llegar a la señal roja y se libere el andén para que pueda entrar otro tren en la estación. Tenga en cuenta la longitud de la vía de salida de modo que, por ejemplo, un tren de 10 coches puede encajar perfectamente entre las señales.
+[[File:en/Longexit.png|center|none|frame|Control de desbordamiento con salidas largas.]]
+
+===Con salidas largas priorizadas===
+Controlar la salida de los [[Main/es/Trenes Mamut|trenes Mamut]] de una estación de un solo sentido en el momento adecuado puede llegar a ser un verdadero reto. Mediante el uso de las señales previas usted puede '''dar prioridad a unas vías sobre otras''' permitiendo a los trenes más rápidos que salgan más pronto.
+
+En la imagen de abajo la prioridad más baja (flechas azules) se asigna a las cinco salidas situadas más a la derecha en la imagen (ya que bloquean la vía de regreso durante más tiempo) y a la salida de la parte inferior (puesto que los trenes aumentan de velocidad más lentamente en una curva cerrada). Esto funciona porque en las salidas de baja prioridad (con señales previas de entrada) se tienen que esperar a que la señal de salida esté en verde (es decir, que el tren pase la señal de la vía de retorno). Mientras que en las vías de mayor prioridad (flechas verdes) podrán salir cuando un tren pase la primera señal, como de costumbre.
+[[File:en/Priorityexit.png|center|none|frame|Salidas largas con señales de prioridad]]
+
+===Con entradas largas===
+Si juega con la [[Main/es/Aceleración realista|aceleración realista]] activada, los trenes más rápidos deben frenar un poco antes de parar en una estación. Esto puede retrasar la entrada del siguiente tren. Hacer unas '''entradas largas''' añadiendo unos pocos tramos de vía antes de la estación puede ser una ayuda.
+[[File:en/Longentrance.png|center|none|frame|Entradas largas para el parche para aceleración realista.]]
+
+===Con doble entrada===
+Este es un tipo de diseño utilizado para estaciones que manejan un gran número de '''trenes procedentes de distintos lugares''', como las que se construyen cerca de fábricas o plantas procesadoras de alimentos. Los trenes pueden utilizar andenes de carga destinados a otros trenes en caso necesario. Asegúrese de usar señales previas.
+[[File:en/Doubleentrance.png|center|none|frame|Entrada doble. Los 4 andenes se dividen en 2 grupos, cada uno con una vía de entrada. La señal combo intermedia entre los dos grupos permite que los trenes que lleguen simultáneamente por las dos entradas puedan acceder a los andenes al mismo tiempo sin interferir entre sí, pero, pudiendo al mismo tiempo cruzar a los andenes del otro grupo cuando no haya ningún andén disponible en su grupo.]]
+
+[[File:en/DoubleEntrance2.png|center|none|frame|Entradas dobles rápidas, evitando curvas pronunciadas (para longitudes <=5)]]
+
+===Estaciones de transferencia de cargas===
+Si su red ferroviaria recorre grandes distancias, puede ser muy rentable ''alimentar'' su estación de carga con más cargas procedentes de otras industrias cercanas, ya que pagan más cuando mayor es la distancia que recorre la carga. En la estación de la foto hay 4 andenes pequeños para que trenes pequeños [[Main/en/Órdenes/Es#transferir|transfieran]] (descarguen) carbón de otras minas cercanas. Posteriormente los trenes grandes cargarán este carbón en la estación grande y lo llevarán a una estación lejana.
+[[File:en/Feederstation.png|center|none|frame|Estación con cuatro andenes para transferir carbón de otras minas.]]
+
+===Estación con vías sin andén, priorizadas===
+Las '''estaciones con vías sin andén''', (o con '''ramales''' o '''apartaderos''') '''priorizadas''' son estaciones que se encuentran en medio de una vía y permiten que los trenes pueden pasar sin detenerse en los andenes a través de un ramal o apartadero construido al efecto.
+
+La señalización es una diferencia crucial aquí: usted puede '''dar prioridad''' a los trenes que circulan por la vía principal (ramal de desvío) o a los trenes que se han detenido en la estación.
+
+Esta estación da prioridad a los trenes que SÍ han pasado por la estación.
+[[File:es/Station priority.png|center|none|thumb|700px|Prioridad a la estación.]]
+
+Esta estación da prioridad a los trenes que NO han pasado por la estación y se han desviado por el ramal.
+[[File:es/Mainline priority.png|center|none|thumb|700px|Prioridad a la vía principal o ramal de desvío. Los cambios están marcados con los círculos rojos.]]
+
+===Estación de término mejorada===
+La '''estación de término mejorada''' o '''avanzada''' es una mezcla entre la estación de término y la estación de un solo sentido. Consiste en una estación de término en la que los trenes que entran no pueden impedir la salida de los trenes que salen (igual que en las estaciones de un sentido). Se puede utilizar para actualizar una estación de término construida anteriormente mejorando su eficiencia. Distintas modificaciones de este diseño pueden aumentar el número de andenes para manejar un mayor número de trenes a la vez. En el ejemplo se han usado señales previas para mejorar la eficiencia.
+[[File:en/Alternative RoRoTerminus.png|center|none|frame|Estación de término mejorada: una combinación entre una estación de término y una estación de un sentido.]]
+
+Este tipo de estación permite que los trenes entren y salgan de la estación al mismo tiempo. Sin embargo, necesita un poco más de espacio que la estación de término normal para construir su "playa de vías".
+
+====Variaciones====
+[[File:en/Advanced Terminus Station.png|center|thumb|550px|Estación de término mejorada, con dos andenes.]] 
+
+[[File:en/Adv terminus 4tr.png|center|thumb|550px|Estación de término mejorada, con cuatro andenes.]]
+
+[[File:ro/Ro.png|center|thumb|550px|Más variaciones con la misma idea.]]
+
+====Estación de término mejorada gigante====
+Por supuesto puede seguir aumentando el número de andenes de una estación de término mejorada. Puede ir tan lejos como quiera, siempre y cuando tenga suficiente espacio.
+[[File:en/epicterminus.png|center|thumb|550px|Estación avanzada con 10 andenes]]
+
+A continuación se muestra un diseño un poco más eficiente que el anterior, con dos vías principales, de entrada y de salida, compartidas por todos los andenes. Se consume la mitad de espacio sin disminuir su capacidad. Es importante no cambiar las direcciones y mantener los túneles en las vías de salida, de otro forma los trenes tendrían que subir al entrar, disminuyendo la velocidad y bloqueando el cruce principal durante más tiempo.
+[[File:en/sharedepicterminus.png|center|thumb|550px|Estación avanzada de 10 andenes, ligera.]]
+Y lo mismo cambiando los túneles por puentes:
+[[File:en/8 platform station.png|center|none|thumb|700px|Estación de término avanzada de gran capacidad.]]
+
+Y una descomunal estación de término mejorada, para líneas muy concurridas. Hay 2 vías de entrada, 2 vías de salida, de modo que 4 trenes pueden entrar y salir al mismo tiempo (2 entran y 2 salen).
+[[File:en/Compact terminus.jpeg|center|none|thumb|700px|Una estación de término mejorada de alta capacidad.]]
+
+===Estación avanzada de un sentido===
+Al igual que en una estación de un solo sentido, corriente, los trenes entran por un extremo de la estación y salen por el otro. De este modo los trenes que salen no pueden bloquear la entrada.
+
+Esta estación está diseñada para que los trenes sin parada puedan pasar por la estación sin bloquear innecesariamente los andenes vacíos y sin tener que parar en la estación.
+
+Puede servir como una estación terminal sin necesidad de invertir la dirección del tren. Incluye depósitos de escape con lo que puede soportar un tráfico elevado, incluso si no hay espacio para agregar andenes adicionales.
+
+Este diseño de estación es un eficaz equilibrio entre las estaciones de término avanzadas más rápidas y el ahorro del espacio en la construcción.
+[[File:en/Advanced ro-ro terminus.png|center|thumb|700px|Una estación avanzada de un sentido, con cuatro andenes, diseñada para trafico pesado y construida sobre un pequeño espacio.]]
+
+==Estaciones NewGRF==
+[[File:es/Newstationsgui.png|right]]Las estaciones [[Main/es/NewGRF|NewGRF]] (o newstations), están disponibles después de haber activado un archivo GRF de estaciones. Seguidamente tendrá acceso a una nueva interfaz gráfica para seleccionar estaciones.
+
+La nueva interfaz gráfica de selección de estaciones tiene una lista desplegable con diferentes grupos de estaciones. Cada grupo tiene diferentes tipos de estaciones a elegir. La estación base usa el tipo «Estación por defecto» del grupo homónimo. Muchos de los grupos y los tipos aparecen con sus nombres en inglés, ya que no todos los archivos GRF están internacionalizados. Seleccione el grupo y el tipo de la estación y se mostrará una vista previa en los botones para seleccionar la orientación.
+
+Algunos tipos de estaciones no permiten más que cierto número de andenes o una longitud máxima (sobretodo en el caso de elementos decorativos, en los que no tiene sentido, o quedaría feo, que tuvieran una longitud mayor). Los números no disponibles se mostrarán de color gris. Algunos archivos GRF de estaciones ofrecen más efectos visuales que otros. Por ejemplo en la estación «Michael Blunck's newstations» los pasajeros se reúnen allí, en los andenes de espera, según va aumentado la carga.
+
+Si un archivo GRF de estaciones contiene también puntos de ruta, por ejemplo, además de las estaciones, aparecerá un interfaz de selección de puntos de ruta cuando seleccione esa herramienta. Tendrá vistas previas de cada punto de ruta que pueda construir. La mayoría de puntos de ruta tienen una fecha de aparición y una fecha de desaparición (por quedar obsoletos) en la que serán reemplazados por versiones más nuevas. Sin embargo, los puntos de ruta que ya haya construido no cambiarán automáticamente, permitiendo una mayor variabilidad gráfica en sus redes.
+
+Las estaciones NewGFR se comportan igual que las estaciones normales, la única diferencia son las casillas sin vías que pueden bloquear los trenes.
+[[File:en/NewGRFstation.png|center|none|frame|Estación NewGRF granjera.]]
+
+==Vea también==
+*[[Main/es/Ejemplos de señalización avanzada|Ejemplos de señalización avanzada]]
+
+[[Category:es/Construcción]]
+[[Category:es/Ferrocarril]]
