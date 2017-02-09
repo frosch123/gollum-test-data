@@ -1,0 +1,146 @@
+[[Translation:Main/en/Railway station]]{{en/-}}{{fr/Table des matières}}
+
+Les '''Gares ferroviaires''' sont le composant de base d'un réseau ferroviaire. Elles permettent le chargement de passagers et de biens dans les [[Main/fr/Trains|trains]], et leur déchargement. Pour votre réseau, il est mieux d'avoir votre gare en dehors de la voie principale pour éviter un trafic inutile dans la gare, et ainsi du retard pour les trains qui s'y arrêtent.
+
+==Gares basiques==
+Les gares suivantes sont faciles à construire et marcheront correctement en étant desservies par quelques trains. Quand la densité de trafic augmente, vous voudrez sûrement essayer une configuration de [[Main/en/Railway station#Advanced stations|gare avancée]].
+
+===Terminus===
+Ces gares se situent en fin de ligne. Les trains entrent et sortent du même côté, et peuvent donc bloquer ou être bloqués par des trains quittant la gare ou y entrant. Elles sont souvent utilisées pour des gares petites et simples quand l'espace disponible ne permet pas de placer une gare à roulements.
+[[File:en/Terminus.png|center|none|frame|Gare simple de terminaux, celle de gauche utilise des [[Signaux/Fr#Signaux_de_bloc|signaux de blocs]], celle de droite des [[Main/en/Signaux/Fr#Signaux de chemin|signaux de chemin]].]]
+
+===Ro-Ro===
+Dans les gares Ro-Ro (Roll-On, Roll-Off), les trains entrent par un côté et ressortent par l'autre. Les trains entrant n'ont pas besoin d'attendre la sortie des trains à quai. C'est très bien pour les trafics moyens. Sans [[Main/en/pre-signals|signaux dépendants]], ce n'est pas bon pour les gares à fort trafic (càd les gares desservant des usines), parce que quand tous les quais sont occupés, un train entrant attend au signal à double sens le plus proche de l'entrée, ce qui peut créer des embouteillages si le train à quai a un ordre de ''chargement complet'' et attend (longtemps) le chargement en provenance d'un autre train.
+[[File:en/Ro-ro1.png|center|none|frame|Gares Ro-Ro avec deux quais, celle du haut utilise des signaux de bloc, celle du bas des signaux de chemin. Vous pourriez ne pas mettre les deux tronçons de voie longs d'une case, en face de la gare du bas, mais ils font aussi office d'aire de freinage.]]
+
+===Gare avec voie d'évitement===
+Une simple gare avec une, ou plusieurs, [http://www.wikipedia.org/wiki/Fr:Évitement_(chemin_de_fer) voie d'évitement] pour éviter que les trains ne s'arrêtant pas en gare bloquent inutilement un quai, ou soient bloqués par les trains à quai.
+
+[[File:en/Drive thru.png|center|none|frame|Ici les voies d'évitement sont au centre, dans le prolongement de la voie principale. Remarquez qu'ici la gare comprend également des aires d'attente pour les trains sur le point d'entrer en gare ou de rejoindre la voie principale. Ces aires sont de longueur équivalente à celle de la gare, afin d'aider à réduire voire à supprimer les ralentissements, en permettant de dégager la voie principale en entrée de gare, si tous les quais disponibles sont occupés, et en permettant aux trains d'accélérer en sortie de gare avant de rejoindre la voie principale.]]
+
+===Gares combinées roro-terminus===
+Il est aussi possible de construire des gares qui servent à la fois de terminus et de gare ro-ro. Cependant, la fenêtre « Niveau de difficulté », l'option « Demi-tour des trains » doit être paramétrée à « À la fin de la ligne et aux gares » pour pouvoir fonctionner. Les trains peuvent entrer dans la gare et la quitter dans les deux sens.
+
+Si l’utilisation des [[Main/en/Signaux/Fr#Signaux de chemin|signaux de chemin]] fonctionne parfaitement, l'utilisation de [[Main/en/Signaux/Fr#Signaux de bloc|signaux de bloc]] sera cause de blocage. Quand deux trains entrant dans le sens opposé traverseront les [[Main/en/Signaux/Fr#Pré-signaux d'entrée|pré-signaux d'entrée]] quasi simultanément, et voudront entrer sur le même quai, le premier train pourra entrer alors que le deuxième sera coincé en face du [[Main/en/Signaux/Fr#Signaux de sortie|signal de sortie]] rouge. Vous devriez donc éviter d'utiliser un système de signaux de blocs à moins qu'il ne s'agisse d'une gare à très faible trafic.
+[[File:en/Two-way-roro-station.png|center|none|frame|Gare combinée roro-terminus, celle du haut utilisant des signaux de bloc, et celle du bas des signaux de chemin.]]
+
+===Gare de sac===
+S'il n'y a pas assez de place pour placer des rails de chaque côté, mais que cette gare n'est pas en bout de ligne, la gare de sac peut être utile. Les trains entreront en gare, feront demi-tour, quitteront la gare et continueront dans la même direction.
+
+La gare de sac ne peut être utilisée sur une ligne à haut trafic, car il ne peut y avoir qu'un train dans chaque direction, et les autres trains devront attendre devant la gare. L'ajout d'une voie d'attente améliorera son efficacité, mais ça restera malgré tout limité. Les trains doivent ralentir avant d'entrer en gare.
+[[File:en/Polany.jpeg|center|none|frame|Gare de sac, la voie principale est au dessus.]]
+
+==Gares complexes==
+Pour de plus grands réseaux ferroviaires, les gares ci-dessus pourraient avoir du mal à en supporter le trafic. Vous aurez besoin de configuration plus complexes de gares et signaux.
+Qu'advient-il quand un troisième train arrive dans l'une des gares qui précède ? Il voit que tous les signaux de bloc sont rouges et donc s'engage dans la voie la plus proche et attends le feu vert. Si l'autre quai se libère alors que le train reste en attente, ce quai restera inutilisé.
+
+Que dire alors des files d'attente qui se créent à l'entrée des gares. Elles peuvent même s'allonger jusqu'à bloquer votre réseau entier !
+
+===Signaux dépendants===
+Les gares avec des [[Main/en/Signaux/Fr#Pré-signaux d'entrée|pré-signaux]] font attendre les trains en dehors de la gare le temps qu'un quai se libère.
+[[File:en/Presignalstation.png|center|none|frame|Gare avec pré-signal]]
+
+===Baie d'attente===
+Un bon moyen d'absorber une file d'attente de trains voulant entrer en gare est de créer un faisceau de [http://www.wikipedia.org/wiki/Fr:Évitement_(chemin_de_fer) voies d'évitements], qui formeront une baie d'attente. Si tous les quais d'une gare sont occupés, un train en arrivée s'engage vers la voie la plus proche de la baie d'attente. Dès qu'un quai se libère, un des trains en attente va s'y diriger. Vérifiez bien la longueur de la voie d'évitement afin que le train puisse tenir entre les deux signaux. Les pré-signaux sont optionnels ; ils sont utiles si votre baie d'attente est, elle aussi, complète !
+[[File:en/waitingbay.png|center|none|frame|Baie d'attente pour un train de 4 à 6 [[Wikipedia:Fr:Wagon|wagons]] ou [http://www.wikipedia.org/wiki/Fr:Voiture_de_chemin_de_fer trains voitures]]]
+
+===Voie d'évitement en boucle===
+Au lieu d'utiliser des pré-signaux, vous pouvez construire une voie d'évitement en boucle. Quand un train entre en gare et voit que tous les signaux de bloc sont rouges (les quais sont tous occupés) sauf celui de la voie en boucle, il va s'engager dans celle-ci. Il va tourner et tourner jusqu'à ce qu'un quai se libère. Un problème avec ce système est que si un autre train arrive, il peut griller la place du premier train pendant que celui-ci est encore en milieu de boucle. Pensez à faire une boucle assez grande pour contenir au moins votre train le plus long.
+[[File:en/Loop.png|center|none|frame|Boucle pour absorber le sur-trafic]]
+
+===« Dépôts d'évitement »===
+Une autre façon de contrôler le sur-trafic est de construire des « dépôts d'évitement ». Placez un dépôt dans le système de signaux à double sens ou sens unique à l'entrée. Les signaux ont automatiquement un signal de bloc à leur entrée, donc ils se comportent exactement comme une voie d'évitement en boucle. Les « dépôts d'évitement », contrairement aux boucles, ont une capacité illimitée.
+
+La meilleure configuration est d'avoir un dépôt de part et d'autre de l'entrée de gare. Cela réduira le temps requis pour traverser une gare avec de nombreux quai.
+
+Cependant, comme les trains entrent et sortent des dépôts à très faible vitesse, cette solution peut réduire la fluidité de la circulation
+[[File:en/Escapedepot.png|center|none|frame|« Dépôts d'évitement » pour absorber le sur-traffic]]
+
+===Sorties longues===
+Normalement, quand deux trains quittent une gare en même temps, un train doit attendre et laisser la voie libre à l'autre. Il quitte la gare, mais reste encore en partie dedans, rendant le quai inutilisable pour d'autres trains. Les sorties longues permettent au train de sortir complètement de la gare avant d'être arrêté au feu rouge, libérant ainsi le quai. Remarquez la longueur des sorties, un train de dix véhicules peut sans problème tenir entre les signaux.
+[[File:en/Longexit.png|center|none|frame|Gestion de sur-trafic avec des sorties longues]]
+
+===Sorties longues, prioritisées===
+Faire sortir des [[Main/en/mammoth trains|trains mammouth]] d'une station ro-ro en un temps opportun peut être un vrai défi. En utilisant des pré-signaux, vous pouvez prioritiser les voies de sorties pour permettre aux trains des voies les plus rapides de partir plus tôt. Dans l'image ci-dessous, une priorité plus basse est attribuée aux 5 sorties du haut (car elle bloqueront la voie de retour plus longtemps) et à la sortie tout en bas (car les trains accélèrent plus lentement dans des virages serrés). Ça fonctionne parce que les sorties à faible priorité attendront que le signal de sortie soit vert (càd quand un train passe le second signal sur la voie de retour). Les autres trains partiront normalement, càd quand un train aura dépassé le premier signal de bloc.
+[[File:en/Priorityexit.png|center|none|frame|Sortie longues avec signaux prioritisants]]
+
+===Entrées longues===
+Si vous jouez avec les [[Main/en/realistic acceleration|accélérations réalistes (en)]], les trains les plus rapides ralentiront un peu avant de s'arrêter dans une gare. Cela peut retarder l'entrée du train suivant. Ajouter une longueur de voie devant la gare peut alors être utile.
+[[File:en/Longentrance.png|center|none|frame|Entrée longue pour le patch d'accélération réaliste]]
+
+===Double entrée===
+C'est un type de conception utilisé pour les gares qui reçoivent un grand nombre de trains, tels que les gares qui desservent des usines ou des manufactures. Les trains sur un circuit peuvent utiliser des quais normalement utilisés par les trains d'un autre circuit, si besoin. Les signaux dépendants sont nécessaires.
+[[File:en/Doubleentrance.png|center|none|frame|Double entrée]]
+[[File:en/DoubleEntrance2.png|center|none|frame|Double entrée plus rapide, évitant les virages serrés (pour des trains <=5)]]
+
+===Baies d'« alimentation »===
+Si votre réseau a de longs trains traversant de grandes distances, il pourrait alors être plus économe d'« alimenter » les gares avec des chargements d'autres industries voisines  Dans l'illustration ci-dessous, il y a quatre quais pour de petits trains, afin d'y transférer du charbon de mines voisines. De longs trains délivrent alors le charbon à une centrale éloignée.
+[[File:en/Feederstation.png|center|none|frame|Gare avec quatre quais d'« alimentation »]]
+
+===Gares avec voies d'évitement prioritisées===
+
+Ces gares sont au milieu d'une ligne, et les trains peuvent y passer sans traverser de quais. La signalisation apporte ici une différence cruciale : vous pouvez donner la priorité à la voie principale, ou aux trains qui quittent les quais.
+
+Cette signalisation donne priorité aux trains quittant les quais.<br />
+''Légende''
+* <font style="color: #7EC54E">➊</font> Vert absinthe : signal d'entrée à sens unique
+* <font style="color: #D507E7">➋</font> Byzanthin : signal combiné à double sens
+* <font style="color: #DA0154">➌</font> Cramoisi : signal de sortie à doube sens
+* <font style="color: #F8FC00">➍</font> Jaune : signal de chemin à sens unique
+* <font style="color: #00E8F8">➎</font> Cyan : Signal de chemin Standard
+[[File:fr/Station priority.png|center|none|thumb|700px|Priorité aux sorties de quai]]
+
+Cette signalisation donne priorité aux trains évitant les quais.<br />
+''Légende''
+* <font style="color: #7EC54E">➊</font> Vert absinthe : signal d'entrée à sens unique
+* <font style="color: #D507E7">➋</font> Byzanthin : signal combiné à double sens
+* <font style="color: #DA0154">➌</font> Cramoisi : signal de sortie à doube sens
+* <font style="color: #F8FC00">➍</font> Jaune : signal de chemin à sens unique
+* <font style="color: #00E8F8">➎</font> Cyan : Signal de chemin Standard
+[[File:fr/Mainline priority.png|center|none|thumb|700px|Priorité à la voie principale. Les changements sont marqués avec les cercles rouges.]]
+
+===Terminus ro-ro===
+====Principe====
+Ce type de gare est un mixte entre le ro-ro et le terminus. Essentiellement, le principe est de partir d'une station en terminus, et de faire partir un train de la plateforme sans perturber le trafic des trains entrant en gare. Il peut être utilisé pour améliorer un terminus et augmenter son efficacité. Les modifications basées sur ce concept peuvent amener à augmenter le nombre de quais afin de pouvoir recevoir un plus grand nombre de trains à la fois. L'exemple suivant comporte des signaux dépendants pour une meilleure efficacité.
+[[File:en/Alternative RoRoTerminus.png|center|none|frame|Un mixte entre le terminus et la gare ro-ro]]
+
+====Variations====
+[[File:en/Advanced Terminus Station.png|center|thumb|550px|gares terminus ro-ro, celle du haut utilise des signaux de bloc standards, et celle du bas des signaux de chemin]]
+
+[[File:en/Adv terminus 4tr.png|center|thumb|550px|Terminus à 4 quais]]
+
+[[File:ro/Ro.png|center|thumb|550px|Diverses variations sur ce principe.]]
+
+====Terminus ro-ro géants====
+
+Les gares peuvent aussi être modifiées facilement pour ajuster le nombre de quais. Vous pouvez donc faire des gares gigantesques sur ce principe.
+[[File:en/epicterminus.png|center|thumb|550px|Terminus ro-ro à 10 quais]]
+
+Ci-dessous, un concept un peu plus efficace, avec une voie pour les entrées et une pour les sorties. Elle prend moitié moins de place, sans pratiquement perdre en capacité. Il est important que le sens d'entrée et de sortie ne soit pas inversé, ou les trains devront grimper en même temps qu'ils sortent, ce qui bloquera le croisement pendant un temps inutilement long.
+[[File:en/sharedepicterminus.png|center|thumb|550px|Terminus ro-ro à 10 quais, allégé]]
+
+Ici des ponts au lieu de tunnels. 
+[[File:en/8 platform station.png|center|none|frame|Un terminus ro-ro à haute capacité]]
+
+Le même principe pour des lignes très denses. Les voies de sorties et d'entrée sont doublées, permettant à 4 trains d'entrer et de sortir en même temps (2 en entrée et 2 en sortie).
+[[File:en/Compact terminus.jpeg|center|none|frame|Un terminus Ro-Ro de très haute capacité]]
+
+===Combinaisons de gares ===
+En combinant les modèles précédents, il est possible d'en créer de nouveaux. À titre d'exemple : un gare en ro-ro classique (les trains entrent par un côté et sortent par l'autre, contrairement au terminus ro-ro ou les trains entrent et sortent du même côté), en milieu de voie, pouvant également faire terminus. Une voie d'évitement permet aux trains sans arrêt de continuer leur chemin sans traverser les quais. La gare peut faire office de terminus (grâce aux doubles voies) sans avoir a inverser le sens du train (grâce aux voies de retour). Les dépôts d'évitement permettent à la gare de supporter un trafic très dense même s'il n'y a plus de place pour ajouter des quais supplémentaires. Cette gare est un compromis efficace entre la capacité de support de traffic des gros terminus ro-ro et l'économie de précieuses surfaces de construction.
+
+[[File:en/Advanced ro-ro terminus.png|center|thumb|550px|Une gare à voies combinées (terminus, voies et dépots d'évitement, ro-ro) pour un trafic dense dans un petit espace constructible.]]
+
+==Habillages ''NewGRF'' de gare==
+[[File:fr/Newstationsgui.png|right|]]Les habillages de gares [[Main/en/NewGRF]] (appelées stations dans le jeu) sont disponibles après avoir activé un fichier ''Newstations'' (au format grf). Vous aurez alors accès à une nouvelle interface ''Choix de la gare''.
+
+La nouvelle interface de sélection a un menu déroulant présentant les différents types de groupes d'habillage, chaque groupe offrant un choix d'habillages variés. Notez que la gare de base utilise l'habillage ''Station par défaut'' du groupe éponyme. Les habillages NewGRF sont généralement décrits en anglais, car tous les fichiers grf ne sont pas internationalisés. Sélectionnez un habillage et son aspect sera affiché dans l'espace de choix d'orientation. Prêtez attention au fait que certains habillages ne permettent pas plus qu'un certain nombre de voies ou qu'une certaine longueur de quai. Ce qui ne sera pas autorisé sera grisé et ne pourra être sélectionné. C'est notamment le cas pour des éléments décoratifs qui peuvent être inclus dans une gare (une arche, une horloge etc.) ou bloquant les trains, à utiliser en bout de gare terminus (butoirs etc). Dans l'illustration de droite, ''Shelters, (Building,Island)'' n'autorise pas de longueur supérieur à 1 car c'est un élément décoratif s'insérant dans une gare plus longue. Certaines séries d'habillages offrent plus d'effets graphiques que d'autres. Par exemple, dans les habillages de Michael Buncks, les passagers vont s'accumuler sur les quais si leur nombre est en augmentation.
+
+Si une série comporte également des habillages de points de contrôle, une interface de sélection d'habillage des points de contrôle fera son apparition. Vous aurez des aperçus complets de chaque point de contrôle que vous pourrez construire. La plupart ont des dates d'apparition et d'obsolescence, les habillages possibles seront alors remplacés à échéance par de nouveaux habillages. Cependant, les points de contrôles déjà créés ne seront pas automatiquement remplacés, ce qui donnera de la variété à votre chemin de fer. 
+
+[[File:en/NewGRFstation.png|center|none|frame|Habillages NewGRF de gare de ferme]]
+
+==Voir aussi==
+*[[Main/en/Advanced signalling examples|exemples avancés de signalisation (en)]]
+
+[[Category:fr/Construction]]
+[[Category:fr/Chemins de fer]]
