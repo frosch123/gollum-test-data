@@ -1,0 +1,78 @@
+[[Translation:Main/en/Heightmap]]
+Une '''carte des altitudes''' est une image informatique qui peut être utilisée pour générer des cartes en fonction de la luminosité des pixels (Voyez [http://www.wikipedia.org/wiki/Heightmap wikipedia]).
+
+==Utiliser des cartes d'altitude==
+Une carte d'altitude peut être considérée comme une image en niveaux de gris où le blanc le plus lumineux (le plus proche de '''#FFFFFF''') est considérée comme le point le plus élevé de la carte, et le noir le plus profond (le plus proche de '''#000000''') est considéré comme le point le plus bas. Voyez [[Main/en/#Table des niveaux de gris|la table des niveaux de gris]] ci-dessous pour une information plus détaillée.
+
+Dans une conversion image vers carte 1:1, un pixel du fichier image représente un coin de 4 cases. Donc, si vous voulez abaisser/élever une case complète, vous devez rendre plus clairs ou sombres les pixels 2x2 l'entourant.
+
+Comme les bords de la carte doivent être au niveau de la mer, au moins une case, la bordure de la carte des altitudes peut être vue comme large de 2 pixels.
+
+===Formats de fichier supportés===
+* [http://www.wikipedia.org/wiki/Bitmap_Image BMP]
+* [http://www.wikipedia.org/wiki/Fr:PNG PNG]
+
+===Exemple===
+<gallery>
+Image:heightmap_img.png|Si vous voulez créer une carte d'altitudes depuis ce fichier...
+Image:heightmap_map.png|... voilà ce que vous obtiendrez
+</gallery>
+
+==Table des niveaux de gris==
+{|
+! hex
+! altitude
+|-
+| 00 - 0F
+| 0m (sea)
+|-
+| 10 - 1F
+| 30m
+|-
+| 20 - 2F
+| 70m
+|-
+| 30 - 3F
+| 100m
+|-
+| 40 - 4F
+| 130m
+|-
+| 50 - 5F
+| 170m
+|-
+| 60 - 6F
+| 200m
+|-
+| 70 - 7F
+| 230m
+|-
+| 80 - 8F
+| 270m
+|-
+| 90 - 9F
+| 300m
+|-
+| A0 - AF
+| 330m
+|-
+| B0 - BF
+| 370m
+|-
+| C0 - CF
+| 400m
+|-
+| D0 - DF
+| 430m
+|-
+| E0 - EF
+| 470m
+|-
+| F0 - FF
+| 500m
+|}
+
+==Liens externes==
+*[http://www.tt-forums.net/viewtopic.php?t=27052 Mode d'emploi: Générer de superbes cartes d'altitude :)]
+*[http://www.tt-forums.net/download/file.php?id=92633 Version mise à jour (Juin 2008) du mode d'emploi par sootynz (Document Word)]
+*[http://www.tt-forums.net/viewtopic.php?t=29323 Cartes d'altitude (disponibles et sur demande) sur le forum]
