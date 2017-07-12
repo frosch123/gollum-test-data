@@ -1,0 +1,200 @@
+{{en/Sandbox}}
+<!-- Please make your edits after this line -->
+
+[[Translation:Main/en/Sandbox]]{{en/-}}
+
+<includeonly>
+testing
+{{{1{{{1|}}}|supplied - {{{1}}} }}}<br>
+{{{1|not supplied}}}
+</includeonly>
+Tere tulemast liivakasti...
+Welcome to sandbox...
+Bienvenidos al cajón de arena para juegos infantiles...    {{emoticon|:D}} lol
+[[File:en/Sandbox.png|righ-t]]
+===== Admins Only =====
+This page was vandalized badly. If someone has information reguarding this page, please help to restore this page to its former glory, please.
+
+
+
+== New attempt ==
+
+===Any difference?===
+With three equal signs. Yes! No title underline.
+
+====Title====
+With four equal signs
+
+=====Title=====
+Test sandbox V1
+======Title======
+With six equal signs
+
+=======Title=======
+With seven equal signs
+
+========Title========
+With eight equal signs
+
+=========Title=========
+With nine equal signs
+
+==Two equal signs==
+
+=One=
+
+==Bjarnice testing graphviz==
+Moved from the page of the same name
+<graphviz>
+digraph "testing" {
+	graph [truecolor bgcolor="#ffffffff"]
+	node [style=filled fillcolor="#00ff005f" shape = "record" fontname "Times-Roman"]
+
+rankdir = "RL"
+"TTD grf" [
+label = " trg1r.grf | trgcr.grf | trghr.grf | trgir.grf | trgtr.grf | sample.cat"
+shape = "record"
+fillcolor="5.6,0.6,1.0
+];
+"custom grf" [fillcolor="red",label="custom grf"]
+"gm files" [fillcolor="yellow",label="gm_ttxx.gm"]
+"lng files" [fillcolor="purple",label=".lng files"]
+"scenario files" [fillcolor="gray",label="scenarios (.scn)"]
+"rootdir" [fillcolor="0.5,0.8,1.0",label="Directory of OpenTTD"]
+"Data" [fillcolor="0.5,0.8,1.0",label="data"]
+"lang" [fillcolor="0.5,0.8,1.0",label="lang"]
+"GM" [fillcolor="0.5,0.8,1.0",label="gm"]
+"Scenario" [fillcolor="0.5,0.8,1.0",label="scenario"]
+"gm files" -> "GM"
+"lng files" -> "lang"
+"scenario files" -> "Scenario"
+{"Data" "GM" "Scenario" "lang"} -> "rootdir"
+{"custom grf" "TTD grf"} -> "Data"
+
+}
+</graphviz>
+
+==[[Archive/en/LordAzamath|LordAzamath]]'s vision of wagon template..==
+==Statistics==
+{|
+|style="background:#ffdead;"| {{{Picture}}}
+|style="background:#32ffff;"| '''''Rail'''''
+|style="background:#32ffff;"| '''''Monorail'''''
+|style="background:#32ffff;"| '''''Maglev'''''
+|-
+|style="background:#ffdead;"| '''Cost:'''
+| {{{NormalCost}}}
+| {{{MonoCost}}}
+| {{{MagCost}}}
+|-
+|style="background:#ffdead;"| '''Weight:'''
+| {{{NormalWeight}}}
+| {{{MonoWeight}}}
+| {{{MagWeight}}}
+|-
+|style="background:#ffdead;"| '''Capacity:'''
+| {{{NormalCapacity}}}
+| {{{MonoCapacity}}}
+| {{{MagCapacity}}}
+|}
+==Description==
+{{{Description}}}
+<nowiki>[[Category:en/Carriages]]
+</nowiki>
+
+===An example===
+
+''Just exampling''
+
+==Statistics==
+{|
+|style="background:#ffdead;"| [[File:en/Passengercarriagex.png]] [[File:en/Passengercarriage.png]] [[File:en/Passengercarriagetoyland.png]]
+|style="background:#32ffff;"| '''''Rail'''''
+|style="background:#32ffff;"| '''''Monorail'''''
+|style="background:#32ffff;"| '''''Maglev'''''
+|-
+|style="background:#ffdead;"| '''Cost:'''
+| £1000 ($2000)
+| £1000 ($2000)
+| £1000 ($2000)
+|-
+|style="background:#ffdead;"| '''Weight:'''
+| 10t (11t)
+| 10t (11t)
+| 10t (11t)
+|-
+|style="background:#ffdead;"| '''Capacity:'''
+| 20t
+| 20t
+| 20t
+|}
+==Description==
+This wagon is just awesome..
+
+<nowiki>[[Category:en/Carriages]]
+</nowiki>
+
+
+The category is put into nowiki tags to not get Village Pump to Carriage category {{emoticon|:)}}
+
+Any comments? This also completes the todo for carriages template. Only picture tags have to be included in all wagons, all else is just reformatting. Similar thing should be made to trains too I think.. (to show their picture too.)
+
+==Test==
+===First test===
+В ''хащах'' японського '''очерету''' чвалає самурай '''''Сімамура'''''.
+
+===Second test===
+*[[Main/en/Sandbox|Пункт 1]]
+**[[Main/en/Sandbox|Подпункт 1.1]]
+**[[Main/en/Sandbox|Подпункт 1.2]]
+*[[Main/en/Sandbox|Пункт 2]]
+**[[Main/en/Sandbox|Подпункт 2.1]]
+**[[Main/en/Sandbox|Подпункт 2.2]]
+
+Go, trees go. The trees are growing. I will cover the ebniter map in trees if I have to. Stupisd town...
+
+==шаблон вандал==
+{{Вандал/Ru}}
+
+==test of Trollebas==
+{{ru/Navbox NewGRF}}
+
+===Unrelated Test===
+If you run Arch Linux, you can get the music working by installing Timidity and Freepats:
+<pre>
+# pacman -S timidity++ timidity-freepats
+# cp /etc/timidity++/timidity-freepats.cfg /etc/timidity++/timidity.cfg
+</pre>
+See also: https://wiki.archlinux.org/index.php/OpenTTD
+
+
+==Navbox==
+
+
+{{en/Navbox|navbar = off
+|state = off      
+
+|name  = Name 
+|title = [[Main/ru/Промышленность]] 
+
+|group1 = [[Main/en/Климат/Ru#Умеренный]]
+|list1  = {{nowrap begin}} [[Main/ru/Банк]] {{en/·w}} [[Main/ru/Завод]] {{en/·w}} [[Main/ru/Лес]] {{en/·w}} [[Main/ru/Лесопилка]] {{en/·w}} [[Main/ru/Нефтезавод]] {{en/·w}} [[Main/ru/Нефтяная платформа]] {{en/·w}} [[Main/ru/Нефтяная скважина]] {{en/·w}} [[Main/ru/Сталелитейный завод]] {{en/·w}} [[Main/ru/Угольная шахта]] {{en/·w}} [[Main/ru/Ферма]] {{en/·w}} [[Main/ru/Шахта железной руды]] {{en/·w}} [[Main/ru/Электростанция]] {{nowrap end}}
+
+|group2 = Отрасли субарктического климата/Ru
+|list2  = {{nowrap begin}} Item 1 {{en/·w}} Item 2 {{en/·w}} Item 3 {{nowrap end}}
+
+|group3 = Отрасли субтропического климата/Ru
+|list3  = {{nowrap begin}} Item 1 {{en/·w}} Item 2 {{en/·w}} Item 3 {{nowrap end}}
+
+|group4 = Отрасли игрушечного климата/Ru
+|list4  = {{nowrap begin}} Item 1 {{en/·w}} Item 2 {{en/·w}} Item 3 {{nowrap end}}
+}}
+
+
+{{en/Navbox Industries}}
+
+[[Category:ru/Первичные отрасли]]
+[[Category:ru/Вторичные отрасли]]
+[[Category:ru/Отрасли умеренного климата]]
+[[Category:ru/Отрасли субтропического климата]]
+[[Category:ru/Отрасли субарктического климата]]
