@@ -1,0 +1,60 @@
+<!--
+--><noinclude>[[Translation:Template/en/Industries]]
+
+O '''Template:Industrias/Pt''' deve ser utilizando para apresentar informações sobre uma [[Main/en/Indústrias|indústria]], como em qual clima ela está disponível, que tipo de carga aceita, que tipo de carga produz, e se houver, notas sobre a mesma.
+
+== Elementos ==
+
+* '''nome:''' o nome (em português) da indústria;
+* '''imagem:''' uma imagem (se houver) do sprite da indústria. Deve se utilizar o sprite padrão do jogo;
+* '''climas:''' em qual clima ela está disponível;
+* '''aceita:''' que tipo de carga aceita;
+* '''produz:''' que tipo de carga produz;
+* '''notas:''' notas (se houver).
+
+{{en/-}}</noinclude><!--
+--><div style="float:right; width:260px; font-size:90%; border:1px solid gray; background-color:#f2f2f2; margin-left:10px; margin-bottom:10px">
+<div style="text-align:center; border-bottom:1px solid gray; padding:5px"><strong>{{{nome}}}</strong></div>
+<div style="background-color:white; padding:5px">[[File:en/.{{{imagem|Industries.png}}}|center]]</div>
+<div style="border-top:1px solid gray; padding:5px"><strong>Climas:</strong> {{{climas}}}</div>
+<div style="border-top:1px solid gray; padding:5px"><strong>Aceita:</strong> {{{aceita}}}</div>
+<div style="border-top:1px solid gray; padding:5px"><strong>Produz:</strong> {{{produz}}}</div>
+<div style="border-top:1px solid gray; padding:5px"><strong>Notas:</strong> {{{notas|Nenhuma}}}</div>
+</div><noinclude>
+
+{{en/-}}
+==Uso==
+Escrever:
+<pre>{{pt/Industrias| nome=
+| imagem=
+| climas=
+| aceita=
+| produz=
+| notas=
+}}</pre>
+
+== Exemplo ==
+
+Escrever:
+
+<pre>{{pt/Industrias| nome=Mina de carvão
+| imagem=Coalmine.png
+| climas=[[Main/pt/Temperado|Temperado]] e [[Main/pt/Subártico|Subártico]]
+| aceita= Nada
+| produz=[[Main/pt/Carvão|Carvão]]
+| notas=Nenhuma
+}}</pre>
+
+Da como resultado:
+
+{{pt/Industrias| nome= Mina de carvão
+| imagem= Coalmine.png
+| climas= [[Main/pt/Temperado|Temperado]] e [[Main/pt/Subártico|Subártico]]
+| aceita= Nada
+| produz= [[Main/pt/Carvão|Carvão]]
+| notas= Nenhuma
+}}
+
+</noinclude><includeonly>
+
+[[Category:pt/Industrias]]</includeonly>
