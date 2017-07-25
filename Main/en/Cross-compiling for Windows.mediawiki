@@ -1,0 +1,521 @@
+You can create Windows builds of OpenTTD on a non-windows platform by using a cross compiler suit. This tutorial will show how to use GCC that compiles for Windows but runs on *nix-es. These builds of OpenTTD can be shared to other Windows users, no need to install any extra stuff. If you are not familiar with compiling on *nix-es natively then first try [[Main/en/Compiling on (GNU/)Linux and *BSD]]. There are also some similarities to [[Main/en/Compiling on Windows using MinGW]].
+
+{{note|Should work on any POSIX-like system including '''Linux''', '''Mac OS X''', '''Cygwin''' and many others although only Linux has been tested here.}}
+
+== MXE (M cross environment) ==
+
+[http://mxe.cc MXE project homepage]
+
+Preferred way of cross-compiling OpenTTD for Windows is to use MXE. It's not flexible e.g. you will be limited to certain versions of libraries, but it saves a lot of trouble.
+
+MXE is a set of scripts. It'll download source code of the cross compiler and build it for your platform. Then it'll download source code of libraries you chose and compile it for you using the cross compiler that was built by it's own. Everything is automated (except of building OpenTTD itself).
+
+=== Building MXE ===
+
+First of all you might need to install some packages in your system. See [http://mxe.cc/#requirements "Requirements" section on MXE website]. On 64-bit Ubuntu 14.10 you need:
+
+:: <tt>autoconf automake autopoint bash bison bzip2 flex gettext git g++ gperf intltool libffi-dev libgdk-pixbuf2.0-dev libtool libltdl-dev libssl-dev libxml-parser-perl make openssl p7zip-full patch perl pkg-config python ruby scons sed unzip wget xz-utils g++-multilib libc6-dev-i386 libtool-bin</tt>
+
+
+Download MXE from git repository. We will keep MXE under <tt>/usr/local/mxe</tt>. Compile the compiler and libraries. See also [http://mxe.cc/#tutorial MXE tutorial].
+
+ cd /usr/local
+ sudo git clone http://github.com/mxe/mxe.git
+ cd mxe
+ sudo make -j`nproc` gcc zlib libpng lzo freetype xz icu4c
+
+Default is to create a suit that compiles for 32-bit Windows. You can also create 64-bit Windows suite by adjusting MXE_TARGETS option e.g. to create both the '''32-bits (i686-w64-mingw32.static)''' and the '''64-bits (x86_64-w64-mingw32.static)''' use:
+
+ sudo make -j`nproc` MXE_TARGETS='i686-w64-mingw32.static x86_64-w64-mingw32.static' gcc zlib libpng lzo freetype xz icu4c
+
+Theoretically MXE should compile all libraries without problems. However, if you experience any, you may try tweaking some issues. See [[Main/en/#Troubleshooting]] section.
+
+=== Installing MXE ===
+
+Add <code>/usr/local/mxe/usr/bin</code> to $PATH variable. See [[Main/en/#Installing cross compiler manually]] for instructions.
+
+=== Compiling OpenTTD ===
+
+Compile OpenTTD using the cross compiler built by MXE.
+
+{{warning|See [[Main/en/#Troubleshooting OpenTTD]] before continuing. You will probably be hit by the [[Main/en/#OpenTTD with ICU 57 and earlier]] issue.}}
+
+ cd ~
+ wget http://binaries.openttd.org/releases/1.7.0/openttd-1.7.0-source.tar.gz -O- | tar xfz -
+ cd openttd*
+ ./configure \
+    --host=i686-w64-mingw32.static \
+    --pkg-config=i686-w64-mingw32.static-pkg-config \
+    --enable-static \
+    --with-lzo2=/usr/local/mxe/usr/i686-w64-mingw32.static/lib/liblzo2.a
+ make
+
+To build 64-bit OpenTTD just change <code>i686</code> to <code>x86_64</code> (don't forget to set MXE_TARGETS when [[Main/en/#Building MXE|building MXE]]).
+
+Now you should be ready to test with WINE:
+
+{{warning|Make sure you have the graphics or it may crash! See also [[Main/en/#OpenTTD crashes on startup on WINE]].}}
+
+ cd bin
+ wine openttd.exe
+
+== Compiling manually with MinGW ==
+
+[http://mingw-w64.org MinGW-w64 project homepage]
+
+In this tutorial we will use MinGW-w64. It's is a fork of [http://mingw.org MinGW]. It has "active support toward 64-bit Windows API". It's also suited to be used as a cross-compiler on *nix-es. We will use it almost like a regular GCC. Alternatively you can try using original MinGW. However, MinGW stopped supporting cross-compilation. See http://www.mingw.org/wiki/linuxcrossmingw for more info.
+
+
+In this tutorial we will be using <code>i686-w64-mingw32</code> cross compiler. If you want to use other, just change that string everywhere. Some of the possible values:
+
+* <code>i686-w64-mingw32</code> - MinGW-w64 32-bit Windows compiler
+* <code>x86_64-w64-mingw32</code> - MinGW-w64 64-bit Windows compiler
+* <code>i686-w64-mingw32.static</code> - MXE 32-bit Windows compiler
+* <code>x86_64-w64-mingw32.static</code> - MXE 64-bit Windows compiler
+* <code>i586-mingw32msvc</code> - older MinGW 32-bit Windows compiler
+
+
+In this tutorial we will manually compile all libraries used by OpenTTD. Tutorial works best with these exact versions of libraries which are present in the <code>wget</code> download links (though the [[Main/en/#Troubleshooting]] section contains info about various library versions, especially various ICU versions). Some of the download links will eventually get obsolete. Visit homepage of a given library for latest download links. We will be installing our libraries under
+
+ /usr/local/i686-w64-mingw32
+
+Change that path if you wish other location.
+
+
+If you are experiencing problems with a library you can always try building OpenTTD without one. Use <code>--without-FEATURE</code> configuration option to force disabling a certain library, though you will be left out from some functionality. Each library [[Main/it/Compiling on (GNU/)Linux and *BSD#1. Required/recommended software and how to install|is responsible for something]].
+
+=== Installing MinGW-w64 cross compiler ===
+
+Just install <code>mingw-w64</code> package. Also usual compiler suit and <code>pkg-config</code> will be needed. On Debian-like systems:
+
+ sudo apt-get install build-essential pkg-config mingw-w64
+
+Visit http://mingw-w64.org/doku.php/download for more options.
+
+=== Installing cross compiler manually ===
+
+Alternatively you can try building from sources e.g. you can try older MinGW or [[Main/en/#Building MXE|MXE]]. After you do so, you must make compiler "visible" in your system. Adjust the [http://www.wikipedia.org/wiki/PATH (variable) $PATH] environment variable e.g. if the compiler is <code>/usr/local/myrcrosscompiler/bin/myrcrosscompiler-gcc</code> then add <code>/usr/local/myrcrosscompiler/bin</code> to your $PATH:
+
+ export PATH="/usr/local/myrcrosscompiler/bin:$PATH"
+
+Notice that this will affect only your current shell. Add it to something like [http://www.wikipedia.org/wiki/Bash (Unix shell)#Startup scripts .bashrc] if you wish to make it permanent.
+
+If you decide to modify $PATH permanently (through something .bashrc -like), this should have effect when sudo'ing (just don't use <code>-i</code> option when running <code>sudo</code>). However, if you don't do this, be aware that $PATH will not be passed to <code>sudo</code>. You may need to pass it manually when invoking <code>sudo</code> e.g.
+
+ sudo PATH="/usr/local/myrcrosscompiler/bin:$PATH" make install
+
+=== Testing cross compiler ===
+
+If compiler is ready you should be able to obtain GCC version at command line:
+
+ i686-w64-mingw32-gcc -v # should print gcc version
+ i686-w64-mingw32-g++ -v # should print g++ version
+
+If sudo'ing with permanent $PATH:
+
+ sudo i686-w64-mingw32-gcc -v # should print gcc version
+
+If sudo'ing with manual $PATH (see [[Main/en/#Installing cross compiler manually]]):
+
+ sudo PATH="/usr/local/mycrosscompiler/bin:$PATH" i686-w64-mingw32-gcc -v # should print gcc version
+
+=== zlib ===
+
+http://zlib.net
+
+ wget http://zlib.net/zlib-1.2.11.tar.gz -O- | tar xfz -
+ cd zlib*
+ # zlib 'configure' script is currently broken, use win32/Makefile.gcc directly
+ sed -e s/"PREFIX ="/"PREFIX = i686-w64-mingw32-"/ -i win32/Makefile.gcc # automatic replacement
+ make -f win32/Makefile.gcc
+ sudo BINARY_PATH=/usr/local/i686-w64-mingw32/bin \
+     INCLUDE_PATH=/usr/local/i686-w64-mingw32/include \
+     LIBRARY_PATH=/usr/local/i686-w64-mingw32/lib \
+     make -f win32/Makefile.gcc install
+ cd ..
+
+=== libpng ===
+
+http://www.libpng.org/pub/png/libpng.html
+http://sourceforge.net/projects/libpng/files
+
+ wget http://downloads.sourceforge.net/project/libpng/libpng16/1.6.29/libpng-1.6.29.tar.gz -O- | tar xfz -
+ cd l*png*
+ ./configure \
+     --host=i686-w64-mingw32 \
+     --prefix=/usr/local/i686-w64-mingw32 \
+     CPPFLAGS="-I/usr/local/i686-w64-mingw32/include" \
+     LDFLAGS="-L/usr/local/i686-w64-mingw32/lib"
+ make
+ sudo make install
+ cd ..
+
+=== lzo ===
+
+http://www.oberhumer.com/opensource/lzo/
+
+ wget http://www.oberhumer.com/opensource/lzo/download/lzo-2.10.tar.gz -O- | tar xfz -
+ cd lzo*
+ ./configure \
+     --host=i686-w64-mingw32 \
+     --prefix=/usr/local/i686-w64-mingw32 \
+     --enable-static \
+     CPPFLAGS="-I/usr/local/i686-w64-mingw32/include" \
+     LDFLAGS="-L/usr/local/i686-w64-mingw32/lib"
+ make
+ sudo make install
+ cd ..
+
+=== FreeType ===
+
+http://www.freetype.org
+
+ wget http://downloads.sourceforge.net/project/freetype/freetype2/2.8/freetype-2.8.tar.gz -O- | tar xfz -
+ cd freetype*
+ ./configure \
+     --host=i686-w64-mingw32 \
+     --prefix=/usr/local/i686-w64-mingw32 \
+     --enable-static \
+     CPPFLAGS="-I/usr/local/i686-w64-mingw32/include" \
+     LDFLAGS="-L/usr/local/i686-w64-mingw32/lib" \
+     PKG_CONFIG_LIBDIR=/usr/local/i686-w64-mingw32/lib/pkgconfig
+ make
+ sudo make install
+ cd ..
+
+=== xz ===
+
+http://tukaani.org/xz
+
+ wget http://tukaani.org/xz/xz-5.2.3.tar.gz -O- | tar xfz -
+ cd xz*
+ ./configure \
+     --host=i686-w64-mingw32 \
+     --prefix=/usr/local/i686-w64-mingw32 \
+     --enable-static --disable-threads \
+     CPPFLAGS="-I/usr/local/i686-w64-mingw32/include" \
+     LDFLAGS="-L/usr/local/i686-w64-mingw32/lib"
+ make 
+ sudo make install
+ cd ..
+
+=== ICU ===
+
+http://icu-project.org
+
+{{en/Warning|Compiling with ICU will greatly increase the size of the resulting OpenTTD executable (from about 10 to about 25 MB). It is possible to reduce the size, checkout [[Main/en/Compiling on Windows using MinGW#Compiling libicu|Compiling libicu using MinGW]]. Also openttd-useful has appropriate patches. }}
+
+ICU comes with few libraries. OpenTTD uses two of them, but it is possible to use only one (or none).
+
+; ICU Sort (<code>icu-i18n</code>)
+: It's for string sorting in language-natural way. Thanks to ICU OpenTTD knows that [http://www.wikipedia.org/wiki/Á á] is right after [http://www.wikipedia.org/wiki/A a], not somewhere after [http://www.wikipedia.org/wiki/Z z].
+; ICU Layout (<code>icu-lx</code>)
+: It's for laying out text. Thanks to ICU OpenTTD can use right-to-left languages. Also laying text out is improved in general.
+
+Latest good ICU version which runs almost without problems is ICU 57.1 and this version is recommended by this tutorial (although see [[Main/en/#OpenTTD with ICU 57 and earlier|Troubleshooting OpenTTD with ICU 57 and earlier]]). Versions 58 and higher require additional external library for ICU Layout - the HarfBuzz. Version 59 dropped support for anything older then Windows 7. There are also some bugs related to versions 58 and 59 (see [[Main/en/#Troubleshooting ICU]]), especially this tutorial doesn't have a solution for building 32-bit version of ICU 59 or newer using MinGW-w64 v4 or older.
+
+==== Compiling ICU natively ====
+
+First compile ICU natively using the system-wide compiler, not the cross compiler. It is required to do this before you can cross-compile. Don't install the compilation.
+
+ wget http://download.icu-project.org/files/icu4c/57.1/icu4c-57_1-src.tgz -O- | tar xfz -
+ 
+ mkdir icu/build
+ cd icu/build
+ ../source/configure
+ make -j`nproc`
+ cd ../..
+
+==== Cross compiling ICU ====
+
+{{warning|See [[Main/en/#Troubleshooting ICU]] before you continue.}}
+
+ mkdir -p icu/build-cross
+ cd icu/build-cross
+ env CPPFLAGS="-I/usr/local/i686-w64-mingw32/include" \
+     LDFLAGS="-L/usr/local/i686-w64-mingw32/lib" \
+     PKG_CONFIG_LIBDIR=/usr/local/i686-w64-mingw32/lib/pkgconfig \
+     ../source/runConfigureICU MinGW \
+     --host=i686-w64-mingw32 \
+     --prefix=/usr/local/i686-w64-mingw32 \
+     --enable-static --disable-shared --disable-strict \
+     --with-cross-build=`pwd`/../build
+ make
+ sudo make install
+ cd ../..
+
+Only if using ICU 57 or earlier (see [[Main/en/#OpenTTD with ICU 57 and earlier]] first):
+
+ sudo mv /usr/local/i686-w64-mingw32/lib/libsicudt.a /usr/local/i686-w64-mingw32/lib/libsicudt.a.old
+ sudo ln -s sicudt.a /usr/local/i686-w64-mingw32/lib/libsicudt.a
+
+==== HarfBuzz ====
+
+http://harfbuzz.org
+
+{{note|You need HarfBuzz only for ICU 58 and higher and only if you wish to use ICU Layout. Default for this tutorial is to skip this section.}}
+
+{{warning|If you decide to use HarfBuzz, you'll probably be issued by the [[Main/en/#OpenTTD and static ICU with HarfBuzz (icu-le-hb)]].}}
+
+Actually two libraries. The HarfBuzz and the ICU proxy (icu-le-hb).
+
+ wget http://www.freedesktop.org/software/harfbuzz/release/harfbuzz-1.4.6.tar.bz2 -O- | tar xfj -
+ cd harfbuzz*
+ ./configure \
+     --host=i686-w64-mingw32 \
+     --prefix=/usr/local/i686-w64-mingw32 \
+     --enable-static --disable-shared \
+     PKG_CONFIG_LIBDIR=/usr/local/i686-w64-mingw32/lib/pkgconfig
+ make
+ sudo make install
+ cd ..
+
+ wget http://www.freedesktop.org/software/harfbuzz/release/icu-le-hb-1.0.3.tar.gz -O- | tar xfz -
+ cd icu-le-hb*
+ ./configure \
+     --host=i686-w64-mingw32 \
+     --prefix=/usr/local/i686-w64-mingw32 \
+     --enable-static --disable-shared \
+     PKG_CONFIG_LIBDIR=/usr/local/i686-w64-mingw32/lib/pkgconfig
+ make
+ sudo make install
+ cd ..
+
+Now recompile ICU simply repeating [[Main/en/#Cross compiling ICU]] section. This time ICU should enable layout support.
+
+==== Removing ICU installation ====
+
+If something went wrong with ICU you may want to clean up the installation. To do so, enter the installation directory and remove these files and folders:
+* include/unicode
+* include/layout
+* any *icu* named files and folders inside these and nested folders:
+** bin
+** include
+** lib
+** share
+Notice that it will also remove icu-le-hb.
+
+ cd /usr/local/i686-w64-mingw32
+ sudo rm -Rfv include/unicode include/layout
+ find bin include lib share -name "*icu*" -exec sudo rm -Rfv {} ';'
+
+=== OpenTTD ===
+
+ wget http://binaries.openttd.org/releases/1.7.0/openttd-1.7.0-source.tar.gz -O- | tar xfz -
+ cd openttd*
+ # notice that OpenTTD can't accept PKG_CONFIG_LIBDIR as an option
+ env PKG_CONFIG_LIBDIR=/usr/local/i686-w64-mingw32/lib/pkgconfig \
+     ./configure \
+     --host=i686-w64-mingw32 \
+     --prefix=/usr/local/i686-w64-mingw32 \
+     --enable-static --static-icu \
+     --with-lzo2=/usr/local/i686-w64-mingw32/lib/liblzo2.a \
+     CFLAGS="-I/usr/local/i686-w64-mingw32/include" \
+     LDFLAGS="-L/usr/local/i686-w64-mingw32/lib"
+ make
+
+Test with WINE:
+
+{{warning|Make sure you have the graphics or it may crash! See also [[Main/en/#OpenTTD crashes on startup on WINE]].}}
+
+ cd bin
+ wine openttd.exe
+
+=== Final notes on pkg-config and library detection ===
+
+Detection of libraries is mostly performed by [http://www.wikipedia.org/wiki/pkg-config pkg-config] utility. MinGW-w64 doesn't come with it's own pkg-config so in this tutorial we are using the system-wide pkg-config (the executable is simply <code>pkg-config</code> and it should be auto-detected). We instruct the utility to use only our own libraries by setting the <code>PKG_CONFIG_LIBDIR</code> variable. Setting <code>PKG_CONFIG_PATH</code> wouldn't be enough to prevent mixing with our native libraries.
+
+<code>PKG_CONFIG_LIBDIR</code> should work for most cases. However, if you are using some different compiler, it may come with it's own pkg-config and using it may be mandatory. For example, MXE has <code>i686-w64-mingw32.static-pkg-config</code> (or <code>x86_64-w64-mingw32.static-pkg-config</code> for 64-bit Windows). You can use it instead of <code>PKG_CONFIG_LIBDIR</code>. Usually it can be set by passing
+
+ PKG_CONFIG=i686-w64-mingw32.static-pkg-config
+
+to "configure" script. In case of OpenTTD, use following configuration option
+
+ --pkg-config=i686-w64-mingw32.static-pkg-config
+
+{{note|Full information on configuration options can be usually retrieved by running <code>./configure --help</code>}}
+{{note|Configuration options are not the same as environment variables. Sometimes some environment variables can be set through configuration options and vice-versa. Read "--help" to know which they are.}}
+
+
+Observe output of "configure" scripts and check whether libraries were detected properly. Falsely detected libraries can be disabled with options like <code>--without-feature</code> or <code>--disable-feature</code>.
+
+Also notice that sometimes libraries have to be linked in proper order. Thus adding missing libraries to "configure" scripts through <code>LDFLAGS</code> won't always work. This is the case for <code>-lharfbuzz</code>. It has to be linked after ICU so it must appear after flags like <code>-lsiculx</code>. Observe output and check what are the final <code>LDFLAGS</code> produced by "configure".
+
+
+Watch out when OpenTTD re-configures itself. It may happen i.e. when you modify the <code>source.list</code> file and run <code>make</code> (or simply run <code>make reconfigure</code>). OpenTTD will re-run <code>configure</code> with options provided previously, but the environment won't be preserved. You have to take care about it by yourself or manually re-run <code>configure</code> with properly set variables like $PATH or $PKG_CONFIG_LIBDIR.
+
+
+{{todo|Instruct which lines of "configure" output should get most attention (each library separately).}}
+
+=== Older OpenTTD, older libraries, older compiler ===
+
+Older OpenTTD versions don't use pkg-config (older then 1.6 or r27377). You may need some extra tweaks for library detection to work. Libraries that we are installing put various tools under <code>bin</code> directory. Make sure it's in your [http://www.wikipedia.org/wiki/PATH (variable) $PATH] e.g.
+
+ export PATH="/usr/local/i686-w64-mingw32/bin:$PATH"
+
+so tools like freetype-config, icu-config etc. can be reached.
+
+
+There are also some issues related to older ICU an the older MinGW cross compiler. Further instructions can be found in [//wiki.openttd.org/?title=Cross-compiling_for_Windows&oldid=90126 older version of this article].
+
+== Troubleshooting ==
+
+=== Troubleshooting OpenTTD ===
+
+This sections describes some issues that may come up when building OpenTTD source code or running OpenTTD. These are not necessarily OpenTTD bugs.
+
+==== OpenTTD crashes on startup on WINE ====
+
+The in-game graphics downloader crashes in WINE. You may need to install a graphic set manually or transfer your OpenTTD user data from native installation. To install [http://www.openttd.org/en/download-opengfx OpenGFX] manually, put <code>opengfx-X.X.X.tar</code> into OpenTTD <code>bin/baseset</code>:
+
+ wget http://binaries.openttd.org/extra/opengfx/0.5.2/opengfx-0.5.2-all.zip -o /tmp/opengfx.zip
+ unzip /tmp/opengfx.zip -d bin/baseset
+
+As of the user data directory, same rules apply as if you were on Windows e.g. <code>My Documents/OpenTTD</code> is one of the search paths. Folders that are virtualized by WINE are in fact somewhere in your system (see [//wiki.winehq.org/FAQ#Where_is_my_C:_drive.3F Where is my C: drive?]). It may be like that the virtual <code>My Documents</code> folder is linked with your real <code>~/Documents</code> folder.
+
+==== OpenTTD with ICU 57 and earlier ====
+
+; Symptom 1 : Size of OpenTTD executable is more like 10 MB then like 25 MB even thought we didn't reduce the size of ICU.
+; Symptom 2 : OpenTTD crashes on startup.
+
+This is caused by so-called "ICU Data" library not properly generated or linked to OpenTTD. ICU Data is an ingredient of ICU and it is required by both the Sort and the Layout. Static version of the library has to be linked statically. In case of ICU 57 the problem is that it generates two libraries (see inside the <code>lib</code> folder):
+* sicudt.a - this is the right library, its size is about 25 MB
+* libsicudt.a - this is a "stub" library, its size is much, much smaller
+However, there is no way to tell the difference when using <code>-l</code> linker flag, <code>-lsicudt</code> picks <code>libsicudt.a</code>. But we can cheat it.
+
+; Workaround
+: Rename files so that always the full ICU Data library is picked
+
+ sudo mv /usr/local/i686-w64-mingw32/lib/libsicudt.a /usr/local/i686-w64-mingw32/lib/libsicudt.a.old
+ sudo ln -s sicudt.a /usr/local/i686-w64-mingw32/lib/libsicudt.a
+
+If trying other way keep in mind that ICU Data may need to be linked in certain order e.g. after other ICU libraries (see also [[Main/en/#Final notes on pkg-config and library detection]]).
+
+==== OpenTTD and static ICU with HarfBuzz (icu-le-hb) ====
+
+; General problem: Need to force static linking with ICU (<code>--static-icu</code>).
+; Symptom 1 : Unresolved "hb_xxxx" symbols while linking OpenTTD.
+; Symptom 2 : "can't find -lsicu-le-hb" while linking OpenTTD.
+
+To force linking ICU statically one may need to use <code>--static-icu</code> option (<code>--enable-static</code> is ignored in case of ICU). Otherwise we may end up with unresolved HarfBuzz symbols (because "--static" is not passed to pkg-config when detecting ICU which results in missing "-lharfbuzz"). However, <code>--static-icu</code> causes automatic renaming of everything which starts with "-licu*" into "-lsicu*". This causes "-licu-le-hb" to be changed into "-lsicu-le-hb" which is usually wrong.
+
+; Workaround : Hardcode <code>pkg-config --static</code> as pkg-config utility for ICU. This will force using static libraries but without the automatic renaming that OpenTTD does when <code>--static-icu</code> is given, instead add these options when running OpenTTD 'configure':
+
+ --with-icu-layout="pkg-config icu-lx --static"
+ --with-icu-sort="pkg-config icu-i18n --static"
+
+{{note|If you are using custom pkg-config utility, then use it instead of "pkg-config" in configuration options. See [[Main/en/#Final notes on pkg-config and library detection]].}}
+
+Entire OpenTTD configuration when using HarfBuzz may look like this (notice no <code>--static-icu</code>):
+
+ env PKG_CONFIG_LIBDIR=/usr/local/i686-w64-mingw32/lib/pkgconfig \
+     ./configure \
+     --host=i686-w64-mingw32 \
+     --prefix=/usr/local/i686-w64-mingw32 \
+     --enable-static \
+     --with-lzo2=/usr/local/i686-w64-mingw32/lib/liblzo2.a \
+     --with-icu-layout="pkg-config icu-lx --static" \
+     --with-icu-sort="pkg-config icu-i18n --static" \
+     CFLAGS="-I/usr/local/i686-w64-mingw32/include" \
+     LDFLAGS="-L/usr/local/i686-w64-mingw32/lib"
+
+==== LTO and missing WinMain or _safe_esp ====
+
+When compiling OpenTTD with LTO enabled (<code>--enable-lto</code>) you may encounter missing <code>WinMain</code> or <code>_safe_esp</code> symbol errors while linking. You have to prevent these Windows-specific variables and functions from optimizing out. You can find a patch here: http://bugs.openttd.org/task/6592
+
+=== Troubleshooting ICU ===
+
+In this section you can find some solutions on problems with compiling ICU.
+
+==== runConfigureICU and spaces ====
+
+<code>runConfigureICU</code> script can't handle options with spaces so these options must be passed via environment variable e.g via <code>env</code>:
+
+ env CXXFLAGS="something with spaces" ../source/runConfigureICU
+
+This won't work:
+
+ ../source/runConfigureICU CXXFLAGS="something with spaces"
+
+Alternatively you can use <code>configure</code> script directly instead of <code>runConfigureICU</code>. Don't forget to manually add all the options otherwise added by <code>runConfigureICU MinGW</code>
+
+==== ICU v58 and v59 with MinGW-w64 v4 and earlier ====
+
+; Symptom
+: Undefined reference to <code>_create_locale</code> or <code>_free_locale</code> while linking ICU.
+
+ICU v58 and v59 uses <code>_create_locale</code> or <code>_free_locale</code> which are not present in MinGW-w64 v4 which causes linker errors to pop up.
+
+ICU bug: http://ssl.icu-project.org/trac/ticket/12896
+
+MinGW fix: while this text was written, support for _create_locale and _free_locale was added but not yet released (http://sourceforge.net/p/mingw-w64/mingw-w64/ci/b508bb87ad179421d10df68a7ebc48b33570f9b0/)
+
+; Workaround
+: define <code>U_USE_STRTOD_L=0</code> macro through <code>CPPFLAGS</code> e.g.
+
+ env CPPFLAGS="-DU_USE_STRTOD_L=0 [other cppflags]" ../source/runConfigureICU MinGW [other options]
+
+==== ICU v59 with MinGW-w64 v4 and earlier 32-bit compiler ====
+
+; Symptom
+: "undefined reference to ResolveLocaleName" linker error.
+
+ICU v59 uses ResolveLocaleName which is not present in MinGW-w64 v4 which causes linker errors to pop up (the function is only in headers). 64-bit (x86_64-w64-mingw32) is OK.
+
+; Workaround
+: Unknown. You may try to tweak the ICU and make it using its POSIX code while dealing with language locales. You may also try fixing MinGW-w64 - 32-bit version of kernel32.a needs a definition of ResolveLocaleName.
+
+==== ICU v59 ====
+
+; Symptom
+: <code>unicode\uloc.h: no such file or directory</code> when compiling ICU.
+
+In ICU v59 there is a backslash in an include path which causes compilation error.
+
+ICU bug: http://ssl.icu-project.org/trac/ticket/13178
+
+ICU fix: http://ssl.icu-project.org/trac/changeset/40102/trunk/icu4c/source/common/putil.cpp
+
+; Workaround
+: Change the backslash into slash in <code>source/common/putil.cpp</code> file:
+
+ sed -i.old 's@unicode\\uloc\.h@unicode/uloc.h@' source/common/putil.cpp
+
+
+; Symptom
+: Compilation errors in <code>source/io/*.cpp</code> or <code>source/tools/*.cpp</code> files e.g. <code>source/io/ufile.cpp: invalid conversion from ‘const char*’ to ‘size_t’</code>
+
+Some unrecognized bugs appered while compiling "ICU IO" and "ICU Tools". These are not required by OpenTTD so you can simply skip this part of ICU.
+
+; Workaround
+: Compile without <code>icuio</code> and <code>icutl</code> by passing <code>--disable-icuio</code> <code>--disable-tools</code> options:
+
+ ../source/runConfigureICU MinGW --disable-icuio --disable-tools [other options]
+
+
+; Symptom
+: Compilation errors about <code>GetUserDefaultLocaleName</code> or <code>ResolveLocaleName</code> not being declared.
+
+ICU v59 dropped support for anything older then Windows 7.
+
+; Workaround
+: To compile against Windows 7 define <code>_WIN32_WINNT=0x0601</code> and <code>WINVER=0x0601</code> macros through <code>CPPFLAGS</code> i.e.
+
+ env CPPFLAGS="-D_WIN32_WINNT=0x0601 -DWINVER=0x0601 [other cppflags]" ../source/runConfigureICU MinGW [other options]
+
+
+Running <code>runConfigureICU</code> with ICU 59 problems fixed may look like this:
+
+ env CPPFLAGS="-I/usr/local/x86_64-w64-mingw32/include -D_WIN32_WINNT=0x0601 -DWINVER=0x0601 -DU_USE_STRTOD_L=0" \
+    LDFLAGS="-L/usr/local/x86_64-w64-mingw32/lib" \
+    PKG_CONFIG_LIBDIR=/usr/local/x86_64-w64-mingw32/lib/pkgconfig \
+    ../source/runConfigureICU MinGW \
+    --host=x86_64-w64-mingw32 \
+    --prefix=/usr/local/x86_64-w64-mingw32 \
+    --enable-static --disable-shared --disable-strict \
+    --with-cross-build=`pwd`/../build \
+    --disable-icuio --disable-tools
+
+Don't forget about fixing <code>putil.cpp</code> slash.
+
+[[Category:en/Compiling OpenTTD]]
