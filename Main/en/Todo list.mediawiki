@@ -1,0 +1,120 @@
+== What's this? ==
+This page contains a list of available tasks. This list is composed by OpenTTD developers considering
+a single criterion: '''The tasks require no detailed knowledge of the OpenTTD source code.'''
+As such this list aims for people who want to get involved with the development of OpenTTD.
+
+Naturally this list differs vastly from the list of [[Main/en/Requested features|feature requests composed by players]].
+* Most of the player's suggestion actually require deep knowledge of the OpenTTD internals, and are not suitable at all to start with.
+* This list contains various small features which are usually not listed by players, since players are usually posting on the forums to discuss a feature; resp. a feature request only becomes popular if it is being discussed. However, some items on this list here are so trivial, that there is nothing to discuss :)
+
+Before you start working on some item:
+* Check the history of this page, when it was updated last, to get an idea about how outdated this is :)
+* Ask on [[Main/en/IRC channel]] about the status of specific items resp. some update of the list.
+
+For coding tasks:
+* Check what the game currently does with respect to the item.
+* Check the source code.
+
+== Coding tasks ==
+
+=== OSX related ===
+This section lists tasks, which require knowledge about the OSX APIs, but not so much about OpenTTD.
+* [http://bugs.openttd.org/index.php?string=OSX&project=1&type%5b%5d=1&status%5b%5d=open&do=index All the other OSX specific bugs :)]
+
+=== Easy ===
+This section lists small tasks which require no advanced coding skills and no big effort of time.
+* [[Main/en/Todo BigGUI]] - Issues with using bigger GUI icons.
+* {{flyspray|5192}} - Display date of files in save/load GUI.
+*: You can sort the filelist by modification date, but you cannot see it in the list.
+* Add pending newsitems to the crashlog.
+*: News messages are a client side thing, so they are not stored in savegames (not even in singleplayer). However, news can tell a bit about what happended recently in a game, so it might be useful to have this information in the crash.log (it's not in crash.sav). Just make sure that the textprocessing involved with the news does not cause crashes while writing the crashlog :p
+* Add text filter to load savegame/scenario/heightmap GUI.
+** Add an editbox to enter a search term which the filelist is then filtered on. (Probably only considering the filename; reading the summary of eachs save would take too long)
+** Filter to save savegame/scenario/heightmap GUI might be consistent, but usecase is questionable. Who wants to filter on the save to overwrite?
+* {{flyspray|5078}} - [NOAI] API lack "vehicle is old"-event.
+* {{forum|post=1071916}} - Change the "give money to" function so that money is donated to the company and not a specific player
+*: The entities that operate in OpenTTD are companies which might be controlled by multiple players. As such it is weird that you give money to a client via the clientlist, instead of to a company via the company GUI.
+* Add the user-side possibility to exclude selected AIs from being chosen as "random AI" for new games. Mind that AIs already have the option to declare themselves that they don't want to be a randomly picked AI.
+* {{flyspray|6078}} - Warn user about useless conditions in the orders. Conditional orders like 'vehicle load >= 0%' and others are not useful because they are either always taken or they are never taken. It would be useful to warn the user of such things as he enters them.
+* In general, more warnings about stupid setups are useful, eg stations that have no vehicles could be one, likely there are more.
+* Sprite aligner window improvements
+** When a sprite is selected in the right column with sprite numbers, it is not coloured white.
+** The currently selected sprite in the blue area is not removed when a new sprite-set is selected with the 'Pick sprite' button.
+** The arrow buttons are too small.
+* {{flyspray|6242}} Station selection window: hightlight current selection. This could potentially be generalised to many windows, like order window, station GUI (next/prev hop), industry lists, ...
+* {{forum|post=1068385}} - Unify the appearance and position of "goto location" buttons.
+** The button should be a small button in the window title bar, next to the close/sticky/shade buttons. (likely a new black-only icon)
+** The button shall esp. be accessible when the window is shaded.
+** Some windows currently lack a "goto location" button, though they should have one (see the linked forum post for suggestions).
+** The vehicle viewport GUI should not become too flat after loosing a button on the right. Maybe the other buttons could be changed in size, or maybe there is another useful button which could be added? :p
+
+=== Medium ===
+This section lists medium tasks which require moderate coding skill and/or medium effort of time.
+* {{flyspray|5018}} - Readme/licence/changelog viewer for OpenTTD itself. (likely requires OS/packaging specific code)
+*: There are in-game text-file viewers for readmes, licences and changelogs of NewGRFs, AIs and other content stuff. OpenTTD also has these three files, but there is currently no way to display them in-game.
+*: The hard part about this task is however, that the location of these files are quite unknown. Some linux distributions might even store them only compressed, and thus unreadable for OpenTTD. So for linux this would basically need a build-time "configure" option to specify the location of those files, which may then not be compressed (the latter would be a task for the package maintainer of the distributions).
+*: Alternatively there might be some nice way to compile the files directly into the binary without duplicating the texts in the source. Maybe via some script in the build process or some other trick.
+* Translatable AI/GS options.
+*: NewGRFs and scripts can define settings which the user can adjust. While NewGRFs can localise these, scripts currently can only provide on language, i.e. usually English. For Game Scripts there is already a method to provide localised texts for in-game stuff like news or extra information in town windows. There should be a similar method (from the script point of view) to translate settings.
+* {{flyspray|5175}} - Accept/deny buttons in station's cargo list. (to start accepting cargo while no vehicle has arrived yet, or to deny acceptance after a vehicle had arrived once)
+*: This has several use case:
+*:* You can start acceptance of cargo before the first vehicle arrives.
+*:* You can start acceptance of cargo in the case that all your vehicles use autorefit, in which case they do not trigger acceptance unless they are already refitted to the right cargo.
+*:* You can stop acceptance if a vehicle accidentially arrived at your station.
+*:* You can deny acceptance without having to set all orders of all vehicles to "no load" at the station. (esp. useful if you play a [http://wiki.openttdcoop.org/Self-regulating_Network self-regulating] style with vehicles without orders)
+*: This deprecates the old "select_goods" setting. It might make sense to turn this setting into a client-side setting for the default-acceptance of new stations. (similar was done with other old settings at some point)
+*: Also this should not mess too much with cargo rating of stations, so as a first step the "if (_settings_game.order.selectgoods && st->goods[type].last_speed == 0) continue;"-hack in station_cmd.cpp would need replacement with something better. (i.e. acceptance should be a separate variable, no special value of some rating-related variable)
+* Add a font configuration window to the game options. (involves OS specific code)
+*: Currently it is very hard for the average user to configure fonts for OpenTTD, though this is kind of a must-task on todays high-resolution screens. So there should be some in-game method.
+* Add more filters to server list.
+*: Currently there is a text filter for the server name. However, filtering on stuff like map size of climate might also be useful.
+*: Adding separate widgets for all filter criterions will likely result in a mess, so the idea is to extent the string filter to also be able to filter on stuff like "arctic 256x256". (which would include arctiv maps but also servers with the name "arctic" and mapsize 256x256)
+* Save the parameters of NewGRF (including palette) and scripts for the next time, when they are removed from the NewGRF/script settings.
+*: I.e. save a mapping of GRFID+md5sum to palette+parameters.
+
+'''These tasks might depend on each other:'''
+* Add unique keys to savegames (when starting a game or scenario), and check these when overwriting a savegame. (Ask for confirmation when overwriting a savegame with different key.)
+*: How used are you to just double-click the top entry in the save list when saving a game? And how often did you overwrite your previous nicely finished game with your just freshly started one? :p
+* Save GUI settings savegame specific (not in the savegame, but on every client; identified by some key of the savegame)
+*: Window sizes, filter states, selected railtype, .... maybe even opened windows and positions.
+*: However, this likely needs some more thoughts wrt. singleplayer and multiplayer:
+*:* In multiplayer you want to store settings between leaving and rejoining. While the "Game-ID" would not change, the game might already have advanced in time.
+*:* In singleplayer you might load the latest or an older savegame of the same game. The "Game-ID" would be the same in both cases, but it does not make sense to share the storage of window positions for both saves.
+
+=== Hard ===
+The items in this list either require good coding skills and/or bigger investment of time.
+* {{forum|Forum|topic=68002}} Button in the order GUI to hide implicit orders. (only GUI, no gameplay effect)
+*: Implicit orders are somewhat a prerequisite for cargo destinations. But they make interaction with the orders list sometimes quite hard if there are a lot implicit orders. So, there should be a toggle-switch in the orders GUI to hide them. However, there is more to consider when hiding orders... Currently orders are numbered in the GUI including implcit orders. Changing the numbering when toggling would be confusing, and skipping numbers while hiding implicit orders would be confusing as well. So, maybe real orders should be numbered 1, 2, 3, and the implcit orders between them should be numbered 1.1, 1.2, 1.3, ... 2.1, 2.2 ... 
+* Map preview when loading heightmaps. And some sliders or similiar to adapt the range of heightlevels being used. (Maybe allow setting 3 control points like brightness/contrast/gamma in image processing)
+*: If you start a game from a heightmap you can only guess how the result may turn out. You might try multiple times while changing the "map rotation" setting or even start your imaging program to adjust breightness/contrast. It would be much nicer if this could be done in-game, esp. wrt. the rotation thingie.
+
+== Non-coding tasks ==
+This section lists tasks which require no coding skills.
+
+=== All-time tasks ===
+These tasks are never done and require constant effort (amount choosen by yourself).
+* [http://translator.openttd.org/status Translations]: [http://www.openttd.org/development How to get involved.]
+* [[Main/en/Village Pump|Improve the Wiki]]. (But consider that some out-dated stuff may not be worth updating, but rather should be deleted.)
+* Third-party projects also require translators and other non-coding help. Check out the {{forum|NoAI/NoGo|forum=65}} and {{forum|NewGRF|forum=26}} development forums.
+
+=== GUI / settings redesign ===
+This a very huge / hard task, which requires no coding skills (in the current stage) but nevertheless a good knowledge about OpenTTD (from a player's point of view).
+
+* Redesign the intro menu.
+* Redesign the process of starting a new game.
+* Redesign the settings GUIs (difficulty settings, game settings, advanced settings, transparency settings, news settings, music settings, newgrf settings, script settings, mapgen settings)
+** A window for game creation where you select everything that cannot change in game (mapgen settings, certain difficulty settings, NewGRF settings)
+** A window for non-game related settings (screen resolution, languages, etc... maybe a subset of the current game options)
+** A window for detailed settings.
+** A window for settings you want to change often during a game. (Mostly transparency settings, but also e.g. "show reserved tracks")
+* Either drop difficulty settings and highscore completely, or redesign how "difficulty profiles" could be specified. (Something like NewGRF presets, but for "some" settings; basically a difficulty profile should specify for every gameplay setting a fixed value or "any value allowed".)
+* In the settings and options, different windows have different ideas about the 'save changes' button, which is confusing for the user.
+* See also [[Main/en/GUI re-arrangement]], {{forum|transparency options analysis|topic=54262}}
+
+=== Other GUI issues ===
+
+Some window are just weird, think about a better way to layout them:
+* Livery colours: Checkbox and combobox usage
+* Custom currency: Blue buttons
+* Vehicle details: Service interval setting
+* Scenario editor: Current date in toolbar
