@@ -1,0 +1,140 @@
+ {{outdated|Substantially outdated, not particularly useful in current format}}
+This is a list of community made patches and patch packs.
+
+==List of patches==
+
+===Environment===
+{{lop header}}
+{{lop|More Height Levels|r23106|40844|v27 by ChillCore and ic111}}
+{{lop footer}}
+
+===Industries and cargo===
+{{lop header}}
+{{lop|YACD - Yet Another CargoDestinations|r22532|54253|v2.3 by Michi_cc}}
+{{lop footer}}
+
+===Towns===
+===Construction===
+{{lop header}}
+{{lop|The Clipboard|r26400|45488|Build your infrastructure by copy/pasting pieces you already built. This is a rewrite of Copy&Paste patch.}}
+{{lop|Polyline track tool|r26405|57080|Build tracks like drawing a "polyline" in some graphic editor: one click - one line connected to previous one.}}
+{{lop footer}}
+
+===Signals===
+===Vehicles===
+{{lop header}}
+{{lop|ATC speed control|r22604|52085|With this patch, you can emulate a certain behaviour of the [http://en.wikipedia.org/wiki/Automatic_Train_Control ATC system]}}
+{{lop|Faster "go to" order creation|r23663, 1.1.4|54549|When creating orders, give "transfer and leave empty" by holding shift, "go via" by holding ctrl+shift}}
+{{lop|Slim timetable separation|r25755|54332|Automatic separation of vehicles on a shared timetable}}
+{{lop footer}}
+
+===Stations and Depots===
+{{lop header}}
+{{lop|NewGRF Airports (try 2)|r18xxx|45654|by Yexo}}
+{{lop footer}}
+===Eyecandy===
+===GUI===
+{{lop header}}
+{{lop|Show station coverage areas|r25578|44835|v1 by gehene}}
+{{lop|Allow creation of new games from within a running game|r22731|56124|v2 by loclahost}}
+{{lop|Multiplayer Server List Filtering|r22958, 1.2.3|43160|Filter, categorise and collect statistics about network games.}}
+{{lop footer}}
+
+===Cheats===
+===Other===
+{{lop header}}
+{{lop|Infrastructure Sharing|r24121|42254|current Version 2.1.2 (17th April 2012) [http://www.tt-forums.net/viewtopic.php?p=1008843#p1008843 Direct link]}}
+{{lop|Scripts on new day, month, year|1.0.3|49595|This is very simple patch to invoke your scripts on new day, new month and new year. Scripts been invoked after all routines (industries updates, finances updates and so on).}}
+{{lop footer}}
+
+==Patch packs==
+{{lop pack header}}
+
+{{lop pack|Hard Game patch pack (by Vaulter)|r25739|49359|v0.8.165<br /><br />taxes<br />Improved Breakdowns<br />
+Adjust town passenger/cargo rates<br />Higher prices for construction near major cities<br />
+Station loaders more distance from industry to station<br />repaircosts<br />
+Airport upgrade<br />More console commands<br />
+signaltunnel<br />More conditional orders<br />
+Setting the length of the day<br />Lease transport<br />
+Automatic timetables and separation<br />Very large maps<br />
+Programmable Waypoints<br />leave-orders<br />
+Automatic train control<br />Loans depends on company's history and value<br />
+Traffic lights<br />Infrastructure sharing<br />
+Auto advertising campaign<br />Colour rating in town label<br />
+zoom64<br />Departure Boards<br />
+Trains whistle when bridge and tunnels approaching<br />Watch company last action<br />
+Russian town names<br />Add console command restart_ai<br />
+Support daily autosave<br />Copy / Paste infrastructure<br />
+Auto refit when build<br />Minimap Screenshot adds a console command `minimap`<br />
+Invoke daily, monthly and yearly scripts<br />industry-stationnames<br />
+townrating-indicator<br />Group info<br />
+Group by properties<br />Trip History<br />
+GUI tweaks<br />Shows station cover by CTRL+click on it<br />
+Filter NewGRF files in build vehicle window<br />Polyline track tool<br />
+forecast_display<br />Fancy fences<br />
+Measurement tool<br />Cursor tracking viewport<br />
+32bpp blitter with antialiasing
+}}
+
+{{lop pack|Chill's patchpack|r22555|47622|
+More height levels<br />
+Cargo distribution<br />
+Automated timetable and seperation<br />
+Larger maps<br />
+Town rating colours<br />
+Signals in tunnels and on bridges<br />
+Chunnel<br />
+Stuck trains<br />
+Sprinkles -> variable daylenght, town cargo factor, misc, ...<br />
+Programmable Signals<br />
+Show system time window<br />
+Copy_paste<br />
+View and click vehicles in tunnels<br />
+Close adjacent level crossing<br />
+Measurement tool<br />
+Tree line height<br />
+Watch other company's gui<br />
+Reduced tree growth patch<br />
+Max_grf<br />
+Company_profile<br />
+Departure boards + 24h clock<br />
+Timetable_change_all_stations<br />
+Departure_vehicletimetableskip1<br />
+Group_info<br />
+Cmd_all_ai<br />
+Infrastucture Sharing<br />
+CTRL-cloning does not open new guis<br />
+Improved breakdowns<br />
+Trafficlights<br />
+Towngrowth_needs_goods Modified and extended patch<br />
+Configurable amount of desert tiles}}
+
+{{lop pack footer}}
+
+==How to use a patch==
+If you are willing to use a patch from the list but don't know how, [http://www.tt-forums.net/viewtopic.php?f=33&t=21678 this forum thread] may be helpful to you.
+
+==Adding your patch==
+Generally anyone can add a patch to the list but you must follow these rules:
+* '''The patch is consistent with the [[Main/en/Patch Checklist]].'''
+* The patch adds new features. Bug fixes goes to the [http://bugs.openttd.org Flyspray].
+* The patch is not trivial e.g. refinement of size of some window.
+* The patch is not (yet) in the trunk. But don't remove patches from the list that got in, put ''"in trunk"'' into '''Against''' field.
+* If the patch patch was not released yet, put ''"in progress"'' into '''Against''' field.
+* Old, outdated patches may be added as well. Maybe someone will resurrect them.
+* Use {{s|lop}} template to add a new entry. 
+* If the patch is on the [http://bugs.openttd.org Flyspray] put an appropriate note (use {{s|Flyspray}} template).
+* Try to keep your entries up to date.
+
+==External links==
+* [http://www.tt-forums.net/viewtopic.php?f=33&t=21678 Howto apply a patch/diff file]
+* [http://bugs.openttd.org/index.php?type&#91;&#93;=4 Patches on Flyspray]
+
+==See also==
+* [[Main/en/Development Documentation#Patches|Development Documentation]]
+* [[Main/en/FAQ development#How to apply a patch.3F|How to apply a patch]]
+* [[Main/en/Patch Checklist]]
+* [[Main/en/Requested features]]
+
+
+[[Category:en/Development]]
