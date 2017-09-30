@@ -1,0 +1,164 @@
+[[Translation:Main/en/Compiling on Windows using MinGW]]
+{{en/-}}
+==Введение==
+Данная статья содержит указания для компиляции OpenTTD для Win32 при помощи '''MinGW'''.
+
+==Список пакетов==
+Данное руководство было протестировано со следующими версиями требуемых пакетов:
+
+* OpenTTD trunk at revision r22221.
+* [http://sourceforge.net/projects/mingw/files/Automated%20MinGW%20Installer/mingw-get-inst/mingw-get-inst-20110316/mingw-get-inst-20110316.exe/download mingw-get-inst-20110316]
+* [http://sourceforge.net/projects/win32svn/files/1.6.15/svn-win32-1.6.15.zip/download Subversion 1.6.15]
+* [http://zlib.net/zlib-1.2.5.tar.gz zlib-1.2.5]
+* [http://sourceforge.net/projects/libpng/files/libpng15/1.5.4/libpng-1.5.4.tar.gz/download libpng-1.5.4.tar.gz]
+* [http://www.oberhumer.com/opensource/lzo/download/lzo-2.04.tar.gz lzo-2.04]
+* [http://sourceforge.net/projects/freetype/files/freetype2/2.4.4/freetype-2.4.4.tar.gz/download freetype-2.4.4]
+* [http://ftp.gnome.org/pub/gnome/binaries/win32/dependencies/gettext-runtime_0.18.1.1-2_win32.zip gettext-runtime_0.18.1.1-2]
+* [http://ftp.gnome.org/pub/gnome/binaries/win32/glib/2.26/glib_2.26.0-2_win32.zip glib_2.26.0-2]
+* [http://ftp.gnome.org/pub/gnome/binaries/win32/dependencies/pkg-config_0.23-3_win32 pkg-config_0.23-3]
+* [http://tukaani.org/xz/xz-5.0.1.tar.gz xz-5.0.1]
+* [http://download.icu-project.org/files/icu4c/4.6/icu4c-4_6-src.zip libicu-4.6]
+
+==Установка MinGW и MSYS==
+#Загрузите и запустите mingw-get-inst (ссылка для загрузки выше).
+#Выберете "Use pre-packaged repository catalogues". (Использовать упакованный репозитарий) 
+#Просмотрите и примите условия лицензии.
+#Обратите внимание, что MinGW должен быть установлен в каталог, путь к которому не содержит пробелов. В данном руководстве протестирован метод установки в C:\MinGW.
+#Выберете C++ Compiler и MSYS Basic System как дополнительные компоненты.
+#Дождитесь пока каждый пакет будет загружен и установлен.
+
+==Настройка MSYS==
+Перейдите в каталог msys (C:\MinGW\msys\1.0), откройте etc\fstab с помощью текстового редактора (например Блокнота) и добавьте следующую строку: 
+<pre>C:\MinGW\   /usr/local</pre>
+В ОС Windows 7 и Vista, если включен UAC , чтобы позволить MSYS полноценно работать, вам понадобятся дополнительные шаги. Перейдите в каталог msys (C:\MinGW\msys\1.0), откройте msys.bat с помощью текстового редактора (например Блокнота) и добавьте следующую строку после @echo off:
+<pre>cd "C:\MinGW\msys\1.0"</pre>
+И если диск C: (или тот на котором у вас установлен MSYS) не является диском, на котором установлена ваша ​​операционная система, то добавить еще одну строку
+<pre>C:</pre>
+After saving the file, right click on msys.bat and choose "Run as Administrator". After that programs requiring admin rights, such as install and patch will work. (You will need right-click and run as administrator every time you run msys).
+После сохранения файла, кликните правой кнопкой мыши на msys.bat и выберите "Запуск от имени администратора". После этого программы, требующие права администратора, такие как установщик и патчер будут работать. (Вам нужно щелкнуть правой кнопкой мыши и запустить от имени администратора при каждом запуске MSYS).
+
+==Проверка установленного MinGW/MSYS==
+<ul><li>Запустите оболочку MinGW (MSYS).</li>
+<li>Запустите следущие команды:<pre>make -v
+gcc -v</pre></li>
+<li>Они должны что-нибудь вывести. Проверьте если что-то будет не так.</li></ul>
+
+==Компиляция и установка необходимых пакетов==
+Для дополнительно информации о библиотеках, посмотрите часть 7.1) в Readme-файле OpenTTD. Для того чтобы скомпилировать и установить данные пакеты, для начала, вам необходимо ввести следующие команды:
+
+<pre>mingw-get install msys-wget
+mingw-get install msys-unzip
+mingw-get install msys-patch</pre>
+
+В качестве альтернативы, чтобы появились wget и tar/unzip для дальнейшего использования, вы можете загрузить все библиотеки и распаковать их в каталог в который установлен MSYS (по умолчанию, C:\MinGW\msys\1.0\home\имя_пользователя.
+
+Если вы получите следующую ошибку:
+<code>configure: error: cannot run C compiled programs.</code>
+, <u>одной из причин</u> может быть ваша антивирусная программа, которая без уведомления удаляет двоичные файлы a.exe. Попробуйте временно отключить антивирусную программу и скомпилировать снова.
+
+==Установка Subversion==
+В MSYS:
+
+<pre>mkdir -p /usr/local/bin
+wget http://sourceforge.net/projects/win32svn/files/1.6.15/svn-win32-1.6.15.zip/download
+unzip svn-win32-1.6.15.zip
+cd svn-win32-1.6.15
+mv bin/* /usr/local/bin/
+cd ..</pre>
+
+В качестве альтернативы, вы можете загрузить и распаковать в C:\MinGW\msys\1.0\usr\local.
+
+==Компиляция zlib==
+В MSYS:
+
+<pre>wget http://zlib.net/zlib-1.2.5.tar.gz
+tar xvfz zlib-1.2.5.tar.gz
+cd zlib-1.2.5
+make -f win32/Makefile.gcc BINARY_PATH=/usr/local/bin INCLUDE_PATH=/usr/local/include LIBRARY_PATH=/usr/local/lib install
+cd ..</pre>
+
+==Компиляция libpng==
+В MSYS:
+
+<pre>wget http://sourceforge.net/projects/libpng/files/libpng15/1.5.4/libpng-1.5.4.tar.gz/download
+tar xvfz libpng-1.5.4.tar.gz
+cd libpng-1.5.4
+mv INSTALL INSTALL.txt
+./configure
+make install
+cd ..</pre>
+
+==Компиляция liblzo2==
+В MSYS:
+
+<pre>wget http://www.oberhumer.com/opensource/lzo/download/lzo-2.05.tar.gz
+tar xvfz lzo-2.05.tar.gz
+cd lzo-2.05
+./configure --enable-static
+make install
+cd ..</pre>
+
+==Компиляция libfreetype==
+В MSYS:
+
+<pre>wget http://sourceforge.net/projects/freetype/files/freetype2/2.4.4/freetype-2.4.4.tar.gz/download
+tar xvfz freetype-2.4.4.tar.gz
+cd freetype-2.4.4
+./configure --enable-static
+make install
+cd ..</pre>
+
+==Компиляция xz==
+Liblzma (который является частью xz) требуется для компиляции OpenTTD начиная с версии [http://vcs.openttd.org/svn/changeset/21044/ r21044]. Также требуется pkg-config. В MSYS:
+
+<pre>wget http://ftp.gnome.org/pub/gnome/binaries/win32/dependencies/gettext-runtime_0.18.1.1-2_win32.zip
+unzip gettext-runtime_0.18.1.1-2_win32.zip -d /mingw
+wget http://ftp.gnome.org/pub/gnome/binaries/win32/glib/2.26/glib_2.26.0-2_win32.zip
+unzip glib_2.26.0-2_win32.zip -d /mingw
+wget http://ftp.gnome.org/pub/gnome/binaries/win32/dependencies/pkg-config_0.23-3_win32.zip
+unzip pkg-config_0.23-3_win32.zip -d /mingw
+wget http://tukaani.org/xz/xz-5.0.3.tar.gz
+tar xvfz xz-5.0.3.tar.gz
+cd xz-5.0.3
+./configure --enable-static --disable-threads
+make install
+cd ..</pre>
+
+==Компиляция libicu==
+libicu является дополнительной библиотекой, используемой для письма справа налево (например, на арабском и персидском языках), а также для естественной сортировки списков. Компиляция данной библиотеки может занять много времени, так что вы можете спокойно пропустить этот шаг, если вам не требуется libicu.
+
+{{ru/Заметка|Применение второго патча - необязательный шаг. Это уменьшит размер скомпилированного OpenTTD, ценой потери сортировки данных для большинства языков.}}
+
+{{ru/Внимание|Компиляция с libicu значительно увеличит размер конечного исполняемого файла OpenTTD.<BR><BR>'''размер openttd.exe с libicu: '''приблиз. 25 Мб<BR>'''размер openttd.exe с libicu (сокращение размера с патчем "reduced icudata size"): '''приблиз. 10 Мб<BR>'''размер openttd.exe без libicu: '''приблиз. 8 Мб}}
+
+
+В MSYS:
+
+<pre>wget http://download.icu-project.org/files/icu4c/4.6/icu4c-4_6-src.zip
+unzip icu4c-4_6-src.zip
+cd icu
+wget http://devs.openttd.org/~terkhen/libicu/libicu_4_6_mingw32.diff
+patch -p1 -i libicu_4_6_mingw32.diff
+wget http://devs.openttd.org/~terkhen/libicu/libicu_reduce_icudata_size.diff
+patch -p1 -i libicu_reduce_icudata_size.diff
+cd source
+./configure --enable-static --disable-shared --disable-strict --disable-threads
+make install
+cd ../..</pre>
+
+==Получение исходного кода==
+Посмотрите [[Main/en/Часто задаваемые вопросы разработчика/Ru#Как мне получить исходный код?|Часто задаваемые вопросы разработчика]] о различных способах получения исходных текстов. Если вы загружаете без использования MSYS (например, загружаете исходные тесты с вебсайта) не забудьте поместить в ваш домашний каталог (по умолчанию C:\MinGW\msys\1.0\home\<имя_пользователя>).
+
+==Компиляция OpenTTD==
+Если у вас не компилируется, не паникуйте. Иногда это может быть связано с ошибками в коде, в этом случае, они должны представляться на [http://bugs.openttd.org/ bugs.openttd.org], таким образом они могут быть исправлены.
+
+<ol><li>Запустите MSYS.</li>
+<li>Введите:<pre>cd ~/<путь_к_исходникам>
+./configure
+make</pre>(заметим что ~ означает ваш домашний каталог)</li>
+<li>Компиляция будет завершена, тогда когда будет создан файл openttd.exe. Он будет скопирован в подкаталог <code>./bin</code>.</li>
+<li>Для проверки вашей компиляции, вы может запустить (из того же каталога в котором скомпилирован ваш OpenTTD):<pre>./bin/openttd</pre>Не забудьте установить [[Main/en/Base graphics|основной пакет графики]] до запуска игры (самый простой способ [[Main/en/OpenGFX Прочти меня/Ru#Installing OpenGFX Manually|OpenGFX]])</li>
+<li>Если вы хотите создать установочный пакет, вы можете использовать:<pre>make bundle</pre>После того как команда выполнится, вы может найти готовый дистрибутив OpenTTD в каталоге ~/<путь_к_исходникам>/bundle.</li></ol>
+
+[[Category:ru/Компиляция OpenTTD]]
+[[Category:ru/Описания программ]]
