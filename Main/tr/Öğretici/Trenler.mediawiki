@@ -1,0 +1,72 @@
+[[Translation:Main/en/Tutorial/Trains]]{{en/-}}__NOTOC__
+{{en/Tabs|5|2
+|Öğretici/Tr|1. Başlangıç<!--
+-->|Öğretici/Otobüsler/Tr|2. Otobüsler<!--
+-->|Öğretici/Trenler/Tr|3. Trenler<!--
+-->|Öğretici/Uçaklar/Tr|4. Uçaklar<!--
+-->|Öğretici/Sonuç/Tr|5. Sonuç}}
+<div style="padding:.5em 1em 1em 1em; border-top:none; background-color:#f1f2fe; color:#000;">
+{{tr/Öğretici}}
+==Bir tren rotası ayarlamak==
+Trenler kara taşıtlarından daha hızlı ve daha yüksek kapasiteye sahiptirler, ancak daha pahalıdırlar ve tren ağları oluşturmak, yollardan daha fazla planlama gerektirir.
+
+OpenTTD içerisinde çeşitli [[Main/tr/kargo|kargo]] ve [[Main/tr/endüstri|endüstri]] zinciri bulunmaktadır. Yapılacak en basit ve en karlı şey [[Main/tr/Kömür Madeni|Kömür Madenleri]]'nden [[Main/tr/Elektrik Santrali|Elektrik Santralleri]]'ne [[Main/tr/kömür|kömür]] taşımak olduğundan, bunun için bir rota ayarlayacağız. Bunu video olarak izlemek için [http://www.cs.helsinki.fi/u/ihonkone/ottd_tut.ogg bu] bağlantıyı kullanabilirsiniz.
+
+OpenTTD dünyasını anlamak için oyunun, hep Güney'den baktığınız kareler ızgarasına dayandığını bilmelisiniz. OpenTTD'deki neredeyse her şey Kuzeybatı-Güneydoğu veya Kuzeydoğu-Güneydoğu eksenindeki kılavuz çizgilerini izlemelidir. Birkaç istisna dışında, yatay veya dikey olarak da çalışabilen seviye demiryolu hatları vardır. Otobüs durakları, tepe yamaçları, köprü veya tünel inşa etmek vs. için yine de ızgaraları takip edin.
+
+===Rotanızı konumlandırmak===
+Yakın bir çevrede [[Main/tr/Kömür Madeni|Kömür Madeni]] ve [[Main/tr/Elektrik Santrali|Elektrik Santrali]] bulmak için haritada gezinin. Bu öğretici için ne kadar uzakta oldukları değildir; ancak gerçek bir oyunda ne kadar uzak olurlarsa o kadar kar getireceklerinden, ''çok'' yakın seçmek istemeyeceksiniz.
+{{en/Phototable|[[File:en/tutorial1.png|400px]]|Yakında bir kömür madeni bulunduran elektrik santrali.|none}}
+
+Artık bazı endüstri alanları buldunuz ancak kömürü elektrik santraline götürebilmek için bir yol gerekli. Öğreticinin bu bölümü trenlerle ilgili olduğundan, tren kullanacağız. Bununla birlikte çok fazla kömür taşıyabilirler ve muhtemelen en eğlenceli taşıtlar trenlerdir.
+
+===Tren istasyonları yapmak===
+{{en/Phototable|[[File:en/Railroad Construction.png]]|Demiryolu yapımı araç çubuğu.|none|6=:}}
+#''Demiryolu Yapımı'' araç çubuğunu [[File:en/RailCnstr.png]] düğmesine basarak açın.
+#''Tren istasyonu ya'' düğmesine [[File:en/RailSt.png]] tıklayın. Bir istasyon yapım penceresi görünecektir. Herhangi bir düğmeye sağ tıklayarak ne işe yaradığı açıklamasını okuyabileceğinizi unutmayın.
+{{en/Phototable|[[File:en/stationgui.png]]|Tren istasyon seçim penceresi.|none|6=:}}
+<ol start="3">
+<li>''Ray Sayısı'' değerini bir ve ''Platform Uzunluğu'' değerini üç olarak ayarlayın. Her "birim" gerçek oyunda iki vagon taşıyacağından, uzunluğu yüklemek istediğiniz tren uzunluğuna göre seçin. Örn. 3 kare uzunluğundaki bir istasyon bir lokomotif ve beş vagon alacaktır.
+<li>İstasyonunuz için en iyi yönelimi seçin. Böylece endüstriler arasında rayı doğru şekilde kurabilirsiniz.
+<li>Kömür Madeni yakınlarında düz bir zemin bulun ve istasyonu yerleştirmek için tıklayın.
+<li>Elektrik santrali yanına başka bir istasyon daha inşa edin.
+</ol>
+{{en/Phototable|[[File:en/tutorial2.png|400px]]|Endüstri yakınlarındaki istasyonlarınız.|none|6=:}}
+
+===Tren istasyonlarını bağlamak===
+Şimdi istasyonlar arasına ray inşa etmelisiniz.
+
+#''Demiryolu Yapımı'' araç çubuğunda ''Otomatik Ray'' düğmesine [[File:en/Autorl.png]] tıklayın.
+#Rayı yerleştirmek üzere bir istasyondan diğerine düz bir çizgi sürükleyin.
+#Diğer istasyona ulaşıncaya kadar daha fazla bağlantı noktası ekleyin (otomatik rayın iki sürükleme kısmını kullanarak sağdaki ekran görüntüsündeki rayı inşa edebilirsiniz - biri düz ve diğeri de elektrik santraline yakın olan için).
+{{en/Phototable|[[File:en/tutorial3.png|400px]]|Bağlı istasyonlar.|none|6=:}}
+
+Eğer bir hata yaparsanız, rayın parçalarını kaldırmak için ''dinamit'' [[File:en/Clear title.png]] aracını kullanabilirsiniz.
+
+===Bir tren eklemek===
+Şimdi de tren almanız gerek, ancak raylarınızda kendiliğinden oluşmasını bekleyemezsiniz - bir tren [[Main/tr/Garaj|garajı]] yapmanız gerek.
+
+#''Demiryolu Yapımı'' araç çubuğundaki ''Tren garajı yap'' düğmesine [[File:en/TrnDpt.png]] tıklayın. Yön seçimini sağlayacak yeni bir pencere açılacaktır.
+#Bir yön seçin ve önü ekran görüntüsündeki gibi bir raya bakacak şekilde garajı yerleştirin. Raylara bağlantı otomatik olarak eklenecek ve böylece trenleriniz garaja girip çıkabilecekler.
+#Henüz inşa ettiğiniz garaja tıklayın. Garaj menüsü görünecek ve içerisindeki tüm trenlerin listesi - şimdilik boş - karşınıza gelecek.
+{{en/Phototable|[[File:en/tutorial4.png|400px]]|Garaj penceresi|none|6=:}}
+<ol start="4">
+<li>Garaj penceresi altında bulunan Yeni Araç düğmesini seçin. Açılacak bu farklı pencerede, şu anda kullanabileceğiniz araçların listesi gösterilecektir. Listeden bir lokomotif seçin ve ''Araç Satın Al'' tıklayın. Tren penceresi açılacaktır.
+<li>Yeni araç penceresini aşağı kaydırın ve altı (6) adet kömür vagonu satın alın.
+<li>Olamaz, aslında beş tane alın demek istemiştim - bir tanesini silmek zorunda kalacağız. Herhangi bir vagonu [[File:en/SellTrainVehicle.png]] düğmesine sürükleyin ve bırakın - geri satılacak ve karşılığında biraz para alacaksınız.
+</ol>
+''Ayrıntılı öğretici için [[Main/tr/Tren satın almak|Tren satın almak]] konusuna bakın.''
+
+===Talimat vermek===
+#Trene talimat vermek, öğreticinin önceki bölümünde otobüse talimat verme ile aynı.
+#Trenler için kullanabileceğimiz bazı ek seçenekler mevcut. Talimatlar listesinde, kömür madeni istasyonunun adına tıklayın ve ''Tam Yük'' düğmesini seçin. Bu trene istasyondan ayrılmadan önce tam olarak yüklenmesi gerektiğini söyler.
+#Treni başlatmak için tren penceresinin altındaki "Durdu" düğmesine basın.
+
+Tebrikler - ilk demiryolunuzu yaptınız! Tren yüklenip kömürü teslim ettikten sonra, otobüsten daha fazla para kazandırdığını farkedeceksiniz.
+
+Bu oyundaki demiryolunun en basit türü olduğundan sadece 1 trene izin verir (birden fazla eklemeyi denediğinizde sadece garajda kaldıklarını göreceksiniz). Bir süre oynayıp diğer Demiryolu öğreticilerini okuduktan sonra, aynı anda birden fazla trene izin veren daha karmaşık demiryollarının nasıl yapılacağını öğreneceksiniz.
+
+<span style="float: right">[[Main/tr/Öğretici/Uçaklar|'''Sonraki''': Uçaklar]] &raquo;</span>
+</div>
+[[Category:tr/Öğretici]]
+[[Category:tr/Temel Öğretici]]
