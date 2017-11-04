@@ -1,0 +1,18 @@
+[[Translation:Main/en/Extend vehicle life]]
+:<small><<Back to the [[Main/en/Openttd.cfg]] (OpenTTD configuration file)</small>
+
+
+'''extend_vehicle_life''' is a variable of the Openttd.cfg file:
+
+Extends every vehicles life by x years. Takes values between 0 and 100.
+
+<pre>
+[vehicle]
+extend_vehicle_life = 0
+</pre>
+
+'''Valid options:''' [0 <= n <= 100]
+
+'''Default:''' 0
+
+[[Category:en/Settings & Preferences]]
