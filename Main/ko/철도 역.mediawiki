@@ -1,0 +1,154 @@
+[[Translation:Main/en/Railway station]]{{en/-}}{{ko/목차}}
+
+{{ko/번역|origin=Railway Station|from=en|to=ko|Percentage=50}}
+'''철도 역'''은 모든 철도 네트워크의 핵심 구성 요소입니다. 철도역에서는 [[Main/ko/열차|열차]]에 모든 종류의 화물을 싣거나 내릴 수 있습니다. 만약 철도 네트워크를 만드려고 한다면, 철도역을 본선에서 분리시켜서 본선에 지연을 유발시키는 필요없는 트래픽을 만들지 않는 것이 좋습니다.
+
+
+==기본 형태==
+아래의 역 형태들은 짓기 쉬우며 몇 안되는 [[Main/ko/열차|열차]]들이 운행될 때 적절한 결과를 보여줄 것입니다. 만약 통행량이 증가했을 때에는 [[Main/en/철도 역/Ko#고급 형태|고급 철도역 형태]]를 시도해 보는 것이 좋습니다.
+
+===두단식 역===
+아래 철도 역들은 철도 노선의 끝 부분에 위치합니다. 열차는 들어온 방향으로 되돌아나가게 되며 역으로 들어가거나 나오는 열차에 의해 막히게 됩니다. 이 형식의 철도역은 작거나 단순한 철도역이나 Ro-Ro 방식의 역을 지을 만한 부지가 도저히 없을 때에 이용됩니다.
+[[File:en/Terminus.png|center|none|frame|간단한 터미널 역 : 왼쪽 예시는 [[신호기/Ko#폐색 신호기|폐색 신호기]]를 이용하고 있고, 오른쪽 예시는 [[Main/en/신호기/Ko#경로 신호기|경로 신호기]]를 사용하고 있습니다.]]
+
+===Ro-Ro===
+Ro-Ro는 Roll-On(들어가는 것), Roll-Off(나오는 것)을 의미합니다 (경우에 따라 Roll-In,Roll-Out이라고 답변해주는 경우도 있음). 열차는 아래의 역사 끝으로 들어가게 되고 나올 때에는 다른 끝으로 나오게 됩니다. 열차는 반대 방향에서 열차가 나올 때까지 대기할 필요가 없습니다. 이 형식은 중간 정도의 트래픽이 있는 역에 적당합니다. [[Main/en/사전 신호기]] 없이는 높은 트래픽을 가지고 있는 역에는 적당하지 않습니다(예시 : 공장에 화물을 수송하는 역). 왜냐하면, 열차는 사전 신호기가 쓰이지 않는다면 두 입구 중 가까운 곳으로 가버리기 때문입니다. 이렇게 한다면 승강장이 모두 2차 생산물 수송 열차로 차고 1차 생산물이 들어올 수 없게 될 수 있기 때문에 데드락을 유발할 수 있습니다.
+[[File:en/Ro-ro1.png|center|none|frame|2선의 Ro-Ro 철도역입니다. 왼쪽은 폐색 신호기, 오른쪽은 경로 신호기를 사용하고 있습니다. 오른쪽 예시에서는 열차가 두칸을 남겨놓고 대기하게 되지만, 제동 공간으로도 사용됩니다.<!--원문 보존. RoRo-stations with 2 platforms, the left one using block signals, the right one using path signals. You could leave out the two straight track tiles in the front of the right one, but they also have a purpose as braking space.-->]]
+
+===통과선이 있는 역===
+열차가 통과하거나 정차할 수 있는 기본적인 역입니다. 이 역은 출발하거나 본선으로 들어가기 위해 남겨둔 공간을 포함하고 있습니다. 이 공간은 통과하는 열차가 느려지지 않게 하도록 해주는 역할임을 유념하십시오. 또한 본선을 막지 않고 모든 플랫폼이 사용될 수 있도록 하는 것이 좋습니다.
+
+[[File:en/Drive thru.png|center|none|frame]]
+
+===터미널 Ro-Ro 복합 역===
+터미널 형식의 역과 Ro-Ro 형식의 역을 함께 짓는 것도 가능합니다. 그러나, "설정">"차량">"경로">"열차가 역 내에서 회차하는 것을 금지" 옵션을 비활성화해야 사용이 가능한 형태입니다. 열차는 양쪽으로 들어올 수 있으며, 마찬가지로 양쪽으로 나갈 수 있습니다.
+
+경로 신호기를 사용하여 짓는다면 잘 작동할 것이지만, 폐색 신호기를 사용한다면 열차는 데드락에 걸릴 수 있습니다. 이 상황은 두 열차가 양쪽에서 함께 들어오고 있을 때 입구 신호기를 지나 동시에 같은 플랫폼으로 들어오려 할 때 벌어집니다. 첫째 열차는 들어가는 것이 가능할 것이지만, 둘째 열차는 적색 출구 신호기에 걸려 데드락 상태에 걸려버릴 것입니다. 그러므로 이 형태의 역을 지을 때에는 되도록이면 폐색 신호기를 사용하지 않거나 적은 트래픽의 역에만 사용하는 것이 좋을 것입니다. 
+[[File:en/Two-way-roro-station.png|center|none|frame|터미널 Ro-Ro형식 복합 역의 예제입니다. 우측 예제는 폐색 신호기를 사용하고 있고, 좌측 예제는 경로 신호기를 사용하고 있습니다.]]
+
+===스위치백 역===
+만일 철도 노선의 양 끝의 역을 지을 만한 부지가 없고 건설할 역이 종착역이 아니라면, 스위치백의 개념을 응용한 '스위치백 역'도 유용하게 서용될 수 있습니다. 열차는 역으로 들어올 것이고, 회차하여 원래의 방향으로 계속 진행할 것입니다.
+
+'스위치백 역'은 많은 트래픽이 있는 역에는 적합하지 않습니다. 왜냐하면 한 방향으로 한 열차만 지나갈 수 있고, 다른 열차는은 역 앞에서 기다려야 하기 때문입니다. 이 현상은 대기 구역을 추가하면서 해결할 수 있긴 하지만, 열차는 들어가거나 나갈 때 속력을 줄여야 하므로 비효율적입니다.
+[[File:en/Polany.jpeg|center|none|frame|Bag station의 예시입니다. 본선은 상단에 있습니다.]]
+
+==고급 형태==
+더 거대한 철도 네트워크에서는 위 형식들의 역이 제대로 작동하지 않을지도 모릅니다. 더 거대한 철도 네트워크에는 보강된 배선과 신호기를 팔요로 할 것입니다.
+
+만약 셋째 열차가 위 역들 중 하나에 도착한다면 어떤 일이 벌어질까요? 열차는 양쪽 모두의 신호기가 적색을 표시하고 있으므로 더 가까운 곳을 찾아 들어가 녹색으로 바뀌기를 기다릴 것입니다. 만약 다른 플랫폼이 셋째 열차가 기다리는 사이 비워진다면, 그 플랫폼은 셋째 열차가 역에 정차할 때까지 비어 있을 것입니다.
+
+또 역에 들어가기 위해서 대기하는 줄이 길어진다면 어떤 일이 벌어질까요? 그 줄을 길게 늘어질 것이고, 그 줄이 당신의 철도 네트워크 전체를 정지시킬 수도 있습니다!
+
+===사전 신호기===
+[[Main/en/신호기/Ko#사전 신호기|사전 신호기]]가 설치된 역은 열차가 빈 플랫폼이 생길 때까지 바깥에서 대기하게 해줍니다.
+[[File:en/Presignalstation.png|center|none|frame|사전 신호기가 설치된 역]]
+
+===대기 구역===
+열차가 길게 줄을 만드는 것에 대한 좋은 해결책은 2선 이상의 대기 구역을 만드는 것입니다. 만약 역의 플랫폼이 전부 찼다면, 그 다음에 도착하는 열차는 대기 구역의 빈 선로를 고를 것입니다. 역의 플랫폼이 비게 될 때면 대기하는 열차들 중 하나가 대기 구역에서 빠져나와 역으로 진입할 것입니다. 사전 신호기는 선택적입니다. 사전 신호기는 당신의 대기 구역이 전부 찼을 때도 도와줄 것입니다!
+[[File:en/waitingbay.png|center|none|frame|6량 이하 열차들을 위한 대기 구역]]
+
+===순환 대기===
+사전 신호기를 사용하지 않고도 건설할 수 있는 방식입니다. 열차가 진입해서 모든 양방향 신호기가 적색 (플랫폼이 가득 찼음)을 표출하고 있다면, 첫번째로 도착하는 열차는 역 앞에서 돌고 돌 것입니다. 열차는 빈 플랫폼이 생길 때까지 돌고 돌게 됩니다. 이 방식의 문제점은 첫째 열차가 도는 동안에 다른 열차가 빈 플랫폼을 먼저 차지할수도 있다는 점입니다. 이 방식의 역을 만들 때에는 당신이 운영하는 열차의 최대 길이보다 순환선을 길게 지어야 함을 유념하십시오.
+[[File:en/Loop.png|center|none|frame|오버플로우 제어를 위한 순환선]]
+
+===대기용 차량기지===
+역의 오버플로우를 방지할 수 있는 또 다른 방법은 "대기용 차량기지"입니다. 양방향/단방향 신호기를 역의 입구에 위치시킨 후에 그 앞에 차량기지를 건설하십시오. 차량기지에는 자동적으로 2방향 신호기가 만들어지므로 순환 트랙처럼 사용될 수 있습니다. 차량기지는 순환선과는 다르게 열차를 무한히 수용할 수 있다는 장점이 있습니다.
+
+최상의 레이아웃은 양쪽에 모두 차량기지가 위치하고 있는 것입니다. (이 방법은 거대한 역을 지나가는 시간을 줄여 줄 것입니다.)
+
+[[File:en/Escapedepot.png|center|none|frame|오버플로우 제어를 위한 대기용 차량기지 (이 예제는 더이상 기본값이 아닌 pf.yapf.rail_firstred_twoway_eol 설정이 활성화 되어 있어야만 사용할 수 있습니다.)]]
+
+===장대 출구===
+보통, 두 열차가 역을 동시에 출발하려고 하면 한 열차는 다른 열차가 역을 나가기를 기다려야 하기 마련입니다. 하지만 여기서는 한 열차는 역 안에 있고 한 열차는 역 밖에 있다면 기다리는 동안 플랫폼을 역에 들어오려는 다른 열차에게 줄 것입니다. 이 형태의 역은 신호기가 적색을 표시하기 전까지 열차는 역에서 전부 꺼내줄 것입니다. 이 형식은 역에 들어오려는 열차에게 플랫폼 여유분을 주게 됩니다. 아래의 출구 길이로는 10량 이하의 열차가 역 밖에서 대기할 수 있게 되니 출구의 길이에 유의하십시오. [[File:en/Longexit.png|center|none|frame|긴 출구로 과부하 제어하기]]
+
+===우선순위가 정해진 장대 출구===
+[[Main/ko/장대 열차|장대 열차]]를 바쁜 Ro-Ro형식의 역에서 빠져나가게 하려는 것은 하나의 도전일 것입니다. 사전 신호기를 사용하여 먼저 도착한 열차를 빠르게 내보낼 수 있습니다. 아래 사진에서 보이듯이, 출구측 선로가 더 오래 막혀있을 것으로 예상되는 진입로를 자동으로 막고 최대한 빨리 열차들이 진행할 수 있을 것으로 예상되는 진입로에 진행 신호를 현시하므로, 위 5개 진입로와 맨 아래측 진입로에 더 낮은 우선 순위가 주어졌습니다.
+다른 선로들은 평상시처럼 동작하며, 열차가 오는 즉시 진행 신로를 현시할 것입니다.
+[[File:en/Priorityexit.png|center|none|frame|우선 순위가 정해진 장대 출구]]
+
+===장거리 입구===
+만일 현실적 가속 옵션 모드를 사용하고 계신다면, 속도가 빠른 열차들은 역에 진입하기 전부터 감속을 할 것입니다. 역 진입에 긴 거리를 요하는 경우 사전 신호기의 사용으로 열차의 진입 순서를 알맞게 분배할 수 있습니다.
+[[File:en/Longentrance.png|center|none|frame|현실적인 가속 옵션을 켜놓았을 때의 역 진입부 구성]]
+
+===복수의 진입로===
+이 방식의 진입로는 한 역의 열차 진입로를 두 곳으로 나누어 보다 많은 열차들을 효율적으로 처리할 수 있게 합니다. 공장과 같은 수요처에 복수의 공급시설에서 열차가 도착하는 경우, 서로 다른 행선지의 열차끼리 플랫폼을 공유함으로서 화물 승하차에 걸리는 시간을 획기적으로 줄여줍니다.
+
+[[File:en/Doubleentrance.png|center|none|frame|복수의 진입로: [[Signals#Combo-signals|콤보 신호기]]를 사용하여 서로 다른 곳에서 출발한 복수의 열차들이 플랫폼을 공유할 수 있도록 합니다.]]
+[[File:en/DoubleEntrance2.png|center|none|frame|열차 길이 5칸 이상을 위한 복수의 진입로]]
+[[File:en/Screen shot 2012-03-24 at 7.08.39 AM.png|center|frame|경로 신호기를 사전 신호기처럼 작동하게 하여 위 사진과 같이 복수의 진입로를 운용할 수 있습니다. 경로 신호기는 현실적 가속 옵션과 호환이 되어, 열차가 자동으로 최대한 빨리 목적지에 도착할 수 있도록 시간을 절약해 주는 추가적인 효과도 있습니다.]]
+
+===집하장 역===
+만일 당신의 철도 시스템이 장거리를 운송하는 대형 열차 위주로 짜여 있다면, 주변의 동일한 산업 시설에서 해당 자원을 환승시켜 집하장에 모이도록 하여 더욱 많은 수익을 추구할 수 있습니다. 아래의 사진은 4개의 집하 전용 플랫폼을 가지고 있는 집하장의 예시를 보여줍니다. 짧은 4개의 환승 열차를 통해서 하단의 긴 열차에 적재, 수송하는 형태입니다.
+
+
+[[File:en/Feederstation.png|center|none|frame|4개의 환승 플랫폼을 가진 역]]
+
+===Prioritised drive-thru stations===
+
+These stations are in the middle of a line and trains can pass them by without using up valuable platforms. Signalling makes a crucial difference here - you can give priority to the mainline trains or the stopping trains with them.
+
+This station gives priority to trains leaving the station.
+[[File:en/Station priority.png|center|none|thumb|700px|Priority to station]]
+
+This station gives priority to trains passing the station by.
+[[File:en/Mainline priority.png|center|none|thumb|700px|Priority to mainline. Changes are marked with red circle.]]
+
+===Ro-Ro Terminus===
+====Principle====
+This style of station is a mix between the Ro-Ro and Terminus styles.  In essence, it takes a terminus station and makes it possible for a train to leave its platform without disrupting the traffic flow entering the station.  It can be used to upgrade a terminus style station and improve station efficiency.  Modifications upon this design could increase the number of platforms to handle a larger number of trains at once.  The example has been pre-signaled for greater efficiency. 
+[[File:en/Alternative RoRoTerminus.png|center|none|frame|A mix between the Ro-Ro and the Terminus stations]]
+This build allows trains to enter and exit station simultaneously. However, it takes a bit more space than ordinary terminus.
+
+====Variations====
+[[File:en/Advanced Terminus Station.png|center|thumb|550px|Advanced 2-bay terminus stations, the top one using block signals, the bottom one using path signals.
+'''Note there is a one-way out signal under the bridge.''']]
+
+[[File:en/Adv terminus 4tr.png|center|thumb|550px|Advanced 4 bay station. Note on the top one, the first signal on the right fork after the entry bridge is a combo signal.]]
+
+[[File:ro/Ro.png|center|thumb|550px|Some variations of same idea]]
+
+====Giant Ro-Ro terminus====
+
+It's of course possible to increase the number of platforms of a Ro-Ro terminus station. You can go as far as you want as long as there's enough space.
+[[File:en/epicterminus.png|center|thumb|550px|Advanced 10 bay station]]
+
+Below is a little more efficient design, with two tracks each sharing an entry and exit line. It consumes half as much space while nearly not decreasing the capacity. It is important that the directions are not switched: Else trains would have to climb up when entering the track, blocking the crossing unneccessarily long.
+[[File:en/sharedepicterminus.png|center|thumb|550px|Light advanced 10 bay station]]
+
+Here bridges instead of tunnels
+[[File:en/8 platform station.png|center|none|frame|A high-capacity Ro-Ro Terminus mix]]
+
+Here is another high throughput Ro-ro station. The bridges are low quality concrete only to make them stand out visually. The left side uses bridges (obviously) and path based signaling. The right side uses tunnels and pre-signals.
+[[File:en/High throughput Ro-ro station.png|center|frame]]
+
+This station continues on that design, but with separate two pairs of separate entry/exit tracks.
+[[File:en/Efficient Terminus.png|center|none|frame|An even higher capacity Ro-Ro Terminus mix]]
+
+This is a huge Ro-Ro terminus for very busy lines. There are 2 tracks inbound, 2 tracks outbound and 4 train can enter and exit at the same time (2 enter and 2 exit).
+[[File:en/Compact terminus.jpeg|center|none|frame|A very high-capacity Ro-Ro Terminus mix]]
+
+===Advanced Combined Terminus- and Roro-Station===
+As with a standard ro-ro station, trains enter at one end of station and exit on the other end, thus trains entering the station do not have to wait for trains leaving. This station is designed so that non-stop trains can pass through the station without unnecessarily blocking empty platforms from trains that need to stop at the station. It can serve as a terminus station without the need to reverse train direction. It includes escape depots so it can endure heavy traffic even if there is no space to add additional platforms. This station design is an efficient trade-off between the fast advanced terminus types and saving precious building space.
+
+[[File:en/Advanced ro-ro terminus.png|center|thumb|550px|A 4 bay advanced combined terminus- and roro-station designed for heavy traffic in small building spaces.]]
+
+===Roundabout station===
+Can handle a huge amount of small trains.
+
+[[File:en/roundabout station.png|center|thumb|700px|A double roundabout station]]
+
+==NewGRF Stations==
+[[File:en/Newstationsgui.png|right]][[Main/en/NewGRF]] Stations, or newstations, are available after you have activated a Newstations grf file. You will then have access to a new station-building GUI.
+
+The new GUI has a drop down box of station groups. Each group has a number of station tiles to choose from. Select a station tile and it will be previewed in the orientation boxes. Some newstation tiles do not allow trains to enter for the effect of full buildings or buffer stops. Be aware when placing newstation tiles that some tiles do not allow more than so many tracks or squares. The numbers not allowed will be greyed out and you cannot build this size. Some newstations sets offer more visual effects than others. For example, in Michael Blunck's newstations, passengers will gather on station platforms as the waiting cargo increases. 
+
+If the station set contains newgrf waypoints, the Waypoint GUI will open upon selecting it. You will have full previews of every waypoint possible for you to build. Most waypoints have introduction and obsoletion dates, in which waypoint styles will be replaced by newer versions. However, any waypoints you have already built will not automatically changed, allowing for variation on your networks. 
+
+Newstations behave the same as normal stations; the only difference is the non-track tiles that block trains.
+[[File:en/NewGRFstation.png|center|none|frame|NewGRF farm station]]
+
+==같이 보기==
+*[[Main/ko/고급 신호기 설치 예제|고급 신호기 설치 예제]]
+
+[[Category:en/건설]]
+[[Category:en/철도]]
