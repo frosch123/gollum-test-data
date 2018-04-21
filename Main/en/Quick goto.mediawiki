@@ -1,0 +1,15 @@
+:<small><<Back to the [[Main/en/Openttd.cfg]] (OpenTTD configuration file)</small>
+
+'''quick_goto''' is a variable of Openttd.cfg file:
+
+Allow quick access to 'goto button' in vehicle orders window.
+With quick goto the Go To button stays active.
+
+<pre>
+[gui]
+quick_goto = false
+</pre>
+
+'''Valid options:''' [true|false]
+
+'''Default:''' false
