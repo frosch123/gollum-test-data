@@ -1,0 +1,108 @@
+{{de/Übersetzung|OpenTTD|99}}
+
+[[Translation:Main/en/Railway construction]]{{en/-}}{{de/Inhaltsverzeichnis}}
+
+Eisenbahnen und Züge sind wahrscheinlich die spaßigsten Transportmittel im Spiel. Züge sind im Moment die profitabelsten Fahrzeuge. Du kannst komplexe Schienennetze bauen, um hunderte von Züge gleichzeitig zu steuern, indem du [[Main/de/Signale|Signale]] und [[Main/de/Wegpunkte|Wegpunkte]] benutzt.
+
+'''''Mehr zum Thema "Wie baue ich Gleise" steht im Tutorial "[[Main/de/Gleise verlegen|Gleise verlegen]]".'''''
+
+[[File:de/4 Types of railway.png|thumb|none|400px|Die vier verschiedenen Gleistypen.]]
+
+==Gleisbauleiste==
+Klicke auf die ''Gleisbau''-Schaltfläche [[File:en/manual html m772c5b23.png]] in der [[Main/en/Spieloberfläche/De#Menü-Leiste|Menüleiste]] (und wähle den gewünschten Gleistyp), um die Gleisbauleiste zu öffnen.
+
+[[File:de/Railroad ConstructionTTD.png|none|frame|Die Gleisbauleiste (TTD)]]
+[[File:de/Railroad ConstructionOGFX.png|none|frame|Die Gleisbauleiste (OpenGFX)]]
+
+Überblick über alle Werkzeuge (von links nach rechts) und was sie bewirken:
+
+{| {{en/Wikitable}}
+|- style="background:#efefef"
+!Schaltfläche
+!width='160'|Funktion
+!Tastenkürzel
+!Beschreibung
+|-
+|[[File:en/Build rail.png]]||'''Gleise legen'''||1,2,3,4
+|Baut Gleise in der ausgewählten Richtung. Klicke und ziehe, um Gleise zu legen. Nicht so effizient wie das [[Main/de/Autorail|Autorail]]-Werkzeug.
+|-
+|[[File:en/Build autorail.png]]||'''[[Main/de/Autorail|Autorail]]'''||A oder 5
+|Mit diesem hilfreichen Werkzeug lassen sich Gleise in beliebige Richtungen legen (die Handhabung kann am Anfang etwas schwierig sein). Wenn beim Benutzen {{keypress|Strg}} gedrückt wird, können damit Schienen schnell wieder entfernt werden.
+|-
+|[[File:en/Clear title.png]]||'''Gebiet räumen'''||6
+|Räumt ein Feld vollständig. Nicht auf jedes Feld anwendbar. Wenn man dieses diesen Tool benutzt, um [[Main/de/Bahnhof|Bahnhöfe]] zu löschen, löscht man den gesamten Bahnhof, falls keine Züge in ihm sind. Um einzelne Stücke zu löschen, benutze Bahnhofsbau + Entfernen ({{keypress|R}}) [[File:en/Build station.png]]+[[File:en/Toggle clear active.png]]
+|-
+|[[File:en/Build traindepot.png]]||'''[[Main/de/Depot|Depot]] bauen'''||7
+|Öffnet das Depot-Fenster, mit dem ein [[Main/de/Depot|Zugdepot]] mit der gewählten Ausrichtung gebaut werden kann.
+|-
+|[[File:en/Build waypoint.png]]||'''[[Main/de/Wegpunkt|Wegpunkt]] bauen'''||8
+|Baut [[Main/de/Wegpunkte bauen|Wegpunkte]] auf einem Gleis.
+|-
+|[[File:en/Build station.png]]||'''[[Main/de/Bahnhof|Bahnhof]] bauen'''||9
+|Öffnet das [[Main/de/Bahnhofsbau|Bahnhof]]-Fenster, mit dem ein [[Main/de/Bahnhof|Bahnhof]] mit der gewählten Richtung und Größe gebaut werden kann.
+|-
+|[[File:en/Place signal.png]]||'''[[Main/de/Signal|Signal]] bauen'''||S
+|Baut [[Main/de/Signalbau|Signale]] auf einem Gleis. {{keypress|Strg}}+Klicke auf ''"Signale bauen"'', falls das Signal-Auswahl-Fenster bei normalem Klick nicht erscheint.
+|-
+|[[File:en/Build bridge.png]]||'''[[Main/de/Brücken|Brücke]] bauen'''||B
+|Baut Eisenbahn[[Main/de/Brückenbau|brücken]].
+|-
+|[[File:en/Build traintunnel.png]]||'''[[Main/de/Tunnel|Tunnel]] bauen'''||T
+|Baut Eisenbahn[[Main/de/Tunnelbau|tunnel]].
+|-
+|[[File:en/Toggle clear active.png]]||'''Entfernen-Modus'''||R (Strg)
+|Wähle ein anderes Werkzeug und aktiviere diese Schaltfläche, um das gewählte Element zu entfernen. Du kannst diese Funktion auch auswählen, indem du die {{keypress|Strg}}-Taste gedrückt hältst. Zum Beispiel kannst du nur ein Signal löschen anstatt das ganze Gleisstück zu löschen oder einzelne Felder eines Bahnhofs löschen.
+|-
+|[[File:en/Convert rail.png]]||'''[[Main/de/Gleis umwandeln|Gleis umwandeln]]'''||C
+|Baut bestehende Gleise in die ausgewählte Gleisart um.
+|}
+
+Neben dem Bau auf flachen Land können Gleise, Zugdepots und Bahnhöfe auch auf [[Main/de/Bauen auf Hang|Hängen gebaut]] werden.
+
+==Verschiedene Gleistypen==
+Um den Gleistyp auszuwählen, der gebaut werden soll, drücke mit gehaltener Maustaste auf ''Gleisbau'' ( [[File:en/manual html m772c5b23.png]] ) in der [[Main/en/Spieloberfläche/De#Menü-Leiste|Menüleiste]].
+[[File:de/Openttd-rail1.png|none|frame|Gleistyp auswählen]]
+* [[Main/de/Eisenbahn|Normale Eisenbahnen]] - Verfügbar ab 1926 (gemäßigtes Klima) oder 1945 (andere Klimazonen). Nur Dampf- und [http://www.wikipedia.org/wiki/Diesel Lokomotive Dieselzüge] fahren auf diesen Gleisen.
+* [[Main/de/Elektrifizierte Eisenbahn|Elektrifizierte Eisenbahn]] - Verfügbar ab 1965, wenn elektrische Züge verfügbar werden. Elektrische Züge fahren '''nur''' auf dieser Art von Gleisen, es sei denn du deaktivierst elektrische Eisenbahnen in den [[Main/de/Erweiterte Einstellungen|erweiterten Einstellungen]]. Dampf- und Dieselzüge können auch auf diesem Gleistyp fahren.
+* [[Main/de/Einschienenbahn|Einschienenbahn]] - Verfügbar ab 1999. Nur Züge, die im Einschienenbahn-Depot gebaut wurden, können auf diesen Gleisen fahren.
+* [[Main/de/Magnetschwebebahn|Magnetschwebebahn]] - Verfügbar ab 2022. Nur Magnetschwebebahnen können auf diesen Gleisen fahren.
+
+Beachte, dass die Verfügbarkeit einer Gleisart nicht genau festgelegt ist, sondern direkt mit der Verfügbarkeit eines passenden Zuges verbunden sind. Die Verfügbarkeit kann um ein paar Monate schwanken aufgrund der Zufälligkeit der Fahrzeugeinführung. Natürlich kann es auch komplett anders sein, wenn du [[Main/de/NewGRF|NewGRF]] Fahrzeuge benutzt.
+
+==Züge bauen==
+Um einen [[Main/de/Züge kaufen und verkaufen|Zug einzusetzen]], gehe folgendermaßen vor:
+*Platziere/Baue ein [[Main/de/Depot|Zugdepot]] und klicke darauf. Das Depot-Fenster erscheint. 
+*Klicke auf "Neue Fahrzeuge". Ein neues Fenster mit einer Liste von Zügen, die Du kaufen kannst, erscheint. 
+*Wähle einen Zug und klicke unten im Fenster auf "Fahrzeug kaufen". Die Kosten werden abgebucht und der Zug erscheint in einem der Slots im Depot-Fenster. Das Zug-Fenster öffnet sich automatisch, damit man leichter Aufträge zuweisen und den Zug starten kann. 
+*Füge Waggons deinem Zug in der gleichen Weise hinzu. Zwei normale Waggons passen auf ein Feld auf der Spielwelt, erinnere dich daran wenn du Bahnhöfe bzw. Züge baust.
+
+'''''Siehe [[Main/de/Züge kaufen und verkaufen|Züge kaufen und verkaufen]] für ein detaillierteres Tutorial.'''''
+
+==Tipps==
+* Baue die Bahnhöfe immer zuerst, vor den Gleisen. Wenn du neue Gleise legst, wirst du wahrscheinlich Bäume fällen und dadurch die [[Main/de/Behörde|Behörden]] verärgern. Die Behörde wird dir nicht erlauben einen Bahnhof zu bauen, wenn du zuviele Gebäude oder Bäume in der Nähe zerstörst, aber sie kann dich nicht daran hindern Gleise zu legen!
+* Wenn du dich dazu entscheidest ''durch'' eine Stadt zu bauen, dann entferne zuerst Hindernisse, wie Gebäude und Straßen, die die Gleise blockieren würden. Baue so lange den Rest der Eisenbahnlinie nicht zu nahe ans Einzugsgebiet und vermeide das Zerstören von Bäumen. Benutze Bestechung und forste wieder auf, um die Behörde zufriedenzustellen, bis alle Hindernisse entfernt wurden.
+* Wenn du dich dazu entscheidest, über oder unter einem Hindernis zu bauen, sind [[Main/de/Tunnelbau|Tunnel]] den [[Main/de/Brückenbau|Brücken]] vorzuziehen. Sie sind manchmal billiger und haben auch keine Geschwindigkeitsbegrenzung.
+* Es ist auch teurer Gleise auf Ackerland zu bauen.
+* {{keypress|Shift}} schaltet vom Bauen zum Anzeigen der erwarteten Kosten, für alle Werkzeuge.
+* Für Gleis-lege-Werkzeuge schaltet {{keypress|Strg}} vom Bauen zum Entfernen.
+* Für Wegpunkt- und Bahnhofs-Werkzeuge schaltet {{keypress|Strg}} zum Anbauen von weiteren Teilen, außer im Entfernen-Modus ({{keypress|R}}). Im Entfernen-Modus entfernt {{keypress|Strg}}-Klick auch die Gleise.
+* Beim Bau von Signalen baut man durch Ziehen entlang eines geraden Gleisabschnitts mehrere Signale. Durch Halten von {{keypress|Strg}} und Ziehen baut man Signale bis zur nächsten Kreuzung, im Entfernen-Modus entfernt man durch Halten von {{keypress|Strg}} und Ziehen die Signale bis zur nächsten Kreuzung. Mit {{keypress|Strg}}+Klick auf ein bestehendes Signal ändert man seinen Typ. 
+
+
+==Siehe auch==
+*[[Main/de/Gleise verlegen|Gleise verlegen]]
+*[[Main/de/Zugdepot bauen|Zugdepots bauen]]
+*[[Main/de/Züge kaufen und verkaufen|Züge kaufen und verkaufen]]
+*[[Main/de/Anweisungen geben|Anweisungen geben]]
+*[[Main/de/Wartung|Wartung]]
+*[[Main/de/Wegpunkte|Wegpunkte]]
+*[[Main/de/Doppelgleisig|Doppelgleisig]]
+*[[Main/de/Signale|Signale]]
+*[[Main/de/Kreuzung|Kreuzung]]
+*[[Main/de/Bahnhof|Bahnhöfe]]
+*[[Main/en/Zugdepot bauen/De#Erweiterte Depotkonfigurationen|Erweiterte Depotkonfigurationen]]
+==Externe Links==
+[http://www.transporttycoon.net/rail Owen's Transport Tycoon Station - Rail Fundamentals]
+
+[[Category:de/Eisenbahn]]
+[[Category:de/Bauen]]
