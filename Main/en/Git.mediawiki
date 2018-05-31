@@ -1,0 +1,52 @@
+git is yet another revision control system. It is ideal to use if you try to maintain a lot of patches, as it allows you to create local branches. Also it allows you to commit to a local branch without it being available to the public (so you can try things ;)). Above that, every use can create local branches.
+
+===What about SVN?===
+
+SVN is not used anymore.
+
+
+===How does git work?===
+
+The best thing to do is to browse the web a bit for this. Many websites explain how it works. The linux kernel uses git too, and have some pretty good documentations. But, here is a small howto:
+
+ git clone https://github.com/OpenTTD/OpenTTD
+ cd trunk
+ git branch (2)
+ git fetch (3)
+ git rebase origin (4)
+ git checkout -b mybranch (5)
+ git checkout master (6)
+ git checkout mybranch (7)
+ git rebase master (8)
+
+* 1) Download the 'trunk' from SVN in git form.
+* 2) Check the local branches you have
+* 3) Get the latest source of the trunk git
+* 4) When you fetch something, it doesn't merge it yet with your code. This command starts merging the latest data into your master. I suggest to keep your master always clean of patches, unless you know what you are doing.
+* 5) Create a new branch named 'mybranch' based on the current branch, 'master' in this case
+* 6) Switch back to 'master' branch
+* 7) Switch back to 'mybranch ' branch
+* 8) Rebase your 'mybranch' with 'master'. This updates the code to 'master' and applies all your patches you commited to 'mybranch' over it. Make sure that you do not have local changes (do commit everything).
+
+Other things you want to know about.
+
+Commits all local changes. This is local, so feel free to commit as often as you find suitable.:
+ git commit -a
+
+Removes all local changes:
+ git checkout -f
+
+Cleans everything (removes unadded files, ...):
+ git clean
+
+Add a file:
+ git add <file>
+
+Merge a branch to the master as a single commit:
+ git checkout master
+ git pull --no-commit --squash . mybranch
+
+Diff your current code against the master:
+ git diff master
+
+And there are many more, but for that we suggest to look up a good manual ;)
