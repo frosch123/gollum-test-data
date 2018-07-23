@@ -1,0 +1,331 @@
+[[Translation:Main/en/Signals]]{{en/-}}{{it/Indice dei contenuti}}
+''Vedi il tutorial [[Main/it/Piazzare i segnali|Piazzare i segnali]] per istruzioni su come collocare materialmente i segnali ferroviari.''
+
+'''I segnali [[Main/it/Realizzazione ferrovia|ferroviari]]''' sono importanti strumenti che permettono di controllare lo spostamento dei treni: difatti impediscono ai treni di entrare in sezioni ove altri treni potrebbero trovarsi, evitando così che essi collidano in un incidente. Le tre tipologie principali sono:
+*''segnali di blocco'': negano l'accesso se sulla sezione è presente un qualunque altro altro;
+*''pre-segnali'': operano in maniera simile, ma richiedono la presenza di un'uscita accessibile dalla sezione;
+*''segnali di percorso'': permette l'accesso in una stessa sezione a due o più treni se questi non interferiscono tra loro.
+
+__TOC__
+{{en/-}}
+== Segnali di blocco ==
+I segnali di blocco dividono il tracciato in due parti dette sezioni, e lavorano secondo il movimento del treno sulle stesse sezioni. Fermano il treno se la sezione successiva del tracciato è occupato da un treno, diventando di colore rosso. Se così non fosse, lascia passare il treno diventando di colore verde. Qualunque binario fisicamente raggiungibile dal segnale, fino al segnale successivo, è considerato appartenente alla stessa sezione, e ciò è indipendente dalla presenza o meno delle diramazioni dei binari. Nel caso in cui il tragitto previsto del treno non vada a coincidere con il tragitto percorso da un altro treno, che però faccia parte della stessa sezione, il segnale di blocco non autorizza il treno a passare.
+
+===Segnale di blocco a due vie===
+[[File:en/2-way signals.png|frame|Segnali di blocco doppio in una stazione di carico]]
+<div style="float:right">
+[[File:en/Two-way signal.png]]
+</div>
+I ''segnali di blocco a due vie'' o ''doppi'' sono usati su binari che i treni possono impegnare da entrambe le direzioni. L'uso più comune è alle stazioni terminali, dove i treni entrano ed escono dalla stessa parte della stazione. Nell'esempio a destra, i segnli dirigono il prossimo treno ad entrare nella zona di carico vuota. Inoltre impediscono ad un treno di lasciare la zona di carico se un altro treno occupa i binari di uscita.
+
+Se un treno può scegliere tra due o più direzioni, tutte con segnali di blocco doppie, sceglierà la direzione con segnale verde. Se tutti i segnali sono rossi aspetterà finché il segnale non diventi verde.
+
+I segnali di blocco doppi erano già introdotti nell'originale originale ''[[Main/en/Transport Tycoon Deluxe]]''.
+{{en/-}}
+
+===Segnale di blocco a una via===
+[[File:en/One-way signal.png|right]]
+
+Il ''segnale di blocco a una via'' o ''singolo'' limita il moveimento dei treni lungo una sola direzione. Nell'esempio sottostante, i segnali costringon i treni a viaggiare in cerchio.
+
+[[File:en/1-way signal loop.png|frame|center|Segnali di blocco singoli in un tragitto circolare]]
+
+Ci sono principalmente due situazioni dove questi segnali sono molto utili:
+*nelle ''stazioni "RoRo"'' (Roll-On Roll-Off) consentono ai treni di fermarsi senza dover rigirarsi e bloccare l'entrata, rendendo i transiti di ingresso e uscita più efficaci;
+*in tragitti con binari doppi permette a più di due treni di viaggiare senza dover rigirarsi sullo stesso binario.
+
+Se un treno arriva dalla parte sbagliata del segnale si blocca e immediatamente si rigirerà a meno che non sia stata disabilitata l'opzione relativa nelle opzioni avanzate. Quando si usano segnali di blocco singoli bisogna essere sicuri che siano ''tutti'' rivolti verso la parte giusta.
+
+Cliccare un segnale di blocco doppio già esistente lo rende un segnale di blocco singolo, un secondo click lo farà cambiare di direzione, un terzo click lo farà tornare un segnale doppio.
+
+Se un treno può scegliere tra diversi tragitti, tutti con un segnale singolo, sceglierà automaticamente il tragitto che lo porterà a destinazione (ad esempio il treno aspetterà finché il segnale sul tragitto che deve seguire non diventi verde anziché imboccare una qualunque altra via con segnale verde). Questo è in contrasto con il segnale a due vie.
+
+Benché il segnale a una via si presenti graficamente con un solo semaforo, tecnicamente nell'altra direzione è come se ci fosse un segnale che è permanentemente sul rosso e che blocco l'entrata da quella parte: ciò però può portare ad errore il giocatore che deve imparare ad usare propriamente i segnali in maniera avanzata per costruire collegamenti efficaci.
+
+Il segnale a una via era già stato introdotto in ''[[Main/en/Transport Tycoon Deluxe]]''.
+
+==Segnali di percorso==
+[[File:it/Yapp signalgui.png|frame|right|I due nuovi tipi di segnali nella [[signal GUI]].]]
+
+C'è un nuovo tipo di segnale, detto "segnale di percorso", per ovviare alle limitazioni imposte dai segnali di blocco originali di ''Transport Tycoon''. Questi permettono ai treni di riservarsi un percorso attraverso una sezione fino al segnale seguente, prima di entrare nella sezione stessa. Se un altro convoglio vuole entrare nella sezione, e può riservarsi un suo percorso, il segnale ne autorizza il transito, anche se nella sezione c'è già un altro treno, cosa impossibile da fare con i tradizionali segnali di blocco e/o i presegnali. Risulta così possibile costruire una rete ferroviaria sofisticata.
+
+[[File:en/Difference block path signals.png|frame|center|Mostriamo la differenza più importante tra il segnale di blocco e il segnale di percorso con un esempio: due binari paralleli sono collegati da una giunzione.
+<ul>
+<li>Nella configurazione con i segnali di blocco essi non autorizzano al treno in basso di attraversare la sezione perché attualmente occupata dal treno in alto, nonostante non ci sia alcun pericolo che i treni possano collidere.</li>
+<li>Nella configurazione con i seganli di percorso invece il treno in basso può attraversare la sezione fintantoché il treno di sopra non cambi percorso passando nel binario in basso.</li>
+</ul>]]
+
+La segnalazione di percorso è un tentativo di simulare un più relistico [[Main/en/Realistic Path Based Signalling|sistema di segnalazione di percorso]] perché:
+# Il vero segnale è permanentemente rosso e diventa solo temporaneamente verde quando un treno arriva davanti ad esso e il percorso successivo non collide con il percorso di un altro treno. In uno scambio realistico, è possibile permettere a più treni di percorrere lo stesso blocco grazie ad un attraversamento sicuro dovuto allo [http://www.wikipedia.org/wiki/it:Deviatoio scambio ferroviario] che limita verso quale lato dello scambio il treno si può dirigere.
+# I segnali di uscita (sia il generico che la parte presente nel pre-segnale) piazzato immediatamente dopo l'intersezione che di solito serve a liberarla per un altro treno in ingresso esiste solo su ''Transport Tycoon'' e non nella realtà perché potrebbe arrestare il treno all'interno dello scambio, causando un blocco.
+# Un segnale a singola faccia non è necessariamente un segnale a senso unico nella realtà (a meno che il giocatore non stia usando un "segnale a senso unico" con lo scopo di limitare la direzione di passaggio). I treni possono passare in un tracciato con un segnale al contrario come se non ci fosse. Come menzionato nel punto precedente, i segnali di uscita non esistono nel mondo reale. Questo è particolarmente importante per una stazione con un lato per l'uscita/entrata di fronte allo scambio, i segnali di percorso (non a senso unico) è piazzato di fronte all'uscita, girato verso il lato della stazione.
+
+Ecco una illustrazione di esempio:
+{|class=wikitable
+!style="background:white"|I segnali di blocco sono lontani dallo scambio
+!I segnali di blocco sono direttamente a ridosso dello scambio
+!style="background:white"|Segnale di percorso prima dello scambio
+|-
+|style="background:white"|Abbiamo una sezione a Y fra tre segnali.
+Il tracciato di destra è usato da un treno. Un treno arriva dal tracciato in basso e vuole andare in quello a sinistra. Un segnale di blocco standard considera tutta la sezione occupata (anche se il tracciato di sinistra è libero).
+|Una soluzione è dividere la sezione in sezioni più piccole aggiungendo segnali dopo lo scambio. Con due segnali di blocco addizionali, la ''Y'' è stata divisa in tre parti: destra, sinistra e scambio.
+|style="background:white"|Al contrario, il segnale di percorso autorizza il treno proveniente dal basso ad entrare nella sezione a Y, la strada che prova a riservare è libera (il tracciato di sinistra). Non serve dividere la sezione in sezioni più piccole (quindi non c'è bisogno di segnali immediatamente a ridosso dello scambio).
+|-
+|style="background:white"|[[File:en/Signal bloc.png]]
+Sezione a Y fra tre ''segnali di blocco''.
+|[[File:en/Multiples standard.png]]
+Con due segnali di blocco addizionali, la Y è divisa in tre sezioni: destra, sinistra e scambio.
+|style="background:white"|[[File:en/Chemin.png|Chemin.png]]
+Sezione a Y fra ''segnale di precorso'' e due ''segnali di blocco''.
+|}
+
+Ci sono due cose da sapere su questo segnale:
+* Piazzarlo solamente dove i treni possano fermarsi senza bloccare lo scambio;
+* Questo segnale funziona in una sola direzione, dalla parte opposta viene ignorato o considerato un segnale a senso unico (vedi sotto).
+{|class=wikitable style="width:600px; margin:auto"
+|[[File:en/Yapp pbssignal.png]]
+|'''Segnale di Percorso''' (PS): i treni possono passare questo segnale al contrario. Da non confondersi con il segnale (di blocco) a senso unico.
+|-
+|[[File:en/Yapp onewaypbssignal.png]]
+|'''Segnale di Percorso a senso unico''' (1W PS): i treni '''non possono''' passare questo segnale al contrario, come se dal lato opposto ci fosse un segnale permanentemente rosso.
+|}
+Il più delle volte sarà sufficiente usare un segnale di percorso normale, dato che passarlo al contrario viene penalizzato dal pathfinder, a meno che la destinazione (stazione o waypoint) sia subito dietro il segnale. Ad ogni modo, i segnali di percorso a senso unico possono essere usati in certi casi specifici.
+
+I due nuovi tipi di segnale si comportano in modo leggermente diverso rispetto a quelli a blocchi standard. Per impostazione predefinita, i segnali di percorso sono rossi e mostreranno il verde non appena un treno potrà prenotare un percorso e percorrerlo in sicurezza fino alla prossima posizione di attesa su quella tratta. Le posizioni di attesa sicure sono - per definizione - di fronte a segnali, depositi e fine binari. La parte posteriore di un segnale di percorso non è considerata una posizione di attesa sicura e quindi i percorsi sono riservati nel tratto compreso tra questi segnali.
+
+Poiché la parte anteriore di ogni segnale è definita come una posizione di attesa sicura, normalmente non posizioneremo un segnale immediatamente dietro un raccordo ma solo di fronte a un raccordo . Questo perché è assolutamente sicuro per un treno attendere di fronte a un raccordo. Non è sicuro invece per un treno attendere un segnale immediatamente dopo la giunzione prima che l'intero treno l'abbia liberata, in quanto bloccerebbe questo incrocio durante l'attesa, come illustrato nell'esempio seguente. Questo è un grande vantaggio rispetto ai tradizionali segnali di blocco, che è necessario posizionare prima e dopo i raccordi, per cui i treni causeranno il blocco di queste giunzioni durante l'attesa.
+
+{|class=wikitable style="margin: 2em auto"
+|style="background:#fee; padding: 10px; border-right: 0"|''' Pessimo '''
+[[File:en/Yapp unsafewaitinglocation.png|none|frame|Il segnale posto nel punto indicato dalla freccia è una pessima scelta poiché il treno nella giunzione ora blocca il percorso altrimenti libero del treno proveniente dall'alto. C'è una seconda cattiva posizione di attesa in questa immagine. Puoi trovarla?]]
+|style="background:#efe;padding: 10px; border-left: 0"|'''Buono'''[[File:en/Yappgoodexample.png|none|frame|Qui c'è abbastanza spazio dopo la giunzione affinchè un treno possa aspettare. Finché questo spazio non sarà disponibile il prossimo treno attenderà prima del nodo anziché bloccarlo. Ciò consentirà al treno proveniente dall'alto di procedere.]]
+|}
+<!--
+{|class=wikitable style="margin:auto"
+|style="background:#fee"|[[File:en/Yapp unsafewaitinglocation.png|center]]
+''' Cattivo ''':Il segnale indicato dalla freccia è un pessimo luogo di attesa, poiché il treno nella giunzione ora blocca il percorso altrimenti libero del treno proveniente dall'alto. C'è una seconda cattiva posizione di attesa in questa immagine. Puoi trovarla?
+|style="background:#efe"|[[File:en/Yappgoodexample.png|center]]
+'''Buono''': Qui c'è abbastanza spazio dopo la giunzione affinchè un treno possa aspettare. Finché questo spazio non sarà disponibile il prossimo treno attenderà prima del nodo anziché bloccarlo. Ciò consentirà al treno proveniente dall'alto di procedere.
+|}
+-->
+<!--
+The two new signal types behave a bit differently than standard block signal types. The path signals are red by default, and will only show green as soon as a train can reserve a path to the next safe waiting position on its route. Safe waiting positions are - by definition - in front of signals, depots and track ends. The back of a path signal is not considered a safe waiting position, and therefore paths are reserved through these signals.
+
+Because the front of every signal is defined as a safe waiting position, you would normally not want to place a signal immediately behind a junction, only in front of a junction. This is because it is only safe for a train to wait in front of a junction. It is not safe for a a train to wait at a signal immediately after a junction before the whole train has cleared the junction, as it would be blocking the junction while waiting, as illustrated in the example below. This is a major advantage against traditional block signals, where you had to place signals before and after junctions, which caused trains to block junctions while waiting.
+
+{|class=wikitable style="margin:auto"
+|style="background:#fee"|[[File:en/Yapp unsafewaitinglocation.png|center]]
+'''Bad''': The signal indicated by the arrow is a bad waiting location, as the train in the junction now blocks the otherwise free path of the train coming from the top. There's a second bad waiting location in this picture. Can you find it?
+|style="background:#efe"|[[File:en/Yappgoodexample.png|center]]
+'''Good''': Here there is enough space after the juction for a train to wait. As long as this space is unavailable, the next train will wait before the junction rather than blocking it. This allows the train coming from the top to proceed.
+|}
+-->
+
+Questo è un altro esempio di cosa puoi fare con i segnali di percorso. Funziona molto meglio che usare i pre-segnali perché puoi lasciare due treni contemporaneamente alla stazione e condividere lo stesso deposito (non c'è modo di farlo con i pre-segnali, a causa della condivisione dei blocchi). In questo caso ci sono segnali di percorso unidirezionali per i treni che escono dalla stazione, e un segnale di percorso semplice per i treni che escono dal deposito.
+[[File:en/pathsignal station exit.png|frame|center|Stazione a due uscite. Si noti che i segnali davanti al depositi non sono necessari, poiché i depositi hanno segnali integrati. Tuttavia, i segnali di percorso di fronte a depositi come questi danno ai treni che lo lasciano la priorità di deposito sui treni che vogliono entrarvi.]]
+
+Anche se dalla schermata sopra non si evince, non è necessario posizionare alcun segnale tra l'ingresso della stazione con diramazioni e la giunzione (effettivamente un "segnale di uscita" nella configurazione tradizionale del segnale di blocco) se il segnale dei binari di ingresso, di fronte alla giunzione, è segnale di percorso.
+
+[[File:en/Rpbs img10.png|center|frame|La stazione con diramazioni (Pass-through) non richiede il segnale di uscita di fronte all'ingresso della stazione, se tutti i segnali sono di tipo percorso.]]
+
+<!--
+This is one other example of what you can do with those path signals. This works far better than using pre-signals because you can have two trains leaving the station at the same time AND share the same depot (there is no way to make it with pre-signals, because of the block share). In this case there are one-way path signals for trains leaving the station, and simple path signal for trains leaving the depot.
+[[File:en/pathsignal station exit.png|frame|center|Two exit station. Note that the signals in front of the depot are not required, as depots have built-in signals. However, path signals in front of depots like this give trains leaving the depot priority over trains wanting to enter the depot.]]
+
+Although the screen shot above does not show, it is unnecessary to place any signal between the pass-through station entrance and junction (effectively an "exit-signal" in the traditional block signal setup) if the signal of entrance tracks in front of the junction is path signal.
+
+[[File:en/Rpbs img10.png|center|frame|Pass-through station does not require exit signal in front of the station entrance, if all signals are path signal type.]]
+-->
+
+==== Impostazioni avanzate ====
+[[File:en/op av perc riser binario.png|frame|right|opzione avanzata per evidenziare il binario riservato]]
+Tramite le [[Main/en/Advanced Settings]] c'è la possibilità di evidenziare i binari riservati. Questa opzione è utile per controllare i tuoi raccordi con segnali di percorso poiché ti evidenzierà quali percorsi i treni si riserveranno attraversando un raccordo.
+
+Le altre due opzioni si trovano in Impostazioni avanzate\Compagnia e controllano il comportamento dell'interfaccia Selezione segnale. Con la prima, "Tipo di segnale predefinito", è possibile impostare il gruppo di segnali predefinito gia predisposto all'apertura dell'interfaccia segnale, offre tre opzioni di scelta: segnali di blocco, segnali di percorso, segnali di percorso a senso unico. Di default è impostato su segnali di percorso ovviamente. La seconda impostazione è "Tipi di segnale fra cui alternare" che offre la possibilità, con l'accoppiata CTRL+click sinistro mouse e cliccando sul segnale, di ciclare trai diversi tipi di segnale. anche questo offre tre opzioni possibilità di cliclare tra i soli segnali di blocco, solo segnali di percorso oppure tutti i tipi di segnali. Di default è impostato su "Tutti".
+
+Nota: si tenga presente che per i segnali OpenTTD ha impostato di default l'uso dello stile semaforico per tutti i segnali piazzati prima del 1950 e quello luminoso dopo tale data. Anche questa data è configurabile in Impostazioni avanzate\Compagnia in "Costruisci segnali semaforici prima del 1950", tecnicamente questo tipo di segnali sono stati usati fino agli anni '70 del 900, quindi potreste prolungare il loro uso, o decidere diversamente, a vostra discrezione, da un punto di vista pratico non cambia assolutamente in gioco, funzionano allo stesso modo, è solo una scelta grafica e di gusto personale. In ogni caso anche se impostati per definizione in un modo potete bypassare questa impostazione tenendo abbassto CTRL prima di piazzare il segnale e verrà posizionato il segnale nello stile opposto a quello predefinito
+
+Ci sono altre opzioni relative al segnale di percorso che non sono disponibili attraverso la finestra Impostazioni avanzate. Quali sono queste opzioni e come modificarle è descritto in [[Main/en/Advanced path signal options & features]].
+
+<!--
+====Advanced Settings====
+[[File:en/Yapp patch-options.png|frame|right|YAPP Advanced Settings]]
+There are three new [[Main/en/Advanced Settings]] related to path signals.
+
+One option is to highlight reserved tracks. This option is useful to troubleshoot your path-signaled junctions, as you can see what paths trains have reserved through a junction.
+
+The other two options control how the build signal tool should behave. You can set the signal type which should be built
+by default when building a new signal with the signal tool and change which signal types should be cycled through on ctrl-clicking
+an already existing signal.
+
+There are a few more path signal related options which are not available through the Advanced Settings window. What these options are, and how to edit them is covered under [[Main/en/Advanced path signal options & features]].
+-->
+
+=== Esempi basilari di uso dei segnali di percorso ===
+Di seguito sono riportati alcuni esempi di tracciato che utilizzano i segnali di percorso. Ci sono anche [[Main/en/Advanced path signal layouts|Schemi di tracciati avanzati]] che non sono raccomandati per i principianti.
+
+<!--
+===Basic examples of path signals===
+Below are some example track layouts which use the path signals. There are also [[Main/en/Advanced path signal layouts|Advanced track layouts]] that are not recommended for beginners.
+-->
+
+==== Giunzione di base ====
+Questo incrocio di base attualmente ha un livello di attraversamento più alto perché i treni devono solo aspettare i treni in arrivo sulla stessa linea. Il treno proveniente da destra (che risale) di solito dovrebbe aspettare altri treni provenienti dai binari di sinistra. Ora dovrebbe solo aspettare se vuole cambiare linea. Notare i 6 segnali di delimitazione al "blocco di giunzione" e 3 segnali di percorso totali, uno a ciascun ingresso.
+
+[[File:en/Yapp basicjunction.png|frame|center|Giunzione base per treni (ottimizzata per la lunghezza di 3 tiles). I segnali di percorso sono presenti a tutti gli accessi al blocco di giunzione. Notare l'uso di segnali ordinari sul binario normale.]]
+
+<!--
+====Basic junction====
+This basic junction now has a much higher throughput because trains only have to wait for trains running on the same line. The train coming from the right (going up) would usually have to wait for other trains coming back from the left tracks. It would now only have to wait if it wishes to switch lines. Note the 6 bounding signals to the 'junction block', and 3 total path signals, one at each entryway.
+
+[[File:en/Yapp basicjunction.png|frame|center|Basic junction for trains (optimised for 3-tile length). Path signals are present at all entries to the junction block. Note the use of normal signals on plain track.]]
+-->
+
+==== Stazione base a due vie ====
+Con questo tipo di stazione, i treni possono utilizzare entrambe le banchine quando provengono da ambedue le direzioni. Poiché i segnali di percorso non creano blocchi sul loro rovescio, il treno non può entrare finché non c'è un percorso libero fino al segnale sul lato "opposto" della banchina (che deve includere lo spazio stesso della banchina), permettendogli di fermarsi in sicurezza. Si noti che questa configurazione potrebbe alternativamente essere replicata con un insieme di presenze di uscita blocco davanti alla stazione.
+
+[[File:en/Yapp basicstation.png|frame|center|Stazione base a due vie.]]
+
+<!--
+====Basic two-way station====
+With this station layout, trains can use both platforms when coming from either direction. Because path signals do not create blocks on their reverse, the train cannot enter until there is a clear path until the signal on the ''opposite'' side of the platform (which must include the platform space), allowing it to safely stop. Note that this setup could alternatively be replicated with a set of block-exit presignals in-front of the station.
+
+[[File:en/Yapp basicstation.png|frame|center|Basic station.]]
+-->
+
+{{en/Feature|0.7}}
+
+== Pre-segnali ==
+I pre-segnali sono un gruppo di segnali di blocco specializzati. Sono così chiamati perché l'ingresso pre-segnale di ingresso blocco proviene non solo dal binario nel blocco, ma da qualsiasi altro pre-segnale posto dall'altro lato del blocco (cioè esce da quel blocco). Sono utilizzati per limitare l'ingresso di treni in blocchi che non possono essere ostruiti o occupati. Nella maggior parte dei casi è possibile utilizzare segnali di percorso per risolvere situazioni in cui i treni possono scegliere tra più alternative, ad esempio in corrispondenza di stazioni o linee a binario singolo utilizzate dai treni in entrambe le direzioni. 
+  
+{|class=wikitable style="margin: 2em auto;"
+|style="background:#fee;padding:10px; border-right:0;"|'''Con segnali ordinari''' 
+[[File:en/Station no pre-signals.png|frame|none|Un problema con l'impostazione a segnale di blocco unico - il treno fermo sulla banchina di sinistra può partire per primo ma il treno in attesa sul raccordo rimarrebbe comunque bloccato in attesa, perchè gia incanalato verso quella banchina, che parta il treno a destra.]]
+|style="background-color:#efe;padding:10px; border-left:0;"|'''Con pre-segnali''' 
+[[File:en/Station with pre-signals.png|frame|none|Il problema si può risolvere facilmente usando i pre-segnali: il treno è fermo prima della diramazione e qualsiasi treno partirà per primo lui ne prenderà il posto.]]
+|}
+
+L'immagine in alto a sinistra mostra una configurazione in cui l'ingresso a una stazione viene controllato utilizzando segnali ordinari. Quando almeno una banchina è vuota è vuota questo funziona bene, poiché un treno in entrata sarà instradato verso una banchina libera. Tuttavia, considera ciò che accade quando tutte le piattaforme sono piene, come nell'immagine. Tutti i rami stanno mostrando rosso, quindi il treno in entrata sceglie il percorso più breve - dritto. Ma supponiamo che il treno sulla piattaforma a destra sarà nella stazione per qualche tempo. Nel frattempo, il treno a sinistra parte. Il treno in arrivo si è impegnato su una piattaforma ed è bloccato tra i segnali, in attesa che un treno parta, anche se ora è disponibile una piattaforma vuota. Dobbiamo fermare quel treno in arrivo prima che la pista si divida, come mostrato fatto nell'immagine a sinistra, in modo che ossa occupare la prima banchina che si libera. Per questo è possibile utilizzare i segnali di percorso, ma è anche possibile risolvere questa situazione con i pre-segnali. In effetti, questo era il modo di costruire stazioni prima dell'invenzione dei segnali di percorso.
+
+I pre-segnali fungono da segnali di blocco, ma decidono quale colore mostrare dallo stato di altri pre-segnali posizionati nella stessa direzione lungo il tracciato. Nello specifico, un pre-segnale di ingresso consente ai treni di entrare se, e solo se, c'è almeno un'uscita verde dal blocco adiacente/successivo. Quando si pianifica il tracciato occorre identificare quali segnali devono fungere da pre-segnali di ingresso blocco e quali identificare le uscite.
+
+<!--
+==Pre-signals==
+Pre-signals are a group of specialised block signals. They are so named because block entry pre-signal input comes from not just the track in the block, but any other pre-signals placed on the other side of the block (that is to say exits from that block). They are used to limit the entry of trains into blocks that cannot be obstructed or occupied. In most cases you can use path signals to solve situations where trains can choose between multiple alternatives, for instance at stations or single-track lines that are used by trains in both directions.
+
+<div style="float:right">
+[[File:en/Station no pre-signals.png|frame|right|A problem with block signal only setup - the left train may leave first, the train waiting behind may get stuck in the track right behind the right train.]]
+[[File:en/Station with pre-signals.png|frame|right|Solve the problem using presignals]]
+</div>
+The image on the top right shows a setup where entry to a station is controlled using ordinary signals.  When at least one platform is empty, this works well, as an incoming train is always directed to a free platform. However, consider what happens when all platforms are full, as in the screenshot. All branches are showing red, so the incoming train picks the shortest path - straight on.  But suppose the train on the platform to the right is going to be in the station for some time. Meanwhile, the train on the left leaves.  The incoming train has committed itself to a platform and is stuck between the signals, waiting for a train to depart even though there is now an empty platform available. We need to stop that incoming train before the track splits so that it picks the empty platform when a train leaves. For this you can use path signals, but you can also solve this situation with pre-signals. In fact, this was the way to build stations before path signals were invented.
+
+Pre-signals function as block signals, but additionally decide on which colour to show by the status of other pre-signals in the same direction down the track.  Specifically, an entry pre-signal allows trains to enter if, and only if, there is at least one green exit out of the adjacent/following block.  You, as the planner, need to identify which signals are to be the block entry pre-signals and which are to identify exits.
+-->
+
+==== Pre-segnale di entrata blocco====
+<div style="float:left">
+[[File:en/entry presignal.png|60px]]
+</div>
+Un pre-segnale di entrata controlla l'aspetto di tutti i pre-segnali di uscita presenti sul blocco dopo di lui. Se è presente almeno un pre-segnale di uscita verde, anche il pre-segnale di ingresso sarà verde. Se tutti i pre-segnali di uscita del blocco successivo sono rossi, anche il pre-segnale di ingresso è rosso. Ciò impedisce ai treni di entrare nel blocco e di ostruirlo finché non è disponibile un'uscita. 
+
+Nota che i depositi ferroviari hanno un segnale bidirezionale incorporato (funziona come un pre-segnale di entrata in un blocco impostato con i pre-segnali). Se non ci sono segnali designati come uscite sul blocco direttamente dietro il pre-segnale di ingresso, si comporta come un normale segnale di blocco. Questo è conveniente per i pre-segnali bidirezionali in cui solo una direzione richiede la funzionalità di pre-segnale.
+
+<!--
+====Block Entry Pre-signal====
+<div style="float:right">
+[[File:en/entry presignal.png|60px]]
+</div>
+An entry pre-signal checks the signal aspect of all exit pre-signals of the signal block following the entry pre-signal. If there is at least one green exit pre-signal, the entry pre-signal wil also show green. If all exit pre-signals of the next block are red, then the entry pre-signal is also red.
+
+This prevents trains from entering the block and obstructing it until there is an available exit. Note that depots have a built-in two way signal (it works as an entry pre-signal in a pre-signal set).
+
+If there are no signals designated as exits on the block directly behind the entry pre-signal, it behaves as a normal block signal. This is convenient for bi-directional pre-signals where only one direction needs pre-signal functionality.
+-->
+
+==== Pre-segnale di uscita blocco ====
+<div style="float:left">
+[[File:en/exit presignal.png|60px]]
+</div>
+I pre-segnali di uscita sono ciò che un pre-segnale di entrata cerca per decidere quale aspetto mostrare, perché si comporta come un segnale di blocco, ma "indica" al segnale di ingresso se il suo blocco binari è libero o occupato.
+
+Riassumendo: nella direzione del viaggio hai prima un segnale di ingresso, poi un incrocio in cui la traccia si divide in almeno due direzioni. Dopo l'incrocio c'è un pre-segnale di uscita su ciascun ramo. Se il primo blocco di ciascun ramo dopo lo svincolo è occupato, non sarà consentito alcun treno sulla giunzione. Se è disponibile almeno una diramazione, sarà disponibile anche la giunzione. Nota che i treni possono ancora scegliere in caso di ramo occupato e questo è l'unico percorso verso la sua destinazione. Se entrambe le diramazioni portano alla destinazione, il treno sceglierà il ramo che non è occupato.
+
+<!--
+====Block Exit pre-signal====
+<div style="float:right">
+[[File:en/exit presignal.png|60px]]
+</div>
+The exit pre-signals are what an entry pre-signal looks for to decide what aspect to show. They otherwise behave in the same way as a normal block signal.
+
+To summarize: in the direction of travel you first have an entry pre-signal, then a junction where the track splits in at least two directions. After the junction there is an exit pre-signal on each branch. If the first block of each branch after the junction is occupied, then no trains will be allowed onto the junction. If at least one branch is available, then the junction will be available as well. Note that trains still can choose the occupied branch, if that is the only route to its destination. If both branches lead to the destination, then the train will choose the branch that is not occupied.
+-->
+{{en/-}}
+==== Segnale combinato ====
+[[File:en/station with pre-signals2.png|frame|Stazione con 1 ingresso pre-segnale, 2 segnali combinati e 4 segnali di uscita]]
+<div style="float:left">
+[[File:en/combo presignal.png|60px]]
+</div>
+C'è un terzo tipo di pre-segnale chiamato segnale combinato e agisce semplicemente come un segnale di ingresso e di uscita. Combinano efficacemente molti segnali di uscita in un unico segnale, copiando efficacemente il loro effetto lungo la catena. Qualsiasi segnale di uscita verde farà diventare verdi tutti i segnali combinati su tutta la linea, che verranno successivamente trasmessi al segnale di ingresso blocco originario. Ciò consente di costruire grandi "alberi" di pre-segnali che coprono diversi blocchi, come mostrato nell'immagine a destra.
+
+In un albero di pre-segnali, quelli combinati sono posizionati tra i pre-segnali di ingresso e i segnali di uscita per i motivi spiegati sopra, gli altri due tipi di segnali sono posti rispettivamente all'inizio e alla fine dello schema.
+
+<!--
+====Combo-signal====
+[[File:en/station with pre-signals2.png|frame|Station with 1 entry pre-signal, 2 combo-signals, and 4 exit-signals]]
+<div style="float:right">
+[[File:en/combo presignal.png|60px]]
+</div>
+There is a third type of pre-signal called the combo signal and simply acts as both an entry and exit signal. They effectively combine many exit signals into one signal, effectively copying their effect down the chain. Any one green exit signal will make any combo signals up the line become green, which will successively relay up to the original block entry signal. This allows you to build large "trees" of pre-signals spanning several blocks, as shown on the right. 
+
+In a tree of pre-signals, combo-signals are placed in between the entry pre-signals and exit-signals for that reason above, the other 2 types of signals are placed at the very beginning and end of the setup respectively.
+-->
+{{en/-}}
+==== Costruire i pre-segnali ====
+[[File:en/1.8.0 op-esp-int-cos-abil-int-cos-segn.png|frame|Attualmente l'interfaccia per la costruzione dei segnali è abilitata di default, per visualizzarla occorre usare le impostazioni per esperti, ver. 1.8.0.]]
+Per creare un pre-segnale, selezionare il pulsante appropriato nella [[Main/en/Building signals| barra di selezione segnale]].
+
+Nelle versioni precedenti, o se non si ha attivata l'interfaccia inserimento segnali, in primo luogo inserire un segnale ordinario. Quindi, tenendo premuto ''Ctrl'', fare clic sul segnale per scorrere i diversi tipi di preselezione:
+* Si noti che è possibile costruire pre-segnali a senso unico nello stesso modo in cui si costruiscono normali segnali a una via. Ricorda: tenendo premuto ''Ctrl'' e facendo clic si alterna il tipo di (pre) segnale , cliccando senza ''Ctrl'' si cambia la direzione della segnalazione - questo se i l'interfaccia per inserire i segnali non è abilitata.
+* Ricorda di non tenere premuto ''Ctrl'' quando posizioni il segnale inizialmente o finirai con un semaforo (vedi sotto). Usa anche ''Ctrl'' se hai abilitato l'interfaccia del segnale.
+[[File:en/1.8.0 pulsante gui segnali.png|left|frame|L'interfaccia di selezione segnale, il pulsante della barra principale per aprirlo e il tooltip con le indicazioni per posarli (ver. 1.8.0)]]
+{{en/-}}
+<!--
+====Building pre-signals====
+To build a pre-signal select the appropriate button in [[Main/en/#Signal Interface|signal selection toolbar]].
+
+In previous versions, first place an ordinary signal.  Then, with ''Ctrl'' held down, click the signal to cycle through the different kinds of presignal:
+*Note that you can build one way pre-signals in the same way as you build ordinary one way signals.  Remember: holding ''Ctrl'' and clicking toggles the type of (pre)signal, clicking without ''Ctrl'' changes the direction of signaling - if interface signals not enabled.
+*Remember not to hold down ''Ctrl'' when placing the signal initially or you will end up with a semaphore (see below). Also use ''Ctrl'' if you have enabled the signal interface.
+-->
+
+==== Limitazioni ==== 
+[[File:en/PresignalLimitation.png|frame|Il problema con i pre-segnali ...]]
+Un punto importante da notare con i segnali di uscita è che un segnale di uscita verde attiverà un verde sul pre-segnale di ingresso all'inizio del blocco anche se non è effettivamente possibile che un treno arrivi a quel segnale di uscita per come è strutturato il tracciato (come nell'immagine a destra, un treno che entra nel binario in basso non può tecnicamente uscire dal binario superiore). Ciò può rovinare le configurazioni di pre-segnalazione più complesse, quindi è necessario prestare attenzione alla pianificazione.
+
+Uno dei bug elencati sotto la voce "non verrà risolto" è: i treni persi ignorano i segnali di uscita (blocco). Se i treni sono persi, sceglieranno una direzione casuale in corrispondenza di ciascuna diramazione, in modo da ignorare i segnali di uscita dei blocchi e potrebbe facilmente bloccare le giunzioni con i pre-segnali.
+
+<!--
+====Limitation====
+[[File:en/PresignalLimitation.png|frame|The problem with pre-signals...]]
+An important point to note with exit signals is that a green exit signal will trigger a green on the entry pre-signal at the beginning of the block even if it is not actually possible for a train to get to that exit signal because of the track layout (as in the image to the right with a train entering on the bottom track cannot technically exit from the top track). This can ruin more complicated pre-signaling setups, so care needs to be taken with planning.
+
+One of the bugs that are noted as "will not be solved" is: lost trains ignore (block) exit signals. If trains are lost, a random direction is chosen at each junction, so they ignore block exit signals, and may easily block junctions with pre-signals.
+-->
+{{en/-}}
+== Indirizzare i treni ==
+I segnali hanno lo scopo di impedire che i treni si schiantino l'uno contro l'altro e di aiutarli a scegliere tra diverse sezioni di binari nella stessa destinazione. Se si desidera indirizzare un treno verso una destinazione particolare attraverso un determinato percorso, è necessario utilizzare [[Main/en/Waypoints]].
+
+<!--
+==Directing trains==
+Signals are intended to prevent trains from crashing into each other, and to help them choose between several track sections to the same destination. If you want to direct a train to a particular destination via a certain route, you should use [[Main/en/Waypoints]].
+-->
+
+==See Also==
+* [[Main/en/Advanced signalling examples|Examples of advanced presignal setups]]
+* [[Main/en/Building depots#Advanced depot configurations]]
+* [[Category/en/Train Junctions]] for examples of complex junctions that take advantage of pre-signals.
+* [http://www.darkcoding.net/misc/openttd-trains-and-signals-for-beginners-a-tutorial/ Signals for the complete beginner]
+* [http://kokolokus.de/?s=blog&v=6 A tutorial written by domsson, on the forums] [http://www.tt-forums.net/viewtopic.php?f=29&t=51395 here]
+
+[[Category:it/Ferrovie]]
+[[Category:it/Costruzioni]]
