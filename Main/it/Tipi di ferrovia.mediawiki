@@ -1,0 +1,73 @@
+[[Translation:Main/en/Types of railway]]{{en/-}}{{Template:Tipi di ferrovia/It}}
+__NOTOC__
+OpenTTD di default permette di costruire quattro tipi di ferrovie, tutte disponibili cliccando sul pulsante '''Costruisci ferrovie''', ma inizialmente, dal 1925, solo quelle normali, poi man mano col passare degli anni, precisamente nel 1965, 1998, 2020,  saranno disponibili anche gli altri tipi.  
+{|style="border-collapse:;"
+|colspan="2" style="border-bottom: none; padding: 5px 10px;"|Menu accessibile cliccando sul pulsante '''Costruisci ferrovie''' nella toolbar principale
+|-
+|style="border-top: none; border-right: none; padding: 5px 0px;"|[[File:it/Openttd-rail1.png|center|frame|inizialmente, 1925, sarà possibile costruire solo ferrovie con binari normali]] 
+|style="border-top: none; border-left: none; padding: 5px 0px;"|[[File:en/Ferrovie costruibili 2020.png|center|frame|Dall'anno 2020, ogni tipo di ferrovia è costruibile (quelle elettrificate solo per il clima temperato)]]
+|}
+
+Per informazioni dettagliate su come si realizzano le ferrovie vedi [[Main/it/Realizzazione ferrovia|Realizzazione ferrovia]].
+
+Ciascun tipo di ferrovia è caratterizzato da un tipo di rotaia che sono le seguenti:
+
+==Ferrovia normale==
+Le [[Main/it/Ferrovie|ferrovie normali]] sono le uniche disponibili all'inizio della partita (a meno che il gioco non sia iniziato molto presto, prima del 1925, oppure dopo il 1965). Solo treni a vapore e diesel funzionano su questa ferrovia (a meno che l'impostazione avanzata [[Main/en/Impostazioni avanzate/Limiti#Disabilita ferrovie elettrificate|"Disabilita ferrovie elettrificate"]] sia attiva.
+{|class="wikitable" style="margin-left:auto; margin-right:auto;"
+|style="border-right: none; padding: 10px 5px 10px 10px; vertical-align: middle;"|[[File:en/rail-normal.png|center|frame|Ferrovia normale]]
+|style="border-left: none; padding: 10px 10px 5px 5px"|[[File:en/rail-normal-magnified.png|center|frame|Ferrovia normale, vista ingrandita]]
+|}
+
+==Ferrovia elettrificata==
+Le [[Main/it/Ferrovie elettrificate|ferrovie elettrificate]] Diventano disponibili a partire dal 1965. I treni elettrici possono circolare ''solo'' su questo tipo di rotaie, a meno che non disabiliti l'impostazione avanzata per le [[Main/en/Impostazioni avanzate/Limiti#Disabilita ferrovie elettrificate|ferrovie elettrificate]]. Treni a vapore e diesel possono circolare sulle ferrovie elettrificate. 
+Di default non ci sono motrici elettriche per i climi sub-artici, tropicali ed per il Toyland, solo per il clima temperato. Se volete usare le ferrovie elettrificate per questo tipo di climi dovete usare qualche add-on [[Main/it/NewGRF|NewGRF]]
+
+{|class="wikitable" style="margin-left:auto; margin-right:auto;"
+|style="border-right: none; padding: 10px 5px 10px 10px; vertical-align: middle;"|[[File:en/rail-electrified.png|center|frame|Ferrovia elettrificata]]
+|style="border-left: none; padding: 10px 10px 5px 5px"|[[File:en/rail-electrified-magnified.png|center|frame|Ferrovia elettrificata, vista ingrandita]]
+|}
+
+==Monorotaia==
+Le [[Main/it/Monorotaia|monorotaie]] diventano disponibili a partire dal 1998. Sono ad uso esclusivo dei treni momorotaia.
+
+{|class="wikitable" style="margin-left:auto; margin-right:auto;"
+|style="border-right: none; padding: 10px 5px 10px 10px; vertical-align: middle;"|[[File:en/rail-monorail.png|center|frame|Ferrovia con monorotaia]]
+|style="border-left: none; padding: 10px 10px 5px 5px"|[[File:en/rail-monorail-magnified.png|center|frame|Ferrovia con monorotaia, vista ingrandita]]
+|}
+
+==MagLev==
+I [[Main/en/MagLev|MagLev]] sono l'ultimo tipo di rotaia, permettono di raggiungere altissime velocità ai treni e sono disponibili solo dal 2020. Sono ad uso esclusivo dei treni MagLev.
+
+{|class="wikitable" style="margin-left:auto; margin-right:auto;"
+|style="border-right: none; padding: 10px 5px 10px 10px; vertical-align: middle;"|[[File:en/rail-Maglev.png|center|frame|Ferrovia MagLev]]
+|style="border-left: none; padding: 10px 10px 5px 5px"|[[File:en/rail-Maglev-magnified.png|center|frame|Ferrovia MagLev, vista ingrandita]]
+|}
+
+==Tipi di rotaie aggiuntive NewGRF==
+[[File:en/Metrotrackset.png|frame|right|esempio di rotaia aggiuntiva: Metro Track Set]]
+In aggiunta a questi tipi di rotaie vi sono diversi tipi di rotaie NewGRF che possono essere aggiunte. Questa caratteristica è diponibile dalla versione 1.0.3. di OpenTTD.
+
+Se hai installato NewGRF, i tipi di rotaie aggiuntivi verranno visualizzati nel menu a discesa sotto il pulsante Costruisci ferrovie, proprio come quelle predefinite. Un NewGRF può aggiungere ulteriori tipi di rotaia, ma può anche alterare o sostituire i tipi di rotaia predefiniti. Nella maggior parte dei casi avrete anche bisogno di un veicolo ferroviario NewGRF per poter utilizzare tutti questi tipi di railtype NewGRF.
+
+Attualmente sono disponibili numerosi NewGRF di tipo railtype tramite [[Main/it/Contenuti online|Contenuti online]]:
+* Metro Track Set (fornisce un  terzo binario ferroviario e un terzo  binario elettrificato con linea aerea di presa);
+* NuTracks (che fornisce binari normali, elettrificati, terzo tipo di rotaia e rotaia + linea aerea di presa con diversi limiti di velocità e una "pianificazione" del tipo di tracciato);
+* Tracce UK Railway Set (fornisce un terzo tipo di binario e terzo tipo di rotaia con linea aerea di presa);
+* Universal Rail Type (un tipo di binario che accetta la maggior parte dei tipi di veicoli, anche nel deposito, che rende più facile la conversione dei motori tra i tipi di binari).
+
+Railtype NewGRFs ha il supporto integrato per tutti i NewGRF stradali.
+
+== NewGRF che sostituisce la Grafica ==
+[[File:en/Transrapidtrackset.png|frame|right|Esempio di sostituzione della traccia grafica: Transrapid Track Set]]
+A parte il railtype [[Main/it/NewGRF|NewGRF]] che aggiunge nuovi tipi di binari, ci sono alcuni NewGRF di stile meno recente che non aggiungono un nuovo tipo di binario, ma sostituiscono semplicemente la grafica di un tipo di binario esistente. Questi NewGRF non sono sempre compatibili con tutti i NewGRF stradali e talvolta necessitano di un treno speciale NewGRF per avere un senso.
+
+Alcuni noti grafici vecchio stile che sostituiscono NewGRF:
+* CS Rail Set (cambia aspetto della linea ferroviaria);
+* Monorail Infra Set (aggiunge cemento accanto alle tracce della monorotaia);
+* Narrow Gauge rails (sostituisce la ferrovia, la monorotaia o il maglev con binari a scartamento ridotto);
+* Swedish Rails Set (cambia aspetto del binario);
+* Transrapid Track Set (cambia aspetto delle tracce di Maglev per assomigliare alla traccia di prova Transrapid tedesca).
+
+[[Category:it/Ferrovie]]
+[[Category:it/Costruzioni]]
