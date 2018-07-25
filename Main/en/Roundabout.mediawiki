@@ -1,0 +1,45 @@
+[[Translation:Main/en/Roundabout]]{{en/-}}{{junctionsmenu}}
+The '''Roundabout''' consists of a circular route one-way with different entrances and exits.
+[[File:en/Roundabout.png|none|frame|Roundabout junction]]
+
+{{Template:Junction_Criteria|Cheap|1|0|0|1.5|0||0|0|1|1|||Broken down trains affect two segments up to the whole junction.|
+*Can handle up to 2 trains at a time
+*When you make it bigger, you can create a 8-way roundabout
+*Will cause traffic jams.
+*Area: 6 x 6
+}}
+
+===Roundabout with path based signals (PBS)===
+Constructing a roundabout with PBS at its entries allows multiple trains to use the junction. Since there are no signals within the loop, deadlocks become impossible.
+
+[[File:en/Roundabout pathsignals.png|none|frame|Roundabout with path signal entries.]]
+The goods train [A] passes the junction from the upper right to the lower left corner (1 to 3). This does neither affect the passenger train [B] (3 to 4) nor the cattle train [C] (4 to 1).
+
+{{Template:Junction_Criteria|Cheap|1|0|0|1.5|0||0|0|0||3||Broken down trains affect one direction up to all but one directions.|
+*Low cost, low space consumption and relatively high efficiency}}
+
+====Roundabout with PBS and bridges====
+This slight modification allows crossing trains not to interfere with each other.
+
+[[File:en/Roundabout pathsignals bridges.png]]
+
+Without bridges, both the grain [A] and steel train [B] would go through the roundabout, causing one of both trains to wait for the other one to pass by. The additional paths for trains just going straight ahead increase the roundabout's efficiency even more, without need of additional space!
+{{Template:Junction_Criteria|Cheap|1|0|1|1.5|0||0|0|0||3||Broken down trains affect one direction up to all but one directions.|}}
+
+===Variations===
+*When you make it bigger, you can create an 8-way roundabout.
+[[File:en/Basic Roundabout 8-way.png|none|frame|The same, but 8-way, roundabout concept.]]
+
+===Split Roundabout===
+
+This modification allows trains to pass faster.
+
+[[File:en/Split Roundabout.png|none|frame|Roundabout junction]]
+
+{{Template:Junction_Criteria|Cheap|1|0|0|3.5|0||0|0|1|1|||Broken down trains affect whole junction.|
+*Can handle up to 7-8 trains at a time
+*Low possibility to cause traffic jams if there are less than 8 trains.
+*Area: 33 x 33
+}}
+
+[[Category:en/Train Junctions]]
