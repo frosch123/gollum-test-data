@@ -1,0 +1,61 @@
+[[Translation:Main/en/Advanced Roundabout]]
+{{en/-}}{{junctionsmenu}}
+Unlike the basic [[Main/en/roundabout]], this junction has 1 level above the default Track-Level. Trains can pass straight through and turn right without entering the circle.
+
+Some problems are minimized by using [[Main/en/Signals#Pre-signals|pre-signals]]
+
+[[File:en/Advanced roundabout.png|center|none|frame|Advanced roundabout junction]]
+
+{{Template:Junction_Criteria|Expensive (Stepped)|2|1|0|3|1|0|1|0|1|1|2||Broken down trains affect one line or all left turns.|
+*Can handle lots of trains moving N-E or S-W
+*Tracks split and only trains going to the left need to take the round-a-bout
+'''Tips'''
+*To allow left-turning trains traveling at full speed through the roundabout, it's possible to enlarge the circle, but this takes a lot of space to build.
+*If you make the inner circle run the opposite way (obviously modifying exit diagonals and signal direction) throughput is increased at the expense of some speed, since trains going up there just cut across instead of having to go round the whole roundabout as tey would with the above.
+*Area: 16 x 16
+}}
+
+[[File:en/Flying roundabout.png|center|none|frame|Flying roundabout junction]]
+
+*Area: 14 x 14
+
+
+== Advanced Roundabout without Deadlock ==
+
+[[File:en/4WayNoLock.png|Image caption]]
+
+{{Template:Junction_Criteria|Moderate|2|1|1|2|1|0|1|0|0|1|2||Broken down trains only affect one direction. (Worst case: Inner circle, between two segments, will block 3 left turn directions)|
+Pros:
+* High capacity 
+* Slopes only for left turns (1 up, 1 down in total) 
+* Will buffer left turns to free up other lines (entry and exit!)
+
+Cons:
+* Pass through highest signal distance: 4/5
+* Left turn highest signal distance: 7
+
+
+* Area: 26 x 26
+}}
+The presignal logic only lets trains enter, when the next and any of the other segments are empty. This ensures that the junction can always be cleared, if the trains fit completely into the segments.
+
+
+== Advanced Roundabout without Deadlock Compact ==
+
+[[File:en/4WayNoLockSmall.png|Image caption]]
+
+{{Template:Junction_Criteria|Moderate|3|1|1|2|1|0|1|0|0|1|2||Broken down trains only affect the one direction. (Worst case: Inner circle, between two segments, will block all left turn directions)|
+Pros:
+* High capacity 
+* Slopes only for left turns (1 up, 1 down in total)
+
+Cons:
+* Pass through highest signal distance: 4/5
+* Left turn highest signal distance: 7
+
+
+* Area: 18 x 18
+}}
+
+
+[[Category:en/Train Junctions]]
