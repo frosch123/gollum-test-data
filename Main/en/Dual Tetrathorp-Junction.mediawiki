@@ -1,0 +1,37 @@
+[[Translation:Main/en/Dual Tetrathorp-Junction]]
+{{en/-}}{{junctionsmenu}}
+The '''Dual Tetrathorp Junction''' is a [[Main/en/Tetrathorp-Junction]] for double mainlines. It is ideally suited for mainlines at different height levels (in the following referred to as "Diff-Lev-Mains"). It consists of a inner Tetrathorp Junction connecting the inner lanes and a outer Tetrathorp connecting the outer lanes. The 4 lanes which are turning to the same direction merge each other first and have a build-in load balancer before they merge the main line. This allows trains to go from inner lanes to outer lanes and vice versa, so that they can pick the new mainline with less traffic.
+
+[[File:en/Dual Ttj orig.png|none|thumb|450px|Original Dual Tetrathorp]]
+
+{{Template:Junction_Criteria|About £330,000|3|1|0|1,5|1|1|1|1|0|0|0||Broken down trains only affect the one track.|
+* Can handle many trains at a time.
+* Requires the [[Main/en/Build on slopes|building on slopes]] patch to be enabled.
+* Clearly structured, therefore probably easier to remember and to build than equally big junctions.
+* Modular design: You can build the inner lanes first, with only little more space than the single [[Main/en/Tetrathorp-Junction]] and add the outer lanes later.
+}}
+
+==Tips==
+* Start building the inner single Tetrathorp (check if it works) then expand the junction outward.
+* The outer lanes for turning right can easily be made longer, so that they can hold your longest train.
+
+==Variations==
+[[File:en/Dual Ttj flat.png|none|thumb|600px|Dual Tetrathorp for flat terrain]]
+This Dual Tetrathorp junction is optimized to be slightly more compact in flat terrain.
+[[File:en/Dual Ttj part.png|none|thumb|600px|Inner part of the Dual Tetrathorp]]
+This is the inner single Terathorp (which is the same for the original junction and the flat variation). The outer landscaping is for the flat variation.
+[[File:en/Dual Ttj exits.png|none|frame|Improved exits for the Dual Tetrathorp Junction]]
+The load balancers of the above variations can be improved like this. The zigzagging exits at the end imply a pathfinding penalty for trains, which otherwise could decide to cross the whole load balancer even if their neighboring mainline is free. Additionally the outer right-turning-lane (2) and the mainlines (1 and 3) have direct access or a shorter accelerating distance to the merging block than the other turning lanes (4). So trains waiting on these lanes (which are more probable to blocking other trains) get priority. (Priority is not to be confused with [[Main/en/Priority Merge|right-of-way]], which is applied at the end of the load balancer).
+
+Furthermore it is possible to make all curves longer to allow for higher speeds and to build some or all tunnels as [[Main/en/Dual tunnels|dual tunnels]] to improve the throughput. The load balancers can probably also be improved further.
+
+==Technical Data==
+* 40 free squares inside the junction
+* 38 tunnels
+Cost of the flat variation:
+* Landscaping: £59,592
+* Inner Tetrathorp: £134,138
+* Outer Tetrathorp: £132,462
+* Total: £326,984
+
+[[Category:en/Train Junctions]]
