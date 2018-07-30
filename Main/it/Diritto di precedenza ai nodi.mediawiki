@@ -1,0 +1,68 @@
+[[Translation:Main/en/Priority Merge]]
+{{en/-}}{{it/Nodi ferroviari}}
+Quando due linee di traccia si uniscono è sempre problematico soprattutto se una delle due è a traffico elevato, i treni si fermano e si accodano su entrambe, passando a turno all'incrocio. Sembra un'ottima idea, ma poiché i treni partendo da fermi devono riacquistare velocità ogni volta, avremo un notevolmente rallentamento del traffico generale. Lo scorrimento della rete ferroviaria trarrà giovamento dando priorità a una linea (preferibilmente quella con più traffico) e consentendo ai treni su di essa di liberare il nodo alla massima velocità prima che i treni sull'altra linea possano accedervi.
+
+Utilizzando la segnaletica specializzata è possibile forzare i treni che entrano nel nodo ad attendere un varco nel traffico per evitare di interrompere il flusso sulla linea principale.
+
+==Priorità di base==
+Con i pre-segnali bidirezionali e nulla in più puoi forzare un treno che deve immettersi a fermarsi se c'è già un treno sulla pista principale direttamente davanti al combinazione di segnali o al segnale di uscita. Lo svantaggio di questo schema è che non è possibile estendere la priorità oltre la lunghezza di due segnali.
+
+{|style="border: 0px; margin: 5px auto 25px auto;"
+|style="padding: 10px 10px 5px; 10px; background-color: #F5F5DC;"|[[File:en/basic priority.png|center|frame|La più semplice forma di via prioritaria.]]
+|}
+
+==Via prioritaria utilizzando un binario supplementare==
+È possibile designare una priorità più lunga collegando la traccia per attivare il segnale di fusione principale a monte. Quando un treno sulla traccia prioritaria viaggia su un tile collegato alla traccia in cui dovrà immettersi, dice al segnale sulla traccia che si unisce di segnalare rosso. Questa costruzione può essere realizzata con segnali di percorso e segnali di blocco regolari sulle tracce. La costruzione del segnale di percorso necessita solo di un singolo segnale di blocco sulla traccia di unione, mentre la costruzione del segnale di blocco richiede la pre-segnalazione sulla pista inutilizzata per impedire ai treni di segnalare a se stessi di fermarsi.
+
+{|style="border: 0px; margin: 5px auto 25px auto;"
+|style="padding: 10px 10px 5px; 10px; background-color: #F5F5DC;"|[[File:en/Priority merges.png|center|frame|Nodo con con diritto di precedenza che usa varie segnaletiche.]]
+|}
+
+Fai attenzione a costruire confluenze prioritarie che si adattino alla lunghezza del tuo treno più piccolo. Se c'è troppo spazio nel mezzo, un treno può occupare per così poco tempo una sezione di traccia tanto da non attivare il segnale di fusione, consentendo a un treno di immettersi e interrompere il traffico. Questo può essere evitato suddividendo la priorità più lunga in segmenti.
+
+{|style="border: 0px; margin: 5px auto 25px auto; Border-collapse: separate;" cellspacing="10"
+|style="padding: 10px 10px 5px; 10px; background-color: #F5F5DC;"|[[File:en/Flawed priority.png|center|frame|Via prioritaria falsata unitamente a troppo spazio non prioritario. Notare che il segnale di unione è verde quando un treno sulla traccia principale si trova proprio nel centro.]]
+|-
+|style="padding: 10px 10px 5px; 10px; background-color: #F5F5DC;"|[[File:en/Fixed priority.png|center|frame|Via prioritaria più lunga risolta dividendo la priorità in segmenti. Il segnale di unione verrà letto in rosso, indipendentemente dalla posizione in cui un treno lungo cinque tile si trova sulla priorità.]]
+|}
+
+==Confluenza ad alta velocità==
+A volte semplicemente non vuoi che il tuo flusso di traffico venga interrotto. Utilizzare le priorità ordinarie in cui un treno può immettersi dopo una fermata significa che se si vuole impedire a questo treno di fermare altri treni già in movimento alla massima velocità di avvicinarsi mentre è in accelerazione e forzare quei treni a fermarsi, è necessario estendere la lunghezza della priorità all'intero spazio di accelerazione del treno che confluisce necessaria per raggiungere la massima velocità partendo da fermo. Le priorità possono essere estremamente lunghe e comportano anche lunghi intervalli tra i treni sulla confluenza, riducendo la sua capacità di traffico efficiente.
+
+{|style="border: 0px; margin: 5px auto 25px auto;"
+|style="padding: 10px 10px 5px; 10px; background-color: #F5F5DC;"|[[File:en/Full-length priority.png|center|frame|La lunghezza di una priorità regolare deve essere tale da prevenire qualsiasi interruzione del traffico per questi treni a tre tiles. Se la priorità di fondo qui fosse più breve, il treno dietro a quello che sta confluend si imbatterebbe in esso e sarebbe costretto a frenare mentre il treno di congiunzione impiegava del tempo per accelerare alla massima velocità. Tutte le fusioni prioritarie in realtà necessitano anche di un po' di traccia prioritaria davanti all'unione e dietro per evitare che un altro treno confluente si avvicini troppo a quello davanti nella confluenza.]]
+|}
+
+È nvece possibile impedire a un treno di accedere alla fusione (e alla frenata) se la priorità è occupata. I segnali bidirezionali rossi sono l'ultima penalità per il pathfinding del treno in OpenTTD: un treno sceglierà qualsiasi altra opzione disponibile per evitarlo, anche se contraddice i suoi ordini e finisca per perderlo. È possibile utilizzarlo a proprio vantaggio, impedendo ai treni di tentare di accedere a un'unione prioritaria (e di terminare la frenata) se vi è attualmente traffico in esecuzione. Posizionando un segnale a due vie in un'unione con un'altra opzione di traccia che continua dopo di essa, i treni ignoreranno completamente l'unione quando la priorità segnala che è occupata e continuano sulla loro strada usando l'altra opzione di traccia.
+
+{|style="border: 0px; margin: 5px auto 25px auto;"
+|style="padding: 10px 10px 5px; 10px; background-color: #F5F5DC;"|[[File:en/High-speed merge.png|center|frame|Un treno eviterà di fondersi quando un altro viene rilevato sulla priorità e il segnale di ingresso diventa rosso, e invece continuerà a muoversi lungo la traccia inferiore. La chiave è il segnale di ingresso a due vie anziché a senso unico. Nota quanto più breve può essere la priorità della traccia quando i treni possono unirsi alla massima velocità. Anche la lunghezza di priorità necessaria non è influenzata dal tempo di accelerazione dei treni come questo; solo la lunghezza del treno lo determina.]]
+|}
+
+È necessario un ulteriore meccanismo di segnalazione per evitare il verificarsi di una frenata del treno nel punto di fusione. Quindi, i pre-segnali devono essere parte di queste costruzioni.
+
+{|style="border: 0px; margin: 5px auto 25px auto; Border-collapse: separate;" cellspacing="10"
+|style="padding: 10px 10px 5px; 10px; background-color: #F5F5DC;"|[[File:en/High-speed merge flaw.png|center|frame|Difetto nel progetto di fusione ad alta velocità. Un treno sulla traccia prioritaria ha inserito la priorità subito dopo che il treno di fusione aveva già scelto il percorso di tracciamento della fusione, a causa del segnale di ingresso che indicava verde quando era in pista. Ora il treno di fusione è costretto a frenare.]]
+|-
+|style="padding: 10px 10px 5px; 10px; background-color: #F5F5DC;"|[[File:en/High-speed merge fix.png|center|frame|Design di fusione ad alta velocità fissato con un meccanismo di segnalazione extra. Un segnale di uscita extra consente al segnale di ingresso in unione di leggere verde anche quando l'altro segnale di uscita sulla priorità è rosso. Spostare ulteriormente il segnale di ingresso a due vie mezzo tegola è cruciale per dare alla stanza del treno la possibilità di disattivare il segnale di uscita monitorandone la presenza. In effetti, una volta che il treno di fusione supera un determinato punto vicino alla fusione, segnala a se stesso di mantenere l'unione "sbloccata", anche quando un altro treno si trova in una parte iniziale della priorità della traccia.]]
+|}
+
+Prendendo la traccia alternativa per quando un treno non entra nell'unione e ricominciandolo su se stesso è possibile dare a un treno continue opportunità di unirsi mantenendolo in piena velocità.
+{|style="border: 0px; margin: 5px auto 25px auto;"
+|style="padding: 10px 10px 5px; 10px; background-color: #F5F5DC;"|[[File:en/High-speed merge loop.png|center|frame|Ripetere il loop di fail-to-join su se stesso.]]
+|}
+
+==Confluenza con diritto di precedenza in una linea pricipale doppia==
+{|style="border: 0px; margin: 5px auto 25px auto;"
+|style="padding: 10px 10px 5px; 10px; background-color: #F5F5DC;"|[[File:en/rightofwaymerge.png|center|frame|Un metodo per unire la doppia linea principale senza interrompere il traffico.]]
+|}
+
+Tutti i segnali sono segnali combinati tranne che nei punti A e B che sono segnali di ingresso e in alto a destra, che sono segnali di uscita. Regola la lunghezza della catena del segnale in base alla lunghezza e alla velocità del treno.
+
+I treni che si uniscono al punto A devono attendere che la catena presegnale lungo la corsia interna sia libera. Se un treno arriva al punto B prima che il treno A sia fuori mano, passerà alla corsia esterna (senza penalità di velocità), ma solo se la catena presegnale per la corsia esterna è libera. Se non lo è, i presegnali nel punto B assicurano che il treno B prenda la linea che cancella per prima.
+
+La connessione delle catene presegnale nel punto C è opzionale. Permette a A di continuare se la catena presegnale per la corsia esterna è libera, anche se la corsia interna non lo è, poiché il treno al suo interno probabilmente sarà in grado di spostarsi verso l'esterno per lasciare A fuori. Quando il cambio di corsia è a nord del segnale B, A attenderà sempre che la corsia interna si liberi, indipendentemente dallo stato della corsia esterna.
+
+Altri usi per questo includono [[Main/it/Cambio corsia con priorità|Cambio corsia con priorità]] e [[Main/en/Costruzione depositi/It#Configurazioni avanzate dei depositi|diritto di precedenza depositi]].
+
+[[Category:it/Nodi ferroviari]]
