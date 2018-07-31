@@ -1,0 +1,93 @@
+[[Translation:Main/en/Landscaping]]{{en/-}}{{it/Tutorial}}
+
+La barra degli strumenti '''modellazione del terreno''' consente la manipolazione e gestione dei suoli permettendo di trasformare l'aspetto di un paesaggio mediante l'uso di strumenti che sollevano, abbasssano e livellano il terreno, di demolire edifici e vegetazione che occupa il suolo e può essere di ostacolo all'edificazione di infrastrutture per il trasporto, nelle città esistono delle condizioni particolari per le demolizioni e costruzioni, vedi [[Main/it/Autorità locale|autorità locale]], piantare alberi, inserire cartelli e acquistare terreni.
+
+==Modellare il terrreno==
+Per visualizzare la barra degli strumenti modellazione terreno occorre cliccare sul pulsante [[File:en/Landscaping button.png]] nella [[Main/en/Interfaccia di gioco/It#Barra dei menu|barra dei menu]]. 
+Verrà visualizzata questa barra: 
+[[File:it/Landscaping toolbar.png|none|frame|La barra degli strumenti Modellazione terreno]]
+
+==Panoramica dei pulsanti==
+I pulsanti sono, da sinistra a destra:<br>
+{| {{en/Wikitable}}
+|- style="background:#efefef"
+!width='46'|Pulsante
+!width='170'|Effetto
+!Scorciatoia
+!Descrizione
+|-
+|[[File:en/Lower land.png]]
+|'''Pulsante abbassa terreno'''
+|Q
+|
+|-
+|[[File:en/Raise land.png]]
+|'''Pulsante innalza terreno'''
+|W
+|
+|-
+|[[File:en/Level land.png]]
+| '''Pulsante livella terreno'''
+|E
+|
+|-
+|[[File:en/Clear title.png]]
+|'''Pulsante pulisci terreno'''
+|D
+|Sgombra il terreno da alberi e demolendo infrastrutture.
+|-
+|[[File:en/Buy land.png]]
+|'''Pulsante compra [[Main/it/Terreno|terreno]]'''
+|U
+|Puoi aquistare terreni, inibendo lo sviluppo della città o l'uso da parte dei rivali.
+|-
+|[[File:en/Plant trees.png]]
+|'''Pulsante pianta alberi'''
+|I
+|Apre la barra degli strumenti per piantare alberi.
+|-
+|[[File:en/Place sign.png]]
+|'''Pulsante piazza [[Main/it/Cartello|cartelli]]'''
+|O
+|Posiziona cartelli informativi ad uso del giocatore, non influenzano i veicoli.
+|}
+
+==Innalza terreno==
+* Seleziona [[File:en/Raise land.png]] lo strumento quindi clicca nell'angolo di un tile. 
+Fai attenzione che quando si alza la cima di una montagna, crescerà anche la base della montagna. La spesa non è per l'altezza, ma per il volume di cambiamento. Evitare di sollevare la terra dal mare, in quanto è estremamente costoso e può mandare in bancarotta le giovani compagnie.
+Puoi anche sollevare un'area di terreno facendo clic e trascinando il mouse. Innanzitutto, la tessera iniziale della selezione viene aumentata di uno, e quindi l'area selezionata viene livellata per corrispondere al bordo iniziale, quindi è fondamentalmente una combinazione dello strumento Alza e Livello.
+
+Puoi premere e tenere premuto CTRL per ruotare l'area selezionata di 45&deg;.
+
+==Abbassare terreno==
+* Seleziona [[File:en/Lower land.png]] lo strumento quindi clicca in un angolo di un tile.
+La terra può essere abbassata al livello del mare. Fai attenzione che le aree al livello del mare sono soggette a inondazioni e tutte le piastrelle verranno lavate via.
+Puoi anche ridurre un'area di terreno cliccando e trascinando il mouse. Innanzitutto, la tessera iniziale della selezione viene abbassata di uno, e quindi l'area selezionata viene livellata per corrispondere al bordo iniziale, quindi è fondamentalmente una combinazione dello strumento inferiore e livello.
+
+Puoi premere e tenere premuto CTRL per ruotare l'area selezionata di 45&deg;.
+
+==Livellare il terreno==
+Usa lo strumento [[File:en/Level land.png]] livella terreno per appiattire il terreno su una vasta area.
+
+* Clicca e tieni premuto il mouse da dove vuoi iniziare. L'altezza della terra livellata sarà della stessa altezza della tessera da cui hai iniziato. Puoi premere e tenere premuto CTRL per ruotare l'area selezionata di 45&deg;.
+
+* Trascina il mouse sull'area che vuoi livellare. [[File:en/Level land before.png|none|frame|Così appare un'area di terreno quando è selezionata]]
+
+* Quando sei soddisfatto dell'area, rilascia il pulsante e l'area verrà livellata.[[File:en/Level land after.png|none|frame|Ecco come appare il terreno dopo che l'area è stata livellata]]
+
+* Nota: lo strumento livella terreno aumenterà/diminuirà più terra possibile all'interno della selezione. Qualsiasi tile la cui altezza non possa essere cambiata con i singoli strumenti di innalzamento o abbassamento del terreno non verrà modificata. Inoltre, qualsiasi infrastruttura, edificio o ostacolo rimarrà in piedi quando l'area sarà livellata.
+
+* Nota: puoi appiattire il terreno in diagonale tenendo premuto CTRL.
+
+==Muri di contenimento==
+Questa è un'impostazione per esperti [[Main/en/Impostazioni per esperti/It#Limiti|Consenti rimodellazione del terreno sotto edifici, rotaie ecc.]], abilitata di default, che rende le restrizioni di terraformazione molto meno severe e ti permette di terraformare sotto oggetti, dove normalmente avresti bisogno di rimuoverlo prima. Aggiunge/rimuove automaticamente muri di contenimento.
+
+{|style="border: 0px; margin: 5px auto 25px auto; Border-collapse: separate;" cellspacing="10"
+|style="padding: 10px 10px 5px; 10px; background-color: #F5F5DC;" colspan="2"|[[File:it/Autoslope.png|center|frame|L'impostazione per esperti che rimuove/aggiunge muri di contenimento.]]
+|-
+|style="padding: 10px 10px 5px; 10px; background-color: #F5F5DC;"|[[File:it/terraformoff.png|center|frame|Senza abilitazione dell'impostazione per i muri di contenimento]]
+|style="padding: 10px 10px 5px; 10px; background-color: #F5F5DC;"|[[File:it/terraformon.png|center|frame|Con l'abilitazione dell'impostazione per i muri di contenimento]]
+|}
+
+{{en/Feature|0.6}}
+[[Category:it/Costruzioni]]
