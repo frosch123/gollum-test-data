@@ -1,0 +1,234 @@
+[[Translation:Main/en/Orders]]{{en/-}}{{it/Tutorial}}
+: ''Questo tutorial spiega gli ordini per la versione [[Main/en/OpenTTD 0.7.0]] e successivi (attualmente versione 1.8.0). Se si utilizza una versione precedente di OpenTTD, consultare l'articolo: '' '''[[Main/en/Orders (old)]]'''
+
+Gli '''ordini''' sono fondamentali per giocare con successo a OpenTTD. Gli [[Main/it/Ordini condizionali|ordini condizionali]] sono ordini avanzati che ti consentono un controllo extra. Se non impartisci ordini, i tuoi [[Main/it/Veicoli|veicoli]] vagheranno senza scopo e sarai molto fortunato se ti faranno guadagnare denaro. Per poter prelevare e consegnare con successo [[Main/it/Carichi|carichi]] (che è in definitiva lo scopo del gioco), è necessario impostare gli ordini dei veicoli. Queste sono istruzioni come "vai qui, prendi il carico quindi portalo lì".
+
+== Fornire ordini ==
+Sei autorizzato a dare ordini a qualsiasi veicolo in tuo possesso. I tuoi autisti proveranno a seguire questi ordini (anche se potrebbero andare persi se la tua rete è mal progettata, ma si tratta di un problema indipendente dagli ordini). Per dare ordini:
+
+* Trova il veicolo a cui vuoi dare l'ordinee e cliccaci sopra. Il veicolo potrebbe trovarsi all'interno di un deposito, se per esempio è stato appena acquistato, o potrebbe già essere in movimento. Nel caso di un treno  cliccare sulla locomotiva o su qualsiasi suo vagone avrà lo stesso effetto. Questo mostrerà la finestra del veicolo.
+
+<div style="padding: 10px 10px 5px; 10px; border-width: 0px; background-color: transparent;">[[File:it/Orders-1.png|frame|none|La finestra del veicolo]]</div>
+
+* Clicca sul pulsante [[File:en/Orders.png]] '''Ordini''' per visualizzare la relativa finestra. Qui sono elencati gli ordini attualmente impartiti al veicolo (il nostro veicolo di esempio non ne ha ancora).  
+
+<div style="padding: 10px 10px 5px; 10px; border-width: 0px; background-color: transparent;">[[File:it/Orders-2.png|frame|none|La finestra degli ordini]]</div>
+
+* Clicca su [[Main/en/#Vai a|'''Vai a''']] e poi clicca sulla stazione di destinazione nella mappa.
+* Clicca sull'ordine appena creato nell'elenco per selezionarlo, quindi comunica al veicolo cosa dovrebbe fare in quella stazione. Ad esempio, clicca su '''Attendi pieno carico''' per fare in modo che il veicolo in quella stazione attenda il caricamento completo del carico per cui è predisposto.
+* Per cancellare un ordine cliccaci sopra per evidenziarlo, diventerà di colore bianco, quindi clicca sul pulsante '''Elimina''', in basso al centro della finestra ordini.
+* Per saltare momentaneamente un ordine senza eliminarlo, perchè per esempio un treno blocca la banchina e la vogliamo liberare, clicca sull'ordine corrente che il veicolo stà eseguendo e poi clicca sul pulsante '''Salta''' in basso a sinistra della finestra ordini. 
+
+''Puoi sempre vedere la destinazione corrente del veicolo nella [[Main/it/Barra di stato|barra di stato]], se il treno è in movimento, oltre che nella finestra Ordini. A sinistra dei singoli ordini, due triangolini neri, o frecce stilizzate, indicano l'ordine attualmente in esecuzione. Quella sarà la destinazione corrente.''
+
+== Finestra degli ordini ==
+La finestra degli ordini ha vari pulsanti che attivano funzioni o aprono menu. Fondamentalmente si possono suddividere tra ordini sul percorso da seguire, quelli sulle azioni da compiere una volta raggiunto un obiettivo e pulsanti per la gestione ordinaria (cancellazione e salta). I pulsanti fondamentali della finestra ordini sono:
+
+* '''Vai a'''
+* '''Elimina'''
+* '''Salta'''
+* '''Orario'''
+
+===Vai a===
+Appena abbiamo comprato il treno, oppure se sono stati cancellati tutti gli ordini, questo è il solo pulsante attivo nella finestra ordini. Cliccandoci su apre un menu che ci permette di dirigere un veicolo in una particolare posizione. Inserisce un nuovo ordine posizionandolo, nell'elenco, sopra all'ordine evidenziato, oppure, se non è selezionato alcun ordine, lo aggiunge sopra la scritta ''-- Fine degli ordini --''. 
+I possibili obiettivi a cui possiamo mandare il veicolo sono:
+
+* Le tue [[Main/it/Stazioni|stazioni]], ma solo le stazioni in cui viene accettato quel particolare veicolo. Quindi non puoi dare a un autobus un ordine di andare in un aeroporto se quell'aeroporto non ha una stazione degli autobus. Non puoi inviare i tuoi veicoli alle stazioni dei concorrenti.
+* [[Main/it/Depositi|depositi]]. Questo cambierà alcuni degli altri pulsanti - vedi [[Main/en/#Servizio| Servizio]] e [[Main/en/#Riadatta|riadattare]] nei paragrafi seguienti.
+* [[Main/it/Waypoint|waypoint]], solo per i treni, è possibile inviare un treno a un determinato waypoint per influenzarne la scelta della traccia o se le stazioni sono troppo distanti e il treno si perde facilmente. 
+* [[Main/it/Boa|boa]], solo per le navi, è un tipo di waypoint per le navi che percorrono lunghe distanze.
+
+''Puoi [[Main/en/#Ordini condivisi|condividere gli ordini]] tra i [[Main/it/Veicoli|veicoli]] dello stesso tipo. Vedi sotto per maggiori informazioni.''
+
+Il menu del pulsante ''Vai a'' offre le seguenti opzioni:
+
+* '''Vai a''' serve per dirigere il veicolo ad una determinata stazione a lui adatta, quindi sia essa ferroviaria, automezzi, di carico, aeroporto o molo.
+* '''Vai al deposito più vicino''' dirigerà il veicolo ad un qualsiasi deposito più vicino a lui adatto anche se ha dei depositi preimpostati a cui andare, vedi [[Main/it/Manutenzione|manutenzione]].
+* [[Main/en/#Salto condizionale|'''Salto condizionale''']] con questa opzione è possibile lasciare fuori le stazioni se, ad esempio, il treno è completamente carico.
+* '''Condividi ordini''' è un altro modo per attivare la [[Main/en/#Ordini condivisi|condivisione]] della lista degli ordini tra i veicoli. 
+
+<div style="padding: 10px 10px 5px; 10px; border-width: 0px; background-color: transparent;">[[File:it/Orders gotooptions.png|none|frame|Le varie opzioni offerte dal pulsante ''Vai a''.]]</div>
+
+Vedi [[Main/it/Vai a rapido|"Vai a" rapido]] per le scorciatoie nel creare ordini.
+
+==== Salto condizionale ====
+Un approdonfimento merita questa opzione che da la possibilità di dettagliare ulteriormente un ordine, vedi [[Main/it/Ordini condizionati|'''Ordini condizionati''']] per un tutorial su come impostarli.
+Cliccando sul pulsante e poi su un ordine che vogliamo gestire con una condizione, comparirà un ulteriore ordine che verrà eseguito fintanto che la condizione da noi impostata sarà in essere altrimenti salterà all'ordine successivo nell'elenco della lista ordini. Come ordine condizionato predefinito comparirà sempre ''Salta all'ordine # se Percentuale di carico è uguale a 0'' che significa: quanso il veicolo arriva in stazione se non ha nulla da caricare parte per la destinazione indicata nella condizione, il "#" sarebbe il numero dell'ordine che vogliamo far eseguire al veicolo al verificarsi della condizione "carico = 0%".
+Per modificare la condizione occorre selezionarla, cliccandoci sopra, e compariranno una nuova serie di pulsanti, con relativi menu, in fondo alla finestra ordini:
+
+# '''Percentuale di carico'''
+#* ''Percentuale di carico''
+#* ''Affidabilità''
+#* ''Velocità massima''
+#* ''Età (anni)''
+#* ''Vita rimanente (anni)''
+#* ''Manutenzione richiesta''
+#* ''Sempre''
+# '''è uguale a'''
+#* ''è uguale a''
+#* ''è diversa da''
+#* ''è minore di''
+#* ''è minore o uguale a''
+#* ''è maggiore di''
+#* ''è maggiore o uguale a''
+# '''0''' (zero)
+
+===== Pulsante "Percentuale di carico" =====
+Sono i parametri che possiamo condizionare, sono tutti parametri del veicolo e non c'è bisogno di ulteriori spiegazioni, tutti possono essere sottoposti alle condizioni espresse dal pulsante '''è uguale a''' trannel le ultime due, '''Manuntenzione richiesta''' che attiverà un nuovo pulsante '''è vero''' con due nuove condizioni, vero o falso. l'Opzione '''Sempre''' invece non offre altre scelte ma da la possibilità di effettuare sempre il salto ad un altro ordine come avviene premendo il pulsante [[Main/en/Ordini/It#Salta|'''Salta''']] con la differenza che in questo caso saltiamo l'ordine corrente mentre con l'opzione '''Sempre''' possiamo decidere a quale ordine dell'elenco saltare.
+
+{|style="margin: 5px auto 25px 0px;"
+|style="padding: 0px; background-color: transparent; border: 0px;" colspan="2"|[[File:it/Ordini condizionati-parametri.png|none|frame|Il menu con i parametri che si possono condizionare.]]
+|-
+|style="padding: 1px 3.5px 0px 0px; background-color: transparent; border: 0px;"|[[File:it/Ordini condizionati manutenzione.png|none|340px|thumb|L'opzione '''Manuntenzione richiesta''']]
+|style="padding: 1px 0px 0px 3.5px; background-color: transparent; border: 0px;"|[[File:it/Ordini condizionati sempre.png|none|340px|thumb|L'opzione salta '''Sempre''']]
+|}
+
+===== Pulsante "è uguale a" =====
+Sono le condizioni a cui sottoporre i parametri visti in precedenza, sono molto chiari e non necessitano di spiegazioni. Sono uguali per tutti i paramtetri tranne per '''Mautenzione richiesta''' e '''Sempre''', vedi paragrafo precedente.
+
+[[File:it/Ordini condizionati condizioni.png|none|frame|Le condizioni che si possono impostare agli ordini]]
+
+===== Pulsante "0" =====
+Permette di impostare un valore numerico alle condizioni, cliccando sul pulsante '''0''' si apre una text box in cui possiamo immettere il valore desiderato.
+
+[[File:it/Ordini condizionati valore.png|none|frame|Cliccando sul pulsante '''0''' si apre una text box per immettere il valore desiderato per la condizione.]]
+
+=== Eliminazione ===
+il pulsante '''Elimina''' cancellerà l'ordine evidenziato dalla lista del veicolo, annullando il servizio a quella stazione con quel veicolo.
+
+Se si evidenzia la riga ''Fine degli ordini'' e la si cancella l'intera lista degli ordini verrà cancellata. 
+
+''<span style="color: red; font-weight: bold;">Attenzione</span>: se la riga  evidenziata è '''Fine degli ordini condivisi''' il pulsante '''Elimina''' diventa '''Termina condivisione''', cliccandolo non si cancellerà l'elenco degli ordini ma solo la condivisione, vedi [[Main/en/#Ordini condivisi|ordini condivisi]] per i dettagli.''
+
+=== Salta ===
+Questo fa sì che il treno salti l'ordine che sta attualmente adempiendo e passa a quello successivo. Premendo '''Salta''' mentre il veicolo stà eseguendo l'ultimo ordine dell'elenco andrà direttamente al primo.
+
+===Tabella oraria===
+{{main|Timetable}}
+Gli orari consentono di specificare per quanto tempo i veicoli devono cercare di viaggiare per ciascuna parte del percorso e quanto tempo restare in ciascuna stazione, oltre a specificare i limiti di velocità da mantenere tra un ordine è l'alto. Vedi l'articolo 
+[[Main/en/Timetable|timetable]] per maggiori dettagli e sul suo uso.
+[[File:it/Orders-timetable.png|none|frame|Tramite i pulsanti '''Orario''' e '''Ordini''' è possibile passare dalla finestra ordini a quella della tabella oraria e viceversa.]]
+
+== Aggiungere istruzioni a un ordine ==
+Con i pulsanti ''Vai a'', ''Elimina '' e ''Salta'' noi possiamo gestire gli ordini per dirigere il veicolo ad un determinato luogo. Una volta giunto a destinazione con altri pulsanti possiamo dire al veicolo esattamente cosa deve fare. Nel caso di una stazione ad esempio possiamo ordinare di aspettare un pieno carico o [[Main/it/Trasferire un carico|forzare a scaricare]] il suo carico. 
+
+Per aggiungere istruzioni a un ordine:
+
+* clicca su quell'ordine per selezionarlo, questo abiliterà i pulsanti collegati che altrimenti saranno disattivati o in alcuni casi non visibili; 
+* ora clicca sull'istruzione che vuoi impostare, per esempio ''Attendi pieno carico o ''scarica'', ecc.
+
+Avremo comportamenti diversi a seconda del [[Main/it/Prefisso ordine|'''prefisso dell'ordine''']] che selezioniamo, ossia se l'ordine è rivolto ad una stazione, un deposito (o hangar), waypoint (o boa):
+
+<ol>
+<li>Quando si seleziona un ordine con il prefisso '''Vai a ''nome_stazione''''' (sia essa ferroviaria, automezzi, di carico, aeroporto, molo) si attiveranno i pulsanti:</li>
+
+<ul>
+<li> '''Attendi qualsiasi pieno carico''', ha un menu con le seguenti opzioni:
+<ul> 
+<li>''Carica se possibile'' </li>
+<li> ''Attendi pieno carico'' </li>
+<li> ''Attendi qualsiasi pieno carico'' </li>
+<li> ''Non caricare'' </li>
+</ul></li>
+
+<li> '''Scarica tutto''' </li> presenta un menu con queste opzioni:
+<ul>
+<li> ''Scarica se accettato'' </li>
+<li> ''Scarica tutto'' </li>
+<li> ''Trasferisci'' </li>
+<li> ''Non scaricare'' </li>
+</ul></li>
+
+<li> [[Main/en/No-stop/It#Nuovo comportamento "No-stop"|'''No-stop''']] (solo treni e automezzi hanno questo pulsante). Il suo menu offre queste opzioni: 
+<ul>
+<li> ''Vai a'' </li>
+<li> ''Vai no-stop a'' </li>
+<li> ''Passa per'' </li>
+<li> ''Passa no-stop per'' </li>
+</ul>
+</li>
+</ul>
+
+''Per maggiori dettagli sulle opzioni degli ordini di caricamento, scaricamento e fermate nelle stazioni vedi il tutorial [[Main/it/Ordini stazione|'''Ordini stazione''']]''
+
+<li>Quando si seleziona un ordine con il prefisso '''Vai a Deposito''', sia esso ferroviario, automezzi, navale o hangar,  si attiveranno i pulsanti:</li>
+
+<ul>
+
+<li> '''Manutieni''' 
+<ul>
+<li> ''Sempre'' </li>
+<li> ''Solo se necessario'' </li>
+<li> ''Ferma in deposito''  </li>
+</ul>
+</li>
+
+<li> '''No-stop''' (solo treni e automezzi hanno questo pulsante) 
+<ul>
+<li> ''Vai a'' </li>
+<li> ''Vai no-stop a'' </li>
+</ul>
+</li>
+
+<li> '''Riadatta''' (solo alcuni veicoli sono riadattabili quindi non sempre compare questo pulsante) </li>
+
+</ul>
+
+''Per maggiori dettagli sulle opzioni degli ordini di manutenzione, fermate e riadattamento dei veicoli nei depositi vedi il tutorial [[Main/it/Ordini deposito|'''Ordini deposito''']]''
+
+<li> Quando si seleziona un ordine con il prefisso '''Passa per Waypoint''', solo per i treni, si attivano i pulsanti:</li>
+
+<ul>
+<li> '''No-stop''' ha due sole opzioni:
+<ul>
+<li> ''Passa per'' </li>
+<li> ''Passa no-stop per'' </li>
+</ul>
+</li>
+</ul>
+
+<li>L'ordine con prefisso '''Passa per Boa''' non attiva alcun pulsante mentre gli altri tipi di veicoli non hanno strumenti analoghi al waypoint ed alla boa.</li>
+</ol>
+
+== Copiare e condividere gli ordini ==
+''Per maggiori dettagli sull'argomento vedi '''[[Main/en/Copiare e condividere ordini]]'''.''
+
+Se più veicoli eseguono le stesse operazioni negli stessi luoghi invece di scrivere ogni volta gli stessi ordini è possibile sia copiare che far condividere loro gli ordini. Nel primo caso eseguiamo un copia incolla degli ordini di un veicolo ad un altro veicolo mediante il tasto '''Vai a''' in pratica seguiamo lo stesso procedimento per assegnare un ordine solo che invece di cliccare sulle varie destinazioni clicciamo solo sul veicolo da cui vogliamo copiare gli ordini. La condivisione si applica allo stesso modo ma tenendo premuto il tasto '''Ctrl''' mentre clicciamo sul veicolo da cui prendere gli ordini. Con la condivisione oltre che copiare gli ordini gli facciamo condividere eventuali future modifiche o cancellazioni, infatti se modifichiamo gli ordini di un veicolo che condivide gli ordini con altri tutti questi subiranno le stesse modifiche. mentre con la copia noi dovremmo modificare individualmente ogni veicolo.
+
+== Controllo degli ordini ==
+Quando si gestisce una grande azienda con molti veicoli diversi e una vasta rete, è inevitabile che gli errori vengano inseriti in alcuni elenchi di ordini. Ad esempio, ciò può accadere quando una stazione viene cancellata o se si fa clic accidentalmente su un hangar anziché su un aeroporto quando si impartiscono ordini ad un aeromobile.
+
+[[Main/it/Sistema di verifica ordine| sistema di verifica ordine]] viene eseguito automaticamente in background e verifica la presenza di quattro problemi tipici che possono verificarsi in un elenco di ordini. Nel caso in cui ne rilevi uno, attiverà un messaggio di notizie che ti informa sull'anomalia in modo che tu possa correggerla.
+
+=== Numero insufficiente di ordini ===
+Per fare un profitto, un veicolo ha bisogno di almeno due stazioni nel suo programma. Depositi o waypoint non contano in quanto non consentono il ritiro o il ritiro del carico. Per questo motivo se un veicolo non ha nessuno ordine, o anche uno solo, di dirigersi ad una stazione verrà segnalato con l'errore '''''tipo_veicolo #'' non ha abbastanza ordini pianificati''', per esempio ''Automezzo 4 non ha abbastanza ordini pianificati''.
+[[File:it/Few-orders.png|none|frame|Esempio di messaggio di errore per '''carenza di ordini'''.]]
+
+=== Ordine duplicato ===
+A volte una stazione viene accidentalmente selezionata due volte consecutivamente. Per la maggior parte dei veicoli, questo provoca un pasticcio nel pathfinder; per esempio un aereo che decolla e atterra di nuovo nello stesso aeroporto. Il messaggio che arriverà sarà del tipo '''''tipo_veicolo #'' ha alcuni ordini duplicati''', per esempio ''Treno 2 ha alcuni ordini cuplicati'' 
+[[File:it/Duplicate-orders.png|none|frame|Esempio di messaggio di errore per '''ordini duplicati'''.]]
+
+=== Ordini non validi ===
+Se si cancella una stazione a cui è stato indirizzato un veicolo, il fantasma della stazione sarà visibile per qualche istante (sotto forma di un'etichetta con nome della stazione ma di colore grigio). Ciò consente di costruire una nuova stazione nella stessa posizione di quella vecchia e ne assumerà anche il nome. I veicoli che avevno la vecchia stazione dell'elenco degli ordini inizieranno ad arrivare a quella stazione nuova (se è ancora del tipo corretto) senza bisogno di modificare nulla.
+
+Tuttavia, se lasci passare troppo tempo, o deliberatamente non costruisci una nuova stazione per sostituire quella vecchia, la stazione fantasma alla fine sparirà. Gli ordini dei veicoli che hanno fatto riferimento ad essa saranno sostituiti con l'indicazione <span style="font-weight: bold; color: red;">Ordine non valido</span> e verranno saltati e il problema verrà segnalato con il messaggio '''''tipo_veicolo #'' ha un ordine vuoto nei suoi ordini''', per esempio ''Aeromobile 1 ha un ordine vuoto nei suoi ordini''. Si noti però che nel lasso di tempo in cui la stazione è "fantasma" il messaggio di errore sarà del tipo '''Stazione non valida''' perchè la stazione anche se cancellata è ancora presente, anche se in maniera fittizia, dopo la sua definitiva sparizione non potrà essere più rilevata e quindi si avrà un ordine non valido.
+
+[[File:it/Invalid-order.png|frame|none|Finsetra ordini in cui compare un '''Ordine non valido'''.]]
+{|style=" margin: 0px -5 0px auto; 
+|style="padding: 0px 5px 0px 0px; background-color: transparent; border: 0px;"|[[File:en/Ordini-controllo-stazione non valida-messaggio.png|none|frame|Messaggio di errore per stazione non valida: l'aeroporto è stato appena distrutto quindi è ancora rilevabile.]]
+|style="padding: 0px 0px 0px 5px; background-color: transparent; border: 0px;"|[[File:en/Ordini-controllo-ordine vuoto-messaggio.png|none|frame|Messaggio di errore per '''Ordine vuoto''' dopo la definitivamente scomparsa dell'aeroporto.]]
+|}
+
+=== Stazione non valida ===
+Se si elimina una parte di una stazione (ad esempio la fermata dell'autobus che è collegata a una stazione ferroviaria), l'ordine non sarà annullato poiché la stazione continua a esistere. Tuttavia, il veicolo non ha modo di raggiungere la stazione in quanto manca la struttura corretta. Questo indurrà il veicolo alla ricerca perpetua della stazione che non potrà mai trovare in quanto non più esistente. Si riceverà il seguente messaggio di errore: '''''tipo_veicolo #'' ha una stazione non valida nei suoi ordini.''', per esempio ''L'automezzo 5 ha una stazione non valida nei suoi ordini''. 
+[[File:it/Invalid-station.png|frame|none|Esempio di messaggio di errore per '''stazione non valida'''.]]
+
+== Vedi anche ==
+* [[Main/it/Ordini stazione|Istruzioni per le stazioni]]
+* [[Main/it/Ordini deposito|Istruzioni per i depositi]]
+* [[Main/it/Copiare e condividere ordini|Copiare e condividere ordini]]
+* [[Main/it/Ordini condizionati|Ordini condizionati]]
+* [[Main/it/Tabella oraria|Tabella oraria]]
+* [[Main/en/Orders (old)]]
+
+[[Category:it/Veicoli]]
