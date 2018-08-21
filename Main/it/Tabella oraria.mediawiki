@@ -1,0 +1,95 @@
+[[Translation:Main/en/Timetable]]{{en/-}}
+
+== Interfaccia ==
+Gli orari sono stati introdotti in [[Main/en/OpenTTD 0.6.0]] (dalla beta 2). Il pulsante dell'orario si trova in alto a destra nella finestra degli ordini. Tutti gli ordini per il veicolo selezionato sono visualizzati nella finestra Orario. Puoi scegliere quanto tempo un veicolo dovrebbe restare in una stazione (in giorni o in cicli - configurabile tramite le impostazioni per esperti dell'interfaccia alla voce [[Main/en/Impostazioni per esperti/It#Interfaccia|Mostra le tabelle orarie in tick piuttosto che in giorni]]) e, se lo desideri, quanto tempo dovrebbe impiegare il veicolo per viaggiare tra i punti del suo percorso, oltre a specificare una velocità massima che il veicolo dovrebbe rispettare in quel tratto. C'è un contatore che indica se un veicolo è in orario o se ha subito ritardo.
+
+[[File:it/Orders-timetable.png|center|frame|L'interfaccia Tabela oraria accessibile tramite la finestra '''Ordini'''.]]
+
+{|
+| '''Cambia tempo'''
+|Modifica la durata del tratto selezionato nell'orario. 
+|Apparirà una finestra per inserire la nuova durata.
+|-
+| '''Elimina tempo'''
+|Rimuove il periodo di tempo.
+|Il veicolo potrà prendersi tutto il tempo che gli occorre per il tratto selezionato.
+|-
+| '''Cambia limite di velocità''' 
+|Modifica la velocità massima alla quale il veicolo percorrerà  il tratto selezionato.
+|Apparirà una finestra per inserire il nuovo limite di velocità.
+|-
+| '''Rlimina limite di velocità''' 
+| Rimuove il limite di velocità.
+| Il veicolo viaggerà il più velocemente possibile.
+|-
+| '''Data iniziale'''
+| Imposta la data di partenza del conteggio dell'orario.
+| Apparirà una finestra per richiedere la data di inizio dell'orario.
+|-
+| '''Azzera ritardo'''
+| Imposta il ritardo del veicolo a zero.
+| Dichiara che il veicolo viaggia in orario, non cercherà più di recuperare rispetto alla tabella di marcia.
+|-
+| '''Auto'''
+|Compila automaticamente un orario in base al prossimo viaggio.
+|Compila i dati per te e potrai assegnarli in un secondo momento.
+|-
+| '''Auto non distruttivo'''
+|Compila automaticamente in base al prossimo viaggio lasciando intatti i tempi di attesa nelle stazioni.
+| Utile, quando si aggiorna l'orario ai nuovi tempi di viaggio, p. es. quando si rimpiazza con un veicolo più veloce.
+|}
+{{it/Avviso|L'attivazione della compilazione automatica dell'orario cancella i tempi di attesa del veicolo nelle stazioni. Assicurati di utilizzare la compilazione automatica non distruttiva, attivata con CTRL + clic sul pulsante '''Auto''' per preservare questi dati.}}
+
+<!-- [This section no longer appears as of OTTD 1.3.0.] '''Expected / Scheduled'''
+|Switches Expected and Scheduled panels.
+|Shows the times vehicles are scheduled or expected to arrive, expected panel taking the lateness/earliness into account.
+
+{{note|Expected/scheduled times are avaible only for complete timetables that have already started}} --->
+
+
+
+=== Limitazioni ===
+Il modo in cui gli orari sono attualmente implementati, non esiste un quadro di riferimento globale per l'orario di un veicolo. Ogni orario è relativo al momento in cui l'orario del veicolo è stato resettato l'ultima volta. Questo rende alcuni compiti, per i quali gli orari del mondo reale potrebbero essere utilizzati, difficili o impossibili:
+* Pianificazione di un veicolo in partenza leggermente dopo l'arrivo di un servizio di collegamento.
+* Pianificazione di una piattaforma libera presso una stazione per un servizio espresso.
+* Pianificazione treni attraverso uno svincolo occupato in modo che pochi, eventualmente, devono aspettare.
+In effetti, più attività pianificate rispetto alla creazione di progressioni tra veicoli che operano su un singolo insieme di ordini condivisi sono difficili.
+
+=== Riepilogo ===
+* L'orario è sintonizzato su una determinata rotta e velocità del veicolo. Usalo per cose come gli autobus; per i treni conviene usare gli [[Main/it/Ordini condizionati|ordini condizionati]]. Usa ordini condivisi.
+* Usa l'impostazione automatica, pulsante '''Auto''', per ottenere una misurazione iniziale su cui basare il tuo orario.
+* Aggiungi e ottimizza un po' di tempo in più per consentire loro di recuperare un eventuale ritardo.
+* Avvia i veicoli tutti assieme.
+* Ripeti la sincronizzazione quando esegui l'aggiornamento a veicoli più veloci.
+
+== Spaziatura automatica ==
+Dalla versione 1.4.0 è stato possibile spaziare automaticamente i veicoli utilizzando la funzione di orario.
+
+Il modo base in cui funziona è il seguente:
+* Il numero totale di giorni nell'orario è diviso per il numero di veicoli che condividono l'orario per ottenere una "cifra di intervallo".
+* La data di inizio di ciascun veicolo viene quindi aumentata della "cifra di intervallo" in modo che ogni veicolo inizi lo stesso numero di giorni dopo quello precedente.
+* Ogni veicolo accelera o rallenta a seconda che sia in ritardo o in anticipo secondo l'orario.
+* A patto che l'orario abbia un po' di margine temporale per tenere conto del traffico e delle stazioni trafficate, questo dovrebbe tenerli sincronizzati per sempre.
+
+Ad esempio, supponiamo tu abbia un autobus che impiega 100 giorni per completare il suo percorso. Se cloni questo bus nove volte avrai dieci bus che condividono gli ordini. La loro spaziatura automatica significa che ogni bus partirà 10 giorni dopo l'ultimo. Ogni stazione verrà visitata ogni 10 giorni.
+
+
+'''Modo di utilizzo:'''
+* Impostare un veicolo e tracciare il percorso utilizzando la scheda '''Ordini'''.
+* Al termine cliccare sul pulsante '''Orario''' e poi su '''Auto'''.
+* Avviare il veicolo e lasciare completare il percorso e per autocompilare l'orario.
+* Fermare il veicolo non appena l'ultimo elemento ha compilato l'orario.
+* Nella scheda '''Ordini''' cliccare sul pulsante '''Salta''' per impostare la prima stazione dell'elenco ordini come la successiva.
+* Deseleziona '''Auto''' e aggiungi un po 'di flessibilità nell'orario per tener conto del traffico delle stazioni. Poiché questa è generalmente la prima volta che visiti ogni stazione, non ci saranno passeggeri da caricare e quindi devi aumentare il tempo in modo che il veicolo possa in futuro avere il tempo di caricare.
+* Una volta completato l'orario, decidi quanti veicoli vuoi su quella rotta.
+* Clona il veicolo iniziale usando ctrl-clic sul veicolo iniziale. I veicoli clonati condivideranno la lista degli ordini e gli orari.
+* Una volta che hai tutti i cloni, seleziona il primo veicolo e '''ctrl-clic''' sul pulsante  '''Data iniziale'''.
+* Imposta una data di inizio alcuni giorni nel futuro. Idealmente, il veicolo dovrebbe arrivare alla prima stazione prima di questo momento.
+* Rilascia tutti i veicoli. Si raduneranno alla prima stazione, ma dovrebbero andarsene a intervalli regolari finché non saranno tutti distanziati.
+* È possibile confermare controllando l'orario di ciascun veicolo e verificare che la data di inizio di ciascun veicolo sia equamente distanziata.
+
+Potresti trovare più facile mettere in pausa il gioco dopo aver completato l'orario, in modo da poter clonare gli altri veicoli e impostare l'orario senza preoccuparti del fatto che il primo veicolo continui sulla sua rotta andando troppo lontano.
+
+Non è strettamente necessario impostare una data di inizio futura o addirittura fermare il primo veicolo se si ha dimestichezza nell'uso della '''Tabella oraria''', i veicoli accelereranno e rallenteranno secondo necessità e alla fine si sposteranno uniformemente. Quanto sopra è solo il metodo più semplice che ho trovato.
+
+[[Category:en/0.6.0 Features]] [[Category:it/Tutorial]] [[Category:it/Veicoli]]
