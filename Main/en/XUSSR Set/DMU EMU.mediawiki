@@ -1,0 +1,935 @@
+=== MUs ===
+[//en.wikipedia.org/wiki/Multiple_unit '''Multiple unit'''] - A multiple unit train, or just a multiple unit (MU) is a type of train which consists of several carriages joined together to create a specific configuration. The carriages can be both powered and unpowered, but they can usually all carry passengers or luggage/cargo. Multiple units can normally be coupled together with one driver controlling the whole train. A self-propelled passenger train consisting of one carriage only is often called a railcar. The set includes MUs of the following types:
+====Diesel MUs (DMUs)====
+[[File:en/Diesel DMU 1.png|frame| Diesel DMUs]] 
+{|class="wikitable sortable"
+|-
+! Name
+! Type
+! Years of production,  <br>yy
+! Power,<br>hp
+! Capacity,<br>pas
+! Build rules
+|-
+|D (Motorized car)
+|1960-1964
+|500
+|44.3
+|77
+|2 or 3 cars (М-[0..1C - М]), <br> second train can be attached
+|-
+|D (Car)
+|1960-1964
+|
+|
+|128
+|
+|-
+|D1 (Motorized car) "Vengerka"
+|1963-1988
+|615
+|46.3
+|72
+|2, 3 or 4 cars (М-[0..4C] - М), <br> second train can be attached
+|-
+|D1 (Car) "Vengerka"
+|1963-1988
+|
+|
+|128
+|
+|-
+|DR1 (Motorized car)
+|1963-1969
+|750
+|82.8
+|80
+|3, 4, 5 or 6 cars (М - [1..4C] - М)
+|-
+|DR1 (Car)
+|1963-1969
+|
+|
+|128
+|
+|-
+|DR1P (Motorized car)
+|1970-1976
+|800
+|85
+|68
+|3, 4, 5, 6 or 7 cars (М - [1..5C] - М), <br> second train can be attached
+|-
+|DR1P (Car)
+|1970-1976
+|
+|
+|124
+|
+|-
+|DR1A (Motorized car)
+|1976-2008
+|800
+|85
+|68
+|3, 4, 5, 6 or 7 cars (М - [1..5C] - М, <br> N - [1..5C] - М, М - [1..5C] - N), <br> second train can be attached
+|-
+|DR1A (Non-motorized car)
+|1990-2008
+|
+|
+|96
+|
+|-
+|DR1A (Car)
+|1976-2008
+|
+|
+|124
+|
+|-
+|DR1B (Motorized car)
+|2005-2009
+|810
+|90
+|68
+|3, 4, 5, 6 or 7 cars (М - [1..5C] - М, <br> N - [1..5C] - М, М - [1..5C] - N), <br>  second train can be attached
+|-
+|DR1B (Non-motorized car)
+|2005-2009
+|
+|
+|96
+|
+|-
+|DR1B (Car)
+|2005-2009
+|
+|
+|124
+|
+|-
+|DPKr2 (Motorized head car with WC)
+|2014-...
+|530
+|45
+|82
+|2, 3, 4 или 5 вагонов (Mwc - [0..3MC] - Mwc, Mwc - [0..3MC] - М, М - [0..3MC] -Mwc)
+|-
+|DPKr2 (Motorized head car)
+|2014-...
+|530
+|45
+|91
+|
+|-
+|DPKr2 (Motorized car)
+|2014-...
+|530
+|45
+|116
+|
+|-
+|AS1 (Railcar) "Tarakanchik"
+|1964-1980
+|70
+|10
+|24
+|1 or 2 cars
+|-
+|ACH2 (Railcar)
+|1984-1992
+|850
+|90
+|67
+|1, 2 or 3 sections ACH2, (1..3[ACH2+APCH2+APCH2]), <br> ACH2 - [1..4APCH2] - ACH2
+|-
+|ACH2 (Car)
+|1988-1989
+|
+|
+|123
+|
+|-
+|RA1 (Railcar)
+|1999, 2005-2006
+|343
+|55
+|62
+|1, 2 or 3 cars
+|}
+
+======Build rules of diesel DMUs======
+{|class="wikitable sortable"
+|-
+! Name
+! Build rules
+! Example
+|-
+|D
+|H+H <br> H+C+H 
+|[[File:en/Д 1.png]] <br> [[File:en/Д 2.png]]
+|-
+|D1 "Vengerka"
+|H+H <br> H+C+H <br> H+C+C+H <br> H+C+C+C+H <br> H+C+C+C+C+H <br> H+H+H+H <br> H+C+H+H+C+H <br> H+C+C+H+H+C+C+H <br> H+C+C+C+H+H+C+C+C+H <br> H+C+C+C+C+H+H+C+C+C+C+H
+|[[File:en/Д1 "Венгерка" 1.png]] <br> [[File:en/Д1 "Венгерка" 2.png]] <br> [[File:en/Д1 "Венгерка" 3.png]] <br> [[File:en/Д1 "Венгерка" 4.png]] <br> [[File:en/Д1 "Венгерка" 5.png]] <br> [[File:en/Д1 "Венгерка" 6.png]] <br> [[File:en/Д1 "Венгерка" 7.png]] <br> [[File:en/Д1 "Венгерка" 8.png]] <br> [[File:en/Д1 "Венгерка" 9.png]] <br> [[File:en/Д1 "Венгерка" 10.png]]
+|-
+|DR1
+|H+C+H <br> H+C+C+H <br> H+C+C+C+H <br> H+C+C+C+C+H 
+|[[File:en/ДР1 2.png]] <br> [[File:en/ДР1 3.png]] <br> [[File:en/ДР1 4.png]] <br> [[File:en/ДР1 5.png]]
+|-
+|DR1P
+|H+C+H <br> H+C+C+H <br> H+C+C+C+H <br> H+C+C+C+C+H <br> H+C+C+C+C+C+H <br> H+H+H+H <br> H+C+H+H+C+H <br> H+C+C+H+H+C+C+H <br> H+C+C+C+H+H+C+C+C+H <br> H+C+C+C+C+H+H+C+C+C+C+H <br> H+C+C+C+C+C+H+H+C+C+C+C+C+H
+|[[File:en/ДР1П 2.png]] <br> [[File:en/ДР1П 3.png]] <br> [[File:en/ДР1П 4.png]] <br> [[File:en/ДР1П 5.png]] <br> [[File:en/ДР1П 66.png]] <br> [[File:en/ДР1П 7.png]] <br> [[File:en/ДР1П 8.png]] <br> [[File:en/ДР1П 9.png]] <br> [[File:en/ДР1П 10.png]] <br> [[File:en/ДР1П 11.png]]
+|-
+|DR1A
+|H+C+H <br> H+C+C+H <br> H+C+C+C+H <br> H+C+C+C+C+H <br> H+C+C+C+C+C+H <br> H+C+H+H+C+H <br> H+C+C+H+H+C+C+H <br> H+C+C+C+H+H+C+C+C+H <br> H+C+C+C+C+H+H+C+C+C+C+H <br> H+C+C+C+C+C+H+H+C+C+C+C+C+H
+|[[File:en/ДР1А 2.png]] <br> [[File:en/ДР1А 3.png]] <br> [[File:en/ДР1А 4.png]] <br> [[File:en/ДР1А 5.png]] <br> [[File:en/ДР1А 55.png]] <br> [[File:en/ДР1А 6.png]] <br> [[File:en/ДР1А 7.png]] <br> [[File:en/ДР1А 8.png]] <br> [[File:en/ДР1А 9.png]] <br> [[File:en/ДР1А 10.png]]
+|-
+|DR1B
+|H+C+H <br> H+C+C+H <br> H+C+C+C+H <br> H+C+C+C+C+H <br> H+C+C+C+C+C+H <br> H+C+N+N+C+H <br> H+C+C+N+N+C+C+H <br> H+C+C+C+N+N+C+C+C+H <br> H+C+C+C+C+N+N+C+C+C+C+H <br> H+C+C+C+C+C+N+N+C+C+C+C+C+H
+|[[File:en/ДР1Б 2.png]]  <br> [[File:en/ДР1Б 3.png]] <br> [[File:en/ДР1Б 4.png]] <br> [[File:en/ДР1Б 5.png]] <br> [[File:en/ДР1Б 55.png]] <br> [[File:en/ДР1Б 6.png]] <br> [[File:en/ДР1Б 7.png]] <br> [[File:en/ДР1Б 8.png]] <br> [[File:en/ДР1Б 9.png]] <br> [[File:en/ДР1Б 10.png]]
+|-
+|DPKr2
+|Mwc+Mwc <br> Mwc+MC+Mwc <br> Mwc+MC+MC+Mwc <br> Mwc+MC+MC+MC+Mwc <br> Mwc+М <br> Mwc+MC+М <br> Mwc+MC+Пм+М <br> Mwc+MC+MC+MC+М <br> М+Mwc <br> М+MC+Mwc <br> М+MC+MC+Mwc <br> М+MC+MC+MC+Mwc
+|[[File:en/ДПКр2 1.png]] <br> [[File:en/ДПКр2 2.png]]  <br> [[File:en/ДПКр2 3.png]] <br> [[File:en/ДПКр2 4.png]] <br> [[File:en/ДПКр2 5.png]] <br> [[File:en/ДПКр2 6.png]] <br> [[File:en/ДПКр2 7.png]] <br> [[File:en/ДПКр2 8.png]] <br> [[File:en/ДПКр2 9.png]] <br> [[File:en/ДПКр2 10.png]] <br> [[File:en/ДПКр2 11.png]] <br> [[File:en/ДПКр2 12.png]]
+|-
+|AS1А "Tarakanchik"
+|1 section <br> 2 sections 
+|[[File:en/АС1А "Тараканчик" 1.png]] <br> [[File:en/АС1А "Тараканчик" 2.png]] 
+|-
+|ACh2
+|1 section <br> 2 sections <br> 3 sections <br> ACh2 + APCh2 + APCh2 <br> ACH2 + APCh2 + APCh2 + ACh2 + APCh2 + APCh2 <br> ACh2 + APCh2 + APCh2 + ACh2 + APCh2 + APCh2 + ACh2 + APCh2 + APCh2 <br> ACh2 + APCh2 + ACh2 <br> ACh2 + APCh2 + APCh2 + ACh2 <br> ACh2 + APCh2 + APCh2 + APCh2 + ACh2 <br> ACh2 + APCh2 + APCh2 + APCh2 + APCh2 + ACh2 
+|[[File:en/АЧ2 1.png]] <br> [[File:en/АЧ2 2.png]]  <br> [[File:en/АЧ2 3.png]] <br> [[File:en/АЧ2 4.png]]  <br> [[File:en/АЧ2 5.png]]  <br> [[File:en/АЧ2 6.png]] <br> [[File:en/АЧ2 7.png]]  <br> [[File:en/АЧ2 8.png]] <br> [[File:en/АЧ2 9.png]]  <br> [[File:en/АЧ2 10.png]]
+|-
+|RA1
+|1 section <br> 2 sections <br> 3 sections
+|[[File:en/РА1 1.png]] <br> [[File:en/РА1 2.png]]  <br> [[File:en/РА1 3.png]] 
+|}
+
+{| class="wikitable mw-collapsible mw-collapsed"
+|-
+! Diesel MUs
+|-
+| [//ru.wikipedia.org/wiki/Дизель-поезд_Д D] D <br> [[File:en/Д.jpeg]] 
+|| [//ru.wikipedia.org/wiki/Дизель-поезд_Д1 D1] D1 "Vengerka" <br> [[File:en/Д1 "Венгерка".jpeg]] 
+|| [//ru.wikipedia.org/wiki/ДР1 DR1] DR1 <br> [[File:en/ДР1.jpeg]]
+|| [//ru.wikipedia.org/wiki/ДР1#.D0.94.D0.A01.D0.9F_2 DR1P] DR1P <br> [[File:en/ДР1П.jpeg]]
+|-
+| [//ru.wikipedia.org/wiki/ДР1#.D0.94.D0.A01.D0.90_2 DR1A] DR1A <br> [[File:en/ДР1А.jpeg]] 
+|| [//ru.wikipedia.org/wiki/ДР1#.D0.94.D0.B8.D0.B7.D0.B5.D0.BB.D1.8C-.D0.BF.D0.BE.D0.B5.D0.B7.D0.B4.D0.B0_.D0.94.D0.A01.D0.91.2C_.D0.94.D0.A01.D0.91.D0.99.D0.BE.D1.82_.D0.B2_.D0.AD.D1.81.D1.82.D0.BE.D0.BD.D0.B8.D0.B8 DR1B] DR1B <br> [[File:en/ДР1Б.jpeg]] 
+|| [//ru.wikipedia.org/wiki/ДПКр2 DPKr2] DPKr2 "Obriy" <br> [[File:en/ДПКр2.jpeg]]
+|| [//ru.wikipedia.org/wiki/АС1А AS1A] AS1A "Tarakanchik" <br> [[File:en/АС1А "Таракагчик".jpeg]] 
+|-
+| [//ru.wikipedia.org/wiki/АЧ2 ACh2] ACh2 <br> [[File:en/АЧ2.jpeg]] 
+|| [https://ru.wikipedia.org/wiki/РА1 RA1] RA1 <br> [[File:en/РА1.jpeg]] 
+|}
+
+====Electric MUs (EMUs)====
+=====Direct current=====
+[[File:en/EMU DC 5.1.png|frame| EMU DC]]  
+{|class="wikitable sortable"
+|-
+! Name
+! Years of production,  <br>yy
+! Power,<br>hp
+! Traction force,<br>kH
+! Capacity,<br>pas.
+! Build rules
+|-
+|SD (Section)
+|1932
+|680
+|95
+|321
+|1, 2 or 3 sections (3 cars each)
+|-
+|EM167 (Section)
+|1946
+|483
+|
+|120
+|2, 3 or 4 sections (2 cars each)
+|-
+|SR "Kolombina" (Section)
+|1947-1952
+|702
+|96.1
+|321 or 306 + 20 bags of mail
+|1, 2 or 3 sections (3 cars each)
+|-
+|SR3 "Kolombina" (Section)
+|1952-1955
+|702
+|96.1
+|321
+|1, 2 or 3 sections (3 cars each)
+|-
+|SN "Nord New" (Section) 
+|1954-1956
+|921
+|100
+|296
+|1, 2 or 3 sections (3 cars each)
+|-
+|ER1 "Globus" (Head car)
+|1957-1962
+|
+|
+|88
+|4, 6, 8 or 10 cars (HММH, HМCММH, HМCММCМH or HМCМCММCМH)
+|-
+|ER1 "Globus" (Motorized car)
+|1957-1962
+|853
+|74.5
+|110
+|
+|-
+|ER1 "Globus" (Car)
+|1957-1962
+|
+|
+|110
+|
+|-
+|ER2 (Head car)
+|1962-1984
+|
+|
+|84
+|4, 6, 8, 10 or 12 cars (HММH, HМCММH, HМCММCМH, HМCМCММCМH or HМCМCММCМCМH)
+|-
+|ER2 (Motorized car)
+|1962-1984
+|959
+|74.5
+|110
+|
+|-
+|ER2 (Car)
+|1962-1984
+|
+|
+|108
+|
+|-
+|ER22
+|1964-1968
+|1039
+|117.6
+|494
+|1 or 2 sections (4 cars each)
+|-
+|ER2R (Head car)
+|1984-1987
+|
+|
+|84
+|4, 6, 8, 10 или 12 вагонов (HММH, HМCММH, HМCММCМH, HМCМCММCМH or HМCМCММCМCМH)
+|-
+|ER2R (Motorized car)
+|1984-1987
+|1039
+|117.6
+|110
+|
+|-
+|ER2R (Car)
+|1984-1987
+|
+|
+|107
+|
+|-
+|ER2T (Head car)
+|1987-1997
+|
+|
+|84
+|4, 6, 8, 10 or 12 cars (HММH, HМCММH, HМCММCМH, HМCМCММCМH or HМCМCММCМCМH)
+|-
+|ER2T (Motorized car)
+|1987-1997
+|1039
+|117.6
+|110
+|
+|-
+|ER2T (Car)
+|1987-1997
+|
+|
+|107
+|
+|-
+|ED2T "Kamaz" (Head car)
+|1993-1999
+|
+|
+|86
+|4, 6, 7, 8, 9, 10, 11 or 12 cars (HММH, HМCММH, HМCCММH, HМCММCМH, HМCММCCМH, HМCМCММCМH, HМCМCММCCМH or HМCМCММCМCМH)
+|-
+|ED2T "Kamaz" (Motorized car)
+|1993-1999
+|1039
+|117.6
+|116
+|
+|-
+|ED2T "Kamaz" (Car)
+|1993-1999
+|
+|
+|116
+|
+|-
+|ED4M "Strekoza" (Head car)
+|1997-2016
+|
+|
+|86
+|4, 6, 7, 8, 9, 10, 11 or 12 cars (HММH, HМCММH, HМCCММH, HМCММCМH, HМCММCCМH, HМCМCММCМH, HМCМCММCCМH or HМCМCММCМCМH)
+|-
+|ED4M "Strekoza" (Motorized car)
+|1997-2016
+|1039
+|104
+|116
+|
+|-
+|ED4M "Strekoza" (Car)
+|1997-2016
+|
+|
+|116
+|
+|-
+|EP2D (Head car)
+|2016-...
+|
+|
+|61
+|4, 5, 6, 7, 8, 9, 10, 11 или 12 cars (HММH, HМCМH, HМCММH, HМCCММH, HМCММCМH, HМCММCCМH, HМCМCММCМH, HМCМCММCCМH, HМCМCММCМCМH, HHм, HМHм or HМCHм)
+|-
+|EP2D (Motorized head car)
+|2016-...
+|1105
+|55
+|68
+|
+|-
+|EP2D (Motorized car)
+|2016-...
+|1105
+|55
+|116
+|
+|-
+|EP2D (Car)
+|2016-...
+|
+|
+|116
+|
+|-
+|ES2G "Lastochka" (Motorized head car)
+|2014-...
+|1993
+|128
+|67
+|5, 7, 10, 12 (H+P+C+P+H, H+P+C+Т+P+Т+H, H+P+М+P+C+C+P+М+P+H, H+P+М+P+C+P+М+C+P+М+P+H), <br> second train can be attached 
+|-
+|ES2G "Lastochka" (Car with pantograph)
+|2014-...
+|
+|
+|94
+|
+|-
+|ES2G "Lastochka" (Car)
+|2014-...
+|
+|
+|94
+|
+|-
+|ES2G "Lastochka" (Motorized car without pantograph)
+|2018-...
+|1993
+|128
+|94
+|
+|-
+|ER200 (Head car with buffet)
+|1984, 1988, 1991-1992
+|
+|
+|16
+|6, 8, 10, 12 or 14 cars (HMCMCH, HMCMCMCH, HMCMCMCMCH, HMCMCMCMCMCH or HMCMCMCMCMCMCH)
+|-
+|ER200 (Head car with pantograph)
+|1984, 1988, 1991-1992
+|1146
+|35.6
+|64
+|
+|-
+|ER200 (Head car without pantograph)
+|1984, 1988, 1991-1992
+|1146
+|35.6
+|64
+|
+|-
+|EVS1 "Sapsan" (Section)
+|2009-...
+|2719
+|82
+|508
+|1 or 2 section (10 cars each)
+|}
+
+======The build rules of EMUs DC======
+{|class="wikitable sortable"
+|-
+! Name
+! Build rules
+! Example
+|-
+|SD
+|1 section <br> 2 sections <br> 3 sections 
+|[[File:en/Сд 1.png]] <br> [[File:en/Сд 2.png]] <br> [[File:en/Сд 3.png]]
+|-
+|EM167
+|2 sections <br> 3 sections <br> 4 sections 
+|[[File:en/ЭМ167 1.png]] <br> [[File:en/ЭМ167 2.png]] <br> [[File:en/ЭМ167 3.png]]
+|-
+|SR "Kolombina"
+|1 section <br> 2 sections<br> 3 sections 
+|[[File:en/СР "Коломбина" 1.png]] <br> [[File:en/СР "Коломбина" 2.png]] <br> [[File:en/СР "Коломбина" 3.png]]
+|-
+|SR3 "Kolombina"
+|1 section <br> 2 sections<br> 3 sections 
+|[[File:en/СР3 "Коломбина" 1.png]] <br> [[File:en/СР3 "Коломбина" 2.png]] <br> [[File:en/СР3 "Коломбина" 3.png]]
+|-
+|SN "Nord New"
+|1 section <br> 2 sections<br> 3 sections 
+|[[File:en/СН "Северная новая" 1.png]] <br> [[File:en/СН "Северная новая" 2.png]] <br> [[File:en/СН "Северная новая" 3.png]]
+|-
+|ER1
+|H+М+М+H <br> H+М+C+М+М+H <br> H+М+C+М+М+C+М+H <br> H+М+C+М+C+М+М+C+М+H 
+|[[File:en/ЭР1 1.png]] <br> [[File:en/ЭР1 2.png]] <br> [[File:en/ЭР1 3.png]] <br> [[File:en/ЭР1 4.png]] 
+|-
+|ER2
+|H+М+М+H <br> H+М+C+М+М+H <br> H+М+C+М+М+C+М+H <br> H+М+C+М+C+М+М+C+М+H <br> Г+М+П+М+П+М+М+П+М+П+М+Г
+|[[File:en/ЭР2 1.png]] <br> [[File:en/ЭР2 2.png]] <br> [[File:en/ЭР2 3.png]] <br> [[File:en/ЭР2 4.png]]  <br> [[File:en/ЭР2 5.png]] 
+|-
+|ER22
+|1 section <br> 2 sections 
+|[[File:en/ЭР22 1.png]] <br> [[File:en/ЭР22 2.png]]
+|-
+|ER2R
+|H+М+М+H <br> H+М+C+М+М+H <br> H+М+C+М+М+C+М+H <br> H+М+C+М+C+М+М+C+М+H <br> H+М+C+М+C+М+М+C+М+C+М+H
+|[[File:en/ЭР2Р 1.png]] <br> [[File:en/ЭР2Р 2.png]] <br> [[File:en/ЭР2Р 3.png]] <br> [[File:en/ЭР2Р 4.png]]  <br> [[File:en/ЭР2Р 5.png]]
+|-
+|ER2T
+|H+М+М+H <br> H+М+C+М+М+H <br> H+М+C+М+М+C+М+H <br> H+М+C+М+C+М+М+C+М+H <br> H+М+C+М+C+М+М+C+М+C+М+H
+|[[File:en/ЭР2Т 1.png]] <br> [[File:en/ЭР2Т 2.png]] <br> [[File:en/ЭР2Т 3.png]] <br> [[File:en/ЭР2Т 4.png]]  <br> [[File:en/ЭР2Т 5.png]]
+|-
+|ED2T "Kamaz"
+|H+М+М+H <br> H+М+C+М+М+H <br> H+М+C+C+М+М+H <br> H+М+C+М+М+C+М+H <br> H+М+C+М+М+C+C+М+H <br> H+М+C+М+C+М+М+C+М+H
+|[[File:en/ЭД2Т 1.png]] <br> [[File:en/ЭД2Т 2.png]] <br> [[File:en/ЭД2Т 3.png]] <br> [[File:en/ЭД2Т 4.png]]  <br> [[File:en/ЭД2Т 5.png]] <br> [[File:en/ЭД2Т 6.png]]
+|-
+|ED4M "Strekoza"
+|H+М+М+H <br> H+М+C+М+М+H <br> H+М+C+C+М+М+H <br> H+М+C+М+М+C+М+H <br>  H+М+C+М+М+C+C+М+H <br> H+М+C+М+C+М+М+C+М+H 
+|[[File:en/ЭД4М 1.png]] <br> [[File:en/ЭД4М 2.png]] <br> [[File:en/ЭД4М 3.png]] <br> [[File:en/ЭД4М 4.png]]  <br> [[File:en/ЭД4М 5.png]] <br> [[File:en/ЭД4М 6.png]]  
+|-
+|EP2D
+|H+М+М+H <br> H+М+C+М+H <br> H+М+C+М+М+H <br> H+М+C+C+М+М+H <br> H+М+C+М+М+C+М+H <br> H+М+C+М+М+C+C+М+H <br> H+М+C+М+C+М+М+C+М+H <br> H+М+C+М+C+М+М+C+C+М+H <br> H+М+C+М+C+М+М+C+М+C+М+H <br> H+Hм <br> H+М+Hм <br> H+М+C+Hм <br> H+М+М+H+H+М+М+H <br> H+М+C+М+H+H+М+C+М+H <br> H+М+C+М+М+H+H+М+C+М+М+H <br> H+Hм+H+Hм <br> H+М+Hм+H+М+Hм <br> H+М+C+Hм+H+М+C+Hм
+|[[File:en/ЭП2Д 1.png]] <br> [[File:en/ЭП2Д 2.png]] <br> [[File:en/ЭП2Д 3.png]] <br> [[File:en/ЭП2Д 4.png]]  <br> [[File:en/ЭП2Д 5.png]] <br> [[File:en/ЭП2Д 6.png]] <br> [[File:en/ЭП2Д 7.png]] <br> [[File:en/ЭП2Д 8.png]] <br> [[File:en/ЭП2Д 9.png]] <br> [[File:en/ЭП2Д 10.png]] <br> [[File:en/ЭП2Д 11.png]] <br> [[File:en/ЭП2Д 12.png]] <br> [[File:en/ЭП2Д 13.png]] <br> [[File:en/ЭП2Д 14.png]] <br> [[File:en/ЭП2Д 15.png]] <br> [[File:en/ЭП2Д 16.png]] <br> [[File:en/ЭП2Д 17.png]] <br> [[File:en/ЭП2Д 18.png]]
+|-
+|ES2G "Lastochka"
+|H+P+C+P+H <br> H+P+C+P+H+H+P+C+P+H <br> H+P+C+Т+P+Т+H <br> H+P+C+Т+P+Т+H+H+P+C+Т+P+Т+H <br> H+P+М+P+C+C+P+М+P+H <br> H+P+М+P+C+C+P+М+P+H+H+P+М+P+C+C+P+М+P+H <br> H+P+М+P+C+P+М+C+P+М+P+H <br> H+P+М+P+C+P+М+C+P+М+P+H+H+P+М+P+C+P+М+C+P+М+P+H
+|[[File:en/ЭС2Г 1.png]] <br> [[File:en/ЭС2Г 2.png]] <br>  [[File:en/ЭС2Г 3.png]] <br> [[File:en/ЭС2Г 4.png]] <br> [[File:en/ЭС2Г 5.png]] <br> [[File:en/ЭС2Г 6.png]] <br> [[File:en/ЭС2Г 7.png]] <br> [[File:en/ЭС2Г 8.png]]
+|-
+|ER200
+|H+M+C+M+C+H<br> H+M+C+M+C+M+C+H <br> H+M+C+M+C+M+C+M+C+H
+|[[File:en/ЭР200 1.png]] <br> [[File:en/ЭР200 2.png]] <br> [[File:en/ЭР200 3.png]] 
+|-
+|EVS1 "Sapsan"
+|1 section <br> 2 sections 
+|[[File:en/ЭВС1 1.png]] <br> [[File:en/ЭВС1 2.png]]  
+|}
+
+{| class="wikitable mw-collapsible mw-collapsed"
+|-
+! EMUs DC
+|-
+| [//ru.wikipedia.org/wiki/С_(электропоезд)#СД SD] SD <br> [[File:en/Сд.jpeg]]
+|| [//ru.wikipedia.org/wiki/ЭМ167 EM167] EM167 <br> [[File:en/ЭМ167.jpeg]] 
+|| [//ru.wikipedia.org/wiki/С_(электропоезд)#.D0.A1.D0.A0 SR] SR "Kolombina" <br> [[File:en/СР "Коломбина".jpeg]]
+|| [//ru.wikipedia.org/wiki/С_(электропоезд)#.D0.A1.D0.A03_.D0.B8_.D0.A1.D0.9C3.C2.A0.E2.80.94_.D0.BE.D0.BA.D0.BE.D0.BD.D1.87.D0.B0.D1.82.D0.B5.D0.BB.D1.8C.D0.BD.D1.8B.D0.B9_.D0.BF.D0.B5.D1.80.D0.B5.D1.85.D0.BE.D0.B4_.D0.BD.D0.B0_.D1.81.D0.B5.D1.82.D1.8C_3000_.D0.92 SR3] SR3 "Kolombina" <br> [[File:en/СР3 "Коломбина".jpeg]] 
+|-
+| [//ru.wikipedia.org/wiki/СН_(электросекция) SN] SN "Nord New" <br> [[File:en/СН "Северная новая".jpeg]]
+|| [//ru.wikipedia.org/wiki/ЭР1 ER1] ER1 <br> [[File:en/ЭР1.jpeg]]
+|| [//ru.wikipedia.org/wiki/ЭР2 ER2] ER2 <br> [[File:en/ЭР2.jpeg]] 
+|| [//ru.wikipedia.org/wiki/ЭР22 ER22] ER22 <br> [[File:en/ЭР22.jpeg]] 
+|-
+| [//ru.wikipedia.org/wiki/ЭР2#.D0.AD.D0.BB.D0.B5.D0.BA.D1.82.D1.80.D0.BE.D0.BF.D0.BE.D0.B5.D0.B7.D0.B4.D0.B0_.D0.AD.D0.A02.D0.A0 ER2R] ER2R <br> [[File:en/ЭР2Р.jpeg]] 
+|| [//ru.wikipedia.org/wiki/ЭР2#.D0.AD.D0.BB.D0.B5.D0.BA.D1.82.D1.80.D0.BE.D0.BF.D0.BE.D0.B5.D0.B7.D0.B4.D0.B0_.D1.81.D0.B5.D1.80.D0.B8.D0.B9_.D0.AD.D0.A02.D1.82_.28.D0.AD.D0.A02.D0.B8.29_.D1.81_.D1.88.D0.B8.D1.80.D0.BE.D1.82.D0.BD.D0.BE-.D1.87.D0.B0.D1.81.D1.82.D0.BE.D1.82.D0.BD.D1.8B.D0.BC.D0.B8_.D0.BF.D1.80.D0.B5.D0.BE.D0.B1.D1.80.D0.B0.D0.B7.D0.BE.D0.B2.D0.B0.D1.82.D0.B5.D0.BB.D1.8F.D0.BC.D0.B8 ER2T] ER2T <br> [[File:en/ЭР2Т.jpeg]]
+|| [//ru.wikipedia.org/wiki/ЭД2Т ED2T] ED2T "Kamaz" <br> [[File:en/ЭД2Т "Камаз".jpeg]] 
+|| [//ru.wikipedia.org/wiki/ЭД4#.D0.AD.D0.944.D0.9C ED4M] ED4M "Strekoza" <br> [[File:en/ЭД4М "Стрекоза".jpeg]] 
+|-
+| [//ru.wikipedia.org/wiki/ЭП2Д EP2D] EP2D <br> [[File:en/ЭП2Д.jpeg]]
+|| [//ru.wikipedia.org/wiki/Ласточка_(электропоезд)#ЭС2Г_пригородно-городской ES2G] ES2G <br> [[File:en/ЭС2Г.jpeg]]
+|| [//ru.wikipedia.org/wiki/ЭР200 ER200] ER200 <br> [[File:en/ЭР200.jpeg]] 
+|| [//ru.wikipedia.org/wiki/ЭВС1/ЭВС2 EVS1] EVS1 <br> [[File:en/ЭВС1.jpeg]] 
+|}
+
+=====Alternating current=====
+[[File:en/EMU AC 6.png|frame| EMU AC]]  
+{|class="wikitable sortable"
+|-
+! Name
+! Years of production,  <br>yy
+! Power,<br>hp
+! Traction force,<br>kH
+! Capacity,<br>pas.
+! Build rules
+|-
+|ER7 (Head car)
+|1959, 1960-1962
+|
+|
+|88
+|4, 6, 8 or 10 cars (HММH, HМПММH, HМCММCМH или HМCМCММCМH)
+|-
+|ER7 (Motorizad car)
+|1959, 1960-1962
+|800
+|45
+|98
+|
+|-
+|ER7 (Car)
+|1959-1962
+|
+|
+|110
+|
+|-
+|ER9P (Head car)
+|1964-1976
+|
+|
+|88
+|4, 6, 8, 10 or 12 cars (HММH, HМCММH, HМCММCМH, HМCМCММCМH or HМCМCММCМCМH)
+|-
+|ER9P (Motorized car)
+|1964-1976
+|826
+|93.4
+|110
+|
+|-
+|ER9P (Car)
+|1964-1976
+|
+|
+|108
+|
+|-
+|ER9M (Head car)
+|1976-1983
+|
+|
+|88
+|4, 6, 8, 10 or 12 cars (HММH, HМCММH, HМCММCМH, HМCМCММCМH or HМCМCММCМCМH)
+|-
+|ER9M (Motorized car)
+|1976-1983
+|826
+|93.4
+|107
+|
+|-
+|ER9M (Car)
+|1976-1983
+|
+|
+|108
+|
+|-
+|ER9E (Head car)
+|1982-1988
+|
+|
+|88
+|4, 6, 8, 10 or 12 cars (HММH, HМCММH, HМCММCМH, HМCМCММCМH or HМCМCММCМCМH)
+|-
+|ER9E (Motorized car)
+|1982-1988
+|826
+|93.4
+|107
+|
+|-
+|ER9E (Car)
+|1982-1988
+|
+|
+|108
+|
+|-
+|ER9T (Head car)
+|1988-1996
+|
+|
+|88
+|4, 6, 8, 10 or 12 cars (HММH, HМCММH, HМCММCМH, HМCМCММCМH or HМCМCММCМCМH)
+|-
+|ER9T (Motorized car)
+|1988-1996
+|826
+|93.4
+|107
+|
+|-
+|ER9T (Car)
+|1988-1996
+|
+|
+|108
+|
+|-
+|ED9T (Head car) "Kamaz"
+|1995-2000
+|
+|
+|80
+|4, 6, 7, 8, 9, 10 or 11 cars (HММH, HМCММH, HМCCММH, HМCММCМH, HМCММCCМH, HМCМCММCМH or HМCМCММCCМH)
+|-
+|ED9T (Motorized car) "Kamaz"
+|1995-2000
+|1066
+|102
+|112
+|
+|-
+|ED9T (Car) "Kamaz"
+|1995-2000
+|
+|
+|116
+|
+|-
+|ED9M (Head car) "Strekoza"
+|2000-2012
+|
+|
+|80
+|4, 6, 7, 8, 9, 10 or 11 cars (HММH, HМCММH, HМCCММH, HМCММCМH, HМCММCCМH, HМCМCММCМH or HМCМCММCCМH)
+|-
+|ED9M (Motorized car) "Strekoza"
+|2000-2012
+|1066
+|102
+|112
+|
+|-
+|ED9M (Car) "Strekoza"
+|2000-2012
+|
+|
+|116
+|
+|-
+|ED9E (Head car)
+|2012-2016
+|
+|
+|64
+|4, 6, 7, 8, 9, 10 or 11 cars (HММH, HМCММH, HМCCММH, HМCММCМH, HМCММCCМH, HМCМCММCМH or HМCМCММCCМH)
+|-
+|ED9E (Motorized car)
+|2012-2016
+|1066
+|102
+|116
+|
+|-
+|ED9E (Car)
+|2012-2016
+|
+|
+|116
+|
+|-
+|EP3D (Head car)
+|2016-...
+|
+|
+|61
+|4, 6, 8 or 9 cars (HММH, HМCММH, HМCММCМH or HМCММCCМH)
+|-
+|EP3D (Motorized car)
+|2016-...
+|1066
+|102
+|116
+|
+|-
+|EP3D (Car)
+|2016-...
+|
+|
+|116
+|
+|-
+|EPg
+|2011-2012
+|1359.5
+|100
+|260
+|1, 2 or 3 sections (4 cars each)
+|-
+|EPr
+|2011-2013
+|1359.5
+|100
+|217
+|1, 2 or 3 sections (4 cars each)
+|}
+
+======The build rules of EMUs AC======
+{|class="wikitable sortable"
+|-
+! Name
+! Build rules
+! Example
+|-
+|ER7
+|H+М+М+H <br> H+М+C+М+М+H <br> H+М+C+М+М+C+М+H <br> H+М+C+М+C+М+М+П+М+H
+|[[File:en/ЭР7 1.png]] <br> [[File:en/ЭР7 2.png]] <br> [[File:en/ЭР7 3.png]] <br> [[File:en/ЭР7 4.png]]
+|-
+|ER9P
+|H+М+М+H <br> H+М+C+М+М+H <br> H+М+C+М+М+C+М+H <br> H+М+C+М+C+М+М+C+М+H <br> H+М+C+М+C+М+М+C+М+C+М+H
+|[[File:en/ЭР9п 1.png]] <br> [[File:en/ЭР9п 2.png]] <br> [[File:en/ЭР9п 3.png]] <br> [[File:en/ЭР9п 4.png]] <br> [[File:en/ЭР9п 5.png]]
+|-
+|ER9M
+|H+М+М+H <br> H+М+C+М+М+H <br> H+М+C+М+М+C+М+H <br> H+М+C+М+C+М+М+C+М+H <br> H+М+C+М+C+М+М+C+М+C+М+H
+|[[File:en/ЭР9М 1.png]] <br> [[File:en/ЭР9М 2.png]] <br> [[File:en/ЭР9М 3.png]] <br> [[File:en/ЭР9М 4.png]] <br> [[File:en/ЭР9М 5.png]]
+|-
+|ER9E
+|H+М+М+H <br> H+М+C+М+М+H <br> H+М+C+М+М+C+М+H <br> H+М+C+М+C+М+М+C+М+H <br> H+М+C+М+C+М+М+C+М+C+М+H
+|[[File:en/ЭР9Е 1.png]] <br> [[File:en/ЭР9Е 2.png]] <br> [[File:en/ЭР9Е 3.png]] <br> [[File:en/ЭР9Е 4.png]] <br> [[File:en/ЭР9Е 5.png]]
+|-
+|ED9T
+|H+М+М+H <br> H+М+C+М+М+H <br> H+М+C+C+М+М+H <br> H+М+C+М+М+C+М+H <br> H+М+C+М+C+М+М+C+М+H
+|[[File:en/ЭД9Т 1.png]] <br> [[File:en/ЭД9Т 2.png]] <br> [[File:en/ЭД9Т 3.png]] <br> [[File:en/ЭД9Т 4.png]] <br> [[File:en/ЭД9Т 5.png]]
+|-
+|ED9M
+|H+М+М+H <br> H+М+C+М+М+H <br> H+М+C+C+М+М+H <br> H+М+C+М+М+C+М+H <br> H+М+C+М+М+C+C+М+H <br> H+М+C+М+C+М+М+C+М+H <br> H+М+C+М+C+М+М+C+C+М+H
+|[[File:en/ЭД9М 1.png]] <br> [[File:en/ЭД9М 2.png]] <br> [[File:en/ЭД9М 3.png]] <br> [[File:en/ЭД9М 4.png]] <br> [[File:en/ЭД9М 5.png]] <br> [[File:en/ЭД9М 6.png]] <br> [[File:en/ЭД9М 7.png]]
+|-
+|ED9E
+|H+М+М+H <br> H+М+П+М+М+H <br> H+М+C+C+М+М+H <br> H+М+C+М+М+C+М+H <br> H+М+C+М+М+C+C+М+H <br> H+М+C+М+C+М+М+C+М+H <br> H+М+C+М+C+М+М+C+C+М+H
+|[[File:en/ЭД9Э 1.png]] <br> [[File:en/ЭД9Э 2.png]] <br> [[File:en/ЭД9Э 3.png]] <br> [[File:en/ЭД9Э 4.png]] <br> [[File:en/ЭД9Э 5.png]] <br> [[File:en/ЭД9Э 6.png]] <br> [[File:en/ЭД9Э 7.png]]
+|-
+|EP3D
+|H+М+М+H <br> H+М+П+М+М+H <br> H+М+C+М+М+C+М+H <br> H+М+C+М+М+C+C+М+H
+|[[File:en/ЭП3Д 1.png]] <br> [[File:en/ЭП3Д 2.png]] <br> [[File:en/ЭП3Д 4.png]] <br> [[File:en/ЭП3Д 5.png]]
+|-
+|EPg
+|1 section <br> 2 sections <br> 3 sections 
+|[[File:en/ЭПг 1.png]] <br> [[File:en/ЭПг 2.png]] <br> [[File:en/ЭПг 3.png]] 
+|-
+|EPr
+|1 section <br> 2 sections <br> 3 sections
+|[[File:en/ЭПр 1.png]] <br> [[File:en/ЭПр 2.png]] <br> [[File:en/ЭПр 3.png]] 
+|}
+
+{| class="wikitable mw-collapsible mw-collapsed"
+|-
+! EMUs AC
+|-
+| [//ru.wikipedia.org/wiki/ЭР7 ER7] ER7 <br> [[File:en/ЭР7.jpeg]] 
+|| [//ru.wikipedia.org/wiki/ЭР9#.D0.AD.D0.A09.D0.9F ER9P] ER9P <br> [[File:en/ЭР9п.jpeg]] 
+|| [//ru.wikipedia.org/wiki/ЭР9#.D0.AD.D0.A09.D0.9C ERР9M] ER9M <br> [[File:en/ЭР9М.jpeg]] 
+|| [//ru.wikipedia.org/wiki/ЭР9#.D0.AD.D0.A09.D0.95.2C_.D0.AD.D0.A09.D0.95.D0.A2 ER9E] ЭР9Е <br>  [[File:en/ЭР9Е.jpeg]] 
+|-
+| [//ru.wikipedia.org/wiki/ЭР9#.D0.AD.D0.A09.D0.A2.2C_.D0.AD.D0.A09.D0.A2.D0.9C ER9Т] ER9Т<br> [[File:en/ЭР9Т.jpeg]]
+|| [//ru.wikipedia.org/wiki/ЭД9#.D0.AD.D0.949.D0.A2 ED9T] ED9T "Kamaz" <br> [[File:en/ЭД9Т "Камаз".jpeg]] 
+|| [//ru.wikipedia.org/wiki/ЭД9#.D0.AD.D0.949.D0.9C_.2F_.D0.AD.D0.949.D0.9C.D0.9A ED9M] ED9M "Strekoza" <br> [[File:en/ЭД9М "Стрекоза".jpeg]]
+|| [//ru.wikipedia.org/wiki/ЭД9#ЭД9Э ED9E] ED9E <br> [[File:en/ЭД9Э.jpeg]] 
+|-
+| [//ru.wikipedia.org/wiki/ЭП3Д EP3D] EP3D <br> [[File:en/ЭП3Д.jpeg]] 
+|| [//ru.wikipedia.org/wiki/ЭПг EPg] EPg <br> [[File:en/ЭПг.jpeg]]
+|| [//ru.wikipedia.org/wiki/ЭПр EPr] EPr <br> [[File:en/ЭПр.jpeg]]
+|}
+
+=====Double-system=====
+[[File:en/EMU DC AC 1.png|frame| Double-system MUs]]  
+{|class="wikitable sortable"
+|-
+! Name
+! Type
+! Years of production,  <br>yy
+! Power,<br>hp
+! Traction force,<br>kH
+! Build rules
+|-
+|EVS2 "Sapsan"
+|2009-...
+|10878
+|325
+|508
+|1 or 2 sections
+|-
+|Sm6 "Allegro"
+|2010-...
+|7480
+|231
+|341
+|1 or 2 sections
+|-
+|ES1 "Lastochka"
+|2012-....
+|3468
+|256
+|443
+|1 or 2 sections
+|}
+
+======The build rules of double-system MUs======
+{|class="wikitable sortable"
+|-
+! Name
+! Build rules
+! Example
+|-
+|EVS2 "Sapsan"
+|1 section <br> 2 sections
+|[[File:en/ЭВС2 "Сапсан" 1.png]] <br> [[File:en/ЭВС2 "Сапсан" 2.png]]
+
+|-
+|Sm6 "Allegro"
+|1 section <br> 2 sections
+|[[File:en/Sm6 "Аллегро" 1.png]] <br> [[File:en/Sm6 "Аллегро" 2.png]]
+
+|-
+|ES1 "Lastochka"
+|1 section <br> 2 sections
+|[[File:en/ЭС1 "Ласточка" 1.png]] <br> [[File:en/ЭС1 "Ласточка" 2.png]]
+|}
+
+{| class="wikitable mw-collapsible mw-collapsed"
+|-
+! Double-system  MUs
+|-
+| [//ru.wikipedia.org/wiki/ЭВС1/ЭВС2 EVS2] EVS2 "Sapsan" <br> [[File:en/ЭВС2 "Сапсан".jpeg]] || [//ru.wikipedia.org/wiki/Allegro_(электропоезд) Sm6] Sm6 "Allegro" <br> [[File:en/Sm6 "Аллегро".jpeg]] || [//ru.wikipedia.org/wiki/Ласточка_(электропоезд) ES1] ES1 "Lastochka" <br> [[File:en/ЭС1 "Ласточка".jpeg]]
+|}
+
+====Main page of the xUSSR Set/EN====
+[[Main/en/XUSSR Set]]
