@@ -1,0 +1,455 @@
+[[Translation:Main/en/Mini Integrated Nightly]]
+{{en/Historic|The development of MiniIN has been stopped, read more about in this [http://www.tt-forums.net/viewtopic.php?t=24423&postdays=0&postorder=asc&start=1080 thread]. MiniIN was discontinued as of 31 December 2006.}}
+{{en/-}}
+
+The '''Mini Integrated Nightly''' was a special build of [[Main/en/OpenTTD]], which incorporates patches which have yet to be approved for the main code.  It was maintained by [[Main/en/richk67]].  ''"Its like OTTD's smarter younger brother; a bit dirty and smelly at times, but tons of energy, and lots of ideas - some more realistic than others."''[http://www.tt-forums.net/viewtopic.php?p=469054#469054] --richk67
+
+==Description (non-technical)==
+While there are a core set of programmers who work on the major improvements and administer the project, anybody is allowed to code their own improvement for OpenTTD.  However, until that improvement gets approval from the core administers, it will not be integrated into the main game.  Until that time, the improvement generally sits in the development forum in the form of a source code [[Main/en/Advanced Settings|setting]].
+
+Anybody with a compiler can take a patch or any number of patches and create their own version.  But not all OpenTTD users know how to compile code.  The other problem of course is that patches often conflict with each other.
+
+The answer: The Mini Integrated Nightly (or MiniIN for short)
+
+The requirements are much less strict for a patch to be included into the MiniIN, so quite a few patches are included as quickly as possible. Small neat patches are more likely to be applied quickly - it has been known for a patch to be added within hours of its first posting on the forums.
+
+The term "nightly" refers to the [[Main/en/Nightly build|Nightly Builds]], which contain the latest changes made by the core programmers.  "Integrated" refers to all the patches being integrated into the nightly build.  "Mini" refers to the fact that this is the second generation of Integrated Nightly's, and there are a few requirements before a patch will be included.
+
+==Downloading the Mini Integrated Nightly==
+The executable files are automatically compiled, and this is what is known as a [[Main/en/nightly]].  Despite its name, the nightly builds for the MiniIN are only built every Sunday, Tuesday and Thursday (23:00 CET, 22:00 UTC). If there aren't any changes in between those three days, you just have to wait.
+
+The latest MiniIN nightly build can be downloaded at: 
+
+http://nightly.openttd.org/MiniIN/files/ 
+
+Be sure to download the version for your Operating System.
+
+==Common problems==
+
+==== Using PBS ====
+
+To use PBS you need to ''turn on'' New Global Pathfinder (NPF) and ''turn off'' YAPF. Note that NPF is not as efficient as YAPF and that performance might be adversely affected.
+==== Planeset not introducing planes correctly====
+
+This is a common type of error if you install the planeset GRF and try to use it on an existing savegame. This error may affect all types of new vehicle sets. It will not occur if you start a new game after loading a vehicle set.
+
+To fix the problem, press ~ (Tilde, next to 1 on the keyboard.), and type ''resetengines''.
+==== Configuration File Error ====
+[[File:en/MiniIN Config File Error.gif]]
+
+This is a very common type of error to see when you first install the MiniIN.  A lot has changed in the MiniIN, and your old configuration files basically are no longer valid.  It's not a big issue, as the game will still run even with an invalid configuration file.  However, you probably want to fix it, you have two options:
+
+1. Delete '''openttd.cfg''' from the OpenTTD home directory.  You'll lose your default settings.  It's worth it though!
+
+2. Open the '''openttd.cfg''' and delete all what you get after the = of the display_opt entry (you should have then "display_opt = "). This option is the preferred, as you only need to reset the display options when in game, like '''Show Town Names''' or '''Full Detail'''
+
+==Patches Included==
+A few lists of patches included in or up for review for the Mini Integrated Nightly as of r5311(?). See [http://www.tt-forums.net/viewtopic.php?p=426901#426901 the forum] for a possible more up to date list.
+
+If you download the source code, this list can be found in [http://svn.openttd.org/cgi-bin/trac.cgi/browser/branches/MiniIN/patches/MiniINpatches.txt /patches/MiniINpatches.txt].
+
+{| boarder=2
+!style="background:pink;" | Currently in MiniIN or main trunk: 
+|-
+!style="background:#999999;" | Patch Name
+!style="background:#999999;" | MiniIN Status
+!style="background:#999999;" | Update Available
+!style="background:#999999;" | Description
+|-
+|[[Main/en/Yet Another Pathfinder]]                           
+|in trunk
+|
+|''Yet another pathfinder'' is a powerful and flexible, yet optimized, pathfinder for vehicles.
+|-
+|[http://www.tt-forums.net/viewtopic.php?t=24991&highlight=stations New Stations]
+|in trunk
+|
+|''New Stations'' enables the use of .GRF station sets.
+|-
+|[http://www.tt-forums.net/viewtopic.php?t=22640 Sort Stations                 ] 
+|in trunk
+|
+|''Sort stations'' enables you to sort (by cargo waiting/cargo value/station type/name) and filter stations (by vehicle type/cargo type) in the station list.
+|-
+|[http://www.tt-forums.net/viewtopic.php?t=24172 Planeset v1.5]
+|in trunk
+|
+|''Planeset v1.5'' enables the use of Planeset v1.5 in OpenTTD.
+|-
+|[http://www.tt-forums.net/viewtopic.php?t=24842 NewGRF Aircraft Callback15]
+|in trunk
+|
+|''NewGRF Aircraft Callback15'' enables you to refit cargo capacities in aircraft and is intended to be used with the ''Planeset''.
+|-
+|[http://www.tt-forums.net/viewtopic.php?t=25562 Italian Town Names]
+|in trunk
+|
+|This adds a new Italian town names generator.
+|-
+|[http://www.tt-forums.net/viewtopic.php?t=24283 6 New Airports] 
+|4 in trunk, 2 in MiniIN
+|
+|This adds the following airports to the game: Commuter airport (Supports only "small" aircraft), Metropolitan airport, International airport, Intercontinental airport, Helistation and Helidepot.
+|-
+|[http://www.tt-forums.net/viewtopic.php?p=280398 PNGmap]
+|in trunk
+|
+|''PNGmap ''allows the import of heightmaps.
+|-
+|Past 2090
+|in trunk
+|
+|''Past 2090'' allows playing past 2090.
+|-
+|[http://www.tt-forums.net/viewtopic.php?t=25144 NewGRF Cargo Subtype Callback 19]
+|in trunk
+|
+|''NewGRF Cargo Subtype Callback 19'' adds the ability to use alternative liveries, such as those used in the ''Planeset''.
+|-
+|[[Main/en/Old Path Based Signaling|Old Path Based Signaling (PBS)]]
+|in MiniIN
+|
+|''PBS'' allows multiple trains in the same signal block.
+|-
+|[http://www.tt-forums.net/viewtopic.php?t=23434 TerraGenesis Perlin]
+|in trunk
+|
+|''TerraGenesis Perlin'' adds a new terrain generator.
+|-
+|[http://www.tt-forums.net/viewtopic.php?t=23434 More Trees (now part of TerraGenesis)]
+|in MiniIN
+|
+|
+|-
+|[http://www.tt-forums.net/viewtopic.php?t=24574 Snow in Temperate             ] 
+|in MiniIN
+|
+|''Snow in Temperate'' adds snow in the temperate climate above the snow line, as configured for the sub-arctic climate. Although it cannot be disabled, you can increase the snow height to the maximum, limiting snow to only the highest peaks. The snow line height cannot be changed once the terrain has been generated.
+|-
+|[http://www.tt-forums.net/viewtopic.php?t=14819 Smooth economy 5147]
+|in MiniIN
+|
+|In ''Smooth economy 5147'' industries respond to the demand put on them by the transport network. It also smoothes increases and decreases in production.
+|-
+|[http://www.tt-forums.net/viewtopic.php?t=19896 More Diesel Smoke patch v2.0b]
+|in MiniIN
+|
+|''More Diesel Smoke patch v2.0b'' increases the amount of smoke diesel trains produce.
+|-
+|[http://www.tt-forums.net/viewtopic.php?p=427658#427658 Realistic Acceleration v2.0]
+|in MiniIN
+|
+|''Realistic Acceleration v2.0'' will make the acceleration of trains more realistic. Trains will go slower around sharp corners, and faster (up to full speed) around less sharp turns. Trains will not slow down so much for a short (1 square) slope.
+|-
+|[http://www.tt-forums.net/viewtopic.php?p=450663 Signal Auto-complete]
+|in MiniIN
+|[http://www.tt-forums.net/viewtopic.php?p=457986#457986 Yes]
+|With ''Signal Auto-complete'' signals can be automatically be build until the first junction.
+|-
+|[http://www.tt-forums.net/viewtopic.php?t=25804 Signal Gui]
+|in MiniIN
+|
+|''Signal Gui'' adds a graphical interface to select the signal you want to build.
+|-
+|[http://www.tt-forums.net/viewtopic.php?t=24393 Waypoint stats] 
+|in MiniIN
+|
+|Using ''Waypoint stats'' waypoints will keep track of the amount of trains to pass in the current and prior month, and year, as well as the standing record.
+|-
+|[http://www.tt-forums.net/viewtopic.php?t=11942 Subsidiaries patch]
+|in MiniIN
+|
+|The ''Subsidiaries patch'' allows the company to create subsidiaries. This is useful to build station in or near local authorities that will not ordinarily allow you to build in them.
+|-
+|[http://www.tt-forums.net/viewtopic.php?p=426646#426646 Upgrade Bridges in situ]
+|in trunk
+|
+|''Upgrade Bridges in situ'' allows you to replace a bridge by simply dragging a new bridge over it. This is useful to replace wooden bridges built by cities.
+|-
+|[http://www.tt-forums.net/viewtopic.php?t=24759 Advanced Town Handling]
+|in MiniIN
+|
+|''Advanced Town Handling'' makes it more expensive to build near and in cities.
+|-
+|[http://www.tt-forums.net/viewtopic.php?t=21557 Town growth patch]
+|in MiniIN
+|
+|''Town growth patch'' will make the town road building algorithm more effective and eliminate small blocks.
+|-
+|[http://www.tt-forums.net/viewtopic.php?t=22257 Dither Desert/Rocks]
+|in MiniIN
+|
+|''Dither Desert/Rocks'' allows drag/drop of a random pattern of desert and rock tiles.
+|-
+|[http://www.tt-forums.net/viewtopic.php?t=12193 Additional Orders]
+|in MiniIN
+|
+|''Additional Orders'' adds the following orders: Load/unload/transfer exactly x%, Priority load. 
+|-
+|[http://www.tt-forums.net/viewtopic.php?t=22054 Toolbar fix]
+|in MiniIN
+|
+|''Toolbar fix'' Fixes the position of popup toolbars so they do not overlap with main build toolbar.
+|- 
+|[http://www.tt-forums.net/viewtopic.php?t=25681 Purchase Window Refit Info]
+|in trunk
+|
+|''Purchase Window Refit Info'' adds information about the cargos a vehicle can be refitted to in the purchase list.
+|-
+|[http://www.tt-forums.net/viewtopic.php?t=25037 Build Templates (Copy & Paste)]
+|in MiniIN
+|[http://www.tt-forums.net/viewtopic.php?p=458220#458220 Yes]
+|''Build Templates (Copy & Paste)'' allows you to copy and paste, as well as save and import track/road layouts.
+|-
+|[http://www.tt-forums.net/viewtopic.php?t=25744 Loading Indicators]
+|in Trunk
+|
+|With ''Loading Indicators'' vehicles will show the percentage cargo they have been loaded with in the status bar.
+|-
+|[http://www.tt-forums.net/viewtopic.php?t=25481 More Selective Transparency]
+|in trunk
+|
+|With ''More Selective Transparency'' you can select the objects that will be transparent. See fix for bug above.
+|-
+|[http://www.tt-forums.net/viewtopic.php?t=24634 Send All *Vehicles* to Depot]
+|in trunk
+|
+|''Send All *Vehicles* to Depot'' allows you to globally order all vehicles (of a type) to the nearest depot. This is useful to replace trains with autoreplace.
+|-
+|[http://www.tt-forums.net/viewtopic.php?t=20006 Adjustable Day Length]
+|in MiniIN
+|
+|''Adjustable Day Length'' allows you to adjust the length of a day.
+|-
+|Freight Trains Weight Multiplier
+|in MiniIN
+|
+|''Freight Trains Weight Multiplier'' This allows you to multiply the weight of freight trains by a multiplier to simulate very heavy trains.
+|-
+|[http://www.tt-forums.net/viewtopic.php?t=25858 Advanced Auto Replace]
+|in MiniIN
+|
+|''Advanced Auto Replace'' allows you to (auto) replace trains with trains of a different type. (e.g. normal rail trains to monorail trains.) Trains of a different type will stay in the depot until the depot is updated.
+|-
+|Screen Size Limit Increase 
+|in MiniIN
+|
+|''Screen Size Limit Increase'' increases the maximum resolution of the game in a windowed game.
+|-
+|[http://www.tt-forums.net/viewtopic.php?p=469286#469286 Electricity Production (by coal plants)]
+|in MiniIN
+|
+|Coal power plants will report the amount of coal delivered to them.
+|-
+|[http://www.tt-forums.net/viewtopic.php?t=26252 Drive Through Road Stops]
+|in MiniIN
+|
+|This allows the construction of ''Drive Through Road Stops'' for bus and lorry stations.
+|-
+|Physics
+|In MiniIN
+|
+|
+|-
+|Breaking News
+|In MiniIN
+|
+|''Breaking News'' will move news about disasters to the top of the newspaper queue.
+|-
+|Found a Bank town option
+|In MiniIN
+|
+|''Found a Bank town option'' will add an option to the town option list to found a bank.
+|-
+|Origveh
+|In MiniIN
+|
+|''Origveh'' will replace statistics of certain trains with those in the original Transport Tycoon.
+|-
+|No Town Bridges within 2 tiles
+|In MiniIN
+|
+|''No Town Bridges within 2 tiles'' will stop towns from building bridges within two tiles form one another.
+|-
+|Diagonal Level Crossings
+|In MiniIN
+|
+|''Diagonal Level Crossings'' allows tracks to be built diagonally over roads.
+|-
+|Drag Buying Land
+|In MiniIN
+|
+|''Drag Buying Land'' allows you to buy land by dragging the mouse, instead of buying one square at a time. You will receive "bulk discount" for buying larger areas of land. ''This does not work in multiplayer.''
+|-
+|Adjacent Stations
+|In MiniIN
+|
+|''Adjacent & DistantJoin Stations'' allows stations to be built next to each other, or join them if they are more than 1 tile away from each other (a list will pop up to ask which station group to join.).
+Use "CTRL + Build" to popup the GUI.
+|-
+|Disable Elrails
+|In MiniIN
+|
+|''Disable Elrails'' turns electric rails off. Previously built electric rail will remain, and previously built electric trains will only be able to run on electric rail. Newly built electric trains will be able to run on normal rail.
+|-
+|Tile quantity calculator
+|In MiniIN (?)
+|
+|''Tile quantity calculator'' shows a tooltip which you can use to measure the length and height change of a tile selection. This is useful when building bridges over valleys.
+|-
+|[http://www.tt-forums.net/viewtopic.php?t=14888 Past 2090]
+|In MiniIN (?)
+|
+|''Past 2090'' allows playing past 31 December 2090.
+|}
+
+{|
+!style="background:pink;" | Will be added soon:
+|-
+!style="background:#999999;" | Patch Name
+!style="background:#999999;" | MiniIN Status
+|-
+|[http://www.tt-forums.net/viewtopic.php?t=24187 Speed Signs] 
+|pending-Needs updating for YAPF
+|-
+|[http://sourceforge.net/tracker/index.php?func=detail&aid=1227158&group_id=103924&atid=636367 Bridge Highlight (Diff Tracker Link)]
+|updated by RichK67. pending
+|-
+|[http://www.tt-forums.net/viewtopic.php?t=21438 No tunnels under mines]
+|updated by RichK67. pending
+|-
+|Continue Multiplayer Locally
+|pending
+|-
+|[http://www.tt-forums.net/viewtopic.php?t=22055 Disable repay loan]   
+|pending
+|-
+|[http://sourceforge.net/tracker/index.php?func=detail&aid=1467270&group_id=103924&atid=636367 Origveh(Diff Tracker Link)]
+|pending. RichK updated for more "real" truck names
+|-
+|[http://www.tt-forums.net/viewtopic.php?p=461615#461615 Aircraft queueing & planespeed]
+|Pending, Will Be Updated Very, Very Soon (Richk67)
+|}
+
+{|
+!style="background:pink;" | Likely to be added if updated by author:
+|-
+!style="background:#999999;" | Patch Name
+!style="background:#999999;" | MiniIN Status
+|-
+|[http://www.tt-forums.net/viewtopic.php?t=21827 Yellow signal state]
+|awaiting confirmation it is current
+|}
+
+{|
+!style="background:pink;" | Unknown:
+|-
+!style="background:#999999;" | Patch Name
+!style="background:#999999;" | MiniIN Status
+|-
+|Auto clean zero                
+|unknown. may not be applied
+|-
+|Pause on no clients            
+|unknown
+|-
+|Statistics tools               
+|unknown
+|-
+|Copy orders from vehicle windows         
+|unknown
+|-
+|Sort Vehicle options           
+|unknown
+|-
+|Smallmap zoom                  
+|unknown. updated feature being added to trunk
+|}
+
+{|
+!style="background:pink;" | Unlikely to be added:
+|-
+!style="background:#999999;" | Patch Name
+!style="background:#999999;" | MiniIN Status
+|-
+|Oil industries anywhere on map  
+|unknown. TGPerlin does something similar
+|-
+|Diagonal Clearing               
+|needs updating. clear_cmd.c changed a lot
+|-
+|No bells on crossings           
+|settings vars need updating.
+|-
+|Pause on Dec 31                 
+|will not be added
+|}
+
+==Development==
+This section contains the technical details for obtaining the code and creating special patches for the MiniIN
+
+====Downloading the MiniIN code====
+Using a Subversion program, you may download any revision of the code from '''svn://svn.openttd.org/branches/MiniIN'''
+
+====Viewing the Changelog====
+The complete changelog can be viewed here: 
+
+'''http://svn.openttd.org/cgi-bin/trac.cgi/log/branches/MiniIN'''
+
+This is a great way to stay on top of all the changes, and even better for updating this wiki!
+
+====Create a patch for the MiniIN====
+Ok, so you've created your very cool patch and want users to try it out?  Several people will look at it if you build your own executable, but even more will look at it if you include it into the MiniIN.  Here's how:
+
+First, make sure that you meet the requirements for having your patch included:
+:*Wait a month and test your patch before requesting inclusion in the MiniIN
+:*No debugging code
+:*"Idle" commented-out dev code removed
+:*Any trailing spaces removed; regexp: /s/[\t ]+$//
+:*Applies to MiniIN branch (resolve conflicts as best you can)
+:*Compiles without any errors or warnings (other than non-fatal language warnings)
+:*If you have an update, or a bug fix, please say *what* has changed or what the current version number is in the forum topic.
+
+Next, create an actual patch against the MiniIN (The steps below apply to users of TortoiseSVN):
+:#Check out trunk at either pre-branch (4977), or current last sync (check the branch for details).
+:#Apply patch
+:#Use the Tortoise "Switch" option to point to '''svn://svn.openttd.org/branches/MiniIN'''. It will run a merge, and you may get conflicts.
+:#Resolve conflicts.
+:#Create patch.
+
+====Maintaining your patch in the MiniIN====
+If you make a new version of your patch and need to update it in the MiniIN, pretty much you follow the same method as when you first put it in.  Your new code will most likely conflict with your old code, so always compile and run your patch to make sure you haven't left any orphaned lines of code in.
+
+'''BIG NOTE:''' When your patch is first added, richk67 will change any settings you added in settings.c:
+
+<pre>
+Before:
+SDT_VAR(Patches, day_length, SLE_UINT8, NS, 0, 1, 1, 32, STR_CONFIG_PATCHES_DAY_LENGTH, NULL), 
+
+After:
+SDT_CONDVAR(Patches, day_length,  SLE_UINT8, 34, SL_MAX_VERSION, NS, 0, 1, 1,   32, STR_CONFIG_PATCHES_DAY_LENGTH, NULL),
+</pre>
+
+This is to keep savegames backwards compatible.  Do not revert these, and do not change the 3rd and 4th parameters.  More info at [[Main/en/OpenTTDDevBlackBook/Settings/AddSetting]]
+
+When you upload your update patch, please notify everyone on [http://www.tt-forums.net/viewtopic.php?t=26333 this forum thread].  You may upload the file to the individual patch thread or to the MiniIN patch forum thread.  Then feel free to add a link to the Update Available like this: 
+
+:<nowiki>[http://link-to-update/ Yes]</nowiki>
+
+==External Links==
+:Forum topic [http://www.tt-forums.net/viewtopic.php?t=24423&postdays=0&postorder=asc&start=0]
+:Forum - problems thread [http://www.tt-forums.net/viewtopic.php?t=26332&postdays=0&postorder=asc&start=0]
+:Forum - patches and TODO list [http://www.tt-forums.net/viewtopic.php?t=26333&postdays=0&postorder=asc&start=0]
+:SVN Branch [http://svn.openttd.org/cgi-bin/trac.cgi/log/branches/MiniIN]
+:MiniIN Nightly Build [http://nightly.openttd.org/MiniIN/]
+:Old Integrated Nightly forum topic [http://www.tt-forums.net/viewtopic.php?t=14849]
+
+==See also==
+* [[Main/en/Roadmap]] &mdash; The Roadmaps
+* [[Main/en/Requested features]] &mdash; List of WIP Suggestions
+* [[Main/en/NewGRF TODO]] &mdash; A list of NewGRF WIP features for developers.
+* [[Main/en/Comparison of OpenTTD and TTDPatch features]] &mdash; Full List of features
+* [[Main/en/Mini Integrated Nightly]] &mdash; The list of patch of the precedent nightly
+
+[[Category:en/Development]]
+[[Category:en/Compiling OpenTTD]]
