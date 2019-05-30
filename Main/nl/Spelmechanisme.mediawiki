@@ -1,0 +1,617 @@
+[[Translation:Main/en/Game mechanics]]{{en/-}}{{nl/Inhoudsopgave}}
+
+Hier vind je informatie over hoe OpenTTD de cijfers in het spel berekent.
+
+Wilde je altijd al weten hoe de stationswaardering tot stand komt? Hoe de goederendistributie werkt? Hier kun je dat vinden!
+
+==Bedrijfswaardering==
+
+Elk deel van de bedrijfsbeoordeling is een lineaire functie, m.a.w. 50% verdienen van het doel van een component geeft je 50% van de punten die zijn vastgelegd voor die component. Waar componenten een monetair bedrag inhouden, worden deze geconverteerd naar de valuta van het huidige spel; intern worden deze bedragen opgeslagen als het bedrag in ponden.
+
+{| {{en/Wikitable}}
+|- style="background:#efefef"
+! Component !! Doel !! Punten (min) !! Punten (max) !! Percentage
+|-
+|Aantal voertuigen||>=120||0 punten voor 0 voertuigen||100 punten voor minimaal 120 voertuigen||0 tot 10%
+|-
+|Aantal stationsdelen als bedrijfseigendom||>=80||0 punten voor 0 delen||100 punten voor minimaal 80 delen||0 tot 10%
+|-
+|Minimumwinst van voertuigen die ten minste twee jaar oud zijn||>=£10.000||0 punten voor verlies of £0||100 punten voor ten minste £10.000||0 tot 10%
+|-
+|Kleinste kwartaalopbrengsten verdiend in de laatste 3 jaar||>=£50.000||0 punten voor £0||50 punten voor ten minste £50.000||0 tot 5%
+|-
+|Grootste kwartaalopbrengsten verdiend in de laatste 3 jaar||>=£100.000||0 punten voor £0||100 punten voor ten miste £100.000||0 tot 10%
+|-
+|Eenheden vracht afgeleverd in het laatste jaar||>=40.000||0 punten voor 0 eenheden||400 punten voor ten minste 40.000 eenheden||0 tot 40%
+|-
+|Aantal soorten vracht afgeleverd in het laatste kwartaal||>=8||0 punten voor 0 vrachtsoorten||50 punten voor ten minste 8 vrachtsoorten||0 tot 5% 
+|-
+|Huidige hoeveelheid geld in de bank||>=£10 miljoen||0 punten voor £0||50 punten voor ten minste £10 miljoen||0 tot 5%
+|-
+|Huidige lening van de bank||£0||0 punten voor meer dan £250.000 schuld||50 punten voor £0||0 tot 5%
+|- style="background:#efefef"
+! Totalen !!!! 0 punten !! 1000 punten !! 0 tot 100%
+|}
+
+<table>
+<tr valign="top"><td style="background:none; border:0px">
+{| {{en/Wikitable}}
+|- style="background:#efefef"
+!colspan="2"|Waarderingstabel bedrijfscompetitie 
+|- style="background:#efefef"
+!Waardering!!Titel
+|-
+|0 tot 127||Ingenieur
+|-
+|128 tot 255||Verkeersmanager
+|-
+|256 tot 383||Transportcoördinator
+|-
+|384 tot 511||Routeverantwoordelijke
+|-
+|512 tot 639||Directeur
+|-
+|640 tot 767||Chief executive
+|-
+|768 tot 895||Voorzitter
+|-
+|896 tot 959||President
+|-
+|960 tot 1000||Tycoon
+|}
+</td><td style="background:none; border:0px">
+{| {{en/Wikitable}}
+|- style="background:#efefef"
+!colspan="2"|Waardering 2050 high score 
+|-
+!Waardering!!Titel
+|-
+|0 tot 319||Zakenman
+|-
+|320 tot 447||Ondernemer
+|-
+|448 tot 575||Industrieel
+|-
+|576 tot 703||Kapitalist
+|-
+|704 tot 831||Magnaat
+|-
+|832 tot 959||Mogol
+|-
+|960 tot 1000||Tycoon van de eeuw
+|}
+</td></tr></table>
+
+==Stationswaardering==
+Deze sectie toont de factoren die effect hebben op de waardering van een station. Alle berekeningen worden apart gedaan voor elke vrachtsoort.
+
+{| {{en/Wikitable}}
+|- style="background:#efefef"
+!Factor!!Conditie!!Waarderingspunten!!Waarderingspercentage
+|-
+| Maximumsnelheid van laatste voertuig dat het station binnenkomt (met bovengrens 255 km/h) <br> Halveer als het een wegvoertuig betreft || boven 85 km/h (52 mph)|| (Snelheid (km/h) - 85) / 4 || 0% tot 17%
+|-
+|rowspan="3"|Leeftijd in jaren van laatste voertuig dat het station binnenkomt || 2 || 10|| 4%
+|-
+| 1 || 20 || 8%
+|-
+| 0 || 33 || 13%
+|-
+|rowspan="4"|Dagen sinds laatste vracht is opgepikt <br> Vermenigvuldig dagen in kolom "conditie" met 4 als laatste voertuig een schip was.<br><small>(Opmerking: als een voertuig klaar was om vracht op te pikken, maar er was geen vracht aanwezig, wordt dit toch beschouwd als het oppikken van een vracht. Dit is misschien een [https://github.com/OpenTTD/OpenTTD/issues/7430 bug])</small>|| 32,5 to 52,5 || 25 || 10%
+|-
+| 17,5 tot 32,5 || 50 || 20%
+|-
+| 10 tot 17,5  || 95 || 37%
+|-
+| minder dan 10 || 130 || 51%
+|-
+|rowspan="6"|Eenheden vracht die staan te wachten op een station <br> <small>(Opmerking: als de vracht overgeladen is naar andere stations, moet het station met grootste hoeveelheid wachtende vracht als transferstation beschouw worden.)</small> || Meer dan 1.500 || -90 || -35%
+|-
+| 1.001 tot 1.500 || -35 || -14%
+|-
+| 601 tot 1.000 || 0 || 0%
+|-
+| 301 tot 600 || 10 || 4%
+|-
+| 101 tot 300 || 30 || 12%
+|-
+| minder dan 100 || 40 || 16%
+|-
+|Standbeelden in stad of station||Gebouwd||26|| 10%
+|-
+|Kleine advertentiecampagne||Station binnen 10 tegels van het stadscentrum||+64|| +25%
+|-
+|Normale advertentiecampagne||Station binnen 15 tegels van het stadscentrum||+112|| +44%
+|-
+|Grote advertentiecampagne||Station binnen 20 tegels van het stadscentrum||+160|| +63%
+|-
+|Verongelukt wegvoertuig||Station binnen 22 tegels van het ongeluk ||-160|| -63%
+|-
+|Verongelukte trein||Station binnen 30 tegels van het ongeluk ||-160|| -63%
+|}
+Deel het totaal aantal punten door 255 om de percentagewaardering te krijgen. Het maximaal haalbare is 100%. Advertentiecampagnes geven een directe doch tijdelijke verhoging van de waardering van nabijgelegen stations. De verhoging zal geleidelijk wegvallen in de berekende waardering.
+
+De hoeveelheid vracht van een industrie die vervoerd kan worden hangt volledig af van de stationswaardering. Als de hoeveelheid vracht aan de lage kant is, betekent dit waarschijnlijk dat de stationswaardering ook aan de lage kant is.
+
+Elke 2,5 dag worden de stationswaardering berekend; waarderingen kunnen niet veranderen met meer dan 2 punten per cyclus, tenzij na ongelukken.
+
+'''Merk op:''' De exacte formule kan worden gevonden op "[https://github.com/OpenTTD/OpenTTD/blob/97c0594cedcad866bbdea8a0f86406b5c38694a3/src/station_cmd.cpp#L3262 UpdateStationRating()]" in <code>station_cmd.cpp</code>. Dit gebruikt sommige waarden die berekend worden in "[https://github.com/OpenTTD/OpenTTD/blob/97c0594cedcad866bbdea8a0f86406b5c38694a3/src/economy.cpp#L1595 LoadUnloadVehicle()]" in <code>economy.cpp</code>.
+
+'''Merk op:''' als de waardering lager dan 50% wordt, zal het station vracht beginnen verliezen.
+
+'''Merk op''': als de hoeveelheid wachtende vracht hoger is dan 4096 eenheden (of 4.096.000 liter), zal het station ook vracht beginnen verliezen.
+
+==Vrachtlevering aan stations==
+Gedurende elke cyclus van 2,5 dagen wordt voor elke vrachtsoort voor de leverende industrie maximaal 2 stations aangewezen als ontvanger van deze vracht. Als er meer dan 2 mogelijke stations zijn met dezelfde waardering t.o.v. de waarde van de huidige vrachtsoort, dan hangt het af van de interne volgorde van de stations welke de vracht krijgt.
+
+Als er slechts een mogelijk station is dan is het totaal aan af te leveren vracht: geproduceerde hoeveelheid * stationswaardering in procenten, afgerond op hele waarden naar boven.
+
+Voor de twee mogelijke stations is de berekening complexer. Eerst wordt de waardering van station 2 gedeeld door 2 voor verdere lokale berekeningen. Het aantal beschikbaar voor station 1 wordt als volgt berekend:
+<br><br> ''(stationswaardering in punten 1 * (hoeveelheid + 1)) / (stationswaardering in punten 1 + stationswaardering in punten 2)''<br><br>
+Voor gelijksoortige waardering is dit ongeveer 2/3 van de productie, het wordt groter bij grotere verschillen. Het resultaat is onderworpen aan dezelfde berekening als bij een enkel station. Dit is afgeleverd aan station 1. Als station 1 niet de volledige beschikbare hoeveelheid ontvangt, dan wordt dat deel in het geheel niet getransporteerd. De overblijvende hoeveelheid van de productie, als die er is, is onderworpen aan dezelfde berekening als bij een enkel station en aflevering aan station 2.
+
+==Reputatie bij de gemeenteraad==
+
+De reputatie beperkt sommige acties van spelers; zij start op +500 en kan veranderen op basis van sommige acties.
+
+Momenteel kun je het spel uitbuiten door ongeveer 200 bomen te planten in het invloedsgebied van de gemeenteraad. Het is mogelijk dat je eerst een gebied moet vrijmaken om ruimte te hebben om de bomen te planten, maar dit is geen probleem; het planten van 200 bomen verhoogt zelfs de minimumreputatie van -1.000 tot 220. Als je reputatie Matig of hoger is, zal het planten van 30 bomen de reputatieschade van het bouwen van een station compenseren. Het planten van bomen bij een reputatie van Erg goed of hoger heeft geen effect.
+
+<table>
+<tr valign="top"><td style="background:none; border:0px">
+{| {{en/Wikitable}}
+|- style="background:#efefef"
+!Beoordelingspunten!!Beoordeling
+|-
+| -1.000 tot -400 || Verschrikkelijk
+|-
+| -399 tot -200 || Erg slecht
+|-
+| -199 tot 0 || Slecht
+|-
+| 0 tot 200 || Matig
+|-
+| 201 tot 400 || Goed
+|-
+| 401 tot 600 || Erg goed
+|-
+| 601 tot 800 || Uitstekend
+|-
+| 801 tot 1.000 || Voortreffelijk
+|}
+</td><td style="background:none; border:0px">
+{| {{en/Wikitable}}
+|- style="background:#efefef"
+!Spelers actie!!Vereiste beoordeling*!!Effect op beoordeling
+|-
+|Bouw een station|| -200 || n.v.t.
+|-
+|Vernietig een stuk van een 'randweg'|| 16 / 64 / 112 ||-18, aflopend tot -100.
+|-
+|Vernietig een stuk van een 'binnenweg'|| 16 / 64 / 112 ||-50, aflopend tot -100.
+|-
+|Vernietig een stadstunnel of -brug|| 144 / 208 / 400 ||-250, aflopend tot 0.
+|-
+|Vernietig een gebouw**|| 40 to 300 ||-40 tot -300
+|-
+|Plant een boom op een leeg vierkant|| n.v.t. ||+7, oplopend tot 220.
+|-
+|Wis een vierkant met bomen|| n.v.t. ||-35
+|-
+|Succesvol omkopen|| n.v.t. ||+200, oplopend tot 800.
+|-
+|Onsuccesvol omkopen|| n.v.t. ||Teruggezet naar -50.
+|}
+<nowiki>*</nowiki> "Vereiste beoordeling" is opgesomd voor de instellingen Toegeeflijk / Neutraal / Vijandig van de waarde van ''[[Main/en/moeilijkheidsgraad/Nl#Houding van gemeenten m.b.t. landschapsaanpassingen|Houding van gemeentebestuur ten opzichte van herstructurering omgeving]]''.<br>
+<nowiki>**</nowiki> Voor standaardgebouwen. NewGRFs kunnen deze waarde aanpassen tussen 0 en >1000, wat een gebouw praktisch niet-verwijderbaar maakt.
+</td></tr></table>
+
+Elke maand verandert de reputatie van een speler automatisch:
+* De reputatie gaat met 5 omhoog als het minder dan 200 is.
+* De reputatie  gaat met 12 omhoog voor elk station dat vracht heeft getransporteerd in de laatste 50 dagen.
+* De reputatie gaat omlaag met 15 voor elk station dat geen vracht heeft getransporteerd in de laatste 50 dagen.
+
+=== Voorbeeld ===
+Stel een speler heeft een reputatie van -300 (Erg slecht), 2 actieve stations en 1 niet-actief station in het invloedsgebied van een gemeenteraad.
+
+* Zijn reputatie zal elke maand stijgen met 14 punten: 5 + 2 * 12 - 15. Dit komt van 5 punten van de maandelijkse vermindering bij een score lager dan 200, tweemaal 12 punten voor de actieve stations en -15 voor het inactieve station.
+* Het zal 8 maand duren vooraleer de speler een nieuw station kan bouwen. Een station bouwen vereist -200 reputatie. Zijn reputatie dient dus met 100 te stijgen; aan 14 per maand duurt dit 8 maanden.
+
+De code voor de reputatie bij de gemeenteraad is te vinden in de bestanden <code>town.h</code>, <code>town_cmd.c</code>, <code>tree_cmd.c</code> en <code>road_cmd.c</code>.
+
+==Productie door industrie==
+
+Hier wordt aangegeven hoe in het spel wordt bepaald hoeveel vracht een industrie produceert per maand. Productie van ruwe materialen gebeurt 8 of 9 keren per maand. Het gebeurt elke 256 ''ticks''. Er zijn 74 ticks in een dag en 28 tot 31 dagen in een maand, zie <code>[https://github.com/OpenTTD/OpenTTD/blob/97c0594cedcad866bbdea8a0f86406b5c38694a3/src/date_type.h#L30 date_type.h]</code>. Dit betekent dat ongeveer 9% van de industrieën 9 keren zullen produceren in een maand met 28 dagen, maar dat 96% van de industrieën 9 keren zal produceren in een maand met 31 dagen. De productie zal altijd een veelvoud van 8 of 9 zijn, tenzij de productiehoeveelheid aangepast wordt in die maand.
+
+Deze tabel geeft een overzicht van mogelijke startproducties die worden bestuurd door de optie [[Main/en/geavanceerde instellingen/Economie/Nl#Vloeiende economie inschakelen (meer, kleinere veranderingen)|vloeiende economie]]. Deze waarden zijn veelvouden van 8. Als het spel een nieuwe kaart genereert, zal elke industrie 8 keren geproduceerd hebben en zullen de productiehoeveelheden niet veranderd zijn in de december die vooraf ging aan het begin van het spel.
+
+{| {{en/Wikitable}}
+|- style="background:#efefef"
+!Ruw materiaal!!Geproduceerde vracht!!Initieel productiebereik
+|-
+|[[Main/nl/Kolenmijn|Kolenmijn]]||[[Main/nl/Kolen|Kolen]]||56 tot 176
+|-
+|[[Main/nl/Bos|Bos]]||[[Main/nl/Hout|Hout]]||48 tot 152
+|-
+|[[Main/nl/Olieplatform|Olieplatform]]||[[Main/nl/Olie|Olie]]||56 tot 176
+|-
+|[[Main/nl/Boerderij|Boerderij]]||[[Main/nl/Graan|Graan]] en [[Main/nl/Vee|vee]]||40 tot 112
+|-
+|[[Main/nl/Kopermijn|Kopermijn]]||[[Main/nl/Kopererts|Kopererts]]||56 tot 112
+|-
+|[[Main/nl/Oliebronnen|Oliebron]]||[[Main/nl/Olie|Olie]]||48 tot 152
+|-
+|[[Main/nl/IJzermijn|IJzermijn]]||[[Main/nl/IJzererts|IJzererts]]||40 tot 112
+|-
+|[[Main/nl/Bank|Bank]]||[[Main/nl/Kostbaarheden|Kostbaarheden]]||24 tot 64
+|-
+|colspan="5"|
+|-
+|[[Main/nl/Goudmijn|Goudmijn]]||[[Main/nl/Goud|Goud]]||24 tot 80
+|-
+|colspan="5"|
+|-
+|[[Main/nl/Diamantmijn|Diamantmijn]]||[[Main/nl/Diamanten|Diamanten]]||24 tot 80
+|-
+|[[Main/nl/Boomgaard|Boomgaard]]||[[Main/nl/Fruit|Fruit]]||40 tot 112
+|-
+|[[Main/nl/Rubberplantage|Rubberplantage]]||[[Main/nl/Rubber|Rubber]]||40 tot 112
+|-
+|[[Main/nl/Watervoorraad|Watervoorraad]]||[[Main/nl/Water|Water]]||48 tot 152
+|-
+|[[Main/nl/Boerderij|Boerderij]]||[[Main/nl/Mais|Maïs]]||40 tot 128
+|-
+|[[Main/nl/Timmerhoutzagerij|Timmerhoutzagerij]]||[[Main/nl/Hout|Hout]]||180 of 225 (als bomen beschikbaar zijn)
+|-
+|colspan="5"|
+|-
+|[[Main/nl/Suikerspinbos|Suikerspinbos]]||[[Main/nl/Suikerspin|Suikerspin]]||48 tot 152
+|-
+|[[Main/nl/Batterijenboerderij|Batterijenboerderij]]||[[Main/nl/Batterijen|Batterijen]]||40 tot 128
+|-
+|[[Main/nl/Colabronnen|Colabronnen]]||[[Main/nl/Cola|Cola]]||48 tot 136
+|-
+|[[Main/nl/Plasticfonteinen|Plasticfontein]]||[[Main/nl/Plastic|Plastic]]||56 tot 160
+|-
+|[[Main/nl/Bellenblazer|Bellenblazer]]||[[Main/nl/Bubbels|Bubbels]]||48 tot 152
+|-
+|[[Main/nl/Toffeegroeve|Toffeegroeve]]||[[Main/nl/Toffee|Toffee]]||40 tot 112
+|-
+|[[Main/nl/Suikermijn|Suikermijn]]||[[Main/nl/Suiker|Suiker]]||40 tot 128
+|}
+
+Kijk in <code>[https://github.com/OpenTTD/OpenTTD/blob/97c0594cedcad866bbdea8a0f86406b5c38694a3/src/table/build_industry.h#L1198 _origin_industry_specs]</code> als je deze tabel wilt berekenen. De suikermijn heeft waarde <code>CT_SUGAR, 11</code>, wat betekent dat de productie van de suikermijnen start op 11. Pas de formule uit <code>[https://github.com/OpenTTD/OpenTTD/blob/97c0594cedcad866bbdea8a0f86406b5c38694a3/src/industry_cmd.cpp#L1643 DoCreateNewIndustry]</code> toe: vermenigvuldig de productie met een willekeurig getal tussen 128 en 383, deel door 256 en rond af naar beneden. Zo transformeert de beginwaarde 11 tot het bereik 5 tot 16. Vermenigvuldig tot slot met 8 om 40 tot 128 te bekomen.
+
+===Productiewijziging===
+
+Elke maand verandert het spel willekeurig sommige productiehoeveelheden.
+
+====Standaard / TTD-achtige economieregels====
+
+Voor een kaart van 256x256 tegels is er een verandering per maand mogelijk (één industrie verandert). Numeriek schaalt dit netjes met de kaartafmeting sinds de introductie van de functie "Dagelijkse productiewijzigingen" in versie r14332. 
+
+*Zoals met de vloeiende economie leveren industrieën 8 of 9 keren per maand vracht aan de stations.
+Echter - producties zijn begrens tot 6 productieniveaus: laagste, lager, normaal (met een nieuw spel gestart of een nieuwe industrie gebouwd), hoger, 2x hoger en de hoogste.
+Productieveranderingen tussen deze niveaus zijn of een 50% verlaging (halveren) of een 100% verhoging (verdubbeling).
+
+*Voorbeelden:
+**Een kolenmijn: laagste (32 of 40 ton/maand),    lager (64 of 72), normaal (120 of 135), hoger (240 of 270), 2x hoger (480 of 540) en de hoogste (960 of 1080).
+**Een bos: laagste (32 of 64 ton/maand),    lager (35 of 70), normaal ( 78 of 117), hoger (208 of 260), 2x hoger (416 of 468 of 520 (= 10x vermenigvuldiger)) en de hoogste (832 of 936 of 1040).
+**Een goudmijn: laagste (12 of 18 zakken/maand), lager (32 of 40), normaal ( 56 of  63), hoger (112 of 126), 2x hoger (224 of 252) en de hoogste (448 of  504).
+
+
+Laten we eens kijken wat de veranderingen zijn voor 256x256 kaarten om de dingen eenvoudig te houden (max. 1 verandering per maand = max. 1 industrie per maand verandert de productie):
+
+*De verandering voor een productie elke maand is:
+** 50% voor alleen verlagen industrie om te verlagen (momenteel alleen gematigd terrein oliebronnen) of
+** 50% voor 1/3 verandering (=16.7%) bij verandering van de productie van de andere industrie (niet alleen verlagen).
+
+
+*Als een productieverandering optreedt (~16.7% kans/maand):
+** Voor een industrie dat een slechte of geheel geen dienst ontvangt (minder dan 60% van zijn vracht wordt vervoerd): '''33%''' kans op verhoging, '''67%''' kans op vrelaging.
+** Voor een industrie dat een goede (meer dan 60%) dienst ontvangt: '''67%''' kans op verhoging, '''33%''' kans op verlaging.
+** Er is geen bonus voor excellente dienstverlening met een standaard economie.
+
+
+*Om de kans op een bepaalde verandering te berekenen, bijv. 50% * 1/3 * 33% = 5.56%:
+** Slechte service: '''5.56%''' dat 1 mogelijke verandering per maand een verhoging is en '''11.12%''' dat 1 mogelijke kans per maand een verlaging is.
+** Goede service: '''11.12%''' dat 1 mogelijke verandering per maand een verhoging is en '''5.56%''' dat 1 mogelijke kans per maand een verlaging is.
+
+====Regels bij vloeiende economie====
+:''Maak onderscheid tussen [[Main/en/Geavanceerde instellingen/Economie/Nl#Vloeiende economie inschakelen .28meer.2C kleinere veranderingen.29|vloeiende economie]] en  [[Main/nl/Moeilijkheidsgraad|stabiele economie]]''
+
+*De kans op een productiewijziging per maand is '''4,5%''' ofwel 4,5% van de producerende industrieën uit de list wijzigen de productie.
+
+*Wanneer een productiewijziging zich voordoet voor een industrie die:
+** slecht of niet (minder dan 60% van de vracht wordt vervoerd) wordt bediend is er: '''33%''' kans op verhoging en '''67%''' kans op verlaging.
+** goed (meer dan 60% van de vracht wordt vervoerd) wordt bediend is er: '''67%''' kans op verhoging en '''33%''' kans op verlaging.
+** zeer goed (meer dan 80% van de vracht wordt vervoerd) wordt bediend is er: '''83%''' kans op verhoging en '''17%''' kans op verlaging.
+
+*Deze twee worden met elkaar vermenigvuldigd, bv. 4,5% * 33% = 1,5%:
+** Slechte service: '''1,5%''' naar verhoging en '''3,0%''' voor verlaging.
+** Goede service: '''3,0%''' naar verhoging en '''1,5%''' voor verlaging.
+** Zeer goede service: '''3,75%''' naar verhoging en '''0,75%''' voor verlaging.
+<!--*These two are multiplied together, i.e. 4.5% * 33% = 1.5%:
+** Poor service: '''1.5%''' to increase and '''3.0%''' to decrease
+** Good service: '''3.0%''' to increase and '''1.5%''' to decrease
+** Excellent service: '''3.75%''' to increase and '''0.75%''' to decrease
+Weet niet zeker of het zo goed is vertaald, daarom originele tekst laten staan.-->
+
+*Met de optie [[Main/en/Geavanceerde instellingen/Economie/Nl#Vloeiende economie inschakelen .28meer.2C kleinere veranderingen.29|vloeiende economie]] ingeschakeld zijn de productiewijzigingen per maand tussen 3% en 23%.
+**Industrieën met zeer lage productie (zo'n 12-40 ton per maand) hebben grotere kansen.
+**Primaire industrieën produceren 8 of 9 keer (10 keer is voor bos mogelijk) per maand. Maandelijkse productie kan worden berekend door de 'basisproductie' te vermenigvuldigen met het aantal keer per maand. Bijvoorbeeld: de basisproductie van een kolenmijn is 15 ton, de maandelijkse productie is dus 120 of 135 ton. De basisproductie is gemaximeerd op 255 dus is de maximale maandelijkse productie voor iedere industrie 2040 of 2295 (of 2550 voor bos). {{forum|Bron|topic=163733}}
+
+====Voorbeelden====
+Wanneer de productie van een kolenmijn voor 70% is getransporteerd is er een kans van '''3%''' (4,5% * 67) op een verhoging van de productie met 3-23% en een kans van '''1,5%''' (4,5% * 33%) op een verlaging van de productie met 3-23% (met een gemiddelde van 13%):<br>
+(1 + (0,03 - 0,015) * 0,13) ^12 - 1 = 0,0237 of '''2,37%'''
+
+De kolenmijn groeit met een gemiddelde van 2,37% na het eerste jaar<br>
+(1.0237 ^20) - 1 = 59.6% na twintig jaar<br>
+(1.0237 ^50) - 1 = 321.8% or '''3.22x''' na vijftig jaar<br>
+(1.0237 ^100) - 1 = '''10.35x''' na honderd jaar<br>
+
+Wanneer de productie van een kolenmijn voor 80% is getransporteerd is er een kans van '''3.75%''' op een verhoging van de productie en een kans van '''0.75%''' op een verlaging van de productie:<br>
+(1 + (.0375 - 0.0075) * .13) ^12 - 1 = 0.0478 of '''4.78%'''
+
+De industrie groeit naar verwachting 4,78% na het eerste jaar<br>
+(1.0478 ^20) - 1 = '''2.54x''' na twintig jaar<br>
+(1.0478 ^50) - 1 = '''10.32x''' na vijftig jaar<br>
+(1.0478 ^100) - 1 = '''106.62x''' na honderd jaar<br>
+
+Met een goede bediening kost het gemiddeld '''29,6 jaar''' om te '''verdubbelen'''; met een zeer goede bediening kost het '''14,8 jaar'''. Wanneer in het spel een dag 2,36 seconden is de '''verdubbelingstijd''' met een goede bediening '''7,1 uur'''; met zeer goede bediening de '''verdubbelingstijd''' is '''3,6 uur'''. Om de productie te laten stijgen van bijna niets (100) naar bij het maximum (2100) duurt '''130 jaar''' met een goede bediening en '''65 jaar''' met een zeer goed bediening.
+
+In het spel echter zal de productie van industrieën zeer wisselend zijn. Bovenstaande voorbeelden zijn alleen geldig wanneer vele industrieën worden bestudeerd gedurende lange termijn; individuele industrieën kunnen grote afwijkingen vertonen van deze gemiddelden. Statistisch gezien zullen 6 op 10 industrieën niet binnen 65 jaar van 100 naar 2100 gaan en ongeveer bij 1 op 9 industrieën zal de productie zelfs dalen wanneer ze worden bediend op 60-80% over een periode van 50 jaar.
+
+Voor een groter aanbod van de industrieën moet het aantal wagons worden aangepast op de productie (voor de laagste productie moeten twee wagons worden gebruikt). Voor dit soort vrachttreinen wordt gewoonlijk de order [Alle vracht volladen] gebruikt.
+
+'''Opmerking:''' De exacte formule kan worden gevonden in [http://vcs.openttd.org/svn/browser/trunk/src/industry_cmd.cpp#L2440 industry_cmd.cpp] in de functie "ChangeIndustryProduction()".
+
+==Betalingstarieven bij aflevering==
+De hoeveelheid die je betaald krijgt voor levering van de vracht is gebaseerd op 4 factoren: de hoeveelheid vracht die je aflevert, de waarde van de vracht, de afstand waarover wordt geleverd en hoeveel op tijd wordt geleverd.
+
+{| {{en/Wikitable}}
+|- style="background:#efefef"
+!Vracht!!Eenheden!!Vroegste levering<br> Tijd (dagen)!!Laatste levering<br> Tijd (dagen)!!Start vracht <br> betaling (ponden)
+|-
+|[[Main/nl/Passagiers|Passagiers]]||-||Onmiddellijk||24||£39
+|-
+|[[Main/nl/Kostbaarheden|Kostbaarheden]]||Zakken||1||32||£91
+|-
+|[[Main/nl/Vee|Vee]]||Stuks||4||18||£53
+|-
+|[[Main/nl/Graan|Graan]]||Tonnen||4||40||£58
+|-
+|[[Main/nl/Goederen|Goederen]]||Kratten||5||28||£75
+|-
+|[[Main/nl/Kolen|Kolen]]||Tonnen||7||Geen||£72
+|-
+|[[Main/nl/Staal|Staal]]||Tonnen||7||Geen||£69
+|-
+|[[Main/nl/IJzererts|IJzererts]]||Tonnen||9||Geen||£62
+|-
+|[[Main/nl/Hout|Hout]]||Tonnen||15||Geen||£61
+|-
+|[[Main/nl/Olie|Olie]]||Kiloliters||25||Geen||£54
+|-
+|[[Main/nl/Post|Post]]||Zakken||20||90||£55
+|- style="background:#efefef"
+!colspan="5" align="center"|Specifiek voor arctisch
+|-
+|[[Main/nl/Tarwe|Tarwe]]||Tonnen||4||40||£58
+|-
+|[[Main/nl/Papier|Papier]]||Tonnen||7||60||£66
+|-
+|[[Main/nl/Goud|Goud]]||Zakken||10||40||£71
+|-
+|[[Main/nl/Voedsel|Voedsel]]||Tonnen||Onmiddellijk||30||£69
+|- style="background:#efefef"
+!colspan="5" align="center"|Specifiek voor tropisch
+|-
+|[[Main/nl/Rubber|Rubber]]||Kiloliters||2||20||£54
+|-
+|[[Main/nl/Fruit|Fruit]]||Tonnen||Onmiddellijk||15||£51
+|-
+|[[Main/nl/Mais|Mais]]||Tonnen||4||40||£53
+|-
+|Tropisch [[Main/nl/Hout|hout]]||Tonnen||15||Geen||£97
+|-
+|[[Main/nl/Kopererts|Kopererts]]||Tonnen||12||Geen||£59
+|-
+|[[Main/nl/Water|Water]]||Kiloliters||20||80||£57
+|-
+|[[Main/nl/Diamanten|Diamanten]]||Zakken||10||Geen||£71
+|- style="background:#efefef"
+!colspan="5" align="center"|Specifiek voor speelgoedland
+|-
+|[[Main/nl/Suiker|Suiker]]||Tonnen||20||Geen||£54
+|-
+|[[Main/nl/Speelgoed|Speelgoed]]||-||25||Geen||£68
+|-
+|[[Main/nl/Batterijen|Batterijen]]||-||2||30||£53
+|-
+|[[Main/nl/Snoep|Snoep]]||Tonnen||8||40||£75
+|-
+|[[Main/nl/Toffee|Toffee]]||Tonnen||14||60||£58
+|-
+|[[Main/nl/Cola|Cola]]||Kiloliters||5||75||£59
+|-
+|[[Main/nl/Suikerspin|Suikerspin]]||Tonnen||10||25||£61
+|-
+|[[Main/nl/Bubbels|Bubbels]]||-||20||80||£62
+|-
+|[[Main/nl/Plastic|Plastic]]||Kiloliters||30||Geen||£54
+|-
+|[[Main/nl/Frisdrank|Frisdrank]]||-||30||50||£76
+|}
+Betaling van goederen is voor afleveren van 100 stuks over 1 landtegel. De betaling gaat omhoog met de inflatie als het spel vordert.
+
+Boetes voor te laat afleveren:
+*Voor iedere dag na de vroege aflevertijd wordt een boete van 0,4% in rekening gebracht.
+*Voor iedere dag na de late aflevertijd wordt een extra boete van 0,4% in rekening gebracht.
+*Maximale boete is 88%.
+
+'''Voorbeelden''' (geen inflatie):<br>
+Lever 200.000 liter olie 20 landtegels verder af in 10 dagen:<br>
+2 * £54 * 20 landtegels * 100% = £2160
+
+Lever 100 zakken post 100 landtegels verder af in 100 dagen:<br>
+£55 * 100 landtegels * (1 - 80*0.004 - 10*0.004) = £3520
+
+
+'''Opmerkingen:'''
+* De exacte formule is veel complexer en iets nauwkeuriger door de afrondingsfout bij het omzetten van grotere afzonderlijke waarden. Zie
+[http://vcs.openttd.org/svn/browser/trunk/src/economy.cpp#L881 economy.cpp] "GetTransportedGoodsIncome()" and [[Main/nl/Vrachtinkomsten]].
+
+* Afstand wordt gemeten tussen de gelabelde delen van stations, niet tussen industrieën of voor de afstand die het voertuig heeft overbrugd. Het wordt berekend door de verschillen in de x- en y-coördinaten te berekenen (de [https://nl.wikipedia.org/wiki/Manhattan-metriek Manhattan-afstand], niet de afstand in vogelvlucht).
+
+* Elk soort vracht heeft een karakteristieke tijd waarop de betaling maximaal is, ervan uitgaande dat je de vracht aan constante snelheid verder stuurt. Voor vracht met een vertragingsboete is dit vaak rond 70 dagen, voor vracht zonder vertragingsboete rond 130 dagen.
+
+==Voertuigsnelheden==
+
+OpenTTD werkt intern met een eenheid genoemd "km-achtig/uur", dit is gelijk aan "mph/1.6".
+De conversiefactor van km-achtig/uur naar km/uur is 1.00584, en de conversiefactor van km-achtig/uur naar mph is 1.6.
+
+Een landtegel is, voor het meten van voertuigsnelheden, 664,|216| km-achtig, 668 km of 415 mijl lang. Dit is gebaseerd op de volgende feiten:
+*Een landtegel heeft 16 deellocaties per X/Y-as.
+*Een voertuig heeft een opslaggeheugen voor landtegelbeweging in een byte: deelsnelheid genoemd en heeft daarom 256 verschillende waarden.
+*De (ruwe) snelheid van een voertuig wordt toegevoegd aan deelsnelheid. De resulterende waarde wordt gedeeld door 256, het geheugen wordt opgeslagen in deelsnelheid en het voertuig wordt een het aantal deellocaties verplaatst die overeenkomt met de uitkomst van die deling. Voor treinen en vliegtuigen is de ruwe snelheid in km-achtig/uur, voor wegvoertuigen en schepen in 0,5 km-achtig/uur. Voor treinen en vliegtuigen wordt dit twee keer per tik uitgevoerd, waar dit voor wegvoertuigen en schepen slechts een keer per tik wordt gedaan.
+*Een dag bestaat uit 74 ticks en duurt 24 uur.
+Stel nu voor dat een voertuig 1km-achtig/uur gaat: (1 * 16 * 256) / (74 * 2) * 24 = 664,|216|.
+
+==== Vliegtuigen ====
+*Standaard vliegt een vliegtuig op een kwart van de vermelde snelheid (dit kan worden gewijzigd in de geavanceerde instellingen).
+*Vliegtuigversnelling varieert per vliegtuig, tussen 144 km-achtig/uur/dag en 400 km-achtig/uur/dag.
+*Defecte vliegtuigen vliegen 320 km-achtig/uur.
+*Taxisnelheid van vliegtuigen is 150 km-achtig/uur.
+
+==== Wegvoertuigen ====
+*Wegvoertuigen versnellen met 37 km-achtig/uur/dag.
+*Door de bocht rijden wegvoertuigen op halve snelheid.
+*Heuvelafwaarts versnellen wegvoertuigen extra met 74 km-achtig/uur/dag.
+*Heuvelopwaarts vertragen wegvoertuigen 10%, 4 keer per landtegel. Dit wordt verrekend met de acceleratie van 34 km-achtig/uur voor alle wegvoertuigen.
+
+(Opmerking: Dit geldt niet wanneer het verbeterde wegvoertuigen versnellingsmodel wordt gebruikt.)
+
+==== Schepen ====
+*Schepen versnellen met 37 km-achtig/uur/dag.
+*Een schip dat "gestopt" is hervat de laatste snelheid onmiddellijk.
+
+==== Treinen ==== 
+(met de [[Main/nl/realistische acceleratie|optie realistische treinacceleratie]])<br>
+*Treinen worden niet door heuvels beïnvloed wanneer ze sterk genoeg zijn.
+*Treinen mogen niet sneller dan 61 km/uur bij het binnen- en buitengaan van het depot.
+*Treinen kunnen een bocht van 45° maken zonder te vertragen.
+*Bij twee of meer bochten van 45° in dezelfde richting wordt de maximumsnelheid als volgt:
+
+{| style="margin: 1em 1em 1em 0;"    <!-- begin geneste tabel -->
+|-
+
+|    <!-- metrisch -->
+{| border="2" width="auto" cellspacing="4" cellpadding="3" rules="all" style="margin: 0; border: solid 1px #AAAAAA; background-color: #efefff;"
+|-
+!rowspan=2  style="background:#efefef"  | Kromming
+!colspan=3  style="background:#dfdfff"  | Maximale snelheid (km/h)
+|-
+!   style="background:#dfdfff"      | Normaal spoor
+!   style="background:#dfdfff"      | Monorail
+!   style="background:#dfdfff"      | Mag-Lev
+|-
+| style="background:#f8f8ff"    | 0 (90° bocht)  
+|    61||91||121
+|-
+| style="background:#f8f8ff"    | 1 (2x45° bocht)
+|     88||132||176
+|-
+| style="background:#f8f8ff"    | 2
+|    111||166||221
+|-
+| style="background:#f8f8ff"    | 3
+|    132||198||264
+|-
+| style="background:#f8f8ff"    | 4
+|    151||226||301
+|-
+| style="background:#f8f8ff"    | 5
+|    168||252||336
+|-
+| style="background:#f8f8ff"    | 6
+|    183||274||365
+|-
+| style="background:#f8f8ff"    | 7
+|    196||294||392
+|-
+| style="background:#f8f8ff"    | 8
+|    207||310||413
+|-
+| style="background:#f8f8ff"    | 9
+|    216||324||432
+|-
+| style="background:#f8f8ff"    | 10
+|    223||334||445
+|-
+| style="background:#f8f8ff"    | 11
+|    228||342||456
+|-
+| style="background:#f8f8ff"    | 12+
+|    231||346||461
+|}
+
+|    <!-- Engels -->
+{| border="2" width="auto" cellspacing="4" cellpadding="3" rules="all" style="margin: 0; border: solid 1px #AAAAAA; background-color: #ffefef;"
+|-
+!rowspan=2  style="background:#efefef"  | Kromming
+!colspan=3  style="background:#efdfdf"  | Max. snelheid (mi/h)
+|-
+!   style="background:#efdfdf"      | Normaal spoor
+!   style="background:#efdfdf"      | Monorail
+!   style="background:#efdfdf"      | Mag-Lev
+|-
+| style="background:#f8f8ff"    | 0||     37|| 56|| 75 
+|-
+| style="background:#f8f8ff"    | 1||     54|| 82||109 
+|-
+| style="background:#f8f8ff"    | 2||     68||103||137 
+|-
+| style="background:#f8f8ff"    | 3||     82||123||164 
+|-
+| style="background:#f8f8ff"    | 4||     93||140||187 
+|-
+| style="background:#f8f8ff"    | 5||    104||156||208 
+|-
+| style="background:#f8f8ff"    | 6||    113||170||226 
+|-
+| style="background:#f8f8ff"    | 7||    121||182||243 
+|-
+| style="background:#f8f8ff"    | 8||    128||192||256 
+|-
+| style="background:#f8f8ff"    | 9||    134||201||268 
+|-
+| style="background:#f8f8ff"    | 10    ||138||207||276 
+|-
+| style="background:#f8f8ff"    | 11    ||141||212||283 
+|-
+| style="background:#f8f8ff"    | 12+   ||143||214||286 
+|}
+
+|}  <!-- einde geneste tabellen -->
+
+''Kromming'' betekent hier het gemiddelde aantal wagons van de trein tussen bochten. Zeer scherpe bochten (kromming 0 en 1) worden niet uitgemiddeld over lange treinen.
+
+* Nieuwe spoortypes kunnen een aangepaste maximumsnelheid voor bochten specificeren in dezelfde onderverdeling als de drie standaardtypes in de tabel.
+* [https://nl.wikipedia.org/wiki/Kantelbaktrein Kantelbaktreinen] krijgen een snelheidsbonus van 20% van de maximumsnelheid.
+* De versnelling en maximumsnelheid van treinen wordt beïnvloed door de kracht van de motor, de maximale trekkracht (alle motoren en van stroom voorziene wagons samen), de huidige snelheid, luchtwrijving, het totale treingewicht en de helling van de sporen.
+* Versnellingstabellen voor niet-maglev treinen zijn te vinden op het forum: [https://www.tt-forums.net/viewtopic.php?f=31&t=55972&p=960678#p960672 tt-forum].
+* Remmen is tweemaal de versnelling, behalve wanneer een depot of station wordt binnengegaan.
+
+[[File:en/speed-limits.png]]
+
+''Zie ook: [[Main/nl/Realistische acceleratie|Realistische acceleratie]] en [[Main/nl/Bochten|Bochten]].''
+
+''Zie ook: [http://vcs.openttd.org/svn/browser/trunk/src/aircraft_cmd.cpp aircraft_cmd.cpp] [http://vcs.openttd.org/svn/browser/trunk/src/ship_cmd.cpp ship_cmd.cpp] [http://vcs.openttd.org/svn/browser/trunk/src/train_cmd.cpp train_cmd.cpp] [http://vcs.openttd.org/svn/browser/trunk/src/vehicle.cpp vehicle.cpp] for code.''
+
+
+== Groei van gemeenten ==
+
+Zie [[Main/en/Gemeente/Nl#De groei van een gemeente|Gemeente/De groei van een gemeente]].
+
+[[Category:nl/Spelen]]
+[[Category:nl/Ontwikkelingen]]
