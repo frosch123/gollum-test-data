@@ -1,0 +1,62 @@
+[[Translation:Main/en/Passenger and cargo distribution]]{{en/-}}{{ru/Перевод|Passenger and cargo distribution|13}}
+Доставка пассажиров и груза, сокращённо "Cargodist" — это патч, который устанавливает определённое место назначения для пассажиров, почты, и прочих грузов. Груз будет загружаться только на те транспортные средства, которые будут способны довести его до места назначения.
+В июне 2013 Cargodist был включён в основную ветку игры. Первый стабильный релиз появился в версии 1.4.0.
+
+
+==Разъяснение==
+
+В классическом OpenTTD сложно распределить груз из одного источника по множеству мест назначения. Вам придётся или для каждого назначения использовать по транспорту, или городить сложнозадачные системы. Представим, у вас есть поезд, идущий между городами А и Б. А в каждом городе у вас есть автобусная сеть, соединённая с ЖД станцией. И вы хотите, чтобы пассажиры с любых остановок или ЖД станции из А перемещались к любой из остановок или ЖД станции в Б, и наоборот. В классическом OpenTTD вы можете сделать так, чтобы автобусы собирали пассажиров по остановкам и разгружали на ЖД станцию. Там поезд может их взять и, опять же, разгрузить на станцию в Б. Затем можете сделать так, чтобы автобусы в Б распределили пассажиров по остановкам, через езду туда-сюда между станцией и каждой остановкой, в звёздноподобной схеме. Каждому транспорту пришлось бы использовать задание "Разгрузиться и уйти пустым", и это решение не позволило бы пассажирам идти, ни через Б в А, ни в какую-либо станцию или остановку в пределах одного из городов. Однако, возможно реализовать эти маршруты, усложнив схему. В любом случае, чем больше станций и транспорта вы задействуете, тем сложнее и более громоздкими эти системы становятся.
+
+Cargodist берёт на себя заботу о выгрузке/загрузке и выбору места назначения для перевозимых пассажиров. По примеру выше, вам не нужно будет ни указывать никаких "Разгрузиться и уйти пустым", не воздвигать никаких звёздноподобных автобусных сетей. Любые автосети в А и Б с простыми заданиями будут работать пока подключены к ЖД станции. Однако, так как пассажиры будут сами решать, куда им идти и какие именно транспортные средства задействовать, станции станут более загруженными.
+
+Были и другие патчи пытающиеся добиться тех же вещей. В отличии от проекта [[Main/en/cargodest|Cargod'''e'''st]], проблемы маршрутизации груза и равномерного распределения на разные маршруты, рассматриваются неотъемлемо в Cargod'''i'''st и таким образом решаются вместе. А ещё, определение спроса на транспортировку, рассматриваются как предпосылка к решению проблем выше, и обрабатываются в первую очередь. Основное отличие от [http://www.tt-forums.net/viewtopic.php?f=33&t=54253 YACD] в том, что Cargodist рассматривает только достижимые назначения, а не всю карту, заранее рассчитывая всю схему маршрутизации в отдельных потоках, для повышения производительности.
+
+На [http://www.tt-forums.net/viewtopic.php?f=33&t=41992&start=0 этой](eng) ветке форума можно почитать подробней.
+
+Cargodist включён в основную ветку игры с июня 2013 года.
+
+==Режимы распределения грузов==
+[[File:en/cargodist-overlays.png|frame|Screenshot of linkgraph overlays]]
+[[File:en/cargodist-station.png|frame|Screenshot of station GUI]]
+
+
+Можно установить три режима распределения грузов. Делается это в расширенных настройках: ''Окружающая среда'' --> ''Распределение грузов''.
+* '''Вручную''' - при это способе нет никакого управления потоками грузов.
+* '''Симметричное''' - алгоритм будет стараться отправлять равные количества грузов или пассажиров в обе стороны. То есть от станции А к станции Б будет ехать столько же, сколько от Б к А. Это логично для пассажиров, которые едут в одну сторону на работу или в гости, а потом возвращаются обратно. Алгоритм не всегда может обеспечить такие потоки. Очевидно не получится их выравнять, например, для двух станций, одна из которых находится в центре города, а другая на его окраине. Вы можете отрегулировать алгоритм параметром "Количество возвращаемого груза при симметричном распределении". Установка этого значения ниже 100% заставит распределение быть менее «симметричным»: количество возвращаемого груза сможет быть меньше, чем количество отправленного. Установка в 0% сделает распределение полностью несимметричным
+* '''Асимметричное''' - никаких ограничений направлениям грузов нет.
+
+==Расширения для миникарты и главного вида==
+
+В составе плагина разработан инструмент графического представление схемы связей (link graph) для миникарты и главного вида. Он показывает станции и доступные маршруты, которые отображаются линиями разного цвета в зависимости от того -  how much cargo they are carrying related to their capacities. Желтым и красным выделяются маршруты, Если для груза включен Cargodist и механизм обсчета схемы связей определил, что маршрут имеет низкую пропускную способность для объемов, подлежащих перевозке. В этом случае необходимо добавить больше транспорта на маршрут, или повысить скорость транспортировки. Белая или бледно-зеленая подсветка показывает маршруты, пропускная способность которых существенно превышает объемы товара к перевозке. В этом случае можно снять несколько транспортных средств с маршрута. Следует помнить, что белым цветом могут обозначаться маршруты, где транспорт возвращается обратно пустым посла разгрузки.
+
+Станции обозначаются квадратами цвета пользователя. Чем больше размер квадратов - тем больше грузов и пассажиров производится и поставляется на станцию окружающими домами и производствами. The legend for the link graph overlay for the main viewport can be opened from the "map" menu. Вы можете выбрать игроков и виды грузов для отображения на схеме. Отображение схемы связей на миникарте ограничено - показываются только ваши маршруты. Для выбора отображаемых на схеме грузов реализовано дополнительное меню.
+
+==Extensions to the station GUI==
+The station GUI shows the sources, next hops and estimated destinations of the cargo waiting as well as those of the planned cargo flows through the station. Final destinations are only estimated. Don't expect each packet of cargo to go exactly that way. Cargo packets are never split for routing but they may be split to fit into vehicles of different sizes. That means it would be very hard to give the exact numbers here. In the long run everything is still sent to the proper destinations, though.
+
+You can group the cargo by source station, next hop and destination in any order with the "Group by" drop down in the top menu. The subgroups are opened and closed by clicking the little "+" and "-" buttons at the end of the line. You can sort entries within the groups and subgroups by the station they represent or by the amount of cargo displayed. The dropdown above the one for grouping order combines the selection of sort criteria with the selection of mode to be shown (planned or waiting cargo).
+
+==Продвинутые настройки==
+
+When switching on automatic distribution for some cargo it will take a few game days until the cargo is actually distributed. This is because the distribution is periodically calculated and the effect can only be seen after the first calculation. The calculation is done based on link graphs. A link graph is a connected component for one cargo in your network. In the introductory example all stations in the towns A and B would form one link graph. If there is another bus network in a town C which isn't connected to A or B then that forms a different link graph. The more link graphs exist in a game the longer it takes until all of them are calculated.
+
+You can influence how often a new link graph calculation shall be started and how much time to allow for each calculation with the respective settings in the "Cargo Distribution" group of the advanced settings. Indirectly this determines the maximum number of link graphs to calculated in parallel at any time. Link graph calculations are done in separate threads, decoupled from the main game. Those threads are joined at predefined times to maintain network synchronization. For most games on most computers both the interval and the time settings can be decreased quite a bit to reduce the delay between changes to orders and reactions of the link graph. If you set them too low, the game will periodically "hang" while waiting for some link graph calculation thread to finish, though. The default settings are tailored to extremely large games on slow computers so that this never happens. There is another setting which determines the accuracy of link graph calculations. The more accurate the calculation the longer it takes to finish. If you change it you should balance it against the "time" setting.
+
+The setting for the effect of distance on demands determines how much more cargo is sent to nearby stations than to far away stations. You probably don't want to change the short path saturation settings, except for debugging purposes.
+
+==Ограничения==
+
+Cargodist не учитывает при обсчете схемы связей отдельные задания с командами "выгрузить все", "передать","не выгружать", "не загружаться". Он не может корректно оценить пропускную способность маршрута если на нем работают транспортные средства с указанными модификациями и без них одновременно. It will find out if the orders allow cargo from any source to be transported on those links at all, though. That means you shouldn't be able to produce unroutable cargo with those orders.
+
+Conditional orders are problematic by definition. You can create an [http://en.wikipedia.org/wiki/Undecidable_problem undecidable problem] for the link graph creation algorithm by having a vehicle's orders depend on load percentage. The shape of the link graph determines which cargo a vehicle will load. The cargo loaded then determines which way it goes and that in turn determines the shape of the link graph. Some of the other conditions' outcomes are very hard to predict in advance without simulating the whole game up to the point when they are to be evaluated normally. The link graph creation and cargo routing algorithms handle that pragmatically and always load greedily. That means they'll load cargo for any station that can potentially be reached with the given conditionals and they won't unload cargo that goes to one of those stations.
+
+The algorithm used to evaluate the conditions and load/unload based on that but this strategy was suboptimal as the same cargo would be loaded and unloaded at the same station.
+
+С последними изменениями (начиная с OpenTTD 1.4) вы можете безо всяких проблем делать следующие вещи:
+
+ Go to LOADING STATION
+ Go to DROP1
+ If load percentage equals 0 go to LOADING STATION
+ Go to DROP2
+ If load percentage equals 0 go to LOADING STATION
+ Go to DROP3
