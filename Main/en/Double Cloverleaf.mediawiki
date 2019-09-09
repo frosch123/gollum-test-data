@@ -1,0 +1,41 @@
+[[Translation:Main/en/Double Cloverleaf]]
+{{en/-}}{{junctionsmenu}}
+__TOC__
+== 4-way 4-track Clover-in-Clover ==
+An extended version of the [[Main/en/Cloverleaf]] for mainlines tracked AABB style (indicating the direction trains run in).
+This junction use tunnels instead of bridges, because tunnels don't have speed limits.
+As you can see on the image below, there are two tracks leading into the junction and two leading out: the whole reason for a double cloverleaf is to allow more traffic to flow through your line if you have a 4 track mainline.
+
+[[File:en/double cloverleaf.png|none|thumb|590px|A double cloverleaf 4 way junction (horizontal extent 24; verical extent 24; needs 396 squares)]]
+
+===Pros===
+* Double tracked, holds twice the number of trains
+* Can handle a large number of trains at the same time.
+* Uses separate tracks so trains wont interfere with each other too much.
+
+===Cons===
+* Branching after merging: Very likely to enter a deadlock state.
+* Extremely large
+* Trains have to slow down when climbing a slope
+* Trains have to turn right to turn left. This could lead to trains getting lost. (Can be fixed using [[Main/en/waypoints]])
+* Doesn't have a direct path so that trains travel extra far to turn left.
+* Costly to build
+* Difficult layout to remember and to build
+
+===Variations===
+[[File:en/DoubleCloverleafVariation.png|none|thumb|590px|A double cloverleaf 4 way junction without sharp corners, easier to remember, and more looking like a clover leaf.]]
+[[File:en/Rsz 1rsz campbell %26 co feb 29th 2000.png|none|thumb|590px|A double cloverleaf 4 way junction without sharp corners than the above, a little harder to remember, and more looking like a clover leaf.]]
+
+== 6-way 2-track Double Overlap Clover ==
+Taking two cloverleaf junctions and overlapping them together produces a 6-way junction. This is similar to the 4W4T clover, except that the mainline is signalled ABAB-style rather than AABB (train direction per track) and that trains can change over (an expensive operation the path finder tries to generally avoid).
+
+It has the same extent as the Clover-in-Clover (24×24). Without the direct right turns, the extent shrinks to a compact box of 20×12.
+
+[[File:en/Two clover merged.png|none|thumb|590px|6-way double cloverleaf]]
+
+== 8-way 2-track Quad Overlap Clover ==
+Taking four cloverleaf junctions and overlapping them together produces an 8-way junction. (Again, if one ignores the space, it is a 4-way 4-track interchangeeven though the double tracks are separated by a void of 6 squares, combining them likewise, an 8-way junction can be obtained. This is similar to the 4W4T cloverleaf in that, when one considers the two 2-tracks , and handy when the mainline tracks are signalled ABAB style (indicating direction trains run in) rather than AABB.
+
+[[File:en/Quad clover merged.png|none|thumb|590px|8-way quadruple cloverleaf]]
+
+[[Category:en/Train Junctions]]
