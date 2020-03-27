@@ -1,0 +1,105 @@
+[[Translation:Main/en/Road vehicles]]{{en/-}}{{en/Table of contents}}
+
+The trucks and buses are a cheap alternative to trains, and require considerably less planning and infrastructure. It's recommended to get the eGRVTS newGRF to add many more vehicles. Trucks can carry everything but passengers, and buses can only carry passengers. Various newGRFs have vehicles that can act as either a truck or a bus.  The vehicle names were changed in TTD to avoid trademark infringements, and OpenTTD retains the made-up names. You can change them back by downloading and activating the "Original Vehicle Names" NewGRF.
+
+Buses are basically trucks carrying people. However, they need [[Main/en/Loading Bays#Bus Loading Bay|bus stations]] instead of [[Main/en/Loading Bays#Lorry Loading Bay|loading bays]].
+
+One handy, albeit somewhat cheaty way to use bus stations is to position them throughout the city, ctrl+clicking to connect them to a train station or airport (or both!) on the outskirts of the city. This can increase the flow of passengers to the point of being ridiculous. Creating a massive train station on the outskirts of a ~25,000 population city only yielded between 1 and 2 thousand passengers each month. Spreading bus stations throughout the city spiked that to between 8 and 10 thousand. It may be looked poorly on in multiplayer, however.
+
+==List of road vehicles==
+{{en/VehicleTable/Start}}
+{{en/VehicleTable/Header|Passengers and Mail}}
+{{en/VehicleTable/Row|
+*[[Main/en/Buses]]
+*[[Main/en/Mail Trucks]]
+|
+*[[Main/en/Buses]]
+*[[Main/en/Mail Trucks]]
+|
+*[[Main/en/Buses]]
+*[[Main/en/Mail Trucks]]
+|
+*[[Main/en/Buses]]
+*[[Main/en/Mail Trucks]]
+}}
+{{en/VehicleTable/Header|Common cargo}}
+{{en/VehicleTable/Row|
+*[[Main/en/Oil Tankers]]
+*[[Main/en/Goods Trucks]]
+*[[Main/en/Grain Trucks]]
+*[[Main/en/Livestock Vans]]
+*[[Main/en/Wood Trucks]]
+|
+*[[Main/en/Oil Tankers]]
+*[[Main/en/Goods Trucks]]
+*[[Main/en/Grain Trucks]]
+*[[Main/en/Livestock Vans]]
+*[[Main/en/Wood Trucks]]
+|
+*[[Main/en/Oil Tankers]]
+*[[Main/en/Goods Trucks]]
+*[[Main/en/Grain Trucks]]
+* -
+*[[Main/en/Wood Trucks]]
+|
+*[[Main/en/Cola Trucks]]
+*[[Main/en/Sweet Trucks]]
+*[[Main/en/Toy Vans]]
+*[[Main/en/Battery Trucks]]
+*[[Main/en/Candyfloss Trucks]]
+}}
+{{en/VehicleTable/Header|Similar cargo}}
+{{en/VehicleTable/Row|
+*[[Main/en/Armoured Trucks]]*
+*[[Main/en/Coal Trucks]]
+*[[Main/en/Iron Ore Trucks]]
+*[[Main/en/Steel Trucks]]
+* -
+|
+*[[Main/en/Armoured Trucks]]*
+*[[Main/en/Coal Trucks]]
+* -
+*[[Main/en/Paper Trucks]]
+*[[Main/en/Food Vans]]
+|
+*[[Main/en/Armoured Trucks]]*
+* -
+*[[Main/en/Copper Ore Trucks]]
+* -
+*[[Main/en/Food Vans]]
+|
+* -
+*[[Main/en/Sugar Trucks]]
+* -
+* -
+* -
+}}
+{{en/VehicleTable/Header|Other cargo}}
+{{en/VehicleTable/Row|
+|
+|
+*[[Main/en/Water Tankers]]
+*[[Main/en/Fruit Trucks]]
+*[[Main/en/Rubber Trucks]]
+|
+*[[Main/en/Bubble Trucks]]
+*[[Main/en/Fizzy Drink Trucks]]
+*[[Main/en/Plastic Trucks]]
+*[[Main/en/Toffee Trucks]]
+}}
+|}
+
+Notes(*):
+*Armoured trucks carry Valuables, Gold, or Diamonds, depending on [[Main/en/climate]].
+
+==Accidents==
+[[File:en/Roadvehicledualtrack.png|right|frame|Example: Path signals to close the crossing in advance and space for road vehicles to queue.]]
+Road vehicles will not crash on their own, even at heavily congested stations and depots.  
+
+However they can be destroyed by collision with trains so you should be careful where you build level crossings.  Although the lights on a crossing will flash and stop any approaching road vehicles when a train is coming, if a vehicle is already on the crossing and the train is moving quickly, the road vehicle will not be able to leave the crossing in time and will be crushed.  The train will continue undamaged.
+
+You can use [[Main/en/Path Signals#Path Signals|path signals]] to close the level crossing earlier and reduce the chance of collision. If you have a double track railway, make sure there is enough room for the road vehicles to wait between the tracks, see the image at the right for an example. Of course, a bridge does the job nicely as well.
+
+A malicious player can deliberately cross several squares of road with railway tracks and use 1 train to create a massive traffic jam and use trains either side of it to deliberately crush the vehicles.
+
+[[Category:en/Road Vehicles]]
