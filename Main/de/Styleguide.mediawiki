@@ -1,0 +1,157 @@
+[[Translation:Main/en/Manual of Style]]{{en/-}}
+[[File:de/StyleGuide.png|left|64px]]
+{{en/TOCright}}
+Diese Seite beschreibt die Richtlinien, um [[Main/de/OpenTTD|OpenTTD]]-Wikiartikel zu erstellen oder zu bearbeiten.
+
+Besuche die [[Main/de/Bearbeitungshilfe|Wiki-Bearbeitungshilfe]], wenn du im Schreiben von Wikiartikeln unerfahren bist.
+<div style="margin: 2em 0em 0em 0em; padding: 0em 1em 1em 1em; border: 1px solid #E1BBFF; background-color: #F5EDFC;">
+==Sehr wichtige Regeln==
+<div style="font-size:large">
+#Wenn du einen Kommentar schreibst, logge dich vorher ein. Einen Kommentar unterschreibst du mit <nowiki>~~~~</nowiki>.
+#Benutze den '''Show preview'''-Button bevor du eine Seite speicherst.
+</div></div>
+
+==Allgemein==
+*Folge dem Ausbau und Design von bestehenden Seiten, soweit dies möglich ist.
+*Bitte benutze die [[Main/en/sandbox|Sandbox]], um Code zu testen.
+*Überprüfe deinen Artikel in mehreren Browsern, wenn dies dir möglich ist.
+*Füge eine Zusammenfassung hinzu, die den Artikel bzw. deine Änderungen gut beschreibt.
+*Ein "minor edit", also die Änderung einer Kleinigkeit, benötigt keine Beschreibung.
+
+==Diskussionen==
+*Diskussionen gehören nur in die dafür vorgesehenen Bereiche.
+*Bearbeite die Seiten anderer Benutzer nicht. Benutze stattdessen die user_talk Seite.
+*Wenn du dort einen Kommentar hinterlässt, unterschreibe ihn mit <nowiki>~~~~</nowiki>
+*Wenn du auf einen früheren Kommentar antwortest, rücke deine Antwort mit einem Doppelpunkt (:) ein.
+*Wenn du eine neue Idee posten willst, benutze den "+" Link oben auf der Seite.
+{|
+!Code!!Ergebnis
+|-
+|<pre>==Thema des Kommentars==
+Diskussionsstoff ~~~~
+:Antwort ~~~~</pre>
+|
+'''Thema des Kommentars'''
+----
+Diskussionsstoff [[Archive/en/MeusH|MeusH]] 11:21, 6 June 2007 (CEST)
+:Antwort [[Archive/en/Zojj|Zojj]] 11:21, 6 June 2007 (CEST)
+|}
+
+==Aktikelüberschriften==
+
+===Einzahl vs. Mehrzahl===
+Wenn du einen Artikel anlegst, überlege dir, wonach man suchen könnte.<br>
+z.B. würde ein Spieler, der etwas über die Industrie wissen will, nicht nach Industrien suchen.
+
+Man kann auch eine Weiterleitung benutzen, um von der Einzahl auf die Mehrzahl oder anders herum zu leiten:
+<pre>#REDIRECT [[Main/en/Industrie]]</pre>
+
+Im Zweifelsfall benutze die Einzahl. 
+
+<div style="margin: 0; padding: 0em 1em 1em 1em;  border: 1px solid #E1BBFF; background-color: #F5EDFC;">
+
+===Nicht-englische Seiten===
+Der Artikel sollte in seiner jeweiligen Sprache sein, gefolgt von dem Symbol ''/'' und dem internationalen Kürzel seiner Sprache. Beispiele : 
+*[[Main/es/Página principal]] (für ''Startseite'' auf Spanisch)
+*[[Main/de/Startseite]] (für ''Startseite'' auf Deutsch)
+
+Für einen Index mit Artikeln in anderen Sprachen im OpenTTD-Wiki sieh hier: [[Category/en/Articles in other languages]]</div>
+
+===Testseiten===
+Wenn die [[Main/en/sandbox|Sandbox]] nicht als Testseite aussreicht, kannst du eine Testseite als "Ordner" unter deiner User-Seite anlegen. Das hilft die Hauptseiten sauber zu halten. Beispiel:
+*[[Archive/en/Zuu/New Main Page side by side layout|User:Zuu/Neue_Start_Seite_side_by_side_layout]]
+
+===Namensräume===
+Wenn dein Artikel nicht direkt etwas mit OpenTTD zu tun hat, passt er vielleicht in einen anderen Namensraum. 
+Beispiele:
+*[[Main/en/Village Pump]]
+*[[Main/en/Italy]]
+
+==Artikelinhalt==
+
+===Bilder===
+PNG Dateien sind die beste Wahl für die meisten OpenTTD Grafiken.  
+Hier ein typisches Beispiel:
+{|
+!Code!!Ergebnis
+|-
+|<pre>[[File:en/longerbridges.png|frame|Bildbeschreibung]]</pre>
+|[[File:en/longerbridges.png|frame|Bildbeschreibung]]
+|}
+
+===Kommentierte Screenshots===
+[[File:en/WhyPresignals.png|frame|right|Format um Screenshots zu kommentieren]]
+Wenn du einen Screenshot zeigst, um damit Konzepte wie z.B. Kreuzungen zu veranschaulichen, dann solltest du den Text im Bild auf ein Mindestmaß reduzieren und dafür Punkte im Bild markieren, auf die du im Haupttext Bezug nimmst.
+Diese Punkte sollten in einer gut sichtbaren Farbe dargestellt sein und einen Anti-Aliased Sans-Serif Font in Bold benutzen.
+Pfeile können wenn benötigt benutzt werden, aber es ist besser, das Label nahe dem zu beschreibenden Punkt zu setzen. Das Bild rechts dient als Beispiel, wie so etwas aussehen kann. 
+
+===Screenshots von Fenstern===
+Wenn du einen Screenshot eines Spielfensters einfügen willst, sei bitte sicher, dass du das Bild exakt so zugeschnitten hast, dass nur das Notwendigste zu sehen ist. Dies gibt dem ganzen ein professionelleres Aussehen.
+OpenTTD-Fenster sind perfekte Rechtecke, also sollte dies einfach sein - zoome hinein wenn nötig.
+
+===Abläufe===
+Benutze nummerierte oder unnummerierte Listen, um die einzelnen Schritte deutlich zu machen.
+{|
+!Code!!Ergebnis
+|-
+|<pre>
+#Schritt 1
+#Schritt 2
+#* Schritt 2 Notiz
+#* Schritt 2 Notiz</pre>
+|
+#Schritt 1
+#Schritt 2
+#* Schritt 2 Notiz
+#* Schritt 2 Notiz
+|}
+
+===Spielversion===
+Konzentiere dich beim Schreiben von Artikel auf das neuste Release, nicht auf die [[Main/en/nightly]]-Builds. Entwicklungsseiten können nightlyfeatures diskutieren. Wenn du wirklich ein nightlyfeature beschreiben willst, markiere diese Sektion mit dem {{en/S|nightly}} Template.
+
+===In-Game-Buttons, Menüeinträge etc.===
+Wenn du einen In-Game-Button o.ä. zitierst, so tue das bitte in ''Kursivschrift'' ohne Anführungsstriche.  
+Beispiel:
+Um Einstellungen am Patch zu ändern, benutze ''Einstellungen des Patches''.
+
+===Benutzen von "meta" Wörtern===
+Unterlasse das Benutzen von Wörtern wie ''wiki'' oder anderen Wörtern, die etwas nur sehr ungenau beschreiben. Du bearbeitest eine ''Dokumentation'', ein ''Handbuch'',  ein ''Tutorial'' etc.
+
+===Patches===
+Benutze dasselbe Format wie hier: [[Main/en/longer bridges]].
+
+==Templates==
+Benutze dasselbe Format wie {{en/S|nightly}} und packe Informationen für andere User hinein.
+
+Wähle Farben, die am besten zu dem Zweck des Templates passen 
+*Rot für wichtige Sachen (z.B. Löschung etc)
+*Gelb für Warnungen
+*Grün für Aktuelle Aufgaben
+*Blau für Informationen
+
+===Gängige Templates===
+''Hauptartikel: [[Main/en/Manual of Style/Common templates]]''
+
+Du kannst hier eine Liste mit Templates finden:
+*Deutsch: [[Category/de/Vorlagen]]
+*Englisch: [[Category/en/Templates]]
+
+==Kategorien==
+Benutze dasselbe Format wie [[Category/en/requests for deletion]].
+
+===Artikel in Kategorien einsortieren===
+Sortiere deinen Aktikel in die passenden Kategorien ein. Das macht das Finden leichter. Eine Liste von existierenden Kategorien findest du hier: [[Main/en/Special:Categories]]. Platziere diesen Code ganz ans Ende deines Artikels:
+<pre>[[Category:en/Kategoriename]]</pre>
+Überprüfe aber erst, ob dein Artikel auch wirklich in diese Kategorie passt.
+
+==Szenarios==
+Lies dir zuerst diese Anleitung durch: [[Main/en/Scenarios Team#Procedure to add a scenario]].
+Platziere Szenarios im ''Scenario'' Namesraum:
+*[[Main/en/Italy]]
+
+==Beachte außerdem==
+*[http://meta.wikimedia.org/wiki/Help:Editing Text Editing syntax in MediaWiki]
+*[http://en.wikipedia.org/wiki/Wikipedia:Extended_image_syntax Extended image syntax]
+*[http://meta.wikimedia.org/wiki/Help:Table Editing Tables]
+
+[[Category:de/OpenTTD Wiki]]
