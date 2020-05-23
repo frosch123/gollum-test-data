@@ -1,0 +1,254 @@
+[[Translation:Main/en/Cargo]]{{en/-}}{{table of contents}}
+:''For a listing of cargo types, see the [[Category/en/Cargo|Cargo category]]''
+
+In [[Main/en/OpenTTD]], '''Cargo''' is what you, as a [[Main/en/transport company]], transport (relocate) between [[Main/en/cargo agent|cargo agents]].  Some ''cargo agents'' ([[Main/en/industries]] or [[Main/en/town|town buildings]]) produce cargo, and some agents accept (consume) cargo; some both produce and accept cargo. All cargo exists in the form of discrete, atomic units of a fixed quantity and size. E.g. a single unit of [[Main/en/oil]] consists of exactly 1000 litres. Every action&nbsp;&mdash; whether production, transfer or consumption&nbsp;&mdash; is conducted against an integer number of cargo units.
+
+Cargo can only be accessed by an agent via a nearby [[Main/en/station]]. ''Accepting agents'' that are [[Main/en/catchment area|nearby]] a [[Main/en/station]] accept (consume) cargo and passengers from this station, and ''producing agents'' will [[Main/en/production delivery|deliver]] their produced cargo to any [[Main/en/catchment area|nearby]] station, allowing it to be transferred elsewhere. (In some industries, only certain squares can accept cargo. See [[Main/en/catchment area]] for more information.)
+
+An accepting agent consumes cargo units (effectively destroying them) upon unloading at a nearby station, and pays for their transportation. A producing agent creates new cargo units and places ([[Main/en/production delivery|delivers]]) them to [[Main/en/catchment area|nearby]] stations, if available and if a vehicle accepting that type of cargo has been to the station before.
+
+In some cases the agent produces and accepts the same type of cargo&nbsp;&mdash; unloading that type permanently destroys all old units (standard payment occurs), unless the vehicle is ordered to [[Main/en/transfer]].
+
+Once cargo unit is delivered to a station, the station's owner [[Main/en/transport company|company]] effectively controls it. From this moment, the company alone decides where or how to transfer or store it. The company can't sell the cargo, however it can collect payment for transferring it to a station with an accepting agent nearby which accepts the same type of cargo.
+
+Each cargo unit tracks its own ''age'', starting from the moment it was produced; some cargo types deteriorate faster than others and must be served faster. The transfer costs always includes a penalty for the age. Cargo dissipates/vanishes over time at stations if left there for too long. Companies are not charged for those losses, although waiting too long to pick up cargo [[Main/en/Game mechanics#Station rating|does affect the rating]] of the station.
+
+A production [[Main/en/cargo agent|agent]] does not distribute cargo evenly among nearby stations. Instead, it checks certain conditions before [[Main/en/production delivery|delivering]] the cargo to a station. This is a crucial (and somewhat obscure) part of competitive play. It involves logistics, service throughput effectiveness and local reputation (rating). Refer to [[Main/en/production delivery|delivery]] and [[Main/en/game mechanics]].
+
+[[Main/en/Passengers]] and [[Main/en/Mail]] are also types of cargo, mainly produced and accepted by [[Main/en/town]]s. Different building squares in towns accept differing amounts of passengers and other cargo. The acceptances can be found out by using the land area information tool (question mark). If a square can't accept a cargo by itself, the amount is noted by 1/8's. There has to be at least 8/8 of a cargo type in a station's catchment area for the station to accept that cargo.
+
+Some industry tiles also accept 1/8 of passengers. Industries however, except for [[Main/en/Oil Rig]]s, don't produce any passengers. Most notably, [[Main/en/Steel Mill]]s have many 1/8 squares and can accept passengers on their own. Furthermore, the Company Headquarters accepts and generates some passengers and mail to help players in the very beginning of the game.
+
+See [[Main/en/cargo income]] for more information on how income is calculated.
+
+Below are charts and tables showing each Cargo in each climate, and what produces and accepts them.
+
+==Cargo Types Flow Charts==
+<gallery>
+image:Temperate_-_Flow.png|Flow chart for Temperate climate.
+image:Sub-Arctic_-_Flow.png|Flow chart for Sub-Arctic climate.
+image:Sub-Tropical_-_Flow.png|Flow chart for Sub-Tropical climate.
+image:Toyland_-_Flow.png|Flow chart for Toyland.
+</gallery>
+
+==Good Production and Acceptance Tables==
+
+:{| {{en/Wikitable}} style="width: 512px; font-size: 90%; margin:2px 4px 2px 0; border:solid 1px #AAAAAA" rules="cols"
+|- 
+| style="background: #ccffcc" colspan="3" align="center"|'''[[Main/en/Climates#Temperate]]'''
+|- style="background: #ffdead"
+|style="width: 26%;"| '''Cargo'''
+|style="width: 37%;"| '''Produced By'''
+|style="width: 37%;"| '''Accepted By'''
+|- style="background: #E5FFE5"
+|'''[[Main/en/Coal]]'''
+|[[Main/en/Coal Mine]]s
+|[[Main/en/Power Station]]s
+|-
+|'''[[Main/en/Goods]]'''
+|[[Main/en/Factory|Factories]], [[Main/en/Oil Refinery|Oil Refineries]], [[Main/en/Sawmill]]s
+|[[Main/en/Towns]]s
+|- style="background: #E5FFE5"
+|'''[[Main/en/Grain]]'''
+|[[Main/en/Farm]]s
+|[[Main/en/Factory|Factories]]
+|-
+|'''[[Main/en/Iron Ore]]'''
+|[[Main/en/Iron Ore Mine]]s
+|[[Main/en/Steel Mill]]s
+|- style="background: #E5FFE5"
+|'''[[Main/en/Mail]]'''
+|[[Main/en/Towns]]s
+|[[Main/en/Towns]]s, [[Main/en/Oil Rig]]s
+|-
+|'''[[Main/en/Livestock]]'''
+|[[Main/en/Farm]]s
+|[[Main/en/Factory|Factories]]
+|- style="background: #E5FFE5"
+|'''[[Main/en/Oil]]'''
+|[[Main/en/Oil Wells]], [[Main/en/Oil Rig]]s
+|[[Main/en/Oil Refinery|Oil Refineries]]
+|-
+|'''[[Main/en/Passengers]]'''
+|[[Main/en/Towns]]s, [[Main/en/Oil Rig]]s
+|[[Main/en/Towns]]s, [[Main/en/Oil Rig]]s
+|- style="background: #E5FFE5"
+|'''[[Main/en/Steel]]'''
+|[[Main/en/Steel Mill]]s
+|[[Main/en/Factory|Factories]]
+|-
+|'''[[Main/en/Valuables]]'''
+|[[Main/en/Bank]]s
+|[[Main/en/Bank]]s
+|- style="background: #E5FFE5"
+|'''[[Main/en/Wood]]'''
+|[[Main/en/Forest]]s
+|[[Main/en/Sawmill]]s
+|}
+
+:{| {{en/Wikitable}} style="width: 512px; font-size: 90%; margin:2px 4px 2px 0; border:solid 1px #AAAAAA" rules="cols"
+|- 
+| style="background: #ccccff" colspan="3" align="center"|'''[[Main/en/Climates#Sub-arctic]]'''
+|- style="background: #ffdead"
+|style="width: 26%;"| '''Cargo'''
+|style="width: 37%;"| '''Produced By'''
+|style="width: 37%;"| '''Accepted By'''
+|- style="background: #dfefef"
+|'''[[Main/en/Coal]]'''
+|[[Main/en/Coal Mine]]s
+|[[Main/en/Power Station]]s
+|-
+|'''[[Main/en/Food]]'''
+|[[Main/en/Food Processing Plant]]s
+|[[Main/en/Towns]]s
+|- style="background: #dfefef"
+|'''[[Main/en/Goods]]'''
+|[[Main/en/Printing Works]], [[Main/en/Oil Refinery|Oil Refineries]]
+|[[Main/en/Towns]]s
+|-
+|'''[[Main/en/Gold]]'''
+|[[Main/en/Gold Mine]]s
+|[[Main/en/Bank]]s
+|- style="background: #dfefef"
+|'''[[Main/en/Livestock]]'''
+|[[Main/en/Farm]]s
+|[[Main/en/Food Processing Plant]]s
+|-
+|'''[[Main/en/Mail]]'''
+|[[Main/en/Towns]]s
+|[[Main/en/Towns]]s
+|- style="background: #dfefef"
+|'''[[Main/en/Oil]]'''
+|[[Main/en/Oil Wells]]
+|[[Main/en/Oil Refinery|Oil Refineries]]
+|-
+|'''[[Main/en/Paper]]'''
+|[[Main/en/Paper Mill]]s
+|[[Main/en/Printing Works]]
+|- style="background: #dfefef"
+|'''[[Main/en/Passengers]]'''
+|[[Main/en/Towns]]s
+|[[Main/en/Towns]]s
+|-
+|'''[[Main/en/Wheat]]'''
+|[[Main/en/Farm]]s
+|[[Main/en/Food Processing Plant]]s
+|- style="background: #dfefef"
+|'''[[Main/en/Wood]]'''
+|[[Main/en/Forest]]s
+|[[Main/en/Paper Mill]]s
+|}
+
+:{| {{en/Wikitable}} style="width: 512px; font-size: 90%; margin:2px 4px 2px 0; border:solid 1px #AAAAAA" rules="cols"
+|- 
+| style="background: #ffffcc" colspan="3" align="center"|'''[[Main/en/Climates#Sub-tropical]]'''
+|- style="background: #ffdead"
+|style="width: 26%;"| '''Cargo'''
+|style="width: 37%;"| '''Produced By'''
+|style="width: 37%;"| '''Accepted By'''
+|- style="background: #FFFDE0"
+|'''[[Main/en/Copper Ore]]'''
+|[[Main/en/Copper Ore Mine]]s
+|[[Main/en/Factory|Factories]]
+|-
+|'''[[Main/en/Diamonds]]'''
+|[[Main/en/Diamond Mine]]s
+|[[Main/en/Bank]]s
+|- style="background: #FFFDE0"
+|'''[[Main/en/Food]]'''
+|[[Main/en/Food Processing Plant]]s
+|[[Main/en/Towns]]s
+|-
+|'''[[Main/en/Fruit]]'''
+|[[Main/en/Fruit Plantation]]s
+|[[Main/en/Food Processing Plant]]s
+|- style="background: #FFFDE0"
+|'''[[Main/en/Goods]]'''
+|[[Main/en/Factory|Factories]], [[Main/en/Oil Refinery|Oil Refineries]]
+|[[Main/en/Towns]]s
+|-
+|'''[[Main/en/Mail]]'''
+|[[Main/en/Towns]]s
+|[[Main/en/Towns]]s
+|- style="background: #FFFDE0"
+|'''[[Main/en/Maize]]'''
+|[[Main/en/Farm]]s
+|[[Main/en/Food Processing Plant]]s
+|-
+|'''[[Main/en/Oil]]'''
+|[[Main/en/Oil Wells]]
+|[[Main/en/Oil Refinery|Oil Refineries]]
+|- style="background: #FFFDE0"
+|'''[[Main/en/Passengers]]'''
+|[[Main/en/Towns]]s
+|[[Main/en/Towns]]s
+|-
+|'''[[Main/en/Rubber]]'''
+|[[Main/en/Rubber Plantation]]s
+|[[Main/en/Factory|Factories]]
+|- style="background: #FFFDE0"
+|'''[[Main/en/Water]]'''
+|[[Main/en/Water Supply|Water Supplies]]
+|[[Main/en/Water Tower]]s
+|-
+|'''[[Main/en/Wood]]'''
+|[[Main/en/Lumber Mill]]s
+|[[Main/en/Factory|Factories]]
+|}
+
+:{| {{en/Wikitable}} style="width: 512px; font-size: 90%; margin:2px 4px 2px 0; border:solid 1px #AAAAAA" rules="cols"
+|- 
+| style="background: #ff9999" colspan="3" align="center"|'''[[Main/en/Climates#Toyland]]'''
+|- style="background: #ffdead"
+|style="width: 26%;"| '''Cargo'''
+|style="width: 37%;"| '''Produced By'''
+|style="width: 37%;"| '''Accepted By'''
+|- style="background: #FFF0F5"
+|'''[[Main/en/Batteries]]'''
+|[[Main/en/Battery Farm]]s
+|[[Main/en/Toy Factory|Toy Factories]]
+|-
+|'''[[Main/en/Bubbles]]'''
+|[[Main/en/Bubble Generator]]s
+|[[Main/en/Fizzy Drink Factory|Fizzy Drink Factories]]
+|- style="background: #FFF0F5"
+|'''[[Main/en/Candyfloss|Candyfloss (Cotton Candy)]]''' 
+|[[Main/en/Candyfloss Forest|Candyfloss Forests (Cotton Candy Forests)]]
+|[[Main/en/Sweet Factory|Sweet Factories (Candy Factories)]]
+|-
+|'''[[Main/en/Cola]]'''
+|[[Main/en/Cola Wells]]
+|[[Main/en/Fizzy Drink Factory|Fizzy Drink Factories]]
+|- style="background: #FFF0F5"
+|'''[[Main/en/Fizzy Drinks]]'''
+|[[Main/en/Fizzy Drink Factory|Fizzy Drink Factories]]
+|[[Main/en/Towns]]s
+|-
+|'''[[Main/en/Mail]]'''
+|[[Main/en/Towns]]s
+|[[Main/en/Towns]]s
+|- style="background: #FFF0F5"
+|'''[[Main/en/Passengers]]'''
+|[[Main/en/Towns]]s
+|[[Main/en/Towns]]s
+|-
+|'''[[Main/en/Plastic]]'''
+|[[Main/en/Plastic Fountains]]
+|[[Main/en/Toy Factory|Toy Factories]]
+|- style="background: #FFF0F5"
+|'''[[Main/en/Sugar]]'''
+|[[Main/en/Sugar Mine]]s
+|[[Main/en/Sweet Factory|Sweet Factories (Candy Factories)]]
+|-
+|'''[[Main/en/Sweets|Sweets (Candy)]]'''
+|[[Main/en/Sweet Factory|Sweet Factories (Candy Factories)]]
+|[[Main/en/Towns]]s
+|- style="background: #FFF0F5"
+|'''[[Main/en/Toffee]]'''
+|[[Main/en/Toffee Quarry|Toffee Quarries]]
+|[[Main/en/Sweet Factory|Sweet Factories (Candy Factories)]]
+|-
+|'''[[Main/en/Toys]]'''
+|[[Main/en/Toy Factory|Toy Factories]]
+|[[Main/en/Toy Shop]]s
+|}
