@@ -1,0 +1,179 @@
+{{pl/Informacja|Ten artykuł tłumaczyli ludzie tacy jak Ty. Mimo dołożenia wszelkich starań, żeby tłumaczenie było poprawne merytorycznie, może okazać się że między polską a angielską wersją językową są jakieś drobne różnice. 
+<br>'''Pamiętaj - w oryginale ten artykuł napisano w języku angielskim, więc w razie wszelkich nieścisłości to [[Main/en/Manual of Style|angielska wersja]] stoi nad innymi.'''}}
+[[Translation:Main/en/Manual of Style]]{{en/-}}
+
+Ta strona zawiera listę zasad tworzenia i edycji artykułów wiki [[Main/pl/OpenTTD|OpenTTD]].
+
+Zobacz [[Main/pl/Pomoc przy edycji|pomoc dotyczącą edycji wiki]], jeśli jesteś nowy w edycji wiki.
+
+<div style="margin: 2em 0em 0em 0em; padding: 0em 1em 1em 1em; border: 1px solid #E1BBFF; background-color: #F5EDFC;">
+==Bardzo ważne zasady==
+<div style="font-size:large">
+#Zawsze zostawiaj swój nick zamieszczając komentarz. Wpisz cztery [https://pl.wikipedia.org/wiki/Tylda tyldy]: "<nowiki>~~~~</nowiki>" - nick z datą pojawi się automatycznie.
+#Zawsze używaj przycisku '''Pokaż podgląd''' przed zapisaniem zmian.
+#Zawsze odnoś się do tej strony podczas edytowania stron.
+</div></div>
+
+==Zasady ogólne==
+*Używaj przycisku '''Podgląd'''.
+*Na tyle na ile to możliwe, staraj się zachowywać format już istniejących stron.
+*Do testowania kodu używaj naszej [[Main/en/sandbox|piaskownicy]].
+*Przetestuj swoje edycje na tak wielu przeglądarkach jak to możliwe!
+*Pamiętaj, żeby zawsze dodawać opis (podsumowanie) swoich zmian ''z wyjątkiem''
+*"Mała edycja" ("a minor edit") jest poprawką literówki, błędu ortograficznego lub inną drobną zmianą, która nie ma wpływu na stronę. Nie jest wymagane żadne podsumowanie. Miej jednak na uwadze, że w historii strony zawsze można porównać Twoje zmiany z poprzednią wersją - nie ma sensu oznaczać dużych zmian jako "minor edit" 
+==Dyskusja==
+*Dyskusja i komentarze redaktora znajdują się tylko na stronach "Talk" (stronach rozmów).
+*Nie edytuj stron użytkowników innych osób. Napisz do nich w dyskusji. 
+*Zapisz swój nick na końcu swojego komentarza, używając (<nowiki>~~~~</nowiki>)
+*Rozpocznij swój komentarz od dwukropka (:), kiedy odpowiadasz na poprzedni.
+*Kiedy wpadniesz na zupełnie nowy pomysł i chcesz o tym napisać, utwórz dl niego nową sekcję (używając przycisku '''+''' na górze strony).
+{|
+!Kod!!Efekt
+|-
+|<pre>==Temat komentarza==
+treść dyskusji ~~~~
+:odpowiedź ~~~~</pre>
+|
+'''Temat komentarza'''
+----
+treść dyskusji [[Archive/en/MeusH|MeusH]] 11:21, 6 June 2007 (CEST)
+:odpowiedź[[Archive/en/Zojj|Zojj]] 11:21, 6 June 2007 (CEST)
+|}
+
+==Tytuły artykułów==
+
+===Liczba pojedyncza czy mnoga?===
+Kiedy tworzysz artykuł, zastanów się czego będzie szukał gracz.<br>
+na przykład: Gracz pragnący dowiedzieć się czegoś o [[Main/pl/Przedsiębiorstwa|Przedsiębiorstwach]] najprawdopodobniej wyszuka "przedsiębiorstwa", nie: "przedsiębiorstwo"
+
+Zawsze możesz utworzyć stronę przekierowującą:
+<pre>#REDIRECT [[Main/pl/Przedsiębiorstwa]]</pre>
+
+W razie wątpliwości (jednak nie powinny być one zbyt częste) użyj liczby pojedynczej
+
+===Wielkie litery===
+Nie należy umieszczać w tytułach wielkich liter, chyba że wymaga tego pisownia (np. [[Main/pl/OpenTTD|OpenTTD]]).  Wiki automatycznie zmieni pierwszą literę tytułu na wielką.
+
+===Strony językach innych niż angielski===
+Tytuł artykułu powinien być napisany w tym samym języku co artykuł, następnie, po znaku '''/''', w tytule należy umieścić kod języka. Na przykład:
+*[[Main/es/Página principal]] (strona główna w języku hiszpańskim)
+*[[Main/pl/Strona główna]] (strona główna w języku polskim)
+*[[Main/ru/Главная страница]] (strona główna w języku rosyjskim)
+
+Strony nieangielskie znajdziesz tutaj: [[Category/en/Articles in other languages]]
+
+'''''Od tłumacza:''' W tytułach artykułów '''można''', a wręcz '''należy''' używać polskich liter (Dlaczego należy? Jeśli zaczęlibyśmy tworzyć strony bez ploskich znaków w tytułach, po chwili pogubilibyśmy się wśród nazewnictwa. Gdyby dwóch użytkowników stworzyło stronę o [[Main/pl/Złoto|Złocie]] w grze OpenTTD, i jeden nazwałby ją Zloto a drugi Złoto, mielibyśmy dwie strony o tym samym... Tak samo z innymi rzeczami)''
+
+===Strony testowe===
+Jeśli [[Main/en/sandbox|piaskownica]] nie jest wystarczającym narzędziem dla Twojej strony, możesz stworzyć stronę jako "folder" na stronie użytkownika. Pomaga to utrzymać główną przestrzeń nazw w czystości. Przykład:
+*[[Archive/en/Zuu/New Main Page side by side layout]]
+
+===Przestrzenie nazw===
+Jeśli twój artykuł nie dotyczy bezpośrednio gry, to prawdopodobnie należy do przestrzeni nazw. Przykłady:
+*[[Main/en/Village Pump]]
+*[[Main/en/Italy]]
+
+==Treść artykułu==
+
+===Ilustracje===
+Najważniejsze żeby działało. Do większości grafiki najlepszy format to '''.png'''.  Wstawienie obrazka wygląda tak:
+{|
+!Kod!!Efekt
+|-
+|<pre>[[File:en/longerbridges.png|frame|Opis oobrazka]]</pre>
+|[[File:en/longerbridges.png|frame|Opis obrazka]]
+|}
+
+===Opisywanie zrzutu ekranu===
+[[File:en/WhyPresignals.png|frame|right|Prawidłowo opisany zrzut ekranu]]
+Jeśli publikujesz zrzuty ekranu objaśniające koncepcje gier lub skrzyżowania, powinieneś ograniczyć do minimum ilość tekstu objaśniającego w rzeczywistym obrazie, a zamiast tego w głównym tekście odnieść się do oznaczonych elementów. Oznaczenia powinny być wykonane w kontrastowym kolorze (dla klimatu umiarkowanego dobry jest biały) przy użyciu czcionki bezszeryfowej, pogrubionej na przezroczystym tle. W razie potrzeby można użyć strzałek, ale lepiej jest umieścić etykietę w pobliżu elementu, który ma być objaśniony. Przykładem tego formatu jest obrazek po prawej stronie (ale pamiętaj, że etykiety nie muszą być literami lub cyframi, o ile nie zakłócają one zrzutu ekranu i nie zwierają całego objaśnienia, które powinno znajdować się w głównym tekście).
+
+===Zrzuty ekranu okienek===
+Jeśli załączasz taki zrzut ekranu, postaraj się przyciąć go dokładnie do krawędzi okna, aby uzyskać bardziej profesjonalny wygląd. Okna OpenTTD to idealne prostokąty, więc powinno być to wystarczająco proste - w razie potrzeby można je powiększyć.
+
+===Instrukcje w etapach===
+Do oddzielnych kroków należy używać list uporządkowanych i nieuporządkowanych:
+{|
+!Kod!!Efekt
+|-
+|<pre>
+#krok 1.
+#krok 2.
+#* uwaga do kroku 2.
+#* uwaga do kroku 2.</pre>
+|
+#krok 1.
+#krok 2.
+#* uwaga do kroku 2.
+#* uwaga do kroku 2.
+|}
+
+===Wersja gry===
+Skoncentruj się na tworzeniu artykułów do najnowszej wersji, nie na wersjach nocnych (''nightly''). Na stronach deweloperskich można dyskutować o nocnych funkcjach. Jeśli naprawdę musisz dołączyć funkcję nocną, oznacz sekcję szablonem {{en/S|nightly}}.
+
+===Angielski - brytyjski czy amerykański? ===
+Oryginalny TTD został stworzony w Wielkiej Brytanii, więc..:
+*Brytyjski angielski jest oficjalnym angielskim tej wiki.
+*Funt (£) jest oficjalną walutą. Możesz umieścić dolary ($) w nawiasie, po funtach.
+*Jednostki metryczne są oficjalne. Możesz umieścić w nawiasie jednostki imperialne po jednostkach metrycznych.
+
+'''''Od tłumacza:''' W artykułach w języku polskim należy używać funtów, a po nich w nawiasie, złotówek (wartość 6-krotnie większa). Natomiast jednostki pozostawiamy metryczne (km/h, nie używamy mph)''
+
+===Przyciski w grze, elementy menu itp.===
+
+Przy cytowaniu nazwy przycisku w grze należy używać kursywy (w niektórych przypadkach pogrubienia), bez cudzysłowów. Na przykład:
+
+Aby dostosować ustawienia łatek, kliknij przycisk ''Configure Patches''.
+
+===Używanie "meta"słownictwa===
+Unikaj używania słowa ''wiki'' i innych słów opisujących mechanikę, chyba że jest to absolutnie konieczne. Nazwa tego co edytujesz to ''dokumentacja'', ''podręcznik'', ''tutorial'' itp. - Wiki jest tylko środkiem przekazu, więc najlepiej w ogóle o niej nie wspominać.
+
+Podobnie wygląda sprawa z rzeczami takimi jak "strona", "sekcja" czy "link" przy linkowaniu do innych stron - powinieneś użyć tytułu strony jako tekstu linku. Dobrym sposobem na podjęcie takiej decyzji jest wyobrażenie sobie strony jako drukowanego dokumentu i sprawdzenie, czy ma ona sens - oczywiście słowo "kliknij" nie ma sensu w tym kontekście.
+
+Dążymy tutaj do tego, aby informacje były niezależne od mediów i użyteczne w każdym formacie, w jakim się znajdują. Oczywiście meta-słownictwo może być odpowiednie, jeśli jest to artykuł taki jak ten - o tym, jak korzystać z wiki.
+
+===Patche (łatki)===
+Użyj takiego samego formatu jak w artykule [[Main/en/Longer bridges]] (w jęz. angielskim).
+
+==Szablony==
+===Format szablonów===
+Tworząc szablon, użyj takiego samego formatu jak w szablonie {{en/S|Nightly}}. Pamiętaj o dołączeniu instrukcji dla innych!
+
+Wybierz kolorystykę najlepiej pasującą do wiadomości, którą chcesz przekazać - poczytaj o [[Main/en/Szablony/Pl#Ramki informacyjne|ramkach informacyjnych]], żeby dowiedzieć się więcej na temat doboru kolorów (strona w języku polskim).
+
+===Podstawowe szablony===
+''Zobacz artykuł: [[Main/en/Instrukcja stylów/Pl/Podstawowe szablony]]''
+
+*Więcej informacji o szablonach znajdziesz tutaj: [[Main/pl/Szablony]]
+
+==Kategorie==
+===Format kategorii===
+Tworząc stronę kategorii, użyj takiego samego formatu jak na stronie [[Category/en/requests for deletion]].
+
+===Dodawanie artykułu do kategorii===
+Dodaj swój artykuł do kategorii - a nawet dwóch, lub więcej, jeśli to możliwe - ułatwi to jego znalezienie.
+
+Zobacz też listę istniejących kategorii: [[Main/en/Special:Categories]].
+
+Umieść kod przydzielający do kategorii na samym końcu swojego artykułu:
+*dla kategorii w języku polskim:<br><pre>[[Category:pl/Nazwa kategorii]]</pre>
+*dla kategorii w języku agielskim:<br><pre>[[Category:en/categoryname]]</pre>
+Należy zawsze najpierw sprawdzić, jaki rodzaj artykułów korzysta z danej kategorii. Na przykład: (angielskojęzyczna) [[Category/en/Engines|kategoria ''Lokomotywy'']] przeznaczona jest tylko dla artykułów o konkretnych maszynach - nie dla jakichkolwiek artykułów związanych z pociągami, które wspominają o lokomotywach. Założenie jest takie, że jeśli użytkownicy chcą mieć prostą, "nieskażoną" listę lokomotyw, przejdą do tej kategorii.
+
+==Scenariusze==
+Sprawdź instrukcje dla scenariuszy tutaj: [[Main/en/Scenarios Team#Procedure to add a scenario]].
+Umieść scenariusz w przestrzeni nazw Scenario:
+*[[Main/en/Italy]]
+
+==Zobacz Również==
+*[http://meta.wikimedia.org/wiki/Help:Editing Text Editing syntax in MediaWiki]
+*[http://en.wikipedia.org/wiki/Wikipedia:Extended_image_syntax Extended image syntax]
+*[http://en.wikipedia.org/wiki/Wikipedia:Picture_tutorial Picture tutorial]
+*[http://meta.wikimedia.org/wiki/Help:Table Editing Tables in MediaWiki]
+*[http://en.wikipedia.org/wiki/Help:Table Table (Wikipedia help)]
+*[http://en.wikipedia.org/wiki/Help:Template Template (Wikipedia help)]
+*[http://en.wikipedia.org/wiki/Help:Category Category (Wikipedia help)]
+*[http://www.mediawiki.org/wiki/Help:Magic_words Magic words in MediaWiki]
+*[http://www.mediawiki.org/wiki/Help:Extension:ParserFunctions ParserFunctions in MediaWiki]
+
+[[Category:pl/OpenTTD Wiki]]
