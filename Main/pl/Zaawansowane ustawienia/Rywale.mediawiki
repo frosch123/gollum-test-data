@@ -1,0 +1,73 @@
+{{pl/Uwaga|Ten artykuł dotyczy zmieniania ustawień przy użyciu '''przestarzałego''' interfejsu. Aktualny artykuł znajdziesz [[Main/pl/Ustawienia/Rywale|tutaj]]}}
+{{pl/Informacja|'''Artykuł nie jest w całości przetłumaczony'''. Ze względy na to, że ten widok ustawień nie jest już używany, z artykułu usunięto szablon <nowiki>{{pl/Tłumaczenie}}</nowiki>}}
+
+[[Translation:Main/en/Advanced Settings/Competitors]]{{en/-}}{{pl/Spis treści}}
+
+==Okno ustawień zaawansowanych: Rywale==
+Sekcja '''Rywali''' pozwala na zmianę ustawień dotyczących [[Main/pl/Ustawienia SI|SI]] oraz [[Main/pl/Gra wieloosobowa|gry wieloosobowej]]. Ustawienia są wypisane poniżej z możliwymi wartościami oraz odnośnikiem do [[Main/en/Openttd.cfg|pliku konfiguracyjnego]].
+{| align="center"
+|- valign="top"
+|__TOC__
+|[[File:en/UstawieniaZaawansowaneRywalePL.png|frame|left|Widok ustawień o rywalach w oknie [[Zaawansowane ustawienia/Pl|ustawień zaawansowanych]] (1.2.3)]]
+{{pl/Zaawansowane ustawienia}}
+|}
+
+===<u>Gracze komputerowi</u>===
+====Pozwól na SI w grze wieloosobowej====
+{{pl/Zgodne Wersje|0.4|align="right"|text=(od 0.4.5)}}
+Pozwala na graczy komputerowych w [[Main/pl/Gra wieloosobowa|grze wieloosobowej]]. Ich ilość może być ustawiona w [[Main/pl/Trudność|opcjach trudności]].
+:''Możliwe ustawienia:'' <span style="color:green">'''Wł.'''</span> lub <span style="color:red">'''Wył.'''</span>
+:''W pliku konfiguracyjnym [[Main/en/Openttd.cfg]]:'' [ai] ai_in_multiplayer = <true|false>
+
+====Pociągi niedostępne dla komputera====
+{{pl/Zgodne Wersje|Old|align="right"|text=(od 0.3.2)}}
+Computer cannot build [[Main/en/trains]] or [[Main/en/railway construction|rail infrastucture]].
+This option has been moved from [[Main/en/Configuring patches/Vehicles#Disable trains for computer|Vehicles section]] in 0.3.4.
+:''Możliwe ustawienia:'' <span style="color:green">'''Wł.'''</span> lub <span style="color:red">'''Wył.'''</span>
+:''W pliku konfiguracyjnym [[Main/en/Openttd.cfg]]:'' [ai] ai_disable_veh_train = <true|false>
+
+====Samochody niedostępne dla komputera====
+{{pl/Zgodne Wersje|Old|align="right"|text=(od 0.3.2)}}
+Computer cannot build [[Main/en/road vehicles]] or [[Main/en/roadway construction|roads]]. This option has been moved from [[Main/en/Configuring patches/Vehicles#Disable road vehicles for computer|Vehicles section]] in 0.3.4.
+:''Możliwe ustawienia:'' <span style="color:green">'''Wł.'''</span> lub <span style="color:red">'''Wył.'''</span>
+:''W pliku konfiguracyjnym [[Main/en/Openttd.cfg]]:'' [ai] ai_disable_veh_roadveh = <true|false>
+
+====Samoloty niedostępne dla komputera====
+{{pl/Zgodne Wersje|Old|align="right"|text=(od 0.3.2)}}
+Computer cannot build [[Main/en/aircraft]] or [[Main/en/airports]]. This option has been moved from [[Main/en/Configuring patches/Vehicles#Disable aircraft for computer|Vehicles section]] in 0.3.4.
+:''Możliwe ustawienia:'' <span style="color:green">'''Wł.'''</span> lub <span style="color:red">'''Wył.'''</span>
+:''W pliku konfiguracyjnym [[Main/en/Openttd.cfg]]:'' [ai] ai_disable_veh_aircraft = <true|false>
+
+====Statki niedostępne dla komputera====
+{{pl/Zgodne Wersje|Old|align="right"|text=(od 0.3.2)}}
+Computer cannot build [[Main/en/ships]]. This option has been moved from [[Main/en/Configuring patches/Vehicles#Disable ships for computer|Vehicles section]] in 0.3.4.
+:''Możliwe ustawienia:'' <span style="color:green">'''Wł.'''</span> lub <span style="color:red">'''Wył.'''</span>
+:''W pliku konfiguracyjnym [[Main/en/Openttd.cfg]]:'' [ai] ai_disable_veh_ship = <true|false>
+
+====ilość #opcodes przed uśpieniem skryptu====
+{{pl/Zgodne Wersje|0.7|align="right"|text=(od 0.7.0)}}
+Lower this value if the AI is making the game run slow. Increase this value if you find the AI doing a lot of nothing instead of actually building stuff. Leave value at 10,000 if unsure.
+:''Możliwe ustawienia:'' <span style="color:#00693E">'''5,000'''</span> do <span style="color:#00693E">'''250,000'''</span>
+:''W pliku konfiguracyjnym [[Main/en/Openttd.cfg]]:'' [script] script_max_opcode_till_suspend = <5000-250000>
+{{en/-}}
+----
+
+===Pozwól na wysyłanie pieniędzy do innych firm===
+{{pl/Zgodne Wersje|0.7|align="right"|text=(od 0.7.0)}}
+Allows you to donate money to other companies.
+:''Możliwe ustawienia:'' <span style="color:green">'''Wł.'''</span> lub <span style="color:red">'''Wył.'''</span>
+:''W pliku konfiguracyjnym [[Main/en/Openttd.cfg]]:'' [economy] give_money = <true|false>
+{{en/-}}
+===Pozwól kupować udziały w innych firmach===
+{{pl/Zgodne Wersje|0.7|align="right"|text=(od 0.7.0)}}
+Allows you to enable or disable the ability to [[Main/en/buying shares|buy shares]] from competitors. You also have to wait for the company to get old enough before buying 25% or a full take over. This age is about 6 years old.
+:''Możliwe ustawienia:'' <span style="color:green">'''Wł.'''</span> lub <span style="color:red">'''Wył.'''</span>
+:''W pliku konfiguracyjnym [[Main/en/Openttd.cfg]]:'' [economy] allow_shares = <true|false>
+{{en/-}}
+
+==W poprzednich wersjach==
+===Zobacz też===
+*'''Od 0.3.0 do 0.6.3''' - Zobacz [[Main/en/Configuring patches]], jak zmieniały się ustawienia.
+*'''Dla 0.2.0 i 0.2.1''' - Zobacz [[Main/en/Configuring patches in 0.2.0]]
+
+[[Category:pl/Stare ustawienia]]
