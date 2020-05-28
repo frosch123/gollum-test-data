@@ -1,0 +1,263 @@
+[[Translation:Main/en/Editing help]]{{en/-}}{{en/TOCright}}
+Oto przewodnik po języku znaczników wiki. Zachęcamy do przetestowania każdego z nich w [[Main/en/Sandbox|piaskownicy]].
+
+*Zobacz [https://pl.wikipedia.org/wiki/Pomoc:Formatowanie_tekstu Stronę o formatowaniu tekstu na Wikipedii], jeśli nie znajdziesz potrzebnych informacji w tym artykule.
+<div style="margin: 2em 0em 0em 0em; padding: 0em 1em 1em 1em; border: 1px solid #E1BBFF; background-color: #F5EDFC; font-size:large;">
+==Bardzo ważne zasady==
+#Zawsze zostawiaj swój nick zamieszczając komentarz. Wpisz cztery [https://pl.wikipedia.org/wiki/Tylda tyldy]: "<nowiki>~~~~</nowiki>" - nick z datą pojawi się automatycznie.
+#Zawsze używaj przycisku '''Pokaż podgląd''' przed zapisaniem zmian.
+#Przeczytaj [[Main/pl/Instrukcja Stylów|Instrukcję stylów OpenTTD Wiki]].
+</div>
+
+==Formatowanie tekstu==
+Użyj apostrofów żeby pogrubić lub pochylić tekst.
+{|
+!Kod
+!Odpowiednik w HTML
+!Efekt
+|-
+|<code><nowiki>''Kursywa''</nowiki></code>||<nowiki><i>Kursywa</i></nowiki>||''Kursywa''
+|-
+|<code><nowiki>'''Pogrubienie'''</nowiki></code>||<nowiki><b>Pogrubienie</b></nowiki>||'''Pogrubienie'''
+|-
+|<code><nowiki>'''''Pogrubiona kursywa'''''</nowiki></code>||<nowiki><b><i>Pogrubiona kursywa</i></b></nowiki>||'''''Pogrubiona kursywa'''''
+|}
+
+==Linki==
+===Linki wewnętrzne===
+Umieść słowa w podwójnych nawiasach kwadratowych, aby utworzyć link do artykułu na OpenTTD Wiki (wiki.openttd.org). Oddziel link od opisu pionową kreską ("|")
+
+'''''Od tłumacza:''' ze względu na różnice pomiędzy adresami stron w języku angielskim i polskim, z tego paragrafu wydzielono więc część dla linków angielskich.''
+
+====Linki do stron w języku angielskim====
+
+{|
+!Przykład
+!Kod
+|-
+|[[Main/en/Download]] || <code><nowiki>[[Main/en/Download]]</nowiki></code>
+|-
+|[[Main/en/Download]]s || <code><nowiki>[[Main/en/Download]]s</nowiki></code>
+|-
+|[[Main/en/Download|Obtaining the files]] || <code><nowiki>[[Main/en/Download|Obtaining the files]]</nowiki></code>
+|}
+
+====Linki do stron w języku polskim====
+
+Pamiętaj, że tytuły (a więc i adresy) stron na wiki w języku polskim zakończone są sufiksem '''/Pl'''. Dla zachowania przejrzystości tekstu nie będziemy więc stosować pierwszej ani drugiej metody (z wyjątkiem linków do stron [[Main/en/Klimat/Pl#Umiarkowany]], [[Main/en/Klimat/Pl#Arktyczny]], [[Main/en/Klimat/Pl#Tropikalny]] i [[Main/en/Klimat/Pl#Zabawkowy]], przekierowujących do odpowiednich sekcji (zobacz: [[Main/en/Pomoc przy edycji/Pl#Przekierowania|Przekierowania]]) w artykule [[Main/pl/Klimat|Klimat]]), a jedynie trzecią. Poniżej znajdują się prawidłowe linki:
+
+{|
+!Przykład
+!Kod
+|-
+|[[Main/en/Klimat/Pl#Tropikalny]] || <code><nowiki>[[Main/en/Klimat/Pl#Tropikalny]]</nowiki></code>
+|-
+|[[Main/en/Klimat/Pl#Tropikalny]]m || <code><nowiki>[[Main/en/Klimat/Pl#Tropikalny]]m</nowiki></code>
+|-
+|[[Main/pl/Klimat|Klimat]] || <code><nowiki>[[Main/pl/Klimat|Klimat]]</nowiki></code>
+|-
+|[[Main/pl/Klimat|artykuł o klimatach]] || <code><nowiki>[[Main/pl/Klimat|artykuł o klimatach]]</nowiki></code>
+|}
+
+====Linki do sekcji w artykułach====
+
+Czasami nie chcemy tworzyć linku do całej strony, a jedynie do określonej jego sekcji. Po tytule artykułu należy wówczas wstawić "#" i tytuł sekcji
+
+{|
+!Przykład
+!Kod
+|-
+|[[Main/en/Klimat/Pl#Tropikalny]] || <code><nowiki>[[Main/en/Klimat/Pl#Tropikalny]]</nowiki></code>
+|-
+|[[Main/en/Klimat/Pl#Tropikalny|Przeczytaj o klimacie tropikalnym]] || <code><nowiki>[[Main/en/Klimat/Pl#Tropikalny|Przeczytaj o klimacie tropikalnym]]</nowiki></code>
+|}
+
+===Linki zewnętrzne===
+Umieść link do strony w nawiasach kwadratowych, aby utworzyć link do innej strony internetowej. Opis oddziel od linku spacją (" ").
+{|
+!Przykład
+!Kod
+!Uwagi
+|-
+|[http://www.openttd.org] || <code><nowiki>[http://www.openttd.org]</nowiki></code> || Link zewnętrzny bez opisu zostanie automatycznie pokazany jako [x] 
+|-
+|[http://www.openttd.org OpenTTD] || <code><nowiki>[http://www.openttd.org OpenTTD]</nowiki></code> ||
+|}
+====Linki do stron na Wikipedii====
+Linki do stron na Wikipedii należy tworzyć tak, jak wszystkie inne linki zewnętrzne. 
+
+Podczas tłumaczenia stron można czasem napotkać linki do Wikipedii utworzone w inny sposób - podobnie jak wewnętrzne, tylko z dopiskiem ''Wikipedia:''. Ta metoda już nie działa, nie należy jej stosować. 
+<!--Oryginalna (usunięta) wersja angielska:
+===Wikipedia links===
+Same as above but add "wikipedia:" before the link.
+{|
+!Example
+!Source
+|-
+|[http://www.wikipedia.org/wiki/Subversion ] || <code><nowiki>[http://www.wikipedia.org/wiki/Subversion ]</nowiki></code>
+|-
+|[http://www.wikipedia.org/wiki/OpenTTD ]eluxe || <code><nowiki>[http://www.wikipedia.org/wiki/OpenTTD ]eluxe</nowiki></code>
+|-
+|[http://www.wikipedia.org/wiki/OpenTTD OpenTTD] || <code><nowiki>[http://www.wikipedia.org/wiki/OpenTTD OpenTTD]</nowiki></code>
+|-
+|[http://www.wikipedia.org/wiki/m:Help Help at Meta]||<code><nowiki>[http://www.wikipedia.org/wiki/m:Help Help at Meta]</nowiki></code>
+|}
+Commented out. See also the talk-page-->
+==Sekcje artykułu==
+Umieść tekst między znakami równości aby utworzyć sekcje i podsekcje
+
+<pre><nowiki>=Sekcja główna=
+==Podsekcja==
+===Pod-podsekcja===
+====Rozumiesz?====
+</nowiki></pre>
+
+==Ilustracje==
+Wgraj plik, używając strony specjalnej [[Main/en/special:upload|Prześlij plik]] - link do niej znajduje się w menu głównym (pasek po lewej stronie).
+
+Użyj takiego kodu, żeby umieścić obraz w artykule:
+<pre>[[File:en/.filename|frame|none|caption]]</pre>
+
+Przykład:
+<pre>[[File:en/longerbridges.png|frame|none|Longer bridges]]</pre>
+Efekt:
+[[File:en/longerbridges.png|frame|none|Longer bridges]]
+
+*Zobacz też: Artykuł [http://en.wikipedia.org/wiki/Help:Extended_image_syntax Extended image syntax] na Wikipedii.
+*Na [[Main/en/special:upload|stronie przesyłania]] również znajduje się krótki przykład jak można wstawić obrazek.
+
+==Tabele==
+Każdy element kodu tabeli powinien znajdować się na początku wiersza.
+{|
+!Kod
+!Odpowiednik HTML
+!Efekt
+|-
+|<code><nowiki>{|</nowiki></code>||<nowiki><table></nowiki>||Początek tabeli 
+|-
+|<code><nowiki>!</nowiki></code>||<nowiki><th></nowiki>||Kolumna nagłówka
+|-
+|<code><nowiki>|</nowiki></code>||<nowiki><td></nowiki>||Nowa komórka
+|-
+|<code><nowiki>!!</nowiki></code>||<nowiki></th><th></nowiki>||Kolumna nagłówka w tej samej linii
+|-
+|<code><nowiki>||</nowiki></code>||<nowiki></td><td></nowiki>||Nowa komórka w tej samej linii
+|-
+|<code><nowiki>|-</nowiki></code>||<nowiki><tr></nowiki>||Nowy wiersz
+|-
+|<code><nowiki>|}</nowiki></code>||<nowiki></table></nowiki>||Koniec tabeli
+|-
+|
+<pre><nowiki>
+{|
+!Nagłówek1!!Nagłówek2
+|-
+|dane1
+|dane2
+|-
+|dane3||dane4
+|}</nowiki></pre>
+|
+<pre><nowiki>
+<table><tr>
+<td>Nagłówek1</th><th>Header2</th></tr>
+<tr>
+<td>dane1</td>
+<td>dane2</td>
+<tr>
+<td>dane3</td><td>dane4</td>
+</tr></table>
+</nowiki></pre>
+|
+
+{|
+!Nagłówek1!!Nagłówek2
+|-
+|dane1
+|dane2
+|-
+|dane3||dane4
+|}
+|}
+
+*Przeczytaj też artykuł [http://en.wikipedia.org/wiki/Help:Table Table Help] na Wikipedii.
+
+==Listy==
+Każdy element kodu listy powinien znajdować się na początku wiersza.
+{|
+!width="150"|Kod
+!Efekt
+|-
+|<nowiki>#</nowiki>||Lista uporządkowana
+|-
+|<nowiki>*</nowiki>||Lista nieuporządkowana
+|-
+|'''<nowiki>:</nowiki>'''||Uwagi
+|-
+|<pre><nowiki>#Krok A
+#Krok B
+#*Wskazówka
+#Krok C
+##Etap 1.
+##Etap 2.
+#Krok D
+:Uwaga:
+::Tekst uwagi</nowiki></pre>
+|
+#Krok A
+#Krok B
+#*Wskazówka
+#Krok C
+##Etap 1.
+##Etap 2.
+#Krok D
+:Uwaga:
+::Tekst uwagi
+|}
+
+==Szablony==
+{{pl/Informacja|Tak wygląda przykładowy szablon. Szczegóły na temat użycia szablonów znajdują się w artykule [[Main/pl/Szablony|Szablony]]}}
+
+Powyższy szablon jest wstawiony przy użyciu takiego kodu:
+<pre>{{pl/Informacja|Tak wygląda przykładowy szablon. Szczegóły na temat użycia szablonów znajdują się w artykule [[Main/pl/Szablony|Szablony]]}}</pre>
+
+Ogólny wzór wstaiwania szablony wygląda tak:
+<pre>{{Nazwa szablonu/Pl|parametr1|parametr2}}</pre>
+
+*Przeczytaj też artykuł [http://en.wikipedia.org/wikiHelp:Template Template help] na Wikipedii.
+
+==Przekierowania==
+Użyj przekierowania, żeby stworzyć stronę automatycznie przekierowującą użytkownika do właściwego artykułu. Na przykład, strona [[Main/pl/Budowa na skarpach]] automatycznie przekierowuje do artykułu [[Main/pl/Budowa na skarpach]]:
+<pre>#REDIRECT [[Main/pl/Budowa na skarpach]]</pre>
+Strona może również przekierowywać nie do całego artykułu, a określonej sekcji - na przykład strona [[Main/en/Klimat/Pl#Tropikalny]] przekierowuje do [[Main/en/Klimat/Pl#Tropikalny]]. Kod wygląda tak:
+<pre>#REDIRECT [[Main/en/Klimat/Pl#Tropikalny]]</pre>
+
+==Kategorie==
+Dodaj artykuł do kategorii, wstawiając na jego końcu link do kategorii:
+<pre>[[Category:en/Development]]</pre>
+
+Jeśli dodasz - jak w przykładzie - dwukropek, strona nie zostanie dodana do kategorii, tylko pojawi się link do tej kategorii:
+<pre>[[Category/en/Development]]</pre>
+[[Category/en/Development]]
+
+==Inne znaczniki==
+{|
+!Kod
+!Efekt
+|-
+|<nowiki><nowiki>tekst</no</nowiki>wiki>||Wyświetla tekst "surowy", bez formatowania wiki
+|-
+|<nowiki><code>tekst</code></nowiki>||Wyświetla tekst jako kod (czcionką o stałej szerokości)
+|-
+|<nowiki><pre>tekst</pre></nowiki>||Wyświetla tekst w ramce, czcionką o stalej szerokości (jako kod), bez formatowania HTML
+|-
+|<nowiki><noinclude>tekst</noinclude></nowiki>||Pokazuje tekst na stronie szablonu, ale nie w szablonie (na stronach, na których został użyty). Przydatne w przypadku opisu szablonu.
+|-
+|<nowiki><includeonly>tekst<includeonly></nowiki>||Pokazuje tekst tylko na stronach, na których szablon został użyty (nie na stronie szablonu).  Przydatny w przypadku szablonów automatycznie dodających artykuły do kategorii.
+|-
+|<code><nowiki>----</nowiki></code>||Wstawia poziomą linię (należy stosować tak rzadko jak to możliwe)
+|-
+|<code><nowiki>~~~~</nowiki></code>||Wstawia Twój podpis z datą (należy zawsze stosować w dyskusjach).
+|}
+
+[[Category:en/OpenTTD Wiki]]
