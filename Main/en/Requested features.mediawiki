@@ -1,0 +1,178 @@
+ {{outdated}}
+
+[[Translation:Main/en/Requested features]]
+
+
+==How to request a feature==
+
+Things to know:
+
+* OpenTTD is mature and stable, with clear goals. https://wiki.openttd.org/FAQ_development#What_are_the_goals_of_the_official_branch.3F
+* The chances of a successful feature request are very low.  Only features that interest one or more developers will make it into the game.  The most likely trajectory for a feature request is one of:
+*# explicit rejection with a reason given - we do just politely close a lot of requests, otherwise the issue tracker overflows and becomes useless
+*# it's read, but nobody replies because they don't feel able to comment usefully, or don't want to cause offence by rejecting
+*# nobody is aware of it and it's not even read - there is no-one who has volunteered to read and respond to all feature requests
+
+This can be demoralising, so it's much better to know this in advance. :)  We don't want to waste anyone's time.
+
+If you do have a feature request and want to patch:
+#Ensure you are playing the latest [[Main/en/nightly]] version of the game so that you know what's already been done.
+#Check that it's not already posted in the [http://www.tt-forums.net/viewforum.php?f=32 suggestions forum].
+#Check that it's not in OpenTTD GitHub issues - either  in the [https://github.com/OpenTTD/OpenTTD/issues open] or [https://github.com/OpenTTD/OpenTTD/issues?q=is%3Aissue+is%3Aclosed closed] statuses.
+#Join the OpenTTD IRC channel - instructions here https://wiki.openttd.org/Irc IRC is the best way to discuss features.
+#'''Do not create a separate article for your suggestion. It will be deleted.'''
+#'''Do not create a suggestion that has already been rejected. [[Main/en/Rejected features]] stay in this list, but with a "rejected" note instead of the percentage.
+
+==Outdated List of requested features==
+
+This is a very outdated list of previously discussed suggestions.  This list is not maintained in the wiki as of 2019, and is left here for historical interest.
+
+Requested features that have already been rejected are marked as '''Rejected' or "Not needed"''. Please do ''not'' request those features here or in the forums again. 
+
+===Environment===
+{{rf header}}
+{{rf|All Climates World|not needed|36764|Rejected}}
+{{rf|Remove Trees|90%|49326|Latest version of patch is r20180}}
+{{rf|Trees growth reduced|90%|45502|Latest version of patch is r20180}}
+{{rf|Create Realistic Heightmap|50%|33956|Latest version of patch is r13922}}
+{{rf|[[Main/en/Day/Night Cycle]]|not needed|36929|Use [[Main/en/NewGRF]]}}
+{{rf|Grass on unused tracks|not needed|32285|Rejected}}
+{{rf|Higher mountains in map|100%|40844|In trunk since r27010}}
+{{rf|Improved Timetable Management|75%|39276|Latest version of patch is r17628}}
+{{rf|Increase terraforming cost|not needed|8252|Use [[Main/en/NewGRF]]}}
+{{rf|Larger map sizes|100%|33137|4096x4096 in trunk since r26319, even larger maps are rejected}}
+{{rf|More Map Settings (MMS)|50%|39899|Latest version of patch is r14439}}
+{{rf|New Title Screen|100%|42044|Title screen is occasionally changed when releasing a new version}}
+{{rf|Seasons|not needed|15487|NewGRF variable snowline supported since r9371}}
+{{rf|Snow in temperate climate|not needed|24574|Rejected}}
+{{rf|Tracking Viewport|75%|43473|Latest version of patch is r20082}}
+{{rf|Underwater levels|50%|31576|Visible or not, Latest version of patch is r11127}}
+{{rf|Weather|not needed|24574|Rejected}}
+{{rf footer}}
+
+===Industries and cargo===
+{{rf header}}
+{{rf|Changes to the Original Industries|not needed|37049|Use [[Main/en/NewGRF]]}}
+{{rf|Industry budgets|not needed|30898|Rejected}}
+{{rf|New Industry Closures|not needed|36653|Use [[Main/en/NewGRF]]}}
+{{rf|[[Main/en/Passenger and cargo distribution]]|100%|41992|Cargodest is dead.  Cargodist in trunk since r25361}}
+{{rf footer}}
+
+===Towns===
+{{rf header}}
+{{rf|Colour Town Ratings|75%|42598|Indicate Town Rating with colour in Title, latest version of patch is r18684}}
+{{rf|Limit town growth|50%|32083|Latest version of patch is r9894 (old!)}}
+{{rf|Maximum Town Size|75%|35219|Very similar to patch above, latest version of patch is r15815}}
+{{rf|Minimum Town Distance|75%|33625|Latest version of patch is r18656}}
+{{rf|New Town Grid|50%|40922|Latest version of patch is r15096}}
+{{rf footer}}
+
+===Construction===
+{{rf header}}
+{{rf|Better statue placement|100%|49413| In trunk! r19206}}
+{{rf|Copy and paste|10%|41259|Rejected only in its current form, latest version of patch is r22255}}
+{{rf|[[Main/en/Custom Bridgeheads]]|not needed|20211|Rejected}}
+{{rf|Diagonal clearing and leveling|100%|19311| In trunk since r21500}}
+{{rf|Diagonal level crossings|50%|26584|4=Also see [http://www.tt-forums.net/viewtopic.php?t=26385 TTDPatch suggestion], latest version of patch is r5911 (V. old!)}}
+{{rf|Diagonal roads, tunnels, bridges|0%|7104|}}
+{{rf|Enhanced tunnels|not needed|36661|Rejected}}
+{{rf|Limit flattening to sea level|not needed|32295|4=Rejected}}
+{{rf|Minimise autosignal gaps|100%|35443|In trunk since r24129}}
+{{rf|Bridges between any land level|not needed|43188|Rejected}}
+{{rf|Non-instant construction|not needed|32301|Rejected}}
+{{rf|Purchase land faster|75%|29495|Drag a box, latest version of patch is r19990}}
+{{rf|Realistic Level Crossing|not needed|39830|Use [[Main/en/Signals#Path signals]]}}
+{{rf|[[Main/en/Shared Tracks]]|75%|34292|Latest version of patch is r12346.}}
+{{rf|[[Archive/en/HackaLittleBit/Under Water Tunnels|Underwater tunnels]]|75%|41775|Latest version of patch is r19518}}
+{{rf|Undo feature|not needed|38377|Rejected.}}
+{{rf|Close adjacent level crossings|50%|46091|Latest version of patch is r18359}}
+{{rf footer}}
+
+===Signals===
+{{rf header}}
+{{rf|Long Reserve PBS Signal|not needed|42675|Rejected}}
+{{rf|Priority Path Signal (PPS)|not needed|40393|Rejected}}
+{{rf|Route markers|not needed|30118|Rejected}}
+{{rf|[[Archive/en/HackaLittleBit/Tunnel Signals|Signals in tunnels and on bridges]]|75%|41260|Latest version of patch is r24024}}
+{{rf|Traffic Lights|not needed|36261|Rejected}}
+{{rf|Multi-Aspect Signals (MAS)|not needed|45304|Rejected}}
+{{rf|Signal Extensions (SignalEx)|75%|45208|General support for complex signal extension (i.e., programmable). Latest version of patch is r17618}}
+{{rf footer}}
+
+===Vehicles===
+{{rf header}}
+{{rf|More diesel smoke|100%|19896|In trunk since r20376}}
+{{rf|Adjustable plane crash probability|not needed|32202|Rejected - use the cheat if necessary)}}
+{{rf|Disable Train Reverse when waiting for too long|100%|40024|In trunk since r21962 (See also [[Main/en/Disable Train Reversing]])}}
+{{rf|Easy conversion for different rail types|not needed|31622|Rejected}}
+{{rf|Improved Breakdowns|75%|39518|Last version of patch is r19152}}
+{{rf|Plane landing queues|75%|15502|Last version of the patch is r17510}}
+{{rf|Ship Distance|50%|42758|Stop ships from going on top of each other, last version of patch is r16018}}
+{{rf footer}}
+
+===Stations and Depots===
+{{rf header}}
+{{rf|Airports built by parts|0%|29914|4=Look at [http://www.tt-forums.net/viewtopic.php?t=45654 NewGRF Airports] as well}}
+{{rf|City owned airports|0%|20093|}}
+{{rf|Close Airports|100%|33418|In trunk since r24127}}
+{{rf|Display station coverage|0%|32363|}}
+{{rf|Multi-track railway stations divided into platforms for improved vehicle ordering|not needed|46505|Rejected}}
+{{rf|Drive through depots|not needed|42312|Rejected}}
+{{rf|Infrastructure Sharing|75%|42254|}}
+{{rf|Long train depots|not needed|34574|4=Use NewGRF [https://www.tt-forums.net/viewtopic.php?p=1191359#p1191359 Example]}}
+{{rf|RV (Road Vehicle) Waypoints|not needed|33179|Rejected - one can use "go via" orders on drive through road stops instead since r12689}}
+{{rf|Sloped Stations|50%|41433|}}
+{{rf|Stations on bridges|not needed|40606|Rejected}}
+{{rf|Trains through non-stop stations / Whistle boards|not needed|38015|Rejected}}
+{{rf|Upgrade airports|90%|35867|4=Also see [http://www.tt-forums.net/viewtopic.php?t=28962 Replace Airport] thread}}
+{{rf footer}}
+
+===Eyecandy===
+{{rf header}}
+{{rf|Completely shore|90%|34401|}}
+{{rf|NewObjects|100%|49783|Implemented in r20673}}
+{{rf footer}}
+
+===GUI===
+{{rf header}}
+{{rf|OpenTTD GUI Re-arrangement|50%|3826|Project Page: http://dev.openttdcoop.org/projects/openttd-gui}}
+{{rf|Advanced expenses column|10%|31455|}}
+{{rf|Better graphs|75%|31984|}}
+{{rf|Clean up patch options|10%|32191|}}
+{{rf|Configurable hotkeys|100%|38343|In trunk since r20055 and related commits}}
+{{rf|[[Main/en/Font selection GUI]]|75%|29766|}}
+{{rf|Improvement for GUI toolbar|0%|40843|}}
+{{rf|Longer history of finances|not needed|21079|Rejected}}
+{{rf|Multiplayer server list filtering|90%|43160|Latest version of patch is r22449.}}
+{{rf|New Chat Window|50%|40927|}}
+{{rf|New Station Building GUI|50%|41222|}}
+{{rf|New Station GUI|50%|40419|}}
+{{rf|NewGRF GUI Window 2|50%|35001|}}
+{{rf|Toggle Terrain on Minimap|100%|42257|In trunk since r18665}}
+{{rf footer}}
+
+===Cheats===
+{{rf header}}
+{{rf|Local authority doesn't reject you|90%|30807|}}
+{{rf footer}}
+
+===Other===
+{{rf header}}
+{{rf|Leasing|not needed|49389|Rejected}}
+{{rf|Adjustable day length|50%|42432}}
+{{rf|Alphabetized openttd.cfg|50%|32164|}}
+{{rf|Auto-download NewGrfs|not needed|32764|Use centralised [[Main/en/Content Service]] (BaNaNaS) instead.}}
+{{rf|Better save game naming convention|10%|32308}}
+{{rf|Built-in goals|not needed|43698|Use GameScript}}
+{{rf|Code optimizations|50%|32319|4=Train collision detection is slow. Also see [http://www.tt-forums.net/viewtopic.php?t=27925 here] (in trunk since r10111) and [http://www.tt-forums.net/viewtopic.php?p=594775#594775 here]}}
+{{rf|Competitive Play|not needed|42572|Use GameScript}}
+{{rf|Draw on Map|not needed|42784|Rejected}}
+{{rf|Improved Loans|not needed|36184|Rejected}}
+{{rf|Load/Save Company Info|50%|40457|Save information about companies and load it back}}
+{{rf|More Conditional Orders|50%|38317|Latest version of patch is r27962 from 11th Jan 2018}}
+{{rf|Multicore support|rejected|37064|}}
+{{rf|New Sound Mixer|75%|37448|orudge}}
+{{rf|OpenGL Blitter|50%|38151|}}
+{{rf|[Real stock market]|not needed|69780|Rejected}}
+{{rf|Station/track templates|not needed|25037|Rejected}}
+{{rf footer}}
