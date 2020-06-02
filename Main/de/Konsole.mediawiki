@@ -1,0 +1,397 @@
+{{de/Übersetzung|Console|99}}
+
+[[Translation:Main/en/Console]]{{en/-}}{{de/Inhaltsverzeichnis}}
+{|
+|- valign="top"
+| style="background:none; border:0px" | Die '''Konsole''' lässt dich den Chatverlauf im [[Main/en/Multiplayer]] sehen und Befehle im [http://www.wikipedia.org/wiki/DOS DOS]-Stil in [[Main/de/OpenTTD|OpenTTD]] ausführen. Die Meisten Befehle werden dazu benutzt, Multiplayer-[[Main/en/Server]] zu konfigurieren.
+
+__TOC__
+| style="background:none; border:0px"|
+[[File:en/console.png|none|frame|Die OpenTTD Konsole]]
+|}
+
+==Benutzen der Konsole==
+Öffne die Konsole durch zweimaliges Drücken der Zirkumflex-Taste ({{keypress|^}}), links neben der {{keypress|1}}. Auf [http://www.wikipedia.org/wiki/Keyboard_layout anderssprachigen Tastaturen] kann die Taste abweichend beschriftet sein (z.B. ist das auf englischen Tastaturen die Tilde-Taste {{keypress|~}} (einmal drücken) ). <!-- Eventuell noch Zusatzinformationen zu nicht deutschen Tastaturen? -->
+Bei manchen Tastaturen funktioniert auch die Tastenkombination {{keypress|Alt Gr|^}}. Außerdem gibt es eine ''Konsole öffnen/schließen''-Option im ''[[Main/en/Spieloberfläche/De#Anderes|Hilfe-Menü]]''.
+<br />
+Nachdem die Konsole geöffnet wurde, gib einen Befehl, wie zum Beispiel "help" ein, und drücke die Eingabetaste {{keypress|Enter}}<!-- Enter? -->. 
+
+Tipps:
+* Scrolle durch die Konsole mit {{keypress|Shift|Up}}/{{keypress|Down}} oder {{keypress|Shift|Bild ↑}}/{{keypress|Bild ↓}}.
+* Scrolle durch die vorherigen Eingaben mit den {{keypress|Up}}/{{keypress|Down}} Pfeiltasten.
+* Mache die Konsole mit {{keypress|Strg|Enter}} größer.
+* Füge Text von der Zwischenablage mit der normalen {{keypress|Strg|V}} Kombination ein (nur auf Windows Betriebssystemen).
+
+==Konsolenbefehle==
+Hier ist eine Liste mit allen verfügbaren Befehlen in OpenTTD. Eckige Klammern ([]) kennzeichnen optionale Angaben. Ein senkrechter Strich (|) heißt "oder". Die Liste ist nach der Zweckmäßigkeit der Befehle geordnet, wobei die nützlichsten ganz oben stehen.  Diese Liste ist auch in [[Main/en/Console Commands|alphabetischer Reihenfolge (en)]] verfügbar.
+Achte darauf, das die Anführungszeichen auch in die Konsole geschieben werden sollten!
+
+===Hilfebefehle===
+{| {{en/Wikitable}} width=100%
+|- style="background:#efefef"
+!width="225"|Befehl
+!Beschreibung
+|-
+|help [<item>]
+|Zeige die Konsolenhilfe an. Um Hilfe zu einem speziellen Befehl oder einer Variable zu bekommen, gib dessen Namen als <item> an.
+|-
+|list_cmds [<filter>]
+|Liste alle verfügbaren Befehle auf, optional nur die, die mit <filter> beginnen.
+|-
+|list_vars [<filter>]
+|Liste alle registrierten Variablen auf, optional nur die, die mit <filter> beginnen.
+|-
+|list_aliases
+|Liste alle verfügbaren [[Main/en/Console Aliases|aliase]] auf.
+|-
+|list_patches
+|Liste alle [[Main/de/Erweiterte Einstellungen|erweiterten Einstellungen]] auf.
+|}
+
+===Spielbefehle===
+Diese Befehle funktionieren sowohl im Einspielermodus als auch auf Servern.
+
+{| {{en/Wikitable}} width=100%
+|- style="background:#efefef"
+!width="225"|Befehl
+!Beschreibung
+|-
+|newgame
+|Startet ein neues Spiel
+|-
+|restart
+|Startet das selbe Spiel von vorne.
+|-
+|connect <host>
+|Verbinde zu einen Netzwerspiel, das auf <host> läuft. Nicht für den Server verfügbar.
+|-
+|reconnect
+|Verbindet zum Server, auf dem du zum letzten Mal gespielt hast. ''(Eingeführt in r17466, nur in Version 1.0 oder später)''
+|-
+|save <nowiki><Nummer | Datei></nowiki>
+|Speichert das aktuelle Spiel in <Nummer> oder <Datei>.
+|-
+|load <nowiki><Nummer | Datei></nowiki>
+|Lädt einen Spielstand aus <Nummer> oder <Datei>.
+|-
+|part
+|Verlasse das laufende Spiel und kehre zum Menü zurück. Nicht für den Server verfügbar.
+|-
+|exit / quit
+|Verlasse das Spiel.
+|}
+
+===Multiplayerbefehle===
+Diese Befehle werden dafür benutzt, einen Multiplayer-[[Main/en/Server]] laufen zu lassen. Einige Befehle funktionieren auch für den verbundenen Client.
+{| {{en/Wikitable}} width=100%
+|- style="background:#efefef"
+!width="225"|Befehl
+!Beschreibung
+!width="90"|Clients
+|-
+|kick <nowiki><ip | client-id></nowiki>
+|Kicke den Client mit IP <ip> oder der Id <client-id>.
+|Nein
+|-
+|ban <nowiki><ip | client-id></nowiki>
+|Banne den Client mit IP <ip> oder der Id <client-id>.
+|Nein
+|-
+|unban <ip>
+|Lösche den Bann von <ip>.
+|Nein
+|-
+|banlist
+|Liste alle gebannten Clients auf.
+|Nein
+|-
+|[[Main/en/Reset Company|reset_company]] <company-id>
+|Lösche die mit <company-id> gekennzeichnete Firma.
+|Nein
+|-
+|pause
+|Pausiere eine Netzwerkspiel.
+|Nein
+|-
+|unpause
+|Beende die Pause für ein Netzwerspiel.
+|Nein
+|-
+|clients
+|Liste die Client-Id, den Namen, die Firmen-Id und die IP-Addresse jedes Clients auf.
+|Ja
+|-
+|companies
+|Liste alle Spieler mit deren Attributen, zum Beispiel Firmenname, Kredithöhe, Anzahl der Fahrzeuge, usw., auf.
+|Nein
+|-
+|status
+|Frage die Statusinformationen aller gerade verbundenen Clients ab.
+|Nein
+|-
+|server_info
+|Zeige die aktuellen und maximalen Client/Spieler-Limits.
+|Nein
+|-
+|say "<msg>"
+|Sende die Nachricht <msg> an alle Spieler.
+|Ja
+|-
+|say_client <client-nr> "<msg>"
+|Sende die Nachricht <msg> an den mit <client-nr> gekennzeichneten Client.
+|Ja
+|-
+|say_company <player-nr> "<msg>"
+|Sende eine Nachricht <msg> an die mit <player-nr> gekennzeichnete Firma. (Alias: say_player)
+|Ja
+|-
+|rcon <Passwort> "<Befehl>"
+|Führe <Befehl> auf dem server aus, authentifiziert mit <Passwort>, während du als Client verbunden bist. Das Passwort muss vorher lokal auf dem Server mit "rcon_pw <Passwort>" festgelegt werden.
+|Ja
+|-
+|join <company-id> [<Passwort>]
+|Tritt einer Firma bei, wobei 255 für Zuschauer steht. <Passwort> wird nur benötigt, wenn die Firma, der du beitreten möchtest, passwortgeschützt ist.
+|Ja
+|-
+|spectate
+|Alias für join 255. Tritt den Zuschauern bei.
+|Ja
+|-
+|move <client-id> <company-id>
+|Verschiebe einen Client in die Firma <company-id>, wobei 255 für Zuschauer steht. 
+|Nein
+|-
+|client_name <client-id> <name>
+|Ändere den Namen eines Clients zu <name>. Sinnvoll, wenn ein Client mit einem anstößigem Namen beitritt.
+|Nein
+|-
+|list_ai
+|Listet alle verfügbaren AI's auf dem Server auf.
+|Ja
+|-
+|start_ai <ai>
+|Startet eine verfügbare AI.
+|Nein
+|-
+|stop_ai <company-id>
+|Stoppt eine existierende AI. Die Firma wird danach komplett von der Karte entfernt.
+|Nein
+|}
+
+===File handling Befehle===
+{| {{en/Wikitable}} width=100%
+|- style="background:#efefef"
+!width="225"|Befehl
+!Beschreibung
+|-
+|cd <nowiki><Verzeichnis | Nummer></nowiki>
+|Ändere das Arbeitsverzeichnis zu <Verzeichnis> oder <Nummer>.
+|-
+|ls
+|Liste alle (Spielstands-)Dateien des aktuellen Verzeichnisses auf. (Alias: dir)
+|-
+|pwd
+|Gibt den Pfad des aktuellen Arbeitsverzeichnises aus.
+|-
+|rm <nowiki><Nummer | Datei></nowiki>
+|Löscht einen Spielstand mit <Nummer> oder <Datei> 
+|}
+
+{| {{en/Wikitable}} width=100%
+|- style="background:#efefef"
+!width="225"|Befehl
+!Beschreibung
+|-
+|script <Datei>
+|Mit diesem Befehl kannst du ein [[Main/en/Scripts|Script]] aufnehmen, das in die <Datei> gespeichert wird.
+|-
+|exec <script> <?>
+|Führt eine lokale Skriptdatei aus.
+|-
+|return
+|Beendet eine laufende Scriptdatei.
+|}
+
+{| {{en/Wikitable}} width=100%
+|- style="background:#efefef"
+!width="225"|Befehl
+!Beschreibung
+|-
+|content update
+|Updated die Liste von verfügbarem Onlineinhalt.
+|-
+|content upgrade
+|Wählt alle Dateien aus, die Upgrades (von lokal existierenden Dateien) sind.
+|-
+|content select (ID / all)
+|Wählt einen Inhalt über ID oder alle.
+|-
+|content unselect (ID / all)
+|Löscht die Auswahl von ID oder allen.
+|-
+|content state
+|Zeigt den Status der gewählten Inhalte an.
+|-
+|content download
+|Lädt alle gewählten Onlineinhalte herunter.
+|}
+
+===andere Befehle===
+{| {{en/Wikitable}} width=100%
+|- style="background:#efefef"
+!width="225"|Befehl
+!Beschreibung
+|-
+|screenshot <nowiki>[big | nocon]</nowiki>
+|Macht einen Screenshot. ''big'' macht einen Screenshot der ganzen Karte. ''nocon'' versteckt die Konsole für einen normalen Screenshot.
+|-
+|alias <Name> <Befehl> 
+|Erstelle ein [[Main/en/Console Aliases|Alias (en)]] mit dem Namen <name>, der den Befehl <Befehl> ausführt.
+|-
+|setting <setting_name> [<newvalue>]
+|Liest oder setzt eine Einstellung in der Konsole. Wenn <newvalue> nicht angegeben ist, wird er aktuelle Wert ausgegeben. Siehe auch [[Main/en/Console Settings|Konsolenbefehle (en)]] für eine Liste von verfügbaren Befehlen. (Aliase: set, patch)
+|-
+|dump_vars
+|Gibt alle verfügbaren Variablen und deren Werte aus.
+|-
+|getseed
+|Gibt das Seed aus, das zum Erstellen einer Zufallskarte benutzt wurde. Es kann beutzt werden, um die selbe Karte erneut zu erhalten.
+|-
+|scrollto <Feld>
+|Scrollt zum Feld mit der nummer <Feld>. Gültige Argumente sind Hexadezimal- (beginnend mit 0x) und Dezimalzahlen. Benutze das Informationswerkzeug, um die Nummer des Feldes zu erfahren.
+|-
+|clear
+|Leert den Konsolenbildschirm.
+|-
+|echo <text>
+|Gibt <text> in der Konsole aus.
+|-
+|echoc <color> <text>
+|Gibt <text> in der farbe <color> aus. <color> muss eine Zahl zwischen 0 und 255 sein.
+|-
+|info_cmd <Befehl>
+|Zeigt technische Informationen zum Befehl <Befehl> an.
+|-
+|info_var <Variable>
+|Zeigt technische Informationen zur Variable <Variable> an.
+|-
+|debug_level [<level>]
+|Liest oder setzt verschiedene debug-Stufen von verschiedenen Teilen des Spiels. <level> kann eine beliebige Kombination von Name und Stufe sein (z.B. 'net=5 console=0' oder nur die Stufe). Vergiss die Anführungszeichen nicht.
+|-
+|resetengines
+|Resette das Alter und die zuverlässigkeit aller Fahrzeuge.
+|}
+
+==Variablen==
+Hier ist eine Liste aller [http://www.wikipedia.org/wiki/Variable Variablen], die in OpenTTD verfügbar sind. Du kannst dir den Wert einer Variable anzeigen lassen, indem du '''''set''' Variablename'' eingibst.
+Ändere den Wert, indem du '''''set''' Variablenname'' gefolgt von dem neuen Wert eingibst. [http://www.wikipedia.org/wiki/Boolean_data_type Boolesche] Variablen werden mit 'on' oder 'off' gesetzt. Textvariablen können mit '*' geleert werden.
+
+===Servervariablen===
+{| {{en/Wikitable}} width=100%
+|- style="background:#efefef"
+!width="225"|Variable
+!Beschreibung
+!width="90"|Standardwert
+|-
+|[[Main/en/Autoclean companies|autoclean_companies]]
+|Schließe automatisch inaktive Firmen, um Platz für andere Spieler zu schaffen. Kann mit 'autoclean_(un)protected' und 'autoclean_novehicles' näher eingestellt werden.
+|off
+|-
+|[[Main/en/Autoclean protected|autoclean_protected]]
+|Lösche automatisch das Passwort inaktiver, passwortgeschützter Firmen nach x Monaten.
+|36
+|-
+|[[Main/en/Autoclean unprotected|autoclean_unprotected]]
+|Lösche automatisch inaktive, ungeschützte Firmen nach x Monaten Inaktivität (oder x Monate, nachdem ihr Passwort automatisch gelöscht wurde).
+|12
+|-
+|[[Main/en/Autoclean novehicles|autoclean_novehicles]]
+|Lösche automatisch Firmen ohne Fahrzeuge nach x Monaten.
+|0
+|-
+|max_clients
+|Maximale Spieleranzahl auf dem Server.
+|10
+|-
+|max_companies
+|Maximale Firmenanzahl auf dem Server.
+|8
+|-
+|max_join_time
+|Maximale Zeit (ticks), in der der Client beitreten darf.
+|500
+|-
+|max_spectators
+|Maximale Anzahl von Zuschauern.
+|10
+|-
+|min_active_clients
+|Pausiert automatisch, wenn weniger Spieler auf dem Server sind, als angegeben.
+|0
+|-
+|net_frame_freq
+|Anzahl der Frames, bis ein Befehl (sichtbar) ausgeführt wird.
+|1
+|-
+|net_sync_freq
+|Anzahl der Frames, um zu überprüfen, ob ein Spiel noch synchron ist.
+|100
+|-
+|pause_on_join
+|Gibt an, ob der Server das Spiel pausieren soll, solange ein Client versucht beizutreten. Das könnte langsamen Spielern helfen.
+|on
+|-
+|rcon_pw
+|"Remote connection password", wird benutzt, um den Server zu steuern, während man als Client verbunden ist. Benutze '*', um rcon zu deaktvieren.
+|
+|-
+|restart_game_year
+|Automatischer Serverneustart, wenn der 1. Januar vom gewählten Jahr erreicht wurde. '0' deaktiviert die Funktion.
+|0
+|-
+|server_advertise
+|Gibt an, ob sich der Server am Masterserver anmelden soll, um in der Serverliste zu erscheinen.
+|on
+|-
+|server_ip
+|IP zu der der Server gebunden wird. Wird erst beim Neustart übernommen. Benutze 'all' oder '0.0.0.0', um ihn an irgendeine IP zu binden.
+|0.0.0.0
+|-
+|server_name
+|Name der Servers für Multiplayer.
+|
+|-
+|server_port
+|Server-Port-Nummer: Ändere den Port, wenn es Konflikte mit der Firewall oder anderen Programmen gibt. Wird erst beim Neustart übernommen.
+|3979 (TCP & UDP)
+|-
+|server_password
+|Benutze ein Serverpasswort, um deinen Server zu schützen. Nur Clients mit Passwort sind in der Lage mitzuspielen. Setze das Passwort auf '*', um es zu löschen.
+|
+|}
+
+===Andere Variablen===
+{| {{en/Wikitable}} width=100%
+|- style="background:#efefef"
+!width="225"|Variable
+!Beschreibung
+!width="90"|Standardwert
+|-
+|name
+|Dein Name für Mehrspielerspiele.
+|Player
+|-
+|company_pw
+|Dein Firmenpasswort. Nur Clients mit dem Passwort können beitreten. '*' löscht das Passwort.
+|
+|-
+|developer
+|Wert '2' leitet debugging-Informationen von der Konsole/Kommandozeile in die ingame-Konsole um.
+|1
+|}
+
+===Pathfindervariablen===
+Siehe [[Main/en/Yet Another Pathfinder]] für YAPF feineinstellungs-Variablen.
+
+[[Category:en/Console]] [[Category:de/Konsole]]
+[[Category:de/Mehrspieler]]
