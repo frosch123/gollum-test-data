@@ -1,0 +1,60 @@
+[[Translation:Main/en/NewGRF]]{{en/-}}{{de/Inhaltsverzeichnis}}
+
+{{todo|restliche Links fertig übersetzen}}
+
+NewGRF steht für "New Graphics Resource File" ("Neue Grafik Ressourcen Datei"). Dieses Format stellt eine allgemeine Schnittstelle zur Veränderung der Spiele OpenTTD und [[Main/de/TTDPatch|TTDPatch]] dar. Dies sollte nicht verwechselt werden mit [[Main/en/Playing with 32 bpp graphics| 32bpp Grafiken]] die lediglich bestehende 8bpp Grafiken ersetzen(bpp = bits per pixel; 32bpp bieten vereinfacht gesagt einen größeren Farb- und Kontrastumfang und harmonischere Farbverläufe).
+'''NewGRFs''' eröffnen die Möglichkeit sowohl komplett neue als auch Modifikationen bereits bestehender Grafiken und Eigenschaften für Fahrzeuge, Gebäude, Frachttypen, Schienen, Straßen, Objekte und Industrien zu definieren.
+Im Gegensatz zu den [[Main/de/Erweiterte Einstellungen|erweiterten Einstellungen]] die jederzeit während eines laufenden Spiels verändert werden können sollten NewGRFs '''vor''' Beginn eines neuen Spiels aktiviert werden um die korrekte Funktion zu ermöglichen. Seit Version 1.1 von OTTD ist es nicht mehr möglich NewGRFs nachträglich in ein bereits begonnenes Spiel einzufügen da dies sehr häufig zu Fehlfunktionen führte. Für Entwickler wurde eine Hintertür geschaffen die aber hier nicht näher beschrieben werden soll.
+
+Der Name "NewGRF" bezieht sich auf die neuen erweiterten Möglichkeiten im Vergleich zu herkömmlichen "grf" Dateien (=Transport Tycoon Grafik Ressourcen Datei). Das NewGRF Format ist weitgehend kompatibel für OpenTTD und TTDPatch und erlaubt weitgehende Veränderungensowohl des Aussehens als auch des Verhaltens der einzelnen Spielelemente.
+
+Bei Problemen sollte man einen Blick in die [[Main/de/NewGRF FAQ| NewGRF FAQ]] werfen.
+
+{{de/Während Übersetzung}}
+
+==Auswählen neuer Grafiksets (NewGRF)==
+=== Aus dem Internet ===
+Der einfachste und schnellste Weg zu neuen Grafiksets ist das [[Main/en/Online content|Herunterladen aus dem Internet]] über die entsprechende Programmfunktion in OpenTTD selbst die auch als "Bananas" bekannt ist. Die meisten Grafiksets sind so zugänglich. Außerdem existiert ein NewGRF-Entwickler-Forum [http://www.tt-forums.net/viewforum.php?f=26|Entwickler-Forum], wo weitere Grafiksets zu finden sind.
+=== Manuelle Installation ===
+Sollen Grafiksets von anderer Stelle verwendet werden, müssen diese manuell an der korrekten Stelle eingebunden werden. Ein Grafikset ist meist eine einzige Datei (Dateiendung: .grf) wie zum Beispiel: "grvts.grf" oder eine .tar Datei (umkomprimierte Containerdatei die z.B. auch die readme.txt und ähnliches enthalten kann). Um diese Grafiksets einzubinden:
+
+{{todo|Korrekte Pfadnamen für deutsche Windows/Linux/OSX-Installationen einfügen}}
+
+#Herunterladen des Grafiksets (die .grf oder .tar Datei)
+#Das Grafikset in den Installationsordner von OpenTTD einfügen.
+:*Meist etwa der folgende Pfad:
+::C:\Eigene Dateien\data (Windows 95, 98, ME)
+::C:\Dokumente und Einstellungen\<benutzername>\Eigene Dateien\OpenTTD\data (Windows 2000, XP)
+::C:\Benutzer\<benutzername>\Eigene Dokumente\OpenTTD\data (Windows Vista, 7)
+::~/.openttd/content_download (Linux, BSD)
+::~/Documents/OpenTTD/data (OSX)
+
+==Aktivieren neuer Grafiksets (NewGRF)==
+
+Achtung: Die Reihenfolge in der Liste der aktiven NewGRFs ist wichtig da diese von oben nach unten abgearbeitet wird. Daher können Veränderungen durch ein weiter oben in der Liste stehendes NewGRF durch ein weiter unten stehendes überschrieben werden. Meist sind entsprechende Hinweise in der Dokumentation (readme/liesmich Datei o.ä.) der jeweiligen NewGRFs zu finden. Ein Beispiel ist u.a. die Kombination der NewGRFs "Total Bridge Replacement Set (TBRS)" und "Total Town Replacement Set (TTRS)". Bei diesen muss TBRS nach TTRS geladen werden also weiter unten in der Liste stehen. Beachtet man dies nicht würden die vom TBRS bereitgestellten Brücken wieder mit TTRS-Brücken überschrieben werden.
+
+1.   Im Hauptmenü: klicke auf "NewGRF-Einstellungen".
+[[File:en/Hauptmenü.png|Hauptmenü (NewGRF Einstellungen)|center]]
+2.   Wähle NewGRFs aus der Liste der 'inactive NewGRFs files' per Doppelklick oder das Feld "Add". Auf kleineren Bildschirmen sieht dies wie folgt aus:
+[[File:en/NewGRF Einstellungen klein.png|normales Fenster für NewGRF Einstellungen |center]]
+und auf größeren Bildschirmen kann es komfortabler wie folgt angezeigt werden:
+[[File:en/NewGRF Einstellungen breit.png|breitere Ansicht des Fensters für NewGRF Einstellungen |center]]
+3.   Konfiguriere die Parameter des NewGRFs wenn nötig: Wähle das NewGRF in der Liste der 'active newgrf files' und klicke auf 'parameter'. Das sich öffnende Fenster kann dann zum Beispiel wie folgt aussehen:
+[[File:en/NewGRF Parameter.png|dieses Fenster öffnet sich wenn man auf "Parameter setzen" klickt|center]]
+4.   Optional kann man auch die Auswahl der NewGRFs mit ihren Parameter-Einstellungen als NewGRF Preset abspeichern. Somit können verschiedene NewGRF Setups gespeichert und später problemlos zum Erstellen neuer Spiele aufgerufen werden:
+[[File:en/NewGRF Einstellung speichern.png|hier kann der Name des Presets abgespeichert werden|center]]
+
+== Abschließende Bemerkungen ==
+Die hier ausgewählten NewGRFs werden bei Erstellung eines neuen Spiels berücksichtigt. Die Einstellungen haben aber keinen Einfluß auf bereits bestehende Spielstände weil die bei Spielbeginn verwendeten NewGRFs integraler Bestandteil des Spielstandes sind.
+
+
+== Siehe auch ==
+
+* [http://grfcrawler.tt-forums.net/ GRFCrawler] Eine zwar unvollständige aber dennoch sehr umfangreiche Sammlung verfügbarer NewGRFs
+* [http://newgrf-specs.tt-wiki.net/wiki/Main_Page NewGraphicSpecs] Spezifikationen des NewGRF Formats
+* [http://www.tt-forums.net/viewforum.php?f=66 'Englischsprachiges Forum zu NewGRFs].
+
+{{en/Navbox NewGRF}}
+
+[[Category:en/Settings & Preferences]]
+[[Category:en/NewGRF]]
