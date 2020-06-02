@@ -1,0 +1,72 @@
+{{es/Traducción|Development|20}}
+[[Translation:Main/en/Development]]
+<div style="background-color: #f1f2fe; border: 1px solid #c7c8fe; margin:0; padding: 1em 1em 1em 1em; text-align:left; border-bottom: none;">
+[[File:es/BlackBook.png|66px|left]]
+<strong style="font-size:1.4em; display:block">Manual de desarrollo para OpenTTD</strong>
+[[Main/es/OpenTTD|OpenTTD]] es un proyecto open source (código abierto), publicado bajo licencia [http://www.gnu.org/copyleft/gpl.html GPL]. Puede [http://svn.openttd.org/ ver el código fuente online] o descargar el último árbol usando [[Main/es/Preguntas frecuentes sobre desarrollo|SVN]]. Si modifica la fuente, puede enviar el archivo diff con los cambios al [http://bugs.openttd.org Patch tracker] (Gestor de parches).
+</div>
+{| cellspacing="3" class="mainpagetable" align="center" cellpadding="10px" style="margin:0;"
+|- valign="top" 
+|width="33%" style="border: 1px solid #c7c8fe; border-bottom: none;"|
+<font size="3">'''Desarrollo'''</font> <!-----------------------Developement--------->
+
+[[Main/es/Objetivos|Objetivos]] - objetivos de OpenTTD a largo plazo.
+[[Main/es/Desarrollos recientes y actuales|Desarrollos recientes y actuales]] - muestra la evolución del trunk (desarrollo principal) desde el último lanzamiento principal, así como los efectos de las branches (versiones de desarrollo paralelas al trunk) en nuestro repositorio [http://www.wikipedia.org/wiki/es:Subversion SVN].
+
+Los últimos cambios al árbol [[Main/en/FAQ development]] de OpenTTD están en el [http://cia.navi.cx/stats/project/OpenTTD cia.navi.cx service] ([http://cia.navi.cx/stats/project/OpenTTD/.rss?ver=2&medium=unquoted&limit=15 RSS feed also avaible])
+
+|width="33%" style="border: 1px solid #c7c8fe; border-bottom: none;"|
+<font size="3">'''Desarrollando código'''</font>  <!-----------------------Coding--------->
+
+*[[Main/en/Developers]] (Desarrolladores) de OpenTTD
+*[[Main/en/Coding style|Coding Style]] - Como desarrollar código para OpenTTD.
+*[[Main/en/GUI Style Guide|GUI Style guide]] - Look and feel of the interface.
+*[[Main/en/Coding Tools]] to build and debug OpenTTD
+*[[Main/en/Todo list]] - Colecciòn de los resultados de discusiones acerca de características todavía no implementadas.
+*[[Main/en/Roadmap]] - Vea que está planeado para futuras versiones.
+*[http://docs.openttd.org Doxygen] - Documentación acerca del código.
+*[[Main/en/Patch Checklist|Checklist for Patches]]
+*[http://bugs.openttd.org/ Bug tracker]
+
+|width="33%" style="border: 1px solid #c7c8fe; border-bottom: none;"|
+<font size="3">'''Subproyectos'''</font> <!-----------------------Subprojects--------->
+
+*[[Main/en/Graphics Development]] - Encuentra información acerca de los gráficos de 32bpp, newGrfs, sustitución de gráficos, etc.
+*[[Main/en/AI:Main Page|NoAI]] - a new framework for user-made AIs
+*[[Main/en/Sound Effects Replacement]] - Creating a set of replacement sound effects for the game
+*[[Main/en/Passenger and cargo destinations]] - A new way of handling cargo and passengers allowing specific destinations
+*[[Main/en/Passenger and cargo distribution]] - A new and better way of handling cargo and passengers allowing specific destinations
+|}  <!------------- 3th part ------------->
+{| cellspacing="3" class="mainpagetable" align="center" cellpadding="10px" style="background-color: #E7EBFF; border: 1px solid #c7c8fe; margin:0; border-top:none; padding:0; margin-bottom:2em"
+|- valign="top"
+|width="33%" style="border: 1px solid #c7c8fe;"|
+<font size="3">'''Documentación de desarrollo'''</font>  <!---------Development documentation--------->
+
+*[[Main/en/Development]]
+*[[Main/en/Doing an OpenTTD release]]
+*[[Main/en/Nightly build]]
+*[[Main/en/Compile Farm]]
+*[[Category/en/Compiling OpenTTD|Compiling OpenTTD]]
+*[[Main/en/OpenTTD Release History]]
+
+|width="33%" style="border: 1px solid #c7c8fe;"|
+<font size="3">'''Ayuda con el desarrollo'''</font>  <!------------- Help with coding ------------->
+
+In the list below are some tips, and helpful tidbits to help you code/debug and get your patches to be accepted swiftly and without problems to the source
+*[[Main/en/coding style]] - to keep a coherent feel of the code, we ask you to code your patches in the following style
+*[[Main/en/Debugging]]
+*[[Main/en/Strings]] - with the string system being not too userfriendly, this might help you on your way
+
+|width="33%" style="border: 1px solid #c7c8fe;"|
+<font size="3">'''Varios'''</font>  <!------------- Miscellaneous ------------->
+
+* [http://www.openttd.org OpenTTD website]
+* [http://www.tt-forums.net/viewforum.php?f=55 OpenTTD forum]
+* [http://cia.vc/stats/project/OpenTTD CIA Stats]
+* [[Main/en/Requested features]]
+* [[Main/en/Rejected features|Rejected features]]
+* [[Main/en/Miscellaneous suggestions]]
+|}
+
+
+[[Category:es/Desarrollo]]
