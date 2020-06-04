@@ -1,0 +1,43 @@
+[[Translation:Main/en/AI:WrightAI]]
+{{en/-}}
+{{fr/NonIA}}
+
+WrightAI est une IA d'exemple simple. Actuellement, il y a bien d'autres IAs meilleurs disponibles, mais si vous voulez commencer à écrire votre propre IA, c'est un bon point de départ.
+WrightAI a été la première IA fonctionnelle pour le framewoerk NonIA qui a réellement fait quelque chose d'utile, et c'est de là que vient son nom (wright est un archaïsme anglais pour artisan ou constructeur).
+
+== Description de fonctionnement ==
+La première chose qu'il fait après le démarrage est de dormir un tic; cela est dû au fait que créer une compagnie d'IA est vu comme un DoCommand; vous ne pouvez donc pas exécuter d'autre DoCommands dans ce tic. Mais si vous le faites, OpenTTD lèvera une erreur de déclaration et plantera.
+
+Après cela, il s'appelle lui-même ''WrightAI #x'' (où x est un nombre libre) et affiche un message de bienvenue:
+
+    
+   /* Lui donne un nom */
+   if (!AICompany.SetCompanyName("WrightAI")) {
+      local i = 2;
+      while (!AICompany.SetCompanyName("WrightAI #" + i)) {
+         i++;
+      }
+   }
+   this.name = AICompany.GetCompanyName(AICompany.MY_COMPANY);
+   
+   /* Dit bonjour à  l'utilisateur */
+   print(this.name + ": Bienvenue à WrightAI. Je vais construire des aéroports tout le temps.");
+
+Il contracte alors un prêt, passe un tic du système et calcule le temps pendant lequel il doit s'endormir chaque fois et fait la boucle:
+   while(true) {
+      /* La boucle est exécutée ici */
+      Sleep(sleepingtime);
+      ticker += sleepingtime;
+   }
+
+La boucle contient les choses suivantes:
+* Au premier tic, et après tous les 1000 tics, elle essaye de construire un trajet si elle a assez d'argent.
+* Elle vérifie tous les aéroports et leurs véhicules tous les 2000 tics.
+* Elle tente de rembourser le prêt tous les 5000 tics.
+* Elle vérifie les nouveaux événements (avions écrasés) tous les 100 tics.
+* Après cela, elle se rendort par défaut de 100 tics puis se réveille pour répéter ces choses.
+
+Pour trouver où construire un aéroport, il construit une grille sur les 10 meilleurs villes avec une population de plus de 500, et vérifie si il peut construire un aéroport sur une de ces cases de la grille.
+
+== Voir aussi ==
+* [http://noai.openttd.org/projects/show/ai-wrightai Site de développement]
