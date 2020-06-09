@@ -1,0 +1,65 @@
+[[Translation:Main/en/OpenTTDDevBlackBook/Network/UDP]] {{en/-}}
+<!--{{en/DevDoc}}-->{{pl/Rozwój}}
+
+==Open TTD Protokół Sieciowy - UDP==
+===Lista pakietów===
+Lista pakietów jest uporządkowana w taki sam sposób jak '''PacletUDPType''' enum z ''network/core/udp.h''
+{| border="1"
+!Nazwa pakietu
+!Wysłane przez
+!Powód
+|-
+|PACKET_UDP_CLIENT_FIND_SERVER
+|Client
+|Pyta serwer gry o informacje o grze
+|-
+|PACKET_UDP_SERVER_RESPONSE
+|Server
+|Odpowiedź serwera gry z informacjami o grze
+|-
+|PACKET_UDP_CLIENT_DETAIL_INFO
+|Client
+|Pyta serwer gry o szczegóły gry, na przykład firmy
+|-
+|PACKET_UDP_SERVER_DETAIL_INFO
+|Server
+|Odpowiedź serwera gry na temat szczegółów gry, takich jak firmy
+|-
+|PACKET_UDP_SERVER_REGISTER
+|Server
+|Pakiet, aby zarejestrować się na serwerze głównym
+|-
+|PACKET_UDP_MASTER_ACK_REGISTER
+|Master Server
+|Pakiet wskazujący rejestrację powiódł się
+|-
+|PACKET_UDP_CLIENT_GET_LIST
+|Client
+|Żądanie listy serwerów z serwera głównego
+|-
+|PACKET_UDP_MASTER_RESPONSE_LIST
+|Master Server
+|Odpowiedź z serwera głównego za pomocą adresu IP serwera + portu
+|-
+|PACKET_UDP_SERVER_UNREGISTER
+|Server
+|Prośba o usunięcie z listy serwerów
+|-
+|PACKET_UDP_CLIENT_GET_NEWGRFS
+|Client
+|Żądanie nazwy listy GRF (GRF_ID i MD5)
+|-
+|PACKET_UDP_SERVER_NEWGRFS
+|Server
+|Wysyła listę żądanych NewGRF.
+|-
+|PACKET_UDP_END
+|None
+|ZAWSZE musi znajdować się na końcu tej listy !! (period)
+|}
+
+===Format pakietu===
+===Enumerate Listy Server`a===
+===Enumerate Informacja Firmy===
+<!--[[Category:en/Development]][[Category:en/OpenTTDDevBlackBook|N]]-->
+[[Category:pl/Rozwój]][[Category:pl/OpenTTDDevBlackBook|N]]
