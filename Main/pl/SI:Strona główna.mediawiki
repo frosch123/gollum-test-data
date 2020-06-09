@@ -1,0 +1,41 @@
+<!--{{note|The user page is here: [[Main/en/AI settings]]}}-->
+{{informacja/Pl|Strona użytkownika jest tutaj: [[Main/pl/Ustawienia SI|Ustawienia SI]]}}
+[[Translation:Main/en/AI:Main Page]]{{en/-}}
+<!--{{en/NoAI}}-->
+{{pl/NoAI}} 
+<!-- Template:NoAI/Pl -->
+Witamy w rozwoju AI. Począwszy od wersji 0.7.0 każdy użytkownik może stworzyć własną sztuczną inteligencję. Zapewniamy nie tylko czysty i prosty interfejs API, ale także pozwalamy tworzyć sztuczną inteligencję w skryptach. Powinno to umożliwić każdemu, kto ma trochę wiedzy programistycznej, stworzenie całkiem dobrych sztucznej inteligencji. Powinno to również stanowić wyzwanie dla ludzi do budowania lepszych AI niż te, które mieliśmy w wersji 0.6. Ta strona mówi ci, jak to zrobić.
+
+Dla wszystkich stron obowiązuje zasada: tam, gdzie podano przykłady, użyjemy Squirrel. Sugerujemy wszystkim, którzy chcą napisać SI, aby przeczytać [[Main/pl/SI:Introduction|Wprowadzenie]] jak to wyjaśni podstawową koncepcję.
+
+== Tutoriale ==
+* [[Main/pl/SI:Introduction|Wprowadzenie do pisania SI dla OpenTTD]]
+* [[Main/pl/SI:Basics|Podstawy pisania SI]]
+* [[Main/pl/SI:Need To Know|Rzeczy, które musisz wiedzieć o pisaniu SI]]
+* [[Main/pl/SI:SQ pitfalls|Częste pułapki podczas pracy ze Squirrel]]
+* [[Main/pl/SI:Lists|Wprowadzenie do list (TownList, TileList, ...)]]
+* [[Main/pl/SI:Last Error|Dowiedz się, jak pobrać komunikaty o błędach po nieudanych komendach kompilacji]]
+* [[Main/pl/SI:Trams|Tramwaje i wszystko związane]]
+
+== API Documentacja ==
+* OpenTTD AI API Docs: https://docs.openttd.org/ai-api/
+* [[Main/en/AI:Doxygen Documentation|Adding Doxygen documentation to your AI library]]
+
+== AIs ==
+=== Przykłady ===
+* [[Main/pl/SI:WrightAI|WrightAI]] - Buduje tylko trasy samolotowe .
+* [[Main/pl/SI:TestAI|TestAI]] - Minimalna ilość orzechów main.nut i info.nut, na których opiera się twoja sztuczna inteligencja.
+
+=== AI użytkownika ===
+Aby pobrać AI stworzone przez użytkownika, użyj [[Main/pl/Serwis Dodatków|serwis dodatków online]] lub alternatywnie spójrz na [http://www.tt-forums.net/viewforum.php?f=65 NoAI forum].
+
+=== Comparison of AIs ===
+* [[Main/pl/Porównanie AI|Porównanie AI]]
+* [[Main/en/AI:Test AIs|Test AIs]]
+
+<!--{{en/Feature|0.7}}-->{{pl/Zgodne Wersje|0.7}}
+
+== Game Scripts ==
+Jeśli chcesz zacząć pisać skrypty gry, jest teraz specjalny artykuł na ten temat: [[Main/pl/GS|Game Skrypty]]
+
+[[Category:pl/Rozwój]] [[Category:pl/NoAI]]
