@@ -1,0 +1,110 @@
+[[Translation:Main/en/AI:SQ pitfalls]]
+{{en/-}}
+<!--{{en/NoAI}}-->{{pl/NoAI}}
+
+== require() ==
+
+Aby dołączyć pliki do <code>main.nut</code> , możesz użyć <code>require()</code> . Ta funkcja działa względnie z bieżącego pliku, więc powinna być łatwa w użyciu. Jest jednak kilka rzeczy, o których należy pamiętać:
+
+* Zawsze zawiera plik w przestrzeni globalnej. To nie jest kod. Tak więc plik musi zawierać pełny kod (rzadko ludzie to zauważą, ale ważne jest, aby wiedzieć) :))
+
+== Klasy ==
+
+Upewnij się, że zainicjowałeś wszystkie swoje niestatystyczne zmienne klas w konstruktorze. Podanie im wartości podczas ich deklarowania nie wystarczy, jeśli utworzysz wiele instancji !! Jeśli nie uda się zainicjować zmiennej w konstruktorze, może to mieć dziwną wartość, na przykład kopiowanie wartości z innej instancji klasy. Poniższe pole pokazuje prawidłowy sposób inicjowania zmiennych. Ważne jest to, że wszystkie zmienne otrzymują wartość w konstruktorze. 
+
+ class Developer
+ {
+     name = null;
+     age  = null;
+     constructor() {
+         name = "Unknown Developer";
+         age  = 25;
+     }
+     function SetName(name);
+     // ...
+ }
+
+== Deklaracje funkcji ==
+Zauważ też, że deklaracje funkcji w klasie zdarzają się ''poza'' ('outside') blokiem należącym do klasy. 
+ class Util{
+     function Util::GetMsg(){
+         return "Test";
+     }	
+ }
+spowoduje awarię AI podczas ładowania, podczas gdy 
+ class Util{
+     	
+ }
+ function Util::GetMsg(){
+    return "Test";
+ }
+
+będzie działać zgodnie z oczekiwaniami.
+
+== Squirrel nie ma sposobu na oznaczenie metod jako statycznych lub prywatnych ==
+
+W innych językach obiektowych możesz ograniczyć sposób wywoływania funkcji podczas ich deklarowania. W wiewiórce jedyną różnicą między funkcją instancji a funkcją statyczną jest sposób ich wywoływania. W innych językach możesz także ustawić metody publiczne lub prywatne. Wszystkie metody wiewiórki są publiczne.
+
+Istnieją dwa sposoby wywoływania funkcji. Możesz zadzwonić do nich z  '''instancji''' ''(instance)'' lub możesz nazwać je '''statycznie''' ''(staticly)'' . Kiedy wywołujesz funkcję z instancji, albo poprzedzasz połączenie słowem kluczowym '''this''' ''(to)'', albo wcale go nie poprzedzasz.
+
+Metody AAIFoo.Valuate() zawsze wywołują twoje metody statycznie. Więc każdy niestandardowy rzeczoznawca powinien być niezależny.
+
+'''instance'''
+  function MyNewAI::Start()
+  {
+    this.MainLoop();
+    /* MainLoop(); would also work. '''this.''' is usually optional. */
+    
+    /* Note that this sample code won't actually get called, because MainLoop() does not return ;-) */
+    local otherClass = MyOtherClass();
+    otherClass.SomeFunction(); // Calls the function with the instance method on another class.
+  }
+  
+  function MyNewAI::MainLoop()
+  {
+    while(true) { // Loop forever.
+      this.Sleep(10);
+    }
+  }
+  
+Gdy wywołujesz metodę z instancji, metoda ma wszystkie zmienne i inne informacje dostępne dla tej instancji klasy. Więc wiersz this.Sleep(10) będzie działał poprawnie, ponieważ AIController ma metodę sleep dla twojej klasy. Pamiętaj, że twoja główna klasa jest rozszerzeniem AIController, a więc ma wszystkie swoje umiejętności, jak również wszelkie inne.
+
+Aby wywołać instancję statyczną, należy poprzedzić metodę nazwą klasy.
+
+'''static'''
+  function MyNewAI::Start()
+  {
+    MyNewAI.MainLoop();
+    MyOtherClass.SomeFunction(); // Calls the otherclass function staticly.
+  }
+  
+  function MyNewAI::MainLoop()
+  {
+    while(true) { // Loop forever.
+      AIController.Sleep(10); // "'''this'''" no longer exists in static context.
+    }
+  }
+  
+Pamiętaj, że twoje funkcje można wywoływać w dowolny sposób. Od osoby dzwoniącej zależy, jak korzystać z tej funkcji.
+
+== Instrukcje przydziału, które zajmują dużo czasu ==
+Załóżmy, że ''good_pairs'' jest zmienną składową twojej głównej klasy. Załóżmy, że istnieje metoda  ''FindGoodPairs'' , która wyszukuje nowe pary i że ta metoda wymaga czasu.
+
+Możesz pomyśleć, że to dobry sposób na aktualizację good_pairs:
+  this.good_pairs = FindGoodPairs();
+
+Now lets assume FindGoodPairs look some thing like this:
+  function FindGoodPairs() {
+    local result = [];
+    // .. time consuming code that finds good pairs
+    return result;
+  }
+
+Teraz, jeśli Save() jest wywoływane od momentu wywołania FindGoodPairs(), ale zanim zwróci, good_pairs nie będzie przechowywał starego wyniku poprzedniego wywołania FindGoodPairs, zamiast tego zachowa jakiś częściowy wynik z metody FindGoodPairs.
+
+Nie mogę dokładnie powiedzieć, co się stanie dla różnych sposobów pisania FindGoodPairs, tylko że znalazłem błędy w skryptach związanych z tą rzeczą.
+
+Sposobem na obejście tego jest zmiana kodu, który wywołuje FindGoodPairs w tym celu:
+
+  local temp = FindGoodPairs();
+  this.good_pairs = temp;
