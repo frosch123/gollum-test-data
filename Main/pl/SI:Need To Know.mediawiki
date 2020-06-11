@@ -1,0 +1,197 @@
+[[Translation:Main/en/AI:Need To Know]]
+{{en/-}}
+<!--{{en/NoAI}}-->{{pl/NoAI}}
+
+==Testowanie AI==
+
+===Jak uruchomić tylko moją AI? ===
+
+Najprostszym sposobem jest ustawienie liczby AI na zero w oknie dialogowym Ustawienia AI/Skrypt Gry oraz w nowym typie gry w konsoli:
+
+ start_ai <the name of your AI>
+
+Wybrana sztuczna inteligencja rozpocznie się natychmiast.
+
+Aby wyświetlić listę wszystkich AI w grze, wpisz w konsoli:
+
+ list_ai
+
+Dostępna jest także lista AI wykrytych przez OpenTTD via:
+
+ ./openttd --help
+
+=== Ładowanie i restartowanie AI ===
+
+Wszystkie AI są ponownie ładowane po rozpoczęciu nowej gry. Nie ma potrzeby ponownego uruchamiania gry; porzucenie obecnego poziomu i rozpoczęcie od nowa jest zwykle najłatwiejszym sposobem na ponowne uruchomienie sztucznej inteligencji z mapy scratch (spróbuj <code>newgame</code> z konsoli) lub załadowanie konfiguracji scenariusza za każdym razem tak samo. Okno debugowania AI umożliwia również restartowanie poszczególnych AI.
+
+Aby natychmiast załadować określony scenariusz, użyj:
+
+ ./openttd -g relative/path/to/scenario.scn
+
+=== Panel Logging <small>''(Logowania)''</small> i Debugowania ===
+
+Panel AI Debugowania jest dostępny z Informacji o obszarze lądowym (czerwony znak zapytania) oznaczonej "Konsola Debugowania SI" ''('AI Debug Console')''. Wszystkie wyjścia <code>AILog.XXX()</code> znajdują się tutaj i można je wybrać według AI. AI można również zrestartować tutaj. Podczas ponownego uruchamiania firma tego AI jest usuwana (wraz z całą jego własnością) i uruchamiana jest nowa AI kontrolowana przez ten sam skrypt (który jest ponownie ładowany z dysku). Dlatego przy zmianie AI wystarczy nacisnąć przycisk Przeładuj, aby uruchomić nową sztuczną inteligencję.
+
+[[File:en/Ai-debug-panel.png|frame|none|AI Debug Panel]]
+
+==== Przerwij komunikat w dzienniku log ====
+<!--{{en/Feature|1.1}}-->{{pl/Zgodne Wersje|1.1}}
+Od wersji r19544 na dole panelu debugowania dodano kilka nowych elementów sterujących do łamania AI, gdy pojawią się pewne komunikaty dziennika. Aby go użyć, wpisz ciąg znaków w polu tekstowym, a gdy AI wydrukuje komunikat dziennika pasujący do tego ciągu, AI zostanie zawieszony po wywołaniu AILog, a na końcu bieżącego tiku OpenTTD zostanie wstrzymany. Po naciśnięciu przycisku kontynuowania lub zwykłego przycisku pauzy AI będzie nadal działać. Jeśli chcesz tymczasowo wyłączyć dopasowanie bez usuwania pola edycji, możesz użyć małego przycisku przełączania po lewej stronie pola edycji.
+
+Aby włączyć tę funkcję, musisz włączyć ustawienie "gui.ai_developer_tools" enabled. Aby ją włączyć, możesz otworzyć konsolę w grze i wpisać "set gui.ai_developer_tools 1".
+
+[[File:en/AIDebug break on.png|frame|none|AI Debug Panel - zatrzymanie na ciągu]]
+
+==== AIController::Break ====
+[http://noai.openttd.org/api/trunk/classAIController.html#9a99eff898d772565ee61029c596f484 Z dokumentacji]: Przerwij wykonywanie skryptu, gdy aktywne są narzędzia programistyczne skryptów (ustawienie "gui.ai_developer_tools" jest włączone). W przypadku innych użytkowników nic się nie stanie po wywołaniu tej funkcji. Aby wznowić skrypt, kliknij przycisk Kontynuuj w oknie debugowania AI.
+
+==== Wykorzystanie Konsoli Programisty ====
+
+Dostęp do konsoli uzyskuje się za pomocą klawisza `(obok "1" ) na klawiaturze i pojawia się w górnej części ekranu. Można to przewijać za pomocą Shift + Page Up/Down .
+
+Aby uzyskać osobne okno (tylko Windows), użyj parametru <code>-d</code> (użyj <code>-d script=5</code> , aby uzyskać tylko informacje AI) na skrócie:
+
+ ./openttd -d
+
+Zapewnia to wyjście (tylko Windows):
+
+[[File:en/Openttd -d.png|frame|none|Przykład Zuu dotyczący wersji -d konsoli programisty wyświetlającej błędy AI.]]
+
+W systemie Linux użycie <code>-d script=5</code> wyśle ​​wszystkie informacje na standardowe wyjście.
+
+==== Logging ''(Logowanie)'' ====
+
+<code>AILog.XXX()</code> polecenia mogą być wysyłane bezpośrednio do konsoli programisty przez:
+
+ ./openttd -d script=5
+ openttd.exe -d script=5
+
+Lub wpisując <code>debug_level script=5</code> w konsoli.
+
+== Fundamenty AI ==
+
+=== GetTick() ===
+
+Po pierwszym wywołaniu  <code>Start()</code> , <code>GetTick()</code> zawsze zwraca 1. Nie jest to ważna wartość. Ma on jedynie na celu wskazanie czasu, ponieważ zawsze uważamy, że warto wiedzieć, kiedy sztuczna inteligencja wypluła wiadomość (czy to było dawno temu, czy niedawno). To powiedziawszy, oczywiście chcesz wiedzieć, kiedy jego wartość zmienia się w grze:
+
+Oczywiście zmienia się to, gdy wykonasz <code>Sleep()</code> i z dokładną wartością określoną w <code>Sleep()</code> . Ale zmienia się również po wykonaniu polecenia. Musi to zrobić w sieci, aby coś zrobić, a jeśli chcesz wiedzieć, czy coś naprawdę zbudowano, musimy poczekać, aż otrzymamy sygnał z serwera. Teraz, aby ułatwić Ci życie, stworzyliśmy grę jedno i wieloosobową: oba opóźniają się. W trybie dla jednego gracza jest to zawsze 1 tik, chyba że skonfigurowałeś go za pomocą <code>SetDelay()</code> . W grze wieloosobowej jest to co najmniej 1 tik, ale zależy to od konfiguracji serwera. Jeśli ustawisz <code>SetDelay()</code> na niższą niż konfiguracja serwera, konfiguracja serwera wygrywa, a także <code>SetDelay()</code> .
+
+Co to znaczy?:
+
+ GetTick() -> 3
+ SetCompanyName()
+ GetTick() -> 4 (or higher)
+
+Jak można zauważyć, nie można używać <code>GetTick()</code> do niczego innego niż debugowanie. To nie jest dobry wskaźnik czasu, nie można robić czegoś co 10 tyknięć czy coś, nic z tego. Musisz sam stworzyć taki system.
+
+=== Kody ''(Opcodes)''===
+
+Pamiętasz w [[Main/en/SI:Introduction/Pl#Twoje Pierwsze AI|Introduction]]  , kiedy powiedzieliśmy ci, że AI zostanie zawieszone po X kodach? To była półprawda. Aby zagłębić się trochę w szczegóły, kod operacyjny to w zasadzie jedna instrukcja squirrel . Struktura po prostu liczy liczbę instrukcji squirrel, które wykonuje twoja sztuczna inteligencja, i uśpia ją po określonej ilości. Podstępne w tym jest to, że można wywołać kod C++ z poziomu squirrel, których instrukcje nie są liczone, ponieważ, cóż, to nie jest squirrel.
+
+Na przykład, gdybym grał na mapie 2048 x 2048 i używał Valuatora do wyceny wszystkich kafelków na mapie za pomocą kalkulatora napisanego w C++, ukradłbym wszystkie zasoby procesora i zawiesiłby grę na jakiś czas. (Dzięki [http://www.tt-forums.net/viewtopic.php?p=892576#p892576 Morloth] za wyjaśnienie i przykład!)
+
+== Mechanika gry ==
+
+=== Współrzędne mapy ===
+
+[[File:en/Ai-placed-coordinate-of-airport.png|frame|right|AI umieściło to lotnisko, używając współrzędnej w prawym górnym rogu, która jest również jego zwróconą lokalizacją. Rozmiar lotniska wynosi X=4, Y=3]]
+
+Współrzędne mapy (X, Y) są wykonywane od góry do dołu - najwyższa współrzędna to (0,0), najniższa współrzędna to (Max_X-1, Max_Y-1). X zwiększa się, przechodząc w SW, a Y zwiększa się, przechodząc w SE. Za każdym razem, gdy zwracany jest więcej niż jeden obiekt wymiaru płytki, będzie to najwyższa współrzędna górna, zmierzająca w kierunku prawego górnego rogu.
+
+Jednak AI nie może uzyskać dostępu do wszystkich współrzędnych jako kafelków. Zewnętrzna krawędź mapy jest zarezerwowana jako płytki, których nie można zbudować. Są to kafelki, w których wartość X lub Y wynosi 0, Max_X-1 (jeśli X) lub Max_Y-1 (jeśli Y). Interfejs API potraktuje płytki o tych współrzędnych jako nieprawidłowe.
+
+To zachowanie różni się jednak, jeśli włączona jest opcja freeform_edges. Jeśli freeform_edges jest wyłączony, wówczas górne dwie krawędzie (te, gdzie X lub Y wynosi 0) stają się dostępne.
+
+Zatem przy włączonych elementach freeform najwyższy kafelek, jaki AI może użyć, to (1, 1). Ale przy wyłączonych elementach freeform najwyższy kafelek to (0, 0).
+
+Najniższy kafelek dostępny dla AI to zawsze (Max_X-2, Max_Y-2).
+
+Aby uzyskać Max_X i Max_Y, można użyć odpowiednio funkcji<code>AIMap.GetMapSizeX()</code> i <code>AIMap.GetMapSizeY()</code> .
+
+Gdy używasz <code>AITile.IsBuildableRectangle</code> z [[Main/pl/SI:Lists|Listy]] , lista będzie zawierać te kafelki, w których możesz zbudować obiekt o określonym rozmiarze, w którym zwrócona płytka jest tą o najniższej wartości Wartość X i Y prostokąta (a raczej: kafelek najbardziej na północ).
+
+=== Obliczenia odległości ===
+
+Wszystkie odległości w grze wykorzystują obliczenia [http://en.wikipedia.org/wiki/Taxicab_geometry Manhattan distance] , więc odległość między (3,3) a (5,5) obliczona przez grę wynosi 4:
+ abs(3-5)  + abs(3-5) = 4
+Użyj <code>AITile.GetDistanceManhattanToTile</code> , aby uzyskać odległość między kafelkami.  <code>AITile.GetDistanceSquareToTile</code> jest znacznie mniej potrzebny, obliczając tę ​​samą odległość co 8:
+ (3-5)^2 + (3-5)^2 = 8
+
+Odległość może nie być dokładnie taka, jak "samolot leciałby" ''(plane would fly)'' , ponieważ samoloty, łodzie i pociągi z prawidłowymi torami mogą poruszać się po przekątnej, zmniejszając bezpośrednią odległość między płytkami. Autobusy zawsze muszą poruszać się na odległość Manhattanu, ponieważ nie mają one rodzaju ukośnych dróg. W przypadku sztucznej inteligencji prawie zawsze będziesz chciał użyć  <code>AITile.GetDistanceManhattanToTile</code> , ponieważ jest to funkcja używana wewnętrznie przez OpenTTD do obliczania odległości.
+
+==== Arytmetyka kafla ''(tile)'' ====
+
+W ramach różnych aplikacji (np. Odnajdywania ścieżek ~ ''pathfinding'') AI będzie musiała móc poruszać się po mapie. Ze względu na sposób reprezentowania wskaźników kafelków można wykonać prostą arytmetykę na indeksie kafelków, aby znaleźć nowy kafelek względem jego pozycji. Dodanie lub odjęcie wyniku <code>AIMap.GetTileIndex(x, y)</code> do kafelka spowoduje wyświetlenie indeksu kafelków  ''x'' i ''y'' z pierwotnej pozycji.
+
+Na przykład poniższy fragment kodu utworzy listę kafelków bezpośrednio przylegających do ''tile''...
+
+ local adjacent = AITileList();
+ adjacent.AddTile(tile - AIMap.GetTileIndex(1,0));
+ adjacent.AddTile(tile - AIMap.GetTileIndex(0,1));
+ adjacent.AddTile(tile - AIMap.GetTileIndex(-1,0));
+ adjacent.AddTile(tile - AIMap.GetTileIndex(0,-1));
+
+Ten fragment tworzy listę zawierającą wszystkie kafelki w obszarze kwadratu 11x11 pośrodku ''tile''...
+
+ local area = AITileList();
+ area.AddRectangle(tile - AIMap.GetTileIndex(5, 5), tile + AIMap.GetTileIndex(5, 5));
+
+Ponieważ obiekt Tile w C++ jest tylko liczbą całkowitą, można owijać brzeg mapy za pomocą tej sztuczki. Aby uniknąć owijania się wokół krawędzi mapy, należy sprawdzić odległość do nowej płytki i upewnić się, że znajduje się w oczekiwanej odległości.
+
+=== Ładunki ===
+
+CargoID, jak każdy identyfikator, jest indeksem. Sam indeks nic nie znaczy, jest tylko wskaźnikiem wartości w tablicy, aw tym przypadku tablicy ładunku. Główny problem z Cargo polega na tym, że nie można ufać wartości oznaczającej coś we wszystkich przypadkach. NewGRF są bardzo potężne i umożliwiają zmianę ładunków na różne sposoby. Zwykle CargoID 0 reprezentuje Pasażerów, ale w przypadku pojedynczego NewGRF można to zmienić, powiedzmy, Węgiel. Teraz jest trudna część tego wszystkiego: nie możesz już transportować tego ładunku zi do miast. Jak więc upewnić się, że twoja SI jest wystarczająco kompatybilna, aby działała we wszystkich przypadkach?
+
+Powiedzmy, że chcesz przewozić rzeczy z jednego miasta do drugiego. Wtedy najprawdopodobniej nie obchodzi cię, czy to pasażerowie, czy poczta, tylko ta, która daje ci największy zysk, prawda? Cóż, w tym przypadku jest to poczta, ale jak się dowiedzieć?
+
+Najpierw utwórz listę ładunków:
+
+ local list = AICargoList();
+ 
+Teraz filtruj to, czego chcemy. Chcemy przesyłek nie-towarowych (krótko: poczta, pasażerowie, ... wszystko, co nie trafia do przemysłu).
+
+ list.Valuate(AICargo.IsFreight);
+ list.KeepValue(0);
+
+Następnie chcemy tego, który jest najbardziej opłacalny dla danej długości (10 płytek w ciągu 2 dni to tutaj używamy, ale używaj tego, co kiedykolwiek chcesz):
+
+ list.Valuate(AICargo.GetCargoIncome, 10, 2);
+
+Teraz najlepszym ładunkiem do transportu jest pierwszy wpis na liście:
+
+ local cargo = list.Begin();
+
+Korzystając z tej metody, możesz uzyskać inne rodzaje ładunku podczas ładowania niektórych NewGRF. Niemniej jednak zawsze istnieje ładunek, który można przewieźć zi do miast, i zawsze taki, który jest najbardziej opłacalny. Dlatego nie jest ważne, czy są to pasażerowie, czy nie. Nie ma znaczenia, co twoja AI transportuje, o ile przynosi zysk (>=20k USD).
+
+
+Oczywiście możliwe jest również znalezienie ładunku na podstawie klasy ładunku. Nie używaj po prostu wartości '0' dla pasażerów, może ona nie obowiązywać dla wszystkich NewGRF . Bezpiecznie jest znaleźć ładunek należący do <code>AICargo.CC_PASSENGERS</code> . Aby dać prosty fragment kodu, który to ilustruje:
+
+ local list = AICargoList();
+ local pass_cargo = -1;
+ for (local cargo = list.Begin(); !list.IsEnd(); cargo = list.Next()) {
+   if (AICargo.HasCargoClass(cargo, AICargo.CC_PASSENGERS)) {
+     pass_cargo = cargo;
+     break;
+   }
+ }
+ if (pass_cargo == -1) AILog.Error("Your game doesn't have any passengers cargo, and as we are a passenger only AI, we can't do anything");
+
+Alternatywny sposób:
+
+ local cargoList = AICargoList();
+ cargoList.Valuate(AICargo.HasCargoClass, AICargo.CC_PASSENGERS);
+ cargoList.KeepValue(1);
+ if (cargoList.Count() == 0) AILog.Error("Your game doesn't have any passengers cargo, and as we are a passenger only AI, we can't do anything");
+ local paxCargo = cargoList.Begin();
+
+Na koniec albo dał błąd, albo pass_cargo jest wartością pierwszego ładunku należącego do klasy <code>CC_PASSENGERS</code> . Przy pomocy Valuatora możliwe są bardziej złożone rozwiązania i stwierdzenie, że ładunek należący do klasy <code>CC_PASSENGERS</code> daje największe zyski. Oczywiście bez żadnych NewGRF zawsze są to Pasażerowie.
+
+==== Dworzec autobusowy lub stacja ciężarówki ====
+
+Jest jeden prosty sposób, aby dowiedzieć się, czy ładunek, który chcesz przewieźć, powinien trafić na dworzec autobusowy lub ciężarówkę. I jest to najbardziej oczywiste: jeśli ładunek należy do klasy <code>CC_PASSENGERS</code> , potrzebuje dworca autobusowego. Wszystkie pozostałe skrzynie wymagają stacji ciężarówek. Więc:
+
+ local truck_station = !AICargo.HasCargoClass(cargo, AICargo.CC_PASSENGERS);
+
+=== Miejscowości ===
+
+Jeśli kafelek nasion miasta nie został zniszczony (''very'' rzadkie zdarzenie), kafelek zwrócony przez <code>AITown.GetLocation()</code> jest '''zawsze''' kafelkiem drogi. Pamiętaj, że nie wszystkie kafelki drogowe w mieście mają zagwarantowane połączenie z kafelkiem nasion.
