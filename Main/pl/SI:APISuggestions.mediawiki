@@ -1,0 +1,26 @@
+[[Translation:Main/en/AI:APISuggestions]] {{en/-}}
+<!--{{en/NoAI}}-->{{pl/NoAI}}
+
+Oto lista sugestii dotyczących rozszerzenia/zmiany interfejsu API AI. Dodaj coś do tej listy tylko po omówieniu tego w  [http://www.tt-forums.net/viewforum.php?f=65 NoAI subforum] . Pamiętaj, że nie wszystko na tej liście jest gwarantowane, oznacza to tylko, że pomysł nie został bezpośrednio odrzucony po pierwszej dyskusji. Ponadto niektóre z tych sugestii są dobre, ale mogą wymagać innej nazwy. We wszystkich przypadkach jest to możliwe do wdrożenia.
+
+*ChangeServicingInterval
+*Sprawdź vehicles/stations należące do innych firm
+*AIEventVehicleHasVoidOrder (nie jestem pewien, czy jest to naprawdę potrzebne)
+
+* Uzyskaj roczny koszt utrzymania posiadania środka transportu na stacji. http://www.tt-forums.net/viewtopic.php?p=857924#p857924
+* Uzyskaj koszt budowy stations/depots/waypoints
+* Uzyskaj dane z okna ekonomicznego, aby oszacować, jak szybko firma zarobi X pieniędzy
+
+* AICompany.IsTownOwner(company_id) - Abyś mógł ustalić, czy coś należy do firmy czy miasta. http://www.tt-forums.net/viewtopic.php?p=862578#p862578
+
+* AIVehicle.GetDirection(vehicle_id) http://www.tt-forums.net/viewtopic.php?p=874821#p874821
+* AIStation.IsCargoAccepted
+
+* AIEngine.GetWeightOfFullyLoaded(engine_id) http://www.tt-forums.net/viewtopic.php?p=886469#p886469
+
+* AIMap::DistanceMin(TileIndex tile_from, TileIndex tile_to) http://www.tt-forums.net/viewtopic.php?p=887204#p887204
+
+* Właśnie doszedłem do punktu, w którym moja AI zaczęła transportować towary do miasta. W pewnym momencie pojawiła się wiadomość, że stacja nie przyjmuje już towarów, a moje ciężarówki będą jeździć bez rozładunku. Byłoby bardzo przydatne, aby uzyskać do tego Zdarzenie, które AI może wykryć . http://www.tt-forums.net/viewtopic.php?p=890973#p890973 (kilka postów na ten temat)
+
+* Gdyby można było uzyskać tę wartość ... (ilość ładunku dostarczonego do miast) http://www.tt-forums.net/viewtopic.php?p=895269#p895269
+* AICompany.[Get/Set]PresidentFace(*company-id*, *newgrf-style-input*); (jeśli rozumiesz, co mam na myśli, na przykład to, co jest przechowywane w openttd.
