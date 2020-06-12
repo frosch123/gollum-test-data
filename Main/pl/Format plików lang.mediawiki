@@ -1,0 +1,337 @@
+<!-- spis -->[[Translation:Main/en/OpenTTDDevBlackBook/Format of langfiles]]
+{{en/-}}{{pl/Rozwój}}
+
+== Przegląd ==
+
+Pamiętaj, że jest to przewodnik dla programistów. Do prostego tłumaczenia OpenTTD na języki alternatywne, jest używany [https://translator.openttd.org/ web translator] .
+
+== Kompilowanie plików językowych ==
+
+Dokumenty OpenTTD GitHub zawierają [https://github.com/OpenTTD/OpenTTD/blob/master/docs/compiling_lang_files.md przewodnik po kompilowaniu plików lang].
+
+== Ogólny układ ==
+
+Każdy wpis w pliku językowym składa się dokładnie z jednej linii.
+
+Wpis jest albo [[Main/en/#comment section|comment]], za [[Main/en/#pragmas section|pragma]] lub  [[Main/en/#translations section|translation]].
+
+Jeśli korzystasz z narzędzia do tłumaczenia internetowego, zobaczysz tylko tłumaczenia.
+
+
+Kodowanie to UTF-8.
+
+== Komentarze ==
+<span id="comment_section"></span>
+Komentarze zaczynają się od jednego lub więcej niż dwóch znaków skrótu (#) lub średnikiem (;). Puste linie są również ignorowane.
+
+<pre>
+# Ignore
+#### Ignore this
+;and this too
+</pre>
+
+== Pragmas ==
+<span id="pragmas_section"></span>
+Pragmy zaczynają się od dwóch znaków skrótu (#). Poniższa tabela zawiera listę wszystkich dostępnych pragm:
+{| border=1
+|-
+!Nazwa !! Funkcja
+|-
+|name ''name''|| Nazwa języka w English
+|-
+|ownname ''name''|| Nazwa języka w samym ''(tym)'' języku
+|-
+|isocode ''code''|| ISO kod dla '''language''' (np. ''de'')
+|-
+|plural ''number''|| Rodzaj liczby mnogiej (lista kodów znajduje się poniżej)
+|-
+|gender ''up to 8 gender names''|| określa listę dozwolonych płci
+|-
+|case ''up to 50 case names''|| określa listę dostępnych przypadków
+|-
+|textdir ''ltr or rtl'' || określa kierunek tekstu (''ltr'' stands for "left-to-right" whilst ''rtl'' stands for "right-to-left", i.e. Hebrew or Arabic)
+|-
+|digitsep ''symbol'' || separator cyfr dla wartości innych niż waluta, znany również jako "thousand separator"
+|-
+|digitsepcur ''symbol'' || separator cyfr dla wartości walutowych
+|-
+|decimalsep ''symbol'' || separator dziesiętnych
+|-
+|winlangid ''hexnumber'' || identyfikator języka zdefiniowany przez Microsoft Windows&reg;
+|-
+|grflangid ''hexnumber'' || identyfikator języka zastosowanego dla GRF
+|-
+|id ''hexnumber'' || Następny ciąg znaków zaczyna się od ''hexnumber''
+|-
+|}
+
+===Lista rodzajów liczby mnogiej===
+Poniższa tabela zawiera dozwolone wartości kodu dotyczące tworzenia liczby mnogiej: 
+{| border=1
+|-
+! rowspan="2"| Code Value !! Opis!!
+|-
+! Używany do
+|-
+| rowspan="2"| 0 || Two forms, singular używany do one tylko 
+|-
+| Danish, Dutch, English, German, Norwegian, Swedish, Estonian, Finnish, Greek, Hebrew, Italian, Portuguese, Spanish, Esperanto
+|-
+| rowspan="2" | 1 || Tylko one forma
+|-
+| Hungarian, Japanese, Korean, Turkish
+|-
+| rowspan="2" | 2 || Two formy, singular używany do zero i one
+|-
+| French, Brazilian Portuguese
+|-
+| rowspan="2" | 3 || Three formy, special case dla zero
+|-
+| Latvian
+|-
+| rowspan="2" | 4 || Three formy, special case dlar one and two
+|-
+| Gaelige (Irish)
+|-
+| rowspan="2" | 5 || Three formy, special case dla numerów ending w 1[2-9]
+|-
+| Lithuanian
+|-
+| rowspan="2" | 6 || Three formy, special cases dla numerów ending w 1 i 2, 3, 4, z wyjątkiem tych kończących się na 1[1-4]
+|-
+| Croatian, Czech, Russian, Slovak, Ukrainian
+|-
+| rowspan="2" | 7 || Trzy formy, specjalny przypadek dla jednej i liczby kończące się na 2, 3, lub 4, z wyjątkiem tych kończących się na 1[2-4]
+|-
+| Polish
+|-
+| rowspan="2" | 8 || Four formy, special case dla one i wszystkie liczby ending in 02, 03, or 04
+|-
+| Slovanian
+|}
+
+===Przykład===
+Standardowy plik językowy '''english.txt''' zaczyna się od następujących pragm:
+<pre>
+##name English (UK)
+##ownname English (UK)
+##isocode en_GB
+##plural 0
+##textdir ltr
+;...
+##id 0x0000
+</pre>
+
+== Tłumaczenia ==
+<span id="translations_section"></span>
+
+Tłumaczenia składają się z klucza i tłumaczenia. Dzieli je dwukropek (:).
+
+=== Klucze ===
+
+Klucz może zawierać tylko wielkie litery, cyfry i znak podkreślenia (_). Każdy klawisz zaczyna się od "STR_" , po którym następuje co najmniej jedno dobrze opisujące słowo.
+
+ STR_MAPSIZE
+ STR_000F_PASSENGERS
+ STR_SORT_BY_DATE
+ STR_0196_SHOW_LAND_OWNERS_ON_MAP
+
+=== Tłumaczenia ===
+
+Za pomocą nawiasów klamrowych {} do tłumaczeń można wstawiać specjalne polecenia, które są zastępowane albo przez strgen, albo gdy ciąg jest narysowany na ekranie. Pełna lista poleceń jest dostępna w [[Main/pl/OpenTTDDevBlackBook/Special strings|Specjalne ciągi znakowe]] . Oprócz <tt>{STRING'''x'''}</tt> i <tt>{RAW_STRING}</tt> zaleca się pozostawienie tych specjalnych ciągów domyślnie nienaruszonych. Polecenia specjalne mogą zastępować wartości lub inne ciągi, w których umieszczane są ciągi specjalne. Tłumacze mogą mieć wpływ na kolejność tych zamian, aby umożliwić płynny język.
+
+=== Zmiana kolejności słów ===
+
+Zamiana parametrów może być również wymienna. Umożliwi to użycie jednego parametru, który zwykle znajduje się w pozycji 0 (jak w: pierwszym) w przetłumaczonym ciągu znaków, w rzeczywistości na pozycji 1, zamieniając w ten sposób miejsce bez 1.
+
+Jako przykład : STR_INDUSTRY_PROD_GOUP.
+
+W języku angielskim ciąg brzmi jak "{BLACK}{BIGFONT}'''{STRING}''' production at '''{INDUSTRY}''' increases {COMMA}%!"
+
+W języku fińskim ten sam ciąg znaków jest teraz "{BLACK}{BIGFONT}'''{1:INDUSTRY}''' tuottaa '''{0:STRING}''' {2:COMMA}{NBSP}% entistä enemmän!"
+
+<!-- {{todo|Finish and correct this}} --> {{pl/Do poprawki|Zakończenie i skorygowanie tego}} 
+
+== Cases ==
+
+Po każdym kluczu może istnieć niestandardowa wielkość liter oddzielona kropką (.) . Sprawa musi zostać zdefiniowana na początku pliku przez ##case pragma.
+
+W poniższym przykładzie z pliku w języku czeskim możesz zobaczyć, jak zdefiniować przypadki. W języku czeskim jest 7 przypadków, a w oknie dialogowym Subsydia występuje dodatkowy "case" ''(przypadek)'' do wpisywania dużej nazwy ładunku.
+
+ ##case nom gen dat acc voc loc ins big
+
+ STR_0011_MAIL                      :pošta
+ STR_0011_MAIL.big                  :Pošta
+ STR_0011_MAIL.gen                  :pošty
+
+Ogólnym zastosowaniem przypadków jest dodanie kropki i nazwy sprawy do polecenia STRING. W akapicie "Dotace dopravy {STRING.gen} z {NBSP} {STRING} do {STRING} nebude dále nabízena." niezbędna jest sprawa dopełniacza.
+
+ STR_202E_OFFER_OF_SUBSIDY_EXPIRED  :{BLACK}{BIGFONT}Nabídka dotace přepravy vypršela:{}{}Dotace dopravy {STRING.gen} z{NBSP}{STRING} do {STRING} nebude dále nabízena.
+ STR_2027_FROM_TO                   :{ORANGE}{STRING.big} z {STRING} do {STRING}
+
+== Liczba mnoga ==
+<span id="plural_form"></span>
+
+==== Wprowadzenie ====
+W większości języków formy liczby pojedynczej i mnogiej są nieco inne.
+Każde słowo można podzielić na dwie części - jedna część nie zmienia się zarówno w liczbie pojedynczej, jak i mnogiej, ale druga część różni się liczbą pojedynczą i mnogą. Nazwijmy je '''core''' ''(rdzeniem)'' i '''suffix'''.
+
+Weźmy podstawowy przykład w języku angielskim, który jest podstawowy, ponieważ ma dwie formy: pojedynczą i mnogą.
+
+Jest "'''1 train'''", ale tutaj są "'''2 trains'''".
+
+Podzielmy teraz to słowo na część, która się nie zmienia, i część, która się zmienia:
+
+*Core: "'''train'''"
+*Suffix for singular: ""
+*Suffix for plural: "'''s'''"
+
+==== Pisanie ciągu ====
+Jak powiedziałem wcześniej, istnieją dwie formy w języku angielskim.
+
+Podstawową strukturą liczby mnogiej w języku angielskim jest <pre>core{P suffix1 suffix2}</pre> , gdzie sufiks1 jest sufiksem dla znaku, a sufiks2 jest przyrostkiem liczby mnogiej.
+
+Należy pamiętać, że formy liczby mnogiej działają tylko wtedy, gdy w ciągu znajduje się odpowiedni parametr.
+
+{COMMA} i {NUM}, wraz z innymi parametrami liczbowymi, dobrze sprawdzają się w określaniu liczby mnogiej.
+
+Zróbmy ciąg, który wyświetla liczbę lamp w pokoju. Forma "lampy" zależałaby od ilości dostarczonej za pomocą parametru {NUM}.
+
+==== Przykład ====
+ STR_SENTENCE : I have {NUM} lamp{P "" s}
+Czy widzisz rdzeń? Tak, to jest słowo '''lamp'''.
+
+Później widzisz '''{P'''. Jest to wskaźnik, że sufiksy nadejdą w następnej kolejności.
+
+'''""''' oznacza, że ​​nie ma przyrostka. OpenTTD musi o tym wiedzieć - jeśli nie ma przyrostka, po prostu wpisz dwa znaki cudzysłowu. To jest pierwszy przyrostek, który zostanie użyty, gdy {NUM} będzie równe 1
+
+'''s''' jest drugim przyrostkiem. Ten zostanie wyświetlony, gdy {NUM} jest większe niż 1.
+
+
+Przejdźmy do bardziej zaawansowanych form liczby mnogiej. Weźmy '''mouse'''. Jego liczba mnoga to '''mice'''.
+
+Przede wszystkim wyobraź sobie zdanie o różnych parametrach.
+*0 - Mum, there are 0 mice in the room!
+*1 - Mum, there is 1 mouse in the room!
+*3 - Mum, there are 3 mice in the room!
+*23 - Mum, there are 23 mice in the room!
+Kiedy będziesz gotowy, możesz napisać ciąg.
+ STR_SENTENCE : Mum, there {P 0 is are} {NUM} m{P ouse ice} in the room!
+Jak zapewne zauważyłeś, pierwsza '''{P''' zawiera dodatkową liczbę przed przyrostkami. Służy do określania, który parametr należy zastosować do określenia liczby mnogiej. Jeśli nie podano żadnej liczby, używany jest poprzedni parametr, ale w tym przypadku nie ma poprzedniego parametru, dlatego musimy go określić.
+<!-- {{todo|check if it is not wrong}} --> {{pl/Do poprawki|sprawdzenie, czy nie jest źle}} 
+
+Pamiętaj, że singluar (1) jest wyjątkowy w tej definicji liczby mnogiej. Liczba mnoga jest używana dla wszystkich liczb> 1, ale także dla 0. (Mamo, w pokoju jest 0 mysz).
+
+==== Ciąg jako liczba ====
+
+Jeśli argument dotyczący liczby mnogiej jest podany jako {STRING}, musisz użyć specjalnego parametru dla '''{P''':
+ Płaski obszar wokół branż: {ORANGE}{STRING} tile{P 0:1 "" s}
+
+==== OpenTTD używanie ====
+Teraz rozumiesz podstawy liczby mnogiej. Weźmy przykład z tłumaczenia na angielski.
+ STR_QUANTITY_LIVESTOCK : {COMMA} item{P "" s} of livestock
+
+Ten tekst jest wyświetlany na stacjach, gdy oczekuje na ładunek żywego inwentarza.
+
+Jak widać, podano parametr {COMMA}. Dzięki temu parametrowi możemy zmienić formę '''item'''.
+Zobaczmy, jak zmieni się ciąg, gdy zmienimy podany parametr.
+*1 - 1 item of livestock
+*4 - 4 items of livestock
+*56 - 56 items of livestock
+
+
+Spójrzmy teraz na ciąg bez podanego parametru. <pre>STR_WAGONS : Wagons</pre> Nie można tutaj zastosować liczby mnogiej. Wagon {P "" s} nie będzie tu działał.
+
+Dlaczego? Ponieważ nie podano żadnego parametru.
+
+Możesz po prostu zostawić ten ciąg bez zmian.
+
+==== Inne typy liczby mnogiej ====
+Znajdź swój język w poniższej tabeli  '''Lista typów mnogich''' . Języki są grupowane w zależności od zachowania słów w różnych ilościach.
+
+Przyrostki są uporządkowane rosnąco, z ''dowolnym innym numerem'' na końcu:
+
+* Pierwszy przyrostek jest zawsze liczbą pojedynczą.
+*Drugi sufiks może oznaczać ''any other number'' (English) lub, w zależności od języka, inne numery. Na przykład w języku polskim drugi formularz dotyczy liczb kończących się na 2, 3 lub 4, ale z wyłączeniem -nastu liczb.
+*Jeśli drugi sufiks nie był dla ''any other number'' , trzeci jest dla ''any other number''.
+
+Weźmy język polski i wymyślmy jakiś ciąg
+ STR_CARS : {NUM} aut{P o a ""}
+Teraz spójrz na opis powyżej i zgadnij, jak wyglądałby łańcuch znaków {NUM} równy 1, 2, 5, 13, 23, 38?
+*1 auto (first suffix used)
+*2 auta (second suffix used - number ends with 2, 3 or 4)
+*5 aut  (third suffix used - ''any other number'')
+*13 aut (third suffix used - second suffix excludes -teen numbers)
+*23 auta (second suffix used - number ends with 2, 3 or 4)
+*38 aut (third suffix used - ''any other number'')
+
+== Płcie ==
+<span id="genders_special_string"></span>
+==== Wprowadzenie ====
+Niektóre języki zawierają płeć. Każdy rzeczownik (jak fabryka, kalkulator, smok) ma swoją płeć.
+Przymiotniki (zielone, nowe, piękne), a czasem czasowniki (spadać, jeść) mają wpływ na płeć.
+
+Przede wszystkim pomyśl o płci swojego języka.
+Następnie otwórz Web Translator 2, przejdź do strony "Zarządzaj" swoim językiem i sprawdź listę rozwijaną płci. Jeśli nie ma jeszcze płci, naciśnij przycisk "+" i podaj krótkie postacie swoich płci ( '''m f n''' dla ''male female neutral'' jest dobre).
+
+Kiedy to zrobisz, pomyśl o ciągach w OpenTTD, które mogą wymagać płci. Wiadomości informują, że powstaje nowy przemysł, jest dobry, ponieważ przemysł jest rzeczownikiem, a niektóre słowa w ciągu powinny się zmieniać w zależności od płci.
+
+==== Zapisywanie ciągu ====
+Aby ustawić płeć łańcucha, wstaw znacznik {G=*} przed pierwszym słowem łańcucha, gdzie * to nazwa płci, którą wcześniej wysłałeś.
+
+W ciągu, który może się zmieniać w zależności od płci, użyj struktury {G suffix1 suffix2 suffix3}  , w którym każdy sufiks odpowiada właściwej płci (kolejność według płci znajduje się w sekcji "Zarządzanie" Twojego języka na liście rozwijanej)
+
+==== Przykład ====
+Użyję języka łacińskiego w przykładach, ponieważ jest on dobrze znany i oczywiście używa płci.
+
+Język łaciński ma trzy rodzaje, nazwiemy je '''m''', '''f''' i '''n'''.
+
+Zgadnijmy rzeczowniki, których użyjemy w przykładach.
+*'''puteus''' m - ''a well, pit''
+*'''officina''' f - ''a workshop, factory''
+*'''forum''' n - - ''an open square, marketplace''
+
+Weźmy przymiotnik i znajdźmy jego rdzeń i przyrostki:
+
+'''magnus''', '''magna''', '''magnum''' - ''large'' (male, female, neutral)
+
+Jak widzisz, '''magn''' jest rdzeniem, a przyrostki są '''us''', '''a''' and '''um''' odpowiednio dla mężczyzn, kobiet i płci neutralnej.
+
+
+I tak działałby przykładowy ciąg:
+<pre>STR_WELL : {G=m}Puteus
+STR_FACTORY : {G=f}Officina
+STR_SQUARE : {G=n}Forum
+STR_IS_BIG : {STRING} magn{G us a um} est</pre>
+Czy wyobrażasz sobie, jak będzie wyglądał wynik? Oto odpowiedź:
+*Puteus magnus est
+*Officina magna est
+*Forum magnum est
+Ponownie, jak w przypadku liczby mnogiej, jeśli nie ma przyrostka, napisz "" . Zawsze używaj tyle sufiksów, ile jest rodzajów.
+<!-- {{todo|How about the order of the suffixes? Do you have to use the same order as defined in the pragma?}} --> {{pl/Do poprawki|Co powiesz na kolejność przyrostków? Czy koniecznie używać tej samej kolejności, jak zdefiniowano w pragmie?}} 
+
+==== Zaawansowane użycie ====
+{G...} tag bazuje na płci ''gender''{STRING} po tag'u.
+Jeśli jednak chcesz zmienić sufiks słowa po {STRING} (przed tagiem), musisz wpisać identyfikator ciągu, z którego chcesz pobrać płeć.
+Może to zabrzmieć niezręcznie, więc spójrzmy na przykład:
+
+<pre>{BLACK}{BIGFONT}Now{G y a e} {STRING} został{G "" a o} posadzon{G y a e} blisko {TOWN}!</pre>
+Drugi i trzeci {G...} nie będą działać, ponieważ nie ma po nich {STRING}, od którego można uzyskać płeć.
+
+Chcemy pobrać płeć z pierwszego (i jedynego) tagu {STRING}. Pierwszy tag ma ID=0, drugi tag ma ID=1 i tak dalej. Oto jak to zrobić:
+
+<pre>{BLACK}{BIGFONT}Now{G y a e} {STRING} został{G 0 "" a o} posadzon{G 0 y a e} blisko {TOWN}!</pre>
+Dodanie ID rozwiązało problem. Ciąg działa zgodnie z oczekiwaniami.
+
+
+Co jeśli jest ich więcej {STRING} s?  ( <!-- {{todo|I'm not sure, please verify this}} --> {{pl/Do poprawki|Nie jestem pewien, prośba zweryfikowamia tego}} )
+W poniższym przykładzie używamy dwóch płci: męskiej i żeńskiej
+
+<pre>Mis{G ter s} {STRING} is shocked by h{G 0 is er} grand{G 2 son daughter} who flamed mis{G ter s} {STRING} yesterday. The bad {G boy girl}'s name is {STRING}</pre>
+Teraz wyjaśnię, dlaczego niektóre {G...} mają numery, a inne nie:
+*Pierwszy, czwarty i piąty '''nie''' mają numeru, ponieważ pobierają płeć następnego ciągu (zachowanie domyślne)
+*Drugi i trzeci mają numer, ponieważ pobierają płeć ciągu, który nie jest po znaczniku. Musimy powiedzieć silnikowi gry, której płci {STRING} chcemy wybrać. Pierwsza liczba to zero, ponieważ jest to ID pierwszego {STRING} . Następny numer to dwa, ponieważ jest to ID trzeciego {STRING}
+
+<!-- {{todo|this section may be clumsy, feel free to improve it}} --> {{pl/Do poprawki|ta sekcja może być niezdarna, można ją ulepszyć}}
+
+[[Category:pl/Do poprawki]]
