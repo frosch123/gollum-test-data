@@ -1,0 +1,22 @@
+[[Translation:Main/en/Realistic acceleration]]{{en/-}}
+[[File:en/Przyspieszenie realistyczne.png|frame|right|Zmiana ustawień]]
+'''Realistyczne przyspieszenie''' włącza prosty, oparty na fizyce model przyspieszenia. W zależności od masy pociągu, mocy silnika i nachylenia zbocza, na którym się on porusza, przyspieszenie jest zmieniane. Jest to bardziej realistyczne niż pierwotny sposób TTD, ale nie jest idealne.
+
+Ta opcja może być (de-)aktywowana w [[Main/en/Ustawienia/Pojazdy/Pl#Model przyspieszania pociągu|Ustawieniach]]
+
+==Charakterystyka==
+* Naprawdę ostre [[Main/pl/Zakręty|zakręty]] są bardzo nieopłacalne. Na zakrętach o 90 stopni pociągi zwalniają do 61 km/h, dwa 45-stopniowe zakręty w tę samą stroną powodują zwolnienie do 88 km/h.
+* W przypadku łagodniejszych zakrętów ograniczenie prędkości oblicza się m.in. na podstawie liczby zmian kierunku jazdy na całej długości pociągu. (Zobacz: [[Main/en/Mechanika gry/Pl#Pociągi|Mechanika gry]])
+* Zajezdnie i stacje też mają limity prędkości.
+* Wzgórza nie przeszkadzają, jeśli pociągi mają wystarczająco mocną lokomotywę
+* Ciężki pociąg ze słabą lokomotywą może nie osiągnąć maksymalnej prędkości. Pomóc może dodanie drugiej lokomotywy.
+
+Ograniczenia prędkości są mnożone przez 1,5 dla kolei jednoszynowej i przez 2 dla kolei magnetycznej (MagLev).
+
+==Zobacz też:==
+* [[Main/en/Ustawienia/Pojazdy/Pl#Model przyspieszania pociągu|Ustawienia]]
+* [[Main/en/Mechanika gry/Pl#Pociągi|Mechanika gry]]
+* [[Main/pl/Zakręty|Zakręty]]
+
+[[Category:en/Settings & Preferences]]
+[[Category:en/Vehicles]]
