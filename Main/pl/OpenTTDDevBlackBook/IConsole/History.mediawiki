@@ -1,0 +1,85 @@
+[[Translation:Main/en/OpenTTDDevBlackBook/IConsole/History]] {{en/-}}
+<!--{{en/DevDoc}}-->{{pl/Rozwój}}
+
+Historia Rozwoju.
+
+==Revision #1==
+funkcje konsoli:
+* console window like in 3d ego shooters
+* internal command and variable handler
+* 80 lines console screen buffer [scrolling not possible yet]
+* error / debug message output
+* direct c++ integration over pointer access
+* dynamic string allocation
+
+komendy:
+* list_cmds [filter]
+* list_vars [filter]
+* echo [string]
+* echoc [color-code] [string]
+* printf [formatstring] [var] [var] [var]....
+* printfc [color-code] [formatstring] [var] [var] [var]....
+* screenshot ["big"]
+* debug_level [0-9]
+* exit
+
+zmienne:
+* * developer
+** -> 0 = no output
+** -> 1 = console error output [like command not found]
+** -> 2 = console error and debug output
+
+* *cursor_rate
+** -> 1-12 = defines the cursor blink interval
+
+==Revision #2==
+console features:
+* scroll up CURSOR-UP PAGE-UP
+* scroll down CURSOR-DOWN PAGE-DOWN
+
+funkcje języka konsoli:
+* c-language independent variables
+* *temp_uint16 << random
+* the "<<" allows to put a return value of a function into an variable
+
+nowe komendy konsoli:
+* help
+* quit
+* random (implented to test value passing to variable)
+* dump_vars [filter]
+
+==Revision #3==
+Ulepszenia Języka Konsoli:
+* Copy data from one data to another
+* Passing of variable-references
+
+Ulepszenia Konsoli:
+* new command buffer: saves 20 commandlines [UP and DOWN KEYS]
+* scrolling: SHIFT + UP / DOWN / PG_UP / PG_DOWN
+
+nowe/zmienione komendy:
+* screenshot [big/no_con]
+* varinfo
+
+nowe zmienne:
+* *con_developer
+** -> true = console debugging output
+** -> false = no output
+
+==Revision #4 [planned]==
+Console Language Enhancements:
+* zezwalanie na pliki skryptów z "exec [filename]"
+* zrzut konsoli do plików za pomocą "script [filename]"
+* przechwytywanie komend i zmiennych
+** ACCESS
+** BEFORE_CHANGE
+** AFTER_CHANGE
+** BEFORE_EXEC
+** AFTER_EXEC
+* kilka innych komend
+
+==Revision #5 [planned]==
+* dostęp do konfiguracji i zmiennych
+* zrzucanie <small>''(dumping)''</small> zmiennych do pliku
+
+<!--[[Category:en/OpenTTDDevBlackBook|H]]--> [[Category:pl/OpenTTDDevBlackBook|H]]
