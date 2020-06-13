@@ -1,0 +1,90 @@
+[[Translation:Main/en/FAQ development]]{{en/-}}{{pl/FAQmenu}}
+
+Odpowiedzi na pytania dotyczące rozwoju OpenTTD, np. kod źródłowy, konfigurowanie kompilatorów itp..
+
+Ta strona zawiera krótkie odpowiedzi, a następnie linki do innych zasobów.  Ma to na celu uniknięcie powielania informacji, które można znaleźć gdzie indziej - zachowaj to podejście podczas edycji, dzięki.
+
+===Wkład w projekt===
+====Co mogę zrobić, aby przyczynić się do projektu?====
+To zależy od twoich talentów.
+* Bez kodowania
+** [[Main/pl/Internacjonalizacja|Translacja]] na inne języki
+*** [https://translator.openttd.org Translacja główna gry]
+*** [https://translator.openttdcoop.org Translacja dodatków (aktualnie brak add-ons)]
+** Rozszerz tę Wiki lub lepiej: Aktualizuj przestarzałe rzeczy.
+** Grafika, dźwięk i muzyka: Jeśli rysujesz, ale nie możesz kodować; sprawdź fora, w których może uczestniczyć jakiś projekt. Uwaga: jeśli nie obejmiesz wszystkich umiejętności wymaganych do jakiegoś projektu, mądrzej jest dołączyć do istniejącego projektu, niż próbować znaleźć kogoś innego, kto dołączyłby do twojego nowego projektu.
+* Dodatki (Add-on) kodowanie:
+** NewGRF:
+*** [[Main/pl/Narzędzia do rozwoju NewGRF|Język i narzędzia zaangażowane]]
+*** Istnieje wiele projektów na DevZone, które potrzebują nowych ludzi, aby je odebrać, szczególnie [https://dev.openttdcoop.org/projects/basedata base sets].
+** GameScripts & AIs: [[Main/pl/GS|Game script]]
+* Main-game kodowanie (C/C++):
+** Zobacz odpowiedzi na tej stronie poniżej, a także [[Main/pl/Rozwój|Dokumentacja rozwojowa OpenTTD]]
+* Tool-chains dla Add-ons (mostly python):
+** [https://dev.openttdcoop.org/projects/grf-tools Tools for NewGRF development]. Praca nad łańcuchami narzędzi wymaga zrozumienia zarówno głównej gry, jak i dodatków. Prawdopodobnie najtrudniejszym wyzwaniem jest zaangażowanie się w nie.
+** [https://dev.openttdcoop.org/projects/admintools Tools for operating OpenTTD servers]
+
+====Jak nawiązać kontakt z ludźmi====
+Sprawdź [[Main/en/Community|Community page]] dla linków do różnych forów i platform dla każdego tematu.
+
+====Jak działa open-source? Czego można oczekiwać od ludzi?====
+Jako ogólna rada, jeśli dopiero zaczynasz korzystać z oprogramowania typu open source: weź pod uwagę różne zainteresowania ludzi w projekcie.
+Nie oczekuj od ludzi racjonalnych celów ani dzielenia się z tobą zainteresowaniami.
+Nawet jeśli wydaje się, że pracujesz nad tym samym, niektórzy ludzie są głównie zainteresowani rezultatem (co robić?), Podczas gdy inni są głównie
+zainteresowany ścieżką do jakiegoś wyniku (jak coś zrobić?).
+
+Dotyczy to obu "inoffical add-ons" jak w przypadku "official branch":
+To jest projekt wolontariacki; wszyscy są tu dla zabawy, a nie dla obowiązków.
+Niektóre osoby opracowują rzeczy, oczekując, że oficjalni opiekunowie są zobowiązani do ich obejrzenia i włączenia
+do głównej gałęzi; ale prawda jest taka, że ​​ludzie będą patrzeć na rzeczy tylko wtedy, gdy będą nimi zainteresowani.
+
+W każdym projekcie wolontariatu znajdziesz posty takie jak "this patch has been around for 10+ years, I want it so badly, why is it still not in the main branch?".
+Ale nie pozwól, aby to zepsuło twoją zabawę :)
+
+====Przyczynianie się do głównej gry====
+Chcesz się przyłączyć?  Świetny!  
+
+:* Mamy przewodnik: [https://github.com/OpenTTD/OpenTTD/blob/master/CONTRIBUTING.md Contributing to OpenTTD]
+
+====Jakie są cele oficjalnej gałęzi?====
+
+* Wkład w przewodnik OpenTTD [https://github.com/OpenTTD/OpenTTD/blob/master/CONTRIBUTING.md#project-goals obejmuje cele oficjalnej gałęzi].
+
+====Nie zgadzam się z celami oficjalnej gałęzi, co mogę zamiast tego zrobić?====
+
+* Wkład w przewodnik OpenTTD [https://github.com/OpenTTD/OpenTTD/blob/master/CONTRIBUTING.md#i-do-not-agree-with-the-goals-of-the-offical-branch-what-can-i-do-instead covers this] (TL;DR: zachęca się do rozwidlenia i łatek).
+
+====Naprawiłem błąd / dodałem funkcję. Jak mogę go przesłać do bazy kodu??====
+:*Składki do oficjalnej gałęzi są przekazywane wyłącznie za pośrednictwem [https://github.com/OpenTTD/OpenTTD/blob/master/CONTRIBUTING.md#pull-requests Pull Requests on GitHub]
+:*Niektórzy ludzie też lubią się dzielić diffs via [http://www.tt-forums.net/viewforum.php?f=33 tt-forums]
+
+====Chcę zostać oficjalnym programistą OpenTTD! W jaki sposób?====
+:*To kwestia zaufania. OpenTTD ma wiele skomplikowanych i tajemnych mechanizmów z dużą ilością wariantów. Możesz dołączyć do oficjalnego zespołu, udowadniając, że naprawiasz sporo .
+:*Najlepszym sposobem na rozpoczęcie jest naprawianie drobnych rzeczy, albo z [https://github.com/OpenTTD/OpenTTD/issues GitHub issues], lub rzeczy, które wykryjesz.  Submit [https://github.com/OpenTTD/OpenTTD/blob/master/CONTRIBUTING.md#pull-requests Pull Requests] dla tych. Staramy się przejrzeć wszystkie żądania ściągania, zwłaszcza od nowych autorów, ale czasem zajmuje to trochę czasu, zanim ktoś do nich dotrze.
+:* Prawie cała oficjalna komunikacja odbywa się za pośrednictwem GitHub lub w [[Main/pl/IRC kanał| kanałach Internet Relay Chat]], regularne dołączanie do IRC jest najskuteczniejszą drogą do zostania długoterminowym współpracownikiem.
+
+===Kod źródłowy <small>(source code)</small>===
+====Co to jest kod źródłowy?====
+:* Kod źródłowy to nieskompilowana wersja programu, w tym przypadku OpenTTD, która umożliwia programistom wprowadzanie zmian w grze.
+:* Jeśli nie znasz kodu źródłowego, sugerujemy zacząć od [http://www.google.com/search?q=C%2B%2B+instruktaż C++ instruktaż]
+
+====Jak mogę uzyskać kod źródłowy??====
+:* Kod źródłowy OpenTTD jest uzyskiwany za pośrednictwem [https://github.com/OpenTTD/OpenTTD/ OpenTTD GitHub repo]
+:* Tutaj znajdziesz instrukcje: [https://github.com/OpenTTD/OpenTTD/blob/master/CONTRIBUTING.md#pull-requests Contributing to OpenTTD]
+
+====Teraz mam kod źródłowy, jak mogę go skompilować?====
+
+[[Category/pl/Kompilowanie OpenTTD|Kompilowanie OpenTTD]] zawiera więcej informacji o kompilacji.
+
+Aby przetestować konfigurację kompilatora, spróbuj skompilować grę z kodu źródłowego bez stosowania łatki i uruchom wynikowy plik wykonywalny. Jeśli wszystko pójdzie dobrze, możesz być całkiem pewien, że konfiguracja jest dobra.
+Jeśli się nie powiedzie, wiesz na pewno, że łatka nie jest źródłem problemów.
+
+====Miałem problem z kompilacją! Co powinienem zrobić?====
+:* To nie jest FAQ (najczęściej zadawane pytania) dotyczące kompilacji. Spróbuj z zapytaniem u dostawcy kompilatora (help).
+
+====Jak utworzyć łatkę (patch)?====
+
+* Zobacz przewodnik w [https://github.com/OpenTTD/OpenTTD/blob/master/CONTRIBUTING.md#pull-requests Contributing to OpenTTD]
+
+[[Category:pl/FAQs]]
+[[Category:pl/Rozwój]]
