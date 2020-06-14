@@ -1,0 +1,95 @@
+[[Translation:Main/en/Advanced Graphics Replacement Features]]
+{{en/-}}
+<!--{{Template:8bpp Graphics Replacement}}-->{{Template:Wymiana Grafik 8bpp/Pl}}
+<!--{{warning| This page is not maintained. All relevant information concerning the base graphics replacement OpenGFX are found in its readme or at the DevZone}}
+{{note| The history of OpenGFX here might be worth to be preserved and extended to reflect the development up to the current date.}}-->{{uwaga/Pl| Ta strona nie jest obsługiwana. Wszystkie istotne informacje dotyczące podstawowej wymiany grafiki OpenGFX znajdują się w jej pliku Readme lub w DevZone}}
+{{informacja/Pl| Warto tutaj zachować historię OpenGFX i rozszerzyć ją, aby odzwierciedlała rozwój do bieżącej daty.}}
+
+
+W ramach [[Main/pl/Wymiana Grafik|8bpp graphics replacement project]] zostanie wyprodukowana grafika dla kilku zaawansowanych lub rozszerzonych funkcji. To jest lista pożądanych funkcji i postępu ich grafiki.
+
+__TOC__
+
+
+
+
+
+
+
+
+
+
+
+== Krajobraz ==
+{| border="1" width="100%"
+! &nbsp; !! Grafiki !! Status !! Artysta !! Komentarz !! Link
+|-
+| &nbsp; ||Temperate snow
+{{en/Done}}
+||[[Archive/en/Zephyris|Zephyris]]||-||[http://www.tt-forums.net/viewtopic.php?p=658082#p658082 newTerrain v0.4]
+|-
+| &nbsp; ||Complete shore line
+{{en/Done}}
+||[[Archive/en/Zephyris|Zephyris]]||-||[http://www.tt-forums.net/viewtopic.php?p=658082#p658082 newTerrain v0.4]
+|-
+| &nbsp; ||Snowy temperate trees
+{{en/Unclaimed}}
+||-||-||-
+|}
+
+== Infrastruktura ==
+{| border="1" width="100%"
+! &nbsp; !! Graphics !! Status !! Artist !! Comment !! Link
+|-
+| &nbsp; ||Narrow gauge rails
+{{en/Unclaimed}}
+||-||-||-
+|-
+| &nbsp; ||Climate/drive side specific roads
+{{en/Done}}
+||[[Archive/en/Zephyris|Zephyris]]||-||[http://www.tt-forums.net/viewtopic.php?p=661730#p661730 OpenGFX+_newInfrastructure_Combined_Road_Set_v0.1.grf]
+|-
+| &nbsp; ||Climate specific depots
+{{en/Done}}
+||athanasios||-||[http://www.tt-forums.net/viewtopic.php?p=654784#p654784 OpenGFX_RdDep.grf]
+|}
+
+== Pojazdy ==
+Celem pojazdów OpenGFX + jest poprawienie wyglądu oryginalnych pojazdów i zwiększenie ich użyteczności; Kluczowymi celami są:
+Kod:
+* Pełne samodzielne kodowanie pojazdów
+:: Umożliwi to korzystanie z oryginalnych pociągów/ciężarówek /itp. z innymi zestawami pojazdów
+* Wprowadzić remont pojazdów w klasie cargo, aby uzyskać wsparcie nowego Cargo
+* Kontrolowana parametrycznie dostępność pojazdów (np. Pociągów)
+Grafika:
+* Przetargi na silniki parowe
+* 2 kolorowe firmowe grafiki dla wszystkich pojazdów
+* Zastępowanie barw dla pociągów nieparowych (wagonów pasażerskich, pocztowych (i wartościowych?)
+* Więcej etapów załadunku (np. Do leja samowyładowczego i pojazdów skrzyniowych)
+* Nowa grafika etapu ładowania (np. Pojazdy skrzyniowe i pocztowe)
+
+Inne potencjalne funkcje to dodatkowe pojazdy w stylu OpenGFX, zwłaszcza tramwaje.
+
+{| border="1" width="100%"
+! &nbsp; !! Graphics !! Status !! Artist !! Comment !! Link
+|-
+| &nbsp; ||Steam tenders
+{{en/Unclaimed}}
+||-||-||-
+|-
+| &nbsp; ||Extra trains
+{{en/Unclaimed}}
+||-||-||-
+|-
+| &nbsp; ||Extra road vehicles
+{{en/Unclaimed}}
+||-||-||-
+|-
+| &nbsp; ||Trams
+{{en/WIP}}
+||DanMackK||Preview [http://www.tt-forums.net/viewtopic.php?p=663251#p663251 here].||-
+|-
+| &nbsp; ||Livery Override for passenger trains
+{{en/WIP}}
+||[http://www.tt-forums.net/memberlist.php?mode=viewprofile&u=14565 7of9/DJ Nekkid], [http://www.tt-forums.net/memberlist.php?mode=viewprofile&u=2467 Purno]||<small>Done: Lev4 'Chimaera', 'SH125', TGV/T.I.M, Asiastar.</small> ||[http://www.tt-forums.net/viewtopic.php?f=36&t=35310&p=666724#p666724 Livery Override v0.3]
+|}
