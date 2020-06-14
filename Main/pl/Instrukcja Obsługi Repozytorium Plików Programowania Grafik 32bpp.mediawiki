@@ -1,0 +1,100 @@
+[[Translation:Main/en/32bit Graphics Development File Repository User Manual]]
+{{en/-}}
+To jest instrukcja użytkownika końcowego do [[Main/pl/Repozytorium Rozowju Plików Grafik 32bpp|32bit Graphics Development File Repository]].
+
+==Wymagane uwierzytelnienie==
+
+Repozytorium wymaga uwierzytelnienia dla wszystkich akcji, w tym akcji odczytu. Używamy dla nich loginu '''guest:guest''' ''(gość)''. Czynności zapisu wymagają indywidualnej rejestracji. (Jeśli zarejestrujesz się w celu uzyskania dostępu do odczytu/zapisu, możesz oczywiście użyć swojego konta do przeglądania).
+
+Podczas rejestracji użyj nazwy użytkownika, której używasz na forach. Hasło może i powinno być inne.
+
+Ponieważ dostęp do zapisu do serwera przez HTTP to poważna sprawa, repozytorium posiada solidny system do weryfikacji, czy użytkownik próbujący się zarejestrować ma aktywne konto na tt-forach. Działa w ten sposób, że w zasadzie próbuje wysłać do siebie wiadomość PM, zawierającą link do skryptu rejestracyjnego z unikalnym kluczem aktywacyjnym. '''Aby przejść przez rejestrację, musisz mieć aktywne ciasteczka na forach, więc przed rejestracją upewnij się, że zalogowałeś się na forach tt z zaznaczonym polem wyboru "zawsze mnie loguj" <small>''(always log me in)''</small> . '''
+
+Aby zapoznać się z samouczkiem krok po kroku na temat rejestracji, czytaj dalej.
+
+==Tryb edycji==
+
+Ponieważ przez większość czasu będziesz sprawdzać ostatnią aktywność w repozytorium i chcesz jak najmniej bałaganu w interfejsie, wszystkie operacje zapisu są ukryte w GUI, dopóki nie włączysz tak zwanego "edit mode" .
+
+Po włączeniu otrzymujesz pola formularza do edycji wszystkiego, do czego masz dostęp. Wszystkie operacje zapisu to czynności wykonywane w trybie edycji: dodawanie plików, edytowanie notatek, zmiany własności i tak dalej.
+
+Aby zapoznać się z samouczkiem krok po kroku, w jaki sposób powyższe czynności zostały wykonane, czytaj dalej.
+
+==Numeracja wersji==
+
+Nie ma sensu zakładać na "0.9" lub "2.1" lub coś takiego w naszych materiałach, prawda? Nigdy nie wiemy, kiedy naszą grafiką jest "1.0" . Jednak potrzebujemy pewnego rodzaju numeracji wersji, aby mieć kontrolę nad tym, czy oglądamy najnowszą zawartość. Dlatego repozytorium używa prostej liczby całkowitej, zaczynając od jednej, i automatycznie zwiększa, że ​​za każdym razem plik jest korygowany. Tak więc wersje będą miały 1, 2, 3 itd. W miarę aktualizowania treści.
+
+==Instrukcja obsługi==
+
+<!--{{outdated}}-->{{nieaktualizowane/Pl}}
+
+===Rejestracja===
+
+[[File:en/repo-register-1.png]]
+
+Wejdź do repozytorium i kliknij '''register an account''' ('zarejestruj konto').
+
+[[File:en/repo-register-2.png]]
+
+Wprowadź żądane poświadczenia. Pamiętaj, że zaleca się używanie nazwy konta użytkownika ''tt-forums.net'' z innym hasłem.
+
+Na tym etapie powinieneś otworzyć nową kartę przeglądarki i przejść do forów tt. Tam się wyloguj i zaloguj, upewniając się, że zaznaczyłeś opcję '''Log me on automatically each visit''' ('Zaloguj mnie automatycznie przy każdej wizycie') :
+
+[[File:en/repo-register-6.jpeg]]
+
+Po zakończeniu kliknij Zarejestruj.
+
+W następnym kroku przeczytaj instrukcje na ekranie, są one ważne. Kliknij "go to tt-forums" ''(przejdź do forów tt)'' .
+
+[[File:en/repo-register-3.jpeg]]
+
+Teraz na forach tt kliknij  "preview" ''(podgląd)'' , aby uzyskać klikalny link aktywacyjny, lub "send" ''(wyślij)'' , aby zapisać wiadomość w skrzynce odbiorczej dla nostalgii.
+
+[[File:en/repo-register-4.png]]
+
+Tak czy inaczej, masz teraz klikalny link. Kliknij to.
+
+[[File:en/repo-register-5.png]]
+
+Możesz teraz zalogować się przy użyciu tego formularza.
+
+===Dodawanie plików===
+
+Najpierw potrzebujesz konta do odczytu / zapisu, więc musisz się zarejestrować - patrz wyżej. Gdy już to zrobisz - zaloguj się.
+
+[[File:en/repo-addfile-1.png]]
+
+Włącz tryb edycji za pomocą kółka. Przejdź do wybranej kategorii.
+
+[[File:en/repo-addfile-2.png]]
+
+Formularz przesyłania pliku znajduje się na dole widoku kategorii. Wypełnij i prześlij, i gotowe.
+
+Kilka dalszych uwag na temat dodawania plików: sprites lub .blends, niezależnie od przesłanego pliku, musi to być plik .zip lub .tar. Zrzuty ekranu muszą mieć format .png lub .jpg. Zrzuty ekranu są DOBRE! Skorzystaj z funkcji i prześlij zrzuty ekranu.
+
+Ponadto dobrze wykorzystaj pole "notes" . Wszelkie informacje na temat licencjonowania, ostatnich zmian, w zasadzie wszystko, co działo się na forach na temat tego konkretnego pliku, należy znaleźć tutaj. W końcu repozytorium ma na celu pozbycie się potrzeby przeszukiwania forów w celu uzyskania informacji na temat rzeczy związanych z tworzeniem grafiki.
+
+===Zarządzanie plikami===
+
+Widok pliku w trybie edycji (zdjęcie poniżej) ma cztery podstawowe elementy sterujące do zarządzania plikami. Aby zobaczyć je w pliku, musisz być wyznaczonym właścicielem. Różne funkcje oznaczymy kolorami.
+
+[[File:en/repo-fileview.png]]
+
+Czerwony formularz umożliwia zmianę tytułu pliku. To nie zmieni nazwy pliku fizycznego.
+
+Żółty formularz pozwala całkowicie usunąć plik z serwera. '''Nie ma okna potwierdzenia.''' Historia aktywności pliku zostanie zachowana.
+
+Zielony formularz pozwala przenieść całą własność tego pliku na dowolne inne konto użytkownika z uprawnieniami do odczytu/zapisu. Zostaniesz pozbawiony własności.
+
+Niebieski formularz umożliwia aktualizację notatek i/lub zrzutów ekranu w pliku, z których żaden nie zwiększy numeru wersji wpisu pliku. Pozwala także na poprawienie pliku (przesłanie nowej wersji). W ten sposób zwiększysz numer wersji o jeden.
+
+==Zewnętrzne linki==
+
+* [http://jupix.info/openttd/gfxdev-repo OpenTTD repozytorium plików gfxdev]
+* [http://www.tt-forums.net/viewtopic.php?f=36&t=42293 Wątek na forach tt]
+* [http://www.tt-forums.net/viewtopic.php?f=36&t=33496&start=60 Ostatnia dyskusja na temat organizowania sprite'ów 32bpp]
+
+
+<!--{{en/Navbox Graphics Development}}-->{{pl/Navbox Programowanie grafik}}
+
+<!--[[Category:en/New Graphics]][[Category:en/32bpp Graphics Developer resources|D]]-->[[Category:pl/Nowe Grafiki]][[Category:pl/zasoby Twórców Grafik 32bpp|D]]
