@@ -1,0 +1,29 @@
+<noinclude>[[Translation:Template/en/Feature]]</noinclude><includeonly>{{en/VersionBox|{{#ifeq: {{{1|}}}|Old|0|{{#ifexpr: {{{1|}}} < 0|0|{{{1|}}}}}}}|{{#ifeq: {{{1|}}}|Old|99|{{#ifexpr: {{{1|}}} > 0|99|{{#expr:-{{{1|}}}}}}}}}||caption=Zgodne Wersje|text={{{text|}}}|align={{{align|}}}}}</includeonly><noinclude>
+
+====Używanie====
+Wpisz: <nowiki>{{</nowiki>'''Zgodne Wersje/Pl'''<nowiki> | numery wersji}}</nowiki>
+*Obsługiwane Wersje: Old,0.5,0.6,0.7,1.0,1.1 (inne mogą być z łatwością dodane).
+*Także ujemne walory... (-Old,-0.5,-0.6,-0.7,-1.0,-1.1,-1.2)
+*Niepublikowane Wersje będą zaznaczane jako ''nightly''.
+*Dodatkowe zmienne: <code>align=</code> i <code>text=</code>
+Dla okresu użyj <!--{{s|Feature_period}}-->{{s|zgodne zakresy/Pl}}
+
+====Przykłady:====
+<pre>{{pl/Zgodne Wersje|0.6}}</pre>
+{{pl/Zgodne Wersje|0.6}}
+<pre>{{pl/Zgodne Wersje|0.7|text=(od 0.7.2)|align="left"}}
+TEXT{{en/-}}</pre>
+{{pl/Zgodne Wersje|0.7|text=(od 0.7.2)|align="left"}}
+TEXT{{en/-}}
+<pre>{{pl/Zgodne Wersje|1.0|align="right"}}
+TEXT{{en/-}}</pre>
+{{pl/Zgodne Wersje|1.0|align="right"}}
+TEXT{{en/-}}
+<pre>{{pl/Zgodne Wersje|1.1}}</pre>
+{{pl/Zgodne Wersje|1.1}}
+<pre>{{pl/Zgodne Wersje|-0.6|text=(do 0.6.2)}}</pre>
+{{pl/Zgodne Wersje|-0.6|text=(do 0.6.2)}}
+
+
+[[Category:pl/Szablony]]
+</noinclude>
