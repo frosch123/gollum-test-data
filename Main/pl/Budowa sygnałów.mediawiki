@@ -1,0 +1,85 @@
+[[Translation:Main/en/Building signals]]{{en/-}}{{pl/Tutorial}}
+
+'''[[Main/pl/Sygnalizacja|Sygnały]]''' są wykorzystywane do kierowania pociągami i zapobiegania kraksom kolejowym.
+
+Ten tutorial ma na celu przedstawienie podstawowego wprowadzenia do sygnalizacji. Aby uzyskać szczegółowe informacje na temat różnych typów sygnałów i zastosowań, zobacz  artykuł [[Main/pl/Sygnalizacja|Sygnalizacja]].
+__TOC__
+== Ograniczenia ==
+*Nie można umieszczać sygnałów w kwadratach zawierających [[Main/pl/Skrzyżowania|skrzyżowania]] lub przejazd kolejowy.
+*Nie można stawiać na [[Main/pl/Mosty|mostach]] i w  [[Main/pl/Tunele|tunelach]]
+
+== Stawianie sygnału ==
+#Kliknij przycisk '''Budowa kolei''' [[File:en/Manual html m772c5b23.png]] na pasku menu, aby wyświetlić pasek narzędzi konstrukcji kolei:
+<br/>[[File:en/Railroad Construction.png|none|frame|Pasek konstrukcji kolei]]
+#Kliknij przycisk '''Budowa sygnalizacji''' [[File:en/Place signal.png]] aby wyświetlić okno wyboru sygnałów:<br/>[[File:en/Signal Selection.png|none|frame|Okno wyboru sygnałów]]
+<br/>'''Co jest czym?''' ''(Na razie możesz zignorować wszystkie typy oprócz '''sygnałów trasy''', więcej informacji: [[Main/pl/Sygnalizacja]])'':
+{|
+|-
+|colspan=2|'''Typy sygnałów'''
+|-
+|[[File:en/Signal Semaphore.png]] &amp; [[File:en/Signal Electric.png]]||[[Main/en/Sygnalizacja/Pl#Sygnały bolokowe|Sygnał blokowy]]
+|-
+|[[File:en/Signal Semaphore Pre-Signal.png]] &amp; [[File:en/Signal Electric Pre-Signal.png]]||[[Main/en/Sygnalizacja/Pl#Sygnalizator wejściowy|Pre-sygnał wejścia]]
+|-
+|[[File:en/Signal Semaphore Exit-Signal.png]] &amp; [[File:en/Signal Electric Exit-Signal.png]]||[[Main/en/Sygnalizacja/Pl#Sygnalizator wyjściowy|Pre-sygnał wyjścia]]
+|-
+|[[File:en/Signal Semaphore Combo-Signal.png]] &amp; [[File:en/Signal Electric Combo-Signal.png]]||[[Main/en/Sygnalizacja/Pl#Sygnalizator złożony|Pre-sygnał złożony]]
+|-
+|[[File:en/Signal Semaphore Path.png]] &amp; [[File:en/Signal Electric Path.png]]||[[Main/en/Sygnalizacja/Pl#Sygnały trasy|Sygnał trasy]] (jest ignorowany przez pociąg jadący w drugim kierunku)
+|-
+|[[File:en/Signal Semaphore Path One-Way.png]] &amp; [[File:en/Signal Electric Path One-Way.png]]||[[Main/en/Sygnalizacja/Pl#Sygnały trasy|Jednokierunkowy sygnał trasy]] (nie może być mijany w drugim kierunku)
+|-
+|-
+|colspan=2|'''Inne ikony'''
+|-
+|[[File:en/Signal Convert.png]]||'''Zamiana sygnałów''' - patrz niżej
+|-
+|[[File:en/Signal Density.png]]||'''Gęstość sygnałów''' - patrz niżej
+|}<br/>Nie ma żadnej funkcjonalnej różnicy pomiędzy stylami sygnałów - jest to tylko kwestia odpowiedniej estetyki. Ogólnie rzecz biorąc, styl lewy (semafory - starsze sygnały elektromechaniczne) jest odpowiedni do lat 70-tych, a styl prawy (nowoczesne elektryczne sygnały świetlne) w latach późniejszych.
+<br/>Ponadto, semafory będą tworzone domyślnie zamiast sygnałów świetlnych przed konfigurowalnym rokiem, 1975 domyślnie. Ustawienie to nazywa się "Automatycznie buduj semafory przed" i można je znaleźć w "Ustawieniach zaawansowanych" w zakładce "Budowa", a następnie "Sygnały"..<br/>
+#Po wybraniu typu sygnału, '''ustaw kursor nad torami kolejowymi''', na których chcesz zbudować swój sygnał.
+<br/>[[File:en/SignalTutorial2.png|none|frame]]
+#'''Kliknij raz''', aby skonstruować sygnał na torze. Jeśli nie wybierzesz sygnału trasy, zbudujesz sygnał dwukierunkowy. Sygnały ścieżek są zawsze skierowane tylko w jednym kierunku.<br/>[[File:en/Two-way signal.png|frame|left]][[File:en/SignalTutorial3.png|none|frame]]
+#Kliknij ponownie, aby zmienić swój sygnał na [[Main/en/Sygnalizacja/Pl#Sygnalizator jednokierunkowy|sygnał jednokierunkowy]]. Teraz, jeśli nie zbudowałeś standardowego sygnału trasy, tylko pociągi jadące z kierunku, w którym sygnał jest skierowany, będą mogły go minąć. Możesz zmienić kierunek sygnału za darmo, wybierając odpowiedni typ sygnału, a następnie klikając na sygnał.<br/>[[File:en/One-way signal.png|frame|left]][[File:en/SignalTutorial4.png|none|frame]]
+#'''Kliknij ponownie''', aby zmienić kierunek sygnału na przeciwny.<br/>[[File:en/SignalTutorial5.png|none|frame]]
+#'''Kliknij jeszcze raz''', aby ponownie zamienić sygnał na sygnał dwukierunkowy.<br/>[[File:en/SignalTutorial5b.png|none|frame]]
+
+== Konstrukcja linii sygnałów ==
+Możesz również zbudować kilka sygnałów tego samego typu jednocześnie, klikając i przeciągając wzdłuż odcinka toru, na którym chcesz zbudować sygnały. Jednak bardziej przydatne może okazać się przeciągnięcie po kliknięciu na istniejący sygnał, ponieważ spowoduje to zbudowanie linii sygnałów skierowanych w tym samym kierunku:
+#Kiedy aktywne jest narzędzie '''Zbuduj sygnały kolejowe''' [[File:en/Place signal.png]], ustaw kursor nad istniejącym sygnałem.
+<br/>[[File:en/SignalTutorial4.png|none|frame]]
+#'''Kliknij i przeciągnij''' myszką po torze kolejowym.<br/>
+'''Uwaga:''' Jeśli przytrzymasz '''Ctrl''' i przeciągniesz jeden lub więcej kwadratów, sygnały będą automatycznie budowane w kierunku, który przeciągnąłeś, aż do momentu znalezienia stacji, innego sygnału lub rozwidlenia na torze.<br/>[[File:en/SignalTutorial20.png|none|frame]]
+#'''Zwolnij myszkę''', aby umieścić sygnały.
+<br/>[[File:en/SignalTutorial21.png|none|frame]]
+<br/>W zależności od wartości wyświetlanej na przycisku '''Gęstość sygnałów''' [[File:en/Signal Density.png]] na pasku wyboru sygnałów, podczas konstruowania linii sygnałów w ten sposób, sygnały będą umieszczane co N płytek w grze (domyślną wartością dla N jest 4).
+<br/>Możesz zmienić gęstość sygnałów klikając na małe strzałki na przycisku. Zauważ również, że jeśli klikniesz i przeciągniesz z sygnałów wejściowych, wyjściowych lub złożonych, ta metoda skonstruuje sygnały blokowe skierowane w tym samym kierunku. 
+
+== Usuwanie sygnałów ==
+Możesz usunąć istniejące sygnały, klikając na przycisk '''Buldożer''' [[File:en/Toggle clear active.png|Clear button]] na pasku narzędzi budowy kolei, jednocześnie mając otwarte okno wyboru sygnałów.
+
+Biały kwadrat zmieni się na czerwony. Następnie możesz kliknąć na poszczególne sygnały, aby je usunąć, lub kliknąć i przeciągnąć wzdłuż odcinka toru, aby usunąć linię sygnałów. Kliknij ponownie na przycisk narzędzia, aby go usunąć. Możesz również zamiast buldożera użyć skrótu klawiszowego '''R'''.
+
+Narzędzie to działa zgodnie z wartością wyświetlaną na przycisku '''gęstość sygnałów''' [[File:en/Signal Density.png]] na pasku narzędzi wyboru sygnałów.
+
+== Zamiana typu sygnałów ==
+Możesz zamienić istniejący sygnał na inny typ sygnału, klikając przycisk '''Zamiana sygnałów''' [[File:en/Signal Convert.png]] na pasku narzędzi wyboru sygnału. Następnie, po kliknięciu na istniejący sygnał, zostanie on (za darmo) zamieniony na typ sygnału wybrany w oknie wyboru sygnału
+
+Aby wyłączyć zamianę sygnału (jeśli chcesz wrócić do konstruowania sygnałów), kliknij ponownie przycisk '''Zamiana sygnałów'''.
+
+Przytrzymanie klawisza CTRL podczas klikania na sygnał (przy wyłączonej zamianie sygnału) powoduje przełączenie sygnału przez dostępne typy sygnałów.
+
+Przytrzymanie klawisza CTRL przy kliknięciu na sygnał (z włączoną zamianą sygnału) zmienia styl sygnału (semafory/nowoczesne sygnały), to jednak wiąże się z kosztami.
+
+== Którego typu sygnału użyć? ==
+Jeśli nie budujesz naprawdę szalonych ustawień, będziesz potrzebował tylko standardowych sygnałów trasy.
+
+Zakładając, że wszystkie twoje tory są używane tylko w jednym kierunku, po prostu umieść jednokierunkowy sygnał trasy zwrócony w kierunku, z którego przyjedzie pociąg, w dowolnym miejscu, w którym pociąg może się bezpiecznie zatrzymać. Wyobraź sobie, że twój najdłuższy pociąg czeka na sygnał i sprawdź, czy może coś zablokować; jeśli tak, to sygnał jest w złym miejscu.
+
+Sygnały blokowe (zwłaszcza pre-sygnały) mogą być wykorzystane w niektórych bardziej zaawansowanych konstrukcjach.
+
+Więcej szczegółów na temat wszystkich typów sygnałów, łącznie z przykładami, można znaleźć w sekcji [[Main/pl/Sygnalizacja]] w instrukcji.
+
+<span style="float: right">[[Main/pl/Kupno pociągów|'''Dalej:''' Kupno i sprzedaż pociągów]] &raquo;</span>
+
+[[Category:pl/Konstrukcje]]
