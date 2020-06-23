@@ -1,0 +1,115 @@
+{{pl/Tłumaczenie|oryg. = Multiplayer
+|z     = en
+|na    = pl
+|Postępy = 99
+}}
+[[Translation:Main/en/Multiplayer]]{{en/-}}{{pl/Spis treści}}
+[[Main/pl/OpenTTD|OpenTTD]] posiada dużo lepszy system '''gry wieloosobowej''', w porównaniu z oryginalnym w <span class="plainlinks">[http://pl.wikipedia.org/wiki/Transport_Tycoon Transport Tycoon Deluxe]</span>. Na [[Main/pl/Serwer|serwerze]] może być 15 [[Main/pl/Firma transportowa|firm]], i maksymalnie 255 podłączonych klientów. Można grać we własnej firmie, lub w [[Main/pl/Rozgrywka kooperacji|trybie kooperacji]] z innym graczem.
+[[File:en/Mp screen.png|none|thumb|400px|Rozgrywka w trybie gry wieloosobowej]]
+
+==Połączenie z serwerem==
+*Wejdź do Trybu gry wieloosobowej, poprzez kliknięcie przycisku w [[Main/en/Interfejs gry/Pl#Okno główne|Oknie głównym]].
+[[File:en/Ottdmulti4.png|none|frame|Wybierz serwer gry.]]
+*By zobaczyć listę publicznych gier, wybierz opcję Internet z menu "Połączenie" i kliknij "Znajdź serwery" na dole ekranu.
+*Wpisz swoje imię!
+*Wybierz serwer z listy, by zobaczyć więcej informacji.
+*Kliknij "Przyłącz się do gry".  Powinno wyskoczyć osobne okno "Lobby gry wieloosobowej".
+
+
+Lista serwerów po lewej stronie pokazuje następujące informacje:
+*'''Nazwa''': Nazwa serwera, lub tylko jego IP, jeśli jest problem z połączeniem.
+*'''Klientów''': Ilość klientów i firm w grze.
+** '''''Format''''': połączonych klientów / maksymalnie klientów - aktywnych firm / maksymalnie firm
+*'''Rozmiar mapy''': Ilość pól na mapie (np. 1024x1024)
+*'''Data''': Aktualny rok gry.
+*'''Lata''': Ilość minionych lat od początku gry.
+*'''Ikonka kłódki''' ''(opcjonalnie)'': Serwer jest prywatny i zabezpieczony hasłem.
+*'''Zielona/Pomarańczowa/Czerwona kropka''': Kompatybilność serwera z twoją [[Main/pl/FAQ Wersje OpenTTD|wersją]] OpenTTD lub twoimi [[Main/pl/NewGRF|NewGRF-ami]].
+*'''Mała flaga''': Flaga kraju, w którym jest hostowany serwer.
+
+===Pobieranie brakujących NewGRF-ów===
+Jeśli chcesz wejść na serwer, przy którym jest pomarańczowa kropka (brakujące NewGRF), musisz kliknąć "Znajdź zgubiony dodatek online" możesz kliknąć przycisk ''Ustawienia NewGRF'' <small>''(NewGRF Settings)''</small> , a następnie sprawdzić zawartość online, aby sprawdzić, czy brakujące NewGRF są dostępne za pośrednictwem systemu [[Main/pl/Dodatki Online|dodatki online ]] <small>''(content)''</small>.
+
+[[File:en/server join bananas.png]]
+
+Jeśli nadal nie możesz rozwiązać niektórych NewGRF, możesz spróbować poszukać go za pomocą [http://grfcrawler.tt-forums.net/ GRF Crawler].
+
+==Wchodzenie do gry==
+Na następnym ekranie zobaczysz szczegółową listę osób, które są już w grze, oraz kilka opcji dołączania do gry.
+[[File:en/Ottdmulti5.png|none|frame|Join multiplayer game]]
+*Kliknij "Nowa firma" <small>''(New company)''</small>, aby rozpocząć grę od zera LUB
+*Wybierz firmę bez ikony kłódki i kliknij "Dołącz do firmy" <small>''(Join company)''</small>, aby zagrać dla tej firmy LUB
+*Kliknij "Obejrzyj grę" <small>''(Watch Game)''</small>, aby wejść do gry jako widz <small>''(spectator)''</small>.
+
+
+Lista firm po lewej stronie zawiera następujące informacje:
+*'''Nazwa firmy''' <small>''(Company Name)''</small>
+*'''Ikona kłódki''' <small>''(Lock Icon)''</small>: Firma jest prywatna i chroniona hasłem.
+*'''Czerwone/Zielone światło''' <small>''(Red/Green Light)''</small>: Pokazuje, czy dla tej firmy nadal działa podłączony klient.
+
+
+==Rozgrywka==
+Po wejściu do gry rozgrywka jest taka sama z kilkoma dodatkowymi funkcjami.
+
+Pamiętaj, że czasami gra może się zatrzymać. Może się to zdarzyć, gdy do gry dołączają nowi gracze, gdy aktywnych klientów jest mniej niż minimum lub gdy administrator serwera lub Game Script manualnie wstrzymuje grę. Jeśli gra jest wstrzymana, jest ona wyświetlana jak zwykle na pasku stanu. Powód pojawia się w obszarze komunikatów w lewym dolnym rogu ekranu. Nie możesz zmienić stanu pauzy jako klient. Nikt nie może korzystać z trybu szybkiego przewijania do przodu.
+
+===Chatowanie===
+[[File:en/Ottdmulti9.png|center|none|frame|3. Obszar wyświetlania czatu]]
+*Rozpocznij czat, naciskając Enter. Okno wprowadzania tekstu otworzy się nad paskiem stanu.
+*Zmień, z kim rozmawiasz, korzystając z listy klientów; patrz poniżej.
+*Wiadomości czatu i połączenia są wyświetlane w lewym dolnym rogu ekranu. Tekst gracza jest kolorem jego firmy. Tekst widzów <small>''(Spectators')''</small> jest szary. 
+*Otwórz [[Main/pl/Konsola|konsole]] <small>''(console)''</small> , aby zobaczyć historię wiadomości.
+*SHIFT+ENTER (SHIFT+T) wysyła wiadomość do wszystkich graczy, CTRL+ENTER (CTRL+T) wysyła wiadomość do wszystkich pomocników drużyny <small>''(team mates)''</small> , a ENTER (T) można dostosować
+
+===Lista graczy===
+[[File:en/Ottdmulti7.png|none|frame|The client list]]
+*Otwórz menu listy firm [[File:en/Manual html 12e20f5b.png]] i kliknij "Lista klientów" <small>''(Client list)''</small>, aby zobaczyć, którzy klienci są połączeni i dla jakiej firmy grają.
+*Kliknij klienta, aby otworzyć inne menu z następującymi opcjami:
+:*'''Prywatna wiadomość''' <small>''(Private Message)''</small>: Wyślij wiadomość czatu tylko do wybranego klienta.
+:*'''Porozmawiaj z firmą''' <small>''(Speak to company)''</small>: Wyślij wiadomość czatu do wszystkich osób w firmie wybranego klienta .
+:*'''Mów do wszystkich''' <small>''(Speak to all)''</small>: Wyślij wiadomość czatu do wszystkich.
+:*'''Dać pieniądze''' <small>''(Give money)''</small>: Daj do 20 000 000 £ wybranemu klientowi.
+
+Lista klientów informuje również, kim jest serwer. Jeśli obok serwera znajduje się nazwa, osoba ta uruchamia [[Main/pl/Listen server|listen server]] . Jeśli serwer nie ma nazwy, to jest to  [[Main/pl/Serwer dedykowany|dedicated server]] .
+
+===Hasło firmy===
+[[File:en/Company password input box2.png|none|frame|Wpisz tutaj swoje hasło +Enter]]
+*Aby zapobiec dołączaniu niechcianych klientów do Twojej firmy, kliknij przycisk listy firm, a następnie przycisk hasła. Wpisz tutaj swoje hasło.
+* Aby usunąć hasło, ustaw je na nic.
+* Musisz ustawić hasło na każdym serwerze.
+
+==Dołączanie pomiędzy firmami==
+Począwszy od wersji OpenTTD 0.7.0 (lub bardziej precyzyjnej od r15242) możliwe jest przechodzenie między firmami/widzami i tworzenie nowych firm bez konieczności ponownego dołączania do gry
+
+===Nowa firma===
+Opcję 'Nowa firma' <small>''(New Company)''</small> można znaleźć na liście firm, jest ona dostępna tylko dla widzów. Jeśli limit serwerów 'max_companies' został osiągnięty, ta opcja jest wyszarzona
+[[File:en/Move company create.png|none|frame|lista firm jako widz <small>''(spectator)''</small>]]
+
+===Dołączanie do firmy===
+Każde okno firmy ma przycisk dołączania (wyświetlany tylko wtedy, gdy nie jesteś w tej firmie).
+[[File:en/Move company join.png|none|frame|przycisk dołączenia do firmy]]
+Kłódka wyświetlana obok przycisku dołączania wskazuje, że firma jest chroniona hasłem. Próba dołączenia do tej firmy poprosi o podanie hasła.
+[[File:en/Move company join pwprompt.png|none|frame|firma chroniona hasłem + pw prompt]]
+
+===Dołączanie do obserwatorów===
+Jeśli jesteś w firmie i chcesz trochę obserwować lub planujesz założyć nową firmę i najpierw musisz dołączyć do widzów, lista firm pokazuje teraz pozycję 'Spectate' , w której wcześniej wymieniono pozycję 'Nowa firma' <small>''(New Company)''</small> .
+Jeśli osiągnięto limit „max_spectators” serwerów, ta opcja jest wyszarzona.
+[[File:en/Move spectate.png|none|frame|join spectators]]
+
+==Błąd synchronizacji==
+Błąd desynchronizacji <small>''(desync error)''</small> występuje, gdy jeden lub więcej graczy nie synchronizuje się z serwerem. Po chwili gracz zostanie wyrzucony z gry z następującym komunikatem:
+
+[[File:en/Desync.png]]
+
+Desyncs są zawsze błędami w OpenTTD, które można podzielić na trzy klasy: wywoływanie <code>(Interactive)Random()</code> w niewłaściwym miejscu, niepoprawne przebudowywanie pamięci podręcznej lub błędy kodowania, takie jak przepełnienie. NIE są one spowodowane zbyt wolnym komputerem, zbyt wolnym połączeniem internetowym itp.
+
+==Zobacz też==
+*[[Main/pl/Serwer|Serwer]], aby uzyskać informacje na temat hostowania własnej gry.
+*[[Main/pl/FAQ Gry Wieloosobowej|FAQ multiplayer]]
+*[[Main/pl/Zasady gry wieloosobowej|Zasady Multiplayer'a]]
+*[[Main/pl/Rozgrywka kooperacji|Cooperative gameplay]]
+*[[Main/pl/AutoCzyszczenie nieaktywnych|Autoclean companies]] za to, co może się zdarzyć, gdy wylogujesz się w trakcie gry
+*[[Main/pl/Ustawienia SI|AI settings]] jeśli chcesz grać przeciwko jednemu lub kilku AI, aby uzyskać trochę konkurencji
+
+[[Category:pl/Rozgrywka]]
+[[Category:pl/Gra wieloosobowa]]
