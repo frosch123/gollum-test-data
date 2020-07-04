@@ -1,0 +1,55 @@
+[[Translation:Main/en/Climates]]{{en/-}}{{pl/Spis treści}}
+
+W świecie gry OpenTTD istnieją cztery rodzaje '''klimatu''': ''Umiarkowany'', ''Arktyczny'', ''Tropikalny'' i ''Zabawkowy''. Każdy z nich posiada odmienne rodzaje [[Main/pl/Przedsiębiorstwa|przedsiębiorstw]], [[Main/pl/Pojazdy|pojazdów]] oraz architekturę [[Main/pl/Miasta|miast]]. Klimat ma również wpływ na charakterystykę rozgrywki ze względu na różne zapotrzebowania [[Main/pl/Miasta|miast]].
+
+==Umiarkowany==
+[[File:en/Temperatescreenshot.png|thumb|left|300px|Klimat umiarkowany]]
+
+Klimat towarzyszy grze od samego początku czyli od 1994 roku. Jest wzorowany na klimacie Wielkiej Brytanii, z którego pochodzą twórcy gry Chris Sawyer, Simon Foster i John Broomhall.
+
+Znalazło to odzwierciedlenie w pojazdach, z których większość opiera się na pojazdach regularnie obserwowanych w Wielkiej Brytanii. Jest to również widoczne w architekturze - wiele budynków w grze opiera się na prawdziwych budynkach znalezionych w Glasgow, domu Chrisa Sawyera.
+
+Klimat umiarkowany jest najbardziej popularnym klimatem, ponieważ charakteryzuje się największą różnorodnością i najszybszymi pociągami. Znajduje to również odzwierciedlenie w zestawach [[Main/en/NewGRF]], dwa najbardziej popularne to [[Main/en/UK Renewal Set]] i [[Main/en/DBSet]], które działają wyłącznie w umiarkowanym klimacie. Klimat ma również jeden z najwyżej cenionych towarów, węgiel i jest prawdopodobnie najłatwiejszym do zarobienia pieniędzy. W przeciwieństwie do pod-klimatów, nie ma zapotrzebowania na żywność ani wodę dla żadnego miasta i nie ma ograniczeń co do tego, gdzie przemysł można zlokalizować.
+'''landscape = temperate''' w openttd.cfg.
+<br clear="all" />
+
+==Arktyczny==
+[[File:en/Subarcticscreenshot.png|thumb|right|300px|Klimat arktyczny]]
+Klimat ten pojawił się w Transport Tycoon Deluxe w 1995 razem z Arktycznym i Zabawkowym. Jest wzorowany na klimacie północnej Ameryki, prawdopodobnie na Kanadzie.
+
+Jest to widoczne w wyglądzie dostępnych pociągów i że nazwy miast w wersji angielskiej wciąż bazują na brytyjskich (Kanada jest państwem brytyjskim). 
+
+Najbardziej charakterystyczną cechą Sub-Arctic jest śnieg powyżej pewnej linii. Oczywiście, każdy budynek i drzewo ponad linią śniegową również pojawia się pokryte śniegiem. W klimacie subarktycznym istnieją oddzielne elementy graficzne od klimatu umiarkowanego i subtropikalnego, ale wiele grafik jest ponownie wykorzystywanych, a mianowicie grafika dla infrastruktury. W Sub-Arktyce dostępne są nowe łańcuchy branżowe, w tym łańcuch papierowy i nowy ładunek żywności, który musi być dostarczany do miast powyżej linii śniegu, aby umożliwić im rozwój. Nieznaczna różnica w stosunku do klimatu umiarkowanego polega na tym, że lasy muszą znajdować się powyżej linii śniegu. Sub-Arctic jest również popularnym klimatem, w którym można się bawić, ale nie tak jak w klimacie umiarkowanym, ze względu na niskie wybory w pociągach. W Subarktyce nie ma pociągów elektrycznych. Istnieją zestawy zastępcze dla tego klimatu, w szczególności zestaw do odnowienia w Ameryce Północnej.
+
+'''landscape = arctic''' w openttd.cfg.
+
+==Tropikalny==
+
+[[File:en/Subtropicalscreenshot.png|thumb|300px|left|Klimat tropikalny]]
+Klimat tropikalny również pojawił się w Transport Tycoon Deluxe. Bazuje na Ameryce Łacińskiej, o czym świadczą nazwy miast w angielskiej wersji i dostępne [[Main/pl/Pociągi|pociągi]].
+
+Ten klimat ma bujne lasy deszczowe, gdzie rośnie trawa w pobliżu wody, ale jałowe pustynie z kaktusami, gdzie nie ma wody. Miasta położone na pustyni wymagają wzrostu ilości żywności i wody, z których pierwsza może być wyprodukowana przez [[Main/pl/Przetwórnia żywności|Zakłady przetwórstwa żywności]], a druga przez [[Main/pl/<!--Źródło zaopatrzenia w wodę-->Ujęcie wody| źródła wody]] na pustyni, która musi zostać dostarczona do [[Main/pl/Wieża ciśnień|Wieża ciśnień]]. Istnieje wiele ograniczeń dotyczących miejsca, w którym można umieścić przemysł, w szczególności zakładów przetwórstwa żywności i rolnictwa, które muszą być umieszczone na użytkach zielonych, [[Main/pl/Tartak (tropikalny)|Tartak]] muszą być otoczone lasem deszczowym, a źródła wody znajdują się tylko na pustyni. Osobliwością unikatową dla Subtropiksu jest tartak, który może być sfinansowany tylko przez gracza i wycina drzewa w pobliżu. Jeśli w branży zabraknie zasobów, drzewa muszą zostać przesiane przez gracza. Jeden z oryginalnych scenariuszy z Transport Tycoon Deluxe o nazwie "Megarail 1960" był scenariuszem tropikalnym, który uczył graczy o sieciowych torach kolejowych.
+Klimat tropikalny nie jest tak popularny, jak umiarkowany przez dostępne pociągi, które są takie same jak w klimacie arktycznym. Jest tylko jeden parowóz w klimatach arktycznym i tropikalnym.
+
+'''landscape = tropic''' w openttd.cfg.
+<br clear="all" />
+
+==Zabawkowy==
+[[File:en/Toylandscreenshot.png|thumb|right|300px|Klimat zabawkowy]]
+
+Klimat zabawkowy jest kompletnie fikcyjny, posiada grafikę przypominającą dziecięcy świat.
+
+Cukierki i słodycze przedstawiają budynki i drzewa, a także zabawki zastępujące towary i pociągi. Każda nowa grafika w Toyland jest nowa, w tym drogi i szyny. Drogi symulują zabawkowy tor wyścigowy, podczas gdy koleje mają większe podkłady. Wszystkie pojazdy mają głupie dźwięki i narysowane na nich twarze. Istnieje bardzo mały wybór pojazdów, a jedynie podstawowe elementy mają niską moc.
+
+Toyland jest najmniej lubianym klimatem OpenTTD ze względu na jasne i porywające kolory, a także ogólną prostotę i kliszę. Doprowadziło to do licznych prób zreformowania klimatu w krajobraz Marsa (poniżej) i prawie na pewno zostanie pominięte w 32-bitowych wersjach graficznych OpenTTD, kiedy zostaną wydane. Wszystkie fabryki i towary zostają zastąpione surrealistycznymi, takimi jak "[[Main/en/Toffee Quarry]]" i "[[Main/en/Farma Baterii]]".
+'''landscape = toyland''' w openttd.cfg
+
+{{en/-}}
+
+==Zobacz też==
+* [[Main/en/Toyland to Mars Conversion|Klimat marsjański]]
+
+==Linki==
+* [http://i-want-a-website.com/about-tt/ttfaq08.html Climate FAQ]
+
+[[Category:pl/Klimaty]]
