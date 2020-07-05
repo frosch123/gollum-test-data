@@ -1,0 +1,252 @@
+[[Translation:Main/en/Cargo]]{{en/-}}{{pl/Spis treści}}
+:''To jest artykuł opisujący '''ładunek''' w grze OpenTTD. Żeby zobaczyć listę dostępnego ładunku, zajrzyj do [[Category/pl/Ładunek|kategorii]].''
+<br><br>
+W [[Main/pl/OpenTTD|OpenTTD]], '''ładunek''' jest tym, co twoja [[Main/pl/Firma transportowa|firma]] transportuje. Ładunki są produkowane przez [[Main/pl/Przedsiębiorstwa|przedsiębiorstwa]] i [[Main/pl/Domy|miasta]], oraz są przez nie akceptowane.
+
+Wszystkie ładunki istnieją w postaci pojedynczych, stałych jednostek o określonej ilości i wielkości. Np. pojedyncza jednostka [[Main/pl/Ropa|ropy naftowej]] składa się z dokładnie 1000 litrów. Każda akcja - czy to produkcja, [[Main/en/<!--Przeładunek/Pl-->Polecenia/Pl#Przeładunek|transfer]] czy zużycie - jest wykonywana na podstawie liczby całkowitej jednostek ładunkowych.
+
+[[Main/pl/Przedsiębiorstwa|Przedsiębiorstwa]] i [[Main/pl/Miasta|budynki]], które znajdują się w zasięgu [[Main/pl/Stacja|stacji]] akceptują ładunki i pasażerów z danej stacji, oraz dostarczają ładunki na daną stację.  (Przy wielu przedsiębiorstwach, do stacji zaliczają się tylko te, które są w zasięgu stacji. Zobacz artykuł o [[Main/en/Stacja/Pl#Zasięg|strefie zasięgu stacji]] dla reszty informacji.)
+
+Przedsiębiorstwo przyjmujące zużywa jednostki ładunku po rozładunku na pobliskiej stacji i płaci za ich transport. Przedsiębiorstwo produkujące tworzy nowe jednostki ładunku i umieszcza je  na pobliskich stacjach, jeżeli są one w zasięgu i jeżeli pojazd przyjmujący ten rodzaj ładunku był już wcześniej na stacji.
+
+Jeśli ładunek znajduje się na [[Main/pl/Stacja|stacji]], automatycznie zmienia się [[Main/en/Stacja/Pl#Ocena|ocena stacji]] na temat danego typu ładunku.
+
+[[Main/pl/Pasażerowie|Pasażerowie]] i [[Main/pl/Poczta|poczta]] to również rodzaje ładunku, produkowane i przyjmowane głównie przez [[Main/pl/Domy|miasta]]. Różne budynki w miastach przyjmują różne ilości pasażerów i innych ładunków. Akceptacje można sprawdzić za pomocą [[Main/pl/Informacja o terenie|narzędzia informacji o powierzchni terenu]]. Ilość ładunku przyjmowana przez budynek jest odnotowywana z dokładnością do 1/8. Aby stacja mogła przyjąć ten ładunek, w jej zasięgu musi znajdować się co najmniej całość (8/8) ładunku danego typu. 
+
+Niektóre [[Main/pl/Przedsiębiorstwa|przedsiębiorstwa]] również akceptują 1/8 pasażerów. Jednak przemysł, z wyjątkiem platform wiertniczych, nie produkuje żadnych pasażerów. W szczególności [[Main/pl/Huta|Huty]] mają wiele kwadratów akceptujących pasażerów po 1/8 i mogą przyjąć ich samodzielnie. Co więcej, [[Main/pl/Siedziba firmy|siedziba firmy]] przyjmuje i generuje pewną liczbę pasażerów i poczty, co może pomóc graczom na samym początku gry. 
+
+Więcej informacji na temat sposobu obliczania dochodów można znaleźć w [[Main/pl/Przychód za ładunek|artykule dotyczącym przychodów z ładunków]].
+
+Poniżej znajdują się schematy i tabele pokazujące poszczególne rodzaje ładunku w każdym klimacie, oraz to, co je produkuje i akceptuje. 
+
+==Łańcuchy przetwarzania==
+Kliknij, aby zobaczyć plik
+<gallery>
+image:Przesyl_umiarkowany.png|Łańcuch przetwarzania dla klimatu umiarkowanego
+image:Przesyl_arktyczny.png|Łańcuch przetwarzania dla klimatu arktycznego
+image:Przesyl_tropikalny.png|Łańcuch przetwarzania dla klimatu tropikalnego
+image:Przesyl_zabawkowy.png|Łańcuch przetwarzania dla zabawkowego
+</gallery>
+
+==Produkcja i odbiór ładunku==
+
+:{| {{en/Wikitable}} style="width: 512px; font-size: 90%; margin:2px 4px 2px 0; border:solid 1px #AAAAAA" rules="cols"
+|- 
+| style="background: #ccffcc" colspan="3" align="center"|'''[[Main/en/Klimat/Pl#Umiarkowany|Umiarkowany]]'''
+|- style="background: #ffdead"
+|style="width: 26%;"| '''Ładunek'''
+|style="width: 37%;"| '''Produkowane przez'''
+|style="width: 37%;"| '''Akceptowane przez'''
+|- style="background: #E5FFE5"
+|'''[[Main/pl/Pasażerowie|Pasażerowie]]'''
+|[[Main/pl/Domy|Domy]], [[Main/pl/Platforma wiertnicza|Platformy wiertnicze]]
+|[[Main/pl/Domy|Domy]], [[Main/pl/Platforma wiertnicza|Platformy wiertnicze]]
+|-
+|'''[[Main/pl/Poczta|Poczta]]'''
+|[[Main/pl/Domy|Domy]]
+|[[Main/pl/Domy|Domy]], [[Main/pl/Platforma wiertnicza|Platformy wiertnicze]]
+|- 
+|'''[[Main/pl/Drewno|Drewno]]'''
+|[[Main/pl/Las|Lasy]]
+|[[Main/pl/Tartak|Tartaki]]
+|-
+|'''[[Main/pl/Kosztowności|Kosztowności]]'''
+|[[Main/pl/Bank|Banki]]
+|[[Main/pl/Bank|Banki]]
+|-
+|'''[[Main/pl/Ropa|Ropa]]'''
+|[[Main/pl/Pole naftowe|Pola naftowe]], [[Main/pl/Platforma wiertnicza|Platformy wiertnicze]]
+|[[Main/pl/Rafineria|Rafinerie]]
+|-
+|'''[[Main/pl/Ruda żelaza|Ruda żelaza]]'''
+|[[Main/pl/Kopalnia rudy żelaza|Kopalnie rudy żelaza]]
+|[[Main/pl/Huta|Huty]]
+|-
+|'''[[Main/pl/Stal|Stal]]'''
+|[[Main/pl/Huta|Huty]]
+|[[Main/pl/Fabryka|Fabryki]]
+|-
+|'''[[Main/pl/Towary|Towary]]'''
+|[[Main/pl/Fabryka|Fabryki]], [[Main/pl/Rafineria|Rafinerie]], [[Main/pl/Tartak|Tartaki]]
+|[[Main/pl/Domy|Domy]]
+|- 
+|'''[[Main/pl/Węgiel|Węgiel]]'''
+|[[Main/pl/Kopalnia węgla|Kopalnie węgla]]
+|[[Main/pl/Elektrownia|Elektrownie]]
+|-
+|'''[[Main/pl/Zboże|Zboże]]'''
+|[[Main/pl/Farma|Farmy]]
+|[[Main/pl/Fabryka|Fabryki]]
+|-
+|'''[[Main/pl/Żywiec|Żywiec]]'''
+|[[Main/pl/Farma|Farmy]]
+|[[Main/pl/Fabryka|Fabryki]]
+|}
+
+:{| {{en/Wikitable}} style="width: 512px; font-size: 90%; margin:2px 4px 2px 0; border:solid 1px #AAAAAA" rules="cols"
+|- 
+| style="background: #ccccff" colspan="3" align="center"|'''[[Main/en/Klimat/Pl#Arktyczny|Arktyczny]]'''
+|- style="background: #ffdead"
+|style="width: 26%;"| '''Ładunek'''
+|style="width: 37%;"| '''Produkowane przez'''
+|style="width: 37%;"| '''Akceptowane przez'''
+|- style="background: #dfefef"
+|'''[[Main/pl/Pasażerowie|Pasażerowie]]'''
+|[[Main/pl/Domy|Domy]] 
+|[[Main/pl/Domy|Domy]]
+|-
+|'''[[Main/pl/Poczta|Poczta]]'''
+|[[Main/pl/Domy|Domy]]
+|[[Main/pl/Domy|Domy]]
+|- 
+|'''[[Main/pl/Drewno|Drewno]]'''
+|[[Main/pl/Las|Lasy]]
+|[[Main/pl/Zakład papierniczy|Zakłady papiernicze]]
+|- 
+|'''[[Main/pl/Papier|Papier]]'''
+|[[Main/pl/Zakład papierniczy|Zakłady papiernicze]]
+|[[Main/pl/Drukarnia|Drukarnie]]
+|-
+|'''[[Main/pl/Pszenica|Pszenica]]'''
+|[[Main/pl/Farma|Farmy]]
+|[[Main/pl/Przetwórnia żywności|Przetwórnie żywności]]
+|-
+|'''[[Main/pl/Ropa|Ropa]]'''
+|[[Main/pl/Pole naftowe|Pola naftowe]]
+|[[Main/pl/Rafineria|Rafinerie]]
+|-
+|'''[[Main/pl/Towary|Towary]]'''
+|[[Main/pl/Drukarnia|Drukarnie]], [[Main/pl/Rafineria|Rafinerie]]
+|[[Main/pl/Domy|Domy]]
+|- 
+|'''[[Main/pl/Węgiel|Węgiel]]'''
+|[[Main/pl/Kopalnia węgla|Kopalnie węgla]]
+|[[Main/pl/Elektrownia|Elektrownie]]
+|-
+|'''[[Main/pl/Złoto|Złoto]]'''
+|[[Main/pl/Kopalnia złota|Kopalnie złota]]
+|[[Main/pl/Bank|Banki]]
+|-
+|'''[[Main/pl/Żywiec|Żywiec]]'''
+|[[Main/pl/Farma|Farmy]]
+|[[Main/pl/Przetwórnia żywności|Przetwórnie żywności]]
+|-
+|'''[[Main/pl/Żywność|Żywność]]'''
+|[[Main/pl/Przetwórnia żywności|Przetwórnie żywności]]
+|[[Main/pl/Domy|Domy]]
+|}
+
+:{| {{en/Wikitable}} style="width: 512px; font-size: 90%; margin:2px 4px 2px 0; border:solid 1px #AAAAAA" rules="cols"
+|- 
+| style="background: #ffffcc" colspan="3" align="center"|'''[[Main/en/Klimat/Pl#Tropikalny|Tropikalny]]'''
+|- style="background: #ffdead"
+|style="width: 26%;"| '''Ładunek'''
+|style="width: 37%;"| '''Produkowane przez'''
+|style="width: 37%;"| '''Akceptowane przez'''
+|- style="background: #FFFDE0"
+|'''[[Main/pl/Pasażerowie|Pasażerowie]]'''
+|[[Main/pl/Domy|Domy]] 
+|[[Main/pl/Domy|Domy]]
+|-
+|'''[[Main/pl/Poczta|Poczta]]'''
+|[[Main/pl/Domy|Domy]]
+|[[Main/pl/Domy|Domy]]
+|-
+|'''[[Main/pl/Diamenty|Diamenty]]'''
+|[[Main/pl/Kopalnia diamentów|Kopalnie diamentów]]
+|[[Main/pl/Bank|Banki]]
+|-
+|'''[[Main/pl/Drewno|Drewno]]'''
+|[[Main/pl/Tartak (tropikalny)|Tartaki]]
+|[[Main/pl/Fabryka|Fabryki]]
+|-
+|'''[[Main/pl/Kauczuk|Kauczuk]]'''
+|[[Main/pl/Plantacja kauczuku|Plantacja kauczuku]]
+|[[Main/pl/Fabryka|Fabryki]]
+|-
+|'''[[Main/pl/Kukurydza|Kukurydza]]'''
+|[[Main/pl/Farma|Farmy]]
+|[[Main/pl/Przetwórnia żywności|Przetwórnie żywności]]
+|-
+|'''[[Main/pl/Owoce|Owoce]]'''
+|[[Main/pl/Plantacja owoców|Plantacje owoców]]
+|[[Main/pl/Przetwórnia żywności|Przetwórnie żywności]]
+|-
+|'''[[Main/pl/Ropa|Ropa]]'''
+|[[Main/pl/Pole naftowe|Pola naftowe]]
+|[[Main/pl/Rafineria|Rafinerie]]
+|-
+|'''[[Main/pl/Ruda miedzi|Ruda miedzi]]'''
+|[[Main/pl/Kopalnia rudy miedzi|Kopalnie rudy miedzi]]
+|[[Main/pl/Fabryka|Fabryki]]
+|-
+|'''[[Main/pl/Towary|Towary]]'''
+|[[Main/pl/Fabryka|Fabryki]], [[Main/pl/Rafineria|Rafinerie]]
+|[[Main/pl/Domy|Domy]]
+|-
+|'''[[Main/pl/Woda|Woda]]'''
+|[[Main/pl/Ujęcie wody|Ujęcia wody]]
+|[[Main/pl/Wieża ciśnień|Wieże ciśnień]]
+|-
+|'''[[Main/pl/Żywność|Żywność]]'''
+|[[Main/pl/Przetwórnia żywności|Przetwórnie żywności]]
+|[[Main/pl/Domy|Domy]]
+|}
+
+:{| {{en/Wikitable}} style="width: 512px; font-size: 90%; margin:2px 4px 2px 0; border:solid 1px #AAAAAA" rules="cols"
+|- 
+| style="background: #ff9999" colspan="3" align="center"|'''[[Main/en/Klimat/Pl#Zabawkowy|Zabawkowy]]'''
+|- style="background: #ffdead"
+|style="width: 26%;"| '''Ładunek'''
+|style="width: 37%;"| '''Produkowane przez'''
+|style="width: 37%;"| '''Akceptowane przez'''
+|- style="background: #FFF0F5"
+|'''[[Main/pl/Pasażerowie|Pasażerowie]]'''
+|[[Main/pl/Domy|Domy]] 
+|[[Main/pl/Domy|Domy]]
+|-
+|'''[[Main/pl/Poczta|Poczta]]'''
+|[[Main/pl/Domy|Domy]]
+|[[Main/pl/Domy|Domy]]
+|-
+|'''[[Main/pl/Baterie|Baterie]]'''
+|[[Main/pl/Farma baterii|Farma baterii]]
+|[[Main/pl/Fabryka zabawek|Fabryka zabawek]]
+|-
+|'''[[Main/pl/Bąbelki|Bąbelki]]'''
+|[[Main/pl/Generator bąbelków|Generator bąbelków]]
+|[[Main/pl/Fabryka napojów gazowanych|Fabryka napojów gazowanych]]
+|-
+|'''[[Main/pl/Cola|Cola]]'''
+|[[Main/pl/Studnia coli|Studnia coli]]
+|[[Main/pl/Fabryka napojów gazowanych|Fabryka napojów gazowanych]]
+|-
+|'''[[Main/pl/Cukier|Cukier]]'''
+|[[Main/pl/Kopalnia cukru|Kopalnia cukru]]
+|[[Main/pl/Zakład cukierniczy|Zakład cukierniczy]]
+|-
+|'''[[Main/pl/Napoje gazowane|Napoje gazowane]]'''
+|[[Main/pl/Fabryka napojów gazowanych|Fabryka napojów gazowanych]]
+|[[Main/pl/Domy|Domy]]
+|-
+|'''[[Main/pl/Plastik|Plastik]]'''
+|[[Main/pl/Fontanny plastiku|Fontanny plastiku]]
+|[[Main/pl/Fabryka zabawek|Fabryka zabawek]]
+|-
+|'''[[Main/pl/Słodycze|Słodycze]]'''
+|[[Main/pl/Zakład cukierniczy|Zakład cukierniczy]]
+|[[Main/pl/Domy|Domy]]
+|-
+|'''[[Main/pl/Toffi|Toffi]]'''
+|[[Main/pl/Odkrywka toffi|Odkrywka toffi]]
+|[[Main/pl/Zakład cukierniczy|Zakład cukierniczy]]
+|-
+|'''[[Main/pl/Wata cukrowa|Wata cukrowa]]'''
+|[[Main/pl/Las waty cukrowej|Las waty cukrowej]]
+|[[Main/pl/Zakład cukierniczy|Zakład cukierniczy]]
+|-
+|'''[[Main/pl/Zabawki|Zabawki]]'''
+|[[Main/pl/Fabryka zabawek|Fabryka zabawek]]
+|[[Main/pl/Sklep z zabawkami|Sklep z zabwkami]]
+|}
+{{pl/Navbox Ładunek}}
