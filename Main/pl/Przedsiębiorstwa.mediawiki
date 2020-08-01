@@ -1,0 +1,383 @@
+[[Translation:Main/en/Industries]]{{en/-}}{{pl/Spis treści}}
+
+:''Ta strona zawiera opis działania przedsiębiorstw w [[Main/pl/OpenTTD|OpenTTD]].  Pełną listę przedsiębiorstw znajdziesz w [[Category/pl/Przedsiębiorstwa|kategorii: Przedsiębiorstwa]].''
+
+'''Przedsiębiorstwa''' to jednostki, które produkują konkretne [[Main/pl/Ładunek|'towary']] <small>''(cargos)''</small> i/lub usługi. W [[Main/pl/OpenTTD|OpenTTD]] są trzy typy przedsiębiorstw; [[Category/pl/Przedsiębiorstwa wydobywcze/produkcyjne|wydobywcze/produkcyjne]], [[Category/pl/Przedsiębiorstwa drugorzędne|drugo-]] i [[Category/pl/Przedsiębiorstwa trzeciorzędne|trzeciorzędne]]. Przedsiębiorstwa wydobywcze, takie jak kopalnie (czy produkcyjne, jak farmy) zapewniają surowce niczego przy tym nie potrzebując. Zasoby te są następnie transportowane przez [[Main/pl/Firma transportowa|firmę transportową]] do przedsiębiorstwa drugorzędnego. Czasami przedsiębiorstwa drugorzędne będą produkowały zasoby, które albo będą transportowane do [[Main/pl/Domy|miast]] ([[Main/pl/Towary|towary]] lub [[Main/pl/Żywność|żywność]]) lub do przedsiębiorstw trzeciorzędnych. 
+
+Twoja firma wyłącznie '''transportuje''' ładunek w imieniu producentów. Wszelkie zyski pochodzą jedynie z opłat za transport, a nie ze sprzedaży ładunku.
+
+Okno przedsiębiorstwa pokazuje dwie liczby mówiące o produkcji każdego typu ładunku tworzonego przez przedsiębiorstwo, a są nimi całkowite wartości z poprzedniego miesiąca. Pierwsza z nich to ilość wyprodukowanego ładunku - jest ona zależna od czynników wewnętrznych przedsiębiorstwa. Podczas [[Main/en/Ekonomia/Pl#Kryzys|kryzysu ekonomicznego]] produkcja spada o połowę.
+
+Druga liczba to procent wyprodukowanej wartości, która została dostarczona na najbliższe stacje do dalszej dystrybucji. Przedsiębiorstwa mogą zadecydować, aby zatrzymać część wyprodukowanego surowca i nie dostarczać jej na żadną stację.
+
+[[File:en/OknoPrzedsiębiorstwaPL.png|frame|center|Okno przedsiębiorstwa - [[Kopalnia węgla/Pl|kopalni węgla]]]]
+
+Wzrost produkcji przedsiębiorstwa wydobywczego zależy od procentu przewiezionego z nich ładunku. Im więcej transportujesz, tym szybciej przedsiębiorstwo rośnie (w perspektywie długoterminowej).
+
+Szczegóły dotyczące obliczeń wspomnianych numerów możesz znaleźć na stronie [[Main/pl/Mechanika gry|Mechanika gry]].
+__TOC__
+
+==Tabela przedsiębiorstw z podziałem na [[Main/pl/Klimat|klimaty]]==
+<table><tr><td valign="top" style="padding:0px; border:none; background-color:transparent;">
+  {| {{en/Wikitable}} style="margin:2px 4px 2px 0; border:solid 1px #AAAAAA" rules="cols"
+  |- 
+  | style="background: #ccffcc" colspan="3" align="center"| '''[[Main/en/Klimat/Pl#Umiarkowany]]'''
+  |- style="background: #ffdead"
+  | '''Przedsiębiorstwo'''
+  | '''Akceptuje'''
+  | '''Produkuje'''
+  |- style="background: #E5FFE5"
+  |[[Main/pl/Bank|Bank]]
+  |[[Main/pl/Kosztowności|Kosztowności]]
+  |[[Main/pl/Kosztowności|Kosztowności]]
+  |-
+  |[[Main/pl/Kopalnia węgla|Kopalnia węgla]]
+  |''nic''
+  |[[Main/pl/Węgiel|Węgiel]]
+  |- style="background: #E5FFE5"
+  |[[Main/pl/Fabryka|Fabryka]]
+  |[[Main/pl/Żywiec|Żywiec]],<br/>[[Main/pl/Zboże|Zboże]],<br/>[[Main/pl/Stal|Stal]]
+  |[[Main/pl/Towary|Towary]]
+  |-
+  |[[Main/pl/Farma|Farma]]
+  |''nic''
+  |[[Main/pl/Zboże|Zboże]],<br/>[[Main/pl/Żywiec|Żywiec]]
+  |- style="background: #E5FFE5"
+  |[[Main/pl/Las|Las]]
+  |''nic''
+  |[[Main/pl/Drewno|Drewno]]
+  |-
+  |[[Main/pl/Kopalnia rudy żelaza|Kopalnia rudy żelaza]]
+  |''nic''
+  |[[Main/pl/Ruda żelaza|Ruda Żelaza]]
+  |- style="background: #E5FFE5"
+  |[[Main/pl/Rafineria|Rafineria]]
+  |[[Main/pl/Ropa|Ropa]]
+  |[[Main/pl/Towary|Towary]]
+  |-
+  |[[Main/pl/Platforma wiertnicza|Platforma wiertnicza]]
+  |[[Main/pl/Pasażerowie|Pasażerowie]]
+  |[[Main/pl/Ropa|Ropa]],<br/>[[Main/pl/Pasażerowie|Pasażerowie]]
+  |- style="background: #E5FFE5"
+  |[[Main/pl/Pole naftowe|Pole naftowe]]
+  |''nic''
+  |[[Main/pl/Ropa|Ropa]]
+  |-
+  |[[Main/pl/Elektrownia|Elektrownia]]
+  |[[Main/pl/Węgiel|Węgiel]]
+  |''nic''
+  |- style="background: #E5FFE5"
+  |[[Main/pl/Tartak|Tartak]]
+  |[[Main/pl/Drewno|Drewno]]
+  |[[Main/pl/Towary|Towary]]
+  |-
+  |[[Main/pl/Huta|Huta]]
+  |[[Main/pl/Ruda żelaza|Ruda Żelaza]]
+  |[[Main/pl/Stal|Stal]]
+  |}
+</td><td valign="top" style="padding:0px; border:none; background-color:transparent;">
+  {| {{en/Wikitable}} style="margin:2px 4px 2px 0; border:solid 1px #AAAAAA" rules="cols"
+  |- 
+  | style="background: #ccccff" colspan="3" align="center"| '''[[Main/en/Klimat/Pl#Arktyczny]]'''
+  |- style="background: #ffdead"
+  | '''Przedsiębiorstwo'''
+  | '''Akceptuje'''
+  | '''Produkuje'''
+  |- style="background: #dfefef"
+  |[[Main/pl/Bank|Bank]]
+  |[[Main/pl/Złoto|Złoto]]
+  |''nic''
+  |-
+  |[[Main/pl/Kopalnia węgla|Kopalnia węgla]]
+  |''nic''
+  |[[Main/pl/Węgiel|Węgiel]]
+  |- style="background: #dfefef"
+  |[[Main/pl/Przetwórnia żywności|Przetwórnia żywności]]
+  |[[Main/pl/Żywiec|Żywiec]],<br/>[[Main/pl/Pszenica|Pszenica]]
+  |[[Main/pl/Żywność|Żywność]]
+  |-
+  |[[Main/pl/Farma|Farma]]
+  |''nic''
+  |[[Main/pl/Pszenica|Pszenica]],<br/>[[Main/pl/Żywiec|Żywiec]]
+  |- style="background: #dfefef"
+  |[[Main/pl/Las|Las]]
+  |''nic''
+  |[[Main/pl/Drewno|Drewno]]
+  |-
+  |[[Main/pl/Zakład papierniczy|Zakład papierniczy]]
+  |[[Main/pl/Drewno|Drewno]]
+  |[[Main/pl/Papier|Papier]]
+  |- style="background: #dfefef"
+  |[[Main/pl/Rafineria|Rafineria]]
+  |[[Main/pl/Ropa|Ropa]]
+  |[[Main/pl/Towary|Towary]]
+  |-
+  |[[Main/pl/Drukarnia|Drukarnia]]
+  |[[Main/pl/Papier|Papier]]
+  |[[Main/pl/Towary|Towary]]
+  |- style="background: #dfefef"
+  |[[Main/pl/Pole naftowe|Pole naftowe]]
+  |''nic''
+  |[[Main/pl/Ropa|Ropa]]
+  |-
+  |[[Main/pl/Elektrownia|Elektrownia]]
+  |[[Main/pl/Węgiel|Węgiel]]
+  |''nic''
+  |- style="background: #dfefef"
+  |[[Main/pl/Kopalnia złota|Kopalnia złota]]
+  |''nic''
+  |[[Main/pl/Złoto|Złoto]]
+  |}
+ </td><td valign="top" style="padding:0px; border:none; background-color:transparent;">
+  {| {{en/Wikitable}} style="margin:2px 4px 2px 0; border:solid 1px #AAAAAA" rules="cols"
+  |- 
+  | style="background: #ffffcc" colspan="3" align="center"| '''[[Main/en/Klimat/Pl#Tropikalny]]'''
+  |- style="background: #ffdead"
+  | '''Przedsiębiorstwo'''
+  | '''Akceptuje'''
+  | '''Produkuje'''
+  |- style="background: #FFFDE0"
+  |[[Main/pl/Bank|Bank]]
+  |[[Main/pl/Diamenty|Diamenty]]
+  |''nic''
+  |-
+  |[[Main/pl/Kopalnia diamentów|Kopalnia diamentów]]
+  |''nic''
+  |[[Main/pl/Diamenty|Diamenty]]
+  |- style="background: #FFFDE0"
+  |[[Main/pl/Fabryka|Fabryka]]
+  |[[Main/pl/Kauczuk|Kauczuk]],<br/>[[Main/pl/Ruda miedzi|Ruda miedzi]],<br/>[[Main/pl/Drewno|Drewno]]
+  |[[Main/pl/Towary|Towary]]
+  |-
+  |[[Main/pl/Farma|Farma]]
+  |''nic''
+  |[[Main/pl/Kukurydza|Kukurydza]]
+  |- style="background: #FFFDE0"
+  |[[Main/pl/Tartak|Tartak]]
+  |''nic''
+  |[[Main/pl/Drewno|Drewno]]
+  |-
+  |[[Main/pl/Kopalnia rudy miedzi|Kopalnia rudy miedzi]]
+  |''nic''
+  |[[Main/pl/Ruda miedzi|Ruda miedzi]]
+  |- style="background: #FFFDE0"
+  |[[Main/pl/Rafineria|Rafineria]]
+  |[[Main/pl/Ropa|Ropa]]
+  |[[Main/pl/Towary|Towary]]
+  |-
+  |[[Main/pl/Przetwórnia żywności|Przetwórnia żywności]]
+  |[[Main/pl/Owoce|Owoce]],<br/>[[Main/pl/Kukurydza|Kukurydza]]
+  |[[Main/pl/Żywność|Żywność]]
+  |- style="background: #FFFDE0"
+  |[[Main/pl/Plantacja owoców|Plantacja owoców]]
+  |''nic''
+  |[[Main/pl/Owoce|Owoce]]
+  |-
+  |[[Main/pl/Plantacja kauczuku|Plantacja kauczuku]]
+  |''nic''
+  |[[Main/pl/Kauczuk|Kauczuk]]
+  |- style="background: #FFFDE0"
+  |[[Main/pl/Ujęcie wody|Ujęcie wody]]
+  |''nic''
+  |[[Main/pl/Woda|Woda]]
+  |-
+  |[[Main/pl/Wieża ciśnień|Wieża ciśnień]]
+  |[[Main/pl/Woda|Woda]]
+  |''nic''
+  |}
+ </td><td valign="top" style="padding:0px; border:none; background-color:transparent;">
+  {| {{en/Wikitable}} style="margin:2px 4px 2px 0; border:solid 1px #AAAAAA" rules="cols"
+  |- 
+  | style="background: #ff9999" colspan="3" align="center"| '''[[Main/en/Klimat/Pl#Zabawkowy]]'''
+  |- style="background: #ffdead;"
+  | '''Przedsiębiorstwo'''
+  | '''Akceptuje'''
+  | '''Produkuje'''
+  |- style="background: #FFF0F5"
+  |[[Main/pl/Las waty cukrowej|Las waty cukrowej]]
+  |''nic''
+  |[[Main/pl/Wata cukrowa|Wata cukrowa]]
+  |-
+  |[[Main/pl/Zakład cukierniczy|Zakład cukierniczy]]
+  |[[Main/pl/Cukier|Cukier]],<br/>[[Main/pl/Toffi|Toffi]],<br/>[[Main/pl/Wata cukrowa|Wata cukrowa]]
+  |[[Main/pl/Słodycze|Słodycze]]
+  |- style="background: #FFF0F5"
+  |[[Main/pl/Farma baterii|Farma baterii]]
+  |''nic''
+  |[[Main/pl/Baterie|Baterie]]
+  |-
+  |[[Main/pl/Studnia coli|Studnia coli]]
+  |''nic''
+  |[[Main/pl/Cola|Cola]]
+  |- style="background: #FFF0F5"
+  |[[Main/pl/Sklep z zabawkami|Sklep z zabawkami]]
+  |[[Main/pl/Zabawki|Zabawki]]
+  |''nic''
+  |-
+  |[[Main/pl/Fabryka zabawek|Fabryka zabawek]]
+  |[[Main/pl/Plastik|Plastik]],<br/>[[Main/pl/Baterie|Baterie]]
+  |[[Main/pl/Zabawki|Zabawki]]
+  |- style="background: #FFF0F5"
+  |[[Main/pl/Fontanny plastiku|Fontanny plastiku]]
+  |''nic''
+  |[[Main/pl/Plastik|Plastik]]
+  |-
+  |[[Main/pl/Fabryka napojów gazowanych|Fabryka napojów gazowanych]]
+  |[[Main/pl/Cola|Cola]],<br/>[[Main/pl/Bąbelki|Bąbelki]]
+  |[[Main/pl/Napoje gazowane|Napoje gazowane]]
+  |- style="background: #FFF0F5"
+  |[[Main/pl/Generator bąbelków|Generator bąbelków]]
+  |''nic''
+  |[[Main/pl/Bąbelki|Bąbelki]]
+  |-
+  |[[Main/pl/Odkrywka toffi|Odkrywka toffi]]
+  |''nic''
+  |[[Main/pl/Toffi|Toffi]]
+  |- style="background: #FFF0F5"
+  |[[Main/pl/Kopalnia cukru|Kopalnia cukru]]
+  |''nic''
+  |[[Main/pl/Cukier|Cukier]]
+  |}
+</td></tr></table>
+
+==Opłacanie nowych przedsiębiorstw==
+Dla wystarczająco bogatej firmy transportowej możliwe jest sfinansowanie budowy nowego przedsiębiorstwa w miejscu wybranym przez gracza. Jednakże nie uzyskasz żadnego zwrotu z inwestycji (np. udziału w zyskach) z wyjątkiem dodatkowego ładunku do transportu. Nie jesteś właścicielem obiektu, co oznacza, że nie możesz go zniszczyć - upewnij się więc dobrze, że umieszczasz go we właściwej lokalizacji!
+
+===Koszty===
+
+Poniżej przedstawiono tabelę, przedstawiającą koszty budowy poszczególnych przedsiębiorstw w różnych klimatach w funtach i złotówkach
+
+{| {{en/Wikitable}}
+!colspan=4 style="background:#ccffcc"|Umiarkowany
+|-
+| rowspan=7 valign="top"| [[File:pl/Fund Industry template.png]]
+| style="background:#efefef" | '''Nazwa'''
+| style="background:#efefef" | <span style="white-space:nowrap">'''Koszt''' (bez inflacji)</span>
+| style="background:#efefef" | '''Opis'''
+|-
+| [[Main/pl/Bank|Bank]]
+| £747.070<span style="white-space:nowrap"> </span>(4.428.420 zł)
+| Akceptuje i produkuje [[Main/pl/Kosztowności|Kosztowności]].
+|-
+| [[Main/pl/Elektrownia|Elektrownie]]
+| £703.125<span style="white-space:nowrap"> </span>(4.218.750 zł)
+| Akceptuje [[Main/pl/Węgiel|Węgiel]] z [[Main/pl/Kopalnia węgla|Kopalni węgla]].
+|-
+| [[Main/pl/Fabryka|Fabryka]]
+| £609.375<span style="white-space:nowrap"> </span>(3.656.250 zł)
+| Akceptuje [[Main/pl/Zboże|Zboże]] i [[Main/pl/Żywiec|Żywiec]] z [[Main/pl/Farma|Farmy]] oraz [[Main/pl/Stal|Stal]] z [[Main/pl/Huta|Huty]]. Produkuje [[Main/pl/Towary|Towary]].
+|-
+| [[Main/pl/Huta|Huta]]
+| £629.882<span style="white-space:nowrap"> </span>(3.779 292 zł)
+| Akceptuje [[Main/pl/Ruda żelaza|Rudę żelaza]] z [[Main/pl/Kopalnia rudy żelaza|Kopalni rudy żelaza]], którą zamienia na [[Main/pl/Stal|Stal]].
+|-
+| [[Main/pl/Rafineria|Rafinerie]]
+| £714.843<span style="white-space:nowrap"> </span>(4.289.058 zł)
+| Może być wybudowana tylko na lub blisko krawędzi mapy. Akceptuje [[Main/pl/Ropa|Ropę]] z [[Main/pl/Platforma wiertnicza|Platform wiertniczych]] lub [[Main/pl/Pole naftowe|Pól naftowych]].
+|-
+| [[Main/pl/Tartak|Tartaki]]
+| £656.250<span style="white-space:nowrap"> </span>(3.937.500 zł)
+| Akceptuje [[Main/pl/Drewno|Drewno]] z [[Main/pl/Las|Lasów]]. Produkuje [[Main/pl/Towary|Towary]].
+|-
+!colspan=4 style="background:#ccccff"|Arktyczny
+|-
+| rowspan=7 valign="top"| [[File:pl/Fund Industry subarctic.png]]
+| style="background:#efefef" | '''Nazwa'''
+| style="background:#efefef" | <span style="white-space:nowrap">'''Koszt''' (bez inflacji)</span>
+| style="background:#efefef" | '''Opis'''
+|-
+| [[Main/pl/Bank|Bank]]
+| £442.382<span style="white-space:nowrap"> </span>(2.653.968 zł)
+| Akceptuje [[Main/pl/Złoto|Złoto]] z [[Main/pl/Kopalnia złota|Kopalni złota]].
+|-
+| [[Main/pl/Drukarnia|Drukarnia]]
+| £609.375<span style="white-space:nowrap"> </span>(3.656.250 zł)
+| Akceptuje [[Main/pl/Papier|Papier]] z [[Main/pl/Zakład papierniczy|Zakładów papierniczych]] i produkuje [[Main/pl/Towary|Towary]].
+|-
+| [[Main/pl/Elektrownia|Elektrownia]]
+| £703.125<span style="white-space:nowrap"> </span>(4.218.750 zł)
+| Akceptuje [[Main/pl/Węgiel|Węgiel]] z [[Main/pl/Kopalnia węgla|Kopalni węgla]]
+|-
+| [[Main/pl/Przetwórnia żywności|Przetwórnia żywności]]
+| £603.515<span style="white-space:nowrap"> </span>(3.621.090 zł)
+| Akceptuje [[Main/pl/Żywiec|Żywiec]] oraz [[Main/pl/Pszenica|Pszenicę]] z [[Main/pl/Farma|Farmy]] i produkuje [[Main/pl/Żywność|Żywność]].
+|-
+| [[Main/pl/Rafineria|Rafineria]]
+| £714.843<span style="white-space:nowrap"> </span>(4.289.058 zł)
+| Może być wybudowana tylko na lub blisko krawędzi mapy. Akceptuje [[Main/pl/Ropa|Ropę]] z [[Main/pl/Pole naftowe|Pól naftowych]].
+|-
+| [[Main/pl/Zakład papierniczy|Zakład papierniczy]]
+| £665.039<span style="white-space:nowrap"> </span>(3.990.234 zł)
+| Akceptuje [[Main/pl/Drewno|Drewno]] z [[Main/pl/Las|Lasów]] i produkuje [[Main/pl/Papier|Papier]].
+|-
+!colspan=4 style="background:#ffffcc"|Tropikalny
+|-
+| rowspan=7 valign="top"| [[File:pl/Fund Industry subtropical.png]]
+| style="background:#efefef" | '''Nazwa'''
+| style="background:#efefef" | <span style="white-space:nowrap">'''Koszt''' (bez inflacji)</span>
+| style="background:#efefef" | '''Opis'''
+|-
+| [[Main/pl/Bank|Bank]]
+| £442.382<span style="white-space:nowrap"> </span>(2.654.292 zł)
+| Akceptuje [[Main/pl/Diamenty|Diamenty]] z [[Main/pl/Kopalnia diamentów|Kopalni diamentów]].
+|-
+| [[Main/pl/Fabryka|Fabryka]]
+| £609.375<span style="white-space:nowrap"> </span>(3.656.250 zł)
+| Akceptuje [[Main/pl/Kauczuk|Kauczuk]] z [[Main/pl/Plantacja kauczuku|Plantacji kauczuku]], [[Main/pl/Ruda miedzi|Rudę miedzi]] z [[Main/pl/Kopalnia rudy miedzi|Kopalni rudy miedzi]] i [[Main/pl/Drewno|Drewno]] z [[Main/pl/Tartak (tropikalny)|Tartaków]]. Produkuje [[Main/pl/Towary|Towary]].
+|-
+| [[Main/pl/Przetwórnia żywności|Przetwórnia żywności]]
+| £603.515<span style="white-space:nowrap"> </span>(3.621.090 zł)
+| Akceptuje [[Main/pl/Owoce|Owoce]] z [[Main/pl/Plantacja owoców|Plantacji owoców]] i [[Main/pl/Kukurydza|Kukurydzę]] z [[Main/pl/Farma|Farm]], produkuje [[Main/pl/Żywność|Żywność]].
+|-
+| [[Main/pl/Rafineria|Rafineria]]
+| £714.843<span style="white-space:nowrap"> </span>(4.289.058 zł)
+| Może być wybudowana tylko na lub blisko krawędzi mapy. Akceptuje [[Main/pl/Ropa|Ropę]] z [[Main/pl/Pole naftowe|Pól naftowych]].
+|-
+| [[Main/pl/Tartak (tropikalny)|Tartak]]
+| £395.507<span style="white-space:nowrap"> </span>(2.373.042 zł)
+| Produkuje [[Main/pl/Drewno|Drewno]].
+|-
+| [[Main/pl/Wieża ciśnień|Wieża ciśnień]]
+| £336.914<span style="white-space:nowrap"> </span>(2.021.484 zł)
+| Akceptuje [[Main/pl/Woda|Woda]] z [[Main/pl/Ujęcie wody|Ujęcia wody]].
+|-
+!colspan=4 style="background:#ff9999"|Zabawkowy
+|-
+| rowspan=5 valign="top"| [[File:pl/Fund Industry toyland.png]]
+| style="background:#efefef" | '''Nazwa'''
+| style="background:#efefef" | <span style="white-space:nowrap">'''Koszt''' (bez inflacji)</span>
+| style="background:#efefef" | '''Opis'''
+|-
+| [[Main/pl/Fabryka napojów gazowanych|Fabryka napojów gazowanych]]
+| £518.554<span style="white-space:nowrap"> </span>(3.111.324 zł)
+| Akceptuje [[Main/pl/Cola|Colę]] ze [[Main/pl/Studnia coli|Studni coli]] i [[Main/pl/Bąbelki|Bąbelki]] z [[Main/pl/Generator bąbelków|Generatorów bąbelków]]. Produkuje [[Main/pl/Napoje gazowane|Napoje gazowane]].
+|-
+| [[Main/pl/Fabryka zabawek|Fabryka zabawek]]
+| £477.539<span style="white-space:nowrap"> </span>(2.856.234 zł)
+| Akceptuje [[Main/pl/Plastik|Plastik]] z [[Main/pl/Fontanny plastiku|Fontanny plastiku]] i [[Main/pl/Baterie|Baterie]] z [[Main/pl/Farma baterii|Farmy baterii]]. Produkuje [[Main/pl/Zabawki|Zabawki]].
+|-
+| [[Main/pl/Sklep z zabawkami|Sklep z zabawkami]]
+| £389.648<span style="white-space:nowrap"> </span>(2.337.888 zł)
+| Akceptuje [[Main/pl/Zabawki|Zabawki]] z [[Main/pl/Fabryka zabawek|Fabryk zabawek]].
+|-
+| [[Main/pl/Zakład cukierniczy|Zakład cukierniczy]]
+| £603.515<span style="white-space:nowrap"> </span>(3.621.090 zł)
+| Akceptuje [[Main/pl/Cukier|Cukier]] z [[Main/pl/Kopalnia cukru|Kopalni cukru]], [[Main/pl/Toffi|Toffi]] z [[Main/pl/Odkrywka toffi|Odkrywek toffi]] i [[Main/pl/Wata cukrowa|Watę cukrową]] z [[Main/pl/Las waty cukrowej|Lasów waty cyukrowej]]. Produkuje [[Main/pl/Słodycze|Słodycze]].
+|}
+
+Aby ufundować nowe przedsiębiorstwo w grze, przytrzymaj przycisk ''Przedsiębiorstwa'' na pasku [[File:en/Manual html m4d6ba21e.png]] (zobacz stronę ''Informacje o firmach i przedsiębiorstwach'' w [[Main/pl/Interfejs gry|Interfejs gry]]) i wybierz ''Ufunduj nowe przedsiębiorstwo''.
+
+Kilka ustawień zmienia zasady budowania nowych przedsiębiorstw: 
+* [[Main/en/Build raw material industries]]
+* [[Main/en/Multiple industries per town]]
+* [[Main/en/Same industries close]]
+
+==Poszukiwanie nowych przedsiębiorstw==
+Od wersji 0.6.1 można ''poszukiwać'' nowych przedsiębiorstw. Ufundowanie nowego przedsiębiorstwa i poszukiwanie mają dwie znaczące różnice. Po pierwsze, poszukiwanie jest dostępne tylko dla przedsiębiorstw wydobywczych, np. surowców. Po drugie, nie można wybrać miejsca dla przedsiębiorstwa znalezionego - będzie ono założone tam, gdzie poszukiwacz odkryje potrzebne zasoby naturalne.
+
+Istnieje możliwość włączenia tej funkcjonalności w grze z okna ustawień w zakładce ''środowisko'', ''budowa przedsiębiorstw wydobywczych'' może przyjmować trzy wartości: ''niedostępna'', ''jak inne przedsiębiorstwa'' i ''poszukiwania''.
+
+[[File:en/Coalmine.png|center|frame|[[Kopalnia węgla/Pl|Kopalnia węgla]] jest jednym z wielu przedsiębiorstw w grze.]]
+
+{{pl/Navbox Industries}}
+[[Category:pl/Przedsiębiorstwa]]
