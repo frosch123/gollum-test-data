@@ -1,0 +1,36 @@
+[[Translation:Main/en/Waterway construction]]{{en/-}}{{pl/Spis treści}}
+Kiedy zamierzasz transportować duże ilości na duże odległości, bądź przemysł jest zlokalizowany na wybrzeżu(np.Rafineria), można wykorzystać możliwości transportu wodnego, nawet jeśli jest on wolny to warto.
+
+==Narzędzia dla transportu wodnego==
+Zaczynamy od  zapoznania się z oknem transportu wodnego,wybieramy ikonę doku [[File:en/Dock build button.png]] z górnego menu [[Main/en/Game interface|menu bar]]
+
+[[File:en/Dock toolbar.png|center|none|frame|The Docks Construction Toolbar]]
+
+Funkcje narzędzi z okna transportu wodnego( patrząc od lewej):<br>
+
+:*[[File:en/Build canal.png]] '''Ikona budowy [[Main/en/Water Transport Tiles|kanału]]'''
+:*[[File:en/Build locks.png]] '''Ikona budowy [[Main/en/Water Transport Tiles|śluzy]]'''
+:*[[File:en/Clear title.png]] '''Ikona [[Main/en/usuwania]]'''
+:*[[File:en/Build dockdepot.png]] '''Ikona budowy  [[Main/en/Depots|doku konstrukcujnego]]'''
+:*[[File:en/Build dock.png]] '''Ikona budowy  [[Main/en/Water Transport Tiles|doku]]'''
+:*[[File:en/Place buoy.png]] '''Postaw [[Main/en/Water Transport Tiles|boję nawigacyjną]]'''
+:*[[File:en/Build aqueduct.png]] '''Ikona budwy  [[Main/en/Waterway construction#Building Aqueducts|akweduktu]]''' (po wersii [[Main/en/OpenTTD 0.7.0]])
+
+==Budowa doku==
+[[Main/en/docks|Doki]] można budować tylko na wybrzeżu. (Mogą być na poziomie morza, lub w części na lądzie.)
+[[File:en/Building Docks 1.png|left]] [[File:en/Building Docks 2.png]]
+
+==Budowa akweduktu==
+[[File:en/Aqueduct.png|thumb|400px|Aqueduct]]
+Akwedukty mogą posłużyć za wodne mosty dla statków korzystających z kanałów. Oczywistym jest że akwedukt nie może się kończyć na lądzie jak most drogowy czy kolejowy. Po obu stronach akweduktu musi być kanał. 
+<br style="clear:both;">
+
+==Zakup statków==
+Aby zakupić nowy [[Main/en/statek]] należy najpierw postawić dok konstrukcyjny. Klikając na niego otwiera się okno, w którym wybieramy przycisk zbuduj nowy statek.Pojawi się okno w którym dokonujemy wyboru jednostki. Wybieramy statek który nas interesuje i przyciskamy przycisk kup pojazd. Po zakupie statku powinno wyskoczyć okno zarządzanie nowo zakupioną jednostką, w której możemy ustawić kurs jednostki. Po ustaleniu kursu włączamy przycisk stop i jednostka rozpoczyna żeglugę.
+
+==Zarządzanie statkiem==
+Aby twoje statki dobrze prosperowały, twój dok musi być blisko, np.  oil refinery,  aby ropa mogła być wyładowywana bezpośrednio.  Jeśli ukształtowanie terenu nie pozwala tego zrobić, można zbudować stację przeładunkową, na której ropa będzie ładowana ze statków i dalej transportowana np. Pociągami.  W takim przypadku należy zbudować stację kolejową obok doku (lub użyć klawisza CTRL, aby dołączyć do stacji), tak aby miały wspólny znak stacji i użyć polecenia' [[Main/en/Polecenia/Pl#Przeładunek|transfer]]' dla statków, które dostarczą olej do stacji przeładunkowej. Pociągi mogą następnie pobrać ropę i zabrać ją do rafinerii.
+
+Note that you should use '[[Main/en/Orders#Transfer|transfer]]' orders only at intermediate stations, never at the final destination, or the cargo will only sit around at the station and you won't be paid for it.
+[[Category:en/Construction]]
+[[Category:en/Ships]]
