@@ -1,4 +1,4 @@
-[[Translation:Main/en/Orders]]{{en/-}}{{en/Tutorial}}{{tr/İçindekiler}}
+[[Translation:Main/en/Orders]]{{en/Tutorial}}{{tr/İçindekiler}}
 :''Bu sayfada [[Main/en/OpenTTD 0.7.0]] ve sonraki sürümlerin talimat sistemi açıklanmaktadır. OpenTTD'nin daha eski bir sürümünü kullanıyorsanız şu makaleye bakın:'''[[Main/en/Orders (old)|Talimatlar (eski)]]''' ''
 
 '''Talimatlar''', OpenTTD'yi başarıyla oynamanın temelini oluşturur. [[Main/en/Conditional Orders|Koşullu talimatlar]], fazladan kontrol sağlayan gelişmiş talimattır. Herhangi bir talimat vermezseniz, [[Main/tr/Araçlar|araçlarınız]] amaçsızca dolaşır ve size para kazandırırsa çok şanslı olursunuz.  [[Main/en/Cargo|Yükü]] başarıyla almak ve teslim etmek için (ki oyunun tüm amacı budur), araç talimatı vermeniz gerekir.  Bunlar "buraya gidin, kargoyu alın, sonra buraya götürün" gibi talimatlardır.
@@ -6,16 +6,16 @@
 ==Talimat Verme==
 Sahip olduğunuz herhangi bir araca talimat verebilirsiniz. Sürücüleriniz bu talimatı takip etmeye çalışacaktır (ağınız kötü tasarlanmışsa kaybolabilirler ancak bu ayrı bir konudur). Talimat vermek için:
 
-*Talimat vermek istediğiniz aracı bulun ve tıklayın. Yeni satın aldıysanız, araç bir depo içinde olabilir ya da zaten hareket ediyor olabilir. Bir tren için herhangi bir vagona tıklamak da aynı etkiyi yaratacaktır. Bu araç penceresini gösterir.<br/>[[File:en/saok.png|frame|none|Araç penceresi]]
+*Talimat vermek istediğiniz aracı bulun ve tıklayın. Yeni satın aldıysanız, araç bir depo içinde olabilir ya da zaten hareket ediyor olabilir. Bir tren için herhangi bir vagona tıklamak da aynı etkiyi yaratacaktır. Bu araç penceresini gösterir.<br/>[[File:en/Saok.png|frame|none|Araç penceresi]]
 
-*''Talimatlar'' düğmesini tıklayın (ekran görüntüsündeki sağa dönük sarı ok). Bu, aracın şu anda sahip olduğu talimatları gösteren Talimatlar penceresini açar (örnek aracımızın herhangi bir talimatı yoktur).<br/>[[File:en/tape.png|frame|none|Talimat penceresi]]
+*''Talimatlar'' düğmesini tıklayın (ekran görüntüsündeki sağa dönük sarı ok). Bu, aracın şu anda sahip olduğu talimatları gösteren Talimatlar penceresini açar (örnek aracımızın herhangi bir talimatı yoktur).<br/>[[File:en/Tape.png|frame|none|Talimat penceresi]]
 
 *[[Main/en/Talimatlar/Tr#Git|Git]]'i ve ardından haritadaki varış istasyonunu tıklayın.
 
 *Seçmek için listede yeni oluşturduğunuz talimatı tıklayın ve ardından araca o istasyonda ne yapması gerektiğini söyleyin. Örneğin, aracın o istasyonda yükün tamamnının dolmasını beklemesi için Bir Kargoyu Tam Yükle'ye tıklayın.
 
 ==Mevcut Varış Yeri==
-Aracın varış yerini her zaman [[Main/en/status bar|durum çubuğunda]] ve ayrıca ''Talimatlar'' penceresinde görebilirsiniz.  Talimatların solunda siyah bir üçgen bir talimatı gösterir. Bu, geçerli varış noktasıdır.
+Aracın varış yerini her zaman [[Main/en/Status bar|durum çubuğunda]] ve ayrıca ''Talimatlar'' penceresinde görebilirsiniz.  Talimatların solunda siyah bir üçgen bir talimatı gösterir. Bu, geçerli varış noktasıdır.
 
 ==Talimat Penceresi==
 Aşağıdaki düğmeler görünür:
@@ -36,7 +36,7 @@ Bir aracı belirli bir yere yönlendirmenin yolu budur. Seçilen talimattan önc
 * '''En yakın gara git'''
 * '''[[Main/en/Conditional Orders|Duruma göre dallan]]'''. Bu seçenekle, örneğin tren tamamen yüklüyse istasyonları terk etmek mümkündür.
 * '''Emirleri paylaştır'''
-[[File:en/gitse.png|frame|none|Git seçenekleri.]]
+[[File:en/Gitse.png|frame|none|Git seçenekleri.]]
 
 Talimat oluşturma kısayolları için [[Main/en/Quick Goto|Hızlı Git]]'e bakın.
 
@@ -66,7 +66,7 @@ Now it is possible to manage loading and unloading separately. You can:
 *''"Tüm kargoyu yükle"'': Her şeyi tam almak için
 *''"Bir kagoyu yükle"'': Bir kargonun tümünü yüklemek için
 *''"Yükleme yapma"'': Hiçbir şey yüklememek için
-[[File:en/yüse.png|frame|none|Yükleme seçenekleri.]]
+[[File:en/Yüse.png|frame|none|Yükleme seçenekleri.]]
 
 ===Mümkünse yükle===
 :Araç istasyondan geçecek, o anda var olan yükü yükleyecek ve bir sonraki varış yerine gidecektir. İlk varsayılan seçenektir. Bu kullanım için önerilmez çünkü büyük olasılıkla bir aracın seyahat süresini kısaltmak için tam yükle ayrılmasını isteyeceksiniz. (yolcu ve posta taşıyan araçlar dışında)
@@ -85,7 +85,7 @@ To unload you can:
 *''"Tümünü boşalt"'': Her şeyi boşaltır.
 *''"Aktar"'': Yükü aktarır.
 *''"Boşaltma yapma"'': Hiçbir şey boşaltmaz.
-[[File:en/bose.png|frame|none|Boşaltma seçenekleri.]]
+[[File:en/Bose.png|frame|none|Boşaltma seçenekleri.]]
 
 ===Kabul edilirse yükle===
 : Araç istasyondan geçecek, bu istasyonda kabul edilen tüm yükleri boşaltacak ve bir sonraki varış yerine gidecektir. İlk varsayılan seçenektir.
@@ -113,7 +113,7 @@ You can:
 *''"Durmaksızın git"''
 *''"Üzerinden git"''
 *''"Durmadan üzerinden git"''
-[[File:en/duse.png|frame|none|Durdurma seçenekleri.]]
+[[File:en/Duse.png|frame|none|Durdurma seçenekleri.]]
 
 ===Durmaksızın git===
 Doğrudan bir istasyona gitmek mümkündür. [[Main/en/Non-stop|Durmaksızın gitme]], bir aracın istenen yere giderken geçtiği istasyonlardan herhangi birinde durmasını önleyecektir.
@@ -123,15 +123,15 @@ Bir istasyon üzerinden gitmek mümkündür. (Her istasyon için durmaksızın g
 
 ==Bakım==
 Bu seçenek, ''bir depoya git'' talimatı seçildiyse kullanılabilir. Bu seçenek, ''bir depoya git'' talimatı seçildiyse kullanılabilir. Ayrıntılar için bkz. [[Main/en/Servicing|Bakım]] ve [[Main/en/Allow goto depot orders|Depoya gitme talimatlarına izin ver]].
-[[File:en/base.png|none|frame|Bakım düğmesi seçenekleri.]]
+[[File:en/Base.png|none|frame|Bakım düğmesi seçenekleri.]]
 
 ==Modifiye==
-Talimat listesindeki bir aracı [[Main/en/refit|modifiye]] etmek için bu düğmeye basın.  Bunu seçtiğinizde, taşıma yapacağınız aracı modifiye için kargo türünü seçmeniz istenecektir.  Bir araç yalnızca bir yük taşımak üzere modifiye edilebilir, yani aynı anda birden çok yük için yapılamaz. Eğer modifiye türünü seçmeden aracı belirli yerler arasında çalıştırmayı denerseniz yükleme (ve  dolayısıyla boşaltma) yapmayacaktır.
-[[File:en/modpe.png|none|frame|Yük türünü seçme.]]
+Talimat listesindeki bir aracı [[Main/en/Refit|modifiye]] etmek için bu düğmeye basın.  Bunu seçtiğinizde, taşıma yapacağınız aracı modifiye için kargo türünü seçmeniz istenecektir.  Bir araç yalnızca bir yük taşımak üzere modifiye edilebilir, yani aynı anda birden çok yük için yapılamaz. Eğer modifiye türünü seçmeden aracı belirli yerler arasında çalıştırmayı denerseniz yükleme (ve  dolayısıyla boşaltma) yapmayacaktır.
+[[File:en/Modpe.png|none|frame|Yük türünü seçme.]]
 
 ==Zaman Çizelgesi==
 Zaman çizelgeleri, araçların yolun her bir parçası boyunca ne kadar süre seyahat etmeye çalışacağını, her istasyonda ne kadar zaman harcayacağını ve talimatlar arasında hız sınırlarını belirleyebilmenizi sağlar. Ayrıntılar için bkz. [[Main/en/Timetable|Zaman çizelgesi]]
-[[File:en/zaçi.png|none|frame|Zaman çizelgesi ekranı.]]
+[[File:en/Zaçi.png|none|frame|Zaman çizelgesi ekranı.]]
 
 ==Talimatları Kopyalama==
 Daha çok araç tarafından yapılan bir taşıma yapmak istiyorsanız, bu araçların talimatlarınnın her birini ayrı ayrı vermek zaman kaybettiricidir. Bu kaybı yaşamamak için talimat kopyalama seçeneği vardır.
@@ -154,7 +154,7 @@ Talimatları kopyalamak en iyi çözüm değildir çünkü talimatları daha son
 #''Ctrl'' tuşuna basılı tutun ve paylaşmak istediğiniz talimatları içeren başka bir araca tıklayın.
 #Şimdi iki araç aynı programı paylaşıyor; birbirine bağlılar.  Diğer araçtan gelen talimatların olduğunu ve son satırda şimdi --Paylaşılmış Talimat Sonu-- yazıldığını göreceksiniz.
 
-[[File:en/pata.png|center|frame|2 otobüs için talimatlar paylaşıldı]]
+[[File:en/Pata.png|center|frame|2 otobüs için talimatlar paylaşıldı]]
 
 İstediğiniz kadar aracı birbirine bağlayabilirsiniz, sınır yoktur ancak elbette aynı tür araçlarını birbirine bağlayabilirsiniz.
 
@@ -168,13 +168,13 @@ Son satırda yine ''--Talimatların Sonu--'' yazdığını göreceksiniz. Bu tal
 
 ===Paylaşılmış talimatları olan araçların listesi===
 Talimatlar penceresinin (ya da Zaman Çizelgesi penceresinin) sağındaki [[File:en/SharedOrders.png]] simgesi Paylaşılan Talimatlar düğmesidir. Mevcut araçla aynı paylaşılan talimatlara sahip tüm araçların bir listesini gösterir. Simge yalnızca araç talimatları paylaşılıyorsa etkinleştirilir.
-[[File:en/patasi.png|none|frame|Paylaşılmış talimatları olan araçlar listesi]]
+[[File:en/Patasi.png|none|frame|Paylaşılmış talimatları olan araçlar listesi]]
 
 ===Notlar===
 *Kopyalanan talimatlardan farklı olarak, zaten mevcut bir programı olan araçlar için talimatları paylaşmak olanaklıdır. Bunun nedeni, talimatları paylaşmak için ''Ctrl'' tuşuna basılı tutmanız ve aracın programını yanlışlıkla kaybedebilmeniz olasılığını ortadan kaldırmasıdır. Bunu yaparken araç mevcut talimatlarının tümünü kaybedecek ve yalnız paylaşılmış talimatlara sahip olacak.
 *Bir aracın kopyasını oluşturmak için ''aracı kopyala'' (depo penceresinin) ya da bir kopyasını satın al (araç penceresinin) düğmesini kullanabilirsiniz ancak varsayılan olarak talimatlar da kopyalanır.  Talimatları kopyalanmış araçlarla paylaşmak istiyorsanız, kopyalamak için araca tıklarken Ctrl tuşuna basılı tutun.
-[[File:en/ako.png|none|frame|Aracı kopyala düğmesi.]]
-[[File:en/asaa.png|none|frame|Bir kopyasını satın al düğmesi. Yalnızca araç depodaysa kullanılabilir.]]
+[[File:en/Ako.png|none|frame|Aracı kopyala düğmesi.]]
+[[File:en/Asaa.png|none|frame|Bir kopyasını satın al düğmesi. Yalnızca araç depodaysa kullanılabilir.]]
 *Paylaşılmış talimatlarda, yanlışlıkla silebileceğiniz "ana" talimat kümesi (örneğin, diğerlerinin bağlantı yaptığı ana talimat listesini saklayan bir araç) yoktur.  İstediğiniz talimatlara sahip olan en az bir araç mevcut olduğu sürece bu liste kendisini korur.
 
 ==Talimat Kontrolü==
@@ -184,15 +184,15 @@ Birçok değişik araç ve geniş bir ağa sahip büyük bir şirket işletiyors
 
 ===Çok az talimat===
 Bir aracın kâr edebilmesi için programında en az iki istasyona gereksinimi vardır. Depolar ya da yerimleri yükün alınmasına ya da boşaltılmasına izin vermediğinden sayılmaz.
-[[File:en/çoazt.png|none|frame|Aracın çok az talimata sahip olduğunda gösterilen ileti.]]
+[[File:en/Çoazt.png|none|frame|Aracın çok az talimata sahip olduğunda gösterilen ileti.]]
 
 ===Tekrarlanmış talimat===
 Bazen bir istasyon yanlışlıkla art arda iki kez seçilir. Çoğu araç için bu, yol bulucuda oldukça karışıklığa neden olur; örneğin, aynı havaalanına inip tekrar inen bir uçak.
-[[File:en/tekrar.png|none|frame|Aracın tekrarlanmış talimata sahip olduğunda gösterilen ileti.]]
+[[File:en/Tekrar.png|none|frame|Aracın tekrarlanmış talimata sahip olduğunda gösterilen ileti.]]
 
 ===Hatalı talimat===
 Bir aracın durması gereken bir istasyonu silerseniz, istasyonun izi bir süre görünür olur (gri istasyon adı etiketi şeklinde). Bu, eski istasyonun adını alacak aynı konumda yeni bir istasyon inşa etmenizi sağlar. Araçlar, talimatlarını değiştirmeye gerek kalmadan o istasyona (hala doğru tipteyse) gelmeye devam edecektir.
-[[File:en/hatta.png|frame|none|"Hatalı talimat"]]
+[[File:en/Hatta.png|frame|none|"Hatalı talimat"]]
 
 Ancak, çok uzun bırakırsanız ya da kasıtlı olarak eski bir istasyonun yerine yeni bir istasyon inşa etmezseniz, ad etkiketi kalan istasyon sonunda kaybolacaktır. Araçların talimat listestindeki varış yeri, '''(Hatalı talimat)''' ile değiştirilecek ve atlanacaktır.
 
@@ -200,7 +200,7 @@ Bir depoyu kaldırdığınızda, tüm talimatlar hemen '''(Hatalı talimat)''' i
 
 ===Hatalı istasyon===
 Bir istasyonun bir kısmını silerseniz (örneğin bir tren istasyonuna bağlı olan otobüs durağı), istasyon hala mevcut olduğundan talimat geçersiz olmaz. Ancak doğru tesisin eksik olması nedeniyle aracın istasyona ulaşması mümkün değildir. Bu, istasyon doğru araç türüne hizmet vermediğinde (yalnızca tren istasyonuna giden otobüs gibi), bir araç [[Main/en/Drive-through Road Stops|DTRS]] olmadan bir istasyonda durmaya çalıştığında ya da bir tren, uyumsuz demiryolu türüne sahip bir istasyonda durmaya çalıştığında olabilir. Bu, aracın sonsuza dek istasyonu aramasına yol açar.
-[[File:en/hatis.png|frame|none|Hatalı istasyon olduğunda gönderilen ileti.]]
+[[File:en/Hatis.png|frame|none|Hatalı istasyon olduğunda gönderilen ileti.]]
 
 ==Ayrıca bakınız==
 * [[Main/en/Conditional Orders|Koşullu Talimatlar]]

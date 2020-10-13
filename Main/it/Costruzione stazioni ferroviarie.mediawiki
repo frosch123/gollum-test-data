@@ -1,4 +1,4 @@
-[[Translation:Main/en/Building railway stations]]{{en/-}}{{it/Tutorial}}
+[[Translation:Main/en/Building railway stations]]{{it/Tutorial}}
 In questo tutorial imparerai come '''costruire stazioni ferroviarie''' e come connettere efficacemente la tua rete di binari ad una stazione. Costruire le stazioni in modo efficiente è molto importante se si desidera costruire un grande impero ferroviario. Ci sono centinaia di modi in cui puoi costruire stazioni, alcuni esempi qui sotto potrebbero serviti per capire come fare.
 <!--
 In this tutorial you can learn how to '''build train''' (railway) '''stations''', and how to '''connect railways''' to stations in efficient ways. Building stations efficiently is very important if you wish to establish a great train empire. There are hundreds of ways you can build stations, some examples below should direct you on the right path.
@@ -14,7 +14,7 @@ __TOC__
 <li>Clicca sul pulsante '''Costruisci stazione ferroviaria''' [[File:en/RailSt.png]]. Apparirà l'interfaccia per scegliere tra le varie caratteristiche possibili, c'è anche la possibilità di usare le [[Main/en/Stazione ferroviaria/It#Stazioni NewGRF|Stazioni NewGRF]] con miglioramenti grafici. Se si passa con il puntatore su un qualsiasi pulsante appare un tooltip con una una descrizione di ciò che fa.</li> 
 
 {|style="margin: 5px auto 5px 0px;"
-|style="padding: 10px 0px 5px; 0px; background-color: transparent; border: 0px;"|[[File:it/stationgui.png|none|frame|Interfaccia ''Selezione stazione''.]]
+|style="padding: 10px 0px 5px; 0px; background-color: transparent; border: 0px;"|[[File:it/Stationgui.png|none|frame|Interfaccia ''Selezione stazione''.]]
 |}
 <li>Imposta il '''Numero di tracce''' e la '''Lunghezza della banchina''' tenendo presente che ogni "unità" può contenere due vagoni, quindi scegli la lunghezza della tua stazione in base alla lunghezza dei treni che vuoi far interagire lì, cioè una stazione lunga tre tiles accoglierà una locomotiva e cinque vagoni. I treni più lunghi potranno cumunque effettuare fermate in questa stazione ma il carico/scarico sarà più lento.</li>
 <li>Seleziona l'orientamento della tua stazione in modo da coordinarsi con la direzione del tracciato esistente o che intendi realizzare.</li>
@@ -25,7 +25,7 @@ __TOC__
 <!--
 ===Building train stations===
 #Open the ''Railway Construction'' toolbar by clicking the [[File:en/RailCnstr.png]] button.<br/>[[File:en/Railroad Construction.png|none|frame|Railway Construction toolbar.]]
-#Click on the ''Build railroad station'' button [[File:en/RailSt.png]]. A station building window will appear. Remember, you can right click<sup>*</sup> on any button if you ever want a description of what it does.<br/>[[File:en/stationgui.png|none|frame|Train station selection window.]]
+#Click on the ''Build railroad station'' button [[File:en/RailSt.png]]. A station building window will appear. Remember, you can right click<sup>*</sup> on any button if you ever want a description of what it does.<br/>[[File:en/Stationgui.png|none|frame|Train station selection window.]]
 #Set the ''Number of Tracks'' and the ''Platform Length''. Remember that each "unit" will take two carriages, so you choose the length of your station according to the length of the trains you want to load there, i.e. a station of 3 squares long will take one locomotive and five carriages. Longer trains can stop there also, but loading/unloading will be slower.
 #Select the orientation for your station so that you can run the track in the right direction.
 #Find a place for the new station on the map. Besides building on flat land you can also [[Main/en/build on  slopes]]. It's possible to build over existing straight rail.
@@ -52,7 +52,7 @@ That is completely up to you. The general guidelines would be:
 * Trains should '''not cause traffic jams''' while entering and exiting the station
 * Stations should be '''long enough''' for trains to fit completely (else loading times will be long)
 
-Below are some examples of stations. Each example is presented in two different signal styles. One style uses [[Main/en/path signals]] (stations in screenshots in red); this is the preferred method of signalling. The other style uses [[Main/en/block signals]] and is kept here for legacy reasons. Read the article on [[Main/en/signals]] if you want to know more about the different types of signals. How to build signals is covered in [[Main/en/building signals]]. 
+Below are some examples of stations. Each example is presented in two different signal styles. One style uses [[Main/en/Signals#Path Signals|path signals]] (stations in screenshots in red); this is the preferred method of signalling. The other style uses [[Main/en/Signals#Block signals|block signals]] and is kept here for legacy reasons. Read the article on [[Main/en/Signals|signals]] if you want to know more about the different types of signals. How to build signals is covered in [[Main/en/Building signals|building signals]]. 
 
 Important to remember when using path signals is that your longest train needs to be able to wait at all signals without blocking junctions. For that reason, some of the path signalled screenshots actually show more of the signal setup than the actual station itself.
 -->
@@ -250,7 +250,7 @@ A special type of station is the '''through station''' which allows trains to en
 |}
 
 <!--
-* The '''double two-way through station''' allows trains in both directions to use both platforms. For this you must add some junctions and some different signaling. As a result, if you have two trains coming shortly after each other from one direction and no train from the opposite direction, the second train can use the other platform if the first one hasn't departed yet. It is important to know that this layout only works with path signals; there's no way to make something similar with block signals that will not break very quickly (try it yourself if you don't believe it!). It is also important to know that this particular layout is prone to [[Main/en/deadlock]]s if you have multiple of these stations close to each other.
+* The '''double two-way through station''' allows trains in both directions to use both platforms. For this you must add some junctions and some different signaling. As a result, if you have two trains coming shortly after each other from one direction and no train from the opposite direction, the second train can use the other platform if the first one hasn't departed yet. It is important to know that this layout only works with path signals; there's no way to make something similar with block signals that will not break very quickly (try it yourself if you don't believe it!). It is also important to know that this particular layout is prone to [[Main/en/Deadlock|deadlock]]s if you have multiple of these stations close to each other.
 
 [[File:en/Station through twotrack pathsignals.png|center|frame|Double one-way through station with path signals]]
 -->

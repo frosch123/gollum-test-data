@@ -39,7 +39,7 @@ You will need to install the windows SDK in order to compile the 64bit version
 If you don't want/need music, you can skip DirectX SDK. Please read next chapter on that.
 :'''Install the version August 2007'''
 :From the components screen remove the documentation and sample source code you'll save a lot of space. They're pretty useless if you just need to compile OpenTTD (see the image below). For those of you who don't want to download the whole DirectX SDK package with several hundred megabytes you can use this handy [http://www.tt-forums.net/download/file.php?id=118839&sid=554843a58fb26683eeacb7642ea2446d zip file] containg only headers needed for successfull OpenTTD compilation. You ''don't'' need the included dxguid.lib file for compiling trunk.
-{{en/Note|You should not use a version newer then August 2007 as DirectMusic is no longer support as of the November 2007 release. If you install a newer version, you should follow the instructions of [[http://wiki.openttd.org/wiki/index.php/Microsoft_Visual_C++_2008_Express_Editions#Microsoft®_DirectX_SDK_earlier_than_August_2007 Microsoft® DirectX SDK earlier than August 2007]]}}
+{{en/Note|You should not use a version newer then August 2007 as DirectMusic is no longer support as of the November 2007 release. If you install a newer version, you should follow the instructions of [[http://wiki.openttd.org/wiki/index.php/Microsoft_Visual_C++_2008_Express_Editions#Microsoft®_DirectX_SDK_earlier_than_August_2007 Microsoft® DirectX SDK earlier than August 2007|http://wiki.openttd.org/wiki/index.php/Microsoft_Visual_C++_2008_Express_Editions#Microsoft®_DirectX_SDK_earlier_than_August_2007 Microsoft® DirectX SDK earlier than August 2007]]}}
 
 :As August 2007 or earlier installer doesn't support Microsoft® Visual Studio 2008, you will have to set up the VC++ directories manually.
 
@@ -57,10 +57,10 @@ If you don't want/need music, you can skip DirectX SDK. Please read next chapter
 
 : '''Alternative''': If you are willing to compile without support for MIDI music you will not be needing the DirectX SDK. To disable music, open the "openttd" project properties dialog and:
 :* Navigate to <code>Configuration properties -> C/C++ -> Preprocessor -> Preprocessor Definitions</code> and remove <code>WIN32_ENABLE_DIRECTMUSIC_SUPPORT</code> preprocessor definition.
-[[File:en/preprocessor.png|thumb|none|200px|Preprocessor settings]]
+[[File:en/Preprocessor.png|thumb|none|200px|Preprocessor settings]]
 
 :* Navigate to <code>Configuration properties -> Linker -> Input -> Additional Dependencies</code> and remove <code>dxguid.lib</code> library. ''note: this may no longer be necessary ''
-[[File:en/linker.png|thumb|none|200px|Linker settings]]
+[[File:en/Linker.png|thumb|none|200px|Linker settings]]
 
 =Preparing your system for 64bit compilation=
 :''Note: these instructions for using a 64bit version of Windows. If you are using a 32bit version, the registry edit will be different''
@@ -113,7 +113,7 @@ Subversion is needed to download the source (the place where to find the MSVC pr
 
 ===Make the directory===
 
-Make a directory called "ottdsrc" in your C:\ drive. It is important to make a directory without spaces since [[Main/en/Compiling on Windows using MinGW]] (the program used later for [[Main/en/#Bundle|making a bundle]]) can only switch to directories without spaces. This will be used as a place to download the source to.
+Make a directory called "ottdsrc" in your C:\ drive. It is important to make a directory without spaces since [[Main/en/Compiling on Windows using MinGW|MSYS]] (the program used later for [[Main/en/#Bundle|making a bundle]]) can only switch to directories without spaces. This will be used as a place to download the source to.
 
 ===Download the source===
 
@@ -170,7 +170,7 @@ After this is done, you can find the contents in the <code>/bundle</code> direct
 
 =Running/Debugging the game=
 
-Make sure you have either the [[Main/en/Installation#Files from TTD|original game files]] or our free alternatives [[Main/en/Sound Effects Replacement]] and [[Main/en/OpenGFX Readme]] placed in ~\Documents\OpenTTD\baseset\ , that way they're shared by all your OpenTTD installations and you don't have to copy them to every new installation.
+Make sure you have either the [[Main/en/Installation#Files from TTD|original game files]] or our free alternatives [[Main/en/Sound Effects Replacement|OpenSFX]] and [[Main/en/OpenGFX Readme|OpenGFX]] placed in ~\Documents\OpenTTD\baseset\ , that way they're shared by all your OpenTTD installations and you don't have to copy them to every new installation.
 
 =Microsoft® DirectX SDK earlier than August 2007=
 

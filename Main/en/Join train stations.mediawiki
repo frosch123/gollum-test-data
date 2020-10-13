@@ -5,19 +5,19 @@ A [[Main/en/Advanced Settings|setting]] that allows you to build a new train sta
 == Description ==
 Already have a train station and want to add another platform? Or you want to make the platforms longer without rebuilding the whole station? Then you have to enable this patch! Any platforms you add have to be the same width as the original station. And if you want to make the platforms longer you have to attach a station with the same amount of platforms.
 
-{{en/Note|A good complement to this patch is [[Main/en/nonuniform stations]], which allow you to build any weird station you can imagine.}}
+{{en/Note|A good complement to this patch is [[Main/en/Nonuniform stations|nonuniform stations]], which allow you to build any weird station you can imagine.}}
 
 == Use ==
-This feature is enabled by default. You can disable this patch through the [[Main/en/Configuring patches/Stations|configure patches -> stations]] window or use the following syntax in [[Main/en/openttd.cfg]]:
+This feature is enabled by default. You can disable this patch through the [[Main/en/Configuring patches/Stations|configure patches -> stations]] window or use the following syntax in [[Main/en/Openttd.cfg|openttd.cfg]]:
 <pre>[patches]
 join_stations = false</pre>
 
-<center>[[File:en/joinTrainStations.png]] [[File:en/joinTrainStations2.png]]</center>
+<center>[[File:en/JoinTrainStations.png]] [[File:en/JoinTrainStations2.png]]</center>
 
 == Hints & tips ==
-With [[Main/en/build on slopes]] enabled you can even have multileveled stations
+With [[Main/en/Build on slopes|build on slopes]] enabled you can even have multileveled stations
 
-<center>[[File:en/joinTrainStations3.png|center|none|frame|'''Join stations on different levels to get multilevelled stations''']]</center>
+<center>[[File:en/JoinTrainStations3.png|center|none|frame|'''Join stations on different levels to get multilevelled stations''']]</center>
 
 Enabling non-uniform stations gives you much freedom, although any station must fit into a square whose size is specified under Configure patches/stations/max station spread.
 

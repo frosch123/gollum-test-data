@@ -1,6 +1,6 @@
 {{de/Übersetzung|Signale|99}}
 
-[[Translation:Main/en/Signals]]{{en/-}}{{de/Inhaltsverzeichnis}}
+[[Translation:Main/en/Signals]]{{de/Inhaltsverzeichnis}}
 
 '''''Siehe das [[Main/de/Gleissignale setzen|Gleissignale setzen]] Tutorial für eine praktische Einführung in die Signalisierung.'''''
 
@@ -13,17 +13,17 @@ Um Signale zu bauen, musst du dich im Signalbaumodus befinden. Öffne das [[Main
 Im Signal-Menü:
 * Um ein '''Signal zu setzen''', klicke auf ein Stück Gleis. Am Anfang wird dies ein ''Zwei-Wege-Signal'' sein, welches die Voreinstellung und die grundlegenste Art eines Signals ist. Siehe unten wie man dies zu einer anderen Art ändert. Wenn du ein Signal auf ein Feld baust, wo zwei parallele und diagonale Gleise drauf sind, gehe sicher dass du das richtige Gleisstück nimmst.
 * Platziere '''mehrere Signale''' gleichzeitig indem du ein Signal auswählst und es entlang des Gleises [http://www.wikipedia.org/wiki/Drag-and-drop ziehst]. Sie werden wie in der Option [[Main/de/Signal zieh Dichte|Signal-Dichte beim Ziehen]] platziert und sind genauso gedreht wie das Anfangssignal.
-* Platziere '''mehrere Signale''' entlang der '''gesamten''' Strecke indem du {{keypress|Strg}} gedrückt hältst, während du ziehst. Du brauchst nur ein Feld lang ziehen und es wird automatisch die gesamte Strecke bis zur nächsten Kreuzung, dem nächsten vorhandenen Signal oder dem nächsten Bahnhof mit Signalen bebaut. Wie oben, werden die Signale wie in der [[Main/de/Signal zieh Dichte|"Signal-Zieh-Dichte-Option"]] festgelegt und in der gleichen Richtung wie das Anfangssignal gesetzt.
+* Platziere '''mehrere Signale''' entlang der '''gesamten''' Strecke indem du {{en/Keypress|Strg}} gedrückt hältst, während du ziehst. Du brauchst nur ein Feld lang ziehen und es wird automatisch die gesamte Strecke bis zur nächsten Kreuzung, dem nächsten vorhandenen Signal oder dem nächsten Bahnhof mit Signalen bebaut. Wie oben, werden die Signale wie in der [[Main/de/Signal zieh Dichte|"Signal-Zieh-Dichte-Option"]] festgelegt und in der gleichen Richtung wie das Anfangssignal gesetzt.
 * '''Entferne Signale''' indem du den [[File:en/Toggle clear active.png]]-Button (während du im Signalbaumodus bist) klickst und dann auf das zu entfernende Signal drückst. Beide Arten von Ziehen, wie oben erklärt, gelten auch für das Löschen von mehreren Signalen.
 * Baue '''[[Main/en/Signale/De#Einweg Signale|Einweg-Signale]]''' indem du nochmals auf ein vorhandenes Signal klickst. Das Signal wird durch 2-Weg, Einweg und Einweg (andere Richtung) wechseln.
-* Baue andere Arten von '''[[Main/en/Signale/De#Blocksignale|Block-]]''' und '''[[Main/en/Signale/De#Wegsignale|Wegsignalen]]''' indem Du mit gedrücktem {{keypress|Strg}} auf ein vorhandenes Signal klickst.
+* Baue andere Arten von '''[[Main/en/Signale/De#Blocksignale|Block-]]''' und '''[[Main/en/Signale/De#Wegsignale|Wegsignalen]]''' indem Du mit gedrücktem {{en/Keypress|Strg}} auf ein vorhandenes Signal klickst.
 
 ===Einschränkungen===
 * Du kannst keine Signale auf Felder mit Kreuzungen oder Straßenübergängen bauen.
 * Du kannst keine Signale auf [[Main/de/Brücke|Brücken]] oder in einem [[Main/de/Tunnelbau|Tunnel]] bauen. Ein [[Archive/en/HackaLittleBit/Tunnel Signals|Patch von HackaLittleBit]] kann jedoch eine automatische Signalsetzung simulieren.
 
 ==Signal-Menü==
-Das Signal-Menü kann dazu benutzt werden, Signale zu setzen, ohne den {{keypress|Strg}}+Klick benutzen zu müssen, mit dem du durch die Signalarten navigieren kannst. Entweder {{keypress|Strg}}+Klicke den Signalbau-Button oder stelle in den [[Main/en/Erweiterte Einstellungen/De/Konstruktion|Erweiterten Einstellungen]] ''Aktiviere Signal-Menü'' auf "an" (ältere Versionen im openttd.cfg enable_signal_gui als "true"). Wenn du auf "Signal errichten" klickst, kommt dann dieses Menü:
+Das Signal-Menü kann dazu benutzt werden, Signale zu setzen, ohne den {{en/Keypress|Strg}}+Klick benutzen zu müssen, mit dem du durch die Signalarten navigieren kannst. Entweder {{en/Keypress|Strg}}+Klicke den Signalbau-Button oder stelle in den [[Main/en/Erweiterte Einstellungen/De/Konstruktion|Erweiterten Einstellungen]] ''Aktiviere Signal-Menü'' auf "an" (ältere Versionen im openttd.cfg enable_signal_gui als "true"). Wenn du auf "Signal errichten" klickst, kommt dann dieses Menü:
 [[File:de/Signal Selection.png|none|frame|Geöffnetes Signal-Menü]]
 {|
 |-
@@ -97,25 +97,25 @@ Das Bild rechts zeigt einen Aufbau, in dem die Einfahrt des Bahnhofs durch einfa
 Der Status eines Vorsignal ist nicht nur abhängig vom Status der Strecke direkt danach, sondern auch vom Status anderer Vorsignale weiter hinten auf der Strecke. Genauer: ein Einfahrvorsignal ist grün, wenn der dahinterliegende Abschnitt ein grünes Ausgangssignal hat. Du als Planer musst entscheiden, welche Signale Vorsignale sind und welche die Ausfahrten kennzeichnen sollen.
 {{en/-}}
 ====Einfahrsignale====
-[[File:en/entry presignal.png|left|60px]]Ein '''Einfahrsignal''' zeigt nur grün, solange sich mindestens ein grünes Ausfahrsignal auf dem folgenden Streckenabschnitt befindet. Dies verhindert, dass ein Zug einfährt, bevor eine Ausfahrt frei ist. Merke, dass Depots eingebaute Zwei-Wege-Signale haben (sie funktionieren wie ein Einfahrsignal in einem Vorsignal-Set).
+[[File:en/Entry presignal.png|left|60px]]Ein '''Einfahrsignal''' zeigt nur grün, solange sich mindestens ein grünes Ausfahrsignal auf dem folgenden Streckenabschnitt befindet. Dies verhindert, dass ein Zug einfährt, bevor eine Ausfahrt frei ist. Merke, dass Depots eingebaute Zwei-Wege-Signale haben (sie funktionieren wie ein Einfahrsignal in einem Vorsignal-Set).
 
 Wenn hinter dem Einfahrsignal kein Signal als Ausfahrsignal gekennzeichnet ist, verhält es sich wie ein normales Signal. Dies ist praktisch für Zwei-Wege-Vorsignale, bei denen nur eine Richtung ein Vorsignal braucht.
 {{en/-}}
 
 ====Ausfahrsignale====
-[[File:en/exit presignal.png|60px|left]]Ein '''Ausfahrsignal''' verhält sich genau wie ein Blocksignal, sendet seinen Status jedoch an das Einfahrsignal des vorherigen Streckenabschnitts. Ausfahrsignale sind hilfreich, um die richtige Farbe auf Einfahr- und Kombinationssignalen zu schalten.
+[[File:en/Exit presignal.png|60px|left]]Ein '''Ausfahrsignal''' verhält sich genau wie ein Blocksignal, sendet seinen Status jedoch an das Einfahrsignal des vorherigen Streckenabschnitts. Ausfahrsignale sind hilfreich, um die richtige Farbe auf Einfahr- und Kombinationssignalen zu schalten.
 {{en/-}}
 
 ====Kombinationssignale====
-[[File:en/station with pre-signals2.png|frame|right|Bahnhof mit einem Einfahrsignal, zwei Kombinationssignale und vier Ausfahrsignale]]
-[[File:en/combo presignal.png|60px|left]]Es gibt eine dritte Art von Vorsignal. Es heißt '''Kombinationssignal''' und ist ein Einfahr- und ein Ausfahrsignal in einem. Dies erlaubt dir, große "Zweige" von Vorsignalen zu bauen (siehe rechts).
+[[File:en/Station with pre-signals2.png|frame|right|Bahnhof mit einem Einfahrsignal, zwei Kombinationssignale und vier Ausfahrsignale]]
+[[File:en/Combo presignal.png|60px|left]]Es gibt eine dritte Art von Vorsignal. Es heißt '''Kombinationssignal''' und ist ein Einfahr- und ein Ausfahrsignal in einem. Dies erlaubt dir, große "Zweige" von Vorsignalen zu bauen (siehe rechts).
 {{en/-}}
 ====Vorsignale bauen====
 Um ein Vorsignal zu bauen, wähle den entsprechenden Button im [[Main/en/Signale/De#Signal-Menü|Signal-Menü]].
 
-In vorherigen Versionen musst du zuerst ein normales Signal platzieren. Dann, mit {{keypress|Strg}} gedrückt, klicke das Signal um durch die verschieden Arten von Vorsignalen zu wechseln:
-* Merke, dass du Einweg-Vorsignale genauso bauen kannst wie normale Einwegsignale. Merke: {{keypress|Strg}} halten und klicken wechselt die Art von (Vor-)Signal, klicken ohne {{keypress|Strg}} ändert die Richtung des Signals - wenn das Signal-Menü nicht aktiviert ist.
-* Vergiss nicht {{keypress|Strg}} zu drücken, wenn du ein neues Signal platzierst, sonst bekommst du ein (altmodisches) Formsignal (siehe unten). Benutze auch {{keypress|Strg}} wenn du das Signal-Menü aktiviert hast.
+In vorherigen Versionen musst du zuerst ein normales Signal platzieren. Dann, mit {{en/Keypress|Strg}} gedrückt, klicke das Signal um durch die verschieden Arten von Vorsignalen zu wechseln:
+* Merke, dass du Einweg-Vorsignale genauso bauen kannst wie normale Einwegsignale. Merke: {{en/Keypress|Strg}} halten und klicken wechselt die Art von (Vor-)Signal, klicken ohne {{en/Keypress|Strg}} ändert die Richtung des Signals - wenn das Signal-Menü nicht aktiviert ist.
+* Vergiss nicht {{en/Keypress|Strg}} zu drücken, wenn du ein neues Signal platzierst, sonst bekommst du ein (altmodisches) Formsignal (siehe unten). Benutze auch {{en/Keypress|Strg}} wenn du das Signal-Menü aktiviert hast.
 {{en/-}}
 ====Einschränkungen====
 [[File:en/PresignalLimitation.png|frame|Das Problem mit Vorsignalen...]]
@@ -156,7 +156,7 @@ Weil die Vorderseite jedes Signals als sicherer Wartepunkt definiert ist, würde
 [[File:en/Yapp unsafewaitinglocation.png|frame|center|Das durch den Pfeil gekennzeichnete Signal zeigt einen schlechten Wartepunkt, da der Zug in der Kreuzung die normalerweise freie Strecke für den Zug von oben blockiert. Im Bild befindet sich auch ein zweiter schlechter Wartepunkt. Kannst du ihn finden?]]
 
 Dies ist noch ein Beispiel dafür, was du mit diesen Pfadsignalen machen kannst. Das funktioniert viel besser als mit Vorsignalen, weil zwei Züge gleichzeitig den Bahnhof verlassen UND das gleiche Depot benutzen können. Es gibt wegen der Aufteilung in Streckenabschnitte keine Möglichkeit, es mit Vorsignalen zu erreichen. In diesem Fall gibt es Einweg-Pfadsignale für die Züge, die den Bahnhof verlassen und einfache Pfadsignale für Züge, die die Depots verlassen.
-[[File:en/pathsignal station exit.png|frame|center|Zwei-Ausfahrten-Bahnhof.]]
+[[File:en/Pathsignal station exit.png|frame|center|Zwei-Ausfahrten-Bahnhof.]]
 
 
 ====Erweiterte Einstellungen====
@@ -165,7 +165,7 @@ Es gibt drei neue [[Main/de/Erweiterte Einstellungen|Einstellungen]] in Bezug au
 
 Eine Option ist das Hervorheben reservierte Strecken. Dies ist nützlich, um Probleme bei Pfad-signalisierten Kreuzungen zu beheben, da man sehen kann, welche Wege von Zügen reserviert wurden.
 
-Die anderen beiden Optionen steuern das Verhalten des Signalbau-Werkzeugs. Du kannst festlegen, welche Signalart standardmäßig gebaut werden soll, wenn du ein neues Signal mit dem Signal-Werkzeug baust, und welche Signalarten bei {{keypress|Strg}}+Klick (auf ein vorhandenes Signal) erstellt werden sollen.
+Die anderen beiden Optionen steuern das Verhalten des Signalbau-Werkzeugs. Du kannst festlegen, welche Signalart standardmäßig gebaut werden soll, wenn du ein neues Signal mit dem Signal-Werkzeug baust, und welche Signalarten bei {{en/Keypress|Strg}}+Klick (auf ein vorhandenes Signal) erstellt werden sollen.
 
 Es gibt noch ein paar andere Pfadsignal-verbundene Optionen, die nicht durch das Erweiterte-Einstellungen-Fenster erreichbar sind. Welche Optionen dies sind und wie man sie ändern kann, findest du [[Main/de/Erweiterte Pfadsignal Optionen|hier]].
 
@@ -182,12 +182,12 @@ Mit diesem Bahnhofs-Layout können Züge von beiden Richtungen beide Plattformen
 {{en/Feature|0.7}}
 
 ==Formsignale==
-[[File:en/semaphore.png|frame|left]]
+[[File:en/Semaphore.png|frame|left]]
 '''Formsignale''' sind eine Signalart mit einem altmodischen Aussehen, die aber die gleiche Funktion wie normale Signale haben.
 
-Vor OpenTTD 0.6.0 konnte man Formsignale nur mit gedrücktem {{keypress|Strg}} bauen. Seit 0.6.0 werden vor 1975 statt Lichtsignalen standardmäßig Formsignale und mit {{keypress|Strg}} Lichtsignale gebaut. Diese Einstellung wird "Automatischer Bau von Formsignalen bis:" genannt und ist unter den "Erweiterten Einstellungen" unter "Konstruktion", "Signale" zu finden.
+Vor OpenTTD 0.6.0 konnte man Formsignale nur mit gedrücktem {{en/Keypress|Strg}} bauen. Seit 0.6.0 werden vor 1975 statt Lichtsignalen standardmäßig Formsignale und mit {{en/Keypress|Strg}} Lichtsignale gebaut. Diese Einstellung wird "Automatischer Bau von Formsignalen bis:" genannt und ist unter den "Erweiterten Einstellungen" unter "Konstruktion", "Signale" zu finden.
 
-Nach der Platzierung kann man mit {{keypress|Strg}} und gedrückter Maustaste die Signalart ändern. Du kannst vorplatzierte Formsignale in Lichtsignale ändern, indem du den "Signalumbau"-Button im Signalmenü auswählst und das Signal {{keypress|Strg}}+klickst.
+Nach der Platzierung kann man mit {{en/Keypress|Strg}} und gedrückter Maustaste die Signalart ändern. Du kannst vorplatzierte Formsignale in Lichtsignale ändern, indem du den "Signalumbau"-Button im Signalmenü auswählst und das Signal {{en/Keypress|Strg}}+klickst.
 {{en/-}}
 ===Geschichte===
 Formsignale haben eine lange Geschichte in der Eisenbahn. Lange vor dem Aufkommen der elektrischen Lichter wurden Formsignale genutzt, um die Richtung von Weichen und der Sicherheit eines Einfahrens in den nächsten Streckenteil zu zeigen. Formsignale sind einfache, mechanisch kontrollierte Schilder, die sich je nach Status der Strecke heben oder senken.
@@ -201,7 +201,7 @@ Signale sind dazu da, um den Zusammenstoß zweier Züge zu verhindern und den Z�
 ==Siehe auch==
 * [[Main/de/Erweiterte Signalisierungs Beispiele|Beispiele Erweiterter Signalisierung]]
 * [[Main/en/Zugdepot bauen/De#Erweiterte Depotkonfigurationen|Erweiterte Depotkonfigurationen]]
-* [[Category/de/Kreuzung]] Gute Beispiele für komplexe Kreuzungen die Vorteile von Vorsignalen nutzen.
+* [[Category/de/Kreuzung|:Category:Kreuzung/De]] Gute Beispiele für komplexe Kreuzungen die Vorteile von Vorsignalen nutzen.
 * [http://www.darkcoding.net/misc/openttd-trains-and-signals-for-beginners-a-tutorial/ Signale für den Anfänger]
 * [http://kokolokus.de/?s=blog&v=6 Ein Tutorial geschrieben von domsson, auf den Foren] [http://www.tt-forums.net/viewtopic.php?f=29&t=51395 Hier]
 

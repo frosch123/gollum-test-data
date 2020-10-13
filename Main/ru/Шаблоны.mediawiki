@@ -3,10 +3,10 @@
 Смотрите список общих '''шаблонов''' и их использование, нажмите на название шаблона для получения подробной информации о шаблоне.
 Вы можете найти список шаблонов в статьях:
 * [[Main/ru/Руководство по стилю/Общие шаблоны|OpenTTD:Руководство по стилю/Общие шаблоны]]
-* [[Category/ru/Шаблоны]].
+* [[Category/ru/Шаблоны|:Category:Шаблоны/Ru]].
 * Для получения полного списка всех шаблонов, смотрите [[Main/en/Special:Allpages/Template:]].
 
-Также смотрите другие статьи [[Category/ru/Редактирование ресурсов]]. 
+Также смотрите другие статьи [[Category/ru/Редактирование ресурсов|:Category:Редактирование ресурсов/Ru]]. 
 
 __TOC__
 
@@ -58,8 +58,7 @@ __TOC__
 |{{ru/Правка|1= }}
 |- valign="top"
 |{{en/S|Перевод/Ru | название оригинала на английском|Процент}}
-|{{ambox
-| type  = style
+|{{en/Ambox| type  = style
 | image = Translation.png
 | text  = <strong>Эта статья переводится с английского языка на русский: <includeonly>[{{SERVER}}{{localurl:{{NAMESPACE}}:{{{1}}}|action=view}} {{{1}}}]</includeonly><noinclude>{{{1}}}</noinclude>.</strong>
 <div style="font-size: 90%">
@@ -145,7 +144,7 @@ __TOC__
 |{{en/Feature|1.0}}
 |-
 |{{en/S|nightly| ТЕКСТ }}
-|{{nightly| ТЕКСТ }}
+|{{en/Nightly| ТЕКСТ }}
 |}
 
 == Другие ==
@@ -184,7 +183,7 @@ __TOC__
 
 == Навигация ==
 
-Смотрите [[Category/en/Navigation]] для списка доступных в настоящее время шаблонов навигации.
+Смотрите [[Category/en/Navigation|:Category:Navigation]] для списка доступных в настоящее время шаблонов навигации.
 
 
 === [[Template/en/Navbox|Navbox]] ===
@@ -197,14 +196,14 @@ __TOC__
 
 |group1 = Группа 1
 |list1  =  {{en/Navbox subgroup|group1 = Подруппа 1
-            |list1  = {{nowrap begin}} Элемент 1 {{en/·w}} Элемент 2 {{en/·w}} Элемент 3 {{nowrap end}}
+            |list1  = {{en/Nowrap begin}} Элемент 1 {{en/·w}} Элемент 2 {{en/·w}} Элемент 3 {{en/Nowrap end}}
 
             |group2 = Подруппа 2
-            |list2  = {{nowrap begin}} Элемент 1 {{en/·w}} Элемент 2 {{en/·w}} Элемент 3 {{nowrap end}}
+            |list2  = {{en/Nowrap begin}} Элемент 1 {{en/·w}} Элемент 2 {{en/·w}} Элемент 3 {{en/Nowrap end}}
            }}
 
 |group2 = Группа 2
-|list2  = {{nowrap begin}} Элемент 1 {{en/·w}} Элемент 2 {{en/·w}} Элемент 3 {{nowrap end}}
+|list2  = {{en/Nowrap begin}} Элемент 1 {{en/·w}} Элемент 2 {{en/·w}} Элемент 3 {{en/Nowrap end}}
 }}
 
 

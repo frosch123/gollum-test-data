@@ -1,9 +1,9 @@
-[[Translation:Main/en/FAQ troubleshooting]]{{en/-}}
+[[Translation:Main/en/FAQ troubleshooting]]
 {{pl/FAQmenu}}
 
 W tym artykule opisano rozwiązywania problemów błędów z [[Main/pl/OpenTTD|OpenTTD]]. Zaleca się wypróbowanie najnowszych <!--[[Main/en/Nightly build|nightly build]]-->[[Main/pl/Nocne budowania|nocnych budowań]] , która jest najnowszą wersją OpenTTD, przed publicznym zgłoszeniem problemu. Często problem został już rozwiązany.
 
-Jeśli występują błędy nawet w najnowszej wersji, możesz uruchomić grę w trybie debugowania. Uruchom grę za pomocą ''"-d1"'' (flaga w takim przypadku). Przeczytaj więcej w sekcji [[Main/pl/debugowanie|debugowanie]].
+Jeśli występują błędy nawet w najnowszej wersji, możesz uruchomić grę w trybie debugowania. Uruchom grę za pomocą ''"-d1"'' (flaga w takim przypadku). Przeczytaj więcej w sekcji [[Main/pl/Debugowanie|debugowanie]].
 
 == Gra się nie uruchomi, ponieważ ... ==
 
@@ -34,7 +34,7 @@ uruchom OpenTTD jako root; jednak prawdopodobnie powinieneś naprawić uprawnien
 
 == Kiedy zaczynam grę w trybie pełnoekranowym, częstotliwość odświeżania zmienia się na 60Hz! (Windows) ==
 :*To dlatego, że nie skonfigurowałeś poprawnie DirectX. Z tego samego powodu może się zdarzyć, że gra działa z wyższą częstotliwością odświeżania niż monitor obsługuje. Spróbuj pobrać "DirectX Control Panel" z microsoft.com, skopiuj to do /windows/system32, otwórz okno dialogowe w Panelu sterowania, przejdź do zakładki DirectDraw i ustaw "Forced Refresh Rate" maksymalnie, co może pokazać Twój monitor.
-:*Możesz ustawić '''display_hz''' mieć prawidłowe odświeżanie. Ten przedmiot jest w '''[win32]''' Grupy [[Main/pl/openttd.cfg|openttd.cfg]].
+:*Możesz ustawić '''display_hz''' mieć prawidłowe odświeżanie. Ten przedmiot jest w '''[win32]''' Grupy [[Main/pl/Openttd.cfg|openttd.cfg]].
 
 == Kursor jest ukryty w trybach pełnoekranowych pod Linux ==
 * OpenTTD można odtwarzać w trybie okienkowym.
@@ -108,7 +108,7 @@ Może to również rozwiązać problemy z innymi programami, które powodują aw
 == Mój interfejs użytkownika jest zbyt mały, aby go odczytać / Moja czcionka jest nieczytelna lub wadliwa ==
 Domyślna czcionka jest częścią podstawowego zestawu graficznego, którego używasz, w przypadku języków z literami niełacińskimi automatycznie wybierana jest czcionka zastępcza spośród czcionek dostępnych w systemie.
 
-Aby użyć innego fontu , zamknij OpenTTD i zmodyfikuj opcje ''small_font'' , ''medium_font'', ''large_font'', ''mono_font'', ''small_size'', ''medium_size'', ''large_size'' i ''mono_size'' w pliku ''[[Main/pl/openttd.cfg|openttd.cfg]]'' . Tutaj możesz ustawić inną czcionkę i rozmiar dla każdego z czterech typów czcionek dostępnych w OpenTTD.
+Aby użyć innego fontu , zamknij OpenTTD i zmodyfikuj opcje ''small_font'' , ''medium_font'', ''large_font'', ''mono_font'', ''small_size'', ''medium_size'', ''large_size'' i ''mono_size'' w pliku ''[[Main/pl/Openttd.cfg|openttd.cfg]]'' . Tutaj możesz ustawić inną czcionkę i rozmiar dla każdego z czterech typów czcionek dostępnych w OpenTTD.
 
 Możesz ustawić dowolną czcionkę dostępną w twoim systemie. To, która twarz i rozmiar najlepiej Ci odpowiada, jest kwestią prób i błędów. Pamiętaj, że musisz zmienić zarówno czcionkę, jak i rozmiar, aby zmiany odniosły jakikolwiek efekt (możesz jednak zmienić na przykład tylko małą czcionkę, ustawiając opcje  ''small_font'' i ''small_size'' , zachowując jednocześnie średnie i duże czcionki podstawowy zestaw grafiki).
 

@@ -1,4 +1,4 @@
-[[Translation:Main/en/Manual of Style]]{{en/-}}
+[[Translation:Main/en/Manual of Style]]
 [[File:en/StyleGuide.png|left|64px]]
 {{en/TOCright}}
 Deze pagina geeft een overzicht van het beleid omtrent en maken en bewerken van [[Main/nl/OpenTTD|OpenTTD]] wiki artikelen.
@@ -16,7 +16,7 @@ Zie de [[Main/nl/Bewerkingshulp|wiki bewerkingshulp]] als je voor het eerst wiki
 ==Algemene regels==
 *Gebruik de '''Bewerking ter controle tonen''' knop.
 *Volg het format van bestaande pagina's zoveel mogelijk.
-*Gebruik a.u.b onze [[Main/nl/zandbak|zandbak]] om codes te testen.
+*Gebruik a.u.b onze [[Main/nl/Zandbak|zandbak]] om codes te testen.
 *Test jouw wiki in meerdere browsers als dat mogelijk is!
 *Voeg een beschrijvende samenvatting bij het bewerken van een pagina.
 *Een "kleine bewerking" is een verbetering van typefouten of kleine aanpassingen die geen effect hebben op de pagina. Geen samenvatting vereist.
@@ -48,7 +48,7 @@ Bijvoorbeeld: Een speler die wat wil weten over industrieën zal dan zoeken op "
 
 Je kunt ook een redirectpagina maken die verwijst van het enkelvoud naar het meervoud:
 
-<pre>#REDIRECT [[Main/en/industries]]</pre>
+<pre>#REDIRECT [[Main/en/Industries|industries]]</pre>
 
 Wanneer je twijfelt (wat niet vaak zou moeten gebeuren), gebruik enkelvoud.
 
@@ -57,21 +57,21 @@ Gebruik geen hoofdletters in de titel van de wiki, tenzij de titel een eigennaam
 
 ===Niet-engelstalige pagina's===
 De titel van het artikel moet in de eigen taal zijn gesteld, gevold door het symbool '''/''' en zijn internationale taal. Voorbeelden:
-*[[Main/es/Página principal]] (voor ''main page'' in het Spaans)
-*[[Main/de/Startseite]] (voor ''main page'' in het Duits)
-*[[Main/ru/Главная страница]] (voor ''main page'' in het Russisch)
-*[[Main/nl/Hoofdpagina]] (voor ''main page'' in het Nederlands)
+*[[Main/es/Página principal|Página principal/Es]] (voor ''main page'' in het Spaans)
+*[[Main/de/Startseite|Startseite/De]] (voor ''main page'' in het Duits)
+*[[Main/ru/Главная страница|Главная_страница/Ru]] (voor ''main page'' in het Russisch)
+*[[Main/nl/Hoofdpagina|Hoofdpagina/Nl]] (voor ''main page'' in het Nederlands)
 
-Voor een index van artikelen in andere talen in OpenTTD Wiki zie: [[Category/en/Articles in other languages]]
+Voor een index van artikelen in andere talen in OpenTTD Wiki zie: [[Category/en/Articles in other languages|:Category:Articles in other languages]]
 
 ===Test pagina's===
-Als de [[Main/nl/zandbak|zandbak]] niet genoeg is voor jouw testpagina, kan je een pagina als "map" aanmaken op je eigen gebruikerspagina zodat de namespace schoon blijft. Voorbeeld:
-*[[Archive/en/Zuu/New Main Page side by side layout]]
+Als de [[Main/nl/Zandbak|zandbak]] niet genoeg is voor jouw testpagina, kan je een pagina als "map" aanmaken op je eigen gebruikerspagina zodat de namespace schoon blijft. Voorbeeld:
+*[[Archive/en/Zuu/New Main Page side by side layout|User:Zuu/New_Main_Page_side_by_side_layout]]
 
 ===Naamruimte===
 Als je artikel niet direct gerelateerd is aan OpenTTD, hoort het waarschijnlijk in een naamruimte. Voorbeelden:
-*[[Main/en/Village Pump]]
-*[[Main/en/Italy]]
+*[[Main/en/Village Pump|OpenTTD:Village Pump]]
+*[[Main/en/Italy|Scenario:Italy]]
 
 ==Artikel inhoud==
 
@@ -80,8 +80,8 @@ Gebruik elk goed werkend formaat. Het PNG-formaat is de beste keuze voor de Open
 {|
 !Code!!Resultaat
 |-
-|<pre>[[File:en/longerbridges.png|frame|Afbeelding tekst]]</pre>
-|[[File:en/longerbridges.png|frame|Afbeelding tekst]]
+|<pre>[[File:en/Longerbridges.png|frame|Afbeelding tekst]]</pre>
+|[[File:en/Longerbridges.png|frame|Afbeelding tekst]]
 |}
 
 ===Annotatie schermafdrukken===
@@ -109,7 +109,7 @@ Je kan geordende of ongeordende lijsten maken:
 |}
 
 ===Spelversie===
-Concentreer je in je artikel alleen op de laatste versie van de stable game, geen [[Main/en/nightly]] builds. Op de Development pagina's kan je de functies van de nightly build discusseren. Als je echt een nightly functie van een nightly build in je artikel wilt zetten markeer je deze met een nightly}} template.
+Concentreer je in je artikel alleen op de laatste versie van de stable game, geen [[Main/en/Nightly build|nightly]] builds. Op de Development pagina's kan je de functies van de nightly build discusseren. Als je echt een nightly functie van een nightly build in je artikel wilt zetten markeer je deze met een nightly}} template.
 
 ===Brits versus Amerikaans Engels ===
 De originele OpenTTD was in het Brits, dus:
@@ -128,7 +128,7 @@ Een soortgelijke zaak geldt ook voor dingen als "pagina", "sectie" of "link" bij
 We streven naar media-onafhankelijke informatie. Natuurlijk kunnen meta woorden nuttig zijn als het over hoe de wiki te gebruiken gaat.
 
 ===Patches===
-Doe dit hetzelfde zoals gedaan is bij: [[Main/en/longer bridges]](EN).
+Doe dit hetzelfde zoals gedaan is bij: [[Main/en/Longer bridges|longer_bridges]](EN).
 
 ==Sjablonen==
 ===Sjabloon format===
@@ -139,12 +139,12 @@ Gebruik een kleur die het beste de boodschap van jouw bericht dekt(geel voor waa
 ===Gewone sjablonen===
 ''Belangrijk artikel: [[Main/en/Stijlhandleiding/Nl#Gewone sjablonen|Stijlhandleiding gewone sjablonen]]''
 
-*Je kan een lijst van sjablonen hier vinden: [[Category/en/Templates]] of [[Category/nl/Sjablonen]]
-*Voor meer informatie, zie: [[Main/en/Templates]] of [[Main/nl/Modellen]]
+*Je kan een lijst van sjablonen hier vinden: [[Category/en/Templates|:Category:Templates]] of [[Category/nl/Sjablonen|:Category:Sjablonen/Nl]]
+*Voor meer informatie, zie: [[Main/en/Templates]] of [[Main/nl/Modellen|Modellen/Nl]]
 
 ==Categorieën==
 ===Artikel verwijderen===
-Gebruik: [[Category/en/requests for deletion]].
+Gebruik: [[Category/en/Requests for deletion|:category:requests for deletion]].
 
 ===Voeg een artikel toe aan een categorie===
 Voeg je pagina toe aan een categorie (of 2). Dit maak het zoeken makkelijker. Je kan een lijst van categorieen hier vinden: [[Main/en/Special:Categories]].
@@ -153,9 +153,9 @@ Plaats deze code aan het eind van een artikel:
 <pre>[[Category:en/categoryname]]</pre>
 
 ==Scenario's==
-Zie de instructies hier: [[Main/en/Scenarios Team#Procedure to add a scenario]].
+Zie de instructies hier: [[Main/en/Scenarios Team#Procedure to add a scenario|Scenarios_Team#Procedure_to_add_a_scenario]].
 Plaats het scenario in een naamruimte:
-*[[Main/en/Italy]]
+*[[Main/en/Italy|Scenario:Italy]]
 
 ==Zie ook==
 *[http://meta.wikimedia.org/wiki/Help:Editing Text Editing syntax in MediaWiki]

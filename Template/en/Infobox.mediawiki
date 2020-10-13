@@ -356,7 +356,7 @@
 }}<!-- Below
 -->{{#if:{{{below|}}}|<tr><td colspan="2" class="{{{belowclass|}}}" style="text-align:center; {{{belowstyle|}}}">{{{below}}}</td></tr>}}<!--
  Navbar
--->{{#if:{{{name|}}}|<tr><td colspan="2" style="text-align:right">{{navbar|{{{name}}}|noedit={{{noedit|0}}}}}</td></tr>}}
+-->{{#if:{{{name|}}}|<tr><td colspan="2" style="text-align:right">{{en/Navbar|{{{name}}}|noedit={{{noedit|0}}}}}</td></tr>}}
 </table></includeonly><noinclude>
 
 This template is intended as a meta-template: a template used for constructing other templates. it is not meant for use directly in an article, but can be used on a one-off basis if required. (see [http://en.wikipedia.org/wiki/Template:Infobox original template doc])
@@ -365,6 +365,6 @@ This template is intended as a meta-template: a template used for constructing o
 ...
 
 ==See example==
-[[Template/en/Infobox User]]
+[[Template/en/Infobox User|Template:Infobox User]]
 
 [[Category:en/Templates|I]]</noinclude>

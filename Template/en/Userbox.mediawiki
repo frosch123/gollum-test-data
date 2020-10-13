@@ -15,15 +15,14 @@
       -->height:{{{logo-height|{{{id-h|45}}}}}}px; line-height:{{{info-line-height|{{{info-lh|1.25em}}}}}}; <!-- 
       -->color:{{{info-color|{{{info-fc|black}}}}}}; vertical-align: middle; {{{info-other-param|{{{info-op|}}}}}}" <!-- 
       -->| {{{info|{{{4|{{{info|''info''}}}}}}}}}
-|}</div>{{#if:{{{usercategory|}}}|[[Category:en/{{{usercategory}}}| {{PAGENAME}}]]}}{{#if:{{{usercategory2|}}}|[[Category:en/{{{usercategory2}}}| {{PAGENAME}}]]}}{{#if:{{{usercategory3|}}}|[[Category:en/{{{usercategory3}}}| {{PAGENAME}}]]}}<noinclude>
+|}</div>{{#if:{{{usercategory|}}}|[[Category:en/{{{usercategory}}}|{{PAGENAME}}]]}}{{#if:{{{usercategory2|}}}|[[Category:en/{{{usercategory2}}}|{{PAGENAME}}]]}}{{#if:{{{usercategory3|}}}|[[Category:en/{{{usercategory3}}}|{{PAGENAME}}]]}}<noinclude>
 {{en/-}}
 ==Usage==
 
 This template can be used to quickly create a [http://en.wikipedia.org/wiki/Wikipedia:Userboxes userbox] for display on a user's user page without having to know HTML or Wikitable syntax.
 
 <pre>
-{{userbox
-| float    = left|right|none (default = left)
+{{en/Userbox| float    = left|right|none (default = left)
 | border-c = border color (default = id-c)
 | border-s = border width in pixels (default = 1)
 | id       = id text or image
@@ -51,7 +50,7 @@ This template can be used to quickly create a [http://en.wikipedia.org/wiki/Wiki
 * All parameters are optional
 
 ==See Also==
-* [[Template/en/Userboxtop]]
-* [[Template/en/Userboxbottom]]
+* [[Template/en/Userboxtop|Template:Userboxtop]]
+* [[Template/en/Userboxbottom|Template:Userboxbottom]]
 
 [[Category:en/Templates|U]]</noinclude>

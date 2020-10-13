@@ -1,7 +1,7 @@
-[[Translation:Main/en/NewGRF FAQ]]{{en/-}}{{en/FAQmenu}}
+[[Translation:Main/en/NewGRF FAQ]]{{en/FAQmenu}}
 {{en/Feature|0.4}}
 
-{{todo|weiter übersetzen, neue Screenshots erstellen und dann im Wiki verlinken}}
+{{en/Todo|weiter übersetzen, neue Screenshots erstellen und dann im Wiki verlinken}}
 
 Antworten auf häufig gestellte Fragen zu Ersatzgrafiken und anderen Erweiterungen in Form von NewGRFs für OpenTTD. Weitere Informationen findet man auch unter [[Main/de/NewGRF|NewGRF]].
 
@@ -10,7 +10,7 @@ Hierzu lies bitte die Erklärungen zu [[Main/de/NewGRF|NewGRFs]].
 
 ===Wo kann ich .grf Dateien herunterladen?===
 
-Eine grosse Auswahl an NewGRFs kann direkt aus OpenTTD heraus heruntergeladen werden indem man im Hauptmenü auf "Erweiterungen herunterladen" klickt (siehe auch [[Main/en/Online content]]).
+Eine grosse Auswahl an NewGRFs kann direkt aus OpenTTD heraus heruntergeladen werden indem man im Hauptmenü auf "Erweiterungen herunterladen" klickt (siehe auch [[Main/en/Online content|Online_content]]).
 Diese NewGRFs können auch manuell von der [http://bananas.openttd.org/ BaNaNaS Internetseite] heruntergeladen werden. Die Funktion im Spiel hat stets die selben Dateien verfügbar wie die BaNaNas Seite. Dies ist insbesondere nützlich wenn man bei Benutzung der Funktion im Spiel auf technische Probleme wie z.B. sehr restriktive Firewalls trifft.
 
 Viele, insbesondere ältere NewGRFs sind leider noch nicht auf diesem Wege verfügbar. Es gibt jedoch eine Reihe weiterer Internetseiten auf denen man solche Perlen finden kann, hier sind Links zu einigen sehr bekannten englischsprachigen Seiten.
@@ -19,7 +19,7 @@ Viele, insbesondere ältere NewGRFs sind leider noch nicht auf diesem Wege verf�
 * [http://www.tt-forums.net/viewforum.php?f=67 TT-Forums.net Graphic Releases forum]
 * [[Main/en/NewGRF List|OpenTTD supported GRF files]]
 * [http://www.ttdpatch.net/newgrf.html TTD Patch website]
-* [[Main/en/Links#Graphics Links]]
+* [[Main/en/Links#Graphics Links|Links#Graphics_Links]]
 
 ===Warum sind nicht alle NewGRFs via "Erweiterungen herunterladen" verfügbar?===
 
@@ -40,7 +40,7 @@ In version 1.1, changing NewGRFs in-game has been disabled. Ever since NewGRFs c
 
 The reason behind this change is that too many people ignored the warning in the red error window, and complained about crashes, or problems with vehicles, industries, etc. after modifying the NewGRF Settings in a saved game.
 
-For scenario developers, a configuration option exists to enable scenario developer tools, which permit changing grfs in-game (for debugging and testing). This option (scenario_developer) is only available in [[Main/en/openttd.cfg]] or the [[Main/en/console]]. If you decide to change this setting, please take time to actually read the warning message when presented. Also know that if your scenario or saved game gets messed up, the only solution is to start from scratch.
+For scenario developers, a configuration option exists to enable scenario developer tools, which permit changing grfs in-game (for debugging and testing). This option (scenario_developer) is only available in [[Main/en/Openttd.cfg|openttd.cfg]] or the [[Main/en/Console|console]]. If you decide to change this setting, please take time to actually read the warning message when presented. Also know that if your scenario or saved game gets messed up, the only solution is to start from scratch.
 
 ===I’ve loaded a vehicle NewGRF into my saved game, but none of the new vehicle graphics I loaded appear. How come?===
 

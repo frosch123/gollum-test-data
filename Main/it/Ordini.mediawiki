@@ -1,4 +1,4 @@
-[[Translation:Main/en/Orders]]{{en/-}}{{it/Tutorial}}
+[[Translation:Main/en/Orders]]{{it/Tutorial}}
 : ''Questo tutorial spiega gli ordini per la versione [[Main/en/OpenTTD 0.7.0]] e successivi (attualmente versione 1.8.0). Se si utilizza una versione precedente di OpenTTD, consultare l'articolo: '' '''[[Main/en/Orders (old)]]'''
 
 Gli '''ordini''' sono fondamentali per giocare con successo a OpenTTD. Gli [[Main/it/Ordini condizionali|ordini condizionali]] sono ordini avanzati che ti consentono un controllo extra. Se non impartisci ordini, i tuoi [[Main/it/Veicoli|veicoli]] vagheranno senza scopo e sarai molto fortunato se ti faranno guadagnare denaro. Per poter prelevare e consegnare con successo [[Main/it/Carichi|carichi]] (che è in definitiva lo scopo del gioco), è necessario impostare gli ordini dei veicoli. Queste sono istruzioni come "vai qui, prendi il carico quindi portalo lì".
@@ -34,7 +34,7 @@ Appena abbiamo comprato il treno, oppure se sono stati cancellati tutti gli ordi
 I possibili obiettivi a cui possiamo mandare il veicolo sono:
 
 * Le tue [[Main/it/Stazioni|stazioni]], ma solo le stazioni in cui viene accettato quel particolare veicolo. Quindi non puoi dare a un autobus un ordine di andare in un aeroporto se quell'aeroporto non ha una stazione degli autobus. Non puoi inviare i tuoi veicoli alle stazioni dei concorrenti.
-* [[Main/it/Depositi|depositi]]. Questo cambierà alcuni degli altri pulsanti - vedi [[Main/en/#Servizio| Servizio]] e [[Main/en/#Riadatta|riadattare]] nei paragrafi seguienti.
+* [[Main/it/Depositi|depositi]]. Questo cambierà alcuni degli altri pulsanti - vedi [[Main/en/#Servizio|Servizio]] e [[Main/en/#Riadatta|riadattare]] nei paragrafi seguienti.
 * [[Main/it/Waypoint|waypoint]], solo per i treni, è possibile inviare un treno a un determinato waypoint per influenzarne la scelta della traccia o se le stazioni sono troppo distanti e il treno si perde facilmente. 
 * [[Main/it/Boa|boa]], solo per le navi, è un tipo di waypoint per le navi che percorrono lunghe distanze.
 
@@ -104,7 +104,7 @@ Se si evidenzia la riga ''Fine degli ordini'' e la si cancella l'intera lista de
 Questo fa sì che il treno salti l'ordine che sta attualmente adempiendo e passa a quello successivo. Premendo '''Salta''' mentre il veicolo stà eseguendo l'ultimo ordine dell'elenco andrà direttamente al primo.
 
 ===Tabella oraria===
-{{main|Timetable}}
+{{en/Main|Timetable}}
 Gli orari consentono di specificare per quanto tempo i veicoli devono cercare di viaggiare per ciascuna parte del percorso e quanto tempo restare in ciascuna stazione, oltre a specificare i limiti di velocità da mantenere tra un ordine è l'alto. Vedi l'articolo 
 [[Main/en/Timetable|timetable]] per maggiori dettagli e sul suo uso.
 [[File:it/Orders-timetable.png|none|frame|Tramite i pulsanti '''Orario''' e '''Ordini''' è possibile passare dalla finestra ordini a quella della tabella oraria e viceversa.]]
@@ -198,7 +198,7 @@ Se più veicoli eseguono le stesse operazioni negli stessi luoghi invece di scri
 == Controllo degli ordini ==
 Quando si gestisce una grande azienda con molti veicoli diversi e una vasta rete, è inevitabile che gli errori vengano inseriti in alcuni elenchi di ordini. Ad esempio, ciò può accadere quando una stazione viene cancellata o se si fa clic accidentalmente su un hangar anziché su un aeroporto quando si impartiscono ordini ad un aeromobile.
 
-[[Main/it/Sistema di verifica ordine| sistema di verifica ordine]] viene eseguito automaticamente in background e verifica la presenza di quattro problemi tipici che possono verificarsi in un elenco di ordini. Nel caso in cui ne rilevi uno, attiverà un messaggio di notizie che ti informa sull'anomalia in modo che tu possa correggerla.
+[[Main/it/Sistema di verifica ordine|sistema di verifica ordine]] viene eseguito automaticamente in background e verifica la presenza di quattro problemi tipici che possono verificarsi in un elenco di ordini. Nel caso in cui ne rilevi uno, attiverà un messaggio di notizie che ti informa sull'anomalia in modo che tu possa correggerla.
 
 === Numero insufficiente di ordini ===
 Per fare un profitto, un veicolo ha bisogno di almeno due stazioni nel suo programma. Depositi o waypoint non contano in quanto non consentono il ritiro o il ritiro del carico. Per questo motivo se un veicolo non ha nessuno ordine, o anche uno solo, di dirigersi ad una stazione verrà segnalato con l'errore '''''tipo_veicolo #'' non ha abbastanza ordini pianificati''', per esempio ''Automezzo 4 non ha abbastanza ordini pianificati''.

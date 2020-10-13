@@ -45,17 +45,15 @@ Semplici esempio d'uso:
 
 Oppure:
 <pre>
-{{ambox/It 
-| tipo = contenuto
+{{it/Ambox| tipo = contenuto
 | testo = Avviso - Un qualche testo.
 }}
 </pre>
-{{ambox/It | tipo = contenuto | testo = Avviso - Un qualche testo.}}
+{{it/Ambox| tipo = contenuto | testo = Avviso - Un qualche testo.}}
 
 == Elenco dei parametri disponibili ==
 <pre>
-{{ambox
-| tipo       = cancella / contenuto / stile / avviso / sposta / protetto
+{{en/Ambox| tipo       = cancella / contenuto / stile / avviso / sposta / protetto
 | imamagine      = Picture.Png / Picture.Png|alt=Picture (se il parametro non è presente, verrà fornita l'icona del tipo di default)
 | testo       = Testo per un grande box, per la parte superiore degli articoli.
 
@@ -67,43 +65,35 @@ Oppure:
 
 I seguenti esempi usano diversi parametri '''tipo''' ma non usano dei parametri immagine quindi usano le immagini di default per ogni tipo.
 
-{{ambox/It
-| tipo  = cancella
-| testo  = tipo=<u>cancella</u> – Problemi di cancellazione, come {{s|cancella}}.
+{{it/Ambox| tipo  = cancella
+| testo  = tipo=<u>cancella</u> – Problemi di cancellazione, come {{en/S|cancella}}.
 }}
-{{ambox/It
-| tipo  = contenuto
-| testo  = type=<u>contenuto</u> – Problemi di contenuto, come {{s|Avviso}}.
+{{it/Ambox| tipo  = contenuto
+| testo  = type=<u>contenuto</u> – Problemi di contenuto, come {{en/S|Avviso}}.
 }}
-{{ambox/It
-| tipo  = stile
-| testo  = tipo=<u>stile</u> – Problemi di stile, come {{s|pulizia}}.
+{{it/Ambox| tipo  = stile
+| testo  = tipo=<u>stile</u> – Problemi di stile, come {{en/S|pulizia}}.
 }}
-{{ambox/It
-| tipo  = notizia
-| testo  = tipo=<u>notizia</u> – Notizie sulle voci, come {{s|corrente}}.
+{{it/Ambox| tipo  = notizia
+| testo  = tipo=<u>notizia</u> – Notizie sulle voci, come {{en/S|corrente}}.
 }}
-{{ambox/It
-| tipo  = sposta
-| testo  = tipo=<u>sposta</u> – Proposte di fondere, dividere o tradurre come {{s|dividere}}.
+{{it/Ambox| tipo  = sposta
+| testo  = tipo=<u>sposta</u> – Proposte di fondere, dividere o tradurre come {{en/S|dividere}}.
 }}
-{{ambox/It
-| tipo  = protetto
-| testo  = tipo=<u>protetto</u> – Avvisi di protezione, come {{s|Storico}}.
+{{it/Ambox| tipo  = protetto
+| testo  = tipo=<u>protetto</u> – Avvisi di protezione, come {{en/S|Storico}}.
 }}
 
 === Altre immagini ===
 
 Le immagini predefinite mostrate sopra sono principalmente per comodità. In molti casi è più appropriato usare immagini più specifiche. Questi esempi usano il parametro '''immagine''' per specificare un'immagine diversa da quelle di default.
 
-<pre>{{ambox/It
-| tipo  = notizia
+<pre>{{it/Ambox| tipo  = notizia
 | immagine = OpenttdManual.png
 | testo  = lorem ipsum ecc. ecc. 
 }}</pre>
 
-{{ambox/It
-| tipo  = notizia
+{{it/Ambox| tipo  = notizia
 | immagine = OpenttdManual.png
 | testo  = lorem ipsum ecc. ecc. 
 }}

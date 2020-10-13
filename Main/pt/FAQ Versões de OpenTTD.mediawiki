@@ -1,5 +1,5 @@
 {{pt/Tradução|FAQ OpenTTD versions|14|texto=Algumas partes não foram traduzidas devido a sua complexidade e foram deixadas em inglês. Caso tenha conhecimento suficiente podes colaborar traduzindo o restante.}}{{en/-}}
-[[Translation:Main/en/FAQ OpenTTD versions]]{{en/-}}{{pt/FAQmenu}}
+[[Translation:Main/en/FAQ OpenTTD versions]]{{pt/FAQmenu}}
 
 OpenTTD é um projeto em constante evolução, com novos recursos, opções, e melhorias se tornando disponíveis regularmente. Enquanto a adição freqüente de "novos brinquedos" para brincar é um benefício para os veteranos OpenTTD, pode ser um pouco confuso para o recém-chegado ao OTTD.  Qual a versão que tem, o que eles devem instalar, e o que se esperar em termos de estabilidade de cada versão. 
 
@@ -15,7 +15,7 @@ The term "build" will be used throughout the rest of this document to refer to a
 ====Release====
 An official "Release" is just that -- a stable, complete release of the game.  While there may be minor bugs fixes applied to a Release, it is expected that there will be no significant changes to this build of the game, and any addition of new features will come in a future version.  
 
-A Release of OpenTTD is just like the release of any software package, and is numbered accordingly.  For example, the latest Release of OpenTTD is {{version}}. Major Releases versions are denoted by the either the first and second number, while Minor Releases are represented by the third number.
+A Release of OpenTTD is just like the release of any software package, and is numbered accordingly.  For example, the latest Release of OpenTTD is {{en/Version}}. Major Releases versions are denoted by the either the first and second number, while Minor Releases are represented by the third number.
 
 ====Release Candidate (RC or testing)====
 You can think of this as a proposed Release.  A Release Candidate build is a Release in the making.  While minor features may be added to an RC, for the most part, the feature list is frozen.
@@ -40,7 +40,7 @@ Nightly builds have a different numbering schema than Releases do.  A nightly ve
 ''r8642''
 
 ====Trunk====
-[[File:en/version Illustration.gif|frame|right|How the Trunk, Branches, Releases, Nightlies, and Release Candidates relate]]
+[[File:en/Version Illustration.gif|frame|right|How the Trunk, Branches, Releases, Nightlies, and Release Candidates relate]]
 The term "trunk" (as in the trunk of a tree) refers to the main development environment for the developers of OpenTTD (contrast this with the "branch" terminology described below).  The trunk contains code either developed  or approved by the core developers of the game.  The code contained in the trunk is anticipated to make its way into an official Release.  By extension, code found in the trunk can be thought of as the "official" code of OpenTTD.
 
 Nightly builds, as described above, will always contain the latest code "in the trunk."  Thus, if you see a feature described as "in the trunk", you can be sure it will be available in the next nightly build, if it is not already.
@@ -67,8 +67,8 @@ Patches cannot be directly installed like nightlies can -- they must be compiled
 
 ====MiniIN====
 {{en/Feature period|Old|0.5}}
-[[File:en/miniIN Illustration.gif|frame|right|The MiniIN]]
-''Main Article: [[Main/en/Mini Integrated Nightly]]''<br>
+[[File:en/MiniIN Illustration.gif|frame|right|The MiniIN]]
+''Main Article: [[Main/en/Mini Integrated Nightly|MiniIN]]''<br>
 
 The MiniIN is a development environment separate from the trunk that contains the trunk code ''plus'' many user patches.  After the release of 0.5.0, the MiniIN will no longer be updated with the trunk code. At that stage the MiniIN will be 0.5.0 plus all the user patches.
 
@@ -95,7 +95,7 @@ If you know you have the right version installed it may be able to be turned on 
 ==See also==
 * [[Main/en/OpenTTD Release History]]
 * [[Main/en/Roadmap|Development Roadmaps]]
-* [[Main/en/Mini Integrated Nightly]]
+* [[Main/en/Mini Integrated Nightly|MiniIN]]
 * [http://www.tt-forums.net/viewtopic.php?t=21678 How to apply patches]
 
 [[Category:en/FAQs]]

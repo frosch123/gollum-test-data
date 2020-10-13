@@ -1,15 +1,15 @@
 <noinclude>{{it/Traduzione|Installation|85}}
-[[Translation:Main/en/Installation]]{{en/-}}{{it/Indice dei contenuti}}
+[[Translation:Main/en/Installation]]{{it/Indice dei contenuti}}
 __TOC__
 
 =Introduzione=
 Fin dalla versione 1.0.0 l'installazione di OpenTTD è stata semplificata, e il gioco completamente (sia il gioco stesso che la sua grafiche) costruito secondo la modalità ''open source''. Per scaricare la versione più aggiornata di OpenTTD [http://www.openttd.org/download-stable clicca qui].
 
-L'installazione può essere leggermente complessa, dato che i file della [[Main/en/base graphics|grafica di base]] non sono distribuiti col gioco. Per questo motivo oltre a [http://www.openttd.org/ scaricare il gioco], dovrai ottenere un set di file di grafica di base.
+L'installazione può essere leggermente complessa, dato che i file della [[Main/en/Base graphics|grafica di base]] non sono distribuiti col gioco. Per questo motivo oltre a [http://www.openttd.org/ scaricare il gioco], dovrai ottenere un set di file di grafica di base.
 
 Attualmente ci sono due set di file di grafica di base che puoi usare:
 * Un set completo e funzionante si trova sul CD di [http://en.wikipedia.org/wiki/Transport_Tycoon Transport Tycoon Deluxe] (TTD). Diversamente da OpenTTD, TTD '''non''' è software libero.
-* Un'alternativa [http://en.wikipedia.org/wiki/Open_source open source] alla grafica di TTD è [[Main/en/OpenGFX Readme]], attualmente completa. Questo set di file di grafica di base è per coloro che non possiedno un CD originale di TTD.
+* Un'alternativa [http://en.wikipedia.org/wiki/Open_source open source] alla grafica di TTD è [[Main/en/OpenGFX Readme|OpenGFX]], attualmente completa. Questo set di file di grafica di base è per coloro che non possiedno un CD originale di TTD.
 
 Ci sono inoltre diverse versioni di OpenTTD per vari [[Main/en/Operating system|sistemi operativi]] (Windows, MacOSX, Linux).
 
@@ -51,11 +51,11 @@ Ci sono inoltre diverse versioni di OpenTTD per vari [[Main/en/Operating system|
 [[File:en/Installation 2 gfx.png|frame|center|Setup di installazione senza i file TTD]]
 
 '''4.''' Modifica il file di configurazione.
-:'''4.1.''' Trova il file [[Main/en/openttd.cfg]], dovrebbe essere nella seguente cartella (dipende dal sistema operativo usato):
+:'''4.1.''' Trova il file [[Main/en/Openttd.cfg|openttd.cfg]], dovrebbe essere nella seguente cartella (dipende dal sistema operativo usato):
  Win XP : "C:\Documents and Settings\<username>\My Documents\OpenTTD"
  Vista  : "C:\Users\<username>\Documents\OpenTTD"
  Linux  : "~/.openttd"
-:'''4.2.''' Apri il file [[Main/en/openttd.cfg]] nel tuo edito di testo preferito.
+:'''4.2.''' Apri il file [[Main/en/Openttd.cfg|openttd.cfg]] nel tuo edito di testo preferito.
 :'''4.3.''' Vai alla sezione [misc] e aggiungi il seguente testo (può darsi che un testo simile ci sia già, nel qual caso modificalo perché sia uguale a quello qui riportato) alla fine di questa sezione:
  graphicsset = "OpenGFX"
 : Il nome del set di file di grafica di base è salvato nel proprio file ''obg'' e non può essere identico al nome del file obg stesso.

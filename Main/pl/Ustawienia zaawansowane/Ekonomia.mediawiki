@@ -1,8 +1,8 @@
-{{nieaktualizowane/Pl|Są teraz zmiany w ustawieniach, między innymi są one inaczej podzielone. Artykuły powinny wyglądać [[Main/en/Ustawienia/Pl#Grupy ustawień|odpowiednio w języku polskim]].}}
-[[Translation:Main/en/Advanced Settings/Economy]]{{en/-}}<!--{{en/Advanced Settings}}-->{{zaawansowane ustawienia/Pl}}
+{{pl/Nieaktualizowane|Są teraz zmiany w ustawieniach, między innymi są one inaczej podzielone. Artykuły powinny wyglądać [[Main/en/Ustawienia/Pl#Grupy ustawień|odpowiednio w języku polskim]].}}
+[[Translation:Main/en/Advanced Settings/Economy]]<!--{{en/Advanced Settings}}-->{{pl/Zaawansowane ustawienia}}
 
 ==Okno Ustawienia zaawansowane: sekcja Ekonomia==
-W sekcji Ekonomia możesz ustawić różne opcje związane z modelem ekonomicznym gry. Cel dostępnych ustawień wyjaśniono poniżej. Dla każdego ustawienia odpowiednia zmienna z [[Main/pl/openttd.cfg|pliku konfiguracyjnego]] jest również wymieniona wraz z możliwymi wartościami.
+W sekcji Ekonomia możesz ustawić różne opcje związane z modelem ekonomicznym gry. Cel dostępnych ustawień wyjaśniono poniżej. Dla każdego ustawienia odpowiednia zmienna z [[Main/pl/Openttd.cfg|pliku konfiguracyjnego]] jest również wymieniona wraz z możliwymi wartościami.
 {| align="center"
 |- valign="top"
 |__TOC__
@@ -11,31 +11,31 @@ W sekcji Ekonomia możesz ustawić różne opcje związane z modelem ekonomiczny
 
 ===<u>Miejscowości</u>===
 ====Zezwalanie na przekupywanie <small>''(bribing)''</small> władz lokalnych====
-{{zgodne Wersje/Pl|Old|align="right"|text=(since 0.3.0)}}
-Pozwala [[Main/en/bribe authority|przekupić władze lokalne]] , aby podnieść Twoją ocenę. Jeśli jednak zostaniesz złapany, zostaniesz ukarany grzywną, Twoja ocena <small>''(rating)''</small> natychmiast spadnie do 'Słaba', 'oceny' stacji natychmiast spadną do 0 i nie będziesz mógł ponownie przekupić tam łapówki przez 6 miesięcy.
+{{pl/Zgodne Wersje|Old|align="right"|text=(since 0.3.0)}}
+Pozwala [[Main/en/Bribe authority|przekupić władze lokalne]] , aby podnieść Twoją ocenę. Jeśli jednak zostaniesz złapany, zostaniesz ukarany grzywną, Twoja ocena <small>''(rating)''</small> natychmiast spadnie do 'Słaba', 'oceny' stacji natychmiast spadną do 0 i nie będziesz mógł ponownie przekupić tam łapówki przez 6 miesięcy.
 :''Możliwe Ustawienia:'' <span style="color:green">'''Wł.'''</span> lub <span style="color:red">'''Wył.'''</span>
 :''W pliku konfiguracyjnym [[Main/pl/Openttd.cfg|Openttd.cfg]] :'' ([economy] bribe = <true|false>)
 
 ====Zezwalanie na zakup wyłącznych praw transportowych <small>''(exclusive transport rights)''</small>====
-{{zgodne Wersje/Pl|0.6|align="right"|text=(since 0.6.0)}}
+{{pl/Zgodne Wersje|0.6|align="right"|text=(since 0.6.0)}}
 Umożliwia wyłączenie zakupu wyłącznych praw transportowych w miastach. Przydatne (wyłączyć?) W grach wieloosobowych.
 :''Możliwe Ustawienia:'' <span style="color:green">'''On'''</span> lub <span style="color:red">'''Off'''</span>
 :''W pliku konfiguracyjnym [[Main/pl/Openttd.cfg|Openttd.cfg]] :'' ([economy]exclusive_rights = <true|false>)
 
 ====Układ drogowy dla nowych miejscowości====
-{{zgodne Wersje/Pl|0.6|align="right"|text=(since 0.6.0)}}
+{{pl/Zgodne Wersje|0.6|align="right"|text=(since 0.6.0)}}
 Wybierz, w jaki sposób miasta powinny budować swoje drogi. Możesz wybrać między oryginalnym algorytmem, ulepszonym algorytmem, siatką 2x2, siatką 3x3 lub losową. Ustawienie losowe wybiera losowo jedną z czterech opcji dla każdego miasta. Ta opcja została przemianowana z [[Main/en/Configuring patches/Economy#Select town road layout|Wybór układu dróg miejskich]] w wersji 0.6.3.
 :''Możliwe Ustawienia:'' <span style="color:#00693E">'''original'''</span>, <span style="color:#00693E">'''lepsze drogi <small>''(better roads)''</small>'''</span>, <span style="color:#00693E">'''2x2 siatka <small>''(grid)''</small>'''</span>, <span style="color:#00693E">'''3x3 siatka'''</span> lub <span style="color:#00693E">'''losowe <small>''(random)''</small>'''</span>
 :''W pliku konfiguracyjnym [[Main/pl/Openttd.cfg|Openttd.cfg]] :'' ([economy] town_layout = <0-4>)
 
 ====Miejscowości mogą budować drogi====
-{{zgodne Wersje/Pl|0.7|align="right"|text=(since 0.7.0)}}
+{{pl/Zgodne Wersje|0.7|align="right"|text=(since 0.7.0)}}
 Po wyłączeniu , miasta nie budują samodzielnie dróg . Aby miasta mogły się rozwijać, musisz sam zapewnić drogi (trochę jak SimCity, ale bez stref i innych rzeczy).
 :''Możliwe Ustawienia:'' <span style="color:green">'''On'''</span> lub <span style="color:red">'''Off'''</span>
 :''W pliku konfiguracyjnym [[Main/pl/Openttd.cfg|Openttd.cfg]] :'' ([economy] allow_town_roads = <true|false>)
 
 ====Zakładanie miejscowości w grze====
-{{zgodne Wersje/Pl|1.0|align="right"|text=(since 1.0.0)}}
+{{pl/Zgodne Wersje|1.0|align="right"|text=(since 1.0.0)}}
 Pozwala założyć miasto w trakcie gry. Możesz skonfigurować, czy chcesz korzystać z układu dróg używanego przez inne miasta w grze, czy samodzielnie wybrać układ dróg.
 :''Możliwe Ustawienia:'' <span style="color:#00693E">'''zakazane <small>''(forbidden)''</small>'''</span>, <span style="color:#00693E">'''dozwolone'''</span> lub <span style="color:#00693E">'''dozwolone, niestandardowy układ miasta <small>''(allowed, custom town layout)''</small>'''</span>
 :''W pliku konfiguracyjnym [[Main/pl/Openttd.cfg|Openttd.cfg]] :'' ([economy] found_town = <0-2>)
@@ -47,13 +47,13 @@ Włącz , jeśli miasta mają usuwać bezużyteczne fragmenty dróg, aby oczyśc
 :''W pliku konfiguracyjnym [[Main/pl/Openttd.cfg|Openttd.cfg]] :'' ([economy] mod_road_rebuild = <true|false>)
 
 ====Szybkość rozwoju miejscowości====
-{{zgodne Wersje/Pl|0.6|align="right"|text=(since 0.6.0)}}
+{{pl/Zgodne Wersje|0.6|align="right"|text=(since 0.6.0)}}
 Wybierz, jak szybko mają się rozwijać miasta. Możesz także całkowicie wyłączyć rozwój miasta.
 :''Możliwe Ustawienia:'' <span style="color:red">'''None'''</span>, <span style="color:#00693E">'''Slow'''</span>, <span style="color:#00693E">'''Normal'''</span>, <span style="color:#00693E">'''Fast'''</span> lub <span style="color:#00693E">'''Very fast'''</span>
 :''W pliku konfiguracyjnym [[Main/pl/Openttd.cfg|Openttd.cfg]] :'' ([economy] town_growth_rate = <0-4>)
 
 ====Odsetek miejscowości, które staną się miastami<!--Proporcje miejscowości-->====
-{{zgodne Wersje/Pl|0.6|align="right"|text=(since 0.6.0)}}
+{{pl/Zgodne Wersje|0.6|align="right"|text=(since 0.6.0)}}
 Określ, ile miejscowości stanie się [[Main/en/miasta/Pl#Metropolia|miastami]]. Miasta to większe miejscowości , które mogą rosnąć szybciej (zobacz także następne ustawienie).
 :''Możliwe Ustawienia:'' <span style="color:red">'''None'''</span> lub <span style="color:#00693E">'''1 in 1'''</span> to <span style="color:#00693E">'''1 in 255'''</span>
 :Jeśli chcesz, aby każda miejscowość była miastem, użyj 1, 0 spowoduje brak miast.
@@ -61,7 +61,7 @@ Określ, ile miejscowości stanie się [[Main/en/miasta/Pl#Metropolia|miastami]]
 To ustawienie ma zastosowanie tylko podczas zakładania nowej miejscowości podczas generowania nowej losowej mapy; w edytorze scenariuszy wyraźnie określasz, czy chcesz mieć miejscowość czy miasto.
 
 ====Mnożnik początkowej wielkości miasta<!--Początkowy mnożnik rozmiaru metropolii-->====
-{{zgodne Wersje/Pl|0.6|align="right"|text=(since 0.6.0)}}
+{{pl/Zgodne Wersje|0.6|align="right"|text=(since 0.6.0)}}
 Ustaw, o ile większe jest nowo założone miasto w porównaniu z miejscowością.
 :''Możliwe Ustawienia:'' <span style="color:#00693E">'''1'''</span> to <span style="color:#00693E">'''10'''</span>
 :Jeśli ustawisz ją na 5, miasto będzie 5 razy większe niż miejscowość.
@@ -71,8 +71,8 @@ To ustawienie jest używane tylko podczas zakładania nowego miasta. Dzieje się
 
 ===<u>Branże</u>===
 ====Manualna metoda konstrukcji podstawowej przemysłu====
-{{zgodne Wersje/Pl|0.6|align="right"|text=(since 0.6.0)}}
-Pozwala [[Main/en/build raw material industries|konstruować przemysły]] , które produkują surowce, a także przemysły, które je wykorzystują. Brak: nie można finansować nowych gałęzi przemysłu. Podobnie jak inne branże: mogą finansować nowe branże podstawowe, ale będzie to kosztować więcej. Poszukiwanie potencjalnych klientów: można finansować nowe branże podstawowe po takich samych cenach jak branże wtórne, ale branża pojawi się w losowym miejscu na mapie lub może się w ogóle nie pojawić.
+{{pl/Zgodne Wersje|0.6|align="right"|text=(since 0.6.0)}}
+Pozwala [[Main/en/Build raw material industries|konstruować przemysły]] , które produkują surowce, a także przemysły, które je wykorzystują. Brak: nie można finansować nowych gałęzi przemysłu. Podobnie jak inne branże: mogą finansować nowe branże podstawowe, ale będzie to kosztować więcej. Poszukiwanie potencjalnych klientów: można finansować nowe branże podstawowe po takich samych cenach jak branże wtórne, ale branża pojawi się w losowym miejscu na mapie lub może się w ogóle nie pojawić.
 :''Możliwe Ustawienia:'' <span style="color:red">'''none'''</span>, <span style="color:#00693E">'''as other industries'''</span> lub <span style="color:#00693E">'''prospecting'''</span>
 :''W pliku konfiguracyjnym [[Main/pl/Openttd.cfg|Openttd.cfg]] :'' ([construction] raw_industry_construction = <0-2>)
 
@@ -80,13 +80,13 @@ Pozwala [[Main/en/build raw material industries|konstruować przemysły]] , któ
 <i>Oczekiwanie na szczegóły</i>
 
 ====Zezwalanie na wiele podobnych branż w jednej miejscowości====
-{{zgodne Wersje/Pl|Old|align="right"|text=(since 0.2.0)}}
-Miejscowość może mieć [[Main/en/multiple industries per town|więcej niż jeden element danego typu branży]].
+{{pl/Zgodne Wersje|Old|align="right"|text=(since 0.2.0)}}
+Miejscowość może mieć [[Main/en/Multiple industries per town|więcej niż jeden element danego typu branży]].
 :''Możliwe Ustawienia:'' <span style="color:green">'''On'''</span> lub <span style="color:red">'''Off'''</span>
 :''W pliku konfiguracyjnym [[Main/pl/Openttd.cfg|Openttd.cfg]] :'' ([economy] multiple_industry_per_town = <true|false>)
 
 ====Maks. odległość od krawędzi dla rafinerii ropy naftowej====
-{{zgodne Wersje/Pl|0.5|align="right"|text=(since 0.5.0)}}
+{{pl/Zgodne Wersje|0.5|align="right"|text=(since 0.5.0)}}
 Ta opcja określa maksymalną dozwoloną odległość (w kaflach) od krawędzi mapy dla rafinerii ropy naftowej.
 Ta opcja została przeniesiona z [[Main/en/Configuring patches/Construction#Max distance from edge for Oil Refineries|Sekcja konstrukcyjna]] w wersji 0.7.0. W najnowszych wersjach OpenTTD wartość tego ustawienia jest skalowana według wymiaru zgodnie z rozmiarem mapy dla map większych niż 256x256.
 :''Możliwe Ustawienia:'' <span style="color:#00693E">'''12'''</span> to <span style="color:#00693E">'''48'''</span>
@@ -95,33 +95,33 @@ Ta opcja została przeniesiona z [[Main/en/Configuring patches/Construction#Max 
 ----
 
 ===Inflacja===
-{{zgodne Wersje/Pl|Old|align="right"|text=(since 0.3.4)}}
-Określa, czy [[Main/en/disable inflation|inflacja jest wł. lub wył.]] . Jeśli inflacja jest włączona, ceny wszystkiego będą rosły wraz z postępami. Aby zrównoważyć ten wzrost, maksymalna dostępna pożyczka będzie rosła co kilka lat.
+{{pl/Zgodne Wersje|Old|align="right"|text=(since 0.3.4)}}
+Określa, czy [[Main/en/Disable inflation|inflacja jest wł. lub wył.]] . Jeśli inflacja jest włączona, ceny wszystkiego będą rosły wraz z postępami. Aby zrównoważyć ten wzrost, maksymalna dostępna pożyczka będzie rosła co kilka lat.
 :''Możliwe Ustawienia:'' <span style="color:green">'''On'''</span> lub <span style="color:red">'''Off'''</span>
 :''W pliku konfiguracyjnym [[Main/pl/Openttd.cfg|Openttd.cfg]] :'' ([economy] inflation = <true|false>)
 
 ===Włączona płynna <small>''(smooth)''</small> ekonomia (więcej, mniejsze zmiany)===
-{{zgodne Wersje/Pl|Old|align="right"|text=(since 0.3.3)}}
+{{pl/Zgodne Wersje|Old|align="right"|text=(since 0.3.3)}}
 [[Main/en/<!--smooth economy-->Łagodna ekonomia/Pl#.C5.81agodna ekonomia|Zmiany w produkcji]] będzą się zdarzać częściej i w mniejszych procentach.
 :''Możliwe Ustawienia:'' <span style="color:green">'''On'''</span> lub <span style="color:red">'''Off'''</span>
 :''W [[Main/pl/Openttd.cfg|Openttd.cfg]] config file:'' ([economy] smooth_economy = <true|false>)
 
 ===Stopa procentowa <small>''(Percentage of leg)''</small> profitu do zapłaty w systemach feeder===
-{{zgodne Wersje/Pl|1.0|align="right"|text=(since 1.0.0)}}
-To ustawienie kontroluje, ile pojazdy są płacone podczas przesyłania ładunku. Jeśli to ustawienie jest niższe, pojazd(y) 'transferujący' otrzyma mniej, a pojazd końcowy otrzyma więcej i na odwrót. Można tego uniknąć [[Main/en/negative income with feeder service|ujemny przychód przez stosowanie podajnika]] / ów.
+{{pl/Zgodne Wersje|1.0|align="right"|text=(since 1.0.0)}}
+To ustawienie kontroluje, ile pojazdy są płacone podczas przesyłania ładunku. Jeśli to ustawienie jest niższe, pojazd(y) 'transferujący' otrzyma mniej, a pojazd końcowy otrzyma więcej i na odwrót. Można tego uniknąć [[Main/en/Negative income with feeder service|ujemny przychód przez stosowanie podajnika]] / ów.
 :''Możliwe Ustawienia:'' <span style="color:red">'''0%'''</span> to <span style="color:#00693E">'''100%'''</span>
 :''W pliku konfiguracyjnym [[Main/pl/Openttd.cfg|Openttd.cfg]] :'' ([economy] feeder_payment_share = <0-100>)
 
 ===Maintenance of infrastructure===
-{{zgodne Wersje/Pl|1.2|align="right"|text=(since 1.2.0-beta1)}}
+{{pl/Zgodne Wersje|1.2|align="right"|text=(since 1.2.0-beta1)}}
 Kontroluje, czy [[Main/en/maintenance of infrastructure|utrzymanie infrastruktury kosztuje]] . Jeśli konserwacja infrastruktury jest włączona, kwota wyliczona z liczby płytek z szynami, kanałami lub śluzami będzie wypłacana w regularnych odstępach czasu.
 :''Możliwe Ustawienia:'' <span style="color:green">'''On'''</span> lub <span style="color:red">'''Off'''</span>
 :''W pliku konfiguracyjnym [[Main/pl/Openttd.cfg|Openttd.cfg]] :'' ([economy] infrastructure_maintenance = <true|false>)
 
 ==W poprzednich wersjach==
 ===Branże tego samego typu można budować blisko siebie===
-{{zgodne Wersje/Pl|-1.0|align="right"|text=(since 0.2.0 to 1.0.0)}}
-Branże tego samego typu mogą być [[Main/en/same industries close|zbudowany blisko każdego]] innego z tą poprawką, może to jednak powodować problemy, ponieważ możesz skończyć z dziesięcioma branżami jednego typu w jednym małym obszarze mapy.
+{{pl/Zgodne Wersje|-1.0|align="right"|text=(since 0.2.0 to 1.0.0)}}
+Branże tego samego typu mogą być [[Main/en/Same industries close|zbudowany blisko każdego]] innego z tą poprawką, może to jednak powodować problemy, ponieważ możesz skończyć z dziesięcioma branżami jednego typu w jednym małym obszarze mapy.
 :''Możliwe Ustawienia:'' <span style="color:green">'''On'''</span> lub <span style="color:red">'''Off'''</span>
 :''W pliku konfiguracyjnym [[Main/pl/Openttd.cfg|Openttd.cfg]] :'' ([economy] same_industry_close = <true|false>)
 {{en/-}}

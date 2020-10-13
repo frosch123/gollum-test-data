@@ -2,50 +2,50 @@
 Wiersz poleceń '''command line''' to polecenie systemu operacyjnego służące do uruchomienia gry. Może to obejmować parametry pozwalające dostosować sposób działania gry. Wszystkie wersje [[Main/pl/OpenTTD|OpenTTD]] obsługują opcje wiersza poleceń.
 
 == Opcje linii komend ==
-Posługiwać się {{c|openttd [parametr(y)]|}}.
+Posługiwać się {{en/C|openttd [parametr(y)]|}}.
 
 {| border=1 width=100%
 !width="225"|Parameter
 !Description
 |-
-|{{c|-h|}}|| Lists OpenTTD command options.
+|{{en/C|-h|}}|| Lists OpenTTD command options.
 |-
-|{{c|-v <driver>|}}|| Sets OpenTTD video driver. Depending on your build, valid drivers may include:<br />
-{{c|null|}} for no video (crash)<br />
-{{c|sdl|}} for SDL video<br />
-{{c|win32|}} for Windows video
+|{{en/C|-v <driver>|}}|| Sets OpenTTD video driver. Depending on your build, valid drivers may include:<br />
+{{en/C|null|}} for no video (crash)<br />
+{{en/C|sdl|}} for SDL video<br />
+{{en/C|win32|}} for Windows video
 |-
-|{{c|-s <driver>|}}|| Sets OpenTTD sound driver. Depending on your build, valid drivers may include<br />
-{{c|null|}} for no sound<br />
-{{c|sdl|}} for SDL sound<br />
-{{c|win32|}} for Windows sound
+|{{en/C|-s <driver>|}}|| Sets OpenTTD sound driver. Depending on your build, valid drivers may include<br />
+{{en/C|null|}} for no sound<br />
+{{en/C|sdl|}} for SDL sound<br />
+{{en/C|win32|}} for Windows sound
 |-
-|{{c|-m <driver>|}}|| Sets OpenTTD music driver. Depending on your build, valid drivers may include<br />
-{{c|null|}} for no music<br />
-{{c|dmusic|}} for DirectMusic<br />
-{{c|win32|}} for Windows MIDI<br />
-{{c|extmidi|}} for external MIDI<br />
-{{c|bemidi|}} for BeOS MIDI
+|{{en/C|-m <driver>|}}|| Sets OpenTTD music driver. Depending on your build, valid drivers may include<br />
+{{en/C|null|}} for no music<br />
+{{en/C|dmusic|}} for DirectMusic<br />
+{{en/C|win32|}} for Windows MIDI<br />
+{{en/C|extmidi|}} for external MIDI<br />
+{{en/C|bemidi|}} for BeOS MIDI
 |-
-|{{c|-I <set>|}}|| Sets which base graphics set to use.
+|{{en/C|-I <set>|}}|| Sets which base graphics set to use.
 |-
-|{{c|-S <set>|}}|| Sets which sound effects set to use.
+|{{en/C|-S <set>|}}|| Sets which sound effects set to use.
 |-
-|{{c|-M <set>|}}|| Sets which music set to use.
+|{{en/C|-M <set>|}}|| Sets which music set to use.
 |-
-<!-- |{{c|-b <driver>|}}|| Sets which blitter to use. Depending on your build, up to 13 blitters may be available.
+<!-- |{{en/C|-b <driver>|}}|| Sets which blitter to use. Depending on your build, up to 13 blitters may be available.
 |- -->
-|{{c|-r <xres>x<yres>|}}|| Sets OpenTTD resolution.
+|{{en/C|-r <xres>x<yres>|}}|| Sets OpenTTD resolution.
 |-
-|{{c|-t <year>|}}|| Sets the starting date.
+|{{en/C|-t <year>|}}|| Sets the starting date.
 |-
-|{{c|-d <level>|}}  
-:{{c|1=-d ai=<level>|2=}}
-:{{c|1=-d driver=<level>|2=}}
-:{{c|1=-d grf=<level>|2=}}
-:{{c|1=-d misc=<level>|2=}}
-:{{c|1=-d net=<level>|2=}}
-:{{c|1=-d spritecache=<level>|2=}}
+|{{en/C|-d <level>|}}  
+:{{en/C|1=-d ai=<level>|2=}}
+:{{en/C|1=-d driver=<level>|2=}}
+:{{en/C|1=-d grf=<level>|2=}}
+:{{en/C|1=-d misc=<level>|2=}}
+:{{en/C|1=-d net=<level>|2=}}
+:{{en/C|1=-d spritecache=<level>|2=}}
 |Sets debug level. Use any number between 0 and 9, where 9 is most sensitive.
 :for AI debuging info only
 :for driver debugging info (sound, music, graphics)
@@ -54,41 +54,41 @@ Posługiwać się {{c|openttd [parametr(y)]|}}.
 :for network debugging info only
 :for spritecache debugging info only
 |-
-|{{c|-l <ip:port>|}}|| Redirect debugging output to a network connection instead of the console.
+|{{en/C|-l <ip:port>|}}|| Redirect debugging output to a network connection instead of the console.
 |-
-|{{c|-e|}}|| Starts the scenario editor.
+|{{en/C|-e|}}|| Starts the scenario editor.
 |-
-|{{c|-q <game>|}}|| Show some information about a save game (OpenTTD version, NewGRFs in use, if the game's ever been used by a modded copy of OpenTTD or had a NewGRF removed) and quit.
+|{{en/C|-q <game>|}}|| Show some information about a save game (OpenTTD version, NewGRFs in use, if the game's ever been used by a modded copy of OpenTTD or had a NewGRF removed) and quit.
 |-
-|{{c|-g [game]|}}|| If no game is specified, starts a new game immediately. If a game is specified, loads that game immediately. Note: {{c|-g|}} can load both savegames and scenarios.
+|{{en/C|-g [game]|}}|| If no game is specified, starts a new game immediately. If a game is specified, loads that game immediately. Note: {{en/C|-g|}} can load both savegames and scenarios.
 |-
-|{{c|-G <seed>|}}|| Sets the random seed.
+|{{en/C|-G <seed>|}}|| Sets the random seed.
 |-
-|{{c|-n [ip:port#company]|}}|| Start network game.
+|{{en/C|-n [ip:port#company]|}}|| Start network game.
 |-
-|{{c|-p <password>|}}|| When joining the game, use this password to connect to the server.
+|{{en/C|-p <password>|}}|| When joining the game, use this password to connect to the server.
 |-
-|{{c|-P <password>|}}|| When joining the game, use this password to join the company.
+|{{en/C|-P <password>|}}|| When joining the game, use this password to join the company.
 |-
-|{{c|-D [ip:port]|}}|| Start dedicated server.
+|{{en/C|-D [ip:port]|}}|| Start dedicated server.
 |-
-|{{c|-f|}}|| Fork into the background (dedicated, non-Windows only).
+|{{en/C|-f|}}|| Fork into the background (dedicated, non-Windows only).
 |-
-|{{c|-c <file>|}}|| Use a different config file instead of {{c|openttd.cfg|}}.
+|{{en/C|-c <file>|}}|| Use a different config file instead of {{en/C|openttd.cfg|}}.
 |-
-|{{c|-x|}}|| Don't save changes to the config file when OpenTTD exits.
+|{{en/C|-x|}}|| Don't save changes to the config file when OpenTTD exits.
 |}
 
 ==Help for Windows users==
 There are two ways to add command line parameters:
 
 ===The shortcut method===
-*Make a shortcut to {{c|openttd.exe|}}
-*Right click the shortcut and select properties. The first box should say something like this: {{c|C:\Games\openttd.exe|}}
-*Put double quotes around the text: {{c|"C:\Games\openttd.exe"|}}
-*Add parameters afterwards, outside the quotes: {{c|"C:\Games\openttd.exe" -m|}}
-*To add modifiers, insert them one space after the parameter: {{c|"C:\Games\openttd.exe" -n 127.12.13.1|}}
-*Separate multiple parameters with spaces: {{c|"C:\Games\Openttd.exe" -m -s null|}}
+*Make a shortcut to {{en/C|openttd.exe|}}
+*Right click the shortcut and select properties. The first box should say something like this: {{en/C|C:\Games\openttd.exe|}}
+*Put double quotes around the text: {{en/C|"C:\Games\openttd.exe"|}}
+*Add parameters afterwards, outside the quotes: {{en/C|"C:\Games\openttd.exe" -m|}}
+*To add modifiers, insert them one space after the parameter: {{en/C|"C:\Games\openttd.exe" -n 127.12.13.1|}}
+*Separate multiple parameters with spaces: {{en/C|"C:\Games\Openttd.exe" -m -s null|}}
 *When you are done, run the game using the shortcut.
 
 ===The command-line ("DOS") method===

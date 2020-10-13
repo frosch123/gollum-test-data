@@ -1,6 +1,5 @@
-<noinclude>[[Translation:Template/en/Mergefrom]]{{en/-}}</noinclude>
-{{ambox
-| type  = move
+<noinclude>[[Translation:Template/en/Mergefrom]]</noinclude>
+{{en/Ambox| type  = move
 | image = mergefrom.png
 | text  =  
 {{#IF: {{{1|}}} |
@@ -13,11 +12,11 @@ No page name was supplied, fix this or remove the template}} }}<includeonly>{{{2
 ==Usage==
 Enter <nowiki>{{</nowiki>'''Mergefrom'''|'''Page name'''<nowiki>}}</nowiki>. Example:
 <pre>{{Template:Mergefrom|Some page}}</pre>
-This will add the article to [[Category/en/Articles to be merged]].
+This will add the article to [[Category/en/Articles to be merged|:Category:Articles to be merged]].
 
 == Which merge template should I use? ==
-* {{s|Merge}} &ndash; to merge at least two together at an unspecified location
-* {{s|Mergeto}} &ndash; to merge the contents of the tagged article ''into'' the specified article.
-* {{s|Mergefrom}} &ndash; the opposite of {{s|Mergeto}}; the contents of the specified article should be merged into the tagged article.
+* {{en/S|Merge}} &ndash; to merge at least two together at an unspecified location
+* {{en/S|Mergeto}} &ndash; to merge the contents of the tagged article ''into'' the specified article.
+* {{en/S|Mergefrom}} &ndash; the opposite of {{en/S|Mergeto}}; the contents of the specified article should be merged into the tagged article.
 
 [[Category:en/Templates|M]][[Category:en/Message boxes|M]]</noinclude>

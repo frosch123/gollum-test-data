@@ -1,7 +1,7 @@
-[[Translation:Main/en/Orders]]{{en/-}}{{nl/Inhoudsopgave}}
+[[Translation:Main/en/Orders]]{{nl/Inhoudsopgave}}
 :''Deze tutorial geeft uitleg over de orders voor de versie [[Main/en/OpenTTD 0.7.0]] en later. Als je een oudere versie gebruikt van OpenTTD kijk dan in het artikel:'' '''[[Main/en/Orders (old)|Orders (oud)(EN)]]'''
 
-'''Orders''' zijn fundamenteel om OpenTTD succesvol te kunnen spelen. [[Main/nl/Conditionele orders|Conditionele orders]] zijn uitgebreide orders die je de mogelijkheid geven extra controle over het spel te hebben. Als je geen orders toedeelt zullen je [[Main/nl/Voertuigen|voertuigen]] doelloos rondrijden en je hebt dan erg veel geluk als zij geld voor je verdienen.  Om succesvol [[Main/nl/vracht|vracht]] te laden en te lossen (wat in feite het doel is van het spel), zul je orders aan je voertuigen moeten toedelen.  Dit zijn instructies zoals "ga hier naar toe, laad die vracht, en breng die daar naar toe".
+'''Orders''' zijn fundamenteel om OpenTTD succesvol te kunnen spelen. [[Main/nl/Conditionele orders|Conditionele orders]] zijn uitgebreide orders die je de mogelijkheid geven extra controle over het spel te hebben. Als je geen orders toedeelt zullen je [[Main/nl/Voertuigen|voertuigen]] doelloos rondrijden en je hebt dan erg veel geluk als zij geld voor je verdienen.  Om succesvol [[Main/nl/Vracht|vracht]] te laden en te lossen (wat in feite het doel is van het spel), zul je orders aan je voertuigen moeten toedelen.  Dit zijn instructies zoals "ga hier naar toe, laad die vracht, en breng die daar naar toe".
 
 ==Orders geven==
 Je kunt elk voertuig dat je bezit orders toedelen. Je chauffeurs zullen trachten deze orders op te volgen (hoewel ze verdwaald kunnen raken als je netwerk slecht ontworpen is, maar dat is een apart onderwerp). Om orders toe te delen:
@@ -15,7 +15,7 @@ Je kunt elk voertuig dat je bezit orders toedelen. Je chauffeurs zullen trachten
 *Klik op de order die je zojuist hebt aangemaakt om het te selecteren, en vertel het voertuig dan wat het moet doen op dat station. Bijv., klik ''Volledig laden'' om aan te geven dat het voertuig moet wachten totdat het volledig geladen is op dat station.
 
 ==Huidige bestemming==
-Je kunt altijd zien wat de bestemming is van het voertuig in de [[Main/en/status bar|statusbalk]] en ook in het ''Orderscherm''. Aan de linkerkant van een individuele order staat een zwart driehoekje dat naar een order wijst. Dat is de huidige bestemming.
+Je kunt altijd zien wat de bestemming is van het voertuig in de [[Main/en/Status bar|statusbalk]] en ook in het ''Orderscherm''. Aan de linkerkant van een individuele order staat een zwart driehoekje dat naar een order wijst. Dat is de huidige bestemming.
 
 ==Orderscherm==
 De volgende knoppen verschijnen: 
@@ -126,7 +126,7 @@ Deze optie is beschikbaar als je een ''Ga naar … Garage'' order hebt geselecte
 [[File:en/Ganaardepotorder1.png|none|frame|De opties van de onderhoudknop]]
 
 ==Ombouwen==
-Je kunt een instructie opnemen om een voertuig [[Main/nl/voertuig aanpassen|om te bouwen]] in de orderlijst. Wanneer je deze optie selecteert wordt een scherm getoond waarin je moet kiezen tussen de typen vracht waarvoor dit voertuig moet worden omgebouwd. Deze order is beperkt in het gebruik omdat je normaliter een voertuig slechts één keer ombouwt voor een bepaalde vrachtsoort.
+Je kunt een instructie opnemen om een voertuig [[Main/nl/Voertuig aanpassen|om te bouwen]] in de orderlijst. Wanneer je deze optie selecteert wordt een scherm getoond waarin je moet kiezen tussen de typen vracht waarvoor dit voertuig moet worden omgebouwd. Deze order is beperkt in het gebruik omdat je normaliter een voertuig slechts één keer ombouwt voor een bepaalde vrachtsoort.
 [[File:en/Ombouwen vracht hk.png|none|frame|Kies de vracht die je wilt laten vervoeren.]]
 
 ==Dienstregeling==
@@ -135,7 +135,7 @@ Dienstregelingen laten je specificeren hoeveel tijd een voertuig mag gebruiken o
 [[File:en/Dienstregeling hk 1.png|none|frame|De dienstregeling interface]]
 
 ==Orders kopiëren==
-Als je een dienst wilt opzetten die door meerdere [[Main/nl/Voertuigen|bussen]] wordt onderhouden, moet je elk voertuig apart dezelfde orders geven. Stel je een busdienst voor waar 5 bussen langs 5 [[Main/nl/stations|stations]] in een stad gaan om een frequente passagiersdienst te onderhouden. Het is dan vervelend om voor elk van die 5 bussen steeds dezelfde stappen te moeten uitvoeren; hiervoor kun je de orders van de ene bus kopiëren naar de andere bussen.
+Als je een dienst wilt opzetten die door meerdere [[Main/nl/Voertuigen|bussen]] wordt onderhouden, moet je elk voertuig apart dezelfde orders geven. Stel je een busdienst voor waar 5 bussen langs 5 [[Main/nl/Stations|stations]] in een stad gaan om een frequente passagiersdienst te onderhouden. Het is dan vervelend om voor elk van die 5 bussen steeds dezelfde stappen te moeten uitvoeren; hiervoor kun je de orders van de ene bus kopiëren naar de andere bussen.
 
 ===Instructies===
 #Geef de orders in voor de eerste bus zoals je dat normaal zou doen. 
@@ -156,7 +156,7 @@ Kopiëren van orders is echter nog niet de beste oplossing want je zou later mis
 #Of kies de optie ''Orders delen'' in het '''Ga naar'''-menu en klik op het andere voertuig.
 #Nu zullen de twee voertuigen hetzelfde schema delen; zij zijn aan elkaar gekoppeld. Je zult zien dat de orders van het andere voertuig zijn overgenomen en op de laatste regel staat ''--Einde gedeelde orders--''. 
 [[File:en/Ga naar opties.png|frame|right|Ga naar opties.]]
-[[File:en/schema 2 bussen.png|none|frame|De schema's voor de 2 bussen zijn gedeeld]]
+[[File:en/Schema 2 bussen.png|none|frame|De schema's voor de 2 bussen zijn gedeeld]]
 
 Je kunt zoveel voertuigen aan elkaar koppelen als je wilt, er is geen limiet, maar je kunt uiteraard alleen voertuigen van hetzelfde type aan elkaar koppelen omdat zij dezelfde stations zullen aandoen.
 
@@ -170,7 +170,7 @@ Je zult zien dat alle orders nu zijn verwijderd uit de lijst bij dit voertuig, e
 
 ===Lijst van voertuigen die deze orders delen===
 Het [[File:en/SharedOrders.png]] icoontje rechts in het orderscherm (of dienstregelingscherm) is de gedeelde orders knop. Het toont een lijst van alle voertuigen die dezelfde orders delen ( [[Main/en/#Gedeelde orders|gedeelde orders]] ) als het huidige voertuig. Dit icoontje zal alleen beschikbaar zijn als het voertuig orders deelt met andere voertuigen. 
-[[File:en/gedeelde orders hk.png|none|frame|Lijst van voertuigen met gedeelde orders]]
+[[File:en/Gedeelde orders hk.png|none|frame|Lijst van voertuigen met gedeelde orders]]
 
 ===Opmerkingen===
 *In afwijking van orders kopiëren, is het bij gedeelde orders mogelijk dat een voertuig al reeds bestaande orders heeft. Dit is omdat je bij het delen van orders de ''Ctrl'' -toets moet vasthouden, waarmee het niet waarschijnlijk is dat je per ongeluk de orders van het voertuig kwijtraakt. Door dit te doen verliest het voertuig dat je toevoegt aan de gedeelde orders zijn bestaande orders, en heeft alleen de gedeelde orders. 
@@ -194,13 +194,13 @@ Soms is een station per ongeluk dubbel aangeklikt. Voor de meeste voertuigen ver
 
 ===Ongeldige order===
 Als je een station verwijdert waar een voertuig moet stoppen, zal de geest van de station een tijdje zichtbaar blijven (in de vorm van een grijze stationsnaam). Dit geeft je de mogelijkheid een nieuw station te maken op dezelfde locatie als het oude station welk de naam van het oude station overneemt. Voertuigen zullen naar dit nieuwe station blijven komen (er van uitgaande dat het een juist type is) zonder dat je hun orders hoeft aan te passen. 
-[[File:en/ongeldige order hk.png|frame|none|"Ongeldige order"]]
+[[File:en/Ongeldige order hk.png|frame|none|"Ongeldige order"]]
 
 Echter, als je te lang wacht of geen nieuw station wilt bouwen om het oude te vervangen, zal de geest van het oude station uiteindelijk verdwijnen. Elke order van voertuigen die naar dit station verwijzen wordt vervangen door '''Ongeldige order''' en zal worden overgeslagen in de route van het voertuig.
 
 ===Ongeldige stations===
 Als je een deel van een station verwijdert (bijvoorbeeld het busstation dat is gekoppeld aan een treinstation) zal de order niet nietig worden verklaard want het station bestaat nog steeds. Echter, het voertuig kan dit station niet benaderen omdat de juiste faciliteit ontbreekt. Dit leidt er toe dat het voertuig steeds opzoek blijft gaan naar dit station.
-[[File:en/ongeldig station hk.png|frame|none|"<Voertuig> heeft een ongeldig station in zijn orders".]]
+[[File:en/Ongeldig station hk.png|frame|none|"<Voertuig> heeft een ongeldig station in zijn orders".]]
 
 ==Zie ook==
 * [[Main/nl/Conditionele orders|Conditionele orders]]

@@ -1,4 +1,4 @@
-[[Translation:Main/en/Game mechanics]]{{en/-}}{{tabla de contenido/Es}}
+[[Translation:Main/en/Game mechanics]]{{es/Tabla de contenido}}
 
 Aquí puedes encontrar información acerca de cómo OpenTTD calcula la puntuación de las empresas en el juego.
 
@@ -202,7 +202,7 @@ A modo de ejemplo, si destruye unos ~200 árboles y luego vuelve a plantarlos, h
 |-
 |Soborno sin éxito|| -- ||Se establece en -50.
 |}
-<nowiki>*</nowiki> En la columna "calificación necesaria" los valores separados por barras se corresponde con las opciones "Permisiva / Tolerante / Hostil" del parámetro "Actitud de las autoridades ante cambios en el terreno" del [[Main/es/dificultad|nivel de dificultad]].
+<nowiki>*</nowiki> En la columna "calificación necesaria" los valores separados por barras se corresponde con las opciones "Permisiva / Tolerante / Hostil" del parámetro "Actitud de las autoridades ante cambios en el terreno" del [[Main/es/Dificultad|nivel de dificultad]].
 </td></tr></table>
 
 Cada mes las calificaciones de los jugadores cambian automáticamente:
@@ -460,7 +460,7 @@ Entrega de 100 bolsas de correo a 100 casillas de distancia tardando 100 días:<
 
 
 '''Notas:'''
-* La fórmula exacta es mucho más complicada y un poco más precisa, debido a errores de redondeo en la conversión de grandes valores. Vea economy.cpp ''(GetTransportedGoodsIncome)'' e [[Main/es/ingresos por carga|ingresos por carga]].
+* La fórmula exacta es mucho más complicada y un poco más precisa, debido a errores de redondeo en la conversión de grandes valores. Vea economy.cpp ''(GetTransportedGoodsIncome)'' e [[Main/es/Ingresos por carga|ingresos por carga]].
 
 * La distancia se mide por el número de casillas entre las estaciones; ni desde las industrias ni por la distancia que recorren los vehículos. Se calcula sumando las diferencias de coordenadas x e y de la casilla de origen y la casilla de destino, no por la distancia en línea recta.
 
@@ -474,7 +474,7 @@ Esto significa que a efectos del cálculo de la velocidad de un vehículo, una c
 *Por defecto las [[Main/es/Aeronaves|aeronaves]] vuelan a un cuarto de su velocidad real de vuelo (esto se puede cambiar en las [[Main/es/Opciones avanzadas/Vehículos|opciones avanzadas]]).
 *Las aeronaves aceleran alrededor de 200 km/h al día. Esto varía por aeronave.
 *Los aviones averiados vuelan a 345 km/h.
-*Durante el rodaje por el [[Main/en/Airport|aeropuerto]] la velocidad está limitada a 154 km/h.
+*Durante el rodaje por el [[Main/en/Airports|aeropuerto]] la velocidad está limitada a 154 km/h.
 
 ==== Vehículos de carretera ====
 *Los [[Main/es/Vehículos de carretera|vehículos de carretera]] aceleran 37 km/h por día.
@@ -489,7 +489,7 @@ Esto significa que a efectos del cálculo de la velocidad de un vehículo, una c
 *Un barco "parado" vuelve a su última velocidad instantáneamente.
 
 ==== Trenes ==== 
-(con la [[Main/en/Opciones avanzadas/Es#Modelo de aceleración de trenes|opción avanzada "modelo de aceleración de trenes"]] [[Main/es/aceleración realista|realista]])<br>
+(con la [[Main/en/Opciones avanzadas/Es#Modelo de aceleración de trenes|opción avanzada "modelo de aceleración de trenes"]] [[Main/es/Aceleración realista|realista]])<br>
 *Los [[Main/es/Trenes|trenes]] no se ven afectados por las pendientes si son suficientemente potentes.
 *Están limitados a una velocidad de 61km/h cuando entran y salen de los depósitos.
 *Pueden tomar una curva de 45° sin penalización de velocidad.
@@ -531,9 +531,9 @@ Esto significa que a efectos del cálculo de la velocidad de un vehículo, una c
 *La aceleración de los trenes MagLev (trenes de Levitación Magnética) es = 37 x (0,022 x Potencia - 0,24 x Velocidad^2 - 60 x Masa_vagones_pendiente_ascendente + 60 x Masa_vagones_pendiente_descendente) / Masa (km/h por día)
 *El frenado es el doble que la aceleración, excepto al entrar a un depósito o a una estación.
 *Los límites de velocidad sólo se aplican cuando todos los giros se producen dentro de la longitud del tren:
-[[File:en/speed-limits.png]]
+[[File:en/Speed-limits.png]]
 
-''Vea también: [[Main/es/Aceleración realista|Aceleración realista]] y [[Main/es/curvas|curvas]].''
+''Vea también: [[Main/es/Aceleración realista|Aceleración realista]] y [[Main/es/Curvas|curvas]].''
 
 Vea los archivos aircraft_cmd.c, roadveh_cmd.c, ship_cmd.c, train_cmd.c y vechicle.c para conocer el código de programación.
 

@@ -9,7 +9,7 @@ This window of the [[Main/en/OpenTTD]] patches section enables you to set variou
 |}
 ====Enable realistic acceleration for trains====
 {{en/Feature|-0.6|align="right"|text=(since 0.3.2 to 0.6.3)}}
-Enables a more [[Main/en/realistic acceleration]] calculation for trains. With this setting enabled, trains will travel faster up hill, but slower through tight corners.
+Enables a more [[Main/en/Realistic acceleration|realistic acceleration]] calculation for trains. With this setting enabled, trains will travel faster up hill, but slower through tight corners.
 This option has been renamed to [[Main/en/Advanced Settings/Vehicles#Train acceleration model|Train acceleration model]] in 0.7.0.
 :''Possible Settings:'' <span style="color:green">'''On'''</span> or <span style="color:red">'''Off'''</span>
 :''In [[Main/en/Openttd.cfg]] config file:'' ([patches] realistic_acceleration=<true|false>)
@@ -22,31 +22,31 @@ Disallows trains from making sharp 90 degree turns. The NPF or YAPF pathfinder n
 {{en/-}}
 ====Enable building very long trains====
 {{en/Feature|Old|align="right"|text=(since 0.2.0)}}
-You can build extremely long trains, aka [[Main/en/mammoth trains]].
+You can build extremely long trains, aka [[Main/en/Mammoth trains|mammoth trains]].
 :''Possible Settings:'' <span style="color:green">'''On'''</span> or <span style="color:red">'''Off'''</span>
 :''In Openttd.cfg config file:'' ([patches] mammoth_trains = <true|false>)
 {{en/-}}
 ====Allow goto depot orders====
 {{en/Feature|Old|align="right"|text=(since 0.2.0)}}
-All vehicles can have a [[Main/en/goto depot orders|depot in their schedule]].
+All vehicles can have a [[Main/en/Allow goto depot orders|depot in their schedule]].
 :''Possible Settings:'' <span style="color:green">'''On'''</span> or <span style="color:red">'''Off'''</span>
 :''In Openttd.cfg config file:'' ([patches] gotodepot = <true|false>)
 {{en/-}}
 ====Road vehicle queueing (with quantum effects)====
 {{en/Feature|Old|align="right"|text=(since 0.2.0)}}
-Trucks [[Main/en/road vehicle queueing|queue up]] at a busy station rather than turning around.
+Trucks [[Main/en/Road vehicle queueing|queue up]] at a busy station rather than turning around.
 :''Possible Settings:'' <span style="color:green">'''On'''</span> or <span style="color:red">'''Off'''</span>
 :''In Openttd.cfg config file:'' ([patches] roadveh_queue = <true|false>)
 {{en/-}}
 ====Pathfinder for trains====
 {{en/Feature|0.6|align="right"|text=(since 0.6.0)}}
-Select the pathfinding algorithm for trains. [[Main/en/Yet Another Pathfinder]] is the default and recommended setting, but you can still select the older pathfinders.  This option has been renamed from [[Main/en/#Use YAPF for trains|Use YAPF for trains]].
+Select the pathfinding algorithm for trains. [[Main/en/Yet Another Pathfinder|YAPF]] is the default and recommended setting, but you can still select the older pathfinders.  This option has been renamed from [[Main/en/#Use YAPF for trains|Use YAPF for trains]].
 :''Possible Settings:'' <span style="color:#FF7E00">'''NPF'''</span> or <span style="color:#FF7E00">'''YAPF'''</span> <span style="color:blue">(Recommended)</span>
 :''In [[Main/en/Openttd.cfg]] config file:'' ([patches] pathfinder_for_trains = <0-2>)
 {{en/-}}
 ====Pathfinder for road vehicles====
 {{en/Feature|0.6|align="right"|text=(since 0.6.0)}}
-Select the pathfinding algorithm for road vehicles. [[Main/en/Yet Another Pathfinder]] is the default and recommended setting, but you can still select the older pathfinders. This option has been renamed from [[Main/en/#Use YAPF for roadvehs|Use YAPF for roadvehs]].
+Select the pathfinding algorithm for road vehicles. [[Main/en/Yet Another Pathfinder|YAPF]] is the default and recommended setting, but you can still select the older pathfinders. This option has been renamed from [[Main/en/#Use YAPF for roadvehs|Use YAPF for roadvehs]].
 :''Possible Settings:'' <span style="color:#FF7E00">'''NPF'''</span> or <span style="color:#FF7E00">'''YAPF'''</span> <span style="color:blue">(Recommended)</span>
 :''In Openttd.cfg config file:'' ([patches] pathfinder_for_roadvehs = <0-2>)
 {{en/-}}
@@ -58,7 +58,7 @@ Select the pathfinding algorithm for ships. The original is the default and reco
 {{en/-}}
 ====Warn if a train's income is negative====
 {{en/Feature|-0.6|align="right"|text=(since 0.3.2 to 0.6.3)}}
-(train_income_warn) If a train's [[Main/en/train income warning|income is negative]] it will be reported in a news message. Use the [[Main/en/transfer]] option in the vehicles order window if you want to set up a [[Main/en/feeder service]]. This option has been renamed to [[Main/en/Advanced Settings/Vehicles#Warn if a vehicle's income is negative|Warn if a vehicle's income is negative]] in 0.7.0.
+(train_income_warn) If a train's [[Main/en/Train income warning|income is negative]] it will be reported in a news message. Use the [[Main/en/Orders#Transfer|transfer]] option in the vehicles order window if you want to set up a [[Main/en/Feeder service|feeder service]]. This option has been renamed to [[Main/en/Advanced Settings/Vehicles#Warn if a vehicle's income is negative|Warn if a vehicle's income is negative]] in 0.7.0.
 :''Possible Settings:'' <span style="color:green">'''On'''</span> or <span style="color:red">'''Off'''</span>
 :''In Openttd.cfg config file:'' ([patches] train_income_warn = <true|false>)
 {{en/-}}
@@ -71,13 +71,13 @@ This option may be enabled for all vehicles, disabled for stopped vehicles, or d
 {{en/-}}
 ====Vehicles never expire====
 {{en/Feature|Old|align="right"|text=(since 0.3.4)}}
-Old vehicles will stay in the vehicle list for you to choose and [[Main/en/never expire vehicles|never become obsolete]].
+Old vehicles will stay in the vehicle list for you to choose and [[Main/en/Never expire vehicles|never become obsolete]].
 :''Possible Settings:'' <span style="color:green">'''On'''</span> or <span style="color:red">'''Off'''</span>
 :''In Openttd.cfg config file:'' ([patches] never_expire_vehicles = <true|false>)
 {{en/-}}
 ====Warn if train is lost====
 {{en/Feature|0.5|align="right"|text=(since 0.5.0)}}
-A train will be [[Main/en/train is lost warning|reported lost]] if it cannot find a route to the station it is currently heading to.
+A train will be [[Main/en/Train is lost warning|reported lost]] if it cannot find a route to the station it is currently heading to.
 :''Possible Settings:'' <span style="color:green">'''On'''</span> or <span style="color:red">'''Off'''</span>
 :''In Openttd.cfg config file:'' ([patches] lost_train_warn = <true|false>)
 {{en/-}}
@@ -89,7 +89,7 @@ Vehicles are [[Main/en/Advanced Settings/Vehicles#Autorenew|automatically replac
 {{en/-}}
 ====Autorenew when vechicle is N months before/after max age====
 {{en/Feature|Old|align="right"|text=(since 0.3.4)}}
-[[Main/en/autorenew months|Autorenew months]] defines when the renew will be done.
+[[Main/en/Advanced Settings/Vehicles#Autorenew|Autorenew months]] defines when the renew will be done.
 :''Possible Settings:'' <span style="color:red">'''-12'''</span> to <span style="color:green">'''12'''</span>
 :* <span style="color:red">-12</span> means that the vehicle is replaced 12 months before it gets old.
 :* <span style="color:green">+12</span> means that the vehicle is replaced 12 months after it gets old.
@@ -97,31 +97,31 @@ Vehicles are [[Main/en/Advanced Settings/Vehicles#Autorenew|automatically replac
 {{en/-}}
 ====Autorenew minimum needed money for renew====
 {{en/Feature|Old|align="right"|text=(since 0.3.4)}}
-[[Main/en/autorenew money|Autorenew money]] defines the minimum amount of money needed before autorenew is done.
+[[Main/en/Advanced Settings/Vehicles#Autorenew|Autorenew money]] defines the minimum amount of money needed before autorenew is done.
 :''Possible Settings:'' <span style="color:red">'''£0'''</span> to <span style="color:green">'''£4,000,000'''</span>
 :''In Openttd.cfg config file:'' ([patches] autorenew_money = <0-2000000>)
 {{en/-}}
 ====Max trains per player====
 {{en/Feature|Old|align="right"|text=(since 0.3.2)}}
-Set the amount of [[Main/en/max trains|trains]] that a player can have.
+Set the amount of [[Main/en/Max trains|trains]] that a player can have.
 :''Possible Settings:'' <span style="color:red">'''0'''</span> to <span style="color:green">'''5,000'''</span>
 :''In Openttd.cfg config file:'' ([patches] max_trains = <0-5000>)
 {{en/-}}
 ====Max road vehicles per player====
 {{en/Feature|Old|align="right"|text=(since 0.3.2)}}
-Set the amount of [[Main/en/max road vehicles|road vehicles]] that a player can have.
+Set the amount of [[Main/en/Max road vehicles|road vehicles]] that a player can have.
 :''Possible Settings:'' <span style="color:red">'''0'''</span> to <span style="color:green">'''5,000'''</span>
 :''In Openttd.cfg config file:'' ([patches] max_roadveh = <0-5000>)
 {{en/-}}
 ====Max aircraft per player====
 {{en/Feature|Old|align="right"|text=(since 0.3.2)}}
-Set the amount of [[Main/en/max aircraft|aircraft]] that a player can have.
+Set the amount of [[Main/en/Max aircraft|aircraft]] that a player can have.
 :''Possible Settings:'' <span style="color:red">'''0'''</span> to <span style="color:green">'''5,000'''</span>
 :''In Openttd.cfg config file:'' ([patches] max_aircraft = <0-5000>)
 {{en/-}}
 ====Max ships per player====
 {{en/Feature|Old|align="right"|text=(since 0.3.2)}}
-Set the amount of [[Main/en/max ships|ships]] that a player can have.
+Set the amount of [[Main/en/Max ships|ships]] that a player can have.
 :''Possible Settings:'' <span style="color:red">'''0'''</span> to <span style="color:green">'''5,000'''</span>
 :''In Openttd.cfg config file:'' ([patches] max_ships = <0-5000>)
 {{en/-}}
@@ -135,25 +135,25 @@ You can hold the Ctrl key while changing service intervals to change them in inc
 {{en/-}}
 ====Default service interval for trains====
 {{en/Feature|Old|align="right"|text=(since 0.3.2)}}
-The default service interval when a new [[Main/en/service interval trains|train]] is built.
+The default service interval when a new [[Main/en/Service interval trains|train]] is built.
 :''Possible Settings:'' <span style="color:red">'''disabled'''</span> or <span style="color:green">'''15 days/%'''</span> to <span style="color:green">'''800 days/%'''</span>
 :''In Openttd.cfg config file:'' ([patches] servint_trains = <0, 5-800)
 {{en/-}}
 ====Default service interval for road vehicles====
 {{en/Feature|Old|align="right"|text=(since 0.3.2)}}
-The default service interval when a new [[Main/en/service interval road vehicles|road vehicle]] is built.
+The default service interval when a new [[Main/en/Service interval road vehicles|road vehicle]] is built.
 :''Possible Settings:'' <span style="color:red">'''disabled'''</span> or <span style="color:green">'''15 days/%'''</span> to <span style="color:green">'''800 days/%'''</span>
 :''In Openttd.cfg config file:'' ([patches] servint_roadveh = <0, 5-800)
 {{en/-}}
 ====Default service interval for ships====
 {{en/Feature|Old|align="right"|text=(since 0.3.2)}}
-The default service interval when a new [[Main/en/service interval ships|ship]] is built.
+The default service interval when a new [[Main/en/Service interval ships|ship]] is built.
 :''Possible Settings:'' <span style="color:red">'''disabled'''</span> or <span style="color:green">'''15 days/%'''</span> to <span style="color:green">'''800 days/%'''</span>
 :''In Openttd.cfg config file:'' ([patches] servint_ships = <0, 5-800)
 {{en/-}}
 ====Default service interval for aircraft====
 {{en/Feature|Old|align="right"|text=(since 0.3.2)}}
-The default service interval when a new [[Main/en/service interval aircraft|aircraft]] is built.
+The default service interval when a new [[Main/en/Service interval aircraft|aircraft]] is built.
 :''Possible Settings:'' <span style="color:red">'''disabled'''</span> or <span style="color:green">'''15 days/%'''</span> to <span style="color:green">'''800 days/%'''</span>
 :''In Openttd.cfg config file:'' ([patches] servint_aircraft = <0, 5-800)
 {{en/-}}
@@ -190,7 +190,7 @@ Set the speed of aircraft in relation to rail, road and water vehicles. In plain
 {{en/-}}
 ====Enable timetabling for vehicles====
 {{en/Feature|0.6|align="right"|text=(since 0.6.0)}}
-Allows you to use [[Main/en/timetables]] for vehicles.
+Allows you to use [[Main/en/Timetable|timetables]] for vehicles.
 :''Possible Settings:'' <span style="color:green">'''On'''</span> or <span style="color:red">'''Off'''</span>
 :''In Openttd.cfg config file:'' ([patches] timetabling = <true|false>) 
 {{en/-}}

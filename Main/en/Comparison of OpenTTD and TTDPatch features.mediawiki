@@ -1,4 +1,4 @@
-{{outdated|Comparison tables are substantially outdated, at least about work-in-progress.  This is only really of value as a historical document now.}}
+{{en/Outdated|Comparison tables are substantially outdated, at least about work-in-progress.  This is only really of value as a historical document now.}}
 
 [[Translation:Main/en/Comparison of OpenTTD and TTDPatch features]]
 '''Here you have a small comparative between OpenTTD and TTDPatch Features'''
@@ -8,8 +8,8 @@ If you are a regular '''TTDPatch user''', you will notice that many similar thin
 
 ==Features shared by TTDPatch and OpenTTD==
 These features work exactly the same as in TTDPatch. Some of them need to be manually activated, see [[Main/en/Advanced Settings]].<br/>
-{{note|List is currently incomplete!}}
-*[[Main/en/Water Transport Tiles]] / [[Main/en/locks]] / rivers 
+{{en/Note|List is currently incomplete!}}
+*[[Main/en/Water Transport Tiles|Canals]] / [[Main/en/Water Transport Tiles|locks]] / rivers 
 *[[Main/en/Change station spread]]
 *Longer stations / more platforms
 *Ability to join stations (of same width or length)
@@ -20,10 +20,10 @@ These features work exactly the same as in TTDPatch. Some of them need to be man
 *[[Main/en/Longer bridges]]
 *[[Main/en/Higher bridges]]
 *[[Main/en/Signals#Pre-signals|Presignals]]
-*[[Main/en/Signals#Semaphores]]
-*Advanced [[Main/en/non-stop]] orders
-*[[Main/en/Orders#Shared Orders]]
-*[[Main/en/Orders#Copying orders]]
+*[[Main/en/Signals#Semaphores|Semaphores]]
+*Advanced [[Main/en/Non-stop|non-stop]] orders
+*[[Main/en/Orders#Shared Orders|Shared orders]]
+*[[Main/en/Orders#Copying orders|Copy orders]]
 *[[Main/en/Crossing tunnels]] cheat
 *Plant many trees on a tile
 *[[Main/en/Bribe authority|Bribe]] the town authority
@@ -48,7 +48,7 @@ These features work exactly the same as in TTDPatch. Some of them need to be man
 * New cargo types
 * [[Main/en/Drive-through Road Stops]] (by mart3p)
 * [[Main/en/Tramways]]
-* [[Main/en/Landscaping#Autoslope]] (Change slope on non-empty tiles)
+* [[Main/en/Landscaping#Autoslope|Autoslope]] (Change slope on non-empty tiles)
 * Signal type selection GUI
 * [[Main/en/Yet Another PBS Patch|Path Based Signals (PBS)]]
 * Signals that are only stopping locations from one side 
@@ -56,9 +56,9 @@ These features work exactly the same as in TTDPatch. Some of them need to be man
 
 ==Features that are significantly different in OpenTTD==
 {{en/Note|List is currently incomplete}}
-*[[Main/en/Checkpoints]].
+*[[Main/en/Waypoints|Checkpoints]].
 *[[Main/en/AI:Main Page|New AI]].
-*Two new [[Main/en/bridges]] instead of raise Bridges speed limit.
+*Two new [[Main/en/Bridges|bridges]] instead of raise Bridges speed limit.
 *[[Main/en/Drag and drop]] for most tools.
 *[[Main/en/Convert rail]] (from and to rail, monorail, maglev).
 *[[Main/en/Sell entire train]].
@@ -69,16 +69,16 @@ These features work exactly the same as in TTDPatch. Some of them need to be man
 *Servicing intervals in percentage of max. reliability.
 *More detailed performance ratings.
 *[[Main/en/Extra Viewport]].
-*Ability to [[Main/en/move company HQ]].
+*Ability to [[Main/en/Move company HQ|move company HQ]].
 *[[Main/en/Cheats#Magic Bulldozer|Magic bulldozer]] cheat to remove industries etc.
-* [[Main/en/Replace vehicles#Autoreplace]] in OpenTTD uses manual selection. This differs from TTDPatch which uses automatic selection based on criteria supplied via newgrf.
+* [[Main/en/Replace vehicles#Autoreplace|Autoreplace]] in OpenTTD uses manual selection. This differs from TTDPatch which uses automatic selection based on criteria supplied via newgrf.
 * [[Main/en/Clone Vehicle]] is available for all vehicle types in OpenTTD, but only trains in TTDPatch.
 *Station tile/platform removal
-* Direct construction of non-connected stations (also called [[Main/en/distant-join stations]])
+* Direct construction of non-connected stations (also called [[Main/en/Distant-join stations|distant-join stations]])
 
 ==TTDPatch features currently not in OpenTTD==
 
-{{note|List is currently incomplete!}}
+{{en/Note|List is currently incomplete!}}
 
 * Low memory version
 * Abandoned Roads
@@ -93,7 +93,7 @@ These features work exactly the same as in TTDPatch. Some of them need to be man
 
 ==Features only available in OpenTTD==
 
-{{note|List is currently incomplete! See [http://hg.openttd.org/openttd/trunk.hg/raw-file/2ab43dcede7e/changelog.txt[here]] for a complete list}}
+{{en/Note|List is currently incomplete! See [http://hg.openttd.org/openttd/trunk.hg/raw-file/2ab43dcede7e/changelog.txt[here]] for a complete list}}
 
 * Larger maps (up to 2048x2048 or even more with patches)
 * Vehicle introduction dates later than 2050
@@ -115,7 +115,7 @@ These features work exactly the same as in TTDPatch. Some of them need to be man
 * [[Main/en/Requested features]] &mdash; List of WIP Suggestions
 * [[Main/en/NewGRF TODO]] &mdash; A list of NewGRF WIP features for developers.
 * [[Main/en/Comparison of OpenTTD and TTDPatch features]] &mdash; Full List of features
-* [[Main/en/Mini Integrated Nightly]] &mdash; The list of patch of the precedent nightly
+* [[Main/en/Mini Integrated Nightly|Mini_Integrated_Nightly]] &mdash; The list of patch of the precedent nightly
 
 == Comparison Chart (Not exhaustive) ==
 
@@ -155,7 +155,7 @@ These features work exactly the same as in TTDPatch. Some of them need to be man
 |-
 |colspan="4" style="background:#ccc"| General
 |-
-| Working [[Main/en/multiplayer]]
+| Working [[Main/en/Multiplayer|multiplayer]]
 | style="background: lime" | Done
 | style="background: yellow" | WIP
 |
@@ -222,17 +222,17 @@ These features work exactly the same as in TTDPatch. Some of them need to be man
 |-
 |colspan="4" style="background:#ccc"| Vehicles
 |-
-| New [[Main/en/airports]]
+| New [[Main/en/Airports|airports]]
 | style="background: lime" | Done
 | style="background: yellow" |  WIP
 | Being worked on as a new GRF feature by Csaboka.
 |-
-| [[Main/en/Yet Another PBS Patch]]
+| [[Main/en/Yet Another PBS Patch|Path Based Signaling]]
 | style="background: lime" | Done
 | style="background: lime" | Done
 | 
 |-
-| New [[Main/en/pathfinder]]
+| New [[Main/en/Pathfinder|pathfinder]]
 | style="background: lime" | Done
 | style="background: Yellow" |  WIP
 | Being worked on by Eis_os

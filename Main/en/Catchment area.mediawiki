@@ -1,13 +1,12 @@
 [[Translation:Main/en/Catchment area]]
-{{en/-}}
-{{outdated|Recent OpenTTD versions have reworked the catchment area mechanics.}}
+{{en/Outdated|Recent OpenTTD versions have reworked the catchment area mechanics.}}
 [[File:en/Catchmentarea.png|thumb|right|250px|In the screenshot, the blue zone is the station's catchment area.]]
-The '''Catchment Area''' of a [[Main/en/station]] is the radius around the stage that it can service. [[Main/en/Towns|Town-buildings]] and [[Main/en/industries]] that are within a station's catchment area accept [[Main/en/cargo]] through this station, and will place their cargo at the station to be delivered elsewhere.
+The '''Catchment Area''' of a [[Main/en/Stations|station]] is the radius around the stage that it can service. [[Main/en/Towns|Town-buildings]] and [[Main/en/Industries|industries]] that are within a station's catchment area accept [[Main/en/Cargo|cargo]] through this station, and will place their cargo at the station to be delivered elsewhere.
 
 == Setting: Allow more realistically sized catchment areas ==
 If the ''[[Main/en/Advanced Settings/Stations#Allow more realistically sized catchment areas|Allow more realistically sized catchment areas]]'' option is  on then the size of the catchment area depends on the type of the station. Otherwise it has a radius of 4 tiles for every station.
 
-For a single physical station, [[Main/en/station radius]] is the same as catchment area. This attribute of a station is inherent. If the ''[[Main/en/Advanced Settings/Stations#|Allow more realistically sized catchment areas]]'' option is ON then the station radius of a single physical station depends on the type of the station.
+For a single physical station, [[Main/en/Modified catchment|station radius]] is the same as catchment area. This attribute of a station is inherent. If the ''[[Main/en/Advanced Settings/Stations#|Allow more realistically sized catchment areas]]'' option is ON then the station radius of a single physical station depends on the type of the station.
 
 : ''For a combined station, the radius of each of its component physical stations is '''promoted''' to the radius of the most extensive component.'' 
 
@@ -33,7 +32,7 @@ So, the lone road station shown, '''Altoona''', has a radius of 3. The lone rail
 
 == Production catchment area ==
 
-In some industries only certain squares can accept the cargo required by that industry. You can use the [[Main/en/land area information]] tool to find out which square accept cargo. When building a station you can see, in the station building dialog, which types of cargo will be accepted by the industries in the catchment area. For [[Main/en/Stations#Building non-physically attached stations|non-physically attached combined stations]] the catchment area also covers all the space between the individual stations. Both stations in the picture wouldn't accept oil if they were built as separate stations because they are too far away from the refinery. But since they form a single combined station their catchment area extends over the refinery and makes them accept oil. This only applies for delivery, not for pickup of cargo. Thus the pictured stations won't get the goods produced by the refinery. (The described case and picture applies when the ''Allow more realistically sized catchment areas'' option is enabled.)
+In some industries only certain squares can accept the cargo required by that industry. You can use the [[Main/en/Land area information|land area information]] tool to find out which square accept cargo. When building a station you can see, in the station building dialog, which types of cargo will be accepted by the industries in the catchment area. For [[Main/en/Stations#Building non-physically attached stations|non-physically attached combined stations]] the catchment area also covers all the space between the individual stations. Both stations in the picture wouldn't accept oil if they were built as separate stations because they are too far away from the refinery. But since they form a single combined station their catchment area extends over the refinery and makes them accept oil. This only applies for delivery, not for pickup of cargo. Thus the pictured stations won't get the goods produced by the refinery. (The described case and picture applies when the ''Allow more realistically sized catchment areas'' option is enabled.)
 
 [[File:en/Catch-altoona-produce.png|thumb|400px|Altoona production catchment area. Catchment is shown in red; the bounding box of each industry is shown in bright green.]]
 
@@ -47,7 +46,7 @@ The Brick Works overlaps Altoona's production catchment by a single tile, in its
 
 
 == Cargo Acceptance area of stations ==
-Every industry square can provide the cargo produced by that industry. Having multiple catchment area squares overlapping an industry doesn't give any advantages. However, coverage for town-building has direct effect on [[Main/en/passenger]] and [[Main/en/mail]] received. So the strategy to boost the [[Main/en/Town#Town Growth|town growth]] and building non-physically attached stations to increase the catchment area will improve the patronage of large station which is difficult to be built near the center of the town.
+Every industry square can provide the cargo produced by that industry. Having multiple catchment area squares overlapping an industry doesn't give any advantages. However, coverage for town-building has direct effect on [[Main/en/Passengers|passenger]] and [[Main/en/Mail|mail]] received. So the strategy to boost the [[Main/en/Town#Town Growth|town growth]] and building non-physically attached stations to increase the catchment area will improve the patronage of large station which is difficult to be built near the center of the town.
 
 [[File:en/Catch-altoona-accept.png|thumb|400px|Altoona acceptance catchment area. Catchment is shown in blue; the footprint of each industry is shown in light brown.]]
 

@@ -1,5 +1,5 @@
 [[Translation:Main/en/Network Protocol]]
-<!--{{warning|This document is out-dated and might not represent the current truth! Handle with caution.}}-->{{uwaga/Pl|Ten dokument jest przestarzały i może nie odzwierciedlać obecnej prawdy! Postępuj ostrożnie.}}
+<!--{{en/Warning|This document is out-dated and might not represent the current truth! Handle with caution.}}-->{{pl/Uwaga|Ten dokument jest przestarzały i może nie odzwierciedlać obecnej prawdy! Postępuj ostrożnie.}}
 
 Poniżej opisano, jak działa protokół sieciowy. 
 
@@ -22,7 +22,7 @@ Wszystko, co budujesz w OpenTTD lub zmieniasz, jest obsługiwane wewnętrznie za
 Jak przeczytałeś powyżej, wysyłamy DoCommands. Teraz w normalnych warunkach serwer wysyła pakiet FRAME co ramkę. W tej ramce mówi, do jakiej ramki klient może 'chodzić' <small>''(walk)''</small>. Tuż przed tym serwer wysłał wszystkie DoCommands dla maksymalnej ramki w pakiecie FRAME. W ten sposób wszyscy klienci „przechodzą” do ramki maksymalnej, a następnie wykonują wszystkie polecenia DoCommands. Ponieważ klient nigdy nie może znajdować się poza maksymalną ramką, podobnie jak serwer, wszystkie DoCommands są wykonywane w tej samej ramce. Jest to bardzo potrzebne, w przeciwnym razie otrzymamy ogromne desynchronie. Czasami konieczne jest zwiększenie częstotliwości. tego pakietu FRAME (np. wiele wolnych połączeń). To, co się dzieje, jest następujące: serwer wysyła pakiet FRAME co X sekund, zawierający maks. Ramkę częstotliwości X +. Ponadto wszystkie DoCommands mają ustawioną ramkę wykonania na X + freq. Ponownie, w ten sposób jesteśmy pewni, że wszystkie DoCommands są obsługiwane w tym samym momencie (nawet w tej samej kolejności). Co to znaczy? Bardzo proste: na przykład, gdy budujesz szynę, może ona zająć ramki 'freq' , zanim się pojawi. Jak rozumiesz, ten „freq” nie może być zbyt wysoki. Niektóre statystyki:
 
 {| border="1"
-|+ Network Speed per Client <!--{{warning|NEEDS UPDATING!}}-->{{uwaga/Pl|POTRZEBUJE AKTUALIZACJI!}}
+|+ Network Speed per Client <!--{{en/Warning|NEEDS UPDATING!}}-->{{pl/Uwaga|POTRZEBUJE AKTUALIZACJI!}}
 |-
 ! net_frame_freq !! Upstream !! Downstream
 |-

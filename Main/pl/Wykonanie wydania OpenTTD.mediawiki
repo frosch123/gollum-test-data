@@ -1,4 +1,4 @@
-[[Translation:Main/en/Doing an OpenTTD release]] {{en/-}}
+[[Translation:Main/en/Doing an OpenTTD release]]
 <!--{{en/DevDoc}}-->{{pl/Rozwój}}
 
 Te rzeczy należy zrobić dla każdego wydania:
@@ -34,7 +34,7 @@ Te rzeczy należy zrobić dla każdego wydania:
 * przekazanie/scalenie zmiany wprowadzone we wstępnej wersji
 * dla wersji non-RC:
 ** utworzenie strony wiki i zaktualizowanie [[Main/en/OpenTTD Release History|release history]] oraz [[Template/en/OTTDVersions|template]]
-** zaktualizowanie szablonów wiki: [[Template/en/Version]]
+** zaktualizowanie szablonów wiki: [[Template/en/Version|Template:Version]]
 ** Dodanie nowej wersji do listy wersji minimalnych/maksymalnych "bananów"
 ** opiekowanie pakietów poke na IRC: blathijs (debian), heffer (fedora)
 
@@ -49,6 +49,6 @@ Te rzeczy należy zrobić dla każdego wydania:
 ** Zaktualizowanie version w src/os/windows/ottdres.rc.in
 ** Dodanie notatki do src/saveload/saveload.h o tym, która wersja zapisu jest używana w gałęzi.
 * Backport changelog ( i debian/changelog) do master branch
-* Zaktualizowanie strony wiki: [[Template/en/VersionBox]]
+* Zaktualizowanie strony wiki: [[Template/en/VersionBox|Template:VersionBox]]
 
 <!--[[Category:en/Development]]--> [[Category:pl/Rozwój]]

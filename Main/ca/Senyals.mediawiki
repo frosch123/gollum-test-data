@@ -1,4 +1,4 @@
-[[Translation:Main/en/Signals]]{{en/-}}{{ca/Taula de contingut}}
+[[Translation:Main/en/Signals]]{{ca/Taula de contingut}}
 :''Veja el tutorial sobre la [[Main/ca/Col·locar senyals|col·locació de senyals]] per a una introducció pràctica a la senyalització.''
 
 Els '''senyals''' són dispositius útils que li permeten controlar el moviment dels [[Main/ca/Trens|trens]]. Són necessàries per a evitar les col·lisions en les xarxes [[Main/ca/Construcció de ferrocarrils|ferroviàries]] amb uns quants trens circulant.
@@ -97,16 +97,16 @@ La imatge anterior mostra un disseny en què l’entrada a una estació es contr
 Els senyals previs són senyals que mostren un color depenent no sols de l’estat (ocupat o buit) del tram de vies immediatament posterior a ell, sinó també segons el color dels senyals immediatament posteriors. En concret, un senyal previ d’entrada (si està seguit per senyals de sortida) mostra una llum verda si, i només si, hi ha almenys una eixida de color verd immediatament posterior a ell. En un sistema de senyals dependents (o previs) vosté ha d’identificar quins senyals hauran de ser senyals previs d’entrada i quins de sortida.
 {{en/-}}
 ====Senyals d’entrada====
-[[File:en/entry presignal.png|left|60px]] Un '''senyal previ d’entrada''' es posa de color verd, sempre que hi haja almenys un senyal de sortida verd en el següent tram de vies. En cas contrari, es mostra de color roig. Açò evita que els trens entren en aqueix bloc (o tram) fins que hi haja una eixida disponible. Tinga en compte que les cotxeres funcionen com si tingueren incorporades un senyal de dos sentits (i funcionen com un senyal d’entrada dins d'un conjunt de senyals dependents).
+[[File:en/Entry presignal.png|left|60px]] Un '''senyal previ d’entrada''' es posa de color verd, sempre que hi haja almenys un senyal de sortida verd en el següent tram de vies. En cas contrari, es mostra de color roig. Açò evita que els trens entren en aqueix bloc (o tram) fins que hi haja una eixida disponible. Tinga en compte que les cotxeres funcionen com si tingueren incorporades un senyal de dos sentits (i funcionen com un senyal d’entrada dins d'un conjunt de senyals dependents).
 
 Si no hi ha senyals designats com a eixides després d’un senyal d’entrada, es comportarà com un senyal normal. Açò és convenient per a senyals previs de dues direccions quan només es necessita que funcione com a tal en un dels dos sentits, sent innecessari el seu funcionament com a tal en el sentit contrari.
 {{en/-}}
 ====Senyals de sortida====
-[[File:en/exit presignal.png|60px|left]] Un '''senyal de sortida''' (o d'eixida) es comporta de la mateixa manera que un senyal de tram normal, però a més, és necessàri per a que el senyal d’entrada o combinat anterior tinga el color correcte.
+[[File:en/Exit presignal.png|60px|left]] Un '''senyal de sortida''' (o d'eixida) es comporta de la mateixa manera que un senyal de tram normal, però a més, és necessàri per a que el senyal d’entrada o combinat anterior tinga el color correcte.
 {{en/-}}
 ====Senyals combinats====
-[[File:en/station with pre-signals2.png|frame|right|Una estació amb 1 senyal previ d’entrada, 2 senyals combinats i 4 senyals de sortida.]]
-[[File:en/combo presignal.png|60px|left]] Hi ha un tercer tipus de senyal previ (o dependent) que en realitat no introdueix cap nova funcionalitat. S’anomena '''senyal combinat''' i simplement actua com un senyal d’entrada i d'eixida alhora. Açò li permet construir grans "arbres" de senyals previs com es mostra a la dreta.
+[[File:en/Station with pre-signals2.png|frame|right|Una estació amb 1 senyal previ d’entrada, 2 senyals combinats i 4 senyals de sortida.]]
+[[File:en/Combo presignal.png|60px|left]] Hi ha un tercer tipus de senyal previ (o dependent) que en realitat no introdueix cap nova funcionalitat. S’anomena '''senyal combinat''' i simplement actua com un senyal d’entrada i d'eixida alhora. Açò li permet construir grans "arbres" de senyals previs com es mostra a la dreta.
 {{en/-}}
 ====Construir senyals previs====
 Si té activa l’interfície de senyals: Per a construir un senyal previ seleccione el botó corresponent de la barra [[Main/en/#Interfície de senyals|Selecció de senyals]].
@@ -153,7 +153,7 @@ Ja que només la part davantera de cada senyal es defineix com una posició segu
 [[File:en/Yapp unsafewaitinglocation.png|frame|center|El senyal assenyalat amb la fletxa està mal ubicat: mentres el tren espera en l’encreuament està bloquejant el camí d’accés del tren que ve per la part superior. Hi ha un altre senyal de ruta mal ubicat en la imatge. Series capaç de trobar-lo?]]
 
 Un altre exemple del que pot fer amb senyals de camí, per a poder tenir dos trens eixint de l’estació al mateix temps i que compartisquen les mateixes cotxeres (impossible d’aconseguir amb senyals previs, que bloquejarien el tram sencer). En aquest exemple s’han usat senyals de ruta d’un sentit a l’eixida de l’estació i senyals de ruta normals a l’eixida de les cotxeres (perquè els trens puguen entrar-hi).
-[[File:en/pathsignal station exit.png|frame|center|Dos trens eixint al mateix temps d’unes cotxeres situades a l’eixida d’una estació.]]
+[[File:en/Pathsignal station exit.png|frame|center|Dos trens eixint al mateix temps d’unes cotxeres situades a l’eixida d’una estació.]]
 
 ====Paràmetres avançats====
 Hi ha tres nous [[Main/ca/Paràmetres avançats|Paràmetres avançats]] relacionats amb els ''senyals de camí'':
@@ -180,7 +180,7 @@ Amb aquest disseny d’estació, els trens poden utilitzar ambdues andanes quan 
 
 ==Semàfors (o senyals mecánics)==
 {{ca/Característica|Old|align="right"}}
-[[File:en/semaphore.png|frame|left]]
+[[File:en/Semaphore.png|frame|left]]
 Els '''semàfors''' o '''senyals mecànics''' són un tipus de senyal que no es diferencien dels senyals elèctrics (o lluminosos). Només tenen una aparença distinta, que els dóna un aire més antic.
 
 Abans de la versió 0.6.0 d’OpenTTD aquests senyals només podien crear-se mantenint polsada la tecla ''Ctrl'' en col·locar els senyals. A partir de la versió 0.6.0 els senyals mecànics es creguen en compte dels senyals elèctrics abans d’un any donat (1975 de forma predeterminada) i amb ''Ctrl'' es construeix l’altre tipus de senyal. Aquesta característica es controla amb el paràmetre «Construir samàfors automàticament abans de» que es troba en: ''Paràmetres avançats/Construcció/Senyals''. Des de la versió 0.7.0 utilitzant la [[Main/en/#Interfície de senyals|interfície de senyals]] es poden construir en qualsevol moment usant el botó corresponent.

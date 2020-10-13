@@ -1,6 +1,5 @@
 {{en/Todo|Glossary, Punctuation}}
 [[Translation:Main/en/Manual of style]]
-{{en/-}}
 {{en/DevDoc}}
 Welcome to the OpenTTD Manual of Style. This document keeps the rules for all English in-game text (both of UK and US variants). This manual was first started with the goal of improving the text quality of the UI tooltips, as to make localization to different languages easier. Eventually this evolved into a full documentation project to unify in-game written-text rules, fix inconsistencies, and improve readability.
 
@@ -9,7 +8,7 @@ The OpenTTD Manual of Style is modeled after the [https://docs.microsoft.com/en-
 
 == Scope ==
 * Apply these rules only for text to be displayed in-game that is included in the OpenTTD core package. 
-* Code, images or any separate documentation included in the OpenTTD package will not follow the rules of this manual. If you wish to learn how to format code, please consult the OpenTTD [[Main/en/Coding Style]] guide available at the wiki. 
+* Code, images or any separate documentation included in the OpenTTD package will not follow the rules of this manual. If you wish to learn how to format code, please consult the OpenTTD [[Main/en/Coding style|Coding Style]] guide available at the wiki. 
 * Text belonging to mods obtained through the in-game content downloader or anywhere else is not covered by this guide. It is however recommended for modders to follow these rules while creating new content as to keep consistency with the original texts.
 * Text belonging to external readme files displayed on the in-game reader tool also falls out of the scope of this guide.
 
@@ -300,7 +299,7 @@ Titles refer to names of individual works (books, songs, apps, articles, etc). F
 |}
 
 ==== Tooltips ====
-[[File:en/tooltiplegend.png|frame|Elements of a tooltip: Green - title; red - description;  blue - additional shortcuts.]]
+[[File:en/Tooltiplegend.png|frame|Elements of a tooltip: Green - title; red - description;  blue - additional shortcuts.]]
 Tooltips are texts printed in small pop-up windows that appear when you hover the mouse cursor over certain UI functions. They are a large part of the OpenTTD descriptive texts. Tooltips can be composed by one or more of three possible parts:
 * Title - the name of function or tool
 * Description - a short explanation of the function or tool
@@ -315,19 +314,19 @@ The following general formatting rules are applied to tooltips:
 ===== Buttons with icons tooltips =====
 If a tooltip is associated with an icon button the following rules apply:
 * Icon button tooltips must always have a title.
-[[File:en/iconbutton.png|none|frame|Icon button tooltips always require a title on the first line.]]
+[[File:en/Iconbutton.png|none|frame|Icon button tooltips always require a title on the first line.]]
 
 ===== Buttons with text tooltips =====
 If a tooltip is associated with a text button the following rules apply:
 * Text button tooltips must never have a title, as it is already written on the button itself.
 * Text button tooltips must always have a description.
-[[File:en/textbutton.png|none|frame|A text button tooltip. The button label acts as a title.]]
+[[File:en/Textbutton.png|none|frame|A text button tooltip. The button label acts as a title.]]
 
 ===== Table tooltips =====
 If a tooltip is associated with a table the following rules apply:
 * If a table has a title, the associated tooltip must have no title. If a window only contains a single table, the window title is also the table title.
 * If a table doesn't have a title, the associated tooltip must always have a title.
-[[File:en/tabletooltip.png|none|frame|If a table has a title or does not share a window with other tables, then the tooltip requires a description only.]]
+[[File:en/Tabletooltip.png|none|frame|If a table has a title or does not share a window with other tables, then the tooltip requires a description only.]]
 
 === UI labels ===
 ==== General UI label formatting ====

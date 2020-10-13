@@ -1,5 +1,5 @@
 {{other languages|en=Listen server|pl=Listen server|language_page=pl}}
-<!--{{stub}}-->{{szkic/Pl}}
+<!--{{en/Stub}}-->{{pl/Szkic}}
 
 '''Listen server''' to gra sieciowa OpenTTD [[Main/pl/Serwer|server]] , która działa w tym samym procesie co klient gry, pozwalając graczowi zarówno hostować, jak i uczestniczyć w grze. Serwery odsłuchu mają pewne ograniczenia, których nie mają [[Main/pl/Serwer dedykowany|dedicated server]]`y .
 
@@ -8,13 +8,13 @@ Wybierz '''Start server''' z menu OpenTTD '''Multiplayer''' .  Możesz teraz wyg
 
 ==Konfigurowanie serwera==
 Istnieją 3 sposoby zmiany ustawień działającego serwera:
-*Używaj graficznego interfejsu użytkownika, podobnie jak w grze dla jednego gracza. Wszystkie opcje serwera, takie jak  [[Main/en/net frame freq]] nie są dostępne w ten sposób.
+*Używaj graficznego interfejsu użytkownika, podobnie jak w grze dla jednego gracza. Wszystkie opcje serwera, takie jak  [[Main/en/net frame freq|net_frame_freq]] nie są dostępne w ten sposób.
 *Użyj [[Main/en/Konsola/Pl#Komendy w grze wieloosobowej|console commands]].
 *Z [[Main/en/Konsola/Pl#Komendy w grze wieloosobowej|rcon]]. Jeśli serwer ustawi hasło rcon, klienci mogą również skonfigurować serwer via rcon .
 
 ==Różnice między 'nasłuchiwaniem' <small>''(listen)''</small> a serwerami dedykowanymi==
 * Serwer 'Listen' działa w tym samym procesie co klient gry, więc co najmniej jeden klient jest zawsze w grze.
-* [[Main/pl/min active clients|min_active_clients]] nie działa na serwerach 'nasłuchujących' <small>''(listen servers)''</small> .
+* [[Main/pl/Min active clients|min_active_clients]] nie działa na serwerach 'nasłuchujących' <small>''(listen servers)''</small> .
 
 
 [[Category:en/Multiplayer]][[Category:pl/Gra wieloosobowa]]

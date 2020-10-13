@@ -1,5 +1,4 @@
 [[Translation:Main/en/AI:RailPathfinder]]
-{{en/-}}
 {{fr/NonIA}}
 == Conditions de prérequis ==
 Avant d'appeler la détermination de chemin, vous devez choisir quel type de voie utiliser. Voici un moyen sûr suggéré par Zutty pour obtenir le premier type de voies de la liste.
@@ -76,7 +75,7 @@ Donc, maintenant que nous savons comment créer une instance de détermination d
 
  local tile_a = AIStation.GetLocation(st_a);
  local tile_b = AIStation.GetLocation(st_b);
- pathfinder.InitializePath(<nowiki>[[Main/en/tile a, tile a + AIMap.GetTileIndex(-1, 0)]], [[Main/en/tile b + AIMap.GetTileIndex(-1, 0), tile b]]</nowiki>);
+ pathfinder.InitializePath(<nowiki>[[Main/en/tile a, tile a + AIMap.GetTileIndex(-1, 0)|tile_a, tile_a + AIMap.GetTileIndex(-1, 0)]], [[Main/en/tile b + AIMap.GetTileIndex(-1, 0), tile b|tile_b + AIMap.GetTileIndex(-1, 0), tile_b]]</nowiki>);
 
 La détermination de chemin attend un tableau de tableaux [case_départ, case_avant_départ] et un tableau de tableaux [case_arrivée, case_après_arrivée]. Comme nous n'avons qu'un seul départ et une seule case d'arrivée, nous créons simplement deux tableaux avec un élément dans chaque. Maintenant, la détermination de chemin est prête à trouver un trajet.
 

@@ -1,8 +1,8 @@
-[[Translation:Main/en/Strings]] {{en/-}}
+[[Translation:Main/en/Strings]]
 <!--{{en/DevDoc}}-->{{pl/Rozwój}}
 
-<!--{{note|This page deals with [http://www.wikipedia.org/wiki/Internationalization_and_localization i18n] strings from a ''developers'' point of view. If you are interested in aspects on translations, see [[Main/en/OpenTTDDevBlackBook/Format of langfiles]] for a more in-depth article. That article also covers language specific concepts like inflection due to gender, causes and plurality.}}-->
-{{informacja/Pl|Ta strona dotyczy [http://www.wikipedia.org/wiki/Internationalization_and_localization i18n] ciągi z ''developers'' punkt widzenia. Jeśli interesują Cię aspekty tłumaczeń, zobacz [[Main/pl/Format plików lang|Format plików lang]] po bardziej szczegółowy artykuł. Artykuł ten obejmuje również pojęcia specyficzne dla języka, takie jak odmiana z powodu płci, przyczyn i mnogości.}}
+<!--{{en/Note|This page deals with [http://www.wikipedia.org/wiki/Internationalization_and_localization i18n] strings from a ''developers'' point of view. If you are interested in aspects on translations, see [[Main/en/OpenTTDDevBlackBook/Format of langfiles|Format of langfiles]] for a more in-depth article. That article also covers language specific concepts like inflection due to gender, causes and plurality.}}-->
+{{pl/Informacja|Ta strona dotyczy [http://www.wikipedia.org/wiki/Internationalization_and_localization i18n] ciągi z ''developers'' punkt widzenia. Jeśli interesują Cię aspekty tłumaczeń, zobacz [[Main/pl/Format plików lang|Format plików lang]] po bardziej szczegółowy artykuł. Artykuł ten obejmuje również pojęcia specyficzne dla języka, takie jak odmiana z powodu płci, przyczyn i mnogości.}}
 
 OpenTTD ma wbudowaną obsługę napisów w wielu językach. Te widoczne dla użytkownika teksty muszą być przetłumaczone na wiele języków obcych.   Łańcuchy znaków zależne od języka są przechowywane w plikach tekstowych pod '''src/lang/''' i mają wzór <code>''[language name]''.txt</code>. Jak każdy plik kodu źródłowego są pod kontrolą wersji przez SVN. Językiem głównym jest angielski (British English) i zapisany jest w pliku '''english.txt''' . Aby uzyskać szczegółowe wyjaśnienie tych plików, patrz [[Main/pl/Format plików lang|Format plików lang]] . Podczas procesu kompilacji narzędzie „strgen” kompiluje pliki językowe w odpowiadające im pliki <code>.lng</code> pliki, które z kolei są wykorzystywane podczas gry. 
 
@@ -30,8 +30,8 @@ STR_MONTH_ABBREV_MAR                                            :Mar
 # ...
 ############ zakres dla końców miesięcy
 </pre>
-<!--{{warning|'''Do not break ranges''' when adding strings as this might have unwanted side-effects!}}-->
-{{uwaga/Pl|'''Nie przerywaj zakresów''' podczas dodawania ciągów, ponieważ może to mieć niepożądane skutki uboczne!}}
+<!--{{en/Warning|'''Do not break ranges''' when adding strings as this might have unwanted side-effects!}}-->
+{{pl/Uwaga|'''Nie przerywaj zakresów''' podczas dodawania ciągów, ponieważ może to mieć niepożądane skutki uboczne!}}
 Zakresy są często używane do definiowania grupy tekstów, które ''nie'' są bezpośrednio przywoływane w kodzie źródłowym. Zamiast tego wykonywane jest obliczenie przesunięcia w stosunku do pierwszego wpisu bloku. W związku z tym do tekstów odwołuje się tylko pośrednio i w czasie wykonywania.
 
 ==Wewnętrzne '''(Internals)'''==

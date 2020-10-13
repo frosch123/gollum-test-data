@@ -1,5 +1,4 @@
 [[Translation:Main/en/Base graphics]]
-{{en/-}}
 '''Base graphics''' are a set of graphic files that OpenTTD requires to be a game.
 
 <div style="float:right; padding-left: 10px;">__TOC__</div>
@@ -38,7 +37,7 @@ As of August 31st 2008, OpenTTD can load base graphics sets other than the ones 
 
 ====List of alternative base graphics====
 Currently, there are two alternative base graphics sets.
-* [[Main/en/OpenGFX Readme]]
+* [[Main/en/OpenGFX Readme|OpenGFX]]
 * [[Main/en/Playing with 32 bpp graphics#zBase|zBase]]
 * [[Main/en/Playing with 32 bpp graphics#aBase|aBase]]
 
@@ -63,7 +62,7 @@ One way to switch between base graphics sets is using the ingame feature.
 
 ===Editing the config file===
 Another way to switch between base graphics sets is to edit the config file.
-* Locate and open [[Main/en/openttd.cfg]] using your favourite plain text editor.
+* Locate and open [[Main/en/Openttd.cfg|openttd.cfg]] using your favourite plain text editor.
 * Locate the [misc] section and add the following (or edit the existing) line to the end of that section:
  graphicsset = name_of_base_graphics_set
 : The name of the base graphics set is listed in it's obg-file and may or may not be identical to the obg's file name.

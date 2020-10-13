@@ -3,7 +3,7 @@
 |na    = pl
 |Postępy = 10
 }}
-[[Translation:Main/en/Installation]]{{en/-}}{{pl/Spis treści}}
+[[Translation:Main/en/Installation]]{{pl/Spis treści}}
 __TOC__
 ==Wstęp==
 Od wersji OpenTTD 1.0.0, instalacja jest wystarczająco uproszczona, ponieważ gra jest całkowicie open source; wszystko można ściągnąć przez instalator. Aby ściągnąć najnowszą wersję OpenTTD, [http://www.openttd.org/download-stable kliknij tutaj].
@@ -14,7 +14,7 @@ Aktualnie są dwa zestawy grafik bazowych, których może używać OpenTTD:
 * Jeden pełen funkcjonalny zestaw znajduje się na płycie CD gry [http://en.wikipedia.org/wiki/Transport_Tycoon_Deluxe Transport Tycoon Deluxe] (TTD). W przeciwieństwie do OpenTTD, TTD ''nie'' jest freeware;
 * Pierwszą alternatywą [http://pl.wikipedia.org/wiki/Open_source Open Source] do grafiki bazowej TTD jest już ukończone [[Main/pl/OpenGFX|OpenGFX]]. OpenGFX jest dla tych, którzy nie mają oryginalnej płyty TTD.
 
-Poza tym, istnieją różne wersje na różne [[Main/pl/System operacyjny|platformy]] (Windows, MacOSX, Linux).
+Poza tym, istnieją różne wersje na różne [[Main/pl/System Operacyjny|platformy]] (Windows, MacOSX, Linux).
 
 ==Instalacja==
 '''Select the installation instructions for the base graphics set you chose and your operating system:'''
@@ -53,11 +53,11 @@ Poza tym, istnieją różne wersje na różne [[Main/pl/System operacyjny|platfo
 [[File:en/Installation 2 gfx.png|frame|center|Installer setup for users without TTD files]]
 
 '''4.''' Editing the config file
-:'''4.1.''' Locate [[Main/en/openttd.cfg]]. It is located in:
+:'''4.1.''' Locate [[Main/en/Openttd.cfg|openttd.cfg]]. It is located in:
  Win XP : "C:\Documents and Settings\<username>\My Documents\OpenTTD"
  Vista  : "C:\Users\<username>\Documents\OpenTTD"
  Linux  : "~/.openttd"
-:'''4.2.''' Open [[Main/en/openttd.cfg]] using your favourite plain text editor.
+:'''4.2.''' Open [[Main/en/Openttd.cfg|openttd.cfg]] using your favourite plain text editor.
 :'''4.3.''' Locate the [misc] section and add the following (or edit the existing) line to the end of that section:
  graphicsset = "OpenGFX"
 : The name of the base graphics set is listed in it's obg-file and may or may not be identical to the obg's file name.
@@ -116,7 +116,7 @@ OpenGFX is faster and prefered.
 #Create an '''~/.openttd/''' directory and put them there.
 
 ====Instalacja ręczna z kodu źródłowego na Linux====
-See [[Main/en/Compiling on (GNU/)Linux and *BSD]].
+See [[Main/en/Compiling on (GNU/)Linux and *BSD|Compiling on Linux]].
 
 ==Pliki z TTD==
 Jeśli instalujesz OpenTTD z grafikami bazowymi TTD, OpenTTD potrzebuje kilku oryginalnych plików z płyty instalacyjnej Transport Tycoon Deluxe.

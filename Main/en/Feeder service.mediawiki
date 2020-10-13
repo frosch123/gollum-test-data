@@ -1,6 +1,6 @@
-[[Translation:Main/en/Feeder service]]{{en/-}}
+[[Translation:Main/en/Feeder service]]
 
-{{en/Note|This article describes how to ''manually'' set up a one-way feeder service. This is not necessary if you have [[Main/en/Passenger and cargo distribution]] enabled in OpenTTD v1.4 or later.}}
+{{en/Note|This article describes how to ''manually'' set up a one-way feeder service. This is not necessary if you have [[Main/en/Passenger and cargo distribution|Cargodist]] enabled in OpenTTD v1.4 or later.}}
 
 {{en/Note|If you want to create a [[Main/en/Two-way feeder service]] then look there. The method described on this page works only in one way.}}
 
@@ -19,18 +19,18 @@ So, imagine you have an [[Main/en/Airports|airport]] in town and you wish to use
 
 First, the bus station must be built directly next to, as in touching, the airport. If there is a gap between the stations, the game will display a different name for the bus station, and transfer will not work. Or, when placing the station, hold down the CTRL key and click where you want to place the station, then select the airport station from the list that appears. See [[Main/en/Stations#Combining stations|combining stations]] for more information on how to do this.
 
-[[File:en/feeder service wrong.png|none|frame|This will not work due to the two separate stations]]
+[[File:en/Feeder service wrong.png|none|frame|This will not work due to the two separate stations]]
 
 [[Main/en/Construction|Set up the route]] as normal, and select the ''Transfer'' button to tell the passengers to wait at the airport for a flight. To prevent the bus from stealing the plane's passengers, also select ''Unload''. From OpenTTD 0.7.0 on, select ''No loading'' and ''Transfer'' from the dropdown menus. The order now reads ''Transfer and Leave Empty''. 
 
-[[File:en/feeder service correct.png|none|frame|Correctly set up,the station now displays bus and plane symbols]]
+[[File:en/Feeder service correct.png|none|frame|Correctly set up,the station now displays bus and plane symbols]]
 
 This way, the bus always moves passengers to the airport for further transportation.
 
 ==How to set up a more complex system==
 [[File:en/Complex feeder system.png|right|thumb|400px|Complex feeder system. Buses bring passengers to an nearby train station. The shuttle train picks them up and transports them to the airport.]]
 You might have noticed that (and wondered why) you can combine ''transfer'' with ''full load'' and ''unload'' (or ''no loading'' respectively). This can be used to set up more complex feeder services.
-Imagine you have that very same airport as in the example above. This airport has a number of [[Main/en/town]]s around it, and you'd like to have a shuttle [[Main/en/Trains|train]] that goes through all the villages to collect passengers.
+Imagine you have that very same airport as in the example above. This airport has a number of [[Main/en/Towns|town]]s around it, and you'd like to have a shuttle [[Main/en/Trains|train]] that goes through all the villages to collect passengers.
 
 * The first village gets a normal (un-flagged) order, and thus a number of people board.
 * In the second village, you want people to hop on, but no one to leave. So you set a ''transfer and take cargo'' order, which unloads passengers but subsequently reloads them, i.e.: Pick-Up only.
@@ -61,7 +61,7 @@ Distributor services don't make much sense for passengers, but they are very use
 
 * In [[Main/en/Climate#Sub-arctic|sub-arctic]] and [[Main/en/Climate#Sub-tropical|sub-tropical]] climates, some towns require monthly deliveries to grow. If the cargo such as food or water arrives less frequently, it makes sense to transfer it on a station near the town, and have a track deliver it to its destination. Since the truck typically has much lower capacity than the vehicle which hauled the batch of cargo from its origin, the delivery will be spread more evenly over time.
 
-* In the [[Main/en/FIRS|FIRS economy]], some industries require small amounts of cargo (such as engineering supplies) to massively increase their production. The cargo supplied above the limit is still accepted, but effectively goes to waste, as it could be used to boost other industries. A distribution service can split a large batch between several nearby industries. See also [[Main/en/FIRS#Feeder Systems]].
+* In the [[Main/en/FIRS|FIRS economy]], some industries require small amounts of cargo (such as engineering supplies) to massively increase their production. The cargo supplied above the limit is still accepted, but effectively goes to waste, as it could be used to boost other industries. A distribution service can split a large batch between several nearby industries. See also [[Main/en/FIRS#Feeder Systems|FIRS#Feeder_Systems]].
 
 * In some maps, there may only be a few suppliers (such as [[Main/en/Gold Mine|gold mines]]), but many, many consumers (such as [[Main/en/Bank|banks]]) clustered together far away from the suppliers. If you want to service all of the consumers in an efficient manner, it's best to use a distributor service to evenly split the cargo among the consumers rather than have many services individually delivering the cargo directly from the supplier to the consumer.
 

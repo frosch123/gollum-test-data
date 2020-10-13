@@ -38,23 +38,21 @@ Detect and report usage with faulty [[Template/en/Ambox#Article message box type
 ==Usage==
 Simple usage example:
 <pre>
-{{ambox | text = Some text.}}
+{{en/Ambox| text = Some text.}}
 </pre>
-{{ambox | text = Some text.}}
+{{en/Ambox| text = Some text.}}
 
 OR:
 <pre>
-{{ambox 
-| type = content
+{{en/Ambox| type = content
 | text = Warning - Some text.
 }}
 </pre>
-{{ambox | type = content | text = Warning - Some text.}}
+{{en/Ambox| type = content | text = Warning - Some text.}}
 
 == Available List of parameters==
 <pre>
-{{ambox
-| type       = delete / content / style / notice / move / protected
+{{en/Ambox| type       = delete / content / style / notice / move / protected
 | image      = Picture.Png / Picture.Png|alt=Picture (if the parameter does not present, default type icon will be supplied)
 | text       = Text for a big box, for the top of articles.
 
@@ -67,43 +65,35 @@ OR:
 The following examples use different '''type''' parameters but use no image parameters thus they use the default images for each type.
 
 
-{{ambox
-| type  = delete
-| text  = type=<u>delete</u> – Deletion issues, such as {{s|delete}}.
+{{en/Ambox| type  = delete
+| text  = type=<u>delete</u> – Deletion issues, such as {{en/S|delete}}.
 }}
-{{ambox
-| type  = content
-| text  = type=<u>content</u> – Content issues, such as {{s|Warning}}.
+{{en/Ambox| type  = content
+| text  = type=<u>content</u> – Content issues, such as {{en/S|Warning}}.
 }}
-{{ambox
-| type  = style
-| text  = type=<u>style</u> – Style issues, such as {{s|cleanup}}.
+{{en/Ambox| type  = style
+| text  = type=<u>style</u> – Style issues, such as {{en/S|cleanup}}.
 }}
-{{ambox
-| type  = notice
-| text  = type=<u>notice</u> – Article notices, such as {{s|current}}.
+{{en/Ambox| type  = notice
+| text  = type=<u>notice</u> – Article notices, such as {{en/S|current}}.
 }}
-{{ambox
-| type  = move
-| text  = type=<u>move</u> – Merge, split and transwiki proposals, such as {{s|split}}.
+{{en/Ambox| type  = move
+| text  = type=<u>move</u> – Merge, split and transwiki proposals, such as {{en/S|split}}.
 }}
-{{ambox
-| type  = protected
-| text  = type=<u>protected</u> – Protection notices, such as {{s|Historical}}.
+{{en/Ambox| type  = protected
+| text  = type=<u>protected</u> – Protection notices, such as {{en/S|Historical}}.
 }}
 
 === Other images ===
 
 The default images shown above are mostly for convenience. In many cases it is more appropriate to use more specific images. These example use the '''image''' parameter to specify an image other than the default images.
 
-<pre>{{ambox
-| type  = notice
+<pre>{{en/Ambox| type  = notice
 | image = OpenttdManual.png
 | text  = Something Something Something 
 }}</pre>
 
-{{ambox
-| type  = notice
+{{en/Ambox| type  = notice
 | image = OpenttdManual.png
 | text  = Something Something Something 
 }}

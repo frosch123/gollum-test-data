@@ -1,13 +1,12 @@
 [[Translation:Main/en/Build raw material industries]]
-{{en/-}}
 [[Category:en/Settings & Preferences]]
 [[Category:en/Construction]]
 
 This [[Main/en/Advanced Settings|setting]] will enable you to purchase and either prospect or place industries which create raw materials.
 
 == Description ==
-[[File:en/raw industry construction basic.png|right|frame|The standard fund new industry menu]]
-[[File:en/raw industry construction extended.png|right|frame|The extended fund new industry menu]]
+[[File:en/Raw industry construction basic.png|right|frame|The standard fund new industry menu]]
+[[File:en/Raw industry construction extended.png|right|frame|The extended fund new industry menu]]
 
 Normally, you are only allowed to [[Main/en/Industries#Funding New Industries|purchase industries]] which process materials, e.g. Factories, Sawmills, etc.  When this setting is enabled, you are also allowed to build raw-material producing industries such as coal mines, iron ore mines, etc.
 
@@ -17,7 +16,7 @@ This does not affect which types of "naturally occurring" industries show up, ju
 
 == Use ==
 
-Construction of primary industries is disabled by default.  When enabled, the list of industries you can purchase will include industries which produce the raw materials, with appropriate pricing. Raw industries are are about 8x more expensive to build at a specific location than to randomly prospect. You can enable this setting through the [[Main/en/Advanced Settings/Economy#Manual primary industry construction method|Advanced Settings -> Economy -> Industries -> Manual primary industry construction method]] window or use the following syntax in [[Main/en/openttd.cfg]]:
+Construction of primary industries is disabled by default.  When enabled, the list of industries you can purchase will include industries which produce the raw materials, with appropriate pricing. Raw industries are are about 8x more expensive to build at a specific location than to randomly prospect. You can enable this setting through the [[Main/en/Advanced Settings/Economy#Manual primary industry construction method|Advanced Settings -> Economy -> Industries -> Manual primary industry construction method]] window or use the following syntax in [[Main/en/Openttd.cfg|openttd.cfg]]:
 
 <pre>
 [construction]
@@ -37,7 +36,7 @@ set raw_industry_construction <value>
 </pre>
 
 ==List of fundable Primary Industries==
-{{todo|Add the primary industries from Toyland climate to the list below.}}
+{{en/Todo|Add the primary industries from Toyland climate to the list below.}}
 
 {| class="wikitable"
 

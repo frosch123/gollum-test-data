@@ -1,4 +1,4 @@
-[[Translation:Main/en/FAQ multiplayer]]{{en/-}}
+[[Translation:Main/en/FAQ multiplayer]]
 {{en/FAQmenu}}
 
 '''Questions regarding multiplayer aspect of OpenTTD''', e.g. joining the server, creating the server, playing the game..
@@ -7,10 +7,10 @@ __FORCETOC__
 
 
 =====How many players can join an OpenTTD game?=====
-:* Up to 255 players can participate in a multiplayer game. You can only open up 15 companies though. Each player can either play his own company, join another company ([[Main/en/cooperative gameplay]]) or watch a game ([[Main/en/spectator mode]]).
+:* Up to 255 players can participate in a multiplayer game. You can only open up 15 companies though. Each player can either play his own company, join another company ([[Main/en/Cooperative gameplay|cooperative gameplay]]) or watch a game ([[Main/en/Spectator mode|spectator mode]]).
 
 =====How do I start a multiplayer game?=====
-:* You can either do that through the [[Main/en/multiplayer window]] or by using the following command line syntax:
+:* You can either do that through the [[Main/en/Multiplayer|multiplayer window]] or by using the following command line syntax:
 <pre>openttd -n IP[:port][#CompanyID]</pre>
 Example:
 <pre>openttd -n 192.168.0.1:3979#1</pre> would connect to 192.168.0.1 on port 3979 and joins company 1.
@@ -55,10 +55,10 @@ Increase the values until your users can connect normally. If you set them too l
 For larger maps, it is highly recommended to enable the ''pause_on_join'', as it eliminates the need to catch-up with the game after map downloading.
 
 =====I am having trouble with cheating. Help!=====
-:* There is a guide to shielding yourself from the worst elements of [[Main/en/multiplayer cheating]]. Also, check the [[Main/en/Multiplayer Rules]].
+:* There is a guide to shielding yourself from the worst elements of [[Main/en/Multiplayer cheating|multiplayer cheating]]. Also, check the [[Main/en/Multiplayer Rules]].
 
 =====Are there any rules?=====
-:* There are some rules, yes. You can see the article [[Main/en/Multiplayer Rules]]. However, the servers are not run by the OpenTTD Team, and they have no control over them what-so-ever. As such if you have any problems you should contact the person who runs the server.
+:* There are some rules, yes. You can see the article [[Main/en/Multiplayer Rules|Multiplayer rules]]. However, the servers are not run by the OpenTTD Team, and they have no control over them what-so-ever. As such if you have any problems you should contact the person who runs the server.
 
 =====Can console commands be executed automatically?=====
 :* Yes, this is possible, and can be pretty handy. The page [[Main/en/Running Startup Scripts]] will explain this in more detail.

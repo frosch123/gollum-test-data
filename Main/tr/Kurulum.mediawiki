@@ -1,4 +1,4 @@
-[[Translation:Main/en/Installation]]{{en/-}}{{tr/İçindekiler}}
+[[Translation:Main/en/Installation]]{{tr/İçindekiler}}
 __TOC__
 =Tanıtım=
 OpenTTD Sürüm 1.0.0'dan beri, kurulum yeterince basitleştirilmiş, oyun bütünüyle (oyun ve grafik) açık kaynak durumuna gelmiş ve her şey yükleyiciye eklenmiştir. OpenTTD'nin en son sürümünü indirmek için [http://www.openttd.org/download-stable buraya tıklayın].
@@ -7,7 +7,7 @@ OpenTTD Sürüm 1.0.0'dan beri, kurulum yeterince basitleştirilmiş, oyun büt�
 
 Şu anda, OpenTTD'nin kullanabileceği iki temel grafik seti vardır:
 * Tamamen işlevsel bir set [http://en.wikipedia.org/wiki/Transport_Tycoon Transport Tycoon Deluxe] (TTD) CD'sinde bulunur. OpenTTD'nin aksine, TTD ücretsiz bir yazılım '''değildir''';
-* TTD temel grafiklerine [[Main/en/OpenGFX Readme]] adlı bir [http://en.wikipedia.org/wiki/Open_source Açık Kaynak] alternatifi şu anda tamamlandı. OpenGFX temel grafik seti, orijinal TTD CD'sine sahip olmayanlar içindir.
+* TTD temel grafiklerine [[Main/en/OpenGFX Readme|OpenGFX]] adlı bir [http://en.wikipedia.org/wiki/Open_source Açık Kaynak] alternatifi şu anda tamamlandı. OpenGFX temel grafik seti, orijinal TTD CD'sine sahip olmayanlar içindir.
 
 = Kurulum =
 '''Seçtiğiniz temel grafik seti ve işletim sisteminiz için kurulum talimatlarını seçin:'''
@@ -46,11 +46,11 @@ OpenTTD Sürüm 1.0.0'dan beri, kurulum yeterince basitleştirilmiş, oyun büt�
 [[File:en/Installation 2 gfx.png|frame|center|TTD dosyaları olmayan kullanıcılar için yükleyici kurulumu]]
 
 '''4.''' Yapılandırma dosyasını düzenleme
-:'''4.1.''' [[Main/en/openttd.cfg]] dosyasını bulun. Bulunduğu yer:
+:'''4.1.''' [[Main/en/Openttd.cfg|openttd.cfg]] dosyasını bulun. Bulunduğu yer:
  Win XP : "C:\Documents and Settings\<username>\My Documents\OpenTTD"
  Vista  : "C:\Users\<username>\Documents\OpenTTD"
  Linux  : "~/.openttd"
-:'''4.2.''' Metin düzenleyicinizi kullanarak [[Main/en/openttd.cfg]] dosyasını açın.
+:'''4.2.''' Metin düzenleyicinizi kullanarak [[Main/en/Openttd.cfg|openttd.cfg]] dosyasını açın.
 :'''4.3.''' [Misc] bölümünü bulun ve o bölümün sonuna aşağıdaki satırı ekleyin (ya da var olanı düzenleyin):
  graphicsset = "OpenGFX"
 : Temel grafik kümesinin adı obg dosyasında listelenir ve obg'nin dosya adıyla aynı olabilir ya da olmayabilir.
@@ -98,7 +98,7 @@ Artık OpenGFX grafiklerinden birini seçebilir ya da orijinal oyunun bir kopyas
 #Bir ~/.openttd / dizini oluşturun ve oraya koyun.
 
 == Linux'ta kaynaktan elle kurulum ==
-Bakınız [[Main/en/Compiling on (GNU/)Linux and *BSD]].
+Bakınız [[Main/en/Compiling on (GNU/)Linux and *BSD|Compiling on Linux]].
 
 = TTD'den dosyalar =
 OpenTTD'yi TTD temel grafikleriyle yüklüyorsanız, OpenTTD için Transport Tycoon Deluxe kurulum CD'nizden birkaç orijinal oyun dosyası gerekir.

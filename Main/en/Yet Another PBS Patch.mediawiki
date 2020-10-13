@@ -71,8 +71,8 @@ This is the basic layout of a single track line that can be used in both directi
 [[File:en/Yapp single track.png|frame|center|Basic single track building block. The outward signals should be moved far enough away from the junction tiles that waiting trains do not block the junctions.]]
 
 ===Advanced patch options===
-YAPP has several options not accessible through the patch settings window. These are saved in your [[Main/en/openttd.cfg]] and
-can be changed either with a text editor or through the in-game [[Main/en/console]] using the "patch" command. Changes made in openttd.cfg '''will not''' affect
+YAPP has several options not accessible through the patch settings window. These are saved in your [[Main/en/Openttd.cfg|openttd.cfg]] and
+can be changed either with a text editor or through the in-game [[Main/en/Console|console]] using the "patch" command. Changes made in openttd.cfg '''will not''' affect
 already started savegames, you have to use the console to change the values of a running game.
 
 {| border = "1"
@@ -84,17 +84,17 @@ already started savegames, you have to use the console to change the values of a
 |-
 | pf.path_backoff_interval || 20 || Ticks between checks for a free path. Increase if you have a slow computer. Set to 255 to disable path look-ahead if you don't want to use advanced signals.
 |-
-| pf.npf.npf_rail_pbs_cross_penalty || 300 || Pathfinder penalty for crossing a reserved tile when using [[Main/en/New global pathfinding]].
+| pf.npf.npf_rail_pbs_cross_penalty || 300 || Pathfinder penalty for crossing a reserved tile when using [[Main/en/New global pathfinding|NPF]].
 |-
-| pf.npf.npf_rail_pbs_signal_back_penalty || 1500 || Pathfinder penalty for passing a path signal from the backside when using [[Main/en/New global pathfinding]].
+| pf.npf.npf_rail_pbs_signal_back_penalty || 1500 || Pathfinder penalty for passing a path signal from the backside when using [[Main/en/New global pathfinding|NPF]].
 |-
-| pf.yapf.rail_pbs_cross_penalty || 300 || Pathfinder penalty for crossing a reserved tile when using [[Main/en/Yet Another Pathfinder]].
+| pf.yapf.rail_pbs_cross_penalty || 300 || Pathfinder penalty for crossing a reserved tile when using [[Main/en/Yet Another Pathfinder|YAPF]].
 |-
-| pf.yapf.rail_pbs_station_penalty || 800 || Pathfinder penalty for crossing a reserved station tile when using [[Main/en/Yet Another Pathfinder]].
+| pf.yapf.rail_pbs_station_penalty || 800 || Pathfinder penalty for crossing a reserved station tile when using [[Main/en/Yet Another Pathfinder|YAPF]].
 |-
-| pf.yapf.rail_pbs_signal_back_penalty || 1500 || Pathfinder penalty for passing a path signal from the backside when using [[Main/en/Yet Another Pathfinder]].
+| pf.yapf.rail_pbs_signal_back_penalty || 1500 || Pathfinder penalty for passing a path signal from the backside when using [[Main/en/Yet Another Pathfinder|YAPF]].
 |-
-| pf.yapf.rail_doubleslip_penalty || 100 || Pathfinder penalty for passing a double slip switch when using [[Main/en/Yet Another Pathfinder]].
+| pf.yapf.rail_doubleslip_penalty || 100 || Pathfinder penalty for passing a double slip switch when using [[Main/en/Yet Another Pathfinder|YAPF]].
 |}
 {{en/Feature|0.7}}
 

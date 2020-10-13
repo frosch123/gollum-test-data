@@ -1,5 +1,4 @@
-<!-- spis -->[[Translation:Main/en/OpenTTDDevBlackBook/Format of langfiles]]
-{{en/-}}{{pl/Rozwój}}
+<!-- spis -->[[Translation:Main/en/OpenTTDDevBlackBook/Format of langfiles]]{{pl/Rozwój}}
 
 == Przegląd ==
 
@@ -150,7 +149,7 @@ W języku angielskim ciąg brzmi jak "{BLACK}{BIGFONT}'''{STRING}''' production 
 
 W języku fińskim ten sam ciąg znaków jest teraz "{BLACK}{BIGFONT}'''{1:INDUSTRY}''' tuottaa '''{0:STRING}''' {2:COMMA}{NBSP}% entistä enemmän!"
 
-<!-- {{todo|Finish and correct this}} --> {{pl/Do poprawki|Zakończenie i skorygowanie tego}} 
+<!-- {{en/Todo|Finish and correct this}} --> {{pl/Do poprawki|Zakończenie i skorygowanie tego}} 
 
 == Cases ==
 
@@ -218,7 +217,7 @@ Przede wszystkim wyobraź sobie zdanie o różnych parametrach.
 Kiedy będziesz gotowy, możesz napisać ciąg.
  STR_SENTENCE : Mum, there {P 0 is are} {NUM} m{P ouse ice} in the room!
 Jak zapewne zauważyłeś, pierwsza '''{P''' zawiera dodatkową liczbę przed przyrostkami. Służy do określania, który parametr należy zastosować do określenia liczby mnogiej. Jeśli nie podano żadnej liczby, używany jest poprzedni parametr, ale w tym przypadku nie ma poprzedniego parametru, dlatego musimy go określić.
-<!-- {{todo|check if it is not wrong}} --> {{pl/Do poprawki|sprawdzenie, czy nie jest źle}} 
+<!-- {{en/Todo|check if it is not wrong}} --> {{pl/Do poprawki|sprawdzenie, czy nie jest źle}} 
 
 Pamiętaj, że singluar (1) jest wyjątkowy w tej definicji liczby mnogiej. Liczba mnoga jest używana dla wszystkich liczb> 1, ale także dla 0. (Mamo, w pokoju jest 0 mysz).
 
@@ -308,7 +307,7 @@ Czy wyobrażasz sobie, jak będzie wyglądał wynik? Oto odpowiedź:
 *Officina magna est
 *Forum magnum est
 Ponownie, jak w przypadku liczby mnogiej, jeśli nie ma przyrostka, napisz "" . Zawsze używaj tyle sufiksów, ile jest rodzajów.
-<!-- {{todo|How about the order of the suffixes? Do you have to use the same order as defined in the pragma?}} --> {{pl/Do poprawki|Co powiesz na kolejność przyrostków? Czy koniecznie używać tej samej kolejności, jak zdefiniowano w pragmie?}} 
+<!-- {{en/Todo|How about the order of the suffixes? Do you have to use the same order as defined in the pragma?}} --> {{pl/Do poprawki|Co powiesz na kolejność przyrostków? Czy koniecznie używać tej samej kolejności, jak zdefiniowano w pragmie?}} 
 
 ==== Zaawansowane użycie ====
 {G...} tag bazuje na płci ''gender''{STRING} po tag'u.
@@ -324,7 +323,7 @@ Chcemy pobrać płeć z pierwszego (i jedynego) tagu {STRING}. Pierwszy tag ma I
 Dodanie ID rozwiązało problem. Ciąg działa zgodnie z oczekiwaniami.
 
 
-Co jeśli jest ich więcej {STRING} s?  ( <!-- {{todo|I'm not sure, please verify this}} --> {{pl/Do poprawki|Nie jestem pewien, prośba zweryfikowamia tego}} )
+Co jeśli jest ich więcej {STRING} s?  ( <!-- {{en/Todo|I'm not sure, please verify this}} --> {{pl/Do poprawki|Nie jestem pewien, prośba zweryfikowamia tego}} )
 W poniższym przykładzie używamy dwóch płci: męskiej i żeńskiej
 
 <pre>Mis{G ter s} {STRING} is shocked by h{G 0 is er} grand{G 2 son daughter} who flamed mis{G ter s} {STRING} yesterday. The bad {G boy girl}'s name is {STRING}</pre>
@@ -332,6 +331,6 @@ Teraz wyjaśnię, dlaczego niektóre {G...} mają numery, a inne nie:
 *Pierwszy, czwarty i piąty '''nie''' mają numeru, ponieważ pobierają płeć następnego ciągu (zachowanie domyślne)
 *Drugi i trzeci mają numer, ponieważ pobierają płeć ciągu, który nie jest po znaczniku. Musimy powiedzieć silnikowi gry, której płci {STRING} chcemy wybrać. Pierwsza liczba to zero, ponieważ jest to ID pierwszego {STRING} . Następny numer to dwa, ponieważ jest to ID trzeciego {STRING}
 
-<!-- {{todo|this section may be clumsy, feel free to improve it}} --> {{pl/Do poprawki|ta sekcja może być niezdarna, można ją ulepszyć}}
+<!-- {{en/Todo|this section may be clumsy, feel free to improve it}} --> {{pl/Do poprawki|ta sekcja może być niezdarna, można ją ulepszyć}}
 
 [[Category:pl/Do poprawki]]

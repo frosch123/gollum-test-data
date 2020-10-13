@@ -1,5 +1,5 @@
 {{ru/Перевод|ЧЗВ выпуски OpenTTD|50}}
-[[Translation:Main/en/FAQ OpenTTD versions]]{{en/-}}{{ru/FAQmenu}}
+[[Translation:Main/en/FAQ OpenTTD versions]]{{ru/FAQmenu}}
 
 OpenTTD это постоянно развивающийся проект, в котором новые возможности, настройки и улучшения становятся доступны регулярно. В то время, как частые добавления "новых плюшек" приветствуются ветеранами OpenTTD, это может запутать новичков OTTD, в какой версии содержатся те или иные нововведения, какую версию устанавливать, и какую стабильность ожидать от разных версий.
 
@@ -14,7 +14,7 @@ OpenTTD это постоянно развивающийся проект, в к
 ====Релиз (Release)====
 Официальный "Релиз" это он и есть -- стабильный, полный релиз игры. В то время, как в релиз могут вноситься небольшие поправки, считается, что в нём не будет значительных изменений, и добавление любых новых возможностей произойдёт уже в следующей версии.
 
-Релиз OpenTTD такой же, как и релиз других программ, и нумеруется соответственно. Например, последний релиз OpenTTD это {{version}}. Основные версии релизов обозначаются или первым или вторым числом, в то время, как второстепенные обозначаются третьим числом.
+Релиз OpenTTD такой же, как и релиз других программ, и нумеруется соответственно. Например, последний релиз OpenTTD это {{en/Version}}. Основные версии релизов обозначаются или первым или вторым числом, в то время, как второстепенные обозначаются третьим числом.
 
 ====Пре-релиз (Release Candidate, RC)====
 Можно считать это версией, предложенной к релизу. Пре-релиз - это релиз в процессе доделывания. Хотя небольшие возможности ещё могут быть добавлены в пре-релиз, список возможностей по большей части заморожен.
@@ -41,7 +41,7 @@ Nightly builds have a different numbering schema than Releases do.  A nightly ve
 ''r8642''
 
 ====Транк (Trunk)====
-[[File:en/version Illustration.gif|frame|right|How the Trunk, Branches, Releases, Nightlies, and Release Candidates relate]]
+[[File:en/Version Illustration.gif|frame|right|How the Trunk, Branches, Releases, Nightlies, and Release Candidates relate]]
 The term "trunk" (as in the trunk of a tree) refers to the main development environment for the developers of OpenTTD (contrast this with the "branch" terminology described below).  The trunk contains code either developed  or approved by the core developers of the game.  The code contained in the trunk is anticipated to make its way into an official Release.  By extension, code found in the trunk can be thought of as the "official" code of OpenTTD.
 
 Nightly builds, as described above, will always contain the latest code "in the trunk."  Thus, if you see a feature described as "in the trunk", you can be sure it will be available in the next nightly build, if it is not already.
@@ -69,7 +69,7 @@ Patches cannot be directly installed like nightlies can -- they must be compiled
 ====MiniIN====
 {{ru/Возможность период|Old|0.5}}
 ''Основная статья: [[Main/en/Mini Integrated Nightly]]''<br>
-[[File:en/miniIN Illustration.gif|frame|right|The MiniIN]]
+[[File:en/MiniIN Illustration.gif|frame|right|The MiniIN]]
 MiniIN это среда разработки, отдельная от транка, которая содержит код транка ''плюс'' многие пользовательские патчи. После релиза 0.5.0, MiniIN больше не обновляет код транка. С этого момента MiniIN является 0.5.0 плюс все пользовательские патчи.
 
 ===Какую версию OpenTTD я должен устанавливать?===

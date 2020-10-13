@@ -1,4 +1,4 @@
-[[Translation:Main/en/Orders]]{{en/-}}{{hu/Oktatás}}{{hu/Tartalomjegyzék}}
+[[Translation:Main/en/Orders]]{{hu/Oktatás}}{{hu/Tartalomjegyzék}}
 :''Ez a fejezet az [[Main/hu/OpenTTD 0.7.0|OpenTTD 0.7.0]] és későbbi verzióira alapul. Ha korábbi verziót használsz, olvasd el angolul a [[Main/en/Orders (old)|korábbi leírást]]''
 
 Az '''utasítások''' ismerete elengedhetetlen a sikeres OpenTTD-zéshez. Ezek közül a [[Main/hu/Feltételes utasítások|feltételes utasítások]] fejlett utasítások, a járművek különleges irányítását teszik lehetővé. Ha nem használnál utasításokat, [[Main/hu/Járművek|járműveid]] céltalanul bolyonganának, és igazán szerencsésnek mondhatnád magad, ha egyáltalán pénzt hoznának. [[Main/hu/Rakomány|Rakomány]] felvétele és kirakása érdekében (ami végül is a játék célja) a járműveknek utasításokat kell adni. 
@@ -62,7 +62,7 @@ Amikor a ''Menj <> állomásra'' utasítást kijelölöd, a következő instrukc
 Amikor a ''Menj <> járműtelepre'' utasítást jelölsz ki, a következő gombok válnak elérhetővé::
 * '''Átalakít''' (a berakodás gombja helyén),
 * '''Javítás''' (a kirakodás gombja helyén).
-Lásd bővebben: [[Main/hu/Allow goto depot orders]]
+Lásd bővebben: [[Main/hu/Allow goto depot orders|Allow goto depot orders/Hu]]
 ==A berakodás opciói==
 [[File:en/Orders goto load.png|frame|none|A berakodás opciói]]
 
@@ -120,7 +120,7 @@ A jármű számára az utasításlistán is előírhatod az [[Main/hu/Járművek
 
 ==Menetrend==
 {{hu/Főcikk|Menetrend}}
-A menetrend azt teszi lehetővé, hogy meghatározd, mennyi idő alatt próbálják a járművek az útvonaluk egyes részeit megtenni, és mennyit időzzenek az egyes állomásokon, vagy sebességkorlátozásokat határozz meg az utasítások közt. Lásd a [[Main/hu/Menetrend| Menetrend]] c. fejezetet ezek használatáról.
+A menetrend azt teszi lehetővé, hogy meghatározd, mennyi idő alatt próbálják a járművek az útvonaluk egyes részeit megtenni, és mennyit időzzenek az egyes állomásokon, vagy sebességkorlátozásokat határozz meg az utasítások közt. Lásd a [[Main/hu/Menetrend|Menetrend]] c. fejezetet ezek használatáról.
 [[File:en/Orders-timetable.png|none|frame|A menetrend kezelőfelülete]]
 
 ==Utasításlista másolása==
@@ -145,7 +145,7 @@ A '''megosztott utasításlista''' azt teszi lehetővé, hogy ugyanazokat az uta
 #Most a két jármű ugyanazt az ütemtervet osztja, össze lettek kapcsolva: láthatod, hogy az előbb említett jármű utasításlistáján megjelentek az utasítások, és ''--Megosztott utasításlista vége--'' olvasható az utolsó sorban.
 Annyi járművet kapcsolsz össze így, ahányat csak akarsz, nincs korlátozás, de természetesen ugyanahhoz a járműfajtához kell hogy tartozzanak, mert azonos állomásokat fognak használni. 
 
-[[File:en/shared-orders.png|center|frame|Az utasításlista két jármű számára lett megosztva]]
+[[File:en/Shared-orders.png|center|frame|Az utasításlista két jármű számára lett megosztva]]
 
 ===Utasításlista megosztásának megszüntetése===
 Van, amikor úgy döntesz, hogy nem akarod, hogy egy jármű a megosztott utasításlista szerint járjon. Természetesen az utasításokat nem törölheted, mert ezzel a listán osztozó minden jármű utasítását törlöd. Ehelyett:

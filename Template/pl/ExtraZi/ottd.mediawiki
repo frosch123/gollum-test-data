@@ -1,0 +1,27 @@
+<noinclude>{{<!--user:Extrazi/template:-->extraZi/inne strony/Pl
+|en=newgrf-specs.tt-wiki.net/wiki/template:ottd
+|pl=template:extraZi/ottd
+}}</noinclude><!--
+--><includeonly><span title="{{#ifeq:{{{1|??}}}|no|Not supported by OpenTTD|Supported by OpenTTD {{{1|??}}}{{#ifeq:{{{2| }}}| | |&nbsp;({{{2|}}})}}}}" style="padding: 1px;white-space:nowrap;background-color:lightblue; outline:1px solid {{#ifeq:{{{1|??}}}|no|red|black}}">{{#ifeq:{{{1|??}}}|no|[[File:en/Openttd icon crossed.png|16px|Nieobsługiwane przez OpenTTD]]|[[Main/en/<!--File:Openttd icon.png-->File:Openttd.ico.png|16px|Obsługiwane przez OpenTTD {{{1|??}}}{{#ifeq:{{{2| }}}| | |&nbsp;({{{2|}}})}}]]{{#ifeq:{{{1|??}}}| ||'''{{{1|??}}}'''}}}}</span></includeonly><noinclude>
+Szablon małej ikony wskazującej wsparcie OpenTTD lub nie.
+{| |-
+| Bez wsparcia || <nowiki>{{pl/ExtraZi/ottd|no}}</nowiki> || {{pl/ExtraZi/ottd|no}}
+|-
+| Wsparcie, wersja nieznana || <nowiki>{{pl/ExtraZi/ottd}}</nowiki> || {{<!--template:-->extraZi/ottd/Pl}}
+|-
+| ⩾ 0.6 || <nowiki>{{pl/ExtraZi/ottd|0.6}}</nowiki> || {{pl/ExtraZi/ottd|0.6}}
+|-
+| ⩾ 0.7 || <nowiki>{{pl/ExtraZi/ottd|0.7}}</nowiki> || {{pl/ExtraZi/ottd|0.7}}
+|-
+| ⩾ 1.0 || <nowiki>{{pl/ExtraZi/ottd|1.0}}</nowiki> || {{pl/ExtraZi/ottd|1.0}}
+|-
+| ⩾ 1.1 || <nowiki>{{pl/ExtraZi/ottd|1.1}}</nowiki> || {{pl/ExtraZi/ottd|1.1}}
+|-
+| ⩾ 1.2 || <nowiki>{{pl/ExtraZi/ottd|1.2|r21432}}</nowiki> || {{pl/ExtraZi/ottd|1.2|r21432}}
+|-
+|}
+Proszę używać tylko numeru wersji stabilnych wydań. Możesz wstawić wyraźne numery wersji opcjonalnie w drugim argumencie. Będzie jednak pokazywany tylko w tekście odkurzacza obrazu. Nigdy też nie używaj terminu "nightly" , użyj oczekiwanej liczby następnych wydań dla funkcji, które nie są jeszcze częścią wydania stabilnego.
+
+Zauważ, że obsługa NewGRF przed wersją 0.6 miała złe zachowanie w ogólnym znaczeniu, co utrudnia podjęcie decyzji, czy coś było obsługiwane, czy działało tylko w niektórych przypadkach. Dlatego po prostu nie dokumentujemy niczego, co mogłoby również działać przed wersją 0.6.
+</noinclude><!--
+--><noinclude>[[Category:pl/User:Extrazi/szablony|{{PAGENAME}}]]</noinclude>

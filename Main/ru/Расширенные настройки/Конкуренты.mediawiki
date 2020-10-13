@@ -1,8 +1,8 @@
 {{ru/Перевод|Advanced Settings/Competitors|1}}
-[[Translation:Main/en/Advanced Settings/Competitors]]{{en/-}}{{ru/Расширенные настройки}}
+[[Translation:Main/en/Advanced Settings/Competitors]]{{ru/Расширенные настройки}}
 
 ==Расширенные настройки: Конкуренты==
-Раздел "конкуренты" позволяет вам настраивать различные опции, относящихся к [[Main/en/AI]] и [[Main/ru/Сетевая игра|сетевой игре]]. The purpose of the available settings is explained below. For each setting, the respective variable from the [[Main/ru/Openttd.cfg|config file]] is listed as well, together with its possible values.
+Раздел "конкуренты" позволяет вам настраивать различные опции, относящихся к [[Main/en/AI:Main Page|AI]] и [[Main/ru/Сетевая игра|сетевой игре]]. The purpose of the available settings is explained below. For each setting, the respective variable from the [[Main/ru/Openttd.cfg|config file]] is listed as well, together with its possible values.
 {| align="center"
 |- valign="top"
 |__TOC__
@@ -25,19 +25,19 @@
 
 ====Disable road vehicles for computer====
 {{ru/Возможность|Old|text=(с 0.3.2)}}
-Computer cannot build [[Main/en/road vehicles]] or [[Main/en/roadway construction|roads]]. This option has been moved from [[Main/en/Configuring patches/Vehicles#Disable road vehicles for computer|Vehicles section]] in 0.3.4.
+Computer cannot build [[Main/en/Road vehicles|road vehicles]] or [[Main/en/Roadway construction|roads]]. This option has been moved from [[Main/en/Configuring patches/Vehicles#Disable road vehicles for computer|Vehicles section]] in 0.3.4.
 :''Возможные настройки:'' <span style="color:green">'''Вкл'''</span> или <span style="color:red">'''Выкл'''</span>
 :''В конфигурационном файле openttd.cfg:'' ([ai] ai_disable_veh_roadveh = <true|false>)
 
 ====Disable aircraft for computer====
 {{ru/Возможность|Old|align="right"|text=(с 0.3.2)}}
-Computer cannot build [[Main/en/aircraft]] or [[Main/en/airports]]. This option has been moved from [[Main/en/Configuring patches/Vehicles#Disable aircraft for computer|Vehicles section]] in 0.3.4.
+Computer cannot build [[Main/en/Aircraft|aircraft]] or [[Main/en/Airports|airports]]. This option has been moved from [[Main/en/Configuring patches/Vehicles#Disable aircraft for computer|Vehicles section]] in 0.3.4.
 :''Возможные настройки:'' <span style="color:green">'''Вкл'''</span> или <span style="color:red">'''Выкл'''</span>
 :''В конфигурационном файле openttd.cfg:'' ([ai] ai_disable_veh_aircraft = <true|false>)
 
 ====Disable ships for computer====
 {{ru/Возможность|Old|text=(с 0.3.2)}}
-Computer cannot build [[Main/en/ships]]. This option has been moved from [[Main/en/Configuring patches/Vehicles#Disable ships for computer|Vehicles section]] in 0.3.4.
+Computer cannot build [[Main/en/Ships|ships]]. This option has been moved from [[Main/en/Configuring patches/Vehicles#Disable ships for computer|Vehicles section]] in 0.3.4.
 :''Возможные настройки:'' <span style="color:green">'''Вкл'''</span> или <span style="color:red">'''Выкл'''</span>
 :''В конфигурационном файле openttd.cfg:'' ([ai] ai_disable_veh_ship = <true|false>)
 
@@ -57,7 +57,7 @@ Allows you to donate money to other companies.
 {{en/-}}
 ===Allow buying shares from other companies===
 {{ru/Возможность|0.7|align="right"|text=(с 0.7.0)}}
-Allows you to enable or disable the ability to [[Main/en/buying shares|buy shares]] from competitors. You also have to wait for the company to get old enough before buying 25% or a full take over. This age is about 6 years old.
+Allows you to enable or disable the ability to [[Main/en/Economy|buy shares]] from competitors. You also have to wait for the company to get old enough before buying 25% or a full take over. This age is about 6 years old.
 :''Возможные настройки:'' <span style="color:green">'''Вкл'''</span> или <span style="color:red">'''Выкл'''</span>
 :''В конфигурационном файле openttd.cfg:'' ([economy] allow_shares = <true|false>)
 {{en/-}}

@@ -1,4 +1,4 @@
-[[Translation:Main/en/Realistic acceleration]]{{en/-}}
+[[Translation:Main/en/Realistic acceleration]]
 [[File:en/Realistic acceleration config.png|frame|right|Train acceleration model configuration: ''Realistic'' or ''Original'']]
 The '''realistic acceleration''' for trains setting turns on a simple physics-based acceleration model. Depending on the weight of the train, the power of the engine and the gradient of the slope it's going up or down, the acceleration is changed. This is more realistic than the original TTD's interpretation, but it's not perfect.
 
@@ -6,7 +6,7 @@ This patch can be (de-)activated in [[Main/en/Advanced Settings/Vehicles#Train a
 
 ==Characteristics==
 For building railway tracks this has the following consequences:
-* Really sharp [[Main/en/corners]] are punished a lot. 90-degree curves have a speedlimit of 61 km/h, two successive 45-degree curves in the same direction get limited to 88 km/h.
+* Really sharp [[Main/en/Corners|corners]] are punished a lot. 90-degree curves have a speedlimit of 61 km/h, two successive 45-degree curves in the same direction get limited to 88 km/h.
 * For softer curves, the speedlimit is calculated from the number of direction changes along the length of the train, among others.
 * Depots and stations have speedlimits.
 * Small slopes don't affect the speed by much

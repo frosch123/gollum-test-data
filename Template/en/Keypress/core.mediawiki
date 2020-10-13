@@ -1,0 +1,74 @@
+<span class="keyboard-key" style="font: {{{font|small-caps}}} 0.85em sans-serif; padding: 1px 3px; background-color: {{{back|whitesmoke}}}; border: solid darkgray; border-width: 1px 1px 2px; border-radius: 3px;">{{#switch:{{lc:{{{1}}}}} 
+| caps
+| capslock
+| caps lock           = <span style="font: normal &quot;Arial Unicode MS&quot;,&quot;Lucida Sans Unicode&quot;,unicode;">⇪</span>&nbsp;Caps&nbsp;Lock
+| shift               = <span style="font: normal &quot;Arial Unicode MS&quot;,&quot;Lucida Sans Unicode&quot;,unicode;">⇧</span>&nbsp;Shift
+| enter               = &crarr;Enter 
+| command
+| cmd                 = <span style="font: normal &quot;Arial Unicode MS&quot;,&quot;Lucida Sans Unicode&quot;,unicode;">⌘</span>&nbsp;Cmd
+| option
+| opt                 = <span style="font: normal &quot;Arial Unicode MS&quot;,&quot;Lucida Sans Unicode&quot;,unicode;">⌥</span>&nbsp;Opt
+| tab                 = Tab&nbsp;<span style="font: normal &quot;Arial Unicode MS&quot;,&quot;Lucida Sans Unicode&quot;,unicode;">↹</span>
+| bk sp
+| bksp                = BkSp
+| back space
+| backspace           = ←&nbsp;Backspace
+| windows
+| win                 = <span style="font: normal &quot;Arial Unicode MS&quot;,&quot;Lucida Sans Unicode&quot;,unicode;">⊞</span> Win
+| menu                = <span style="font: normal &quot;Arial Unicode MS&quot;,&quot;Lucida Sans Unicode&quot;,unicode;">↸</span> Menu
+| north
+| up                  = ↑
+| south
+| down                = ↓
+| west
+| left                = ←
+| east
+| right               = →
+| *                   = <nowiki>*</nowiki>
+| #                   = <nowiki>#</nowiki>
+| :                   = <nowiki>:</nowiki>
+| alt graph
+| altgraph            = AltGraph
+| alt gr
+| altgr               = AltGr
+| alt car
+| altcar
+| alt char
+| altchar             = AltChar
+| meta                = &diams;&nbsp;Meta
+| pg up
+| pgup                = PgUp
+| page up
+| pageup              = Page&nbsp;Up
+| pg dn
+| pgdn                = PgDn
+| page down
+| pagedown            = Page&nbsp;Down
+| num lk
+| numlk               = NumLk
+| numeric lock
+| num lock            = Num&nbsp;Lock
+| scrlk
+| scr lk              = ScrLk
+| scroll lock         = Scroll&nbsp;Lock
+| prtsc
+| prt sc              = PrtSc
+| sysrq
+| sys rq              = SysRq
+| space bar           = Spacebar
+<!-- default -->
+| #default            = {{ucfirst:{{{1}}}}}
+}}</span><noinclude>
+===Usage===
+<b>{&#123;keypress/core|n<sub>1</sub></b>|back=|font=<b>}}</b>
+;n<sub>1</sub>:is the key name.
+* this template enforces first letter capitalization and certain key names.
+;back:is optionally the key colour.
+* defaut is whitesmoke. border colour not variable.
+;font:is optionally the CSS font-style and font-variant, in that order.
+* default is small-caps. other variants include include {normal, inherit, small-caps}. inherit does not work with all browsers when specified.
+<br><code>&#123;{keypress/core|caps lock|meta|back=slategrey|font=&quot;Everson Mono&quot; normal}}</code>{{en/Keypress/core|caps lock|back=slategrey|font=&quot;Everson Mono&quot; normal}}<br>
+===external link===
+*[http://en.wikipedia.org/wiki/Template:Key_press] (David Göthberg,Edokter,SMcCandish,et all.) - from which this was adapted.
+{{en/Note|This template is used by {&#123;[[Template/en/Keypress|template:keypress]]&#125;}.}}
+[[Category:en/Templates|{{PAGENAME}}]]

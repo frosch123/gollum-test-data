@@ -1,14 +1,14 @@
-[[Translation:Main/en/Installation]]{{en/-}}{{Tabelul de conținut}}
+[[Translation:Main/en/Installation]]{{Tabelul de conținut}}
 __TOC__
 =Introducere=
 De la versiunea 1.0.0, instalarea este destul de simplificată, jocul este complet (jocul și graficile) open source; totul este inclus în instalator. Pentru a descărca cea mai recentă versiune a OpenTTD, [http://www.openttd.org/download-stable faceți click aici].
 
-Instalarea poate fi puțin complicată, având în vedere că [[Main/en/base graphics|graficile de bază]] nu sunt distribuite cu jocul. Așa că pe lângă [http://www.openttd.org/ descărcarea jocului], aveți nevoie să obțineți un set de grafici de bază de asemenea.
+Instalarea poate fi puțin complicată, având în vedere că [[Main/en/Base graphics|graficile de bază]] nu sunt distribuite cu jocul. Așa că pe lângă [http://www.openttd.org/ descărcarea jocului], aveți nevoie să obțineți un set de grafici de bază de asemenea.
 
 În acest moment, sunt două seturi de grafici de bază ce OpenTTD poate folosi:
 * Un set complet funcțional se află pe CD-ul [http://en.wikipedia.org/wiki/Transport_Tycoon Transport Tycoon Deluxe] (TTD). Contrar lui OpenTTD, TTD '''nu'''
 este freeware;
-* O alternativă [http://en.wikipedia.org/wiki/Open_source Open Source] graficilor de bază TTD numită [[Main/en/OpenGFX Readme]] este terminată. Setul de grafici de bază OpenGFX este făcut pentru cei care nu au CD-ul TTD original.
+* O alternativă [http://en.wikipedia.org/wiki/Open_source Open Source] graficilor de bază TTD numită [[Main/en/OpenGFX Readme|OpenGFX]] este terminată. Setul de grafici de bază OpenGFX este făcut pentru cei care nu au CD-ul TTD original.
 
 De asemenea, există diferite versiuni pentru diferite [[Main/en/Operating system|platforme]] (Windows, MacOSX, Linux).
 
@@ -49,11 +49,11 @@ De asemenea, există diferite versiuni pentru diferite [[Main/en/Operating syste
 [[File:en/Installation 2 gfx.png|frame|center|Setările instalatorului pentru utilizatorii fără TTD]]
 
 '''4.''' Editarea fișierului config
-:'''4.1.''' Localizați [[Main/en/openttd.cfg]]. Se află în:
+:'''4.1.''' Localizați [[Main/en/Openttd.cfg|openttd.cfg]]. Se află în:
  Win XP : "C:\Documents and Settings\<username>\My Documents\OpenTTD"
  Vista  : "C:\Users\<username>\Documents\OpenTTD"
  Linux  : "~/.openttd"
-:'''4.2.''' Deschideți [[Main/en/openttd.cfg]] folosind programul de editare text simplu preferat.
+:'''4.2.''' Deschideți [[Main/en/Openttd.cfg|openttd.cfg]] folosind programul de editare text simplu preferat.
 :'''4.3.''' Localizați secțiunea [misc] și adăugați următoarul (sau editați existentul) text la sfârșitul acelei secțiuni:
  graphicsset = "OpenGFX"
 : Numele setului de grafici de bază apare în fișierul său obg și s-ar putea să fie identic cu numele fișierului obg.

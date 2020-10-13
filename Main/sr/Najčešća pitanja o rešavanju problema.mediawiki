@@ -1,4 +1,4 @@
-[[Translation:Main/en/FAQ troubleshooting]]{{en/-}}
+[[Translation:Main/en/FAQ troubleshooting]]
 {{sr/Sadržaj}}
 
 Ovaj članak pokriva najčešća pitanja o rešavanju problema u [[Main/en/OpenTTD]]. Preporučujemo da isprobate poslednju [[Main/sr/Radna verzija (Nightly)|radnu verziju (Nightly)]], koja je poslednja verzija OpenTTD, pre nego što obavestite javnost o problemu. Često, problem je već rešen.
@@ -32,7 +32,7 @@ Na *niks kompjuterima, ako ste kopirali fajlove sa particije na kojoj je Vindovs
 
 == Kada pokrenem igru preko čitavog ekrana, frekvencija osvežavanja se promeni na 60Hz! (Vindovs) ==
 :*Ovo se dešava jer niste pravilno podesili DirectX. Iz istog razloga može se desiti da igra radi na višoj frekvenciji osvežavanja od one koju vaš monito podržava. Preuzmite "DirectX Control Panel" sa sajta microsoft.com, kopirajte ga u /windows/system32, otvorite dijalog u Control Panel, idite na DirectDraw tab, i podesite "Forced Refresh Rate" na maksimum koji podržava vaš monitor.
-:*Podesite '''display_hz''' da bi imali odgovarajuću frkvnciju osvežavanja. Ova stavka se nalazi u '''[win32]''' grupi u [[Main/en/openttd.cfg]].
+:*Podesite '''display_hz''' da bi imali odgovarajuću frkvnciju osvežavanja. Ova stavka se nalazi u '''[win32]''' grupi u [[Main/en/Openttd.cfg|openttd.cfg]].
 
 == Kursor se ne prikazuje kada pokrenem igru preko celog ekrana na Linuksu ==
 * OpenTTD se može igrati i u prozoru.
@@ -112,7 +112,7 @@ Ovo takođe može da reši probleme sa drugim programima koji nasumično krahira
 == Korisnički interfejs je premali za čitanje / Font je nečitak ili sa greškama ==
 Podrazumevani font je deo osnovnog grafičkog paketa kog koristite, za jezike sa nelatiničnim slovima rezervni font se automatski preuzima iz fontova dostupnih na vašem računaru.
 
-Da bi koristili drugi font, izađite iz OpenTTD i izmenite ''small_font'', ''medium_font'', ''large_font'', ''mono_font'', ''small_size'', ''medium_size'', ''large_size'' i ''mono_size'' podešavanja u vašem ''[[Main/en/openttd.cfg]]'' fajlu. Tu možete podesiti drukčiji font ili veličinu slova za svaki od četiri tipa fonta dostupna u OpenTTD. 
+Da bi koristili drugi font, izađite iz OpenTTD i izmenite ''small_font'', ''medium_font'', ''large_font'', ''mono_font'', ''small_size'', ''medium_size'', ''large_size'' i ''mono_size'' podešavanja u vašem ''[[Main/en/Openttd.cfg|openttd.cfg]]'' fajlu. Tu možete podesiti drukčiji font ili veličinu slova za svaki od četiri tipa fonta dostupna u OpenTTD. 
 
 Možete da izaberete bilo koji font dostupan na vašem sistemu. Koji font i koja veličina vam najviše odgovaraju je pitanje isprobavanja. Imajte na umu da morate promeniti i font i veličinu slova da bi vaše izmene imale efekta (naravno možete izmeniti samo manji font podešavanjem ''small_font'' i ''small_size'' dok ćete zadržati srednji i veliki font iz vašeg osnovnog grafičkog paketa).
 

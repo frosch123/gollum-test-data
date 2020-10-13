@@ -1,4 +1,4 @@
-[[Translation:Main/en/Editing help]]{{en/-}}{{en/TOCright}}
+[[Translation:Main/en/Editing help]]{{en/TOCright}}
 Oto przewodnik po języku znaczników wiki. Zachęcamy do przetestowania każdego z nich w [[Main/en/Sandbox|piaskownicy]].
 
 *Zobacz [https://pl.wikipedia.org/wiki/Pomoc:Formatowanie_tekstu Stronę o formatowaniu tekstu na Wikipedii], jeśli nie znajdziesz potrzebnych informacji w tym artykule.
@@ -44,15 +44,15 @@ Umieść słowa w podwójnych nawiasach kwadratowych, aby utworzyć link do arty
 
 ====Linki do stron w języku polskim====
 
-Pamiętaj, że tytuły (a więc i adresy) stron na wiki w języku polskim zakończone są sufiksem '''/Pl'''. Dla zachowania przejrzystości tekstu nie będziemy więc stosować pierwszej ani drugiej metody (z wyjątkiem linków do stron [[Main/en/Klimat/Pl#Umiarkowany]], [[Main/en/Klimat/Pl#Arktyczny]], [[Main/en/Klimat/Pl#Tropikalny]] i [[Main/en/Klimat/Pl#Zabawkowy]], przekierowujących do odpowiednich sekcji (zobacz: [[Main/en/Pomoc przy edycji/Pl#Przekierowania|Przekierowania]]) w artykule [[Main/pl/Klimat|Klimat]]), a jedynie trzecią. Poniżej znajdują się prawidłowe linki:
+Pamiętaj, że tytuły (a więc i adresy) stron na wiki w języku polskim zakończone są sufiksem '''/Pl'''. Dla zachowania przejrzystości tekstu nie będziemy więc stosować pierwszej ani drugiej metody (z wyjątkiem linków do stron [[Main/en/Klimat/Pl#Umiarkowany|Umiarkowany]], [[Main/en/Klimat/Pl#Arktyczny|Arktyczny]], [[Main/en/Klimat/Pl#Tropikalny|Tropikalny]] i [[Main/en/Klimat/Pl#Zabawkowy|Zabawkowy]], przekierowujących do odpowiednich sekcji (zobacz: [[Main/en/Pomoc przy edycji/Pl#Przekierowania|Przekierowania]]) w artykule [[Main/pl/Klimat|Klimat]]), a jedynie trzecią. Poniżej znajdują się prawidłowe linki:
 
 {|
 !Przykład
 !Kod
 |-
-|[[Main/en/Klimat/Pl#Tropikalny]] || <code><nowiki>[[Main/en/Klimat/Pl#Tropikalny]]</nowiki></code>
+|[[Main/en/Klimat/Pl#Tropikalny|Tropikalny]] || <code><nowiki>[[Main/en/Klimat/Pl#Tropikalny|Tropikalny]]</nowiki></code>
 |-
-|[[Main/en/Klimat/Pl#Tropikalny]]m || <code><nowiki>[[Main/en/Klimat/Pl#Tropikalny]]m</nowiki></code>
+|[[Main/en/Klimat/Pl#Tropikalny|Tropikalny]]m || <code><nowiki>[[Main/en/Klimat/Pl#Tropikalny|Tropikalny]]m</nowiki></code>
 |-
 |[[Main/pl/Klimat|Klimat]] || <code><nowiki>[[Main/pl/Klimat|Klimat]]</nowiki></code>
 |-
@@ -119,9 +119,9 @@ Użyj takiego kodu, żeby umieścić obraz w artykule:
 <pre>[[File:en/.filename|frame|none|caption]]</pre>
 
 Przykład:
-<pre>[[File:en/longerbridges.png|frame|none|Longer bridges]]</pre>
+<pre>[[File:en/Longerbridges.png|frame|none|Longer bridges]]</pre>
 Efekt:
-[[File:en/longerbridges.png|frame|none|Longer bridges]]
+[[File:en/Longerbridges.png|frame|none|Longer bridges]]
 
 *Zobacz też: Artykuł [http://en.wikipedia.org/wiki/Help:Extended_image_syntax Extended image syntax] na Wikipedii.
 *Na [[Main/en/special:upload|stronie przesyłania]] również znajduje się krótki przykład jak można wstawić obrazek.
@@ -227,9 +227,9 @@ Ogólny wzór wstaiwania szablony wygląda tak:
 *Przeczytaj też artykuł [http://en.wikipedia.org/wikiHelp:Template Template help] na Wikipedii.
 
 ==Przekierowania==
-Użyj przekierowania, żeby stworzyć stronę automatycznie przekierowującą użytkownika do właściwego artykułu. Na przykład, strona [[Main/pl/Budowa na skarpach]] automatycznie przekierowuje do artykułu [[Main/pl/Budowa na skarpach]]:
-<pre>#REDIRECT [[Main/pl/Budowa na skarpach]]</pre>
-Strona może również przekierowywać nie do całego artykułu, a określonej sekcji - na przykład strona [[Main/en/Klimat/Pl#Tropikalny]] przekierowuje do [[Main/en/Klimat/Pl#Tropikalny]]. Kod wygląda tak:
+Użyj przekierowania, żeby stworzyć stronę automatycznie przekierowującą użytkownika do właściwego artykułu. Na przykład, strona [[Main/pl/Budowa na skarpach|Budowanie na stokach/Pl]] automatycznie przekierowuje do artykułu [[Main/pl/Budowa na skarpach|Budowa na skarpach/Pl]]:
+<pre>#REDIRECT [[Main/pl/Budowa na skarpach|Budowa na skarpach/Pl]]</pre>
+Strona może również przekierowywać nie do całego artykułu, a określonej sekcji - na przykład strona [[Main/en/Klimat/Pl#Tropikalny|Tropikalny]] przekierowuje do [[Main/en/Klimat/Pl#Tropikalny]]. Kod wygląda tak:
 <pre>#REDIRECT [[Main/en/Klimat/Pl#Tropikalny]]</pre>
 
 ==Kategorie==
@@ -237,8 +237,8 @@ Dodaj artykuł do kategorii, wstawiając na jego końcu link do kategorii:
 <pre>[[Category:en/Development]]</pre>
 
 Jeśli dodasz - jak w przykładzie - dwukropek, strona nie zostanie dodana do kategorii, tylko pojawi się link do tej kategorii:
-<pre>[[Category/en/Development]]</pre>
-[[Category/en/Development]]
+<pre>[[Category/en/Development|:Category:Development]]</pre>
+[[Category/en/Development|:Category:Development]]
 
 ==Inne znaczniki==
 {|

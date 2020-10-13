@@ -1,5 +1,4 @@
 [[Translation:Main/en/AI:RailPathfinder]]
-{{en/-}}
 <!--{{en/NoAI}}-->{{pl/NoAI}}
 == Warunki wstępne ==
 Zanim zadzwonisz do pathfindera, musisz wybrać typ szyny, którego chcesz użyć. Jest to bezpieczny sposób, w jaki Zutty sugeruje wybór pierwszego rodzaju szyny z listy.
@@ -76,7 +75,7 @@ Tak więc, teraz wiemy, jak stworzyć instancję pathfindera i ustawić funkcje 
 
  local tile_a = AIStation.GetLocation(st_a);
  local tile_b = AIStation.GetLocation(st_b);
- pathfinder.InitializePath(<nowiki>[[Main/en/tile a, tile a + AIMap.GetTileIndex(-1, 0)]], [[Main/en/tile b + AIMap.GetTileIndex(-1, 0), tile b]]</nowiki>);
+ pathfinder.InitializePath(<nowiki>[[Main/en/tile a, tile a + AIMap.GetTileIndex(-1, 0)|tile_a, tile_a + AIMap.GetTileIndex(-1, 0)]], [[Main/en/tile b + AIMap.GetTileIndex(-1, 0), tile b|tile_b + AIMap.GetTileIndex(-1, 0), tile_b]]</nowiki>);
 
 Pathfinder oczekuje tablicy tablic [start_tile, tile_before_start] -arrays i tablicy [last_tile, tile_after_end] -arrays. ponieważ mamy tylko jedno źródło i jedną płytkę celu, po prostu utworzymy dwie tablice z jednym elementem. Teraz pathfinder jest gotowy do znalezienia ścieżki.
 

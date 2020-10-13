@@ -1,12 +1,11 @@
 {{ru/Перевод|Priority Merge|50}}
-[[Translation:Main/en/Priority Merge]]
-{{en/-}}{{ru/Меню развязки}}
+[[Translation:Main/en/Priority Merge]]{{ru/Меню развязки}}
 Когда две колеи соединяются в одну, при значительном трафике поезда будут останавливаться и создавать пробки на каждой линии, по очереди выходя на объединенную колею. Так как поезда каждый раз начинают движение из состояния полной остановки, это значительно замедляет общий трафик. Ваша железнодорожная сеть станет эффективнее, если сделать одну линию приоритетной (предпочтительно с наибольшим трафиком) и разрешить поездам на ней проезжать место слияния путей на полной скорости, в то время как поезда на другой линии будут дожидаться разрешения на проезд.
 
 Используя специализированную сигнализацию, вы можете заставить поезда, подходящие к слиянию путей, дожидаться свободного промежутка, чтобы уменьшить нарушение трафика.
 
 ==Простой приоритет==
-[[File:en/basic priority.png|none|frame|Простейший способ установления приоритета.]]
+[[File:en/Basic priority.png|none|frame|Простейший способ установления приоритета.]]
 Используя лишь двунаправленные пресигналы, вы можете заставить поезд на второстепенной линии остановиться, если на главном пути уже есть поезд перед комбинированным или выходным сигналом. Недостатком этой конструкции является то, что вы не можете продлить приоритет дальше, чем на два сигнала.
 
 ==Приоритет с использованием дополнительной колеи==
@@ -34,7 +33,7 @@
 [[File:en/High-speed merge loop.png|none|frame|Зацикливание дополнительной колеи на случай недачного слияния на саму себя.]]
 
 ==Слияние с правом выбора в двойной основной магистрали==
-[[File:en/rightofwaymerge.png|none|frame|Способ слияния с двойной основной магистралью без нарушения потока.]]
+[[File:en/Rightofwaymerge.png|none|frame|Способ слияния с двойной основной магистралью без нарушения потока.]]
 
 Все сигналы являются комбо-сигналами, за исключением сигналов в точках A и B, которые являются входными сигналами. Настройте длину цепочки сигналов в соответствии с длиной поезда и его скоростью.
 
@@ -42,6 +41,6 @@ Trains joining at point A must wait for the presignal chain along the inside lan
 
 The connection of the presignal chains at point C is optional. It allows A to continue if the presignal chain for the outside lane is clear, even if the inside lane is not, as the train on the inside will probably be able move to the outside to let A out. When the lane-change is north of Signal B, A will always wait for the inside lane to clear, regardless of the state of the outside lane.
 
-Other uses for this include [[Main/en/Right-of-way Lane Change]] and [[Main/en/Building depots#Advanced depot configurations]].
+Other uses for this include [[Main/en/Right-of-way Lane Change]] and [[Main/en/Building depots#Advanced depot configurations|Right-of-way Depot]].
 
 [[Category:ru/Железнодорожные развязки]]

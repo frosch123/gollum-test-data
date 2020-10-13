@@ -1,4 +1,4 @@
-[[Translation:Main/en/Signals]]{{en/-}}{{fr/Table des matières}}
+[[Translation:Main/en/Signals]]{{fr/Table des matières}}
 
 ''Voir le tutoriel'' [[Main/fr/Construire des signaux|Construire des signaux]] ''comme introduction pratique aux signaux.
 
@@ -113,17 +113,17 @@ Dans l'exemple à droite il n'y a pas de signal de sortie au vert, le présignal
 Dans un système de signaux dépendants, vous devez identifier quels signaux doivent être des pré-signaux d'entrée et lesquels seront des signaux de sortie.
 {{en/-}}
 ====Pré-signaux d'entrée====
-[[File:en/entry presignal.png|left|60px]]S'il est suivi par un ou plusieurs signaux de sortie, un pré-signal d'entrée est vert aussi longtemps qu'il y a au moins un signal de sortie vert à sa suite. Autrement, il est rouge. Ça empêche les trains d'entrer dans un bloc tant qu'une sortie n'est pas disponible. Ainsi à l'entrée d'une gare aux quais tous occupés un train ne pourra pas choisir une voie à sa guise, il ne sera autorisé à entrer que lorsqu'un quai sera libéré et ne pourra aller qu'à ce quai devenu libre. Notez que les dépôts ont un signal à double sens incorporé, qui peut fonctionner comme un pré-signal d'entrée dans un système de signaux dépendants.
+[[File:en/Entry presignal.png|left|60px]]S'il est suivi par un ou plusieurs signaux de sortie, un pré-signal d'entrée est vert aussi longtemps qu'il y a au moins un signal de sortie vert à sa suite. Autrement, il est rouge. Ça empêche les trains d'entrer dans un bloc tant qu'une sortie n'est pas disponible. Ainsi à l'entrée d'une gare aux quais tous occupés un train ne pourra pas choisir une voie à sa guise, il ne sera autorisé à entrer que lorsqu'un quai sera libéré et ne pourra aller qu'à ce quai devenu libre. Notez que les dépôts ont un signal à double sens incorporé, qui peut fonctionner comme un pré-signal d'entrée dans un système de signaux dépendants.
 
 Si il n'y a pas de signal de sortie après un pré-signal d'entrée, celui-ci se comporte comme un simple signal de bloc. C'est pratique pour les pré-signaux d'entrée bi-directionnels qui n'ont besoin d'un système de signaux dépendants que dans une direction.
 {{en/-}}
 ====Signaux de sortie====
-[[File:en/exit presignal.png|60px|left]]Un signal de sortie se comporte comme un signal de bloc, mais "indique" au présignal d'entrée que son bloc de voie est libre ou est occupé. Il est donc nécessaire au bon fonctionnement des signaux d'entrée et des signaux combinés.
+[[File:en/Exit presignal.png|60px|left]]Un signal de sortie se comporte comme un signal de bloc, mais "indique" au présignal d'entrée que son bloc de voie est libre ou est occupé. Il est donc nécessaire au bon fonctionnement des signaux d'entrée et des signaux combinés.
 {{en/-}}
 
 ====Signaux combinés====
-[[File:en/station with pre-signals2.png|frame|right|Gare avec 1 pré-signal d'entrée, 2 signaux combinés et 4 signaux de sortie]]
-[[File:en/combo presignal.png|60px|left]]Il y a un troisième type de signal dépendant, qui n'introduit pas vraiment de nouvelle fonctionnalité. C'est le '''signal combiné''' qui agit simplement à la fois comme signal d'entrée et signal de sortie. Cela permet de contruire de grands ''arbres'' de signaux dépendants, comme montré à droite. Dans cet exemple la division du bloc de voies en plusieurs blocs plus petits permet de laisser entrer un train vers un quai libre même si un autre entré juste avant n'a pas fini de se garer à son propre quai, et bien sûr s'il n'y a plus de quai libre (ou, provisoirement plus de passage libre s'il y a un ou plusieurs trains en mouvement dans l'embranchement) alors aucun autre train ne sera autorisé à franchir le présignal d'ntrée. 
+[[File:en/Station with pre-signals2.png|frame|right|Gare avec 1 pré-signal d'entrée, 2 signaux combinés et 4 signaux de sortie]]
+[[File:en/Combo presignal.png|60px|left]]Il y a un troisième type de signal dépendant, qui n'introduit pas vraiment de nouvelle fonctionnalité. C'est le '''signal combiné''' qui agit simplement à la fois comme signal d'entrée et signal de sortie. Cela permet de contruire de grands ''arbres'' de signaux dépendants, comme montré à droite. Dans cet exemple la division du bloc de voies en plusieurs blocs plus petits permet de laisser entrer un train vers un quai libre même si un autre entré juste avant n'a pas fini de se garer à son propre quai, et bien sûr s'il n'y a plus de quai libre (ou, provisoirement plus de passage libre s'il y a un ou plusieurs trains en mouvement dans l'embranchement) alors aucun autre train ne sera autorisé à franchir le présignal d'ntrée. 
 {{en/-}}
 
 ====Construire des signaux dépendants====
@@ -195,7 +195,7 @@ Avec cet agencement de gare, les trains peuvent utiliser les deux quais en venan
 {{fr/Disponibilité|0.7}}
 
 ==Sémaphores==
-[[File:en/semaphore.png|frame|left]]
+[[File:en/Semaphore.png|frame|left]]
 Les électro-sémaphores, ou '''sémaphores''' sont un type de signal qui ne diffèrent pas des signaux lumineux. Ils ont simplement une apparence différente, qui donne un aspect ancien.
 
 Avant OpenTTD 0.6.0, les sémaphores n'étaient créés qu'en maintenant la touche ''Ctrl'' appuyée en plaçant les signaux. Depuis la version 0.6.0, les sémaphores seront créés en lieu et place des signaux lumineux avant une année configurée, 1975 par défaut. Cette option est appelée « Construire automatiquement des sémaphores avant » et peut être trouvée dans les ''Options avancées'' sous ''Construction'' et ''Signaux''.
@@ -214,7 +214,7 @@ Remarquez que les signaux ne sont pas le meilleur moyen de diriger les trains ve
 ==Voir aussi==
 * [[Main/fr/Exemples de signalisation avancée|Exemples de signalisation avancée]]
 * [[Main/fr/Construction de dépôts|Construction avancée de dépôts]]
-* [[Category/en/Train Junctions]] for examples of complex junctions that take advantage of pre-signals.
+* [[Category/en/Train Junctions|:Category:Train Junctions]] for examples of complex junctions that take advantage of pre-signals.
 * [http://www.darkcoding.net/misc/openttd-trains-and-signals-for-beginners-a-tutorial/ Signals for the complete beginner (en)]
 
 [[Category:fr/Chemins de fer]]

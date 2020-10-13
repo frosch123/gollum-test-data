@@ -1,9 +1,9 @@
-[[Translation:Main/en/Railway station]]{{en/-}}{{it/Indice dei contenuti}}
+[[Translation:Main/en/Railway station]]{{it/Indice dei contenuti}}
 
 Le '''stazioni ferroviarie''' sono l'elemento principale di qualsiasi rete ferroviaria. Consentono di caricare e scaricare qualsiasi tipo di merce sui [[Main/it/Treni|treni]]. Per la tua rete, è meglio lasciare la tua stazione fuori dalla linea principale in modo che non vi sia passaggio di traffico non necessario causando ritardi ai soli treni che utilizzano effettivamente la stazione.
 
 <!--
-'''Railway Stations''' are the core component of any railway network. They allow any and all goods to be loaded and unloaded onto [[Main/en/trains]]. For your network, it is best to have your station off the main line so there is no unnecessary traffic passes through them causing delays for trains using the station.
+'''Railway Stations''' are the core component of any railway network. They allow any and all goods to be loaded and unloaded onto [[Main/en/Trains|trains]]. For your network, it is best to have your station off the main line so there is no unnecessary traffic passes through them causing delays for trains using the station.
 -->
 
 == Stazioni base ==
@@ -25,12 +25,12 @@ These stations are the end of a railway line. Trains leave the same side they en
 -->
 
 === Stazione a senso unico ===
-Nella stazione a senso unico (in inglese detta Ro-Ro che sta per Roll-On, Roll-Off o Roll-In, Roll Out secondo altri) i treni entrano nella parte inferiore della stazione e escono dall'altra parte. I treni che entrano nella stazione non devono aspettare quelli in partenza. Questo è ottimo per medie quantità di traffico. Senza [[Main/en/Segnali/It#Pre-segnali|pre-segnali]], non va bene per le stazioni ad alto traffico (ad esempio, le stazioni che servono le fabbriche), perché una volta che tutte le piattaforme sono piene, il treno attende il segnale bidirezionale per la piattaforma più vicina all'ingresso. Ciò può portare a un ingorgo se il treno di blocco ha ordini a pieno carico e sta aspettando che un altro treno scarichi la materia prima [[Main/en/cargo]].
+Nella stazione a senso unico (in inglese detta Ro-Ro che sta per Roll-On, Roll-Off o Roll-In, Roll Out secondo altri) i treni entrano nella parte inferiore della stazione e escono dall'altra parte. I treni che entrano nella stazione non devono aspettare quelli in partenza. Questo è ottimo per medie quantità di traffico. Senza [[Main/en/Segnali/It#Pre-segnali|pre-segnali]], non va bene per le stazioni ad alto traffico (ad esempio, le stazioni che servono le fabbriche), perché una volta che tutte le piattaforme sono piene, il treno attende il segnale bidirezionale per la piattaforma più vicina all'ingresso. Ciò può portare a un ingorgo se il treno di blocco ha ordini a pieno carico e sta aspettando che un altro treno scarichi la materia prima [[Main/en/Cargo|cargo]].
 [[File:en/Ro-ro1.png|center|none|frame|Stazioni Ro-Ro con 2 banchine, quella di sinistra che utilizza segnali di blocco, quella di destra che utilizza segnali di percorso. Si potrebbero tralasciare i due tiles di binari dritti nella parte anteriore di quella destra, ma sono utili perchè forniscono spazio di frenata.]]
 
 <!--
 ===Ro-Ro===
-Ro-Ro stands for Roll-On, Roll-Off (or Roll In, Roll Out, depending who you ask) - trains enter the bottom end of station and exit the other end. Trains entering the station do not have to wait for trains leaving. This is great for medium amounts of traffic. Without [[Main/en/pre-signals]], it's no good for high-traffic stations (e.g., stations serving factories), because once all platforms are full, the train waits at the two way signal for the platform closest to the entrance. This can lead to gridlock if the blocking train has full load orders and is waiting for another train to drop off raw material [[Main/en/cargo]].
+Ro-Ro stands for Roll-On, Roll-Off (or Roll In, Roll Out, depending who you ask) - trains enter the bottom end of station and exit the other end. Trains entering the station do not have to wait for trains leaving. This is great for medium amounts of traffic. Without [[Main/en/Signals#Pre-signals|pre-signals]], it's no good for high-traffic stations (e.g., stations serving factories), because once all platforms are full, the train waits at the two way signal for the platform closest to the entrance. This can lead to gridlock if the blocking train has full load orders and is waiting for another train to drop off raw material [[Main/en/Cargo|cargo]].
 [[File:en/Ro-ro1.png|center|none|frame|RoRo-stations with 2 platforms, the left one using block signals, the right one using path signals. You could leave out the two straight track tiles in the front of the right one, but they also have a purpose as braking space.]]
 -->
 
@@ -101,12 +101,12 @@ Stations with [[Main/en/Signals#Pre-signals|pre-signals]] make arriving trains w
 
 === Area di attesa ===
 Una buona soluzione per gestire una coda di treni in attesa di entrare in una stazione è un'area di attesa con più binari. Se la stazione è piena, un treno in arrivo prende il binario libero più vicino nell'area di attesa. Quando un posto si libera nella stazione uno dei treni in attesa si muoverà. Assicurarsi che un treno possa entrare tra i segnali. I pre-segnali sono opzionali ma aiutano se si riempie anche la tua area di attesa!
-[[File:en/waitingbay.png|center|none|frame|Area di attesa per un massimo di 4 treni di 6 vagoni ciascuno]]
+[[File:en/Waitingbay.png|center|none|frame|Area di attesa per un massimo di 4 treni di 6 vagoni ciascuno]]
 
 <!--
 === Waiting bay ===
 A good solution to hold a queue of trains waiting to enter a station is a multi-line waiting bay.  If the station is full, an arriving train picks the closest empty track in the waiting bay.  When a spot opens in the station, one of the waiting trains will move in.  Make sure a train can fit between the signals.  The pre-signals are optional; they help if your waiting bay fills up too!
-[[File:en/waitingbay.png|center|none|frame|Waiting bay for up to 4 6-wagon trains]]
+[[File:en/Waitingbay.png|center|none|frame|Waiting bay for up to 4 6-wagon trains]]
 -->
 
 === Circuito d'attesa ===
@@ -151,17 +151,17 @@ Controllare la partenza dei treni [[Main/en/Advanced Settings/Vehicles#Maximum t
 
 <!--
 ===Long exits, prioritized===
-Getting [[Main/en/mammoth trains]] to exit a busy Ro-Ro station in a timely fashion can be challenging. By using pre-signals you can prioritize station exit tracks to allow trains on faster tracks to depart sooner. In the image below a lower priority is assigned to the topmost 5 exits (since they'll block the return track longer) and the exit at the bottom (since trains accelerate slower on the sharp bend) by requiring them to wait upon the block exit pre-signal. They must wait for the exit signal to clear (that is, when a train passes the 2nd signal on the return track). The other tracks are not forced to do so and will depart when a train passes the 1st signal as usual. 
+Getting [[Main/en/Mammoth trains|mammoth trains]] to exit a busy Ro-Ro station in a timely fashion can be challenging. By using pre-signals you can prioritize station exit tracks to allow trains on faster tracks to depart sooner. In the image below a lower priority is assigned to the topmost 5 exits (since they'll block the return track longer) and the exit at the bottom (since trains accelerate slower on the sharp bend) by requiring them to wait upon the block exit pre-signal. They must wait for the exit signal to clear (that is, when a train passes the 2nd signal on the return track). The other tracks are not forced to do so and will depart when a train passes the 1st signal as usual. 
 [[File:en/Priorityexit.png|center|none|frame|Long exits with priority signals]]
 -->
 
 === Ingressi lunghi ===
-Se giochi con [[Main/en/realistic acceleration]], i treni più veloci rallentano un bel po' prima di fermarsi in una stazione. Questo può ritardare l'ingresso del prossimo treno. L'aggiunta di alcune sezioni di traccia di fronte alla stazione può essere d'aiuto.
+Se giochi con [[Main/en/Realistic acceleration|realistic acceleration]], i treni più veloci rallentano un bel po' prima di fermarsi in una stazione. Questo può ritardare l'ingresso del prossimo treno. L'aggiunta di alcune sezioni di traccia di fronte alla stazione può essere d'aiuto.
 [[File:en/Longentrance.png|center|none|frame|Ingresso lungo per la patch di accelerazione realistica]]
 
 <!--
 ===Long entrances===
-If you play with [[Main/en/realistic acceleration]], faster trains slow down a good bit before stopping in a station.  This can delay the next train from entering.  Adding a few track sections in front of the station can help with this.
+If you play with [[Main/en/Realistic acceleration|realistic acceleration]], faster trains slow down a good bit before stopping in a station.  This can delay the next train from entering.  Adding a few track sections in front of the station can help with this.
 [[File:en/Longentrance.png|center|none|frame|Long entrance for realistic acceleration patch]]
 -->
 
@@ -250,10 +250,10 @@ This build allows trains to enter and exit station simultaneously. However, it t
 ==== Mega stazione terminal a senso unico ====
 
 Ovviamente è possibile aumentare il numero di banchine di una stazione terminal a senso unico. Il solo limite è lo spazio disponibile.
-[[File:en/epicterminus.png|center|thumb|550px|Stazione avanzata a 10 banchine]]
+[[File:en/Epicterminus.png|center|thumb|550px|Stazione avanzata a 10 banchine]]
 
 Di seguito è riportato un progetto un po' più efficiente, con due tracce ognuna che condivide una linea di entrata e di uscita. Utilizza metà spazio e quasi non diminuisce la capacità. È importante che le direzioni non vengano cambiate altrimenti i treni sarebbero costretti a risalire quando entrano nel binario, bloccando il percorso inutilmente.
-[[File:en/sharedepicterminus.png|center|thumb|550px|Versione avanzata a dieci banchine più snella]]
+[[File:en/Sharedepicterminus.png|center|thumb|550px|Versione avanzata a dieci banchine più snella]]
 
 Qui ponti invece di tunnel
 [[File:en/8 platform station.png|center|none|frame|Esempio di terminal a senso unico ad alta capacità]]
@@ -276,10 +276,10 @@ Come in una stazione a senso unico standard, i treni entrano a un'estremità del
 ====Giant Ro-Ro terminus====
 
 It's of course possible to increase the number of platforms of a Ro-Ro terminus station. You can go as far as you want as long as there's enough space.
-[[File:en/epicterminus.png|center|thumb|550px|Advanced 10 bay station]]
+[[File:en/Epicterminus.png|center|thumb|550px|Advanced 10 bay station]]
 
 Below is a little more efficient design, with two tracks each sharing an entry and exit line. It consumes half as much space while nearly not decreasing the capacity. It is important that the directions are not switched: Else trains would have to climb up when entering the track, blocking the crossing unneccessarily long.
-[[File:en/sharedepicterminus.png|center|thumb|550px|Light advanced 10 bay station]]
+[[File:en/Sharedepicterminus.png|center|thumb|550px|Light advanced 10 bay station]]
 
 Here bridges instead of tunnels
 [[File:en/8 platform station.png|center|none|frame|A high-capacity Ro-Ro Terminus mix]]
@@ -302,13 +302,13 @@ As with a standard ro-ro station, trains enter at one end of station and exit on
 === Stazione con rotatoria ===
 Può gestire una grande quantità di piccoli treni.
 
-[[File:en/roundabout station.png|center|thumb|700px|Una versione con doppia rotatoria]]
+[[File:en/Roundabout station.png|center|thumb|700px|Una versione con doppia rotatoria]]
 
 <!--
 ===Roundabout station===
 Can handle a huge amount of small trains.
 
-[[File:en/roundabout station.png|center|thumb|700px|A double roundabout station]]
+[[File:en/Roundabout station.png|center|thumb|700px|A double roundabout station]]
 -->
 
 == Stazioni NewGRF ==
@@ -316,7 +316,7 @@ Can handle a huge amount of small trains.
 
 La nuova interfaccia grafica ha un menu a discesa con i vari gruppi di stazioni. Ogni gruppo offre più modelli di stazioni ma di default è impostata la stazione standard non grf. Alcuni tiles newstation non consentono ai treni di entrarvi per la presenza di costruzioni piene o di respingenti. Si tenga presente quando si posizionano le newstation che alcuni modelli non consentono più di un certo numero di banchine o di costruirle oltre una determinata lunghezza. Quando un modello non è utilizzabile sarà automaticamente disattivato e non selezionabile. Alcuni set di newstations offrono più effetti grafici di altri. Ad esempio, nelle newstations di Michael Blunck, i passeggeri si accumuleranno sulle banchine delle stazioni in attesa del'arrivo del treno che dovranno prendere.
 
-Se il set stazione contiene [[Main/en/waypoint]] (punti di controllo) newgrf, la GUI Waypoint si aprirà dopo averlo selezionato. Avrai le anteprime complete di tutti i waypoint che puoi costruire. La maggior parte di essi ha una data di creazione e una di obsolescenza, oltre la quale sarà possibile sostituirli con versioni più recenti. Tuttavia, i waypoint già creati non verranno automaticamente modificati, consentendo una maggiore varietà grafica delle vostre reti ferroviarie.
+Se il set stazione contiene [[Main/en/Waypoints|waypoint]] (punti di controllo) newgrf, la GUI Waypoint si aprirà dopo averlo selezionato. Avrai le anteprime complete di tutti i waypoint che puoi costruire. La maggior parte di essi ha una data di creazione e una di obsolescenza, oltre la quale sarà possibile sostituirli con versioni più recenti. Tuttavia, i waypoint già creati non verranno automaticamente modificati, consentendo una maggiore varietà grafica delle vostre reti ferroviarie.
 
 Le newstation si comportano come le stazioni normali; l'unica differenza sono i tile senza binari che bloccano i treni.
 [[File:en/NewGRFstation.png|center|none|frame|NewGRF stazione in un'azienda agricola]]

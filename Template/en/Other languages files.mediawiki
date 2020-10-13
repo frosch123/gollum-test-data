@@ -1,6 +1,6 @@
 <noinclude>
-:''For articles use [[Template:Other languages]]''
-:''For categories use [[Template:Other languages categories]]''</noinclude><includeonly><div style=" height: 40px; float: {{{float|left}}}; border: 1px solid #c7c8fe; background-color: #EEE;">
+:''For articles use [[Template:Other languages|:Template:Other languages]]''
+:''For categories use [[Template:Other languages categories|:Template:Other languages categories]]''</noinclude><includeonly><div style=" height: 40px; float: {{{float|left}}}; border: 1px solid #c7c8fe; background-color: #EEE;">
 <div style=" height: 20px; width: 26px; float: right; text-align:center;"><!-- ======== Main page ===========
 -->{{#switch: {{lc:{{{language_page|}}}}}
  | en = [[File:en/Openttd.ico.png|link=Main Page| 22x21px | frameless]]
@@ -110,12 +110,12 @@ Simple usage:
 ===Examples===
 '''Example 1:'''
 <pre>[[Translation:Template/en/Other languages files]]</pre>
-[[Translation:Template/en/Other languages files]]{{en/-}}
+[[Translation:Template/en/Other languages files]]
 
 '''Example 2:'''
 <pre>[[Translation:Template/en/Other languages files]]</pre>
 
-[[Translation:Template/en/Other languages files]]{{en/-}}
+[[Translation:Template/en/Other languages files]]
 
 ===All languages & flags===
 *[[File:en/Flag.png]] en = English
@@ -132,7 +132,7 @@ Simple usage:
 *[[File:it/Flag.png]] it = Italian (Italiano)
 *[[File:ko/Flag.png]] ko = Korean (한국어)
 *[[File:lb/Flag.png]] lb = Luxembourgish (Lëtzebuergesch)
-*[[File:mp/Flag.png| 22x21px ]] mp = Mapudungun (Mapudungun)
+*[[File:mp/Flag.png|22x21px]] mp = Mapudungun (Mapudungun)
 *[[File:nl/Flag.png]] nl = Dutch (Nederlands)
 *[[File:no/Flag.png]] no = Norwegian (Norsk)
 *[[File:pl/Flag.png]] pl = Polish (Polski)
@@ -153,64 +153,64 @@ The parameter "language_page" indicates the language of the file:
 !width='46' style="background:#efefef;"|<code>language_page=</code>
 !style="background:#efefef;"|The article will be added to...
 |-
-|<code>en</code>|| [[Category/en/Translatable files]]
+|<code>en</code>|| [[Category/en/Translatable files|:Category:Translatable files]]
 |-
-|<code>ca</code>|| [[Category/ca/Fitxers en català]]
+|<code>ca</code>|| [[Category/ca/Fitxers en català|:Category:Fitxers en català/Ca]]
 |-
-|<code>cs</code>|| [[Category/cs/Soubory v českých]]
+|<code>cs</code>|| [[Category/cs/Soubory v českých|:Category:Soubory v českých/Cs]]
 |-
-|<code>de</code>|| [[Category/de/Akten in deutscher Sprache]]
+|<code>de</code>|| [[Category/de/Akten in deutscher Sprache|:Category:Akten in deutscher Sprache/De]]
 |-
-|<code>el</code>|| [[Category/el/Αρχεία στα ελληνικά]]
+|<code>el</code>|| [[Category/el/Αρχεία στα ελληνικά|:Category:Αρχεία στα ελληνικά/El]]
 |-
-|<code>es</code>|| [[Category/es/Archivos en español]]
+|<code>es</code>|| [[Category/es/Archivos en español|:Category:Archivos en español/Es]]
 |-
-|<code>fi</code>|| [[Category/fi/Kuvaa Suomen]]
+|<code>fi</code>|| [[Category/fi/Kuvaa Suomen|:Category:Kuvaa Suomen/Fi]]
 |-
-|<code>fr</code>|| [[Category/fr/Fichiers en français]]
+|<code>fr</code>|| [[Category/fr/Fichiers en français|:Category:Fichiers en français/Fr]]
 |-
-|<code>gd</code>|| [[Category/gd/Faidhlichean sa Ghàidhlig]]
+|<code>gd</code>|| [[Category/gd/Faidhlichean sa Ghàidhlig|:Category:Faidhlichean sa Ghàidhlig/Gd]]
 |-
-|<code>hr</code>|| [[Category/hr/Datoteke na hrvatskom]]
+|<code>hr</code>|| [[Category/hr/Datoteke na hrvatskom|:Category:Datoteke na hrvatskom/Hr]]
 |-
-|<code>hu</code>|| [[Category/hu/Kép a magyar]]
+|<code>hu</code>|| [[Category/hu/Kép a magyar|:Category:Kép a magyar/Hu]]
 |-
-|<code>it</code>|| [[Category/it/File in italiano]]
+|<code>it</code>|| [[Category/it/File in italiano|:Category:File in italiano/It]]
 |-
-|<code>ko</code>|| [[Category/ko/한국어로 된 파일]]
+|<code>ko</code>|| [[Category/ko/한국어로 된 파일|:Category:한국어로 된 파일/Ko]]
 |-
-|<code>lb</code>|| [[Category/lb/Files in Luxembourgish]]
+|<code>lb</code>|| [[Category/lb/Files in Luxembourgish|:Category:Files in Luxembourgish/Lb]]
 |-
 |<code>mp</code>|| 
 |-
-|<code>nl</code>|| [[Category/nl/Bestanden in het Nederlands]]
+|<code>nl</code>|| [[Category/nl/Bestanden in het Nederlands|:Category:Bestanden in het Nederlands/Nl]]
 |-
-|<code>no</code>|| [[Category/no/Filer i norske]]
+|<code>no</code>|| [[Category/no/Filer i norske|:Category:Filer i norske/No]]
 |-
-|<code>pl</code>|| [[Category/pl/Pliki w języku polskim]]
+|<code>pl</code>|| [[Category/pl/Pliki w języku polskim|:Category:Pliki w języku polskim/Pl]]
 |-
-|<code>pt</code>|| [[Category/pt/Arquivos em Português]]
+|<code>pt</code>|| [[Category/pt/Arquivos em Português|:Category:Arquivos em Português/Pt]]
 |-
-|<code>ro</code>|| [[Category/ro/Fişiere în limba română]]
+|<code>ro</code>|| [[Category/ro/Fişiere în limba română|:Category:Fişiere în limba română/Ro]]
 |-
-|<code>ru</code>|| [[Category/ru/Файлы на русском языке]]
+|<code>ru</code>|| [[Category/ru/Файлы на русском языке|:Category:Файлы на русском языке/Ru]]
 |-
-|<code>sk</code>|| [[Category/sk/Súbory vo slovenské]]
+|<code>sk</code>|| [[Category/sk/Súbory vo slovenské|:Category:Súbory vo slovenské/Sk]]
 |-
-|<code>sl</code>|| [[Category/sl/Datotek v slovenščini]]
+|<code>sl</code>|| [[Category/sl/Datotek v slovenščini|:Category:Datotek v slovenščini/Sl]]
 |-
-|<code>sr</code>|| [[Category/sr/Datoteka na srpskom]]
+|<code>sr</code>|| [[Category/sr/Datoteka na srpskom|:Category:Datoteka na srpskom/Sr]]
 |-
-|<code>tr</code>|| [[Category/tr/Türkçe olarak Dosyalar]]
+|<code>tr</code>|| [[Category/tr/Türkçe olarak Dosyalar|:Category:Türkçe olarak Dosyalar/Tr]]
 |-
-|<code>uk</code>|| [[Category/uk/Файли на українській мові]]
+|<code>uk</code>|| [[Category/uk/Файли на українській мові|:Category:Файли на українській мові/Uk]]
 |-
-|<code>zh</code>|| [[Category/zh/中文文件]]
+|<code>zh</code>|| [[Category/zh/中文文件|:Category:中文文件/Zh]]
 |-
-|<code>ja</code>|| [[Category/ja/日本語のファイル]]
+|<code>ja</code>|| [[Category/ja/日本語のファイル|:Category:日本語のファイル/Ja]]
 |}
 
 [[Category:en/Translation]][[Category:en/Templates]][[Category:en/Navigation]]
 
-See: [[Category/en/Files in other languages]]
+See: [[Category/en/Files in other languages|:Category:Files_in_other_languages]]
 </noinclude>

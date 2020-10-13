@@ -1,7 +1,7 @@
-[[Translation:Main/en/Advanced Settings/Competitors]]{{en/-}}{{nl/Geavanceerde instellingen}}
+[[Translation:Main/en/Advanced Settings/Competitors]]{{nl/Geavanceerde instellingen}}
 
 ==Geavanceerde instellingen venster: Tegenstanders sectie==
-De tegenstanders sectie geeft je de mogelijkheid verschillende opties in te stellen gerelateerd aan [[Main/en/AI]] en [[Main/nl/multiplayer|netwerkspelen]]. Het doel van de beschikbare instellingen is hieronder toegelicht. Voor elke instelling zijn de respectievelijke variabelen van de [[Main/en/openttd.cfg|config file]] opgegeven, tezamen met de mogelijke waarden.
+De tegenstanders sectie geeft je de mogelijkheid verschillende opties in te stellen gerelateerd aan [[Main/en/AI:Main Page|AI]] en [[Main/nl/Multiplayer|netwerkspelen]]. Het doel van de beschikbare instellingen is hieronder toegelicht. Voor elke instelling zijn de respectievelijke variabelen van de [[Main/en/Openttd.cfg|config file]] opgegeven, tezamen met de mogelijke waarden.
 {| align="center"
 |- valign="top"
 |__TOC__
@@ -16,13 +16,13 @@ Staat toe om computerspelers toe te laten in netwerkspelen. Het aantal computers
 :''In [[Main/en/Openttd.cfg]] config file:'' ([ai] ai_in_multiplayer = <true|false>)
 ====Treinen voor de computer uitschakelen====
 {{nl/Kenmerken|Old|align="right"|text=(0.3.2)}}
-De computer kan geen [[Main/nl/Treinen|treinen]] of [[Main/nl/spoorwegconstructies|spoorwegconstructies]] bouwen.
+De computer kan geen [[Main/nl/Treinen|treinen]] of [[Main/nl/Spoorwegconstructies|spoorwegconstructies]] bouwen.
 Deze opties is verplaatst van de [[Main/en/Configuring patches/Vehicles#Disable trains for computer|voertuigsectie]] in 0.3.4.
 :''Mogelijke instellingen:'' <span style="color:green">'''Aan'''</span> of <span style="color:red">'''Uit'''</span>
 :''In Openttd.cfg config file:'' ([ai] ai_disable_veh_train = <true|false>)
 ====Wegvoertuigen voor de computer uitschakelen====
 {{nl/Kenmerken|Old|align="right"|text=(0.3.2)}}
-De computer kan geen [[Main/nl/wegvoertuigen|wegvoertuigen]] of [[Main/nl/Wegconstructies|wegen]] bouwen. Deze optie is verplaatst van de [[Main/en/Configuring patches/Vehicles#Disable road vehicles for computer|voertuigsectie]] in 0.3.4.
+De computer kan geen [[Main/nl/Wegvoertuigen|wegvoertuigen]] of [[Main/nl/Wegconstructies|wegen]] bouwen. Deze optie is verplaatst van de [[Main/en/Configuring patches/Vehicles#Disable road vehicles for computer|voertuigsectie]] in 0.3.4.
 :''Mogelijke instellingen:'' <span style="color:green">'''Aan'''</span> of <span style="color:red">'''Uit'''</span>
 :''In Openttd.cfg config file:'' ([ai] ai_disable_veh_roadveh = <true|false>)
 ====Vliegtuigen voor de computer uitschakelen====
@@ -33,7 +33,7 @@ De computer kan geen [[Main/nl/Vliegtuigen|vliegtuigen]] of [[Main/nl/Vliegveld|
 
 ====Schepen voor de computer uitschakelen====
 {{nl/Kenmerken|Old|align="right"|text=(0.3.2)}}
-De computer kan geen [[Main/nl/schepen|schepen]] bouwen. Deze optie is verplaatst van de [[Main/en/Configuring patches/Vehicles#Disable ships for computer|voertuigsectie]] in 0.3.4.
+De computer kan geen [[Main/nl/Schepen|schepen]] bouwen. Deze optie is verplaatst van de [[Main/en/Configuring patches/Vehicles#Disable ships for computer|voertuigsectie]] in 0.3.4.
 :''Mogelijke instellingen:'' <span style="color:green">'''Aan'''</span> of <span style="color:red">'''Uit'''</span>
 :''In Openttd.cfg config file:'' ([ai] ai_disable_veh_ship = <true|false>)
 ====aantal opcodes voordat computerspeler tijdelijk wordt gestopt====

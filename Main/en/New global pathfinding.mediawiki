@@ -1,7 +1,7 @@
 [[Translation:Main/en/New global pathfinding]]
 A [[Main/en/Advanced Settings|setting]] that uses a completely different pathfinding algorithm for all [[Main/en/Vehicles|vehicles]].
 
-'''NPF is superseded by [[Main/en/Yet Another Pathfinder]] for all purposes.'''
+'''NPF is superseded by [[Main/en/Yet Another Pathfinder|YAPF]] for all purposes.'''
 
 == Description ==
 The '''New global PathFinder''' (NPF) works for all vehicles. However, it has now been fully superceded by [[Main/en/Yet Another Pathfinder|Yet Another Pathfinder (YAPF)]], so you should use that instead.
@@ -36,13 +36,13 @@ NPF has the following set of configuration options:
 
 == Use ==
 
-This feature is disabled by default. You can enable this patch through the [[Main/en/Configuring patches/Vehicles|configure patches -> vehicles]] window or use the following syntax in [[Main/en/openttd.cfg]]:
+This feature is disabled by default. You can enable this patch through the [[Main/en/Configuring patches/Vehicles|configure patches -> vehicles]] window or use the following syntax in [[Main/en/Openttd.cfg|openttd.cfg]]:
 <pre>
 [patches]
 new_pathfinding_all = true
 </pre>
 
-The configuration options may only be changed in [[Main/en/openttd.cfg]]:
+The configuration options may only be changed in [[Main/en/Openttd.cfg|openttd.cfg]]:
 
 <pre>
 [patches]

@@ -1,5 +1,5 @@
-[[Translation:Main/en/Editing help]]{{en/-}}{{en/TOCright}}
-Hier is een gids over wiki markup taal. Voel je vrij om dit te testen door het te bewerken van in de [[Main/nl/zandbak|zandbak]].
+[[Translation:Main/en/Editing help]]{{en/TOCright}}
+Hier is een gids over wiki markup taal. Voel je vrij om dit te testen door het te bewerken van in de [[Main/nl/Zandbak|zandbak]].
 
 *Zie de [http://nl.wikipedia.org/wiki/Help:Uitleg bewerkingshulp] op Wikipedia voor meer hulp.
 
@@ -82,14 +82,14 @@ Gebruik deze code om een afbeeling aan een artikel toe te voegen:
 <pre>[[File:en/.bestandsnaam|frame|none|titel]]</pre>
 
 Voorbeeld:
-<pre>[[File:en/longerbridges.png|frame|none|Langere bruggen]]</pre>
+<pre>[[File:en/Longerbridges.png|frame|none|Langere bruggen]]</pre>
 Resultaat:
-[[File:en/longerbridges.png|frame|none|Langere bruggen]]
+[[File:en/Longerbridges.png|frame|none|Langere bruggen]]
 
 *Zie ook [http://en.wikipedia.org/wiki/Help:Extended_image_syntax Uitgebreid afbeeldingssysteem (EN)] op Wikipedia.
 
 ==Tabellen==
-{{nl/Uitbreiding|Hulp over CSS-formateren gewenst}}
+{{Uitbreiding/Nl|Hulp over CSS-formateren gewenst}}
 Tabel-code moet vooraan op de regel beginnen.
 {|
 !Code
@@ -179,25 +179,25 @@ Lijst-code moet vooraan op de regel beginnen.
 |}
 
 ==Sjablonen==
-{{nl/Uitbreiding}}
+{{Uitbreiding/Nl}}
 Zet een sjabloon tussen dubbele accolades ("{}") om deze in te voegen tijdens het laden van de pagina.
 <pre>{{sjabloonnaam|parameter1|parameter2}}</pre>
-In het sjabloonbestand (bijvoorbeeld [[Template/en/delete]]), kunnen de parameters met drievoudige accolades worden benaderd.
+In het sjabloonbestand (bijvoorbeeld [[Template/en/Delete|template:delete]]), kunnen de parameters met drievoudige accolades worden benaderd.
 <pre>{{{1}}} {{{2|default}}}</pre>
 
 *Zie ook [http://nl.wikipedia.org/wiki/Help:Gebruik_van_sjablonen Gebruik van sjablonen] op Wikipedia.
 
 ==Doorverwijzingen==
-Gebruik doorverwijzingen om artikelen automatisch te laten doorverwijzen naar een andere. In dit voorbeeld verwijst [[Main/en/checkpoints]] automatisch naar [[Main/en/waypoints]]:
-<pre>#REDIRECT [[Main/en/waypoints]]</pre>
+Gebruik doorverwijzingen om artikelen automatisch te laten doorverwijzen naar een andere. In dit voorbeeld verwijst [[Main/en/Waypoints|checkpoints]] automatisch naar [[Main/en/Waypoints|waypoints]]:
+<pre>#REDIRECT [[Main/en/Waypoints|waypoints]]</pre>
 
 ==Categorieën==
 Voeg artikelen toe aan een categorie door onderaan het artikel een categorielink toe te voegen:
 <pre>[[Category:nl/Ontwikkelingen]]</pre>
 
 Toon de categorie als een gewone link door een dubbele punt toe te voegen:
-<pre>[[Category/nl/Ontwikkelingen]]</pre>
-[[Category/nl/Ontwikkelingen]]
+<pre>[[Category/nl/Ontwikkelingen|:Category:Ontwikkelingen/Nl]]</pre>
+[[Category/nl/Ontwikkelingen|:Category:Ontwikkelingen/Nl]]
 
 ==Andere codes==
 {|

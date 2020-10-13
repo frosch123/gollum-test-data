@@ -1,4 +1,4 @@
-[[Translation:Main/en/Manual of Style]]{{en/-}}
+[[Translation:Main/en/Manual of Style]]
 [[File:fr/StyleGuide.png|left|64px]]
 {{fr/TOCdroite}}
 Cette page liste les règles à respecter pour créer et modifier des articles du wiki [[Main/fr/OpenTTD|OpenTTD]].
@@ -15,7 +15,7 @@ Allez voir l'[[Main/fr/Aide d'édition|aide d'édition au wiki]] si c'est la pre
 ==Règles générales==
 *Utilisez le bouton '''Prévisualiser'''.
 *Respectez le format des pages existantes autant que possible.
-*Utilisez notre ''[[Main/en/sandbox|sandbox]]'' pour tester le code.
+*Utilisez notre ''[[Main/en/Sandbox|sandbox]]'' pour tester le code.
 *Testez vos pages dans plusieurs navigateurs si possible !
 *Ajoutez un résumé descriptif quand vous modifiez une page.
 *Un « changement mineur » est une correction de typo ou un petit changement qui n'affecte pas la page. Pas de résumé requis.
@@ -46,7 +46,7 @@ Lors de la création d'un article, imaginez ce qui pourrait être recherché.<br
 par ex., un joueur voulant savoir quelque chose sur les [[Main/fr/Industries|industries]] recherchera plus vraisemblablement « industries », plutôt que « industrie ».
 
 Vous pouvez aussi créer une page de redirection pour que le singulier pointe vers le pluriel :
-<pre>#REDIRECT [[Main/fr/Industries]]</pre>
+<pre>#REDIRECT [[Main/fr/Industries|Industries/Fr]]</pre>
 
 Dans le doute (ce qui ne devrait pas arriver souvent), utilisez le singulier.
 
@@ -55,20 +55,20 @@ Ne mettez pas de lettre en majuscule dans le titre d'un article, sauf si le titr
 
 ===Pages n'étant pas en anglais===
 Le titre de l'article doit être dans sa langue, suivi du symbole '''/''' et du code de langue international. Exemples:
-*[[Main/fr/Accueil]] (pour la ''page principale'' en français)
-*[[Main/de/Startseite]] (pour la ''page principale'' en allemand)
-*[[Main/ru/Главная страница]] (pour la ''page principale'' en russe)
+*[[Main/fr/Accueil|Accueil/Fr]] (pour la ''page principale'' en français)
+*[[Main/de/Startseite|Startseite/De]] (pour la ''page principale'' en allemand)
+*[[Main/ru/Главная страница|Главная_страница/Ru]] (pour la ''page principale'' en russe)
 
-Pour un index des articles en d'autres langues dans le Wiki OpenTTD, voyez: [[Category/en/Articles in other languages]]
+Pour un index des articles en d'autres langues dans le Wiki OpenTTD, voyez: [[Category/en/Articles in other languages|:Category:Articles in other languages]]
 
 ===Pages de test===
 Quand le [[Main/fr/Bac à sable|bac à sable]] n'est pas suffisant pour votre page de test, vous pouvez créer une page comme un « répertoire » dans votre page utilisateur. Ceci permet de conserver l'espace de nommage principal propre. Exemple:
-*[[Archive/en/Zuu/New Main Page side by side layout]]
+*[[Archive/en/Zuu/New Main Page side by side layout|User:Zuu/New_Main_Page_side_by_side_layout]]
 
 ===Espaces de nommage===
 Si votre article ne concerne pas directement le jeu, il appartient probablement à un espace de nommage. Exemples:
-*[[Main/fr/Pompe du village]]
-*[[Main/fr/Italie]]
+*[[Main/fr/Pompe du village|OpenTTD:Pompe du village/Fr]]
+*[[Main/fr/Italie|Scenario:Italie/Fr]]
 
 ==Contenu de l'article==
 
@@ -77,8 +77,8 @@ Utilisez le format qui convient le mieux. Les fichiers PNG sont le meilleur choi
 {|
 !Code!!Résultat
 |-
-|<pre>[[File:en/longerbridges.png|frame|Titre de l'image]]</pre>
-|[[File:en/longerbridges.png|frame|Titre de l'image]]
+|<pre>[[File:en/Longerbridges.png|frame|Titre de l'image]]</pre>
+|[[File:en/Longerbridges.png|frame|Titre de l'image]]
 |}
 
 ===Captures d'écran annotées===
@@ -136,14 +136,14 @@ Utilisez le même format que {{en/S|nocturne/Fr}}. Incluez des instructions pour
 Choisissez le plan de couleur le mieux adapté au message que vous voulez véhiculer — rouge pour une perte imminente (par ex. une suppression), jaune pour un avertissement, vert pour une tâche courante, bleu pour une information.
 
 ===Modèles courants===
-''Article principal: [[Main/fr/Manuel de Style/Modèles courants]]''
+''Article principal: [[Main/fr/Manuel de Style/Modèles courants|OpenTTD:Manuel de Style/Modèles courants/Fr]]''
 
-*Vous pouvez trouver ici une liste de modèles: [[Category/fr/Modèles]]
+*Vous pouvez trouver ici une liste de modèles: [[Category/fr/Modèles|:Category:Modèles/Fr]]
 *Pour plus d'information, voyez: [[Main/fr/Modèles|Modèles]]
 
 ==Catégories==
 ===Format des catégories===
-Utilisez le même format que [[Category/fr/demandes de suppression]].
+Utilisez le même format que [[Category/fr/demandes de suppression|:category:demandes de suppression/Fr]].
 
 ===Ajouter un article à une catégorie===
 Ajoutez votre page à une catégorie ou deux si cela est approprié. Cela rend la recherche plus aisée.
@@ -152,12 +152,12 @@ Vous pouvez trouver une liste des catégories existantes ici: [[Main/en/Special:
 
 Mettez le code tout en bas de l'article.
 <pre>[[Category:en/nom catégorie]]</pre>
-Cependant, vous devriez d'abord vérifier quelle sorte d'articles utilise déjà cette catégorie — par exemple, [[Category/fr/Locomotives]] n'est que pour les articles sur des locomotives spécifiques, pas pour n'importe quel article relatif aux locomotives. L'idée est que si les utilisateurs souhaitent une liste des locomotives « non polluée », ils vont dans la catégorie.
+Cependant, vous devriez d'abord vérifier quelle sorte d'articles utilise déjà cette catégorie — par exemple, [[Category/fr/Locomotives|:Category:Locomotives/Fr]] n'est que pour les articles sur des locomotives spécifiques, pas pour n'importe quel article relatif aux locomotives. L'idée est que si les utilisateurs souhaitent une liste des locomotives « non polluée », ils vont dans la catégorie.
 
 ==Scénarios==
 Voyez les instructions ici: [[Main/en/Équipe de scénarios/Fr#Procédure pour ajouter un scénario|Procédure pour ajouter un scénario]].
 Placez les scénarios dans l'espace de nommage scenario :
-*[[Main/fr/Italie]]
+*[[Main/fr/Italie|Scenario:Italie/Fr]]
 
 ==Voir aussi==
 *[http://meta.wikimedia.org/wiki/Help:Editing Syntaxe d'édition de texte dans MediaWiki] (en anglais)

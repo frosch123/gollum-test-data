@@ -1,10 +1,9 @@
-{{outdated|The information on this page is no longer relevant, it is left here as solely as an archive}} 
+{{en/Outdated|The information on this page is no longer relevant, it is left here as solely as an archive}} 
 
 [[Translation:Main/en/Passenger and cargo destinations]]
-{{en/-}}
 {{en/Warning|Progress of this project has been paused since december 2008, there is a similar project [[Main/en/Passenger and cargo distribution]] going on.}}
 
-{{todo|Fill in missing section ''Destination Algorithm''.}}
+{{en/Todo|Fill in missing section ''Destination Algorithm''.}}
 
 Support for [[Main/en/Passenger and cargo destinations]] in OpenTTD exists in the new cargo packets branch by [[Main/en/Celestar]] and [[Main/en/Peter1138]]. An explanation on how to download and install this branch is given in the [[Main/en/Passenger and cargo destinations#Installation|Installation]] section of this page.
 
@@ -91,7 +90,7 @@ This is stuff which will ''not'' be in the first incarnation of cargodest, no ma
 
 === Missing features ===
 * Modification of the vehicle detail window so that is shows the origins
-* New icon for the Route Network view of the map: Suggestion: [[File:en/minimaprouting.png]] Full quality TIF here: [http://www.fvfischer.de/minimaprouting.tif]
+* New icon for the Route Network view of the map: Suggestion: [[File:en/Minimaprouting.png]] Full quality TIF here: [http://www.fvfischer.de/minimaprouting.tif]
 
 === Configuring ===
 
@@ -159,7 +158,7 @@ Connections (edges) are shown as thin lines in the color of the cargo type they 
 {{en/-}}
 
 === Station Cargo List ===
-{{todo|replace outdated screenshots}}
+{{en/Todo|replace outdated screenshots}}
 
 The Station Cargo List will be one of your main tools to work with. To ease network optimization,
 several different cargo views are available in the station view window:
@@ -176,7 +175,7 @@ You can expand the conventional view to a detailed view, which gives you more in
 
 When using one of the detailed views, you can click on any station name mentioned in the window to move your main viewport there, or Ctrl-Click to open a new viewport on the station's location.
 
-[[File:en/svw retract.png|frame|conventional view]]
+[[File:en/Svw retract.png|frame|conventional view]]
 ==== Conventional View ====
 
 We all know this view from the early days of TTO, but it doesn't reveal much information except how much cargo we have for each type.
@@ -184,7 +183,7 @@ We all know this view from the early days of TTO, but it doesn't reveal much inf
 The little "+" sign indicates that there is more information about this cargo type. This is available for routed and unrouted cargo, however, the unrouted cargo needs this by far not as badly as the routed stuff. Click on the "+" and you can be bombarded with loads of information.
 
 {{en/-}}
-[[File:en/svw full.png|frame|"full" view - Shows origin and destination for everything]]
+[[File:en/Svw full.png|frame|"full" view - Shows origin and destination for everything]]
 ==== Full View ====
 This is possibly less useful a view but it's there nonetheless. It shows, for every piece of the selected cargo type, the origin and the destination. This is more for the detail-loving people among us than to really help optimizing your network.
 
@@ -195,14 +194,14 @@ The main problem with it is the sheer amount of entries you get even for a mid-s
 The Full View can be sorted alphabetically (by destination) or by the amount of cargo.
 
 {{en/-}}
-[[File:en/svw destination.png|frame|"destination" view - Shows the ultimate destination of the cargo]]
+[[File:en/Svw destination.png|frame|"destination" view - Shows the ultimate destination of the cargo]]
 ==== Destination View ====
 Here we go simple and straightforward again. We see all the destinations are currently "in use" along with the amount. However, we don't know how the cargo is attempting to get there.
 
 The Destination View can be sorted alphabetically or by the amount of cargo.
 
 {{en/-}}
-[[File:en/svw nexthop.png|frame|"nexthop" view - Shows the station the cargo wishes to go next, independent of the question whether the cargo will leave the vehicle there or not]]
+[[File:en/Svw nexthop.png|frame|"nexthop" view - Shows the station the cargo wishes to go next, independent of the question whether the cargo will leave the vehicle there or not]]
 ==== NextHop View ====
 We call this the NextHop view.
 
@@ -213,7 +212,7 @@ This is quite helpful if you have a lot of cargo at a station and need to find o
 The NextHop View can be sorted alphabetically or by the amount of cargo.
 
 {{en/-}}
-[[File:en/svw tree.png|frame|"tree" view - Shows a logical tree where the cargo is going from the current station, includes information on how many units transfer or arrive at subsequent stations]]
+[[File:en/Svw tree.png|frame|"tree" view - Shows a logical tree where the cargo is going from the current station, includes information on how many units transfer or arrive at subsequent stations]]
 
 ==== Tree View ====
 This view is possibly the most useful, if you get used to it. It shows a forward-tree of the cargo and its destinations (i.e. forward tree because this tree doesn't care about where the cargo comes from).

@@ -1,4 +1,4 @@
-[[Translation:Main/en/Never expire vehicles]]{{en/-}}
+[[Translation:Main/en/Never expire vehicles]]
 This [[Main/en/Advanced Settings|setting]] will stop vehicles from going "out of date" and so they will remain available until the very end of the game.  
 
 == Description ==
@@ -8,10 +8,10 @@ This setting makes sure that vehicles are always available. Thus, you can keep a
 
 If you activate this option '''before you start a game''' then it will be active for all future games, unless you disabled the option to automatically save the settings.
 
-You can also enable this option during an '''already running game'''. It will only apply for this game then and by itself it won't get you any already expired engines back. To achieve that, open the [[Main/en/console]] and type <code>resetengines</code>.
+You can also enable this option during an '''already running game'''. It will only apply for this game then and by itself it won't get you any already expired engines back. To achieve that, open the [[Main/en/Console|console]] and type <code>resetengines</code>.
 
 == Use ==
-This setting is disabled by default. You can enable it through the [[Main/en/Advanced Settings/Vehicles]] window or use the following syntax in [[Main/en/openttd.cfg]]:
+This setting is disabled by default. You can enable it through the [[Main/en/Advanced Settings/Vehicles]] window or use the following syntax in [[Main/en/Openttd.cfg|openttd.cfg]]:
 <pre>
 [patches]
 never_expire_vehicles = true

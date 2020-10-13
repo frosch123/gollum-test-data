@@ -1,4 +1,4 @@
-[[Translation:Main/en/FAQ troubleshooting]]{{en/-}}
+[[Translation:Main/en/FAQ troubleshooting]]
 {{fr/MenuFAQ}}
 
 Cet article couvre les résolutions d'erreurs et problèmes de [[Main/fr/OpenTTD|OpenTTD]]. Il est recommandé d'essayer la dernière [[Main/fr/Construction de nuit|construction nocturne]], qui est la toute dernière version de OpenTTD, avant de signaler publiquement un problème. Souvent, le problème a déjà été corrigé.
@@ -32,7 +32,7 @@ Sur les machines *Nix, si vous copiez les fichiers depuis, disons, une partition
 
 == Quand je démarre le jeu en mode plein écran, le taux de rafraîchissement est modifié à 60Hz! (Windows) ==
 :*C'est parce que vous n'avez pas bien configuré DirectX. Pour cette même raison, il peut arriver que le jeu tourne avec un taux de rafraîchissement plus élevé que ce que supporte votre écran. Essayez de télécharger le "Panneau de contrôle de DirectX" depuis microsoft.com, copiez-le dans /windows/system32, ouvrez la boîte de dialogue dans le Panneau de configuration, allez à l'onglet DirectDraw et fixez le "Taux de rafraîchissement forcé" au maximum de ce que votre écran peut afficher.
-:*Vous pouvez positionner '''display_hz''' pour avoir un taux de rafraîchissement correct. Cette option est dans le groupe '''[win32]''' de [[Main/fr/openttd.cfg|openttd.cfg]].
+:*Vous pouvez positionner '''display_hz''' pour avoir un taux de rafraîchissement correct. Cette option est dans le groupe '''[win32]''' de [[Main/fr/Openttd.cfg|openttd.cfg]].
 
 == Le curseur est caché dans les modes plein écran sous Linux ==
 * OpenTTD est jouable en mode fenêtré.
@@ -101,7 +101,7 @@ Cela peut aussi corriger des problèmes avec d'autres programmes qui plantent al
 == Mon IHM est trop petite à lire ==
 La fonte par défaut fait partie de l'ensemble de graphismes que vous utilisez; pour les langues avec des lettres non latines, une fonte de repli est automatiquement choisie dans les fontes disponibles sur votre système.
 
-Pour utiliser une fonte différente, quittez OpenTTD et modifiez les options suivantes dans votre fichier ''[[Main/fr/openttd.cfg|openttd.cfg]]'':
+Pour utiliser une fonte différente, quittez OpenTTD et modifiez les options suivantes dans votre fichier ''[[Main/fr/Openttd.cfg|openttd.cfg]]'':
 <pre>
 small_font = /usr/share/X11/fonts/100dpi/courB10-ISO8859-1.pcf.gz
 medium_font = /usr/share/X11/fonts/100dpi/courB14-ISO8859-1.pcf.gz

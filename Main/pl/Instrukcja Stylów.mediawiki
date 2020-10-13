@@ -1,6 +1,6 @@
 {{pl/Informacja|Ten artykuł tłumaczyli ludzie tacy jak Ty. Mimo dołożenia wszelkich starań, żeby tłumaczenie było poprawne merytorycznie, może okazać się że między polską a angielską wersją językową są jakieś drobne różnice. 
 <br>'''Pamiętaj - w oryginale ten artykuł napisano w języku angielskim, więc w razie wszelkich nieścisłości to [[Main/en/Manual of Style|angielska wersja]] stoi nad innymi.'''}}
-[[Translation:Main/en/Manual of Style]]{{en/-}}
+[[Translation:Main/en/Manual of Style]]
 
 Ta strona zawiera listę zasad tworzenia i edycji artykułów wiki [[Main/pl/OpenTTD|OpenTTD]].
 
@@ -17,7 +17,7 @@ Zobacz [[Main/pl/Pomoc przy edycji|pomoc dotyczącą edycji wiki]], jeśli jeste
 ==Zasady ogólne==
 *Używaj przycisku '''Podgląd'''.
 *Na tyle na ile to możliwe, staraj się zachowywać format już istniejących stron.
-*Do testowania kodu używaj naszej [[Main/en/sandbox|piaskownicy]].
+*Do testowania kodu używaj naszej [[Main/en/Sandbox|piaskownicy]].
 *Przetestuj swoje edycje na tak wielu przeglądarkach jak to możliwe!
 *Pamiętaj, żeby zawsze dodawać opis (podsumowanie) swoich zmian ''z wyjątkiem''
 *"Mała edycja" ("a minor edit") jest poprawką literówki, błędu ortograficznego lub inną drobną zmianą, która nie ma wpływu na stronę. Nie jest wymagane żadne podsumowanie. Miej jednak na uwadze, że w historii strony zawsze można porównać Twoje zmiany z poprzednią wersją - nie ma sensu oznaczać dużych zmian jako "minor edit" 
@@ -47,7 +47,7 @@ Kiedy tworzysz artykuł, zastanów się czego będzie szukał gracz.<br>
 na przykład: Gracz pragnący dowiedzieć się czegoś o [[Main/pl/Przedsiębiorstwa|Przedsiębiorstwach]] najprawdopodobniej wyszuka "przedsiębiorstwa", nie: "przedsiębiorstwo"
 
 Zawsze możesz utworzyć stronę przekierowującą:
-<pre>#REDIRECT [[Main/pl/Przedsiębiorstwa]]</pre>
+<pre>#REDIRECT [[Main/pl/Przedsiębiorstwa|Przedsiębiorstwa/Pl]]</pre>
 
 W razie wątpliwości (jednak nie powinny być one zbyt częste) użyj liczby pojedynczej
 
@@ -56,22 +56,22 @@ Nie należy umieszczać w tytułach wielkich liter, chyba że wymaga tego pisown
 
 ===Strony językach innych niż angielski===
 Tytuł artykułu powinien być napisany w tym samym języku co artykuł, następnie, po znaku '''/''', w tytule należy umieścić kod języka. Na przykład:
-*[[Main/es/Página principal]] (strona główna w języku hiszpańskim)
-*[[Main/pl/Strona główna]] (strona główna w języku polskim)
-*[[Main/ru/Главная страница]] (strona główna w języku rosyjskim)
+*[[Main/es/Página principal|Página principal/Es]] (strona główna w języku hiszpańskim)
+*[[Main/pl/Strona główna|Strona główna/Pl]] (strona główna w języku polskim)
+*[[Main/ru/Главная страница|Главная_страница/Ru]] (strona główna w języku rosyjskim)
 
-Strony nieangielskie znajdziesz tutaj: [[Category/en/Articles in other languages]]
+Strony nieangielskie znajdziesz tutaj: [[Category/en/Articles in other languages|:Category:Articles in other languages]]
 
 '''''Od tłumacza:''' W tytułach artykułów '''można''', a wręcz '''należy''' używać polskich liter (Dlaczego należy? Jeśli zaczęlibyśmy tworzyć strony bez ploskich znaków w tytułach, po chwili pogubilibyśmy się wśród nazewnictwa. Gdyby dwóch użytkowników stworzyło stronę o [[Main/pl/Złoto|Złocie]] w grze OpenTTD, i jeden nazwałby ją Zloto a drugi Złoto, mielibyśmy dwie strony o tym samym... Tak samo z innymi rzeczami)''
 
 ===Strony testowe===
-Jeśli [[Main/en/sandbox|piaskownica]] nie jest wystarczającym narzędziem dla Twojej strony, możesz stworzyć stronę jako "folder" na stronie użytkownika. Pomaga to utrzymać główną przestrzeń nazw w czystości. Przykład:
-*[[Archive/en/Zuu/New Main Page side by side layout]]
+Jeśli [[Main/en/Sandbox|piaskownica]] nie jest wystarczającym narzędziem dla Twojej strony, możesz stworzyć stronę jako "folder" na stronie użytkownika. Pomaga to utrzymać główną przestrzeń nazw w czystości. Przykład:
+*[[Archive/en/Zuu/New Main Page side by side layout|User:Zuu/New_Main_Page_side_by_side_layout]]
 
 ===Przestrzenie nazw===
 Jeśli twój artykuł nie dotyczy bezpośrednio gry, to prawdopodobnie należy do przestrzeni nazw. Przykłady:
-*[[Main/en/Village Pump]]
-*[[Main/en/Italy]]
+*[[Main/en/Village Pump|OpenTTD:Village Pump]]
+*[[Main/en/Italy|Scenario:Italy]]
 
 ==Treść artykułu==
 
@@ -80,8 +80,8 @@ Najważniejsze żeby działało. Do większości grafiki najlepszy format to '''
 {|
 !Kod!!Efekt
 |-
-|<pre>[[File:en/longerbridges.png|frame|Opis oobrazka]]</pre>
-|[[File:en/longerbridges.png|frame|Opis obrazka]]
+|<pre>[[File:en/Longerbridges.png|frame|Opis oobrazka]]</pre>
+|[[File:en/Longerbridges.png|frame|Opis obrazka]]
 |}
 
 ===Opisywanie zrzutu ekranu===
@@ -142,13 +142,13 @@ Tworząc szablon, użyj takiego samego formatu jak w szablonie {{en/S|Nightly}}.
 Wybierz kolorystykę najlepiej pasującą do wiadomości, którą chcesz przekazać - poczytaj o [[Main/en/Szablony/Pl#Ramki informacyjne|ramkach informacyjnych]], żeby dowiedzieć się więcej na temat doboru kolorów (strona w języku polskim).
 
 ===Podstawowe szablony===
-''Zobacz artykuł: [[Main/en/Instrukcja stylów/Pl/Podstawowe szablony]]''
+''Zobacz artykuł: [[Main/en/Instrukcja stylów/Pl/Podstawowe szablony|OpenTTD:Instrukcja stylów/Pl/Podstawowe szablony]]''
 
-*Więcej informacji o szablonach znajdziesz tutaj: [[Main/pl/Szablony]]
+*Więcej informacji o szablonach znajdziesz tutaj: [[Main/pl/Szablony|Szablony/Pl]]
 
 ==Kategorie==
 ===Format kategorii===
-Tworząc stronę kategorii, użyj takiego samego formatu jak na stronie [[Category/en/requests for deletion]].
+Tworząc stronę kategorii, użyj takiego samego formatu jak na stronie [[Category/en/Requests for deletion|:category:requests for deletion]].
 
 ===Dodawanie artykułu do kategorii===
 Dodaj swój artykuł do kategorii - a nawet dwóch, lub więcej, jeśli to możliwe - ułatwi to jego znalezienie.
@@ -161,9 +161,9 @@ Umieść kod przydzielający do kategorii na samym końcu swojego artykułu:
 Należy zawsze najpierw sprawdzić, jaki rodzaj artykułów korzysta z danej kategorii. Na przykład: (angielskojęzyczna) [[Category/en/Engines|kategoria ''Lokomotywy'']] przeznaczona jest tylko dla artykułów o konkretnych maszynach - nie dla jakichkolwiek artykułów związanych z pociągami, które wspominają o lokomotywach. Założenie jest takie, że jeśli użytkownicy chcą mieć prostą, "nieskażoną" listę lokomotyw, przejdą do tej kategorii.
 
 ==Scenariusze==
-Sprawdź instrukcje dla scenariuszy tutaj: [[Main/en/Scenarios Team#Procedure to add a scenario]].
+Sprawdź instrukcje dla scenariuszy tutaj: [[Main/en/Scenarios Team#Procedure to add a scenario|Scenarios_Team#Procedure_to_add_a_scenario]].
 Umieść scenariusz w przestrzeni nazw Scenario:
-*[[Main/en/Italy]]
+*[[Main/en/Italy|Scenario:Italy]]
 
 ==Zobacz Również==
 *[http://meta.wikimedia.org/wiki/Help:Editing Text Editing syntax in MediaWiki]

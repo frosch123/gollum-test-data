@@ -1,7 +1,7 @@
-<!-- {{outdated|MiniIN is dead and OpenTTD migrated to GitHub.}} -->
-{{nieaktualizowane/Pl|MiniIN nie działa, a OpenTTD migruje do GitHub.}}
+<!-- {{en/Outdated|MiniIN is dead and OpenTTD migrated to GitHub.}} -->
+{{pl/Nieaktualizowane|MiniIN nie działa, a OpenTTD migruje do GitHub.}}
 
-[[Translation:Main/en/FAQ OpenTTD versions]]{{en/-}}{{pl/FAQmenu}}
+[[Translation:Main/en/FAQ OpenTTD versions]]{{pl/FAQmenu}}
 
 OpenTTD to stale rozwijający się projekt, który regularnie udostępnia nowe funkcje, opcje i ulepszenia. Chociaż częste dodawanie  "nowych zabawek" do rozgrywki jest dobrodziejstwem dla weteranów OpenTTD, może być dość mylące dla nowicjusza OTTD, która wersja ma to, co powinna zainstalować i czego oczekiwać pod względem stabilności po każdej kompilacji.
 
@@ -16,7 +16,7 @@ Termin „kompilacja” będzie używany w pozostałej części tego dokumentu w
 ====Wydanie====
 Oficjalne "Wydanie" (Release) jest właśnie tym -- stabilnym, kompletnym wydaniem gry. Chociaż w wydaniu mogą występować drobne poprawki błędów, oczekuje się, że nie będzie znaczących zmian w tej wersji gry, a wszelkie nowe funkcje pojawią się w przyszłej wersji.  
 
-Wydanie OpenTTD jest jak wydanie dowolnego pakietu oprogramowania i jest odpowiednio ponumerowane. Na przykład najnowsza wersja OpenTTD to {{version}}. Wersje głównych wydań są oznaczone pierwszym lub drugim numerem, a drobne wydania są reprezentowane przez trzecią liczbę.
+Wydanie OpenTTD jest jak wydanie dowolnego pakietu oprogramowania i jest odpowiednio ponumerowane. Na przykład najnowsza wersja OpenTTD to {{en/Version}}. Wersje głównych wydań są oznaczone pierwszym lub drugim numerem, a drobne wydania są reprezentowane przez trzecią liczbę.
 
 ====Wydanie Kandydata (RC lub testowanie)====
 Możesz myśleć o tym jako o proponowanym wydaniu. Wersja Release Candidate to wersja, która właśnie powstaje. Chociaż drobne funkcje mogą być dodane do RC, w przeważającej części lista funkcji jest zawieszona.
@@ -40,7 +40,7 @@ Kompilacje nocne mają inny schemat numeracji niż wersje. Wersja nocna będzie 
 ''r8642''
 
 ====Trunk====
-[[File:en/version Illustration.gif|frame|right|Relacje między 'Bagażnikiem' <small>''(Trunk)''</small>, Gałęziami <small>''(Branches)''</small>, Wydania, Nightlies i Kandydatami do Wydania ''(R.C)'']]
+[[File:en/Version Illustration.gif|frame|right|Relacje między 'Bagażnikiem' <small>''(Trunk)''</small>, Gałęziami <small>''(Branches)''</small>, Wydania, Nightlies i Kandydatami do Wydania ''(R.C)'']]
 Termin "trunk" (jak w pniu drzewa) odnosi się do głównego środowiska programistycznego dla programistów OpenTTD (kontrast z terminologią "gałąź" <small>''(branch)''</small> opisaną poniżej). 'Bagażnik' <small>''(trunk )''</small> zawiera kod opracowany lub zatwierdzony przez głównych twórców gry. Oczekuje się, że kod zawarty w 'bagażniku' znajdzie się w oficjalnej wersji. Według rozszerzenia, kod znaleziony w 'bagażniku' może być uważany za "oficjalny" kod OpenTTD.
 
 Kompilacje 'nocne' <small>''(Nightly builds)''</small> , jak opisano powyżej, zawsze będą zawierały najnowszy kod "w bagażniku" <small>''(in the trunk)''</small> . Dlatego jeśli zobaczysz funkcję opisaną jako  "w bagażniku" , możesz być pewien, że będzie ona dostępna w kolejnej nocnej kompilacji, jeśli jeszcze jej nie ma.
@@ -67,8 +67,8 @@ Podczas gdy prace nad 'pniem' (oraz, w mniejszym stopniu, gałąź SVN), są wyk
 
 ====MiniIN====
 <!--{{en/Feature period|Old|0.5}}-->{{pl/Zgodne zakresy|Old|0.5}}
-[[File:en/miniIN Illustration.gif|frame|right| MiniIN]]
-''Główny artykuł: [[Main/en/Mini Integrated Nightly]]''<br>
+[[File:en/MiniIN Illustration.gif|frame|right| MiniIN]]
+''Główny artykuł: [[Main/en/Mini Integrated Nightly|MiniIN]]''<br>
 
 MiniIN to środowisko programistyczne odrębne od linii głównej, które zawiera kod linii głównej ''plus'' wiele poprawek użytkownika. Po wydaniu wersji 0.5.0 MiniIN nie będzie już aktualizowany przy użyciu kodu 'trunk'. Na tym etapie MiniIN będzie wynosił 0.5.0 plus wszystkie łatki użytkownika.
 
@@ -87,7 +87,7 @@ Nawet jeśli korzystasz z najnowszej wersji nocnej, możesz nie mieć ostatnio d
 Jeśli wiesz, że masz zainstalowaną odpowiednią wersję, możesz ją włączyć w [[Main/pl/Zaawansowane ustawienia|Oknie Ustawień Zaawansowanych]].
 
 ===Jak mogę prześledzić, gdzie są funkcje?===
-* Przegląd głównych funkcji zawartych lub planowanych w różnych wydaniach można znaleźć pod [[Main/pl/mapaDrogowa|Roadmap]]''`y''
+* Przegląd głównych funkcji zawartych lub planowanych w różnych wydaniach można znaleźć pod [[Main/pl/MapaDrogowa|Roadmap]]''`y''
 * Szczegóły ostatnich zmian w "bagażniku" <small>''(trunk)''</small> są [http://vcs.openttd.org/svn/log/trunk tutaj]
 
 ===Gdzie mogę pobrać kompilację, którą chcę?===
@@ -96,8 +96,8 @@ Jeśli wiesz, że masz zainstalowaną odpowiednią wersję, możesz ją włączy
 
 ==Zobacz też==
 * [[Main/pl/Historia wersji OpenTTD|Historia Wydania OpenTTD]]
-* [[Main/pl/mapaDrogowa|Development Roadmaps]]
-* [[Main/en/Mini Integrated Nightly]]
+* [[Main/pl/MapaDrogowa|Development Roadmaps]]
+* [[Main/en/Mini Integrated Nightly|MiniIN]]
 * [http://www.tt-forums.net/viewtopic.php?t=21678 How to apply patches]
 
 [[Category:en/FAQs]] [[Category:pl/FAQs]]

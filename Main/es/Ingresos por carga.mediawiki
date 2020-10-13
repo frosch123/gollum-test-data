@@ -2,9 +2,9 @@
 [[Translation:Main/en/Cargo income]]
 ==Overview==
 
-The amount of money earned when delivering a [[Main/en/cargo]] is determined by four factors: cargo, amount, distance, and days in transit, and is the product of the cargo payment rate, amount of cargo, transit distance, and time factor determined by days in transit.
+The amount of money earned when delivering a [[Main/en/Cargo|cargo]] is determined by four factors: cargo, amount, distance, and days in transit, and is the product of the cargo payment rate, amount of cargo, transit distance, and time factor determined by days in transit.
 
-Before OpenTTD 1.0/r17437, transporting [[Main/en/valuables]] a distance of fewer than 10 tiles yielded no money.
+Before OpenTTD 1.0/r17437, transporting [[Main/en/Valuables|valuables]] a distance of fewer than 10 tiles yielded no money.
 
 The transit distance is measured as the [http://www.wikipedia.org/wiki/Manhattan distance manhattan distance] between the origin station and the destination station.
 
@@ -29,7 +29,7 @@ Income(cargo, amount, distance, time) = cargo payment rate ...
 
 This function has the following form:
 
-[[File:en/income vs time.png]]
+[[File:en/Income vs time.png]]
 
 ==Magic Numbers==
 
@@ -131,4 +131,4 @@ Similar graphs can be drawn in-game using [http://www.tt-forums.net/viewtopic.ph
 
 ==See also==
 
-*[[Main/en/Game mechanics#Delivery payment rates]]
+*[[Main/en/Game mechanics#Delivery payment rates|Game mechanics#Delivery_payment_rates]]

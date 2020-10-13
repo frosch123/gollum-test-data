@@ -2,10 +2,10 @@
 Een lijst van gewone '''Sjablonen''' en hun gebruik, klik op de naam van de sjabloon voor verdere documentatie.
 Je kunt een lijst van sjablonen vinden in:
 * [[Main/en/Stijlhandleiding/Nl#Gewone sjablonen|OpenTTD:Stijlhandleiding/Gewone sjablonen]]
-* [[Category/nl/Sjablonen]].
+* [[Category/nl/Sjablonen|:Category:Sjablonen/Nl]].
 * Voor een complete lijst van alle sjablonen, zie [[Main/en/Special:Allpages/Template:]].
 
-Kijk ook bij [[Category/en/Editing Resources]] voor andere editing bronnen die beschikbaar zijn.
+Kijk ook bij [[Category/en/Editing Resources|:category:Editing Resources]] voor andere editing bronnen die beschikbaar zijn.
 __TOC__
 
 == [[Category/nl/Berichtenbox|Berichtenbox sjablonen]] ==
@@ -43,7 +43,7 @@ Er zijn 6 types (kleuren) van boxen voor berichten:
 |{{nl/Te doen| TEKST |2= }}
 |- valign="top"
 |{{en/S|Uitbreiding/Nl| TEKST }}
-|{{nl/Uitbreiding| TEKST |2= }}
+|{{Uitbreiding/Nl| TEKST |2= }}
 |- valign="top"
 |{{en/S|Actueel/Nl}}
 |{{nl/Actueel|1= }}
@@ -63,7 +63,7 @@ Er zijn 6 types (kleuren) van boxen voor berichten:
 {| style="border:0px; padding: 5px; width=100%;"
 |- valign="top"
 |width=150;|{{en/S|waarschuwing/Nl| TEKST }}
-|{{waarschuwing/Nl| TEKST }}
+|{{nl/Waarschuwing| TEKST }}
 |- valign="top"
 |{{en/S|Incompleet/Nl}}
 |{{nl/Incompleet|1= }}
@@ -133,7 +133,7 @@ Er zijn 6 types (kleuren) van boxen voor berichten:
 |{{nl/Kenmerken periode|0.5|1.0|align="center"|text=(0.5 t/m 1.0)}}
 |-
 |{{en/S|nightly| TEKST }}
-|{{nightly| TEKST }}
+|{{en/Nightly| TEKST }}
 |}
 
 == Andere ==
@@ -169,7 +169,7 @@ Er zijn 6 types (kleuren) van boxen voor berichten:
 
 == Navigatie ==
 
-Zie [[Category/en/Navigation]] voor een lijst van actuele navigatiesjablonen.
+Zie [[Category/en/Navigation|:Category:Navigation]] voor een lijst van actuele navigatiesjablonen.
 
 === [[Template/en/Navbox|Navbox]] ===
 
@@ -181,14 +181,14 @@ Zie [[Category/en/Navigation]] voor een lijst van actuele navigatiesjablonen.
 
 |group1 = groep 1
 |list1 = {{en/Navbox subgroup|group1 = Onderdeel 1
-            |list1  = {{nowrap begin}} Item 1 {{en/·w}} Item 2 {{en/·w}} Item 3 {{nowrap end}}
+            |list1  = {{en/Nowrap begin}} Item 1 {{en/·w}} Item 2 {{en/·w}} Item 3 {{en/Nowrap end}}
 
             |group2 = Onderdeel 2
-            |list2  = {{nowrap begin}} Item 1 {{en/·w}} Item 2 {{en/·w}} Item 3 {{nowrap end}}
+            |list2  = {{en/Nowrap begin}} Item 1 {{en/·w}} Item 2 {{en/·w}} Item 3 {{en/Nowrap end}}
            }}
 
 |group2 = groep 2
-|list2  = {{nowrap begin}} Item 1 {{en/·w}} Item 2 {{en/·w}} Item 3 {{nowrap end}}
+|list2  = {{en/Nowrap begin}} Item 1 {{en/·w}} Item 2 {{en/·w}} Item 3 {{en/Nowrap end}}
 }}
 
 == Verzoek om aanvullende sjablonen ==

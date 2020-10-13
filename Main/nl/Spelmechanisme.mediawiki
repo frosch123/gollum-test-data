@@ -1,4 +1,4 @@
-[[Translation:Main/en/Game mechanics]]{{en/-}}{{nl/Inhoudsopgave}}
+[[Translation:Main/en/Game mechanics]]{{nl/Inhoudsopgave}}
 
 Hier vind je informatie over hoe OpenTTD de cijfers in het spel berekent.
 
@@ -338,7 +338,7 @@ Weet niet zeker of het zo goed is vertaald, daarom originele tekst laten staan.-
 
 *Met de optie [[Main/en/Geavanceerde instellingen/Economie/Nl#Vloeiende economie inschakelen .28meer.2C kleinere veranderingen.29|vloeiende economie]] ingeschakeld zijn de productiewijzigingen per maand tussen 3% en 23%.
 **Industrieën met zeer lage productie (zo'n 12-40 ton per maand) hebben grotere kansen.
-**Primaire industrieën produceren 8 of 9 keer (10 keer is voor bos mogelijk) per maand. Maandelijkse productie kan worden berekend door de 'basisproductie' te vermenigvuldigen met het aantal keer per maand. Bijvoorbeeld: de basisproductie van een kolenmijn is 15 ton, de maandelijkse productie is dus 120 of 135 ton. De basisproductie is gemaximeerd op 255 dus is de maximale maandelijkse productie voor iedere industrie 2040 of 2295 (of 2550 voor bos). {{forum|Bron|topic=163733}}
+**Primaire industrieën produceren 8 of 9 keer (10 keer is voor bos mogelijk) per maand. Maandelijkse productie kan worden berekend door de 'basisproductie' te vermenigvuldigen met het aantal keer per maand. Bijvoorbeeld: de basisproductie van een kolenmijn is 15 ton, de maandelijkse productie is dus 120 of 135 ton. De basisproductie is gemaximeerd op 255 dus is de maximale maandelijkse productie voor iedere industrie 2040 of 2295 (of 2550 voor bos). {{en/Forum|Bron|topic=163733}}
 
 ====Voorbeelden====
 Wanneer de productie van een kolenmijn voor 70% is getransporteerd is er een kans van '''3%''' (4,5% * 67) op een verhoging van de productie met 3-23% en een kans van '''1,5%''' (4,5% * 33%) op een verlaging van de productie met 3-23% (met een gemiddelde van 13%):<br>
@@ -459,7 +459,7 @@ Lever 100 zakken post 100 landtegels verder af in 100 dagen:<br>
 
 '''Opmerkingen:'''
 * De exacte formule is veel complexer en iets nauwkeuriger door de afrondingsfout bij het omzetten van grotere afzonderlijke waarden. Zie
-[http://vcs.openttd.org/svn/browser/trunk/src/economy.cpp#L881 economy.cpp] "GetTransportedGoodsIncome()" and [[Main/nl/Vrachtinkomsten]].
+[http://vcs.openttd.org/svn/browser/trunk/src/economy.cpp#L881 economy.cpp] "GetTransportedGoodsIncome()" and [[Main/nl/Vrachtinkomsten|Vrachtinkomsten/Nl]].
 
 * Afstand wordt gemeten tussen de gelabelde delen van stations, niet tussen industrieën of voor de afstand die het voertuig heeft overbrugd. Het wordt berekend door de verschillen in de x- en y-coördinaten te berekenen (de [https://nl.wikipedia.org/wiki/Manhattan-metriek Manhattan-afstand], niet de afstand in vogelvlucht).
 
@@ -496,7 +496,7 @@ Stel nu voor dat een voertuig 1km-achtig/uur gaat: (1 * 16 * 256) / (74 * 2) * 2
 *Een schip dat "gestopt" is hervat de laatste snelheid onmiddellijk.
 
 ==== Treinen ==== 
-(met de [[Main/nl/realistische acceleratie|optie realistische treinacceleratie]])<br>
+(met de [[Main/nl/Realistische acceleratie|optie realistische treinacceleratie]])<br>
 *Treinen worden niet door heuvels beïnvloed wanneer ze sterk genoeg zijn.
 *Treinen mogen niet sneller dan 61 km/uur bij het binnen- en buitengaan van het depot.
 *Treinen kunnen een bocht van 45° maken zonder te vertragen.
@@ -602,7 +602,7 @@ Stel nu voor dat een voertuig 1km-achtig/uur gaat: (1 * 16 * 256) / (74 * 2) * 2
 * Versnellingstabellen voor niet-maglev treinen zijn te vinden op het forum: [https://www.tt-forums.net/viewtopic.php?f=31&t=55972&p=960678#p960672 tt-forum].
 * Remmen is tweemaal de versnelling, behalve wanneer een depot of station wordt binnengegaan.
 
-[[File:en/speed-limits.png]]
+[[File:en/Speed-limits.png]]
 
 ''Zie ook: [[Main/nl/Realistische acceleratie|Realistische acceleratie]] en [[Main/nl/Bochten|Bochten]].''
 

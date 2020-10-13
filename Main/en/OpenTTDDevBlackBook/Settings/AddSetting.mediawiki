@@ -84,7 +84,7 @@ The declaration of the variables are found in [http://svn.openttd.org/trunk/src/
 Note that the comments has a <code>/<</code> prefix for creating documentation with [http://docs.openttd.org/ doxygen]. 
 
 ===Variable name in config file - ''settings_gui.cpp''===
-The name that the variable will have in [[Main/en/openttd.cfg]] are defined in [http://svn.openttd.org/trunk/src/settings_gui.cpp settings_gui.cpp]. Here the specific subpage the variable will be shown on is also chosen. 
+The name that the variable will have in [[Main/en/Openttd.cfg|openttd.cfg]] are defined in [http://svn.openttd.org/trunk/src/settings_gui.cpp settings_gui.cpp]. Here the specific subpage the variable will be shown on is also chosen. 
 
 The Economy->Town looks like a good match, so we'll add these entries to <code>_settings_economy_towns[]</code>:
 

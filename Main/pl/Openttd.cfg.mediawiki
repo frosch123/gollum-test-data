@@ -1,7 +1,7 @@
 <!-- UWAGA!!!!!==========
 Podczas dodawania treści nie twórz ślepych stron, przynajmniej link do nich tutaj w ten sposób:
 
-:<small><<Powrót do [[Main/pl/Openttd.cfg]] (Plik konfiguracyjny OpenTTD)</small>
+:<small><<Powrót do [[Main/pl/Openttd.cfg|Openttd.cfg/Pl]] (Plik konfiguracyjny OpenTTD)</small>
 =========================== 
 -->[[Translation:Main/en/Openttd.cfg]]
 
@@ -18,7 +18,7 @@ Znajduje się w:
 <div class="mw-collapsible {{#ifeq:{{{expand}}}|text| |mw-collapsed}}" style="clear:both">
 <font color=grey>'''nieprawidłowy ''openttd.cfg'' , usunięty zostanie przywrócony, ale bez zapasowej kopii parametry utracone'''</font>
 <div class="mw-collapsible-content">
-<!--:[[Main/en/przykładowo link]] (text)-->
+<!--:[[Main/en/przykładowo link|przykładowo_link]] (text)-->
 W OpenTTD ''[http://www.wikipedia.org/wiki/pl:Plik_konfiguracyjny '''.cfg''']'' wykorzystuje [http://www.wikipedia.org/wiki/pl:INI strukturę pliku-ini]  , który jest wspólnym standardem magazynowania danych o aplikacji. Zmienne zorganizowane są w grupy, aby ułatwić przegląd i zmiany z użyciem [[Main/en/konsola/Pl#Zmienne|konsoli]] .
 
 Możliwa lokalizacja pliku openttd.cfg w systemie operacyjnym : folder instalacyjny OpenTTD (musi zostać utworzony po instalacji, przed pierwszym uruchomieniem) .
@@ -27,21 +27,21 @@ Możesz edytować plik za pomocą dowolnego edytora tekstu (zapisz go jako ANSI)
 
 ==<nowiki>[misc]</nowiki>==
 
-*[[Main/en/display opt]] = SHOW_TOWN_NAMES|SHOW_STATION_NAMES|SHOW_SIGNS|FULL_ANIMATION|FULL_DETAIL|WAYPOINTS
-*[[Main/en/news ticker sound]] <nowiki> = [true | false] </nowiki>
-*[[Main/en/fullscreen]] <nowiki> = [true | false] </nowiki>
+*[[Main/en/display opt|display_opt]] = SHOW_TOWN_NAMES|SHOW_STATION_NAMES|SHOW_SIGNS|FULL_ANIMATION|FULL_DETAIL|WAYPOINTS
+*[[Main/en/News ticker sound|news_ticker_sound]] <nowiki> = [true | false] </nowiki>
+*[[Main/en/Fullscreen|fullscreen]] <nowiki> = [true | false] </nowiki>
 *[[Main/en/graphicsset]]
 *[[Main/en/soundset]]
 *[[Main/en/musicset]]
 *[[Main/en/videodriver]]
-*[[Main/en/musicdriver]]
+*[[Main/en/Musicdriver|musicdriver]]
 *[[Main/en/sounddriver]]
-*[[Main/en/blitter]]
-*[[Main/en/language]] <i><nowiki> = filename.lng </nowiki></i>
-*[[Main/en/resolution]] <i><nowiki> = pixels_width, pixels_height </nowiki></i>
-*[[Main/en/screenshot format]]
-*[[Main/en/savegame format]]
-*[[Main/en/rightclick emulate]] <nowiki> = [true | false] </nowiki>
+*[[Main/en/Blitter|blitter]]
+*[[Main/en/Language|language]] <i><nowiki> = filename.lng </nowiki></i>
+*[[Main/en/Resolution|resolution]] <i><nowiki> = pixels_width, pixels_height </nowiki></i>
+*[[Main/en/Screenshot format|screenshot_format]]
+*[[Main/en/Savegame format|savegame_format]]
+*[[Main/en/Rightclick emulate|rightclick_emulate]] <nowiki> = [true | false] </nowiki>
 *[[Main/en/Unicode|small_font]]
 *[[Main/en/Unicode|medium_font]]
 *[[Main/en/Unicode|large_font]]
@@ -54,257 +54,257 @@ Możesz edytować plik za pomocą dowolnego edytora tekstu (zapisz go jako ANSI)
 *[[Main/en/Unicode|medium_aa]]
 *[[Main/en/Unicode|large_aa]]
 *[[Main/en/Unicode|mono_aa]]
-*[[Main/en/sprite cache size px]]
-*[[Main/en/player face]]
-*[[Main/en/transparency options (variable)|transparency_options]]
-*[[Main/en/transparency locks]]
-*[[Main/en/invisibility options]]
-*[[Main/en/keyboard]]
-*[[Main/en/keyboard|keyboard_caps]]
-*[[Main/en/last newgrf count]] <nowiki> = last count </nowiki>
+*[[Main/en/sprite cache size px|sprite_cache_size_px]]
+*[[Main/en/player face|player_face]]
+*[[Main/en/Transparency options (variable)|transparency_options]]
+*[[Main/en/Transparency locks|transparency_locks]]
+*[[Main/en/Invisibility options|invisibility_options]]
+*[[Main/en/Keyboard|keyboard]]
+*[[Main/en/Keyboard|keyboard_caps]]
+*[[Main/en/last newgrf count|last_newgrf_count]] <nowiki> = last count </nowiki>
 *[[Main/en/support8bpp]] <nowiki> = [no|system|hardware] </nowiki>
 
 ==<nowiki>[difficulty]</nowiki>==
-*[[Main/en/competitor speed]] <nowiki> = [0 | 1 | 2 | 3 | 4] </nowiki>
-*[[Main/en/construction cost]] <nowiki> = [0 | 1 | 2] </nowiki>
-*[[Main/en/diff level]] <nowiki> = [0 | 1 | 2 | 3] </nowiki>
-*[[Main/en/disasters (settings)|disasters]] <nowiki> = [true | false] </nowiki>
-*[[Main/en/economy (settings)|economy]] <nowiki> = [true | false] </nowiki>
-*[[Main/en/industry density]] <nowiki> = [0 | 1 | 2 | 3 | 4 | 5] </nowiki>
-*[[Main/en/initial interest]] <nowiki> = [2 | 3 | 4] </nowiki>
-*[[Main/en/line reverse mode]] <nowiki> = [true | false] </nowiki>
-*[[Main/en/max loan]] <nowiki> = [100000 | 150000 | 200000 | 250000 | 300000 | 350000 | 400000 | 450000 | 500000] </nowiki>
-*[[Main/en/max no competitors]] <nowiki> = [0 <= n <= 14] </nowiki>
-*[[Main/en/number industries]] <nowiki> = [0 | 1 | 2 | 3 | 4] </nowiki>
-*[[Main/en/number towns]] <nowiki> = [0 | 1 | 2 | 3 | 4] </nowiki>
-*[[Main/en/quantity sea lakes]] <nowiki> = [0 | 1 | 2 | 3 | 4] </nowiki>
-*[[Main/en/subsidy multiplier]] <nowiki> = [0 | 1 | 2 | 3] </nowiki>
-*[[Main/en/terrain type]] <nowiki> = [0 | 1 | 2 | 3 | 4] </nowiki>
-*[[Main/en/town council tolerance]] <nowiki> = [0 | 1 | 2] </nowiki>
-*[[Main/en/vehicle breakdowns]] <nowiki> = [0 | 1 | 2] </nowiki>
-*[[Main/en/vehicle costs]] <nowiki> = [0 | 1 | 2] </nowiki>
+*[[Main/en/Competitor speed|competitor_speed]] <nowiki> = [0 | 1 | 2 | 3 | 4] </nowiki>
+*[[Main/en/Construction cost|construction_cost]] <nowiki> = [0 | 1 | 2] </nowiki>
+*[[Main/en/Diff level|diff_level]] <nowiki> = [0 | 1 | 2 | 3] </nowiki>
+*[[Main/en/Disasters (settings)|disasters]] <nowiki> = [true | false] </nowiki>
+*[[Main/en/Economy (settings)|economy]] <nowiki> = [true | false] </nowiki>
+*[[Main/en/Industry density|industry_density]] <nowiki> = [0 | 1 | 2 | 3 | 4 | 5] </nowiki>
+*[[Main/en/Initial interest|initial_interest]] <nowiki> = [2 | 3 | 4] </nowiki>
+*[[Main/en/Line reverse mode|line_reverse_mode]] <nowiki> = [true | false] </nowiki>
+*[[Main/en/Max loan|max_loan]] <nowiki> = [100000 | 150000 | 200000 | 250000 | 300000 | 350000 | 400000 | 450000 | 500000] </nowiki>
+*[[Main/en/Max no competitors|max_no_competitors]] <nowiki> = [0 <= n <= 14] </nowiki>
+*[[Main/en/Number industries|number_industries]] <nowiki> = [0 | 1 | 2 | 3 | 4] </nowiki>
+*[[Main/en/Number towns|number_towns]] <nowiki> = [0 | 1 | 2 | 3 | 4] </nowiki>
+*[[Main/en/Quantity sea lakes|quantity_sea_lakes]] <nowiki> = [0 | 1 | 2 | 3 | 4] </nowiki>
+*[[Main/en/Subsidy multiplier|subsidy_multiplier]] <nowiki> = [0 | 1 | 2 | 3] </nowiki>
+*[[Main/en/Terrain type|terrain_type]] <nowiki> = [0 | 1 | 2 | 3 | 4] </nowiki>
+*[[Main/en/Town council tolerance|town_council_tolerance]] <nowiki> = [0 | 1 | 2] </nowiki>
+*[[Main/en/Vehicle breakdowns|vehicle_breakdowns]] <nowiki> = [0 | 1 | 2] </nowiki>
+*[[Main/en/Vehicle costs|vehicle_costs]] <nowiki> = [0 | 1 | 2] </nowiki>
 
 ==<nowiki>[game_creation]</nowiki>==
-*[[Main/en/town name]]
-*[[Main/en/landscape]]
-*[[Main/en/snow line height]]
-*[[Main/en/starting year]]
-*[[Main/en/land generator]]
-*[[Main/en/oil refinery limit]]
-*[[Main/en/tgen smoothness]]
-*[[Main/en/variety]]
-*[[Main/en/generation seed]]
-*[[Main/en/tree placer]]
-*[[Main/en/heightmap rotation]]
-*[[Main/en/se flat world height]]
-*[[Main/en/map x]]
-*[[Main/en/map y]]
-*[[Main/en/water borders]]
-*[[Main/en/custom town number]]
-*[[Main/en/custom sea level]]
-*[[Main/en/min river length]]
-*[[Main/en/river route random]]
-*[[Main/en/amount of rivers]]
+*[[Main/en/Town name|town_name]]
+*[[Main/en/Landscape|landscape]]
+*[[Main/en/Snow line height|snow_line_height]]
+*[[Main/en/Starting year|starting_year]]
+*[[Main/en/Land generator|land_generator]]
+*[[Main/en/Oil refinery limit|oil_refinery_limit]]
+*[[Main/en/Tgen smoothness|tgen_smoothness]]
+*[[Main/en/Variety|variety]]
+*[[Main/en/generation seed|generation_seed]]
+*[[Main/en/Tree placer|tree_placer]]
+*[[Main/en/heightmap rotation|heightmap_rotation]]
+*[[Main/en/se flat world height|se_flat_world_height]]
+*[[Main/en/Map size|map_x]]
+*[[Main/en/Map size|map_y]]
+*[[Main/en/Water borders|water_borders]]
+*[[Main/en/Custom town number|custom_town_number]]
+*[[Main/en/Custom sea level|custom_sea_level]]
+*[[Main/en/min river length|min_river_length]]
+*[[Main/en/river route random|river_route_random]]
+*[[Main/en/amount of rivers|amount_of_rivers]]
 
 Old or custom settings:
-*[[Main/en/desert amount]]
-*[[Main/en/snow line]]
-*[[Main/en/tree line]]
-*[[Main/en/tree line height]]
+*[[Main/en/desert amount|desert_amount]]
+*[[Main/en/Snow line height|snow_line]]
+*[[Main/en/tree line|tree_line]]
+*[[Main/en/tree line height|tree_line_height]]
 
 ==<nowiki>[vehicle]</nowiki>==
-*[[Main/en/disable elrails]] <nowiki> = [true | false] </nowiki>
+*[[Main/en/Advanced Settings/Vehicles#Disable electric rails|disable_elrails]] <nowiki> = [true | false] </nowiki>
 *[[Main/en/Settings/Dynamic Engines|dynamic_engines]] <nowiki> = [true | false] </nowiki>
-*[[Main/en/extend vehicle life]]
-*[[Main/en/freight trains]]
-*[[Main/en/max aircraft]]
-*[[Main/en/max roadveh]]
-*[[Main/en/max ships]]
+*[[Main/en/Extend vehicle life|extend_vehicle_life]]
+*[[Main/en/Freight trains|freight_trains]]
+*[[Main/en/Max aircraft|max_aircraft]]
+*[[Main/en/Max roadveh|max_roadveh]]
+*[[Main/en/Max ships|max_ships]]
 *[[Main/en/Advanced Settings/Vehicles#Maximum train length|max_train_length]]
-*[[Main/en/max trains]]
-*[[Main/en/never expire vehicles]] <nowiki> = [true | false] </nowiki>
-*[[Main/en/plane crashes]] <nowiki> = [0 | 1 | 2] </nowiki>
-*[[Main/en/plane speed]]
-*[[Main/en/road side]] <nowiki> = [left | right] </nowiki>
+*[[Main/en/Max trains|max_trains]]
+*[[Main/en/Never expire vehicles|never_expire_vehicles]] <nowiki> = [true | false] </nowiki>
+*[[Main/en/Plane crashes|plane_crashes]] <nowiki> = [0 | 1 | 2] </nowiki>
+*[[Main/en/Plane speed|plane_speed]]
+*[[Main/en/Road side|road_side]] <nowiki> = [left | right] </nowiki>
 *[[Main/en/Settings/Road vehicle acceleration model|roadveh_acceleration_model]]
 *[[Main/en/Settings/Road vehicle slope steepness|roadveh_slope_steepness]]
-*[[Main/en/servint aircraft]]
-*[[Main/en/servint ispercent]] <nowiki> = [true | false] </nowiki>
-*[[Main/en/servint roadveh]]
-*[[Main/en/servint ships]]
-*[[Main/en/servint trains]]
-*[[Main/en/train acceleration model]]
-*[[Main/en/train slope steepness]]
-*[[Main/en/wagon speed limits]] <nowiki> = [true | false] </nowiki>
+*[[Main/en/Servint aircraft|servint_aircraft]]
+*[[Main/en/Servint ispercent|servint_ispercent]] <nowiki> = [true | false] </nowiki>
+*[[Main/en/Servint roadveh|servint_roadveh]]
+*[[Main/en/Servint ships|servint_ships]]
+*[[Main/en/Servint trains|servint_trains]]
+*[[Main/en/Train acceleration model|train_acceleration_model]]
+*[[Main/en/Train slope steepness|train_slope_steepness]]
+*[[Main/en/Wagon speed limits|wagon_speed_limits]] <nowiki> = [true | false] </nowiki>
 
 Old settings:
-*[[Main/en/mammoth trains]] <nowiki> = [true | false] </nowiki>
+*[[Main/en/Mammoth trains|mammoth_trains]] <nowiki> = [true | false] </nowiki>
 
 ==<nowiki>[construction]</nowiki>==
-*[[Main/en/autoslope]] <nowiki> = [true | false] </nowiki>
-*[[Main/en/build on slopes]] <nowiki> = [true | false] </nowiki>
+*[[Main/en/Landscaping#Autoslope|autoslope]] <nowiki> = [true | false] </nowiki>
+*[[Main/en/Build on slopes|build_on_slopes]] <nowiki> = [true | false] </nowiki>
 *[[Main/en/Settings/Clear frame burst|clear_frame_burst]]
 *[[Main/en/Settings/Clear per 64k frames|clear_per_64k_frames]]
-*[[Main/en/command pause level]]
-*[[Main/en/extra dynamite]] <nowiki> = [true | false] </nowiki>
-*[[Main/en/extra tree placement]]
-*[[Main/en/freeform edges]] <nowiki> = [true | false] </nowiki>
-*[[Main/en/industry platform]]
+*[[Main/en/command pause level|command_pause_level]]
+*[[Main/en/Extra dynamite|extra_dynamite]] <nowiki> = [true | false] </nowiki>
+*[[Main/en/Extra tree placement|extra_tree_placement]]
+*[[Main/en/Freeform edges|freeform_edges]] <nowiki> = [true | false] </nowiki>
+*[[Main/en/industry platform|industry_platform]]
 *[[Main/en/Longer bridges|max_bridge_length]]
 *[[Main/en/Longer bridges|max_tunnel_length]]
 *[[Main/en/Build raw material industries|raw_industry_construction]]
-*[[Main/en/road stop on competitor road]] <nowiki> = [true | false] </nowiki>
-*[[Main/en/road stop on town road]] <nowiki> = [true | false] </nowiki>
-*[[Main/en/terraform frame burst]]
-*[[Main/en/terraform per 64k frames]]
+*[[Main/en/Road stop on competitor road|road_stop_on_competitor_road]] <nowiki> = [true | false] </nowiki>
+*[[Main/en/Road stop on town road|road_stop_on_town_road]] <nowiki> = [true | false] </nowiki>
+*[[Main/en/terraform frame burst|terraform_frame_burst]]
+*[[Main/en/terraform per 64k frames|terraform_per_64k_frames]]
 *[[Main/en/signal side|train_signal_side]] <nowiki> = [true | false] </nowiki>
-*[[Main/en/tree frame burst]]
-*[[Main/en/tree per 64k frames]]
+*[[Main/en/tree frame burst|tree_frame_burst]]
+*[[Main/en/tree per 64k frames|tree_per_64k_frames]]
 
 Old settings:
 *[[Main/en/Longer bridges|longbridges]] <nowiki> = [true | false] </nowiki>
 
 ==<nowiki>[station]</nowiki>==
-*[[Main/en/adjacent stations]] <nowiki> = [true | false] </nowiki>
-*[[Main/en/distant join station]] <nowiki> = [true | false] </nowiki>
-*[[Main/en/modified catchment]] <nowiki> = [true | false] </nowiki>
-*[[Main/en/station spread]]
+*[[Main/en/adjacent stations|adjacent_stations]] <nowiki> = [true | false] </nowiki>
+*[[Main/en/Distant join station|distant_join_station]] <nowiki> = [true | false] </nowiki>
+*[[Main/en/Modified catchment|modified_catchment]] <nowiki> = [true | false] </nowiki>
+*[[Main/en/station spread|station_spread]]
 
 Old Settings:
-*[[Main/en/always small airport]] <nowiki> = [true | false] </nowiki>
-*[[Main/en/join stations]] <nowiki> = [true | false] </nowiki>
-*[[Main/en/nonuniform stations]] <nowiki> = [true | false] </nowiki>
-*[[Main/en/never expire airports]] <nowiki> = [true | false] </nowiki>
+*[[Main/en/always small airport|always_small_airport]] <nowiki> = [true | false] </nowiki>
+*[[Main/en/join stations|join_stations]] <nowiki> = [true | false] </nowiki>
+*[[Main/en/Nonuniform stations|nonuniform_stations]] <nowiki> = [true | false] </nowiki>
+*[[Main/en/never expire airports|never_expire_airports]] <nowiki> = [true | false] </nowiki>
 
 ==<nowiki>[economy]</nowiki>==
-*[[Main/en/allow shares]] <nowiki> = [true | false] </nowiki>
-*[[Main/en/allow town level crossings]]
-*[[Main/en/allow town roads]] <nowiki> = [true | false] </nowiki>
-*[[Main/en/bribe]] <nowiki> = [true | false] </nowiki>
-*[[Main/en/dist local authority]]
-*[[Main/en/exclusive rights]] <nowiki> = [true | false] </nowiki>
-*[[Main/en/feeder payment share]]
+*[[Main/en/Allow shares|allow_shares]] <nowiki> = [true | false] </nowiki>
+*[[Main/en/allow town level crossings|allow_town_level_crossings]]
+*[[Main/en/Allow town roads|allow_town_roads]] <nowiki> = [true | false] </nowiki>
+*[[Main/en/Bribe authority|bribe]] <nowiki> = [true | false] </nowiki>
+*[[Main/en/dist local authority|dist_local_authority]]
+*[[Main/en/exclusive rights|exclusive_rights]] <nowiki> = [true | false] </nowiki>
+*[[Main/en/feeder payment share|feeder_payment_share]]
 *[[Main/en/Advanced Settings/Economy#Founding towns in game|found_town]]
-*[[Main/en/fund buildings]]
-*[[Main/en/fund roads]]
-*[[Main/en/give money]] <nowiki> = [true | false] </nowiki>
-*[[Main/en/inflation]] <nowiki> = [true | false] </nowiki>
+*[[Main/en/fund buildings|fund_buildings]]
+*[[Main/en/fund roads|fund_roads]]
+*[[Main/en/give money|give_money]] <nowiki> = [true | false] </nowiki>
+*[[Main/en/Inflation|inflation]] <nowiki> = [true | false] </nowiki>
 *[[Main/en/Advanced Settings/Economy#Maintenance of infrastructure|infrastructure_maintenance]]
-*[[Main/en/initial city size]]
-*[[Main/en/larger towns]]
-*[[Main/en/mod road rebuild]] <nowiki> = [true | false] </nowiki>
-*[[Main/en/multiple industry per town]] <nowiki> = [true | false] </nowiki>
-*[[Main/en/smooth economy]] <nowiki> = [true | false] </nowiki>
+*[[Main/en/initial city size|initial_city_size]]
+*[[Main/en/Larger towns|larger_towns]]
+*[[Main/en/Mod road rebuild|mod_road_rebuild]] <nowiki> = [true | false] </nowiki>
+*[[Main/en/Multiple industries per town|multiple_industry_per_town]] <nowiki> = [true | false] </nowiki>
+*[[Main/en/Smooth economy|smooth_economy]] <nowiki> = [true | false] </nowiki>
 *[[Main/en/Advanced Settings/Stations#Allow town controlled noise level for airports|station_noise_level]] <nowiki> = [true | false] </nowiki>
-*[[Main/en/town growth rate]]
-*[[Main/en/town layout]]
+*[[Main/en/Town growth rate|town_growth_rate]]
+*[[Main/en/Town layout|town_layout]]
 
 Old settings:
-*[[Main/en/same industry close]] <nowiki> = [true | false] </nowiki>
-*[[Main/en/town noise population]]
+*[[Main/en/same industry close|same_industry_close]] <nowiki> = [true | false] </nowiki>
+*[[Main/en/town noise population|town_noise_population]]
 
 ==<nowiki>[linkgraph]</nowiki>==
 * [[Main/en/accuracy]] = 16
-* [[Main/en/demand distance]] = 100
-* [[Main/en/demand size]] = 100
-* [[Main/en/distribution armoured]] = [0 | 1 | 2]
-* [[Main/en/distribution default]] = [0 | 1]
-* [[Main/en/distribution mail]] = [0 | 1 | 2]
-* [[Main/en/distribution pax]] = [0 | 1 | 2]
-* [[Main/en/recalc interval]] = 4
-* [[Main/en/recalc time]] = 16
-* [[Main/en/short path saturation]] = 80
+* [[Main/en/demand distance|demand_distance]] = 100
+* [[Main/en/demand size|demand_size]] = 100
+* [[Main/en/Distribution armoured|distribution_armoured]] = [0 | 1 | 2]
+* [[Main/en/distribution default|distribution_default]] = [0 | 1]
+* [[Main/en/distribution mail|distribution_mail]] = [0 | 1 | 2]
+* [[Main/en/distribution pax|distribution_pax]] = [0 | 1 | 2]
+* [[Main/en/recalc interval|recalc_interval]] = 4
+* [[Main/en/recalc time|recalc_time]] = 16
+* [[Main/en/short path saturation|short_path_saturation]] = 80
 
 ==<nowiki>[pf]</nowiki>==
-*[[Main/en/forbid 90 deg]] <nowiki> = [true | false] </nowiki>
-*[[Main/en/npf.maximum go to depot penalty]]
-*[[Main/en/npf.npf buoy penalty]]
+*[[Main/en/forbid 90 deg|forbid_90_deg]] <nowiki> = [true | false] </nowiki>
+*[[Main/en/npf.maximum go to depot penalty|npf.maximum_go_to_depot_penalty]]
+*[[Main/en/npf.npf buoy penalty|npf.npf_buoy_penalty]]
 *[[Main/en/Advanced path signal options %26 features|npf.npf_crossing_penalty]]
-*[[Main/en/npf.npf max search nodes]]
-*[[Main/en/npf.npf rail curve penalty]]
-*[[Main/en/npf.npf rail depot reverse penalty]]
-*[[Main/en/npf.npf rail firstred exit penalty]]
-*[[Main/en/npf.npf rail firstred penalty]]
-*[[Main/en/npf.npf rail lastred penalty]]
+*[[Main/en/npf.npf max search nodes|npf.npf_max_search_nodes]]
+*[[Main/en/npf.npf rail curve penalty|npf.npf_rail_curve_penalty]]
+*[[Main/en/npf.npf rail depot reverse penalty|npf.npf_rail_depot_reverse_penalty]]
+*[[Main/en/npf.npf rail firstred exit penalty|npf.npf_rail_firstred_exit_penalty]]
+*[[Main/en/npf.npf rail firstred penalty|npf.npf_rail_firstred_penalty]]
+*[[Main/en/npf.npf rail lastred penalty|npf.npf_rail_lastred_penalty]]
 *[[Main/en/Advanced path signal options %26 features|npf.npf_rail_pbs_cross_penalty]]
-*[[Main/en/npf.npf rail pbs signal back penalty]]
-*[[Main/en/npf.npf rail slope penalty]]
-*[[Main/en/npf.npf rail station penalty]]
-*[[Main/en/npf.npf road curve penalty]]
-*[[Main/en/npf.npf road drive through penalty]]
-*[[Main/en/npf.npf water curve penalty]]
-*[[Main/en/opf.pf maxdepth]]
-*[[Main/en/opf.pf maxlength]]
-*[[Main/en/path backoff interval]]
-*[[Main/en/pathfinder for roadvehs]]
-*[[Main/en/pathfinder for ships]]
-*[[Main/en/pathfinder for trains]]
-*[[Main/en/reserve paths]] <nowiki> = [true | false] </nowiki>
-*[[Main/en/roadveh queue]] <nowiki> = [true | false] </nowiki>
-*[[Main/en/wait for pbs path]]
-*[[Main/en/wait oneway signal]]
-*[[Main/en/wait twoway signal]]
-*[[Main/en/yapf.disable node optimization]] <nowiki> = [true | false] </nowiki>
-*[[Main/en/yapf.max search nodes]]
-*[[Main/en/yapf.maximum go to depot penalty]]
-*[[Main/en/yapf.rail crossing penalty]]
-*[[Main/en/yapf.rail curve45 penalty]]
-*[[Main/en/yapf.rail curve90 penalty]]
-*[[Main/en/yapf.rail depot reverse penalty]]
+*[[Main/en/npf.npf rail pbs signal back penalty|npf.npf_rail_pbs_signal_back_penalty]]
+*[[Main/en/npf.npf rail slope penalty|npf.npf_rail_slope_penalty]]
+*[[Main/en/npf.npf rail station penalty|npf.npf_rail_station_penalty]]
+*[[Main/en/npf.npf road curve penalty|npf.npf_road_curve_penalty]]
+*[[Main/en/npf.npf road drive through penalty|npf.npf_road_drive_through_penalty]]
+*[[Main/en/npf.npf water curve penalty|npf.npf_water_curve_penalty]]
+*[[Main/en/opf.pf maxdepth|opf.pf_maxdepth]]
+*[[Main/en/opf.pf maxlength|opf.pf_maxlength]]
+*[[Main/en/Path backoff interval|path_backoff_interval]]
+*[[Main/en/pathfinder for roadvehs|pathfinder_for_roadvehs]]
+*[[Main/en/pathfinder for ships|pathfinder_for_ships]]
+*[[Main/en/pathfinder for trains|pathfinder_for_trains]]
+*[[Main/en/Reserve paths|reserve_paths]] <nowiki> = [true | false] </nowiki>
+*[[Main/en/roadveh queue|roadveh_queue]] <nowiki> = [true | false] </nowiki>
+*[[Main/en/Wait for pbs path|wait_for_pbs_path]]
+*[[Main/en/Wait oneway signal|wait_oneway_signal]]
+*[[Main/en/Wait twoway signal|wait_twoway_signal]]
+*[[Main/en/yapf.disable node optimization|yapf.disable_node_optimization]] <nowiki> = [true | false] </nowiki>
+*[[Main/en/yapf.max search nodes|yapf.max_search_nodes]]
+*[[Main/en/yapf.maximum go to depot penalty|yapf.maximum_go_to_depot_penalty]]
+*[[Main/en/yapf.rail crossing penalty|yapf.rail_crossing_penalty]]
+*[[Main/en/yapf.rail curve45 penalty|yapf.rail_curve45_penalty]]
+*[[Main/en/yapf.rail curve90 penalty|yapf.rail_curve90_penalty]]
+*[[Main/en/yapf.rail depot reverse penalty|yapf.rail_depot_reverse_penalty]]
 *[[Main/en/Advanced path signal options %26 features|yapf.rail_doubleslip_penalty]]
-*[[Main/en/yapf.rail firstred exit penalty]]
-*[[Main/en/yapf.rail firstred penalty]]
-*[[Main/en/yapf.rail firstred twoway eol]] <nowiki> = [true | false] </nowiki>
-*[[Main/en/yapf.rail lastred exit penalty]]
-*[[Main/en/yapf.rail lastred penalty]]
-*[[Main/en/yapf.rail longer platform penalty]]
-*[[Main/en/yapf.rail longer platform per tile penalty]]
-*[[Main/en/yapf.rail look ahead max signals]]
-*[[Main/en/yapf.rail look ahead signal p0]]
-*[[Main/en/yapf.rail look ahead signal p1]]
-*[[Main/en/yapf.rail look ahead signal p2]]
-*[[Main/en/yapf.rail pbs cross penalty]]
+*[[Main/en/yapf.rail firstred exit penalty|yapf.rail_firstred_exit_penalty]]
+*[[Main/en/yapf.rail firstred penalty|yapf.rail_firstred_penalty]]
+*[[Main/en/yapf.rail firstred twoway eol|yapf.rail_firstred_twoway_eol]] <nowiki> = [true | false] </nowiki>
+*[[Main/en/yapf.rail lastred exit penalty|yapf.rail_lastred_exit_penalty]]
+*[[Main/en/yapf.rail lastred penalty|yapf.rail_lastred_penalty]]
+*[[Main/en/yapf.rail longer platform penalty|yapf.rail_longer_platform_penalty]]
+*[[Main/en/yapf.rail longer platform per tile penalty|yapf.rail_longer_platform_per_tile_penalty]]
+*[[Main/en/yapf.rail look ahead max signals|yapf.rail_look_ahead_max_signals]]
+*[[Main/en/yapf.rail look ahead signal p0|yapf.rail_look_ahead_signal_p0]]
+*[[Main/en/yapf.rail look ahead signal p1|yapf.rail_look_ahead_signal_p1]]
+*[[Main/en/yapf.rail look ahead signal p2|yapf.rail_look_ahead_signal_p2]]
+*[[Main/en/yapf.rail pbs cross penalty|yapf.rail_pbs_cross_penalty]]
 *[[Main/en/Advanced path signal options %26 features|yapf.rail_pbs_signal_back_penalty]]
 *[[Main/en/Advanced path signal options %26 features|yapf.rail_pbs_station_penalty]]
-*[[Main/en/yapf.rail shorter platform penalty]]
-*[[Main/en/yapf.rail shorter platform per tile penalty]]
-*[[Main/en/yapf.rail slope penalty]]
+*[[Main/en/yapf.rail shorter platform penalty|yapf.rail_shorter_platform_penalty]]
+*[[Main/en/yapf.rail shorter platform per tile penalty|yapf.rail_shorter_platform_per_tile_penalty]]
+*[[Main/en/yapf.rail slope penalty|yapf.rail_slope_penalty]]
 *[[Main/en/Advanced path signal options %26 features|yapf.rail_station_penalty]]
-*[[Main/en/yapf.road crossing penalty]]
-*[[Main/en/yapf.road curve penalty]]
-*[[Main/en/yapf.road slope penalty]]
-*[[Main/en/yapf.road stop penalty]]
+*[[Main/en/yapf.road crossing penalty|yapf.road_crossing_penalty]]
+*[[Main/en/yapf.road curve penalty|yapf.road_curve_penalty]]
+*[[Main/en/yapf.road slope penalty|yapf.road_slope_penalty]]
+*[[Main/en/yapf.road stop penalty|yapf.road_stop_penalty]]
 
 ==<nowiki>[order]</nowiki>==
-*[[Main/en/gradual loading]] <nowiki> = [true | false] </nowiki>
-*[[Main/en/improved load]] <nowiki> = [true | false] </nowiki>
-*[[Main/en/no servicing if no breakdowns]] <nowiki> = [true | false] </nowiki>
+*[[Main/en/gradual loading|gradual_loading]] <nowiki> = [true | false] </nowiki>
+*[[Main/en/Improved load|improved_load]] <nowiki> = [true | false] </nowiki>
+*[[Main/en/No servicing if no breakdowns|no_servicing_if_no_breakdowns]] <nowiki> = [true | false] </nowiki>
 *[[Main/en/selectgoods]] <nowiki> = [true | false] </nowiki>
 *[[Main/en/serviceathelipad]] <nowiki> = [true | false] </nowiki>
 
 Old settings:
-*[[Main/en/gotodepot]] <nowiki> = [true | false] </nowiki>
+*[[Main/en/Gotodepot|gotodepot]] <nowiki> = [true | false] </nowiki>
 *[[Main/en/timetabling]] <nowiki> = [true | false] </nowiki>
 
 ==<nowiki>[script]</nowiki>==
-*[[Main/en/script max opcode till suspend]] = 10000
-*[[Main/en/settings profile]] = easy
+*[[Main/en/script max opcode till suspend|script_max_opcode_till_suspend]] = 10000
+*[[Main/en/settings profile|settings_profile]] = easy
 
 ==<nowiki>[ai]</nowiki>==
-*[[Main/en/ai disable veh aircraft]] <nowiki> = [true | false] </nowiki>
-*[[Main/en/ai disable veh roadveh]] <nowiki> = [true | false] </nowiki>
-*[[Main/en/ai disable veh train]] <nowiki> = [true | false] </nowiki>
-*[[Main/en/ai disable veh ship]] <nowiki> = [true | false] </nowiki>
-*[[Main/en/ai in multiplayer]] <nowiki> = [true | false] </nowiki>
+*[[Main/en/Ai disable veh aircraft|ai_disable_veh_aircraft]] <nowiki> = [true | false] </nowiki>
+*[[Main/en/Ai disable veh roadveh|ai_disable_veh_roadveh]] <nowiki> = [true | false] </nowiki>
+*[[Main/en/Ai disable veh train|ai_disable_veh_train]] <nowiki> = [true | false] </nowiki>
+*[[Main/en/Disable ships for computer|ai_disable_veh_ship]] <nowiki> = [true | false] </nowiki>
+*[[Main/en/ai in multiplayer|ai_in_multiplayer]] <nowiki> = [true | false] </nowiki>
 
 Old Settings:
-*[[Main/en/script max opcode till suspend| ai_max_opcode_till_suspend]]
+*[[Main/en/script max opcode till suspend|ai_max_opcode_till_suspend]]
 
 ==<nowiki>[locale]</nowiki>==
-*[[Main/en/currency]]
-*[[Main/en/digit decimal separator]]
-*[[Main/en/digit group separator]]
-*[[Main/en/digit group separator currency]]
+*[[Main/en/Currency|currency]]
+*[[Main/en/digit decimal separator|digit_decimal_separator]]
+*[[Main/en/digit group separator|digit_group_separator]]
+*[[Main/en/digit group separator currency|digit_group_separator_currency]]
 *[[Main/en/units|units_force]]
 *[[Main/en/units|units_height]]
 *[[Main/en/units|units_power]]
@@ -313,85 +313,85 @@ Old Settings:
 *[[Main/en/units|units_weight]]
 
 ==<nowiki>[gui]</nowiki>==
-*[[Main/en/advanced vehicle list]]
-*[[Main/en/ai developer tools]]
-*[[Main/en/auto euro]] <nowiki> = [true | false] </nowiki>
-*[[Main/en/autoscroll]] <nowiki> = [true | false] </nowiki>
-*[[Main/en/autosave]]
-*[[Main/en/autosave on exit]] <nowiki> = [true | false] </nowiki>
-*[[Main/en/coloured news year]]
-*[[Main/en/console backlog length]]
-*[[Main/en/console backlog timeout]]
-*[[Main/en/cycle signal types]]
-*[[Main/en/date format in default names]]
-*[[Main/en/default rail type]]
-*[[Main/en/default signal type]]
+*[[Main/en/advanced vehicle list|advanced_vehicle_list]]
+*[[Main/en/ai developer tools|ai_developer_tools]]
+*[[Main/en/auto euro|auto_euro]] <nowiki> = [true | false] </nowiki>
+*[[Main/en/Autoscroll|autoscroll]] <nowiki> = [true | false] </nowiki>
+*[[Main/en/Autosave|autosave]]
+*[[Main/en/autosave on exit|autosave_on_exit]] <nowiki> = [true | false] </nowiki>
+*[[Main/en/coloured news year|coloured_news_year]]
+*[[Main/en/console backlog length|console_backlog_length]]
+*[[Main/en/console backlog timeout|console_backlog_timeout]]
+*[[Main/en/Cycle signal types|cycle_signal_types]]
+*[[Main/en/date format in default names|date_format_in_default_names]]
+*[[Main/en/default rail type|default_rail_type]]
+*[[Main/en/default signal type|default_signal_type]]
 *[[Main/en/developer]]
-*[[Main/en/disable unsuitable building]]
-*[[Main/en/drag signals density]]
-*[[Main/en/drag signal fixed distance]]
-*[[Main/en/enable signal gui]] <nowiki> = [true | false] </nowiki>
-*[[Main/en/errmsg duration]]
-*[[Main/en/expenses layout]] <nowiki> = [true | false] </nowiki>
-*[[Main/en/graph line thickness]]
-*[[Main/en/hover delay]]
-*[[Main/en/keep all autosave]] <nowiki> = [true | false] </nowiki>
-*[[Main/en/left mouse btn scrolling]] <nowiki> = [true | false] </nowiki>
-*[[Main/en/link terraform toolbar]] <nowiki> = [true | false] </nowiki>
+*[[Main/en/disable unsuitable building|disable_unsuitable_building]]
+*[[Main/en/drag signals density|drag_signals_density]]
+*[[Main/en/drag signal fixed distance|drag_signal_fixed_distance]]
+*[[Main/en/enable signal gui|enable_signal_gui]] <nowiki> = [true | false] </nowiki>
+*[[Main/en/errmsg duration|errmsg_duration]]
+*[[Main/en/expenses layout|expenses_layout]] <nowiki> = [true | false] </nowiki>
+*[[Main/en/Settings/Graph line thickness|graph_line_thickness]]
+*[[Main/en/hover delay|hover_delay]]
+*[[Main/en/keep all autosave|keep_all_autosave]] <nowiki> = [true | false] </nowiki>
+*[[Main/en/left mouse btn scrolling|left_mouse_btn_scrolling]] <nowiki> = [true | false] </nowiki>
+*[[Main/en/link terraform toolbar|link_terraform_toolbar]] <nowiki> = [true | false] </nowiki>
 *[[Main/en/liveries]]
-*[[Main/en/loading indicators]]
-*[[Main/en/lost train warn]] <nowiki> = [true | false] </nowiki>
-*[[Main/en/max num autosaves]] <nowiki> = [true | false] </nowiki>
-*[[Main/en/measure tooltip]] <nowiki> = [true | false] </nowiki>
-*[[Main/en/missing strings threshold]]
-*[[Main/en/network chat box height]]
-*[[Main/en/network chat box width]]
-*[[Main/en/new nonstop]] <nowiki> = [true | false] </nowiki>
-*[[Main/en/newgrf default palette]]
+*[[Main/en/Loading indicators|loading_indicators]]
+*[[Main/en/lost train warn|lost_train_warn]] <nowiki> = [true | false] </nowiki>
+*[[Main/en/max num autosaves|max_num_autosaves]] <nowiki> = [true | false] </nowiki>
+*[[Main/en/measure tooltip|measure_tooltip]] <nowiki> = [true | false] </nowiki>
+*[[Main/en/missing strings threshold|missing_strings_threshold]]
+*[[Main/en/network chat box height|network_chat_box_height]]
+*[[Main/en/network chat box width|network_chat_box_width]]
+*[[Main/en/new nonstop|new_nonstop]] <nowiki> = [true | false] </nowiki>
+*[[Main/en/newgrf default palette|newgrf_default_palette]]
 *[[Main/en/NewGRF Debugging|newgrf_developer_tools]]
-*[[Main/en/newgrf show old versions]]
-*[[Main/en/news message timeout]]
-*[[Main/en/order review system]]
-*[[Main/en/osk activation]]
-*[[Main/en/pause on newgame]] <nowiki> = [true | false] </nowiki>
-*[[Main/en/persistent building tools]] <nowiki> = [true | false] </nowiki>
-*[[Main/en/population in label]] <nowiki> = [true | false] </nowiki>
-*[[Main/en/prefer teamchat]] <nowiki> = [true | false] </nowiki>
-*[[Main/en/quick goto]] <nowiki> = [true | false] </nowiki>
-*[[Main/en/reverse scroll]] <nowiki> = [true | false] </nowiki>
+*[[Main/en/newgrf show old versions|newgrf_show_old_versions]]
+*[[Main/en/news message timeout|news_message_timeout]]
+*[[Main/en/Order review system|order_review_system]]
+*[[Main/en/osk activation|osk_activation]]
+*[[Main/en/pause on newgame|pause_on_newgame]] <nowiki> = [true | false] </nowiki>
+*[[Main/en/persistent building tools|persistent_building_tools]] <nowiki> = [true | false] </nowiki>
+*[[Main/en/Population in label|population_in_label]] <nowiki> = [true | false] </nowiki>
+*[[Main/en/prefer teamchat|prefer_teamchat]] <nowiki> = [true | false] </nowiki>
+*[[Main/en/Quick Goto|quick_goto]] <nowiki> = [true | false] </nowiki>
+*[[Main/en/reverse scroll|reverse_scroll]] <nowiki> = [true | false] </nowiki>
 *[[Main/en/NewGRF FAQ#I cannot change NewGRFs in my game.2C why.3F|scenario_developer]]
-*[[Main/en/scrollwheel multiplier]]
-*[[Main/en/scrollwheel scrolling]]
-*[[Main/en/semaphore build before]]
+*[[Main/en/scrollwheel multiplier|scrollwheel_multiplier]]
+*[[Main/en/scrollwheel scrolling|scrollwheel_scrolling]]
+*[[Main/en/Semaphore Build Before|semaphore_build_before]]
 *[[Main/en/Advanced Settings#Changing Advanced Settings|settings_restriction_mode]]
-*[[Main/en/show date in logs]]
-*[[Main/en/show finances]] <nowiki> = [true | false] </nowiki>
-*[[Main/en/show track reservation]] <nowiki> = [true | false] </nowiki>
+*[[Main/en/show date in logs|show_date_in_logs]]
+*[[Main/en/show finances|show_finances]] <nowiki> = [true | false] </nowiki>
+*[[Main/en/show track reservation|show_track_reservation]] <nowiki> = [true | false] </nowiki>
 *[[Main/en/Advanced Settings/Interface#Land colour used at the smallmap|smallmap_land_colour]]
-*[[Main/en/smooth scroll]] <nowiki> = [true | false] </nowiki>
-*[[Main/en/station drag drop]] <nowiki> = [true | false] </nowiki>
-*[[Main/en/station gui group order]]
-*[[Main/en/station gui sort by]]
-*[[Main/en/station gui sort order]]
-*[[Main/en/station num tracks]]
-*[[Main/en/station platlength]]
-*[[Main/en/station show coverage]] <nowiki> = [true | false] </nowiki>
-*[[Main/en/statusbar pos]]
+*[[Main/en/smooth scroll|smooth_scroll]] <nowiki> = [true | false] </nowiki>
+*[[Main/en/station drag drop|station_drag_drop]] <nowiki> = [true | false] </nowiki>
+*[[Main/en/station gui group order|station_gui_group_order]]
+*[[Main/en/station gui sort by|station_gui_sort_by]]
+*[[Main/en/station gui sort order|station_gui_sort_order]]
+*[[Main/en/station num tracks|station_num_tracks]]
+*[[Main/en/station platlength|station_platlength]]
+*[[Main/en/station show coverage|station_show_coverage]] <nowiki> = [true | false] </nowiki>
+*[[Main/en/statusbar pos|statusbar_pos]]
 *[[Main/en/Orders|stop_location]]
-*[[Main/en/threaded saves]]
-*[[Main/en/timetable arrival departure]]
-*[[Main/en/timetable in ticks]] <nowiki> = [true | false] </nowiki>
-*[[Main/en/toolbar pos]]
-*[[Main/en/vehicle income warn]] <nowiki> = [true | false] </nowiki>
-*[[Main/en/window snap radius]]
-*[[Main/en/window soft limit]]
+*[[Main/en/threaded saves|threaded_saves]]
+*[[Main/en/timetable arrival departure|timetable_arrival_departure]]
+*[[Main/en/timetable in ticks|timetable_in_ticks]] <nowiki> = [true | false] </nowiki>
+*[[Main/en/toolbar pos|toolbar_pos]]
+*[[Main/en/vehicle income warn|vehicle_income_warn]] <nowiki> = [true | false] </nowiki>
+*[[Main/en/Window snap radius|window_snap_radius]]
+*[[Main/en/window soft limit|window_soft_limit]]
 *[[Main/en/Settings/Zoom|zoom_max]]
 *[[Main/en/Settings/Zoom|zoom_min]]
 
 Old settings:
-*[[Main/en/always build infrastructure]] <nowiki> = [true | false] </nowiki>
-*[[Main/en/bridge pillars]] <nowiki> = [true | false] </nowiki>
-*[[Main/en/status long date]] <nowiki> = [true | false] </nowiki>
+*[[Main/en/always build infrastructure|always_build_infrastructure]] <nowiki> = [true | false] </nowiki>
+*[[Main/en/Bridge pillars|bridge_pillars]] <nowiki> = [true | false] </nowiki>
+*[[Main/en/status long date|status_long_date]] <nowiki> = [true | false] </nowiki>
 
 ==<nowiki>[sound]</nowiki>==
 *[[Main/en/Sound Settings|ambient]] = true
@@ -404,13 +404,13 @@ Old settings:
 *[[Main/en/Sound Settings|vehicle]] = true
 
 ==<nowiki>[music]</nowiki>==
-*[[Main/en/custom 1]]
-*[[Main/en/custom 2]]
-*[[Main/en/effect vol]] <nowiki> = [0 <= n <= 127] </nowiki>
-*[[Main/en/music vol]] <nowiki> = [0 <= n <= 127] </nowiki>
+*[[Main/en/custom 1|custom_1]]
+*[[Main/en/custom 2|custom_2]]
+*[[Main/en/effect vol|effect_vol]] <nowiki> = [0 <= n <= 127] </nowiki>
+*[[Main/en/music vol|music_vol]] <nowiki> = [0 <= n <= 127] </nowiki>
 *[[Main/en/playing]] <nowiki> = [true | false] </nowiki>
 *[[Main/en/playlist]]
-*[[Main/en/shuffle]] <nowiki> = [true | false] </nowiki>
+*[[Main/en/Shuffle|shuffle]] <nowiki> = [true | false] </nowiki>
 
 ==<nowiki>[news_display]</nowiki>==
 *[[Main/en/Message settings|acceptance]]
@@ -430,47 +430,47 @@ Old settings:
 *[[Main/en/subsidies (settings)|subsidies]]
 
 ==<nowiki>[network]</nowiki>==
-*[[Main/en/admin password]]
-*[[Main/en/autoclean companies]] <nowiki> = [true | false] </nowiki>
-*[[Main/en/autoclean novehicles]]
-*[[Main/en/autoclean protected]]
-*[[Main/en/autoclean unprotected]]
-*[[Main/en/bytes per frame]]
-*[[Main/en/bytes per frame burst]]
-*[[Main/en/player name|client_name]]
-*[[Main/en/commands per frame]]
-*[[Main/en/connect to ip]]
-*[[Main/en/default company pass]]
-*[[Main/en/lan internet]]
-*[[Main/en/last host]]
-*[[Main/en/last port]]
-*[[Main/en/max clients]]
-*[[Main/en/max commands in queue]]
-*[[Main/en/max companies]]
-*[[Main/en/max download time]]
-*[[Main/en/max init time]]
-*[[Main/en/max join time]]
-*[[Main/en/max lag time]]
-*[[Main/en/max password time]]
-*[[Main/en/max spectators]]
-*[[Main/en/min active clients]]
-*[[Main/en/network id]]
-*[[Main/en/no httpd content downloads]]
-*[[Main/en/pause on join]] <nowiki> = [true | false] </nowiki>
-*[[Main/en/rcon password]]
-*[[Main/en/reload cfg]] <nowiki> = [true | false] </nowiki>
-*[[Main/en/restart game year]]
-*[[Main/en/server admin chat]] <nowiki> = [true | false] </nowiki>
-*[[Main/en/server admin port]]
-*[[Main/en/server advertise]] <nowiki> = [true | false] </nowiki>
-*[[Main/en/server lang]]
-*[[Main/en/server name]]
-*[[Main/en/server password]]
-*[[Main/en/server port]]
+*[[Main/en/Admin password|admin_password]]
+*[[Main/en/Autoclean companies|autoclean_companies]] <nowiki> = [true | false] </nowiki>
+*[[Main/en/Autoclean novehicles|autoclean_novehicles]]
+*[[Main/en/Autoclean protected|autoclean_protected]]
+*[[Main/en/Autoclean unprotected|autoclean_unprotected]]
+*[[Main/en/bytes per frame|bytes_per_frame]]
+*[[Main/en/bytes per frame burst|bytes_per_frame_burst]]
+*[[Main/en/Player name|client_name]]
+*[[Main/en/commands per frame|commands_per_frame]]
+*[[Main/en/Connect to ip|connect_to_ip]]
+*[[Main/en/Default company pass|default_company_pass]]
+*[[Main/en/Lan internet|lan_internet]]
+*[[Main/en/last host|last_host]]
+*[[Main/en/last port|last_port]]
+*[[Main/en/max clients|max_clients]]
+*[[Main/en/max commands in queue|max_commands_in_queue]]
+*[[Main/en/max companies|max_companies]]
+*[[Main/en/max download time|max_download_time]]
+*[[Main/en/max init time|max_init_time]]
+*[[Main/en/Max join time|max_join_time]]
+*[[Main/en/max lag time|max_lag_time]]
+*[[Main/en/max password time|max_password_time]]
+*[[Main/en/Max spectators|max_spectators]]
+*[[Main/en/Min active clients|min_active_clients]]
+*[[Main/id/network|network_id]]
+*[[Main/en/no httpd content downloads|no_httpd_content_downloads]]
+*[[Main/en/Pause on join|pause_on_join]] <nowiki> = [true | false] </nowiki>
+*[[Main/en/Dedicated server#Controlling the server with rcon|rcon_password]]
+*[[Main/en/reload cfg|reload_cfg]] <nowiki> = [true | false] </nowiki>
+*[[Main/en/Restart game year|restart_game_year]]
+*[[Main/en/server admin chat|server_admin_chat]] <nowiki> = [true | false] </nowiki>
+*[[Main/en/Server admin port|server_admin_port]]
+*[[Main/en/Server advertise|server_advertise]] <nowiki> = [true | false] </nowiki>
+*[[Main/en/Server lang|server_lang]]
+*[[Main/en/Server name|server_name]]
+*[[Main/en/Server password|server_password]]
+*[[Main/en/Server port|server_port]]
 
 Old settings:
-*[[Main/en/player name]]
-*[[Main/en/server bind ip]]
+*[[Main/en/Player name|player_name]]
+*[[Main/en/Server bind ip|server_bind_ip]]
 
 ==<nowiki>[currency]</nowiki>==
 *[[Main/en/Currency|prefix]]
@@ -480,10 +480,10 @@ Old settings:
 *[[Main/en/Currency|to_euro]]
 
 ==<nowiki>[company]</nowiki>==
-*[[Main/en/autorenew|engine_renew]] <nowiki> = [true | false] </nowiki>
-*[[Main/en/autorenew money|engine_renew_months]]
-*[[Main/en/autorenew months|engine_renew_money]]
-*[[Main/en/renew keep length]] <nowiki> = [true | false] </nowiki>
+*[[Main/en/Advanced Settings/Vehicles#Autorenew|engine_renew]] <nowiki> = [true | false] </nowiki>
+*[[Main/en/Advanced Settings/Vehicles#Autorenew|engine_renew_months]]
+*[[Main/en/Advanced Settings/Vehicles#Autorenew|engine_renew_money]]
+*[[Main/en/renew keep length|renew_keep_length]] <nowiki> = [true | false] </nowiki>
 
 ==[[server_bind_ip|<nowiki>[server_bind_addresses]</nowiki>]]==
 
@@ -500,14 +500,14 @@ Old settings:
 ==<nowiki>[game_scripts]</nowiki>==
 
 ==<nowiki>[version]</nowiki>==
-*[[Main/en/version number]]
-*[[Main/en/version string]]
+*[[Main/en/version number|version_number]]
+*[[Main/en/version string|version_string]]
 
 ==<nowiki>[win32]</nowiki>==
-*[[Main/en/display hz]]
-*[[Main/en/force full redraw]] <nowiki> = [true | false] </nowiki>
-*[[Main/en/fullscreen bpp]]
-*[[Main/en/window maximize]] <nowiki> = [true | false] </nowiki>
+*[[Main/en/Display hz|display_hz]]
+*[[Main/en/force full redraw|force_full_redraw]] <nowiki> = [true | false] </nowiki>
+*[[Main/en/Fullscreen bpp|fullscreen_bpp]]
+*[[Main/en/window maximize|window_maximize]] <nowiki> = [true | false] </nowiki>
 
 <br/></div></div>
 

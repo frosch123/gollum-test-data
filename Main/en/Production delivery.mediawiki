@@ -1,6 +1,6 @@
-{{table of contents}}
+{{en/Table of contents}}
 
-Because [[Main/en/cargo]] can't be picked directly at [[Main/en/industries]] and [[Main/en/building|buildings]] (i.e. [[Main/en/cargo agent]]), [[Main/en/stations]] have to be build. A produced cargo is then ''delivered'' to that stations.
+Because [[Main/en/Cargo|cargo]] can't be picked directly at [[Main/en/Industries|industries]] and [[Main/en/Building|buildings]] (i.e. [[Main/en/Cargo agent|cargo agent]]), [[Main/en/Stations|stations]] have to be build. A produced cargo is then ''delivered'' to that stations.
 
 The delivery itself is not explicitly visualized as a physical transfer - it is a virtual micro-process. The allotted amount of cargo units simply appears at the station instantly upon positive delivery decision (see below about conditions). The agent is fully responsible for delivery and doesn't pay anything to the station's owner.
 
@@ -21,6 +21,6 @@ The [[Main/en/Game mechanics#Station rating|station rating]] determines the shar
 
 When cargo is unloaded at a station within [[Main/en/Catchment area#Cargo Acceptance area of stations|catchment area]] of any agent accepting that type, an automatic acceptance delivery immediately takes place. Acceptance delivery abides by the same principles: it is invisible, instant and is entirely handled by the agent.
 
-There is no competition or reputation involved when acceptance is checked. For acceptance conditions see [[Main/en/land area information]], [[Main/en/industries]] and [[Main/en/towns]].
+There is no competition or reputation involved when acceptance is checked. For acceptance conditions see [[Main/en/Land area information|land area information]], [[Main/en/Industries|industries]] and [[Main/en/Towns|towns]].
 
 Because cargo units are essentially destroyed on cosumption and do not get piled up, a consumer agent can't be oversaturated with a surge of its accepted cargo. It will consume infinite amount of accepted cargo type.

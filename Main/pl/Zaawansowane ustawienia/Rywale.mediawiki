@@ -1,7 +1,7 @@
 {{pl/Uwaga|Ten artykuł dotyczy zmieniania ustawień przy użyciu '''przestarzałego''' interfejsu. Aktualny artykuł znajdziesz [[Main/pl/Ustawienia/Rywale|tutaj]]}}
 {{pl/Informacja|'''Artykuł nie jest w całości przetłumaczony'''. Ze względy na to, że ten widok ustawień nie jest już używany, z artykułu usunięto szablon <nowiki>{{pl/Tłumaczenie}}</nowiki>}}
 
-[[Translation:Main/en/Advanced Settings/Competitors]]{{en/-}}{{pl/Spis treści}}
+[[Translation:Main/en/Advanced Settings/Competitors]]{{pl/Spis treści}}
 
 ==Okno ustawień zaawansowanych: Rywale==
 Sekcja '''Rywali''' pozwala na zmianę ustawień dotyczących [[Main/pl/Ustawienia SI|SI]] oraz [[Main/pl/Gra wieloosobowa|gry wieloosobowej]]. Ustawienia są wypisane poniżej z możliwymi wartościami oraz odnośnikiem do [[Main/en/Openttd.cfg|pliku konfiguracyjnego]].
@@ -21,26 +21,26 @@ Pozwala na graczy komputerowych w [[Main/pl/Gra wieloosobowa|grze wieloosobowej]
 
 ====Pociągi niedostępne dla komputera====
 {{pl/Zgodne Wersje|Old|align="right"|text=(od 0.3.2)}}
-Computer cannot build [[Main/en/trains]] or [[Main/en/railway construction|rail infrastucture]].
+Computer cannot build [[Main/en/Trains|trains]] or [[Main/en/Railway construction|rail infrastucture]].
 This option has been moved from [[Main/en/Configuring patches/Vehicles#Disable trains for computer|Vehicles section]] in 0.3.4.
 :''Możliwe ustawienia:'' <span style="color:green">'''Wł.'''</span> lub <span style="color:red">'''Wył.'''</span>
 :''W pliku konfiguracyjnym [[Main/en/Openttd.cfg]]:'' [ai] ai_disable_veh_train = <true|false>
 
 ====Samochody niedostępne dla komputera====
 {{pl/Zgodne Wersje|Old|align="right"|text=(od 0.3.2)}}
-Computer cannot build [[Main/en/road vehicles]] or [[Main/en/roadway construction|roads]]. This option has been moved from [[Main/en/Configuring patches/Vehicles#Disable road vehicles for computer|Vehicles section]] in 0.3.4.
+Computer cannot build [[Main/en/Road vehicles|road vehicles]] or [[Main/en/Roadway construction|roads]]. This option has been moved from [[Main/en/Configuring patches/Vehicles#Disable road vehicles for computer|Vehicles section]] in 0.3.4.
 :''Możliwe ustawienia:'' <span style="color:green">'''Wł.'''</span> lub <span style="color:red">'''Wył.'''</span>
 :''W pliku konfiguracyjnym [[Main/en/Openttd.cfg]]:'' [ai] ai_disable_veh_roadveh = <true|false>
 
 ====Samoloty niedostępne dla komputera====
 {{pl/Zgodne Wersje|Old|align="right"|text=(od 0.3.2)}}
-Computer cannot build [[Main/en/aircraft]] or [[Main/en/airports]]. This option has been moved from [[Main/en/Configuring patches/Vehicles#Disable aircraft for computer|Vehicles section]] in 0.3.4.
+Computer cannot build [[Main/en/Aircraft|aircraft]] or [[Main/en/Airports|airports]]. This option has been moved from [[Main/en/Configuring patches/Vehicles#Disable aircraft for computer|Vehicles section]] in 0.3.4.
 :''Możliwe ustawienia:'' <span style="color:green">'''Wł.'''</span> lub <span style="color:red">'''Wył.'''</span>
 :''W pliku konfiguracyjnym [[Main/en/Openttd.cfg]]:'' [ai] ai_disable_veh_aircraft = <true|false>
 
 ====Statki niedostępne dla komputera====
 {{pl/Zgodne Wersje|Old|align="right"|text=(od 0.3.2)}}
-Computer cannot build [[Main/en/ships]]. This option has been moved from [[Main/en/Configuring patches/Vehicles#Disable ships for computer|Vehicles section]] in 0.3.4.
+Computer cannot build [[Main/en/Ships|ships]]. This option has been moved from [[Main/en/Configuring patches/Vehicles#Disable ships for computer|Vehicles section]] in 0.3.4.
 :''Możliwe ustawienia:'' <span style="color:green">'''Wł.'''</span> lub <span style="color:red">'''Wył.'''</span>
 :''W pliku konfiguracyjnym [[Main/en/Openttd.cfg]]:'' [ai] ai_disable_veh_ship = <true|false>
 
@@ -60,7 +60,7 @@ Allows you to donate money to other companies.
 {{en/-}}
 ===Pozwól kupować udziały w innych firmach===
 {{pl/Zgodne Wersje|0.7|align="right"|text=(od 0.7.0)}}
-Allows you to enable or disable the ability to [[Main/en/buying shares|buy shares]] from competitors. You also have to wait for the company to get old enough before buying 25% or a full take over. This age is about 6 years old.
+Allows you to enable or disable the ability to [[Main/en/Economy|buy shares]] from competitors. You also have to wait for the company to get old enough before buying 25% or a full take over. This age is about 6 years old.
 :''Możliwe ustawienia:'' <span style="color:green">'''Wł.'''</span> lub <span style="color:red">'''Wył.'''</span>
 :''W pliku konfiguracyjnym [[Main/en/Openttd.cfg]]:'' [economy] allow_shares = <true|false>
 {{en/-}}

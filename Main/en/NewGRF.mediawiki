@@ -1,10 +1,10 @@
-[[Translation:Main/en/NewGRF]]{{en/-}}{{en/Table of contents}}
+[[Translation:Main/en/NewGRF]]{{en/Table of contents}}
 
 NewGRF stands for New Graphics Resource File which provide a general interface to mod(ify) the game. As of OpenTTD 1.2.0, 32 bit graphics are also supplied via NewGRFs.
 
 '''NewGRF''' is the way to add new or modify existing graphics, vehicles, buildings, cargos, railtypes, objects and industries within OpenTTD. NewGRF files may be downloaded and selected for activation prior to creation of a new game in order to introduce these features. Unlike [[Main/en/Advanced Settings]] which may be changed part way through a game, NewGRF should be installed prior to starting a new game in order to ensure correct operation. The name "NewGRF" refers to the new features added to GRF files (Transport Tycoon graphics resource files) which can be exploited to change graphics and the behaviour of the game. NewGRF is a shared format between OpenTTD and [[Main/en/TTDPatch]], and is almost fully compatible with both.
 
-For common issues with GRF files in OpenTTD, visit the [[Main/en/NewGRF FAQ| NewGRF FAQ]].
+For common issues with GRF files in OpenTTD, visit the [[Main/en/NewGRF FAQ|NewGRF FAQ]].
 
 ==Getting NewGRFs==
 === Online content ===
@@ -28,13 +28,13 @@ If you want to use NewGRFs obtained from other locations, which are not availabl
 The interface changed between OpenTTD 1.0 and 1.1, thus both will be presented here after one another:
 
 2.   Select a NewGRF from the 'inactive NewGRFs files' and press "Add" or simply double click on it. On small screens it looks like
-[[File:en/newgrf addnew.png|NewGRF settings window (small)|center]]
+[[File:en/Newgrf addnew.png|NewGRF settings window (small)|center]]
 and on big screens it more conveniently expands to:
-[[File:en/newgrf config big.png|NewGRF settings window (big)|center]]
+[[File:en/Newgrf config big.png|NewGRF settings window (big)|center]]
 3.   Configure an active newgrf's parameter, if needed: Select it from the 'active newgrf files' list and choose the 'parameter' button. The result may look similar to
-[[File:en/newgrf parameter.png|NewGRF parameter window|center]]
+[[File:en/NewGRF Parameter.png|NewGRF parameter window|center]]
 4.   Optionally you may choose to save the selection of newgrfs (along with their configuration parameters) or load such list by making use of the NewGRF presets:
-[[File:en/newgrf preset.png|Saving a NewGRF preset|center]]
+[[File:en/Newgrf preset.png|Saving a NewGRF preset|center]]
 
 == To Combine or Not To Combine ==
 OpenTTD allows you to select up to 59 different NewGRFs for each new game you start. However, you can't just make a random selection of what to add; a bit of planning is required. Not all NewGRFs are compatible with each other and sometimes you need multiple NewGRFs that complement each other. Below is an overview of different types of NewGRFs together with some comments on what you should and should not combine.
@@ -70,13 +70,13 @@ OpenTTD allows you to select up to 59 different NewGRFs for each new game you st
 * As much as you want until you reach the upper limit of 64 different roadtypes. This includes the default road and tram types, which cannot be undefined.
 * Some road and tramway sets are specifically designed for specific road vehicle sets.
 
-Many NewGRFs will warn if you make invalid combinations and will possibly disable themselves. It is recommended to check the NewGRF configuration after starting a new game (via Tools menu). If there are problems, it is recommended to abandon the game, fix the problems, and start a new game. For random games you can regenerate the same map when using the same random seed and keeping the other settings identical in the map generator. After starting a game you can obtain its random seed by typing <code>getseed</code> in the [[Main/en/console]].
+Many NewGRFs will warn if you make invalid combinations and will possibly disable themselves. It is recommended to check the NewGRF configuration after starting a new game (via Tools menu). If there are problems, it is recommended to abandon the game, fix the problems, and start a new game. For random games you can regenerate the same map when using the same random seed and keeping the other settings identical in the map generator. After starting a game you can obtain its random seed by typing <code>getseed</code> in the [[Main/en/Console|console]].
 
 == 8 bit vs 32 bit graphics ==
 {{en/Feature|1.2}}
 As of OpenTTD 1.2.0, NewGRFs can contain not only the usual 8 bit graphics, but also 32 bit graphics. With this change, NewGRFs are in fact the only way to supply 32 bit graphics to OpenTTD 1.2.0 or newer. From this point forward, NewGRFs are also able to supply different graphics for the different zoom levels.
 
-See the [[Main/en/Playing with 32 bpp graphics]] for a list of 32 bit graphics available to OpenTTD 1.2.0 and newer.
+See the [[Main/en/Playing with 32 bpp graphics|List of 32bpp NewGRFs]] for a list of 32 bit graphics available to OpenTTD 1.2.0 and newer.
 
 ==Closing remarks==
 Now, whenever you start a new game, the choice of NewGRFs will become active, and whatever changes they make to the game will become effective. However changing these settings will have no effect on existing savegames as newgrfs are an integral part of a savegame and the list of used newgrfs is stored within it.

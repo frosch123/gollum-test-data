@@ -1,5 +1,5 @@
 [[Translation:Main/en/Dedicated server]]
-[[File:en/Dedicated server.png|right|frame|Věnovaný server v okně]] '''Dedicated server''' je OpenTTD hra pro více hráčů ([[Main/en/server]]), 
+[[File:en/Dedicated server.png|right|frame|Věnovaný server v okně]] '''Dedicated server''' je OpenTTD hra pro více hráčů ([[Main/en/Server|server]]), 
 který ti může v pozadi volně běžet. 
 Nesmíš ho ale omylem vypnout. 
 Dobré je přes večer přepnout pc do režimu spánku. 
@@ -11,14 +11,14 @@ Přidat mu parametr "-D". (openttd.exe" -D)
 
 ===Ve Windowsech===
 První metoda:
-*Vytvoř zástupce na {{c|openttd.exe|}}
+*Vytvoř zástupce na {{en/C|openttd.exe|}}
 *Pravým tlačítkem klikni na toho zástupce a dej vlasnosti
 *Přidej {{-D|}} do řádku (openttd.exe" -D)
 *Dej na použít
 *Spust zástupce
 
 ===V Linuxu===
-* Běh {{c | OpenTTD-D |}} v terminálu. Pokud se připojujete na server pomocí SSH a chcete hru spustit, když odhlásit, měli byste použít [http://www.gnu.org/software/screen/ GNU Screen] nebo [http://dtach.sourceforge. net / dtach].
+* Běh {{en/C| OpenTTD-D |}} v terminálu. Pokud se připojujete na server pomocí SSH a chcete hru spustit, když odhlásit, měli byste použít [http://www.gnu.org/software/screen/ GNU Screen] nebo [http://dtach.sourceforge. net / dtach].
 
 Můžete také spustit openttd s-f. To znamená, že proces bude probíhat na pozadí, ale konzola bude avaible. Všechny výstup bude zaslán soubor openttd.log. Můžete si zobrazit log s ocasem: tail-f openttd.log sledovat události. (Toto bylo přeloženo přes google překládač)
 
@@ -29,33 +29,33 @@ Můžete také spustit openttd s-f. To znamená, že proces bude probíhat na po
 Jsou k dispozici 3 možností jak nastavit možnosti hry:
 *Spust hru pro jednoho hráče, nastav nastavení dle libosti a vypni hru.
 *Použíj konzoli (tlačíto pod ESC) a přímo ve hře více hráčů nastav pomocí konzolových příkazů. (Pouze pro zkušenější uživatele)
-*Změn [[Main/en/openttd.cfg]] soubor ručně.
+*Změn [[Main/en/Openttd.cfg|openttd.cfg]] soubor ručně.
 Možné aplikace: [http://www.tt-forums.net/viewtopic.php?f=29&t=33967 Web Interface]
 
 
-Změň síťové nastavení v sekci "Network" [[Main/en/openttd.cfg]]:
-*Nastav [[Main/en/lan internet]] na 0.
-*Změň [[Main/en/server name]] na název tvýho serveru, 
-*Nastav [[Main/en/server advertise]] na "true", aby bylo možno najít server listě [[Main/en/server list]]
-*Pokud máte více síťových rozhraní, ujistěte se, že jste nastavili [[Main/en/server bind ip]].
-*Pokuď máte pc za routerem, musíš na sebe nasměrovat přislušný port, který používá OpenTTD (3979) [[Main/en/server port]] ( TCP a UDP)
+Změň síťové nastavení v sekci "Network" [[Main/en/Openttd.cfg|openttd.cfg]]:
+*Nastav [[Main/en/Lan internet|lan_internet]] na 0.
+*Změň [[Main/en/Server name|server_name]] na název tvýho serveru, 
+*Nastav [[Main/en/Server advertise|server_advertise]] na "true", aby bylo možno najít server listě [[Main/en/Server list|server list]]
+*Pokud máte více síťových rozhraní, ujistěte se, že jste nastavili [[Main/en/Server bind ip|server_bind_ip]].
+*Pokuď máte pc za routerem, musíš na sebe nasměrovat přislušný port, který používá OpenTTD (3979) [[Main/en/Server port|server_port]] ( TCP a UDP)
 
 ==Kontrolování serveru přes rcon (Vzdálený admin)==
 Nastavení serveru přes konzoli [[Main/en/Console#Server commands|rcon]] příkazy:
-*Ve věnovaném serveru napiš {{c|rcon_pw <password>|}}. 
-:Příklad: {{c|rcon_pw 12345|}}
+*Ve věnovaném serveru napiš {{en/C|rcon_pw <password>|}}. 
+:Příklad: {{en/C|rcon_pw 12345|}}
 
 
 Připojení na server jako klient:
 *Normálně spust OpenTTD.
 *Najdi svůj server ve vyhledávačí a připoj se na něj.
 *Otevří konzoli (~ klávesa).
-*Napiš {{c|rcon <password> "<command>"|}}. 
-:Příklad: {{c|rcon 12345 "kick 5"|}}
+*Napiš {{en/C|rcon <password> "<command>"|}}. 
+:Příklad: {{en/C|rcon 12345 "kick 5"|}}
 
 ==Nahrávání hry==
-*Zároveň můžeš nahrávat na server uložené hry a scénáře {{c|-g "<názevsouboru>"|}}, Nastavení parametru
-:Příklad: {{c|openttd.exe -D -g "scenario/echo.scn"|}}.
+*Zároveň můžeš nahrávat na server uložené hry a scénáře {{en/C|-g "<názevsouboru>"|}}, Nastavení parametru
+:Příklad: {{en/C|openttd.exe -D -g "scenario/echo.scn"|}}.
 
 ==Automatické spuštění / zastavení a uložte hru==
 

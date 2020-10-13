@@ -1,0 +1,22 @@
+<includeonly>|-
+|{{{1}}}
+|{{rf status {{{2}}}}}
+|{{{3|}}}</includeonly><noinclude>
+{|
+{{en/Rf2|Feature name|0%|Notes}}
+|}
+====Template:rf usage====
+Enter <nowiki>{{</nowiki>'''rf'''|''feature name''|''progress %''|''notes''<nowiki>}}</nowiki> in between {{en/S|rf header}} and {{en/S|rf footer}} templates. 
+
+Example:
+<pre>
+===Economics===
+{{en/Rf header}}
+{{en/Rf|More disasters|10%|14818|4=also see [http://www.link.com/index?id=10 this page]}}
+{{en/Rf footer}}
+</pre>
+Notes:
+#Use "4=" for the notes parameter if the note contains an equal sign (=).
+#Follow the rules on the [[Main/en/Requested features#Submission rules|requested features]] article.
+#''rf'' is short for Requested Feature.
+</noinclude>

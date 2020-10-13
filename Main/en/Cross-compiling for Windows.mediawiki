@@ -1,6 +1,6 @@
 You can create Windows builds of OpenTTD on a non-windows platform by using a cross compiler suit. This tutorial will show how to use GCC that compiles for Windows but runs on *nix-es. These builds of OpenTTD can be shared to other Windows users, no need to install any extra stuff. If you are not familiar with compiling on *nix-es natively then first try [[Main/en/Compiling on (GNU/)Linux and *BSD]]. There are also some similarities to [[Main/en/Compiling on Windows using MinGW]].
 
-{{note|Should work on any POSIX-like system including '''Linux''', '''Mac OS X''', '''Cygwin''' and many others although only Linux has been tested here.}}
+{{en/Note|Should work on any POSIX-like system including '''Linux''', '''Mac OS X''', '''Cygwin''' and many others although only Linux has been tested here.}}
 
 == MXE (M cross environment) ==
 
@@ -38,7 +38,7 @@ Add <code>/usr/local/mxe/usr/bin</code> to $PATH variable. See [[Main/en/#Instal
 
 Compile OpenTTD using the cross compiler built by MXE.
 
-{{warning|See [[Main/en/#Troubleshooting OpenTTD]] before continuing. You will probably be hit by the [[Main/en/#OpenTTD with ICU 57 and earlier]] issue.}}
+{{en/Warning|See [[Main/en/#Troubleshooting OpenTTD]] before continuing. You will probably be hit by the [[Main/en/#OpenTTD with ICU 57 and earlier]] issue.}}
 
  cd ~
  wget http://binaries.openttd.org/releases/1.7.0/openttd-1.7.0-source.tar.gz -O- | tar xfz -
@@ -54,7 +54,7 @@ To build 64-bit OpenTTD just change <code>i686</code> to <code>x86_64</code> (do
 
 Now you should be ready to test with WINE:
 
-{{warning|Make sure you have the graphics or it may crash! See also [[Main/en/#OpenTTD crashes on startup on WINE]].}}
+{{en/Warning|Make sure you have the graphics or it may crash! See also [[Main/en/#OpenTTD crashes on startup on WINE]].}}
 
  cd bin
  wine openttd.exe
@@ -228,7 +228,7 @@ First compile ICU natively using the system-wide compiler, not the cross compile
 
 ==== Cross compiling ICU ====
 
-{{warning|See [[Main/en/#Troubleshooting ICU]] before you continue.}}
+{{en/Warning|See [[Main/en/#Troubleshooting ICU]] before you continue.}}
 
  mkdir -p icu/build-cross
  cd icu/build-cross
@@ -253,9 +253,9 @@ Only if using ICU 57 or earlier (see [[Main/en/#OpenTTD with ICU 57 and earlier]
 
 http://harfbuzz.org
 
-{{note|You need HarfBuzz only for ICU 58 and higher and only if you wish to use ICU Layout. Default for this tutorial is to skip this section.}}
+{{en/Note|You need HarfBuzz only for ICU 58 and higher and only if you wish to use ICU Layout. Default for this tutorial is to skip this section.}}
 
-{{warning|If you decide to use HarfBuzz, you'll probably be issued by the [[Main/en/#OpenTTD and static ICU with HarfBuzz (icu-le-hb)]].}}
+{{en/Warning|If you decide to use HarfBuzz, you'll probably be issued by the [[Main/en/#OpenTTD and static ICU with HarfBuzz (icu-le-hb)]].}}
 
 Actually two libraries. The HarfBuzz and the ICU proxy (icu-le-hb).
 
@@ -316,7 +316,7 @@ Notice that it will also remove icu-le-hb.
 
 Test with WINE:
 
-{{warning|Make sure you have the graphics or it may crash! See also [[Main/en/#OpenTTD crashes on startup on WINE]].}}
+{{en/Warning|Make sure you have the graphics or it may crash! See also [[Main/en/#OpenTTD crashes on startup on WINE]].}}
 
  cd bin
  wine openttd.exe
@@ -333,8 +333,8 @@ to "configure" script. In case of OpenTTD, use following configuration option
 
  --pkg-config=i686-w64-mingw32.static-pkg-config
 
-{{note|Full information on configuration options can be usually retrieved by running <code>./configure --help</code>}}
-{{note|Configuration options are not the same as environment variables. Sometimes some environment variables can be set through configuration options and vice-versa. Read "--help" to know which they are.}}
+{{en/Note|Full information on configuration options can be usually retrieved by running <code>./configure --help</code>}}
+{{en/Note|Configuration options are not the same as environment variables. Sometimes some environment variables can be set through configuration options and vice-versa. Read "--help" to know which they are.}}
 
 
 Observe output of "configure" scripts and check whether libraries were detected properly. Falsely detected libraries can be disabled with options like <code>--without-feature</code> or <code>--disable-feature</code>.
@@ -345,7 +345,7 @@ Also notice that sometimes libraries have to be linked in proper order. Thus add
 Watch out when OpenTTD re-configures itself. It may happen i.e. when you modify the <code>source.list</code> file and run <code>make</code> (or simply run <code>make reconfigure</code>). OpenTTD will re-run <code>configure</code> with options provided previously, but the environment won't be preserved. You have to take care about it by yourself or manually re-run <code>configure</code> with properly set variables like $PATH or $PKG_CONFIG_LIBDIR.
 
 
-{{todo|Instruct which lines of "configure" output should get most attention (each library separately).}}
+{{en/Todo|Instruct which lines of "configure" output should get most attention (each library separately).}}
 
 === Older OpenTTD, older libraries, older compiler ===
 
@@ -404,7 +404,7 @@ To force linking ICU statically one may need to use <code>--static-icu</code> op
  --with-icu-layout="pkg-config icu-lx --static"
  --with-icu-sort="pkg-config icu-i18n --static"
 
-{{note|If you are using custom pkg-config utility, then use it instead of "pkg-config" in configuration options. See [[Main/en/#Final notes on pkg-config and library detection]].}}
+{{en/Note|If you are using custom pkg-config utility, then use it instead of "pkg-config" in configuration options. See [[Main/en/#Final notes on pkg-config and library detection]].}}
 
 Entire OpenTTD configuration when using HarfBuzz may look like this (notice no <code>--static-icu</code>):
 

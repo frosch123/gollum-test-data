@@ -6,16 +6,16 @@ Cuando se usa [[Main/en/aceleración realista]] las curvas hacen que los trenes 
 
 Los trenes tiene un límite de velocidad cuando realizan más de un giro en la misma dirección al mismo tiempo. Por ejemplo:
 
-[[File:en/corner-1x45.png|frame|left|No hay límite de velocidad: sólo hay una curva.]]
-[[File:en/corner-2x45.png|frame|none| No hay límite de velocidad: sólo hay un giro en cada dirección.]]
-[[File:en/corner-4x45-nocars.png|frame|left|No hay límite de velocidad: el tren sólo hace un giro por vez.]]
-[[File:en/corner-4x45.png|frame|none|Velocidad limitada.]]
+[[File:en/Corner-1x45.png|frame|left|No hay límite de velocidad: sólo hay una curva.]]
+[[File:en/Corner-2x45.png|frame|none| No hay límite de velocidad: sólo hay un giro en cada dirección.]]
+[[File:en/Corner-4x45-nocars.png|frame|left|No hay límite de velocidad: el tren sólo hace un giro por vez.]]
+[[File:en/Corner-4x45.png|frame|none|Velocidad limitada.]]
 
 <br clear="all" />
 
 =Giros de 90º=
 
-[[File:en/corner-90.png|frame|left|speed limit: 90 degree turn]]
+[[File:en/Corner-90.png|frame|left|speed limit: 90 degree turn]]
 
 Los trenes que hacen giros de 90º ven limitada su velocidad a 55km/h (38m/h).
 Hay una 
@@ -32,7 +32,7 @@ Ha de intentar evitarse el uso de tramos en diagonal largos cerca de las ciudade
 Si la longitud del tren no es un problema se puede calcular la distancia nescesaria entre curvas comparando los trenes más rápidos dispobibles con la
 If train length isn't an issue, you can calculate the distance you need between corners by comparing the fastest trains available with the [[Main/en/Game mechanics#Vehicle speeds|Tabla de límites de velocidad]].  Here is a rough guide based on that information:
 
-{| {{wikitable}} style="margin:1em 1em 1em 0; border:solid 1px #AAAAAA; background-color:#F8F8FF; text-align:center"
+{| {{en/Wikitable}} style="margin:1em 1em 1em 0; border:solid 1px #AAAAAA; background-color:#F8F8FF; text-align:center"
 |+ '''Minimum distance between corners''' (assuming infinitely long trains)
 |- style="background:#efefef"
 !style="width: 5em"|Year
@@ -91,5 +91,5 @@ If train length isn't an issue, you can calculate the distance you need between 
 Nota: Técnicamente, el [[Main/en/SH "125"]] (también conocido como BR 'IC125') necesita 8 cuadrados para girar, pero eso no impide que vaya a gran velocidad con muchos vagones.
 
 =See also=
-* [[Main/en/Junction]]
+* [[Main/en/Junction|Junctions]]
 * [[Main/en/Game mechanics#Vehicle speeds|Vehicle speeds]]

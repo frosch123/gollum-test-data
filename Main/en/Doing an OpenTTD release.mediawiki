@@ -33,7 +33,7 @@ These things have to be done for each release:
 * forwardport/merge the changes made in the prerelease
 * for non-RC releases:
 ** create a wiki page and update the [[Main/en/OpenTTD Release History|release history]] and [[Template/en/OTTDVersions|template]]
-** update wiki templates: [[Template/en/Version]]
+** update wiki templates: [[Template/en/Version|Template:Version]]
 ** Add the new version to bananas minimal/maximum version list
 ** poke package maintainers on IRC: blathijs (debian), heffer (fedora)
 
@@ -48,6 +48,6 @@ These things have to be done for each release:
 ** Update the version in src/os/windows/ottdres.rc.in
 ** Add a note to src/saveload/saveload.h about which savegame version is used in the branch.
 * Backport changelog (and debian/changelog) to master branch
-* Update wiki pages: [[Template/en/VersionBox]]
+* Update wiki pages: [[Template/en/VersionBox|Template:VersionBox]]
 
 [[Category:en/Development]]

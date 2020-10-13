@@ -6,16 +6,16 @@ En utilisant l'[[Main/fr/Accélération réaliste|accélération réaliste]], le
 
 Les trains souffrent d'une limitation de vitesse en se trouvant sur plus d'un virage dans la même direction en même temps. Voici quelques exemples:
 
-[[File:en/corner-1x45.png|frame|left|pas de limite de vitesse: un seul virage]]
-[[File:en/corner-2x45.png|frame|none|pas de limite de vitesse: un seul virage dans chaque direction]]
-[[File:en/corner-4x45-nocars.png|frame|left|pas de limite de vitesse: le train n'est que sur un virage à la fois]]
-[[File:en/corner-4x45.png|frame|none|limitation de vitesse!]]
+[[File:en/Corner-1x45.png|frame|left|pas de limite de vitesse: un seul virage]]
+[[File:en/Corner-2x45.png|frame|none|pas de limite de vitesse: un seul virage dans chaque direction]]
+[[File:en/Corner-4x45-nocars.png|frame|left|pas de limite de vitesse: le train n'est que sur un virage à la fois]]
+[[File:en/Corner-4x45.png|frame|none|limitation de vitesse!]]
 
 <br clear="all" />
 
 =Virages à 90 degrés=
 
-[[File:en/corner-90.png|frame|left|limitation de vitesse: virage à 90 degrés]]
+[[File:en/Corner-90.png|frame|left|limitation de vitesse: virage à 90 degrés]]
 
 Les trains prenant des virages à 90 degrés sont limités à 55 km/h (38 mph). Il y a aussi un [[Main/en/Configurer les ajouts/Véhicules/Fr#Interdire aux trains de tourner à 90 degrés|paramètre]] pour empêcher tous les virages à 90 degrés.
 
@@ -29,7 +29,7 @@ Essayez d'éviter de construire de longues voies en diagonale près des villes, 
 
 Si la longueur du train n'est pas un problème, vous pouvez calculer la distance nécessaire entre les virages en comparant les trains les plus rapides disponibles avec la [[Main/en/Mécanique du jeu/Fr#Vitesses des véhicules|table des limites de vitesse]]. Voici une ébauche de guide basé sur ces informations:
 
-{| {{wikitable}} style="margin:1em 1em 1em 0; border:solid 1px #AAAAAA; background-color:#F8F8FF; text-align:center"
+{| {{en/Wikitable}} style="margin:1em 1em 1em 0; border:solid 1px #AAAAAA; background-color:#F8F8FF; text-align:center"
 |+ '''Distance minimale entre virages''' (en supposant des trains infiniment longs)
 |- style="background:#efefef"
 !style="width: 5em"|Année

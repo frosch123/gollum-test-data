@@ -1,4 +1,4 @@
-[[Translation:Main/en/Signals]]{{en/-}}{{hu/Tartalomjegyzék}}
+[[Translation:Main/en/Signals]]{{hu/Tartalomjegyzék}}
 :''Gyakorlati bevezetés:'' [[Main/hu/Jelzők építése|Jelzők építése]]
 
 A '''Jelzők''' hasznos eszközök, melyek a [[Main/hu/Vonatok|vonatok]] mozgásának ellenőrzését teszik lehetővé. Ahhoz szükségesek, hogy a [[Main/hu/Vasútépítés|vasúti]] hálózat ne omoljon össze több, mint egy vonat esetén. 
@@ -38,18 +38,18 @@ Az előjelzők színe nem csak a közvetlenül mögöttük található pályasza
 
 {{en/-}}
 ====Bejárati előjelzők====
-[[File:en/entry presignal.png|left|60px]]Egy '''bejárati előjelző''' mindaddig zöldet mutat, amíg legalább egy zöld kijárati jelző van a következő pályarészen. Ellenkező esetben vöröset mutat. Ez megelőzi, hogy a vonatok a következő jelzőszakaszba lépjenek, mielőtt használható kijárat adódna. Jó tudni, hogy a vasúti járműtelepek beépített kétirányú jelzővel rendelkeznek (előjelző-összeállításban bejárati előjelzőként működik).
+[[File:en/Entry presignal.png|left|60px]]Egy '''bejárati előjelző''' mindaddig zöldet mutat, amíg legalább egy zöld kijárati jelző van a következő pályarészen. Ellenkező esetben vöröset mutat. Ez megelőzi, hogy a vonatok a következő jelzőszakaszba lépjenek, mielőtt használható kijárat adódna. Jó tudni, hogy a vasúti járműtelepek beépített kétirányú jelzővel rendelkeznek (előjelző-összeállításban bejárati előjelzőként működik).
 
 A bejárati előjelzők, ha nincs mögöttük kijárati jelző, normál jelzőként viselkednek. Ez jól jön az olyan kétirányú előjelzőknél, melyeknek csak az egyik irányban szükséges előjelzőként működniük.
 
 {{en/-}}
 ====Kijárati jelzők====
-[[File:en/exit presignal.png|60px|left]]A '''kijárati jelzők''' normál jelzőként viselkednek, de szükség van rájuk a bejárati és a kombinált előjelzők megfelelő színének kiváltása miatt.
+[[File:en/Exit presignal.png|60px|left]]A '''kijárati jelzők''' normál jelzőként viselkednek, de szükség van rájuk a bejárati és a kombinált előjelzők megfelelő színének kiváltása miatt.
 {{en/-}}
 
 ====Kombinált jelzők====
-[[File:en/station with pre-signals2.png|frame|right|Állomás egy bejárati előjelzővel, két kombinált jelzővel, és négy kijárati jelzővel]]
-[[File:en/combo presignal.png|60px|left]] A '''kombinált jelzőnek''' nevezett harmadik előjelző-típus egyszerűen működik: bejárati és kijárati jelzőként is. Lehetővé teszi, hogy nagy "fákat" építs előjelzőkből, amint az jobbra is látható.
+[[File:en/Station with pre-signals2.png|frame|right|Állomás egy bejárati előjelzővel, két kombinált jelzővel, és négy kijárati jelzővel]]
+[[File:en/Combo presignal.png|60px|left]] A '''kombinált jelzőnek''' nevezett harmadik előjelző-típus egyszerűen működik: bejárati és kijárati jelzőként is. Lehetővé teszi, hogy nagy "fákat" építs előjelzőkből, amint az jobbra is látható.
 {{en/-}}
 ====Előjelzők építése====
 Előjelző építéséhez válaszd a megfelelő gombot a [[Main/en/Jelzők építése/Hu#Jelzők készítése|jelzőválasztó eszköztáron]]. Ha a játék korábbi verzióját használod, először helyezz el egy normál jelzőt, aztán a ''Ctrl'' nyomva tartása mellett kattintgass a jelzőn az előjelző fajtáin át.
@@ -99,24 +99,23 @@ A két új jelzőtípus kicsit eltérően viselkedik a szokásos OpenTTD-s jelz�
 
 Miután minden jelző eleje biztonságos várakozóhelynek számít, általában nem akarsz jelzőt közvetlenül az elágazás után elhelyezni, hanem csak a kereszteződés előtt. Ez azért van, mert csak a kereszteződés előtt biztonságos a vonatnak várakoznia: a vonatnak nem biztonságos várakoznia azelőtt, hogy teljes hosszában a kereszteződést elhagyta volna, mert amíg várakozik, megakaszthatja a kereszteződés forgalmát, amint az alábbi példán látható. Az útvonaljelzőknek ez a fő előnye a szokásos OpenTTD-s jelzőkkel szemben, mert utóbbiak használatakor jelzőt kell a kereszteződés előtt és után elhelyezned, ami viszont azzal jár, hogy a vonatok, amíg várakoznak, megállítják a kereszteződés forgalmát.
 <div style="width:50%;float:left;">[[File:en/Yapp unsafewaitinglocation.png|frame|center|'''Rossz''': a nyíllal jelölt jelző rossz várakozóhely, mert a vonat a kereszteződésben most elállja a fentről érkező vonat egyébként szabad útvonalát. Van ezen a képen egy másik rossz várakozóhely is. Megtalálod?]]</div>
-<div style="width:50%;float:left;">[[File:en/Yappgoodexample.png|frame|center|'''Jó''': A kereszteződés után itt elég hely van ahhoz, hogy egy vonat várakozzon. A következő vonat mindaddig, amíg ez a hely nem vehető igénybe, inkább a kereszteződés előtt fog várakozni, mintsem elállná azt. Ez lehetővé teszi a fentről érkező vonat továbbhaladását.
-]]</div>
+<div style="width:50%;float:left;">[[File:en/Yappgoodexample.png|frame|center|'''Jó''': A kereszteződés után itt elég hely van ahhoz, hogy egy vonat várakozzon. A következő vonat mindaddig, amíg ez a hely nem vehető igénybe, inkább a kereszteződés előtt fog várakozni, mintsem elállná azt. Ez lehetővé teszi a fentről érkező vonat továbbhaladását.]]</div>
 <div style="clear:left;"></div>
 
 
 Lássunk egy másik példát arra, mit lehet ezekkel a jelzőkkel tenni. Ez sokkal jobban működik, mint az előjelzők, mert két vonatod hagyhatja el az állomást egyidőben úgy, hogy ugyanazon a vasúti járműtelepen osztoznak (előjelzőkkel ez nem megoldható, a szakasz közös használata miatt). Ebben a példában egyirányú irányjelzők engedik ki a vonatokat az állomásról, és egyszerű irányjelzők a járműtelepről.
-[[File:en/pathsignal station exit.png|frame|center|Állomás két kijárattal. Érdemes tudni, hogy a vasúti járműtelep előtt nem feltétlenül szükségesek jelzők, mivel a járműtelepeknek beépített jelzőjük van. Azonban a járműtelepek előtt elhelyezett útvonaljelzők, mint itt, elsőbbséget biztosítanak a járműtelepre behaladó vonatok számára.]]
+[[File:en/Pathsignal station exit.png|frame|center|Állomás két kijárattal. Érdemes tudni, hogy a vasúti járműtelep előtt nem feltétlenül szükségesek jelzők, mivel a járműtelepeknek beépített jelzőjük van. Azonban a járműtelepek előtt elhelyezett útvonaljelzők, mint itt, elsőbbséget biztosítanak a járműtelepre behaladó vonatok számára.]]
 
 
 ====Haladó beállítások====
 [[File:en/Yapp patch-options.png|frame|right|YAPP Advanced Settings]]
-A [[Main/hu/Haladó beállítások| Haladó beállítások]] közül három függ össze az útvonaljelzőkkel.
+A [[Main/hu/Haladó beállítások|Haladó beállítások]] közül három függ össze az útvonaljelzőkkel.
 
 Az egyik funkció a ''Vágányszakasz foglaltságának jelzése''. Ez hasznos opció az útvonaljelzőkkel ellátott kereszteződések hibaelhárítása során, mert láthatod, hogy a vonataid melyik utakat foglalták le a kereszteződésben.
 
 A másik két funkció a jelzőépítő eszköz működését befolyásolja. Beállíthatod, melyik jelzőtípus legyen alapértelmezett, amikor a jelzőválasztó használatával építesz jelzőt, és beállíthatod a ctrl+klikk hatására váltakozó jelzők fajtáját.
 
-Van még néhány funkció, ami az útvonaljelzőkkel a Haladó beállítások ablakban nem módosítható, csak az ''openttd.cfg''-ben. Ezek és szerkesztésük leírása a [[Main/hu/Speciális útvonaljelző funkciók és beállításaik| Speciális útvonaljelző funkciók és beállításaik]] cikkben olvashatók.
+Van még néhány funkció, ami az útvonaljelzőkkel a Haladó beállítások ablakban nem módosítható, csak az ''openttd.cfg''-ben. Ezek és szerkesztésük leírása a [[Main/hu/Speciális útvonaljelző funkciók és beállításaik|Speciális útvonaljelző funkciók és beállításaik]] cikkben olvashatók.
 
 
 ===Alappéldák===

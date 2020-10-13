@@ -1,5 +1,5 @@
-[[Translation:Main/en/Editing help]]{{en/-}}{{en/TOCright}}
-Это руководство по синтаксису MediaWiki (Википедия). Как черновик вы можете использовать [[Main/en/sandbox|Песочницу]].
+[[Translation:Main/en/Editing help]]{{en/TOCright}}
+Это руководство по синтаксису MediaWiki (Википедия). Как черновик вы можете использовать [[Main/en/Sandbox|Песочницу]].
 <div style="margin: 2em 0em 0em 0em; padding: 0em 1em 1em 1em; border: 1px solid #E1BBFF; background-color: #F5EDFC; font-size:large;">
 ==Очень важные правила==
 #Всегда подписывайтесь, когда оставляете комментарий. Используйте четыре тильды: "<nowiki>~~~~</nowiki>".
@@ -78,9 +78,9 @@
 <pre>[[File:en/.Имя|frame|none|Описание]]</pre>
 
 Пример:
-<pre>[[File:en/longerbridges.png|frame|none|Мосты]]</pre>
+<pre>[[File:en/Longerbridges.png|frame|none|Мосты]]</pre>
 Результат:
-[[File:en/longerbridges.png|frame|none|Мосты]]
+[[File:en/Longerbridges.png|frame|none|Мосты]]
 
 *См. также [http://www.wikipedia.org/wiki/Wikipedia:Extended_image_syntax Расширенный синтаксис изображений] в Википедии.
 
@@ -184,16 +184,16 @@
 
 ==Перенаправления==
 Используйте перенаправление чтобы сразу перенаправить читателя на другую или новую статью (с другим названием).
-Пример: [[Main/en/Checkpoints]] и [[Main/en/Waypoints]]
-<pre>#REDIRECT [[Main/en/waypoints]]</pre>
+Пример: [[Main/en/Waypoints|Checkpoints]] и [[Main/en/Waypoints]]
+<pre>#REDIRECT [[Main/en/Waypoints|waypoints]]</pre>
 
 ==Категории==
 Добавьте в статью категории, чтобы перенаправлять игрока в нужный раздел Вики
 <pre>[[Category:en/Development]]</pre>
 
 Чтобы показать категорию на странице как обычьную ссылку добавьте ":"
-<pre>[[Category/en/Development]]</pre>
-[[Category/en/Development]]
+<pre>[[Category/en/Development|:Category:Development]]</pre>
+[[Category/en/Development|:Category:Development]]
 
 ==Прочие коды==
 {|

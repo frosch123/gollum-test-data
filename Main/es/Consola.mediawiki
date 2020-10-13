@@ -1,11 +1,11 @@
-[[Translation:Main/en/Console]]{{en/-}}{{es/Tabla de contenido}}
+[[Translation:Main/en/Console]]{{es/Tabla de contenido}}
 {|
 |- valign="top"
-| style="background:none; border:0px" |La consola le permite ver el historial del chat del [[Main/es/multijugador|modo multijugador]] y ejecutar comandos en [[Main/es/OpenTTD|OpenTTD]] (al estilo del [http://www.wikipedia.org/wiki/es:DOS sistema operativo DOS]). La mayoría de los comandos se utilizan para configurar los [[Main/es/servidores|servidores]] para varios jugadores.
+| style="background:none; border:0px" |La consola le permite ver el historial del chat del [[Main/es/Multijugador|modo multijugador]] y ejecutar comandos en [[Main/es/OpenTTD|OpenTTD]] (al estilo del [http://www.wikipedia.org/wiki/es:DOS sistema operativo DOS]). La mayoría de los comandos se utilizan para configurar los [[Main/es/Servidor|servidores]] para varios jugadores.
 
 __TOC__
 | style="background:none; border:0px"|
-[[File:en/console.png|none|frame|La consola de OpenTTD.]]
+[[File:en/Console.png|none|frame|La consola de OpenTTD.]]
 |}
 
 ==Usar la consola==
@@ -79,7 +79,7 @@ Estos comandos funcionan tanto en los juegos de un solo jugador como en los serv
 |}
 
 ===Comandos multijugador===
-Estos comandos se utilizan para ejecutarse en un [[Main/es/servidor|servidor]] de juegos multijugador. Algunos comandos también funcionan para los clientes conectados.
+Estos comandos se utilizan para ejecutarse en un [[Main/es/Servidor|servidor]] de juegos multijugador. Algunos comandos también funcionan para los clientes conectados.
 
 {| {{en/Wikitable}} width=100%
 |- style="background:#efefef"
@@ -244,7 +244,7 @@ Estos comandos se utilizan para ejecutarse en un [[Main/es/servidor|servidor]] d
 |Hace una captura de pantalla. 'big' hace una captura de pantalla de todo el mapa. 'nocon' oculta la consola para una captura de pantalla normal.
 |-
 |alias <nombre> <comando> 
-|Crea un [[Main/es/alias de consola|alias]] llamado <nombre> del comando <comando>.
+|Crea un [[Main/es/Alias de consola|alias]] llamado <nombre> del comando <comando>.
 |-
 |patch <nombreopción> [<nuevovalor>]
 |Consultar o establecer la configuración de la consola. Si se omite <nuevovalor> se muestra el valor actual. Vea [[Main/es/Configuración de la consola|Configuración de la consola]] para ver un listado de todos las opciones disponibles.

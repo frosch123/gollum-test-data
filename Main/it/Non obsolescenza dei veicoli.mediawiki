@@ -1,4 +1,4 @@
-[[Translation:Main/en/Never expire vehicles]]{{en/-}}
+[[Translation:Main/en/Never expire vehicles]]
 Questa [[Main/en/Advanced Settings|setting]] impedirà ai veicoli di venire dismessi dal gioco e quindi rimarranno disponibili fino alla fine del gioco.
 
 == Descrizione ==
@@ -8,11 +8,11 @@ Questa impostazione assicura che i veicoli siano sempre disponibili. Pertanto, �
 
 Se attivi questa opzione '''prima di iniziare una partita''', allora sarà attivo per tutte le partite future, a meno che tu non abbia disabilitato l'opzione per salvare automaticamente le impostazioni.
 
-Puoi anche abilitare questa opzione '''nel corso di una partita'''. Si applicherà solo per quella partita e da quel momento in poi, non ti porterà indietro nessun motore già scaduto. Per fare ciò apri [[Main/en/console]], a meno che tu non abbia un tipo differente di tastiera, per aprirla schiaccia in game il tasto "\", e digita <code>resetengines</code>.
+Puoi anche abilitare questa opzione '''nel corso di una partita'''. Si applicherà solo per quella partita e da quel momento in poi, non ti porterà indietro nessun motore già scaduto. Per fare ciò apri [[Main/en/Console|console]], a meno che tu non abbia un tipo differente di tastiera, per aprirla schiaccia in game il tasto "\", e digita <code>resetengines</code>.
 
 
 == Uso ==
-Questa impostazione è disabilitata per impostazione predefinita. Puoi abilitarlo attraverso la finestra (versione OTTD 1.8.0) Impostazioni avanzate / Limiti / I veicoli non diventano mai obsoleti, o utilizzare la seguente sintassi in [[Main/en/openttd.cfg]]:
+Questa impostazione è disabilitata per impostazione predefinita. Puoi abilitarlo attraverso la finestra (versione OTTD 1.8.0) Impostazioni avanzate / Limiti / I veicoli non diventano mai obsoleti, o utilizzare la seguente sintassi in [[Main/en/Openttd.cfg|openttd.cfg]]:
 <Pre>
 [vehicle]
 never_expire_vehicles = true

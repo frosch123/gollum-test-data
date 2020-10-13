@@ -2,15 +2,15 @@
 |from=en
 |to=zh
 |Percentage=50
-}}[[Translation:Main/en/Installation]]{{en/-}}{{zh/目录}}
+}}[[Translation:Main/en/Installation]]{{zh/目录}}
 __TOC__
 =简介=
 自从推出1.0.0版本开始，OpenTTD的安装程序变得更简单，游戏及图形都完全使用开放源代码，并不需要额外下载基本图形。如要下载OpenTTD，请[http://www.openttd.org/download-stable 点击这里]。
 
-在安装过程中，您需要下载一套[[Main/en/base graphics|基本图形]]。
+在安装过程中，您需要下载一套[[Main/en/Base graphics|基本图形]]。
 
 现在有两套基本图形供玩家下载：
-* 使用[http://zh.wikipedia.org/wiki/开放源代码 开放源代码]的[[Main/en/OpenGFX Readme]]基本图形。如您没有运输大亨的游戏光盘，请下载此套基本图形。
+* 使用[http://zh.wikipedia.org/wiki/开放源代码 开放源代码]的[[Main/en/OpenGFX Readme|OpenGFX]]基本图形。如您没有运输大亨的游戏光盘，请下载此套基本图形。
 * 原本在[http://en.wikipedia.org/wiki/Transport_Tycoon 运输大亨]（TTD）光盘上的基本图形。这套基本图形跟OpenGFX不同，这基本图形'''不是'''免费的。
 
 另外，不同的[[Main/en/Operating system|操作系统]]（Windows, MacOSX, Linux）有不同的版本。
@@ -39,11 +39,11 @@ __TOC__
 # 安装OpenTTD.
 # 取消勾选"Copy Game Graphics"来跳过需要运输大亨基本图形的安装程序。[[File:en/Installation 2 gfx.png|frame|center|不使用运输大亨档案的安装设置]]
 #Editing the config file
-::'''4.1.''' Locate [[Main/en/openttd.cfg]]. It is located in:
+::'''4.1.''' Locate [[Main/en/Openttd.cfg|openttd.cfg]]. It is located in:
  Win XP : "C:\Documents and Settings\<username>\My Documents\OpenTTD"
  Vista  : "C:\Users\<username>\Documents\OpenTTD"
  Linux  : "~/.openttd"
-:'''4.2.''' Open [[Main/en/openttd.cfg]] using your favourite plain text editor.
+:'''4.2.''' Open [[Main/en/Openttd.cfg|openttd.cfg]] using your favourite plain text editor.
 :'''4.3.''' Locate the [misc] section and add the following (or edit the existing) line to the end of that section:
  graphicsset = "OpenGFX"
 : The name of the 基本图形 set is listed in it's obg-file and may or may not be identical to the obg's file name.
@@ -103,7 +103,7 @@ OpenGFX is faster and prefered.
 
 
 == 从Linux中的代码源手动安装 ==
-参见 [[Main/en/Compiling on (GNU/)Linux and *BSD]]。
+参见 [[Main/en/Compiling on (GNU/)Linux and *BSD|Compiling on Linux]]。
 
 = 运输大亨里的档案 =
 If you're installing OpenTTD with the运输大亨 基本图形, OpenTTD requires several original game files from your Transport Tycoon Deluxe installation 光盘.

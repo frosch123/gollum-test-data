@@ -16,7 +16,7 @@ The requirements are much less strict for a patch to be included into the MiniIN
 The term "nightly" refers to the [[Main/en/Nightly build|Nightly Builds]], which contain the latest changes made by the core programmers.  "Integrated" refers to all the patches being integrated into the nightly build.  "Mini" refers to the fact that this is the second generation of Integrated Nightly's, and there are a few requirements before a patch will be included.
 
 ==Downloading the Mini Integrated Nightly==
-The executable files are automatically compiled, and this is what is known as a [[Main/en/nightly]].  Despite its name, the nightly builds for the MiniIN are only built every Sunday, Tuesday and Thursday (23:00 CET, 22:00 UTC). If there aren't any changes in between those three days, you just have to wait.
+The executable files are automatically compiled, and this is what is known as a [[Main/en/Nightly build|nightly]].  Despite its name, the nightly builds for the MiniIN are only built every Sunday, Tuesday and Thursday (23:00 CET, 22:00 UTC). If there aren't any changes in between those three days, you just have to wait.
 
 The latest MiniIN nightly build can be downloaded at: 
 
@@ -56,7 +56,7 @@ If you download the source code, this list can be found in [http://svn.openttd.o
 !style="background:#999999;" | Update Available
 !style="background:#999999;" | Description
 |-
-|[[Main/en/Yet Another Pathfinder]]                           
+|[[Main/en/Yet Another Pathfinder|YAPF]]                           
 |in trunk
 |
 |''Yet another pathfinder'' is a powerful and flexible, yet optimized, pathfinder for vehicles.
@@ -430,7 +430,7 @@ After:
 SDT_CONDVAR(Patches, day_length,  SLE_UINT8, 34, SL_MAX_VERSION, NS, 0, 1, 1,   32, STR_CONFIG_PATCHES_DAY_LENGTH, NULL),
 </pre>
 
-This is to keep savegames backwards compatible.  Do not revert these, and do not change the 3rd and 4th parameters.  More info at [[Main/en/OpenTTDDevBlackBook/Settings/AddSetting]]
+This is to keep savegames backwards compatible.  Do not revert these, and do not change the 3rd and 4th parameters.  More info at [[Main/en/OpenTTDDevBlackBook/Settings/AddSetting|OpenTTDDevBlackBook/Patches/AddPatchOption]]
 
 When you upload your update patch, please notify everyone on [http://www.tt-forums.net/viewtopic.php?t=26333 this forum thread].  You may upload the file to the individual patch thread or to the MiniIN patch forum thread.  Then feel free to add a link to the Update Available like this: 
 
@@ -449,7 +449,7 @@ When you upload your update patch, please notify everyone on [http://www.tt-foru
 * [[Main/en/Requested features]] &mdash; List of WIP Suggestions
 * [[Main/en/NewGRF TODO]] &mdash; A list of NewGRF WIP features for developers.
 * [[Main/en/Comparison of OpenTTD and TTDPatch features]] &mdash; Full List of features
-* [[Main/en/Mini Integrated Nightly]] &mdash; The list of patch of the precedent nightly
+* [[Main/en/Mini Integrated Nightly|Mini_Integrated_Nightly]] &mdash; The list of patch of the precedent nightly
 
 [[Category:en/Development]]
 [[Category:en/Compiling OpenTTD]]

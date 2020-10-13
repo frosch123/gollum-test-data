@@ -1,9 +1,9 @@
 [[Translation:Main/en/Scenarios Team]]
-The Scenarios Team is a gathering of people devoted to updating the [[Main/en/list of player-made scenarios]]. Anyone is free to join in. In fact, the team needs your help in updating the database of scenarios so that anyone can search for and download new scenarios with ease.
+The Scenarios Team is a gathering of people devoted to updating the [[Main/en/List of player-made scenarios|list of player-made scenarios]]. Anyone is free to join in. In fact, the team needs your help in updating the database of scenarios so that anyone can search for and download new scenarios with ease.
 
 ==Project Main Goals==
 
-* Get as many scenario authors as possible to join and copy their scenarios from [http://www.tt-forums.net/viewforum.php?f=60 the forums] to [[Main/en/list of player-made scenarios|the wiki]].
+* Get as many scenario authors as possible to join and copy their scenarios from [http://www.tt-forums.net/viewforum.php?f=60 the forums] to [[Main/en/List of player-made scenarios|the wiki]].
 * Update the scenario database as needed.
 * Maintain the aesthetics of the database.
 * Collaborate to create a newbie-friendly database of freely downloadable scenarios for OpenTTD.
@@ -34,7 +34,7 @@ The first scenario project is the [[Main/en/Scenarios Team/Cindini Map Project|C
 
 ===Project Members===
 
-''A full list is available at [[Category/en/Scenarios Team members]].''
+''A full list is available at [[Category/en/Scenarios Team members|:Category:Scenarios Team members]].''
 
 *[[Archive/en/Sleepie|Sleepie]] [http://www.tt-forums.net/profile.php?mode=viewprofile&u=15521 *]
 *[[Archive/en/Tycoonjamie|Tycoonjamie]] [http://www.tt-forums.net/profile.php?mode=viewprofile&u=11355 *]
@@ -48,7 +48,7 @@ The first scenario project is the [[Main/en/Scenarios Team/Cindini Map Project|C
 # Take a screenshot showing a detail you like about the scenario you are about to list. Again, preferably medium-size, and in PNG. [http://wiki.openttd.org/index.php/Image:Scn-echo-screenshot.png Example]
 # Name the above files logically like in the example above and upload them to the wiki [[Main/en/Special:Upload|here]].
 # Go to a category page where your map fits into, a good start would be here: [[Main/en/Scenario by Setting]]
-## Edit the category page and add the following code: '''<code><nowiki>{{Scenario:Name of your Scenario}}</nowiki></code>''' Just look at the existing code and it should be quite easy.'''(NB: Remember capitalisation is important - <nowiki>sub-arctic</nowiki> doesn't work, whilst [[Main/en/Climates#Sub-arctic]] does).'''
+## Edit the category page and add the following code: '''<code><nowiki>{{Scenario:Name of your Scenario}}</nowiki></code>''' Just look at the existing code and it should be quite easy.'''(NB: Remember capitalisation is important - <nowiki>sub-arctic</nowiki> doesn't work, whilst [[Main/en/Climates#Sub-arctic|Sub-Arctic]] does).'''
 ## Press the preview button, you should see a red link with the name of your scenario. Then add a summary for your changes and save the page.
 # Click on the red link you just added to start a new article for your scenario. 
 ## Paste an empty scenario entry into the article from the code block below. Describe your scenario by filling the relevant information into the empty template.
@@ -66,13 +66,12 @@ Thank you.
 
 <pre>
 <nowiki>
-{{scenario
-|title=Your Scenario
+{{en/Scenario|title=Your Scenario
 |minimap=name-of-your-minimap.png
 |screenshot=name-of-your-screenshot.png
 |description=A few words about your scenario. Geography, different strategies, and so on.
 |difficulty=Easy/Normal/Hard
-|setting=[[Main/en/Climates#Temperate]] / [[Main/en/Climates#Sub-tropical]] / [[Main/en/Climates#Sub-arctic]] / [[Main/en/Climates#Toyland]]
+|setting=[[Main/en/Climates#Temperate|Temperate]] / [[Main/en/Climates#Sub-tropical|Sub-tropical]] / [[Main/en/Climates#Sub-arctic|Sub-arctic]] / [[Main/en/Climates#Toyland|Toyland]]
 |size=256x256
 |relief=Very Flat / Flat / Hilly / Mountainous / Mixed
 |towns=Low/Normal/High (the "No. of towns" setting)
@@ -94,11 +93,11 @@ Thank you.
 ::This is really not possible using MediaWiki. To accomplish a system like this, we would need a custom script of some kind.
 
 :;I have some ideas/suggestions/feedback on the project. Where should I post them?
-::To centralize all discussion on this project in one place, please post in [[Archive/en/List of player-made scenarios]].
+::To centralize all discussion on this project in one place, please post in [[Archive/en/List of player-made scenarios|Talk:List of player-made scenarios]].
 
 ===Miscellaneous resources===
 
 
 :;[[Main/en/Scenarios Team/Maintain scenarios]]
 ::This page is for quick maintenance access to all pages in the Scenario namespace. It contains a table with all scenarios, which is sorted by author and name of the scenario.
-::See also [[Category/en/Scenario]]
+::See also [[Category/en/Scenario|:Category:Scenario]]

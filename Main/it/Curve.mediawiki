@@ -6,11 +6,11 @@ Quando si utilizza [[Main/en/Impostazioni avanzate/It#Accelerazione realistica|a
 I treni subiscono un rallentamento quando attraversano più di una curva contemporaneamente e nella stessa direzione. Ecco alcuni esempi:
 
 {|style="border-collapse: separate; border: 0px" cellspacing=10
-|[[File:en/corner-1x45.png|frame|center|Nessun rallentamento: solo una curva]]
-|[[File:en/corner-2x45.png|frame|center|Nessun rallentamento: solo una curva in ciascuna direzione]]
+|[[File:en/Corner-1x45.png|frame|center|Nessun rallentamento: solo una curva]]
+|[[File:en/Corner-2x45.png|frame|center|Nessun rallentamento: solo una curva in ciascuna direzione]]
 |-
-|[[File:en/corner-4x45-nocars.png|frame|center|Nessun rallentamento: ]]
-|[[File:en/corner-4x45.png|frame|center|Rallentamento! Più curve contemporaneamente in più direzioni]]
+|[[File:en/Corner-4x45-nocars.png|frame|center|Nessun rallentamento:]]
+|[[File:en/Corner-4x45.png|frame|center|Rallentamento! Più curve contemporaneamente in più direzioni]]
 |}
 
 Negli ultimi due esempi mostrati sopra anche, se il tracciato è identico, nel primo caso il treno lungo un solo tile non rallenta perchè affronta una sola curva alla volta.
@@ -19,7 +19,7 @@ Negli ultimi due esempi mostrati sopra anche, se il tracciato è identico, nel p
 
 =Curve a 90&deg;=
 
-[[File:en/corner-90.png|frame|left|Rallentamento: curva a 90 gradi]]
+[[File:en/Corner-90.png|frame|left|Rallentamento: curva a 90 gradi]]
 
 I treni che affrontano curve di 90 gradi sono limitati a 55 km/h. C'è un settaggio per evitare questo [[Main/en/Impostazioni avanzate/Veicoli/instradamento#Impedisci a treni e navi di curvare a 90 gradi|Impedisci a treni e navi di curvare a 90 gradi]], di fronte ad una curva simile torneranno indietro. 
 
@@ -35,7 +35,7 @@ Cerca di evitare di costruire una lunga linea diagonale vicino o intorno alle ci
 
 Se la lunghezza del treno non è un problema, puoi calcolare la distanza che ti serve tra le curve, quanto deve essere lunga la curva, per prevenire un eccessivo rallentamento confrontando i treni più veloci disponibili con la [[Main/en/Meccaniche di gioco/It#Velocità dei veicoli|tabella dei limiti di velocità]]. Ecco una guida approssimativa basata su tali informazioni:
 
-{| {{wikitable}} style="margin:1em 1em 1em 0; border:solid 1px #AAAAAA; background-color:#F8F8FF; text-align:center"
+{| {{en/Wikitable}} style="margin:1em 1em 1em 0; border:solid 1px #AAAAAA; background-color:#F8F8FF; text-align:center"
 |+ '''Minimum distance between corners''' (presumendo treni infinitamente lunghi)
 |- style="background:#efefef"
 !style="width: 5em"|Anno

@@ -1,4 +1,4 @@
-[[Translation:Main/en/Signals]]{{en/-}}{{nl/Inhoudsopgave}}
+[[Translation:Main/en/Signals]]{{nl/Inhoudsopgave}}
 
 ''Zie de tutorial [[Main/nl/Seinen plaatsen|seinen plaatsen]] tutorial voor een praktische introductie voor seinen''
 
@@ -99,18 +99,18 @@ De afbeelding rechts toont een opstelling waar de toegang tot een station wordt 
 Voorseinen zijn seinen die hun kleur niet alleen laten afhangen van de status van het spoor, maar ook van de seinen van voorseinen die verderop de lijn staan. Specifiek een ingangsvoorsein laat alleen een groen licht zien als er een groen uitgangssein van het blok erachter is. Jij, als de planner, bent nodig om te bepalen welke seinen ingangsseinen en welke uitgangsseinen worden.
 {{en/-}}
 ====Ingangssein====
-[[File:en/entry presignal.png|left|60px]]Een '''ingangssein''' is groen zolang er 1 groen uitgangssein is op de volgende sectie op het spoor, anders wordt het sein rood. Dit voorkomt dat treinen naar het volgende blok verder rijden tot dat er een uitgang beschikbaar is. Let op dat depots ingebouwde tweerichtingssein hebben (het werkt als een ingangssein in een ketting van voorseinen).
+[[File:en/Entry presignal.png|left|60px]]Een '''ingangssein''' is groen zolang er 1 groen uitgangssein is op de volgende sectie op het spoor, anders wordt het sein rood. Dit voorkomt dat treinen naar het volgende blok verder rijden tot dat er een uitgang beschikbaar is. Let op dat depots ingebouwde tweerichtingssein hebben (het werkt als een ingangssein in een ketting van voorseinen).
 
 Als er geen uitgangsseinen bevinden achter een ingangssein, gaat het uitgangssein zich normaal gedragen. Dit is handig voor tweerichtingsseinen waar slechts 1 richting de voorseinenfunctie gebruikt.
 {{en/-}}
 
 ====Uitgangssein====
-[[File:en/exit presignal.png|60px|left]]Een '''uitgangssein''' gedraagt zich zoals een normale sein, maar is nodig voor het correct functioneren van ingangs- en combinatieseinen.
+[[File:en/Exit presignal.png|60px|left]]Een '''uitgangssein''' gedraagt zich zoals een normale sein, maar is nodig voor het correct functioneren van ingangs- en combinatieseinen.
 {{en/-}}
 
 ====Combinatiesein====
-[[File:en/station with pre-signals2.png|frame|right|Station met 1 voorsein, 2 combinatieseinen, en 4 uitgangsseinen]]
-[[File:en/combo presignal.png|60px|left]]Er is een derde en laatste voorseintype met de naam '''combinatiesein'''. Het is een combinatie van de ingangssein en de uitgangssein. Dit laat toe om grote vertakkingen uit voorseinen te construeren zoals op de afbeelding aan de rechterkant.
+[[File:en/Station with pre-signals2.png|frame|right|Station met 1 voorsein, 2 combinatieseinen, en 4 uitgangsseinen]]
+[[File:en/Combo presignal.png|60px|left]]Er is een derde en laatste voorseintype met de naam '''combinatiesein'''. Het is een combinatie van de ingangssein en de uitgangssein. Dit laat toe om grote vertakkingen uit voorseinen te construeren zoals op de afbeelding aan de rechterkant.
 {{en/-}}
 
 ====Bouwen van voorseinen====
@@ -164,7 +164,7 @@ Omdat de voorkant van elk sein wordt gedefinieerd als een veilige wachtpositie, 
 
 Dit is een ander voorbeeld van wat je kunt doen met routeseinen. Dit werkt veel beter dan met behulp van voorseinen, want je kunt er twee treinen op hetzelfde tijdstip het station laten verlaten en ook gebruik laten maken van hetzelfde depot (dit kan niet met voorseinen, omdat het blok gedeeld wordt). In dit geval zijn er eenwegrouteseinen voor treinen die het station verlaten, en een gewoon routesein voor treinen die het depot verlaten.
 
-[[File:en/pathsignal station exit.png|frame|center|Station met twee uitgangen.]]
+[[File:en/Pathsignal station exit.png|frame|center|Station met twee uitgangen.]]
 
 
 ====Geavanceerde instellingen====
@@ -190,7 +190,7 @@ Met dit station kunnen treinen vanaf beide richtingen beide perrons gebruiken.
 {{nl/Kenmerken|0.7}}
 
 ==Armseinen==
-[[File:en/semaphore.png|frame|left]]
+[[File:en/Semaphore.png|frame|left]]
 '''Armseinen''' zijn een type seinen met een historische verschijning, maar met dezelfde functionaliteit als de seinen met lampen.
 
 Voor OpenTTD 0.6.0 werden armseinen alleen gebouwd als ''Ctrl'' ingedrukt werd gehouden tijdens het plaatsen van seinen. Vanaf 0.6.0 worden armseinen (configureerbaar) gebouwd tot 1975. Deze instelling heet "Plaats automatisch armseinen voor" en kan in de "Geavanceerde settings" onder "Constructie" en dan "Seinen" gevonden worden.
@@ -209,7 +209,7 @@ Seinen zijn bedoeld om ongevallen tussen treinen te voorkomen en ze te laten kie
 ==Zie ook==
 * [[Main/en/Advanced signalling examples|Voorbeelden van geavanceerde voorseininstellingen]]
 * [[Main/en/Depots bouwen/Nl#Geavanceerde depot opstellingen|Geavanceerde depotopstellingen]]
-* [[Category/nl/Treinkruispunt]] voor voorbeelden van complexe kruisingen die voordeel hebben bij voorseinen.
+* [[Category/nl/Treinkruispunt|:Category:Treinkruispunt/Nl]] voor voorbeelden van complexe kruisingen die voordeel hebben bij voorseinen.
 * [http://www.darkcoding.net/misc/openttd-trains-and-signals-for-beginners-a-tutorial/ Seinen voor de absolute beginner]
 * [http://kokolokus.de/?s=blog&v=6 Een tutorial geschreven door domsson, op de fora] [http://www.tt-forums.net/viewtopic.php?f=29&t=51395 hier]
 

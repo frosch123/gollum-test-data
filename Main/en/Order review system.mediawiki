@@ -1,9 +1,9 @@
 [[Translation:Main/en/Order review system]]
-A [[Main/en/Advanced Settings|setting]] that determines under which conditions the program will check orders of the vehicles according to the rules of the [[Main/en/order checker]]
+A [[Main/en/Advanced Settings|setting]] that determines under which conditions the program will check orders of the vehicles according to the rules of the [[Main/en/Orders#Order checking|order checker]]
 
 == Description ==
 
-As the [[Main/en/order checker]] page points out, sometimes due to construction or whatnot, orders get messed up in the queue.  But there may be times when you don't want the order checker to do its job.  The error messages can get annoying, especially with stopped [[Main/en/vehicles]]  With this patch, you can enable the order checker at all times, tell the order checker to skip vehicles that are stopped, or turn off the order checker altogether.
+As the [[Main/en/Orders#Order checking|order checker]] page points out, sometimes due to construction or whatnot, orders get messed up in the queue.  But there may be times when you don't want the order checker to do its job.  The error messages can get annoying, especially with stopped [[Main/en/Vehicles|vehicles]]  With this patch, you can enable the order checker at all times, tell the order checker to skip vehicles that are stopped, or turn off the order checker altogether.
 
 == Use ==
 
@@ -13,7 +13,7 @@ This feature has 3 settings:
  1 = yes, but exclude stopped vehicles  -- Only review moving vehicles
  2 = all of vehicles                    -- Review all vehicles
 
-This feature is set to 'all of vehicles' by default. You can change this patch through the [[Main/en/Configuring patches/Vehicles|configure patches -> vehicles]] window or use the following syntax in [[Main/en/openttd.cfg]]:
+This feature is set to 'all of vehicles' by default. You can change this patch through the [[Main/en/Configuring patches/Vehicles|configure patches -> vehicles]] window or use the following syntax in [[Main/en/Openttd.cfg|openttd.cfg]]:
 
  [patches]
  order_review_system = 0

@@ -1,13 +1,13 @@
-[[Translation:Main/en/Installation]]{{en/-}}{{sr/Sadržaj}}
+[[Translation:Main/en/Installation]]{{sr/Sadržaj}}
 __TOC__
 =Uvod=
 Počev od verzije 1.0.0 OpenTTD, instalacije je uprošćena jer je igra u potpunosti (igra i grafika) zasnovana na otvorenom kodu; sve je uključeno u instalaciju. Za preuzimanje poslednje verzije OpenTTD [http://www.openttd.org/download-stable kliknite ovde].
 
-Instalacija može biti malo komplikovanija, uzimajući u obzir da [[Main/en/base graphics|grafika iz originala]] nije distribuirana zajedno sa igrom. Dakle, pored [http://www.openttd.org/ preuzimanja igre], morate da nabavite i grafiku iz originalne igre.
+Instalacija može biti malo komplikovanija, uzimajući u obzir da [[Main/en/Base graphics|grafika iz originala]] nije distribuirana zajedno sa igrom. Dakle, pored [http://www.openttd.org/ preuzimanja igre], morate da nabavite i grafiku iz originalne igre.
 
 Trenutno postoje dve grafičke verzije OpenTTD koje možete igrati:
 * Prva verzija nalazi se na [http://en.wikipedia.org/wiki/Transport_Tycoon Transport Tycoon Deluxe] (TTD) CD-u. Za razliku od OpenTTD, TTD nije besplatan;
-* Druga verzija je alternativa grafici originalnog TTD-a, zasnovana je na [http://en.wikipedia.org/wiki/Open_source Otvorenom kodu] i zove se [[Main/en/OpenGFX Readme]]. OpenGFX grafika namenjena je onima koji nemaju originalni TTD CD.
+* Druga verzija je alternativa grafici originalnog TTD-a, zasnovana je na [http://en.wikipedia.org/wiki/Open_source Otvorenom kodu] i zove se [[Main/en/OpenGFX Readme|OpenGFX]]. OpenGFX grafika namenjena je onima koji nemaju originalni TTD CD.
 
 Takođe, tu su različite verzije za različite [[Main/en/Operating system|operativne sisteme]] (Vindovs, MekOSX, Linuks).
 
@@ -49,11 +49,11 @@ Takođe, tu su različite verzije za različite [[Main/en/Operating system|opera
 [[File:en/Installation 2 gfx.png|frame|center|Podešavanje instalacije za korisnike bez grafičkih fajlova TTD]]
 
 '''4.''' Izmena config fajla
-:'''4.1.''' Pronađite fajl [[Main/en/openttd.cfg]]. On se nalazi na sledećoj lokaciji (zavisno od operativnog sistema):
+:'''4.1.''' Pronađite fajl [[Main/en/Openttd.cfg|openttd.cfg]]. On se nalazi na sledećoj lokaciji (zavisno od operativnog sistema):
  Win XP : "C:\Documents and Settings\<username>\My Documents\OpenTTD"
  Vista  : "C:\Users\<username>\Documents\OpenTTD"
  Linux  : "~/.openttd"
-:'''4.2.''' Otvorite [[Main/en/openttd.cfg]] koristeći obični editor teksta.
+:'''4.2.''' Otvorite [[Main/en/Openttd.cfg|openttd.cfg]] koristeći obični editor teksta.
 :'''4.3.''' Pronađite [misc] odeljak i dodajte sledeću (ili izmenite postojeću) liniju teksta na kraju tog odeljka:
  graphicsset = "OpenGFX"
 : Naziv grafičke verzije originala nalazi se u njegovom obg-fajlu i možda nije istog naziva kao naziv obg's fajla.
@@ -112,7 +112,7 @@ OpenGFX grafika se preporučuje zbog brzine.
 #Napravite '''~/.openttd/''' folder i tu smestite grafičke fajlove.
 
 == Ručna instalacija sa sorce na Linuksu ==
-Pogledajte [[Main/en/Compiling on (GNU/)Linux and *BSD]].
+Pogledajte [[Main/en/Compiling on (GNU/)Linux and *BSD|Compiling on Linux]].
 
 = Fajlovi sa TTD=
 Ako instalirate OpenTTD sa TTD grafikom, OpenTTD će zahtevati nekoliko fajlova sa Transport Tajkun Deluks instalacionog CD-a.

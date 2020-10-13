@@ -1,13 +1,13 @@
-[[Translation:Main/en/Installation]]{{en/-}}{{en/Table of contents}}
+[[Translation:Main/en/Installation]]{{en/Table of contents}}
 __TOC__
 =Introduction=
 Since version 1.0.0 OpenTTD, installation is simplified enough, the game is completely (play and graphics) open source; everything is included in the installer. To download the latest version of OpenTTD [http://www.openttd.org/download-stable click here].
 
-Installation can be a little complicated, as the [[Main/en/base graphics]] are not distributed with the game. So beside [http://www.openttd.org/ downloading the game], you need to obtain a set of base graphics as well.
+Installation can be a little complicated, as the [[Main/en/Base graphics|base graphics]] are not distributed with the game. So beside [http://www.openttd.org/ downloading the game], you need to obtain a set of base graphics as well.
 
 Currently, there are two sets of base graphics that OpenTTD can use:
 * One fully functional set is located on the [http://en.wikipedia.org/wiki/Transport_Tycoon Transport Tycoon Deluxe] (TTD) CD. As opposed to OpenTTD, TTD is '''not''' freeware;
-* An [http://en.wikipedia.org/wiki/Open_source Open Source] alternative to the TTD base graphics called [[Main/en/OpenGFX Readme]] is currently finished. The OpenGFX base graphics set is for those guys not having the original TTD CD.
+* An [http://en.wikipedia.org/wiki/Open_source Open Source] alternative to the TTD base graphics called [[Main/en/OpenGFX Readme|OpenGFX]] is currently finished. The OpenGFX base graphics set is for those guys not having the original TTD CD.
 
 = Installation =
 '''Select the installation instructions for the base graphics set you chose and your operating system:'''
@@ -44,11 +44,11 @@ Currently, there are two sets of base graphics that OpenTTD can use:
 [[File:en/Installation 2 gfx.png|frame|center|Installer setup for users without TTD files]]
 
 '''4.''' Editing the config file
-:'''4.1.''' Locate [[Main/en/openttd.cfg]]. It is located in:
+:'''4.1.''' Locate [[Main/en/Openttd.cfg|openttd.cfg]]. It is located in:
  Win XP : "C:\Documents and Settings\<username>\My Documents\OpenTTD"
  Vista  : "C:\Users\<username>\Documents\OpenTTD"
  Linux  : "~/.openttd"
-:'''4.2.''' Open [[Main/en/openttd.cfg]] using your favourite plain text editor.
+:'''4.2.''' Open [[Main/en/Openttd.cfg|openttd.cfg]] using your favourite plain text editor.
 :'''4.3.''' Locate the [misc] section and add the following (or edit the existing) line to the end of that section:
  graphicsset = "OpenGFX"
 : The name of the base graphics set is listed in it's obg-file and may or may not be identical to the obg's file name.
@@ -97,7 +97,7 @@ OpenGFX is faster and prefered.
 #Create an '''~/.openttd/''' directory and put them there.
 
 == Manual Installation from source on Linux ==
-See [[Main/en/Compiling on (GNU/)Linux and *BSD]].
+See [[Main/en/Compiling on (GNU/)Linux and *BSD|Compiling on Linux]].
 
 = Files from TTD=
 If you're installing OpenTTD with the TTD base graphics, OpenTTD requires several original game files from your Transport Tycoon Deluxe installation CD.

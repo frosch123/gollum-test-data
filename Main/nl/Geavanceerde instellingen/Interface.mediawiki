@@ -1,7 +1,7 @@
-[[Translation:Main/en/Advanced Settings/Interface]]{{en/-}}{{nl/Geavanceerde instellingen}}
+[[Translation:Main/en/Advanced Settings/Interface]]{{nl/Geavanceerde instellingen}}
 
 ==Geavanceerde instellingen venster: Interface sectie==
-De interface sectie geeft je de mogelijkheid verschillende opties gerelateerd aan de spelinterface in te stellen. Het doel van de beschikbare instellingen wordt hierna toegelicht. Voor elke instelling zijn de respectievelijke variabelen van de [[Main/en/openttd.cfg|config file]] opgesomd met de mogelijke waarden.{{en/-right}}
+De interface sectie geeft je de mogelijkheid verschillende opties gerelateerd aan de spelinterface in te stellen. Het doel van de beschikbare instellingen wordt hierna toegelicht. Voor elke instelling zijn de respectievelijke variabelen van de [[Main/en/Openttd.cfg|config file]] opgesomd met de mogelijke waarden.{{en/-right}}
 {| align="center" style="margin:0;"
 |- valign="top"
 |style="padding: 0; border: 0; background: transparent;"|__TOC__
@@ -28,7 +28,7 @@ Toont een hulpscherm waarin wordt aangegeven wat de lengte, het gebied en/of de 
 {{en/-}}
 ====Gebruik laadindicatoren====
 {{nl/Kenmerken|0.6|float=right|text=(0.6.0)}}
-Deze functie toont de [[Main/nl/laadindicatoren|laadindicatoren]] boven voertuigen, waarin is aangegeven de hoeveelheid vracht in het voertuig bij laden/lossen in procenten.
+Deze functie toont de [[Main/nl/Laadindicatoren|laadindicatoren]] boven voertuigen, waarin is aangegeven de hoeveelheid vracht in het voertuig bij laden/lossen in procenten.
 :''Mogelijke instellingen:'' <span style="color:red">'''Uit'''</span>, <span style="color:#00693E">'''Eigen bedrijf'''</span> of <span style="color:#00693E">'''Alle bedrijven'''</span>
 :''In Openttd.cfg config file:'' ([gui] loading_indicators = <0-2>)
 {{en/-}}
@@ -60,7 +60,7 @@ Stelt de hoofdkleur van de kleine kaart in op groen, donker groen of violet.
 ===<u>Interactie</u>===
 ====Vensterklikradius====
 {{nl/Kenmerken|Old|float=right|text=(0.3.5)}}
-Radius in pixels waarbinnen een venster, dat wordt gesleept, [[Main/en/window snap radius|automatisch vastklikt]] aan de rand van een ander venster of de rand van het scherm.
+Radius in pixels waarbinnen een venster, dat wordt gesleept, [[Main/en/Window snap radius|automatisch vastklikt]] aan de rand van een ander venster of de rand van het scherm.
 :''Mogelijke instellingen:'' <span style="color:red">'''uit'''</span> of <span style="color:#00693E">'''1'''</span> tot <span style="color:#00693E">'''32 pixels'''</span>
 :''In Openttd.cfg config file:'' ([gui] window_snap_radius = <num_val>)
 {{en/-}}
@@ -71,7 +71,7 @@ Stelt het aantal vensters in dat kan worden geopend op hetzelfde moment, zonder 
 :''In Openttd.cfg config file:'' ([gui] window_soft_limit = <num_val>)
 ====Verbind de knoppenbalk voor terreinvorming met die voor spoor/weg/water/vliegveld====
 {{nl/Kenmerken|Old|float=right|text=(0.4.0.1)}}
-Wanneer op een van de [[File:en/Manual html m772c5b23.png]] [[Main/nl/Spoorwegconstructies|Spoorwegconstructies]], [[File:en/Manual html ma6d6c8c.png]] [[Main/nl/Wegconstructies|Wegconstructies]], [[File:en/Manual html m2cc0c4cd.png]] [[Main/nl/Waterwegconstructies|Waterwegconstructies]] of [[File:en/Manual html 1ae92703.png]] [[Main/nl/bouw vliegveld|Vliegveldconstructies]] knoppen op de [[Main/en/Spelinterface/Nl#De menubalk|menubalk]] wordt geklikt zal de [[Main/nl/Terreinvorming|terreinvorming]] werkbalk worden geopend naast de relevante constructiewerkbalk. Wanneer je een geopende constructiewerkbalk sluit, zal de geopende terreinvorming werkbalk ook gesloten worden.
+Wanneer op een van de [[File:en/Manual html m772c5b23.png]] [[Main/nl/Spoorwegconstructies|Spoorwegconstructies]], [[File:en/Manual html ma6d6c8c.png]] [[Main/nl/Wegconstructies|Wegconstructies]], [[File:en/Manual html m2cc0c4cd.png]] [[Main/nl/Waterwegconstructies|Waterwegconstructies]] of [[File:en/Manual html 1ae92703.png]] [[Main/nl/Bouw vliegveld|Vliegveldconstructies]] knoppen op de [[Main/en/Spelinterface/Nl#De menubalk|menubalk]] wordt geklikt zal de [[Main/nl/Terreinvorming|terreinvorming]] werkbalk worden geopend naast de relevante constructiewerkbalk. Wanneer je een geopende constructiewerkbalk sluit, zal de geopende terreinvorming werkbalk ook gesloten worden.
 :''Mogelijke instellingen:'' <span style="color:green">'''Aan'''</span> of <span style="color:red">'''Uit'''</span>
 :''In Openttd.cfg config file:'' ([gui] link_terraform_toolbar = <true|false>){{en/-}}
 ====Voorkeur voor team chat met <ENTER>====
@@ -82,7 +82,7 @@ Met deze optie aan zullen chat boodschappen alleen aan teamleden worden gezonden
 {{en/-}}
 ====Verschuif scherm als muis aan de rand is====
 {{nl/Kenmerken|Old|float=right|text=(0.2.0)}}
-Wanneer de muis aan de rand van het venster komt zal het beeld [[Main/en/autoscroll|automatisch gaan scrollen]].
+Wanneer de muis aan de rand van het venster komt zal het beeld [[Main/en/Autoscroll|automatisch gaan scrollen]].
 :''Mogelijke instellingen:'' <span style="color:green">'''Aan'''</span> of <span style="color:red">'''Uit'''</span>
 :''In Openttd.cfg config file:'' ([gui] autoscroll = <true|false>)
 {{en/-}}
@@ -119,13 +119,13 @@ Stelt de snelheid van het muiswiel in.
 ----
 ===Financieel overzicht aan het einde van het jaar weergeven===
 {{nl/Kenmerken|Old|float=right|text=(0.2.0)}}
-Wel of niet tonen van het [[Main/en/show finances at end of year|financieel overzicht]] aan het eind van het jaar.
+Wel of niet tonen van het [[Main/en/Show finances at end of year|financieel overzicht]] aan het eind van het jaar.
 :''Mogelijke instellingen:'' <span style="color:green">'''Aan'''</span> of <span style="color:red">'''Uit'''</span>
 :''In Openttd.cfg config file:'' ([gui] show_finances = <true|false>)
 {{en/-}}
 ===Duur van foutmeldingen===
 {{nl/Kenmerken|Old|float=right|text=(0.3.2)}}
-Aantal seconden dat [[Main/en/error message duration|foutmeldingen]] worden getoond.
+Aantal seconden dat [[Main/en/Error message duration|foutmeldingen]] worden getoond.
 :''Mogelijke instellingen:'' <span style="color:red">'''0'''</span> tot <span style="color:#00693E">'''20'''</span>
 :''In Openttd.cfg config file:'' ([gui] errmsg_duration = <num_val>)
 {{en/-}}
@@ -137,7 +137,7 @@ Geeft aan of er een tooltip wordt getoond bij het hovergedrag van de muis met ee
 {{en/-}}
 ===Positie van algemene knoppenbalk===
 {{nl/Kenmerken|Old|float=right|text=(0.3.4)}}
-[[Main/en/toolbar position|Locatie van de algemene knoppenbalk/menubalk]] waar alle constructie gereedschappen op zijn aangegeven.
+[[Main/en/Toolbar position|Locatie van de algemene knoppenbalk/menubalk]] waar alle constructie gereedschappen op zijn aangegeven.
 :''Mogelijke instellingen:'' <span style="color:#00693E">'''Links'''</span>, <span style="color:#00693E">'''Midden'''</span> of <span style="color:#00693E">'''Rechts'''</span>
 :''In Openttd.cfg config file:'' ([gui] toolbar_pos = <0-2>)
 {{en/-}}
@@ -155,7 +155,7 @@ Met het aanzetten van deze optie start een nieuw spel automatisch in de Pauze st
 {{en/-}}
 ===Gebruik de geavanceerde voertuigenlijst===
 {{nl/Kenmerken|0.6|float=right|text=(0.6.0)}}
-De [[Main/nl/voertuig groepen|geavanceerde voertuigenlijst]] geeft de mogelijkheid voertuigen in groepen in te delen en bepaalde acties op deze groepen toe te passen, zoals het vervangen en naar een depot sturen voor onderhoud.
+De [[Main/nl/Voertuig groepen|geavanceerde voertuigenlijst]] geeft de mogelijkheid voertuigen in groepen in te delen en bepaalde acties op deze groepen toe te passen, zoals het vervangen en naar een depot sturen voor onderhoud.
 :''Mogelijke instellingen:'' <span style="color:red">'''Uit'''</span>, <span style="color:#00693E">'''Eigen bedrijf'''</span> of <span style="color:#00693E">'''Alle bedrijven'''</span>
 :''In Openttd.cfg config file:'' ([gui] advanced_vehicle_list = <0-2>)
 {{en/-}}
@@ -197,7 +197,7 @@ Houdt bijvoorbeeld de bus station constructievenster open nadat je een nieuw bus
 {{en/-}}
 ===Kleurenfoto's komen in===
 {{nl/Kenmerken|Old|float=right|text=(0.3.2)}}
-Het jaar waarin [[Main/en/colored newspaper|kleurenfoto's]] verschijnen.
+Het jaar waarin [[Main/en/Coloured newspaper|kleurenfoto's]] verschijnen.
 Deze optie is verplaatst uit de [[Main/en/Configuring patches/Economy#Coloured news appears in|economie sectie]] in 0.7.0.
 :''Mogelijke instellingen:'' <span style="color:#00693E">'''0'''</span> tot <span style="color:#00693E">'''5.000.000'''</span>
 :''In Openttd.cfg config file:'' ([gui] colored_news_year = <year>)

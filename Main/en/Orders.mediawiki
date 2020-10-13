@@ -1,8 +1,8 @@
 {{en/Split|It's necessary to separate Manual/Tutorial}}
-[[Translation:Main/en/Orders]]{{en/-}}{{en/Tutorial}}
+[[Translation:Main/en/Orders]]{{en/Tutorial}}
 :''This tutorial explains the orders for the version [[Main/en/OpenTTD 0.7.0]] and later. If you are using an older version of OpenTTD see the article:'' '''[[Main/en/Orders (old)]]'''
 
-'''Orders''' are fundamental to playing OpenTTD successfully. [[Main/en/Conditional Orders]] are advanced orders that allow you extra control. If you do not issue any orders, your [[Main/en/vehicles]] will drive around aimlessly and you will be very lucky if they make you any money.  In order to successfully pick up and deliver [[Main/en/cargo]] (which is after all the object of the game), you need to issue your vehicles orders.  These are instructions such as "go here, pick up cargo, then take it here".
+'''Orders''' are fundamental to playing OpenTTD successfully. [[Main/en/Conditional Orders]] are advanced orders that allow you extra control. If you do not issue any orders, your [[Main/en/Vehicles|vehicles]] will drive around aimlessly and you will be very lucky if they make you any money.  In order to successfully pick up and deliver [[Main/en/Cargo|cargo]] (which is after all the object of the game), you need to issue your vehicles orders.  These are instructions such as "go here, pick up cargo, then take it here".
 
 ==Giving Orders==
 You are allowed to give orders to any vehicle you own.  Your drivers will try to follow these orders (although they may get lost if your network is poorly designed, but that's a separate issue). To give orders:
@@ -16,7 +16,7 @@ You are allowed to give orders to any vehicle you own.  Your drivers will try to
 *Click the order you just created in the list to select it, and then tell the vehicle what it should do at that station.  I.e., click ''Full Load'' to make the vehicle wait for a full load at that station.
 
 ==Current Destination==
-You can always see the vehicle's destination in its [[Main/en/status bar]] and also in the ''Orders'' window.  To the left of the individual orders, a black triangle points to an order. This is the current destination.
+You can always see the vehicle's destination in its [[Main/en/Status bar|status bar]] and also in the ''Orders'' window.  To the left of the individual orders, a black triangle points to an order. This is the current destination.
 
 ==Order window==
 The following buttons appear:
@@ -30,7 +30,7 @@ This is the way to direct a vehicle to a particular location.  It inserts a new 
 *Your own stations, but only stations where that particular vehicle is accepted. So you cannot give a bus an order to go to an airport if that airport doesn't have a bus station. You cannot send your vehicles to competitors' stations.
 *[[Main/en/Depots]]. This will change some of the other buttons - see [[Main/en/#Service|Service]] and [[Main/en/#Refit|Refit]] below.
 *Vehicles of the same type to [[Main/en/#Copying orders|copy orders]] or to create [[Main/en/#Shared orders|shared orders]]. See below for more information.
-*[[Main/en/Waypoints]], you can send a train to a particular waypoint to influence its choice of track or if the stations are too far apart and the train gets lost easily.  A [[Main/en/buoy]] is a type of waypoint for ships traveling long distances.
+*[[Main/en/Waypoints]], you can send a train to a particular waypoint to influence its choice of track or if the stations are too far apart and the train gets lost easily.  A [[Main/en/Water Transport Tiles|buoy]] is a type of waypoint for ships traveling long distances.
 
 The ''Go to'' button has the following '''options''':
 * '''Go to'''
@@ -127,21 +127,21 @@ This option is available if you have a ''go to depot'' order selected. See [[Mai
 [[File:en/Service-options.png|none|frame|The options of the service button.]]
 
 ==Refit==
-You can include an instruction to [[Main/en/refit]] a vehicle in the orders list.  When you select this you will be prompted to choose the type of cargo to refit the vehicle to carry.  This order is of limited use, as normally you only refit a vehicle for a cargo once.
+You can include an instruction to [[Main/en/Refit|refit]] a vehicle in the orders list.  When you select this you will be prompted to choose the type of cargo to refit the vehicle to carry.  This order is of limited use, as normally you only refit a vehicle for a cargo once.
 [[File:en/Order-Refit.png|none|frame|When asked to reform mandates the type of load.]]
 
 ==Timetable==
-{{main|Timetable}}
+{{en/Main|Timetable}}
 Timetables let you specify how long vehicles should try to take to travel along each part of the route and how long to spend in each station, as well as specifying speed limits between orders. See the [[Main/en/Timetable|timetable]] article for details on how to use them.
 [[File:en/Orders-timetable.png|none|frame|The timetable interface.]]
 
 ==Copy Orders==
-If you want to set up a service that is used by more [[Main/en/vehicles]], it is repetitive to give each of these vehicles orders separately. Imagine a bus service where 5 buses go around to 5 [[Main/en/stations]] in a town for a frequent passenger service. It is boring to carry out the same steps 5 times over, so you can copy all orders from one vehicle to another.
+If you want to set up a service that is used by more [[Main/en/Vehicles|vehicles]], it is repetitive to give each of these vehicles orders separately. Imagine a bus service where 5 buses go around to 5 [[Main/en/Stations|stations]] in a town for a frequent passenger service. It is boring to carry out the same steps 5 times over, so you can copy all orders from one vehicle to another.
 
 ===Instructions===
 #Give out the orders as you would normally do for the first vehicle. 
 #Now click on the next vehicle, go to its order window and press ''Go To''
-#Instead of clicking a destination as before, '''click on the first vehicle''' which already has its orders set (either in its [[Main/en/depot]] or if it has been set loose; on the road/track/etc.)
+#Instead of clicking a destination as before, '''click on the first vehicle''' which already has its orders set (either in its [[Main/en/Depots|depot]] or if it has been set loose; on the road/track/etc.)
 #You will now see that the second vehicle has the same orders as the first one.
 
 To prevent mistakes, you can only copy orders to a vehicle if it doesn't already have orders. This is because in a busy station you might accidentally click on a vehicle with existing orders and overwrite all your hard work. 
@@ -156,7 +156,7 @@ Copying orders is still not the best solution because if you want to change orde
 #Hold down ''Ctrl'' and click on another vehicle that has the orders you want to share.
 #Now the two vehicles share the same schedule; they are linked together.  You will see that the orders from the other vehicle are displayed and the last line now reads ''--End of Shared Orders--''.
 
-[[File:en/shared-orders.png|center|frame|The schedules for the 2 buses have been shared]]
+[[File:en/Shared-orders.png|center|frame|The schedules for the 2 buses have been shared]]
 
 You can link together as many vehicles as you want, there is no limit, but of course you can only link the same type of vehicle together because they will be using the same stations.
 

@@ -1,8 +1,8 @@
 {{es/Traducción|Advanced Settings/Construction|10}}
-[[Translation:Main/en/Advanced Settings/Construction]]{{en/-}}{{es/Opciones avanzadas}}
+[[Translation:Main/en/Advanced Settings/Construction]]{{es/Opciones avanzadas}}
 
 ==Ventana Opciones avanzadas, sección Construcción==
-La sección '''construcción''' permite configurar varias opciones relacionadas con la construcción y la modificación del paisaje. A continuación se explican cada uno de los ajustes disponibles. Para cada ajuste, se muestra la variable correspondiente del archivo de configuración [[Main/es/openttd.cfg|openttd.cfg]] con sus posibles valores.
+La sección '''construcción''' permite configurar varias opciones relacionadas con la construcción y la modificación del paisaje. A continuación se explican cada uno de los ajustes disponibles. Para cada ajuste, se muestra la variable correspondiente del archivo de configuración [[Main/es/Openttd.cfg|openttd.cfg]] con sus posibles valores.
 {{en/-right}}
 {| align="center"
 |- valign="top"
@@ -19,7 +19,7 @@ Si las señales se muestran en el [[Main/es/Mostrar señales en el lado de condu
 {{en/-}}{{es/Pendiente de traducción}}
 ====Activar la GUI de señales====
 {{es/Disponibilidad|0.6|align="right"|texto=(desde 0.6.0)}}
-With this patch enabled, clicking on the [[Main/en/Signals|signal]] button will result in the opening of an extra signal toolbar, which allows you to pick certain types of signal (semaphore, light signal, [[Main/en/presignals]]) directly without having to cycle trough them using the CTRL-key. Using CTRL to select your signal types is still possible when this patch is enabled.
+With this patch enabled, clicking on the [[Main/en/Signals|signal]] button will result in the opening of an extra signal toolbar, which allows you to pick certain types of signal (semaphore, light signal, [[Main/en/Signals#Pre-signals|presignals]]) directly without having to cycle trough them using the CTRL-key. Using CTRL to select your signal types is still possible when this patch is enabled.
 :''Valores posibles:'' <span style="color:green">'''Sí'''</span> o <span style="color:red">'''No'''</span>
 :''En el archivo de configuración Openttd.cfg:'' ([gui] enable_signal_gui = <true|false>) 
 {{en/-}}
@@ -82,7 +82,7 @@ This option has been renamed from [[Main/en/#Always allow small airports|Always 
 {{en/-}}
 ===Habilitar la modificación del terreno en los bordes del mapa===
 {{es/Disponibilidad|0.7|align="right"|texto=(desde 0.7.0)}}
-With this enabled, the map doesn't require to have water all around it and allows you to terraform the map's edges just as any place elsewhere. Selecting this feature also provides an extra set of buttons in the [[Main/en/TGP|map generator]] to select the type of egde (water/freeform) for each side of the map.
+With this enabled, the map doesn't require to have water all around it and allows you to terraform the map's edges just as any place elsewhere. Selecting this feature also provides an extra set of buttons in the [[Main/en/Terra Genesis Perlin|map generator]] to select the type of egde (water/freeform) for each side of the map.
 :''Valores posibles:'' <span style="color:green">'''Sí'''</span> o <span style="color:red">'''No'''</span>
 :''En el archivo de configuración Openttd.cfg:'' ([construction] freeform_edges = <true|false>)
 {{en/-}}

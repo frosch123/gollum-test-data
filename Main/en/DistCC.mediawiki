@@ -15,7 +15,7 @@ Simply:
 * Save file, close.
 * Type <code>make -jN</code>, where N is the amounts of CPUs + 1 (or any other number, just don't put it to high).
 
-{{note|Not all compilers can build files that your computer can read. This means you have to be very careful which hosts you use to help you out compiling.
+{{en/Note|Not all compilers can build files that your computer can read. This means you have to be very careful which hosts you use to help you out compiling.
 Gentoo has a nice solution for that: it doesn't use ''gcc'', but, for example, ''i386-linux-pc-gnu-gcc''. Every host that supports this platform has this file, and so distcc can compile perfectly. Not all distros have this solution, so don't be all too surprised if you get weird errors.
 Also, most distros support cross-compiling tools. Installing this on a slave can help out.}}
 

@@ -1,17 +1,17 @@
 [[Translation:Main/en/Stations]]
 [[File:en/Stations.png|right|476px|thumb|Stations of all types: railway station, bus and truck stops, airport, and dock.]]
 
-'''Stations''' are the most important part of any network. They are where [[Main/en/cargo]] is collected and loaded onto or unloaded from [[Main/en/vehicles]]. The cargo is [[Main/en/Production delivery|delivered]] from and to the buildings in the station's [[Main/en/catchment area]]. Every station costs £50 ($100) a month to maintain, regardless of size or the infrastructure maintenance setting.
+'''Stations''' are the most important part of any network. They are where [[Main/en/Cargo|cargo]] is collected and loaded onto or unloaded from [[Main/en/Vehicles|vehicles]]. The cargo is [[Main/en/Production delivery|delivered]] from and to the buildings in the station's [[Main/en/Catchment area|catchment area]]. Every station costs £50 ($100) a month to maintain, regardless of size or the infrastructure maintenance setting.
 
 Stations are not [[Category/en/Cargo|cargo type]]-specific. Any station can load, unload, and store any type of cargo and any amount of different types.
 
-Stations also serve as storage hubs (e.g. see [[Main/en/feeder service]]). They don't have a ''capacity'' characteristic and can store an almost infinite amount of cargo, but huge piles will eventually dissolve because [[Main/en/cargo|individual units]] of cargo disappear if they're not handled in a timely fashion. There is no penalty for vanished units, but it is a wasted opportunity nevertheless.
+Stations also serve as storage hubs (e.g. see [[Main/en/Feeder service|feeder service]]). They don't have a ''capacity'' characteristic and can store an almost infinite amount of cargo, but huge piles will eventually dissolve because [[Main/en/Cargo|individual units]] of cargo disappear if they're not handled in a timely fashion. There is no penalty for vanished units, but it is a wasted opportunity nevertheless.
 
 Each mode of transport has its own type of station:
-*'''[[Main/en/Railway station]]''' are used by [[Main/en/trains]].  The basic station layout remains the same for all [[Main/en/types of railway]].
-*'''[[Main/en/Airports]]''' are the loading and unloading points for aeroplanes. There are many types of airport including [[Main/en/heliport]]s for [[Category/en/Helicopters|helicopters]].
-*'''[[Main/en/Water Transport Tiles]]''' are where your [[Main/en/ships]] berth.
-*'''[[Main/en/Loading Bays]]''' are where [[Main/en/buses]] and [[Main/en/trucks]] load and unload their cargo.
+*'''[[Main/en/Railway station|Railway Stations]]''' are used by [[Main/en/Trains|trains]].  The basic station layout remains the same for all [[Main/en/Types of railway|types of railway]].
+*'''[[Main/en/Airports]]''' are the loading and unloading points for aeroplanes. There are many types of airport including [[Main/en/Airports|heliport]]s for [[Category/en/Helicopters|helicopters]].
+*'''[[Main/en/Water Transport Tiles|Docks]]''' are where your [[Main/en/Ships|ships]] berth.
+*'''[[Main/en/Loading Bays]]''' are where [[Main/en/Buses|buses]] and [[Main/en/Road vehicles|trucks]] load and unload their cargo.
 
 __TOC__
 
@@ -19,8 +19,8 @@ __TOC__
 Stations you place directly adjacent to one another (of any kind) will combine to form one logical station.  That is, they share their cargo acceptances, name and pool of cargo to be collected.  They of course maintain their physical location and layout. So for example, you could have a train station with a bus station attached - the bus station would share a pool of cargo with the train station, but allow passengers to be picked up and dropped off by buses as well as trains.
 
 You can combine stations for many reasons:
-*To set up a [[Main/en/feeder service]] where one mode of transport transfers cargo to another, which takes it on to its new destination
-*To extend the [[Main/en/catchment area]] of a station (up to the size given in the Maximum station spread [[Main/en/Advanced Settings|setting]])
+*To set up a [[Main/en/Feeder service|feeder service]] where one mode of transport transfers cargo to another, which takes it on to its new destination
+*To extend the [[Main/en/Catchment area|catchment area]] of a station (up to the size given in the Maximum station spread [[Main/en/Advanced Settings|setting]])
 *To alleviate overcrowding on a station with additional terminals
 *To reduce the maintenance costs that come with multiple stations.
 
@@ -35,7 +35,7 @@ Note for original ''Transport Tycoon'' and ''Deluxe'' players: in OpenTTD you ca
 
 Combined stations need not be physically adjacent to each other – at least not in the long run.  You can build a chain of stations and delete intermediate links in that chain, and the “detached” stations will still be part of the same logical station.
 
-From 0.7.0 onward you can also build [[Main/en/distant-join stations]] by Ctrl-leftclicking when placing a new station. A popup window will ask which station you want to join to, or build a new station. Stations which are too far away from the place you clicked won't be listed. You also have to hold Ctrl when extending a station and the new extension is physically adjacent multiple stations.
+From 0.7.0 onward you can also build [[Main/en/Distant-join stations|distant-join stations]] by Ctrl-leftclicking when placing a new station. A popup window will ask which station you want to join to, or build a new station. Stations which are too far away from the place you clicked won't be listed. You also have to hold Ctrl when extending a station and the new extension is physically adjacent multiple stations.
 
 ===Deleting combined stations===
 You can remove a component of a combined station using the dynamite tool which will remove just that individual station, not the overall thing. The exception to this is train stations, where demolishing one part of a train station will remove all of them (or not, if there are trains in any of them). To remove these, you should select the “build station” tool [[File:en/Build station.png]] and then the “clear” tool [[File:en/Toggle clear active.png]] which will allow you to remove train stations one tile at a time.

@@ -4,9 +4,9 @@
 |Percentage = 15
 }}
 
-[[Translation:Main/en/Game interface]]{{en/-}}{{ko/목차}}
+[[Translation:Main/en/Game interface]]{{ko/목차}}
 == 메인 화면 ==
-[[File:en/Intro screenKo.jpeg|frame|center|OpenTTD 시작 화면 ]]
+[[File:en/Intro screenKo.jpeg|frame|center|OpenTTD 시작 화면]]
 위의 사진에서 보이는 메인 화면은 몇가지로 나눌 수 있습니다.:
 * '''[[Main/en/New game|새 게임]]''': 새로운 맵을 생성하고 플레이합니다..
 * '''[[Main/en/Savegame|불러오기]]''': 저장되었던 게임을 불러오고 이어서 플레이합니다..
@@ -17,7 +17,7 @@
 * '''[[Main/en/Game options window|게임 설정]]''': OpenTTD의 기본설정을 조작합니다..
 * '''[[Main/en/설정]]''': OpenTTD의 설정을 조작합니다..
 * '''[[Main/en/AI settings|인공지능/게임 스크립트 설정]]''': 인공지능의 설정을 조작합니다.
-* '''[[Main/en/NewGRF|NewGRF 설정]]''': 추가적인 NewGRF파일을 설정합니다..
+* '''[[Main/en/NewGRF#Activating NewGRFs|NewGRF 설정]]''': 추가적인 NewGRF파일을 설정합니다..
 * '''[[Main/en/Online content|온라인 콘텐츠 다운로드]]''': 추가적인 콘텐츠를 다운로드 합니다..
 * '''[[Main/en/고득점 순위표]]''': 순위표를 보여줍니다..
 * '''종료''': OpenTTD를 종료합니다..
@@ -25,7 +25,7 @@
 ==게임 인터페이스==
 여러분이 새로운 게임을 시작하신다면 아래의 사진처럼 메인 인터페이스가 보이실 겁니다. 여러분은 게임을 플레이하시면서 이 화면을 가장 많이 보시게 될겁니다. 메인 인터페이스는 3가지로 나뉩니다 : 가장 윗 부분에 있는 것은  ''[[Main/en/#The Menu bar|메뉴 바]]''이며 , 화면의 가운데는 ''[[Main/en/#3D isometric gameplay world|3D 게임 플레이 화면]]''이며 가장 아래에 있는 것은 ''[[Main/en/#The Status Bar|상태 바]]''입니다..
 
-[[File:en/interface.png|thumb|none|400px|게임 플레이 화면]]
+[[File:en/Interface.png|thumb|none|400px|게임 플레이 화면]]
 
 ==메뉴 바==
 메뉴 바는 아래 크림처럼 나누어집니다. 왼쪽부터 오른쪽으로 순서대로 나열하자면 "게임 컨트롤", "지도 정보", "회사 & 산업시설 정보", "차량 정보", "줌(Zoom)", "건설" 그리고 "기타" 이다.
@@ -47,7 +47,7 @@
 
 ===회사 & 산업시설 정보===
 *[[File:en/Finances screen button.png|Finances screen]] '''Finances screen button:''' View the finances screen of any company.
-*[[File:en/Company information button.png|Company Information]] '''[[Main/en/Transport company]] information button:''' View the company information for any company, and have the possibility to share your competitor's success by buying shares in that company
+*[[File:en/Company information button.png|Company Information]] '''[[Main/en/Transport company|Company]] information button:''' View the company information for any company, and have the possibility to share your competitor's success by buying shares in that company
 *[[File:en/Graphs button.png|Graphs]] '''Graphs button:''' View various graphs about companies, their performance and the economy.
 *[[File:en/Company league table button.png|Company league]] '''Company league table button:''' View the company league table showing the rankings of the various players.
 *[[File:en/Industry button.png|Industries]] '''Industry button:''' View a list of industries and their production. You can also prospect or [[Main/en/Industries#Funding New Industries|fund new industries]].
@@ -80,7 +80,7 @@ The Landscaping button has a dropdown to access the tree and sign placement wind
 
 ===기타===
 *[[File:en/Sound Music button.png|Jukebox]] '''Jukebox button:''' Change sound and music settings.
-*[[File:en/News button.png|News]] '''News button:''' Change news and [[Main/en/message settings]]. You can also see a history of news messages.
+*[[File:en/News button.png|News]] '''News button:''' Change news and [[Main/en/Message settings|message settings]]. You can also see a history of news messages.
 *[[File:en/Other button.png|Other]] '''Other button:''' Things that do not fit into other sections: ''[[Main/en/Land area information]]'', ''[[Main/en/Console|Toggle console]]'', ''[[Main/en/AI Debug]]'', ''[[Main/en/Screenshot|Screenshot]]'', ''[[Main/en/Screenshot|Giant screenshot]]'', and ''About OpenTTD''.
 
 ===특별한 기능===
@@ -90,16 +90,16 @@ The Landscaping button has a dropdown to access the tree and sign placement wind
 The OpenTTD world takes the form of a landscape, presented on [http://en.wikipedia.org/wiki/Video_games_with_isometric_graphics isometric projection] (strictly speaking rather [http://en.wikipedia.org/wiki/Dimetric_projection#Three_types_of_axonometric_projections dimetric projection]) for that 3D look.  You will spend most of your time playing here.  The world is divided up into tiles, of which there are many types.  Some are sloped, some are water, some are occupied by buildings, etc. This is where you build your transport empire!
 
 ==The status bar==
-[[File:en/status-bar.png|none|frame|The status bar]]
+[[File:en/Status-bar.png|none|frame|The status bar]]
 The status bar can be found at the bottom of page, as can be seen in picture 1., and above in picture 3. It is divided into three sections. 
 *On the left you can see the date. It progresses at about 1 day every 2.5 seconds.
 *The middle part, which takes up most of the space, shows various information:
-**The name of your company, initially "Unnamed". After you [[Main/en/name your company]] it will show that name. 
+**The name of your company, initially "Unnamed". After you [[Main/en/Transport company|name your company]] it will show that name. 
 **[[Main/en/News messages]] pop up out of the status bar. Click on the status bar to display the last message.
-**If you have changed the [[Main/en/message settings]] to "Summary" mode, messages will scroll by here instead of popping up.
+**If you have changed the [[Main/en/Message settings|message settings]] to "Summary" mode, messages will scroll by here instead of popping up.
 **If you have changed the message settings to "Off" mode, messages will be notified by a red dot.
 **It also shows if the game is paused by saying: "* * PAUSED * *"
-*The right part shows how much money you have. You can change the currency in the [[Main/en/game options window]] by pressing the "Options" button and then "Game options".
+*The right part shows how much money you have. You can change the currency in the [[Main/en/Game options window|game options window]] by pressing the "Options" button and then "Game options".
 
 You may also hear "status bar" used to refer to the [[Main/en/Status bar|vehicle status bar]].
 

@@ -1,7 +1,7 @@
-[[Translation:Main/en/Signals]]{{en/-}}{{en/Table of contents}}
+[[Translation:Main/en/Signals]]{{en/Table of contents}}
 ''See the [[Main/en/Building signals]] tutorial for instructions on how to carry out signal construction.''
 
-'''[[Main/en/Railway construction]] Signals''' are useful devices that allow you to control [[Main/en/train]] movement. They do this by preventing trains from entering areas where other trains might be, and so preventing them from crashing. This usually involves taking information from the section of track following the signal. The three main types of signal are block signals, which simply deny access if the section has any trains; pre-signals, which operate similarly, but also require there to be an available exit from the section; and path signals, which compares the train's desired path to current train presence and allows access if the two do not interfere.
+'''[[Main/en/Railway construction|Railway]] Signals''' are useful devices that allow you to control [[Main/en/Trains|train]] movement. They do this by preventing trains from entering areas where other trains might be, and so preventing them from crashing. This usually involves taking information from the section of track following the signal. The three main types of signal are block signals, which simply deny access if the section has any trains; pre-signals, which operate similarly, but also require there to be an available exit from the section; and path signals, which compares the train's desired path to current train presence and allows access if the two do not interfere.
 
 __TOC__
 {{en/-}}
@@ -17,7 +17,7 @@ Two-way signals are used in a railway that has trains moving in both directions 
 
 If a train has a choice of two or more directions, each with two-way signals on them, it will choose the direction with a green signal.  If all signals are red it will pick the easiest direction and wait for the signal to change.
 
-Two-way signal was the very first and only railway signal introduced in the original ''[[Main/en/Transport Tycoon Deluxe]]''.
+Two-way signal was the very first and only railway signal introduced in the original ''[[Main/en/Transport Tycoon Deluxe|Transport Tycoon]]''.
 {{en/-}}
 ===One-way signal===
 [[File:en/One-way signal.png|right]]
@@ -98,7 +98,7 @@ Because the front of every signal is defined as a safe waiting position, you wou
 |}
 
 This is one other example of what you can do with those path signals. This works far better than using pre-signals because you can have two trains leaving the station at the same time AND share the same depot (there is no way to make it with pre-signals, because of the block share). In this case there are one-way path signals for trains leaving the station, and simple path signal for trains leaving the depot.
-[[File:en/pathsignal station exit.png|frame|center|Two exit station. Note that the signals in front of the depot are not required, as depots have built-in signals. However, path signals in front of depots like this give trains leaving the depot priority over trains wanting to enter the depot.]]
+[[File:en/Pathsignal station exit.png|frame|center|Two exit station. Note that the signals in front of the depot are not required, as depots have built-in signals. However, path signals in front of depots like this give trains leaving the depot priority over trains wanting to enter the depot.]]
 
 Although the screen shot above does not show, it is unnecessary to place any signal between the pass-through station entrance and junction (effectively an "exit-signal" in the traditional block signal setup) if the signal of entrance tracks in front of the junction is path signal.
 
@@ -144,7 +144,7 @@ Pre-signals function as block signals, but additionally decide on which colour t
 
 ====Block Entry Pre-signal====
 <div style="float:right">
-[[File:en/entry presignal.png|60px]]
+[[File:en/Entry presignal.png|60px]]
 </div>
 An entry pre-signal checks the signal aspect of all exit pre-signals of the signal block following the entry pre-signal. If there is at least one green exit pre-signal, the entry pre-signal wil also show green. If all exit pre-signals of the next block are red, then the entry pre-signal is also red.
 
@@ -154,7 +154,7 @@ If there are no signals designated as exits on the block directly behind the ent
 
 ====Block Exit pre-signal====
 <div style="float:right">
-[[File:en/exit presignal.png|60px]]
+[[File:en/Exit presignal.png|60px]]
 </div>
 The exit pre-signals are what an entry pre-signal looks for to decide what aspect to show. They otherwise behave in the same way as a normal block signal.
 
@@ -163,9 +163,9 @@ To summarize: in the direction of travel you first have an entry pre-signal, the
 {{en/-}}
 
 ====Combo-signal====
-[[File:en/station with pre-signals2.png|frame|Station with 1 entry pre-signal, 2 combo-signals, and 4 exit-signals]]
+[[File:en/Station with pre-signals2.png|frame|Station with 1 entry pre-signal, 2 combo-signals, and 4 exit-signals]]
 <div style="float:right">
-[[File:en/combo presignal.png|60px]]
+[[File:en/Combo presignal.png|60px]]
 </div>
 There is a third type of pre-signal called the combo signal and simply acts as both an entry and exit signal. They effectively combine many exit signals into one signal, effectively copying their effect down the chain. Any one green exit signal will make any combo signals up the line become green, which will successively relay up to the original block entry signal. This allows you to build large "trees" of pre-signals spanning several blocks, as shown on the right. 
 
@@ -234,8 +234,8 @@ The biggest comparison between the game and real train signals is that the game 
 
 ==See Also==
 * [[Main/en/Advanced signalling examples|Examples of advanced presignal setups]]
-* [[Main/en/Building depots#Advanced depot configurations]]
-* [[Category/en/Train Junctions]] for examples of complex junctions that take advantage of pre-signals.
+* [[Main/en/Building depots#Advanced depot configurations|Advanced Main Line Depot]]
+* [[Category/en/Train Junctions|:Category:Train Junctions]] for examples of complex junctions that take advantage of pre-signals.
 * [http://www.darkcoding.net/misc/openttd-trains-and-signals-for-beginners-a-tutorial/ Signals for the complete beginner]
 * [http://kokolokus.de/?s=blog&v=6 A tutorial written by domsson, on the forums] [http://www.tt-forums.net/viewtopic.php?f=29&t=51395 here]
 

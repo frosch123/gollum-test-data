@@ -1,6 +1,6 @@
 {{Template:Obsolete}}
 
-A proposal for authentication using [http://gnupg.org/ GNU Privacy Guard] inspired by [[Main/en/Miscellaneous suggestions/Centralised authentication]], put forth by [[Archive/en/Dphoenix|Dphoenix]]
+A proposal for authentication using [http://gnupg.org/ GNU Privacy Guard] inspired by [[Main/en/Miscellaneous suggestions/Centralised authentication|CentralisedAuthentication]], put forth by [[Archive/en/Dphoenix|Dphoenix]]
 
 == Why we need it ==
 
@@ -42,8 +42,8 @@ At this point, both server and client have each other's public keys, and authent
 # Username / password is not needed. The GPG key acts as the username, and the password authentication is done locally on a user's computer through the GPG program. GPG encryption is considered extremely secure, and the only way to pass off as another user would be to get a hold of both his private key and his password.
 # Because all communication both ways are encrypted and signed, putting up a man-in-the-middle attack is extremely cumbersome. Because the server owner is given the client's key on beforehand, the person attempting man-in-the-middle attack would actually have to disrupt this process first, which can be near-impossible, before even having a chance at the man-in-the-middle-attack in the first place.
 
-== [[Main/en/Miscellaneous suggestions/Centralised authentication]] ==
+== [[Main/en/Miscellaneous suggestions/Centralised authentication|CentralisedAuthentication]] ==
 
-This idea can be combined with the ideas in [[Main/en/Miscellaneous suggestions/Centralised authentication]] to be a stronger protection scheme. The idea presented here, however, can also be used without an external authentication system, and is thus also perfectly viable on hidden/LAN games.
+This idea can be combined with the ideas in [[Main/en/Miscellaneous suggestions/Centralised authentication|CentralisedAuthentication]] to be a stronger protection scheme. The idea presented here, however, can also be used without an external authentication system, and is thus also perfectly viable on hidden/LAN games.
 
 [[Category:en/Development]]

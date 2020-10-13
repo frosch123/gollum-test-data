@@ -1,12 +1,12 @@
 [[Translation:Main/en/Allow goto depot orders]]
-'''Sta ga naar depot orders''' is een [[Main/nl/Geavanceerde instellingen|instelling]] dat spelers toestaat een garage/hangar op te nemen in de orderlijst van voertuigen [[Main/nl/orders|orders]]. 
+'''Sta ga naar depot orders''' is een [[Main/nl/Geavanceerde instellingen|instelling]] dat spelers toestaat een garage/hangar op te nemen in de orderlijst van voertuigen [[Main/nl/Orders|orders]]. 
 
 == Beschrijving ==
 [[File:en/Ganaardepotorder1.png|right|frame|"Ga naar depot" order in de voertuigen orderlijst]]
 Als deze optie toegestaan is wordt het mogelijk een depot/garage/hangar op te nemen in de [[Main/nl/Orders|voertuigen orders]]. Dit is te gebruiken om verplicht onderhoud op een bepaald punt in de orders op te nemen (misschien voordat een complexe kruising wordt gepasseerd, waar je niet wil dat je trein - door een defect - stil komt te staan).
 
 == Hoe de ''ga naar depot'' order te gebruiken ==
-Je kunt, net als bij een station, een depot aanklikken in de kaart om op te nemen in de orderlijst, en het voertuig zal dat depot bezoeken als het deze order tegenkomt in de lijst, voordat hij zijn weg vervolgd, net zoals elk ander [[Main/nl/controleposten|controlepost]] of station in de orderlijst. 
+Je kunt, net als bij een station, een depot aanklikken in de kaart om op te nemen in de orderlijst, en het voertuig zal dat depot bezoeken als het deze order tegenkomt in de lijst, voordat hij zijn weg vervolgd, net zoals elk ander [[Main/nl/Controleposten|controlepost]] of station in de orderlijst. 
 
 Wanneer je een '''ga naar depot''' order selecteert in de orderlijst, zullen de "Volledig laden" en "Lossen" instructieknoppen in het ordervenster veranderen in respectievelijk "Ombouwen" en "Onderhoud".
 
@@ -17,7 +17,7 @@ Als je wil dat het voertuig wordt [[Main/nl/Voertuig aanpassen|omgebouwd]] in he
 ''Zie ook: [[Main/en/Onderhoud/Nl#Inroosteren onderhoud|Inroosteren onderhoud]]''
 
 == Gebruik ==
-Deze functie staat standaard aan. Je kunt deze uitzetten met de [[Main/nl/Geavanceerde instellingen/Voertuigen|Geavanceerde instellingen -> voertuigen]] venster of de volgende syntax gebruiken in [[Main/en/openttd.cfg]]:
+Deze functie staat standaard aan. Je kunt deze uitzetten met de [[Main/nl/Geavanceerde instellingen/Voertuigen|Geavanceerde instellingen -> voertuigen]] venster of de volgende syntax gebruiken in [[Main/en/Openttd.cfg|openttd.cfg]]:
 <pre>[order]
 gotodepot = false</pre>
 

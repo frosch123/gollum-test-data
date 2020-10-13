@@ -5,7 +5,7 @@ Um bom método de trabalho é, primeiro traduzir literalmente os artigos do ingl
 ==Como começar?==
 O primeiro que devemos fazer é criar a página portuguesa.<br/>
 Vejamos passo a passo, uma forma prática de como fazê-lo. 
-*'''1)''' No artigo em inglês adicione o modelo {{s|Other languages}} no início da página:
+*'''1)''' No artigo em inglês adicione o modelo {{en/S|Other languages}} no início da página:
 <pre>
 '''Broken translation link'''
 </pre>
@@ -14,12 +14,12 @@ Vejamos passo a passo, uma forma prática de como fazê-lo.
 *'''3)''' Guarde o arquivo, aparecerá a bandeira inglesa (ou outra correspondente ao idioma original) e no lugar da bandeira portuguesa uma mensagem de erro, NÃO SE PREOCUPE, corrigiremos mais tarde.
 *'''4)''' Clique no link em vermelho <span style="color:red">EN</span> que aparece no quadro das bandeiras.
 *'''5)''' Na nova janela de edição, cole o texto que havia copiado (CTRL+V).
-*'''6)''' Vá para o início do texto que você acabou de colar e adicionar o modelo {{s|Tradução/Pt}}:
+*'''6)''' Vá para o início do texto que você acabou de colar e adicionar o modelo {{en/S|Tradução/Pt}}:
 <pre>
 {{pt/Tradução|Título do artigo em inglês|0}}
 </pre>
 *'''7)''' Salve. Temos a página em português (embora em inglês). Com a primeira edição que fizemos desaparecerá o erro na caixa de bandeiras.
-*'''8)''' Corrija o parâmetro <code>language_page</code> do modelo {{s|Other languages}} pelo correto:
+*'''8)''' Corrija o parâmetro <code>language_page</code> do modelo {{en/S|Other languages}} pelo correto:
 <pre>
 |language_page=pt
 </pre>
@@ -27,17 +27,17 @@ Vejamos passo a passo, uma forma prática de como fazê-lo.
 Agora já só se trata de is passo a passo traduzindo frase a frase, e não se esqueça de salvar quando acabar.
 
 ==Traduções incompletas==
-Se por qualquer motivo deixar parte do artigo sem tradução use o modelo {{s|Tradução pendente/Pt}} para separa o texto em português do texto em inglês. Indique também a porcentagem aproximada da tradução no modelo {{s|Tradução/Pt}} que foi colocado no início do texto. 
+Se por qualquer motivo deixar parte do artigo sem tradução use o modelo {{en/S|Tradução pendente/Pt}} para separa o texto em português do texto em inglês. Indique também a porcentagem aproximada da tradução no modelo {{en/S|Tradução/Pt}} que foi colocado no início do texto. 
 
 ==Recursos==
 ===Recursos do OpenTTD wiki===
 *[[Main/en/Manual of Style|Manual de estilo]]
-*[[Template:Other languages]]
-*[[Template/pt/Tradução]]
-*[[Template/pt/Tradução pendente]]
-*[[Category/pt/Modelos]]
-*[[Category/pt/Caixas de mensagens]]
-*[[Category/pt/Arquivos em Português]]
+*[[Template:Other languages|:Template:Other_languages]]
+*[[Template/pt/Tradução|:Template:Tradução/Pt]]
+*[[Template/pt/Tradução pendente|:Template:Tradução pendente/Pt]]
+*[[Category/pt/Modelos|:Category:Modelos/Pt]]
+*[[Category/pt/Caixas de mensagens|:Category:Caixas de mensagens/Pt]]
+*[[Category/pt/Arquivos em Português|:Category:Arquivos em Português/Pt]]
 
 ===Recursos da wikipédia e outros===
 *[http://pt.wikipedia.org/wiki/Wikip%C3%A9dia:Predefini%C3%A7%C3%B5es Wikipédia:Predefinições] ''([http://www.wikipedia.org/wiki/Help:Template ])''

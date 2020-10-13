@@ -1,7 +1,7 @@
-[[Translation:Main/en/Editing help]]{{en/-}}{{fr/Table des matières droite}}
+[[Translation:Main/en/Editing help]]{{fr/Table des matières droite}}
 Voici un guide du langage de marquage du wiki. Sentez-vous libre de tester l'un de ceux-ci en éditant le [[Main/fr/Bac à sable|bac à sable]].
 
-*Voyez [http://www.wikipedia.org/wiki/m:Help:Editing  Editing Help] (en anglais) sur Wikipedia pour davantage d'aide.
+*Voyez [http://www.wikipedia.org/wiki/m:Help:Editing Editing Help] (en anglais) sur Wikipedia pour davantage d'aide.
 <div style="margin: 2em 0em 0em 0em; padding: 0em 1em 1em 1em; border: 1px solid #E1BBFF; background-color: #F5EDFC; font-size:large;">
 ==Règles très importantes==
 #Signez toujours avec votre nom en postant un commentaire. Utilisez quatre tildes: "<nowiki>~~~~</nowiki>".
@@ -30,9 +30,9 @@ Encapsulez les mots entre double crochets pour en faire un lien vers un article 
 !Exemple
 !Source
 |-
-|[[Main/fr/Téléchargement]] || <code><nowiki>[[Main/fr/Téléchargement]]</nowiki></code>
+|[[Main/fr/Téléchargement|Téléchargement/Fr]] || <code><nowiki>[[Main/fr/Téléchargement|Téléchargement/Fr]]</nowiki></code>
 |-
-|[[Main/fr/Téléchargement]]s || <code><nowiki>[[Main/fr/Téléchargement]]s</nowiki></code>
+|[[Main/fr/Téléchargement|Téléchargement/Fr]]s || <code><nowiki>[[Main/fr/Téléchargement|Téléchargement/Fr]]s</nowiki></code>
 |-
 |[[Main/fr/Téléchargement|Obtenir les fichiers]] || <code><nowiki>[[Main/fr/Téléchargement|Obtenir les fichiers]]</nowiki></code>
 |}
@@ -80,9 +80,9 @@ Utilisez ce code pour ajouter une image à l'article:
 <pre>[[File:en/.nomfichier|frame|none|libellé]]</pre>
 
 Exemple:
-<pre>[[File:en/longerbridges.png|frame|none|Ponts plus longs]]</pre>
+<pre>[[File:en/Longerbridges.png|frame|none|Ponts plus longs]]</pre>
 Résultat:
-[[File:en/longerbridges.png|frame|none|Ponts plus longs]]
+[[File:en/Longerbridges.png|frame|none|Ponts plus longs]]
 
 *Voyez aussi [http://www.wikipedia.org/wiki/fr:Wikipédia:Description d'une image Syntaxe d'image étendue] sur Wikipédia.
 
@@ -180,22 +180,22 @@ Tous les codes de liste doivent être le premier caractère de la ligne.
 {{fr/Compléter}}
 Encapsulez un modèle entre double accolades pour qu'il soit transcrit dans la page.
 <pre>{{nom_modèle|paramètre1|paramètre2}}</pre>
-Dans le fichier du modèle (par ex. [[Template/fr/Suppression]]), accédez aux paramètres avec des accolades triples.
+Dans le fichier du modèle (par ex. [[Template/fr/Suppression|Template:Suppression/Fr]]), accédez aux paramètres avec des accolades triples.
 <pre>{{{1}}} {{{2|défaut}}}</pre>
 
 *Voyez aussi [http://www.wikipedia.org/wiki/m:Help:Template Template help] (en anglais) sur Wikipedia.
 
 ==Redirections==
-Utilisez les redirections pour qu'un article renvoie automatiquement sur la lecture d'un autre. Dans cet exemple, [[Main/en/checkpoints]] est automatiquement rédirigé vers [[Main/en/waypoints]]:
-<pre>#REDIRECT [[Main/en/waypoints]]</pre>
+Utilisez les redirections pour qu'un article renvoie automatiquement sur la lecture d'un autre. Dans cet exemple, [[Main/en/Waypoints|checkpoints]] est automatiquement rédirigé vers [[Main/en/Waypoints|waypoints]]:
+<pre>#REDIRECT [[Main/en/Waypoints|waypoints]]</pre>
 
 ==Catégories==
 Ajoutez des articles à une catégorie en ajoutant un lien de catégorie au bas de cet article:
 <pre>[[Category:en/Développement]]</pre>
 
 Affichez la catégorie comme un lien normal en ajoutant deux points:
-<pre>[[Category/en/Développement]]</pre>
-[[Category/en/Développement]]
+<pre>[[Category/en/Développement|:Category:Développement]]</pre>
+[[Category/en/Développement|:Category:Développement]]
 
 ==Autres codes==
 {|

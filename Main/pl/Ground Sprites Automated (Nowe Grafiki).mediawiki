@@ -8,16 +8,16 @@ Strona powinna zawierać link do wielu zautomatyzowanych plików.
 == Krok pierwszy ==
 '''Pobieranie i rozumienie potrzebnych plików.'''
 
-<!--{{note|Those files aren't currently there.}}-->{{informacja/Pl|Tych plików obecnie nie ma.}}
+<!--{{en/Note|Those files aren't currently there.}}-->{{pl/Informacja|Tych plików obecnie nie ma.}}
 
 Pobierz wymagane i przykładowe pliki z tej witryny http://ottd.mudpuddle.co.nz/terrain-256/ . Potrzebne pliki są następujące. Uziemienie * .blend.zip, Outlines.zip pozostałe pliki są opcjonalne
 
-<!--{{note|Those files aren't currently there.}}-->{{informacja/Pl|Tych plików obecnie nie ma.}}
+<!--{{en/Note|Those files aren't currently there.}}-->{{pl/Informacja|Tych plików obecnie nie ma.}}
 
 [[File:en/Files.png|left|frame|1. przykładowa struktura pliku]] <br> Ważne pliki i foldery, które należy zachować, to '''Outlines, kontury 2, *.Blend,''' a jeśli w systemie Windows ze zdjęciami - '''Black-AlphaZero.exe'''<br>
 <br style="clear: left"/>
 
-[[File:en/Outlines.png|left|frame|2. Kontury - (podniesiony narożnik północny) ]]
+[[File:en/Outlines.png|left|frame|2. Kontury - (podniesiony narożnik północny)]]
 [[File:en/Outlines2.png|left|frame|3. Outlines2]]<br>
 Kontury folder zawiera nakładki używane przez blender do wycinania renderów, dzięki czemu testilate jest całkowicie. Kontury byłyby stosowane do płaskich standardowych płytek gruntowych.<br>
 Kontury2 folder zawiera nakładki, które po prostu odcinają dno, dzięki czemu takie pola, krzewy, skały itp. ... przyklejają się nad górą 'sprite' . w celu poprawnego wyświetlania może być konieczne użycie obu nakładek. (jeśli tak jest, zapytaj mnie "Alltaken" )
@@ -59,7 +59,7 @@ Jest to ekran początkowy, który większość użytkowników powinna zobaczyć,
 === Warstwy <small>''(Layers)''</small> ===
 
 
-[[File:en/Layers.png|left|frame|2. Warstwy ]]<br>
+[[File:en/Layers.png|left|frame|2. Warstwy]]<br>
 Przede wszystkim warstwy plików powinny być dla Ciebie interesujące.<br>
 '''layer 1''' to standardowe 'sprites' naziemne. są one używane do renderowania kombinacji 1-85 normalnych 'sprite' ziemi (tj. bez brzegów, bez skał, bez dodanych rzeczy)<br>
 '''Layer 2-5''' to różne warstwy wysokości brzegu, które zawierają płaszczyznę na wysokości wody, która przecina ziemię na poziomie wody i nie renderuje niczego poniżej tego poziomu (nie dotykaj tych dużych płaszczyzn, chyba że wiesz, co robisz)<br>
@@ -136,4 +136,4 @@ Nie można jeszcze wypełnić tej sekcji, ponieważ oczekuje ona na zdefiniowani
 
 <!--{{en/Navbox Graphics Development}}-->{{pl/Navbox Programowanie grafik}}
 
-<!--[[Category:en/New Graphics]][[Category:en/32bpp Graphics Developer resources]]-->[[Category:pl/Nowe Grafiki]][[Category:pl/zasoby Twórców Grafik 32bpp]]
+<!--[[Category:en/New Graphics]][[Category:en/32bpp Graphics Developer resources]]-->[[Category:pl/Nowe Grafiki]][[Category:pl/Zasoby Twórców Grafik 32bpp]]

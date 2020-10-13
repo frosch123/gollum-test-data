@@ -1,4 +1,4 @@
-[[Translation:Main/en/NewGRF]]{{en/-}}{{pl/Spis treści}}
+[[Translation:Main/en/NewGRF]]{{pl/Spis treści}}
 
 Nazwa '''NewGRF''' pochodzi od angielskiego zwrotu ''New Graphics Resource File'' (Nowy Plik Zasobów Graficznych), który określa ogólny interfejs służący do modyfikowania gry.
 
@@ -6,7 +6,7 @@ Dzięki '''NewGRF'''om możemy dodawać do OpenTTD nowe, lub zastępować już i
 
 Pod względem technicznym, format NewGRF stanowi funkcjonalne rozwinięcie oryginalnego formatu GRF (Transport Tycoon Graphics Resource Files (Pliki graficzne Transport Tycoon)), który również służył do definiowania grafiki i sposobu zachowania gry. Format NewGRF jest obsługiwany zarówno przez OpenTTD jak i przez [[Main/en/OpenTTD/Pl#Historia Transport Tycoon|TTDPatch]]. W większości przypadków jest w pełni kompatybilny z obydwoma odmianami TTD. Począwszy od wersji 1.2.0 OpenTTD, również grafiki 32-bitowe są obsługiwane poprzez pliki NewGRF.
 
-Aby znaleźć odpowiedzi na typowe problemy z plikami GRF w OpenTTD, odwiedź [[Main/pl/FAQ NewGRF| NewGRF FAQ]].
+Aby znaleźć odpowiedzi na typowe problemy z plikami GRF w OpenTTD, odwiedź [[Main/pl/FAQ NewGRF|NewGRF FAQ]].
 
 == Instalacja NewGRFów ==
 === Dodatki Online ===
@@ -33,13 +33,13 @@ Aby skorzystać z NewGRFów pobranych z innych stron, a które nie były dostęp
 Interfejs pomiędzy OpenTTD 1.0 i 1.1 zmienił się, więc oba będą tu pokazane: 
 === Wersja 1.1 i późniejsze ===
 2.   Wybierz NewGRF z 'inactive NewGRFs files' (nieaktywnych plików NewGRF) i naciśnij "Add" (Dodaj) lub po prostu dwukrotnie naciśnij na niego. Na małych ekranach wygląda to tak:
-[[File:en/newgrf addnew.png|NewGRF settings window (small)|center]]
+[[File:en/Newgrf addnew.png|NewGRF settings window (small)|center]]
 a na większych tak:
-[[File:en/newgrf config big.png|NewGRF settings window (big)|center]]
+[[File:en/Newgrf config big.png|NewGRF settings window (big)|center]]
 3.   Skonfiguruj (w razie potrzeby) parametry aktywnego newgrf'a: Wybierz go z listy "Active newgrf files" ("Aktywne pliki newgrf") i kliknij przycisk "Parametr". Wynik może wyglądać podobnie do tego:
-[[File:en/newgrf parameter.png|NewGRF parameter window|center]]
+[[File:en/NewGRF Parameter.png|NewGRF parameter window|center]]
 4.   Opcjonalnie można wybrać zapisanie wyboru newgrfów (wraz z ich parametrami konfiguracyjnymi) lub załadować taką listę korzystając z możliwości zapisania schematu NewGRFów:
-[[File:en/newgrf preset.png|Saving a NewGRF preset|center]]
+[[File:en/Newgrf preset.png|Saving a NewGRF preset|center]]
 
 === Wersja 1.0 i wcześniejsze ===
 2.   Klkinij "Add" ("Dodaj").
@@ -81,7 +81,7 @@ OpenTTD pozwala na jednoczesne wybranie aż 59 różnych dodatków NewGRF podcza
 Wiele NewGRF-ów będzie ostrzegać, jeśli dokonasz nieprawidłowych kombinacji i być może wyłączą się same. Zaleca się sprawdzenie konfiguracji NewGRF po uruchomieniu nowej gry (poprzez menu Narzędzia). Jeśli pojawią się problemy, zalecane jest opuszczenie gry, usunięcie problemów i rozpoczęcie nowej gry. W przypadku gier losowych można zregenerować tę samą mapę przy użyciu tego samego losowego numeru i zachowaniu pozostałych ustawień identycznych w generatorze map. Po uruchomieniu gry można uzyskać jej losowy materiał siewny wpisując <code>getseed</code> w [[Main/pl/Konsola|konsoli]].
 
 == Grafika - 8- vs 24-bitowa ==
-<!--{{en/Feature|1.2}}-->{{zgodne Wersje/Pl|1.2}}
+<!--{{en/Feature|1.2}}-->{{pl/Zgodne Wersje|1.2}}
 Od OpenTTD 1.2.0, NewGRF-y mogą zawierać nie tylko standardową grafikę 8-bitową, ale również 32-bitową. Dzięki tej zmianie, NewGRFy są w rzeczywistości jedynym sposobem na dostarczenie grafiki 32 bitowej do OpenTTD. Od tego momentu NewGRFs mogą również dostarczać inną grafikę dla różnych poziomów przybliżenia.
 
 Nie jest możliwe użycie grafiki 32-bitowej w starym formacie png/tar z OpenTTD 1.2.0 i nowszym. Nie wszystkie istniejące wcześniej grafiki 32-bitowe są już dostępne w formacie NewGRF. Zobacz [[Main/pl/Rozgrywka z grafiką 32 bpp|listę 32-bitowych grafik NewGRF]], dostępnych dla OpenTTD 1.2.0 i nowszych.
