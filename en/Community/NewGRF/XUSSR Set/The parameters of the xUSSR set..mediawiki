@@ -1,0 +1,63 @@
+== The parameters of the xUSSR set.==
+===xUSSR Railway Set.===
+In the set you can change the following GRF parameters (see the screenshot below):
+[[File:en/The parameters of the xUSSR set 2.png|frame| The parameters of the xUSSR Railway Set]]
+; Enable icons - on, off.
+:Enable icons in purchase window. For example, the pictogram "red lightning" means DC-powered piece of rolling stock.
+; Enable long names - on, off.
+:Enable long names in the purchase window, if this option is disabled, only the abbreviated names will be shown. For example, instead of "Steam 9P (0-6-0) 'Klop'", just "9P" will be shown. 
+; Penalty of speed - 15%.
+:The value of a penalty of speed (from 10% to 50%, by default 15%). 
+:The penalty is a tax on efficiency. In the buy menu there is a note how many and which locomotives you can join without penalty. Each locomotive/DMUs and EMUs in the description have SMU (system of many units). 
+:[//en.wikipedia.org/wiki/Multiple-unit_train_control '''Multiple-unit_train_control'''] (SMU) — method of controlling rolling stock, in which one engages several train locomotives or motor wagons and traction motor control is conducted with one control and one locomotive crew, is a special case of a multiple thrust. Applies to electric locomotives, diesel locomotives, EMUs and DMUs, on trams and trolleybuses. Union motorcars at SMU on rail transport has the following advantages relative to the layout of the trains of locomotive and trailer cars:
+:*The increase in maximum acceleration, which depends on the ratio of the number axes in the composition. For trains on the locomotive traction this value is about 0,2-0,3 m/s², and for electric locomotives — to 1 m/s²). This allows you to increase the speed of communication on the routes with frequent stops (i.e. urban and suburban transport), and increase the capacity of the line.
+:*There is no need in circulation (precept) locomotive. To change the direction of movement of the train locomotive crew enough to go to another cabin.
+:*Partitioning. Train with passengers can for a short time to disengage for a few parts which can go separately in different directions.
+:*Reliability. In case of failure of one of the wagon train can keep moving.
+:*The smaller axial load. Reducing the load on the way from the heavy locomotive.
+:The connection of the SMU allows locomotives to increase train weight and increase the carrying capacity of lines. Possible organization of the united train with the locomotives in the head and in the middle (and sometimes the tail) of the train. The train is divided into autonomous compositions and engage is side ways stations, along the way should a single entity and uses one thread schedule. SMU also allows to reduce the required number of locomotive crews.
+:In fact, on SMU work almost all multi-section locomotives — electric locomotives [//ru.wikipedia.org/wiki/ВЛ11 VL11], [//ru.wikipedia.org/wiki/ВЛ15 VL15], [//ru.wikipedia.org/wiki/ВЛ80 VL80]  and [//ru.wikipedia.org/wiki/ВЛ85 VL85], [//ru.wikipedia.org/wiki/ЧС6 CHS6], [//ru.wikipedia.org/wiki/ЧС7 CHS7]  and [//ru.wikipedia.org/wiki/ЧС8 CHS8], diesel locomotives [//ru.wikipedia.org/wiki/ТЭ2 TE2] , [//ru.wikipedia.org/wiki/ТЭ3 TE3] , [//ru.wikipedia.org/wiki/ТЭ10 2TE10]  all indexes, [//ru.wikipedia.org/wiki/2ТЭ116 2TE116] , exception — electric locomotive [//ru.wikipedia.org/wiki/ВЛ10 VL10] , which to the wiring diagram (repeating the scheme dvuhkrugovogo [//ru.wikipedia.org/wiki/ВЛ8 VL8] , the first Soviet  8-axes electric locomotive) is one locomotive, equipment of which is divided in two sections.
+:From modern locomotives work on SME support electric locomotives [//ru.wikipedia.org/wiki/ЧС2 CHS2] , [//ru.wikipedia.org/wiki/ВЛ11 VL11] , [//ru.wikipedia.org/wiki/ВЛ60 VL60K] , [//ru.wikipedia.org/wiki/ВЛ80 VL80S] and re-equipped [//ru.wikipedia.org/wiki/ВЛ80 VL80R] , series [//ru.wikipedia.org/wiki/Э5К E5K] , diesel locomotives [//ru.wikipedia.org/wiki/М62_(тепловоз) 3M62U] , [//ru.wikipedia.org/wiki/ТЭ10#2.D0.A2.D0.AD10 2ТE10M]  и 3TE10М, 2ТE10U и 3ТE10U (work in 2 and 3 sections), [//ru.wikipedia.org/wiki/ТЭП70 ТEP70] , as well as all the diesel and electric trains.
+:If locomotives/DMUs and EMUs equipped and on SMU can't drive, at association the penalty is imposed depending on the declared value in the "Penalty of speed". 
+:'''Example 1'''. The speed of a steam Nv (2-6-0) is 120 km/h, he can't drive for SMU. At association two steams Nv (2-6-0) and parametrs "Penalty of speed" 15%, the overall speed will be 102 km/h.
+:If locomotives/DMUS and EMUs equipped and can travel along system multiple unit (SMU), then you can merge them without penalty.  
+:'''Example 2'''. The speed of a diesel locomotive TE3 is 101 km/h, he can drive for SMU, as this parameter is specified association up to 2 sections. At association two deisel locomotives TE3 and parametrs "Penalty of speed" 15%, the overall speed will be 101 km/h.
+;Train default cargo - depending on the type of locomotive.
+: Cargo for locomotives (the drop-down list): mixed, goods, passengers, mail. Every option means "default cargo". Although the capacity of the locomotives 0, this type defines, what on what you can change when you upgrade. If all on all, then you need one of the 3 last options. If there is a option "depends on the type of locomotive", then change will be possible only passengers on passengers, cargo-passengers on cargo-passengers, freight on freight. If other options, then all in all, on the menu they are filtered, respectively, as transporting passengers, mail or goods.
+;Disable steam locomotives - on, off.
+:Hides steam locomotives from purchase list. If enabled (green button) all steam locomotives not will be available for purchase in the game.
+;Disable diesel locomotives - on, off.
+:Hides diesel locomotives from purchase list. If enabled (green button) all diesel locomotives not will be available for purchase in the game.
+;Disable AC electric locomotives - on, off.
+:Hides AC electric locomotives from purchase list. If enabled (green button) all AC electric locomotives not will be available for purchase in the game.
+;Disable DC electric locomotives - on, off.
+:Hides DC electric locomotives from purchase list. If enabled (green button) all DC electric locomotives not will be available for purchase in the game.
+;Disable ACDC electric locomotives - on, off.
+:Hides ACDC electric locomotives from purchase list. If enabled (green button) all ACDC electric locomotives not will be available for purchase in the game.
+;Disable DMUs - on, off.
+:Hides DMUs from purchase list. If enabled (green button) all DMUs not will be available for purchase in the game.
+;Disable AC EMUs - on, off.
+:Hides AC EMUs from purchase list. If enabled (green button) all AC EMUs not will be available for purchase in the game.
+;Disable DC EMUs - on, off.
+:Hides DC EMUs from purchase list. If enabled (green button) all DC EMUs not will be available for purchase in the game.
+;Disable ACDC EMUs - on, off.
+:Hides ACDC EMUs from purchase list. If enabled (green button) all ACDC EMUs not will be available for purchase in the game.
+
+===xUSSR Rails Set.===
+In the set you can change the following GRF parameters (see the screenshot below):
+[[File:en/The parameters of the xUSSR set additional for the railway.png|frame| The parameters of the xUSSR Rails Set]]
+; Electrification - all, all in 1, ignore voltage, xUSSR.
+:Specifies types of electrification.
+*"All" specifies 4 main (AC 25kV, AC 15kV, DC 3kV, Dc 1.5kV) and a combo - (AC 25kV + DC 3kV)
+*"All in 1" specifies only 1 electrification type for all the electric locomotives.
+*"Ignore voltage" specifies 2 types, uniting AC 25kV with AC 15kV and DC 3kV with DC 1.5kV.
+*"xUSSR" adjust available electrifications types to xUSSR train set (removes high-speed versions for AC 15kV and DC 1.5kV) and adds (DC 3kV + DC 1.5kV) combo.
+;Gauge width - ignored, broad, standart.
+:Specifies gauge types. If ignored, broad acts as standart.
+;Speed limits - all, no limits, strict.
+:Specifies speed limits.
+*"All" specifies speed limits allowing train on every track.
+*"No limits" specifies no speed limits.
+*"Strict" specifies strict speed limits, disallowing low speed trains on the high speed trains and vise versa.
+====Main page XUSSR Set/EN====
+[[en/Community/NewGRF/XUSSR Set]]

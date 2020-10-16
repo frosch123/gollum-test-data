@@ -1,0 +1,29 @@
+[[Translation:Template/en/Outdated]]
+<noinclude></noinclude>{{en/ambox| type  = content
+| image = Outdated_content.png | alt = Outdated content
+| text  = <strong>Nieaktualne</strong><br />
+Ten artykuł (lub sekcja) dawno nie był aktualizowany. Niektóre z jego treści mogą nie być już dokładne, z powodu zmian w najnowszej wersji. Artykuł do zaktualizowania. {{#IF: {{{1|}}} |<br>{{{1}}}|}}
+}}<includeonly>{{{2|[[Category:pl/Artykuły do zaktualizowania]]}}}</includeonly><noinclude>
+
+====Stosowanie====
+Wprowadź <nowiki>{{</nowiki>'''Nieaktualne/Pl'''<nowiki>}}</nowiki> lub <nowiki>{{</nowiki>'''Nieaktualne/Pl'''|'''''Co jest do zrobienia?'''''<nowiki>}}</nowiki> wewnątrz sekcji artykułu, jeśli jest przestarzały. Przykład:
+<pre>
+{{pl/Nieaktualne}}
+</pre>
+
+daje:
+
+{{pl/Nieaktualne}}
+
+<pre>
+{{pl/Nieaktualne|Należy poprawić linki}}
+</pre>
+
+daje:
+
+{{pl/Nieaktualne|Należy poprawić linki}}
+
+Artykuł z tym szablonem zostanie automatycznie umieszczony w kategorii [[:Category:pl/Artykuły do zaktualizowania|Kategorii: Artykuły do zaktualizowania]].
+
+[[Category:pl/szablony|O]][[Category:pl/InfoBox|O]]
+</noinclude>

@@ -1,6 +1,7 @@
-<noinclude>[[Translation:Template/en/Cargo]]
+[[Translation:Template/en/Cargo]]
+<noinclude>
 
-O '''Template:Cargas/Pt''' deve ser utilizando para apresentar informações sobre uma [[Main/pt/Carga|carga]], como onde é produzida e onde é aceita.
+O '''Template:Cargas/Pt''' deve ser utilizando para apresentar informações sobre uma [[pt/Carga|carga]], como onde é produzida e onde é aceita.
 
 == Elementos ==
 
@@ -10,10 +11,10 @@ O '''Template:Cargas/Pt''' deve ser utilizando para apresentar informações sob
 * '''produzida:''' onde é produzida;
 * '''notas:''' notas (se houver).
 
-{{en/-}}</noinclude><!--
+</noinclude><!--
 --><div style="float:right; width:260px; font-size:90%; border:1px solid gray; background-color:#f2f2f2; margin-left:10px; margin-bottom:10px">
 <div style="text-align:center; border-bottom:1px solid gray; padding:5px"><strong>{{{nome}}}</strong></div>
-<div style="background-color:white; padding:5px">[[File:en/.{{{imagem|Industries.png}}}|center]]</div>
+<div style="background-color:white; padding:5px">[[File:en/{{{imagem|Industries.png}}}|center]]</div>
 <div style="border-top:1px solid gray; padding:5px"><strong>Aceita:</strong> {{{aceita}}}</div>
 <div style="border-top:1px solid gray; padding:5px"><strong>Produzida:</strong> {{{produz}}}</div>
 <div style="border-top:1px solid gray; padding:5px"><strong>Notas:</strong> {{{notas|Nenhuma}}}</div>
@@ -34,8 +35,8 @@ Escrever:
 
 <pre>{{pt/Cargas| nome= Carvão
 | imagem= Coal.png
-| aceita= [[Main/pt/Usina de energia|Usina de energia]]
-| produzida= [[Main/pt/Mina de carvão|Mina de carvão]]
+| aceita= [[pt/Usina de energia|Usina de energia]]
+| produzida= [[pt/Mina de carvão|Mina de carvão]]
 | notas= Nenhuma
 }}</pre>
 
@@ -43,8 +44,8 @@ Da como resultado:
 
 {{pt/Cargas| nome=Carvão
 | imagem=Coal.png
-| aceita=[[Main/pt/Usina de energia|Usina de energia]]
-| produzida=[[Main/pt/Mina de carvão|Mina de carvão]]
+| aceita=[[pt/Usina de energia|Usina de energia]]
+| produzida=[[pt/Mina de carvão|Mina de carvão]]
 | notas=Nenhuma
 }}
 

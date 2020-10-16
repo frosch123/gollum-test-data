@@ -1,0 +1,105 @@
+[[Translation:en/Development/FAQ development]]
+{{sr/Sadržaj}}
+
+Ovaj članak daje odgovore na pitanja o razvoju OpenTTD, npr. korišćenje SVN, preuzimanje izvornog koda, podešavanje kompajlera itd.
+
+===Doprinos projektu===
+====Kako ja mogu da pomognem projektu?====
+:* Ovo zavisi od Vašeg znanja. Ako ste dobri u kodiranju, možete pomoći prilikom dodavanja novih funkcija ili ispravljanjem grešaka. Takođe, svaki drugi vid pomoći je dobrodošao, poput [[sr/Internacionalizacije|prevođenja]] na druge jezike, crtanja grafike, pisanja ovog uputstva ili pravljenja zvukova i muzike.
+
+====U kom programskom jeziku je napisan OpenTTD?====
+:* OpenTTD je programiran u C++, ANSI-C flavor korišten od strane MS Visual Studio, konkretno. Pročitajte smernice oko [[sr/Stil kodiranja|stila kodiranja]] kao preporuku kako bi vaš kod trebao da bude strukturisan.
+
+====Ispravio sam grešku/dodao sam opciju. Kako mogu da podnesem to u bazu koda?====
+:*Napravite diff fajl (iliti peč fajl) sa vašim izmenama i podnesite ga na [http://bugs.openttd.org Flajsprej]. Molimo Vas da pratite pečeve da vidite da li programeri imaju neki predlog. Ako je sve u redu sa vašim pečom, on će biti uključen u SVN stablo.
+:*Možete da napravite temu na [http://www.tt-forums.net/viewforum.php?f=33 našem forumu] i da dodate vaš peč na [[sr/Spisak pečeva|spisak pečeva]].
+
+====Želim da postanem zvanični OpenTTD programer! Kako?====
+:*Jedini način je da konstantno pravite pečeve, posebno one za ispravljanje grešaka. Proverite spisak [http://bugs.openttd.org/index.php?string=&project=1&type=1 poznatih grešaka] i imajte na umu naš [[sr/Stil kodiranja|stil kodiranja]]. Kada količina vašeg vremena koje ste utrošili na programiranje OpenTTD dostigne naš nivo, Šanse su velike da ćete  dobiti SVN nalog i biti dodani na spisak.
+
+===Izvorni kod===
+====Šta je to izvorni kod?====
+:* [http://www.google.com/search?q=C%2B%2B+tutorial Ne brinite se oko njega i ne zamarajte se da čitate ostatak ovoga.]
+
+====Kako mogu da dobijem izvorni kod?====
+Prvenstveno izvorni kod dobijate preko sistema kontrole verzija (version control system - VCS). On omogućava laku proveru koda i nadogradnju na bilo koju verziju (možda najnoviju jer radne verzije imaju novu opciju ili neku posebnu koja je neophodna za specifičan peč) koja vam je potrebna. Ako nameravate da koristite pečeve, prevashodno koristite mercurial ili git, jer su najpogodniji za ažuriranje i upravljanje pečovanim verzijama.
+:* Subversion: <code>svn checkout svn://svn.openttd.org/trunk</code>
+:* Mercurial: <code>hg clone http://hg.openttd.org/openttd/trunk.hg</code>
+:* Git: <code>http://git.openttd.org/openttd/trunk.git/</code> (alternatively <code>git://git.openttd.org/openttd/trunk.git/</code>)
+Imajte ne umu da se nove revizije mogu pojaviti u git skladištu preko HTTP sa zakašnjenjem od par sati. Ovo kašnjenje se ne javlja ako koristite git protokol. 
+
+Izvorni kod možete pribaviti još putem tar bala, ali izbegavajte ovo, ako ste u mogućnosti da iskoristite VCS:
+:* Poslednja objavljena verzija:  [http://www.openttd.org/download-stable  Preuzmite sa sajta]
+:* [[sr/Radne verzije|Radne verzije]]: [http://nightly.openttd.org/ Preuzmite sa sajta radnih verzija]
+
+====Šta su SVN verzije?====
+:* SVN ili [https://www.wikipedia.org/wiki/Subversion_%28software%29 Subverzije] su sistemi za kontrolu verzija poput CVS. U osnovi on prati izmene izvornog koda igre. SVN verzija predstavlja najnoviji izvorni kod igre.
+
+====Na kom operativnom sistemu radi Subversion?====
+:* Na bilo kom modernom Uniksolikom (Mek OS X, Linuks, BSD, ...), Vin32, BeOS/Haiku, OS/2. Subversion je naposan u ANSI C i koristi APR, Apache Portable Runtime biblioteku, kao sloj za portabilnost. Subversion klijent će raditi gde god APR radi, znači na mnogo mesta.
+
+====Kako da nabavim SVN verziju?====
+:* Prvo morate da preuzmete klijenta za vaš operativni sistem koji će vas povezati na SVN server, gde ćete preuzeti izvorni kod. Možete ga preuzeti sa glavne strane SVN projekta http://subversion.apache.org/. Ako ste na Vindovsu možete preuzeti i [http://tortoisesvn.tigris.org/ TortoiseSVN] koji se integriše sa Eksplorerom i oslobađava vas obaveze pokretanja stvari iz komandne linije.<br><br>Potrebno je da podesite klijent da koristi skladišni url koji je ''"svn://svn.openttd.org/trunk"''. Ovo zavisi od softvera koji nabavite, ali instrukcije senalaze u dokumentaciji koje dolaze sa softverom.<br><br> Na Linuksu (Uniksu) možete koristi komandu ''"svn co svn://svn.openttd.org/trunk/"''.<br><br>Na MekOSX Xcode upravlja i SVN i Git tako da nema potrebe da se bilo šta instalira (osim samog Xcode).
+
+====Subverzija nije portovana na moju platformu / Ne želim da instaliram još softvera - da li postoji još neki nači za pribavljanje izvornog koda?====
+:* Onlajn možete pregledati skladište na adresi http://svn.openttd.org/, takođe  proverite kopije, tako da možete da preuzmete kompletan paket izvornog koda. Poslednji izvorni kod radne verzije preuzmite sa http://nightly.openttd.org/.
+
+====Sada kada sam nabavio izvorni kod kako da ga kompajliram?====
+:* Kompajlirajte OpenTTD na Vindovsu koristeći [[:Category:sr/Microsoft Visual C%2B%2B|Microsoft Visual C++]]
+:* Kompajlirajte OpenTTD na Vindovsu koristeći [[sr/Kompajliranje na MinGW|MinGW]]
+:* Kompajlirajte OpenTTD na [[sr/Kompajliranje na Linuksu|Linuksu]]
+:* Kompajlirajte OpenTTD na [[sr/Kompajliranje na Meku|Mek OS X]]
+:* Kompajlirajte OpenTTD na [[sr/Kompajliranje na Solarisu|Solarisu]]
+:* Kompajlirajte OpenTTD na [[sr/Kompajliranje na Haiku|Haiku]]
+
+Da bi testirali podešavanja kompajlera, probajte da kompajlirate igru iz izvornog koda bez dodavawa ijednog peča (pročitajte dole) i pokrenite dobijeni izvršnu. Ako sve prođe kako treba, možete prilično biti sigurni da su podešavanja dobra.
+Ako ne uspete, bićete sigurni da peč nije uzrok problema.
+
+====Naišao sam na problem prilikom kompajliranja! Šta da radim?====
+:* Ovo nisu najčešća pitanja o kompajliranju, zatražite pomoć od vašeg prodavca kompajlera.
+====Zašto su programeri izabrali da koriste Subversion?====
+:* Subversion (SVN) je izabran ispred CVS zato što je napredniji i lakši za upotrebu. Pored toga dosta programera ne voli CVS sada kada poznaju SVN.
+:* SVN je "izabran" ispred distribuiranih sistema kontrola verzija (distributed version control systems - DVCS) poput Bazaar, Darcs, git, Mercurial i SVK je u vreme kad je vršen izbor, potoji nisu postojali. GNU arch je bio jedan od par DVCS koji je potojao tada, ali je bio težak za učenje i razumevanje. Kasnije sa verzijama API za NewGRFove  je napravljen iz SVN revizije jer bi prebacivanje u DVCS bi onemogućilo tu opciju i tako bi onesposobili mnogo postojećih NewGRFova.
+
+====Koja je poenta sistema kontrola verzija? Zašto jednostavno ne stavite izvorni kod u FTP direktorijum?====
+:* Sistem kontrole verzija prati sve promene, kada ih je i ko napravio. Ako programeri kasnije nađu da je nešto što su uradili bila greška i pokvare nešto važno, morali bi da sve rade ispočetka. Ovako oni mogu da samo 'provere' reviziju kada je sve radilo kako treba. Takođe, programeri mogu da stavljaju komentare da bi znali koje promene su načinili.
+====Kako da napravim diff fajl da podelim moje izmene sa drugim koderima?====
+:* Na Linuksu, koristite komandu "svn diff > mypatch.diff" iz izvornog direkotrijuma da napravite diff fajl.
+:* Na Vindovsu, isto možete uraditi iz komandnog promta ili ako imate Tortoise SVN, desni klik na izvornom direkorijumu i izaberite  Create Patch. Onda će te biti pitani za lokaciju i ime fajla.
+
+====Kako da primenim peč?====
+Obično je najbolje da primenite peč na reviziju koju je naveo autor peča.
+
+Različiti sistemi kontrola verzija koriste različite načine za izražavanje promena. Trenutno postoje 2 tipa pečeva: SVN i HG/GIT pečevi.
+Da bi znali koji tip imate, tekst editorom otvorite peč fajl i pogledajte prvih par linija.
+
+SVN peč počinje ovako
+<pre>
+Index: src/gfx.cpp
+===================================================================
+--- src/gfx.cpp (revision 20024)
++++ src/gfx.cpp (working copy)
+@@ -641,14 +641,13 @@
+...
+</pre>
+
+a HG/GIT peč ovako
+<pre>
+diff --git a/src/gfx.cpp b/src/gfx.cpp
+--- a/src/gfx.cpp
++++ b/src/gfx.cpp
+@@ -641,14 +641,13 @@
+...
+</pre>
+Glavna razlika su <code>a/</code> i <code>b/</code> dodaci u linijama koje počinju sa <code>---</code> i <code>+++</code>.
+
+
+*'''Uniks šel (Vindovs koji koristi using MSYS/MinGW, Mek OS X, Linuks, ...):''' Ukucajte sledeću liniju u konzolu (zamenite patch_name sa filename peča):
+:<code>patch -p0 < patch_name</code> (za SVN pečeve). U nekim slučajevima možda će vam trebati <code>patch -p1 < patch_name</code> (za HG/GIT pečeve).
+ 
+*'''Vindovs, grafički:''' Proverite da li imate instaliran [http://tortoisesvn.tigris.org TortoiseSVN].
+{{en/Warning| TortoiseSVN radi samo sa SVN pečevima, ne i sa HG/GIT pečevima!!}}
+:Desni klik na folder sa izvornim kodom OpenTTD, otvorite TortoiseSVN podmeni i odaberite 'Apply Patch...'. Pronađite peč fajl i odaberite ga. Onda desni klik na prozor 'File Patches' i kliknite na 'Patch All'. Kada uradite ovo, zatvorite TortoiseMerge prozor.
+
+[[Category:sr/Najčešća pitanja]]
+[[Category:sr/Razvoj]]

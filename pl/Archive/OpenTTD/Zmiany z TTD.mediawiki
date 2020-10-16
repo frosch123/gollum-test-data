@@ -1,0 +1,98 @@
+[[Translation:en/Archive/OpenTTD/Changes from TTD]]
+
+=Co jest w OpenTTD, czego nie było w oryginalnym Transport Tycoon Deluxe?=
+
+OpenTTD jest wzorowany na oryginalnej grze Transport Tycoon Deluxe autorstwa Chrisa Sawyera i znacznie poprawia wrażenia z gry. Wiele funkcji zostało zainspirowanych [http://www.ttdpatch.net/ TTDPatch]'em podczas gdy inne są oryginalne. Masz również tutaj [[en/Archive/OpenTTD/Comparison of OpenTTD and TTDPatch features]] (porównanie) .
+
+==Znaczące ulepszenia==
+
+* Multiple ports - A native Linux version, Windows, Mac OS X, OS/2 i więcej.
+* [[en/Manual/Autorail|Autorail build tool]] - Umożliwia przeciąganie i upuszczanie szyny w dowolnym kierunku, a komputer zbuduje tory w tym kierunku.
+* Większe mapy, do 4096x4096.
+* Realistic scenarios na podstawie map wysokości wykorzystujących cyfrowe dane wysokościowe pobrane z Google Earth, strony forum http://www.tt-forums.net/viewtopic.php?f=29&t=27052  lub aktualne słowo doc http://www.tt-forums.net/download/file.php?id=92633 .
+* [[en/Docks|Canals/Locks]] - Pozwalając graczom tworzyć drogi wodne, które rozciągają się na lądzie i pozwalają statkom na ich nawigację.
+* Larger stations - Stacje mogą być dłuższe i składają się z wielu innych platform.
+* [[en/Archive/Manual/Settings/Nonuniform stations|Non-uniform stations]] - Stacje mogą być lekko przesunięte '(offset)'.
+* Ability to [[en/Manual/Join train stations|join stations]] (of same width or length) - Zbudowanie stacji obok innej stacji tego samego typu, szerokości i długości tworzy pojedynczą dłuższą stację.
+* [[en/Manual/Waypoints]] - Specjalny kawałek toru, który można umieścić na rozgałęziających się trasach, aby zmusić pociąg do skorzystania z określonego odgałęzienia, by dotrzeć do celu.
+* [[en/Archive/Manual/Settings/Mammoth trains|Mammoth trains]] - Pociągi mogą być znacznie dłuższe.
+* [[en/Archive/Manual/Settings/Multiheaded trains|Multi-headed trains]] - Pociągi mogą mieć więcej niż jeden silnik, co pomaga zwiększyć prędkość podczas przewożenia ciężkich ładunków, wjeżdżania pod górę etc.
+* [[en/Archive/Manual/Settings/Build on slopes|Budowle na zboczach]] i wybrzeżu - Można budować na zboczach wybrzeża lub wzgórz; odpowiednia płytka jest wypełniona do płaskiej wysokości za pewien koszt.
+* Goto depot order - Pozwala na wstawienie polecenia nakazującego pojazdowi powrót do składu.
+* [[en/Archive/Manual/Settings/Longer bridges|Longer bridges]] - Mosty mogą rozciągać się na większe odległości... za cenę.
+* Higher bridges - Mosty mogą rozciągać się na większych wysokościach, co umożliwia tworzenie bardziej złożonych sieci.
+* Three new [[en/Manual/Bridges|bridges]] - Aby umożliwić większe wykorzystanie pociągów o większej prędkości.
+* [[pl/Manual/Sygnalizacja#Pre-sygnały|Presygnały]] (CTRL-Klik na istniejących sygnałach) - Jako [http://www.ttdpatch.net/ TTDPatch] - specjalne sygnały pomagające w budowaniu skomplikowanych układów torów (zwykle używane, gdy do jednej linii pociągu podłączonych jest wiele peronów).
+* [[pl/Manual/Sygnalizacja#Semafory|Semafhory]] (CTRL-D by umieścić je) - Jako [http://www.ttdpatch.net/ TTDPatch].
+* [[en/Manual/Orders#Shared_orders|Order sharing]] i [[en/orders#Copy_orders|copying]] ("goto" on other vehicle to copy, ctrl+"goto" to share) - Pojazdy mogą teraz udostępniać zamówienia, a zmiany zamówień dotyczą wszystkich pojazdów, a zamówienia można po prostu skopiować, klikając dowolny inny pojazd, aby zaoszczędzić czas.
+* [http://www.ttdpatch.net/ TTDpatch]-compatible Non-stop handling - Exactly as it says on the tin.
+* [[en/Archive/Manual/Settings/Crossing tunnels|Crossing tunnels]] - Tunele mogą się teraz krzyżować pod ziemią.
+* Bodowanie wiele drzew na jednym kafelku.
+* [[en/Manual/Bribe authority|możliwość Przekupienia władz miasta]] - Jeśli twoi mieszczanie cię nienawidzą, możesz przekupić władze lokalne, aby ci pomogły, ale jest to drogie i grozi złapaniem.
+* Much improved [[en/Manual/Multiplayer|networking and internet play]] by TCP/IP, including server lists, kick/ban, dedicated server, cheat protection and chat.
+* [[pl/Development/Script/SI/Strona główna|AI framework]] pozwalając na tworzenie nowych sztucznej inteligencji przez użytkowników. Stary (cheating) AI zostało usunięte.
+* Several new types of airport ([[en/Manual/Airports#Metropolitan_airport|metropolitan]] in 1980, [[en/airports#international_airport|international]] in 1990 and [[en/airports#intercontinental_airport|intercontinental]] in 2002).
+* [[en/Manual/Drive-through Road Stops]] - Nowy rodzaj stacji dla pojazdów drogowych. Podobnie jak tradycyjny „przystanek autobusowy”, nowe stacje pozwalają pojazdom drogowym ładować / rozładowywać pasażerów i ładunek po prostu zatrzymując się przy drodze.
+* [[pl/Manual/Linie tramwajowe|Tramwaje]] - New kind of road vehicles (like bus) and require special tracks, stops and depots for them.
+
+==Lepsza użyteczność==
+
+* [[en/Manual/Convert rail|Convert rail]] tool (to rail, monorail, maglev) - Aby umożliwić łatwe przełączanie utworów na najnowszą technologię.
+* Build stations with drag & drop - Zamiast zgadywać rozmiar lub liczyć kafelki, po prostu przeciągnij i upuść stację nad wybranym obszarem, a zostanie ona stworzona dla Ciebie.
+* [[en/Archive/Manual/Settings/Build in pause|Build while paused]] - Opcjonalna łatka, która pozwala budować, gdy gra jest wstrzymana.
+* Kółka myszy można używać do przewijania menu oraz powiększania / pomniejszania.
+* Autoscroll (to left/right) - po dotarciu do krawędzi ekranu przesuwa się ona w poprzek.
+* Bigger demolish tool.
+* Plant trees on area.
+* [[en/Manual/Sell entire train|Sprzedaż całego pociągu]] przeciągając do dynamitowego kosza na śmieci - Sprzedaje cały pociąg zamiast tylko jednego wagonu.
+* Cost estimation with Shift - Przytrzymanie klawisza Shift podczas prawie każdej akcji pokaże, ile będzie cię to kosztowało, zanim to zrobisz.
+* Usuwanie dróg i szyn przez przeciąganie.
+* Siedziba firmy może być teraz przeniesiona gdzie indziej (koszt 1% wartości firmy).
+* Automatyczne zapisywanie w regularnych odstępach czasu.
+* [[en/Archive/Manual/Settings/Advanced Settings/Vehicles|Autoodnowa/zastąpienie]] pojazdy zbliżające się do końca żywotności.
+* Teraz można usunąć platformę ze stacji, klikając narzędzie stacji, a następnie narzędzie do usuwania, a następnie platformę, którą chcesz usunąć.
+* Wszystkie zapisywania gier TTDLX są obsługiwane (.SS1, .SV1, .SV2, .SV0, .SS0). 
+* Tabela najlepszych wyników
+* Nowy algorytm pathfinding dla pociągów.
+* [[en/Autoslope]].
+
+==Nowe opcje==
+
+* "No train service" opcja.
+* [[en/Archive/Manual/Settings/Disable inflation|Disable inflation]] opcja.
+* [[en/Archive/Manual/Settings/Full load any cargo|Full load any]] opcja, jak w [http://www.ttdpatch.net/ TTDPatch] - Twój pociąg opuści stację, jeśli ŻADNE z jego ładunków są pełne.
+* "[[en/Archive/Manual/Settings/Select goods]]" opcja.
+* "Multiple similar industries in close proximity" opcja.
+* "Multiple industries per town" opcja.
+* Wiadomość dla "pociąg jest nieopłacalny".
+* Wiadomość dla "pociąg jest zagubiony".
+* Możliwość ustawienia daty początkowej, przyjmuje wartość w formularzu yyyy, yyyymm lub yyyymmdd.
+* [[en/Archive/Manual/Settings/Disable AI vehicles|Wybór]] jakie typy pojazdów zbuduje AI.
+* Możliwość wyboru wysokości linii śniegu.
+* Zmień domyślny interwał serwisowy dla pojazdów.
+* Zmień maksymalną liczbę pojazdów na gracza.
+* Opcja dla procentowych okresów serwisowych. Wyślij pojazd do składu, gdy straci X% niezawodności
+
+==Funkcje graficzne/interfejsu==
+
+* Screenshots może być BMP, PNG or PCX (wybierz w menu opcji gry).
+* Więcej walut (w tym wprowadzenie euro w 2002 r. i własne waluty niestandardowe).
+* Więcej języków nazwy miasta.
+* Tryb okienkowy lub pełny ekran, w tym wybór rozdzielczości.
+* Lepkie okna (nie zamykaj, chyba że sam je zamkniesz) i zatrzaskowe okna (okna przylegają do siebie po przeciągnięciu).
+* Windows z możliwością zmiany rozmiaru.
+* Ustawienie konfiguracji częstotliwości odświeżania.
+* Sortowanie katalogów miast.
+* [[pl/Archive/Manual/Settings/Zaawansowane ustawienia|Zaawansowane ustawienia]] okno konfiguracji.
+* Użycie kliknięcia z Ctrl, aby spłacić pełną pożyczkę lub wziąć pełną pożyczkę.
+* [[en/Archive/Manual/Settings/Coloured newspaper|Color newspaper]] po określonej dacie.
+* Zwiększenie prędkości gry (poprzez przycisk szybkiego przewijania do przodu lub przez naciśnięcie Tab).
+* Posadź losowy typ drzewa.
+* [[pl/Manual/Skróty klawiszowe|Skróty klawiszowe]] na prawie każdą akcję.
+* [[pl/Main/Internacjonalizacja|Tłumaczenia]] na wiele języków, do wyboru w grze w dowolnym momencie.
+* [[pl/Manual/NewGRF|NewGRF|Loading new graphics sets]].
+* Bring up an [[en/Archive/Manual/Settings/Extra Viewport|extra viewport]] pokazując dowolną część mapy.
+* Zyski pojazdu oznaczone kolorami.
+* Nieprawidłowe zamówienia w harmonogramie pojazdu są podświetlone na czerwono i generują ostrzeżenie.
+
+Aby uzyskać szczegółowe informacje na temat każdej zmiany, zobacz [[pl/Archive/OpenTTD/Historia wersji OpenTTD|Historia_wersji_OpenTTD]]

@@ -1,0 +1,257 @@
+
+==Compiling and developing OpenTTD on MacOSX==
+[[File:en/Terminal Mac OSX.png|left|64px]]
+A quick guide to get started with OpenTTD development on OSX.
+Note: if you have not installed any of this, it will take a while and there will be a lot to download, but you will get access to a lot more software than just OpenTTD.
+
+Compiling OpenTTD requires use of the command line, so before you start, you should make yourself familiar with the '''Terminal.app''' if you aren't already. A very brief terminal tutorial can be found [http://macapper.com/2007/03/08/the-terminal-an-introduction/ here.]
+
+====Getting the source====
+:* Source is controlled with Git, and obtained via GitHub https://github.com/OpenTTD/OpenTTD
+:* Git is either pre-installed by Apple on your Mac, or is available by installing Apple's XCode Developer Tools, which can be found via Apple's Site or the Mac App store
+
+==Installing Developer Tools (Xcode)==
+[[File:en/Compiling MacOSX 02-Xcode.png|center|128px]]
+===Recent OSes===
+If you have access to the Mac App Store, you will find Xcode there as a free download.
+===Older Mac OSes===
+First you need to install a compiler. You should do this by installing '''Xcode''' (Requires OSX 10.3+)
+They should be on the CD / DVD when you got your OS. You can also download it from the Apple Developer Connection web site (free registration required), although it is over 3gb in size. This includes, amongst many other things, gcc (in the ''UNIX Dev Support'' package), which is the compiler that are used by most opensource projects, including OpenTTD.
+{{en/note|By default, this will also install the iOS SDK, which you probably won't need. You can uncheck it in the final installation settings or just disagree with its license to save several gigabytes of disk space.}}
+
+==Installing required libraries==
+In order to build OpenTTD from source you need to have installed some [http://www.openttd.org/en/development libraries] which it depends upon. 
+
+The minimum requirements for OpenTTD on mac are:
+* [http://www.libpng.org/pub/png/libpng.html libpng]
+* [http://tukaani.org/xz/ liblzma] (it's part of the xzUtils)
+
+and optionally you want also:
+* [http://www.oberhumer.com/opensource/lzo/ lzo2]
+* [http://www.freetype.org/ freetype2]
+* [http://icu-project.org/ icu]
+
+For getting the openttd source, you will need:
+* [http://subversion.apache.org/ subversion]
+OR:
+* [http://mercurial.selenic.com/ mercurial]
+OR:
+* [http://git-scm.com/ git]
+All of the above are installable using MacPorts.
+
+[http://www.libsdl.org/ SDL] and [http://fontconfig.org/ fontconfig] are not required on mac. [http://www.zlib.net/ zlib] comes with the OS so you don't need to install zlib.
+
+On OSX 10.6.1 it may also be necessary to install:
+* [http://pkg-config.freedesktop.org/ pkg-config]
+
+The easiest solution in order to obtain these libraries is to have either [http://mxcl.github.com/homebrew/ Homebrew] or [http://www.macports.org/ macports] install them for you. Alternatively, you may compile and install it from source for yourself. As another alternative you may visit the pages of those libraries and see whether they provide ready-compiled binary versions. At least libpng does so.
+
+Please refer to the [http://mxcl.github.com/homebrew/ Homebrew website] for instructions on how to install Homebrew.
+
+===Using Homebrew===
+[http://mxcl.github.com/homebrew/ Homebrew] is a very simple package management system for Mac OS X. If you have Homebrew installed, you can have it build OpenTTD for you with two simple commands:
+
+<pre>
+brew tap homebrew/games
+brew install openttd
+</pre>
+
+Or manually install the libraries with:
+
+<pre>
+brew install xz
+brew install lzo
+brew install pkg-config
+</pre>
+
+{{en/warning|The homebrew pages contains advice concerning how to handle directories usually only writable by root (requiring the admin password) and claims as to which of these “could safely be deleted”. It cannot be recommended to follow any of this advice if you are not 100% sure of what you do. You may corrupt your system without possibility to recover it.}}
+
+===Using MacPorts===
+[http://www.macports.org/ The MacPorts Project] is an open-source community initiative to design an easy-to-use system for compiling, installing, and upgrading either command-line, X11 or Aqua based open-source software on the Mac OS X operating system. As you will install libraries in your system directories, you'll need to do so as administrator via the command ''sudo'' - which will require you to enter the administrator password. Further information regarding <code>sudo</code> can be found on [https://www.wikipedia.org/wiki/Sudo wikipedia].
+
+====Installing libraries with MacPorts====
+Before installing any libraries, make sure you have access to the latest ports by updating the local repository:
+ <code>sudo port selfupdate</code>
+
+{{en/Note|If you want to compile universal binaries to distribute, add " +universal" at the end of each line.}} 
+(Everything will need to be compiled first, so have patience.)
+
+Install ''libpng'', ''liblzma' (provided by xz package)', ''pkgconfig'' (required for lzma detection), ''lzo2'' and ''libiconv'' (the required ''zlib'' will be installed as dependency automatically). 
+ <code>sudo port install libpng
+ sudo port install xz  
+ sudo port install pkgconfig
+ sudo port install lzo2
+ sudo port install libiconv</code>
+
+
+At least in order to compile a ''static binary'' (for redistribution), but also for your convenience, you might want these as well:
+ <code>sudo port install fontconfig
+ sudo port install freetype
+ sudo port install icu</code>
+
+====Some further notes on MacPorts====
+
+It might be worth to risk a look at the [http://guide.macports.org/#using.port macports documentation]. If you need for one or another reason an old(er) library version, a short walk-through is [https://trac.macports.org/wiki/howto/InstallingOlderPort found here]
+
+{{en/note| There are issues with some gcc versions which are supplied by macports. Use one of the apple-supplied compilers if fails with illegal compiler arguments. 
+You can switch the compiler being used by installing ''gcc_select'' package from macports, then using ''port select <version>''}}
+
+
+Fun fact: if you have installed yourself libraries and build them for other architectures than x86_64 i386 ppc and ppc64 it might fail. Those four seem to be accepted, but macports might bitch, if others are found like ppc970.
+
+=== Installing manually ===
+If you want truly universal libraries it might be needed that you compile the libraries yourself, especially as newer versions (e.g. Snow Leopard) only support 'universal' binaries and libraries with the i386 and x86_64 architectures while OpenTTD's universal binaries can also include ppc, ppc64 and ppc970.
+
+There's no build script to get the required universal libraries, but some steps which can be followed will get you there.
+* get the source of the library
+* make sure it compiles with your usual settings w/o modification
+* build all different architectures. This short shell script gives you an idea how to do it analogously for all libraries, this is made to build libz 1.2.5, you might need to adopt it accordingly:
+<pre>
+#!/bin/bash
+export archs="ppc ppc64 ppc970 i386 x86_64"
+#export archs="ppc"
+export sdk="/Developer/SDKs/MacOSX10.4u.sdk"
+export file="libz.1.2.5.dylib"
+
+
+for this in $archs; do
+	echo "$this"
+	flags="-arch $this -isysroot $sdk -I$sdk/usr/include -mmacosx-version-min=10.3"
+	export CFLAGS="$flags"
+	export CXXFLAGS="$flags"
+	export CPPFLAGS="$flags"
+	export LDFLAGS="$flags"
+	make clean
+	./configure
+	make
+	cp $file $this.$file
+done
+
+lipo -create *.$file -output $file
+</pre>
+* subsequently install the resulting libz.1.2.5.dylib into your library dir, either /usr/lib or /opt/local/lib
+
+Repeat similar steps for the other libraries.
+
+= Compiling the source =
+For those just wanting a working copy for themselves, enter the following into a terminal window:
+ <code>cd ~/Downloads/directory_containing_downloaded_sources
+ ./configure
+ make
+ make bundle
+</code>
+After the compiler is done doing all it's stuff, you should find yourself a working '''OpenTTD.app''' in the bundles folder! [[File:en/Smile 22px.png]]
+
+
+For more detailed instructions, and options, read on...
+
+===Applying a patch===
+If you want to use a patch/diff file then you have to apply it before using configure.
+This is done in the same way as on Linux so you should read this: [[en/GNU/Linux#Applying_a_patch]]
+
+===Configure===
+There is a configure script. This is used to figure out what your system is like and generate a makefile to compile a binary designed for your system. To run it, just write <code>./configure</code> and it will figure everything out on its own.
+
+If you have a special request for your compilation, then you need to give arguments to configure. To see a full list of available settings, use the help system (<code>./configure --help</code>)
+
+Example: if you want to make a static build (the binary will contain the needed parts of the libraries so they do not have to be installed on the computer playing the game), you will have to type <code>./configure --enable-static</code>. This is recommended for Mac OS X builds. Multiple arguments can be added like <code>./configure --enable-static --enable-dedicated</code>.
+
+==== Configuring on Mavericks (and Yosemite) ====
+
+* There is no liblzo2 in the package managers yet for Mavericks (as of 1 Nov 2013). To configure without this optional library, use <code>--without-liblzo2</code>
+
+* Mac OS 10.9 has removed the method declarations related to palettes and 8-bit graphics from the CoreGraphics header files. You may either <code>#if 0</code> those blocks out (in fullscreen.mm) or compile against the Mac OS 10.8 SDK.
+
+* The version of Clang that ships with Xcode 5.0.1 uses a custom C++ library. To link OpenTTD, you must tell Clang to use the standard one.
+
+All of the above can be achieved with this configure command:
+
+<code>
+./configure --enable-static --without-liblzo2 --without-osx-sysroot CFLAGS="-isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk" LDFLAGS="-stdlib=libstdc++"
+</code>
+
+Some users report linker failures with the configure command above.  The following command may solve those failures:
+
+<code>
+./configure --enable-static --without-liblzo2 --without-freetype --without-osx-sysroot CFLAGS="-isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk" LDFLAGS="-stdlib=libstdc++"
+</code>
+
+'''October 2014 Update - applies to both Mavericks and Yosemite'''
+Apple released an Xcode update for Mavericks in October 2014, which appears to remove the 10.8 SDK.  Following this update, OpenTTD compiles for at least some users with:
+
+<code>
+./configure --without-freetype LDFLAGS="-stdlib=libstdc++"
+</code>
+
+This also works on Yosemite.
+
+If you can supply an appropriate version of Freetype, the --without-freetype flag might be unnecessary.
+
+===Compiling===
+When configure has made a makefile for you, all you need to do to compile is to type <code>make</code>. The binary is then placed in the "bin" subdirectory.
+
+If needed, make can accept arguments as well. Commonly used arguments will be (all of them will start by compiling the game if needed):
+
+* <code>make run</code>: will start the game
+* <code>make bundle</code>: this will create a bundle inside the bundle directory (created if needed). This means that the game will be executable from finder and not only terminal
+* <code>make bundle_dmg</code>: as above, but will create a dmg
+* <code>make help</code>: lists all "targets" available (like make run and make bundle)
+
+Make also accepts standard make arguments. The most interesting is the <code>-j</code> option. By default GCC compiles one file at a time and it can only use one CPU/core to compile a single file. If you want to compile as fast as possible, you can tell it to compile more files at once with the <code>-j</code> option. Example: <code>make bundle -j 4</code> will compile 4 files at once, making good use of a dualcore computer. Usually having two files compiling on each core is the fastest as one compile while the other one waits for read/write to the disk.
+Note: the makefile dependencies has to be set up correctly for this to work. While they are for OpenTTD, don't assume this for other projects or nasty stuff can happen, like weird compilation errors.
+
+If it comes to frequent compiles, it might be worth to look for alternative compilers. Newer OSX bring also llvm-gcc binaries which offer a speed gain during compilation for the cost of a bit slower binaries. In order to activate the set the environment variables CC=/Developer/usr/bin/llvm-gcc and CXX=/Developer/usr/bin/llvm-g++
+
+====When compiling fails====
+
+* If you get a linker error like the following,
+
+ <code>[SRC] Linking openttd
+ Undefined symbols for architecture x86_64:
+ "_BZ2_bzDecompressInit", referenced from:
+ _FT_Stream_OpenBzip2 in libfreetype.a(ftbzip2.o)
+ _ft_bzip2_stream_io in libfreetype.a(ftbzip2.o)
+ "_BZ2_bzDecompressEnd", referenced from:
+ _ft_bzip2_stream_io in libfreetype.a(ftbzip2.o)
+ _ft_bzip2_stream_close in libfreetype.a(ftbzip2.o)
+ "_BZ2_bzDecompress", referenced from:
+ _ft_bzip2_file_fill_output in libfreetype.a(ftbzip2.o)
+ ld: symbol(s) not found for architecture x86_64
+ collect2: ld returned 1 exit status
+ make[1]: *** [openttd] Error 1
+ make: *** [all] Error 1
+</code>
+
+try downgrading <code>freetype</code>. For example, if you are using macports, you can achieve this by executing
+
+ <code>sudo port activate freetype @<version number></code>
+
+Or use the <code>--without-freetype</code> configure option.
+
+* If you get an error that starts with something like this:
+
+<code>ISO C++ forbids forward references to 'enum' types</code>
+
+try adding <code>CFLAGS="-std=c++11"</code> to the end of your configure call.
+
+* If your error looks like this:
+
+ <code>Undefined symbols for architecture x86_64:
+ "_iconv", referenced from:
+ convert_tofrom_fs(void*, char const*) in unix.o
+ "_iconv_open", referenced from:
+ OTTD2FS(char const*) in unix.o
+ FS2OTTD(char const*) in unix.o
+ ld: symbol(s) not found for architecture x86_64
+</code>
+
+specify <code>LDFLAGS="-liconv"</code> (you may have to merge this with other used LDFLAGS).
+
+===Compiling universal binaries===
+Compiling a universal binary is done by adding <code>--enable-universal</code> to configure:
+ <code>./configure --enable-universal</code>
+This is all if your system is set up correctly. Make will then compile for intel, PPC and PPC970 (optimized for this particular CPU. Apple renamed it to G5), so setting G5 flags and such shouldn't be needed. Static is also enabled by default as it's assumed that the binary is to be moved to another computer.
+
+For this to work, you will need universal libraries. For more info, read [[en/universal libraries]]
+
+[[Category:en/Compiling OpenTTD]]

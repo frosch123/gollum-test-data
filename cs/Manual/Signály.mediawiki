@@ -1,0 +1,223 @@
+[[Translation:en/Manual/Signals]]
+{{cs/Obsah}}
+
+''Podívejte se na [[en/Manual/Building signals]] návod a praktické příklady stavění signálů''
+
+'''Návěstidla''' jsou užitečná zařízení které vám umožní ovládat jízdu [[cs/Manual/Base Set/Vehicles/Vlaky|vlaku]].  Jsou nezbytné aby po [[en/railway|trati]] mohly jezdit vlaky a nesrazily se.
+
+==Stavba návěstidel==
+[[File:en/Signals-icon2.png|frame|centre|Stavění návěstidel]]
+Chcete-li stavět návěstidla, musíte přepnout na stavění návěstidel. Otevřete okno [[cs/Výstavba železnice|Výstavba železnice]], kde vyberete ikonu s obrázkem návěstidel (semaforů). A otevře se vám okno Stavění návěstidel, kde můžete vybrát typ semaforu, který chcete stavět.
+
+V módu výstavby semaforu:
+* klikněte na '''Obyčejné návěstidlo''' a klikněte na místo s kolejemi. Bude postaveno ''obousměrné návěstidlo'', nejvíce používaný základní druh. Změna na jednosměrný typ '''Obyčejného návěstidla'''  je popsána níže.
+* Pokud chcete postavit '''více semaforů''' naráz klepněte na existující signál a táhněte myší po trati.  Budou rozmístěny ve vzdálenosti, jak je stanoveno v nastavení [[en/Archive/Manual/Settings/Drag signal density]] a budou všechny stejné.
+* Pokud chcete postavit '''více semaforů''' naráz podržte klávesu ''Ctrl'' a klepněte na existující signál a potáhněte myší po trati o jeden čtverec požadovaným směrem a semafory se rozmístí do konce trati (k stanici, k stávajícímu semaforu čí křížení).  Budou rozmístěny ve vzdálenosti, jak je stanoveno v nastavení [[en/Archive/Manual/Settings/Drag signal density]] a budou stejné jako je ten první semafor.
+* Pro '''odstranění semaforu''' klikněte na [[File:en/Toggle clear active.png]] bulldozer tlačítko (zatímco zůstane v režimu stavění semaforů) a klikněte na semafor, který chcete odstranit. Oba typy tažení, jak je uvedeno výše, jsou k dispozici pro odstranění více semaforů.
+* Pro vytvoření '''[[cs/Manual/Signály#Jednosměrné návěstidlo|jednosměrného návěstidla]]''' klikneme znovu na už vytvořený semafor. Semafor se bude přepínat mezi obousměrným, jednosměrným směrem tam a jednosměrným v opačném směru.
+* Pro vytvoření dalších typů '''[[cs/Manual/Signály#Obyčejné návěstidlo|obyčejných návěstidel]]''' a '''[[cs/Manual/Signály#Dokonalejší (PBS) návěstidlo|dokonalejších (PBS) návěstidel]]''' stačí přidržet ''Ctrl'' a kliknutím na existující semafor se mění za jiné.
+
+===Omezení===
+* Nelze umístit semafory do čtverce obsahující křížení kolejí či na železniční přejezd.
+* Nelze umístit semafory na [[en/most]] nebo do [[en/tunelu]].
+
+==Výběr návěstidel==
+Nové rozhraní odstraňuje nutnost klávesou Ctrl procházet typy signálu. Buď s klávesou ''Ctrl'' klikněte na ikonu vytvořit signály, nebo v [[en/Archive/Manual/Settings/Advanced Settings/Construction]] nastavíte ''Povolit signálu GUI'' (starší verze: V openttd.cfg nastavit enable_signal_gui jako pravdivé). Když potom kliknete na "postavení návěstidla" tak se zobrazí toto rozhraní:
+[[File:en/Signal Selection.png|none|frame|Výběr návěstidel]]
+{|
+|-
+|colspan=2|'''Semafory''' (mechanické signály, staré)
+|-
+|[[File:en/Signal Semaphore.png]]||[[cs/Manual/Signály#Obyčejné návěstidlo|Obyčejné návěstidlo]]
+|-
+|[[File:en/Signal Semaphore Pre-Signal.png]]||[[cs/Manual/Signály#Vjezdové návěstidlo|Vjezdové návěstidlo]]
+|-
+|[[File:en/Signal Semaphore Exit-Signal.png]]||[[cs/Manual/Signály#Výjezdové návěstidlo|Výjezdové návěstidlo]]
+|-
+|[[File:en/Signal Semaphore Combo-Signal.png]]||[[cs/Manual/Signály#Cestové návěstidlo|Cestové návěstidlo]]
+|-
+|[[File:en/Signal Semaphore Path.png]]||[[cs/Manual/Signály#Dokonalejší (PBS) návěstidlo|Dokonalejší (PBS) návěstidlo]] (ignoruje se při průjezdu opačným směrem)
+|-
+|[[File:en/Signal Semaphore Path One-Way.png]]||[[cs/Manual/Signály#Dokonalejší (PBS) návěstidlo|Dokonalejší (PBS) návěstidlo]] (neprůjezdné v opačném směru)
+|-
+|colspan=2|'''Světelné semafory''' (moderní elektrické semafory)
+|-
+|[[File:en/Signal Electric.png]]||Standard světelné [[cs/Manual/Signály#Obyčejné návěstidlo|Obyčejné návěstidlo]]
+|-
+|[[File:en/Signal Electric Pre-Signal.png]]|| světelné [[cs/Manual/Signály#Vjezdové návěstidlo|Vjezdové návěstidlo]]
+|-
+|[[File:en/Signal Electric Exit-Signal.png]]|| světelné [[cs/Manual/Signály#Výjezdové návěstidlo|Výjezdové návěstidlo]]
+|-
+|[[File:en/Signal Electric Combo-Signal.png]]|| světelné [[cs/Manual/Signály#Kombinované návěstidlo|Kombinované návěstidlo]]
+|-
+|[[File:en/Signal Electric Path.png]]|| světelné [[cs/Manual/Signály#Dokonalejší (PBS) návěstidlo|Dokonalejší (PBS) návěstidlo]] (ignoruje se při průjezdu opačným směrem)
+|-
+|[[File:en/Signal Electric Path One-Way.png]]|| světelné [[cs/Manual/Signály#Dokonalejší (PBS) návěstidlo|Dokonalejší (PBS) návěstidlo]] (neprůjezdné v opačném směru)
+|-
+|colspan=2|'''Další ikonky'''
+|-
+|[[File:en/Signal Convert.png]]|| Přeměna návěstidel - změna návěstidel na ''trati'' na jedno vybrané v ''gui''. Viz [[en/Manual/Building signals#Converting_signals_to_different_types|Building signals]]
+|-
+|[[File:en/Signal Density.png]]|| Rozestup návěstidel - Nastavuje, jak blízko jsou signály umístěny, když automaticky stavíme návěstidla po celé trati. Viz [[en/Manual/Building signals#Constructing_a_line_of_signals|Building signals]]
+|}
+{{en/Feature|0.7}}
+
+==Obyčejné návěstidlo==
+
+Návěstidla povolují, nebo zakazují jízdu vlaku do dalšího úseku. Jízda vlaku je povolená, pokud následující úsek za návěstidlem není obsazen. Úsek je celá část trati za návěstidlem. Tento úsek končí zase dalším návěstidlem, stanicí anebo depem.
+Pokud je úsek za návěstidlem obsazen, návěstidlo svítí červeně a vjezd do tohoto úseku je zakázán. Platí to i v případě, že se trať větví po signálu na více úseků (např. křižovatky). I když očekávaná cesta přijíždějícího vlaku nekoliduje s jiným vlakem ve stejném úseku, ale na vedlejší trati, první vlak bude mít červenou. Pokud je úsek za návěstidlem volný je vjezd povolen a na návěstidlu svítí zelená (případně žlutá a pod... je to závislé na typu použitých návěstidel). 
+
+===Obousměrné návěstidlo===
+[[File:en/Two-way signal.png|frame|left]][[File:en/2-way signals.png|frame|right|Obousměrné návěstidlo]]
+Obousměrná návěstidla se používají na železnici tam, kde se pohybují vlaky v obou směrech na stejné dráze. Nejčastější použití je u stanic, kde vlaky vjíždí a vyjíždí.
+
+Pokud má vlak nějakou volnou kolej, tak na ni pojede. Pokud jsou všechna návěstidla na stůj - červené, pojede nejjednodušším směrem (rovně) a bude čekat na návěstidle na volno.
+{{en/-}}
+
+===Jednosměrné návěstidlo===
+[[File:en/One-way signal.png|frame|left]]
+[[File:en/1-way signal loop.png|frame|right|Jednosměrné návěstidlo v kruhu]]
+Jednosměrné návěstidlo omezuje jízdu vlaků v jednom směru. V příkladu vpravo, návěstidla nutí vlaky pohybovat se v kruhu. To má dvě výhody: vlaky pro vjezd a výjezd ze stanic je efektivní a trať může mít více než 2 vlaky.
+
+Při použití jednosměrného návěstidla, se ujistěte, že jsou ''všechna'' ve správném směru. Je dobré sledovat první vlak na nové trati zda jsou na celé cestě správně umístěná návěstidla, aby jste zjistili zda jste neudělali nějakou chybu.
+
+Kliknutím na stávající obousměrné návěstidlo přepínete na jednosměrné návěstidlo. Pokud na něj znovu kliknete, můžete změnit jeho směr, po třetím kliknutí se vrátí zpět do obousměrného návěstidla.
+
+Vlak si vybere cestu k návěstidlu zepředu.
+
+Přijede-li vlak k jednosměrnému návěstidlu z druhé strany, okamžitě zastaví a neprojede.
+{{en/-}}
+
+==Vjezdové a výjezdové návěstidla==
+[[File:en/Station no pre-signals.png|frame|right|Problém - vlevo může odjet vlak dříve a potom druhý vlak tam nemůže.]]
+[[File:en/Station with pre-signals.png|frame|right|Problém vyřešen pomocí vjezdového návěstidla]]
+Obrázek v pravém horním rohu zobrazuje situaci, kde je vjezd do stanice ovládán pomocí běžných návěstidel. Pokud je alespoň jedna kolej prázdná, tak to funguje dobře, přijíždějící vlak je vždy poslán na volnou kolej v nádraží. Nicméně, když všechny koleje v nádraží budou obsazeny (viz obrázek). Všechny návěstidla svítí červeně, tak přijíždějící vlak vybírá nejjednodušší cestu - rovně. Předpokládejme však, že vlak na pravé koleji bude ve stanici delší dobu. Mezitím vlak na levé straně odjede. Příchozí vlak ovšem zůstal stát na přímé koleji která je obsazená, i když je nyní levá kolej volná! Proto musíme zastavit vlak ještě před výhybkou a pustit ho dále až se uvolní nějaká kolej, potom si vlak vybere volnou kolej. K tomuto účelu je třeba použít některá z následujících návěstidel.
+
+
+{{en/-}}
+====Vjezdové návěstidlo====
+[[File:en/entry presignal.png|left|60px]]'''Vjezdové návěstidlo''' ukazuje zelenou (volno), pokud alespoň jedno následující výjezdové či kombinované návěstidlo ukazuje zelený signál (volno). Jinak svítí červeně (stůj). To zabrání vlaku vjet do úseku, pokud není následující úsek volný pro pokračování v cestě.
+
+Pokud neexistují žádná výjezdová či kombinovaná návěstidla bezprostředně za ním chová se jako obyčejné návěstidlo.
+
+Všimněte si, že depa obsahují obousměrná vjezdová návěstidla.
+{{en/-}}
+
+====Výjezdové návěstidlo====
+[[File:en/exit presignal.png|60px|left]]'''Výjezdové návěstidlo''' se chová stejně jako normální návěstidlo, ale je nutné pro správné fungování vjezdového a kombinovaného návěstidla. (závislost)
+
+V krátkosti: Nejprve je ve směru jízdy vlaku umístěno vjezdové návěstidlo. Za ním se trať rozděluje nejméně na dva úseky. Na každé z nich je výstupní návěstidlo a pokud je trať za oběma obsazená, budou svítit červeně. Pak i vjezdové návěstidlo bude červené. Jestliže je alespoň jedna trať za výjezdovým návěstidlem volná, svítí zeleně, pak i vjezdové návěstidlo bude zelené.
+{{en/-}}
+
+====Kombinované návěstidlo====
+[[File:en/station with pre-signals2.png|frame|right|Stanice s 1 vjezdovým návěstidlem, 2 kombinovanými návěstidly a 4 výjezdovými návěstidly]]
+[[File:en/combo presignal.png|60px|left]]Třetí typ návěstidla tzv. '''Kombinované návěstidlo''' se chová zároveň jako vstupní i výstupní návěstidlo. Umožňuje postavit celý řetěz návěstidel. Ukazuje zelenou (volno), pokud alespoň jedno následující výjezdové nebo obyčejné návěstidlo (případně kombinace) ukazuje zelený signál (volno). Pak i vstupní návěstidlo svítí zeleně. V opačném případě kombinované návěstidlo svítí červeně (stůj) a následně i vstupní návěstidlo svítí červeně. To zabrání vlaku vjezd do úseku, pokud není následující úsek volný pro pokračování v cestě a umožní vám vytvářet velké "stromy" návěstidel, jak je znázorněno na obrázku na pravé straně.
+{{en/-}}
+
+====Stavba návěstidel====
+Chceteli postavit návěstidlo zvolte příslušné tlačítko z [[en/#Výběr návěstidel|výběru návěstidel]].
+
+{{en/-}}
+
+====Omezení====
+[[File:en/PresignalLimitation.png|frame|Problémy s Vjezdovým návěstidlem... (Semafory vlevo!)]]
+Důležité je to že zelená v některém následujícím úseku rozsvítí zelenou v úseku, a pokud vlak nemůže pokračovat protože k tomu následujícímu úseku nevedou koleje a k úsekům co koleje vedou je na semaforu červená může dojít k zablokování křížení a potom už tam neprojede žádný vlak.
+
+Viz obrázek (semafory vlevo od kolejí) - pokud pojede vlak ze spodní koleje má zelenou, ale na horní kolej nevede cesta takže skončí před některým semaforem s červenou a dojde k zablokování. 
+
+Taky pokud se vlak ztratí je vybrán náhodný směr kterým může jet a může dojít k zablokování. Proto třeba při použití vjezdových, výjezdových a cestovních návěstidel je třeba více přemýšlet aby nedošlo k zablokování trati.
+{{en/-}}
+
+==Dokonalejší (PBS) návěstidlo==
+[[File:en/Yapp signalgui.png|frame|right|Dva typy dokonalejších návěstidel [[en/signal GUI]].]]
+K dispozici jsou dva nové typy signálů. Dokonalejší jednosměrné a také obousměrné návěstidlo (PBS = Path block signals). Tato návěstidla umožňují vlakům rezervovat si cestu do dalšího úseku návěstidel před vstupem do úseku. Pokud jiný vlak chce vstoupit do úseku, a podaří se mu rezervovat cestu do místa kde může bezpečně zastavit (vlaky si nekříží cesty), cesta návěstidlem bude povolená do úseku, i když je v úseku jiný vlak.
+
+[[File:en/Difference block path signals.png|frame|center|Velmi důležitý rozdíl mezi obyčejnými a dokonalejšími (PBS) návěstidly: dvě paralelní tratě jsou rozděleny křižovatkou.
+<ul>
+<li>Block signals: Obyčejné návěstidlo vlak na paralelní trati přes křižovatku nepustí, protože je úsek obsazen vlakem na horní trati. K žádné kolizi vlaků by zde ale nedošlo, protože úsek je pro oba vlaky bezpečný. Stejně se chová i vjezdové, výjezdové a kombinované návěstidlo</li>
+<li>Path signals: Dokonalejší (PBS) návěstidlo pustí oba vlaky souběžně - mají volnou cestu. Trať je bezpečná.</li>
+</ul>]]
+{{en/-}}
+
+[[File:en/Signal bloc.png|frame|right|Y odbočka a ''Obyčejné návěstidla'']]
+Viz příklady a obrázky.
+
+Máme zde Y odbočku kde jsou tři semafory.
+Vlak přijíždí a chce jet do leva po trati. Obyčejné návěstidlo mu to nedovolí, protože je úsek obsazen (i když trať je do leva volná).
+{{en/-}}
+[[File:en/Multiples standard.png|frame|right|Y odbočka kdy za odbočkou jsou hned další obyčejné návěstidla na obě strany]]
+Řešením je rozdělit tento úsek na menší úseky přidáním semaforu hned za křížení.
+{{en/-}}
+[[File:en/Chemin.png|frame|right|Y odbočka a ''Dokonalejší (PBS) návěstidlo'' a dvě ''obyčejné návěstidla'']]
+Naopak, pokud použijeme Dokonalejší (PBS) návěstidlo tak vlak může jet do leva protože je tam volná kolej až k návěstidlu, do prava nemůže tam je vlak. Není třeba rozdělovat úsek do menších úseků (tj. není potřeba návěstidla za křížení).
+{{en/-}}
+Dvě věci by jste měly vědět o tomto návěstidle:
+* Je vhodné tam kde nechceme blokovat křížení tratí
+* Návěstidlo funguje pouze v jednom směru. V opačném směru, je buď ignorováno nebo považováno za jednosměrné návěstidlo v závislosti na výběru Dokonalejšího (PBS) návěstidla (viz níže)
+[[File:en/Yapp pbssignal.png|frame|left|PS]]
+* '''Dokonalejší (PBS) návěstidlo''': vlaky mohou projíždět tento signál ze zadní strany.
+{{en/-}}
+[[File:en/Yapp onewaypbssignal.png|frame|left|1W PS]]
+* '''Dokonalejší (PBS) jednosměrné návěstidlo''': vlak '''neprojede''' toto návěstidlo z druhé strany .
+{{en/-}}
+
+Dva nové typy Dokonalejších (PBS) návěstidel se chovají trochu jinak než standardní typy signálů OpenTTD. Návěstidla jsou ve výchozím nastavení červené a přepnou se do zelené, jakmile si vlak může rezervovat cestu k další bezpečné pozici která je na jeho cestě. Bezpečné pozice jsou - podle definice - před návěstidlama, v depu.
+
+Je vhodné další návěstidla umístit tak aby když bude před nimi stát nejdelší vlak nestály vagony v křížení a tím pádem pokud pojede jiný vlak tak ho dokonalejší návěstidlo pustí tak jak je znázorněno v následujícím příkladu. To je velká výhoda proti standardním návěstidlům OpenTTD, kde jste museli umístit návěstidla před a za křížením, který způsoboval že vlaky blokovaly při čekání křížení.
+<div style="width:50%;float:left;">[[File:en/Yapp unsafewaitinglocation.png|frame|center|'''Špatně''': Návěstidlo je špatně umístěno, jak vlak stojí před návěstidlem blokuje křížení pro jiný vlak.]]</div>
+<div style="width:50%;float:left;">[[File:en/Yappgoodexample.png|frame|center|'''Správně''': Tady je dost místa před návěstidlem na vlak který tu může čekat. Další vlaky budou čekat před křižením a nebudou ho blokovat pro jiný směr. To umožňuje, že vlak přijíždějící z jiného směru může křížení projet bez čekání (pokračovat).]]</div>
+<div style="clear:left;"></div>
+
+
+
+To je jeden další příklad toho, co můžete dělat s dokonalejšími návěstidly.
+[[File:en/pathsignal station exit.png|frame|center|Stanice s dokonalejšímy návěstidly. Všimněte si, že návěstidla v přední části stanice pro vjezd nejsou zapotřebí, protože jsou použita jednosměrná návěstidla. Nicméně, takhle je lehčí vyjet s vlaky z depa před vlaky, které chtějí vstoupit do depa.]]
+
+
+====Pokročilé nastavení====
+[[File:cs/patch-options.png|frame|right|Pokročilé nastavení]]
+K dispozici je [[en/Archive/Manual/Settings/Advanced Settings|pokročilé nastavení]].
+
+Jednou z možností je upozornit na vyhrazené dráhy. Tato možnost je vhodná k řešení problémů s cestou přes křižovatky, pak můžete vidět, jaké cesty vlaky mají nastavené přes křížení. (Vyznačovat rezervovanou trať)
+
+Další možnost zvolit jaký typ semaforu se bude defaultně stavět. A jaké se budou vybírat při stlačení CTRL. (Výchozí typ návěstidla, Vybírat dokola návěstidla)
+
+===Základní příklady===
+Níže jsou uvedeny některé příklad uspořádání trati, které používají návěstidla. [[en/Community/Junctionary/Advanced path signal layouts|Další příklady dokonalejších návěstidel EN (Advanced_path_signal_layouts)]] , které nejsou vhodné pro začátečníky.
+
+====Základní odbočka====
+Tato odbočka má nyní větší propustnost
+[[File:en/Yapp basicjunction.png|frame|center|Základní křižovatka pro vlaky s maximální délky tři dlaždice. Všimněte si použití běžných signálů na rovné trati. Všiměte si také tmavších kolejí před vlaky - rezervovaný úsek.]]
+
+====Základní obousměrná stanice====
+U této stanice můžou vlaky používat obě koleje z obou směrů.
+[[File:en/Yapp basicstation.png|frame|center|Základní stanice.]]
+{{en/Feature|0.7}}
+
+==Semafory==
+[[File:en/semaphore.png|frame|left]]
+'''Starý semafor''' má stejnou funkci jako světelné semafory, pouze vzhled je stejný jako staré dřívější mechanická návěstidlo.
+
+Před OpenTTD 0.6.0 byly semafory vytvořeny pouze držením klávesy ''Ctrl'' Při umísťování signálů. Vzhledem k tomu, semafory 0.6.0 bude vytvořeno místo světelných signálů před konfigurovatelné rok 1975 ve výchozím nastavení. Toto nastavení se nazývá "Automatické vytvoření semafory před" a lze nalézt v "Advanced Settings" v části "Konstrukce" a pak "signály".
+
+Po umístění drží ''Ctrl'' a klikněte změny Rozšíření signálu stav signálu (tj. presignals). Můžete změnit předem umístěny semafory na světelné signály volbou "konvertovat signál" nástroj signál-gui a Ctrl + kliknutí na existující signál.
+{{en/-}}
+===Historie===
+Semafory mají dlouhou historii v železničních tratí. Viz: [http://cs.wikipedia.org/wiki/%C5%BDelezni%C4%8Dn%C3%AD_tra%C5%A5ov%C3%A9_n%C3%A1v%C4%9Bstidlo Železniční traťové návěstidlo]
+
+V původním Transport Tycoon, železniční semafory vytvořené před rokem 1975 byly mechanické. Poté byly semafory světelné. Transport Tycoon Deluxe odstranil tuto funkci, ale to bylo obnoveno v TTDPatch OpenTTD.
+{{en/Feature|Old}}
+
+==Řízení vlaků==
+Semafory jsou určeny k prevenci aby se vlaky nesrazily, a pomoci nich mohly dojet na stejné místo určení. Pokud chcete přímo určit vlaku k těmto cílům cestu přes určité trasy, měli byste používat [[cs/Manual/Směrování|směrování]].
+
+==Viz také==
+* [[en/Community/Junctionary/Advanced signalling examples|Examples of advanced presignal setups]]
+* [[en/Advanced Main Line Depot]]
+* [[:Category:en/Train Junctions]] for examples of complex junctions that take advantage of pre-signals.
+* [http://www.darkcoding.net/misc/openttd-trains-and-signals-for-beginners-a-tutorial/ Signals for the complete beginner]
+* [http://kokolokus.de/?s=blog&v=6 A tutorial written by domsson, on the forums] [http://www.tt-forums.net/viewtopic.php?f=29&t=51395 here]
+* [http://cs.wikipedia.org/wiki/%C5%BDelezni%C4%8Dn%C3%AD_tra%C5%A5ov%C3%A9_n%C3%A1v%C4%9Bstidlo Železniční traťové návěstidlo]
+
+[[Category:en/Railways]]
+[[Category:en/Construction]]

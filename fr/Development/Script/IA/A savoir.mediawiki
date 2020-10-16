@@ -1,0 +1,195 @@
+[[Translation:en/Development/Script/AI/Need To Know]]
+
+
+{{fr/NonIA}}
+
+==Tester une IA==
+
+===Comment ne démarrer que mon IA?===
+
+La manière la plus facile est de fixer le paramètre de difficulté à Aucune IA, et dans une nouvelle partie, taper dans la console:
+
+ start_ai <le nom de votre IA>
+
+L'IA de votre choix démarrera immédiatement.
+
+Pour lister toutes les IA en jeu, tapez dans la console:
+
+ list_ai
+
+La liste des IA détectées par OpenTTD est également disponible via:
+
+ ./openttd --help
+
+=== Charger et redémarrer des IAs ===
+
+Toutes les IAs sont rechargées quand une nouvelle partie est lancée. Il n'y a pas besoin de redémarrer le jeu; abandonner le niveau courant et démarrer de nouveau est habituellement la méthode la plus facile pour redémarrer l'IA depuis une carte vierge (essayez <code>newgame</code> depuis la console), ou chargez un scénario paramétré pour être le même à chaque fois. La fenêtre de débogage de l'IA permet aussi de redémarrer les IAs individuellement.
+
+Pour charger un scénario spécifique immédiatement, utilisez:
+
+ ./openttd -g relative/path/to/scenario.scn
+
+=== Trace et fenêtre de débogage ===
+
+La fenêtre de débogage de l'IA est accessible depuis l'information sur le terrain (point d'interrogation rouge) intitulé "Console de débogage de l'IA". Toutes les sorties de <code>AILog.XXX()</code> vont là, et peuvent être sélectionnées par IA. L'IA peut aussi être redémarrée ici. Lors de son redémarrage, la compagnie de cette IA est supprimée (avec toutes ses propriétés), et une nouvelle IA contrôlée par le même script (qui est rechargé depuis le disque) est démarrée. Donc, pour changer l'IA, il suffit simplement de cliquer sur le bouton Recharger pour que votre nouvelle IA fonctionne.
+
+[[File:en/Ai-debug-panel.png|frame|none|Fenêtre de débogage de l'IA]]
+
+==== Arrêt sur message de trace ====
+{{fr/Disponibilité|1.1}}
+Depuis la révision r19544, il a été ajouté certains contrôles supplémentaires en bas de la fenêtre de débogage pour arrêter une IA quand certains messages de trace surviennent. Pour les utiliser, vous devez taper une chaîne de caractères dans la zone de texte et, quand votre IA affiche un message de trace qui correspond à cette chaîne, l'IA sera suspendue après l'appel de AILog et, à la fin de ce tic, OpenTTD sera mis en pause. Quand vous appuyez sur le bouton Continuer ou sur le bouton de pause normal, votre IA continuera à fonctionner. Si vous voulez désactiver temporairement la correspondance sans vider la zone de texte, vous pouvez utiliser la petite case à cocher à gauche de la zone d'édition.
+
+Pour activer cette fonctionnalité, vous devez avoir le paramètre "gui.ai_developer_tools" activé. Pour le faire, vous pouvez ouvrir la console du jeu et entrer "set gui.ai_developer_tools 1".
+
+[[File:en/AIDebug break on.png|frame|none|Fenêtre de débogage de l'IA - arrêt sur chaîne]]
+
+==== Utilisation de la console pour le développeur ====
+
+La console peut être accédée par la touche ` (près de "1") du clavier, et elle apparaît en haut de l'écran. On peut la faire défiler avec Shift + Page Up/Down.
+
+Pour avoir une fenêtre séparée (seulement sous Windows), utilisez le paramètre <code>-d</code> tout seul (utilisez <code>-d ai=5</code> pour avoir seulement l'information sur l'IA) avec un raccourci:
+
+ ./openttd -d
+
+Cela produit cet affichage (uniquement sur Windows):
+
+[[File:en/Openttd -d.png|frame|none|Exemple de Zuu de la console de développement version -d affichant les erreurs de l'IA]]
+
+Pour Linux, utiliser <code>-d ai=5</code> enverra toutes les informations sur stdout.
+
+==== Tracer ====
+
+Les commandes <code>AILog.XXX()</code> peuvent être affichées directement dans la console du développeur par:
+
+ ./openttd -d ai=5
+ openttd.exe -d ai=5
+
+ou en entrant <code>debug_level ai=5</code> dans la console.
+
+== B.a.ba de l'IA ==
+
+=== GetTick() ===
+
+Quand votre <code>Start()</code> est appelé pour la première fois, <code>GetTick()</code> renvoie toujours 1. Sa seule utilité est de donner une indication du temps, car nous trouvons toujours utile de savoir quand une IA émet un message (était-ce il y a des lustres, ou tout récemment?). Ceci dit, vous voulez bien sûr savoir quand sa valeur est modifiée par le jeu.
+
+Bien entendu, elle change quand vous appelez <code>Sleep()</code>, avec de la valeur exacte que vous avez spécifié dans <code>Sleep()</code>. Mais elle change aussi quand vous exécutez une commande. Cela est lié au fait qu'en réseau, cela prend du temps de faire quelque chose, et comme vous voulez savoir si quelque chose a vraiment été construit, vous devez attendre d'avoir un signal de retour du serveur. Maintenant, pour vous simplifier la vie, nous avons rendu identiques les version mono-joueur et multijoueurs: les deux attendent. En mono-joueur, c'est toujours de 1 tic, sauf si vous l'avez configuré avec <code>SetDelay()</code>. En multijoueurs, c'est au moins de 1 tic, mais cela dépend de la configuration du serveur. Si vous avez mis <code>SetDelay()</code> inférieur à sa valeur dans la configuration du serveur, c'est cette dernière qui gagnera, sinon ce sera <code>SetDelay()</code>.
+
+Qu'est-ce que cela veut donc dire?
+
+ GetTick() -> 3
+ SetCompanyName()
+ GetTick() -> 4 (ou plus)
+
+Comme vous l'aurez remarqué, vous ne pouvez pas utiliser <code>GetTick()</code> pour autre chose que du débogage. Ce n'est pas un bon indicateur de temps, et il n'est pas utilisable pour faire quelque chose tous les 10 tics environ; pas du tout. Vous devrez faire un tel système par vous-mêmes.
+
+=== Opcodes ===
+
+Vous souvenez-vous, dans l'[[fr/Development/Script/IA/Introduction#Votre première IA|introduction]], quand nous vous avons dit que l'IA serait suspendue après X opcodes? Bien, c'était une semi-vérité. Pour entrer un peu plus dans les détails, un opcode est, au fond, une instruction Squirrel. Le framework compte simplement le nombre d'instructions Squirrel que fait votre IA et la met en sommeil après un certain nombre. Ce qu'il y a d'insidieux avec cela est qu'il est possible d'appeler du code C++ depuis Squirrel, dont les instructions ne sont pas comptées puisque ce n'est pas du Squirrel.
+
+Par exemple, si je joue sur une carte 2048x2048 et utilise un Valuator pour évaluer toutes les cases de la carte en utilisant un évaluateur écrit en C++, je volerai toutes les ressources CPU et "gèlerai" le jeu pendant un moment (merci à [http://www.tt-forums.net/viewtopic.php?p=892576#p892576 Morloth] pour l'explication et l'exemple!)
+
+== Mécanismes du jeu ==
+
+=== Coordonnées de la carte ===
+
+[[File:en/Ai-placed-coordinate-of-airport.png|frame|right|L'IA a placé cet aéroport en utilisant la coordonnée la plus en haut à droite, qui est aussi l'emplacement renvoyé. La taille de l'aéroport est X=4, Y=3]]
+
+Les coordonnées (X,Y) de la carte vont de haut en bas - la coordonnée la plus haute est (0,0), la plus basse (Max_X-1,Max_Y-1). X est incrémenté en allant au SO, et Y en allant au SE. Chaque fois qu'un objet de plus d'une case est renvoyé, ce sera sa plus haute coordonnée, la plus proche du bord haut droit.
+
+Cependant, une IA ne peut accéder à toutes les coordonnées comme des cases. Le bord externe de la carte est réservé avec des cases non constructibles. Ce sont les cases pour lesquelles la valeur de X ou Y est soit 0, soit Max_X-1 (pour X) ou Max_Y-1 (pour Y). L'API traitera les cases avec ces coordonnées comme invalides.
+
+Ce comportement varie toutefois si l'option freeform_edges est activée. Si elle est désactivée, alors les deux bords supérieurs (ceux avec X ou Y à 0) deviennent accessibles.
+
+Donc avec freeform_edges activée, la case la plus haute que l'IA peut utiliser est (1,1). Mais avec freeform_edges désactivée, cette case est (0,0).
+
+La case la plus basse accessible à l'IA est toujours (Max_X-2,Max_Y-2).
+
+Pour obtenir Max_X et Max_Y, les fonctions <code>AIMap.GetMapSizeX()</code> et <code>AIMap.GetMapSizeY()</code> peuvent être utilisées, respectivement.
+
+En utilisant <code>AITile.IsBuildableRectangle</code> avec les [[fr/Development/Script/IA/Listes|listes]], la liste contiendra les cases où vous pouvez construire un objet de la taille spécifiée, où la case renvoyée est celle avec les valeurs de X et Y les plus basses du rectangle (dit autrement: la case la plus au nord).
+
+=== Calculs de distance ===
+
+Toutes les distances dans le jeu utilisent les calculs de [http://fr.wikipedia.org/wiki/Distance_de_Manhattan distance de Manhattan]; ainsi, la distance entre (3,3) et (5,5) calculée par le jeu est 4:
+ abs(3-5)  + abs(3-5) = 4
+Utilisez <code>AITile.GetDistanceManhattanToTile</code> pour obtenir cette distance entre cases. <code>AITile.GetDistanceSquareToTile</code> est moins utile, calculant la même distance comme 8:
+ (3-5)^2 + (3-5)^2 = 8
+
+La distance peut ne pas être exactement ce qu'un "avion survolerait", car les avions, les bateaux et les trains avec les voies appropriées peuvent circuler en diagonale, réduisant la distance directe entre les cases. Les bus parcourent toujours les distances Manhattan, toutefois, du fait qu'il n'y a pas de routes en diagonale. Pour une IA, vous voudrez sans doute toujours utiliser <code>AITile.GetDistanceManhattanToTile</code>, car c'est la fonction que OpenTTD utilise en interne pour les calculs de distance.
+
+==== Arithmétique des cases ====
+
+À l'intérieur de plusieurs applications (comme la détermination de chemin), une IA aura besoin de la possibilité de se déplacer sur la carte. Du fait de la manière de représenter les indices des cases, vous pouvez effectuer une arithmétique simple sur l'index de la case pour trouver une nouvelle case relativement à sa position. Ajouter ou soustraire le résultat de <code>AIMap.GetTileIndex(x, y)</code> à une case ramènera l'index de la case ''x'' et ''y'' depuis la position d'origine.
+
+Par exemple, l'extrait de code suivant créera une liste de cases directement adjacentes à ''case''...
+
+ local adjacent = AITileList();
+ adjacent.AddTile(case - AIMap.GetTileIndex(1,0));
+ adjacent.AddTile(case - AIMap.GetTileIndex(0,1));
+ adjacent.AddTile(case - AIMap.GetTileIndex(-1,0));
+ adjacent.AddTile(case - AIMap.GetTileIndex(0,-1));
+
+Cet extrait crée une liste contenant toutes les cases dans une zone carrée 11x11 centrée autour de ''case''...
+
+ local area = AITileList();
+ area.AddRectangle(case - AIMap.GetTileIndex(5, 5), tile + AIMap.GetTileIndex(5, 5));
+
+Comme l'objet Tile en C++ est simplement un entier, il est possible d'envelopper les bords de la carte avec ce truc. Pour éviter d'englober le bord de la carte, vous devez vérifier la distance à la nouvelle case et vous assurer qu'elle reste dans la distance attendue.
+
+=== Cargaisons ===
+
+Le CargoID, comme tout ID, est un index. Un index en lui-même ne veut rien dire, c'est juste un pointeur vers une valeur dans un tableau, et dans ce cas-ci, un tableau de cargaisons. Le problème principal avec les cargaisons est que vous ne pouvez pas compter sur une valeur pour signifier toujours la même chose. Les NewGRFs sont très puissants, et permettent de modifier les cargaisons de toutes sortes de façons. Normalement, le CargoID 0 représente les passagers, mais avec un seul NewGRF, cela peut être changé en du charbon, par exemple. Alors, voici la conséquence délicate de cela: vous ne pouvez plus transporter cette cargaison entre villes. Donc, comment vous assurer que votre IA est suffisamment compatible et fonctionne dans tous les cas?
+
+Eh bien, disons que vous voulez transporter quelque chose d'une ville vers une autre. Que vous ne vous préoccupez pas de savoir si c'est des passagers ou du courrier, simplement un qui vous donnera le plus grand profit, n'est-ce pas? Bien, dans ce cas, c'est le courrier, mais comment le savoir?
+
+Tout d'abord, faisons une liste de cargaisons:
+
+ local list = AICargoList();
+
+Puis filtrons ce que nous voulons... nous ne voulons pas de fret (en court: du courrier, des passagers, etc. tout ce qui ne vient pas ou ne va pas aux industries).
+
+ list.Valuate(AICargo.IsFreight);
+ list.KeepValue(0);
+
+Ensuite, nous en voulons une qui soit la plus profitable pour une distance donnée (10 cases en 2 jours est ce que nous utilisons ici, mais utilisez la valeur que vous voulez):
+
+ list.Valuate(AICargo.GetCargoIncome, 10, 2);
+
+Maintenant, la meilleure cargaison à transporter est la première entrée de la liste:
+
+ local cargo = list.Begin();
+
+En utilisant cette méthode, vous pouvez obtenir les autres types de cargaison en chargeant certains NewGRFs. Néanmoins, il y a toujours une cargaison que vous pouvez transporter entre villes, et il y en a toujours une qui est la plus profitable. Donc, que ce soient des passagers ou non importe peu. Ce que votre IA transporte n'est pas important, tant que cela génère du profit (>=20k$).
+
+
+Bien entendu, il est aussi possible de trouver une cargaison en se basant sur la classe de celle-ci. N'utilisez simplement pas la valeur '0' pour les passagers, elle pourrait ne pas être correcte pour tous les NewGRFs. Ce qui est correct est de trouver la cargaison appartenant à <code>AICargo.CC_PASSENGERS</code>. Voici un court fragment de code qui illustre cela:
+
+ local list = AICargoList();
+ local pass_cargo = -1;
+ for (local cargo = list.Begin(); !list.IsEnd(); cargo = list.Next()) {
+   if (AICargo.HasCargoClass(cargo, AICargo.CC_PASSENGERS)) {
+     pass_cargo = cargo;
+     break;
+   }
+ }
+ if (pass_cargo == -1) AILog.Error("Votre partie n'a pas de cargaison passagers, et comme nous sommes une IA uniquement pour passagers, nous ne faisons rien");
+
+Une autre manière:
+
+ local cargoList = AICargoList();
+ cargoList.Valuate(AICargo.HasCargoClass, AICargo.CC_PASSENGERS);
+ cargoList.KeepValue(1);
+ if (cargoList.Count() == 0) AILog.Error("Votre partie n'a pas de cargaison passagers, et comme nous sommes une IA uniquement pour passagers, nous ne faisons rien");
+ local paxCargo = cargoList.Begin();
+
+À la fin, soit il renvoie une erreur, ou pass_cargo est la valeur de la première cargaison appartenant à la classe <code>CC_PASSENGERS</code>. Des solutions plus complexes sont possibles en utilisant le Valuator et en trouvant la cargaison appartenant à la classe <code>CC_PASSENGERS</code> qui génère le plus de profit. Bien entendu, sans NewGRFs, ce sont toujours les passagers.
+
+==== Station de bus ou de poids-lourds ====
+
+Il n'y a qu'un moyen simple de savoir si la cargaison que vous voulez transporter doit aller à une station de bus ou de poids-lourds. Et c'est la plus étrange: si la cargaison appartient à la classe <code>CC_PASSENGERS</code>, elle a besoin d'une station de bus; dans tous les autres cas, ce sera une station de poids-lourds. Donc:
+
+ local truck_station = !AICargo.HasCargoClass(cargo, AICargo.CC_PASSENGERS);
+
+=== Villes ===
+
+Si la case d'origine de la ville a été détruite (une possibilité ''très'' rare), la case renvoyée par <code>AITown.GetLocation()</code> est '''toujours''' une case de route. Notez que toutes les cases de route dans une ville sont garanties être connectées à la case centrale.

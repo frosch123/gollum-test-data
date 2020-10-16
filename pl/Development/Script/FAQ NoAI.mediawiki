@@ -1,0 +1,52 @@
+[[Translation:en/Development/Script/NoAI Forum FAQ]]
+
+
+<!--{{NoAI}}-->{{pl/NoAI}}
+
+Oto najczęściej zadawane pytania na forum NoAI pod adresem http://www.tt-forums.net/viewforum.php?f=65
+
+=NoAI FAQ=
+
+==(Q) Jak mogę odzyskać starą SI ?==
+(A) Nie możesz w OpenTTD. Istnieje wiele AI, które działają na różne sposoby. Powinieneś rozejrzeć się i sprawdzić, czy jest taki, który ci się podoba.
+
+(A) Najbliższe dopasowanie do zachowania starej AI to prawdopodobnie SimpleAI, próba odtworzenia strategii starej AI w nowej strukturze AI.
+
+==(Q) Nie lubię żadnych nowych AI. Czy mogę teraz odzyskać starą SI ? ==
+(A) Niestety, nie, nadal nie możesz. Stare AI oszukiwało. Dużo. Terraformowałby za darmo, ignorując stosunek rady miasta do gracza. Nowe ramy nie pozwalają sztucznej inteligencji oszukiwać. Nie może zrobić niczego, czego nie można zrobić. Istnieje wiele sztucznej inteligencji, z których niektóre mają na celu zastąpienie starej sztucznej inteligencji. Czytaj dalej, jeśli chcesz wpłynąć na nie, aby bardziej Ci się podobały.
+
+==(Q) Co powinienem zrobić, jeśli AI ulegnie awarii ?==
+(A) Jeśli chcesz być pomocny, zrzut ekranu czerwonego tekstu jest mile widziany. Pamiętaj, aby uzyskać całą linię. Liczby po prawej stronie są ważne. Dokładaj wszelkich starań, aby uzyskać całą linię. Opublikuj zrzut ekranu w wątku AI odpowiadającym uszkodzonej AI.
+
+==(Q) Co powinienem zrobić, jeśli znajdę błąd <small>(bug)</small> w SI ?==
+(A) Zrób dobry zrzut ekranu błędu i opublikuj go w wątku AI. Postaraj się jasno określić, czego się spodziewałeś i co zobaczyłeś. Zapisywanie gier może czasem pomóc, ale w wielu przypadkach problem już minął, a zrzut ekranu jest równie dobry.
+
+
+==(Q) Co powinienem zrobić, jeśli uważam, że AI powinna zrobić coś inaczej, dodać funkcję, wesprzeć newgrf lub coś takiego ?==
+(A) Znajdź wątek i z szacunkiem poproś autora o dołączenie go. Pomaga to w uzasadnieniu logiki. "Newgrf X jest bardzo popularny, a AI nie jest kompatybilny" jest o wiele bardziej przekonujący niż "Załadowałem 15 newgrfs w dziwnej kombinacji, a w moim niestandardowym scenariuszu AI zepsuło się o połowę krócej" . Pamiętaj, że programiści są zasadniczo wolontariuszami. Traktuj je z szacunkiem.
+
+==(Q) Jak zacząć pisać własną SI ?==
+(A) [[pl/Development/Script/SI/Strona główna|NoAi sekcja Wiki]] powinno się zacząć.
+
+==(Q) Co zrobić, jeśli mam pytania dotyczące sposobu zrobienia czegoś w mojej sztucznej inteligencji ?==
+(A) Prosimy pytać na tablicy NoAI. Inni autorzy prawie zawsze będą próbowali ci pomóc. Oczekują, że wykonasz dźgnięcie nożem i być może opublikujesz kod pokazujący, czego próbujesz. Spróbuj zadać konkretne pytania.
+
+
+==(Q) Jak zaproponować zmiany w interfejsie API NoAI ?==
+(A) Istnieje [http://www.tt-forums.net/viewtopic.php?f=65&t=44249 wątek] do tej dyskusji. Przeczytaj cały wątek przed opublikowaniem "nowych" pomysłów, które już tam są.
+
+
+==(Q) Moja SI potrzebuje funkcji matematycznej lub czegoś innego dodanego do Squirrel, aby działać? ==
+(A) Zobacz API Ideas [http://www.tt-forums.net/viewtopic.php?f=65&t=44249 wątek] . Jest sporo dyskusji na ten temat.
+
+==(Q) Czy mogę dodać karę za przejazdy kolejowe w ścieżce biblioteki ?==
+(A) Tak. Fanioz [http://www.tt-forums.net/viewtopic.php?p=809026#p809026 ma metodę] .
+
+==(Q) Mam pytanie, którego nie ma na tej liście, czy powinienem je tutaj zadać? ==
+(A) Najpierw przeszukaj fora. Spędź co najmniej 10-15 minut na wyszukiwaniu. Kiedy zadajesz pytania, włącz wszystkie wyszukiwane hasła. W przeciwnym razie prawdopodobnie otrzymasz zwięzłą odpowiedź na wyszukiwanie.
+
+==(Q) Zadałem pytanie i nie otrzymałem (dobrej) odpowiedzi, co mam zrobić?==
+(A) Upewnij się, że na twoje pytanie można odpowiedzieć. Ogólne pytania, takie jak  "Czy ktoś wie, jak kupić silnik?" nie uzyskują tak dużej przyczepności, jak pytania typu  "Dlaczego fragment kodu nie powoduje zakupu silnika?" . Upewnij się, że twoje pytanie znajduje się we właściwym wątku. Powiedzenie "Ta SI powinna wspierać pasażerów" w wątku AI jest lepsze niż pytanie  "Dlaczego więcej AI nie wspiera pasażerów" w ogólnym wątku.
+
+==(Q) Moja AI podaje błąd  "nie mogę wykryć rzeczywistej instancji klasy dla wywołania niestatycznego  " , gdy próbuję rozszerzyć listę, co zrobiłem źle ?==
+(A) Zapomniałeś wywołać konstruktora klasy nadrzędnej. Dodaj do swojego konstruktora wywołanie do niego.

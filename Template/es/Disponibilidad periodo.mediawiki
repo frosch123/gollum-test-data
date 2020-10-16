@@ -1,10 +1,11 @@
-<noinclude>[[Translation:Template/en/Feature period]]</noinclude><includeonly>{{en/VersionBox|{{#ifeq: {{{1|}}}|Old|0|{{{1|}}}}}|{{#ifeq: {{{2|}}}|Old|0|{{{2|}}}}}|caption=Disponibilidad de la característica|text={{{texto|}}}|align={{{align|center}}}}}</includeonly><noinclude>
+[[Translation:Template/en/Feature period]]
+<noinclude></noinclude><includeonly>{{en/VersionBox|{{#ifeq: {{{1|}}}|Old|0|{{{1|}}}}}|{{#ifeq: {{{2|}}}|Old|0|{{{2|}}}}}|caption=Disponibilidad de la característica|text={{{texto|}}}|align={{{align|center}}}}}</includeonly><noinclude>
 
 ====Uso de la plantilla====
 Introduzca <nowiki>{{</nowiki>'''Disponibilidad_periodo/Es'''<nowiki> | Número de versión desde | Número de versión hasta}}</nowiki>
 *Versiones compatibles Old,0.5,0.6,0.7,1.0,1.1 (y otras se pueden añadir fácilmente)
 *Otros parámetros son <code>align=</code> y <code>texto=</code>
-Vea también {{en/S|Disponibilidad/Es}}
+Vea también {{en/s|Disponibilidad/Es}}
 
 ====Ejemplos====
 <pre>{{es/Disponibilidad periodo|0.6|0.7}}</pre>

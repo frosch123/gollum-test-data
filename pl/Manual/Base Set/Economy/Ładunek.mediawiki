@@ -1,0 +1,253 @@
+[[Translation:en/Manual/Base Set/Economy/Cargo]]
+{{pl/Spis treści}}
+:''To jest artykuł opisujący '''ładunek''' w grze OpenTTD. Żeby zobaczyć listę dostępnego ładunku, zajrzyj do [[:Category:pl/Ładunek|kategorii]].''
+<br><br>
+W [[pl/Manual/OpenTTD|OpenTTD]], '''ładunek''' jest tym, co twoja [[pl/Manual/Firma transportowa|firma]] transportuje. Ładunki są produkowane przez [[pl/Manual/Base Set/Economy/Przedsiębiorstwa|przedsiębiorstwa]] i [[pl/Trash/Domy|miasta]], oraz są przez nie akceptowane.
+
+Wszystkie ładunki istnieją w postaci pojedynczych, stałych jednostek o określonej ilości i wielkości. Np. pojedyncza jednostka [[pl/Manual/Base Set/Economy/Ropa|ropy naftowej]] składa się z dokładnie 1000 litrów. Każda akcja - czy to produkcja, [[pl/Manual/Polecenia#Przeładunek|transfer]] czy zużycie - jest wykonywana na podstawie liczby całkowitej jednostek ładunkowych.
+
+Przedsiębiorstwa i budynki, które znajdują się w [[pl/Manual/Stacje#Zasięg|zasięgu stacji]] akceptują ładunki i pasażerów z danej stacji, oraz dostarczają ładunki na daną stację. 
+
+Przedsiębiorstwo przyjmujące zużywa jednostki ładunku po rozładunku na pobliskiej stacji i płaci za ich transport. Przedsiębiorstwo produkujące tworzy nowe jednostki ładunku i umieszcza je  na pobliskich stacjach, jeżeli są one w zasięgu i jeżeli pojazd przyjmujący ten rodzaj ładunku był już wcześniej na stacji.
+
+Jeśli ładunek znajduje się na stacji, automatycznie zmienia się [[pl/Ocena stacji|jej ocena]] na temat danego typu ładunku.
+
+[[pl/Manual/Base Set/Economy/Pasażerowie|Pasażerowie]] i [[pl/Manual/Base Set/Economy/Poczta|poczta]] to również rodzaje ładunku, produkowane i przyjmowane głównie przez miasta. Różne budynki w miastach przyjmują różne ilości pasażerów i innych ładunków. Akceptację można sprawdzić za pomocą narzędzia [[pl/Manual/Informacja o terenie|informacji o terenie]]. Ilość ładunku przyjmowana przez budynek jest odnotowywana z dokładnością do 1/8. Aby stacja mogła przyjąć ten ładunek, w jej zasięgu musi znajdować się co najmniej całość (8/8) ładunku danego typu (szczegóły: [[en/Akceptowanie częściowe|Akceptowanie częściowe/Pl]]). 
+
+Niektóre przedsiębiorstwa również akceptują 1/8 pasażerów. Jednak przemysł, z wyjątkiem platform wiertniczych, nie produkuje żadnych pasażerów. W szczególności [[pl/Manual/Base Set/Economy/Huta|Huty]] mają wiele kwadratów akceptujących pasażerów po 1/8 i mogą przyjąć ich samodzielnie. Co więcej, [[pl/Manual/Siedziba firmy|siedziba firmy]] przyjmuje i generuje pewną liczbę pasażerów i poczty, co może pomóc graczom na samym początku gry. 
+
+Więcej informacji na temat sposobu obliczania dochodów można znaleźć w artykule dotyczącym [[pl/Przychód z ładunku|przychodów z ładunków]].
+
+Poniżej znajdują się schematy i tabele pokazujące poszczególne rodzaje ładunku w każdym klimacie, oraz to, co je produkuje i akceptuje. 
+
+==Łańcuchy przetwarzania==
+Kliknij, aby zobaczyć plik
+<gallery>
+image:Przesyl_umiarkowany.png|Łańcuch przetwarzania dla klimatu umiarkowanego
+image:Przesyl_arktyczny.png|Łańcuch przetwarzania dla klimatu arktycznego
+image:Przesyl_tropikalny.png|Łańcuch przetwarzania dla klimatu tropikalnego
+image:Przesyl_zabawkowy.png|Łańcuch przetwarzania dla zabawkowego
+</gallery>
+
+==Produkcja i odbiór ładunku==
+
+:{| {{en/Wikitable}} style="width: 512px; font-size: 90%; margin:2px 4px 2px 0; border:solid 1px #AAAAAA" rules="cols"
+|- 
+| style="background: #ccffcc" colspan="3" align="center"|'''[[pl/Manual/Klimat#Umiarkowany|Umiarkowany]]'''
+|- style="background: #ffdead"
+|style="width: 26%;"| '''Ładunek'''
+|style="width: 37%;"| '''Produkowane przez'''
+|style="width: 37%;"| '''Akceptowane przez'''
+|- style="background: #E5FFE5"
+|'''[[pl/Manual/Base Set/Economy/Pasażerowie|Pasażerowie]]'''
+|[[pl/Trash/Domy|Domy]], [[pl/Manual/Base Set/Economy/Platforma wiertnicza|Platformy wiertnicze]]
+|[[pl/Trash/Domy|Domy]], [[pl/Manual/Base Set/Economy/Platforma wiertnicza|Platformy wiertnicze]]
+|-
+|'''[[pl/Manual/Base Set/Economy/Poczta|Poczta]]'''
+|[[pl/Trash/Domy|Domy]]
+|[[pl/Trash/Domy|Domy]], [[pl/Manual/Base Set/Economy/Platforma wiertnicza|Platformy wiertnicze]]
+|- 
+|'''[[pl/Manual/Base Set/Economy/Drewno|Drewno]]'''
+|[[pl/Manual/Base Set/Economy/Las|Lasy]]
+|[[pl/Manual/Base Set/Economy/Tartak|Tartaki]]
+|-
+|'''[[pl/Manual/Base Set/Economy/Kosztowności|Kosztowności]]'''
+|[[pl/Manual/Base Set/Economy/Bank|Banki]]
+|[[pl/Manual/Base Set/Economy/Bank|Banki]]
+|-
+|'''[[pl/Manual/Base Set/Economy/Ropa|Ropa]]'''
+|[[pl/Manual/Base Set/Economy/Pole naftowe|Pola naftowe]], [[pl/Manual/Base Set/Economy/Platforma wiertnicza|Platformy wiertnicze]]
+|[[pl/Manual/Base Set/Economy/Rafineria|Rafinerie]]
+|-
+|'''[[pl/Manual/Base Set/Economy/Ruda żelaza|Ruda żelaza]]'''
+|[[pl/Manual/Base Set/Economy/Kopalnia rudy żelaza|Kopalnie rudy żelaza]]
+|[[pl/Manual/Base Set/Economy/Huta|Huty]]
+|-
+|'''[[pl/Manual/Base Set/Economy/Stal|Stal]]'''
+|[[pl/Manual/Base Set/Economy/Huta|Huty]]
+|[[pl/Manual/Base Set/Economy/Fabryka|Fabryki]]
+|-
+|'''[[pl/Manual/Base Set/Economy/Towary|Towary]]'''
+|[[pl/Manual/Base Set/Economy/Fabryka|Fabryki]], [[pl/Manual/Base Set/Economy/Rafineria|Rafinerie]], [[pl/Manual/Base Set/Economy/Tartak|Tartaki]]
+|[[pl/Trash/Domy|Domy]]
+|- 
+|'''[[pl/Manual/Base Set/Economy/Węgiel|Węgiel]]'''
+|[[pl/Manual/Base Set/Economy/Kopalnia węgla|Kopalnie węgla]]
+|[[pl/Manual/Base Set/Economy/Elektrownia|Elektrownie]]
+|-
+|'''[[pl/Manual/Base Set/Economy/Zboże|Zboże]]'''
+|[[pl/Manual/Base Set/Economy/Farma|Farmy]]
+|[[pl/Manual/Base Set/Economy/Fabryka|Fabryki]]
+|-
+|'''[[pl/Manual/Base Set/Economy/Żywiec|Żywiec]]'''
+|[[pl/Manual/Base Set/Economy/Farma|Farmy]]
+|[[pl/Manual/Base Set/Economy/Fabryka|Fabryki]]
+|}
+
+:{| {{en/Wikitable}} style="width: 512px; font-size: 90%; margin:2px 4px 2px 0; border:solid 1px #AAAAAA" rules="cols"
+|- 
+| style="background: #ccccff" colspan="3" align="center"|'''[[pl/Manual/Klimat#Arktyczny|Arktyczny]]'''
+|- style="background: #ffdead"
+|style="width: 26%;"| '''Ładunek'''
+|style="width: 37%;"| '''Produkowane przez'''
+|style="width: 37%;"| '''Akceptowane przez'''
+|- style="background: #dfefef"
+|'''[[pl/Manual/Base Set/Economy/Pasażerowie|Pasażerowie]]'''
+|[[pl/Trash/Domy|Domy]] 
+|[[pl/Trash/Domy|Domy]]
+|-
+|'''[[pl/Manual/Base Set/Economy/Poczta|Poczta]]'''
+|[[pl/Trash/Domy|Domy]]
+|[[pl/Trash/Domy|Domy]]
+|- 
+|'''[[pl/Manual/Base Set/Economy/Drewno|Drewno]]'''
+|[[pl/Manual/Base Set/Economy/Las|Lasy]]
+|[[pl/Manual/Base Set/Economy/Zakład papierniczy|Zakłady papiernicze]]
+|- 
+|'''[[pl/Manual/Base Set/Economy/Papier|Papier]]'''
+|[[pl/Manual/Base Set/Economy/Zakład papierniczy|Zakłady papiernicze]]
+|[[pl/Manual/Base Set/Economy/Drukarnia|Drukarnie]]
+|-
+|'''[[pl/Manual/Base Set/Economy/Pszenica|Pszenica]]'''
+|[[pl/Manual/Base Set/Economy/Farma|Farmy]]
+|[[pl/Manual/Base Set/Economy/Przetwórnia żywności|Przetwórnie żywności]]
+|-
+|'''[[pl/Manual/Base Set/Economy/Ropa|Ropa]]'''
+|[[pl/Manual/Base Set/Economy/Pole naftowe|Pola naftowe]]
+|[[pl/Manual/Base Set/Economy/Rafineria|Rafinerie]]
+|-
+|'''[[pl/Manual/Base Set/Economy/Towary|Towary]]'''
+|[[pl/Manual/Base Set/Economy/Drukarnia|Drukarnie]], [[pl/Manual/Base Set/Economy/Rafineria|Rafinerie]]
+|[[pl/Trash/Domy|Domy]]
+|- 
+|'''[[pl/Manual/Base Set/Economy/Węgiel|Węgiel]]'''
+|[[pl/Manual/Base Set/Economy/Kopalnia węgla|Kopalnie węgla]]
+|[[pl/Manual/Base Set/Economy/Elektrownia|Elektrownie]]
+|-
+|'''[[pl/Manual/Base Set/Economy/Złoto|Złoto]]'''
+|[[pl/Manual/Base Set/Economy/Kopalnia złota|Kopalnie złota]]
+|[[pl/Manual/Base Set/Economy/Bank|Banki]]
+|-
+|'''[[pl/Manual/Base Set/Economy/Żywiec|Żywiec]]'''
+|[[pl/Manual/Base Set/Economy/Farma|Farmy]]
+|[[pl/Manual/Base Set/Economy/Przetwórnia żywności|Przetwórnie żywności]]
+|-
+|'''[[pl/Manual/Base Set/Economy/Żywność|Żywność]]'''
+|[[pl/Manual/Base Set/Economy/Przetwórnia żywności|Przetwórnie żywności]]
+|[[pl/Trash/Domy|Domy]]
+|}
+
+:{| {{en/Wikitable}} style="width: 512px; font-size: 90%; margin:2px 4px 2px 0; border:solid 1px #AAAAAA" rules="cols"
+|- 
+| style="background: #ffffcc" colspan="3" align="center"|'''[[pl/Manual/Klimat#Tropikalny|Tropikalny]]'''
+|- style="background: #ffdead"
+|style="width: 26%;"| '''Ładunek'''
+|style="width: 37%;"| '''Produkowane przez'''
+|style="width: 37%;"| '''Akceptowane przez'''
+|- style="background: #FFFDE0"
+|'''[[pl/Manual/Base Set/Economy/Pasażerowie|Pasażerowie]]'''
+|[[pl/Trash/Domy|Domy]] 
+|[[pl/Trash/Domy|Domy]]
+|-
+|'''[[pl/Manual/Base Set/Economy/Poczta|Poczta]]'''
+|[[pl/Trash/Domy|Domy]]
+|[[pl/Trash/Domy|Domy]]
+|-
+|'''[[pl/Manual/Base Set/Economy/Diamenty|Diamenty]]'''
+|[[pl/Manual/Base Set/Economy/Kopalnia diamentów|Kopalnie diamentów]]
+|[[pl/Manual/Base Set/Economy/Bank|Banki]]
+|-
+|'''[[pl/Manual/Base Set/Economy/Drewno|Drewno]]'''
+|[[pl/Manual/Base Set/Economy/Tartak (tropikalny)|Tartaki]]
+|[[pl/Manual/Base Set/Economy/Fabryka|Fabryki]]
+|-
+|'''[[pl/Manual/Base Set/Economy/Kauczuk|Kauczuk]]'''
+|[[pl/Manual/Base Set/Economy/Plantacja kauczuku|Plantacja kauczuku]]
+|[[pl/Manual/Base Set/Economy/Fabryka|Fabryki]]
+|-
+|'''[[pl/Manual/Base Set/Economy/Kukurydza|Kukurydza]]'''
+|[[pl/Manual/Base Set/Economy/Farma|Farmy]]
+|[[pl/Manual/Base Set/Economy/Przetwórnia żywności|Przetwórnie żywności]]
+|-
+|'''[[pl/Manual/Base Set/Economy/Owoce|Owoce]]'''
+|[[pl/Manual/Base Set/Economy/Plantacja owoców|Plantacje owoców]]
+|[[pl/Manual/Base Set/Economy/Przetwórnia żywności|Przetwórnie żywności]]
+|-
+|'''[[pl/Manual/Base Set/Economy/Ropa|Ropa]]'''
+|[[pl/Manual/Base Set/Economy/Pole naftowe|Pola naftowe]]
+|[[pl/Manual/Base Set/Economy/Rafineria|Rafinerie]]
+|-
+|'''[[pl/Manual/Base Set/Economy/Ruda miedzi|Ruda miedzi]]'''
+|[[pl/Manual/Base Set/Economy/Kopalnia rudy miedzi|Kopalnie rudy miedzi]]
+|[[pl/Manual/Base Set/Economy/Fabryka|Fabryki]]
+|-
+|'''[[pl/Manual/Base Set/Economy/Towary|Towary]]'''
+|[[pl/Manual/Base Set/Economy/Fabryka|Fabryki]], [[pl/Manual/Base Set/Economy/Rafineria|Rafinerie]]
+|[[pl/Trash/Domy|Domy]]
+|-
+|'''[[pl/Manual/Base Set/Economy/Woda|Woda]]'''
+|[[pl/Manual/Base Set/Economy/Ujęcie wody|Ujęcia wody]]
+|[[pl/Manual/Base Set/Economy/Wieża ciśnień|Wieże ciśnień]]
+|-
+|'''[[pl/Manual/Base Set/Economy/Żywność|Żywność]]'''
+|[[pl/Manual/Base Set/Economy/Przetwórnia żywności|Przetwórnie żywności]]
+|[[pl/Trash/Domy|Domy]]
+|}
+
+:{| {{en/Wikitable}} style="width: 512px; font-size: 90%; margin:2px 4px 2px 0; border:solid 1px #AAAAAA" rules="cols"
+|- 
+| style="background: #ff9999" colspan="3" align="center"|'''[[pl/Manual/Klimat#Zabawkowy|Zabawkowy]]'''
+|- style="background: #ffdead"
+|style="width: 26%;"| '''Ładunek'''
+|style="width: 37%;"| '''Produkowane przez'''
+|style="width: 37%;"| '''Akceptowane przez'''
+|- style="background: #FFF0F5"
+|'''[[pl/Manual/Base Set/Economy/Pasażerowie|Pasażerowie]]'''
+|[[pl/Trash/Domy|Domy]] 
+|[[pl/Trash/Domy|Domy]]
+|-
+|'''[[pl/Manual/Base Set/Economy/Poczta|Poczta]]'''
+|[[pl/Trash/Domy|Domy]]
+|[[pl/Trash/Domy|Domy]]
+|-
+|'''[[pl/Manual/Base Set/Economy/Baterie|Baterie]]'''
+|[[pl/Manual/Base Set/Economy/Farma baterii|Farma baterii]]
+|[[pl/Manual/Base Set/Economy/Fabryka zabawek|Fabryka zabawek]]
+|-
+|'''[[pl/Manual/Base Set/Economy/Bąbelki|Bąbelki]]'''
+|[[pl/Manual/Base Set/Economy/Generator bąbelków|Generator bąbelków]]
+|[[pl/Manual/Base Set/Economy/Fabryka napojów gazowanych|Fabryka napojów gazowanych]]
+|-
+|'''[[pl/Manual/Base Set/Economy/Cola|Cola]]'''
+|[[pl/Manual/Base Set/Economy/Studnia coli|Studnia coli]]
+|[[pl/Manual/Base Set/Economy/Fabryka napojów gazowanych|Fabryka napojów gazowanych]]
+|-
+|'''[[pl/Manual/Base Set/Economy/Cukier|Cukier]]'''
+|[[pl/Manual/Base Set/Economy/Kopalnia cukru|Kopalnia cukru]]
+|[[pl/Manual/Base Set/Economy/Zakład cukierniczy|Zakład cukierniczy]]
+|-
+|'''[[pl/Manual/Base Set/Economy/Napoje gazowane|Napoje gazowane]]'''
+|[[pl/Manual/Base Set/Economy/Fabryka napojów gazowanych|Fabryka napojów gazowanych]]
+|[[pl/Trash/Domy|Domy]]
+|-
+|'''[[pl/Manual/Base Set/Economy/Plastik|Plastik]]'''
+|[[pl/Manual/Base Set/Economy/Fontanny plastiku|Fontanny plastiku]]
+|[[pl/Manual/Base Set/Economy/Fabryka zabawek|Fabryka zabawek]]
+|-
+|'''[[pl/Manual/Base Set/Economy/Słodycze|Słodycze]]'''
+|[[pl/Manual/Base Set/Economy/Zakład cukierniczy|Zakład cukierniczy]]
+|[[pl/Trash/Domy|Domy]]
+|-
+|'''[[pl/Manual/Base Set/Economy/Toffi|Toffi]]'''
+|[[pl/Manual/Base Set/Economy/Odkrywka toffi|Odkrywka toffi]]
+|[[pl/Manual/Base Set/Economy/Zakład cukierniczy|Zakład cukierniczy]]
+|-
+|'''[[pl/Manual/Base Set/Economy/Wata cukrowa|Wata cukrowa]]'''
+|[[pl/Manual/Base Set/Economy/Las waty cukrowej|Las waty cukrowej]]
+|[[pl/Manual/Base Set/Economy/Zakład cukierniczy|Zakład cukierniczy]]
+|-
+|'''[[pl/Manual/Base Set/Economy/Zabawki|Zabawki]]'''
+|[[pl/Manual/Base Set/Economy/Fabryka zabawek|Fabryka zabawek]]
+|[[pl/Manual/Base Set/Economy/Sklep z zabawkami|Sklep z zabawkami]]
+|}
+{{pl/Navbox Ładunek}}

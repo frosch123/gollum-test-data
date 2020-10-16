@@ -1,0 +1,17 @@
+[[Translation:en/unsorted/Renderer]]
+
+
+The renderer in OpenTTD separates drawing routines from the screen. The renderer is selected by the [[en/blitter]] in use, i.e. an 8bpp blitter would activate the 8bpp renderer.
+
+The following renderers exist in SVN:
+
+* 32bpp
+* 8pp
+* null
+
+Experimental renderers:
+
+* opengl
+
+[[Category:en/Development]]
+[[Category:en/Graphics Development Documentation]]

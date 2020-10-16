@@ -1,0 +1,100 @@
+[[Translation:en/Manual/Game interface]]
+{{en/Translation|origin= Game interface
+|from  = en
+|to    = fi
+|Percentage =40
+}}
+{{fi/Sisällysluettelo}}
+==Pääikkunan sisältö==
+[[File:fi/Intro Screen.png|frame|center|OpenTTD aloitusnäkymä]]
+Pelin aloitusikkuna, jonka näet yläpuolella, tarjoaa seuraavat vaihtoehdot:
+* '''[[fi/Uusi peli|Uusi peli]]''': Luo uusi, sattumanvarainen kartta ja aloita peli.
+* '''[[fi/Lataa peli|Lataa peli]]''': Lataa tallennettu peli ja jatka pelaamista.
+* '''[[fi/Skenaario|Lataa skenaario]]''': Lataa skenaario ja pelaa sitä.
+* '''[[fi/Korkeuskartta|Lataa korkeuskartta]]''': Lataa korkeuskartta ja aloita uusi peli siinä.
+* '''[[fi/Skenaariomuokkain|Skenaariomuokkain]]''': Luo tai muokkaa skenaariota.
+* '''[[fi/Moninpeli|Moninpeli]]''': Liity moninpeliin.
+* '''[[fi/Pelin asetukset|Pelin asetukset]]''': Määrittele pelin yleisiä asetuksia.
+* '''[[fi/Vaikeusaste|Vaikeusaste]]''': Valitse vaihtoehdoista, jotka tekevät pelisä vaikeamman tai helpomman.
+* '''[[fi/Lisäasetukset|Lisäasetukset]]''': Määrittele eri yksityiskohtia simulaatiosta.
+* '''[[fi/NewGRF asetukset|NewGRF asetukset]]''': Valitse vaihtoehtoisia resurssitiedostoja.
+* '''[[fi/Online-sisältö|Tarkista Online-sisältö]]''': Lataa vaihtoehtoisia pelimateriaaleja.
+* '''[[fi/Tekoälyasetukset|Tekoälyasetukset]]''': Määrittele tekoälymoduulien asetuksia.
+* '''Sulje''': Poistu OpenTTD:stä.
+
+
+==Pelin käyttöliittymä==
+Aloitettuasi pelin eteesi aukeaa alla näkyvä ''Pelin käyttöliittymä''. Tulet viettämään suurimman osan ajastasi tässä näkymässä pelatessasi. Siinä on kolme osiota: Ylimpänä on ''[[en/#Valikkorivi|Valikkorivi]]'', keskeltä löydät ''[[en/#3D isometrinen pelimaailma|3D Isometrisen pelimaailman]]'' ja viimeisenä alimpana on ''[[en/#Tilarivi|Tilarivi]]''.
+
+[[File:en/interface.png|thumb|none|400px|Pelinäyttö]]
+
+==Valikkorivi==
+Valikkorivillä painikkeet ovat jaettu osioihin, jotka ovat selitetty alla. Osiot ovat vasemmalta oikealle: "Pelin ohjaimet"", "Kartta tietoa", "Yritys- ja teollisuustietoa", "Ajoneuvojen tietoja", "Suurennus", "Rakentaminen" ja "Muut".
+* Voit katsoa pelissä mitä painikkeista tapahtuu painamalla hiiren oikeaa nappia painikkeen kohdalla.
+* Suurimmalla osalla painikkeista on kaksi toimintatapaa: yksi painallus aktivoi oletustoiminnon, kun taas painamalla ja pitämällä hiiren painiketta pohjassa aukeaa alavalikko.
+[[File:en/Menu bar.png|none|frame|Valikkorivi]]
+
+===Pelin ohjaimet===
+*[[File:en/manual html m7fd3f2df.png|Tauko]] '''Tauko painike''': Ottaa pelin tauon päälle/pois päältä.
+*[[File:en/manual html m56d46b8f.png|Nopeuta peliä]] '''Nopeuta peliä painike''': Kasvattaa pelin nopeutta riippuen siitä, kuinka nopea tietokoneesi on.
+*[[File:en/manual html md7ebe52.png|Asetukset]] '''Asetukset painike''': Avaa asetukset valikon: ''Pelin asetukset'', ''[[fi/Vaikeus|Vaikeus]]asetukset'', ''[[fi/Lisäasetukset|Lisäasetukset]]'', ja grafiikka-asetukset.
+*[[File:en/manual html m3ad9dba5.png|Tallenna/Lataa]] '''Tallenna / Lataa -painike''': Avaa tallenna-lataa-valikon: ''Tallenna peli'', ''Lataa peli'', ''Lopeta peli'' (palaa aloitusruutuun), ja ''Poistu'' (palaa käyttöjärjestelmääsi).
+
+===Karttatietoa===
+*[[File:en/manual html m6cb2b7aa.png|Pienoiskartta]] '''Pienoiskartta painike''': Näyttää maailman kartan, lisänäkymän ja näyttää kaikki [[fi/Kyltit|kyltit]] kartalla.
+*[[File:en/manual html m58c015ad.png|Kaupunkihakemisto]] '''[[fi/Kaupunki|Kaupunki]]hakemisto''': Näyttää listan kaupungeista ja niiden asukasluvut.
+*[[File:en/manual html 54594ccb.png|Tukitarjoukset]] '''[[fi/Tukitarjoukset|Tukitarjoukset]]''': Näyttää listan tukitarjouksista, joita on tarjolla ja jotka ovat jo myönnetty eri yhtiöille.
+*[[File:en/manual html m791b53c3.png|Asemaluettelo]] '''[[en/Asemaluettelo]]''': Täältä voit katsoa minkä tahansa pelaajan asemaluetteloa.
+
+===Yritys- ja teollisuustietoa===
+*[[File:en/manual html 63e6566d.png|Finances screen]] '''Finances screen button''': View the finances screen of any company.
+*[[File:en/manual html 12e20f5b.png|Company Information]] '''[[en/Company]] information button''': View the company information for any company, and have the possibility to share your competitor's success by buying shares in that company
+*[[File:en/manual html 36354981.png|Graphs]] '''Graphs button''': View various graphs about companies, their performance and the economy.
+*[[File:en/manual html 2a553acb.png|Company league]] '''Company league table button''': View the company league table showing the rankings of the various players.
+*[[File:en/manual html m4d6ba21e.png|Industries]] '''Industry button''': View a list of industries and their production. You can also prospect or [[en/Manual/Base Set/Economy/Industries#Funding_New_Industries|fund new industries]].
+
+===Ajoneuvojen tietoa===
+*[[File:en/manual html m16a497ce.png|Train list]] '''Train Information''': View a list of your company's or your competitors' trains.
+*[[File:en/manual html m3518e48c.png|Road vehicle list]] '''Road Vehicle Information''': View a list of your company's or your competitors' road vehicles.
+*[[File:en/manual html 53123a33.png|Ship list]] '''Ship information''': View a list of your company's or your competitors' ships.
+*[[File:en/manual html 442702e6.png|Aircraft list]] '''Aircraft information''': View a list of your company's or your competitors' aircraft.
+
+More information on [[en/Manual/Vehicle lists]].
+
+===Suurennus===
+To magnify or shrink the view in the main 3D world, click on either of the buttons shown below. There are three levels of magnification.  You can also zoom with the mouse scroll wheel.
+*[[File:en/manual html 628b2aa3.png|Zoom in]] '''Zoom in button''': Zoom in. If the button is disabled, you have reached the maximum magnification level.
+*[[File:en/manual html m55168bcb.png|Zoom out]] '''Zoom out button''': Zoom out. If the button is disabled, you cannot get a larger view of the gameplay area.
+
+===Rakentaminen===
+*[[File:en/manual html m772c5b23.png|Build railroads]] '''Railroad build button''': Open the [[en/Railway Construction|build toolbar for railways and stations]].
+*[[File:en/manual html ma6d6c8c.png|Build roads]] '''Road build button''': Open the [[en/Road Construction|build toolbar for roads and stations/loading bays]].
+*[[File:en/manual html m2cc0c4cd.png|Build docks]] '''Dock build button''': Open the [[en/Dock Construction|build window for docks and canals]].
+*[[File:en/manual html 1ae92703.png|Build airports]] '''Airport build button''': Open the [[en/Airport Construction|build window for airports]].
+*[[File:en/manual html m233f8633.png|Landscape]] '''Landscaping button''': Open the [[en/Manual/Landscaping|landscaping]] toolbar.
+
+===Muut===
+*[[File:en/manual html m6a2249c4.png|Jukebox]] '''Jukebox button''': Change sound and music settings.
+*[[File:en/manual html 2a55c3aa.png|News]] '''News button''': Change news and [[en/message settings]]. You can also see a history of news messages.
+*[[File:en/manual html 51cda05b.png|Other]] '''Other button''': Things that do not fit into other sections: ''[[en/Manual/Land area information]]'', ''[[en/Manual/Console|Toggle console]]'', ''[[en/AI Debug]]'', ''[[en/Screenshots|Screenshot]]'', ''[[en/Screenshots|Giant screenshot]]'', and ''About OpenTTD''.
+
+==3D isometrinen pelimaailma==
+The OpenTTD world takes the form of a landscape, presented on [https://www.wikipedia.org/wiki/Video games with isometric graphics isometric projection] (strictly speaking rather [https://www.wikipedia.org/wiki/dimetric projection dimetric projection]) for that 3D look.  You will spend most of your time playing here.  The world is divided up into tiles, of which there are many types.  Some are sloped, some are water, some are occupied by buildings, etc. This is where you build your transport empire!
+
+==Tilarivi==
+[[File:en/status-bar.png|none|frame|The status bar]]
+The status bar can be found at the bottom of page, as can be seen in picture 1., and above in picture 3. It is divided into three sections. 
+*On the left you can see the date. It progresses at about 1 day every 2.5 seconds.
+*The middle part, which takes up most of the space, shows various information:
+**The name of your company, initially "Unnamed". After you [[en/name your company]] it will show that name. 
+**[[en/Manual/News messages]] pop up out of the status bar. Click on the status bar to display the last message.
+**If you have changed the [[en/message settings]] to "Summary" mode, messages will scroll by here instead of popping up.
+**If you have changed the message settings to "Off" mode, messages will be notified by a red dot.
+**It also shows if the game is paused by saying: "* * PAUSED * *"
+*The right part shows how much money you have. You can change the currency in the [[en/game options window]] by pressing the "Options" button and then "Game options".
+
+You may also hear "status bar" used to refer to the [[en/Manual/Status bar|vehicle status bar]].
+
+==Katso myös==
+* [[en/Manual/Hotkeys|Hotkeys (keyboard shortcuts)]]
+* [[en/Manual/Other Interface Features]]

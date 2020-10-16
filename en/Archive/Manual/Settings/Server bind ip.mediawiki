@@ -1,0 +1,19 @@
+[[Translation:en/Archive/Manual/Settings/Server bind ip]]
+
+
+IP-address to which the OpenTTD server will bind itself. If you have more than one network connection, you can select the network connection to be used. The default is 0.0.0.0, which means any network connection can be used.
+{{en/-}}
+Example of syntax for openttd.cfg (version 1.3.3) if your server should run only on 10.0.0.1(replace with your own ip or resolveable hostname) is:
+{{en/-}}
+--previous sections of openttd.cfg--
+{{en/-}}
+[server_bind_addresses]
+{{en/-}}
+10.0.0.1 = 
+{{en/-}}
+--following sections of openttd.cfg--
+{{en/-}}
+[[Category:en/Settings & Preferences]]
+[[Category:en/Multiplayer]]
+
+{{en/OpenTTD-Patch-Stub}}

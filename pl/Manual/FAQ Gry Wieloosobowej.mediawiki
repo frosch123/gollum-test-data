@@ -1,0 +1,82 @@
+[[Translation:en/Manual/FAQ multiplayer]]
+
+{{pl/FAQmenu}}
+
+'''Pytania dotyczące wieloosobowego (Multiplayer) aspektu OpenTTD''', na przykład dołączanie do serwera, tworzenie serwera, rozgrywanie gry..
+
+__FORCETOC__
+
+
+=====Ilu graczy może dołączyć do gry OpenTTD?=====
+:* W grze wieloosobowej może uczestniczyć do 255 graczy. Możesz otworzyć tylko 15 firm. Każdy gracz może albo grać we własnej firmie, dołączyć do innej firmy ([[pl/Wspólna rozgrywka|rozgrywki kooperacyjnej]]) lub obejrzeć grę ([[pl/Manual/Spectator mode|spectator mode]]).
+
+=====Jak rozpocząć grę wieloosobową?=====
+:* Możesz to zrobić w [[pl/Manual/Gra wieloosobowa|oknie multiplayer'a]] lub przy użyciu następującej składni linii komendy:
+<pre>openttd -n IP[:port][#CompanyID]</pre>
+Przykład:
+<pre>openttd -n 192.168.0.1:3979#1</pre> połączy się z 192.168.0.1 na porcie 3979 i dołączy do firmy 1.
+
+=====Czy to działa na różnych platformach? =====
+:* Tak. Możesz na przykład uruchomić serwer w systemie MacOS, a 'odtwarzacze' <small>''(players)''</small> korzystające z systemu Windows, Linux lub dowolnego innego systemu mogą się przyłączyć.
+
+=====Z jakiego portu korzysta OpenTTD? =====
+: * domyślny port to 3979, ale możesz go zmienić na dowolny, kiedy chcesz uruchomić serwer. Jeśli skonfigurujesz własny serwer za routerem, musisz przesłać zarówno TCP, jak i UDP na tym porcie.
+: * Komunikacja z serwerem głównym działa przez port 3979 przez UDP (przychodzące + wychodzące) i 3978 przez UDP (wychodzące)
+: * Jeśli dołączasz do serwera, nie musisz przekierowywać żadnych portów, ponieważ połączenia są tylko wychodzące.
+
+===== Czy mogę używać serwera dedykowanego do hostowania gry?=====
+:* Możliwe jest uruchomienie serwera dedykowanego za pomocą przełącznika '-D' . Zobacz [[pl/Manual/Serwer dedykowany|"Dedicated Server"]] po więcej szczegółów.
+
+=====Ile przepustowości wykorzystuje gra?=====
+:* Szybkość wynosi około 1,2 kb/s wysyłania i 1,2 kb/s pobierania na klienta. Po pomnożeniu, serwer dla 10 graczy zużyje około 12 kb/s w 'wysyłaniu' <small>''(up)''</small> i 12 kb/s w 'dół' <small>''~odbiór''</small> (dokładne liczby będą zależeć od liczby retransmisji itp.). Dlatego 10-graczowy serwer 24/7 zużywa 60 GigaBajtów/s miesięcznie (30 Gb. down~odbieranie ORAZ 30 Gb upload~wysyłanie) przepustowości, jeśli wszystkie 10 graczy jest podłączonych przez cały miesiąc. W przypadku jednego klienta łączącego się z serwerem, na godzinę gry, zużyje około 8 MB przepustowości plus wszystko, co trzeba pobrać.
+:* Należy pamiętać, że 1,2 kbyte/s jest prawdziwe tylko w przypadku standardowej mapy 256x256 z normalną aktywnością. Mapy z większym rozwojem i aktywnością (takie jak miasta, branże, stacje i pojazdy) będą zużywać większą przepustowość na klienta, podczas gdy większe mapy (takie jak 512x512 i więcej) potrwają dłużej, zanim klienci dołączą do pobrania.
+
+=====Ludzie się rozłączają podczas dołączania, jak to naprawić ?=====
+Gdy nowy gracz się połączy, musi pobrać całą mapę. Jeśli wyłączyłeś opcję ''pause_on_join'' , gra będzie kontynuowana. Zanim skończy, musi zatem nadrobić zmiany wprowadzone od początku pobierania.
+Oczywiście nowy gracz musi mieć wystarczająco szybkie połączenie (i maszynę), w przeciwnym razie zajmie mu to wieczność.
+
+Aby zapewnić Ci kontrolę nad tym, jak długo to może potrwać, można ustawić następujące zmienne:
+{| class="wikitable" style="text-align:left"
+|+Zmienne czasowe do gry w sieci
+|-
+! Zmienna !! Wartości !! Znaczenie
+|-
+| max_join_time || 0-65535 || Maksymalny czas w tikach gry klient może zsynchronizować podczas dołączania.
+|-
+| pause_on_join || true/false || Wstrzymaj grę, gdy dołączą ludzie.
+|-
+| max_download_time || 0-65535 || Maksymalny czas w tikach gry klient może pobrać mapę.
+|-
+| max_lag_time || 0-65535 || Maksymalny czas w tikach gry klient może pozostawać w tyle za serwerem.
+|}
+Pamiętaj, że wszystkie wartości są zaznaczone w grze, czyli 1/74 dnia gry (1/30 sekundy).
+
+Zwiększaj wartości, aż użytkownicy będą mogli normalnie połączyć się. Jeśli ustawisz je zbyt długo, istnieje zwiększone niebezpieczeństwo, że ludzie będą zbyt długo się podłączać i po prostu marnują przepustowość.
+
+W przypadku większych map zdecydowanie zaleca się włączenie opcji  ''pause_on_join'' , ponieważ eliminuje to potrzebę nadrobienia zaległości w grze po pobraniu mapy.
+
+=====Mam problem z 'cheating'. Pomoc !=====
+:* Istnieje przewodnik, jak uchronić się przed najgorszymi elementami [[pl/Manual/Multiplayer cheating|multiplayer cheating]] . Sprawdź także [[pl/Community/Play Style/Zasady gry wieloosobowej|Multiplayer Zasady]] .
+
+=====Czy istnieją jakieś zasady ?=====
+:* Istnieją pewne zasady, tak. Możesz zobaczyć artykuł  [[pl/Community/Play Style/Zasady gry wieloosobowej|Multiplayer zasady]] . Jednak serwery nie są obsługiwane przez zespół OpenTTD i nie mają nad nimi żadnej kontroli. Jeśli masz jakiekolwiek problemy, powinieneś skontaktować się z osobą, która zarządza serwerem.
+
+=====Czy polecenia konsoli mogą być wykonywane automatycznie ?=====
+:* Tak, jest to możliwe i może być bardzo przydatne. Strona [[pl/Manual/Uruchamianie skryptów startowych|Uruchamianie Startup Scripts]] wyjaśni to bardziej szczegółowo.
+
+=====Uruchomiłem nowy serwer. Jednak moja gra nie pojawia się na liście gier moich znajomych, nawet po manualnym wstawieniu serwera na listę. Dlaczego tak się dzieje ?=====
+:* Wygląda na to, że występuje problem podczas uruchamiania nowego serwera z komputera podłączonego do Internetu za pośrednictwem routera, można to naprawić, przesyłając numer portu 3979, zarówno UDP, jak i TCP.
+
+=====Co to jest błąd desynchronizacji ?=====
+:* Patrz [[pl/Manual/Gra wieloosobowa#Błąd synchronizacji|Desync error]] .
+
+===== Moje NewGRF nie pojawiają się na moim serwerze =====
+Najlepszym rozwiązaniem jest użycie zwykłej gry komputerowej do zbudowania pliku konfiguracyjnego, a następnie skopiowanie tego pliku z NewGRF na serwer.
+Niektóre rzeczy, na które należy uważać:
+
+:* Nie kopiuj pliku konfiguracyjnego, gdy serwer jest uruchomiony (OpenTTD domyślnie zapisuje plik konfiguracyjny przy wyjściu, zastępując właśnie skopiowany plik).
+:* Napraw ścieżki NewGRF, \ nie jest separatorem katalogów w systemie Unix.
+
+<!--[[Category:FAQs]]--> <!--[[Category:FAQs/Pl]]-->
+<!--[[Category:Playing]]--> [[Category:pl/Rozgrywka]]
+[[Category:en/Multiplayer]] [[Category:pl/gra wieloosobowa]]

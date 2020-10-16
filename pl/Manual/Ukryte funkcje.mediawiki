@@ -1,0 +1,146 @@
+[[Translation:en/Manual/Hidden features]]
+<!--{{Table of contents}}-->{{pl/Spis treści}}
+
+Istnieje wiele funkcji w OpenTTD bez przycisków w interfejsie, lecz łatwo dostępnych w obsłudze. Dla większości niedoświadczonych użytkowników są to '''Ukryte funkcje'''.
+
+Oto lista ukrytych funkcji, które są pomocne, ale niekoniecznie oczywiste nawet dla doświadczonych graczy. Jeśli znasz więcej ukrytych funkcji, uzupełnij ją!
+
+Ta strona nie zawiera [[pl/Manual/Skróty klawiszowe|skrótów klawiszowych]].
+
+==Funkcje Ctrl==
+Klawisz 'Control' może być bardzo przydatny. Przytrzymanie go podczas klikania może znacznie przyspieszyć żmudne zadania.
+
+{| {{en/Wikitable}}
+|- style="background:#efefef"
+!Akcja!!Komenda
+|-
+
+|style="background:#99aaee" colspan="2"|'''Konstrukcja'''
+|-
+|Umieść przyległą stację||Przytrzymaj Ctrl i umieść stację obok istniejącej, aby utworzyć nową zamiast powiększać istniejącą. Potrzebuje [[pl/Archive/Manual/Settings/Zaawansowane ustawienia|Advanced Setting]] "sąsiednich stacji" <small>''(adjacent_stations)''</small> .
+|-
+|Dołącz do istniejącej stacji <br/> (r14919 / 0.7.0)||Przytrzymaj klawisz Ctrl podczas budowania stacji, aby uzyskać listę pobliskich stacji do wyboru, z której stacji ma zostać połączona nowa. Nadal możesz utworzyć nową (sąsiednią) stację.
+|-
+|Funkcja Usuwania||Narzędzie Budowań drogowe/kolejowe -> Przytrzymaj Ctrl, aby przełączyć usuwanie (z wyjątkiem sygnałów - użyj R do tego) .
+|-
+|Jeśli to możliwe, zbuduj ostatnio zbudowany typ mostu <br/> (r14805 / 0.7.0) ||Ctrl + budowanie mostu
+|-
+
+|style="background:#99aaee" colspan="2"|'''Sygnały'''
+|-
+|Wstawienie [[pl/Manual/Sygnalizacja#Semafory|semafor]]ów||Konstrukcja Kolejowa -> Budowanie sygnału -> Ctrl + klik zwykły tor kolejowy
+|-
+|Wstawienie [[pl/Manual/Sygnalizacja#Pre-sygnały|pre-sygnału]]||Konstrukcja Kolejowa -> Budowanie sygnału -> Ctrl + kliknięcie już istniejącego sygnału
+|-
+|[[pl/Manual/Sygnalizacja|Sygnał]] autouzupełnienie <small>''~autocomplete''</small> <br/> (0.6.0)||Konstrukcja Kolejowa -> Budowanie sygnału -> Ctrl + przeciągnij po zwykłym torze kolejowym. Działa również na usunięcie.
+|-
+
+|style="background:#99aaee" colspan="2"|'''okno Depotu'''
+|-
+|Clone a vehicle with [[en/shared orders]]||Okno Depotu -> Clone Vehicle -> Ctrl + klik pojazd
+|-
+|Przeciągnij wiele części składu w depocie||Okno Depotu -> Ctrl + poruszanie wagonem
+|-
+|Pokaż obciążenie i pojemność pojazdu||Okno Depotu -> Prawy przycisk myszy w pojeździe
+|-
+|Pokaż obciążenie pojazdu i pojemność wielu pojazdów||Okno Depotu -> Ctrl + Prawy przycisk myszy na pojeździe
+|-
+|Odwróć kierunek silnika||Ctrl + klik na silniku w oknie depotu [tylko jeśli jest obsługiwany przez NewGRF]
+|-
+
+|style="background:#99aaee" colspan="2"|'''Lista zakupów'''
+|-
+|Ukryj/Pokaż silnik (r26805 / 1.5)||Lista zakupów -> Ctrl + klik na modelu pojazdu
+|-
+
+|style="background:#99aaee" colspan="2"|'''Okno pojazdu'''
+|-
+|Scrooll to current vehicle destination (r19216 / 1.0)|| Okno pojazdu -> Ctrl + klik pasek Start-Stop/Status
+|-
+|Auto service||Ctrl + klik ikony idź do depotu 
+|-
+|Śledzenie pojazdu||Ctrl + klik "Wyśrodkuj na pojeździe" w oknie pojazdu (tylko normalne powiększenie)
+|-
+|Pokazanie harmonogramu zamiast zamówień||Ctrl+klik przycisk zamówień
+|-
+
+|style="background:#99aaee" colspan="2"|'''Lista zamówień'''
+|-
+|[[en/Copy orders|Kopiowanie zamówień]]||Okno zamówień -> Idź Do -> klik pojazd
+|-
+|Przydzielać [[en/shared orders|współdzielone zamówienia]]||Okno zamówień -> Idź Do -> Ctrl + klik pojazd
+|-
+|Zobacz lokalizację zamówienia||Okno zamówień -> Ctrl + klik na zamówieniu
+|-
+|Modyfikatory Zamówienia <br/> (r14827 / 0.7.0) ||Okno zamówień -> Idź do -> Przytrzymaj Ctrl, klikając ...
+* stacja, aby automatycznie utworzyć zamówienie "Pełny zładunek" <small>''(Full load any)''</small>
+* depot, aby utworzyć zamówienie „Serwis w Depocie” (zamiast „Przejdź do depotu”)
+* waypoint, aby użyć innej opcji non-stop niż określona jako domyślna w [[en/Archive/Manual/Settings/Advanced Settings]]
+|-
+
+|style="background:#99aaee" colspan="2"|'''Okno harmonogramu'''
+|-
+|Nieniszczące automatyczne uzupełnianie harmonogramu <br/> (r14592 / 0.7.0) || Przytrzymaj klawisz Ctrl, klikając przycisk autouzupełniania
+|-
+|Harmonogram z separacją pojazdów <br/> ([http://hg.openttd.org/openttd/trunk.hg/rev/006dfecf1559 r25377 ]) || Ctrl+Klik przy ustalaniu daty rozpoczęcia w harmonogramie
+|-
+
+|style="background:#99aaee" colspan="2"|'''"Rzutnia" <small>(Viewport)</small>'''
+|-
+|Start/stop pojazd (r19714 / 1.1)|| Ctrl + klik pojazd na mapie, aby go uruchomić/zatrzymać
+|-
+|Usuń swój własny znak <br/> (r13501 / 0.6.2)||Ctrl + klik na znaku
+|-
+|Wyświetl lokalizację w 'rzutni' <small>''(viewport)''</small>||Ctrl + klik przycisk Lokalizacja (różne okna) pokazuje lokalizację w nowej 'rzutni' <small>''(viewport)''</small> zamiast przewijania tam głównego widoku
+|-
+
+|style="background:#99aaee" colspan="2"|'''Opcje przezroczystości'''
+|-
+|Zablokowanie przezroczystości <br/> (0.6.0)||Ustawienia przezroczystości -> Ctrl + klik przycisk, aby zablokować opcję przezroczystości ('x' już jej nie przełącza)
+|-
+
+|style="background:#99aaee" colspan="2"|'''Lista pojazdów'''
+|-
+|Pokaż inne okno grupy pojazdów niż domyślne||Przytrzymaj Ctrl podczas otwierania listy pociągów/pojazdów drogowych/samolotów/statków gracza
+|-
+|Dodaj wszystkie pojazdy ze wspólną listą zamówień do grupy <br/> (r24138)||Okno Grupy -> Przytrzymaj klawisz Ctrl podczas przeciągania pojazdu do grupy
+|-
+
+|style="background:#99aaee" colspan="2"|'''Okno finansów'''
+|-
+|Pożycz/Spłać maximum pieniędzy||Okno Finansów -> Ctrl + klik Przycisk Pożycz/Spłać
+|-
+
+|style="background:#99aaee" colspan="2"|'''Ekran Intro'''
+|-
+|Szybki start nowej gry <br/> (r15690 / 0.7.0)||Przytrzymaj klawisz Ctrl, klikając  "Nowa gra" w menu głównym, aby bezpośrednio rozpocząć grę bez otwierania okna "Generacja świata"
+
+|-
+|style="background:#99aaee" colspan="2"|'''Edytor scenariuszy'''
+|-
+|Usuń pustynię w edytorze scenariuszy||Krajobraz -> Narzędzie Pustyni -> Ctrl + kliknij kafel
+|}
+
+==Więcej funkcji==
+{| {{en/Wikitable}}
+|- style="background:#efefef"
+!Akcja!!Opis
+|-
+|Automatyczne Uzupełnianie Czatu||Użyj Tab, aby przełączać nazwy graczy i miast
+|-
+|Okno Chatu||Shift+Enter (Shift+T) wysyła wiadomość do wszystkich graczy, Ctrl+Enter (Ctrl+T) wysyła wiadomość do wszystkich kompanów drużyny, a Enter (T) można dostosować
+|-
+|Anulowanie Budowy||Kiedy klikniesz i przeciągniesz, aby zbudować obiekt, ale znajduje się on w niewłaściwym miejscu, zostanie on zbudowany po zwolnieniu przycisku myszy. Zamiast tego przytrzymaj przycisk myszy i naciśnij klawisz Esc, aby anulować budowę .
+|-
+|Oszacowanie Kosztów||Przytrzymaj klawisz Shift podczas wykonywania operacji budowy. Działa prawie wszędzie. Pozwala również anulować budowę, jeśli już kliknąłeś (np. Chcesz zbudować ścieżkę w niewłaściwym miejscu, wystarczy przytrzymać Shift i zwolnić przycisk myszy).
+|-
+|Zobacz lokalizację na małej mapie||Po użyciu przycisku lokalizacji, aby przewinąć okno główne do tej lokalizacji, kliknij ponownie, aby przewinąć małą mapę do tej samej lokalizacji.
+|-
+|Przewijanie góra/dół okna||Kółko myszy w górę/w dół podczas najechania kursorem na pasek tytułowy okna.
+|}
+
+* Kółko myszy do przewijania listy lub powiększania mapy
+* Ulepszenia mostu: Zbuduj nowy most nad starym mostem, aby go ulepszyć. Nie możesz zmienić typu, np. droga do kolei, w ten sposób. W przypadku modernizacji mostu miejskiego nowy most musi mieć wyższą prędkość maksymalną, ale w przeciwnym razie (jeśli droga jest twoja) może być dowolny. (0.6.0)
+* [[pl/Development/NewGRF/Debugowanie NewGRF|narzędzia deweloperskie NewGRF]] (1.1.0)
+* Dla AI developers: [[pl/Development/Script/SI/Need To Know#Przerwij komunikat w dzienniku log|zatrzymać komunikat dziennika]] (1.1.0)
+<!--[[Category:Playing]]-->[[Category:pl/Rozgrywka]]

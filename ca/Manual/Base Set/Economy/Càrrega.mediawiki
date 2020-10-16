@@ -1,0 +1,249 @@
+[[Translation:en/Manual/Base Set/Economy/Cargo]]
+{{ca/Traducció|Cargo|25}}
+{{ca/Taula de contingut}}
+:''For a listing of cargo types, see the [[:Category:en/Cargo|Cargo category]]''
+
+In [[en/]], '''Cargo''' is what you, as a [[en/transport company]], transport. They are produced by some [[en/industries]] and [[en/towns]], and they are accepted by others. 
+
+[[en/Manual/Base Set/Economy/Industries]] and [[en/Town|town-buildings]] that are within a [[en/station]]'s [[en/catchment area]] accept cargo and passengers through this station, and will place their cargo at the station to be delivered elsewhere. (In some industries, only certain squares can accept cargo. See [[en/catchment area]] for more information.)
+
+If a cargo is placed at a station and it ammount are affected by the station's rating [[en/Manual/Game mechanics#Station rating|Station rating]] about that type of cargo.
+
+[[en/Manual/Base Set/Economy/Passengers]] and [[en/Manual/Base Set/Economy/Mail]] are also types of cargo, mainly produced and accepted by [[en/town]]s. Different building squares in towns accept differing amounts of passengers and other cargo. The acceptances can be found out by using the land area information tool (question mark). If a square can't accept a cargo by itself, the amount is noted by 1/8's. There has to be at least 8/8 of a cargo type in a station's catchment area for the station to accept that cargo.
+
+Some industry tiles also accept 1/8 of passengers. Industries however, except for [[en/Manual/Base Set/Economy/Oil Rig]]s, don't produce any passengers. Most notably, [[en/Manual/Base Set/Economy/Steel Mill]]s have many 1/8 squares and can accept passengers on their own. Furthermore, the Company Headquarters accepts and generates some passengers and mail to help players in the very beginning of the game.
+
+See [[en/cargo income]] for more information on how income is calculated.
+
+Below are charts and tables showing each Cargo in each climate, and what produces and accepts them.
+
+==Diagrames de flux==
+:[[File:ca/OpenTTD industry-commodity flow chart - Temperate.png|border]]
+
+:[[File:ca/OpenTTD industry-commodity flow chart - Sub-arctic.png|border]]
+
+:[[File:ca/OpenTTD industry-commodity flow chart - Sub-tropical.png|border]]
+
+:[[File:ca/OpenTTD industry-commodity flow chart - Toyland.png|border]]
+
+==Good Production and Acceptance Tables==
+
+:{| {{en/Wikitable}} style="width: 512px; font-size: 90%; margin:2px 4px 2px 0; border:solid 1px #AAAAAA" rules="cols"
+|- 
+| style="background: #ccffcc" colspan="3" align="center"|'''[[en/Temperate]]'''
+|- style="background: #ffdead"
+|style="width: 26%;"| '''Cargo'''
+|style="width: 37%;"| '''Produced By'''
+|style="width: 37%;"| '''Accepted By'''
+|- style="background: #E5FFE5"
+|'''[[en/Manual/Base Set/Economy/Coal]]'''
+|[[en/Manual/Base Set/Economy/Coal Mine]]s
+|[[en/Manual/Base Set/Economy/Power Station]]s
+|-
+|'''[[en/Manual/Base Set/Economy/Goods]]'''
+|[[en/Manual/Base Set/Economy/Factory|Factories]], [[en/Manual/Base Set/Economy/Oil Refinery|Oil Refineries]], [[en/Manual/Base Set/Economy/Sawmill]]s
+|[[en/Town]]s
+|- style="background: #E5FFE5"
+|'''[[en/Manual/Base Set/Economy/Grain]]'''
+|[[en/Manual/Base Set/Economy/Farm]]s
+|[[en/Manual/Base Set/Economy/Factory|Factories]]
+|-
+|'''[[en/Manual/Base Set/Economy/Iron Ore]]'''
+|[[en/Manual/Base Set/Economy/Iron Ore Mine]]s
+|[[en/Manual/Base Set/Economy/Steel Mill]]s
+|- style="background: #E5FFE5"
+|'''[[en/Manual/Base Set/Economy/Mail]]'''
+|[[en/Town]]s
+|[[en/Town]]s, [[en/Manual/Base Set/Economy/Oil Rig]]s
+|-
+|'''[[en/Manual/Base Set/Economy/Livestock]]'''
+|[[en/Manual/Base Set/Economy/Farm]]s
+|[[en/Manual/Base Set/Economy/Factory|Factories]]
+|- style="background: #E5FFE5"
+|'''[[en/Manual/Base Set/Economy/Oil]]'''
+|[[en/Manual/Base Set/Economy/Oil Wells]], [[en/Manual/Base Set/Economy/Oil Rig]]s
+|[[en/Manual/Base Set/Economy/Oil Refinery|Oil Refineries]]
+|-
+|'''[[en/Manual/Base Set/Economy/Passengers]]'''
+|[[en/Town]]s, [[en/Manual/Base Set/Economy/Oil Rig]]s
+|[[en/Town]]s, [[en/Manual/Base Set/Economy/Oil Rig]]s
+|- style="background: #E5FFE5"
+|'''[[en/Manual/Base Set/Economy/Steel]]'''
+|[[en/Manual/Base Set/Economy/Steel Mill]]s
+|[[en/Manual/Base Set/Economy/Factory|Factories]]
+|-
+|'''[[en/Manual/Base Set/Economy/Valuables]]'''
+|[[en/Manual/Base Set/Economy/Bank]]s
+|[[en/Manual/Base Set/Economy/Bank]]s
+|- style="background: #E5FFE5"
+|'''[[en/Manual/Base Set/Economy/Wood]]'''
+|[[en/Manual/Base Set/Economy/Forest]]s
+|[[en/Manual/Base Set/Economy/Sawmill]]s
+|}
+
+:{| {{en/Wikitable}} style="width: 512px; font-size: 90%; margin:2px 4px 2px 0; border:solid 1px #AAAAAA" rules="cols"
+|- 
+| style="background: #ccccff" colspan="3" align="center"|'''[[en/Sub-Arctic]]'''
+|- style="background: #ffdead"
+|style="width: 26%;"| '''Cargo'''
+|style="width: 37%;"| '''Produced By'''
+|style="width: 37%;"| '''Accepted By'''
+|- style="background: #dfefef"
+|'''[[en/Manual/Base Set/Economy/Coal]]'''
+|[[en/Manual/Base Set/Economy/Coal Mine]]s
+|[[en/Manual/Base Set/Economy/Power Station]]s
+|-
+|'''[[en/Manual/Base Set/Economy/Food]]'''
+|[[en/Manual/Base Set/Economy/Food Processing Plant]]s
+|[[en/Town]]s
+|- style="background: #dfefef"
+|'''[[en/Manual/Base Set/Economy/Goods]]'''
+|[[en/Manual/Base Set/Economy/Printing Works]], [[en/Manual/Base Set/Economy/Oil Refinery|Oil Refineries]]
+|[[en/Town]]s
+|-
+|'''[[en/Manual/Base Set/Economy/Gold]]'''
+|[[en/Manual/Base Set/Economy/Gold Mine]]s
+|[[en/Manual/Base Set/Economy/Bank]]s
+|- style="background: #dfefef"
+|'''[[en/Manual/Base Set/Economy/Livestock]]'''
+|[[en/Manual/Base Set/Economy/Farm]]s
+|[[en/Manual/Base Set/Economy/Food Processing Plant]]s
+|-
+|'''[[en/Manual/Base Set/Economy/Mail]]'''
+|[[en/Town]]s
+|[[en/Town]]s
+|- style="background: #dfefef"
+|'''[[en/Manual/Base Set/Economy/Oil]]'''
+|[[en/Manual/Base Set/Economy/Oil Wells]]
+|[[en/Manual/Base Set/Economy/Oil Refinery|Oil Refineries]]
+|-
+|'''[[en/Manual/Base Set/Economy/Paper]]'''
+|[[en/Manual/Base Set/Economy/Paper Mill]]s
+|[[en/Manual/Base Set/Economy/Printing Works]]
+|- style="background: #dfefef"
+|'''[[en/Manual/Base Set/Economy/Passengers]]'''
+|[[en/Town]]s
+|[[en/Town]]s
+|-
+|'''[[en/Manual/Base Set/Economy/Wheat]]'''
+|[[en/Manual/Base Set/Economy/Farm]]s
+|[[en/Manual/Base Set/Economy/Food Processing Plant]]s
+|- style="background: #dfefef"
+|'''[[en/Manual/Base Set/Economy/Wood]]'''
+|[[en/Manual/Base Set/Economy/Forest]]s
+|[[en/Manual/Base Set/Economy/Paper Mill]]s
+|}
+
+:{| {{en/Wikitable}} style="width: 512px; font-size: 90%; margin:2px 4px 2px 0; border:solid 1px #AAAAAA" rules="cols"
+|- 
+| style="background: #ffffcc" colspan="3" align="center"|'''[[en/Sub-Tropical]]'''
+|- style="background: #ffdead"
+|style="width: 26%;"| '''Cargo'''
+|style="width: 37%;"| '''Produced By'''
+|style="width: 37%;"| '''Accepted By'''
+|- style="background: #FFFDE0"
+|'''[[en/Manual/Base Set/Economy/Copper Ore]]'''
+|[[en/Manual/Base Set/Economy/Copper Ore Mine]]s
+|[[en/Manual/Base Set/Economy/Factory|Factories]]
+|-
+|'''[[en/Manual/Base Set/Economy/Diamonds]]'''
+|[[en/Manual/Base Set/Economy/Diamond Mine]]s
+|[[en/Manual/Base Set/Economy/Bank]]s
+|- style="background: #FFFDE0"
+|'''[[en/Manual/Base Set/Economy/Food]]'''
+|[[en/Manual/Base Set/Economy/Food Processing Plant]]s
+|[[en/Town]]s
+|-
+|'''[[en/Manual/Base Set/Economy/Fruit]]'''
+|[[en/Manual/Base Set/Economy/Fruit Plantation]]s
+|[[en/Manual/Base Set/Economy/Food Processing Plant]]s
+|- style="background: #FFFDE0"
+|'''[[en/Manual/Base Set/Economy/Goods]]'''
+|[[en/Manual/Base Set/Economy/Factory|Factories]], [[en/Manual/Base Set/Economy/Oil Refinery|Oil Refineries]]
+|[[en/Town]]s
+|-
+|'''[[en/Manual/Base Set/Economy/Mail]]'''
+|[[en/Town]]s
+|[[en/Town]]s
+|- style="background: #FFFDE0"
+|'''[[en/Manual/Base Set/Economy/Maize]]'''
+|[[en/Manual/Base Set/Economy/Farm]]s
+|[[en/Manual/Base Set/Economy/Food Processing Plant]]s
+|-
+|'''[[en/Manual/Base Set/Economy/Oil]]'''
+|[[en/Manual/Base Set/Economy/Oil Wells]]
+|[[en/Manual/Base Set/Economy/Oil Refinery|Oil Refineries]]
+|- style="background: #FFFDE0"
+|'''[[en/Manual/Base Set/Economy/Passengers]]'''
+|[[en/Town]]s
+|[[en/Town]]s
+|-
+|'''[[en/Manual/Base Set/Economy/Rubber]]'''
+|[[en/Manual/Base Set/Economy/Rubber Plantation]]s
+|[[en/Manual/Base Set/Economy/Factory|Factories]]
+|- style="background: #FFFDE0"
+|'''[[en/Manual/Base Set/Economy/Water]]'''
+|[[en/Manual/Base Set/Economy/Water Supply|Water Supplies]]
+|[[en/Manual/Base Set/Economy/Water Tower]]s
+|-
+|'''[[en/Manual/Base Set/Economy/Wood]]'''
+|[[en/Manual/Base Set/Economy/Lumber Mill]]s
+|[[en/Manual/Base Set/Economy/Factory|Factories]]
+|}
+
+:{| {{en/Wikitable}} style="width: 512px; font-size: 90%; margin:2px 4px 2px 0; border:solid 1px #AAAAAA" rules="cols"
+|- 
+| style="background: #ff9999" colspan="3" align="center"|'''[[en/Toyland]]'''
+|- style="background: #ffdead"
+|style="width: 26%;"| '''Cargo'''
+|style="width: 37%;"| '''Produced By'''
+|style="width: 37%;"| '''Accepted By'''
+|- style="background: #FFF0F5"
+|'''[[en/Manual/Base Set/Economy/Batteries]]'''
+|[[en/Manual/Base Set/Economy/Battery Farm]]s
+|[[en/Manual/Base Set/Economy/Toy Factory|Toy Factories]]
+|-
+|'''[[en/Manual/Base Set/Economy/Bubbles]]'''
+|[[en/Manual/Base Set/Economy/Bubble Generator]]s
+|[[en/Manual/Base Set/Economy/Fizzy Drink Factory|Fizzy Drink Factories]]
+|- style="background: #FFF0F5"
+|'''[[en/Manual/Base Set/Economy/Candyfloss|Candyfloss (Cotton Candy)]]''' 
+|[[en/Manual/Base Set/Economy/Candyfloss Forest|Candyfloss Forests (Cotton Candy Forests)]]
+|[[en/Manual/Base Set/Economy/Sweet Factory|Sweet Factories (Candy Factories)]]
+|-
+|'''[[en/Manual/Base Set/Economy/Cola]]'''
+|[[en/Manual/Base Set/Economy/Cola Wells]]
+|[[en/Manual/Base Set/Economy/Fizzy Drink Factory|Fizzy Drink Factories]]
+|- style="background: #FFF0F5"
+|'''[[en/Manual/Base Set/Economy/Fizzy Drinks]]'''
+|[[en/Manual/Base Set/Economy/Fizzy Drink Factory|Fizzy Drink Factories]]
+|[[en/Town]]s
+|-
+|'''[[en/Manual/Base Set/Economy/Mail]]'''
+|[[en/Town]]s
+|[[en/Town]]s
+|- style="background: #FFF0F5"
+|'''[[en/Manual/Base Set/Economy/Passengers]]'''
+|[[en/Town]]s
+|[[en/Town]]s
+|-
+|'''[[en/Manual/Base Set/Economy/Plastic]]'''
+|[[en/Manual/Base Set/Economy/Plastic Fountains]]
+|[[en/Manual/Base Set/Economy/Toy Factory|Toy Factories]]
+|- style="background: #FFF0F5"
+|'''[[en/Manual/Base Set/Economy/Sugar]]'''
+|[[en/Manual/Base Set/Economy/Sugar Mine]]s
+|[[en/Manual/Base Set/Economy/Sweet Factory|Sweet Factories (Candy Factories)]]
+|-
+|'''[[en/Manual/Base Set/Economy/Sweets|Sweets (Candy)]]'''
+|[[en/Manual/Base Set/Economy/Sweet Factory|Sweet Factories (Candy Factories)]]
+|[[en/Town]]s
+|- style="background: #FFF0F5"
+|'''[[en/Manual/Base Set/Economy/Toffee]]'''
+|[[en/Manual/Base Set/Economy/Toffee Quarry|Toffee Quarries]]
+|[[en/Manual/Base Set/Economy/Sweet Factory|Sweet Factories (Candy Factories)]]
+|-
+|'''[[en/Manual/Base Set/Economy/Toys]]'''
+|[[en/Manual/Base Set/Economy/Toy Factory|Toy Factories]]
+|[[en/Manual/Base Set/Economy/Toy Shop]]s
+|}

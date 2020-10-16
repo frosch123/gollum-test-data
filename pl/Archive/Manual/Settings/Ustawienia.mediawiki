@@ -1,0 +1,54 @@
+[[Translation:en/Archive/Manual/Settings/Advanced Settings]]
+
+
+{{pl/Spis treści}}
+
+W [[pl/Manual/OpenTTD|OpenTTD]] wiele opcji, które wpływają na rozgrywkę można zmienić. Żeby wprowadzić zmianę w niektórych z nich, trzeba edytować plik [[pl/openttd.cfg|openttd.cfg]], ale większość można zmienić w '''ustawieniach'''. Najbardziej zaawansowane ustawienia poprawiają rozgrywkę lub interfejs, a inne dają więcej zabawy w grze. (Kliknij na obrazek po lewej stronie, żeby go powiększyć i zobaczyć wszystkie ustawienia).
+
+[[File:en/Ustawienia.jpeg|thumb|left|Okno ustawień w pełnej okazałości - OpenTTD 1.10.0 (kliknij, aby powiększyć)]]
+
+==Typy ustawień==
+
+Ustawienia dzielą się na trzy typy. Są on zapisywane w różnych  miejscach, i w różny sposób wpływają na rozgrywkę:
+
+*'''Ustawienia gry''' i '''ustawienia firmy''' - przechowywane są w pliku zapisu, wpływają tylko na nowo rozpoczęte gry
+*'''Ustawienia klienta''' - nieprzechowywane w pliku zapisu, wpływają na wszystkie gry
+
+==Kategoria ustawień==
+
+Widok ustawień można zmienić tak, aby widoczna była tylko część z nich. Domyślnie widoczne ustawienia to grupa ''Podstawowe (pokaż tylko ważne opcje)''. Bardziej doświadczeni gracze mogą przełączyć widok na ''Zaawansowane (pokaż większość opcji)'' lub na ''Ekspert (pokaż wszystkie ustawienia, włącznie z dziwnymi)'' (na obrazku po lewej). Można również wyświetlić tylko ustawienia z inną wartością niż domyślna.
+
+==Zmiana ustawień==
+
+* '''Ustawienia włącz ([[File:en/onbutton.png]]) / wyłącz ([[File:en/offbutton.png]])''' - ustawienia te mają dwa tryby - mogą być włączone, albo wyłączone. Ich zmiana odbywa się za pomocą przycisku znajdującego się po lewej stronie ustawienia. Przycisk wygląda tak: [[File:en/onbutton.png]], gdy ustawienie jest włączone, a tak: [[File:en/offbutton.png]], gdy jest wyłączone.
+* '''Ustawienia z listą możliwości''' - po lewej stronie ustawień z tej grupy znajduje się przycisk [[File:en/listbutton.png]]. Po jego naciśnięciu pokazuje się lista opcji (np. ustawienie [[pl/Trash/Ustawienia/Interfejs#Widok#Funkcja rolki myszy|''Funkcja rolki myszy'']] może przyjmować wartości: ''powiększ widok'', ''przesuń widok'' lub ''wył.'').
+* '''Ustawienia z parametrem liczbowym''' - ustawienia, w których przyjmowana wartość wyrażona jest liczbą. Liczbę można ustawić za pomocą przycisku [[File:en/plusminusbutton.png]], lub wpisać ręcznie, po dwukrotnym kliknięciu na tytuł (nazwę) ustawienia. Zakres liczb możliwych do wpisania jest ograniczony, na przykład ustawienie [[pl/Trash/Ustawienia/Finanse#Oprocentowanie|''Oprocentowanie'']] może przyjmować wartość od 2 do 4 (%).
+
+==Grupy ustawień==
+
+Ustawienia w oknie są pogrupowane na trzynaście kategorii (niektóre mogą nie być dostępne w przypadku działania wyłącznie na ustawieniach podstawowych):
+* [[pl/Trash/Ustawienia/Lokalizacja|Lokalizacja]]
+* [[pl/Trash/Ustawienia/Grafika|Grafika]]
+* [[pl/Trash/Ustawienia/Dźwięk|Dźwięk]]
+* [[pl/Trash/Ustawienia/Interfejs|Interfejs]] (podkategorie: [[pl/Trash/Ustawienia/Interfejs#Ogólne|Ogólne]], [[pl/Trash/Ustawienia/Interfejs#Widok|Widok]] i [[pl/Trash/Ustawienia/Interfejs#Konstrukcje|Konstrukcje]])
+* [[pl/Trash/Ustawienia/Wiadomości i porady|Wiadomości i porady]]
+* [[pl/Trash/Ustawienia/Firma|Firma]]
+* [[pl/Trash/Ustawienia/Finanse|Finanse]]
+* [[pl/Trash/Ustawienia/Pojazdy|Pojazdy]] (podkategorie: [[pl/Trash/Ustawienia/Pojazdy#Fizyka|Fizyka]] i [[pl/Trash/Ustawienia/Pojazdy#Wyznaczanie trasy|Wyznaczanie trasy]])
+* [[pl/Trash/Ustawienia/Ograniczenia|Ograniczenia]]
+* [[pl/Trash/Ustawienia/Awarie i katastrofy|Awarie i katastrofy]]
+* [[pl/Trash/Ustawienia/Tworzenie mapy|Tworzenie mapy]]
+* [[pl/Trash/Ustawienia/Środowisko|Środowisko]] (podkategorie: [[pl/Trash/Ustawienia/Środowisko#Władze lokalne|Władze lokalne]], [[pl/Trash/Ustawienia/Środowisko#Miasta|Miasta]], [[pl/Trash/Ustawienia/Środowisko#Przedsiębiorstwa|Przedsiębiorstwa]] i [[pl/Trash/Ustawienia/Środowisko#Dystrybucja towarów|Dystrybucja towarów]])
+* [[pl/Trash/Ustawienia/Rywale|Rywale]] (podkategoria: [[pl/Trash/Ustawienia/Rywale#Gracze komputerowi|Gracze komputerowi]])
+
+{{en/-}}
+==Historia==
+
+Okno Ustawień zaawansowanych wcześniej było znane jako ''[[en/Archive/Manual/Settings/Configuring patches|Configure Patches]]''. Od r14275, nazwa ''Patches'' została zamieniona na "Advanced Settings ([[pl/Archive/Manual/Settings/Zaawansowane ustawienia|Ustawienia zaawansowane]])", by nie kolidowała z ''TTDPatch'' lub ''patches (w sensie technicznym - wersje gry)'' w kodzie źródłowym gry. Od r14974 zakładki na górze okna zostały usunięte i wszystkie ustawienia zaawansowane zostały spisane w liście w strukturze drzewa. Pozwala to otwierać i zamykać poszczególne sekcje w 100% niezależnie od siebie. Dawne zakładki (''Interfejs'', ''Konstrukcje'', ''Pojazdy'', ''Stacje'', ''Ekonomia'' i ''Rywale'') zostały najwyższymi kategoriami i otrzymały podkategorie, na przykład podkategoria ''Pociągi'' w ''Pojazdach''. Następnie nazwa została zmieniona na '''Ustawienia''', a menu zostało połączone m.in. z menu [[pl/Archive/Manual/Settings/Trudność|ustawieniami trudności]].
+
+==Zobacz też==
+*[[pl/Archive/Manual/Settings/Openttd.cfg|Openttd.cfg]] - lista ustawień zaawansowanych w pliku konfiguracyjnym
+*[[en/Archive/Manual/Settings/Configuring patches]] - informacje, jak zmieniały się ustawienia od wersji 0.3.0 do 0.6.3
+*[[en/Archive/Manual/Settings/Configuring patches in 0.2.0]] - informacje o ustawieniach w wersji 0.2.0 oraz 0.2.1
+
+[[Category:pl/Ustawienia]]

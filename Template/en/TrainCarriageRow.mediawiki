@@ -1,8 +1,9 @@
+[[Translation:Template/en/TrainCarriageRow]]
 <noinclude>
-[[Translation:Template/en/TrainCarriageRow]]</noinclude>
+</noinclude>
 <includeonly>
 |-
-|[[Main/en/TSRY|{{{1|{{{climate|?}}}}}}]]
+|[[en/Manual/Base Set/Vehicles/TSRY|{{{1|{{{climate|?}}}}}}]]
 |style="background: #ccffcc; text-align: center"|{{{2|{{{name|?}}}}}}
 |style="background: #ccccff; text-align: center"|{{{3|{{{costGBP|?}}}}}} ({{{4|{{{costUSD|?}}}}}})
 |style="background: #ffffcc; text-align: center"|{{{5|{{{weightEmpty|?}}}}}}
@@ -21,12 +22,12 @@ Use this for rows between a <nowiki>{{en/TrainCarriageHeader}}</nowiki> and a |}
 === using named properties ===
 
 * incomplete list
-:'''<nowiki>{{en/TrainCarriageRow| name=[[Main/en/Battery Truck]] | weightEmpty=18 }}</nowiki>'''
+:'''<nowiki>{{en/TrainCarriageRow| name=[[en/Manual/Base Set/Vehicles/Battery Truck]] | weightEmpty=18 }}</nowiki>'''
 
 * full list
 :'''<nowiki>{{ TrainCarriageRow</nowiki>'''
 :'''| climate=Y'''
-:'''<nowiki>| name=[[Main/en/Battery Truck]]</nowiki>'''
+:'''<nowiki>| name=[[en/Manual/Base Set/Vehicles/Battery Truck]]</nowiki>'''
 :'''| costGBP=1,148'''
 :'''| costUSD=2,296'''
 :'''| weightEmpty=18'''
@@ -40,15 +41,15 @@ Use this for rows between a <nowiki>{{en/TrainCarriageHeader}}</nowiki> and a |}
 :'''}}'''
 
 Note: if you use names, you can provide them in any order, like this:
-:'''<nowiki>{{en/TrainCarriageRow| weightEmpty=18 | name=[[Main/en/Battery Truck]] }}</nowiki>'''
+:'''<nowiki>{{en/TrainCarriageRow| weightEmpty=18 | name=[[en/Manual/Base Set/Vehicles/Battery Truck]] }}</nowiki>'''
 
 === listing properties in order ===
 
 * incomplete list - note that you should not suppose that an empty cell ('||') means that the property was not supplied!
-:'''<nowiki>{{en/TrainCarriageRow| ? | [[Main/en/Battery Truck]] | ? | ? | 18 }}</nowiki>'''
+:'''<nowiki>{{en/TrainCarriageRow| ? | [[en/Manual/Base Set/Vehicles/Battery Truck]] | ? | ? | 18 }}</nowiki>'''
 
 * full list
-:'''<nowiki>{{en/TrainCarriageRow| Y | [[Main/en/Battery Truck]] | 1,148 | 2,296 | 18 | 23 | 24 | 25 | batteries | 22 | 27 | 29 }}</nowiki>'''
+:'''<nowiki>{{en/TrainCarriageRow| Y | [[en/Manual/Base Set/Vehicles/Battery Truck]] | 1,148 | 2,296 | 18 | 23 | 24 | 25 | batteries | 22 | 27 | 29 }}</nowiki>'''
 
 == Example result ==
 
@@ -56,10 +57,10 @@ The above five uses would result in this table:
 
 {{en/TrainCarriageHeader}}
 
-{{en/TrainCarriageRow| name=[[Main/en/Battery Truck]] | weightEmpty=18 }}
+{{en/TrainCarriageRow| name=[[en/Manual/Base Set/Vehicles/Battery Truck]] | weightEmpty=18 }}
 
 {{en/TrainCarriageRow| climate=Y
-| name=[[Main/en/Battery Truck]]
+| name=[[en/Manual/Base Set/Vehicles/Battery Truck]]
 | costGBP=1,148
 | costUSD=2,296
 | weightEmpty=18
@@ -72,11 +73,11 @@ The above five uses would result in this table:
 | capacityMagLev=29
 }}
 
-{{en/TrainCarriageRow| weightEmpty=18 | name=[[Main/en/Battery Truck]] }}
+{{en/TrainCarriageRow| weightEmpty=18 | name=[[en/Manual/Base Set/Vehicles/Battery Truck]] }}
 
-{{en/TrainCarriageRow| ? | [[Main/en/Battery Truck]] | ? | ? | 18 }}
+{{en/TrainCarriageRow| ? | [[en/Manual/Base Set/Vehicles/Battery Truck]] | ? | ? | 18 }}
 
-{{en/TrainCarriageRow| Y | [[Main/en/Battery Truck]] | 1,148 | 2,296 | 18 | 23 | 24 | 25 | batteries | 22 | 27 | 29 }}
+{{en/TrainCarriageRow| Y | [[en/Manual/Base Set/Vehicles/Battery Truck]] | 1,148 | 2,296 | 18 | 23 | 24 | 25 | batteries | 22 | 27 | 29 }}
 
 |}
 

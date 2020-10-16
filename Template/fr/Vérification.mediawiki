@@ -1,9 +1,9 @@
 <includeonly>
-[[File:en/.{{#switch: {{{1|}}} | non | Non =No_check_{{#switch: {{{2|}}} 
+[[File:en/{{#switch/{{{1|}}} | non | Non =No check {{#switch/{{{2|}}} 
   | noir   | Noir   = Black 
   | orange | Orange = Orange 
   | #default        = Red}}
-|Yes_check_{{#switch: {{{2|}}} 
+|Yes check {{#switch/{{{2|}}} 
   | noir   | Noir   = Black 
   | orange | Orange = Orange 
   | rouge  | Rouge  = Red 
@@ -14,8 +14,8 @@
 ==Utilisation==
 Entrez <nowiki>{{</nowiki>'''Vérification/Fr'''|''Oui/Non''|''Couleur''|''taille''<nowiki>}}</nowiki> dans une section d'article. Exemple:
 <pre>
-{{fr/Vérification|Oui}        Par défaut pour oui: vert
-{{fr/Vérification|Non}        Par défaut pour non: rouge
+{{Vérification/Fr|Oui}        Par défaut pour oui: vert
+{{Vérification/Fr|Non}        Par défaut pour non: rouge
 {{fr/Vérification|Oui|Bleu|taille=50px}}  La taille est optionnelle. Défaut: 11px
 </pre>
 

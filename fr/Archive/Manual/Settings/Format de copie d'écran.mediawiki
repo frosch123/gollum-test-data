@@ -1,0 +1,21 @@
+[[Translation:en/Archive/Manual/Settings/Screenshot format]]
+
+
+[[Category:fr/Réglages et préférences]]
+
+Le format à utiliser en prenant des [[fr/Manual/Capture d'écran|captures d'écran]]. C'est un paramètre client uniquement.
+
+==Utilisation==
+
+"BMP" est l'option par défaut. Vous pouvez la modifier via la [[fr/Manual/Fenêtre des options du jeu|fenêtre des options du jeu]] ou via [[fr/openttd.cfg|openttd.cfg]] avec la syntaxe suivante:
+
+<pre>
+[misc]
+screenshot_format = <Options valides>
+</pre>
+
+'''Options valides:''' [ <vide> | bmp | png | pcx ]
+
+'''Par défaut:''' <vide>
+
+Si une valeur invalide est entrée, alors l'option prendra la valeur par défaut.

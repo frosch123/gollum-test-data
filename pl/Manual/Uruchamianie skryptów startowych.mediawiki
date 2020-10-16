@@ -1,0 +1,39 @@
+[[Translation:en/Manual/Running Startup Scripts]]
+
+
+OpenTTD ma opcję uruchomienia jednego z wielu [[pl/Development/Script/Skrypty|skryptów]] podczas uruchamiania.
+
+Skrypty powinny zawierać zwykły plik tekstowy, którego nazwa została zmieniona na to, co jest odpowiednie (patrz poniżej). Powinny one zostać umieszczone w katalogu "scripts" w twojej instalacji OTTD.
+
+Skrypty lokalne
+
+'''autoexec.scr''' - Ten skrypt jest wykonywany przy uruchamianiu gry ['all' - użyj tego dla niestandardowych aliasów ex.]
+
+Network Scripts
+
+'''on_client.scr''' - Ten skrypt jest wykonywany za każdym razem, gdy dołączasz do serwera
+
+'''on_server_connect.scr''' - Ten skrypt zostanie wykonany przez serwer za każdym razem, gdy klient się łączy (przydatne dla motd)
+
+
+
+Skrypty te powinny być użyte do ustawienia portu/ip i/lub ustawień/poprawek optymalizacji serwera.
+
+'''pre_server.scr''' jest wykonywany przed uruchomieniem stosu TCP serwerów - ''tylko serwer w grze'' <small>''(in-game server only)''</small> .
+
+'''pre_dedicated.scr''' jest wykonywany przed uruchomieniem stosu TCP serwerów - ''Tylko serwer dedykowany'' <small>''(Dedicated server only)''</small> .
+
+
+Tych skryptów sieciowych należy używać do ustawiania nazwy serwerów, hasła i tak dalej.
+
+'''on_server.scr''' jest wykonywany po uruchomieniu serwera - ''Zarówno serwery dedykowane, jak i serwery w grze'' <small>''(Both dedicated and in-game servers)''</small> .
+
+'''on_dedicated.scr''' jest dodatkowo wykonywany po uruchomieniu serwera - ''dedykowany serwer tylko'' <small>''(dedicated serveronly)''</small> .
+
+'''game_start.scr''' jest dodatkowo wykonywany po uruchomieniu gry. Jeśli chcesz start_ai na serwerze dedykowanym, skonfiguruj go tutaj.
+
+
+
+
+<!--[[Category:Settings & Preferences]]--> [[Category:pl/ustawienia]]
+<!--[[Category:Console]]--> [[Category:pl/Konsola]]

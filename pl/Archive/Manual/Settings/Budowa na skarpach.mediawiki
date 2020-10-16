@@ -1,0 +1,35 @@
+[[Translation:en/Archive/Manual/Settings/Build on slopes]]
+
+[[File:en/build-on-slopes.png|center|frame|right|250px|Mały, górski kompleks stacji z włączonymi [[pl/Archive/Manual/Settings/Stacje niejednolite|niejednolitymi stacjami]]]]
+'''Budowa na skarpach''' to łatka pozwalająca na budowę praktycznie każdej infrastruktury na skarpach gdzie różnica poziomów wynosi jeden. Jest to implementacja ścian oporowych z prawdziwego świata.
+
+== Opis ==
+Normanie budowanie na skarpach (zbocza gór, wybrzeża, pagórki, dziury w ziemi) jest bardzo ograniczone. Możesz budować tylko równolegle do skarpy, każdy inny kierunek jest zabroniony.
+
+Z tą łatką będziesz miał więcej możliwości wykorzystania skarp:
+*Drogi możesz budować prostopadle do zbocza góry/wybrzeża
+*Tory mogą być położone w dowolnym kierunku zbocza góry/wybrzeża, z wyjątkiem części kończących się przy końcu skarpy
+*Zajezdnie pojazdów mogą być budowane w dowolym kierunku, prócz zbocza
+*Stacje kolejowe mogą być budowane prostopadle do góry/wybrzeża
+*Porty lotnicze, lądowiska dla helikopterów, siedziby firm, latarnie i słupy radiowe (edytor scenariuszy) mogą być zbudowane na skarpie jeżeli różnica poziomów wynosi jeden
+*Wszystkie drogi i tory mogą być budowane nad małymi dziurami (jeden poziom głębokości)
+*Mosty także mogą być budowane na początku i końcu dopóki są na tym samym poziomie lub 1 wyższym/niższym.
+
+Funkcja ta wyłączona jest dla SI, ponieważ nie potrafi jej wykorzystywać.
+
+Fajnym efektem tej łątki jest to, że możesz zbudować stacje na różnych wysokościach. Po prostu postaw każdy segment stacji oddzielnie. You might need to turn on [[en/nonuniform stations]] to enjoy the full effect of this patch.
+
+==Ostrzejsze zbocza==
+Od '''r5864''' (OpenTTD 0.5.0) stało się możliwe budować tory na skarpach które są całkowicie ścięte. Trasu mogą być budowane z góry na dół i wzdłuż nich ale nie jednocześnie.
+[[File:en/Steeperslopesexample.png|center|frame|Przykład różnych metod budowy.]]
+
+== Użycie ==
+Domyślnie jest ta możliwość budowy włączona. Możesz ją wyłączyć używając tego sformułowania w pliku [[en/openttd.cfg]]:
+
+<pre>
+[construction]
+build_on_slopes = false
+</pre>
+
+[[Category:pl/Ustawienia]]
+[[Category:pl/Konstrukcje]]

@@ -1,0 +1,128 @@
+[[Translation:en/Manual/Building signals]]
+{{it/Tutorial}}
+I '''segnali''' hanno la funzione di instradare i treni e prevenire le collisioni tra convogli.
+
+Questo tutorial è progettato per fornire un'introduzione di base alla segnaletica ferroviaria. Per informazioni approfondite sui diversi tipi di segnali e applicazioni si veda [[it/Manual/Segnali|Segnali]].
+
+__TOC__
+== Restrizioni ==
+* Non si possono piazzare segnali in tiles che contengono incroci o passaggi a livello con strade.
+* Non si possono piazzare segnali sui [[en/ponti]] i nei [[en/tunnel]] però c'è la [[en/HackaLittleBit/Tunnel Signals|patch di HackaLittleBit]] che simula la presenza dei segnali in automatico. &Egrave; possibile reperire la patch in qualche pacchetto, vedi [https://www.tt-forums.net/viewforum.php?f=33 OpenTTD Development]
+
+== Costruire un segnale ==
+#Clicca sul pulsante '''Costruisci ferrovie''' [[File:en/Manual html m772c5b23.png]] nel [[en/Manual/Game interface#The_Menu_bar|menu bar]] per visualizzare la toolbar ''Costruzione ferrovie'':<br /> [[File:it/Railroad Construction.png|none|frame|La toolbar Costruzione ferrovie]]
+#Clicca il pulsante '''Costruisci segnali ferroviari''' [[File:en/Place signal.png]] della toolbar Costruzione ferrovie per visualizzare l'interfaccia ''Selezione segnale'':<br />[[File:it/Signal Selection.png|none|frame|L'interfaccia Selezione segnale, si noti il segnale di percorso preselezionato di default]]
+
+<br />Illustrazione dei segnali (Puoi anche ignorarli tutti tranne i segnali di percorso - vedi [[it/Piazzare i segnali#Quale tipo di segnale usare|Quale tipo di segnale usare]]):
+{|
+|-
+|colspan=2|'''Tipi di segnale'''
+|-
+|[[File:en/Signal Semaphore.png]] and [[File:en/Signal Electric.png]]||[[it/Manual/Segnali#Segnali di blocco|Segnali di blocco]]
+|-
+|[[File:en/Signal Semaphore Pre-Signal.png]] and [[File:en/Signal Electric Pre-Signal.png]]||[[it/Manual/Segnali#Pre-segnali di ingresso blocco|Pre-segnali di ingresso]]
+|-
+|[[File:en/Signal Semaphore Exit-Signal.png]] and [[File:en/Signal Electric Exit-Signal.png]]||[[it/Manual/Segnali#Pre-segnale di uscita blocco|Pre-segnali di uscita]]
+|-
+|[[File:en/Signal Semaphore Combo-Signal.png]] and [[File:en/Signal Electric Combo-Signal.png]]||[[it/Manual/Segnali#Segnali combinati|Segnali combinati]]
+|-
+|[[File:en/Signal Semaphore Path.png]] and [[File:en/Signal Electric Path.png]]||[[it/Manual/Segnali#Segnali di percorso|Segnali di percorso standard (o a due vie o a doppio senso)]] (può essere passato nella direzione opposta e in questo caso viene ignorato)
+|-
+|[[File:en/Signal Semaphore Path One-Way.png]] and [[File:en/Signal Electric Path One-Way.png]]||[[it/Manual/Segnali#Segnali di percorso|Segnali di percorso a senso unico (o a una via)]] (non può essere passato nella direzione opposta)
+|-
+|-
+|colspan=2|'''Altre icone'''
+|-
+|[[File:en/Signal Convert.png]]|| Strumento conversione segnale - converte il tipo di segnale gia piazzato sul tracciato in quello selezionato nell'interfaccia Selezione segnale). Vedi [[it/Costruire segnali#Conversione di un tipo di segnale in altri|Costruire segnali]]
+|-
+|[[File:en/Signal Density.png]]|| Strumento dendità segnale - imposta la distanza tra i segnali quando viene utilizzata la generazione automatica della segnaletica. Vedi [[it/Costruire segnali#Costruire una serie di segnali|Costruire segnali]]
+|}
+
+<br />Non esiste alcuna differenza funzionale tra gli stili del segnale: è solo una questione di scelta estetica. In generale, lo stile di sinistra (semafori - vecchi segnali elettromeccanici) è appropriato fino agli anni '70, e lo stile a destra (i moderni segnali luminosi elettrici) per gli anni successivi. <br /> Inoltre, i semafori verranno creati di default invece dei segnali luminosi prima un anno, configurabile, per impostazione predefinita è attualmente, versione client 1.8.0, l'anno 1950. L'impostazione si chiama "Costruisci segnali semaforici prima del" e può essere trovata nelle "Impostazioni avanzate" sotto "Compagnia".
+Potete bypassare questa impostazione tenendo abbassto CTRL prima di piazzare il segnale e verrà posizionato il segnale nello stile opposto a quello predefinito.
+
+Ci sono inoltre altre due impostazioni modificabili per i segnali si trovano sempre in Impostazioni avanzate\Compagnia e controllano il comportamento dell'interfaccia Selezione segnale. Con la prima, "Tipo di segnale predefinito", è possibile impostare il gruppo di segnali predefinito gia predisposto all'apertura dell'interfaccia segnale, offre tre opzioni di scelta: segnali di blocco, segnali di percorso, segnali di percorso a senso unico. Di default è impostato su segnali di percorso ovviamente. La seconda impostazione è "Tipi di segnale fra cui alternare" che offre la possibilità, con l'accoppiata CTRL+click sinistro mouse e cliccando sul segnale, di ciclare trai diversi tipi di segnale. anche questo offre tre opzioni possibilità di ciclare tra i soli segnali di blocco, solo segnali di percorso oppure tutti i tipi di segnali. Di default è impostato su "Tutti".<br/>
+#Dopo aver selezionato un tipo di segnale '''posizionare il cursore sopra i binari della ferrovia''' dove si desidera posizionare il segnale. <br/> [[File:en/SignalTutorial2.png|none|frame]]
+# '''Fare clic una volta''' per costruire un segnale sul binario. ''A meno che tu non abbia scelto un segnale di percorso'', costruirai un '''segnale bidirezionale'''. I segnali di percorso sono sempre rivolti solo verso una direzione. <br/> [[File:en/Two-way signal.png|frame|left]] [[File:en/SignalTutorial3.png|none|frame]]
+# '''Clicca di nuovo''' per convertire il segnale in un '''segnale unidirezionale'''. Ora, a meno che non abbiate costruito un segnale di percorso standard, solo i treni provenienti dalla direzione delle facce del segnale saranno in grado di superarlo. Puoi cambiare la direzione di un segnale gratuitamente selezionando il tipo di segnale corrispondente e quindi facendo clic sul segnale. <br/> [[File:en/One-way signal.png|frame|left]] [[File:en/SignalTutorial4.png|none|frame]]
+# '''Clicca di nuovo''' per invertire la direzione del segnale. <br/> [[File:en/SignalTutorial5.png|none|frame]]
+# '''Fai di nuovo clic''' per riconvertire il segnale in un '''segnale bidirezionale'''. <br/> [[File:en/SignalTutorial5b.png|none|frame]]
+
+<!--
+<br/>There is no functional difference between the signal styles - it's only a question of aesthetics which one you use. Generally speaking, the left style (semaphores - older electro-mechanical signals) is appropriate until the 1970s, and the right style (modern electric light signals) afterwards.<br/>Furthermore, semaphores will be created by default instead of light signals before a configurable year, 1975 by default. The setting is called "Automatically build semaphores before" and can be found in the "Advanced settings" under "Construction" and then "Signals"..<br/>
+#Once you have selected a signal type, '''position your cursor over the railway tracks''', where you wish to build your signal.<br/>[[Image:SignalTutorial2.png|none|frame]]
+#'''Click once''' to construct a signal on the track. ''Unless you chose a path signal'', you will build a '''two-way signal'''. Path signals always face one direction only.<br/>[[Image:Two-way_signal.png|frame|left]][[Image:SignalTutorial3.png|none|frame]]
+#'''Click again''' to convert your signal to a '''one-way signal'''. Now, unless you have built a standard path signal, only trains coming from the direction the signal faces will be able to pass it. You can change a signal's direction for free by selecting the matching signal type and then clicking on the signal.<br/>[[Image:One-way_signal.png|frame|left]][[Image:SignalTutorial4.png|none|frame]]
+#'''Click again''' to convert the signal to face the opposite direction.<br/>[[Image:SignalTutorial5.png|none|frame]]
+#'''Click again''' to convert your signal back to a '''two-way signal''' again.<br/>[[Image:SignalTutorial5b.png|none|frame]]
+-->
+
+== Costruire una serie di segnali ==
+Puoi anche creare più segnali dello stesso tipo contemporaneamente facendo clic e trascinando lungo la sezione del tracciato su cui desideri creare i segnali. Tuttavia, potresti trovare più utile fare clic e trascinare da un segnale esistente, poiché così facendo costruirai una linea di segnali orientati come quello di origine:
+# Mentre è selezionato lo strumento '''Costruisci segnali ferroviari' '[[File:en/Place signal.png]],'''posiziona il cursore su un segnale esistente'''. <br/> [[File:en/SignalTutorial4.png|none|frame]]
+# '''clicca e trascina''' il mouse lungo il tracciato ferroviario. <br/> '''Nota:''' Se tieni premuto Ctrl e trascini per uno o più tiles, i segnali saranno automaticamente piazzati stai trascinando fino che non troverete una stazione, un altro segnale o una biforcazione lungo il tracciato. <br/> [[File:en/SignalTutorial20.png|none|frame]]
+# '''Rilascia il mouse''' per posizionare i segnali. <br/> [[File:en/SignalTutorial21.png|none|frame]] <br/> A seconda del valore "N" (predefinito è 4) visualizzato sul pulsante '''Distanza tra i segnali costruiti in automatico''' [[File:en/Signal Density.png]] nell'interfaccia di selezione del segnale, i segnali saranno posizionati a quella distanza di N tiles quando costruisci una linea di segnaletica in questo modo. <br/> Puoi cambiare la densità del segnale di trascinamento facendo clic sulle piccole frecce sul pulsante e modificando questo valore N. Inoltre se si clicca e si trascina partendo da segnali di entrata, uscita o combinati, questo metodo costruisce segnali di blocco rivolti nella stessa direzione.
+
+<!--
+== Constructing a line of signals ==
+You can also build several signals of the same type at once by clicking and dragging along the section of track you want signals built on. However you may find it more useful to click and drag from an existing signal, as doing so will construct a line of signals facing the same direction:
+#While the '''Build railway signals''' [[Image:Place_signal.png]] tool is selected, '''position your cursor over an existing signal'''.<br/>[[Image:SignalTutorial4.png|none|frame]]
+#'''Click and drag''' the mouse along the railway track.<br/><b>Note:</b> If you hold Ctrl and drag one or more squares, signals will be automatically built in the direction you dragged until either a station, another signal or a fork in the track is found.<br/>[[Image:SignalTutorial20.png|none|frame]]
+#'''Release the mouse''' to place the signals.<br/>[[Image:SignalTutorial21.png|none|frame]]<br/>Depending on the value displayed on the '''Dragging signal density''' [[Image:Signal_Density.png]] button on the Signal Selection toolbar, signals will be placed every N game tiles (the default value for N is 4) when constructing a line of signals this way.<br/>You may change the dragging signal density by clicking the small arrows on the button. Also note that if you click and drag from entry, exit or combo signals, this method will construct block signals facing the same direction.
+-->
+
+== Rimozione dei segnali ==
+Per rimuovere i segnali esistenti occorre avere l'interfaccia di Selezione segnale aperta e cliccare sul pulsante '''Bulldozer''' [[File:en/Toggle clear active.png|Clear button]] sulla barra degli strumenti Costruzione ferroviaria.
+
+Il quadrato bianco diventerà un quadrato rosso. Quindi è possibile fare clic sui singoli segnali per rimuoverli o fare clic e trascinare lungo una sezione di traccia per rimuovere una linea di segnali. Fai di nuovo clic sul pulsante dello strumento per deselezionarlo. Puoi anche usare il tasto di scelta rapida '''R'''.
+
+Questo strumento obbedisce al valore visualizzato sul pulsante '''Distanza fra i segnali costruiti in automatico''' [[File:en/Signal Density.png]] dell'interfaccia di Selezione segnale.
+
+== Conversione di un tipo di segnale in altri ==
+È possibile convertire un segnale esistente in un altro tipo di segnale facendo clic sul pulsante '''Signal Convert''' [[File:en/Signal Convert.png]] sull'interfaccia di Selezione segnale, quindi cliccare su un segnale esistente che verrà convertito gratuitamente nel tipo di segnale selezionato nell'interfaccia di Selezione segnale.
+
+Per disattivare la conversione del segnale (se si desidera tornare alla costruzione di segnali) cliccare sul pulsante Conversione segnale.
+
+Tenendo premuto il tasto CTRL mentre si clicca su un segnale (con la conversione del segnale disattivata) si alterna, gratuitamente, il segnale attraverso i tipi di segnale disponibili (a meno nelle impotazioni avanzate\Compagnia si abbia impostato "Tipo di segnali tra cui alternare" su "solo segnali di blocco" o "solo segnali di percorso").
+
+Tenendo premuto il tasto CTRL mentre clicca su un segnale (con la conversione del segnale attivata) si modifica, a pagamento, lo stile del segnale (da luminoso a semaforico o viceversa).
+
+<!--
+== Removing signals ==
+You can remove existing signals by clicking the '''Bulldozer''' [[Image:Toggle_clear_active.png|Clear button]] button on the Railway Construction toolbar, while having the Signal Selection toolbar open.
+
+The white square will change to a red square. Then you may click on individual signals to remove them or click and drag along a section of track to remove a line of signals. Click the tool button again to deselect it. You can also use the '''R''' key shortcut.
+
+This tool obeys the value displayed on the '''Dragging signal density'''[[Image:Signal_Density.png]] button on the Signal Selection toolbar.
+
+== Conversione di un tipo di segnale in altri ==
+You can convert an existing signal to a different signal type by clicking the '''Signal Convert''' [[Image:Signal_Convert.png]] button on the Signal Selection toolbar. Then, when you click on an existing signal it will be converted free of charge to the signal type selected in the Signal Selection toolbar.
+
+To turn signal conversion off (if you want to return to constructing signals), click the Signal Convert button again.
+
+Holding the CTRL key while clicking on a signal (with signal conversion off) toggles the signal through the available signal types.
+
+Holding the CTRL key while clicking on a signal (with signal conversion on) changes the style of a signal (semaphores/ modern signals) to the signal style selected in the Signal Selection toolbar. This will however cost money.
+-->
+
+== Quale tipo di segnale usare ==
+A meno che tu non stia costruendo delle configurazioni davvero pazzesche, avrai sempre e solo bisogno di segnali di percorso standard.
+
+Supponendo che tutte i tuoi binari vengano utilizzate solo in una direzione, è sufficiente posizionare un segnale a percorso unidirezionale ovunque sia possibile che un treno si fermi, di fronte alla direzione da cui proviene il treno. Considera però il tuo treno più lungo per stabilire la distanza tra un segnale di attesa e eventuali raccordi, se per caso mentre aspetta può bloccare la via ad altri convogli che altrimenti potrebbero continuare indisturbati; se è così, il segnale è nel posto sbagliato e devi riposizionarlo.
+
+I segnali di blocco possono essere utilizzati per alcune costruzioni più avanzate.
+
+Maggiori dettagli su tutti i tipi di segnali, inclusi gli esempi, sono disponibili nella sezione [[it/Manual/Segnali|Segnali]] del manuale.
+
+<!--
+== Which signal type to use ==
+Unless you are building some really crazy setups, you'll only ever need standard path signals.
+
+Assuming all of your tracks are only used in one direction, simply place a one-way path signal anywhere it would be OK for a train to stop, facing in the direction the train would be coming from. Just imagine your longest train waiting at the signal and work out if it could block something; if so, the signal is in the wrong place.
+
+The block signals can be used for some more advanced constructions.
+
+More details about all types of signals, including examples, can be found in the [[Signals]] section of the manual.
+
+<span style="float: right">[[Buying trains|'''Next:''' Buying trains]] &raquo;</span>
+-->

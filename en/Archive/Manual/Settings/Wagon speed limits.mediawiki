@@ -1,0 +1,13 @@
+[[Translation:en/Archive/Manual/Settings/Wagon speed limits]]
+
+
+Sets whether speed limits should apply for wagons that set them. The default wagons in the game do not specify a maximum speed, so this feature only affects wagons from [[en/Manual/NewGRF]] sets.
+
+== Use ==
+
+This feature is enabled by default. You can disable this patch through the [[en/Archive/Manual/Settings/Advanced Settings/Vehicles#Enable wagon speed limits|configure patches --> vehicle]] window or use the following syntax in [[en/openttd.cfg]]:
+
+ [patches]
+ wagon_speed_limits = false
+<small><<Back to the [[en/Archive/Manual/Settings/Openttd.cfg]]</small>
+[[Category:en/Settings & Preferences]]

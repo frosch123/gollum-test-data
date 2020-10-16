@@ -1,7 +1,8 @@
+[[Translation:Template/en/Ambox]]
 <!-- 
       Adaptación de la plantilla wiki '''Metaplantilla de avisos'''
 
---><noinclude>[[Translation:Template/en/Ambox]]</noinclude><includeonly><div style="{{#IF: {{{estilo|}}} | {{{estilo}}} | margin: 0px 10% 0px 10%; border: 1px solid #aaa; border-left: 10px solid {{#switch:{{{tipo|}}} 
+--><noinclude></noinclude><includeonly><div style="{{#IF: {{{estilo|}}} | {{{estilo}}} | margin: 0px 10% 0px 10%; border: 1px solid #aaa; border-left: 10px solid {{#switch:{{{tipo|}}} 
   | borrar     =#b22222;
   | contenido  =#f28500;
   | estilo     =#f4c430;
@@ -9,9 +10,9 @@
   | protección =#bba;
   | #default  =#1e90ff;
 }} padding: 4px 8px; background:#efefef; min-height: 44px;">}}
-<div style="position: absolute;">[[File:en/.{{#if:{{{imagen|}}}
+<div style="position: absolute;">[[File:en/{{#if/{{{imagen|}}}
   | {{{imagen}}}
-  | {{#switch:{{{tipo|}}}
+  | {{#switch/{{{tipo|}}}
     | borrar     =Deletion.png
     | contenido  =Content.png
     | estilo     =Edit-clear.png
@@ -52,7 +53,8 @@ O:
 
 == Lista de parámetros disponibles ==
 <pre>
-{{es/Metaplantilla de avisos| tipo         = borrar / contenido / estilo / información / fusionar / protección
+{{Metaplantilla de avisos/Es
+| tipo         = borrar / contenido / estilo / información / fusionar / protección
 | imagen       = Picture.Png / Picture.Png|alt=Imagen (si el parámetro no se establece, aparecerá el icono predeterminado)
 | texto        = Texto para una caja grande, para poner en la parte superior de los artículos.
 
@@ -64,22 +66,22 @@ O:
 Los siguientes ejemplos utilizan diferentes valores para el parámetro '''tipo''', pero sin usar el parámetro imagen por lo que se utilizan las imágenes predeterminadas para cada tipo.
 
 {{es/Metaplantilla de avisos| tipo  = borrar
-| texto = tipo=<u>borrar</u> – Cuestiones de borrado, como {{en/S|Borrar/Es}}.
+| texto = tipo=<u>borrar</u> – Cuestiones de borrado, como {{en/s|Borrar/Es}}.
 }}
 {{es/Metaplantilla de avisos| tipo  = contenido
-| texto = tipo=<u>contenido</u> – Cuestiones de contenido, como {{en/S|Aviso/Es}} o {{en/S|Desactualizado/Es}}.
+| texto = tipo=<u>contenido</u> – Cuestiones de contenido, como {{en/s|Aviso/Es}} o {{en/s|Desactualizado/Es}}.
 }}
 {{es/Metaplantilla de avisos| tipo  = estilo
-| texto = tipo=<u>estilo</u> – Cuestiones de estilo, como {{en/S|Corregir/Es}} o {{en/S|Traducción/Es}}.
+| texto = tipo=<u>estilo</u> – Cuestiones de estilo, como {{en/s|Corregir/Es}} o {{en/s|Traducción/Es}}.
 }}
 {{es/Metaplantilla de avisos| tipo  = información
-| texto = tipo=<u>información</u> – Información para los artículos, como {{en/S|Nota/Es}} o {{en/S|Evento actual/Es}}.
+| texto = tipo=<u>información</u> – Información para los artículos, como {{en/s|Nota/Es}} o {{en/s|Evento actual/Es}}.
 }}
 {{es/Metaplantilla de avisos| tipo  = fusionar
-| texto = tipo=<u>fusionar</u> – Propuestas de fusión o traslado, como {{en/S|Dividir/Es}}.
+| texto = tipo=<u>fusionar</u> – Propuestas de fusión o traslado, como {{en/s|Dividir/Es}}.
 }}
 {{es/Metaplantilla de avisos| tipo  = protección
-| texto = tipo=<u>protección</u> – Protección de páginas, como {{en/S|Histórico/Es}}.
+| texto = tipo=<u>protección</u> – Protección de páginas, como {{en/s|Histórico/Es}}.
 }}
 
 === Otras imágenes ===

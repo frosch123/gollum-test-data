@@ -1,6 +1,6 @@
 <includeonly>
 |-
-|[[Main/fr/TSRJ|{{{1|{{{climat|?}}}}}}]]
+|[[fr/Manual/Base Set/Vehicles/TSRJ|{{{1|{{{climat|?}}}}}}]]
 |style="background: #ccffcc; text-align: center"|{{{2|{{{nom|?}}}}}}
 |style="background: #ccccff; text-align: center"|{{{3|{{{coûtGBP|?}}}}}} ({{{4|{{{coûtUSD|?}}}}}})
 |style="background: #ffffcc; text-align: center"|{{{5|{{{poidsVide|?}}}}}}
@@ -19,12 +19,12 @@ Utilisez cela pour les lignes entre un <nowiki>{{fr/WagonEntete}}</nowiki> et un
 === Utiliser les propriétés nommées ===
 
 * liste incomplète
-:'''<nowiki>{{fr/WagonLigne| nom=[[Main/fr/Wagon de batteries|Wagon de batteries]] | poidsVide=18 }}</nowiki>'''
+:'''<nowiki>{{fr/WagonLigne| nom=[[fr/Manual/Base Set/Vehicles/Wagon de batteries|Wagon de batteries]] | poidsVide=18 }}</nowiki>'''
 
 * liste complète
 :'''<nowiki>{{ WagonLigne/Fr</nowiki>'''
 :'''| climat=J'''
-:'''<nowiki>| nom=[[Main/fr/Wagon de batteries|Wagon de batteries]]</nowiki>'''
+:'''<nowiki>| nom=[[fr/Manual/Base Set/Vehicles/Wagon de batteries|Wagon de batteries]]</nowiki>'''
 :'''| coûtGBP=1 148'''
 :'''| coûtUSD=2 296'''
 :'''| poidsVide=18'''
@@ -38,15 +38,15 @@ Utilisez cela pour les lignes entre un <nowiki>{{fr/WagonEntete}}</nowiki> et un
 :'''}}'''
 
 Note: si vous utilisez les noms, vous pouvez les fournir dans n'importe quel ordre, comme ceci:
-:'''<nowiki>{{fr/WagonLigne| poidsVide=18 | nom=[[Main/fr/Wagon de batteries|Wagon de batteries]] }}</nowiki>'''
+:'''<nowiki>{{fr/WagonLigne| poidsVide=18 | nom=[[fr/Manual/Base Set/Vehicles/Wagon de batteries|Wagon de batteries]] }}</nowiki>'''
 
 === lister les propriétés dans l'ordre ===
 
 * liste incomplète - notez que vous ne devez pas supposer qu'une cellule vide ('||') signifie que la propriété n'a pas été fournie!
-:'''<nowiki>{{fr/WagonLigne| ? | [[Main/fr/Wagon de batteries|Wagon de batteries]] | ? | ? | 18 }}</nowiki>'''
+:'''<nowiki>{{fr/WagonLigne| ? | [[fr/Manual/Base Set/Vehicles/Wagon de batteries|Wagon de batteries]] | ? | ? | 18 }}</nowiki>'''
 
 * liste complète
-:'''<nowiki>{{fr/WagonLigne| J | [[Main/fr/Wagon de batteries|Wagon de batteries]] | 1 148 | 2 296 | 18 | 23 | 24 | 25 | batteries | 22 | 27 | 29 }}</nowiki>'''
+:'''<nowiki>{{fr/WagonLigne| J | [[fr/Manual/Base Set/Vehicles/Wagon de batteries|Wagon de batteries]] | 1 148 | 2 296 | 18 | 23 | 24 | 25 | batteries | 22 | 27 | 29 }}</nowiki>'''
 
 == Résultats des exemples ==
 
@@ -54,10 +54,10 @@ Les cinq exemples d'utilisation ci-dessus aboutiraient à cette table:
 
 {{fr/WagonEntete}}
 
-{{fr/WagonLigne| nom=[[Main/fr/Wagon de batteries|Wagon de batteries]] | poidsVide=18 }}
+{{fr/WagonLigne| nom=[[fr/Manual/Base Set/Vehicles/Wagon de batteries|Wagon de batteries]] | poidsVide=18 }}
 
 {{fr/WagonLigne| climat=J
-| nom=[[Main/fr/Wagon de batteries|Wagon de batteries]]
+| nom=[[fr/Manual/Base Set/Vehicles/Wagon de batteries|Wagon de batteries]]
 | coûtGBP=1 148
 | coûtUSD=2 296
 | poidsVide=18
@@ -70,11 +70,11 @@ Les cinq exemples d'utilisation ci-dessus aboutiraient à cette table:
 | capacitéMagLev=29
 }}
 
-{{fr/WagonLigne| poidsVide=18 | nom=[[Main/fr/Wagon de batteries|Wagon de batteries]] }}
+{{fr/WagonLigne| poidsVide=18 | nom=[[fr/Manual/Base Set/Vehicles/Wagon de batteries|Wagon de batteries]] }}
 
-{{fr/WagonLigne| ? | [[Main/fr/Wagon de batteries|Wagon de batteries]] | ? | ? | 18 }}
+{{fr/WagonLigne| ? | [[fr/Manual/Base Set/Vehicles/Wagon de batteries|Wagon de batteries]] | ? | ? | 18 }}
 
-{{fr/WagonLigne| J | [[Main/fr/Wagon de batteries|Wagon de batteries]] | 1 148 | 2 296 | 18 | 23 | 24 | 25 | batteries | 22 | 27 | 29 }}
+{{fr/WagonLigne| J | [[fr/Manual/Base Set/Vehicles/Wagon de batteries|Wagon de batteries]] | 1 148 | 2 296 | 18 | 23 | 24 | 25 | batteries | 22 | 27 | 29 }}
 
 |}
 

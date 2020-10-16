@@ -1,0 +1,408 @@
+[[Translation:en/Manual/Base Set/Economy/Industries]]
+{{de/Übersetzung|Industries|100}}
+{{de/Inhaltsverzeichnis}}
+
+:''Dieser Artikel befasst sich mit dem Konzept einer Industrie in OpenTTD. Für eine kategorisierte Liste der Industrien, siehe [[:Category:de/Industrien]]'' 
+'''Industrien''' sind Einheiten die spezifische [[de/Ware|Waren]] und/oder Dienste erstellen. Es gibt drei Arten von Industrien in OpenTTD; Primäre, Sekundäre und Tertiäre. Primäre Industrien, wie zum Beispiel Bergwerke, stellen Ressourcen zur Verfügung ohne irgendetwas zu benötigen. Diese Ressourcen werden dann von einer [[de/Transportfirma]] zu einer Sekundärindustrie transportiert. Manchmal stellen Sekundärindustrien Ressourcen zur Verfügung, die entweder zu Städten (Waren oder Nahrung) oder zu einer tertiären Industrie transportiert werden.
+
+Eine Firma ''transportiert'' nur Fracht im Auftrag der Hersteller. Alle erzielten Profite, stammen ausschließlich von den Transportgebühren die erhoben werden, nicht vom Verkauf der Fracht. 
+
+Die Industrie Fenster zeigen zwei Kennzahlen über die Produktion jedes Frachttyps den diese Industrie erzeugt, dies sind Absolutwerte vom Vormonat. Der erste Wert ist die produzierte Menge, er variiert nach internen Faktoren der Industrie. Während einer [[de/Manual/Wirtschaft#Rezession|wirtschaftlichen Rezession]] halbiert sich die Produktionsmenge, im Vergleich zur üblichen Produktion. 
+
+Der zweite Wert ist der Prozentsatz der produzierten Menge, der an die umliegenden Stationen zum Transport geliefert wurde. Industrien können entscheiden einen Teil der Produktion zurückzuhalten und nicht an die Stationen zu liefern.
+
+[[File:en/Industry window.png|frame|center|Industriefenster einer Kohlemine]]
+
+Das Wachstum der Produktion primärer Industrien hängt vom Prozentsatz der von ihnen abtransportierten Fracht ab. Je mehr Fracht transportiert wird, desto schneller wächst die Menge im Langzeitschnitt.
+
+Details zur Berechnung der erwähnten Zahlen können auf der [[de/Manual/Spielberechnung|Spielberechnungs]] Seite gefunden werden.
+
+__TOC__
+
+==Tabelle der Industrien nach Klima==
+<table><tr><td valign="top" style="padding:0px; border:none; background-color:transparent;">
+  {| {{en/Wikitable}} style="margin:2px 4px 2px 0; border:solid 1px #AAAAAA" rules="cols"
+  |- 
+  | style="background: #ccffcc" colspan="3" align="center"| '''Gemäßigt'''
+  |- style="background: #ffdead"
+  | '''Industrie'''
+  | '''Akzeptiert'''
+  | '''Produziert'''
+  |- style="background: #E5FFE5"
+  |[[de/Bank]]
+  |[[de/Wertsachen]]
+  |[[de/Wertsachen]]
+  |-
+  |[[de/Kohlebergwerk]]
+  |Nichts
+  |[[de/Kohle]]
+  |- style="background: #E5FFE5"
+  |[[de/Fabrik]]
+  |[[de/Vieh]],<br/>[[de/Getreide]],<br/>[[de/Stahl]]
+  |[[de/Waren]]
+  |-
+  |[[de/Bauernhof]]
+  |Nichts
+  |[[de/Getreide]],<br/>[[de/Vieh]]
+  |- style="background: #E5FFE5"
+  |[[de/Wald]]
+  |Nichts
+  |[[de/Holz]]
+  |-
+  |[[de/Eisenerzbergwerk]]
+  |Nichts
+  |[[de/Eisenerz]]
+  |- style="background: #E5FFE5"
+  |[[de/Ölraffinerie]]
+  |[[de/Öl]]
+  |[[de/Waren]]
+  |-
+  |[[de/Ölplattform]]
+  |[[de/Manual/Base Set/Economy/Passagiere]]
+  |[[de/Öl]],<br/>[[de/Manual/Base Set/Economy/Passagiere]]
+  |- style="background: #E5FFE5"
+  |[[de/Ölquellen]]
+  |Nichts
+  |[[de/Öl]]
+  |-
+  |[[de/Kraftwerk]]
+  |[[de/Kohle]]
+  |Nichts
+  |- style="background: #E5FFE5"
+  |[[de/Sägewerk]]
+  |[[de/Holz]]
+  |[[de/Waren]]
+  |-
+  |[[de/Stahlwalzwerk]]
+  |[[de/Eisenerz]]
+  |[[de/Stahl]]
+  |}
+</td><td valign="top" style="padding:0px; border:none; background-color:transparent;">
+  {| {{en/Wikitable}} style="margin:2px 4px 2px 0; border:solid 1px #AAAAAA" rules="cols"
+  |- 
+  | style="background: #ccccff" colspan="3" align="center"| '''Subarktisch'''
+  |- style="background: #ffdead"
+  | '''Industrie'''
+  | '''Akzeptiert'''
+  | '''Produziert'''
+  |- style="background: #dfefef"
+  |[[de/Bank]]
+  |[[de/Gold]]
+  |Nichts
+  |-
+  |[[de/Kohlebergwerk]]
+  |Nichts
+  |[[de/Kohle]]
+  |- style="background: #dfefef"
+  |[[de/Manual/Base Set/Economy/Nahrungsmittelfabrik]]
+  |[[de/Vieh]],<br/>[[de/Weizen]]
+  |[[de/Nahrungsmittel]]
+  |-
+  |[[de/Bauernhof]]
+  |Nichts
+  |[[de/Weizen]],<br/>[[de/Vieh]]
+  |- style="background: #dfefef"
+  |[[de/Wald]]
+  |Nichts
+  |[[de/Holz]]
+  |-
+  |[[de/Papiermühle]]
+  |[[de/Holz]]
+  |[[de/Papier]]
+  |- style="background: #dfefef"
+  |[[de/Ölraffinerie]]
+  |[[de/Öl]]
+  |[[de/Waren]]
+  |-
+  |[[de/Druckerei]]
+  |[[de/Papier]]
+  |[[de/Waren]]
+  |- style="background: #dfefef"
+  |[[de/Ölquellen]]
+  |Nichts
+  |[[de/Öl]]
+  |-
+  |[[de/Kraftwerk]]
+  |[[de/Kohle]]
+  |Nichts
+  |- style="background: #dfefef"
+  |[[de/Goldmine]]
+  |Nichts
+  |[[de/Gold]]
+  |}
+ </td><td valign="top" style="padding:0px; border:none; background-color:transparent;">
+  {| {{en/Wikitable}} style="margin:2px 4px 2px 0; border:solid 1px #AAAAAA" rules="cols"
+  |- 
+  | style="background: #ffffcc" colspan="3" align="center"| '''Subtropisch'''
+  |- style="background: #ffdead"
+  | '''Industrie'''
+  | '''Akzeptiert'''
+  | '''Produziert'''
+  |- style="background: #FFFDE0"
+  |[[de/Bank]]
+  |[[de/Diamanten]]
+  |Nichts
+  |-
+  |[[de/Diamantenmine]]
+  |Nichts
+  |[[de/Diamanten]]
+  |- style="background: #FFFDE0"
+  |[[de/Fabrik]]
+  |[[de/Kautschuk]],<br/>[[de/Kupfererz]],<br/>[[de/Holz]]
+  |[[de/Waren]]
+  |-
+  |[[de/Bauernhof]]
+  |Nichts
+  |[[de/Mais]]
+  |- style="background: #FFFDE0"
+  |[[de/Sägewerk]]
+  |Nichts
+  |[[de/Holz]]
+  |-
+  |[[de/Kupfererzbergwerk]]
+  |Nichts
+  |[[de/Kupfererz]]
+  |- style="background: #FFFDE0"
+  |[[de/Ölraffinerie]]
+  |[[de/Öl]]
+  |[[de/Waren]]
+  |-
+  |[[de/Ölquellen]]
+  |Nichts
+  |[[de/Öl]]
+  |- style="background: #FFFDE0"
+  |[[de/Manual/Base Set/Economy/Nahrungsmittelfabrik]]
+  |[[de/Früchte]],<br/>[[de/Mais]]
+  |[[de/Nahrungsmittel]]
+  |-
+  |[[de/Fruchtplantage]]
+  |Nichts
+  |[[de/Früchte]]
+  |- style="background: #FFFDE0"
+  |[[de/Kautschukplantage]]
+  |Nichts
+  |[[de/Kautschuk]]
+  |-
+  |[[de/Wasserquelle]]
+  |Nichts
+  |[[de/Wasser]]
+  |- style="background: #FFFDE0"
+  |[[de/Wasserturm]]
+  |[[de/Wasser]]
+  |Nichts
+  |}
+ </td><td valign="top" style="padding:0px; border:none; background-color:transparent;">
+  {| {{en/Wikitable}} style="margin:2px 4px 2px 0; border:solid 1px #AAAAAA" rules="cols"
+  |- 
+  | style="background: #ff9999" colspan="3" align="center"| '''Spielzeugland'''
+  |- style="background: #ffdead;"
+  | '''Industrie'''
+  | '''Akzeptiert'''
+  | '''Produziert'''
+  |- style="background: #FFF0F5"
+  |[[de/Zuckerwattewald]]
+  |Nichts
+  |[[de/Zuckerwatte]]
+  |-
+  |[[de/Bonbonfabrik]]
+  |[[de/Zucker]],<br/>[[de/Karamell]],<br/>[[de/Zuckerwatte]]
+  |[[de/Bonbons]]
+  |- style="background: #FFF0F5"
+  |[[de/Batterieplantage]]
+  |Nichts
+  |[[de/Batterien]]
+  |-
+  |[[de/Colaquellen]]
+  |Nichts
+  |[[de/Cola]]
+  |- style="background: #FFF0F5"
+  |[[de/Spielwarengeschäft]]
+  |[[de/Spielzeuge]]
+  |Nichts
+  |-
+  |[[de/Spielwarenfabrik]]
+  |[[de/Plastik]],<br/>[[de/Batterien]]
+  |[[de/Spielzeuge]]
+  |- style="background: #FFF0F5"
+  |[[de/Plastikbrunnen]]
+  |Nichts
+  |[[de/Plastik]]
+  |-
+  |[[de/Limonadenfabrik]]
+  |[[de/Cola]],<br/>[[de/Luftblasen]]
+  |[[de/Limonaden]]
+  |- style="background: #FFF0F5"
+  |[[de/Luftblasengenerator]]
+  |Nichts
+  |[[de/Luftblasen]]
+  |-
+  |[[de/Karamellgrube]]
+  |Nichts
+  |[[de/Karamell]]
+  |- style="background: #FFF0F5"
+  |[[de/Zuckermine]]
+  |Nichts
+  |[[de/Zucker]]
+  |}
+</td></tr></table>
+
+==Neue Industrie finanzieren==
+Es ist für eine Transportfirma, mit ausreichenden Finanzen, möglich, den Bau neuer Industrien zu finanzieren, wobei Ort und Zeitpunkt frei gewählt werden können. Eine direkte Rückzahlung der Investition (zum Beispiel eine Gewinnbeteiligung), ausser der zusätzlichen Fracht gibt es aber nicht. Das Gebäude gehört nicht der Firma und kann deshalb auch nicht wieder abgerissen werden, man sollte sich also gut überlegen wo man es platziert!
+
+Normalerweise darf man nur die folgenden [[:Category:de/Industrien|Industrien]] finanzieren:
+
+{| {{en/Wikitable}}
+!colspan=4 style="background:#ccffcc"|Gemäßigt
+|-
+| rowspan=7 valign="top"| [[File:en/Fund Industry template.png]]
+| style="background:#efefef" | '''Name'''
+| style="background:#efefef" | <span style="white-space:nowrap">'''Kosten''' (ohne 
+
+Inflation)</span>
+| style="background:#efefef" | '''Bemerkungen'''
+|-
+| [[de/Kraftwerk]]
+| £703,125<span style="white-space:nowrap"> </span>($1,406,250)
+| Akzeptiert [[de/Kohle]] von [[de/Kohlebergwerk|Kohlebergwerken]].
+|-
+| [[de/Sägewerk]]
+| £656,250<span style="white-space:nowrap"> </span>($1,212,500)
+| Akzeptiert [[de/Holz]] von [[de/Wald|Wäldern]]. Produziert [[de/Waren]].
+|-
+| [[de/Ölraffinerie]]
+| £714,843<span style="white-space:nowrap"> </span>($1,429,686)
+| Dürfen nur in Küstennähe gebaut werden. Akzeptiert [[de/Öl]] von [[de/Ölplattform|Ölplattformen]] oder 
+
+[[de/Ölquellen]].
+|-
+| [[de/Fabrik]]
+| £609,375<span style="white-space:nowrap"> </span>($1,218,750)
+| Akzeptiert [[de/Getreide]] und [[de/Vieh]] von [[de/Bauernhof|Bauernhöfen]] und [[de/Stahl]] von 
+
+[[de/Stahlwalzwerk|Stahlwalzwerken]]. Produziert [[de/Waren]].
+|-
+| [[de/Stahlwalzwerk]]
+| £629,882<span style="white-space:nowrap"> </span>($1,259,764)
+| Akzeptiert [[de/Eisenerz]] von [[de/Eisenerzbergwerk|Eisenerzbergwerken]] welches es zu [[de/Stahl]] verarbeitet.
+|-
+| [[de/Bank]]
+| £747,070<span style="white-space:nowrap"> </span>($1,494,140)
+| Akzeptiert [[de/Wertsachen]] und produziert [[de/Wertsachen]].
+|-
+!colspan=4 style="background:#ccccff"|Subarktisch
+|-
+| rowspan=7 valign="top"| [[File:en/Fund Industry subarctic.png]]
+| style="background:#efefef" | '''Name'''
+| style="background:#efefef" | <span style="white-space:nowrap">'''Kosten''' (ohne 
+
+Inflation)</span>
+| style="background:#efefef" | '''Bemerkungen'''
+|-
+| [[de/Kraftwerk]]
+| £703,125<span style="white-space:nowrap"> </span>($1,406,250)
+| Akzeptiert [[de/Kohle]] von [[de/Kohlebergwerk|Kohlebergwerken]]
+|-
+| [[de/Ölraffinerie]]
+| £714,843<span style="white-space:nowrap"> </span>($1,429,686)
+| Dürfen nur in Küstennähe gebaut werden. Akzeptiert [[de/Öl]] von [[de/Ölquellen]].
+|-
+| [[de/Druckerei]]
+| £609,375<span style="white-space:nowrap"> </span>($1,218,750)
+| Akzeptiert [[de/Papier]] von [[de/Papiermühle]] und produziert [[de/Waren]].
+|-
+| [[de/Manual/Base Set/Economy/Nahrungsmittelfabrik]]
+| £603,515<span style="white-space:nowrap"> </span>($1,307,030)
+| Akzeptiert [[de/Vieh]] und [[de/Weizen]] und produziert [[de/Nahrungsmittel]].
+|-
+| [[de/Papiermühle]]
+| £665,039<span style="white-space:nowrap"> </span>($1,330,078)
+| Akzeptiert [[de/Holz]] und produziert [[de/Papier]].
+|-
+| [[de/Bank]]
+| £442,382<span style="white-space:nowrap"> </span>($884,764)
+| Akzeptiert [[de/Gold]].
+|-
+!colspan=4 style="background:#ffffcc"|Subtropisch
+|-
+| rowspan=7 valign="top"| [[File:en/Fund Industry subtropical.png]]
+| style="background:#efefef" | '''Name'''
+| style="background:#efefef" | <span style="white-space:nowrap">'''Kosten''' (ohne 
+
+Inflation)</span>
+| style="background:#efefef" | '''Bermerkungen'''
+|-
+| [[de/Ölraffinerie]]
+| £714,843<span style="white-space:nowrap"> </span>($1,429,686)
+| Akzeptiert [[de/Öl]] von [[de/Ölquellen]] und produziert [[de/Waren]].
+|-
+| [[de/Manual/Base Set/Economy/Nahrungsmittelfabrik]]
+| £603,515<span style="white-space:nowrap"> </span>($1,307,030)
+| Akzeptiert [[de/Frucht|Früchte]] von [[de/Fruchtplantage]] und [[de/Mais]] von 
+
+[[de/Bauernhof|Bauernhöfen]] und produziert [[de/Nahrungsmittel]].
+|-
+| [[de/Bank]]
+| £442,382<span style="white-space:nowrap"> </span>($884,764)
+| Akzeptiert [[de/Diamanten]] von [[de/Diamantenmine|Diamantenmine]]n.
+|-
+| [[de/Wasserturm]]
+| £336,914<span style="white-space:nowrap"> </span>($673,828)
+| Akzeptiert [[de/Wasser]] von [[de/Wasserquelle|Wasserquelle]]n.
+|-
+| [[de/Fabrik]]
+| £609,375<span style="white-space:nowrap"> </span>($1,218,750)
+| Akzeptiert [[de/Kautschuk]] von [[de/Kautschukplantage|Kautschukplantage]]n, [[de/Kupfererz]] von 
+
+[[de/Kupfererzbergwerk|Kupfererzbergwerken]] und [[de/Holz]] von [[de/Sägewerk|Sägewerk]]en. Produziert [[de/Waren]].
+|-
+| [[de/Sägewerk]]
+| £395,507<span style="white-space:nowrap"> </span>($791,014)
+| produziert [[de/Holz]].
+|-
+!colspan=4 style="background:#ff9999"|Spielzeugland
+|-
+| rowspan=5 valign="top"| [[File:en/Fund Industry toyland.png]]
+| style="background:#efefef" | '''Name'''
+| style="background:#efefef" | <span style="white-space:nowrap">'''Kosten''' (ohne 
+
+Inflation)</span>
+| style="background:#efefef" | '''Bemerkungen'''
+|-
+| [[de/Bonbonfabrik]]
+| £603,515<span style="white-space:nowrap"> </span>($1,207,030)
+| Akzeptiert [[de/Zucker]], [[de/Karamell]] und [[de/Zuckerwatte]]. Produziert [[de/Bonbons]].
+|-
+| [[de/Spielwarengeschäft]]
+| £389,648<span style="white-space:nowrap"> </span>($779,296)
+| Akzeptiert [[de/Spielzeuge]] von [[de/Spielwarenfabrik|Spielwarenfabrik]]en.
+|-
+| [[de/Spielwarenfabrik]]
+| £477,539<span style="white-space:nowrap"> </span>($955,078)
+| Akzeptiert [[de/Plastik]] von [[de/Plastikbrunnen]] und [[de/Batterien]] von 
+
+[[de/Batterieplantage|Batterieplantage]]n. produziert [[de/Spielzeuge]].
+|-
+| [[de/Limonadenfabrik]]
+| £518,554<span style="white-space:nowrap"> </span>($1,037,108)
+| Akzeptiert [[de/Cola]] von [[de/Colaquellen]] und [[de/Luftblasen]] von [[de/Luftblasengenerator]]. 
+
+produziert [[de/Limonaden]].
+|}
+
+Um im Spiel eine neue Industrie zu finanzieren, halte den Industrie Button gedrückt [[File:en/Manual html m4d6ba21e.png]] (siehe ''Firmen und Industrie Informationen'' auf der 
+[[de/Manual/Spieloberfläche|Spieloberfläche]] Seite) und wähle ''Neue Industrie finanzieren''.
+
+Einige Patches ändern die Regeln zum Bau neuer Industrien:	
+* [[de/Baue Rohmaterial Industrien]]
+* [[de/Mehrere Industrien pro Stadt]]
+* [[de/Gleiche Industrien in der Nähe]]
+
+==Erkundung neuer Industrien==
+Ab Version 0.6.1 kann man neue Industrien ''Erkunden''. Zwischen dem finanzieren neuer Industrien und dem Erkunden, gibt es zwei große Unterschiede. Erstens das Erkunden wird nur für primäre Industrien genutzt und zweitens kann man den Platz für eine Erkundete Industrie nicht festlegen - sie wird dort gebaut, wo die Geologen zuerst das gesuchte Mineral finden. 
+
+Man kann diese Option während des Spiels im Menü ''Erweiterte Einstellungen'', ''Wirtschaft'', Tab ''Industrien'', ''Manueller Bau von Rohstoffindustrien'' aktivieren; es sind drei Einstellungen möglich: ''Nicht erlaubt'', ''Wie andere Industrien'', ''Durch Prospektion'' .  
+
+
+[[File:en/Coalmine.png|center|frame|Das Kohlebergwerk ist nur eine von vielen Industrien in OpenTTD/De]]
+
+[[Category:de/Industrien]]

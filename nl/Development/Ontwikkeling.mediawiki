@@ -1,0 +1,47 @@
+[[Translation:en/Development/Development]]
+
+{| class="wikitable" style="width: 80%;"
+! colspan="2" style="background-color:#f1f2fe; text-align: left;" | 
+[[File:en/BlackBook.png|64px|left]]
+<p style="font-size: 120%; font-weight:bold;">OpenTTD ontwikkelaarshandleiding</p>
+[[nl/Manual/OpenTTD|OpenTTD]] is een opensourceproject, gepubliceerd onder de [http://www.gnu.org/copyleft/gpl.html GPL]. Je kunt [https://github.com/OpenTTD/OpenTTD de broncode online bekijken] of een kopie van de recentste code downloaden door [[en/Archive/Other/Git]] te gebruiken. Als je de code aanpast kun je een [https://github.com/OpenTTD/OpenTTD/blob/master/CONTRIBUTING.md#pull-requests pull request] maken om je verbeteringen op te namen in OpenTTD.
+|-
+| style="vertical-align:top;" |
+<p style="font-size: 110%; font-weight:bold;">Ontwikkeling</p>
+
+[[en/Main/Objectives|Doelen (EN)]] - De langetermijndoelen van OpenTTD. Dit zijn missieverklaringen die behulpzaam moeten zijn bij het bepalen van de grenzen van OpenTTD-ontwikkeling in de toekomst.
+
+De laatste wijzigingen aan de [[en/Archive/Other/Git]]-repository van OpenTTD zijn te vinden op [https://github.com/OpenTTD/OpenTTD/commits GitHub] [http://cia.navi.cx/stats/project/OpenTTD cia.navi.cx onderhoud] ([https://github.com/OpenTTD/OpenTTD/commits/master.atom Een RSS-feed is ook beschikbaar!])
+| style="vertical-align:top;" |
+<p style="font-size: 110%; font-weight:bold;">Programmeren</p>
+
+*[[en/Development/Coding style|Programmeerstijl (EN)]] - Hoe te programmeren voor OpenTTD
+*[[en/GUI Style|GUI-stijlgids (EN)]] - Look en feel van de interface.
+*[http://docs.openttd.org Doxygen] - Documentatie van de code
+*[[en/unsorted/Patch Checklist|Checklist voor patches]]
+*[https://github.com/OpenTTD/OpenTTD/issues Bug tracker]
+
+|-
+| style="background-color:#c7c8fe; vertical-align:top;" |
+<p style="font-size: 110%; font-weight:bold;">Ontwikkelaarsdocumentatie</p>
+
+*[[en/Development Documentation|Ontwikkelingsdocumentatie (EN)]]
+*[[en/Commit style|Commitstijl (EN)]]
+*[[en/To do for releases|Te doen voor releases (EN)]]
+*[[en/Nightly builds|Nachtelijke builds (EN)]]
+*[[en/Development/Compile Farm|Compileerfarm (EN)]]
+*[[:Category:en/Compiling OpenTTD|Compileren van OpenTTD (EN)]]
+*[[en/Archive/OpenTTD/OpenTTD Release History|Versiegeschiedenis van OpenTTD (EN)]]
+*[[en/Development/Server Admin Port Development|Ontwikkeling van de serveradmin port (EN)]]
+
+| style="background-color:#c7c8fe; vertical-align:top;" |
+<p style="font-size: 110%; font-weight:bold;">Helpen met programmeren</p>
+
+In de lijst hieronder staan enkele tips en nuttige weetjes die je kunnen helpen tijdens het programmeren of debuggen en om je patches vlot in OpenTTD te krijgen.
+
+*[[en/Coding guidelines|Programmeergids (EN)]] - om ervoor te zorgen dat de code een coherent geheel blijft, vragen we je om je patches in deze stijl te schrijven
+*[[en/unsorted/Debugging|Debugging(EN)]]
+*[[en/unsorted/Strings|String (EN)]] - omdat het stringsysteem niet al te gebruiksvriendelijk is, kan dit je op weg helpen
+
+|}
+[[Category:nl/Ontwikkelingen]]

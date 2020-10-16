@@ -1,13 +1,14 @@
-<noinclude>
 [[Translation:Template/en/Check]]
+<noinclude>
+
 </noinclude>
 
 <includeonly>
-[[File:en/.{{#switch: {{{1|}}} | no | No =No_check_{{#switch: {{{2|}}} 
+[[File:en/{{#switch/{{{1|}}} | no | No =No check {{#switch/{{{2|}}} 
   | black  | Black  = Black 
   | orange | Orange = Orange 
   | #default        = Red}}
-|Yes_check_{{#switch: {{{2|}}} 
+|Yes check {{#switch/{{{2|}}} 
   | black  | Black  = Black 
   | orange | Orange = Orange 
   | red    | Red    = Red 
@@ -18,8 +19,8 @@
 ==Usage==
 Entrer <nowiki>{{</nowiki>'''Check'''|''Yes/No''|''Color''|''size''<nowiki>}}</nowiki> dans la section d'un article. Exemple :
 <pre>
-{{en/Check|Yes}                  Par défaut un Oui vert
-{{en/Check|No}                   Par défaut un Non rouge
+{{Check|Yes}                  Par défaut un Oui vert
+{{Check|No}                   Par défaut un Non rouge
 {{en/Check|Yes|Blue|size=50px}}  size (la taille) est optionnel. Par défaut à 11px
 </pre>
 

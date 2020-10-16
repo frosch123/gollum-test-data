@@ -1,0 +1,180 @@
+[[Translation:en/Development/Script/AI/Save/Load]]
+
+
+<!--{{NoAI}}-->{{pl/NoAI}}
+
+== Zapis ==
+Jeśli utworzysz funkcję <code>Save()</code> w swojej sztucznej inteligencji, możesz zapisać niektóre dane w grze. Funkcja powinna zwrócić tabelę z informacjami, które chcesz zapisać. Możesz tylko przechowywać:
+* integers
+* strings
+* arrays (max. 25 levels deep)
+* tables (max. 25 levels deep)
+* booleans
+* nulls
+
+Instancji zajęć nie można zapisać. Należy pamiętać, że obejmuje to AIList, więc jeśli chcesz przechowywać AIList, musisz przekonwertować go na tablicę lub tabelę podczas zapisywania i przekonwertować z powrotem przy ładowaniu.
+
+Gdy tylko użytkownik zapisze grę, wywoływana jest funkcja <code>Save()</code> twojej sztucznej inteligencji. Dzieje się tak, gdy twoja sztuczna inteligencja jest nadal aktywna i robi wszystko, co do niej wykonałeś. Na przykład w środku szukania ścieżki, a może podczas zmiany tablicy wewnętrznej. Chodzi o to, że twoja sztuczna inteligencja tego nie zauważy, poza tym, że <code>Save()</code> jest wywoływane na chwilę. Kiedy wrócisz z tej funkcji, twoja sztuczna inteligencja trwa, jakby nic się nie wydarzyło. Ostrzeżenie: jeśli zmienisz zmienną, którą również przechowujesz i chcesz mieć absolutną pewność, że nie wystąpią żadne warunki wyścigu, zrób to zaraz po <code>Sleep()</code> . Szanse na uruchomienie rzetelnego harmonogramu Squirrel zaraz po <code>Sleep()</code> są bardzo niewielkie, więc powinieneś być względnie bezpieczny.
+
+'''Nota:''' Żadne inne informacje nie są zapisywane, więc na przykład wszystkie oczekujące zdarzenia zostaną utracone, gdy tylko gra się załaduje. Aby to obejść, możesz samodzielnie zapisać wszystkie zdarzenia (przekonwertowane na dozwolone typy). Jednak gra będzie normalnie kontynuowana po wywołaniu funkcji <code>Save()</code> , więc musisz także obsłużyć te zdarzenia.
+
+== Załadowanie ==
+Jeśli zostanie zapisana gra zapisana z AI, OpenTTD spróbuje wykonać następujące czynności. Gdy tylko jeden krok się powiedzie, sekwencja jest zatrzymywana:
+* Spróbuj załadować dokładnie tę samą wersję tego samego AI.
+* Spróbuj załadować najnowszą wersję tego samego AI, która obsługuje ładowanie danych z zapisanej wersji. (wersja zapisanej AI >= zwracana wartość MinVersionToLoad)
+* Załaduj najnowszą wersję tego samego AI.
+* Załaduj losową AI.
+* Załaduj sztuczny ''(dummy)'' AI.
+
+Najpierw nazywa się konstruktor AI (aby utworzyć instancję AI). Następnie wywoływana jest funkcja <code>Load(version, data)</code> z numerem wersji AI użytej do zapisania i samych zapisanych danych, a na koniec funkcja <code>Start()</code> jest wywoływana aby uruchomić program. Jeśli AI nie zapisała żadnych danych, funkcja <code>Load()</code> nie jest wywoływana. (Konstruktor jest wywoływany w celu utworzenia instancji, a następnie wywoływana jest funkcja <code>Start()</code> .)
+
+== Jakie dane zapisać? ==
+Oczywiście, jakie dane dokładnie zapiszesz, zależy od ciebie, ale zasadniczo nie powinieneś zapisywać niczego, co można łatwo wykryć, czytając mapę ponownie. Możesz więc zapisać mapowanie stacji ciężarówek do przemysłu, ale przechowywanie tylko listy stacji jest bezużyteczne.
+
+== Czego nie można zrobić w funkcji Save() i Load() ==
+Zarówno Save(), jak i Load function() są wywoływane z głównego wątku. Oznacza to, że nie można wykonać żadnego polecenia, które buduje / usuwa / zmienia coś w grze. Możesz wykonać niektóre funkcje API, ale tylko te, które pobierają dane. Spróbuj zminimalizować kod w Save() i Load(), ponieważ użytkownik musi czekać na te funkcje za każdym razem, gdy zapisuje i ładuje grę.
+
+== Obsługa wersji zapisu ==
+Po zapisaniu gry zostaje zapisana nazwa i wersja każdej AI. Gdy OpenTTD ładuje grę, próbuje znaleźć wersję tego samego AI, która może załadować stan gry z wersji AI, która została użyta w składowaniu. Deklarując <code>MinVersionToLoad()</code> w swoim info.nut i spraw, aby zwrócił minimalną wersję twojej AI, z której może załadować dane.
+
+Dodatkowo istnieje argument wersji Load(), który informuje funkcję load, która wersja twojej AI została użyta do zapisania stanu gry.
+
+== Przykład Save() / Load() kod ==
+ /* info.nut */
+ class testai extends AIInfo
+ {
+   /* ... */
+ 
+   function GetVersion() { return 3; }
+ 
+   /* Accept to load games saved by version >= 2 of this AI */
+   function MinVersionToLoad() { return 2; } 
+ 
+   /* ... */
+ }
+
+ /* main.nut */
+ class testai extends AIController
+ {
+   constructor()
+   {
+     counter = 0;
+   }
+ 
+   counter = null;
+ };
+ 
+ function testai::Save()
+ {
+   local table = {counter_value = this.counter};
+   return table;
+ }
+ 
+ function testai::Load(version, data)
+ {
+   if (data.rawin("counter_value")) {
+     this.counter = data.rawget("counter_value");
+   }
+ }
+ 
+ function testai::Start()
+ {
+   while(true) {
+     AILog.Info("Tick " + this.counter);
+     this.Sleep(70);
+     this.counter++;
+   }
+ }
+
+
+== Identyfikatory zapisu ==
+Ponieważ różne newgrfs mogą zmieniać wiele różnych typów identyfikatorów używanych w grze, oto lista typów identyfikatorów, którym możesz/nie możesz ufać, że są takie same, gdy gra jest zapisana.
+
+{| border="1"
+|-
+! typ ID 
+! Znaczenie
+! Przechowywane w savegames
+! Kod na AI
+! Nota
+|-
+| BridgeID
+| Typ mostu (np. Rurowy)
+| [0]
+| No
+| Użyj funkcji AIBridge::* , aby znaleźć odpowiedni typ mostka.
+|-
+| CargoID
+| Typ ładunku
+| [0]
+| No
+| Możesz filtrować AICargoList za pomocą AICargo::CargoClass (np. CC_PASSENGERS) lub AICargo::TownEffect (np. TE_PASSENGERS), aby uzyskać cargoID pasażera
+|-
+| EngineID
+| Typ Silnika
+| [0]
+| No
+| Użyj funkcji AIEngine::* , aby znaleźć identyfikator silnika odpowiadający Twoim potrzebom.
+|-
+| GroupID
+| Grupa pojazdu
+| Yes
+| ---
+| 
+|-
+| IndustryID
+| Konkretna branża gdzieś na mapie
+| Yes
+| ---
+| 
+|-
+| IndustryType
+| Typ branży, np. kopalnia węgla
+| [0]
+| No
+| Użyj AIIndustryList_CargoAccepting i AIIndustryList_CargoProducing, aby znaleźć pasujące pary.
+|-
+| SignID
+| Znak gdzieś na mapie
+| yes
+| ---
+| 
+|-
+| StationID
+| Określona stacja gdzieś na mapie
+| Yes
+| ---
+| 
+|-
+| SubsidyID
+| subsydium
+| Tak (ale jest ponownie wykorzystywane po wygaśnięciu dotacji)
+| ---
+| 
+|-
+| TileIndex
+| Kafel gdzieś na mapie
+| Yes
+| ---
+| 
+|-
+| TownID
+| Miejscowość gdzieś na mapie
+| Yes
+| ---
+| 
+|-
+| VehicleID
+| Pojazd
+| yes
+| ---
+| 
+|-
+| WaypointID
+| Waypoint
+| trochę
+| ---
+| Podczas aktualizacji zapisanych gier sprzed r16909, a więc od 0.7.x do 1.0.x lub nowszych, identyfikatory zmienią się, jeśli w grze są stacje
+|}
+
+[0] Powinny być one bezpieczne do przechowywania, ale mogą ulec zmianie po zmianie konfiguracji newgrf. Zwykle użytkownicy nie powinni tego zmieniać, więc jeśli Twoja AI ulegnie awarii z powodu jednej z tych zmian, obwiniaj użytkownika. Zauważ, że konfiguracja newgrf może się również zmienić podczas gry, aw takim przypadku nic nie możesz zrobić, jeśli zmieni się jeden z tych identyfikatorów. (Możesz ponownie obliczyć identyfikatory za każdym razem, gdy ich używasz, ale to bardzo niepraktyczne).

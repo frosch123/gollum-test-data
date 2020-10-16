@@ -1,0 +1,14 @@
+{{en/table of contents}}
+
+Agents are real-world entities, structures and institutions that operate with [[en/cargo]], but are unable to exchange/transfer it over distances and pay the [[en/transport company|transport companies]] for 
+the transportation services instead.
+
+Agents may produce new cargo, consume it and optionally recycle/process it to create new one.
+
+There are 2 major agents groups:
+* [[en/industries]]
+* [[en/building|buildings]].
+
+In case with [[en/passengers]] the [[en/building|buildings]] are the cargo "operators", even though it might look like passengers have their own will to travel. Internally, buildings just "consume" any arrived people (if conditions allow to accept it) and generate new ones infinitely, much like a factory consumes raw materials or basic items and outputs more complex items.
+
+Cargo can't be directly taken from agents. [[en/Manual/Stations]] must be deployed in order to interact with agents for cargo input/output. Because stations don't physically integrate with the agents (with some exceptions, e.g. [[en/Manual/Base Set/Economy/Oil Rig|oil rigs]]), the cargo somehow should be [[en/production delivery|delivered]] from an agent to a station and vice versa. That delivery is a virtual micro-process, not handled by a [[en/transport company]].

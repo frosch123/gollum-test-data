@@ -1,0 +1,50 @@
+<noinclude>{{pl/extraZi/inne strony|en= 
+|pl=:template:extraZi/sztaluga
+}}</noinclude><includeonly><!--
+-->{{#switch: {{{1|}}}<!--
+  -->|<!--
+ --> top=<!--
+  --><h4 style=" background: #E9EFEC;  
+ font-size: 12px; font-family: Verdana, Geneva, Arial, Helvetica, sans-serif; 
+ margin: 1px 0; padding: 0px; border: 1px solid #8CBBAC; 
+ clear: both; ">{{{text|}}}</h4><!--
+  -->|<!--
+ -->pas=<!--
+  --><div style="background: #C7D9D0; <!--color: black;--> border: 1px solid #8CBBAC; padding-left: 1px; padding-right: 1px; padding-top: 1px; padding-bottom: 1px; margin: 1px 1px; clear: both;"><!--
+  --> {{{text|}}} </div><!--
+  -->|<!--
+ -->bottom=<!--
+  --><center><div style="background: #E0E8E6; <!--color: black;--> border: 1px solid #8CBBAC; padding-left: 1px; padding-right: 1px; padding-top: 1px; padding-bottom: 1px; margin: 1px 1px; display: table; clear: both; "><span title="{{{3|}}}">poprzedzające strony[[en/{{{link1|}}}| ◄≈≈≈ ]] </span><span style=background:black><font color=silver><big> {{{text|}}} </big></font></span> <span title="{{{2|}}}"> [[en/{{{link2|}}}| ≈≈≈► ]] <font color=#E0E8E6> . . </font> następne <font color=#E0E8E6> . </font> strony <font color=#E0E8E6> . . . </font> </span></div></center><!--
+--> }} <!--
+--></includeonly><noinclude>
+
+''Rezultat szablonu z parametrami'' top | text  '':'' 
+
+{{pl/extraZi/sztaluga|top|text=Tytuł}}
+
+<br><br><!--<br>-->
+
+''Rezultat szablonu z parametrami'' pas | text  '':''
+
+{{pl/extraZi/sztaluga|pas|text=Content}}
+
+<br><br>
+
+''Rezultat szablonu z parametrami'' bottom | text | linkl2 | 2 | link1 | 3  '':'' 
+
+{{pl/extraZi/sztaluga|bottom|text=Tytuł|link2=Template:ExtraZi/przypisy/Pl|przypisy|link1= Template:ExtraZi/refs/Pl|refs}}
+<br>
+
+'''''Stosowanie :'''''
+ {{pl/ExtraZi/sztaluga|opcje}}
+: ''można użyć z wpisami - przed zamykającymi klamrami po znaku'' "|" '' - ''
+* typ ''(aktualnie do wybotu jak wyżej - 3)''
+* text="tekst"
+:: ''dla typu'' bottom '' + kolejne wpisy'' :
+** link2="link II"
+***''nienazwany argument 2 to krótki opis do linku 2 widoczny przy wskazaniu kursora '' 
+** link1="link I"
+***''ostatni argument nienazwany to krótki opis do linku 1''
+
+[[Category:pl/user/Extrazi/szablony]]
+</noinclude>

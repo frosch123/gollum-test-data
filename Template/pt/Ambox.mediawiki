@@ -1,7 +1,8 @@
+[[Translation:Template/en/Ambox]]
 <!-- 
      Adaptação da predefinição wiki '''Ambox'''
 
---><noinclude>[[Translation:Template/en/Ambox]]</noinclude><includeonly><div style="{{#IF: {{{estilo|}}} | {{{estilo}}} | margin: 0px 10% 0px 10%; border: 1px solid #aaa; border-left: 10px solid {{#switch:{{{tipo|}}} 
+--><noinclude></noinclude><includeonly><div style="{{#IF: {{{estilo|}}} | {{{estilo}}} | margin: 0px 10% 0px 10%; border: 1px solid #aaa; border-left: 10px solid {{#switch:{{{tipo|}}} 
   | eliminação =#b22222;
   | conteúdo   =#f28500;
   | estilo     =#f4c430;
@@ -9,9 +10,9 @@
   | proteção   =#bba;
   | #default   =#1e90ff;
 }} padding: 4px 8px; background:#efefef; min-height: 44px;">}}
-<div style="position: absolute;">[[File:en/.{{#if:{{{imagem|}}}
+<div style="position: absolute;">[[File:en/{{#if/{{{imagem|}}}
   | {{{imagem}}}
-  | {{#switch:{{{tipo|}}}
+  | {{#switch/{{{tipo|}}}
     | eliminação =Deletion.png
     | conteúdo   =Content.png
     | estilo     =Edit-clear.png
@@ -52,7 +53,8 @@ O:
 
 == Lista de parâmetros disponíveis ==
 <pre>
-{{pt/Ambox| tipo         = eliminação / conteúdo / estilo / notícia / mover / proteção
+{{Ambox/Pt
+| tipo         = eliminação / conteúdo / estilo / notícia / mover / proteção
 | imagem       = Picture.Png / Picture.Png|alt=Imagem (Se o parâmetro não for definido, ícone padrão é exibido)
 | texto        = Texto de uma caixa grande para colocar em cima de artigos.
 | estilo       = Estilo de tabela diferente. (Preferencialmente NÃO USE)
@@ -63,22 +65,22 @@ O:
 Os exemplos a seguir usam valores diferentes para o parâmetro '''tipo''' mas sem usar o parâmetro '''imagem'''. Por esta razão imagens padrão são usados para cada tipo.
 
 {{pt/Ambox| tipo  = eliminação
-| texto = tipo=<u>eliminação</u> – Indicações para eliminação, como {{en/S|Eliminação/Pt}}.
+| texto = tipo=<u>eliminação</u> – Indicações para eliminação, como {{en/s|Eliminação/Pt}}.
 }}
 {{pt/Ambox| tipo  = conteúdo
-| texto = tipo=<u>conteúdo</u> – Informações sobre o conteúdo da página, como {{en/S|Aviso/Pt}} o {{en/S|Desatualizado/Pt}}.
+| texto = tipo=<u>conteúdo</u> – Informações sobre o conteúdo da página, como {{en/s|Aviso/Pt}} o {{en/s|Desatualizado/Pt}}.
 }}
 {{pt/Ambox| tipo  = estilo
-| texto = tipo=<u>estilo</u> – Informações sobre o estilo, como {{en/S|Corrigir/Pt}} o {{en/S|Tradução/Pt}}.
+| texto = tipo=<u>estilo</u> – Informações sobre o estilo, como {{en/s|Corrigir/Pt}} o {{en/s|Tradução/Pt}}.
 }}
 {{pt/Ambox| tipo  = notícia
-| texto = tipo=<u>notícia</u> – Notícias sobre o tema do artigo, como {{en/S|Nota/Pt}} o {{en/S|Evento atual/Pt}}.
+| texto = tipo=<u>notícia</u> – Notícias sobre o tema do artigo, como {{en/s|Nota/Pt}} o {{en/s|Evento atual/Pt}}.
 }}
 {{pt/Ambox| tipo  = mover
-| texto = tipo=<u>mover</u> – Propostas para juntar, separar ou mover o artigo, como {{en/S|Dividir/Pt}}.
+| texto = tipo=<u>mover</u> – Propostas para juntar, separar ou mover o artigo, como {{en/s|Dividir/Pt}}.
 }}
 {{pt/Ambox| tipo  = proteção
-| texto = tipo=<u>proteção</u> – Proteção dos artigos, como {{en/S|Histórico/Pt}}.
+| texto = tipo=<u>proteção</u> – Proteção dos artigos, como {{en/s|Histórico/Pt}}.
 }}
 
 === Outras imagens ===

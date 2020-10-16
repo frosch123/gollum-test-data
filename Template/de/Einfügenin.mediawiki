@@ -1,17 +1,18 @@
-<noinclude>'''Broken translation link'''{{en/-}}</noinclude>
+[[Translation:Template/en/Mergeto]]
+<noinclude></noinclude>
 {{de/Ambox| Typ   = Bewegen
 | Bild  = mergeto.png
-| Text  =  {{#IF: {{{1|}}} |Es wurde vorgeschlagen, dass dieser Artikel oder dieser Teil in ''[[Main/en/{{NAMESPACE}}:{{{1}}}|{{{1}}}]]'' ([[Main/en/{{NAMESPACE}} talk:{{{1}}}|Diskutieren]]) <span class="plainlinks">[http://en.wikipedia.org/wiki/Wikipedia:Merging eingefügt]</span> werden soll.<!--
+| Text  =  {{#IF: {{{1|}}} |Es wurde vorgeschlagen, dass dieser Artikel oder dieser Teil in ''[[:en/{{NAMESPACE}}/{{{1}}}|{{{1}}}]]'' ([[:en/{{NAMESPACE}} talk/{{{1}}}|Diskutieren]]) <span class="plainlinks">[http://en.wikipedia.org/wiki/Wikipedia:Merging eingefügt]</span> werden soll.<!--
                             -->  | Keine Seite wurde vorgeschlagen. Bitte diese Vorlage löschen oder aktualisieren.
 }} }}<includeonly>{{{2|[[Category:en/Articles to be merged|{{PAGENAME}}]]}}}</includeonly><noinclude>
 
 ==Vorlage: Benutzung==
 Einfach <nowiki>{{</nowiki>'''Einfügenin/De'''|'''Seitenname'''<nowiki>}}</nowiki> im Artikel einfügen, der bewegt werden soll. Beispiel:
-<pre>{{Template:Einfügen/De|Irgendwelche Seite}}</pre>
+<pre>{{de/Einfügen|Irgendwelche Seite}}</pre>
 
 == Welche "Einfügen"-Vorlage soll ich benutzen? ==
-* {{en/S|Einfügen/De}} &ndash; um zwei verschiedene Artikel an einem umbestimmten Ort zusammenzufügen.
-* {{en/S|Einfügenin/De}} &ndash; um die Inhalte Artikels, in dem die Vorlage ist, in einen anderen angegebenen Artikel einzufügen.
-* {{en/S|Einfügenvon/De}} &ndash; das Gegenteil von {{en/S|Einfügenin/De}}; die Inhalte der angegebenen Seite in den Artikel einfügen, der diese Vorlage hat.
+* {{en/s|Einfügen/De}} &ndash; um zwei verschiedene Artikel an einem umbestimmten Ort zusammenzufügen.
+* {{en/s|Einfügenin/De}} &ndash; um die Inhalte Artikels, in dem die Vorlage ist, in einen anderen angegebenen Artikel einzufügen.
+* {{en/s|Einfügenvon/De}} &ndash; das Gegenteil von {{en/s|Einfügenin/De}}; die Inhalte der angegebenen Seite in den Artikel einfügen, der diese Vorlage hat.
 
 [[Category:de/Vorlagen|E]][[Category:de/Message-Boxen|E]]</noinclude>

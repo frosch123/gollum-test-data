@@ -1,0 +1,88 @@
+[[Translation:en/Archive/Source/OpenTTDDevBlackBook/IConsole/AddFunctions]]
+ 
+<!--{{DevDoc}}-->{{pl/Rozwój}}
+W tym dokumencie wyjaśniono, jak dodawać funkcje konsoli.
+
+==pierwszy krok==
+pierwszą rzeczą, której potrzebujesz, jeśli chcesz coś zrobić w konsoli, jest
+<pre>
+include "console.h"
+</pre>
+daje to dostęp do wszystkich funkcji i struktur IConsole, z których będziesz musiał korzystać, jeśli zamierzasz dodawać komendy/funkcje/zmienne ''(Commands/Functions/Variables)'' do konsoli.
+
+==tworzenie komend funkcji c++==
+<pre>
+static _iconsole_var * MyLittleConsoleFunction(byte argc, byte* argv[], byte argt[]) {
+	if (argc<2) return NULL;
+	// i am a dummy :D
+	return NULL;
+}
+</pre>
+{|
+| parametr || znaczenie
+|-
+| argc || liczba parametrów przeciążonych przez parser do funkcji
+|-
+| argv || parametry itself ''(samo)''
+|-
+| argt || typy parametrów (ICONSOLE_VAR_UNKNOWN, ICONSOLE_VAR_BYTE, ICONSOLE_VAR_STRING, ...)
+|-
+|}
+parametry przekazywane bezpośrednio z konsoli mają domyślnie typ ICONSOLE_VAR_UNKNOWN. ICONSOLE_VAR_UNKNOWN jest łańcuchem, ale może zawierać liczbę całkowitą lub coś w tym rodzaju. zależy to od sposobu, w jaki obsługuje to funkcja c++. jeśli ktoś użył czegoś takiego:
+<pre>
+]printf "%i" *temp_uint_16
+31291
+</pre>
+pierwszy parametr jest przekazywany jako ICONSOLE_VAR_UNKNOWN, a drugi jest przekazywany jako ICONSOLE_VAR_UINT16. tylko zmienne, które zostały przekazane do komend , mogą być innego typu, jak ICONSOLE_VAR_UNKNOWN.
+
+==używanie preferencji zmiennych==
+jeśli ktoś przekazał zmienną przez jej odwołanie:
+<pre>
+]dosomething @*temp_uint_16
+did something with temp_uint_16
+</pre>
+typ tego pierwszego parametru to ICONSOLE_VAR_REFERENCE.
+przykład jak napisać polecenie dosomething:
+<pre>
+static _iconsole_var * IConsoleStdLibRandom(byte argc, byte* argv[], byte argt[]) {
+if (argt[1]==ICONSOLE_VAR_REFERENCE) {
+    _iconsole_var * item;
+    item = (_iconsole_var *) argv[1];
+    IConsolePrintF("did something with %s",item->name);
+    }
+return NULL;
+}
+</pre>
+
+==zwracanie wartości w ramach funkcji==
+<pre>
+static _iconsole_var * IConsoleStdLibRandom(byte argc, byte* argv[], byte argt[]) {
+_iconsole_var * result;
+result = IConsoleVarAlloc(ICONSOLE_VAR_UINT16);
+IConsoleVarSetValue(result,rand());
+return result;
+}
+</pre>
+<pre>_iconsole_var * IConsoleVarAlloc(byte type);</pre>
+służy do przydzielania pamięci dla struktury _iconsole_var.
+<pre>void IConsoleVarSetValue(_iconsole_var * var, int value);</pre>
+służy do łatwego ustawiania wartości struktury _iconsole_var
+<pre>void IConsoleVarSetString(_iconsole_var * var, byte * string);</pre>
+IConsoleVarSetString służy do przypisania ciągu do wartości
+
+==rejestracja komendy==
+gdzieś w kodzie powinieneś dodać taką linię ... należy to zrobić podczas inicjalizacji openttd: [review the first example]
+<pre>
+IConsoleCmdRegister("mylittlefunction",MyLittleConsoleFunction);
+</pre>
+rejestruje to polecenie jako polecenie konsoli o nazwie mylittlefunction. możesz także dodać jedną funkcję c++ z różnymi nazwami poleceń konsoli ... po prostu spróbuj ...
+jeśli wszystko poszło dobrze, powinieneś zobaczyć następujące informacje:
+<pre>
+]list_cmds
+echo
+echof
+printf
+mylittlefunction
+</pre>
+
+<!--[[Category:OpenTTDDevBlackBook|F]]--> [[Category:pl/OpenTTDDevBlackBook|F]]

@@ -1,8 +1,9 @@
+[[Translation:Template/en/Ambox]]
 <!-- 
       adattamento del codice Wiki Ambox
 -->
 
-<noinclude>[[Translation:Template/en/Ambox]]</noinclude><includeonly><div style="{{#IF: {{{stile|}}} | {{{stile}}} | margin: 0px 10% 0px 10%; border: 1px solid #aaa; border-left: 10px solid {{#switch:{{{tipo|}}} 
+<noinclude></noinclude><includeonly><div style="{{#IF: {{{stile|}}} | {{{stile}}} | margin: 0px 10% 0px 10%; border: 1px solid #aaa; border-left: 10px solid {{#switch:{{{tipo|}}} 
   | cancella     =#b22222;
   | contenuto    =#f28500;
   | stile      =#f4c430;
@@ -10,9 +11,9 @@
   | protetto  =#bba;
   | #default   =#1e90ff;
 }} padding: 4px 8px; background:#efefef; min-height: 44px;">}}
-<div style="position: absolute;">[[File:en/.{{#if:{{{immagine|}}}
+<div style="position: absolute;">[[File:en/{{#if/{{{immagine|}}}
   | {{{immagine}}}
-  | {{#switch:{{{tipo|}}}
+  | {{#switch/{{{tipo|}}}
     | cancellazione     =Deletion.png
     | contenuto    =Content.png
     | stile      =Edit-clear.png
@@ -24,7 +25,7 @@
 <div style="border: none; padding: 2px 2px 2px 62px;">
 <span style="{{#IF: {{{stile-testo|}}} | {{{stile-testo}}} | }}"> {{{testo|}}} </span>
 </div></div><!-- 
-Rileva e segnala l'utilizzo errato [[Template/en/Ambox/It#Tipi di finestre di dialogo delle voci parametri|"tipo"]]:
+Rileva e segnala l'utilizzo errato [[Template:Ambox/It#Tipi di finestre di dialogo delle voci parametri |"tipo"]]:
 -->{{#switch:{{{tipo|}}}
 |            = <!--Nessun tipo fornito è considerato un input valido --> 
 | cancella     =
@@ -45,15 +46,16 @@ Semplici esempio d'uso:
 
 Oppure:
 <pre>
-{{it/Ambox| tipo = contenuto
+{{it/ambox| tipo = contenuto
 | testo = Avviso - Un qualche testo.
 }}
 </pre>
-{{it/Ambox| tipo = contenuto | testo = Avviso - Un qualche testo.}}
+{{it/ambox| tipo = contenuto | testo = Avviso - Un qualche testo.}}
 
 == Elenco dei parametri disponibili ==
 <pre>
-{{en/Ambox| tipo       = cancella / contenuto / stile / avviso / sposta / protetto
+{{ambox
+| tipo       = cancella / contenuto / stile / avviso / sposta / protetto
 | imamagine      = Picture.Png / Picture.Png|alt=Picture (se il parametro non è presente, verrà fornita l'icona del tipo di default)
 | testo       = Testo per un grande box, per la parte superiore degli articoli.
 
@@ -65,35 +67,35 @@ Oppure:
 
 I seguenti esempi usano diversi parametri '''tipo''' ma non usano dei parametri immagine quindi usano le immagini di default per ogni tipo.
 
-{{it/Ambox| tipo  = cancella
-| testo  = tipo=<u>cancella</u> – Problemi di cancellazione, come {{en/S|cancella}}.
+{{it/ambox| tipo  = cancella
+| testo  = tipo=<u>cancella</u> – Problemi di cancellazione, come {{en/s|cancella}}.
 }}
-{{it/Ambox| tipo  = contenuto
-| testo  = type=<u>contenuto</u> – Problemi di contenuto, come {{en/S|Avviso}}.
+{{it/ambox| tipo  = contenuto
+| testo  = type=<u>contenuto</u> – Problemi di contenuto, come {{en/s|Avviso}}.
 }}
-{{it/Ambox| tipo  = stile
-| testo  = tipo=<u>stile</u> – Problemi di stile, come {{en/S|pulizia}}.
+{{it/ambox| tipo  = stile
+| testo  = tipo=<u>stile</u> – Problemi di stile, come {{en/s|pulizia}}.
 }}
-{{it/Ambox| tipo  = notizia
-| testo  = tipo=<u>notizia</u> – Notizie sulle voci, come {{en/S|corrente}}.
+{{it/ambox| tipo  = notizia
+| testo  = tipo=<u>notizia</u> – Notizie sulle voci, come {{en/s|corrente}}.
 }}
-{{it/Ambox| tipo  = sposta
-| testo  = tipo=<u>sposta</u> – Proposte di fondere, dividere o tradurre come {{en/S|dividere}}.
+{{it/ambox| tipo  = sposta
+| testo  = tipo=<u>sposta</u> – Proposte di fondere, dividere o tradurre come {{en/s|dividere}}.
 }}
-{{it/Ambox| tipo  = protetto
-| testo  = tipo=<u>protetto</u> – Avvisi di protezione, come {{en/S|Storico}}.
+{{it/ambox| tipo  = protetto
+| testo  = tipo=<u>protetto</u> – Avvisi di protezione, come {{en/s|Storico}}.
 }}
 
 === Altre immagini ===
 
 Le immagini predefinite mostrate sopra sono principalmente per comodità. In molti casi è più appropriato usare immagini più specifiche. Questi esempi usano il parametro '''immagine''' per specificare un'immagine diversa da quelle di default.
 
-<pre>{{it/Ambox| tipo  = notizia
+<pre>{{it/ambox| tipo  = notizia
 | immagine = OpenttdManual.png
 | testo  = lorem ipsum ecc. ecc. 
 }}</pre>
 
-{{it/Ambox| tipo  = notizia
+{{it/ambox| tipo  = notizia
 | immagine = OpenttdManual.png
 | testo  = lorem ipsum ecc. ecc. 
 }}

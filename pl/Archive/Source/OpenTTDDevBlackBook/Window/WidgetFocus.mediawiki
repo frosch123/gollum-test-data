@@ -1,0 +1,41 @@
+[[Translation:en/Archive/Source/OpenTTDDevBlackBook/Window/WidgetFocus]]
+ 
+<!--{{DevDoc}}-->{{pl/Rozwój}}
+
+Ten dokument ma na celu krótkie wprowadzenie do systemu fokusowania widgetów. 
+
+== Focus poziomy ==
+System fokusowy w OpenTTD ma dwa poziomy. Najpierw jest wskaźnik, który śledzi, które okno ma fokus. Następnie każde wystąpienie okna śledzi, który widget jest ustawiony w tym oknie. Oznacza to, że okno, które nie jest aktywne, nadal pamięta, który widżet był globalnie ustawiony, zanim inne okno nie ukradło go. Ten widget może później stać się widgetem zorientowanym globalnie, jeśli jego okno zostanie zogniskowane bez zmiany tego widgetu. (na przykład klikając pasek tytułu)
+
+Termin '''globally focused widget''' odnosi się do skupionego widżetu skoncentrowanego okna. <code>Window::IsWidgetGloballyFocused</code> zwróci tylko, jeśli dany widget, a także instancja okna jest skoncentrowana. Z drugiej strony <code>Window::IsWidgetFocused</code> wymaga tylko, aby dany widżet był zogniskowany w instancji okna, ale samo okno nie musi być zogniskowane.
+
+Termin '''local focus''' odnosi się do fokusa w oknie, niezależnie od tego, czy okno jest aktywne, czy nie.
+
+== Jak wchodzić w interakcje z systemem ustawiania ostrości ==
+Ostatnie i najdokładniejsze szczegóły znajdują się w kodzie źródłowym.
+
+=== Funkcje globalne ===
+* <code>SetFocusedWindow(Window *w)</code> : Ustawia skoncentrowane ''(focused)'' okno
+
+=== Okno members ===
+* <code>IsWidgetFocused(byte widget_index)</code> : Sprawdza, czy dany widżet jest ustawiony w oknie
+* <code>IsWidgetGloballyFocused(byte widget_index)</code> : Sprawdza, czy dany widżet jest globalnie skoncentrowany
+* <code>SetFocusedWidget(byte widget_index)</code> : Ustaw fokus lokalnego widgetu na dany widget
+* <code>UnfocusFocusedWidget()</code> : Ustaw fokus lokalnego widgetu na null
+
+=== Unfocus ===
+Jeśli chcesz cofnąć fokus na aktualnie lokalnie skoncentrowanym widżecie, ale nie chcesz nadawać innego fokusa widżetowi, musisz użyć następującego kodu: (napisany jako sposób pisania z poziomu okna)
+ if (this->nested_focus != NULL) {
+   this->nested_focus->SetDirty(this);
+   this->nested_focus = NULL;
+ }
+
+
+Jeśli jednak okno używa starego nie zagnieżdżonego systemu widgetów, powyższy kod staje się:
+ if (this->focused_widget != NULL) {
+   this->InvalidateWidget(this->focused_widget - this->widget);
+   this->focused_widget = NULL;
+ }
+
+<!--[[Category:Development]]--> [[Category:pl/Rozwój]]
+<!--[[Category:OpenTTDDevBlackBook|W]]--> [[Category:pl/OpenTTDDevBlackBook|W]]

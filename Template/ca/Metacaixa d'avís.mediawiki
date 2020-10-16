@@ -1,7 +1,8 @@
+[[Translation:Template/en/Ambox]]
 <!-- 
       Adaptació de la plantilla wiki '''Metacaixa d'avís'''
 
---><noinclude>[[Translation:Template/en/Ambox]]</noinclude><includeonly><div style="{{#IF: {{{estil|}}} | {{{estil}}} | margin: 0px 10% 0px 10%; border: 1px solid #aaa; border-left: 10px solid {{#switch:{{{tipus|}}} 
+--><noinclude></noinclude><includeonly><div style="{{#IF: {{{estil|}}} | {{{estil}}} | margin: 0px 10% 0px 10%; border: 1px solid #aaa; border-left: 10px solid {{#switch:{{{tipus|}}} 
   | esborrar   =#b22222;
   | contingut  =#f28500;
   | estil      =#f4c430;
@@ -9,9 +10,9 @@
   | protecció  =#bba;
   | #default   =#1e90ff;
 }} padding: 4px 8px; background:#efefef; min-height: 44px;">}}
-<div style="position: absolute;">[[File:en/.{{#if:{{{imatge|}}}
+<div style="position: absolute;">[[File:en/{{#if/{{{imatge|}}}
   | {{{imatge}}}
-  | {{#switch:{{{tipus|}}}
+  | {{#switch/{{{tipus|}}}
     | esborrar   =Deletion.png
     | contingut  =Content.png
     | estil      =Edit-clear.png
@@ -52,7 +53,8 @@ O:
 
 == Llista de paràmetres disponibles==
 <pre>
-{{ca/Metacaixa d'avís| tipus        = esborrar / contingut / estil / informació / moure / protecció
+{{Metacaixa d'avís/Ca
+| tipus        = esborrar / contingut / estil / informació / moure / protecció
 | imatge       = Picture.Png / Picture.Png|alt=Imatge (si no s'estableix el paràmetre apareixerà la icona predeterminada)
 | text         = Text per a una caixa gran, per a posar a la part superior dels articles.
 
@@ -64,22 +66,22 @@ O:
 Els següents exemples empren diferents valors per al paràmetre '''tipus''', però sense emprar el paràmetre imatge per la qual cosa s'empren les imatges predeterminades per a cada tipus.
 
 {{ca/Metacaixa d'avís| tipus = esborrar
-| text  = tipus=<u>esborrar</u> – Qüestions d'esborrat, com {{en/S|Esborrar/Ca}}.
+| text  = tipus=<u>esborrar</u> – Qüestions d'esborrat, com {{en/s|Esborrar/Ca}}.
 }}
 {{ca/Metacaixa d'avís| tipus = contingut
-| text  = tipus=<u>contingut</u> – Qüestions de contingut com {{en/S|Avís/Ca}} o {{en/S|Desactualitzat/Ca}}.
+| text  = tipus=<u>contingut</u> – Qüestions de contingut com {{en/s|Avís/Ca}} o {{en/s|Desactualitzat/Ca}}.
 }}
 {{ca/Metacaixa d'avís| tipus = estil
-| text  = tipus=<u>estil</u> – Qüestions d'estil com  {{en/S|Corregir/Ca}} o {{en/S|Traducció/Ca}}.
+| text  = tipus=<u>estil</u> – Qüestions d'estil com  {{en/s|Corregir/Ca}} o {{en/s|Traducció/Ca}}.
 }}
 {{ca/Metacaixa d'avís| tipus = informació
-| text  = tipus=<u>informació</u> – Informació per als articles com {{en/S|Nota/Ca}} o {{en/S|Succés actual/Ca}}.
+| text  = tipus=<u>informació</u> – Informació per als articles com {{en/s|Nota/Ca}} o {{en/s|Succés actual/Ca}}.
 }}
 {{ca/Metacaixa d'avís| tipus = moure
-| text  = tipus=<u>moure</u> – Propostes de fusió o trasllat {{en/S|Dividir/Ca}}.
+| text  = tipus=<u>moure</u> – Propostes de fusió o trasllat {{en/s|Dividir/Ca}}.
 }}
 {{ca/Metacaixa d'avís| tipus = protecció
-| text  = tipus=<u>protecció</u> – Protecció de pàgines com {{en/S|Històric/Ca}}.
+| text  = tipus=<u>protecció</u> – Protecció de pàgines com {{en/s|Històric/Ca}}.
 }}
 
 === Altres imatges ===

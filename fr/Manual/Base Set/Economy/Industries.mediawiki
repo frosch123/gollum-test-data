@@ -1,0 +1,386 @@
+[[Translation:en/Manual/Base Set/Economy/Industries]]
+{{fr/Table des matières}}
+
+:''Cet article concerne le concept d'industrie dans OpenTTD. Pour une liste d'industries par catégorie, reportez-vous à [[:Category:fr/Industries]]''
+
+Les '''industries''' sont des entités qui produisent des [[fr/Manual/Base Set/Economy/Cargaison|cargaisons]] et/ou des services spécifiques. Il y a trois types d'industrie dans OpenTTD: primaire, secondaire et tertiaire. Les industries primaires, comme les mines, fournissent des ressources sans avoir besoin de quoi que ce soit. Ces ressources sont alors transportées par une [[fr/Manual/Compagnie de transport|compagnie de transport]] vers une industrie secondaire. Quelquefois, les industries secondaires fournissent à leur tour une ressource qui sera soit transportée vers les villes (marchandises ou nourriture), ou vers une industrie tertiaire.
+
+Votre société ne fait que ''transporter'' les cargaisons pour le compte de ces industries. Tous les profits que vous faites proviennent uniquement des frais de transport que vous facturez, non pas de la vente des chargements.
+
+La fenêtre d'une industrie montre deux nombres concernant la production de chaque type de cargaison créé par cette industrie; ce sont les valeurs totales concernant le dernier mois. Le premier est la quantité produite; elle varie en fonction de facteurs internes à l'industrie. Durant une [[fr/Récession économique|récession économique]], il n'y a que la moitié de la production habituelle.
+
+La seconde valeur est le pourcentage de la quantité produite qui a été livrée aux gares à proximité pour être distribuée. Les industries peuvent décider de conserver une partie de leur production et de ne pas la livrer à une gare.
+
+[[File:en/Industry window.png|frame|center|Fenêtre d'industrie d'une mine de charbon]]
+
+La croissance de la production d'une industrie primaire dépend du pourcentage de cargaison transportée depuis elle. Plus vous en transportez, plus rapidement elle croîtra sur le long terme, en moyenne.
+
+Les détails sur le calcul des nombres mentionnés ci-dessus peuvent être trouvés sur la page des [[fr/Manual/Mécanique du jeu|mécanismes du jeu]].
+
+__TOC__
+
+==Table des industries par climat==
+<table><tr><td valign="top" style="padding:0px; border:none; background-color:transparent;">
+  {| {{en/Wikitable}} style="margin:2px 4px 2px 0; border:solid 1px #AAAAAA" rules="cols"
+  |- 
+  | style="background: #ccffcc" colspan="3" align="center"| '''Tempéré'''
+  |- style="background: #ffdead"
+  | '''Industrie'''
+  | '''Accepte'''
+  | '''Produit'''
+  |- style="background: #E5FFE5"
+  |[[fr/Manual/Base Set/Economy/Banque|Banque]]
+  |[[fr/Manual/Base Set/Economy/Biens de valeur|Biens de valeur]]
+  |[[fr/Manual/Base Set/Economy/Biens de valeur|Biens de valeur]]
+  |-
+  |[[fr/Manual/Base Set/Economy/Mine de charbon|Mine de charbon]]
+  |Rien
+  |[[fr/Manual/Base Set/Economy/Charbon|Charbon]]
+  |- style="background: #E5FFE5"
+  |[[fr/Manual/Base Set/Economy/Usine|Usine]]
+  |[[fr/Manual/Base Set/Economy/Bétail|Bétail]],<br/>[[fr/Manual/Base Set/Economy/Céréales|Céréales]],<br/>[[fr/Manual/Base Set/Economy/Acier|Acier]]
+  |[[fr/Manual/Base Set/Economy/Marchandises|Marchandises]]
+  |-
+  |[[fr/Manual/Base Set/Economy/Ferme|Ferme]]
+  |Rien
+  |[[fr/Manual/Base Set/Economy/Céréales|Céréales]],<br/>[[fr/Manual/Base Set/Economy/Bétail|Bétail]]
+  |- style="background: #E5FFE5"
+  |[[fr/Manual/Base Set/Economy/Forêt|Forêt]]
+  |Rien
+  |[[fr/Manual/Base Set/Economy/Bois|Bois]]
+  |-
+  |[[fr/Manual/Base Set/Economy/Mine de fer|Mine de fer]]
+  |Rien
+  |[[fr/Manual/Base Set/Economy/Minerai de fer|Minerai de fer]]
+  |- style="background: #E5FFE5"
+  |[[fr/Manual/Base Set/Economy/Raffinerie|Raffinerie]]
+  |[[fr/Manual/Base Set/Economy/Pétrole|Pétrole]]
+  |[[fr/Manual/Base Set/Economy/Marchandises|Marchandises]]
+  |-
+  |[[fr/Manual/Base Set/Economy/Plateforme pétrolière|Plateforme pétrolière]]
+  |[[fr/Manual/Base Set/Economy/Passagers|Passagers]]
+  |[[fr/Manual/Base Set/Economy/Pétrole|Pétrole]],<br/>[[fr/Manual/Base Set/Economy/Passagers|Passagers]]
+  |- style="background: #E5FFE5"
+  |[[fr/Manual/Base Set/Economy/Puits de pétrole|Puits de pétrole]]
+  |Rien
+  |[[fr/Manual/Base Set/Economy/Pétrole|Pétrole]]
+  |-
+  |[[fr/Manual/Base Set/Economy/Centrale électrique|Centrale électrique]]
+  |[[fr/Manual/Base Set/Economy/Charbon|Charbon]]
+  |Rien
+  |- style="background: #E5FFE5"
+  |[[fr/Manual/Base Set/Economy/Scierie|Scierie]]
+  |[[fr/Manual/Base Set/Economy/Bois|Bois]]
+  |[[fr/Manual/Base Set/Economy/Marchandises|Marchandises]]
+  |-
+  |[[fr/Manual/Base Set/Economy/Aciérie|Aciérie]]
+  |[[fr/Manual/Base Set/Economy/Minerai de fer|Minerai de fer]]
+  |[[fr/Manual/Base Set/Economy/Acier|Acier]]
+  |}
+</td><td valign="top" style="padding:0px; border:none; background-color:transparent;">
+  {| {{en/Wikitable}} style="margin:2px 4px 2px 0; border:solid 1px #AAAAAA" rules="cols"
+  |- 
+  | style="background: #ccccff" colspan="3" align="center"| '''Subarctique'''
+  |- style="background: #ffdead"
+  | '''Industrie'''
+  | '''Accepte'''
+  | '''Produit'''
+  |- style="background: #dfefef"
+  |[[fr/Manual/Base Set/Economy/Banque|Banque]]
+  |[[fr/Manual/Base Set/Economy/Or|Or]]
+  |Rien
+  |-
+  |[[fr/Manual/Base Set/Economy/Mine de charbon|Mine de charbon]]
+  |Rien
+  |[[fr/Manual/Base Set/Economy/Charbon|Charbon]]
+  |- style="background: #dfefef"
+  |[[fr/Manual/Base Set/Economy/Usine agroalimentaire|Usine agroalimentaire]]
+  |[[fr/Manual/Base Set/Economy/Bétail|Bétail]],<br/>[[fr/Manual/Base Set/Economy/Blé|Blé]]
+  |[[fr/Manual/Base Set/Economy/Nourriture|Nourriture]]
+  |-
+  |[[fr/Manual/Base Set/Economy/Ferme|Ferme]]
+  |Rien
+  |[[fr/Manual/Base Set/Economy/Blé|Blé]],<br/>[[fr/Manual/Base Set/Economy/Bétail|Bétail]]
+  |- style="background: #dfefef"
+  |[[fr/Manual/Base Set/Economy/Forêt|Forêt]]
+  |Rien
+  |[[fr/Manual/Base Set/Economy/Bois|Bois]]
+  |-
+  |[[fr/Manual/Base Set/Economy/Papeterie|Papeterie]]
+  |[[fr/Manual/Base Set/Economy/Bois|Bois]]
+  |[[fr/Manual/Base Set/Economy/Papier|Papier]]
+  |- style="background: #dfefef"
+  |[[fr/Manual/Base Set/Economy/Raffinerie|Raffinerie]]
+  |[[fr/Manual/Base Set/Economy/Pétrole|Pétrole]]
+  |[[fr/Manual/Base Set/Economy/Marchandises|Marchandises]]
+  |-
+  |[[fr/Manual/Base Set/Economy/Imprimerie|Imprimerie]]
+  |[[fr/Manual/Base Set/Economy/Papier|Papier]]
+  |[[fr/Manual/Base Set/Economy/Marchandises|Marchandises]]
+  |- style="background: #dfefef"
+  |[[fr/Manual/Base Set/Economy/Puits de pétrole|Puits de pétrole]]
+  |Rien
+  |[[fr/Manual/Base Set/Economy/Pétrole|Pétrole]]
+  |-
+  |[[fr/Manual/Base Set/Economy/Centrale électrique|Centrale électrique]]
+  |[[fr/Manual/Base Set/Economy/Charbon|Charbon]]
+  |Rien
+  |- style="background: #dfefef"
+  |[[fr/Manual/Base Set/Economy/Mine d'or|Mine d'or]]
+  |Rien
+  |[[fr/Manual/Base Set/Economy/Or|Or]]
+  |}
+ </td><td valign="top" style="padding:0px; border:none; background-color:transparent;">
+  {| {{en/Wikitable}} style="margin:2px 4px 2px 0; border:solid 1px #AAAAAA" rules="cols"
+  |- 
+  | style="background: #ffffcc" colspan="3" align="center"| '''Subtropical'''
+  |- style="background: #ffdead"
+  | '''Industrie'''
+  | '''Accepte'''
+  | '''Produit'''
+  |- style="background: #FFFDE0"
+  |[[fr/Manual/Base Set/Economy/Banque|Banque]]
+  |[[fr/Manual/Base Set/Economy/Diamant|Diamants]]
+  |Rien
+  |-
+  |[[fr/Manual/Base Set/Economy/Mine de diamant|Mine de diamants]]
+  |Rien
+  |[[fr/Manual/Base Set/Economy/Diamant|Diamants]]
+  |- style="background: #FFFDE0"
+  |[[fr/Manual/Base Set/Economy/Usine|Usine]]
+  |[[fr/Manual/Base Set/Economy/Caoutchouc|Caoutchouc]],<br/>[[fr/Manual/Base Set/Economy/Minerai de cuivre|Minerai de cuivre]],<br/>[[fr/Manual/Base Set/Economy/Bois|Bois]]
+  |[[fr/Manual/Base Set/Economy/Marchandises|Marchandises]]
+  |-
+  |[[fr/Manual/Base Set/Economy/Ferme|Ferme]]
+  |Rien
+  |[[fr/Manual/Base Set/Economy/Maïs|Maïs]]
+  |- style="background: #FFFDE0"
+  |[[fr/Manual/Base Set/Economy/Scierie de construction|Scierie de construction]]
+  |Rien
+  |[[fr/Manual/Base Set/Economy/Bois|Bois]]
+  |-
+  |[[fr/Manual/Base Set/Economy/Mine de cuivre|Mine de cuivre]]
+  |Rien
+  |[[fr/Manual/Base Set/Economy/Minerai de cuivre|Minerai de cuivre]]
+  |- style="background: #FFFDE0"
+  |[[fr/Manual/Base Set/Economy/Raffinerie|Raffinerie]]
+  |[[fr/Manual/Base Set/Economy/Pétrole|Pétrole]]
+  |[[fr/Manual/Base Set/Economy/Marchandises|Marchandises]]
+  |-
+  |[[fr/Manual/Base Set/Economy/Plateforme pétrolière|Plateforme pétrolière]]
+  |[[fr/Manual/Base Set/Economy/Passagers|Passagers]]
+  |[[fr/Manual/Base Set/Economy/Pétrole|Pétrole]],<br/>[[fr/Manual/Base Set/Economy/Passagers|Passagers]]
+  |- style="background: #FFFDE0"
+  |[[fr/Manual/Base Set/Economy/Usine agroalimentaire|Usine agroalimentaire]]
+  |[[fr/Manual/Base Set/Economy/Fruits|Fruits]],<br/>[[fr/Manual/Base Set/Economy/Maïs|Maïs]]
+  |[[fr/Manual/Base Set/Economy/Nourriture|Nourriture]]
+  |-
+  |[[fr/Manual/Base Set/Economy/Plantation fruitière|Plantation fruitière]]
+  |Rien
+  |[[fr/Manual/Base Set/Economy/Fruits|Fruits]]
+  |- style="background: #FFFDE0"
+  |[[fr/Manual/Base Set/Economy/Plantation d'hévéa|Plantation d'hévéas]]
+  |Rien
+  |[[fr/Manual/Base Set/Economy/Caoutchouc|Caoutchouc]]
+  |-
+  |[[fr/Manual/Base Set/Economy/Réserve d'eau|Réserve d'eau]]
+  |Rien
+  |[[fr/Manual/Base Set/Economy/Eau|Eau]]
+  |- style="background: #FFFDE0"
+  |[[fr/Manual/Base Set/Economy/Château d'eau|Château d'eau]]
+  |[[fr/Manual/Base Set/Economy/Eau|Eau]]
+  |Rien
+  |}
+ </td><td valign="top" style="padding:0px; border:none; background-color:transparent;">
+  {| {{en/Wikitable}} style="margin:2px 4px 2px 0; border:solid 1px #AAAAAA" rules="cols"
+  |- 
+  | style="background: #ff9999" colspan="3" align="center"| '''Pays des jouets'''
+  |- style="background: #ffdead;"
+  | '''Industrie'''
+  | '''Accepte'''
+  | '''Produit'''
+  |- style="background: #FFF0F5"
+  |[[fr/Manual/Base Set/Economy/Forêt de barbe à papa|Forêt de barbe à papa]]
+  |Rien
+  |[[fr/Manual/Base Set/Economy/Barbe à papa|Barbe à papa]]
+  |-
+  |[[fr/Manual/Base Set/Economy/Usine de bonbons|Usine de bonbons]]
+  |[[fr/Manual/Base Set/Economy/Sucre|Sucre]],<br/>[[fr/Manual/Base Set/Economy/Caramel|Caramel]],<br/>[[fr/Manual/Base Set/Economy/Barbe à papa|Barbe à papa]]
+  |[[fr/Manual/Base Set/Economy/Bonbon|Bonbons]]
+  |- style="background: #FFF0F5"
+  |[[fr/Manual/Base Set/Economy/Ferme de batterie|Ferme de batteries]]
+  |Rien
+  |[[fr/Manual/Base Set/Economy/Batterie|Batteries]]
+  |-
+  |[[fr/Manual/Base Set/Economy/Source de coca-cola|Source de coca-cola]]
+  |Rien
+  |[[fr/Manual/Base Set/Economy/Coca-Cola|Coca-Cola]]
+  |- style="background: #FFF0F5"
+  |[[fr/Manual/Base Set/Economy/Magasin de jouet|Magasin de jouets]]
+  |[[fr/Manual/Base Set/Economy/Jouet|Jouets]]
+  |Rien
+  |-
+  |[[fr/Manual/Base Set/Economy/Usine de jouet|Usine de jouets]]
+  |[[fr/Manual/Base Set/Economy/Plastique|Plastique]],<br/>[[fr/Manual/Base Set/Economy/Batterie|Batteries]]
+  |[[fr/Manual/Base Set/Economy/Jouet|Jouets]]
+  |- style="background: #FFF0F5"
+  |[[fr/Manual/Base Set/Economy/Fontaine de plastique|Fontaine de plastique]]
+  |Rien
+  |[[fr/Manual/Base Set/Economy/Plastique|Plastique]]
+  |-
+  |[[fr/Manual/Base Set/Economy/Usine de boisson gazeuse|Usine de boissons gazeuses]]
+  |[[fr/Manual/Base Set/Economy/Coca-Cola|Coca-Cola]],<br/>[[fr/Manual/Base Set/Economy/Bulles|Bulles]]
+  |[[fr/Manual/Base Set/Economy/Boisson gazeuse|Boissons gazeuses]]
+  |- style="background: #FFF0F5"
+  |[[fr/Manual/Base Set/Economy/Générateur de bulles|Générateur de bulles]]
+  |Rien
+  |[[fr/Manual/Base Set/Economy/Bulles|Bulles]]
+  |-
+  |[[fr/Manual/Base Set/Economy/Carrière de caramel|Carrière de caramel]]
+  |Rien
+  |[[fr/Manual/Base Set/Economy/Caramel|Caramel]]
+  |- style="background: #FFF0F5"
+  |[[fr/Manual/Base Set/Economy/Mine de sucre|Mine de sucre]]
+  |Rien
+  |[[fr/Manual/Base Set/Economy/Sucre|Sucre]]
+  |}
+</td></tr></table>
+
+==Financer de nouvelles industries==
+Il est possible, pour une compagnie de transport suffisamment riche, de financer la construction d'une nouvelle industrie, qui s'installera là où et quand vous l'indiquez. Cependant, vous n'aurez pas de retour immédiat sur votre investissement (comme un partage du bénéfice), sauf la cargaison supplémentaire à transporter. Vous ne posséderez pas l'usine, ce qui veut dire que vous n'êtes normalement pas autorisés à la détruire; assurez-vous donc de la placer au bon endroit!
+
+Normalement, vous ne pouvez financer que les [[:Category:fr/Industries|industries]] suivantes:
+
+{| {{en/Wikitable}}
+!colspan=4 style="background:#ccffcc"|Tempéré
+|-
+| rowspan=7 valign="top"| [[File:en/Fund Industry template.png]]
+| style="background:#efefef" | '''Nom'''
+| style="background:#efefef" | <span style="white-space:nowrap">'''Coût''' (sans inflation)</span>
+| style="background:#efefef" | '''Notes'''
+|-
+| [[fr/Manual/Base Set/Economy/Centrale électrique|Centrale électrique]]
+| 703 125£<span style="white-space:nowrap"> </span>(1 406 250$)
+| Accepte du [[fr/Manual/Base Set/Economy/Charbon|charbon]] depuis les [[fr/Manual/Base Set/Economy/Mine de charbon|mines de charbon]].
+|-
+| [[fr/Manual/Base Set/Economy/Scierie|Scierie]]
+| 656 250£<span style="white-space:nowrap"> </span>(1 212 500$)
+| Accepte du [[fr/Manual/Base Set/Economy/Bois|Bois]] depuis les [[fr/Manual/Base Set/Economy/Forêt|forêts]]. Produit des [[fr/Manual/Base Set/Economy/Marchandises|marchandises]].
+|-
+| [[fr/Manual/Base Set/Economy/Raffinerie|Raffinerie]]
+| 714 843£<span style="white-space:nowrap"> </span>(1 429 686$)
+| Elle ne peut être construite que sur la côte ou très près. Accepte du [[fr/Manual/Base Set/Economy/Pétrole|Pétrole]] depuis les [[fr/Manual/Base Set/Economy/Plateforme pétrolière|plateformes pétrolières]] ou les [[fr/Manual/Base Set/Economy/Puits de pétrole|puits de pétrole]].
+|-
+| [[fr/Manual/Base Set/Economy/Usine|Usine]]
+| 609 375£<span style="white-space:nowrap"> </span>(1 218 750$)
+| Accepte des [[fr/Manual/Base Set/Economy/Céréales|céréales]] et du [[fr/Manual/Base Set/Economy/Bétail|bétail]] depuis les [[fr/Manual/Base Set/Economy/Ferme|fermes]], et de l'[[fr/Manual/Base Set/Economy/Acier|acier]] depuis les [[fr/Manual/Base Set/Economy/Aciérie|aciéries]]. Produit des [[fr/Manual/Base Set/Economy/Marchandises|marchandises]].
+|-
+| [[fr/Manual/Base Set/Economy/Aciérie|Aciérie]]
+| 629 882£<span style="white-space:nowrap"> </span>(1 259 764$)
+| Accepte du [[fr/Manual/Base Set/Economy/Minerai de fer|minerai de fer]] depuis les [[fr/Manual/Base Set/Economy/Mine de fer|mines de fer]], qu'elle transforme en [[fr/Manual/Base Set/Economy/Acier|acier]].
+|-
+| [[fr/Manual/Base Set/Economy/Banque|Banque]]
+| 747 070£<span style="white-space:nowrap"> </span>(1 494 140$)
+| Accepte et produit des [[fr/Manual/Base Set/Economy/Biens de valeur|biens de valeur]].
+|-
+!colspan=4 style="background:#ccccff"|Subarctique
+|-
+| rowspan=7 valign="top"| [[File:en/Fund Industry subarctic.png]]
+| style="background:#efefef" | '''Nom'''
+| style="background:#efefef" | <span style="white-space:nowrap">'''Coût''' (sans inflation)</span>
+| style="background:#efefef" | '''Notes'''
+|-
+| [[fr/Manual/Base Set/Economy/Centrale électrique|Centrale électrique]]
+| 703 125£<span style="white-space:nowrap"> </span>(1 406 250$)
+| Accepte du [[fr/Manual/Base Set/Economy/Charbon|charbon]] depuis les [[fr/Manual/Base Set/Economy/Mine de charbon|mines de charbon]].
+|-
+| [[fr/Manual/Base Set/Economy/Raffinerie|Raffinerie]]
+| 714 843£<span style="white-space:nowrap"> </span>(1 429 686$)
+| Elle ne peut être construite que sur la côte ou très près. Accepte du [[fr/Manual/Base Set/Economy/Pétrole|Pétrole]] depuis les [[fr/Manual/Base Set/Economy/Puits de pétrole|puits de pétrole]].
+|-
+| [[fr/Manual/Base Set/Economy/Imprimerie|Imprimerie]]
+| 609 375£<span style="white-space:nowrap"> </span>(1 218 750$)
+| Accepte du [[fr/Manual/Base Set/Economy/Papier|papier]] depuis les [[fr/Manual/Base Set/Economy/Papeterie|papeteries]] et produit des [[fr/Manual/Base Set/Economy/Marchandises|marchandises]].
+|-
+| [[fr/Manual/Base Set/Economy/Usine agroalimentaire|Usine agroalimentaire]]
+| 603 515£<span style="white-space:nowrap"> </span>(1 307 030$)
+| Accepte du [[fr/Manual/Base Set/Economy/Bétail|bétail]] et du [[fr/Manual/Base Set/Economy/Blé|blé]] et produit de la [[fr/Manual/Base Set/Economy/Nourriture|nourriture]].
+|-
+| [[fr/Manual/Base Set/Economy/Papeterie|Papeterie]]
+| 665 039£<span style="white-space:nowrap"> </span>(1 330 078$)
+| Accepte du [[fr/Manual/Base Set/Economy/Bois|bois]] et produit du [[fr/Manual/Base Set/Economy/Papier|papier]].
+|-
+| [[fr/Manual/Base Set/Economy/Banque|Banque]]
+| 442 382£<span style="white-space:nowrap"> </span>(884 764$)
+| Accepte de l'[[fr/Manual/Base Set/Economy/Or|or]].
+|-
+!colspan=4 style="background:#ffffcc"|Subtropical
+|-
+| rowspan=7 valign="top"| [[File:en/Fund Industry subtropical.png]]
+| style="background:#efefef" | '''Nom'''
+| style="background:#efefef" | <span style="white-space:nowrap">'''Coût''' (sans inflation)</span>
+| style="background:#efefef" | '''Notes'''
+|-
+| [[fr/Manual/Base Set/Economy/Raffinerie|Raffinerie]]
+| 714 843£<span style="white-space:nowrap"> </span>(1 429 686$)
+| Accepte du [[fr/Manual/Base Set/Economy/Pétrole|Pétrole]] depuis les [[fr/Manual/Base Set/Economy/Plateforme pétrolière|plateformes pétrolières]] et produit des [[fr/Manual/Base Set/Economy/Marchandises|marchandises]].
+|-
+| [[fr/Manual/Base Set/Economy/Usine agroalimentaire|Usine agroalimentaire]]
+| 603 515£<span style="white-space:nowrap"> </span>(1 307 030$)
+| Accepte des [[fr/Manual/Base Set/Economy/Fruits|fruits]] depuis les [[fr/Manual/Base Set/Economy/Plantation fruitière|plantations fruitières]] et du [[fr/Manual/Base Set/Economy/Maïs|maïs]] depuis les [[fr/Manual/Base Set/Economy/Ferme|fermes]], et produit de la [[fr/Manual/Base Set/Economy/Nourriture|nourriture]].
+|-
+| [[fr/Manual/Base Set/Economy/Banque|Banque]]
+| 442 382£<span style="white-space:nowrap"> </span>(884 764$)
+| Accepte des [[fr/Manual/Base Set/Economy/Diamant|diamants]] depuis les [[fr/Manual/Base Set/Economy/Mine de diamant|mines de diamants]].
+|-
+| [[fr/Manual/Base Set/Economy/Château d'eau|Château d'eau]]
+| 336 914£<span style="white-space:nowrap"> </span>(673 828$)
+| Accepe de l'[[fr/Manual/Base Set/Economy/Eau|eau]] depuis les [[fr/Manual/Base Set/Economy/Réserve d'eau|réserves d'eau]].
+|-
+| [[fr/Manual/Base Set/Economy/Usine|Usine]]
+| 609 375£<span style="white-space:nowrap"> </span>(1 218 750$)
+| Accepte du [[fr/Manual/Base Set/Economy/Caoutchouc|caoutchouc]] depuis les [[fr/Manual/Base Set/Economy/Plantation d'hévéa|plantations d'hévéas]], du [[fr/Manual/Base Set/Economy/Minerai de cuivre|minerai de cuivre]] depuis les [[fr/Manual/Base Set/Economy/Mine de cuivre|mines de cuivre]], et du [[fr/Manual/Base Set/Economy/Bois|bois]] depuis les [[fr/Manual/Base Set/Economy/Scierie de construction|scieries de construction]]. Produit des [[fr/Manual/Base Set/Economy/Marchandises|marchandises]].
+|-
+| [[fr/Manual/Base Set/Economy/Scierie de construction|Scierie de construction]]
+| 395 507£<span style="white-space:nowrap"> </span>(791 014$)
+| Produit du [[fr/Manual/Base Set/Economy/Bois|bois]].
+|-
+!colspan=4 style="background:#ff9999"|Pays des jouets
+|-
+| rowspan=5 valign="top"| [[File:en/Fund Industry toyland.png]]
+| style="background:#efefef" | '''Nom'''
+| style="background:#efefef" | <span style="white-space:nowrap">'''Coût''' (sans inflation)</span>
+| style="background:#efefef" | '''Notes'''
+|-
+| [[fr/Manual/Base Set/Economy/Usine de bonbons|Usine de bonbons]]
+| 603 515£<span style="white-space:nowrap"> </span>(1 207 030$)
+| Accepte du [[fr/Manual/Base Set/Economy/Sucre|sucre]], du [[fr/Manual/Base Set/Economy/Caramel|caramel]] et de la [[fr/Manual/Base Set/Economy/Barbe à papa|barbe à papa]]. Produit des [[fr/Manual/Base Set/Economy/Bonbon|bonbons]].
+|-
+| [[fr/Manual/Base Set/Economy/Magasin de jouet|Magasin de jouets]]
+| 389 648£<span style="white-space:nowrap"> </span>(779 296$)
+| Accepte des [[fr/Manual/Base Set/Economy/Jouet|jouets]] depuis les [[fr/Manual/Base Set/Economy/Usine de jouet|usines de jouets]].
+|-
+| [[fr/Manual/Base Set/Economy/Usine de jouet|Usine de jouets]]
+| 477 539£<span style="white-space:nowrap"> </span>(955 078$)
+| Accepte du [[fr/Manual/Base Set/Economy/Plastique|plastique]] depuis les [[fr/Manual/Base Set/Economy/Fontaine de plastique|fontaines de plastique]] et des [[fr/Manual/Base Set/Economy/Batterie|piles]] depuis les [[fr/Manual/Base Set/Economy/Ferme de batterie|fermes de batteries]]. Produit des [[fr/Manual/Base Set/Economy/Jouet|jouets]].
+|-
+| [[fr/Manual/Base Set/Economy/Usine de boisson gazeuse|Usine de boissons gazeuses]]
+| 518 554£<span style="white-space:nowrap"> </span>(1 037 108$)
+| Accepte du [[fr/Manual/Base Set/Economy/Coca-Cola|coca-cola]] depuis les [[fr/Manual/Base Set/Economy/Source de coca-cola|sources de coca-cola]] et des [[fr/Manual/Base Set/Economy/Bulles|bulles]] depuis les [[fr/Manual/Base Set/Economy/Générateur de bulles|générateurs de bulles]]. Produit des [[fr/Manual/Base Set/Economy/Boisson gazeuse|boissons gazeuses]].
+|}
+
+Pour financer une nouvelle industrie dans le jeu, laissez appuyé sur le bouton ''Industries'' de la barre d'outils [[File:en/Manual html m4d6ba21e.png]] (voyez ''Information sur la compagnie et les industries'' dans la page [[fr/Interface du jeu|Interface du jeu]]) et choisissez ''Financer une nouvelle industrie''.
+
+Plusieurs corrections modifient les règles pour construire de nouvelles industries:
+* [[fr/Construire des industries de matériau brut|Construire des industries de matériau brut]]
+* [[fr/Archive/Manual/Settings/Industries multiples par ville|Industries multiples par ville]]
+* [[fr/Archive/Manual/Settings/Industries semblables proches|Industries semblables proches]]
+
+==Prospecter de nouvelles industries==
+Depuis la version 0.6.1, vous pouvez ''prospecter'' de nouvelles industries. Financer de nouvelles industries et en prospecter présente deux différences majeures. Tout d'abord, la prospection n'est utilisée que pour les industries primaires (c.à.d. les matériaux bruts), et ensuite, vous ne pouvez pas choisir l'emplacement d'une industrie prospectée - elle sera positionnée là où vos prospecteurs auront découvert en premier lieu les bonnes ressources naturelles.
+
+Vous pouvez activer cette fonctionnalité dans le jeu depuis la fenêtre de configuration corrigée, onglet ''Économie'', ''Méthode de construction manuelle d'une industrie primaire'', qui peut prendre trois valeurs: ''aucune'', ''comme les autres industries'' et ''prospection'' (par défaut).
+
+[[File:en/Coalmine.png|center|frame|La mine de charbon n'est qu'une des nombreuses industries de OpenTTD.]]
+
+[[Category:fr/Industries]]

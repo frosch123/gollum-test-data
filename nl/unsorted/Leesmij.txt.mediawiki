@@ -1,0 +1,688 @@
+[[Translation:en/unsorted/Readme.txt]]
+
+
+De meest recent versie van de readme (in het Engels) is beschikbaar op
+https://github.com/OpenTTD/OpenTTD/blob/master/README.md
+
+<pre>
+OpenTTD LEESMIJ
+Laatst bijgewerkt: 2011-08-14
+Versie:            1.1.2
+------------------------------------------------------------------------
+
+
+Inhoudsopgave
+-------------
+1.0) Over
+2.0) Contacteren
+ * 2.1) Fouten rapporteren
+ * 2.2) Desyncs rapporteren
+3.0) Ondersteunde Besturingssystemen
+4.0) Installeren en draaien van OpenTTD
+ * 4.1) (Benodigde) 3de partij bestanden
+    * 4.1.1) Vrije graphics en geluidsbestanden
+    * 4.1.2) Originele Transport Tycoon Deluxe graphics en geluidsbestanden
+    * 4.1.3) Originele Transport Tycoon Deluxe muziek
+    * 4.1.4) AIs
+ * 4.2) OpenTTD mappen
+ * 4.3) Portable Installaties (Externe Media)
+5.0) OpenTTD features
+ * 5.1) Registreren van potentieel gevaarlijke acties
+6.0) Configuratiebestand
+7.0) Compileren
+ * 7.1) Benodigde/optionele bibliotheken
+ * 7.2) Ondersteunde compilers
+8.0) Vertaling
+ * 8.1) Vertaling
+ * 8.2) Testen
+9.0) Probleemoplossing
+X.X) Credits
+
+
+1.0) Over
+---- ----
+OpenTTD is een transport simulatiespel gebaseerd op het populaire
+Transport Tycoon Deluxe spel, geschreven door Chris Sawyer.
+OpenTTD probeert het originele spel zo dicht mogelijk na te
+bootsen terwijl het ook uitgebreid wordt met nieuwe mogelijkheden.
+
+OpenTTD wordt verspreid onder de GNU General Public Licentie versie 2.0.
+Voor meer informatie, zie het bestand 'COPYING'.
+
+2.0) Contacteren
+---- -----------
+De makkelijkste manier om contact te zoeken met het OpenTTD team is een bug te
+rapporteren of commentaar te posten in één van de fora. Je kan ook op IRC
+terecht (in het Engels) op #openttd op irc.oftc.net.
+
+De OpenTTD homepage is http://www.openttd.org/.
+
+Je kan ook op de OpenTTD fora terecht op http://forum.openttd.org/
+
+
+2.1) Fouten rapporteren
+---- ------------------
+Kijk eerst na of de fout al gekend is. Je kan dit nakijken door het overlopen
+van het bestand met de naam 'known-bugs.txt', die meegeleverd wordt met
+OpenTTD net zoals deze leesmij.
+
+Om fouten bij te kunnen houden maken we gebruik van een bugtracker met de naam
+Flyspray. Deze tracker kan bereikt worden via http://bugs.openttd.org/. Kijk
+vooraleer je fouten meld eerst na of de fout al gekend is.
+Het bestand 'known-bugs.txt' kan achterlopen met feiten, omdat je alleen de
+gekende fouten leest voor de distributie van deze versie. Kijk ook de
+recent gesloten 'bugs' eens na.
+
+Als je er zeker van bent dat de bug nog niet gerapporteerd is, dan:
+ * Zorg je ervoor dat je de meest recente versie draait (zoals de huidige
+   stabiele versie of de laatste nachtelijke bouw) en daar de bug in kunt
+   aantonen;
+ * Weet je zeker dat je geen niet-officiële versie draait, zoals een patch 
+   pack. Als je wel een patch pack draait, dan mag je bug-rapport naar het 
+   forumdraadje voor dat patch pack;
+ * Maak 'm reproduceerbaar voor de ontwikkelaars. M.a.w. creëer een savegame
+   waarin je het probleem reproduceert zodra het geladen wordt. De geproduceerde
+   crash.dmp, crash.sav, crash.log en de screenshot zijn zeer nuttig.
+ * Controleer of de bug al in Flyspray gemeld is, inclusief de bugs die kort
+   geleden gesloten zijn. Het kan zijn dat de bug al opgelost is.
+
+Na dat je deze stappen hebt voltooid hebt mag je de bug rapporteren. Vergeet
+tijdens het rapporteren ook niet de volgende informatie toe te voegen:
+ * OpenTTD versie (Test AUB de laatste SVN/nightly build)
+ * Details over de fout, inclusief de stappen die nodig zijn om de bug te
+   reproduceren.
+ * Platform (Win32, Linux, FreeBSD, ...) en compiler als je OpenTTD zelf
+   gecompileerd hebt.
+ * Voeg een bewaarde versie toe van het spel *en* een screenshot indien mogelijk
+ * Als de fout alleen in recente versies optreed, vermeld dan de laatste versie
+   zonder de fout en de eerste met de de fout. Hierdoor kunnen we fouten sneller
+   oplossen aan de hand van de gemaakte veranderingen in de broncode.
+ * Voeg de bestanden crash.dmp, crash.log en crash.sav toe. Deze bestanden
+   bevinden zich op dezelfde locatie als waar je openttd.cfg zit.
+   De crashhandler zal deze locatie ook zelf vermelden.
+
+2.2) Desyncs rapporteren
+---- -------------------
+Desyncs zijn lastig te reproduceren, gelukkig heeft OpenTTD de mogelijkheid om
+alle acties bij te houden, zodat we het hele spel achteraf kunnen herspelen,
+in poging desync beter te kunnen achterhalen. Je moet wel eerst die
+mogelijkheid activeren. Er worden automatische savegames gemaakt in de map
+'save/autosave', die op zijn beurt in de OpenTTD map zit. Er wordt daarnaast
+ook een logbestand aangemaakt onder de naam 'commands-out.log' waar alle
+uitgevoerde commando's in worden weggeschreven.
+
+Om het debuggen aan te schakelen moet je eerst het debugniveau voor 'desync'
+verhogen tot tenminste 1. Dit doe je door Openttd op te starten met de vlag
+'-d desync<niveau>' als parameter, of door 'debug_level desync=<niveau>' te
+typen in OpenTTD's ingebouwde console.
+De desync debugniveaus zijn:
+ 0: niets.
+ 1: dumpen van commando's in 'commands-out.log'.
+ 2: zelfde als 1 plus cachecontrole van voertuigen en het dumpen van hun inhoud.
+ 3: zelfde als 2 plus maandelijkse saves in autosave.
+ 4 en hoger: zelfde als 3
+
+Tijdens het herstarten zal OpenTTD het bestand 'commands-out.log' overschrijven.
+OpenTTD zal de savegames (dump_cmds_*.sav) die gemaakt zijn door het desync
+debug systeem niet verwijderen, dus je zal ze regelmatig zelf
+handmatig moeten verwijderen!
+
+De benaming van de desync savegames gaat als volgt:
+dmp_cmds_XXXXXXXX_YYYYYYYY.sav, waar de XXXXXXXX een hexadecimale presentatie
+is van de gegenereerde zaad van het spel en YYYYYYYY de hexadecimale
+presentatie van de datum van het spel. Hierdoor worden savegames gesorteerd op
+spel en datum wat het vinden van de juiste savegame vergemakkelijkt.
+
+Wanneer een desync gebeurt is met de desync debugger aan, dien je een bug te
+rapporteren met volgende bestanden:
+ - commands-out.log dat de informatie bevat van alle uitgevoerde commando's
+ - De laatst bewaarde savegame (zoek naar de eerste lijn die begint met
+   'save: dmp_cmds_' in commands-out.log). We gebruiken deze savegame om na te
+   gaan of we makkelijk de desync kunnen reproduceren. Anders hebben we
+   volgende bestanden nodig...
+ - De eerste savegame (zoek naar de eerste lijn dat begint met 'save' waar de
+   eerste deel tot aan de underscore '_' hetzelfde is). We hebben deze savegame
+   nodig om de bug te kunnen reproduceren wanneer de laatste savegame niet oud
+   genoeg is. Als je een scenario of een savegame gebruikte, voeg deze ook toe.
+ - Optioneel kan je de savegames meeleveren van rond 50%, 75%, 85%, 90% en 95%
+   van de spelvorderingen. We gebruiken deze savegames om het reproduceren van
+   de desync te versnellen, maar we zouden de fout kunnen reproduceren op basis
+   van de savegame en command-out.log.
+ - In geval dat je NewGRFs gebruikte, dien je deze ook mee te geven, tenzij we
+   deze bestanden makkelijk kunnen terugvinden via bananas of wanneer ze
+   deel uitmaken van het OpenTTDCoop pack.
+
+Verwijder NIET de dmp_cmds savegames waar je desyncs heb gerapporteerd hebt,
+totdat de desync gefixt is; als je ons per ongeluk de verkeerde savegames hebt
+verzonden, kunnen we de desync niet reproduceren en zijn we niet in staat de
+fout op te lossen.
+
+3.0) Ondersteunde besturingssystemen
+---- -------------------------------
+
+OpenTTD is geport naar verschillende platformen en besturingssystemen. Het zou
+niet zo moeilijk moeten zijn het te porten naar een nieuw systeem. De huidige
+werkende platformen zijn:
+
+  BeOS                 - SDL of Allegro
+  DOS                  - Allegro
+  FreeBSD              - SDL
+  Linux                - SDL of Allegro
+  MacOS X (universal)  - Cocoa video en geluidsdrivers
+  MorphOS              - SDL
+  OpenBSD              - SDL
+  OS/2                 - SDL
+  Windows              - Win32 GDI (sneller) of SDL of Allegro
+
+
+4.0) OpenTTD installeren en uitvoeren
+---- --------------------------------
+
+De installatie van OpenTTD is redelijk simpel. Je kan kiezen tussen het
+downloaden van een archief dat je  uitpakt in een map naar keuze, of het
+downloaden van een installer die OpenTTD automatisch zal installeren in de
+map naar keuze.
+
+OpenTTD zoekt op meerdere locaties voor het vinden van de vereiste
+databestanden (zoals beschreven in sectie 4.2). Het installeren van gelijk
+welke bestanden van derde partij in een gedeelde locatie heeft het voordeel
+dat je deze stap slechts één keer moet uitvoeren, tegenover het kopiëren van
+bestanden naar iedere OpenTTD installatie op je computer.
+Savegames, screenshots, enz. worden bewaard op de locatie relatief aan je
+configuratiebestand (openttd.cfg) dat je momenteel gebruikt. Dit betekend dat
+als je een configuratiebestand hebt in een gedeelde map, de savegames in
+diezelfde map save/ zal terechtkomen, naast het openttd.cfg bestand.
+Als je savegames en screenshots wil bewaren waar je OpenTTD
+uitvoeringsbestanden zijn geïnstalleerd, kopieer je gewoon het
+configuratiebestand naar die locatie. Echter, als je je configuratiebestand
+dan achteraf verwijderd, zal OpenTTD nog steeds diezelfde map gebruiken van
+waar je je configuratiebestand had verwijderd (zie de notities in sectie 4.2).
+
+OpenTTD wordt geleverd zonder AIs, dus als je met AIs wilt spelen zal je deze
+moeten downloaden. De gemakkelijkste manier is via de "Online inhoud zoeken"
+knop in het hoofdmenu.
+Je kan een paar AIs selecteren waarvan je denkt dat die bij jouw manier van
+spelen passen. Een andere manier is om ze manueel te downloaden van het forum
+maar dan moet je je er van vergewissen dat je ook de benodigde AI bibliotheken
+installeert; deze worden automatisch geïnstalleerd als je de AIs download via
+de "Online inhoud zoeken". Als je geen AIs hebt maar OpenTTD geconfigureerd
+hebt om te starten met AIs dan zal er een boodschap getoond worden dat de
+"Dummy" AI is gestart.
+
+4.1) (Benodigde) 3de partij bestanden
+---- --------------------------------
+
+Alvorens OpenTTD te draaien, moet je de databestanden van het spel in de map
+data/ plaatsen die zich in verschillende mappen kunnen bevinden. Welke mappen
+dat zijn, zie je in sectie 4.2.
+
+Voor OpenTTD heb je enkele 3de partij bestanden nodig. Hiervoor heb je de
+keuze uit de Originele Transport Tycoon Deluxe bestanden of hun vrij
+beschikbare tegenhangers.
+
+Kopieer GEEN bestanden die geleverd worden met OpenTTD in "gedeelde" mappen
+(meer uitleg in de volgende secties) omdat je vroeg of laat grafische
+problemen krijgt hierdoor wanneer je andere versies gebruikt van het spel.
+
+4.1.1) Vrije graphics en geluidsbestanden
+------ ------------------------------------
+De vrije data bestanden, onderverdeeld in OpenGFX voor graphics, OpenSFX voor
+geluiden en OpenMSX voor muziek kan je vinden op:
+ - http://www.openttd.org/download-opengfx voor OpenGFX
+ - http://www.openttd.org/download-opensfx voor OpenSFX
+ - http://www.openttd.org/download-openmsx voor OpenMSX
+AUB volg de leesmij.txt (readme) van deze bestanden voor de installatie procedure.
+De Windows installer kan deze optioneel downloaden en installeren.
+
+4.1.2) Originele Transport Tycoon Deluxe graphics en geluidsbestanden
+------ ----------------------------------------------------------------
+Als je met de originele Transport Tycoon Deluxe data bestanden wil spelen moet
+je de databestanden van de CD-ROM kopiëren naar de map data/. Het maakt geen
+verschil of je de DOS of Windows versie van Transport Tycoon Deluxe gebruikt.
+De Windows installer kan deze bestanden optioneel kopiëren.
+OpenTTD heeft de volgende bestanden nodig:
+
+ - sample.cat
+ - trg1r.grf of TRG1.GRF
+ - trgcr.grf of TRGC.GRF
+ - trghr.grf of TRGH.GRF
+ - trgir.grf of TRGI.GRF
+ - trgtr.grf of TRGT.GRF
+
+4.1.3) Originele Transport Tycoon Deluxe muziek
+------ ----------------------------------------
+Als je de originele Transport Tycoon Deluxe muziek wilt, kopieer de gm/ map
+van de Windows versie van Transport Tycoon Deluxe naar je OpenTTD map (niet je
+data map - ook uitgelegd in de volgende secties). De muziek van de DOS versie
+en de originele Transport Tycoon werken niet.
+
+4.1.4) AIs
+------ ---
+
+Als je AIs wil gebruiken, gebruik dan de in-game inhoud downloader. Indien je
+deze niet kan gebruiken of je wil een AI installeren die niet beschikbaar is
+gemaakt via het inhoud download systeem, download dan het "tar" archief en
+plaats dit in de map ai/. Indien de AI een bibliotheek nodig heeft zal je deze
+ook moeten downloaden, plaats deze in de map ai/library. Alle AIs die
+beschikbaar zijn gemaakt via het online inhoud systeem kan je vinden op
+http://noai.openttd.org/downloads/
+De AIs en bibliotheken kan je in de vorm van .tar.gz archieven vinden. OpenTTD
+kan in tar archieven lezen maar pakt geen .tar.gz bestanden zelf uit. Om er
+achter te komen welke bibliotheken een AI nodig heeft zal je deze moeten
+opstarten en op een foutmelding wachten. Deze foutmelding ziet er zo uit:
+"couldn't find library 'lib-name'". Download die bibliotheek (lib-name) en
+probeer nogmaals.
+
+4.2) OpenTTD mappen
+---- --------------
+
+OpenTTD gebruikt zijn eigen map voor het opslaan van benodigde 3de partij
+bestanden (zoals beschreven in sectie 4.1) alsook andere optionele extensies
+(NewGRF, AIs, hoogtekaarten, scenarios). Zie verderop voor de specifieke locaties.
+
+OpenTTD's hoofdmap kan teruggevonden worden op teruggevonden worden op
+verschillende locaties, afhankelijk van het besturingssysteem:
+
+	1. De huidige werkende map (van waar je OpenTTD hebt gestart)
+		Voor niet-Windows draaiende systemen: OpenTTD zal niet naar bestanden
+		zoeken in deze map wanneer het je persoonlijke map is i.e. "~/", of
+		wanneer het de root map is, i.e. "/".
+	2. Je persoonlijke map
+		Windows: C:\My Documents (95, 98, ME)
+		         C:\Documents and Settings\<username>\My Documents\OpenTTD (2000, XP)
+		         C:\Users\<username>\Documents\OpenTTD (Vista, 7)
+		Mac OSX: ~/Documents/OpenTTD
+		Linux:   ~/.openttd
+	3. De gedeelde map
+		Windows: C:\Documents and Settings\All Users\Shared Documents\OpenTTD (2000, XP)
+		         C:\Users\Public\Documents\OpenTTD (Vista, 7)
+		Mac OSX: /Library/Application Support/OpenTTD
+		Linux:   not available
+	4. De map waar het OpenTTD uitvoeringsbestand is
+		Windows: C:\Program Files\OpenTTD
+		Linux:   /usr/games
+	5. De installatie map (alleen Linux)
+		Linux:   /usr/share/games/openttd
+	6. De applicatie bundel (alleen Mac OSX)
+		Dit bevat de OpenTTD bestanden (grf+lng) en het werkt zolang als deze
+		niet worden veranderd.
+
+De gegevens en/of extenties komen terecht in submappen in de OpenTTD map:
+  Configuratiebestand:    (geen submap)
+  Screenshots:            (geen submap)
+  Basis Graphics:         data                    (of in een submap erin)
+  Geluidsset:             data                    (of in een submap erin)
+  NewGRFs:                data                    (of in een submap erin)
+  32bpp Sets:             data                    (of in een submap erin)
+  Music Sets:             gm                      (of in een submap erin)
+  AIs:                    ai                      (of in een submap erin)
+  AI Bibliotheken:        ai/libraries            (of in een submap erin)
+  Savegames:              save
+  Automatische Savegames: save/autosave
+  Scenarios:              scenario
+
+Opmerkingen:
+	- Linux in de bovenstaande lijst is .deb, maar de meeste mappen zouden
+	  vergelijkbaar moeten zijn voor andere installatie methodes.
+	- De bovenstaande volgorde is ook gebruikt voor NewGRFs en openttd.cfg.
+	- Indien openttd.cfg niet gevonden wordt, dan zal het aangemaakt worden in
+	  de 2, 4, 1, 3, 5 volgorde.
+	- Opgeslagen spellen zullen relatief aan het configuratie bestand worden
+	  aangemaakt enkel als er geen save/ map is in mappen met een hogere
+	  prioriteit dan waar het configuratie bestand is geplaatst, maar
+	  automatisch opgeslagen spellen en screenshots zullen altijd relatief aan
+	  het configuratie bestand worden aangemaakt.
+
+De geprefereerde setup:
+Plaats 3de partij bestanden in de gedeelde map (of in je persoonlijke map als
+je geen toestemming hebt om in de gedeelde map te schrijven) en plaats het
+configuratie bestand (openttd.cfg) in je persoonlijke map (waar OpenTTD dan
+ook je opgeslagen spellen en screenshots zal plaatsen).
+
+4.3) Portable installaties (Externe Media)
+---- -------------------------------------
+
+Je kunt OpenTTD op een extern medium zetten zodat je het altijd bij je hebt,
+zoals een USB stick, een USB harddisk, etc.
+Creëer een map waarin je het spel opslaat (b.v. OpenTTD/).
+Kopieer het uitvoerbare bestand (OpenTTD.exe, OpenTTD.app, openttd, etc), 
+data/ en je openttd.cfg naar deze map.
+Als je de uitvoerbare bestanden voor verschillende besturingssystemen in 
+deze map zet, dan kun je het spel op bijna elke computer spelen waar je het 
+externe medium op aansluit.
+Zoals altijd kunnen extra grf bestanden in de data/ map geplaatst worden (zie 
+paragraaf 4.1 voor meer details).
+
+
+5.0) OpenTTD features
+---- ----------------
+
+OpenTTD heeft een heleboel functies die verder gaan dan de originele Transport
+Tycoon Deluxe emulatie. Helaas is er momenteel geen volledige lijst van
+functies, maar er is een basislijst van functies op het web, en een aantal
+optionele functies kunnen ingesteld worden in het dialoogvenster Geavanceerde
+instellingen. Er zijn ook wat kenmerken van TTDPatch geïmplementeerd
+(http://www.ttdpatch.net/).
+
+Een aantal belangrijke niet-standaard besturingselementen:
+
+* Ctrl wijzigt veel opdrachten en maakt ze krachtiger. Als je bijvoorbeeld
+  Ctrl-klik op signalen gebruikt tijdens de de bouw verandert hun gedrag,
+  blijf Ctrl ingedrukt houden als je spoor aan het bouwen bent en het stuk
+  spoor wordt verwijderd, etc. Zie http://wiki.openttd.org/Hidden_features
+  voor een (niet volledige) lijst of kijk op de tooltips.
+* Console in het spel. Zie voor meer informatie
+  http://wiki.openttd.org/index.php/Console
+* Zweven boven een GUI-element toont tooltips. Dit kan worden veranderd door 
+  rechts-klikken via de geavanceerde instellingen.
+
+
+5.1) Registreren van potentieel gevaarlijke acties
+---- ---------------------------------------------
+
+OpenTTD is een ingewikkeld programma, en samen met NewGRF, kan er buggy gedrag
+ontstaan. Maar niet alleen bugs in de code kunnen problemen veroorzaken. Er
+zijn verschillende manieren om de toestand van het spel te beïnvloeden,
+mogelijk resulterend in een programma crash of een multiplayer desync.
+
+De gemakkelijker manier zou zijn om al deze onveilige handelingen te
+verbieden, maar dat zou van invloed zijn op de bruikbaarheid van het spel voor
+veel spelers. Dat willen we zeker niet. Wij ontvangen echter vaak
+bug-rapporten als gevolg van dit gebruik. Om minder tijd kwijt te zijn met
+oplossen van deze problemen, worden deze potentieel onveilige handelingen
+geregistreerd in het opgeslagen spel (inclusief crash.sav).
+Het log wordt ook opgeslagen in crash logs.
+
+Informatie die geregistreerd wordt:
+
+* Toevoegen / verwijderen / veranderen van volgorde van NewGRFs
+* Veranderen van NewGRF parameters, laden van compatibele NewGRFs
+* Veranderen van spel-modus (scenario-editor <-> normaal spel)
+* Laden van een spel opgeslagen in een andere OpenTTD / TTDPatch / Transport
+  Tycoon Deluxe / originele Transport Tycoon versie
+* Het uitvoeren van een gemodificeerde OpenTTD bouw
+* Veranderen van instellingen die van invloed zijn op NewGRF gedrag 
+(instellingen die niet veilig zijn in een netwerk)
+* Veranderen van het landschap (door een cheat)
+* NewGRF bugs treffen
+
+Er worden geen persoonlijke informatie opgeslagen.
+
+Je kunt de game log zien door het intikken van 'gamelog' in de console of door
+het uitvoeren van OpenTTD in debug mode.
+
+6.0) Configuratiebestand
+---- -------------------
+Het configuratiebestand voor OpenTTD (openttd.cfg) is in het eenvoudige 
+Windows-achtige .INI-formaat. Het is voornamelijk ongedocumenteerd. Bijna 
+alle instellingen kunnen in het spel worden gewijzigd met behulp van het 
+'Geavanceerde instellingen' venster.
+Als je het configuratiebestand niet kunt vinden, dan je moet kijken in de 
+mappen zoals beschreven in paragraaf 4.2. Als er geen openttd.cfg bestaat, 
+zal OpenTTD er een maken als het afgesloten wordt.
+
+7.0) Compileren
+---- ----------
+Windows:
+  Je hebt Microsoft Visual Studio .NET nodig. Open het project-bestand
+  en het zou automatisch moeten bouwen. In het geval dat je wilt bouwen met 
+  SDL ondersteuning moet je WITH_SDL toevoegen aan de project instellingen.
+  PNG (WITH_PNG) en ZLIB (WITH_ZLIB) ondersteuning is standaard ingeschakeld. 
+  Hiervoor zijn de ontwikkelbestanden van deze bibliotheken nodig. Deze zijn
+  gebundeld in OpenTTD-useful.zip, te downloaden van
+  http://www.openttd.org/download-openttd-useful
+  Zet de header bestanden (.h) in de include/ map van de compiler en de
+  bibliotheek (.lib) bestanden in de lib / map.
+  Voor meer hulp met VS, zie docs/Readme_Windows_MSVC.txt.
+
+  Je kunt ook bouwen met behulp van de Makefile met MSYS / MinGW of Cygwin / MinGW.
+  Lees de Makefile voor meer informatie.
+
+Solaris, FreeBSD, OpenBSD:
+  Gebruik "gmake", maar draai "./configure" vóór de eerste bouw.
+
+Linux/Unix:
+  OpenTTD kan gebouwd worden met GNU "make". Op niet-GNU systemen heet het "gmake".
+  Hoe dan ook, draai "./configure" vóór de eerste bouw.
+
+MacOS X:
+  Gebruik "make" of Xcode (dat vervolgens make voor je aanroept).
+  Dit geeft je een uitvoerbaar bestand voor jouw CPU type (PPC/Intel).
+  Hoe dan ook, draai "./configure" vóór de eerste bouw.
+  Om een universal binary te maken type je "./configure --enabled-universal"
+  in plaats van "./configure".
+
+BeOS:
+  Gebruik "make", maar draai "./configure" vóór de eerste bouw.
+
+MorphOS:
+  Gebruik "gmake", maar draai "./configure" vóór de eerste bouw. Merk op dat 
+  je de MorphOS SDK, de laatste libnix updates (anders bouwen de C++ delen van
+  OpenTTD niet) en de powersdl.library SDK nodig hebt. Optioneel heb je de libz,
+  libpng en freetype2 ontwikkelbestanden nodig.
+
+OS/2:
+  Een volledige GNU bouwomgeving is nodig om de OS/2 versie te bouwen.
+  Zie het docs/Readme_OS2.txt bestand voor meer informatie.
+
+DOS:
+  Een bouwomgeving met DJGPP is nodig, alsmede bibliotheken, zoals
+  Allegro, zlib en libpng, die alle kunnen worden gedownload van de DJGPP
+  website. Compilatie is rechttoe rechtaan: gebruik "make", maar wel een
+  "./configure" vóór de eerste bouw. Het gebouwde uitvoerbare bestand heeft
+  cwsdpmi.exe in dezelfde map nodig om te kunnen draaien.
+  cwsdpmi.exe kan worden gevonden in de os/dos map.
+  Als je compileert met stripping aan op het uitvoerbare bestand zal
+  cwsdpmi.exe niet nodig zijn doordat cswdstub.exe toegevoegd wordt aan
+  gebouwde OpenTTD uitvoerbare bestand.
+
+7.1) Benodigde/optionele bibliotheken
+---- --------------------------------
+De volgende bibliotheken worden door OpenTTD gebruikt voor:
+  - libSDL/liballegro: hardware toegang (video, sound, mouse)
+  - zlib: (de)compressie van oude (0.3.0-1.0.5) savegames, content downloads, hoogtekaarten
+  - liblzo2: (de)compressie van oude (voor 0.3.0) savegames
+  - liblzma: (de)compressie van savegames (1.1.0 en later)
+  - libpng: screenshots maken en hoogtekaarten laden
+  - libfreetype: laden van generieke fonts en ze tekenen
+  - libfontconfig: zoeken naar lettertypes en namen van lettertypenamen
+    vertalen naar daadwerkelijke lettertypes
+  - libicu: afhandeling van rechts-naar-links schriften (bijvoorbeeld Arabisch 
+    en Perzisch) en natuurlijke sortering van teksten.
+
+OpenTTD vereist de aanwezigheid van geen van de bibliotheken, maar zonder
+liblzma kun je de meest recente savegames niet openen en zonder zlib kun je 
+de meeste oudere savegames niet openen of gebruik maken van het downloaden 
+van content systeem.
+Zonder libSDL / liballegro op niet-Windows-en niet-MacOS X machines heb je
+geen grafische user interface, al kun je dit gebruiken voor de bouw van een
+server.
+
+Om de extra graphics die nodig zijn om te spelen met de originele Transport 
+Tycoon Deluxe afbeeldingen te hercompileren, heb je GRFCodec (waaronder
+NFORenum) ook nodig. GRFCodec kan gevonden worden op:
+http://www.openttd.org/download-grfcodec
+De compilatie van deze extra graphics zal over het algemeen niet gebeuren,
+tenzij je de graphics bestanden met behulp van "make maintainer-clean"
+verwijdert.
+
+7.2) Ondersteunde compilers
+---- ----------------------
+Van de volgende compilers is bekend dat ze OpenTTD kunnen compileren:
+  - Microsoft Visual C++ (MSVC) 2005, 2008 en 2010.
+    Versie 2005 geeft onnodige waarschuwingen over scoping kwesties.
+  - GNU Compiler Collection (GCC) 3.3 - 4.7.
+    Versies 4.1 en eerder geven onnodige waarschuwingen over ongeïnitialiseerde variabelen.
+    Versies 4.4 en later geven onnodige waarschuwingen over het vrijgeven van non-heap objecten.
+  - Intel C++ Compiler (ICC) 12.0.
+
+De volgende compilers bouwen OpenTTD niet:
+  - Microsoft Visual C++ (MSVC) 2003 en eerder.
+  - GNU Compiler Collection (GCC) 3.2 en eerder.
+    Deze oude versies werken niet door OpenTTD's gebruik van templates.
+  - Intel C++ Compiler (ICC) 11.1 en eerder.
+    Version 10.0 en eerder geven een fout in "./configure" en gaan mis met recente systeem headers.
+    Version 10.1 compileert station_gui.cpp niet.
+    Version 11.1 gaat mis met een interne fout als network.cpp gecompileerd wordt.
+  - Clang/LLVM 2.8 en eerder.
+  - (Open) Watcom.
+
+Als je het voor elkaar krijgt om deze compilers OpenTTD weer te laten bouwen,
+laat het ons weten. Patches die meer compilers ondersteunen zijn welkom.
+
+8.0) Vertaling
+---- ---------
+Zie http://www.openttd.org/development voor up-to-date informatie.
+
+Het gebruik van de online vertaaldienst, te vinden op
+http://translator.openttd.org/, wordt sterk aangemoedigd. Volg gewoon de 
+richtlijnen in de FAQ op de website voor het krijgen van een account.
+
+Als om wat voor reden de website voor een langere periode van tijd niet werkt,
+dan kan de onderstaande informatie helpen.
+
+Neem contact op met de vertalingen manager (http://www.openttd.org/contact)
+vóór je het vertaalproces begint! Dit voorkomt dubbel werk, zoals
+iemand anders die misschien al begonnen is met het vertalen van dezelfde taal.
+
+8.1) Vertaling
+---- ---------
+Zo, nu dat je het ontwikkelingsteam verteld hebt over je voornemen om te
+vertalen (Dat heb je gedaan, toch? Natuurlijk wel!) kun je english.txt ophalen
+(te vinden in de SVN repository onder /src/lang) en vertalen.
+
+Je moet de eerste twee regels van het bestand veranderen:
+
+##name Engelse-naam-van-de-taal
+##ownname Inheemse-naam-van-de-taal
+
+Opmerking: Laat de volgende delen van het bestand met rust:
+
+    * String identifiers (eerste woord op elke regel)
+    * Delen van de strings die in accolades staan (zoals {STRING})
+    * Regels die beginnen met ## (zoals ##id), behalve de eerste twee regels
+
+8.2) Previewen
+---- ---------
+Om de vertaling te bekijken in het spel, moet je je vertaalbestand compileren
+met de strgen utility. Je kunt een voorgecompileerde strgen vinden op:
+http://www.openttd.org/download-strgen
+Om het zelf te compileren, haal je de OpenTTD sources op en bouwt die. In dit
+proces wordt strgen ook gebouwd.
+
+strgen is een commandline hulpprogramma. Het neemt de taalbestandsnaam als parameter.
+Voorbeeld:
+
+strgen lang/german.txt
+
+Dit compileert german.txt naar german.lng. Alle ontbrekende strings worden
+vervangen door hun Engelse evenknie. Mark op dat english.txt gezocht wordt in
+de lang/ map, waar ook je nieuwe taalbestand staat.
+
+Dat is alles! Nu kun je de taal selecteren in de taalselectie in de spelopties.
+
+9.0) Probleemoplossing
+---- -----------------
+Om alle opstart opties te zien die beschikbaar zijn, start je OpenTTD met de
+"./openttd -h" optie. Dit kan je helpen om een paar instellingen naar je wens
+te wijzigen.
+
+Als het spel op een bizarre manier reageert en je bent avontuurlijk ingesteld
+dan kan je de "-d [[<naam>]=[<level>]" vlag proberen, hoe hoger het level dat
+je instelt hoe meer debug output. De "naam" variabele kan je helpen om
+alleen een bepaalt soort debug berichten te tonen. Dit is voor het grootste
+deel niet gedocumenteerd, je neemt best een kijkje in de broncode (debug.c)
+als je meer wilt weten over verschillende soorten debug berichten.
+Zie http://wiki.openttd.org/index.php/Command_line voor meer informatie.
+
+Het meest vastgestelde probleem is ontbrekende data bestanden. Vergeet niet
+OpenGFX te installeren.
+Installeer ook OpenSFX en OpenMSX als je geluid en muziek wilt horen.
+Zie sectie 4.1 voor meer informatie. 
+
+Onder bepaald omstandigheden, vooral op Ubuntu, kan OpenTTD extreem traag
+draaien of zelfs vastlopen. Zie known-bugs.txt voor meer informatie hoe je dit
+kan oplossen op jouw computer.
+
+Onder Windows 98 en lager is het onmogelijk om een toegewijde server te
+draaien; deze zal weigeren om op te starten. Dit is misschien maar beter omdat
+die besturingssystemen niet bepaald bekend staan om hun stabiliteit.
+
+Met de toegevoegde ondersteuning voor lettertype-afhankelijke tekst zal het
+selecteren van een niet latijnse taal resulteren in een hoop vraagtekens op
+het scherm. Open het configuratiebestand (zie sectie 4.2 voor de specifieke
+locatie) en voeg het gewenste lettertype toe voor small/medium- en large_font.
+Dit kan een lettertype naam zijn zoals bv. "Tomaha" of een verwijzing naar een
+lettertype zoals:
+
+  small_font = "Tahoma"
+  medium_font = "Tahoma"
+  large_font = "Tahoma"
+
+In het bestand moet je de naam van het lettertype zoals "Tahoma" of het pad
+naar het letterypebestand opgeven.
+
+Eender welk NewGRF bestand gebruikt in een spel is opgeslagen in dat spel, als
+dit NewGRF bestand niet beschikbaar is zal dit spel weigeren om geladen te
+worden. Een lijst van missende GRFs kan teruggevonden worden in het
+"laad bestand" dialoogvenster.
+
+Andere ontbrekende bestanden kan je proberen terug te vinden via het
+doorzoeken van foras of via de GrfCrawler (http://grfcrawler.tt-forums.net/).
+Plaats vervolgens deze NewGRF bestanden in de juiste map (zie sectie 4.2
+"OpenTTD mappen"), en scan vervolgens naar de NewGRF bestanden in openTTD.
+Eenmaal je alle bestanden gevonden hebt, kan je verder OpenTTD spelen.
+
+X.X) Credits
+---- -------
+Het OpenTTD team (in alfabetische volgorde):
+  Albert Hofkamp (Alberth)       - GUI expert
+  Jean-François Claeys (Belugas) - GUI, newindustries en meer
+  Matthijs Kooijman (blathijs)   - Pathfinder-guru, pool herwerking
+  Christoph Elsenhans (frosch)   - Algemene programmeur
+  Loïc Guilloux (glx)            - Windows expert
+  Michael Lutz (michi_cc)        - Path gebaseerde signalen
+  Owen Rudge (orudge)            - Forum host, OS/2 port
+  Peter Nelson (peter1138)       - Spiritueel afgevaardigde van de newGRF goden
+  Ingo von Borstel (planetmaker) - Ondersteuning
+  Remko Bijker (Rubidium)        - Hoofd programmeur en veel meer
+  Zdeněk Sojka (SmatZ)           - Bug vinder en fixer
+  José Soler (Terkhen)           - Algemene programmeur
+  Thijs Marinussen (Yexo)        - AI Framework
+
+Inactieve Ontwikkelaars:
+  Bjarni Corfitzen (Bjarni)      - MacOSX port, programmeur en voertuigen
+  Victor Fischer (Celestar)      - Programmeert overal waar je hem nodig hebt
+  Tamás Faragó (Darkvater)       - Ex-Hoofd programmeur
+  Jaroslav Mazanec (KUDr)        - YAPG (Nog Een Pathfinder God) ;)
+  Jonathan Coome (Maedhros)      - Hoog priester van de NewGRF Tempel
+  Attila Bán (MiHaMiX)           - WebTranslator 1 en 2
+  Christoph Mallon (Tron)        - Programmeur, code correctheid politie
+
+Ontwikkelaars op pensioen:
+  Ludvig Strigeus (ludde)        - OpenTTD auteur, Hoofd programmeur (0.1 - 0.3.3)
+  Serge Paquet (vurlix)          - Assistent project manager, programmeur (0.1 - 0.3.3)
+  Dominik Scherer (dominik81)    - Hoofd programmeur, GUI expert (0.3.0 - 0.3.6)
+  Benedikt Brüggemeier (skidd13) - Bug fixer en code herschrijver
+  Patric Stout (TrueBrain)       - Programmeur (0.3 - pre0.7), sys op (actief)
+
+Dank aan:
+  Josef Drexler                  - Voor zijn fantastisch werk aan TTDPatch.
+  Marcin Grzegorczyk             - Voor zijn TTDPatch werk en documentatie van Transport Tycoon Deluxe internals en graphics (signalen en spoor funderingen)
+  Petr Baudiš (pasky)            - Vele patches, newgrf ondersteuning, etc.
+  Simon Sasburg (HackyKid)       - Voor de vele bugfixes waarmee hij ons gezegend heeft
+  Stefan Meißner (sign_de)       - Voor zijn werk aan de console
+  Mike Ragsdale                  - OpenTTD installer
+  Cian Duffy (MYOB)              - BeOS port / schrijven van de handleiding
+  Christian Rosentreter (tokai)  - MorphOS / AmigaOS port
+  Richard Kempton (RichK67)      - Additionele luchthavens, aanvankelijke TGP implementatie
+  Alberto Demichelis             - Squirrel scripttaal
+  L. Peter Deutsch               - MD5 implementatie
+  Michael Blunck                 - Voor het revolutioneren van TTD met fantastische graphics
+  George                         - Kanaal graphics
+  David Dallaston (Pikka)        - Tram sporen
+  Alle Vertalers                 - Voor hun ondersteuning om van OpenTTD een echt internationaal spel te maken
+  Bug Rapporteurs                - Dank voor alle bug rapporten
+  Chris Sawyer                   - Voor een fantastisch spel!
+
+</pre>

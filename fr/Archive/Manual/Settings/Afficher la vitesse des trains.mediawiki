@@ -1,0 +1,19 @@
+[[Translation:en/Archive/Manual/Settings/Show vehicle speed]]
+
+
+[[Category:fr/Réglages et préférences]]
+[[Category:fr/Véhicules]]
+
+Une [[fr/Archive/Manual/Settings/Options avancées|option]] qui affiche la vitesse courante d'un véhicule dans sa fenêtre d'information.
+
+== Description ==
+Quand cette option est activée, vous connaîtrez à tout moment à quelle vitesse se déplace votre véhicule. La vitesse sera affichée soit en km/h ou en mph, selon vos paramètres. Vous pouvez modifier les unités de distance dans la [[fr/Manual/Fenêtre des options du jeu|fenêtre des options du jeu]].
+
+== Utilisation ==
+Cette fonctionnalité est activée par défaut. Vous pouvez la désactiver via la fenêtre [[fr/Archive/Manual/Settings/Options avancées/Interface#Afficher vitesse du véhicule dans la barre d'état|Configuration avancée -> Interface]] ou en utilisant la syntaxe suivante dans [[fr/openttd.cfg|openttd.cfg]]:
+
+<pre>
+[patches]
+vehicle_speed = false
+</pre>
+<center>[[File:en/ShowVehicleSpeed.png]]</center>

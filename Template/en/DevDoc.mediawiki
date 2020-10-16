@@ -1,6 +1,7 @@
-<noinclude>[[Translation:Template/en/DevDoc]]</noinclude><div style="float:right; padding-left:12px; background:#ffffff;">
+[[Translation:Template/en/DevDoc]]
+<noinclude></noinclude><div style="float:right; padding-left:12px; background:#ffffff;">
 <div style="width:220px; border:1px solid #000000; background:#ffb466; padding:5px; -moz-border-radius-topleft:5px; -moz-border-radius-topright:5px; font-size: 12pt;">
-<center><strong><font size="3">[[Main/en/Development|OpenTTD Development Documentation]]</font></strong></center>
+<center><strong><font size="3">[[en/Development Documentation|OpenTTD Development Documentation]]</font></strong></center>
 </div>
 <div style="width:220px;  border:1px solid black; border-top-width: 0px; background:#ffd496; padding:5px; -moz-border-radius-bottomleft:5px; -moz-border-radius-bottomright:8px; font-size: 8pt;">
 
@@ -10,53 +11,53 @@
 [http://docs.openttd.org OpenTTD Doxygen]
 
 <center>'''General Reference'''</center>
-[[Main/en/Coding style|Coding style]]<br/>
-[[Category/en/Compiling OpenTTD|Compiling OpenTTD]]<br/>
-[[Main/en/Debugging|Debugging]]<br/>
-[[Main/en/OpenTTDDevBlackBook/Settings/AddSetting|Add a setting]]<br/>
-[[Main/en/OpenTTDDevBlackBook/NoAI/Adding a squirrel function|Add a squirrel function]]<br/>
-[[Main/en/OpenTTDDevBlackBook/Map/SaveGame|Understanding the SaveGame handler]]<br/>
-[[Main/en/OpenTTDDevBlackBook/Settings/CreateSavegame|Bumping the savegame version]]<br/>
-[[Main/en/Doing an OpenTTD release|Doing an OpenTTD release]]<br/>
+[[en/Development/Coding style|Coding style]]<br/>
+[[:Category:en/Compiling OpenTTD|Compiling OpenTTD]]<br/>
+[[en/unsorted/Debugging|Debugging]]<br/>
+[[en/Archive/Source/OpenTTDDevBlackBook/Settings/AddSetting|Add a setting]]<br/>
+[[en/Archive/Source/OpenTTDDevBlackBook/NoAI/Adding a squirrel function|Add a squirrel function]]<br/>
+[[en/Archive/Source/OpenTTDDevBlackBook/Map/SaveGame|Understanding the SaveGame handler]]<br/>
+[[en/Archive/Source/OpenTTDDevBlackBook/Settings/CreateSavegame|Bumping the savegame version]]<br/>
+[[en/Development/Doing an OpenTTD release|Doing an OpenTTD release]]<br/>
 
 <center>'''Language and Strings'''</center>
-[[Main/en/Manual of style|Manual of style]]<br/>
-[[Main/en/OpenTTDDevBlackBook/Format of langfiles|Format of langfiles]]<br/>
-[[Main/en/Strings|Using OpenTTD strings]]<br />
-[[Main/en/OpenTTDDevBlackBook/Special strings|List of special strings]]
+[[en/Development/Manual of style|Manual of style]]<br/>
+[[en/Archive/Source/OpenTTDDevBlackBook/Format of langfiles|Format of langfiles]]<br/>
+[[en/unsorted/Strings|Using OpenTTD strings]]<br />
+[[en/Archive/Source/OpenTTDDevBlackBook/Special strings|List of special strings]]
 
 <center>'''Window System'''</center>
-[[Main/en/OpenTTDDevBlackBook/Window/UseWindows|Using the window system]]<br/>
-[[Main/en/OpenTTDDevBlackBook/Window/Colours|Colour codes that exist in OpenTTD]]<br/>
-[[Main/en/OpenTTDDevBlackBook/Window/TextEdit|Adding a text box]]<br/>
-[[Main/en/OpenTTDDevBlackBook/Window/WidgetFocus|Understanding the widget focus system]]<br/>
-[[Main/en/GUI Style Guide|GUI style guide]]<br/>
+[[en/Archive/Source/OpenTTDDevBlackBook/Window/UseWindows|Using the window system]]<br/>
+[[en/Archive/Source/OpenTTDDevBlackBook/Window/Colours|Colour codes that exist in OpenTTD]]<br/>
+[[en/Archive/Source/OpenTTDDevBlackBook/Window/TextEdit|Adding a text box]]<br/>
+[[en/Archive/Source/OpenTTDDevBlackBook/Window/WidgetFocus|Understanding the widget focus system]]<br/>
+[[en/Development/GUI Style Guide|GUI style guide]]<br/>
 
 <center>'''Multiplayer'''</center>
-[[Main/en/OpenTTDDevBlackBook/Network/TCP|The OpenTTD TCP protocol]]<br/>
-[[Main/en/OpenTTDDevBlackBook/Network/UDP|The OpenTTD UDP protocol]]<br/>
-[[Main/en/OpenTTDDevBlackBook/Network/Desync debugging|Debugging desyncs]]<br/>
-[[Main/en/Server Admin Port Development|Server Admin Port development]]
+[[en/Archive/Source/OpenTTDDevBlackBook/Network/TCP|The OpenTTD TCP protocol]]<br/>
+[[en/Archive/Source/OpenTTDDevBlackBook/Network/UDP|The OpenTTD UDP protocol]]<br/>
+[[en/Archive/Source/OpenTTDDevBlackBook/Network/Desync debugging|Debugging desyncs]]<br/>
+[[en/Development/Server Admin Port Development|Server Admin Port development]]
 
 <center>'''Ingame Console'''</center>
-[[Main/en/OpenTTDDevBlackBook/IConsole/Window|The console window]]<br/>
-[[Main/en/OpenTTDDevBlackBook/IConsole/Console Commands|Console commands]]<br/>
-[[Main/en/OpenTTDDevBlackBook/IConsole/Console Variables|Console variables]]<br/>
-[[Main/en/OpenTTDDevBlackBook/IConsole/Scripting|Using console scripting]]<br/>
-[[Main/en/OpenTTDDevBlackBook/IConsole/AddFunctions|Adding functions/commands to the console]]<br/>
-[[Main/en/OpenTTDDevBlackBook/IConsole/AddVariables|Adding variables to the console]]<br/>
-[[Main/en/OpenTTDDevBlackBook/IConsole/History|Console development history]]
+[[en/OpenTTDDevBlackBook/IConsole/Window|The console window]]<br/>
+[[en/OpenTTDDevBlackBook/IConsole/Console Commands|Console commands]]<br/>
+[[en/OpenTTDDevBlackBook/IConsole/Console Variables|Console variables]]<br/>
+[[en/Archive/Source/OpenTTDDevBlackBook/IConsole/Scripting|Using console scripting]]<br/>
+[[en/Archive/Source/OpenTTDDevBlackBook/IConsole/AddFunctions|Adding functions/commands to the console]]<br/>
+[[en/Archive/Source/OpenTTDDevBlackBook/IConsole/AddVariables|Adding variables to the console]]<br/>
+[[en/Archive/Source/OpenTTDDevBlackBook/IConsole/History|Console development history]]
 
 <center>'''Content APIs (modding frameworks)'''</center>
-[[Main/en/Graphics Development|Graphics and similar (NewGRF)]]<br />
-[[Main/en/AI:Main Page|AI framework (NoAI)]]<br />
-[[Main/en/Game script|GameScript framework (NoGO)]]<br/>
+[[en/Archive/Community/Graphics Development|Graphics and similar (NewGRF)]]<br />
+[[en/NoAI|AI framework (NoAI)]]<br />
+[[en/NoGo|GameScript framework (NoGO)]]<br/>
 
 <center>'''Other Reference'''</center>
-[[Main/en/Map array (landscape grid)|Map array (landscape grid)]]<br/>
-[[Main/en/OpenTTDDevBlackBook/Simulation/Vehicles|Vehicles]]<br/>
-[[Main/en/OpenTTDDevBlackBook/Simulation/Pathfinding|Pathfinding]]<br/>
-[[Main/en/OpenTTDDevBlackBook/Simulation/Train Acceleration|Train acceleration]]<br/>
+[[en/Archive/Lists/Map array (landscape grid)|Map array (landscape grid)]]<br/>
+[[en/Archive/Source/OpenTTDDevBlackBook/Simulation/Vehicles|Vehicles]]<br/>
+[[en/Archive/Source/OpenTTDDevBlackBook/Simulation/Pathfinding|Pathfinding]]<br/>
+[[en/Archive/Source/OpenTTDDevBlackBook/Simulation/Train Acceleration|Train acceleration]]<br/>
 
 
 </div>

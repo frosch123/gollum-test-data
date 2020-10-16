@@ -1,19 +1,20 @@
+[[Translation:Template/en/Merge]]
 <noinclude>
-'''Broken translation link'''{{en/-}}</noinclude>
-{{en/Ambox| type  = move
+</noinclude>
+{{en/ambox| type  = move
 | image = merge.png
 | text  =  {{#IF: {{{1|}}} |Sugerowano, aby ten artykuł lub sekcja była <span class="plainlinks">[http://pl.wikipedia.org/wiki/Scalanie_(system_kontroli_wersji) Scalona]</span> z<!--
---> ''[[Main/en/{{NAMESPACE}}:{{{1}}}|{{{1}}}]]''. ([[Main/en/{{NAMESPACE}} talk:{{{1}}}|Przekonsultować]]) | Nie podano nazwy strony, napraw to lub usuń szablon
-}} }}<includeonly>{{{2|<!--[[Category:en/Articles to be merged|{{PAGENAME}}]]-->[[Category:pl/Artykuły do ​​scalenia|{{PAGENAME}}]]}}}</includeonly><noinclude>
+--> ''[[:en/{{NAMESPACE}}/{{{1}}}|{{{1}}}]]''. ([[:en/{{NAMESPACE}} talk/{{{1}}}|Dyskusja]]) | Nie podano nazwy strony, napraw to lub usuń szablon
+}} }}<includeonly>{{{2|<!--[[Category:Articles to be merged|{{PAGENAME}}]]-->[[Category:pl/Artykuły do ​​scalenia|{{PAGENAME}}]]}}}</includeonly><noinclude>
 
 ==Używanie==
 Wprowadź <nowiki>{{</nowiki>'''Scalanie/Pl'''|'''Nazwa strony'''<nowiki>}}</nowiki>. Przykład:
-<pre>{{Template:Scalanie/Pl|Jakaś strona}}</pre>
-To doda artykuł do <!--[[Category/en/Articles to be merged|:Category:Articles to be merged]]-->[[Category/pl/Artykuły do ​​scalenia|kategorii : Artykuły do scalenia]].
+<pre>{{pl/Scalanie|Jakaś strona}}</pre>
+To doda artykuł do <!--[[:Category:Articles to be merged]]-->[[:Category:pl/Artykuły do ​​scalenia|kategorii : Artykuły do scalenia]].
 
 == Który szablon scalania powinienem użyć? ==
-* {{en/S|Scalanie/Pl}} &ndash; połączyć co najmniej dwa razem w nieokreślonym miejscu.
-* {{en/S|Mergeto}} &ndash; aby scalić zawartość oznaczonego artykułu ''into'' określony artykuł.
-* {{en/S|Mergefrom}} &ndash; przeciwieństwo {{en/S|Mergeto}}; zawartość określonego artykułu powinna zostać scalona w oznaczony artykuł.
+* {{en/s|Scalanie/Pl}} &ndash; połączyć co najmniej dwa razem w nieokreślonym miejscu.
+* {{en/s|Mergeto}} &ndash; aby scalić zawartość oznaczonego artykułu ''into'' określony artykuł.
+* {{en/s|Mergefrom}} &ndash; przeciwieństwo {{en/s|Mergeto}}; zawartość określonego artykułu powinna zostać scalona w oznaczony artykuł.
 
-<!--[[Category:en/Templates|M]][[Category:en/Message boxes|M]]-->[[Category:pl/Szablony|M]][[Category:pl/InfoBox|M]]</noinclude>
+<!--[[Category:Templates|M]][[Category:Message boxes|M]]-->[[Category:pl/Szablony|M]][[Category:pl/InfoBox|M]]</noinclude>

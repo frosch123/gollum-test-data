@@ -1,0 +1,54 @@
+[[Translation:en/Archive/Other/Git]]
+ <!--{{-}}-->
+[http://git-scm.com/book/pl<!--/v2--> 'git'] to kolejny system kontroli wersji. Jest idealny do użycia, jeśli próbujesz zachować wiele łat, ponieważ pozwala tworzyć lokalne ekspozytury <small>''(branches)''</small>. Pozwala także na przypisanie <small>''(zatwierdzenie-commit)''</small> do lokalnego odgałęzienia <small>''(branch)''</small> bez udostępniania go publicznie (dzięki czemu można wypróbować;)). Ponadto każde użycie może tworzyć lokalne gałęzie.
+
+===Co z SVN ?===
+
+SVN nie jest już używany.
+
+
+===Jak działa git ?===
+
+Najlepiej jest po to trochę przeszukać sieć. Wiele stron internetowych wyjaśnia, jak to działa. Jądro linux również używa git i ma całkiem niezłą dokumentację. Ale tutaj jest małe 'howto':
+
+ git clone https://github.com/OpenTTD/OpenTTD
+ cd trunk
+ git branch (2)
+ git fetch (3)
+ git rebase origin (4)
+ git checkout -b mybranch (5)
+ git checkout master (6)
+ git checkout mybranch (7)
+ git rebase master (8)
+
+* 1) Pobierz 'trunk' z SVN w formie git.
+* 2) Sprawdź lokalne oddziały
+* 3) Uzyskaj najnowsze źródło 'git trunk'
+* 4) Kiedy coś pobierasz, nie łączy to jeszcze z twoim kodem. To polecenie rozpoczyna scalanie najnowszych danych w systemie głównym. Sugeruję, aby twoje 'master' zawsze czyścił łatki, chyba że wiesz, co robisz.
+* 5) Utwórz nową gałąź o nazwie 'mybranch' na podstawie bieżącej gałęzi, w tym przypadku 'master' 
+* 6) Wróć do gałęzi 'master' 
+* 7) Wróć do gałęzi 'mybranch ' 
+* 8) Zmień swój 'mybranch' w 'master' . To aktualizuje kod do 'master' i nakłada na niego wszystkie łatki, które zobowiązałeś się do 'mybranch' . Upewnij się, że nie masz lokalnych zmian (wykonaj wszystko).
+
+Inne rzeczy, o których chcesz wiedzieć.
+
+Zatwierdza wszystkie zmiany lokalne. Jest to lokalne, więc zachęcamy do popełniania tak często, jak tylko jest to odpowiednie.:
+ git commit -a
+
+Usuwa wszystkie lokalne zmiany:
+ git checkout -f
+
+Czyści wszystko (usuwa nieprzydane pliki, ...):
+ git clean
+
+Dodaj plik:
+ git add <file>
+
+Scal gałąź z master jako pojedynczy zatwierdzenie:
+ git checkout master
+ git pull --no-commit --squash . mybranch
+
+Zróżnicuj swój obecny kod względem elementu nadrzędnego:
+ git diff master
+
+I jest o wiele więcej, ale do tego sugerujemy poszukać dobrego podręcznika ;)

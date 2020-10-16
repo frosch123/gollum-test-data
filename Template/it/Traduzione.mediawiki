@@ -1,4 +1,5 @@
-<noinclude>[[Translation:Template/en/Translation]] </noinclude>{{en/Ambox| type  = style
+[[Translation:Template/en/Translation]]
+<noinclude> </noinclude>{{en/Ambox| type  = style
 | image = Translation.png
 | text  = <strong>Questo articolo è tradotto dall'originale inglese: <includeonly>[{{SERVER}}{{localurl:{{NAMESPACE}}:{{{1}}}|action=view}} {{{1}}}]</includeonly><noinclude>{{{1}}}</noinclude>.</strong>
 <div style="font-size: 90%">
@@ -7,25 +8,25 @@
 </div>
 Si può contribuire aiutando a [{{SERVER}}{{localurl:{{NAMESPACE}}:{{PAGENAME}}|action=edit}} migliorare nella scrittura].
 </div><div style="font-size: 80%">
-* Utilizzare il [[Main/en/Manual of Style|manuale di stile]] per modificare correttamente il wiki.
+* Utilizzare il [[en/Main/Manual of Style|manuale di stile]] per modificare correttamente il wiki.
 * Ricordarsi di togliere questo modello una volta che l'articolo è stato tradotto correttamente.</div>
 }}<noinclude>
 
 === Utilizzando il modello di ===
 Tipo <code><nowiki>{{</nowiki>'''traduzione/It'''|''Titolo in inglese''|''percentuale''<nowiki>}}</nowiki></code> per la parte superiore del articolo per indicare che è in fase di traduzione.
 <p>Tipo di parametro, il titolo dell'articolo originale in lingua inglese. Per esempio:</p>
-<pre>{{it/Traduzione|Main page|100}}</pre>
+<pre>{{it/traduzione|Main page|100}}</pre>
 Restituisce:
-{{it/Traduzione|Main page|100}}
+{{it/traduzione|Main page|100}}
 In questo esempio l'articolo originale in inglese è ''Main page'' (''Pagina principale'').
-<p>Aggiungere anche l'articolo di Categoria [[Category/it/Articoli in fase di traduzione|:Category:Articoli in fase di traduzione/It]].</p>
+<p>Aggiungere anche l'articolo di Categoria [[:Category:it/Articoli in fase di traduzione]].</p>
 
 === Dopo la traduzione===
-Una volta completamente tradotta rimuovere questa pagina del modello e utilizzare il modello [[Template:Other languages|Template:Other_languages]].
+Una volta completamente tradotta rimuovere questa pagina del modello e utilizzare il modello [[Template:en/Other languages]].
 
 ===Vedi anche===
-*[[Template/it/In attesa di traduzione|Template:In attesa di traduzione/It]]
-*[[Category/en/Other languages|:Category:Other languages]] per le statistiche di traduzione.
+*[[Template:it/In attesa di traduzione]]
+*[[:Category:en/Other languages]] per le statistiche di traduzione.
 
 [[Category:it/Templates]][[Category:it/Message box]][[Category:it/Articoli in italiano]][[Category:it/Traduzione]]
 </noinclude><includeonly>{{ #ifexpr: {{{2|0}}}=100 | |[[Category:it/Articoli in fase di traduzione]]{{ #ifexpr: {{{2|0}}}>10 | [[Category:it/Tradotto più 10 per cento]] | [[Category:it/Tradotto meno 10 per cento]]}}}}</includeonly>

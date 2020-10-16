@@ -1,7 +1,8 @@
+[[Translation:Template/en/Ambox]]
 <!-- 
       Adaptation du code Ambox de Wiki
 
---><noinclude>[[Translation:Template/en/Ambox]]</noinclude><includeonly><div style="{{#IF: {{{style|}}} | {{{style}}} | margin: 0px 10% 0px 10%; border: 1px solid #aaa; border-left: 10px solid {{#switch:{{{type|}}} 
+--><noinclude></noinclude><includeonly><div style="{{#IF: {{{style|}}} | {{{style}}} | margin: 0px 10% 0px 10%; border: 1px solid #aaa; border-left: 10px solid {{#switch:{{{type|}}} 
   | suppression=#b22222;
   | contenu    =#f28500;
   | style      =#f4c430;
@@ -9,9 +10,9 @@
   | protection =#bba;
   | #default   =#1e90ff;
 }} padding: 4px 8px; background:#efefef; min-height: 44px;">}}
-<div style="position: absolute;">[[File:en/.{{#if:{{{image|}}}
+<div style="position: absolute;">[[File:en/{{#if/{{{image|}}}
   | {{{image}}}
-  | {{#switch:{{{type|}}}
+  | {{#switch/{{{type|}}}
     | suppression=Deletion.png
     | contenu    =Content.png
     | style      =Edit-clear.png
@@ -23,7 +24,7 @@
 <div style="border: none; padding: 2px 2px 2px 62px;">
 <span style="{{#IF: {{{texte-style|}}} | {{{texte-style}}} | }}"> {{{texte|}}} </span>
 </div></div><!-- 
-Détecte et informe sur l'utilisation avec un paramètre [[Template/en/Fenêtre de message/Fr#Types de fenêtres de message des articles|"type"]] erroné:
+Détecte et informe sur l'utilisation avec un paramètre [[Template:Fenêtre de message/Fr#Types de fenêtres de message des articles|"type"]] erroné:
 -->{{#switch:{{{type|}}}
 |            = <!--Aucun type fourni est également une entrée valide --> 
 | suppression=
@@ -52,7 +53,8 @@ Ou:
 
 ==Liste des paramètres disponibles==
 <pre>
-{{fr/Fenêtre de message| type       = suppression / contenu / style / annonce / mouvement / protection
+{{Fenêtre de message/Fr
+| type       = suppression / contenu / style / annonce / mouvement / protection
 | image      = Picture.Png / Picture.Png|alt=Picture (si le paramètre n'est pas présent, l'icône du type par défaut sera fournie)
 | texte      = Texte pour une grande fenêtre, pour le sommet des articles.
 
@@ -68,22 +70,22 @@ Les exemples suivants utilisent différents paramètres '''type''', mais n'utili
 
 
 {{fr/Fenêtre de message| type  = suppression
-| texte = type=<u>suppression</u> – Problèmes de suppression, comme {{en/S|suppression/Fr}}.
+| texte = type=<u>suppression</u> – Problèmes de suppression, comme {{en/s|suppression/Fr}}.
 }}
 {{fr/Fenêtre de message| type  = contenu
-| texte = type=<u>contenu</u> – Problèmes de contenu, comme {{en/S|Avertissement/Fr}}.
+| texte = type=<u>contenu</u> – Problèmes de contenu, comme {{en/s|Avertissement/Fr}}.
 }}
 {{fr/Fenêtre de message| type  = style
-| texte = type=<u>style</u> – Problèmes de style, comme {{en/S|nettoyage/Fr}}.
+| texte = type=<u>style</u> – Problèmes de style, comme {{en/s|nettoyage/Fr}}.
 }}
 {{fr/Fenêtre de message| type  = annonce
-| texte = type=<u>annonce</u> – Notes sur l'article, comme {{en/S|courant/Fr}}.
+| texte = type=<u>annonce</u> – Notes sur l'article, comme {{en/s|courant/Fr}}.
 }}
 {{fr/Fenêtre de message| type  = mouvement
-| texte = type=<u>mouvement</u> – Propositions de fusion, découpe et inter-wiki, comme {{en/S|découpe/Fr}}.
+| texte = type=<u>mouvement</u> – Propositions de fusion, découpe et inter-wiki, comme {{en/s|découpe/Fr}}.
 }}
 {{fr/Fenêtre de message| type  = protection
-| texte = type=<u>protection</u> – Notes de protection, comme {{en/S|Historique/Fr}}.
+| texte = type=<u>protection</u> – Notes de protection, comme {{en/s|Historique/Fr}}.
 }}
 
 === Autres images ===

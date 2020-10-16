@@ -1,16 +1,16 @@
 <includeonly>{|class="userboxes" style="margin-left: {{{left|1}}}em;; margin-bottom: 0.5em; width: 248px; border: {{{bordercolor|#99B3FF}}} solid 1px; background-color: {{{backgroundcolor|#FFFFFF}}}; color: {{{textcolor|#000000}}}; float: {{{2|{{{align|right}}}}}}; {{{extra-css|}}}"
-|<div style="text-align: center; font-size: 120%; font-weight: bold;">{{{1|{{{toptext|[http://www.wikipedia.org/wiki/Userboxes Userboxes]}}}}}}</div></includeonly><noinclude>
+|<div style="text-align: center; font-size: 120%; font-weight: bold;">{{{1|{{{toptext|[https://www.wikipedia.org/wiki/Userboxes Userboxes]}}}}}}</div></includeonly><noinclude>
 ==Usage==
-To collect images or [[Template/en/Userbox|Template:Userbox]]es into a single column grouping easily
+To collect images or [[Template:en/Userbox]]es into a single column grouping easily
 
 <pre>
-{{en/Userboxtop}}
+{{en/userboxtop}}
 [userboxes]
-{{en/Userboxbottom}}
+{{en/userboxbottom}}
 </pre>
 
 userboxtop Parameters (All of the parameters are '''optional'''):
-<pre>{{en/Userboxtop| align           = left|right (default = right)
+<pre>{{en/userboxtop| align           = left|right (default = right)
 | left            = left margin value(default = 1)
 | backgroundcolor = background color (default = #FFFFFF)
 | bordercolor     = border color (default = #99B3FF)
@@ -21,7 +21,7 @@ userboxtop Parameters (All of the parameters are '''optional'''):
 </pre>
 
 ==See Also==
-* [[Template/en/Userbox|Template:Userbox]]
-* [[Template/en/Userboxbottom|Template:Userboxbottom]]
+* [[Template:en/Userbox]]
+* [[Template:en/Userboxbottom]]
 
 [[Category:en/Templates|U]]</noinclude>

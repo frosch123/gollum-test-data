@@ -1,0 +1,208 @@
+[[Translation:en/Main/Templates]]
+
+
+Zobacz listę popularnych '''szablonów''' i ich użycia. Kliknij na nazwę szablonu, aby dowiedzieć się więcej.
+Listę szablonów znajdziesz w tych miejscach:
+* [[en/Main/Manual of Style/Common templates]] (szablony ogólne)
+* [[:Category:en/Templates]] (szablony w kategorii "Szablony")
+* [[en/Special/Allpages/Template/]] (wszystkie stworzone szablony)
+
+Zajrzyj też stronę [[Category:pl/Zasoby edycji]].
+
+'''''Od tłumacza:''' tylko niektóre z szablonów zostały przetłumaczone na język polski. W tabelach w dalszej części artykułu pozostawiono angielskie oryginały, w przypadku, jeśli taki szablon w języku polskim nie istnieje.''
+
+__TOC__
+
+== [[:Category:en/Message boxes|Ramki informacyjne]] ==
+
+Istnieje 6 typów (kolorów) dostępnych w ramkach informacyjnych (ang. message box, w skrócie msgbox):
+
+<table style="margin: 0px 10% 0px 10%; border: 1px solid #aaa; background:#fbfbfb">
+<tr valign="top">
+<td style="border: 0px; border-left: 10px solid #1e90ff; padding: 2px 0 2px 0.5em;"><div style="width:88px; color:#1e90ff;">'''niebieski'''</div></td>
+<td style="border: none; padding: 0.25em 0.9em; width: 100%;}}">[[en/#Informacja (niebieski)|Powiadomienie]]: Czytelnicy/Edytorzy powinni być tego świadomi</td>
+</tr><tr valign="top">
+<td style="border: 0px; border-left: 10px solid #f4c430; padding: 2px 0 2px 0.5em;"><div style="width:88x; color:#f4c430;">'''żółty'''</div></td>
+<td style="border: none; padding: 0.25em 0.9em; width: 100%;}}">[[en/#Styl (żółty)|Styl]]: Problemy nie z treścią, lecz jej formatowaniem/prezentacją</td>
+</tr><tr valign="top">
+<td style="border: 0px; border-left: 10px solid #f28500; padding: 2px 0 2px 0.5em;"><div style="width:88px; color:#f28500;">'''pomarańczowy'''</div></td>
+<td style="border: none; padding: 0.25em 0.9em; width: 100%;}}">[[en/#Treść (pomarańczowy)|Treść]]: Problemy z treścią artykułu (nie z formatowaniem)</td>
+</tr><tr valign="top">
+<td style="border: 0px; border-left: 10px solid #b22222; padding: 2px 0 2px 0.5em;"><div style="width:88px; color:#b22222;">'''czerwony'''</div></td>
+<td style="border: none; padding: 0.25em 0.9em; width: 100%;}}">[[en/#Do usunięcia (czerwony)|Do usunięcia]]: Artykuł przeznaczony do usunięcia</td>
+</tr><tr valign="top">
+<td style="border: 0px; border-left: 10px solid #9932cc; padding: 2px 0 2px 0.5em;"><div style="width:88px; color:#9932cc;">'''fioletowy'''</div></td>
+<td style="border: none; padding: 0.25em 0.9em; width: 100%;}}">[[en/#Do przeniesienia (fioletowy)|Do przeniesienia]]: Połączenie, rozdzielenie...</td>
+</tr><tr valign="top">
+<td style="border: 0px; border-left: 10px solid #bba; padding: 2px 0 2px 0.5em;"><div style="width:88px; color:#bba;">'''gray'''</div></td>
+<td style="border: none; padding: 0.25em 0.9em; width: 100%;}}">[[en/#Zabezpieczona (szary)|Zabezpieczona]]: Strona zabezpieczona przed edycją</td>
+</tr>
+</table>
+
+===Informacja (niebieski)===
+{| style="border:0px; padding:5px; width=100%;"
+|- valign="top"
+|width=160;|{{en/S|Informacja/Pl| TEKST }}
+|{{pl/Informacja| TEKST }}
+|- valign="top"
+|{{en/S|Do poprawki/Pl| TEKST }}
+|{{pl/Do poprawki| TEKST |2= }}
+|- valign="top"
+|{{en/S|Rozbudowa/Pl| TEKST }}
+|{{pl/Rozbudowa| TEKST |2= }}
+|- valign="top"
+|{{en/S|<!--Current-->Bieżące/Pl}}
+|{{pl/Bieżące|1= }}
+|- valign="top"
+|{{en/S|Edytowane/Pl| NICK &#124; DATA}}
+|{{pl/Edytowane| NICK | DATA }}
+|}
+
+===Styl (żółty)===
+{| style="border:0px; padding: 5px; width=100%;"
+|- valign="top"
+|width=150;|{{en/S|Czyszczenie/Pl}}
+|{{pl/Czyszczenie|1= }}
+|- valign="top"
+|{{en/S|Tłumaczenie/Pl| oryg. &#124; z &#124; Postępy}}
+|{{pl/Tłumaczenie||origin=title}}
+|}
+
+===Treść (pomarańczowy)===
+{| style="border:0px; padding: 5px; width=100%;"
+|- valign="top"
+|width=150;|{{en/S|Uwaga/Pl| TEKST }}
+|{{pl/Uwaga| TEKST }}
+|- valign="top"
+|{{en/S|Niekompletne/Pl}}
+|{{pl/Niekompletne|1= }}
+|- valign="top"
+|{{en/S|<!--Outdated-->nieaktualizowane/Pl}} <br> {{en/S|<!--Outdated-->nieaktualizowane/Pl| TEXT }} 
+|{{pl/nieaktualizowane|2= }} 
+|}
+===Do usunięcia (czerwony)===
+{| style="border:0px; padding:5px; width=100%;"
+|- valign="top"
+|width=150;|{{en/S|<!--Delete-->zniesienie/Pl| <!--Reason-->powód &#124; User name}}
+|{{pl/zniesienie|3= }} 
+|}
+
+===Do przeniesienia (fioletowy)===
+{| style="border:0px; padding: 5px; width=100%;"
+|- valign="top"
+|width=150;|{{en/S|Merge|Page name}}
+|{{en/Merge|Page name|2= }}
+|- valign="top"
+|width=150;|{{en/S|Mergeto|Page name}}
+|{{en/Mergeto|Page name|2= }}
+|- valign="top"
+|width=150;|{{en/S|Mergefrom|Page name}}
+|{{en/Mergefrom|Page name|2= }}
+|- valign="top"
+|{{en/S|Split|TEXT}}
+|{{en/Split|TEXT|2= }} 
+|}
+
+===Zabezpieczona (szary)===
+{| style="border:0px; padding: 5px; width=100%;"
+|- valign="top"
+|width=150;|{{en/S|Historical}}
+|{{en/Historical|1= }} 
+|}
+
+== Specyficzne szablony ==
+
+{| style="border:0px; padding: 5px; width=100%;"
+|- valign="top"
+|width=150;|{{en/S|<!--Linking-->linkowanie/Pl}}
+|{{pl/linkowanie}}
+|- valign="top"
+|{{en/S|<!--Suggestions-->sugestie/Pl}}
+|{{pl/sugestie|1= }}
+|- valign="top"
+|{{en/S|<!--License-->licencja/Pl|type=your type}}
+|{{pl/licencja|type=PD}}
+|}
+
+== Szablony związane z wersjami OpenTTD ==
+
+{| style="border:0px; padding: 5px; width=100%;"
+! width=150;|Tags 
+!|Result
+|-
+|{{en/S|<!--FutureFeature-->funkcjaPrzyszłości/Pl}}
+|{{pl/funkcjaPrzyszłości}}
+|-
+|{{en/S|Zgodne Wersje/Pl| numery wersji }}
+|{{pl/Zgodne Wersje|1.2}}
+|-
+|{{en/S|<!--nightly-->nightly/Pl| <!--TEXT-->Wyjaśnienie }}
+|{{pl/nightly| TEXT }}
+|}
+
+== Inne ==
+
+{| style="border:0px; padding:5px; width=100%;"
+! width=150;|Tags 
+!|Result
+|-
+|{{en/S|Progress bar | 50 }}
+|{{en/Progress bar| 50}}
+|-
+|{{en/S|Progress bar 32bpp tracker | category}}
+|{{en/Progress bar 32bpp tracker|ground terrain}}
+|-
+|{{en/S|Other_languages | ... }}}
+|
+|}
+
+== Tekst ==
+{| border=1 cellspacing=0 cellpadding=3 
+!width=150px| Kod
+!width=55%| Efekt
+|-
+|{{en/S|Forum| Caption &#124; Forum/Topic/Post }}
+|Link do TT-forums (forum/temat/post). Zobacz [[Template:en/Forum|przykłady]].
+|-
+|{{en/S|User| Nazwa użytkownika }}
+| {{en/User| Nazwa użytkownika }} 
+|-
+|{{en/S|Check| Type &#124; Color &#124; Size }}
+|{{en/Check|Yes|Green|20px}} lub {{en/Check|No|Red|20px}} lub {{en/Check|No|Black|20px}} itd...
+|-
+|{{en/S|Emoticon| Code &#124; Size }}
+|{{en/Emoticon|:)}} lub {{en/Emoticon|;)}} lub {{en/Emoticon|:((}} itd...
+|}
+
+== Nawigacja ==
+
+Lista szablonów nawigacyjnych: [[:Category:en/Navigation]].
+
+
+=== [[Template:en/Navbox|Navbox]] ===
+
+{{en/Navbox|navbar = off
+|state = off      
+
+|name  = Nazwa
+|title = Pogrupowane listy linków
+
+|group1 = Grupa 1
+|list1  =  {{en/Navbox subgroup|group1 = Podgrupa 1
+            |list1  = {{en/nowrap begin}} Element 1 {{en/·w}} Element 2 {{en/·w}} Element 3 {{en/nowrap end}}
+
+            |group2 = Podgrupa 2
+            |list2  = {{en/nowrap begin}} Element 1 {{en/·w}} Element 2 {{en/·w}} Element 3 {{en/nowrap end}}
+           }}
+
+|group2 = Grupa 2
+|list2  = {{en/nowrap begin}} Element 1 {{en/·w}} Element 2 {{en/·w}} Element 3 {{en/nowrap end}}
+}}
+
+
+== Prośba o dodatkowe szablony ==
+
+Zapytaj na [[en/Templates|stronie dyskusji angielskiej wersji tego artykułu]].
+
+
+[[Category:en/Templates|*]][[Category:en/Editing Resources]][[Category:pl/Szablony|*]]

@@ -1,7 +1,8 @@
+[[Translation:Template/en/Ambox]]
 <!-- 
       Adaptiert vom standarmäßigen Wiki '''Ambox'''
 
---><noinclude>[[Translation:Template/en/Ambox]]</noinclude><includeonly><div style="{{#IF: {{{Stil|}}} | {{{Stil}}} | margin: 0px 10% 0px 10%; border: 1px solid #aaa; border-left: 10px solid {{#switch:{{{Typ|}}} 
+--><noinclude></noinclude><includeonly><div style="{{#IF: {{{Stil|}}} | {{{Stil}}} | margin: 0px 10% 0px 10%; border: 1px solid #aaa; border-left: 10px solid {{#switch:{{{Typ|}}} 
   | Löschen      =#b22222;
   | Inhalt       =#f28500;
   | Stil         =#f4c430;
@@ -9,9 +10,9 @@
   | Beschützt    =#bba;
   | #default     =#1e90ff;
 }} padding: 4px 8px; background:#efefef; min-height: 44px;">}}
-<div style="position: absolute;">[[File:en/.{{#if:{{{Bild|}}}
+<div style="position: absolute;">[[File:en/{{#if/{{{Bild|}}}
   | {{{Bild}}}
-  | {{#switch:{{{Typ|}}}
+  | {{#switch/{{{Typ|}}}
     | Löschen    =Deletion.png
     | Inhalt     =Content.png
     | Stil       =Edit-clear.png
@@ -68,22 +69,22 @@ Die folgenden Beispiele benutzen verschiedene '''Typ''' Parameter, aber keine ''
 
 
 {{de/Ambox| Typ  = Löschen
-| Text  = Typ=<u>Löschen</u> – Für Artikel, die gelöscht werden müssen, z.B. {{en/S|Löschen/De}}.
+| Text  = Typ=<u>Löschen</u> – Für Artikel, die gelöscht werden müssen, z.B. {{en/s|Löschen/De}}.
 }}
 {{de/Ambox| Typ   = Inhalt
-| Text  = Typ=<u>Inhalt</u> – Fehler oder Warnungen wegen Inhalt, z.B. {{en/S|Warnung/De}}.
+| Text  = Typ=<u>Inhalt</u> – Fehler oder Warnungen wegen Inhalt, z.B. {{en/s|Warnung/De}}.
 }}
 {{de/Ambox| Typ   = Stil
-| Text  = Typ=<u>Stil</u> – Stiländerungen, z.B. {{en/S|Aufräumen/De}}.
+| Text  = Typ=<u>Stil</u> – Stiländerungen, z.B. {{en/s|Aufräumen/De}}.
 }}
 {{de/Ambox| Typ   = Notiz
-| Text  = Typ=<u>Notiz</u> – Notizen im Artikel, z.B. {{en/S|Aktuell/De}}.
+| Text  = Typ=<u>Notiz</u> – Notizen im Artikel, z.B. {{en/s|Aktuell/De}}.
 }}
 {{de/Ambox| Typ   = Bewegen
-| Text  = Typ=<u>Bewegen</u> – Veränderungen in Form von Artikel teilen oder zusammenfügen, z.B. {{en/S|Aufteilen/De}}.
+| Text  = Typ=<u>Bewegen</u> – Veränderungen in Form von Artikel teilen oder zusammenfügen, z.B. {{en/s|Aufteilen/De}}.
 }}
 {{de/Ambox| Typ   = Beschützt
-| Text  = Typ=<u>Beschützt</u> – Beschützte Seiten, z.B. {{en/S|Historisch/De}}.
+| Text  = Typ=<u>Beschützt</u> – Beschützte Seiten, z.B. {{en/s|Historisch/De}}.
 }}
 
 === Andere Bilder ===

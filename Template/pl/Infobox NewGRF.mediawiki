@@ -1,29 +1,43 @@
+[[Translation:Template/en/Infobox NewGRF]]
 {| class="infobox bordered" align="right" style="width: 300px; font-size: 90%; border:1px solid #C0C090;" cellpadding="2"
 | colspan="2" style="text-align: center; background-color: #F8EABA;" | '''{{#If:{{{setname|}}}|{{{setname}}}|Nie podano tytułu}}'''
 |-
-| colspan="2" style="text-align: center;" |[[File:en/.{{#If:{{{screenshot|}}}|{{{screenshot}}}|No image.png}}|center|300x200px]]
+| colspan="2" style="text-align: center;" |[[File:pl/{{#If/{{{screenshot|}}}|{{{screenshot}}}|No image.png}}|center|300x200px]]
 |-
-! style="background-color: #F8EABA; border:1px solid #C0C090;" | Artist
+! style="background-color: #F8EABA; border:1px solid #C0C090;" | Grafika
 | {{{artist|}}}
 |-
-! style="background-color: #F8EABA; border:1px solid #C0C090;" | Coder
+! style="background-color: #F8EABA; border:1px solid #C0C090;" | Kodowanie
 | {{{coder|}}}
 |-
-! style="background-color: #F8EABA; border:1px solid #C0C090;" | Category
-| {{#If:{{{focus|}}}|[[Category:en/Addons {{{focus}}}]]|Nie wybrano żadnej kategorii}}  <!-- testowanie tego pomysłu, dodaj więcej opcji i przełącznik? -->
+! style="background-color: #F8EABA; border:1px solid #C0C090;" | Kategoria
+| {{#If:{{{focus|}}}|[[Category:pl/NewGRF/{{{focus}}}]]|Nie wybrano żadnej kategorii}}
 |-
-! style="background-color: #F8EABA; border:1px solid #C0C090;" | Homepage
+! style="background-color: #F8EABA; border:1px solid #C0C090;" | Strona internetowa
 | {{#If:{{{homepage|}}}|[http://{{{homepage|}}} {{{homepagename|}}}]}}
 |-
-! style="background-color: #F8EABA; border:1px solid #C0C090;" | Copyright
+! style="background-color: #F8EABA; border:1px solid #C0C090;" | Prawa autorskie
 | {{{copyright|}}}
 |}
-<includeonly><!--[[Category:en/NewGRF Sets]]-->[[Category:pl/Zestawy NewGRF]]</includeonly><noinclude>
+<includeonly>[[Category:pl/NewGRF]]</includeonly>
+<noinclude>
 
-[[Translation:Template/en/Infobox NewGRF]]
+
 ==Używanie==
 
-Dokumentacja.
+Wpisz:
+<pre>
+ {{pl/Infobox NewGRF|setname= Nazwa NewGRFa
+ |screenshot= Zrzutekranu.png
+ |artist= Autor grafiki
+ |coder= Koder
+ |focus= Kategoria (np. Pociągi, Budynki, Pojazdy)
+ |homepage= Strona internetowa (lub link do forum)
+ |homepagename= Nazwa strony internetowej (tekst wyświetlany w linku do strony podanej powyżej)
+ |copyright= Prawa autorskie
+ }}
+</pre>
+Do dokumentacji.
 
-<!--[[Category:en/Templates|I]]-->[[Category:pl/Szablony|I]]
+<!--[[category:Templates|I]]-->[[Category:pl/Szablony|I]]
 </noinclude>

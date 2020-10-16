@@ -1,0 +1,247 @@
+[[Translation:en/Manual/Base Set/Economy/Cargo]]
+{{fr/Table des matières}}
+:''Pour une liste des types de cargaison, voyez la [[:Category:fr/Cargaison|catégorie Cargaison]]''
+
+Dans [[fr/Manual/OpenTTD|OpenTTD]], une '''cargaison''' est ce que vous, en tant que [[fr/Manual/Compagnie de transport|compagnie de transport]], transportez. Elles sont produites par les [[fr/Manual/Base Set/Economy/Industries|industries]] et les [[fr/Manual/Ville|villes]], et elles sont acceptées par d'autres.
+
+Les [[fr/Manual/Base Set/Economy/Industries|industries]] et les [[fr/Manual/Ville#Bâtiments de la ville|bâtiments de ville]] qui sont dans la [[fr/Manual/Zone de captage|zone de captage]] d'une [[fr/Manual/Gares|gare]] acceptent des passagers et des cargaisons via cette gare, et placeront leurs cargaisons à la gare pour être livrées ailleurs (dans certaines industries, seules certaines cases peuvent accepter une cargaison. Voyez [[fr/Manual/Zone de captage|zone de captage]] pour plus d'information).
+
+Si une cargaison est placée à la gare, sa quantité dépend de la [[fr/Manual/Mécanique du jeu#Cote de gare|cote de la gare]] pour ce type de cargaison.
+
+Les [[fr/Manual/Base Set/Economy/Passagers|passagers]] et le [[fr/Manual/Base Set/Economy/Courrier|courrier]] sont aussi des types de cargaison, principalement produits et acceptés par les [[fr/Manual/Ville|villes]]. Différentes cases de bâtiment, dans les villes, acceptent des quantités différentes de passagers et d'autres cargaisons. Les acceptations peuvent être trouvées en utilisant l'outil d'information sur le terrain (point d'interrogation). Si une case ne peut accepter elle-même une cargaison, la quantité est notée 1/8. Il doit y avoir au moins 8/8 d'une cargaison dans la zone de captage d'une gare pour qu'elle accepte cette cargaison.
+
+Certaines cases d'industrie acceptent aussi 1/8 passagers. Les industries, cependant, sauf les [[fr/Manual/Base Set/Economy/Plateforme pétrolière|plateformes pétrolières]], ne produisent aucun passager. Le plus notable est que les [[fr/Manual/Base Set/Economy/Aciérie|aciéries]]] ont beaucoup de cases 1/8 et peuvent accepter des passagers toutes seules. De plus, le siège de la société accepte et génère quelques passagers et courrier, pour aider les joueurs au tout début du jeu.
+
+Voyez [[fr/Manual/Base Set/Economy/Revenu de cargaison|Revenu des cargaisons]] pour plus d'information sur la manière de calculer le revenu.
+
+Ci-dessous se trouvent des graphiques et des tableaux montrant chaque cargaison dans les différents climats, et ce qui les produit et les accepte.
+
+==Tableaux des flux de cargaison==
+:[[File:fr/OpenTTD industry-commodity flow chart - Temperate.png|border]]
+
+:[[File:fr/OpenTTD industry-commodity flow chart - Sub-arctic.png|border]]
+
+:[[File:fr/OpenTTD industry-commodity flow chart - Sub-tropical.png|border]]
+
+:[[File:fr/OpenTTD industry-commodity flow chart - Toyland.png|border]]
+
+==Tableaux de production de biens et d'acceptation==
+:{| {{en/Wikitable}} style="width: 512px; font-size: 90%; margin:2px 4px 2px 0; border:solid 1px #AAAAAA" rules="cols"
+|- 
+| style="background: #ccffcc" colspan="3" align="center"|'''[[fr/Manual/Climat#Tempéré|Climat tempéré]]'''
+|- style="background: #ffdead"
+|style="width: 26%;"| '''Cargaison'''
+|style="width: 37%;"| '''Produit par'''
+|style="width: 37%;"| '''Accepté par'''
+|- style="background: #E5FFE5"
+|'''[[fr/Manual/Base Set/Economy/Charbon|Charbon]]'''
+|[[fr/Manual/Base Set/Economy/Mine de charbon|Mines de charbon]]
+|[[fr/Manual/Base Set/Economy/Centrale électrique|Centrales électriques]]
+|-
+|'''[[fr/Manual/Base Set/Economy/Marchandises|Marchandises]]'''
+|[[fr/Manual/Base Set/Economy/Usine|Usines]], [[fr/Manual/Base Set/Economy/Raffinerie|Raffineries]], [[fr/Manual/Base Set/Economy/Scierie|Scieries]]
+|[[fr/Manual/Ville|Villes]]
+|- style="background: #E5FFE5"
+|'''[[fr/Manual/Base Set/Economy/Céréales|Céréales]]'''
+|[[fr/Manual/Base Set/Economy/Ferme|Fermes]]
+|[[fr/Manual/Base Set/Economy/Usine|Usines]]
+|-
+|'''[[fr/Manual/Base Set/Economy/Minerai de fer|Minerai de fer]]'''
+|[[fr/Manual/Base Set/Economy/Mine de fer|Mines de fer]]
+|[[fr/Manual/Base Set/Economy/Aciérie|Aciéries]]
+|- style="background: #E5FFE5"
+|'''[[fr/Manual/Base Set/Economy/Courrier|Courrier]]'''
+|[[fr/Manual/Ville|Villes]]
+|[[fr/Manual/Ville|Villes]], [[fr/Manual/Base Set/Economy/Plateforme pétrolière|Plateformes pétrolières]]
+|-
+|'''[[fr/Manual/Base Set/Economy/Bétail|Bétail]]'''
+|[[fr/Manual/Base Set/Economy/Ferme|Fermes]]
+|[[fr/Manual/Base Set/Economy/Usine|Usines]]
+|- style="background: #E5FFE5"
+|'''[[fr/Manual/Base Set/Economy/Pétrole|Pétrole]]'''
+|[[fr/Manual/Base Set/Economy/Puits de pétrole|Puits de pétrole]], [[fr/Manual/Base Set/Economy/Plateforme pétrolière|Plateformes pétrolières]]
+|[[fr/Manual/Base Set/Economy/Raffinerie|Raffineries]]
+|-
+|'''[[fr/Manual/Base Set/Economy/Passagers|Passagers]]'''
+|[[fr/Manual/Ville|Villes]], [[fr/Manual/Base Set/Economy/Plateforme pétrolière|Plateformes pétrolières]]
+|[[fr/Manual/Ville|Villes]], [[fr/Manual/Base Set/Economy/Plateforme pétrolière|Plateformes pétrolières]]
+|- style="background: #E5FFE5"
+|'''[[fr/Manual/Base Set/Economy/Acier|Acier]]'''
+|[[fr/Manual/Base Set/Economy/Aciérie|Aciéries]]
+|[[fr/Manual/Base Set/Economy/Usine|Usines]]
+|-
+|'''[[fr/Manual/Base Set/Economy/Biens de valeur|Biens de valeur]]'''
+|[[fr/Manual/Base Set/Economy/Banque|Banques]]
+|[[fr/Manual/Base Set/Economy/Banque|Banques]]
+|- style="background: #E5FFE5"
+|'''[[fr/Manual/Base Set/Economy/Bois|Bois]]'''
+|[[fr/Manual/Base Set/Economy/Forêt|Forêts]]
+|[[fr/Manual/Base Set/Economy/Scierie|Scieries]]
+|}
+
+:{| {{en/Wikitable}} style="width: 512px; font-size: 90%; margin:2px 4px 2px 0; border:solid 1px #AAAAAA" rules="cols"
+|- 
+| style="background: #ccccff" colspan="3" align="center"|'''[[fr/Manual/Climat#Subarctique|Climat subarctique]]'''
+|- style="background: #ffdead"
+|style="width: 26%;"| '''Cargaison'''
+|style="width: 37%;"| '''Produit par'''
+|style="width: 37%;"| '''Accepté par'''
+|- style="background: #dfefef"
+|'''[[fr/Manual/Base Set/Economy/Charbon|Charbon]]'''
+|[[fr/Manual/Base Set/Economy/Mine de charbon|Mines de charbon]]
+|[[fr/Manual/Base Set/Economy/Centrale électrique|Centrales électriques]]
+|-
+|'''[[fr/Manual/Base Set/Economy/Nourriture|Nourriture]]'''
+|[[fr/Manual/Base Set/Economy/Usine agroalimentaire|Usines agroalimentaires]]
+|[[fr/Manual/Ville|Villes]]
+|- style="background: #dfefef"
+|'''[[fr/Manual/Base Set/Economy/Marchandises|Marchandises]]'''
+|[[fr/Manual/Base Set/Economy/Imprimerie|Imprimeries]], [[fr/Manual/Base Set/Economy/Raffinerie|Raffineries]]
+|[[fr/Manual/Ville|Villes]]
+|-
+|'''[[fr/Manual/Base Set/Economy/Or|Or]]'''
+|[[fr/Manual/Base Set/Economy/Mine d'or|Mines d'or]]
+|[[fr/Manual/Base Set/Economy/Banque|Banques]]
+|- style="background: #dfefef"
+|'''[[fr/Manual/Base Set/Economy/Bétail|Bétail]]'''
+|[[fr/Manual/Base Set/Economy/Ferme|Fermes]]
+|[[fr/Manual/Base Set/Economy/Usine agroalimentaire|Usines agroalimentaires]]
+|-
+|'''[[fr/Manual/Base Set/Economy/Courrier|Courrier]]'''
+|[[fr/Manual/Ville|Villes]]
+|[[fr/Manual/Ville|Villes]]
+|- style="background: #dfefef"
+|'''[[fr/Manual/Base Set/Economy/Pétrole|Pétrole]]'''
+|[[fr/Manual/Base Set/Economy/Puits de pétrole|Puits de pétrole]]
+|[[fr/Manual/Base Set/Economy/Raffinerie|Raffineries]]
+|-
+|'''[[fr/Manual/Base Set/Economy/Papier|Papier]]'''
+|[[fr/Manual/Base Set/Economy/Papeterie|Papeteries]]
+|[[fr/Manual/Base Set/Economy/Imprimerie|Imprimeries]]
+|- style="background: #dfefef"
+|'''[[fr/Manual/Base Set/Economy/Passagers|Passagers]]'''
+|[[fr/Manual/Ville|Villes]]
+|[[fr/Manual/Ville|Villes]]
+|-
+|'''[[fr/Manual/Base Set/Economy/Blé|Blé]]'''
+|[[fr/Manual/Base Set/Economy/Ferme|Fermes]]
+|[[fr/Manual/Base Set/Economy/Usine agroalimentaire|Usines agroalimentaires]]
+|- style="background: #dfefef"
+|'''[[fr/Manual/Base Set/Economy/Bois|Bois]]'''
+|[[fr/Manual/Base Set/Economy/Forêt|Forêts]]
+|[[fr/Manual/Base Set/Economy/Papeterie|Papeteries]]
+|}
+
+:{| {{en/Wikitable}} style="width: 512px; font-size: 90%; margin:2px 4px 2px 0; border:solid 1px #AAAAAA" rules="cols"
+|- 
+| style="background: #ffffcc" colspan="3" align="center"|'''[[fr/Manual/Climat#Subtropical|Climat subtropical]]'''
+|- style="background: #ffdead"
+|style="width: 26%;"| '''Cargaison'''
+|style="width: 37%;"| '''Produit par'''
+|style="width: 37%;"| '''Accepté par'''
+|- style="background: #FFFDE0"
+|'''[[fr/Manual/Base Set/Economy/Minerai de cuivre|Minerai de cuivre]]'''
+|[[fr/Manual/Base Set/Economy/Mine de cuivre|Mines de cuivre]]
+|[[fr/Manual/Base Set/Economy/Usine|Usines]]
+|-
+|'''[[fr/Manual/Base Set/Economy/Diamant|Diamants]]'''
+|[[fr/Manual/Base Set/Economy/Mine de diamant|Mines de diamant]]
+|[[fr/Manual/Base Set/Economy/Banque|Banques]]
+|- style="background: #FFFDE0"
+|'''[[fr/Manual/Base Set/Economy/Nourriture|Nourriture]]'''
+|[[fr/Manual/Base Set/Economy/Usine agroalimentaire|Usines agroalimentaires]]
+|[[fr/Manual/Ville|Villes]]
+|-
+|'''[[fr/Manual/Base Set/Economy/Fruits|Fruits]]'''
+|[[fr/Manual/Base Set/Economy/Plantation fruitière|Plantations fruitières]]
+|[[fr/Manual/Base Set/Economy/Usine agroalimentaire|Usines agroalimentaires]]
+|- style="background: #FFFDE0"
+|'''[[fr/Manual/Base Set/Economy/Marchandises|Marchandises]]'''
+|[[fr/Manual/Base Set/Economy/Usine|Usines]], [[fr/Manual/Base Set/Economy/Raffinerie|Raffineries]]
+|[[fr/Manual/Ville|Villes]]
+|-
+|'''[[fr/Manual/Base Set/Economy/Courrier|Courrier]]'''
+|[[fr/Manual/Ville|Villes]]
+|[[fr/Manual/Ville|Villes]]
+|- style="background: #FFFDE0"
+|'''[[fr/Manual/Base Set/Economy/Maïs|Maïs]]'''
+|[[fr/Manual/Base Set/Economy/Ferme|Fermes]]
+|[[fr/Manual/Base Set/Economy/Usine agroalimentaire|Usines agroalimentaires]]
+|-
+|'''[[fr/Manual/Base Set/Economy/Pétrole|Pétrole]]'''
+|[[fr/Manual/Base Set/Economy/Puits de pétrole|Puits de pétrole]]
+|[[fr/Manual/Base Set/Economy/Raffinerie|Raffineries]]
+|- style="background: #FFFDE0"
+|'''[[fr/Manual/Base Set/Economy/Passagers|Passagers]]'''
+|[[fr/Manual/Ville|Villes]]
+|[[fr/Manual/Ville|Villes]]
+|-
+|'''[[fr/Manual/Base Set/Economy/Caoutchouc|Caoutchouc]]'''
+|[[fr/Manual/Base Set/Economy/Plantation d'hévéa|Plantations d'hévéas]]
+|[[fr/Manual/Base Set/Economy/Usine|Usines]]
+|- style="background: #FFFDE0"
+|'''[[fr/Manual/Base Set/Economy/Eau|Eau]]'''
+|[[fr/Manual/Base Set/Economy/Réserve d'eau|Réserves d'eau]]
+|[[fr/Manual/Base Set/Economy/Château d'eau|Châteaux d'eau]]
+|-
+|'''[[fr/Manual/Base Set/Economy/Bois|Bois]]'''
+|[[fr/Manual/Base Set/Economy/Scierie de construction|Scieries de construction]]
+|[[fr/Manual/Base Set/Economy/Usine|Usines]]
+|}
+
+:{| {{en/Wikitable}} style="width: 512px; font-size: 90%; margin:2px 4px 2px 0; border:solid 1px #AAAAAA" rules="cols"
+|- 
+| style="background: #ff9999" colspan="3" align="center"|'''[[fr/Manual/Climat#Pays des jouets|Pays des jouets]]'''
+|- style="background: #ffdead"
+|style="width: 26%;"| '''Cargaison'''
+|style="width: 37%;"| '''Produit par'''
+|style="width: 37%;"| '''Accepté par'''
+|- style="background: #FFF0F5"
+|'''[[fr/Manual/Base Set/Economy/Batterie|Batteries]]'''
+|[[fr/Manual/Base Set/Economy/Ferme de batterie|Fermes de batteries]]
+|[[fr/Manual/Base Set/Economy/Usine de jouet|Usines de jouet]]
+|-
+|'''[[fr/Manual/Base Set/Economy/Bulles|Bulles]]'''
+|[[fr/Manual/Base Set/Economy/Générateur de bulles|Générateurs de bulles]]
+|[[fr/Manual/Base Set/Economy/Usine de boisson gazeuse|Usines de boissons gazeuses]]
+|- style="background: #FFF0F5"
+|'''[[fr/Manual/Base Set/Economy/Barbe à papa|Barbe à papa]]''' 
+|[[fr/Manual/Base Set/Economy/Forêt de barbe à papa|Forêts de barbe à papa]]
+|[[fr/Manual/Base Set/Economy/Usine de bonbons|Usines de bonbons]]
+|-
+|'''[[fr/Manual/Base Set/Economy/Coca-Cola|Coca-Cola]]'''
+|[[fr/Manual/Base Set/Economy/Source de coca-cola|Sources de coca-cola]]
+|[[fr/Manual/Base Set/Economy/Usine de boisson gazeuse|Usines de boissons gazeuses]]
+|- style="background: #FFF0F5"
+|'''[[fr/Manual/Base Set/Economy/Boisson gazeuse|Boissons gazeuses]]'''
+|[[fr/Manual/Base Set/Economy/Usine de boisson gazeuse|Usines de boissons gazeuses]]
+|[[fr/Manual/Ville|Villes]]
+|-
+|'''[[fr/Manual/Base Set/Economy/Courrier|Courrier]]'''
+|[[fr/Manual/Ville|Villes]]
+|[[fr/Manual/Ville|Villes]]
+|- style="background: #FFF0F5"
+|'''[[fr/Manual/Base Set/Economy/Passagers|Passagers]]'''
+|[[fr/Manual/Ville|Villes]]
+|[[fr/Manual/Ville|Villes]]
+|-
+|'''[[fr/Manual/Base Set/Economy/Plastique|Plastique]]'''
+|[[fr/Manual/Base Set/Economy/Fontaine de plastique|Fontaines de plastique]]
+|[[fr/Manual/Base Set/Economy/Usine de jouet|Usines de jouet]]
+|- style="background: #FFF0F5"
+|'''[[fr/Manual/Base Set/Economy/Sucre|Sucre]]'''
+|[[fr/Manual/Base Set/Economy/Mine de sucre|Mines de sucre]]
+|[[fr/Manual/Base Set/Economy/Usine de bonbons|Usines de bonbons]]
+|-
+|'''[[fr/Manual/Base Set/Economy/Bonbon|Bonbons]]'''
+|[[fr/Manual/Base Set/Economy/Usine de bonbons|Usines de bonbons]]
+|[[fr/Manual/Ville|Villes]]
+|- style="background: #FFF0F5"
+|'''[[fr/Manual/Base Set/Economy/Caramel|Caramel]]'''
+|[[fr/Manual/Base Set/Economy/Carrière de caramel|Carrières de caramel]]
+|[[fr/Manual/Base Set/Economy/Usine de bonbons|Usines de bonbons]]
+|-
+|'''[[fr/Manual/Base Set/Economy/Jouet|Jouets]]'''
+|[[fr/Manual/Base Set/Economy/Usine de jouet|Usines de jouet]]
+|[[fr/Manual/Base Set/Economy/Magasin de jouet|Magasins de jouets]]
+|}

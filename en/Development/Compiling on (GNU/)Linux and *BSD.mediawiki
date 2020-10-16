@@ -1,0 +1,292 @@
+[[Translation:en/Development/Compiling on (GNU/)Linux and *BSD]]
+[[Category:en/Compiling OpenTTD]]
+
+A quick guide to get started with OpenTTD development on Linux and other *nix-like systems. For help with compiling on various platforms, join [irc://irc.oftc.net/openttd.compile #openttd] on OFTC.
+
+==Step 1. Required/recommended software and how to install it==
+* Compiler: ''gcc/g++'' or ''clang/clang++'' (this guide uses GCC). Required.
+* Build tool: GNU ''make''. Required.
+* Libraries:
+** Graphics and sound: ''SDL'' and/or ''Allegro''. Required except for dedicated servers. ''LibPNG'' (depends on ''ZLib'') is also recommended, it allows making PNG screenshots.
+** Music: ''TiMidity'', directly or with Allegro as a front-end. Other external MIDI players can also be used. Recommended; not strictly speaking a build requirement, but the only way to play music, since the music driver using the TiMidity library directly (libtimidity, https://sourceforge.net/projects/libtimidity/) doesn't work; the library itself hasn't been tested with OpenTTD in years, but there have been some new libtimidity releases in the past year.
+** File compression/decompression: ''LZO2'' (oldest saves), ''ZLib'' (most saves up to 1.0.5, as well as downloaded content), ''liblzma'' from XZ Utils (newest saves). Strongly recommended.
+** Text: ''Freetype2'', ''Fontconfig'' (TrueType fonts), ''icu4c'' from ICU (list sorting). Recommended.
+* Utility programs:
+** Version control system, if you want to keep your source recent: ''Git''.
+** To apply patches: the ''patch'' utility.
+
+Instructions for the various distributions should also be applicable to derivatives of them. Text that looks <code>like this</code> is a shell command.
+
+=== Mandriva ===
+(tested on Mandriva 2009 Spring)
+
+<code>urpmi gcc gcc-c++ libsdl-devel zlib1-devel git patch patchutils</code>
+=== Debian, Ubuntu===
+Tested on Debian buster/testing. Take a look at the CompileFarm's Dockerfile to see what's installed there to build on Debian: https://github.com/OpenTTD/CompileFarm/blob/master/base-linux/Dockerfile
+
+==== Automatically ====
+To install the same dependencies used by the official packages, run:
+
+<code>sudo apt build-dep openttd</code>
+
+This will not install any utility programs. For that, do:
+
+<code>sudo apt install git</code>
+
+==== Manually ====
+Install:
+* build-essential (for compilers)
+* pkg-config (required by configure script)
+* libsdl1.2-dev
+* zlib1g-dev
+* libfluidsynth-dev (optional)
+* liblzo2-dev
+* liblzma-dev
+* libpng12-dev
+* git
+* timidity
+* libfontconfig6-dev
+* libicu-dev
+
+In one command:
+
+ <code>sudo apt install build-essential pkg-config libsdl1.2-dev git zlib1g-dev liblzo2-dev liblzma-dev libfontconfig-dev libicu-dev libfluidsynth-dev</code>
+
+
+
+In at least one instance the package "libsdl1.2debian-all" was required for a full installation with a PowerPC build of Debian.  Without this package, only the dedicated server would compile. [http://www.tt-forums.net/viewtopic.php?f=31&t=37680]
+Remark: This was not needed on a custom Debian 2.6.26-2-amd64 server when compiling r20739.
+
+=== Fedora === 
+==== Automatically ====
+For the same dependencies as the official package:
+
+ <code>yum-builddep openttd -y</code>
+
+NOTE: This does not include gcc and gcc-c++ (which you can install via ''(sudo) yum install gcc/gcc-c++'')
+
+==== Manually ====
+* gcc-c++
+* SDL2-devel
+* libicu-devel
+* libpng-devel
+* zlib-devel
+* lzo-devel
+* xz-devel
+* esound (optional, for soundtrack)
+
+In one command (as root):
+<code>yum install gcc-c++ SDL-devel zlib-devel esound xz-devel lzo-devel -y</code>
+
+=== openSUSE ===
+==== Automatically ====
+For the same dependencies as the official package:
+
+ <code>zypper source-install --build-deps-only openttd</code>
+
+==== Manually ====
+Use YaST to download:
+* gcc-c++
+* SDL-devel
+* zlib-devel
+* libpng-devel
+* libicu-devel
+* lzo-devel 
+* freetype2-devel
+* xz-devel
+* git
+
+You can use the command-line tool `zypper' as well:
+ <code>zypper install gcc-c++ SDL-devel zlib-devel libpng-devel libicu-devel lzo-devel freetype2-devel xz-devel git</code>
+
+=== Gentoo ===
+As root run:
+
+ emerge --onlydeps -av openttd && emerge git
+
+This will install all dependencies as well as Git.
+
+If you want to use the most current version (aka git/master), run the following:
+
+ git clone git@github.com:OpenTTD/OpenTTD.git
+
+=== Arch Linux ===
+As root run
+ <code>pacman -S --needed openttd</code>
+and it will install all the OpenTTD dependencies.
+It will install OpenTTD and all the dependencies. Free graphics set (openttd-opengfx) and free soundset (openttd-opensfx) are also available in the official repositories.
+
+If you just want development environment, this should do the trick:
+ <code>sudo pacman -S --needed desktop-file-utils fontconfig freetype2 hicolor-icon-theme icu libpng lzo2 sdl xz zlib</code>
+
+openttd-bin, openttd-git, and other PKGBUILDs are available in the [https://aur.archlinux.org/packages.php?O=0&K=openttd AUR].
+
+=== FreeBSD ===
+
+To fetch, compile and install all necessary dependencies, as root run:
+ 
+<code>cd /usr/ports/games/openttd && make depends clean </code>
+
+If you are going to compile OpenTTD from subversion then again, as root run:
+
+<code> cd /usr/ports/devel/subversion && make install clean </code>
+
+=== NetBSD ===
+
+To fetch, compile and install all necessary dependencies run:
+
+<code>cd /usr/pkgsrc/games/openttd && make depends clean</code>
+
+If you are going to compile OpenTTD from subversion then again run:
+
+<code> cd /usr/pkgsrc/devel/subversion-base && make install clean</code>
+
+You should be asked for the root password once the code is compiled and ready for installation.
+
+=== OpenBSD ===
+
+As root, do (as root) <code>pkg_add gmake openttd</code> to install OpenTTD with its dependencies. If you only want the dependencies, run:
+
+<code>pkg_add gmake icu4c lzo2 png sdl xz</code>
+
+You may also want to <code>pkg_add git</code>.
+
+'''Warning:''' Since OpenBSD 6.2, amd64 and i386 users must configure OpenTTD to use clang. A plain <code>./configure</code> picks gcc, but the old gcc doesn't work with the ic4uc package. Use <code>./configure CC=clang CXX=clang++</code>
+
+== Step 2. Getting the source and applying patches ==
+=== Releases ===
+You can download the .tar.gz source files from the [http://www.openttd.org/download-stable OpenTTD website]. Extracting tarball will give you a directory called openttd-<version>, where <version> is the version you downloaded. Enter this directory, and you're ready to proceed to step 3.
+
+=== Most current version (Git master) ===
+The most current version of the official code is stored in our Git repository (https://github.com/OpenTTD/OpenTTD). Git tracks various versions and shares our code. For you as a user this means you can quickly get the newest sourcecode.
+
+==== Initial download ====
+
+To obtain the source code from GitHub, type from command line:
+
+<code>git clone https://github.com/OpenTTD/OpenTTD.git openttd</code>
+
+This downloads the repository and makes a "working tree" in the directory <code>openttd/</code>. The working tree tracks the latest version of our "master" branch. All git commands given from now on assume your shell's working directory is the <code>openttd/</code> directory.
+
+You can now skip to step 3 if you just want to compile the latest version.
+
+==== Updating ====
+
+If you have previously downloaded the repository and a new version is available on GitHub, you can update your working tree to the latest version. Inside your tree run the following:
+
+<code>git pull</code>
+
+This downloads the updates from GitHub, and "fast-forwards" your working tree to the latest version of master, or it tells you if your tree is already up to date.
+
+Also, if you have made any local changes to the source, these will be preserved. If your changes overlap with the pulled changes, then Git may prompt you to run <code>git stash</code> before <code>git pull</code>. This will move your changes to the stash. After the pull, you run <code>git stash pop</code> to merge your changes with the pulled changes.
+
+If a conflict between the changes occurs, then <code>git stash pop</code> will put conflict markers in your files. You must edit the files to resolve the conflict. Use <code>git status</code> to files with conflicts, and <code>git reset filename</code> to remove the conflict status. After you resolve the conflict, run <code>git stash drop</code> to clean the stash.
+
+====Creating a patch file====
+
+If you have made changes to your source that you want to share or upload as a patch, you can ask git to generate a diff.
+The command
+
+<code>git diff > mypatch.diff</code>
+
+creates a diff file (also referred to as "patch") which you can submit to the developers to share your improvements.
+
+====Reverting local changes====
+
+You can undo local changes to a file with
+
+<code>git checkout filename</code>
+
+or to your entire working directory with:
+
+<code>git checkout .</code>
+
+==== Applying a patch ====
+
+{{en/todo|Update this section to use git, not svn.}}
+To apply a patch (diff file) to the source code, update your source code to the patch file's revision. Let's say the patch file has been made on r1234. You can see this in the first lines of the patch:
+<code>
+ Index: foo.c
+ ===================================================================
+ --- foo.c (revision 1234)
+ +++ foo.c (working copy)
+ </code>
+To update your source code to r1234, run
+
+<code>svn update -r 1234</code>
+
+Then you're ready to merge the patch file
+
+<code>patch -p0 < mydiff.diff</code>
+
+Now (optionally) update the source code to the newest revision with
+
+<code>svn update</code>
+
+If this produces conflicts (files marked with "C"), tough luck, the patch doesn't work for the latest revision (you can always revert and retry the patching, skipping this last step and playing an older version).
+
+== Step 3. Compiling commands, running the compiled binary ==
+<code>cd <directory in which the OpenTTD source code is located></code> 
+
+===openttd >= 1.9===
+In openttd 1.9 cmake has replaced .configure
+
+<code>mkdir build<br/>
+cd build<br/>
+cmake ..<br/>
+make<br/>
+./openttd  (to start the game)
+</code>
+
+===openttd < 1.9===
+For openttd < 1.9 the following commands apply: <br/>
+<code>./configure</code>
+
+Your system's default compiler (usually GCC) will be used -- if you want to use a specific compiler, export CC and CXX in the environment, or pass them as configure arguments. Example for clang: <code>$ ./configure CC=clang CXX=clang++</code>
+
+NOTE: Without a compiler configured, you will receive the "''please define the CC/CXX environment to where it is located''" message when running configure. Define (<code>export</code>) them, or pass them as given in the example above.
+
+This will create a Makefile. The next step is to run <code>make</code>; BSD users may need to run <code>gmake</code> instead of make.
+If you have changed files or updated your source, only modified code will be recompiled. Now:
+
+<code>make --jobs=<#></code>
+
+On multi-core systems, using a high thread number (the #) can speed up compiling greatly; it's commonly recommended to use the number of logical cores (obtainable using <code>getconf _NPROCESSORS_ONLN</code> on Linux at least; <code>sysctl hw.ncpu</code> on BSD) plus one. (The theory behind this is that if one compiling thread is currently limited by I/O speed, the others should still fully saturate the available hardware threads.) 
+For example, on an Intel i5 with two hyper-threaded cores (i.e. four logical ones), make --jobs=5 took 1 minute and 33 seconds, and plain make three minutes and 18 seconds.
+
+There should now be an OpenTTD executable in the ''bin'' subdirectory. To install the OpenTTD binary to a directory included in your PATH variable, so it can be run as only <code>openttd</code>, do a <code>make install</code> as root/using sudo.
+
+== Installing TiMidity and sound fonts==
+
+'''In Debian/Ubuntu''':
+ <code>sudo apt-get install timidity freepats</code>
+
+'''In Fedora''':
+ <code>yum install timidity++</code>
+
+Timidity wants to talk to ESD, so you will need to "enable software sound mixing (ESD)" (System &rarr; Preferences &rarr; Sound).
+
+'''In Arch Linux''':
+ <code> pacman -S timidity++ timidity-freepats
+  cp /etc/timidity++/timidity-freepats.cfg /etc/timidity++/timidity.cfg</code>
+
+'''In OpenBSD:'''
+ <code>pkg_add timidity--</code>
+
+== Debian package ==
+{{en/Todo|Doesn't actually work, at least not on Ubuntu 13.04.}}
+You should be able to build a Debian package from the latest source using the supplied debian directory. You can replace step 3 by this. This Debian directory is, conforming to OpenTTD standards, put inside the ''os'' subdirectory and needs to be moved a level up first:
+
+<code>mv os/debian .</code>
+
+After that, use normal debian tools to build the package:
+
+<code>dpkg-buildpackage -rfakeroot -uc -us</code>
+
+Installing can then be done by executing (as root):
+<code>dpkg -i ../openttd-<version>_<architecture>.deb</code>
+
+
+Data files (original TTD as well as replacement) will need to be manually copied to ''/usr/share/games/openttd/data'', since they are not included in the .deb due to licensing issues.
+
+Now, when you run <code>openttd</code>, you will always be starting the version you have just built and installed.

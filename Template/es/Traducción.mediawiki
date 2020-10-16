@@ -1,4 +1,5 @@
-<noinclude>[[Translation:Template/en/Translation]]__NOTOC__ </noinclude>{{es/Metaplantilla de avisos| tipo  = estilo
+[[Translation:Template/en/Translation]]
+<noinclude>__NOTOC__ </noinclude>{{es/Metaplantilla de avisos| tipo  = estilo
 | imagen= Translation.png
 | texto = <strong>Este artículo se está traduciendo del original en inglés: <includeonly>[{{SERVER}}{{localurl:{{NAMESPACE}}:{{{1}}}|action=view}} {{{1}}}]</includeonly><noinclude>{{{1}}}</noinclude>.</strong>
 <div>{{{texto|}}}</div>
@@ -8,7 +9,7 @@
 </div>
 Puedes colaborar ayudando a su [{{SERVER}}{{localurl:{{NAMESPACE}}:{{PAGENAME}}|action=edit}} mejora en la redacción].
 </div><div style="font-size: 80%">
-* Usa el [[Main/es/Manual de Estilo|Manual de Estilo]] para una correcta edición.
+* Usa el [[es/Main/Manual de Estilo|Manual de Estilo]] para una correcta edición.
 * Recuerda quitar esta plantilla una vez que el artículo haya sido correctamente traducido.</div>
 }}<noinclude>
 
@@ -21,10 +22,10 @@ Da como resultado:
 {{es/Traducción|Main page|100}}
 
 En este ejemplo el artículo original en inglés es ''Main page'' (''Página principal'').
-<p>Además se agregará el artículo a la Categoría [[Category/es/Artículos que se están traduciendo al español|:Category:Artículos que se están traduciendo al español/Es]].</p>
+<p>Además se agregará el artículo a la Categoría [[:Category:es/Artículos que se están traduciendo al español]].</p>
 
 ===Concluida la traducción===
-Una vez completamente traducida la página retire esta plantilla y use la plantilla [[Template:Other languages|Template:Other_languages]].
+Una vez completamente traducida la página retire esta plantilla y use la plantilla [[Template:en/Other languages]].
 
 ===Añadir texto explicativo===
 <pre>{{es/Traducción|xxx|100|texto=Algunas partes no se han podido traducir debido a su complejidad y se han dejado en inglés. Si tiene suficiente nivel puede colaborar traduciendo lo que falta.
@@ -33,8 +34,8 @@ Da como resultado:
 {{es/Traducción|xxx|100|texto=Algunas partes no se han podido traducir debido a su complejidad y se han dejado en inglés. Si tiene suficiente nivel puede colaborar traduciendo lo que falta.}}
 
 ===Vea también===
-*[[Template/es/Pendiente de traducción|Template:Pendiente de traducción/Es]]
-*[[Category/en/Other languages|:Category:Other languages]] para estadísticas sobre traducción.
+*[[Template:es/Pendiente de traducción]]
+*[[:Category:en/Other languages]] para estadísticas sobre traducción.
 
 [[Category:es/Plantillas|Traducción]][[Category:es/Cajas de mensajes|Traducción]][[Category:es/Artículos en español]][[Category:es/Traducción|Traducción]]
 </noinclude><includeonly>{{ #ifexpr: {{{2|0}}}=100 | |[[Category:es/Artículos que se están traduciendo al español]]{{ #ifexpr: {{{2|0}}}>10 | [[Category:es/Traducción más 10 por ciento]] | [[Category:es/Traducción menos 10 por ciento]]}}}}</includeonly>

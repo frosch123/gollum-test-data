@@ -1,7 +1,8 @@
+[[Translation:Template/en/Ambox]]
 <!-- 
       Wiki Ambox code adaptation
 
---><noinclude>[[Translation:Template/en/Ambox]]</noinclude><includeonly><table style="{{#IF: {{{style|}}} | {{{style}}} | margin: 0px 10% 0px 10%; border: 1px solid #aaa; background:#fbfbfb}}"><tr>
+--><noinclude></noinclude><includeonly><table style="{{#IF: {{{style|}}} | {{{style}}} | margin: 0px 10% 0px 10%; border: 1px solid #aaa; background:#fbfbfb}}"><tr>
 <td style="border-left: 10px solid {{#switch:{{{type|}}} 
   | delete     =#b22222;
   | content    =#f28500;
@@ -9,9 +10,9 @@
   | move       =#9932cc;
   | protected  =#bba;
   | #default   =#1e90ff;
-}} padding: 2px 0 2px 0.5em;"><div style="width: 52px;">[[File:en/.{{#if:{{{image|}}}
+}} padding: 2px 0 2px 0.5em;"><div style="width: 52px;">[[File:en/{{#if/{{{image|}}}
   | {{{image}}}
-  | {{#switch:{{{type|}}}
+  | {{#switch/{{{type|}}}
     | delete     =Deletion.png
     | content    =Content.png
     | style      =Edit-clear.png
@@ -23,7 +24,7 @@
 {{#if:{{{imageright|}}}
 <td style="padding: 2px 0.5em 2px 0;">No need at the moment</td>
 }}</tr></table><!-- 
-Detect and report usage with faulty [[Template/en/Ambox#Article message box types|"type"]] parameter:
+Detect and report usage with faulty [[Template:Ambox#Article message box types|"type"]] parameter:
 -->{{#switch:{{{type|}}}
 |            = <!--No type fed, is also valid input --> 
 | delete    =
@@ -69,22 +70,22 @@ Die folgenden Beispiele benutzen verschieden '''type''' Parameter, aber keine ''
 
 
 {{de/Infofenster| type  = delete
-| text  = type=<u>delete</u> – Für Artikel, die gelöscht werden müssen, z.B. {{en/S|Löschen/De}}.
+| text  = type=<u>delete</u> – Für Artikel, die gelöscht werden müssen, z.B. {{en/s|Löschen/De}}.
 }}
 {{de/Infofenster| type  = content
-| text  = type=<u>content</u> – Fehler oder Warnungen wegen Inhalt, z.B. {{en/S|Warnung/De}}.
+| text  = type=<u>content</u> – Fehler oder Warnungen wegen Inhalt, z.B. {{en/s|Warnung/De}}.
 }}
 {{de/Infofenster| type  = style
-| text  = type=<u>style</u> – Stiländerungen, z.B. {{en/S|Aufräumen/De}}.
+| text  = type=<u>style</u> – Stiländerungen, z.B. {{en/s|Aufräumen/De}}.
 }}
 {{de/Infofenster| type  = notice
-| text  = type=<u>notice</u> – Notizen im Artikel, z.B. {{en/S|Aktuell/De}}.
+| text  = type=<u>notice</u> – Notizen im Artikel, z.B. {{en/s|Aktuell/De}}.
 }}
 {{de/Infofenster| type  = move
-| text  = type=<u>move</u> – Veränderungen in Form von Artikel teilen oder zusammenfügen, z.B. {{en/S|Aufteilen/De}}.
+| text  = type=<u>move</u> – Veränderungen in Form von Artikel teilen oder zusammenfügen, z.B. {{en/s|Aufteilen/De}}.
 }}
 {{de/Infofenster| type  = protected
-| text  = type=<u>protected</u> – Beschützte Seiten, z.B. {{en/S|Historisch/De}}.
+| text  = type=<u>protected</u> – Beschützte Seiten, z.B. {{en/s|Historisch/De}}.
 }}
 
 === Andere Bilder ===

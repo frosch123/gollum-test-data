@@ -1,0 +1,56 @@
+[[Translation:en/Archive/Source/OpenTTDDevBlackBook/Simulation/Vehicles]]
+ 
+<!--{{DevDoc}}-->{{pl/Rozwój}}
+
+Pojazd jest jednym z podstawowych elementów gry.
+
+==Rodzaje ==
+Istnieje 6 uznanych typów pojazdów w VehicleType enum:
+* VEH_TRAIN: Pociąg lub wagon. Korzysta z połączonej listy dla wagonów.
+* VEH_ROAD: Autobus lub ciężarówka. Prawdopodobnie użyje tej samej połączonej listy dla pojazdów przegubowych.
+* VEH_SHIP
+* VEH_AIRCRAFT
+* VEH_SPECIAL
+* VEH_DISASTER
+
+==Pojazd==
+Struktura pojazdu ma wiele zmiennych i metod. Niektóre z nich są ważne:
+{|
+| colspan=2 | '''Zmienne'''
+|-
+| VehicleTypeByte type
+| Typ pojazdu
+|-
+| PlayerByte owner
+| właściciel pojazdu
+|-
+| TileIndex tile<br>int32 x_pos<br>int32 y_pos<br>byte z_pos
+| Jego bieżąca lokalizacja <br>x_pos i y_pos to współrzędne świata na 1/16 kafelka.
+|-
+| byte spritenum<br>uint16 cur_image<br>byte sprite_width<br>byte sprite_height
+| Infomation Sprit'a
+|-
+| TextEffectID fill_percent_te_id
+| identyfikator efektu tekstowego do obiektu wskaźnika ładowania
+|-
+| uint16 max_speed<br>byte subspeed
+| Prędkość pociągu
+|-
+| byte acceleration<br>uint16 max_speed
+| Przyspieszenie i maksymalna prędkość
+|-
+| byte vehstatus
+| Status
+|-
+| CargoID cargo_type<br>uint16 cargo_cap
+| ˛Typ i ilość ładunku
+|-
+| Order *orders
+| Połączona lista zamówień
+|-
+| colspan=2 | '''Metody'''
+|-
+| BeginLoading()<br>LeaveStation()
+| Wchodzenie i wychodzenie ze stacji
+|}
+Jest o wiele więcej metod i zmiennych niż to. Aby uzyskać więcej informacji, zobacz vehicle_base.h i vehicle.cpp. Wszystkie pojazdy są podklasowane, więc istnieją inne, bardziej szczegółowe metody i zmienne dla pociągów itp.

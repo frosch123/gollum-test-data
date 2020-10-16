@@ -1,0 +1,40 @@
+[[Translation:en/unsorted/Nightly build guidelines]]
+
+
+==Wytyczne dotyczące budowania nocnego==
+Ponieważ obecnie nazwy nocnych-nightlies i ich zawartość są trochę nieporządkiem, poniżej znajdziesz oficjalne wytyczne dla nich.
+
+===Nazwa===
+Nazwa powinna jednorodnie identyfikować typ systemu i dla której rewizji (nightly)została wykonana .
+:*OpenTTD: '''"OTTD-<system>-nightly-r<revision>.<extension>"'''. Eg ''OTTD-win32-nightly-r3794.zip''.
+:*Strgen: '''"strgen-<system>.<extension>"'''. Eg ''strgen-win32.zip''.
+
+===OpenTTD Zmiany===
+Sam OpenTTD powinien zostać zmieniony, aby poprawnie odzwierciedlał charakter nocnego. Oznacza to dodanie tagu nightly jako jego identyfikatora (już zrobione w systemach, które używają makefile do kompilacji)
+:*Revision: bieżąca rewizja (wersja nightly), dla której została sporządzona , np "r3794"
+:*Title bar: (pasek tytułu)zawiera nazwę i wersję programu w formacie '''OpenTTD (YYYY-MM-DD) - r<revision>'''
+:*Executable properties (if applicable): jeśli twój system obsługuje właściwości wykonywalne, tak jak w systemie Windows, zmień następujące jak najbliżej poniższych wskazówek:
+:*FileVersion: (wersja pliku) aktualna wersja openttd, np 0.4.0.1
+:*ProductVersion: (wersja produktu ) aktualna wersja openttd plus rewizja; na przykład '''"0.4.0.1 r<rev>"'''
+:*SpecialBuild: (specjalne budowanie) pokazuje, że to jest nocne (nightly): ''''"Nightly Build YYYY-MM-DD"''''
+
+===Kompilowanie===
+Kompilacja powinna odbywać się bez żadnych informacji DEBUG (np. Tryb wydania), ale z włączonymi ASSERTIONS. PNG i ZLIB również muszą być włączone.
+
+===Plik zawarty w OpenTTD===
+:*OpenTTD wykonywalny (exe)
+:*COPYING (licencja)
+:*readme.txt (opisowy ogólny)
+:*docs\console.txt
+:*docs\multiplayer.txt
+:*data folder (data\*.grf, data\opntitle.dat)
+:*lang folder (lang\*.lng)
+
+===Plik zawarty w Strgen===
+:*strgen (executable)
+:*COPYING
+:*readme.txt
+:*lang\english.txt
+:*docs\Howto_compile_lng_files_from_CLI.txt
+
+<!--[[Category:Development]]--> [[Category:pl/Rozwój]]

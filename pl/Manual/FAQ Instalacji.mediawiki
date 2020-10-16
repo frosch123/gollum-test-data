@@ -1,0 +1,74 @@
+[[Translation:en/Manual/Installation FAQ]]
+
+{{pl/FAQmenu}}
+
+Ten FAQ zawiera pytania na temat instalacji OpenTTD.
+
+== Czego potrzebuję, by uruchomić OpenTTD? ==
+Musisz posiadać jeden ze [[pl/unsorted/System Operacyjny|wspieranych systemów operacyjnych]]. Potem sprawdź, czy Twój komputer spełnia minimalne [[en/unsorted/System Requirements|wymagania sprzętowe]].
+
+== Jak przebiega instalacja OpenTTD? ==
+=== Na Windowsie: ===
+:*Bardzo łatwo, tylko kilka kroków:
+:#Pobierz instalator Windows OpenTTD ze [http://www.openttd.org/download-stable oficjalnej strony] - albo po prostu archiwum zip z tej samej strony.
+:#Kliknij dwukrotnie!
+:#Wybierz podstawowe ustawienia, pozwól na zainstalowanie najważniejszych plików.
+:#Uruchom OpenTTD.
+:#Podziwiaj splendor ekranu powitalnego.
+
+:Oczywiście możesz także pobrać [[pl/Development/FAQ rozwoju#Kod źródłowy (source code)|kod źródłowy]], jest to najszybsza/najłatwiejsza droga. [prawdopodobnie jakiś żart =>] ''(ale gdybyś wybrał dłuższą trasę ... czy zwiększyłoby to dochód z trasy?... czy powinien poczekać na kolej jednoszynową... <small>~but if you took the longer route... would it increase the route income?.. or should you wait for monorail</small>..)''
+
+=== Na Linuxie: ===
+* Tak jak do większości programów w Linuxie, jest wiele sposobów aby zainstalować OpenTTD:
+:* Możesz znaleźć OpenTTD w sklepie swojej dystrybucji, np. Aptitude, Yum, Portage, YaST i Centrum Oprogramowania Ubuntu. Po więcej informacji, sprawdź instrukcję lub stronę internetową twojej dystrybucji. To jest łatwiejszy sposób, ponieważ instaluje również inne pliki gry.
+:* Możesz znaleźć instalatory na [http://www.openttd.org/download-stable project page], takie jak pliki .deb i .rpm.
+:**Będziesz musiał wsadzić pliki takie jak OpenGFX do ~/.openttd/data (stwórz jeśli nie instnieje).
+:* Możesz również pobrać plik źródłowy i skompilować samodzielnie! Tu możesz przeczytać jak to zrobić: [[en/Compiling on Linux]].
+:**Będziesz musiał wsadzić pliki takie jak OpenGFX do ~/.openttd/data (stwórz jeśli nie instnieje).
+
+* Instrukcja jak zainstalować w Ubuntu 14.04:
+:* Włącz 'Centrum Oprogramowania Ubuntu'.
+:* wyszukaj 'openttd'
+:* Zainstaluj OpenTTD
+:* Możesz ściągnąć pliki takie jak muzyka/grafika samodzielnie.
+:** Gra zaistaluje się do "/usr/share/games/openttd/data"
+:** Zapisy / screenshoty itd. zapiszą się do "/home/{username}/.openttd". (Folder może być ukryty. Naciśnij CTRL + H aby pokazać ukryte foldery.).
+
+=== Na Mac OS X (no a z tym tak samo, ale uważajcie na ogryzka!): ===
+:*Całkiem proste, tylko kilka kroków:
+:#''Obtain'' zdobyć  [http://www.openttd.org/download-opengfx OpenGFX] 
+:#Rozpakuj OpenGFX it do ~/Documents/OpenTTD/data (zrób ten folder, jeśli na Twoim komputerze go nie ma)
+:#Pobierz pakiet OSX dla OpenTTD ze strony  [http://www.openttd.org/download-stable downloads page] .
+:#Zamontuj ''(Mount)'' pobrany 'obraz' ''(image)'' i skopiuj OpenTTD do wybranego folderu, tj. /Applications/OpenTTD/ (zalecane jest, aby był pusty, ponieważ OpenTTD doda do niego pliki).
+:#[opcjonalnie] Utwórz także folder "gm" i skopiuj do niego pliki .gm dla całej szykownej dobroci midi. '''[*2]'''
+:#Uruchom OpenTTD!
+:#[opcjonalnie] Możesz teraz wygodnie instalować zestawy dźwięków i muzyki, korzystając z pobierania treści z gry
+
+=== Na innych systemach: ===
+:*Jeśli masz Unix'o-podobny system możesz na nim pograć w OpenTTD. Gra działa na większej ilości systemów niż wymienione wyżej.
+:#Zobacz do [[pl/unsorted/System Operacyjny|Listy systemów operacyjnych]] gdzie możesz zgłosić swój system.
+:#Upewnij się, że [http://libsdl.org SDL library] jest dostępne i zainstalowane na Twoim systemie.
+:#Ściągnij kod źródłowy OpenTTD i spróbuj skompilować samodzielnie.
+:#Dodaj na [[pl/unsorted/System Operacyjny|listę systemów operacyjnych]], nawet jeśli nie zakończyło się powodzeniem.
+
+== Czy mogę użyć oryginalnych plików z TTD? ==
+
+W skrócie: żadne pliki z TTD nie są potrzebne, istnieją darmowe podstawowe pliki grafiki, dźwiękowe i muzyczne. Ale wciąż możesz używać podstawowych plików z TTD:
+
+:*Jeśli nie używasz installera do instalowania OpenTTD, (lub są po prostu curious ~''ciekawi'') musisz skopiować pewne pliki ręcznie ''(certain files)'' .
+:Wymagane pliki; umieść je w folderze <i>data/</i> :
+::* Pliki graficzne: <b>trg1r.grf</b>, <b>trgcr.grf</b>, <b>trghr.grf</b>, <b>trgir.grf</b>, <b>trgtr.grf</b>
+:::*Jeśli używasz TTD w wersji DOS do kopiowania plików, potrzebujesz plików, które są wymienione powyżej, ale bez "R" na końcu, np. trg1.grf etc.
+::* Pliki dźwiękowe: <b>sample.cat</b>
+:Jeśli chcesz także muzyki, ''(wszystkie ważne szykownej dobroci midi)'' skopiuj następujące pliki do folderu <i>gm/</i> :
+::* Pliki z muzyką: <b>*.gm</b>
+::Jeśli nie ma folderu gm, po prostu utwórz go w głównym folderze openttd i umieść tam pliki. Zauważ, że wersja TTD w systemie DOS nie ma plików <b>*.gm</b> .
+
+Na komputerach *nix musisz upewnić się, że masz uprawnienia do przeglądania powyższych plików jako zwykły użytkownik, w przeciwnym razie będziesz mógł uruchomić OpenTTD tylko jako root.
+
+== Co z 'nocnymi' wersjami ? ==
+Kompilacje nocne <small>''(nightly builds)''</small> mogą być używane równolegle do stabilnej wersji. Pobierz najnowsze archiwum kompilacji w nocy <small>''(nightly)''</small>, a następnie wypakuj je do nowego folderu bez konieczności instalacji. Po prostu uruchom plik binarny.
+
+Aby zawsze grać najnowszą ''nightly'' , możesz użyć [[pl/unsorted/Aktualizacje OpenTTD|updater]]  , aby zaktualizować do najnowszej [[pl/Nocne budowania|nightly]] po uruchomieniu OpenTTD.
+
+[[Category:pl/FAQs]]
