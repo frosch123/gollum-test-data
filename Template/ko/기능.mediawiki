@@ -1,5 +1,4 @@
-[[Translation:Template/en/Feature]]
-<noinclude></noinclude><includeonly>{{en/VersionBox|{{#ifeq: {{{1|}}}|구버전|0|{{#ifexpr: {{{1|}}} < 0|0|{{{1|}}}}}}}|{{#ifeq: {{{1|}}}|구버전|99|{{#ifexpr: {{{1|}}} > 0|99|{{#expr:-{{{1|}}}}}}}}}||caption=버전 호환성|text={{{text|}}}|float={{{float|}}}}}</includeonly><noinclude>
+<noinclude>[[Translation:Template/en/Feature]]</noinclude><noinclude></noinclude><includeonly>{{en/VersionBox|{{#ifeq: {{{1|}}}|구버전|0|{{#ifexpr: {{{1|}}} < 0|0|{{{1|}}}}}}}|{{#ifeq: {{{1|}}}|구버전|99|{{#ifexpr: {{{1|}}} > 0|99|{{#expr:-{{{1|}}}}}}}}}||caption=버전 호환성|text={{{text|}}}|float={{{float|}}}}}</includeonly><noinclude>
 
 ====Template:기능 사용법====
 <nowiki>{{</nowiki>'''기능/Ko'''<nowiki> | 버전 넘버}}</nowiki> 를 입력하십시오.

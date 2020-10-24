@@ -1,0 +1,119 @@
+[[Translation:en/Development/Script/RailPathfinder]]
+
+
+{{fr/NonIA}}
+== Conditions de prérequis ==
+Avant d'appeler la détermination de chemin, vous devez choisir quel type de voie utiliser. Voici un moyen sûr suggéré par Zutty pour obtenir le premier type de voies de la liste.
+
+  local types = AIRailTypeList();
+  AIRail.SetCurrentRailType(types.Begin());
+
+== Initialisation ==
+
+Vomme pour toute bibliothèque, avant de l'utiliser, vous devez l'importer. Vous pouvez le faire en plaçant la ligne suivante au début de votre code.
+
+ import("pathfinder.rail", "RailPathFinder", 1);
+
+Cela importe la détermination de chemin ferroviaire version 1 et l'appelle <code>RailPathFinder</code>. Vous pouvez maintenant l'instancier comme toute autre classe:
+
+ local pathfinder = RailPathFinder();
+
+Avant de commencer à chercher un trajet, vous pouvez positionner quelques paramètres. Ceux qui sont disponibles sont:
+
+{| class="wikitable"
+|-
+! Nom
+! Valeur par défaut
+! Signification
+|-
+| cost.max_cost
+| 2000000000
+| Le coût maximal pour un trajet.
+|-
+| cost.tile
+| 100
+| Le coût pour une voie non en diagonale.
+|-
+| cost.diagonal_tile
+| 70
+| Le coût pour une voie en diagonale.
+|-
+| cost.turn
+| 50
+| Le coût ajouté à cost.tile / cost.diagonal_tile si la direction est modifiée.
+|-
+| cost.slope
+| 100
+| Le coût supplémentaire si la case est en pente.
+|-
+| cost.bridge_per_tile
+| 150
+| Le coût par case d'un nouveau pont; il sera ajouté à cost.tile.
+|-
+| cost.tunnel_per_tile
+| 120
+| Le coût par case d'un nouveau tunnel; il sera ajouté à cost.tile.
+|-
+| cost.coast
+| 20
+| Le coût supplémentaire d'une case côtière.
+|-
+| cost.max_bridge_length
+| 6
+| La longueur maximale d'un pont qui peut être construite.
+|-
+| cost.max_tunnel_length
+| 6
+| La longueur maximale d'un tunnel qui peut être construite.
+|}
+
+Pour fixer un paramètre, utilisez simplement:
+
+ pathfinder.cost.tile = 100;
+
+== Planifier un trajet ==
+
+Donc, maintenant que nous savons comment créer une instance de détermination de chemin et fixer les coûts de construction, il est temps de mettre cette connaissance en pratique. Planifions notre première voie ferrée. Tout d'abord, nous avons besoin d'une (ou plusieurs) case(s) de départ et une (ou plusieurs) case(s) de destination. Pour cela, supposons que nous les avons déjà, car expliquer comment les obtenir dépasse le but de cette page. Disons donc, par exemple, que nous voulons construire une voie entre deux gares st_a et st_b. Pour cet exemple, nous supposerons que la direction des gares est NE_SO, et nous voulons relier le côté NE de la gare. Nous appelons d'abord <code>InitializePath</code> de notre objet de détermination de chemin:
+
+ local tile_a = AIStation.GetLocation(st_a);
+ local tile_b = AIStation.GetLocation(st_b);
+ pathfinder.InitializePath(<nowiki>[[tile_a, tile_a + AIMap.GetTileIndex(-1, 0)]], [[tile_b + AIMap.GetTileIndex(-1, 0), tile_b]]</nowiki>);
+
+La détermination de chemin attend un tableau de tableaux [case_départ, case_avant_départ] et un tableau de tableaux [case_arrivée, case_après_arrivée]. Comme nous n'avons qu'un seul départ et une seule case d'arrivée, nous créons simplement deux tableaux avec un élément dans chaque. Maintenant, la détermination de chemin est prête à trouver un trajet.
+
+ local path = pathfinder.FindPath(-1);
+
+Le paramètre que <code>FindPath</code> accepte est le nombre d'itérations qu'il doit faire avant de se terminer. -1 signifie boucler jusqu'à ce qu'un chemin soit trouvé. Une fois ceci fait, la fonction renvoie soit le chemin trouvé, soit null pour indiquer qu'aucun trajet n'existe.
+
+== Construire le trajet planifié ==
+
+Supposons que la détermination de chemin a renvoyé un trajet, comment commencer à le construire? Tout d'abord, il est intéressant de savoir que <code>FindPath</code> renvoie une instance de la classe <code>AyStar.Path</code>. Pour voir sa documentation, ouvrez <code>bin/ai/library/graph/aystar/main.nut</code>. Globalement, elle a trois fonctions: <code>GetParent()</code>, <code>GetCost()</code> et <code>GetTile()</code>. <code>GetCost()</code> n'est pas très utile pour le moment; nous  utiliserons donc uniquement <code>GetParent()</code> et <code>GetTile()</code>. Pour construire un trajet trouvé par la détermination de chemin, nous appelons <code>path.GetParent()</code> jusqu'à ce qu'il renvoie null. Comme la détermination de chemin peut renvoyer des ponts et des tunnels, nous devons vérifier la distance entre le nœud courant et le précédent. Si cette distance est supérieure à 1, nous devons construire un pont ou un tunnel.
+
+ local prev = null;
+ local prevprev = null;
+ while (path != null) {
+   if (prevprev != null) {
+     if (AIMap.DistanceManhattan(prev, path.GetTile()) > 1) {
+       if (AITunnel.GetOtherTunnelEnd(prev) == path.GetTile()) {
+         AITunnel.BuildTunnel(AIVehicle.VT_RAIL, prev);
+       } else {
+         local bridge_list = AIBridgeList_Length(AIMap.DistanceManhattan(path.GetTile(), prev) + 1);
+         bridge_list.Valuate(AIBridge.GetMaxSpeed);
+         bridge_list.Sort(AIAbstractList.SORT_BY_VALUE, false);
+         AIBridge.BuildBridge(AIVehicle.VT_RAIL, bridge_list.Begin(), prev, path.GetTile());
+       }
+       prevprev = prev;
+       prev = path.GetTile();
+       path = path.GetParent();
+     } else {
+       AIRail.BuildRail(prevprev, prev, path.GetTile());
+     }
+   }
+   if (path != null) {
+     prevprev = prev;
+     prev = path.GetTile();
+     path = path.GetParent();
+   }
+ }
+
+Ce code boucle sur toute la longueur du trajet. Pour chaque élément, il tente de construire soit un pont ou un tunnel ou une portion de voie. Remarquez que dans une vraie IA, vous vérifieriez probablement si <code>AIRail.BuildRail</code> renvoie true, et si non, vous relanceriez la détermination de chemin.

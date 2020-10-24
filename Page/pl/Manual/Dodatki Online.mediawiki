@@ -1,0 +1,38 @@
+[[Translation:en/Manual/Online content]]
+
+<!--{{table of contents}}-->{{pl/spis treści}}
+<!--{{Feature|0.7}}-->{{pl/Zgodne Wersje|0.7}}
+
+17 stycznia 2009 r. Dodano nową funkcję do OpenTTD. Ta funkcja usługi treści umożliwia pobieranie zawartości z centralnego serwera ( content.openttd.org ). Autorzy NewGRF, AI, scenariusze itp. Najpierw muszą przesłać swoją pracę na [http://content.openttd.org/ Content Service Website]. Po dodaniu gracze OpenTTD mogą z łatwością pobrać pliki NewGRF, AI, scenariusze itp. Dodane na centralny serwer za pomocą interfejsu w grze. Użytkownicy muszą jedynie wybrać to, co chcą pobrać; gra obsługuje instalowanie wszystkich plików. (Domyślny port to 3978) Oryginalna nazwa usługi treści online to BaNaNaS. Odniesienia, takie jak  "Twój ulubiony sklep z owocami" , istnieją w nieformalnych miejscach, takich jak fora, i odnoszą się do systemu dodatków online.
+
+==Pobieranie dodatków==
+Aby otworzyć interfejs pobierania, kliknij ''Sprawdź dodatki online'' u dołu menu głównego.
+[[File:en/MainMenu CheckOnlineContent.png|center|frame|Nowy przycisk Sprawdź dodatki online w menu głównym.]]
+
+Otworzy się nowe okno dialogowe. Lewa połowa tego okna zawiera listę całej zawartości dostępnej na serwerze treści. Pierwsza kolumna listy pokazuje typ zawartości, druga kolumna nazwę nadaną treści. Kliknij nazwę wpisu na liście, aby wyświetlić więcej informacji o wybranej treści. Ta informacja jest wyświetlana w prawej połowie okna.
+
+Przed każdym wpisem znajduje się pole wyboru. Możesz wybrać zawartość do pobrania, klikając odpowiednie pola wyboru. Treść, którą już posiadasz i która jest aktualna, jest oznaczona zieloną kulą zamiast pola wyboru.
+Zamiast ręcznie wybierać całą zawartość, możesz także użyć przycisku ''Wybierz aktualizacje'' w lewym dolnym rogu. Ten przycisk pozwala wybrać całą zawartość, którą już pobrałeś, ale której nowa wersja jest dostępna.
+
+Jeśli szukasz konkretnej treści, możesz użyć pola tekstowego ''filtr tagów/nazw'' w prawym górnym rogu okna, aby wyświetlić tylko elementy zawierające słowo wpisane w nazwie lub znacznikach (słowa kluczowe określone przez autor do opisania zawartości).
+
+[[File:en/ContentDownloading Progress.png|left|frame|Wskaźnik postępu.]]Kiedy jesteś zadowolony ze swojego wyboru, kliknij przycisk  ''Pobierz'' w prawym dolnym rogu. Pojawi się wskaźnik postępu, a wybrana zawartość zostanie pobrana i zainstalowana automatycznie. Po wykonaniu tej czynności możesz kliknąć przycisk OK, aby zamknąć okno dialogowe. Teraz albo wybierz więcej treści i powtórz proces, albo zamknij okno za pomocą przycisku w lewym górnym oknie lub klikając przycisk  'Anuluj' na dole okna.
+
+Pamiętaj, że jeśli pobrałeś pliki NewGRF, nie są one automatycznie dodawane do okna ustawień NewGRF. Nadal musisz to zrobić ręcznie.
+[[File:en/ContentDownloading2.png|center|frame|Interfejs pobierania dodatków.]]
+
+==Łączenie z serwerem z brakującą zawartością==
+Czasami serwer używa wersji NewGRF, które nie są już dostępne za pośrednictwem  "dodatki online" z menu głównego (wyświetlane są tylko najnowsze wersje dostępnej zawartości). Nadal możesz załadować brakujące pliki NewGRF z lobby dołączenia do serwera sieciowego, jeśli brakujące zostały wcześniej przesłane na serwer dodatków online.
+<br>
+Aby to zrobić:<br>
+- Kliknij przycisk  "Ustawienia NewGRF" w oknie gry wieloosobowej, otworzy się nowe okno z listą NewGRF używanych na serwerze.<br>
+- Kliknij przycisk "Znajdź brakujący dodatek online" u dołu tego nowego okna, otworzy się okno pobierania podobne do normalnego do pobierania zawartości (jak pokazano powyżej). Zamiast wyświetlać tylko najnowsze wersje, będziesz mieć również możliwość pobrania starszych wersji, których brakuje. Jeśli nie można znaleźć NewGRF na internetowym serwerze dodatków, musisz je znaleźć [[pl/Archive/Community/FAQ NewGRF|gdzie indziej]], zanim będziesz mógł dołączyć do serwera.
+[[File:en/server join bananas.png|center|frame|Brakujące dodatki.]]
+
+==Zobacz też==
+*[[pl/Archive/Community/Serwis Dodatków|Serwis Dodatków]]
+*[[pl/Manual/Serwer dedykowany#Instalowanie dodatków online|Instalowanie dodatków online na dedykowanym serwerze]] (za pomocą komend konsoli)
+
+<!--[[Category:Content Service]]--> [[Category:pl/Serwis Dodatków]]
+<!--[[Category:Development]]--> [[Category:pl/Rozwój]]
+<!--[[Category:Manual]]--> [[Category:pl/Podręcznik]]

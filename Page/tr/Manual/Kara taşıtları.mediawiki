@@ -1,0 +1,106 @@
+[[Translation:en/Manual/Road vehicles]]
+{{tr/İçindekiler}}
+
+Kamyonlar ve otobüsler trenlere ucuz bir alternatiftir ve daha az tasarlama ve altyapı gerektirir. Daha çok araç eklemek için eGRVTS NewGRF'sini edinmeniz önerilir. Kamyonlar yolcu dışında her şeyi taşıyabilir ve otobüsler yalnızca yolcu taşıyabilir. Çeşitli NewGRF'lerde kamyon ya da otobüs görevi görebilecek araçlar bulunur.  Ticari marka ihlallerini önlemek için TTD'de araç adları değiştirildi ve OpenTTD'de uydurma adları koruyor. "Original Vehicle Names" NewGRF'sini indirip etkinleştirerek bunları değiştirebilirsiniz.
+
+Otobüsler temelde insanları taşıyan kamyonlardır. Ancak, [[en/Manual/Loading Bays#Lorry Loading Bay|yükleme alanları]] yerine [[en/Manual/Loading Bays#Bus Loading Bay|otobüs duraklarına]] gereksinimleri vardır.
+
+Otobüs duraklarını kullanmanın biraz daha ucuz bir yolu olsa da kullanışlı bir yöntem, onları kent genelinde konumlandırmaktır, örneğin ctrl+tıklama ile kentin dışıdaki tren istasyonuna ya da havaalanına (ya da her ikisine!) bağlayabilirsiniz. Bu yolcuların akışını gülünç bir noktaya kadar artırabilir. Yaklaşık 25.000 nüfuslu kentin dışında büyük bir tren istasyonu oluşturmak, her ay yalnızca 1-2 bin yolcu getirir. Kentin dört bir yanına otobüs duraklarının yayılması bunu 8 ila 10 bin arasına çıkartabilir. Bununla birlikte, çok oyunculu oyunda kötü görünebilir.
+
+==Kara taşıtları listesi==
+{{tr/AraçTablosu/Başlangıç}}
+{{en/VehicleTable/Header|Yolcu ve Posta}}
+{{en/VehicleTable/Row|
+*[[en/Otobüsler]]
+*[[en/Posta Kamyonları]]
+|
+*[[en/Otobüsler]]
+*[[en/Posta Kamyonları]]
+|
+*[[en/Otobüsler]]
+*[[en/Posta Kamyonları]]
+|
+*[[en/Otobüsler]]
+*[[en/Posta Kamyonları]]
+}}
+{{en/VehicleTable/Header|Ortak Kargo}}
+{{en/VehicleTable/Row|
+*[[en/Petrol Tankerleri]]
+*[[en/Eşya Kamyonları]]
+*[[en/Tahıl Kamyonları]]
+*[[en/Hayvan Kamyonları]]
+*[[en/Odun Kamyonları]]
+|
+*[[en/Petrol Tankerleri]]
+*[[en/Eşya Kamyonları]]
+*[[en/Tahıl Kamyonları]]
+*[[en/Hayvan Kamyonları]]
+*[[en/Odun Kamyonları]]
+|
+*[[en/Petrol Tankerleri]]
+*[[en/Eşya Kamyonları]]
+*[[en/Tahıl Kamyonları]]
+* -
+*[[en/Odun Kamyonları]]
+|
+*[[en/Kola Kamyonları]]
+*[[en/Tatlı Kamyonları]]
+*[[en/Oyuncak Kamyonları]]
+*[[en/Pil Kamyonları]]
+*[[en/Pamuk Şeker Kamyonları]]
+}}
+{{en/VehicleTable/Header|Benzer Kargo}}
+{{en/VehicleTable/Row|
+*[[en/Zırhlı Kamyonlar]]*
+*[[en/Kömür Kamyonları]]
+*[[en/Demir Kamyonları]]
+*[[en/Çelik Kamyonları]]
+* -
+|
+*[[en/Zırhlı Kamyonlar]]*
+*[[en/Kömür Kamyonları]]
+* -
+*[[en/Kâğıt Kamyonları]]
+*[[en/Yemek Kamyonları]]
+|
+*[[en/Zırhlı Kamyonlar]]*
+* -
+*[[en/Bakır Kamyonları]]
+* -
+*[[en/Yemek Kamyonları]]
+|
+* -
+*[[en/Şeker Kamyonları]]
+* -
+* -
+* -
+}}
+{{en/VehicleTable/Header|Diğer Kargo}}
+{{en/VehicleTable/Row|
+|
+|
+*[[en/Su Tankerleri]]
+*[[en/Meyve Kamyonları]]
+*[[en/Kauçuk Kamyonları]]
+|
+*[[en/Baloncuk Kamyonları]]
+*[[en/Gazlı İçecek Tankerleri]]
+*[[en/Plastik Kamyonları]]
+*[[en/Şekerleme Kamyonları]]
+}}
+|}
+
+Notlar(*):
+*Zırhlı kamyonlar, [[en/iklime]] bağlı olarak Değerli Eşya, Altın ya da Elmas taşır.
+
+==Kazalar==
+[[File:en/Roadvehicledualtrack.png|right|frame|Örnek: Geçişi önceden kapatmak için yol sinyalleri ve karayolu araçlarının sıraya gireceği alan.]]
+Kara taşıtları, yoğun kalabalık istasyonlarda ve depolarda bile kendilerine çarpmazlar.
+
+Ancak, trenlerle çarpışma ile yok edilebilirler, bu nedenle hemzemin geçitleri oluşturduğunuzda dikkatli olmalısınız. Bir hemzemin geçitte ışıklar yanıp sönerken ve tren yaklaşırken, buraya gelen kara taşıtlarını durduracak olsa da bir araç zaten kesişme noktasındaysa ve tren hızla hareket ediyorsa, kara taşıtı geçidi zamanında terk edemeyecek ve ezilecektir. Tren hasar almadan devam edecektir.
+
+Daha önce hemzemin geçidi kapatmak ve çarpışma olasılığını azaltmak için [[en/Manual/Signals#Path_Signals|yol sinyallerini]] kullanabilirsiniz. Çift raylı bir demiryolu sisteminiz varsa, kara taşıtlarının raylar arasında beklemesi için yeterli alan olduğundan emin olun, örnek için sağdaki resme bakın. Tabii ki, bir köprü bu işi daha iyi yapar.
+
+Kötü niyetli bir oyuncu, demiryolu raylarıyla birkaç yol karesini kasıtlı olarak geçebilir ve büyük bir trafik sıkışıklığı oluşturmak için 1 tren kullanabilir ve araçların kasıtlı olarak ezilmesi için trenlerin her iki tarafını da kullanabilir.
+
+[[Category:en/Road Vehicles]]

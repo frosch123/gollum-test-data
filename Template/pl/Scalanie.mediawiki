@@ -1,15 +1,14 @@
-[[Translation:Template/en/Merge]]
-<noinclude>
+<noinclude>[[Translation:Template/en/Merge]]</noinclude><noinclude>
 </noinclude>
 {{en/ambox| type  = move
 | image = merge.png
 | text  =  {{#IF: {{{1|}}} |Sugerowano, aby ten artykuł lub sekcja była <span class="plainlinks">[http://pl.wikipedia.org/wiki/Scalanie_(system_kontroli_wersji) Scalona]</span> z<!--
---> ''[[:en/{{NAMESPACE}}/{{{1}}}|{{{1}}}]]''. ([[:en/{{NAMESPACE}} talk/{{{1}}}|Dyskusja]]) | Nie podano nazwy strony, napraw to lub usuń szablon
+--> ''[[:{{NAMESPACE}}:{{{1}}}|{{{1}}}]]''. ([[:{{NAMESPACE}} talk:{{{1}}}|Dyskusja]]) | Nie podano nazwy strony, napraw to lub usuń szablon
 }} }}<includeonly>{{{2|<!--[[Category:Articles to be merged|{{PAGENAME}}]]-->[[Category:pl/Artykuły do ​​scalenia|{{PAGENAME}}]]}}}</includeonly><noinclude>
 
 ==Używanie==
 Wprowadź <nowiki>{{</nowiki>'''Scalanie/Pl'''|'''Nazwa strony'''<nowiki>}}</nowiki>. Przykład:
-<pre>{{pl/Scalanie|Jakaś strona}}</pre>
+<pre>{{pl/Scalanie|en/Jakaś strona}}</pre>
 To doda artykuł do <!--[[:Category:Articles to be merged]]-->[[:Category:pl/Artykuły do ​​scalenia|kategorii : Artykuły do scalenia]].
 
 == Który szablon scalania powinienem użyć? ==

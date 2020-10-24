@@ -1,0 +1,279 @@
+[[Translation:en/Community/Essays/NewTowns]]
+{{en/other languages|en=NewTowns|pl=NewTowns}}{{en/-}}
+NewTowns is a proposal for OpenTTD to implement a better economy and better gameplay for towns. It is inspired on the many servers where players are competing for the biggest town. Most knowledge assembled and presented in this article comes straight from implemented ideas on those servers. There are some novel ideas mixed in, to add juice.
+
+
+==Purpose==
+The main goal for this document is to provide implementors with inspiration on how towns should be handled within OpenTTD. I myself might be an implementor, if I decide to learn C++ sometime in the future.
+
+==Meta==
+
+===Status===
+Alpha
+
+Currently (August 9th 2010) this is a proposal in alpha status. Most ideas presented here are not yet well described, neither checked on technical feasability with the devs of OpenTTD. When reading through it, expect ridiculous phrased sentences, incomplete/roughly/inconsistent described things and other confusing stuff.
+
+===Process===
+The writing of this document is done from scratch all on the wiki. 
+When this document reaches beta status (all ideas have been described concisely and to certain detail level), a forum topic will be opened. This topic is mainly to get feedback of the ideas presented on technical and functional level.
+
+===Feedback===
+* Is has been suggested by planetmaker to splitup big projects into smaller ones. I will take this advice to heart. As this document grows with described idea's, subdocuments will be created with more detailed implementation/technical information. Implementors then have a much smaller topic to focus on, increasing ease of coding for actual implementation. 
+* Values defining town type are arbitrarily chosen; much higher values are suggested. This would also accomodate non-networking players. An idea to solve this is to have a game length indicator; town type classification can be relative to the game length. A game of 12 years should have lower tresholds then a game of 120 years.
+
+==What is a town?==
+Towns/cities are centers where economic activity is present, attracting inhabitants for work. in turn, more inhabitants in towns generate more economic activity. The relation between inhabitants and economic activity goes therefore two-ways. A town is therefore a place consisting of centers where economic activities and living activities find their place.
+[[File:en/Townoutline.png|frame|A town can be defined as center of centers. In this case, the town has one original center (middle) and 4 surrounding centers.]]
+A town can be defined as a center of centers. It always starts with at least one center (original center). When time passes and a town grows, more centers are added. 
+
+Centers remove the problem of players trying to shape the city such that only roads exist around town centers. Currently industries, parks, squares, fountains, trainstations, airfields are all built as far away from centers as possible. This is because a town´s structure is such that it consists of 5 concentric circles from the center outwards, which each circle adding a level of building size. As such, big towers with 100+ inhabitants will only appear in the most inner circles, creating demand to remove all obstacles near a center. 
+
+Adding centers to towns will largely remove this need. Furthermore, it is much more realistic compared to how towns grow IRL.
+
+Several center types exist:
+===Original center===
+Usually houses some special buildings like churches, historic buildings, squares. It is the center present at start, the "town center" as many people refer to.
+Town centers can have any type of building; cargo industries usually are not present in the center. Town centers have increased chances for fountains, statues or other special buildings/objects to appear.
+
+===Industry center===
+A center appearing in cities when player provides strong and consistent input/output of a cargo type, for example a Valuables sector might develop if a player services a Bank frequently in that area.
+
+===Neighborhood===
+Town authority plans neighborhoods. Neighborhoods are areas where only houses and small shops will appear. Neighborhoods are planned by the authority when they expect large growth in coming time.
+The size planned for a neighborhood is proportional to the town size. Bigger towns plan bigger neighborhoods, as they have more inhabitants needing residential space. Neighborhoods mostly spawn new residential buildings; occasionally shops/small office buildings may appear.
+
+===Agglomeration===
+An agglomeration center is an old town which is assimilated by a neighbouring bigger town. The old assimilated town becomes a center of the assimilating bigger town, making the old town cease to exist.
+
+==Town types==
+As towns grow, they evolve from settlements all the way to megalopolis. Each type has their distinct properties, the main properties being the types of buildings/industries they host.
+
+<span style="color:#808000"> industry </span>
+<span style="color:#0000ff"> office</span> 
+<span style="color:#008000">residential</span>
+
+Each type inherits previous types.
+* Settlement (max 250)
+** <span style="color:#008000">Small houses</span>
+* Village (max 750)
+** <span style="color:#008000">small apartment blocks</span>
+** <span style="color:#0000ff">few small offices</span>
+* Town (max 1500)
+** <span style="color:#008000">suburban houses</span>
+** <span style="color:#008000">bigger apartment blocks</span>
+** <span style="color:#808000">small industries</span>
+** <span style="color:#0000ff">more small offices</span>
+* City (max 5000)
+** <span style="color:#008000">bigger suburban houses</span>
+** <span style="color:#008000">apartment blocks</span>
+** <span style="color:#0000ff">big office buildings</span>
+** <span style="color:#808000">industries</span>
+** <span style="color:#0000ff">HQ's</span>
+** Growth factor is doubled
+* Metropolis (no limit)
+** <span style="color:#808000">industry centers</span>
+** <span style="color:#0000ff">skyscrapers</span>
+* Megalopolis (no limit)
+** <span style="color:#008000">agglomerations</span>
+
+==What makes a town grow?==
+The most important factor of town growth is economic activity. Therefore, in OpenTTD town growth should be largely dependant on economic activity surrounding the town. Without economic activity, towns gradually shrink since inhabitants don't have any possibilty to employ themselves. 
+Other factors include, but are not limited to (this list should be completed):
+* Public transport system quality
+* Traffic system quality (jams)
+* Geological location of the town (space to extend)
+Since economic activity is the main factor for town growth, players in OpenTTD are encouraged to facilitate economic activity through infrastructure. In theory, towns should be as big as the infrastructure built by the player(s) in that particular town. In simple wordings: Infrastructure development somewhat equals town development.
+
+==Town anatomy==
+A town consists of 4 major parts:
+* (mostly secondary) Industries (factory, bank)
+* Offices (office buildings seen in the center of town)
+* Houses
+* Infrastructure (roads/rail/air)
+
+Above 4 parts are mixed in towns, there is no clear distinction in "residential area's" or "commercial area's".
+
+Towns have one or more centers. A settlement has a center, the nametag of the town is located there. Additional centers may be added ingame. Examples of those centers are industry centers, assimilated towns or centers added by the town authority.
+
+In centers, for instance an industry center, it is possible for residential or commercial buildings to appear. However, chances are much bigger industries/industrial buildings will appear.
+
+==What is economic activity?==
+In OpenTTD, economic activity are activities performed in industries. Since the definition of an industry in OpenTTD also encompasses houses & offices, passenger & mail transport also include economic activity.
+Since the main influence on economic activity is infrastructure players can build, developing economic activity is almost synonymous to providing (building roads/rails/airports/canals) and utilizing (transporting passengers and cargo) infrastructure created by players.
+
+==How should towns grow?==
+Town growth appears usually in areas of economic activity. For instance, when a player adds a passengers station and services it well, this is considered economic activity. Buildings will appear next to the station. Another example is a factory. Near factories, other industries should open. Growth is faster near centers. Growth is bigger when economic activity is bigger (industries producing more). Large economic activity near a center should bring optimal growth.
+No requirements are needed to grow a town. However, the "town growth factor" is increased when deploying several kinds of activities:
+* Local public transport service
+* Space assingment for growth of communities, offices and industries
+* Serviced industries
+* Meeting cargo requirements of the town
+* Doubling the cargo requirements to enable development of industry centers
+Depending on what actions the player executes, several types of buildings may appear. For instance, a settlement can grow with only a local bus service using 2 stops. However, the settlement won't grow any other buildings the small houses/huts. When starting to service industries, and start meeting cargo demands, towns have the right economic circumstances for bigger buildings to settle in town.
+
+==Cargo demand==
+Cargo demand differs from the played climate. Cargo demand is calculated not on town size, but using the buildings present in town. For instance, when lots of banks are present in a town, demand for valuables will be considerably higher as compared to one bank. 
+
+==Agglomerations==
+[[File:en/Assimilation.png|frame|The green town's center falls within a center of the blue town, therefore th green town becomes considered for assimilation for the blue town]]
+Towns growing fast reaching outskirts of surrounding towns, may assimilate those towns. The assimilating town must have a higher status: A city can assimilate a settlement or a village, but not a city or a metropole. Assimilated towns simply become a new center in the assimilating town, named after the assimilated town. A metropole reaches megalopole status when it assimilated 3 other towns.
+An assimilation is considered when a center radius incorporates a center of a smaller town. In other words, when a center in the to be assimilated town is located within the area of a center from the assimilating town. 
+===Assimilation refusal===
+A town to be assimilated may refuse its assimilation based on hard facts. For instance, when lots of tourist industry is present in the smaller town, the town may refuse assimilation based on the pitoresque argument. 
+A second consideration for assimilation takes place when the big town completely surrounded the smaller town. A refusal of the smaller town needs at least two arguments. For instance, nature may have appeared within the smaller towns' borders (a player planting trees, swamps appear in watery regions), adding the nature argument on top of the pitoresque argument. When a town has refused assimilation twice, the refusal becomes permanant.
+Some argument examples for towns to refuse assimilation:
+* Bad rating of company in town
+* Nature surrounding town
+* Tourist industry in town
+* Pollution from current assimilating town (i.e. airfield, diesel trains/buses)
+
+==Player HQ==
+A player HQ is an office building to provide all administrative tasks of the company. Warehouses store cargo, and are built using the "fund new industry" option. Another possible way to build warehouses is using the company window with a button "build new warehouse".
+
+A player company HQ aids in town growth. It is an industry in itself, which is currently true too: a player company HQ accepts mail/passengers. Bigger HQ's might add other cargo acceptance, such as valuables/goods.
+===Claiming===
+Usually on town growth servers, players are required to monopolize a town by placing the HQ near the town center. When a town is "claimed", competitors are not allowed to build near the center of the town. This radius increases along with the size of the town.
+Claiming a town is different from "exclusive transport rights":
+* Area around a claimed town is "owned" by the claiming player; competitors are not allowed nor enabled to build anything around claimed towns in a certain radius (about 10-20 tiles). When a competitor tries to build, an error message is given
+* Monopolization of the town is permanent, exclusive transport rights only go for one year
+* Town's name is changed to " <companyname>'s Town" (the prefix space allows for sorting on claimed towns in the town list)
+* Utilizing "exclusive transport rights" is disabled in (claimed) towns, as it allows competitors to monopolize a claimed towns' infrastructure
+* Only one town can be claimed, exclusive transport rights can be applied to any town
+* Only settlements can be claimed (towns sized < 250)
+
+===Warehouse===
+[[File:en/Aracirion - 002.png|frame|A warehouse newGRF suggestion (credits go to Aracirion)]]
+HQ's are used as a warehouse to store goods the town did not need the current month. Cargo which can be stored such as goods, can be used the next month. HQ warehouses should become bigger when the town size increases. This should also be true for the graphics of the HQ. Currently, HQ building graphic is not determined by economic activity, but by the "performance" metric of a company. The performance metric is somewhat representable for economic activity, but it's goal is not the same. HQ's size should be determined by the size of the warehouse and the amount of economic activity performed by the company. Warehouses should be built by the player as an industry with a modular design. The size of the warehouse should generally be in proportion of the cargo throughput of the company.
+
+===Placement===
+As economic activity is spurred itself by economic activity, HQ's should be encouraged to build in the center of the town. When doing so, the company increases the economic activity in town, and as such is spurring growth of the town. The economic activity growth factor realized by having the HQ in the center should be based on the scale of economic activity of the company. In other words, when the company is doing well, the HQ is big and has a profound influence on town growth.
+
+===Graphics===
+The player HQ takes 4 tiles by default. Currently, the player HQ has 5 stages:
+
+[[File:en/HQ1.png]]
+[[File:en/HQ2.png]]
+[[File:en/HQ3.png]]
+[[File:en/HQ4.png]]
+[[File:en/HQ5.png]]
+
+The idea is to add more stages to the HQ. For example, newGRFS such as the one shown below can be stage 7.
+[[File:en/Bighq.png]] (from: http://www.tt-terminal.co.uk/downloads.shtml)
+
+Or even stage 10:
+
+[[File:en/Mainhq.gif]] (from: http://users2.tt-forums.net/ttdur/ttdur.htm)
+
+Warehouses may be placed on a different spot then the company HQ. Furthermore, warehouses may be placed on multiple locations. However, warehouses should be placed in the claimed town.
+
+==Industry centers==
+Most kinds of industries tend to develop in the same area in towns. For instance, cloth shops open usually around other cloth shops. Financial companies tend to move to areas where already financial companies are. This fact should be resembled in town growth. 
+===Developing===
+An industry center can be developed by offering double the amount of the required cargo type over a certain period of time. Banks may grow, and new banks may open, because the valuables economic activity is high. As banks grow and new banks appear near current banks, demand increases spurring growth of banks further.
+As another example, new secondary industries may open near location which have certain properties. Those properties may be position near water for shipment, station for train transport, or another factory providing input in close range.
+
+===Becoming===
+A prerequisite for industry centers is having company HQ (not OpenTTD companies, but newGRF tagged with HQ) buildings in the industry cluster. Another prerequisiste is that the town should have city status.
+Clusters of certain industry become industry centers when a continuous, steady flow of cargo is brought to town (consistent economic activity). For instance, when all banks are serviced for 200% their needs over a timespan of, say 2 years, the country instance (game engine) may decide the cluster of industries become an industry center. 
+===Advantages===
+Industry centers attract HQ's of companies (newGRF's tagged with HQ). Company HQ's are interesting for towns, as they generate a lot of economic activity (and thus growth). 
+===Losing status===
+Industry centers may be lost to a town, because of not meeting requirements for a certain amount of time. 
+===Properties===
+* Only one industry center of a cargo type may exist on a map (one financial center, one production center, etc)
+* At least one HQ newGRF needed to become industry center
+* Multiple industry centers are possible in a town
+* Industry centers dramatically increase chances of more HQ newgrfs
+===Types===
+* Banking industry
+* Goods industry
+* Passenger hub
+* Steel industry
+* Food industry
+* Printing press industry
+* Nightlife industry (cinema/night clubs)
+* Shopping center
+
+==Buildings==
+Various grades of town buildings exist.
+===Huts===
+Small cheap houses for residential use. Placed at the border of suburbs/countryside.
+
+[[File:en/1x1 houses trop1.png]]
+[[File:en/1x1 houses trop2.png]]
+[[File:en/Modernhouse2.png]]
+[[File:en/Modernhouse.png]]
+
+===Houses===
+Houses are small buildings only for residential use.
+
+[[File:en/2townhouseandgardens.png]]
+[[File:en/3townhouseandgarden.png]]
+
+===Suburban buildings===
+Suburban buildings are small buildings offering peripheral functions
+
+[[File:en/1x1 houses trop5.png]]
+[[File:en/1x1 houses trop6.png]]
+
+===Apartment blocks===
+Apartment blocks are buildings housing multiple homes, and are situated closer to centers.
+
+[[File:en/1x1 flats trop5.png]]
+[[File:en/1x1 flats trop2.png]]
+
+===Office towers===
+Office towers appear generally in centers, and consist of office companies and residential area.
+ 
+[[File:en/Greyflats.png]]
+[[File:en/Modernofficeblock.png]]
+[[File:en/1x1 flats trop7.png]]
+
+===Skyscrapers===
+Skyscrapers are like office towers, but bigger with more capacity. Usually they utilize more then 1 tile.
+===Cargo Industries===
+Cargo industries are generally placed at the outskirts of a town.
+
+===Parks===
+Parks have the effect of attracting bigger buildings (office towers/residential towers/skyscrapers) to be build alongside. This mechanism has several aims:
+* When growing towns, players usually delete parks. This is because they do not add any inhabitants to town, thus being 'useless'. By giving them purpose, the urge to remove parks is gone.
+* Since parks do not add any inhabitants, attracting bigger buildings compensates for the lost in gained inhabitants. 
+* IRL, parks attract big buildings and increase ground value. This should/can be reflected in OpenTTD, too. 
+
+[[File:en/Park001.png]]
+[[File:en/Park002.png]]
+
+===Squares/fountains/statues===
+Squares and fountains generally appear in the center of centers. They have the same effect as parks, increasing chances big buildings will locate near squares. Squares, fountains and status can be removed by a player at high authority rating cost. 
+
+===Company statue===
+Companies can built statues themselve to increase station ratings of stations built in the town county.
+
+===Stadiums===
+Stadiums attract relatively many passengers. So many, players are generally required to build a separate station for stadiums.
+Currently, stadiums are unique to a town: only one is allowed. This restriction should be removed for different stadiums; each stadium type should be unique. A soccer stadium and an American football stadium both should be allowed in town.
+
+Different sized stadiums should be added to the game. Various grades can be distinguished:
+* 100-1000 stadium (small) 2x2
+* 1000-10000 stadium (medium) 2x2
+* 10000-20000 stadium (big) 2x2
+* 20000-40000 stadium (huge) 3x3
+* 40000-80000 stadium (enourmous) 3x3
+* 80000-200000 stadium (megalomaniac) 4x4
+
+[[File:en/soccerstadium.png]]
+[[File:en/Americanfootballstadium.png]]
+
+===HQ newGRFs===
+HQ newGRFs, not to mixup with the players' company HQ's, are newGRFs of big buildings and industries unique in a game (a company generally has only one HQ).
+While the HQ newGRFs are unique in a game, multiple HQ newGRFs may exist of the same type of cargo. For instance, a Bank of America HQ newGRF may exist alongside a JP/Morgan HQ newGRF.
+
+When a new HQ newGRF is opened in town, a newspaper message should appear. An HQ opening is usually such a big event that this is newsworthy.
+
+[[File:en/Citibank.gif]](from http://users2.tt-forums.net/ttdur/ttdur.htm, credits go to Andés Zsögön)]]
+
+===Churches===
+Old style churches are found in original centers of towns. Old style churches cannot be removed by town authority nor players, they are permanent in town. Old style churches cannot be build by town authority during the game, however new style churches can. Churches should accept tourists. Churches are related to fountains and squares, usually both are found in neighboring tiles. 
+
+[[File:en/Church.png]]
+[[File:en/1x1 flats trop3.png]]

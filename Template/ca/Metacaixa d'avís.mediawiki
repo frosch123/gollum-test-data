@@ -1,5 +1,4 @@
-[[Translation:Template/en/Ambox]]
-<!-- 
+<noinclude>[[Translation:Template/en/Ambox]]</noinclude><!-- 
       Adaptació de la plantilla wiki '''Metacaixa d'avís'''
 
 --><noinclude></noinclude><includeonly><div style="{{#IF: {{{estil|}}} | {{{estil}}} | margin: 0px 10% 0px 10%; border: 1px solid #aaa; border-left: 10px solid {{#switch:{{{tipus|}}} 
@@ -10,9 +9,9 @@
   | protecció  =#bba;
   | #default   =#1e90ff;
 }} padding: 4px 8px; background:#efefef; min-height: 44px;">}}
-<div style="position: absolute;">[[File:en/{{#if/{{{imatge|}}}
+<div style="position: absolute;">[[Image:{{#if:{{{imatge|}}}
   | {{{imatge}}}
-  | {{#switch/{{{tipus|}}}
+  | {{#switch:{{{tipus|}}}
     | esborrar   =Deletion.png
     | contingut  =Content.png
     | estil      =Edit-clear.png

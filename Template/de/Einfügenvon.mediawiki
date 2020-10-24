@@ -1,14 +1,13 @@
-[[Translation:Template/en/Mergefrom]]
-<noinclude></noinclude>
+<noinclude>[[Translation:Template/en/Mergefrom]]</noinclude><noinclude></noinclude>
 {{de/Ambox| Typ   = Bewegen
 | Bild  = mergeto.png
-| Text  =  {{#IF: {{{1|}}} |Es wurde vorgeschlagen, dass ''[[:en/{{NAMESPACE}}/{{{1}}}|{{{1}}}]]'' ([[:en/{{NAMESPACE}} talk/{{{1}}}|Diskutieren]]) in diesen Artikel oder diesen Teil <span class="plainlinks">[http://en.wikipedia.org/wiki/Wikipedia:Merging eingefügt]</span> werden soll.<!--
+| Text  =  {{#IF: {{{1|}}} |Es wurde vorgeschlagen, dass ''[[:{{NAMESPACE}}:{{{1}}}|{{{1}}}]]'' ([[:{{NAMESPACE}} talk:{{{1}}}|Diskutieren]]) in diesen Artikel oder diesen Teil <span class="plainlinks">[http://en.wikipedia.org/wiki/Wikipedia:Merging eingefügt]</span> werden soll.<!--
                             -->  | Keine Seite wurde vorgeschlagen. Bitte diese Vorlage löschen oder aktualisieren.
 }} }}<includeonly>{{{2|[[Category:en/Articles to be merged|{{PAGENAME}}]]}}}</includeonly><noinclude>
 
 ==Vorlage: Benutzung==
 Einfach <nowiki>{{</nowiki>'''Einfügenin/De'''|'''Seitenname'''<nowiki>}}</nowiki> im Artikel einfügen, der bewegt werden soll. Beispiel:
-<pre>{{de/Einfügen|Irgendeine Seite}}</pre>
+<pre>{{de/Einfügen|en/Irgendeine Seite}}</pre>
 
 == Welche "Einfügen"-Vorlage soll ich benutzen? ==
 * {{en/s|Einfügen/De}} &ndash; um zwei verschiedene Artikel an einem umbestimmten Ort zusammenzufügen.

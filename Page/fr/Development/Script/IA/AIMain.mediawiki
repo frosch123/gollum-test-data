@@ -1,0 +1,52 @@
+[[Translation:en/Development/Script/AIMain]]
+
+
+{{fr/NonIA}}
+
+'''main.nut''' est un fichier requis pour une IA, ainsi que [[fr/Development/Script/IA/AIInfo|info.nut]]. [[fr/Development/Script/IA/TestAI|IA:TestAI]] fournit un exemple d'un main.nut correctement formé (mais qui ne fait rien).
+
+==Structure de main.nut==
+main.nut a besoin de détenir la classe que le AIController utilise pour démarrer votre IA. C'est une classe Squirrel avec comme nom la valeur renvoyée par la fonction CreateInstance de votre info.nut.
+
+ function CreateInstance() { return "'''MaNouvelleIA'''"; }
+
+
+Si vous avez MaNouvelleIA, alors votre main.nut devra déclarer une classe du même nom. Vous devez aussi étendre le contrôleur de l'IA.
+
+ class '''MaNouvelleAI''' extends AIController
+ { 
+   constructor()
+   {
+     //constructor est une fonction optionnelle spéciale qui sera appelée dès que votre IA sera instanciée.
+     //Vous pouvez analyser la carte, récupérer et positionner des variables ici, mais vous ne pouvez rien faire qui affecte le jeu.
+     //Assurez-vous que votre IA ne prend pas trop de temps, ou elle sera tuée.
+   }
+ }
+
+==Fonctions requises==
+Le jeu essayera de lancer certaines fonctions particulières dans votre IA, et la fera planter ou se plaindre si vous ne les avez pas fournies. Ce sont Start(), Save() et Load(). À l'exception de Start(), elles peuvent être vides jusqu'à ce que vous ayez implémenté la fonctionnalité.
+
+Dans Squirrel, vous pouvez déclarer une fonction de deux manières: soit dans la déclaration de la classe, soit à l'extérieur. Vous pouvez choisir ce que vous préférez.
+
+ class '''MaNouvelleIA''' extends AIController
+ {
+   
+   function Start()
+   {
+     //Cette fonction est à l'intérieur de la déclaration de la classe
+   }
+    
+   //Ce sont des prototypes optionnels. Notez le ; à la fin plutôt que {}.
+   //Squirrel n'en a pas besoin, mais certains programmeurs aiment les utiliser.
+   function Save();
+   function Load(version, data);
+ }
+ 
+ function MaNouvelleIA::Save()
+ {
+    //Cette fonction est en dehors de la déclaration de la classe et nécessite le nom de la classe, pour que Squirrel puisse l'assigner au bon endroit.
+ }
+ 
+ function MaNouvelleIA::Load(version, data)
+ {
+ }

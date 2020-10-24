@@ -1,0 +1,180 @@
+[[Translation:en/Development/Script/Save and Load]]
+
+
+{{fr/NonIA}}
+
+== Sauvegarde ==
+Si vous créez une fonction <code>Save()</code> dans votre IA, vous pouvez stocker certaines données dans la sauvegarde d'un jeu. La fonction doit renvoyer une table avec l'information que vous voulez stocker. Vous ne pouvez enregistrer que:
+* des entiers
+* des chaînes
+* des tableaux (max. 25 niveaux d'imbrication)
+* des tables (max. 25 niveaux de profondeur)
+* des booléens
+* des valeurs nulles
+
+Les instances de classes ne peuvent pas être sauvegardées. Notez bien que cela comprend AIList; donc si vous voulez sauvegarder une AIList, vous devez la convertir en un tableau ou une table pour cela, et faire la conversion inverse au chargement.
+
+Dès que les utilisateurs sauvegardent leur partie, la fonction <code>Save()</code> de votre IA est appelée. Cela a lieu alors que votre IA est encore active, en train de faire ce pour quoi elle est prévue. Par exemple, au milieu d'une détermination de chemin, ou peut-être alors que vous modifiez un tableau interne. Le point à prendre en compte est que votre IA ne le remarquera pas, en plus du fait que le <code>Save()</code> est appelé pendant un moment. Quand vous faites un retour de cette fonction, votre IA continuera comme si rien n'était arrivé. Attention: si vous changez une variable que vous stockez aussi, et voulez absolument éviter tout effet de bord, faites-le juste après un <code>Sleep()</code>. Les chances pour qu'un ordonnanceur équilibré de Squirrel prenne effet juste après un <code>Sleep()</code> sont très faibles, donc vous devriez y être assez à l'abri.
+
+'''Note:''' Aucune autre information n'est sauvegardée; ainsi, par exemple, tous les événements en cours sont perdus dès que le jeu est chargé. Pour éviter cela, vous pouvez stocker vous-mêmes tous les événements (convertis en types autorisés) dans la sauvegarde. Cependant, le jeu continuera normalement après l'appel de la fonction <code>Save()</code>, donc vous devez aussi traiter ces événements.
+
+== Chargement ==
+Si une sauvegarde avec une IA est chargée, OpenTTD essaye ce qui suit. Dès qu'une étape réussit, la séquence est stoppée:
+* Essaye de charger exactement la même version de la même IA.
+* Essaye de charger la dernière version de la même IA qui supporte les données chargées depuis la version sauvegardée (version de l'IA sauvegardée >= valeur de retour de MinVersionToLoad)
+* Charge la dernière version de la même IA.
+* Charge une IA aléatoire.
+* Charge l'IA à blanc.
+
+Tout d'abord, le constructeur de votre IA est appelé, puis ensuite votre fonction <code>Load()</code>. Si une IA n'a sauvegardé aucune donnée, la fonction <code>Load()</code> ne sera pas appelée.
+
+== Quelles données sauvegarder? ==
+Bien entendu, les données que vous sauvegardez exactement ne dépendent que de vous, mais en règle générale, vous n'avez pas besoin de sauvegarder tout ce qui peut être aisément détecté en regardant de nouveau la carte. Vous pouvez donc stocker une carte des liens entre aire de poids lourds et industrie, mais stocker uniquement une liste de gares est inutile.
+
+== Ce que vous ne pouvez pas faire dans vos fonctions Save() et Load() ==
+Les deux fonctions Save() et Load() sont appelées depuis le processus principal. Cela veut dire qu'il n'est pas possible d'exécuter une commande qui construit / supprime / modifie quelque chose dans le jeu. Vous pouvez exécuter certaines fonctions de l'API, mais uniquement celles qui récupèrent des données. Essayez de minimiser le code dans Save() et Load(), car l'utilisateur doit attendre la fin de ces fonctions chaque fois qu'il sauvegarde ou charge une partie.
+
+== Gérer les versions de sauvegarde ==
+Quand une partie est sauvegardée, le nom et la version de chaque IA est enregistré. Quand OpenTTD charge une partie, il tente de trouver une version de la même IA qui peut charger l'état du jeu depuis la version de l'IA utilisée dans la sauvegarde. Cela se fait en déclarant <code>MinVersionToLoad()</code> dans votre info.nut et en lui faisant renvoyer la version minimale de votre IA depuis laquelle il peut charger les données.
+
+De plus, il y a un argument version à Load() qui indique à la fonction de chargement quelle version de votre IA a été utilisée pour sauvegarder l'état du jeu.
+
+== Exemple de code Save() / Load() ==
+ /* info.nut */
+ class testai extends AIInfo
+ {
+   /* ... */
+ 
+   function GetVersion() { return 3; }
+ 
+   /* Accepte de charger les parties sauvées par une version >= 2 de cette IA */
+   function MinVersionToLoad() { return 2; } 
+ 
+   /* ... */
+ }
+
+ /* main.nut */
+ class testai extends AIController
+ {
+   constructor()
+   {
+     counter = 0;
+   }
+ 
+   counter = null;
+ };
+ 
+ function testai::Save()
+ {
+   local table = {counter_value = this.counter};
+   return table;
+ }
+ 
+ function testai::Load(version, data)
+ {
+   if (data.rawin("counter_value")) {
+     this.counter = data.rawget("counter_value");
+   }
+ }
+ 
+ function testai::Start()
+ {
+   while(true) {
+     AILog.Info("Tic " + this.counter);
+     this.Sleep(70);
+     this.counter++;
+   }
+ }
+
+
+== Identifiants de sauvegardes ==
+Comme divers NewGFX peuvent modifier plusieurs des types d'ID utilisés dans le jeu, voici une liste des types d'ID auxquels vous pouvez vous fier comme étant constants quand la sauvegarde est chargée.
+
+{| border="1"
+|-
+! Type d'ID
+! Signification
+! Stocké dans les sauvegardes
+! Codé en dur dans les IAs
+! Note
+|-
+| BridgeID
+| Type de pont (ex.: tubulaire)
+| [0]
+| Non
+| Utilisez la fonction AIBridge::* pour trouver le type de pont adéquat.
+|-
+| CargoID
+| Type de cargaison
+| [0]
+| Non
+| Vous pouvez filtrer la AICargoList en utilisant AICargo::CargoClass (ex. CC_PASSENGERS) ou AICargo::TownEffect (ex. TE_PASSENGERS) pour obtenir le cargoID des passagers
+|-
+| EngineID
+| Type de locomotive
+| [0]
+| Non
+| Utilisez les fonctions AIEngine::* pour trouver l'engineID qui correspond à vos besoins.
+|-
+| GroupID
+| Groupe de véhicule
+| Oui
+| ---
+| 
+|-
+| IndustryID
+| Industrie spécifique quelque part sur la carte.
+| Oui
+| ---
+| 
+|-
+| IndustryType
+| Type d'industrie, par ex. mine de charbon
+| [0]
+| Non
+| Utilisez AIIndustryList_CargoAccepting et AIIndustryList_CargoProducing pour trouver les paires correspondantes.
+|-
+| SignID
+| Un signe quelque part sur la carte.
+| Oui
+| ---
+| 
+|-
+| StationID
+| Une station spécifique quelque part sur la carte.
+| Oui
+| ---
+| 
+|-
+| SubsidyID
+| Subvention
+| Oui (mais est réutilisé quand la subvention expire)
+| ---
+| 
+|-
+| TileIndex
+| Une case quelque part sur la carte.
+| Oui
+| ---
+| 
+|-
+| TownID
+| Une ville quelque part sur la carte.
+| Oui
+| ---
+| 
+|-
+| VehicleID
+| Véhicule
+| Oui
+| ---
+| 
+|-
+| WaypointID
+| Point de passage
+| Quelquefois
+| ---
+| En mettant à jour des sauvegardes d'avant la r16909, donc en effet de 0.7.x à 1.0.x ou ultérieur, les IDs changeront s'il y a des gares dans le jeu.
+|}
+
+[0] Il peut être prudent de les stocker, mais ils peuvent changer quand la configuration des NewGRF change. Normalement, les utilisateurs ne devraient pas les modifier; donc, si votre IA plante à cause d'un de ces changements, blâmez l'utilisateur. Notez que la configuration NewGRF peut aussi changer en cours de partie, et dans ce cas, vous ne pouvez rien faire si un de ces IDs change (vous pouvez recalculer les IDs chaque fois que vous les utilisez, mais ce n'est guère pratique).

@@ -1,5 +1,4 @@
-[[Translation:Template/en/Junction Criteria]]
-<noinclude></noinclude><includeonly>
+<noinclude>[[Translation:Template/en/Junction Criteria]]</noinclude><noinclude></noinclude><includeonly>
 <table style='border: 1px solid #ccc;background-color: #f9f9f9;'>
 <tr><th colspan='2'>[[hu/Community/Junctionary/Csomópontok tulajdonságai|A csomópont tulajdonságai:]]</th></tr>
 <tr><td width='50%' valign='top'>
@@ -32,7 +31,9 @@
   <td>{{#switch:{{{12}}}|0=Bármilyen|1=Alap|2=Előjelző|3=Útvonaljelző|undefined}}</td></tr>}}
 </table>
 </td></tr>
-{{#if:{{{15}}}|<tr><td colspan='2'>{{{15}}}</td></tr>}}
+{{#if:{{{15}}}|<tr><td colspan='2'>
+{{{15}}}
+</td></tr>}}
 </table>
 </includeonly>
 <noinclude>

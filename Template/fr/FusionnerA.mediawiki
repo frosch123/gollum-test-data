@@ -1,14 +1,13 @@
-[[Translation:Template/en/Mergeto]]
-<noinclude></noinclude>
+<noinclude>[[Translation:Template/en/Mergeto]]</noinclude><noinclude></noinclude>
 {{en/ambox| type  = move
 | image = mergeto.png
 | text  =  {{#IF: {{{1|}}} |Il a été suggéré que le contenu de cet article soit <span class="plainlinks">[http://fr.wikipedia.org/wiki/Wikip%C3%A9dia:Pages_%C3%A0_fusionner fusionné]</span> à <!--
-                            --> ''[[:en/{{NAMESPACE}}/{{{1}}}|{{{1}}}]]''. ([[:en/{{NAMESPACE}} talk/{{{1}}}|Discuster]]) | Aucun non de page n'a été donné. Corrigez cela ou supprimez ce modèle.
+                            --> ''[[:{{NAMESPACE}}:{{{1}}}|{{{1}}}]]''. ([[:{{NAMESPACE}} talk:{{{1}}}|Discuster]]) | Aucun non de page n'a été donné. Corrigez cela ou supprimez ce modèle.
 }} }}<includeonly>{{{2|[[Category:en/Articles to be merged|{{PAGENAME}}]]}}}</includeonly><noinclude>
 
 ==Utilisation==
 Entrer <nowiki>{{</nowiki>'''FusionnerA/Fr'''|'''Nom de la page'''<nowiki>}}</nowiki>. Exemple :
-<pre>{{fr/FusionnerA|Des pages}}</pre>
+<pre>{{fr/FusionnerA|en/Des pages}}</pre>
 Ceci va ajouter l'article à [[:Category:en/Articles to be merged]].
 
 == Quel modèle de fusion devrais-je utiliser ? ==

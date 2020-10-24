@@ -1,5 +1,4 @@
-[[Translation:Template/en/Translation]]
-<noinclude></noinclude>{{en/ambox| type  = style
+<noinclude>[[Translation:Template/en/Translation]]</noinclude><noinclude></noinclude>{{en/ambox| type  = style
 | image = Translation.png
 | text  = <strong>U tijeku je prijevod ove stranice s {{#switch:{{{from|}}}
   | ca = Catalan
@@ -85,7 +84,7 @@ Title of original article: <includeonly>[{{SERVER}}{{localurl:{{NAMESPACE}}:{{{o
   | pl = [[Category:pl/Artykuły w języku polskim]]
   | pt = [[Category:pt/Artigos em Português]]
   | ro = [[Category:ro/Articole în limba română]]
-  | ru = [[Category:ru/Статьи на русском языке]][[Category:ru/Статьи в настоящее время переведенные на русский язык]]
+  | ru = [[Category:ru/Статьи на русском языке]][[Category:ru/Статьи, которые в настоящее время переводятся на русский язык]]
   | sk = [[Category:sk/Články na slovenské]]
   | sl = [[Category:sl/Članki v slovenščini]]
   | sr = [[Category:sr/Članci na srpskom]]
@@ -99,7 +98,7 @@ Title of original article: <includeonly>[{{SERVER}}{{localurl:{{NAMESPACE}}:{{{o
 === Uporaba predloška ===
 Napišite ili iskopirajte sljedeće na početku članka kao obavijest da je prijevod u tijeku:
 <pre>
-{{en/Prijevod|origin= ime članka u izvorniku
+{{hr/Prijevod|origin= ime članka u izvorniku
 |from  = jezik izvornika
 |to    = hrvatski
 |Percentage = postotak dovršenosti prijevoda
@@ -107,14 +106,14 @@ Napišite ili iskopirajte sljedeće na početku članka kao obavijest da je prij
 </pre>
 Primjer:
 <pre>
-{{en/Prijevod|origin= OpenTTD
+{{hr/Prijevod|origin= OpenTTD
 |from  = en
 |to    = hr
 |Percentage =75
 }}
 </pre>
 Rezultat:
-{{en/Prijevod|origin= OpenTTD
+{{hr/Prijevod|origin= OpenTTD
 |from  = en
 |to    = hr
 |Percentage =75
@@ -163,7 +162,7 @@ Also, the parameter "to" indicates the language of the page:
 |-
 |<code>ro</code>|| [[:Category:ro/Articole în limba română|Articole în limba română/Ro]] ||
 |-
-|<code>ru</code>|| [[:Category:ru/Статьи на русском языке|Статьи на русском языке/Ru]] || [[:Category:ru/Статьи в настоящее время переведенные на русский язык|Статьи в настоящее время переведенные на русский язык/Ru]]
+|<code>ru</code>|| [[:Category:ru/Статьи на русском языке|Статьи на русском языке/Ru]] || [[:Category:ru/Статьи, которые в настоящее время переводятся на русский язык|Статьи в настоящее время переведенные на русский язык/Ru]]
 |-
 |<code>sk</code>|| [[:Category:sk/Články na slovenské|Články na slovenské/Sk]] ||
 |-

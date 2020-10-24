@@ -1,13 +1,12 @@
-[[Translation:Template/en/Industries]]
-<!--
+<noinclude>[[Translation:Template/en/Industries]]</noinclude><!--
 This is a Template for Industries. '''DO NOT EDIT THIS PAGE''', edit the specific article instead.
 Ez az Iparok/Hu sablonja. '''NE SZERKESZD EZT A CIKKET''', szerkeszd a specifikus cikket inkább.
 --><noinclude></noinclude><!--
 --><div style="float:right; width:260px; font-size:90%; border:1px solid gray; background-color:#f2f2f2; margin-left:10px; margin-bottom:10px">
 <div style="text-align:center; border-bottom:1px solid gray; padding:5px"><strong>{{{név}}}</strong></div>
-<div style="background-color:white; padding:5px">[[File:en/{{{kép|Industries.png}}}|center]]</div>
+<div style="background-color:white; padding:5px">[[Image:{{{kép|Industries.png}}}|center]]</div>
 {{#if:{{{caption|}}}|<div style="text-align:center; background-color:white; padding:5px">{{{caption}}}</div>}}
-{{#if:{{{image2|}}}|<div style="background-color:white; padding:5px">[[File:en/.{{{image2}}}|center]]</div>
+{{#if:{{{image2|}}}|<div style="background-color:white; padding:5px">[[Image:{{{image2}}}|center]]</div>
 {{#if:{{{caption2|}}}|<div style="text-align:center; background-color:white; padding:5px">{{{caption2}}}</div>}}
 }}<div style="border-top:1px solid gray; padding:5px"><strong>Klímák:</strong> {{{klíma}}}</div>
 <div style="border-top:1px solid gray; padding:5px"><strong>Elfogad:</strong> {{{elfogad}}}</div>
@@ -30,17 +29,17 @@ Gépeld be:
 Gépeld be:
 <pre>{{hu/Gazdasági épületek| név        = Szénbánya
 | kép        = Coalmine.png
-| klíma      = [[hu/Mérsékelt|Mérsékelt]], [[hu/Szubarktikus|Szubarktikus]]
+| klíma      = [[hu/Manual/Éghajlatok|Mérsékelt]], [[hu/Manual/Éghajlatok|Szubarktikus]]
 | elfogad    = Semmit
-| előállít   = [[hu/Manual/Base Set/Economy/Szén|Szén]]
+| előállít   = [[hu/Manual/Base Set/Cargos/Szén|Szén]]
 | megjegyzés = Nincs
 }}</pre>
 Eredmény:
-{{hu/Iparok| név        = Szénbánya
+{{hu/Gazdasági épületek| név        = Szénbánya
 | kép        = Coalmine.png
-| klíma      = [[hu/Mérsékelt|Mérsékelt]], [[hu/Szubarktikus|Szubarktikus]]
+| klíma      = [[hu/Manual/Éghajlatok|Mérsékelt]], [[hu/Manual/Éghajlatok|Szubarktikus]]
 | elfogad    = Semmit
-| előállít   = [[hu/Manual/Base Set/Economy/Szén|Szén]]
+| előállít   = [[hu/Manual/Base Set/Cargos/Szén|Szén]]
 | megjegyzés = Nincs}}
 [[Category:hu/Sablonok]]
 </noinclude><includeonly>

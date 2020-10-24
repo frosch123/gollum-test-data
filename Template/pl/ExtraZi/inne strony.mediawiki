@@ -1,4 +1,3 @@
-[[Translation:en/Manual/Tutorial]]
 <noinclude>
 
 :''Dla plików innych stron użycie <!--[[:Template:Other languages files]]-->[[:Template:pl/extraZi/inne pliki|:szablon: inne pliki]]''
@@ -13,7 +12,7 @@
  ...
 --><!--{{#if:{{{no|}}}|<div style="display:inline-block; height: 3em; width: 26px; text-align:center;">[[Image:Flag_No.png|link={{{no}}}/No | alt=no | 22x16px | frameless]]<br/>[[{{{no}}}/No|NO]]</div>}}--><!--
 
--->{{#if:{{{pl|}}}|<div style="display:inline-block; height: 3em; width: 26px; text-align:center;">[[File:pl/Flag.png|link={{{pl}}}/Pl | alt=pl | 22x16px | frameless]]<br/>[[pl/{{{pl}}}|PL]]</div>}}<!--
+-->{{#if:{{{pl|}}}|<div style="display:inline-block; height: 3em; width: 26px; text-align:center;">[[File:pl/Flag.png|link={{{pl}}}/Pl | alt=pl | 22x16px | frameless]]<br/>[[{{{pl}}}/Pl|PL]]</div>}}<!--
 
 --><!--{{#if:{{{pt|}}}|<div style="display:inline-block; height: 3em; width: 26px; text-align:center;">[[Image:Flag_Pt.png|link={{{pt}}}/Pt | alt=pt | 22x16px | frameless]]<br/>[[{{{pt}}}/Pt|PT]]</div>}}--><!--
  ...
@@ -21,19 +20,19 @@
 
 --><div style="display:inline-block; height: 3em; width: 26px; text-align:center;"><!-- === Strona łówna ===========
 -->{{#switch: {{lc:{{{language_page|}}}}}
- | en = [[File:en/Openttd.ico.png|link=Main Page| 22x21px | frameless]]<br/>[[en/Main/Main Page|mp]]
+ | en = [[File:en/Openttd.ico.png|link=en/Main/Main Page| 22x21px | frameless]]<br/>[[en/Main/Main Page|mp]]
 <!-- | ca = [[Image:Openttd.ico.png|link=Pàgina principal/Ca| 22x21px | frameless]]<br/>[[Pàgina principal/Ca|pr]]--><!--
  ...
 --><!-- | no = [[Image:Openttd.ico.png|link=Forside/No| 22x21px | frameless]]<br/>[[Forside/No|f]]-->
- | pl = [[File:en/Openttd.ico.png|link=Strona główna/Pl| 22x21px | frameless]]<br/>[[pl/Main/Strona główna|gł]]
+ | pl = [[File:en/Openttd.ico.png|link=pl/Main/Strona główna| 22x21px | frameless]]<br/>[[pl/Main/Strona główna|gł]]
 <!-- | pt = [[Image:Openttd.ico.png|link=Página principal/Pt| 22x21px | frameless]]<br/>[[Página principal/Pt|pr]]--><!--
  ...
 --><!-- | ja = [[Image:Openttd.ico.png|link=メインページ/Ja| 22x21px | frameless]]<br/>[[メインページ/Ja|ﾎｰﾑ]]-->
  | 
 }}<!-- ============== sub ===============
 -->{{#switch: {{lc:{{{sub|}}}}}
- | nfo = [[File:en/Openttd.ico.png|link=user:extrazi/specs.tt/Pl| 22x21px | frameless]]<br/>[[pl/extrazi/specs.tt|nfo]] <!--
---> | menu = [[File:en/Openttd.ico.png|link=user:extrazi/database/Pl| 22x21px | frameless]]<br/>[[pl/extrazi/database|meni]]}}<!--
+ | nfo = [[File:en/Openttd.ico.png|link=pl/extrazi/specs.tt| 22x21px | frameless]]<br/>[[pl/extrazi/specs.tt|nfo]] <!--
+--> | menu = [[File:en/Openttd.ico.png|link=pl/extrazi/database| 22x21px | frameless]]<br/>[[pl/extrazi/database|meni]]}}<!--
 --></div></div><!--  ==============Pliki===============
 -->{{#switch: {{lc:{{{language_page|}}}}}
 <!-- | ca = [[Category:Articles en català/Ca]]--><!--

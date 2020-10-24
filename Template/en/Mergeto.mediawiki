@@ -1,14 +1,13 @@
-[[Translation:Template/en/Mergeto]]
-<noinclude></noinclude>
+<noinclude>[[Translation:Template/en/Mergeto]]</noinclude><noinclude></noinclude>
 {{en/ambox| type  = move
 | image = mergeto.png
 | text  =  {{#IF: {{{1|}}} |It has been suggested that this article or section be <span class="plainlinks">[http://en.wikipedia.org/wiki/Wikipedia:Merging merged]</span> into<!--
-                            --> ''[[:en/{{NAMESPACE}}/{{{1}}}|{{{1}}}]]''. ([[:en/{{NAMESPACE}} talk/{{{1}}}|Discuss]]) | No page name was supplied, fix this or remove the template
+                            --> ''[[:{{NAMESPACE}}:{{{1}}}|{{{1}}}]]''. ([[:{{NAMESPACE}} talk:{{{1}}}|Discuss]]) | No page name was supplied, fix this or remove the template
 }} }}<includeonly>{{{2|[[Category:en/Articles to be merged|{{PAGENAME}}]]}}}</includeonly><noinclude>
 
 ==Usage==
 Enter <nowiki>{{</nowiki>'''Mergeto'''|'''Page name'''<nowiki>}}</nowiki>. Example:
-<pre>{{en/Mergeto|Some page}}</pre>
+<pre>{{en/Mergeto|en/Some page}}</pre>
 This will add the article to [[:Category:en/Articles to be merged]].
 
 == Which merge template should I use? ==

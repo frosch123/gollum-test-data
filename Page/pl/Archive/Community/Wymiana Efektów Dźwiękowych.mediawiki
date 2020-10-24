@@ -1,0 +1,74 @@
+[[Translation:en/Archive/Community/Sound Effects Replacement]]
+
+'''OpenSFX''' to bezpłatna zamiana podstawowych dźwięków dla [[pl/Manual/OpenTTD|OpenTTD]], dzięki czemu OpenTTD można odtwarzać bez konieczności korzystania z plików (chronionych prawem autorskim) z płyty CD TTD. To potencjalnie zwiększa liczbę fanów OpenTTD i sprawia, że ​​jest to prawdziwa darmowa gra.
+
+
+==Pobieranie OpenSFX==
+OpenSFX jest dostępny w co najmniej trzech lokalizacjach. Ten plik Readme obejmie tylko oficjalne lokalizacje pobierania. Nie możemy wspierać lokalizacji pobierania stron trzecich i nie możemy zwrócić twoich pieniędzy, jeśli zapłaciłeś pieniądze za OpenSFX.
+
+===Uzyskiwanie Stabilnego Wydania===
+Są dwa miejsca, w których można uzyskać najnowszą stabilną wersję:
+* Jeśli dopiero zaczynasz korzystać z OpenTTD i nie masz dostępu do oryginalnych plików TTD, musisz ręcznie pobrać i zainstalować OpenSFX. To naprawdę nie jest takie trudne, jak może się wydawać, więc nie przejmuj się tym zbytnio.
+** '''Download location''': http://bundles.openttdcoop.org/opensfx/releases/;
+** '''Installation instructions''': [[en/#Manualne Instalowanie OpenSFX|Installing OpenSFX Manually]].
+* Jeśli masz już uruchomiony OpenTTD przy użyciu oryginalnych dźwięków podstawowych TTD, usługa online w grze jest łatwym sposobem na uzyskanie OpenSFX.
+** '''Download location''': use the ingame [[pl/Manual/Dodatki Online|Online content]] service;
+** '''Installation instructions''': [[en/#Instalowanie lub Aktualizowanie OpenSFX za pomocą usługi Dodatki Online|Installing OpenSFX using the Online Content service]].
+
+===Zdobywanie kompilacji nocnej ===
+* Podobnie jak OpenTTD, dostępne są również nocne wersje OpenSFX. Każdego wieczoru około 18:18 CEST automatycznie tworzona jest nowa wersja OpenSFX (jeśli jest coś nowego). W przeciwieństwie do wersji stabilnych, te kompilacje nie są testowane, aby sprawdzić, czy działają, ale jeśli noc nie działa, to też niczego nie psuje. Zachowaj stabilną lub pracującą nocną pozycję w katalogu /data i po prostu usuń zepsutą noc, aby ponownie uruchomić OpenSFX.
+** '''Download location''': http://bundles.openttdcoop.org/opensfx/nightlies/;
+** '''Installation instructions''': [[en/#Manualne Instalowanie OpenSFX|Installing OpenSFX Manually]].
+
+
+==Manualne Instalowanie OpenSFX==
+'''1.''' Najpierw upewnij się, że masz [http://www.openttd.org/ downloaded] i [[pl/Manual/Instalacja|installed]]  przynajmniej '''OpenTTD version 0.8.0''' lub najnowszy [[pl/Archive/Community/Wersje nightly|nightly]] .
+
+'''2.''' Następnie pobierz najnowszy pakiet OpenSFX. ([http://mz.openttdcoop.org/bundles/opensfx/releases/ stable] [http://mz.openttdcoop.org/bundles/opensfx/nightlies/ nightly])
+
+'''3.''' Rozpakuj zip do katalogu OpenTTD / data. Nie ma potrzeby rozpakowywania [https://www.wikipedia.org/wiki/pl:Tar (informatyka) tar file], więc zostaw to tak, jak jest.
+Twój katalog OpenTTD /data znajduje się w:
+* Folder OpenTTD w katalogu domowym konta użytkownika:
+** Windows XP: C:\Documents and Settings\<username>\My Documents\OpenTTD
+** Windows Vista: C:\Users\<username>\Documents\OpenTTD\data
+** Mac OSX: ~/Documents/OpenTTD
+** Linux:   ~/.openttd
+* Katalog instalacyjny OpenTTD.
+
+'''4.''' Uruchom OpenTTD. 
+
+'''5.''' W głównym menu gry kliknij przycisk ''Opcje gry'' . Pojawi się okno dialogowe ''Opcje gry'' .
+
+'''6.''' Wybierz ''OpenSFX'' z rozwijanej listy poniżej ''Podstawowy zestaw dźwięków'' , jeśli nie jest jeszcze zaznaczony (lewy dolny róg okna). Zamknij okno za pomocą × w lewym górnym rogu.
+
+To nie było takie trudne, prawda? W każdym razie, jeśli masz problemy z uruchomieniem OpenSFX, zgłoś szczegółowy raport o tym, co zrobiłeś, jakie komunikaty o błędach otrzymałeś i gdzie utknąłeś w temacie wydania OpenSFX na forach TT: http://www.tt-forums.net/viewtopic.php?f=29&t=44761&hilit=opensfx
+
+==Instalowanie lub Aktualizowanie OpenSFX za pomocą usługi Dodatki Online==
+Ta metoda wykorzystuje usługę [[pl/Manual/Dodatki Online|Online content]] (BaNaNaS) do pobrania OpenSFX. Aby tego użyć, potrzebujesz działającego OpenTTD i ponownie przynajmniej '''OpenTTD version 0.8.0''' lub najnowszego  [[pl/Archive/Community/Wersje nightly|nightly]] .
+
+'''1.''' Uruchom OpenTTD i w menu głównym kliknij przycisk  ''Sprawdź dodatki online'' . Pojawi się nowe okno.
+* Jeśli OpenTTD nie uruchamia się, postępuj zgodnie z [[en/#Manualne Instalowanie OpenSFX|manual installation procedure]].
+
+'''2.''' Znajdź pozycję OpenSFX z listy po lewej stronie. Możesz użyć pola wyszukiwania w prawym górnym rogu okna.
+
+'''3.''' Kliknij mały kwadrat przed wpisem OpenSFX, aby oznaczyć go do pobrania.
+
+'''4.''' Click the ''Download'' button in the bottom right corner. After download, close the open windows.
+
+'''5.''' W głównym menu gry kliknij przycisk ''Opcje gry'' . Pojawi się okno dialogowe ''Opcje gry'' .
+
+'''6.''' Wybierz ''OpenSFX'' z rozwijanej listy poniżej ''Zestaw podstawowych dźwięków'' , jeśli nie jest jeszcze zaznaczony (lewy dolny róg okna). Zamknij okno za pomocą × w lewym górnym rogu. 
+* Tutaj możesz przełączać podstawowe zestawy dźwięków .
+
+
+==Szczegóły techniczne i licencyjne==
+
+Dźwięki należy przesyłać w formacie 44,100 Hz, 16-bitowych plików WAV lub FLAC mono. Zostanie opracowany nowy format pliku dźwiękowego dla OpenTTD, prawdopodobnie wykorzystujący pliki .tar w sposób podobny do nowych dźwięków. Do tego czasu udostępnione zostaną narzędzia umożliwiające pracę przy użyciu istniejącego formatu sample.cat.
+
+Aby zapewnić, że wynikowy plik sample.cat (lub tar) może być swobodnie dystrybuowany za pomocą kodu OpenTTD, wszystkie pliki dźwiękowe muszą mieć część wolnej licencji. Odpowiednie są  [https://www.wikipedia.org/wiki/pl:Public domain Public domain] lub [http://creativecommons.org/licenses/sampling+/1.0/ Sampling Plus license] . Inne licencje (jak na przykład Creative Commons -sa -nd -nc lub ich kombinacje) są bardziej problematyczne. Jeśli pozyskujesz efekty dźwiękowe z bezpłatnych bibliotek online, upewnij się, że są one licencjonowane w ramach domeny publicznej lub licencji Sampling Plus 1.0.
+
+== Zewnętrzne linki ==
+* [http://dev.openttdcoop.org/projects/opensfx Tracker for sound replacement project]
+* [http://www.tt-forums.net/viewtopic.php?f=29&t=44761 Sound replacement project]
+
+<!--[[Category:Development]]-->[[Category:pl/Rozwój]]

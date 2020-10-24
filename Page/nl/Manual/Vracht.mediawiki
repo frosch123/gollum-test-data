@@ -1,0 +1,248 @@
+[[Translation:en/Manual/Cargo]]
+{{nl/Inhoudsopgave}}
+:''Voor een lijst met vrachttypen, zie de [[:Category:nl/Vracht|vracht categorie]]''
+
+In [[nl/Manual/OpenTTD|OpenTTD]], '''vracht''' is wat je, als [[nl/bedrijf|bedrijf]], transporteert. Zij worden geproduceerd door sommige [[nl/industrie|industrieën]] en [[nl/gemeente|steden]], en zij worden door anderen geaccepteerd. 
+
+[[nl/Manual/Industrie|Industrieën]] en [[nl/gemeente|stedelijke gebouwen]] die in het [[nl/handelsgebied|handelsgebied]] van een [[nl/stations|station]] liggen aceepteren vracht en passagiers via dit station, en zullen hun vracht afgeven op dit station om elders te worden aangeleverd. (In sommige industrieën kunnen alleen bepaalde vierkanten vracht accepteren. Zie [[nl/handelsgebied|handelsgebied]] voor meer informatie.)
+
+Als een vracht op het station is geplaatst zal de omvang hiervan effect hebben op de [[nl/Manual/Spelmechanisme#Stationsrangorde|stationsrangorde]] voor dat type vracht.
+
+[[nl/Manual/Base Set/Cargos/Passagiers|Passagiers]] en [[nl/Manual/Base Set/Cargos/Post|post]] zijn ook vrachttypen, voornamelijk geproduceerd en geaccepteerd door [[nl/gemeente|steden]]. Verschillende gebouwvierkanten in steden acceoteren verschillende aantallen passagiers en andere vracht. De acceptatie kan worden gevonden door het [[nl/landinformatie|landinformatie]] gereedschap te gebruiken ( [[File:en/vraagteken.png]] ). Als een vierkant geen vracht van zichzelf kan accepteren, wordt het aantal genoteerd in 1/8'en. Er moet ten minste 8/8 van een vrachttype in een stationshandelsgebied liggen voordat het station die vracht gaat accepteren.
+
+Sommige industrietegels accepteren ook 1/8 passagier. Industrieën zullen echter geen passagiers opleveren, met uitzondering van [[olieplatform/Nl|olieplatforms]. Meest opmerkelijk, [[nl/hoogoven|hoogovens]] hebben vele 1/8 vierkanten en kunnen passagiers van zichzelf ontvangen. Daarnaast accepteert en genereert het bedrijfshoofdkwartier enkele passagiers en postzakken om spelers in het begin van het spel op weg te helpen.
+
+Zie [[nl/vrachtinkomsten|vrachtinkomsten]] voor meer informatie over hoe het inkomen wordt berekend.
+
+Hieronder staan schema's en tabellen die voor elke vracht in elk klimaat aangeven wie deze produceert en accepteert.
+
+==Vracht stroomschema==
+:[[File:en/OpenTTD industry-commodity flow chart - Temperate.png|border]]
+
+:[[File:en/OpenTTD industry-commodity flow chart - Sub-arctic.png|border]]
+
+:[[File:en/OpenTTD industry-commodity flow chart - Sub-tropical.png|border]]
+
+:[[File:en/OpenTTD industry-commodity flow chart - Toyland.png|border]]
+
+==Goederen productie en acceptatie tabellen==
+
+{| {{en/Wikitable}} style="width: 512px; font-size: 90%; margin:2px 4px 2px 0; border:solid 1px #AAAAAA" rules="cols"
+|- 
+| style="background: #ccffcc" colspan="3" align="center"|'''[[nl/Manual/Klimaat#Gematigd|Gematigd]]'''
+|- style="background: #ffdead"
+|style="width: 26%;"| '''Vracht'''
+|style="width: 37%;"| '''Geproduceerd door'''
+|style="width: 37%;"| '''Geaccepteerd door'''
+|- style="background: #E5FFE5"
+|'''[[nl/Manual/Base Set/Cargos/Kolen|Kolen]]'''
+|[[nl/Manual/Base Set/Industries/Kolenmijn|Kolenmijnen]]
+|[[nl/Manual/Base Set/Industries/Energiecentrale|Energiecentrales]]
+|-
+|'''[[nl/Manual/Base Set/Cargos/Goederen]]'''
+|[[nl/Manual/Base Set/Industries/Fabriek|Fabrieken]], [[nl/Manual/Base Set/Industries/Olieraffinaderij|Olieraffinaderijen]], [[nl/Manual/Base Set/Industries/Houtzagerij|Houtzagerijen]]
+|[[nl/Manual/Gemeente|Steden]]
+|- style="background: #E5FFE5"
+|'''[[nl/Manual/Base Set/Cargos/Graan|Graan]]'''
+|[[nl/Manual/Base Set/Industries/Boerderij|Boerderijen]]
+|[[nl/Manual/Base Set/Industries/Fabriek|Fabrieken]]
+|-
+|'''[[nl/Manual/Base Set/Cargos/IJzererts|IJzererts]]'''
+|[[nl/Manual/Base Set/Industries/IJzermijn|IJzermijnen]]
+|[[nl/Manual/Base Set/Industries/Hoogoven|Hoogovens]]
+|- style="background: #E5FFE5"
+|'''[[nl/Manual/Base Set/Cargos/Post|Post]]'''
+|[[nl/Manual/Gemeente|Steden]]
+|[[nl/Manual/Gemeente|Steden]], [[nl/Manual/Base Set/Industries/Olieplatform|Olieplatforms]]
+|-
+|'''[[nl/Manual/Base Set/Cargos/Vee|Vee]]'''
+|[[nl/Manual/Base Set/Industries/Boerderij|Boerderijen]]
+|[[nl/Manual/Base Set/Industries/Fabriek|Fabrieken]]
+|- style="background: #E5FFE5"
+|'''[[nl/Manual/Base Set/Cargos/Olie|Olie]]'''
+|[[nl/Manual/Base Set/Industries/Oliebronnen|Oliebronnen]], [[nl/Manual/Base Set/Industries/Olieplatform|Olieplatforms]]
+|[[nl/Manual/Base Set/Industries/Olieraffinaderij|Olieraffinaderijen]]
+|-
+|'''[[nl/Manual/Base Set/Cargos/Passagiers|Passagiers]]'''
+|[[nl/Manual/Gemeente|Steden]], [[nl/Manual/Base Set/Industries/Olieplatform|Olieplatforms]]
+|[[nl/Manual/Gemeente|Steden]], [[nl/Manual/Base Set/Industries/Olieplatform|Olieplatforms]]
+|- style="background: #E5FFE5"
+|'''[[nl/Manual/Base Set/Cargos/Staal|Staal]]'''
+|[[nl/Manual/Base Set/Industries/Hoogoven|Hoogovens]]
+|[[nl/Manual/Base Set/Industries/Fabriek|Fabrieken]]
+|-
+|'''[[nl/Manual/Base Set/Cargos/Kostbaarheden|Kostbaarheden]]'''
+|[[nl/Manual/Base Set/Industries/Bank|Banken]]
+|[[nl/Manual/Base Set/Industries/Bank|Banken]]
+|- style="background: #E5FFE5"
+|'''[[nl/Manual/Base Set/Cargos/Hout|Hout]]'''
+|[[nl/Manual/Base Set/Industries/Bos|Bossen]]
+|[[nl/Manual/Base Set/Industries/Houtzagerij|Houtzagerijen]]
+|}
+
+{| {{en/Wikitable}} style="width: 512px; font-size: 90%; margin:2px 4px 2px 0; border:solid 1px #AAAAAA" rules="cols"
+|- 
+| style="background: #ccccff" colspan="3" align="center"|'''[[nl/Manual/Klimaat#Subarctisch|Subarctisch]]'''
+|- style="background: #ffdead"
+|style="width: 26%;"| '''Vracht'''
+|style="width: 37%;"| '''Geproduceerd door'''
+|style="width: 37%;"| '''Geaccepteerd door'''
+|- style="background: #dfefef"
+|'''[[nl/Manual/Base Set/Cargos/Kolen|Kolen]]'''
+|[[nl/Manual/Base Set/Industries/Kolenmijn|Kolenmijnen]]
+|[[nl/Manual/Base Set/Industries/Energiecentrale|Energiecentrales]]
+|-
+|'''[[en/Manual/Base Set/Cargos/Food]]'''
+|[[nl/Manual/Base Set/Industries/Voedselfabriek|Voedselfabrieken]]
+|[[nl/Manual/Gemeente|Steden]]
+|- style="background: #dfefef"
+|'''[[en/Manual/Base Set/Cargos/Goods]]'''
+|[[en/Manual/Base Set/Industries/Printing Works]], [[nl/Manual/Base Set/Industries/Olieraffinaderij|Olieraffinaderijen]]
+|[[nl/Manual/Gemeente|Steden]]
+|-
+|'''[[nl/Manual/Base Set/Cargos/Goud|Goud]]'''
+|[[nl/Manual/Base Set/Industries/Goudmijn|Goudmijnen]]
+|[[nl/Manual/Base Set/Industries/Bank|Banken]]
+|- style="background: #dfefef"
+|'''[[nl/Manual/Base Set/Cargos/Vee|Vee]]'''
+|[[nl/Manual/Base Set/Industries/Boerderij|Boerderijen]]
+|[[nl/Manual/Base Set/Industries/Voedselfabriek|Voedselfabrieken]]
+|-
+|'''[[nl/Manual/Base Set/Cargos/Post|Post]]'''
+|[[nl/Manual/Gemeente|Steden]]
+|[[nl/Manual/Gemeente|Steden]]
+|- style="background: #dfefef"
+|'''[[nl/Manual/Base Set/Cargos/Olie|Olie]]'''
+|[[nl/Manual/Base Set/Industries/Oliebronnen|Oliebronnen]]
+|[[nl/Manual/Base Set/Industries/Olieraffinaderij|Olieraffinaderijen]]
+|-
+|'''[[nl/Manual/Base Set/Cargos/Papier|Papier]]'''
+|[[nl/Manual/Base Set/Industries/Papierfabriek|Papierfabrieken]]
+|[[nl/Manual/Base Set/Industries/Drukkerij|Drukkerijen]]
+|- style="background: #dfefef"
+|'''[[nl/Manual/Base Set/Cargos/Passagiers|Passagiers]]'''
+|[[nl/Manual/Gemeente|Steden]]
+|[[nl/Manual/Gemeente|Steden]]
+|-
+|'''[[nl/Manual/Base Set/Cargos/Tarwe|Tarwe]]'''
+|[[nl/Manual/Base Set/Industries/Boerderij|Boerderijen]]
+|[[nl/Manual/Base Set/Industries/Voedselfabriek|Voedselfabrieken]]
+|- style="background: #dfefef"
+|'''[[nl/Manual/Base Set/Cargos/Hout|Hout]]'''
+|[[nl/Manual/Base Set/Industries/Bos|Bossen]]
+|[[nl/Manual/Base Set/Industries/Papierfabriek|Papierfabrieken]]
+|}
+
+{| {{en/Wikitable}} style="width: 512px; font-size: 90%; margin:2px 4px 2px 0; border:solid 1px #AAAAAA" rules="cols"
+|- 
+| style="background: #ffffcc" colspan="3" align="center"|'''[[nl/Manual/Klimaat#Subtropisch|Subtropisch]]'''
+|- style="background: #ffdead"
+|style="width: 26%;"| '''Vracht'''
+|style="width: 37%;"| '''Geproduceerd door'''
+|style="width: 37%;"| '''Geaccepteerd door'''
+|- style="background: #FFFDE0"
+|'''[[nl/Manual/Base Set/Cargos/Kopererts|Kopererts]]'''
+|[[nl/Manual/Base Set/Industries/Kopermijn|Kopermijnen]]
+|[[nl/Manual/Base Set/Industries/Fabriek|Fabrieken]]
+|-
+|'''[[nl/Manual/Base Set/Cargos/Diamanten|Diamanten]]'''
+|[[nl/Manual/Base Set/Industries/Diamantmijn|Diamantmijnen]]
+|[[nl/Manual/Base Set/Industries/Bank|Banken]]
+|- style="background: #FFFDE0"
+|'''[[nl/Manual/Base Set/Cargos/Voedsel|Voedsel]]'''
+|[[nl/Manual/Base Set/Industries/Voedselfabriek|Voedselfabrieken]]
+|[[nl/Manual/Gemeente|Steden]]
+|-
+|'''[[nl/Manual/Base Set/Cargos/Fruit|Fruit]]'''
+|[[nl/Manual/Base Set/Industries/Boomgaard|Boomgaarden]]
+|[[nl/Manual/Base Set/Industries/Voedselfabriek|Voedselfabrieken]]
+|- style="background: #FFFDE0"
+|'''[[nl/Manual/Base Set/Cargos/Goederen|Goederen]]'''
+|[[nl/Manual/Base Set/Industries/Fabriek|Fabrieken]], [[nl/Manual/Base Set/Industries/Olieraffinaderij|Olieraffinaderijen]]
+|[[nl/Manual/Gemeente|Steden]]
+|-
+|'''[[nl/Manual/Base Set/Cargos/Post|Post]]'''
+|[[nl/Manual/Gemeente|Steden]]
+|[[nl/Manual/Gemeente|Steden]]
+|- style="background: #FFFDE0"
+|'''[[nl/Manual/Base Set/Cargos/Mais|Mais]]'''
+|[[nl/Manual/Base Set/Industries/Boerderij|Boerderijen]]
+|[[nl/Manual/Base Set/Industries/Voedselfabriek|Voedselfabrieken]]
+|-
+|'''[[nl/Manual/Base Set/Cargos/Olie|Olie]]'''
+|[[nl/Manual/Base Set/Industries/Oliebronnen|Oliebronnen]]
+|[[nl/Manual/Base Set/Industries/Olieraffinaderij|Olieraffinaderijen]]
+|- style="background: #FFFDE0"
+|'''[[nl/Manual/Base Set/Cargos/Passagiers|Passagiers]]'''
+|[[nl/Manual/Gemeente|Steden]]
+|[[nl/Manual/Gemeente|Steden]]
+|-
+|'''[[nl/Manual/Base Set/Cargos/Rubber|Rubber]]'''
+|[[nl/Manual/Base Set/Industries/Rubberplantage|Rubberplantages]]
+|[[nl/Manual/Base Set/Industries/Fabriek|Fabrieken]]
+|- style="background: #FFFDE0"
+|'''[[nl/Manual/Base Set/Cargos/Water|Water]]'''
+|[[nl/Manual/Base Set/Industries/Watervoorraad|Watervoorraden]]
+|[[nl/Manual/Base Set/Industries/Watertoren|Watertorens]]
+|-
+|'''[[nl/Manual/Base Set/Cargos/Hout|Hout]]'''
+|[[nl/Manual/Base Set/Industries/Timmerhoutzagerij|Timmerhoutzagerijen]]
+|[[nl/Manual/Base Set/Industries/Fabriek|Fabrieken]]
+|}
+
+{| {{en/Wikitable}} style="width: 512px; font-size: 90%; margin:2px 4px 2px 0; border:solid 1px #AAAAAA" rules="cols"
+|- 
+| style="background: #ff9999" colspan="3" align="center"|'''[[nl/Manual/Klimaat#Speelgoedland|Speelgoedland]]'''
+|- style="background: #ffdead"
+|style="width: 26%;"| '''Vracht'''
+|style="width: 37%;"| '''Geproduceerd door'''
+|style="width: 37%;"| '''Geaccepteerd door'''
+|- style="background: #FFF0F5"
+|'''[[nl/Manual/Base Set/Cargos/Batterijen|Batterijen]]'''
+|[[nl/Manual/Base Set/Industries/Batterijenboerderij|Batterijenboerderijen]]
+|[[nl/Manual/Base Set/Industries/Speelgoedfabriek|Speelgoedfabrieken]]
+|-
+|'''[[nl/Manual/Base Set/Cargos/Bubbels|Bubbels]]'''
+|[[nl/Manual/Base Set/Industries/Bellenblazer|Bellenblazers]]
+|[[nl/Manual/Base Set/Industries/Frisdrankfabriek|Frisdrankfabrieken]]
+|- style="background: #FFF0F5"
+|'''[[nl/Manual/Base Set/Cargos/Suikerspin|Suikerspin]]''' 
+|[[nl/Manual/Base Set/Industries/Suikerspinbos|Suikerspinbossen]]
+|[[nl/Manual/Base Set/Industries/Snoepfabriek|Snoepfabrieken]]
+|-
+|'''[[nl/Manual/Base Set/Cargos/Cola|Cola]]'''
+|[[nl/Manual/Base Set/Industries/Colabronnen|Colabronnen]]
+|[[nl/Manual/Base Set/Industries/Frisdrankfabriek|Frisdrankfabrieken]]
+|- style="background: #FFF0F5"
+|'''[[en/Manual/Base Set/Cargos/Fizzy Drinks]]'''
+|[[nl/Manual/Base Set/Industries/Frisdrankfabriek|Frisdrankfabrieken]]
+|[[nl/Manual/Gemeente|Steden]]
+|-
+|'''[[nl/Manual/Base Set/Cargos/Post|Post]]'''
+|[[nl/Manual/Gemeente|Steden]]
+|[[nl/Manual/Gemeente|Steden]]
+|- style="background: #FFF0F5"
+|'''[[nl/Manual/Base Set/Cargos/Passagiers|Passagiers]]'''
+|[[nl/Manual/Gemeente|Steden]]
+|[[nl/Manual/Gemeente|Steden]]
+|-
+|'''[[nl/Manual/Base Set/Cargos/Plastic|Plastic]]'''
+|[[nl/Manual/Base Set/Industries/Plasticfonteinen|Plasticfonteinen]]
+|[[nl/Manual/Base Set/Industries/Speelgoedfabriek|Speelgoedfabrieken]]
+|- style="background: #FFF0F5"
+|'''[[nl/Manual/Base Set/Cargos/Suiker|Suiker]]'''
+|[[nl/Manual/Base Set/Industries/Suikermijn|Suikermijnen]]
+|[[nl/Manual/Base Set/Industries/Snoepfabriek|Snoepfabrieken]]
+|-
+|'''[[nl/Manual/Base Set/Cargos/Snoep|Snoep]]'''
+|[[nl/Manual/Base Set/Industries/Snoepfabriek|Snoepfabrieken]]
+|[[nl/Manual/Gemeente|Steden]]
+|- style="background: #FFF0F5"
+|'''[[nl/Manual/Base Set/Cargos/Toffee|Toffee]]'''
+|[[nl/Manual/Base Set/Industries/Toffeegroeve|Toffeegroeven]]
+|[[nl/Manual/Base Set/Industries/Snoepfabriek|Snoepfabrieken]]
+|-
+|'''[[nl/Manual/Base Set/Cargos/Speelgoed|Speelgoed]]'''
+|[[nl/Manual/Base Set/Industries/Speelgoedfabriek|Speelgoedfabrieken]]
+|[[nl/Manual/Base Set/Industries/Speelgoedwinkel|Speelgoedwinkels]]
+|}

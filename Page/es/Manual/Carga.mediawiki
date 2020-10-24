@@ -1,0 +1,242 @@
+[[Translation:en/Manual/Cargo]]
+{{es/tabla de contenido}}
+:''Para ver un listado de los artículos sobre cargas, consulte la [[:Category:es/Carga|categoría carga]]''
+
+En [[es/Manual/OpenTTD|OpenTTD]], se considera '''carga''' a todo aquello que se transporta como [[es/Manual/Empresa de transporte|empresa]]. Las cargas la producen unas [[es/Manual/Industrias|industrias]] y [[es/Manual/Pueblo|pueblos]], y las aceptan otras industrias y pueblos.
+
+Las industrias y los pueblos que se encuentren en el [[es/Manual/Área de influencia|área de influencia]] de una [[es/Manual/Estaciones|estación]] aceptarán cargas y pasajeros en dicha estación, y descargarán su producción en ella para que sea transportada a otra parte. (En algunas industrias sólo algunas casillas aceptan cargas. Vea [[es/Manual/Área de influencia|área de influencia]] para más información.)
+
+Los [[es/Manual/Base Set/Cargos/Pasajeros|pasajeros]] y el [[es/Manual/Base Set/Cargos/Correo|correo]] también son cargas, aceptadas principalmente en los [[es/Manual/Pueblo|pueblos]]. Las distintas casillas con edificios de los pueblos aceptan cantidades distintas de pasajeros y otras cargas. Lo puede comprobar usando la herramienta '''Información sobre terreno''' (botón con el signo de interrogación). Tienen que haber al menos 8 casillas que acepten determinada carga en el área de influencia de una estación para que ésta pueda aceptar esa carga.
+
+Algunas casillas de industrias aceptan pasajeros, pero no los generan (excepto las [[es/Manual/Base Set/Industries/Plataforma petrolífera|Plataformas Petrolíferas]]). Por ejemplo, las [[es/Manual/Base Set/Industries/Acería|acerías]] tienen muchas casillas que aceptan pasajeros. Además, la Sede de la empresa de transportes acepta y genera algunos pasajeros y correo para de este modo ayudar a los jugadores al comienzo del juego.
+
+Vea los [[es/Manual/Game Mechanics/Ingresos por carga|ingresos por carga]] si quiere información sobre el cálculo de los beneficios.
+
+A continuación se muestran algunos gráficos y tablas que muestran las cargas por clima, quién las produce y quién las acepta.
+
+==Diagramas de flujo==
+:[[File:es/OpenTTD industry-commodity flow chart - Temperate.png|border]]
+
+:[[File:es/OpenTTD industry-commodity flow chart - Sub-arctic.png|border]]
+
+:[[File:es/OpenTTD industry-commodity flow chart - Sub-tropical.png|border]]
+
+:[[File:es/OpenTTD industry-commodity flow chart - Toyland.png|border]]
+
+==Tablas de producción y admisión de cargas==
+{| {{en/Wikitable}} style="width: 512px; font-size: 90%; margin:2px 4px 2px 0; border:solid 1px #AAAAAA" rules="cols"
+|- 
+| style="background: #ccffcc" colspan="3" align="center"|'''[[es/Manual/Clima|Clima templado]]'''
+|- style="background: #ffdead"
+|style="width: 26%;"| '''Carga'''
+|style="width: 37%;"| '''Producida por'''
+|style="width: 37%;"| '''Aceptada por'''
+|- style="background: #E5FFE5"
+|'''[[es/Manual/Base Set/Cargos/Acero|Acero]]'''
+|[[es/Manual/Base Set/Industries/Acería|Acerías]]
+|[[es/Manual/Base Set/Industries/Fábrica|Fábricas]]
+|-
+|'''[[es/Manual/Base Set/Cargos/Carbón|Carbón]]'''
+|[[es/Manual/Base Set/Industries/Mina de carbón|Minas de carbón]]
+|[[es/Manual/Base Set/Industries/Central eléctrica|Centrales eléctricas]]
+|- style="background: #E5FFE5"
+|'''[[es/Manual/Base Set/Cargos/Correo|Correo]]'''
+|[[es/Manual/Pueblo|Pueblos]]
+|[[es/Manual/Pueblo|Pueblos]], [[es/Manual/Base Set/Industries/Plataforma petrolífera|Plataformas petrolíferas]]
+|-
+|'''[[es/Manual/Base Set/Cargos/Ganado|Ganado]]'''
+|[[es/Manual/Base Set/Industries/Granja|Granjas]]
+|[[es/Manual/Base Set/Industries/Fábrica|Fábricas]]
+|- style="background: #E5FFE5"
+|'''[[es/Manual/Base Set/Cargos/Grano|Grano]]'''
+|[[es/Manual/Base Set/Industries/Granja|Granjas]]
+|[[es/Manual/Base Set/Industries/Fábrica|Fábricas]]
+|-
+|'''[[es/Manual/Base Set/Cargos/Madera|Madera]]'''
+|[[es/Manual/Base Set/Industries/Bosque|Bosques]]
+|[[es/Manual/Base Set/Industries/Aserradero|Aserraderos]]
+|- style="background: #E5FFE5"
+|'''[[es/Manual/Base Set/Cargos/Mercancías|Mercancías]]'''
+|[[es/Manual/Base Set/Industries/Fábrica|Fábricas]], [[es/Manual/Base Set/Industries/Refinería de petróleo|Refinerías de petróleo]], [[es/Manual/Base Set/Industries/Aserradero|Aserraderos]]
+|[[es/Manual/Pueblo|Pueblos]]
+|-
+|'''[[es/Manual/Base Set/Cargos/Mineral de hierro|Mineral de hierro]]'''
+|[[es/Manual/Base Set/Industries/Mina de hierro|Minas de hierro]]
+|[[es/Manual/Base Set/Industries/Acería|Acerías]]
+|- style="background: #E5FFE5"
+|'''[[es/Manual/Base Set/Cargos/Objetos de valor|Objetos de valor]]'''
+|[[es/Manual/Base Set/Industries/Banco|Bancos]]
+|[[es/Manual/Base Set/Industries/Banco|Bancos]]
+|-
+|'''[[es/Manual/Base Set/Cargos/Pasajeros|Pasajeros]]'''
+|[[es/Manual/Pueblo|Pueblos]], [[es/Manual/Base Set/Industries/Plataforma petrolífera|Plataformas petrolíferas]]
+|[[es/Manual/Pueblo|Pueblos]], [[es/Manual/Base Set/Industries/Plataforma petrolífera|Plataformas petrolíferas]]
+|- style="background: #E5FFE5"
+|'''[[es/Manual/Base Set/Cargos/Petróleo|Petróleo]]'''
+|[[es/Manual/Base Set/Industries/Pozos petrolíferos|Pozos petrolíferos]], [[es/Manual/Base Set/Industries/Plataforma petrolífera|Plataformas petrolíferas]]
+|[[es/Manual/Base Set/Industries/Refinería de petróleo|Refinerías de petróleo]]
+|}
+
+{| {{en/Wikitable}} style="width: 512px; font-size: 90%; margin:2px 4px 2px 0; border:solid 1px #AAAAAA" rules="cols"
+|- 
+| style="background: #ccccff" colspan="3" align="center"|'''[[es/Manual/Clima|Subártico]]'''
+|- style="background: #ffdead"
+|style="width: 26%;"| '''Carga'''
+|style="width: 37%;"| '''Producida por'''
+|style="width: 37%;"| '''Aceptada por'''
+|- style="background: #dfefef"
+|'''[[es/Manual/Base Set/Cargos/Alimentos|Alimentos]]'''
+|[[es/Manual/Base Set/Industries/Planta procesadora de alimentos|Planta procesadora de alimentos]]
+|[[es/Manual/Pueblo|Pueblos]]
+|-
+|'''[[es/Manual/Base Set/Cargos/Carbón|Carbón]]'''
+|[[es/Manual/Base Set/Industries/Mina de carbón|Minas de carbón]]
+|[[es/Manual/Base Set/Industries/Central eléctrica|Centrales eléctricas]]
+|- style="background: #dfefef"
+|'''[[es/Manual/Base Set/Cargos/Correo|Correo]]'''
+|[[es/Manual/Pueblo|Pueblos]]
+|[[es/Manual/Pueblo|Pueblos]]
+|-
+|'''[[es/Manual/Base Set/Cargos/Ganado|Ganado]]'''
+|[[es/Manual/Base Set/Industries/Granja|Granjas]]
+|[[es/Manual/Base Set/Industries/Planta procesadora de alimentos|Plantas procesadoras de alimentos]]
+|- style="background: #dfefef"
+|'''[[es/Manual/Base Set/Cargos/Madera|Madera]]'''
+|[[es/Manual/Base Set/Industries/Bosque|Bosques]]
+|[[es/Manual/Base Set/Industries/Papelera|Papeleras]]
+|-
+|'''[[es/Manual/Base Set/Cargos/Mercancías|Mercancías]]'''
+|[[es/Manual/Base Set/Industries/Imprenta|Imprentas]], [[es/Manual/Base Set/Industries/Refinería de petróleo|Refinerías de petróleo]]
+|[[es/Manual/Pueblo|Pueblos]]
+|- style="background: #dfefef"
+|'''[[es/Manual/Base Set/Cargos/Oro|Oro]]'''
+|[[es/Manual/Base Set/Industries/Mina de oro|Minas de oro]]
+|[[es/Manual/Base Set/Industries/Banco|Bancos]]
+|-
+|'''[[es/Manual/Base Set/Cargos/Papel|Papel]]'''
+|[[es/Manual/Base Set/Industries/Papelera|Papeleras]]
+|[[es/Manual/Base Set/Industries/Imprenta|Imprentas]]
+|- style="background: #dfefef"
+|'''[[es/Manual/Base Set/Cargos/Pasajeros|Pasajeros]]'''
+|[[es/Manual/Pueblo|Pueblos]]
+|[[es/Manual/Pueblo|Pueblos]]
+|-
+|'''[[es/Manual/Base Set/Cargos/Petróleo|Petróleo]]'''
+|[[es/Manual/Base Set/Industries/Pozos petrolíferos|Pozos petrolíferos]]
+|[[es/Manual/Base Set/Industries/Refinería de petróleo|Refinerías de petróleo]]
+|- style="background: #dfefef"
+|'''[[es/Manual/Base Set/Cargos/Trigo|Trigo]]'''
+|[[es/Manual/Base Set/Industries/Granja|Granjas]]
+|[[es/Manual/Base Set/Industries/Planta procesadora de alimentos|Plantas procesadoras de alimentos]]
+|- style="background: #dfefef"
+|}
+
+{| {{en/Wikitable}} style="width: 512px; font-size: 90%; margin:2px 4px 2px 0; border:solid 1px #AAAAAA" rules="cols"
+|- 
+| style="background: #ffffcc" colspan="3" align="center"|'''[[es/Manual/Clima|Subtropical]]'''
+|- style="background: #ffdead"
+|style="width: 26%;"| '''Carga'''
+|style="width: 37%;"| '''Producida por'''
+|style="width: 37%;"| '''Aceptada por'''
+|- style="background: #FFFDE0"
+|'''[[es/Manual/Base Set/Cargos/Agua|Agua]]'''
+|[[es/Manual/Base Set/Industries/Suministro de agua|Suministros de agua]]
+|[[es/Manual/Base Set/Industries/Torre de agua|Torres de agua]]
+|-
+|'''[[es/Manual/Base Set/Cargos/Alimentos|Alimentos]]'''
+|[[es/Manual/Base Set/Industries/Planta procesadora de alimentos|Plantas procesadoras de alimentos]]
+|[[es/Manual/Pueblo|Pueblos]]
+|- style="background: #FFFDE0"
+|'''[[es/Manual/Base Set/Cargos/Caucho|Caucho]]'''
+|[[es/Manual/Base Set/Industries/Plantación de caucho|Plantación de caucho]]
+|[[es/Manual/Base Set/Industries/Fábrica|Fábricas]]
+|-
+|'''[[es/Manual/Base Set/Cargos/Correo|Correo]]'''
+|[[es/Manual/Pueblo|Pueblos]]
+|[[es/Manual/Pueblo|Pueblos]]
+|- style="background: #FFFDE0"
+|'''[[es/Manual/Base Set/Cargos/Diamantes|Diamantes]]'''
+|[[es/Manual/Base Set/Industries/Mina de diamantes|Minas de diamantes]]
+|[[es/Manual/Base Set/Industries/Banco|Bancos]]
+|-
+|'''[[es/Manual/Base Set/Cargos/Fruta|Fruta]]'''
+|[[es/Manual/Base Set/Industries/Plantación de fruta|Plantaciones de fruta]]
+|[[es/Manual/Base Set/Industries/Planta procesadora de alimentos|Planta procesadora de alimentos]]
+|- style="background: #FFFDE0"
+|'''[[es/Manual/Base Set/Cargos/Madera|Madera]]'''
+|[[es/Manual/Base Set/Industries/Aserradero|Aserraderos]]
+|[[es/Manual/Base Set/Industries/Fábrica|Fábricas]]
+|-
+|'''[[es/Manual/Base Set/Cargos/Maíz|Maíz]]'''
+|[[es/Manual/Base Set/Industries/Granja|Granjas]]
+|[[es/Manual/Base Set/Industries/Planta procesadora de alimentos|Plantas procesadoras de alimentos]]
+|- style="background: #FFFDE0"
+|'''[[es/Manual/Base Set/Cargos/Mercancías|Mercancías]]'''
+|[[es/Manual/Base Set/Industries/Fábrica|Fábricas]], [[es/Manual/Base Set/Industries/Refinería de petróleo|Refinerías de petróleo]]
+|[[es/Manual/Pueblo|Pueblos]]
+|-
+|'''[[es/Manual/Base Set/Cargos/Mineral de cobre|Mineral de cobre]]'''
+|[[es/Manual/Base Set/Industries/Mina de cobre|Mina de cobre]]
+|[[es/Manual/Base Set/Industries/Fábrica|Fábricas]]
+|- style="background: #FFFDE0"
+|'''[[es/Manual/Base Set/Cargos/Pasajeros|Pasajeros]]'''
+|[[es/Manual/Pueblo|Pueblos]]
+|[[es/Manual/Pueblo|Pueblos]]
+|-
+|'''[[es/Manual/Base Set/Cargos/Petróleo|Petróleo]]'''
+|[[es/Manual/Base Set/Industries/Pozos petrolíferos|Pozos petrolíferos]]
+|[[es/Manual/Base Set/Industries/Refinería de petróleo|Refinerías de petróleo]]
+|}
+
+{| {{en/Wikitable}} style="width: 512px; font-size: 90%; margin:2px 4px 2px 0; border:solid 1px #AAAAAA" rules="cols"
+|- 
+| style="background: #ff9999" colspan="3" align="center"|'''[[es/Manual/Clima|Fantasía]]'''
+|- style="background: #ffdead"
+|style="width: 26%;"| '''Carga'''
+|style="width: 37%;"| '''Producida por'''
+|style="width: 37%;"| '''Aceptada por'''
+|- style="background: #FFF0F5"
+|'''[[es/Manual/Base Set/Cargos/Algodón dulce|Algodón dulce]]''' 
+|[[es/Manual/Base Set/Industries/Bosque de algodón dulce|Bosques de algodón dulce]]
+|[[es/Manual/Base Set/Industries/Fábrica de dulces|Fábricas de dulces]]
+|-
+|'''[[es/Manual/Base Set/Cargos/Azúcar|Azúcar]]'''
+|[[es/Manual/Base Set/Industries/Mina de azúcar|Minas de azúcar]]
+|[[es/Manual/Base Set/Industries/Fábrica de dulces|Fábrica de dulces]]
+|- style="background: #FFF0F5"
+|'''[[es/Manual/Base Set/Cargos/Burbujas|Burbujas]]'''
+|[[es/Manual/Base Set/Industries/Generador de burbujas|Generadores de burbujas]]
+|[[es/Manual/Base Set/Industries/Fábrica de refrescos|Fábricas de refrescos]]
+|-
+|'''[[es/Manual/Base Set/Cargos/Caramelos|Caramelos]]'''
+|[[es/Manual/Base Set/Industries/Cantera de caramelos|Canteras de caramelos]]
+|[[es/Manual/Base Set/Industries/Fábrica de dulces|Fábricas de dulces]]
+|- style="background: #FFF0F5"
+|'''[[es/Manual/Base Set/Cargos/Cola|Cola]]'''
+|[[es/Manual/Base Set/Industries/Pozos de cola|Pozos de cola]]
+|[[es/Manual/Base Set/Industries/Fábrica de refrescos|Fábricas de refrescos]]
+|-
+|'''[[es/Manual/Base Set/Cargos/Dulces|Dulces]]'''
+|[[es/Manual/Base Set/Industries/Fábrica de dulces|Fábrica de dulces]]
+|[[es/Manual/Pueblo|Pueblos]]
+|- style="background: #FFF0F5"
+|'''[[es/Manual/Base Set/Cargos/Juguetes|Juguetes]]'''
+|[[es/Manual/Base Set/Industries/Fábrica de juguetes|Fábrica de juguetes]]
+|[[es/Manual/Base Set/Industries/Tienda de juguetes|Tiendas de juguetes]]
+|-
+|'''[[es/Manual/Base Set/Cargos/Pasajeros|Pasajeros]]'''
+|[[es/Manual/Pueblo|Pueblos]]
+|[[es/Manual/Pueblo|Pueblos]]
+|- style="background: #FFF0F5"
+|'''[[es/Manual/Base Set/Cargos/Pilas|Pilas]]'''
+|[[es/Manual/Base Set/Industries/Granja de pilas|Granjas de pilas]]
+|[[es/Manual/Base Set/Industries/Fábrica de juguetes|Fábricas de juguetes]]
+|-
+|'''[[es/Manual/Base Set/Cargos/Plástico|Plástico]]'''
+|[[es/Manual/Base Set/Industries/Fuentes de plástico|Fuentes de plástico]]
+|[[es/Manual/Base Set/Industries/Fábrica de juguetes|Fábricas de juguetes]]
+|- style="background: #FFF0F5"
+|'''[[es/Manual/Base Set/Cargos/Refrescos|Refrescos]]'''
+|[[es/Manual/Base Set/Industries/Fábrica de refrescos|Fábrica de refrescos]]
+|[[es/Manual/Pueblo|Pueblos]]
+|}

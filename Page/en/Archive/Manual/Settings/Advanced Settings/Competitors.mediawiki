@@ -1,0 +1,81 @@
+[[Translation:en/Archive/Manual/Settings/Advanced Settings/Competitors]]
+{{en/outdated|Setting have been substantially re-organised since this last had a major update}} 
+{{en/Advanced Settings}}
+
+==Advanced Settings window: Competitors section==
+The Competitors section allows you to set various options related to the [[en/Development/Script/AI Development]] and [[en/multiplayer]]. The purpose of the available settings is explained below. For each setting, the respective variable from the [[en/openttd.cfg|config file]] is listed as well, together with its possible values.
+{| align="center"
+|- valign="top"
+|__TOC__
+|[[File:en/Advset competitors.png|frame|left|The Competitors section of the Advanced Settings window (1.3.1)]]
+|}
+
+===<u>Computer players</u>===
+====Default settings profile====
+{{en/Feature|1.3|align="right"|text=(since 1.3.0)}}
+Difficulty level reported to AIs and game scripts. Generally: how hard the AI shall try to compete with the player.
+:''Possible Settings:'' Easy, Medium, Hard
+:''In [[en/Archive/Manual/Settings/Openttd.cfg]] config file:'' ([scripts] settings_profile = <easy|medium|hard>)
+====#opcodes before scripts are suspended====
+{{en/Feature|1.3|align="right"|text=(since 1.3.0)}}
+Amount of computation time granted to AIs and game scripts. Less time means usually easier AI.
+:''Possible Settings:'' 
+:''In [[en/Archive/Manual/Settings/Openttd.cfg]] config file:'' ([scripts] script_max_opcode_till_suspend)
+====Allow AIs in multiplayer====
+{{en/Feature|0.4|align="right"|text=(since 0.4.5)}}
+Enables computer players in multiplayer games. The number of computer players can be set through the [[en/Archive/Manual/Settings/Difficulty|difficulty settings]] window.
+:''Possible Settings:'' <span style="color:green">'''On'''</span> or <span style="color:red">'''Off'''</span>
+:''In [[en/Archive/Manual/Settings/Openttd.cfg]] config file:'' ([ai] ai_in_multiplayer = <true|false>)
+
+====Disable trains for computer====
+{{en/Feature|Old|align="right"|text=(since 0.3.2)}}
+Computer cannot build [[en/trains]] or [[en/railway construction|rail infrastucture]].
+This option has been moved from [[en/Archive/Manual/Settings/Configuring patches/Vehicles#Disable trains for computer|Vehicles section]] in 0.3.4.
+:''Possible Settings:'' <span style="color:green">'''On'''</span> or <span style="color:red">'''Off'''</span>
+:''In Openttd.cfg config file:'' ([ai] ai_disable_veh_train = <true|false>)
+
+====Disable road vehicles for computer====
+{{en/Feature|Old|align="right"|text=(since 0.3.2)}}
+Computer cannot build [[en/road vehicles]] or [[en/roadway construction|roads]]. This option has been moved from [[en/Archive/Manual/Settings/Configuring patches/Vehicles#Disable road vehicles for computer|Vehicles section]] in 0.3.4.
+:''Possible Settings:'' <span style="color:green">'''On'''</span> or <span style="color:red">'''Off'''</span>
+:''In Openttd.cfg config file:'' ([ai] ai_disable_veh_roadveh = <true|false>)
+
+====Disable aircraft for computer====
+{{en/Feature|Old|align="right"|text=(since 0.3.2)}}
+Computer cannot build [[en/aircraft]] or [[en/airports]]. This option has been moved from [[en/Archive/Manual/Settings/Configuring patches/Vehicles#Disable aircraft for computer|Vehicles section]] in 0.3.4.
+:''Possible Settings:'' <span style="color:green">'''On'''</span> or <span style="color:red">'''Off'''</span>
+:''In Openttd.cfg config file:'' ([ai] ai_disable_veh_aircraft = <true|false>)
+
+====Disable ships for computer====
+{{en/Feature|Old|align="right"|text=(since 0.3.2)}}
+Computer cannot build [[en/ships]]. This option has been moved from [[en/Archive/Manual/Settings/Configuring patches/Vehicles#Disable ships for computer|Vehicles section]] in 0.3.4.
+:''Possible Settings:'' <span style="color:green">'''On'''</span> or <span style="color:red">'''Off'''</span>
+:''In Openttd.cfg config file:'' ([ai] ai_disable_veh_ship = <true|false>)
+
+====#opcodes before AI is suspended====
+{{en/Feature|0.7|align="right"|text=(since 0.7.0)}}
+Lower this value if the AI is making the game run slow. Increase this value if you find the AI doing a lot of nothing instead of actually building stuff. Leave value at 10,000 if unsure.
+:''Possible Settings:'' <span style="color:#00693E">'''5,000'''</span> to <span style="color:#00693E">'''250,000'''</span>
+:''In Openttd.cfg config file:'' ([ai] ai_max_opcode_till_suspend = <5000-250000>)
+{{en/-}}
+----
+
+===Allow sending money to other companies===
+{{en/Feature|0.7|align="right"|text=(since 0.7.0)}}
+Allows you to donate money to other companies.
+:''Possible Settings:'' <span style="color:green">'''On'''</span> or <span style="color:red">'''Off'''</span>
+:''In Openttd.cfg config file:'' ([economy] give_money = <true|false>)
+{{en/-}}
+===Allow buying shares from other companies===
+{{en/Feature|0.7|align="right"|text=(since 0.7.0)}}
+Allows you to enable or disable the ability to [[en/buying shares|buy shares]] from competitors. You also have to wait for the company to get old enough before buying 25% or a full take over. This age is about 6 years old.
+:''Possible Settings:'' <span style="color:green">'''On'''</span> or <span style="color:red">'''Off'''</span>
+:''In Openttd.cfg config file:'' ([economy] allow_shares = <true|false>)
+{{en/-}}
+
+==In previous versions==
+===See also===
+*'''For 0.3.0 to 0.6.3''' - See [[en/Archive/Manual/Settings/Configuring patches]] for information of how to change settings.
+*'''For 0.2.0 and 0.2.1''' - See [[en/Archive/Manual/Settings/Configuring patches in 0.2.0]].
+
+[[Category:en/Settings & Preferences]]

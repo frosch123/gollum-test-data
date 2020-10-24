@@ -1,0 +1,104 @@
+[[Translation:en/Archive/Old 32bpp/32bit Graphics Development Documentation]]
+<!--{{outdated|References outdated forum threads etc.  The 32bpp project referred to in this section is, as of 2017, dead}}-->{{pl/nieaktualizowane|Odnośniki do starszych wątków na forum itp. Projekt 32bpp, o którym mowa w tej sekcji, od 2017 r. zanika poza wyjątkami}}
+
+
+''« Wrócić do [[pl/Archive/Old 32bpp/Rozwój Grafiki 32bpp|Rozwój Grafik 32bpp]]''
+
+{| width="100%"
+|-
+|colspan="2" style="background-color: #f1f2fe; border: 1px solid #c7c8fe; margin: 0; padding: 1em 1em 1em 1em; text-align:center"|<font size="3">'''Dokumentacja Grafik 32bit: Standardy i Sugestie dla Artystów'''</font>
+|- valign="top"
+|width="50%" style="background-color: #E7EBFF; border: 1px solid #c7c8fe; margin: 0; padding: 1em 1em 0em 1em;"|
+
+<div style="margin:1em;padding:1em;border:1px solid #c7c8fe;background:#f1f2fe;">
+<font size="3">'''Pozycja kamery, oświetlenie i więcej'''</font>
+
+Dysponujemy niestandardowymi plikami szablonów, między innymi wstępnie ustawionymi pozycjami kamery i specyfikacjami oświetlenia [https://www.wikipedia.org/wiki/pl:Blender (program) Blender], [https://www.wikipedia.org/wiki/pl:Autodesk 3ds Max 3D Studio Max] i [https://www.wikipedia.org/wiki/pl:LightWave 3D Lightwave]. [[en/Ben|Ben Robbins]] dokonania [http://www.tt-forums.net/download/file.php?id=91802 '''3DSMax szablon'''] oraz [[en/Aracirion|Aracirion]] szablon '''Fali światła'''. Możesz je wysłać, aby uzyskać szczegółowe informacje na temat każdego z nich. Dla '''Blender''', pobierz [http://www.tt-forums.net/download.php?id=53231 wersja F, nowa wersja kontrastowa]. Przed ich użyciem, '''please read through the short blurbs below.'''
+
+Pliki szablonów zawierają prawidłowe oświetlenie, położenie kamery, rozdzielczość itp. 1 Jednostka miksera to 1 metr. Istnieją szablony dla różnych rozmiarów budynków. Jeśli potrzebujesz więcej rozmiarów lub jeśli coś jest niejasne lub chcesz coś skomentować, dołącz do dyskusji w [http://tt-forums.net/viewtopic.php?t=24857 "new lighting for buildings" thread on tt-forums].
+</div>
+
+<div style="margin:1em;padding:1em;border:1px solid #c7c8fe;background:#f1f2fe;">
+<font size="3">'''Rozmiary'''</font>
+
+[[File:en/Model square.png|128px|lewo]]
+
+W maximum zoom level '''one square equals 12,5 m x 12,5 m equals 64px across'''. Jest to podstawowa jednostka dla torów kolejowych i dróg. Ponieważ budynki oryginalnego Transport Tycoon wyglądają tak, jakby miały około 25 m x 25 m na kwadrat, wiele nowych budynków zajmie 2 x 2 nowe kwadraty 12,5 m. Do porównania skali [[en/Ben|Ben Robbins]] modelowane [http://tt-forums.net/download.php?id=48953 Ottis, real-rozmiar ludzki].
+
+[[File:en/3dsmeasurements.jpeg|thumb|200px|right|Rozmiary dla jednego kwadratu budynku.]]
+
+Jeśli pracujesz z 3D Studio Max, masz półprzezroczystą kwadratową siatkę na ziemi w rzutni Perspektywa. Ma domyślne wymiary 140 x 140 jednostek. Korzystając z tych pomiarów, jeśli przyjmiemy, że ten raster naziemny reprezentuje jeden kwadrat potentata transportu, możemy założyć, że człowiek o wysokości dwóch metrów zająłby 22,4 jednostki. Użyj tego, aby przeskalować swój budynek, rekwizyt lub pojazd. Jeśli utworzysz budynek 2x2, po prostu podziel odpowiednie liczby przez 2. W ten sposób, gdy wszystkie budynki się połączą, jeden duży budynek nie będzie wyglądał jak miniatura w porównaniu z rzekomo małym budynkiem. Jeśli chcesz, aby siatka domowa miała inny rozmiar, przejdź do <code>Customize</code>, i w <code>Grid and Snap</code> Okno dialogowe ustawień, przejdź do <code>Home Grid</code> tab.
+</div>
+
+|width="50%" style="background-color: #E7EBFF; border: 1px solid #c7c8fe; margin: 0; padding: 1em 1em 0em 1em;"|
+
+<div style="margin:1em;padding:1em;border:1px solid #c7c8fe;background:#f1f2fe;">
+<font size="3">'''Materiały'''</font>
+
+[[File:en/Ref-%26-amb.png|400px|center]]
+
+Dla '''every''' materiał, który tworzysz w <code>shaders</code> tab, zaleca się zmianę <code>Amb</code> parametru ('''0.5''' domyślnie) dopasować <code>Ref</code> parametr ('''1''' domyślnie). Zawsze musisz zmodyfikować <code>Ref</code> i <code>Amb</code> razem. Zdecydowano, że <code>Amb</code> powinna zawsze mieć tę samą wartość co <code>Ref</code>, ponieważ materiał powinien odbijać światło słoneczne lub inne źródła światła w taki sam sposób, jak odbija światło z otoczenia (światło otoczenia). Dlatego dla maksymalnego realizmu wartości powinny być takie same. Oczywiście nie jest to surowa zasada, masz swobodę artystyczną, aby się od tego odstąpić.
+
+[[File:en/Official materials.png|150px|prawe]]
+
+Archiwum plików szablonu zawiera plik o nazwie '''official_materials.blend'''. Zawiera niektóre materiały, których będziesz często potrzebować i które powinny wyglądać tak samo w różnych obiektach, na przykład chodniku. Umieść ten plik w miejscu, w którym może się zatrzymać. Gdy zbudujesz model i chcesz użyć oficjalnego materiału, '''link the material rather than just append it'''. Aby uzyskać dodatkowe instrukcje, zobacz [[en/Using Official Materials]].
+</div>
+
+<div style="margin:1em;padding:1em;border:1px solid #c7c8fe;background:#f1f2fe;">
+<font size="3">'''Minimalizowanie czasu renderowania'''</font>
+
+[[File:en/AO-samples.png|400px|center]]
+
+Renderowanie może być dość wolne. Aby skrócić czas renderowania podglądu, zmniejsz <code>Samples</code> wartość poniżej <code>Ambient Occlusion</code>.
+</div>
+|-
+|colspan="2" style="background-color: #f1f2fe; border: 1px solid #c7c8fe; margin: 0; padding: 0.5em 1em 0.5em 1em;"|
+<div style="margin:1em;padding:1em;border:1px solid #c7c8fe;background:#E7EBFF;">
+__NOTOC__
+====Przewodniki i tutorial'e====
+;:[[en/Archive/Old 32bpp/Ground Sprites Automated (New Graphics)|Automatyzacja Ground Sprites]] -  Tutorial pokazujący artystom, jak stworzyć zestaw ponad 85 sprites ziemi w około 30 minut. Zawiera wiele automatycznych plików.
+;:[[pl/Archive/Old 32bpp/Jak Stworzyć Grafiki 32bpp z Dodatkowym Powiększeniem|32bpp Grafiki z Extra_Zoom]] - Tutorial na temat tworzenia grafiki 32bpp z dodatkowym powiększeniem.
+
+;:[http://www.tt-forums.net/viewtopic.php?f=36&t=39367 3d max tutorial - Tworzenie statków]
+;:[http://www.tt-forums.net/viewtopic.php?f=36&t=39195 3d max tutorial - Plane tworzenie]
+
+====Zasoby====
+;:[[pl/Archive/Old 32bpp/Repozytorium Rozowju Plików Grafik 32bpp|Repozytorium plików]] publiczne repozytorium plików dla 32bit Graphics Development.
+;:[[pl/Archive/Old 32bpp/Automatyczny pakiet nocny 32bpp]] Nocna kompilacja wydanych 'spritów'.
+
+;:[[en/Archive/Old 32bpp/Standardised materials (New Graphics)|Materiały]] Na razie ta strona zawiera mapy obrazków. Ostatecznie powinien zawierać materiały blendera.
+;:[[pl/Archive/Old 32bpp/Rekwizyty (Nowe Grafik)|Props]] Ta strona zawiera małe rekwizyty, takie jak drzewa i samochody.
+
+;:[http://www.sxc.hu Stock.xchng] Ogromna biblioteka zdjęć (w tym przydatne tekstury)
+
+;:[http://www.burningwell.org BurningWell.org] Biblioteka zdjęć z przydatnymi texturami (Public Domain).
+
+
+;;Zwróć uwagę, że poniższe mają niekompatybilne licencje do dystrybucji z OpenTTD i nie należy ich używać, jeśli chcesz, aby grafika była zawarta w OpenGFX lub podobnym
+;:[http://www.cgtextures.com/ CgTextures.com] zewnętrzna biblioteka tekstur. Proszę przeczytać [http://cgtextures.com/content.php?action=faq FAQ] po więcej szczegółów na temat ich licencji.
+;:[http://shadowhousecreations.blogspot.com/ Shadowhouse Creations] zewnętrzna biblioteka tekstur Jerry'ego Jonesa "skeletalmess" . Proszę przeczytać jego [http://shadowhousecreations.blogspot.com/p/tou.html Warunki korzystania] ponieważ nie możesz rozpowszechniać jego tekstur wraz ze swoją grafiką. Zamiast tego należy podać link do jego strony internetowej i odpowiedni kredyt .
+;:[http://www.chrissawyergames.com/feature1a.htm Original TTD grafiki] - Wyświetlanie oryginalnej grafiki TTD i ich prawdziwych odpowiedników (uwaga: chronione prawem autorskim przez Chrisa Sawyera, wyłącznie w celach informacyjnych).
+
+====Narzędzia i dokumentacja====
+;:[[en/Archive/Old 32bpp/PNGCodec]] Informacje o narzędziu do kodowania plików PNG w celu użycia w grze
+;:[[en/Archive/Old 32bpp/32bit Graphics Licensing]] Lista artystów, którzy wydali ogólną licencję na swój wkład
+;:[[pl/Archive/Old 32bpp/Standardowy format tar 32bity|32bit standard tar format]] Opis 32bpp standardowego formatu wydania tar 
+;:[[en/Archive/Old 32bpp/Tile version table (New graphics)|tablea Tile version]] (nieaktualne) Tabela przedstawiająca wymagane / pożądane wersje każdego obiektu .
+;:[[en/Archive/Old 32bpp/Ground sprites conversions list (New Graphics)|tabela Konwersji Ground sprites]] (nieaktualne) Ta lista jest przydatna dla osób, które chcą korzystać ze zautomatyzowanych ikonek w starym lub nowym formacie graficznym .
+;:[[en/Archive/Old 32bpp/Rendered Angles table (New graphics)|tabela Renderowanych Angles]] (nieaktualne) Ta strona zawiera tabele zawierające kąty renderowania w stosunku do ich numeru renderowania, przydatne dla programistów .
+
+====Inne wymogi do prze-aranżowania====  
+;:[http://ngplant.sourceforge.net/ ngPlant - Pakiet do modelowania roślin Open Source]
+;:[http://yorik.orgfree.com/tutorials/treemaking.html 'Tutorial' tworzenia roślin przy użyciu ngPlant i innego oprogramowania]
+
+;:[[pl/Community/NewGRF/Rozgrywka z grafiką 32 bpp|Poziomy Extra Zoom 32bpp]]
+
+</div>
+|-
+|}
+
+
+<!--{{Navbox Graphics Development}}-->{{pl/Navbox Programowanie grafik}}
+
+[[Category:en/New Graphics]][[Category:en/32bpp Graphics]][[Category:en/32bpp Graphics Developer resources|D]]
+[[Category:pl/Nowe Grafiki]][[Category:pl/Grafiki 32bpp]][[Category:pl/Zasoby Twórców Grafik 32bpp|D]]

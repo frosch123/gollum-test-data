@@ -1,8 +1,7 @@
-[[Translation:Template/en/Infobox NewGRF]]
-{| class="infobox bordered" align="right" style="width: 300px; font-size: 90%; border:1px solid #C0C090;" cellpadding="2"
+<noinclude>[[Translation:Template/en/Infobox NewGRF]]</noinclude>{| class="infobox bordered" align="right" style="width: 300px; font-size: 90%; border:1px solid #C0C090;" cellpadding="2"
 | colspan="2" style="text-align: center; background-color: #F8EABA;" | '''{{#If:{{{setname|}}}|{{{setname}}}|Nie podano tytułu}}'''
 |-
-| colspan="2" style="text-align: center;" |[[File:pl/{{#If/{{{screenshot|}}}|{{{screenshot}}}|No image.png}}|center|300x200px]]
+| colspan="2" style="text-align: center;" |[[Image:{{#If:{{{screenshot|}}}|{{{screenshot}}}|No image Pl.png}}|center|300x200px]]
 |-
 ! style="background-color: #F8EABA; border:1px solid #C0C090;" | Grafika
 | {{{artist|}}}
@@ -11,7 +10,7 @@
 | {{{coder|}}}
 |-
 ! style="background-color: #F8EABA; border:1px solid #C0C090;" | Kategoria
-| {{#If:{{{focus|}}}|[[Category:pl/NewGRF/{{{focus}}}]]|Nie wybrano żadnej kategorii}}
+| {{#If:{{{focus|}}}|[[category:NewGRF:{{{focus}}}/Pl]]|Nie wybrano żadnej kategorii}}
 |-
 ! style="background-color: #F8EABA; border:1px solid #C0C090;" | Strona internetowa
 | {{#If:{{{homepage|}}}|[http://{{{homepage|}}} {{{homepagename|}}}]}}
@@ -28,8 +27,7 @@
 Wpisz:
 <pre>
  {{pl/Infobox NewGRF|setname= Nazwa NewGRFa
- |screenshot= Zrzutekranu.png
- |artist= Autor grafiki
+ |screenshot=en/Zrzutekranu.png|artist= Autor grafiki
  |coder= Koder
  |focus= Kategoria (np. Pociągi, Budynki, Pojazdy)
  |homepage= Strona internetowa (lub link do forum)

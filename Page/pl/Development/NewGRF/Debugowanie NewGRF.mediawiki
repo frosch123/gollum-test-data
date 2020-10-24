@@ -1,0 +1,70 @@
+[[Translation:en/Development/NewGRF/Debugging]]
+<!--{{Table of contents}}-->{{pl/Spis treści}}
+
+<!--{{Feature|1.1}}-->{{pl/zgodne Wersje|1.1}}
+
+== Aktywowanie narzędzi programistycznych newgrf ==
+OpenTTD r19723 i kolejne wprowadziły szereg narzędzi do debugowania dla (nowych) programistów GRF. Aby były dostępne, narzędzia do debugowania najlepiej aktywować za pomocą ukrytego ustawienia via [[pl/Manual/Konsola|console]]:
+<pre>
+set newgrf_developer_tools 1
+</pre>
+
+Następnie dostępnych jest wiele narzędzi
+
+== Narzędzie do wyrównywania ikonek ==
+Prosty pomocnik wyrównania ikonek dostępny z menu „Informacje” na głównym pasku narzędzi.
+
+Narzędzie do wyrównywania ikonek nie przechowuje nigdzie nowych odsunięć, więc gdy tylko 'sprit' zostanie ponownie załadowany, odsunięcia znikają (użyj większej pamięci podręcznej ikonki, jeśli tak się stanie). Również wszystko, co przeładowuje NewGRF (nowe gry, ładowanie gier lub (ponowne) stosowanie NewGRF) czyści pamięć podręczną sprite i jako takie resetuje przesunięcia.
+
+'Picker' jest dołączony, aby pomóc Ci znaleźć 'sprita' , którego potrzebujesz. Spowoduje to wyświetlenie ikonek używanych w określonym miejscu na ekranie, wypróbuj każdy element na liście, aż znajdziesz ten, którego szukasz.
+
+'''WSKAZÓWKI
+<small>''(TIPS)''</small>:'''<br/>
+1. Wystąpił błąd w wyrównywaniu ikonek. Podczas używania go do wyrównywania czegokolwiek, '''podziel wynik przez 4'''. <br/>Przykład: kiedy dostosowałeś swojego 'sprita' do swojej satysfakcji, i to mówi ''X offset: -24, Y offset: -44'', oznacza to, że w pliku .nml rzeczywiste przesunięcia <small>('offsets')</small> będą ''X: -6'' i ''Y: -11''<br/><br/>
+2. CTRL + click przesunie 'sprita' o 8 pikseli (2 piksele w rzeczywistym arkuszu 'sprite'). ''Zawsze pamiętaj, aby przesuwać 'sprite' w odstępach co 4 piksele''
+
+'''Dostęp do narzędzia do wyrównywania ikonek'''
+
+[[File:en/sprite aligner 1.png]]
+
+
+'''Narzędzie do wyrównywania ikonek w użyciu'''
+
+[[File:en/sprite aligner 2.png]]
+
+== Narzędzie do kontroli Zmiennych / Właściwości ==
+Udostępniono narzędzie do debugowania zmiennych i właściwości. Szeroki zakres zmiennych i właściwości jest zawarty w każdym typie obiektu. Niektóre właściwości nie są wyświetlane, ponieważ są już widoczne w grze (na przykład nazwa pojazdu) lub są widoczne w nfo dla akcji 0.
+
+Okno debugowania w branży zawiera wartości 16 trwałych lokalizacji pamięci. Umożliwia to programistom branżowym debugowanie złożonych odmian łańcuchów poprzez wypychanie wartości do pamięci masowej (możliwe tylko w branżach, pojazdach, domach itp. Nie ma trwałej pamięci masowej).
+
+Widok debugowania dla zmiennych można uzyskać za pomocą narzędzia informacji o obszarze kafelków dla wszystkich newgrfs, które nie zajmują się pojazdami (zwróć uwagę na ikonę debugowania w prawym górnym rogu okna informacji o obszarze):
+
+[[File:en/variable debug1.png]]
+
+[[File:en/variable debug2.png]]
+
+
+Debugowanie zmiennych pojazdu jest dostępne bezpośrednio przez okno pojazdu.
+[[File:en/vehicle debug.png]]
+
+== Przeglądarka obwiedni ==
+Dostępne za pomocą skrótu Ctrl + B lub w pobliżu narzędzia do wyrównywania ikonek, widok ramki ograniczającej pokazuje ramkę ograniczającą wszystkich ikonek narysowanych na mapie.
+
+== Przeładowywanie NewGRF ==
+Gdy chcesz szybko sprawdzić zmiany wprowadzone w NewGRF, możesz skorzystać z polecenia konsoli 
+<pre>
+reload_newgrfs
+</pre>
+Ponownie zainicjuje wszystkie NewGRF bieżącej gry z ich plików grf. W ten sposób możesz zastąpić swoją GRF nową wersją i użyć tego polecenia, aby natychmiast przejrzeć wprowadzone zmiany.
+
+Zauważ, że anuluje on wszystkie zmiany wyrównania ikonek dokonane za pomocą narzędzia do wyrównania ikonek i że ponownie odczyta tylko dokładnie te pliki grf, które są obecnie używane - dlatego musisz nadpisać plik grf, aby zobaczyć zmiany. Umieszczenie nowej wersji w innym pliku nie załatwi sprawy.
+
+== Ładowanie starszych wersji NewGRF ==
+Do celów testowych lub podczas tworzenia map do rzeczywistej gry długoterminowej może czasem być wygodne nie używać najnowszej wersji NewGRF, którą opracowujesz, ale najnowszej stabilnej wersji - a może innej wersji, która po prostu działa inaczej. Posługiwać się
+<pre>
+set newgrf_show_old_versions 1
+</pre>
+aby OpenTTD wyświetlał wszystkie różne wersje wszystkich NewGRF w oknie dialogowym wyboru NewGRF.
+
+
+<!--[[Category:NewGRF]]-->[[Category:pl/NewGRF]]

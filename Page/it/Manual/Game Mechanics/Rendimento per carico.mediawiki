@@ -1,0 +1,136 @@
+[[Translation:en/Manual/Game Mechanics/Cargo income]]
+
+==Panoramica==
+
+L'ammontare di denaro guadagnato quando si consegna un [[it/Manual/Carico|carico]] è determinato da quattro fattori: carico, importo, distanza e giorni di transito ed è il prodotto del tasso di pagamento del carico, della quantità di carico, della distanza di transito e del fattore tempo determinato dai giorni di transito.
+
+Prima di OpenTTD 1.0/r17437, il trasporto di [[it/Valori|oggetti di valore]] a una distanza di meno di 10 tiles non comportava alcun guadagno.
+
+La distanza di transito viene misurata come [http://it.wikipedia.org/wiki/Geometria_del_taxi distanza di Manhattan] tra la stazione di origine e la stazione di destinazione.
+
+La scala temporale penalizza il trasporto lento. Ogni tipo di carico ha due numeri, Days1 e Days2 (Giorni1 e Giorni2), che determinano i limiti tra "veloce", "medio" e "lento".
+
+'''Nota:''' un "day" in questa pagina corrisponde è in realtà 2,5 giorni nel gioco. Quindi se days_in_transit = 4, allora tu usi 4 nei calcoli che seguono ma in realtà il carico è già da 10 giorni in transito.
+
+<!--
+<math>
+I(c,a,d,t)=c_\mathrm{Base} \cdot a \cdot d \cdot \max\left(31,
+\begin{cases}
+255 & t \le c_\mathrm{Days1} \\
+255 - (t-c_\mathrm{Days1}) & c_\mathrm{Days1} < t \le c_\mathrm{Days1} + c_\mathrm{Days2} \\
+255 - 2(t-c_\mathrm{Days1}) + c_\mathrm{Days2} & t > c_\mathrm{Days1} + c_\mathrm{Days2} 
+\end{cases}\right)\cdot\frac{1}{2^{21}}
+</math>
+-->
+
+[[File:en/Income Formula.png|Income Formula.png]]
+
+Income(cargo, amount, distance, time) = cargo payment rate ... (Guadagno(carico, quantità, distanza, tempo) = tasso di pagamento del carico ...)
+
+Questa funzione ha la seguente forma:
+
+[[File:it/income vs time.png]]
+
+==Numeri magici==
+
+Nella tabella sotto "Base" indica il tasso di pagamento del carico.
+
+{| class="wikitable sortable" style="text-align:right"
+! Tipo di carico !! Base !! Days1 !! Days2
+|-
+|[[it/Acciaio|Acciaio]]||5688||7||255
+|-
+|[[it/Acqua|Acqua]]||4664||20||80
+|-
+|[[it/Batterie|Batterie]]||4322||2||30
+|-
+|[[it/Beni|Beni]]||6144||5||28
+|-
+|[[it/Bestiame|Bestiame]]||4322||4||18
+|-
+|[[it/Bibite frizzanti|Bibite frizzanti]]||6250||30||50
+|-
+|[[it/Bollicine|Bollicine]]||5077||20||80
+|-
+|[[it/Caramelle|Caramelle]]||6144||8||40
+|-
+|[[it/Carbone|Carbone]]||5916||7||255
+|-
+|[[it/Carta|Carta]]||5461||7||60
+|-
+|[[en/Cibo/It!Cibo]]||5688||0||30
+|-
+|[[it/Cola|Cola]]||4892||5||75
+|-
+|[[it/Diamanti|Diamanti]]||5802||10||255
+|-
+|[[it/Ferro|Ferro]]||5120||9||255
+|-
+|[[it/Frumento|Frumento]]||4778||4||40
+|-
+|[[it/Frutta|Frutta]]||4209||0||15
+|-
+|[[it/Giocattoli|Giocattoli]]||5574||25||255
+|-
+|[[it/Gomma|Gomma]]||4437||2||20
+|-
+|[[it/Grano|Grano]]||4778||4||40
+|-
+|[[it/Legname|Legname]]||5005||15||255
+|-
+|[[it/Legname|Legname (sub-tropicale)]]||7964||15||255
+|-
+|[[it/Mais|Mais]]||4322||4||40
+|-
+|[[it/Oro|Oro]]||5802||10||40
+|-
+|[[it/Passeggeri|Passeggeri]]||3185||0||24
+|-
+|[[it/Petrolio|Petrolio]]||4437||25||255
+|-
+|[[it/Petrolio|Petrolio (sub-tropicale)]]||4892||25||255
+|-
+|[[it/Plastica|Plastica]]||4664||30||255
+|-
+|[[it/Manual/Base Set/Cargos/Posta|Posta]]||4550||20||90
+|-
+|[[it/Rame|Rame]]||4892||12||255
+|-
+|[[it/Toffee|Toffee]]||4778||14||60
+|-
+|[[it/Valori|Valori]]||7509||1||32
+|-
+|[[it/Zucchero|Zucchero]]||4437||20||255
+|-
+|[[it/Zucchero filato|Zucchero filato]]||5005||10||25
+|}
+
+==Visualizzazione==
+
+[[File:en/Speed vs income.png]]
+
+L'immagine mostra come il reddito dipende da 20 passeggeri consegnati a "100" tiles di distanza alla velocità v (in km/h). Secondo l'equazione di questa pagina, il reddito dei passeggeri consegnati a 100 km/h è pari al 96,2% del reddito consegnato a 600 km/h. Ciò significa che a volte la velocità del veicolo non deve essere prioritaria tanto quanto, ad esempio, la capacità di carico dei veicoli (in particolare per quanto riguarda gli aerei).
+
+Inoltre, distanze più lontane sono più sensibili alla velocità. Dai un'occhiata alla consegna del passeggero a distanza superiori ai '''500''' tiles:
+
+
+[[File:en/Speed1.png]]
+
+Questa volta il reddito di 100 km/h è del 67,1% contro i 600 km/h, il che significa che un veicolo più veloce aumenterà sostanzialmente il nostro reddito.
+
+Inoltre, il grafico molto interessante che otteniamo da distanza contro reddito (stessi 20 passeggeri ma a '''100''' km/h):
+
+[[File:en/Distance vs income.png]]
+
+È interessante notare che approssimativamente a 600 tile si otterrà sempre meno denaro, perché il valore dei passeggeri sta diminuendo più velocemente rispetto alla crescita per una distanza maggiore. Bisogna aggiungere che, se si presta molta attenzione all'equazione di questa pagina, si noterà che se impiega troppo tempo per consegnare un carico, si otterrà il valore costante di 31 per volta. Questo suggerisce che si può ottenere un reddito molto grande che dipende solo dalla distanza se la distanza è estremamente grande (linea retta).
+
+Inoltre se la velocità del veicolo è maggiore, è possibile raggiungere distanze maggiori senza perdite di reddito. Ecco un esempio di velocità di '''300''' km/h:
+
+[[File:en/Distance vs income2.png]]
+
+===Grafici===
+Grafici simili a quelli sopra possono essere disegnati nel gioco usando [http://www.tt-forums.net/viewtopic.php?f=33&t=31984 nuova patch per i grafici].
+
+==Vedi anche==
+
+*[[it/Manual/Meccaniche di gioco#Tassi di pagamento alla consegna|Tassi di pagamento alla consegna]]

@@ -1,0 +1,105 @@
+[[Translation:en/Archive/Old 32bpp/32bit base set conversion project]]
+
+
+32-bitowy projekt konwersji zestawu podstawowego jest podprojektem [[pl/Archive/Old 32bpp/Rozwój Grafiki 32bpp|32bit Graphics Development]] projekt, którego celem jest zastąpienie 8bit Transport Tycoon [[pl/Archive/Community/Bazowe grafiki|base graphics]] z 32-bitowymi odpowiednikami.
+
+Naszą intencją jest, aby ostatecznie instalator gry dał użytkownikowi możliwość pobrania i zainstalowania tego pakietu graficznego jako zestawu podstawowego, jako alternatywy dla oryginalnej grafiki i OpenGFX. Tak więc grafika w nim będzie podlegać ogromnej kontroli publicznej. W rezultacie będzie musiała być kontrolowana za pomocą bardziej rygorystycznych wytycznych, a poszczególne wpisy będą miały surowsze wymagania dotyczące włączenia.
+
+<!-- What follows is a "bastard child" of my whitepaper and planetmaker's "about 32bpp" -->
+<!-- spolszczenie: Poniżej znajduje się „drani” mojej białej księgi i „o 32bpp” planetmaker's -->
+==Wymagania graficzne==
+
+===Wytyczne dla całego projektu graficznego 32bpp===
+
+Sugestie [[en/Archive/Old 32bpp/Suggestions for 32bit Graphics Developers|tutaj]] są obowiązkowe przy tworzeniu zestawu podstawowego.
+
+===Styl, Koherencja Wizualna===
+
+Pożądany jest nieco jednolity wygląd zestawu podstawowego. Obejmuje to oświetlenie, kolor, szczegółowe rekwizyty, tekstury podłoża i krawędzie sprite. Grafika w TTD jest wyraźna i wyraźna z wysokim kontrastem. Pojazdy używają wielu kolorów firmowych.
+
+Naszym celem jest ponowne wdrożenie OpenTTD w 32 bitach na piksel - nie tworzenie nowej gry. Dlatego musimy chronić esencję wizualną i klimat oryginalnego świata gry. Jest to ogólny wygląd, którego nie można zdefiniować, ale który należy osiągnąć, aby przedmiot kwalifikował się do włączenia. Artysta powinien zwrócić uwagę na to, jak ich wkład pasuje do reszty zestawu.
+
+===GPLv2 lub Kompatybilne z Licencją===
+
+OpenTTD jest wydany na Powszechnej Licencji Publicznej GNU w wersji 2. Dla jasności i aby bez wątpienia było możliwe spakowanie
+zestaw zamienny z OpenTTD, obowiązkowe jest, aby nasze wpisy graficzne były licencjonowane na licencji GPLv2 lub zgodnej licencji.
+
+GPL wymaga, aby całe oprogramowanie było opatrzone jego źródłem:
+
+:''3. Użytkownik może kopiować i rozpowszechniać Program (lub dzieło oparte na nim, zgodnie z Sekcją 2) w kodzie obiektowym lub w formie wykonywalnej zgodnie z postanowieniami Sekcji 1 i 2 powyżej, pod warunkiem, że wykona się również jedną z następujących czynności:''
+
+:''a) Towarzyszyć mu z kompletnym odpowiednim kodem źródłowym do odczytu maszynowego, który musi być dystrybuowany zgodnie z warunkami Sekcji 1 i 2 powyżej na nośniku zwykle używanym do wymiany oprogramowania; lub,''
+
+:[ ... ]
+
+:''Kod źródłowy pracy oznacza preferowaną formę pracy do wprowadzania modyfikacji. W przypadku pracy wykonywalnej pełny kod źródłowy oznacza cały kod źródłowy dla wszystkich zawartych w nim modułów, a także wszelkie powiązane pliki definicji interfejsu oraz skrypty używane do kontrolowania kompilacji i instalacji pliku wykonywalnego. Jednak jako szczególny wyjątek dystrybuowany kod źródłowy nie musi zawierać niczego, co normalnie jest dystrybuowane (w formie źródłowej lub binarnej) z głównymi komponentami (kompilatorem, jądrem itd.) Systemu operacyjnego, na którym działa plik wykonywalny, chyba że sam ten komponent towarzyszy plikowi wykonywalnemu.''
+
+:''Jeśli dystrybucja kodu wykonywalnego lub obiektowego odbywa się poprzez oferowanie dostępu do kopiowania z wyznaczonego miejsca, wówczas oferowanie równoważnego dostępu do kopiowania kodu źródłowego z tego samego miejsca jest liczone jako dystrybucja kodu źródłowego, nawet jeśli osoby trzecie nie są zmuszone do kopiowania źródło wraz z kodem obiektowym.''
+
+Jak widać, licencja GPL nie została dokładnie zaprojektowana (a więc sformułowana) do naszego zastosowania. Jednak, aby zachować zgodność z licencją najlepiej jak potrafimy, a ponieważ celem tego projektu jest umożliwienie użytkownikom wprowadzania zmian w grafice, źródła muszą być dostępne w repozytorium plików programowania grafiki.
+
+Źródła obejmują wszystko, co umożliwia i ułatwia wprowadzanie modyfikacji do wszystkich 'sprites' wydanego wpisu. Mogą to być:
+* Modele 3D i powiązane tekstury
+* Fotografie
+* Źródła bitmap (na przykład pliki robocze programu Photoshop)
+* Uwagi i, w stosownych przypadkach, niezbędne kroki ręcznej manipulacji w celu uzyskania takiego samego ogólnego wyglądu zmodyfikowanego 'sprite', jak niemodyfikowanego.
+
+==Wskazówki Graficzne==
+
+Postępuj zgodnie z tymi wskazówkami, a powinieneś mieć 'sprite', który całkiem dobrze pasuje do reszty zestawu.
+
+===Oświetlenie, Cienie & Perspektywa===
+
+Słońce jest już wysoko około 16:30 do 17:00. Obiekty są dobrze oświetlone ze wszystkich stron. Tam, gdzie są cienie, mają ostre krawędzie i średnie krycie.
+
+Lekkość przedmiotów może się różnić w zależności od poziomu powiększenia, aby ułatwić rozpoznanie elementu gry, a tym samym ułatwić grę.
+
+Podobnie jak w przypadku 'sprites' o mocy 8 pb, grafika używa rzutowania izometrycznego z kamerą pod kątem 26 stopni w dół, a świat gry jest skierowany na północ.
+
+Mamy dostępne pliki szablonów dla [https://www.wikipedia.org/wiki/pl:Blender (program) Blender], [https://www.wikipedia.org/wiki/pl:Autodesk 3ds Max 3D Studio Max] i [https://www.wikipedia.org/wiki/pl:LightWave 3D Lightwave]. [[en/Ben|Ben Robbins]] dokonane [http://www.tt-forums.net/download/file.php?id=91802 '''3DSMax template'''] i [[en/Aracirion|Aracirion]] szablon '''Lightwave''' . Możesz je wysłać, aby uzyskać szczegółowe informacje na temat każdego. Dla '''Blender''', pobierz [http://www.tt-forums.net/download/file.php?id=53231 version F, the new contrast version].
+
+===Kolor===
+
+Podobnie jak waniliowy TT, nasza grafika ma głębokie, żywe kolory i wszystkie kolory są używane. Tam, gdzie ma to zastosowanie, kolory firmowe są stosowane jasno i wyraźnie. Kolory firmowe renderowane na modelach muszą pasować do kolorów w selektorze kolorów w oknie właściwości firmy.
+
+===Standaryzowane Rekwizyty & Tekstury===
+
+W stosownych przypadkach powinieneś użyć kilku standardowych rekwizytów: [[pl/Archive/Old 32bpp/Rekwizyty (Nowe Grafik)|Props (New Graphics)]]
+
+Istnieje również kilka tekstur dla popularnych materiałów: [[en/Archive/Old 32bpp/Standardised materials (New Graphics)]]
+
+===Skala===
+
+Skala nie jest kwestią użytych kolorów. Obowiązuje skala używana przez 'sprites' 8bpp. Oznacza to, że nie ma wspólnej skali między różnymi funkcjami i obowiązują takie same ograniczenia, jak w przypadku wszystkich grafik, np. pojazdy nie mogą być dłuższe niż połowa płytki.
+
+Skala może być nawet różna dla długości i wysokości tego samego obiektu (wagonów kolejowych są tego dobrym przykładem).
+
+===Celowy brak tożsamości narodowej===
+
+W waniliowym TT klimat umiarkowany rozgrywa się na Wyspach Brytyjskich, domu twórcy gry Chrisa Sawyera. Subtropikalny klimat panuje w środkowej Ameryce Południowej, a subarktyczny klimat może w Kanadzie, północnej Skandynawii lub Eurazji.
+
+Miejsca te są identyfikowane przez odrębne właściwości krajobrazu, przyrody i architektury, a nie przez symbole narodowe lub kulturowe, takie jak flagi lub pismo.
+
+Tworząc dzieła sztuki, musimy również powstrzymać się od umieszczania takich odcisków palców krajowych lub kulturowych, zachowując jednocześnie wygląd tych miejsc.
+
+==Wdrożenie i Dystrybucja==
+
+Po uruchomieniu projektu zastępowania zestawu podstawowego poszczególne wpisy zostaną zwolnione w repozytorium. Wydania zostaną ogłoszone w wątku dotyczącym rozwoju zestawu podstawowego. Zostanie wykonane połączenie, które wydania są uwzględnione. Zostaną one oznaczone w bazie danych repozytorium.
+
+W fazie alfa wydania z białej listy będą odczytywane z repozytorium raz dziennie i skompilowane w jedną standardową tar. Dzięki temu zestaw można odtwarzać na trasie smoły. Te smoły zostaną udostępnione przez [[en/Jupix]] w niezdecydowanej lokalizacji, z linkami na forach.
+
+W końcowej fazie, gdy w zestawie są minimalne luki, zestaw podstawowy zostanie skompilowany.
+
+Wydania będą dystrybuowane za pośrednictwem systemu dostarczania treści w grze. Informacje o poszczególnych zasobach, w tym źródłach, będą dostępne w 32-bitowym repozytorium plików programowania grafiki.
+
+==Bierzący Status==
+
+Projekt zestawu podstawowego nie został jeszcze rozpoczęty.
+
+==Zobacz też==
+
+* [[pl/Archive/Old 32bpp/Rozwój Grafiki 32bpp|32bit Graphics Development]]
+
+<!--{{Navbox Graphics Development}}-->{{pl/Navbox Programowanie grafik}}
+
+<!--[[Category:New Graphics]][[category:32bpp Graphics]][[Category:32bpp Graphics Developer resources|B]]-->[[Category:pl/Nowe Grafiki]][[Category:pl/Grafiki 32bpp]][[Category:pl/zasoby Twórców Grafik 32bpp|B]]

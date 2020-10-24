@@ -1,0 +1,211 @@
+[[Translation:en/Manual/Signals]]
+{{pl/Spis treści}}
+
+''Podstawowa wiedza z  [[pl/Manual/Budowa sygnałów|budowania sygnalizatorów]] ''
+
+'''Sygnalizacja''' jest bardzo dobrym narzędziem, dzięki któremu możemy kontrolować ruch [[pl/Manual/Pociągi|pociągów]]. Sygnalizatory są potrzebne po to, aby zachować porządek na torowisku, oraz żeby nie dochodziło do kolizji.
+
+==Stawianie Świateł sygnalizacyjnych==
+[[File:en/Signal build mode preview.png|frame|<!--centre-->left|Tryb budowy sygnalizacji]]{{en/-}}
+Aby rozpocząć prace z sygnałami należy zacząć od rozwinięcia zakładki sygnałów. Otwieramy [[pl/Menu budowy kolei|Menu budowy kolei]] a następnie klikamy ikonę sygnalizacji. Mamy rozwiniętą zakładkę.   
+
+Zasady budowania:
+
+*Aby '''wstawić sygnał''' wybieramy odpowiedni rodzaj  z zakładki i klikamy w odpowiednim miejscu na torach. Tym sposobem postawiliśmy ''sygnalizator dwukierunkowy''. Kiedy klikniemy dwukrotnie uzyskamy sygnał jednokierunkowy,ponowne trzecie kliknięcie spowoduje odwrócenie kierunku.
+Wstawianie ''wielu sygnałów'' za jednym kliknięciem. Wystarczy złapać za sygnał i przeciągnąć go wzdłuż torowiska. Sygnalizatory zostaną rozstawione w równych odstępach. Długość odstępów ustawia się w zakładce sygnalizacji.
+*Rozmieść '''wiele sygnalizatorów''' wzdłuż ''całej'' trasy trzymając wciśnięty klawisz '''Ctrl''' i przeciągając myszą od sygnalizatora już istniejącego. Wystarczy że przeciągniesz kursor o jedno pole a reszta szyn zostanie wyposażona w sygnalizację do najbliższej stacji, innego sygnalizatora bądź rozwidlenia szyn. Jak wyżej, sygnały będą rozmieszczone tak, jak ustawiony jest pierwszy z nich i zwrócone w tę samą stronę.
+*'''Usuń sygnalizatory''' za pomocą [[File:zh/Toggle clear active.png]] przycisku buldożera. Wystarczy (pozostając w trybie budowania sygnalizatorów) aktywować buldożer, a  następnie kliknąć na niechciany sygnalizator. Oba typy przeciągania opisane powyżej, są dostępne do usuwania wielu sygnalizatorów.
+* Twórz jednokierunkowe [http://wiki.openttd.org/Signals#One_way_signals sygnalizatory] klikając na już istniejące. Sygnalizatory zmieniają się kolejno na dwukierunkowe, jednokierunkowe i jednokierunkowe w drugą stronę.
+* Twórz inne typy '''sygnalizatorów blokowych''' i '''sygnalizatorów trasy''' poprzez przytrzymanie klawisza "Ctrl" podczas klikania na już istniejący sygnalizator.
+
+===Ograniczenia===
+* Nie można stawiać na skrzyżowaniach torów z torami, oraz na skrzyżowaniach torów z jezdnią.
+* Nie można stawiać na [[pl/Most|mostach]] i w  [[pl/Tunel|tunelach]]. Jednak [[en/HackaLittleBit/Tunnel Signals|patch HackaLittleBit'a]] może symulować sygnały, poprzez automatyczne ich wstawienie.
+
+==Interfejs sygnalizacji==
+Można używać interfejsu sygnalizacji do umieszczania sygnałów, co likwiduje potrzebę klikania z klawiszem ctrl poprzez wszystkie typy sygnałów. Po kliknięciu na "wybór sygnałów" otrzymamy poniższy interfejs:
+[[File:pl/Signal selection.png|none|frame|Interfejs sygnalizacji]]
+''W starszych wersjach OpenTTD należy włączyć okno budowania sygnałów w ustawieniach:''
+[[File:pl/Adwanced options construction.png|none|frame|Okno ustawień zaawansowanych]]
+{|
+|-
+|colspan=2|'''Semafory''' (elektro-mechaniczne sygnalizatory, staromodne, stosowane na szeroką skalę w latach 70tych)
+|-
+|[[File:en/Signal Semaphore.png]]||'''Sygnalizator blokowy'''
+|-
+|[[File:en/Signal Semaphore Pre-Signal.png]]||'''Pre-sygnalizator wejścia'''
+|-
+|[[File:en/Signal Semaphore Exit-Signal.png]]||'''Pre-sygnalizator wyjścia'''
+|-
+|[[File:en/Signal Semaphore Combo-Signal.png]]||'''Pre-sygnalizator złożony'''
+|-
+|[[File:en/Signal Semaphore Path.png]]||'''Sygnalizator trasy''' (zostanie zignorowany gdy pociąg jedzie pod prąd)
+|-
+|[[File:en/Signal Semaphore Path One-Way.png]]||'''Jednokierunkowy sygnalizator trasy''' (pociąg nie będzie mógł przejechać w przeciwnym kierunku)
+|-
+|colspan=2|'''Sygnalizatory świetlne''' (zachowanie to samo, tyle że wyglądają inaczej, stosowane po dziś dzień)
+|-
+|[[File:en/Signal Electric.png]]||Standardowy '''elektryczny sygnalizator blokowy'''
+|-
+|[[File:en/Signal Electric Pre-Signal.png]]|| '''Elektryczny pre-sygnalizator wejściowy'''
+|-
+|[[File:en/Signal Electric Exit-Signal.png]]|| '''Elektryczny pre-sygnalizator wyjściowy'''
+|-
+|[[File:en/Signal Electric Combo-Signal.png]]|| '''Elektryczny pre-sygnalizator złożony'''
+|-
+|[[File:en/Signal Electric Path.png]]|| '''Elektryczny sygnalizator trasy''' (zostanie zignorowany gdy pociąg jedzie pod prąd)
+|-
+|[[File:en/Signal Electric Path One-Way.png]]|| '''Jednokierunkowy elektryczny sygnalizator trasy''' (pociąg nie będzie mógł przejechać w przeciwnym kierunku)
+|-
+|colspan=2|'''Inne ikony'''
+|-
+|[[File:en/Signal Convert.png]]|| Narzędzie '''przekształcania sygnalizatorów''' - przekształca typ sygnalizatora na  ''ścieżce'' na ten, który jest obecnie zaznaczony w ''menu''. Patrz : [[pl/Manual/Budowa sygnałów|Budowa sygnalizacji]]
+|-
+|[[File:en/Signal Density.png]]|| Narzędzie '''gęstości sygnalizacji''' - służy do ustawienia gęstości sygnalizacji na ustalonym odcinku. Patrz : [[pl/Manual/Budowa sygnałów|Budowa sygnalizacji]]
+|}
+{{en/Feature|0.7}}
+
+==Sygnały blokowe==
+
+Sygnalizatory bloku, jak sugeruje sama nazwa, operują głównie na odcinkach tras. Jeżeli odcinek po przeciwnej stronie sygnalizatora jest zajęty, poinformuje o tym świecąc się na czerwono. W przeciwnym wypadku, światło będzie zielone. Odcinek (bądź blok) składa się ze wszyskich płytek ścieżki od wyznaczonego jej fragmentu bez krzyżowania się sygnalizatorów.
+
+===Sygnalizator dwukierunkowy===
+[[File:en/Two-way signal.png|frame|left]][[File:en/2-way signals.png|frame|right|Sygnalizatory dwukierunkowe na stacji załadowczej]]
+Sygnalizatory dwukierunkowe na torach kolejowych są używane, gdy tą samą ścieżką pociąg podróżuje w obie strony.  Najczęsciej używa się ich na stacjach końcowych, gdzie pociągi wjeżdżają i wyjeżdżają tą samą ścieżką.  Przykład po prawej, sygnalizatory wskazują iż jedna stacja jest zajęta, jednak drugi pociąg może wjechać na drugi peron, prez co przy załadunku/rozładunku mogą brać udział obie maszyny. Taka sygnalizacja również zapobiega wyjazdu pociągu ze stacji, jeżeli inny znajduje się na drodze.
+
+Jeżeli pociąg ma wybór pomiędzy dwoma (lub więcej) kierunkami, wtedy każdy z dwukierunkowych sygnałów wskaże wolną trasę zielonym światłem.  Jeżeli wszystkie sygnalizatory świecą się na czerwoną, maszyna po prostu poczeka na wolną drogę.
+{{en/-}}
+===Sygnalizator jednokierunkowy===
+[[File:en/One-way signal.png|frame|left]]
+[[File:en/1-way signal loop.png|frame|right|Sygnalizatory jednokierunkowe w pętli]]
+Sygnalizatory jednokierunkowe ograniczają ruch pociągu do jednego kierunku.  Jak na widocznym obrazku, sygnalizatory zmuszają maszyny do ruchu po pętli. Niesie to za sobą dwie zalety, pociągi opuszczają i wjeżdżają na stację bez zbędnych opóźnień, oraz trasa może posiadać dwie maszyny.  
+
+Używając sygnalizacji jednokierunkowej, bądź pewien że ''wszystkie'' z nich zwrócone są w odpowiednim kierunku.  Dobrym pomysłem jest obserwacja pociągu poruszającego się po nowo osygnalizowanej ścieżce do samego końca aby uzyskać pewność, że nie został popełniony błąd podczas budowy sygnalizatorów.
+
+Mając aktywne okno wyboru sygnałów, kliknij na sygnalizator dwukierunkowy aby zmienić jego zwrot. Są ich trzy rodzaje, jednokierunkowy, odwrócony jednokierunkowy, trzecie kliknięcie spowoduję przekształcenie sygnalizatora z powrotem w dwukierunkowy.
+
+Jeżeli pociąg ma wybór pomiędzy trasami posiadającymi sygnalizatory jednokierunkowe, wybierze tę, która prowadzi do jego celu podróży (np. poczeka dopóki sygnalizator prowadzący do jego celu nie zmieni światła na zielone, w przeciwieństwie do wyboru jakiejkowiek trasy która jest wolna).  Kontrastuje to z sygnalizatorami dwukierunkowymi.
+
+Jeżeli maszyna podjedzie pod prąd do sygnalizatora jednokierunkowego, natychmiast zawróci.
+{{en/-}}
+
+===Pre-sygnały===
+[[File:en/Station no pre-signals.png|frame|right|Problem - pociąg po lewej może opuścić stację jako pierwszy.]]
+[[File:en/Station with pre-signals.png|frame|right|Rozwiąż problem stosując pre-sygnalizatory]]
+Zrzut ekranu po prawej pokazuje wjazd na stację oznaczony zwykłymi sygnalizatorami.  Gdy przynajmniej jeden peron jest wolny, wtedy wszystko jest w porządku, ponieważ nadjeżdżający pociąg zawsze jest kierowany na wolny peron.  Jednak, weź pod uwagę co się stanie gdy wszyskie perony będą zajęte, jak na zrzucie ekranu obok.  Wszystkie sygnalizatory wskazują czerwone światło, więc nadjeżdżający pociąg wybiera najłatwiejszą drogę - prosto.  Oczywiście pociąg na peronie może chwilę postać.  Tymczasem, pociąg z drugiego peronu odjeżdża.  Jednak pociąg za bardzo zbliżył się do pierwszego peronu, tym samym utykając w miejscu i czekając na pociąg który zajmuje peron aż odjedzie, gdy obok jest wolne miejsce!  Musimy zapobiec takim sytuacjom aby pociąg wybierał pomiędzy dwoma czerwonymi sygnałami. Dla tego użyjemy '''pre-sygnalizatorów'''.
+
+Pre-sygnalizatory decydują o tym jaki kolor pokazać, nie tylko odcinka dokładnie przed nim, ponieważ biorą pod uwagę jeszcze inne pre-sygnalizatory znajdujące się wzdłuż ścieżki.  Jaśniej, wejściowy pre-sygnalizator pokazuje zielone światło, wtedy i tylko wtedy, gdy znajduje się za nim pre-sygnalizator wyjścia wskazujący wolny odcinek.  Ty, jako strateg i inżynier musisz zadecydować, które sygnalizatory będą pre-sygnalizatorami określającymi wejście, a które wyjście. To potężne narzędzia.
+{{en/-}}
+====Sygnalizator wejściowy====
+[[File:en/entry presignal.png|left|60px]]'''Pre-sygnalizator wejścia''' pokazuje zielone światło kiedy przynajmniej jeden pre-sygnalizator wyjścia pokazuje zielone światło w dalszej sekcji trasy.  Czerwone, gdy droga jest zajęta.  Zapobiega to pociągom wejścia w odcinek trasy gdy wyjście jest zablokowane. Zauważ, że stacje mają wbudowane sygnalizatory dwukierunkowe (działają jako pre-sygnalizatory wejścia).
+
+Jeżeli za pre-sygnalizatorem wyjścia nie znajduje się żaden pre-sygnalizator wyjściowy, zachowuje się on jak zwykły sygnalizator.  Jest to wygodne dla dwukierunkowych pre-sygnalizatorów wtedy gdy tylko jeden kierunek trasy będzie przez nie kontrolowany.
+{{en/-}}
+====Sygnalizator wyjściowy====
+[[File:en/exit presignal.png|60px|left]]'''Pre-sygnalizator wyjściowy''' zachowuje się jak zwykły sygnalizator, jednak jest wymagany aby pre-sygnalizatory łączone oraz pre-sygnalizatory wejścia wskazywały odpowiednie światła
+{{en/-}}
+
+====Sygnalizator złożony====
+[[File:en/station with pre-signals2.png|frame|right|Stacja 1 pre-sygnalizatorem wejściowym, 2 pre-sygnalizatorami złożonymi i 4 sygnalizatorami wyjścia]]
+[[File:en/combo presignal.png|60px|left]]Jest jeszcze trzeci typ pre-sygnalizatora, zwany złożonym. Działa on zarówno jako sygnalizator wejścia i wyjścia, pozwala to na konstrukcję dużych, bardziej zaawansowanych ścieżek jak prosty przykład po prawej.
+{{en/-}}
+====Budowanie pre-sygnalizatorów====
+Aby stworzyć pre-sygnalizator należy wcisnąć odpowiedni przycisk w oknie [[en/#Signal Interface|wyboru sygnałów]].
+
+W poprzednich wersjach wpierw stawiany był zwykły sygnalizator, następnie trzymając wciśnięty "Ctrl" i klikając na sygnalizatorze zamieniał się on na pozostałe ich typy:
+*Zauważ że możesz budować jednokierunkowe pre-sygnalizatory tak samo jak robisz to ze zwykłymi.  Zapamiętaj: trzymając "Ctrl" i klikając na pre-sygnalizator zmieniasz jego typ, klikając bez wciśnietego ''Ctrl'' zmienia zwrot sygnalizatora.
+*Pamiętaj aby nie trzymać wciśniętego "Ctrl" stawiając sygnalizatory, spowoduje to zamianę ich na semafory (patrz niżej). Gdy włączony jest interfejs wyboru sygnałów, możesz używać "Ctrl".
+{{en/-}}
+====Ograniczenia====
+[[File:en/PresignalLimitation.png|frame|Problem z pre-sygnalizatorami...]]
+Ważnym aspektem dotyczącym pre-sygnalizatorów wyjścia jest to, że gdy pre-sygnalizator wyjściowy zapali się na zielono, co za tym idzie pre-sygnalizator wyjścia także zapali się na zielono, nawet wtedy, gdy przejazd do tego miejsca wskazanego przez pre-sygnalizator wyjścia jest praktycznie niemożliwy z powodu złego układu odcinka (jak na obrazku po prawej, kiedy pociąg nadjeżdża z dołu trasy).  To może stworzyć poważne problemy dla pociągów używających pre-sygnalizacji, musisz być ostrożny by nie stworzyć martwych punktów.
+
+Jeden z "nierozwiązywalnych" błędów: zgubione pociągi ignorują pre-sygnalizatory wyjścia. Jeżeli pociąg się zgubił, losowa trasa jest wybierana na każdym skrzyżowaniu, więc ignorują pre-sygnalizatory wyjścia i z łatwością mogą zablokować skrzyżowanie na którym są one rozmieszczone.
+{{en/-}}
+
+==Sygnały trasy==
+[[File:en/Yapp signalgui.png|frame|right|Dwa nowe sygnały w [[en/signal GUI]].]]
+Tutaj kolejne dwa typy sygnalizacji. Te sygnały pozwalają zarezerwować pociągom trasę poprzez blok do następnego sygnału, jeszcze zanim pociąg znajdzie się w tym bloku. W odróżnieniu do sygnałów blokowych, przy sygnałach trasy wiele pociągów '''może''' znajdować się w jednym momencie w tym samym bloku, pod warunkiem że każdy będzie mógł w momencie wejścia w blok zarezerwować trasę do wyjścia nieprzecinającą się z innymi.
+{{en/-}}
+[[File:en/Signal bloc.png|frame|right|Blok Y pomiędzy trzema sygnałami blokowymi]]
+Na obrazku znajduje się przykład.
+
+Mamy tutaj blok Y pomiędzy trzema sygnałami.
+Prawy tor jest zajęty przez pociąg. Skład który przybywa do rozjazdu mógł by pojechać lewą wolną częścią. Jednak standardowy sygnał bloku uważa, że ​​cały blok jest zajęty (nawet jeśli lewa trasa jest wolna).
+
+{{en/-}}
+[[File:en/Multiples standard.png|frame|right|Dzięki dwóm dodatkowym sygnałom blokowym,''Y'' został podzielony na trzy bloki: prawe ramię, lewe ramię i skrzyżowanie]]
+Rozwiązaniem jest podzielenie tego bloku na mniejsze bloki przez dodanie sygnałów po połączeniu.
+{{en/-}}
+[[File:en/Chemin.png|frame|right|Blok Y pomiędzy sygnałem trasy a dwoma sygnałami blokowymi]]
+W przeciwieństwie do blokowego, sygnał trasy upoważnia pociąg jadący od dołu do wejścia na blok Y, ponieważ trasa, którą próbuje zarezerwować, jest wolna (lewy tor). Nie ma potrzeby dzielenia bloku na mniejsze bloki (tzn. nie ma potrzeby stawiania sygnałów po skrzyżowaniu).
+{{en/-}}
+Są jeszcze dwie rzeczy, które powinieneś wiedzieć o tym rodzaju sygnałów:
+* Umieszczaj go tylko tam, gdzie pociągi mogą się zatrzymać i czekać bez blokowania węzłów;
+* Ten sygnał działa tylko w jednym kierunku. Jeśli jest on mijany w drugim kierunku, zostaje albo zignorowany, albo potraktowany jako sygnał jednokierunkowy, w zależności od ścieżki sygnału (patrz niżej)
+[[File:en/Yapp pbssignal.png|frame|left|PS]]
+* '''Sygnał trasy''': pociągi jadące w drugą stronę zignorują go i pojadą dalej.
+{{en/-}}
+[[File:en/Yapp onewaypbssignal.png|frame|left|1W PS]]
+* '''Jednokierunkowy sygnał trasy''': pociągi hadące w drugą stronę zawrócą przy tym sygnale, jak przy jednokierunkowym sygnale blokowym.
+{{en/-}}
+W większości przypadków wystarczy użyć domyślnego sygnału ścieżki, ''as passing a signal from the back is penalised by the pathfinder,'' jednak w niektórych szczególnych przypadkach użyteczne mogą być sygnały jednokierunkowe.
+
+Dwa nowe typy sygnałów zachowują się nieco inaczej niż standardowe typy sygnałów OpenTTD. Sygnały trasy są domyślnie czerwone i będą pokazywać się w kolorze zielonym tylko wtedy, gdy pociąg będzie mógł zarezerwować trasę do następnego bezpiecznego miejsca oczekiwania na swojej drodze. Bezpieczne miejsca oczekiwania znajdują się - z definicji - przed sygnalizatorami, zajezdniami i końcami torów. Tylna strona sygnału ścieżki nie jest uważana za bezpieczne miejsce oczekiwania, dlatego też trasy są rezerwowane za pomocą tych sygnałów, ''and therefore paths are reserved through these signals.''
+
+Ponieważ przód każdego sygnału jest zdefiniowany jako bezpieczna pozycja oczekiwania, zwykle nie chcemy umieszczać sygnału bezpośrednio za skrzyżowaniem, a jedynie przed nim. Wynika to z faktu, że bezpieczne jest jedynie oczekiwanie pociągu przed skrzyżowaniem. Nie jest bezpieczne, aby pociąg czekał na sygnał bezpośrednio za skrzyżowaniem zanim cały skład opuści skrzyżowanie, ponieważ blokowało by to skrzyżowanie w czasie oczekiwania, jak pokazano na poniższym przykładzie. Jest to istotna zaleta w porównaniu ze standardowymi sygnałami OpenTTD, które trzeba było umieszczać przed i za węzłami, co powodowało blokowanie węzłów przez pociąg w czasie oczekiwania.
+
+[[File:en/Yapp unsafewaitinglocation.png|frame|center|Sygnał wskazywany przez strzałkę jest złym miejscem oczekiwania, ponieważ pociąg na węźle blokuje teraz w przeciwnym razie wolną trasę pociągu nadjeżdżającego z góry. Na tym zdjęciu jest drugie złe miejsce oczekiwania. Znajdziesz je?]]
+
+Jest to jeszcze jeden przykład tego, co można zrobić z tymi sygnałami trasy. To działa o wiele lepiej niż korzystanie z pre-sygnałów, ponieważ można mieć dwa pociągi odjeżdżające ze stacji w tym samym czasie ORAZ korzystać z tej samej zajezdni (nie ma możliwości, aby to zrobić przy użyciu pre-sygnałów, ze względu na udział bloku). W tym przypadku są to sygnały jednokierunkowe dla pociągów odjeżdżających ze stacji oraz zwykły sygnał trasy dla pociągów odjeżdżających z zajezdni.
+[[File:en/pathsignal station exit.png|frame|center|Dwie stacje wylotowe.]]
+
+
+====Zaawansowane Opcje====
+[[File:en/Yapp patch-options.png|frame|right|YAPP Advanced Settings]]
+Są tu trzy nowe [[en/Ustawienia]] związane z sygnałami trasy.
+
+Jedną z opcji jest podświetlenie zarezerwowanych torów. Opcja ta jest przydatna przy rozwiązywaniu problemów z węzłami obsługiwanymi przez sygnalizatory trasy, ponieważ możesz zobaczyć, jakie trasy zarezerwowały pociągi przez dany węzeł.
+
+Pozostałe dwie opcje kontrolują sposób, w jaki powinno zachowywać się narzędzie do budowania sygnału.Możesz ustawić typ sygnału, który powinien być budowany domyślnie podczas budowania nowego sygnału za pomocą narzędzia do budowania sygnałów i zmienić, które typy sygnału powinny być cyklicznie przełączane po kliknięciu na istniejący już sygnał przytrzymując Ctrl.
+
+Istnieje jeszcze kilka innych opcji związanych z sygnałem ścieżki, które nie są dostępne w oknie Ustawienia zaawansowane. Czym są te opcje i jak je edytować, omówiono na stronie [[en/Archive/Manual/Settings/Advanced path signal options & features]].
+
+===Proste przykłady===
+Poniżej jest kilka przykładowych ustawień torów, które używają sygnałów trasy. [[en/Community/Junctionary/Advanced path signal layouts|Zaawansowany przykłady]], nie dla początkujących, można znaleźć [[en/Community/Junctionary/Advanced path signal layouts|tutaj]].
+
+====Proste skrzyżowanie====
+Ten podstawowy węzeł ma teraz znacznie większą przepustowość.
+[[File:en/Yapp basicjunction.png|frame|center|Węzeł podstawowy dla pociągów o maksymalnej długości trzech kafli. Należy zwrócić uwagę na stosowanie normalnych sygnalizatorów na torze zwykłym.]]
+
+====Prosta dwukierunkowa stacja====
+Dzięki takiemu układowi stacji, pociągi mogą korzystać z obu peronów, gdy przyjeżdżają z dowolnego kierunku.
+[[File:en/Yapp basicstation.png|frame|center|Podstawowa stacja.]]
+{{en/Feature|0.7}}
+
+==Semafory==
+[[File:en/semaphore.png|frame|left]]
+'''Semafory''' to zwykłe sygnalizatory kształtowe, które działają identycznie jak odpowiadający im typem sygnalizator świetlny; różnią się wyłącznie wyglądem.
+
+Przed wersją OpenTTD 0.6.0 semafory były stawiane domyślnie podczas tworzenia sygnalizatorów na całej długości trasy przy przytrzymaniu klawisza "ctrl". Po wersji 0.6.0 semafory są tworzone domyślnie zamiast sygnalizacji świetlnej tylko do pewnego momentu, domyślnie roku 1950. Rok ten można zmienić w ustawieniu "Automatycznie buduj semafory przed" które znajduje się pod listą rozwijaną "Firma" po wybraniu kategorii "ekspert".
+
+Możesz zmienić semafory na sygnalizację świetlną używając narzędzia do zamiany sygnalizacji.
+{{en/-}}
+===Historia===
+
+
+W oryginalnym Transport Tycoon, sygnały kolejowe powstałe przed 1975 r. były semaforami. Później pojawiły się sygnały jako standardowe kolorowe światła. Transport Tycoon Deluxe wyeliminował tę możliwość, ale została ona przywrócona w TTDPatch i OpenTTD.
+{{en/Feature|Old}}
+
+==Alternatywne trasy dla pociągów==
+Sygnalizatory zostały stworzone z myślą o tym, aby zapobiec przypadkowym zderzeniom pociągów i pomóc im w wyborze bezkolizyjnej trasy do swojego celu. Jeżeli chcesz stworzyć z góry założoną, alternatywną trasę dla danych pociągów,zastępując tym samym domyślną trasę, którą wybrałby pociąg automatycznie, lepszym rozwiązaniem będzie zastosowanie narzędzia [[pl/Punkty kontrolne|Punkty kontrolne]].
+
+==Zobacz również==
+* [[en/Community/Junctionary/Advanced signalling examples|Examples of advanced presignal setups]]
+* [[en/Manual/Building depots]]
+* [[:Category:en/Train Junctions]] for examples of complex junctions that take advantage of pre-signals.
+* [http://www.darkcoding.net/misc/openttd-trains-and-signals-for-beginners-a-tutorial/ Signals for the complete beginner]
+* [http://kokolokus.de/?s=blog&v=6 A tutorial written by domsson, on the forums] [http://www.tt-forums.net/viewtopic.php?f=29&t=51395 here]
+
+[[Category:pl/Linie kolejowe]]
+[[Category:pl/Konstrukcje]]

@@ -1,15 +1,14 @@
-[[Translation:Template/en/Merge]]
-<noinclude>
+<noinclude>[[Translation:Template/en/Merge]]</noinclude><noinclude>
 </noinclude>
 {{en/ambox| type  = move
 | image = merge.png
 | text  =  {{#IF: {{{1|}}} |Er wordt voorgesteld dat dit artikel of deze sectie wordt <span class="plainlinks">[http://en.wikipedia.org/wiki/Wikipedia:Merging samengevoegd]</span> met<!--
-                            --> ''[[:en/{{NAMESPACE}}/{{{1}}}|{{{1}}}]]''. ([[:en/{{NAMESPACE}} talk/{{{1}}}|Discussie]]) | Er is geen paginanaam ingevoerd, bewerk dit of verwijder de template
+                            --> ''[[:{{NAMESPACE}}:{{{1}}}|{{{1}}}]]''. ([[:{{NAMESPACE}} talk:{{{1}}}|Discussie]]) | Er is geen paginanaam ingevoerd, bewerk dit of verwijder de template
 }} }}<includeonly>{{{2|[[Category:en/Articles to be merged|{{PAGENAME}}]]}}}</includeonly><noinclude>
 
 ==Gebruik==
 Voer in <nowiki>{{</nowiki>'''Samenvoegen/Nl'''|'''Paginanaam'''<nowiki>}}</nowiki>. Voorbeeld:
-<pre>{{nl/Samenvoegen|Een pagina}}</pre>
+<pre>{{nl/Samenvoegen|en/Een pagina}}</pre>
 Dit zal het artikel toevoegen aan [[:Category:en/Articles to be merged]].
 
 == Welke samenvoeg template zal ik gebruiken? ==

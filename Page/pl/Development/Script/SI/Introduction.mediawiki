@@ -1,0 +1,98 @@
+[[Translation:en/Development/Script/Introduction]]
+<!--{{NoAI}}-->{{pl/NoAI}}
+Na początek językiem, w którym będziesz pisać AI, jest Squirrel . Squirrel to bardzo prosty i podobny do C++ język skryptowy. Aby zapoznać się ze wstępem do Squirrel , sprawdź stronę [[pl/Development/Script/SI/Squirrel|Squirrel Introduction]] . Wybraliśmy Squirrel, ponieważ wygląda bardzo podobnie do C++ .
+
+W tym wstępie przeprowadzimy Cię przez proces tworzenia podstawowej sztucznej inteligencji. Robiąc to, wyjaśnimy ci podstawy potrzebne do stworzenia sztucznej inteligencji i sztucznej inteligencji w OpenTTD. Aby uzyskać zaawansowaną obsługę AI, zalecamy zakup dobrej książki. Wynik końcowy tego samouczka można znaleźć w katalogach  'przykładowych' .
+
+==Tworzenie własnegoj AI==
+Istnieje kilka sposobów na rozpoczęcie pracy.
+
+Możesz pobrać istniejącą sztuczną inteligencję i zmodyfikować ją, jeśli pozwala na to licencja (w chwili pisania tego tekstu wszystkie znane AI były typu open source). Możesz zacząć od "Wright AI" i rozbudowywać stamtąd.
+
+Przewodnik zakłada, że ​​chcesz rozpocząć własną sztuczną inteligencję od zera. [[pl/Development/Script/SI/TestAI|AI:TestAI]] to przykład minimalnej sztucznej inteligencji z ustawieniami użytkowników. Możesz sprawdzić lub skopiować ten kod, aby zobaczyć, co musisz zrobić, aby zacząć. 
+
+Ogólna zasada programowania polega na pisaniu dobrej dokumentacji dla sztucznej inteligencji, więc po kilku dniach, a nawet miesiącach możesz łatwo zapamiętać, jakie funkcje mają wykonać. Podział AI na mniejsze, logiczne pliki również pomoże w organizacji. Niektórzy pisarze AI używają komentarzy w stylu Doxygen, aby umożliwić im automatyczne tworzenie wysokiej jakości dokumentacji.
+
+===Wymagane Pliki Squirrel ===
+# Znajdź folder instalacyjny openttd. W Windows domyślnie jest w C:\Program Files\OpenTTD , w Linuksie jest w /usr/share/games/openttd , a dla mac jego (twoja nazwa użytkownika) /dokumenty/openttd
+# Utwórz nowy katalog dla swojego ai w katalogu <code>ai</code> . Na przykład możesz utworzyć katalog <code>MyNewAI</code>
+#* Możesz również utworzyć nowy katalog w <code>content_download/ai</code> (znajduje się w folderze  <code>~/.openttd</code> w systemie Linux, gdy znajduje się on w <code>Documents/OpenTTD</code>  katalogu użytkownika w systemie Windows), ale ta metoda NIE jest zalecana, ponieważ możesz zastąpić swoje pliki, jeśli umieścisz AI na bananach, a ponieważ znajduje się w domu użytkownika, będzie działać tylko dla tego konkretnego użytkownika.
+# Utwórz plik o nazwie <code>info.nut</code> . Jest to ważne, ponieważ moduł ładujący Squirrel szuka tego i <code>main.nut</code> we wszystkich podkatalogach. Jeśli nie znajdzie <code>info.nut</code> , katalog jest uważany za coś innego i twoja sztuczna inteligencja nie zostanie załadowana.
+
+Układ katalogu powinien wyglądać teraz tak:
+<pre>
+$OpenTTD_Dir/
+    | ai/
+        | MyNewAI/
+            | info.nut 
+            | main.nut
+</pre>
+
+Otwóz <code>info.nut</code> a następnie kontynuuj czytanie następnej sekcji.
+
+==Rejestrować==
+
+Chcesz, aby OpenTTD wiedział, że masz AI, która chce przejąć firmę. W tym celu musisz dodać rozszerzoną klasę <code>AIInfo</code>:
+
+ class MyNewAI extends AIInfo {
+   function GetAuthor()      { return "Newbie AI Writer"; }
+   function GetName()        { return "MyNewAI"; }
+   function GetDescription() { return "An example AI by following the tutorial at http://wiki.openttd.org/"; }
+   function GetVersion()     { return 1; }
+   function GetDate()        { return "2007-03-17"; }
+   function CreateInstance() { return "MyNewAI"; }
+   function GetShortName()   { return "XXXX"; }
+   function GetAPIVersion()  { return "1.9"; }
+ }
+
+W ten sposób powiedz OpenTTD, jak twoja AI jest nazywana, jej wersja i inne ogólne informacje. Następnie musisz utworzyć instancję klasy.
+Squirrel :
+
+ /* Tell the core we are an AI */
+ RegisterAI(MyNewAI());
+
+To wystarczy, aby zainicjować AI. Ale nie jesteśmy jeszcze tam, aby dać mu pierwszy start. Nie mamy jeszcze prawdziwej sztucznej inteligencji, tylko fragment kodu, który mówi, jaka jest twoja sztuczna inteligencja i kto ją napisał. Stwórzmy więc klasę, która będzie naszą sztuczną inteligencją.
+
+==Twoje Pierwsze AI==
+
+Aby to zrobić, utwórz plik <code>main.nut</code> w tym samym katalogu i stwórz klasę, która się rozszerza <code>AIController</code>. Zobacz [[pl/Development/Styl kodowania|styl kodowania]] do zaleceń formatowania .
+
+ class MyNewAI extends AIController 
+ {
+   function Start();
+ }
+ 
+ function MyNewAI::Start()
+ {
+   while (true) {
+     AILog.Info("I am a very new AI with a ticker called MyNewAI and I am at tick " + this.GetTick());
+     this.Sleep(50);
+   }
+ }
+
+Pierwszy blok tworzy klasę rozszerzającą <code>AIController</code> . Drugi blok tworzy funkcję <code>Start()</code> , która jest wywoływana raz po uruchomieniu AI. Jeśli wyjdziesz z tej funkcji, twoja AI umrze. Dlatego tworzymy <code>while()</code> , który nigdy się nie kończy.
+Nie musisz się zbytnio przejmować blokowaniem gry przez AI poprzez zjedzenie całego procesora komputera (a tym samym zatrzymanie samej gry), sam silnik będzie spał co X kodów, co wymusza uczciwe planowanie i pozwala na grę działać płynnie. Możesz jednak ręcznie ustawić AI w tryb uśpienia, wywołując polecenie <code>Sleep()</code> . Kiedy za chwilę uruchomimy tę sztuczną inteligencję, zobaczysz, że co 50 tyknięć w konsoli wyświetla się linia drukowania.
+
+Rozpocznij nową grę i poszukaj na głównym ekranie gry ustawień AI. Stamtąd wybierz swoją sztuczną inteligencję do uruchomienia. Ponowne uruchomienie gry będzie konieczne tylko po każdej zmianie pliku info.nut. Pamiętaj, aby zmienić czas rozpoczęcia na sztucznej inteligencji, abyś nie musiał na niej czekać.
+
+'''Wskazówka''':
+W systemie Windows Vista może być konieczne uruchomienie <code>openttd.exe</code> jako administrator. Kliknij prawym przyciskiem myszy i wybierz „Uruchom jako administrator” za każdym razem lub wyłącz UAC dla administratorów ( [http://www.howtogeek.com/howto/windows-vista/disable-user-account-controluac-for-administrators-only/] ).
+Jeśli OpenTTD nie zostanie uruchomiony jako administrator, katalogi AI będą niewidoczne dla pliku wykonywalnego, a załadowanie dowolnej AI spowoduje błąd „AI o nazwie 'XYZ' jest nieznany lub nieodpowiedni”.
+
+Jeśli otworzysz okno debugowania AI, które można znaleźć pod ikoną QuestionMark, zobaczysz fajne drukowanie linii, w której jesteśmy aktywni. Możesz także ręcznie uruchomić nowo utworzoną sztuczną inteligencję, wpisując polecenie
+ start_ai MyNewAI
+do konsoli w grze (otwiera się klawiszem '''`''' )
+
+Jeśli dokonasz zmian kodu w czymkolwiek innym niż info.nut, możesz użyć polecenia konsoli <code>restart</code> , aby rozpocząć grę od początku. Lub możesz po prostu użyć przycisku „Przeładuj AI” w oknie AI Debugowania.
+
+Wszelkie znalezione błędy, zarówno w czasie kompilacji, jak i w czasie wykonywania, są wysyłane do okna debugowania AI. Jeśli twój plik info.nut nie ładuje się, nie zobaczysz błędów, chyba że włączysz konsolę debugowania z wiersza poleceń gry. '''-d script=5'''.
+
+
+Możesz przekierować dane wyjściowe do konsoli w grze, otwierając konsolę w grze i wpisując
+ developer 2
+Włącz wyjście z <code>print</code> i <code>AILog.*</code> wyrażenia z AI, wpisując
+ debug_level script=4
+
+Możesz przewijać okno konsoli za pomocą SHIFT-PGUP, SHIFT-PGDOWN i SHIFT-(góra/dół)klawisze STRZAŁY .
+
+Masz więc swoją pierwszą sztuczną inteligencję. Oczywiście teraz musimy dodać funkcje. W tym celu zalecamy przejście do następnego rozdziału [[pl/Development/Script/SI/Basics|Basics]] . Musisz tylko wiedzieć, że cały kod powinien przejść w <code>Start()</code> . Jeszcze jedna rzecz, którą powinieneś wiedzieć: nigdy nie twórz zmiennych globalnych. Zachowaj wszystko w instancji klasy. Ale to tylko reguła domowa, a jeśli nie wiesz, co to znaczy, w tym momencie tak naprawdę nie ma znaczenia.

@@ -1,0 +1,75 @@
+[[Translation:en/Archive/Development/AI Development milestones]]
+
+
+<!--{{NoAI}}-->{{pl/NoAI}}
+W miarę rozwoju program wprowadza kilka ważnych zmian w systemie NoAI. Ta strona je dokumentuje. Najnowsze produkty są na górze.
+
+== 12 stycznia 2009 r ==
+
+NoAI jest scalony w trunk. Tak!
+
+== 20 lipca 2008 r. - Nowy sposób przypisywania SI firmie (funkcjonalnej) ==
+
+Stan na 2008-08-20 (r13771), nowa metoda określania, która sztuczna inteligencja powinna kontrolować, która firma i przy jakich ustawieniach. Z tego powodu opcja wiersza polecenia '-a' została usunięta. Wkrótce zostanie dodany interfejs GUI, aby ułatwić edycję, ale na razie musisz otworzyć plik  'openttd.cfg' i dodać / zmienić następną sekcję:
+
+ [ai_players]
+ none = 
+ YourAI =
+
+Możesz zdefiniować do 8 miejsc. Dla każdej AI rozpoczynającej się w tym gnieździe (firmie), ta przypisana AI zostanie uruchomiona. Jeśli gracz ludzki zakłada firmę na tym polu, informacje AI są ignorowane. 'none' ''(brak)'' oznacza firmę ludzką.
+
+== 20 May 2008 - main.nut jest podzielony na dwie części ==
+
+W dniu 2008-05-20 (r13194) wprowadzono nową metodę rejestracji AI. Ta metoda rozwiązuje wiele starych problemów. Na przykład, jeśli masz teraz problem z kompilacją w <code>main.nut</code> , przy uruchomieniu nie powoduje to już błędu. Błąd pojawia się, gdy AI chce się uruchomić, i w ten sposób możemy przekierować go do okna debugowania AI. Rozwiązuje to problem polegający na tym, że użytkownik nie miał pojęcia, dlaczego sztuczna inteligencja się nie pojawiła (wielu użytkowników (Windows) nigdy nie patrzy na konsolę). Teraz jedyną ważną rzeczą jest to, że podczas uruchamiania twój <code>info.nut</code> jest poprawny. Co nie powinno być zbyt trudne dla większości ludzi.
+
+===Aktualizacja ze starego systemu===
+
+Zasadniczo powinieneś przenieść niewielką część swojego <code>main.nut</code> do <code>info.nut</code>. Przykład:
+
+ class FWrightAI extends '''AIFactory''' {
+ 	function GetAuthor()      { return "OpenTTD Dev Team"; }
+ 	function GetName()        { return "WrightAI"; }
+ 	function GetDescription() { return "A simple AI that tries to beat you with only aircrafts"; }
+ 	function GetVersion()     { return 1.1; }
+ 	function GetDate()        { return "2008-02-24"; }
+ 	function CreateInstance() { return "WrightAI"; }
+ }
+ 
+ /* Tell the core we are an AI */
+ '''iFWrightAI <- FWrightAI();'''
+
+Powinien zostać usunięty i powinien otrzymać  <code>info.nut</code> :
+
+ class WrightAI extends '''AIInfo''' {
+ 	function GetAuthor()      { return "OpenTTD Dev Team"; }
+ 	function GetName()        { return "WrightAI"; }
+ 	function GetDescription() { return "A simple AI that tries to beat you with only aircrafts"; }
+ 	function GetVersion()     { return 1.1; }
+ 	function GetDate()        { return "2008-02-24"; }
+ 	function CreateInstance() { return "WrightAI"; }
+ }
+ 
+ '''RegisterAI(WrightAI());'''
+
+Rzeczy do zapamiętania:
+* <code><-</code> linia staje się <code>RegisterAI</code>
+* <code>AIFactory</code> staje się <code>AIInfo</code>.
+
+== 17 marca 2008 r. - Porzucono obsługę C++ ==
+
+Od 17 marca 2008 r. Nie można już pisać AI w C++. Jedynym językiem do pisania AI jest Squirrel . Jest tak z kilku powodów, niektóre wymienione poniżej:
+
+* Trudno jest utrzymać platformę obsługującą zarówno Squirrel, jak i C++.
+* Squirrel ograniczył nas do tworzenia fajnych rzeczy w C++, a C++ ograniczyła nas do tworzenia fajnych rzeczy w SQ.
+* Kiedy mam sztuczną inteligencję w C++ i chcesz ją wypróbować, muszę wysłać ci źródło i musisz ponownie skompilować OpenTTD.
+* Nawet jeśli ostatni punkt został rozwiązany za pomocą modułów, nie byłby kompatybilny z wieloma platformami.
+* Squirrel jest wystarczająco dojrzała, aby ją przejąć.
+* Squirrel umożliwia łatwe handlowanie AI między użytkownikami.
+* Jeśli popełnisz błąd w C ++, możesz zawiesić grę. W SQ możemy zawrzeć dowolny problem w maszynie wirtualnej i zabić tylko AI.
+
+Oczywiście są też pewne wady, które również dla rekordów są wymienione:
+
+* C++ jest szybszy, chociaż różnica nie jest tak duża, jak można się spodziewać.
+* C++ pozwala na zabawę wskaźnikiem. Chociaż jest to również zła rzecz, może działać najlepiej
+
+Podsumowując: usuwając C++ jako język, w którym można pisać AI, zyskujemy prostotę frameworka, bezpieczeństwo i przede wszystkim: przenośność. Z tych powodów jednogłośnie zdecydowano o usunięciu C++ jako możliwego języka dla frameworku NoAI.

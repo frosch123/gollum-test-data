@@ -1,5 +1,4 @@
-[[Translation:Template/en/Ambox]]
-<!-- 
+<noinclude>[[Translation:Template/en/Ambox]]</noinclude><!-- 
       Adaptation du code Ambox de Wiki
 
 --><noinclude></noinclude><includeonly><div style="{{#IF: {{{style|}}} | {{{style}}} | margin: 0px 10% 0px 10%; border: 1px solid #aaa; border-left: 10px solid {{#switch:{{{type|}}} 
@@ -10,9 +9,9 @@
   | protection =#bba;
   | #default   =#1e90ff;
 }} padding: 4px 8px; background:#efefef; min-height: 44px;">}}
-<div style="position: absolute;">[[File:en/{{#if/{{{image|}}}
+<div style="position: absolute;">[[Image:{{#if:{{{image|}}}
   | {{{image}}}
-  | {{#switch/{{{type|}}}
+  | {{#switch:{{{type|}}}
     | suppression=Deletion.png
     | contenu    =Content.png
     | style      =Edit-clear.png

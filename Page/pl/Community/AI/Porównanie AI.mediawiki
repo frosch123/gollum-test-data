@@ -1,0 +1,498 @@
+[[Translation:en/Community/AI/Comparison of AIs]]
+ 
+<!--{{NoAI}}-->{{pl/NoAI}}
+Oto porównanie AI, które są [http://bananas.openttd.org/package/ai dostępne] przez system [[pl/Manual/Dodatki Online|Dodatków online]] .
+
+Uwaga: poniższe informacje są prawidłowe dla najnowszych wersji dostępnych za pośrednictwem systemu treści online (od sierpnia 2015 r.), Nowsze wersje mogą być dostępne na forach.
+
+__TOC__
+
+==Informacje ogólne==
+{|border="1"  class="wikitable sortable"
+ ! scope="col" | AI
+ ! scope="col" class="unsortable"| Ostatnia wersja 
+ ! scope="col" class="unsortable"| wątek Forum
+ {{en/AI general|AdmiralAI|25|38057|AdmiralAI-25.tar.gz}}
+ {{en/AI general|AIAI|kappa97|47298|AIAI-kappa97.tar.gz}}
+ {{en/AI general|AroAI|1.2|49496|AroAI-1.2.tar.gz}}
+ {{en/AI general|Beginner Tutorial - Ship AI|17|57624|Beginner_Tutorial__Ship_AI-17.tar.gz}}
+ {{en/AI general|BorkAI|23|56448|BorkAI-23.tar.gz}}
+ {{en/AI general|ChooChoo|412|44225|ChooChoo-412.tar.gz}}
+ {{en/AI general|Chopper|10|45070|Chopper-10.tar.gz}}
+ {{en/AI general|CivilAI|32|69986|CivilAI-32.tar.gz}}
+ {{en/AI general|CityConnecter|1|70063|CityConnecter-1.tar.gz}}
+ {{en/AI general|CluelessPlus|38|41462|CluelessPlus-38.tar.gz}}
+ {{en/AI general|CPU|1.4|70220|CPU-1.4.tar.gz}}
+ {{en/AI general|[[en/Community/AI/Convoy|Convoy]]|11|37946|Convoy-11.tar.gz}}
+ {{en/AI general|Denver & Rio Grande|1|44287|Denver__Rio_Grande-1-2.tar.gz}}
+ {{en/AI general|DictatorAI|183|52982|DictatorAI-183.tar.gz}}
+ {{en/AI general|EpicTrans|1.0|0|EpicTrans-1.0.tar.gz}}
+ {{en/AI general|FastPTPAI|4|66958|FastPTPAI-4.tar.gz}}
+ {{en/AI general|gelignAIte|1.1|51853|gelignAIte-1.1.tar.gz}}
+ {{en/AI general|HeliFerry|4|75384|HeliFerry-4.tar.gz}}
+ {{en/AI general|Idle|1|0|Idle-1.tar.gz}}
+ {{en/AI general|IdleMore|1|0|IdleMore-1.tar.gz}}
+ {{en/AI general|MailAI|2.22|52478|MailAI-2.22.tar.gz}}
+ {{en/AI general|MogulAI|5900|44760|MogulAI-5900.tar.gz}}
+ {{en/AI general|NoCAB|2.1.4|40203|NoCAB-2.1.4.tar.gz}}
+ {{en/AI general|NoNoCAB|6|75030|NoNoCAB-6.tar.gz}}
+ {{en/AI general|Orders Assistant AI|9|70217|Orders_Assistant_AI-9.tar.gz}}
+ {{en/AI general|OtviAI|422|39707|OtviAI-422.tar.gz}}
+ {{en/AI general|PathZilla|6|38645|PathZilla-6.tar.gz}}
+ {{en/AI general|PAXLink|14|41518|PAXLink-14.tar.gz}}
+ {{en/AI general|RailwAI|20|83545|RailwAI-20.tar.gz}}
+ {{en/AI general|RoadAI|5|56506|RoadAI-5.tar.gz}}
+ {{en/AI general|RoadRunner|12|48281|RoadRunner-12.tar.gz}}
+ {{en/AI general|rocketAI|1|45561|rocketAI-1.tar.gz}}
+ {{en/AI general|Rondje om de kerk|385|39756|Rondje_om_de_kerk-385.tar.gz}}
+ {{en/AI general|Rythorn Airline AI|3|62509|Rythorn_Airline_AI-3.tar.gz}}
+ {{en/AI general|[[en/Community/AI/SimpleAI|SimpleAI]]|14|44809|SimpleAI-14.tar.gz}}
+ {{en/AI general|ShipAI|10|75531|ShipAI-10.tar.gz}}
+ {{en/AI general|StreetTraffic1|1.0|0|StreetTraffic1-1.0.tar.gz}}
+ {{en/AI general|SynTrans|15|57136|SynTrans-15.tar.gz}}
+ {{en/AI general|Terron AI|209|54639|Terron_AI-209.tar.gz}}
+ {{en/AI general|TeshiNet|4.0.3|57616|TeshiNet-4.0.3.tar.gz}}
+ {{en/AI general|TownCars|5|42393|TownCars-5.tar.gz}}
+ {{en/AI general|TracAI|1.0|73114|TracAI-1.0.tar.gz}}
+ {{en/AI general|trAIns|2.1|44725|trAIns-2.1.tar.gz}}
+ {{en/AI general|Trans AI|190723|42272|Trans_AI-190723.tar.gz}}
+ {{en/AI general|TREE|1.0|0|TREE-1.0.tar.gz}}
+ {{en/AI general|TutorialAI|5|55400|TutorialAI-5.tar.gz}}
+ {{en/AI general|WmDOT|14|53698|WmDOT-14.tar.gz}}
+ {{en/AI general|WormAI|8|67167|WormAI-8.tar.gz}}
+ {{en/AI general|[[en/Development/Script/WrightAI|WrightAI]]|3|0|WrightAI-3.tar.gz}}
+|}
+
+==Funkcjonalność==
+Poniżej znajduje się porównanie funkcji. Należy pamiętać, że omówiono te AI, które nie są przeznaczone do prowadzenia firmy transportowej (takie jak Idle, IdleMore itp.) [[pl/Community/AI/Porównanie AI#Inne AI|poniżej]].
+{|border="1" class="wikitable sortable" style="text-align:center"
+ ! scope="col" | AI
+ ! scope="col" | Trains
+ ! scope="col" | Road vehicles
+ ! scope="col" | Aircraft
+ ! scope="col" | Ships
+ ! scope="col" | Passengers/mail
+ ! scope="col" | Freight
+ ! scope="col" | Save/load compatibility
+ ! scope="col" class="unsortable"| [[en/Manual/NewGRF]] compatibility
+ |-
+ |<center>AdmiralAI</center>
+ |{{en/yes}}
+ |{{en/yes|Yes*}}
+ |{{en/yes}}
+ |{{en/no}}
+ |{{en/yes}}
+ |{{en/yes}}
+ |{{en/yes}}
+ |Często bankrutuje, gdy używany jest NuTracks
+ |-
+ |<center>AIAI</center>
+ |{{en/yes}}
+ |{{en/yes}}
+ |{{en/yes}}
+ |{{en/no}}
+ |{{en/yes}}
+ |{{en/yes}}
+ |{{en/yes}}
+ |
+ |-
+ |<center>AroAI</center>
+ |{{en/no}}
+ |{{en/yes}}
+ |{{en/no}}
+ |{{en/no}}
+ |{{en/yes}}
+ |{{en/no}}
+ |{{en/no}}
+ |
+ |-
+ |<center>BorkAI</center>
+ |{{en/no}}
+ |{{en/yes}}
+ |{{en/yes}}
+ |{{en/no}}
+ |{{en/yes}}
+ |{{en/yes}}
+ |{{en/yes}}
+ |
+ |-
+ |<center>ChooChoo</center>
+ |{{en/yes}}
+ |{{en/yes}}
+ |{{en/no}}
+ |{{en/no}}
+ |{{en/yes}}
+ |{{en/yes}}
+ |{{en/yes}}
+ |
+ |-
+ |<center>Chopper</center>
+ |{{en/no}}
+ |{{en/no}}
+ |{{en/yes}}
+ |{{en/no}}
+ |{{en/yes}}
+ |{{en/yes}}
+ |{{en/yes}}
+ |
+ |-
+ |<center>CivilAI</center>
+ |{{en/yes}}
+ |{{en/yes}}
+ |{{en/yes}}
+ |{{en/yes}}
+ |{{en/yes}}
+ |{{en/yes}}
+ |{{en/yes}}
+ |Będzie budować samochody w miastach, jeśli obecne są samochody miejskie NewGRF
+ |-
+ |<center>CluelessPlus</center>
+ |{{en/no}}
+ |{{en/yes}}
+ |{{en/yes}}
+ |{{en/no}}
+ |{{en/yes}}
+ |{{en/yes}}
+ |{{en/yes}}
+ |
+ |-
+ |<center>Convoy</center>
+ |{{en/no}}
+ |{{en/yes}}
+ |{{en/no}}
+ |{{en/no}}
+ |{{en/yes}}
+ |{{en/no}}
+ |{{en/no}}
+ | Brak wsparcia dla pojazdów drogowych NewGRF
+ |-
+ |<center>Denver & Rio Grande</center>
+ |{{en/yes}}
+ |{{en/no}}
+ |{{en/no}}
+ |{{en/no}}
+ |{{en/no}}
+ |{{en/yes}}
+ |{{en/yes}}
+ |[[en/Community/NewGRF/North American Renewal Set|NARS]] jest preferowanym trainset'em, współpracuje z [[en/Community/NewGRF/2cc TrainSet]] i domyślnym zestawem pociągów
+ |-
+ |<center>DictatorAI</center>
+ |{{en/yes}}
+ |{{en/yes}}
+ |{{en/yes}}
+ |{{en/yes}}
+ |{{en/yes}}
+ |{{en/yes}}
+ |{{en/yes}}
+ |
+ |-
+ |<center>EpicTrans</center>
+ |{{en/no}}
+ |{{en/yes}}
+ |{{en/yes}}
+ |{{en/no}}
+ |{{en/yes}}
+ |{{en/no}}
+ |{{en/no}}
+ |
+ |-
+ |<center>FastPTPAI</center>
+ |{{en/yes}}
+ |{{en/no}}
+ |{{en/no}}
+ |{{en/no}}
+ |{{en/no}}
+ |{{en/yes}}
+ |{{en/no}}
+ |
+ |-
+ |<center>gelignAIte</center>
+ |{{en/no}}
+ |{{en/yes}}
+ |{{en/no}}
+ |{{en/no}}
+ |{{en/yes}}
+ |{{en/no}}
+ |{{en/yes}}
+ |
+ |-
+ |<center>HeliFerry</center>
+ |{{en/no}}
+ |{{en/no}}
+ |{{en/yes}}
+ |{{en/yes}}
+ |{{en/yes}}
+ |{{en/no}}
+ |{{en/no}}
+ |
+ |-
+ |<center>MailAI</center>
+ |{{en/yes}}
+ |{{en/yes}}
+ |{{en/no}}
+ |{{en/no}}
+ |{{en/yes}}
+ |{{en/no}}
+ |{{en/yes|Yes²}}
+ |Problem z Japanese trainset.
+ |-
+ |<center>MogulAI</center>
+ |{{en/no}}
+ |{{en/yes}}
+ |{{en/no}}
+ |{{en/no}}
+ |{{en/no}}
+ |{{en/yes}}
+ |{{en/yes}}
+ |
+ |-
+ |<center>NoCAB</center>
+ |{{en/yes}}
+ |{{en/yes}}
+ |{{en/yes}}
+ |{{en/yes}}
+ |{{en/yes}}
+ |{{en/yes}}
+ |{{en/yes}}
+ |
+ |-
+ |<center>NoNoCAB</center>
+ |{{en/yes}}
+ |{{en/yes}}
+ |{{en/yes}}
+ |{{en/yes}}
+ |{{en/yes}}
+ |{{en/yes}}
+ |{{en/yes}}
+ |
+ |-
+ |<center>OtviAI</center>
+ |{{en/yes}}
+ |{{en/yes|Yes*}}
+ |{{en/no}}
+ |{{en/yes}}
+ |{{en/yes}}
+ |{{en/yes}}
+ |{{en/no}}
+ |
+ |-
+ |<center>PathZilla</center>
+ |{{en/no}}
+ |{{en/yes|Yes*}}
+ |{{en/no}}
+ |{{en/no}}
+ |{{en/yes}}
+ |{{en/yes}}
+ |{{en/yes}}
+ |
+ |-
+ |<center>PAXLink</center>
+ |{{en/no}}
+ |{{en/yes}}
+ |{{en/yes}}
+ |{{en/no}}
+ |{{en/yes}}
+ |{{en/no}}
+ |{{en/yes}}
+ | Można używać tylko non-articulated busy ''(bez przegubu)''
+ |-
+ |<center>RailwAI</center>
+ |{{en/yes}}
+ |{{en/yes}}
+ |{{en/no}}
+ |{{en/yes}}
+ |{{en/yes}}
+ |{{en/yes}}
+ |{{en/yes}}
+ | 
+ |-
+ |<center>RoadAI</center>
+ |{{en/no}}
+ |{{en/yes}}
+ |{{en/no}}
+ |{{en/no}}
+ |{{en/yes}}
+ |{{en/no}}
+ |{{en/no}}
+ | 
+ |-
+ |<center>RoadRunner</center>
+ |{{en/no}}
+ |{{en/yes|Yes*}}
+ |{{en/no}}
+ |{{en/no}}
+ |{{en/yes}}
+ |{{en/yes}}
+ |{{en/yes}}
+ |
+ |-
+ |<center>rocketAI</center>
+ |{{en/no}}
+ |{{en/yes}}
+ |{{en/no}}
+ |{{en/no}}
+ |{{en/yes}}
+ |{{en/no}}
+ |{{en/no}}
+ |
+ |-
+ |<center>Rondje om de kerk</center>
+ |{{en/no}}
+ |{{en/yes}}
+ |{{en/no}}
+ |{{en/no}}
+ |{{en/yes}}
+ |{{en/yes}}
+ |{{en/no}}
+ |
+ |-
+ |<center>Rythorn Airline AI</center>
+ |{{en/no}}
+ |{{en/no}}
+ |{{en/yes}}
+ |{{en/no}}
+ |{{en/yes}}
+ |{{en/no}}
+ |{{en/no}}
+ |
+ |-
+ |<center>SimpleAI</center>
+ |{{en/yes}}
+ |{{en/yes}}
+ |{{en/yes}}
+ |{{en/no}}
+ |{{en/yes}}
+ |{{en/yes}}
+ |{{en/yes}}
+ |
+ |-
+ |<center>ShipAI</center>
+ |{{en/no}}
+ |{{en/no}}
+ |{{en/no}}
+ |{{en/yes}}
+ |{{en/yes}}
+ |{{en/yes}}
+ |{{en/no}}
+ |
+ |-
+ |<center>SynTrans</center>
+ |{{en/no|No**}}
+ |{{en/yes}}
+ |{{en/yes}}
+ |{{en/no}}
+ |{{en/yes}}
+ |{{en/no}}
+ |{{en/yes}}
+ |
+ |-
+ |<center>Terron AI</center>
+ |{{en/no}}
+ |{{en/yes}}
+ |{{en/yes}}
+ |{{en/yes}}
+ |{{en/yes}}
+ |{{en/yes}}
+ |{{en/yes}}
+ |
+ |-
+ |<center>TeshiNet</center>
+ |{{en/no}}
+ |{{en/yes}}
+ |{{en/yes}}
+ |{{en/no}}
+ |{{en/yes}}
+ |{{en/yes}}
+ |{{en/yes}}
+ |
+|-
+ |<center>TracAI</center>
+ |{{en/yes}}
+ |{{en/no}}
+ |{{en/yes}}
+ |{{en/no}}
+ |{{en/yes}}
+ |{{en/yes}}
+ |{{en/no}}
+ |
+ |-
+ |<center>trAIns</center>
+ |{{en/yes}}
+ |{{en/no}}
+ |{{en/no}}
+ |{{en/no}}
+ |{{en/yes}}
+ |{{en/yes}}
+ |{{en/no}}
+ |Brak wsparcia dla zestawów torów kolejowych NewGRF
+ |-
+ |<center>Trans AI</center>
+ |{{en/no}}
+ |{{en/yes|Yes*}}
+ |{{en/yes}}
+ |{{en/yes}}
+ |{{en/yes}}
+ |{{en/yes}}
+ |{{en/yes}}
+ |Brak obsługi branżowych zestawów zamiennych
+ |-
+ |<center>WormAI</center>
+ |{{en/yes}}
+ |{{en/no}}
+ |{{en/yes}}
+ |{{en/no}}
+ |{{en/yes}}
+ |{{en/yes}}
+ |{{en/yes}}
+ |
+ |-
+ |<center>WrightAI</center>
+ |{{en/no}}
+ |{{en/no}}
+ |{{en/yes}}
+ |{{en/no}}
+ |{{en/yes}}
+ |{{en/no}}
+ |{{en/no}}
+ |
+|}
+
+<nowiki>* Uwzględniono również Tramwaje</nowiki>
+
+² Może mieć niedokończone trasy
+
+<nowiki>** Robi kilka tras pociągów dla zarabiających pieniądze na starcie, ale potem nie korzysta z pociągów</nowiki>
+
+==Wydajność==
+Na forach przeprowadzono testy porównujące wydajność AI. Wątki te obejmują wykresy i inne zrzuty ekranu, zapisy są dostępne do pobrania.
+
+Wątki testujące AI na forach: (najnowsze na górze listy)
+* [https://www.tt-forums.net/viewtopic.php?f=65&t=76118 March 2017] Testing compatibility z World Airliners Set
+* [https://www.tt-forums.net/viewtopic.php?f=65&t=75907 February 2017] Starting year 3000
+* [https://www.tt-forums.net/viewtopic.php?f=65&t=75174 August 2016] Aircraft tylko test
+* [https://www.tt-forums.net/viewtopic.php?f=65&t=75144 August 2016] Ships tylko test
+* [https://www.tt-forums.net/viewtopic.php?f=65&t=75027 July 2016] Trains tylko test
+* [https://www.tt-forums.net/viewtopic.php?f=65&t=74943 June 2016] Road vehicles tylko test
+* [http://www.tt-forums.net/viewtopic.php?f=65&t=63062 October 2012], videos: [http://www.youtube.com/watch?v=GuehENQQg3w Semifinals 1], [http://www.youtube.com/watch?v=hNC5C5HAGJs Semifinals 2], [http://www.youtube.com/watch?v=VUiISfVJhA4 Finals]
+* [http://www.tt-forums.net/viewtopic.php?f=65&t=53358 March 2011, May 2011, July 2011]
+* [http://www.tt-forums.net/viewtopic.php?f=65&t=51135 November 2010]
+* [http://www.tt-forums.net/viewtopic.php?f=65&t=50857 November 2010] - train-tylko test
+* [http://www.tt-forums.net/viewtopic.php?f=65&t=50552 October 2010]
+* [http://www.tt-forums.net/viewtopic.php?f=65&t=49907 September 2010]
+* [http://www.tt-forums.net/viewtopic.php?f=65&t=44523 July 2009, August 2009, February 2010, July 2010]
+W maju 2010 r. Przeprowadzono również test wykorzystania procesora przez poszczególne AI:
+* [http://www.tt-forums.net/viewtopic.php?f=65&t=48353 Forum link]
+
+Zobacz też [[en/Community/AI/Test AIs]] - próba pomiaru wydajności różnych AI.
+
+==Inne AI==
+* '''Beginner Tutorial - Ship AI''' - Specjalna SI statku dla samouczka dla początkujących, przeznaczona do użycia wraz ze skryptem gry. Widoczne tylko dla twórców AI/skryptów 'game'.
+* '''CityConnecter''' - AI, która łączy pobliskie miasta z drogami.
+* '''Idle''' - AI, która nic nie robi, zachowując minimalną dopuszczalną równowagę. Bezczynności można używać do prowadzenia wielu firm w grze jednoosobowej przy użyciu przełączania firm [[pl/Manual/Cheaty|cheat]].
+* '''IdleMore''' - To widelec bezczynności, który działa jeszcze mniej. Zarządzanie saldami bankowymi jest konfigurowalne i nie zmienia nazwy firmy po załadowaniu zapisanej gry.
+* '''Orders Assistant AI''' - Ta SI nie działa sama. Zarządza trasami dla gracza, który dołączył do jego firmy.
+* '''StreetTrafic1''' - Jest to 'widelec' TownCars, który jeździ samochodami po miastach, by urozmaicić symulacje tzw.''(eye-candy)''. Potrzebuje samochodu NewGRF, aby być obecnym (jak Generic Cars).
+* '''TownCars''' - SI, która jeździ samochodami po miastach, dla efektu ''(eye-candy)''. Potrzebuje samochodu NewGRF, aby być obecnym (jak Generic Cars).
+* '''TREE''' - Eyecandy AI, która sadzi drzewa i pozwala użytkownikowi kontrolować, ile sadzi (i gdzie) zamiast ogólnej eksplozji drzew zwykle spotykanych w grach OpenTTD. Jest przeznaczony do użytku z wyłączonym ustawieniem wzrostu drzewa.
+* '''TutorialAI''' - AI, która działa jak samouczek w grze, wprowadzając nowych graczy do gry w OpenTTD. Został teraz zastąpiony przez ''Tutorial dla początkujących'', który używa skryptu gry jako tutorial'a.
+* '''WmDOT''' - AI, która łączy miasta z drogami, bez prowadzenia na nich żadnych pojazdów. WmDOT może być wykorzystany do zbudowania sieci dróg między miastami. Wykorzystuje statki, aby zarobić.

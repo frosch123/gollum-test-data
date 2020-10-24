@@ -1,0 +1,204 @@
+{{en/Historic|This page is only valid up to version 1.8. Later versions require Visual C++ 2015 or newer.}}
+
+
+{{en/Note|If you "just" want to compile/apply a single patch, it's probably a better idea to follow [[en/Archive/Compilation and Ports/Compiling on Windows using MinGW|this article]], '''word for word'''.}}
+This article gets you started on compiling OpenTTD using Microsoft Visual C++ 2008/2010. Note that, for the Express Editions, compiling for 64-bit systems requires extra steps.
+ 
+
+__TOC__
+=Required software=
+:* [http://www.microsoft.com/express/download/default.aspx Microsoft® Visual C++ 2008 Express Editions] ''(current: Final)''  VS2008 does not appear to be available anymore. This link leads to VS2013 page.  VS2010 can also be downloaded from links on the page.
+:* [http://www.microsoft.com/downloads/details.aspx?FamilyID=529f03be-1339-48c4-bd5a-8506e5acf571 Microsoft® DirectX SDK - August 2007 or earlier] ''(only needed for DirectX Music, otherwise can be skipped. More later on.)''
+:* [http://www.microsoft.com/en-us/download/details.aspx?id=8279 Microsoft windows 7 SP1 SDK] ''for 64 bit compilation only''
+
+:* [http://www.openttd.org/download-openttd-useful openttd-useful-X.X-win.zip] ''Choose to download the Headers/libraries.''
+:** openttd_useful.zip is a collection of files of varying age. For the latest zlib, libpng, liblzo2 and FreeType files you can browse their websites below.
+:** [http://www.zlib.net/ zlib]
+:** [http://sourceforge.net/project/showfiles.php?group_id=23617&package_id=16183 GnuWin32 libpng]
+:** [http://gnuwin32.sourceforge.net/downlinks/freetype.php GnuWin32 FreeType]
+:** [http://icu-project.org/download/ ICU4C]
+:** [http://www.freshports.org/archivers/lzo2/ liblzo2]
+:...and of course the newest source from <code>svn://svn.openttd.org/trunk</code>. You need to have a SVN-client to download the source from the SVN server. Pick either of the following two. For SVN novices TortoiseSVN is highly recommended:
+
+:* [http://svnbook.red-bean.com/en/1.7/svn.ref.svn.html Subversion command line version] ''(current: 1.7)''
+:* [http://tortoisesvn.net/downloads GUI TortoiseSVN] ''(current: 1.8.8)''
+
+=Installing=
+[[File:en/Microsoft Visual Cpp 2008 Express Editions.png|thumb|200px|Install screen]]
+
+===Microsoft® Visual C++ 2008 Express Editions===
+:If you just need to compile OpenTTD it's enough if you don't select any options, keep the default options and wait for the installation to finish (for illustration click the image).
+
+===Extra install required for 64bit compilation===
+You will need to install the windows SDK in order to compile the 64bit version
+:The only options you need are Developer Tools -> Windows Headers and Libraries.
+
+[[File:en/SDK options.png|thumb|200px|Minimal SDK options]]
+
+===Microsoft® DirectX SDK===
+If you don't want/need music, you can skip DirectX SDK. Please read next chapter on that.
+:'''Install the version August 2007'''
+:From the components screen remove the documentation and sample source code you'll save a lot of space. They're pretty useless if you just need to compile OpenTTD (see the image below). For those of you who don't want to download the whole DirectX SDK package with several hundred megabytes you can use this handy [http://www.tt-forums.net/download/file.php?id=118839&sid=554843a58fb26683eeacb7642ea2446d zip file] containg only headers needed for successfull OpenTTD compilation. You ''don't'' need the included dxguid.lib file for compiling trunk.
+{{en/Note|You should not use a version newer then August 2007 as DirectMusic is no longer support as of the November 2007 release. If you install a newer version, you should follow the instructions of [[http://wiki.openttd.org/wiki/index.php/Microsoft_Visual_C++_2008_Express_Editions#Microsoft®_DirectX_SDK_earlier_than_August_2007 Microsoft® DirectX SDK earlier than August 2007]]}}
+
+:As August 2007 or earlier installer doesn't support Microsoft® Visual Studio 2008, you will have to set up the VC++ directories manually.
+
+:Go to <code>Tools -> Options</code>, then to <code>Projects and Solutions -> VC++ Directories</code>. Add the following lines:
+
+:Include files:
+:* C:\Program Files\Microsoft DirectX SDK\Include
+
+:Library files:
+:* C:\Program Files\Microsoft DirectX SDK\Lib\x86
+
+:'''Note:''' Please update the paths as necessary.
+
+===Without Microsoft® DirectX SDK===
+
+: '''Alternative''': If you are willing to compile without support for MIDI music you will not be needing the DirectX SDK. To disable music, open the "openttd" project properties dialog and:
+:* Navigate to <code>Configuration properties -> C/C++ -> Preprocessor -> Preprocessor Definitions</code> and remove <code>WIN32_ENABLE_DIRECTMUSIC_SUPPORT</code> preprocessor definition.
+[[File:en/preprocessor.png|thumb|none|200px|Preprocessor settings]]
+
+:* Navigate to <code>Configuration properties -> Linker -> Input -> Additional Dependencies</code> and remove <code>dxguid.lib</code> library. ''note: this may no longer be necessary ''
+[[File:en/linker.png|thumb|none|200px|Linker settings]]
+
+=Preparing your system for 64bit compilation=
+:''Note: these instructions for using a 64bit version of Windows. If you are using a 32bit version, the registry edit will be different''
+*Download this .REG file and import it to your registry (https://docs.google.com/open?id=0B22TZ_qFdiWQYV9DSDZCV0Iwd3M)
+*Open folder 'C:\Program Files (x86)\Microsoft Visual Studio 9.0\VC\vcpackages'
+**rename / delete VCProjectEngine.Dll.Express.Config ''it gets replaced below''
+**change the extention from .config to .Express.config for the following files
+***AMD64.VCPlatform.Config
+***VCProjectEngine.dll.Express
+
+=Copying from OpenTTD needed includes and libraries=
+
+:*Extract the [http://www.openttd.org/download-openttd-useful openttd-useful.zip] file and copy the content to some <code><personal folder></code>.
+:*In the guide below: Don't forget to replace <code><personal folder></code> with the folder where you extracted openttd-useful.zip.
+
+==== Visual C++ Express 2008 ====
+:*Now you need to tell Visual C++ where the files are located. In Visual C++ Express 2008, navigate to ''Tools > Options > Projects and Solutions > VC++ Directories'':<br />
+:**Select Platform '''Win32''' (Be sure that all your entries are '''before''' any SDK folder!):
+:***Select '''Include Files''', press the new folder button and add the folder <code><personal folder>\'''shared'''\include</code> to the list. <-- note the ''''shared'''' and not 'win32'
+:***Select '''Library Files''', press the new folder button and add the folder <code><personal folder>\win32\library</code> to the list.
+:**Select Platform '''x64''' (Skip if it isn't available! Again be sure that all your entries are '''before''' any SDK folder!) :
+:***Select '''Include Files''', press the new folder button and add the folder <code><personal folder>\shared\include</code> to the list.
+:***Select '''Library Files''', press the new folder button and add the folder <code><personal folder>\win64\library</code> to the list.<br />
+
+==== Visual C++ Express 2010 ====
+:In Visual C++ Express 2010 the options are set in a different way. You can either add them globally for all projects or just for OpenTTD.
+
+:To add them globally:
+::*Click on ''View > Property Manager''
+::*Expand the '''openttd''' project
+::*For '''Win32''' expand ''''Debug | Win32''' and right click on '''Microsoft.Cpp.Win32.user''' and choose '''Properties'''.
+::*Choose '''VC++ Directories''' under '''Common Properties'''
+::*Click on the dropdown next to '''Include Directories''' and choose '''edit'''.
+::*Click the 'New Line' icon at the top, and add the folder <code><personal folder>\'''shared'''\include</code> to the list.
+::*Repeat for '''Library Directories''' with <code><personal folder>\'''win32'''\library</code>
+::* For ''x64'' click on '''Debug | x64 > Microsoft.Cpp.x64.user''' instead. The include path is identical, the library path has '''x64''' instead of '''win32'''.
+
+:To add them locally:
+::*Select the platform and configuration you want to modify.
+::*Right click on the '''openttd''' project in the Solution Explorer and choose Properties.
+::*Choose '''VC++ Directories''' under '''Common Properties'''
+::*Click on the dropdown next to '''Include Directories''' and choose '''edit'''.
+::*Click the 'New Line' icon at the top, and add the folder <code><personal folder>\'''shared'''\include</code> to the list.
+::*Repeat for '''Library Directories''' with <code><personal folder>\'''win32'''\library</code>
+
+=Subversion=
+===Getting the client===
+[[File:en/SVN Checkout.png|thumb|400px|The SVN Checkout Box]]
+Subversion is needed to download the source (the place where to find the MSVC project file. If you want an easy, GUI subversion client, download and install [http://tortoisesvn.net/downloads TortoiseSVN].
+
+===Make the directory===
+
+Make a directory called "ottdsrc" in your C:\ drive. It is important to make a directory without spaces since [[en/Archive/Compilation and Ports/Compiling on Windows using MinGW]] (the program used later for [[en/#Bundle|making a bundle]]) can only switch to directories without spaces. This will be used as a place to download the source to.
+
+===Download the source===
+
+To download the actual source of OpenTTD, right click inside the folder <code>C:\ottdsrc</code>, then go to '''SVN Checkout'''.
+
+In '''SVN Checkout''', make sure you have the url of the OpenTTD trunk source (svn://svn.openttd.org/trunk) in the "URL of Repository" box.
+
+To get the latest revision, get the HEAD Revision. To get an older/different revision, highlight the "Revision" box and type in the revision number you want specifically. For now, you can just download the HEAD revision, unless you need another revision. This takes about 5-20 minutes depending on your internet.
+
+=Compiling=
+A compile can take anywhere from ~5 minutes to ~20 or more minutes depending on how fast your system is. The "generating code" part at the end takes the longest (about 20% of the entire compile), so do not close MSVC because it looks like it has stopped.
+
+'''Debug''' (Debugging crashes only):
+:* Open <code>projects/openttd_vs90.sln</code>. This will open your IDE with the project loaded.
+:* Go to <code>Build -> Configuration Manager</code> and check if it is set to <code>Debug</code>. By default, it should be.
+:* Right-click on openttd (project) -> Properties -> C/C++ -> -> General -> Additional Include Directories. Add the DirectX headers subdirectory (Usually, <code>C:\Program Files\Microsoft DirectX SDK (August 2007)\Include</code>)
+:* Press <code>F7</code>, or go to <code>Build -> Build Solution</code>.
+'''Release''' (Recommended):
+:* Open <code>projects/openttd_vs90.sln</code>. This will open your IDE with the project loaded.
+:* Go to <code>Build -> Configuration Manager</code> and select <code>Release for OpenTTD</code>.
+:* Right-click on openttd (project) -> Properties -> C/C++ -> -> General -> Additional Include Directories. Add the DirectX headers subdirectory (Usually, <code>C:\Program Files\Microsoft DirectX SDK (August 2007)\Include</code>)
+:* For '''Win32''':
+:** Right-click on openttd (project) -> Properties -> Linker -> General -> Additional Library Directories. Add the DirectX SDK Lib subdirectory (Usually, <code>C:\Program Files\Microsoft DirectX SDK (August 2007)\Lib\x86</code>)
+:* For '''Win64''':
+:** Right-click on openttd (project) -> Properties -> Linker -> General -> Additional Library Directories. Add the DirectX SDK Lib subdirectory (Usually, <code>C:\Program Files\Microsoft DirectX SDK (August 2007)\Lib\x64</code>)
+:* Make sure to press ''Apply'' then press ''Ok'', this is important.
+:* Press <code>F7</code>, or go to <code>Build -> Build Solution</code>.
+==Compile Problems==
+====Missing files for compilation====
+'''Problem'''
+It is possible some files are missing for compilation, eg. <code>rev.cpp</code>. These files aren't included with the source, but are generated by a script before compilation, apparently some script didn't run. See the next sub section to fix problems with running these scripts.
+
+====Input Error: There is no script engine for file extension “.vbs”====
+'''Problem'''
+There's an executable (c/w)script which runs your <code>.vbs</code> scripts, perhaps the reposonsible <code>.dll</code> isn't registered in your Windows installation. Another possible cause is setting your default program for this file extensionto another application (eg. notepad++) this might give problems while building.
+
+'''Solutions'''
+First try to solve it by registering the responsible dll in the commandprompt: <code>regsvr32 %systemroot%\system32\vbscript.dll</code>.
+If that doesn't work try to solve it by registering <code>.vbs</code> through a <code>.reg</code> file, [http://www.nilpo.com/2009/07/windows-xp/restoring-vbs-vbscript-script-file-file-associations/ solution] found [http://superuser.com/questions/155929/input-error-there-is-no-script-engine-for-file-extension-vbs via] and file for [http://www.nilpo.com/pub/scripts/FixVBSFileAssociationsXP.reg XP] or [http://www.nilpo.com/pub/scripts/FixVBSFileAssociationsVista.reg Vista/Win7]
+
+====Where is my completed build====
+When you do not use make bundle, all files end up in <code>ottdsrc\bin</code> with the exception of the executable, the executable ends up in <code>ottdsrc\objs\win32\debug</code> or <code>ottdsrc\objs\win32\release</code>.
+
+=Bundle=
+
+This is not necessary in compiling OpenTTD, only if you want to upload your binary publicly. The purpose of this article is to get the equivalent of a "<code>make bundle</code>" for MSVC builds. {{en/Note|You must have MSYS or Cygwin installed for this to work. To get MSYS, follow [[en/Archive/Compilation and Ports/Compiling on Windows using MinGW#Setting_up_MinGW|this guide]]. You only need to use the part which says "Setting Up MinGW", "Setting up MSYS" and "Install SVN", then you are good to go. Note that when installing MinGW, you do ''not'' need to install the g++ compiler, but you still need to install the candidate.}}
+You will first need to change the directory to your OpenTTD source. Use this command to change directory: <code>cd <directory></code>. To change to your new source directory, type <code>cd /c/ottdsrc</code>
+
+Then, enter the command:
+<pre>make -f Makefile.msvc bundle PLATFORM=Win32</pre>
+Replace <code>PLATFORM=Win32</code> with <code>PLATFORM=x64</code> if you compiled a 64-bit build.
+
+After this is done, you can find the contents in the <code>/bundle</code> directory. From there, you can make a zip/rar out of the files. Remember, TT-Forums.net[http://tt-forums.net] only allows files that are less than or equal to 6 MiB.
+
+=Running/Debugging the game=
+
+Make sure you have either the [[en/Manual/Installation#Files_from_TTD|original game files]] or our free alternatives [[en/Archive/Community/Sound Effects Replacement]] and [[en/Archive/Community/OpenGFX Readme]] placed in ~\Documents\OpenTTD\baseset\ , that way they're shared by all your OpenTTD installations and you don't have to copy them to every new installation.
+
+=Microsoft® DirectX SDK earlier than August 2007=
+
+Information: The DirectX SDK from November 2007 is the first one which supports Microsoft® Visual Studio 2008. But it's also the first version which doesn't support DirectMusic which is needed to compile OpenTTD. That is why we must copy the missing files from an older version, prefered the final one for DirectMusic: 'August 2007'.
+
+Direct download link here (WARNING: Starts download immediately): http://download.microsoft.com/download/3/3/f/33f1af6e-c61b-4f14-a0de-3e9096ed4b3a/dxsdk_aug2007.exe
+
+* Extract (no double-click, do not install) dxsdk_aug2007.exe in an extra directory and you get a file called dxsdk_aug2007.exe (yes that's right, both files have the same name).
+* Extract the second dxsdk_aug2007.exe in an extra directory.
+* Now copy following 9 files from .\dxsdk_aug2007\dxsdk_aug2007\Include\ to <personal folder>\shared\include (note: Please update the paths as necessary):
+:* dls1.h
+:* dmdls.h
+:* dmerror.h
+:* dmksctrl.h
+:* dmplugin.h
+:* dmusbuff.h
+:* dmusicc.h
+:* dmusicf.h
+:* dmusici.h
+
+=Credits=
+
+:* OpenTTD Developers for the great game.
+:* Microsoft® for the the SDKs and Visual C++ 2008 Express Edition.
+:* Sebastian and Desolator (aka Mircea Chirea) for creating/updating the Microsoft® Visual C++ 2005 Express guide.
+:* 64 bit instructions taken from http://jenshuebel.wordpress.com/2009/02/12/visual-c-2008-express-edition-and-64-bit-targets
+
+[[Category:en/Development]]
+[[Category:en/Compiling OpenTTD]]
+[[Category:en/Microsoft Visual C++]]
+[[Category:en/Program Descriptions]]

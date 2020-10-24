@@ -1,13 +1,12 @@
-[[Translation:Template/en/Industries]]
-<!--
+<noinclude>[[Translation:Template/en/Industries]]</noinclude><!--
 This is a Template for Industries. '''DO NOT EDIT THIS PAGE''', edit the specific article instead.
 --><noinclude></noinclude><!--
 -->
 <div style="float:right; width:300px; font-size:90%; border:1px solid gray; background-color:#f2f2f2; margin-left:10px; margin-bottom:10px">
 <div style="text-align:center; border-bottom:1px solid gray; padding:5px"><strong>{{{name}}}</strong></div>
-<div style="background-color:white; padding:5px">[[File:en/{{{image|Industries.png}}}|center]]</div>
+<div style="background-color:white; padding:5px">[[Image:{{{image|Industries.png}}}|center]]</div>
 {{#if:{{{caption|}}}|<div style="text-align:center; background-color:white; padding:5px">{{{caption}}}</div>}}
-{{#if:{{{image2|}}}|<div style="background-color:white; padding:5px">[[File:en/.{{{image2}}}|center]]</div>
+{{#if:{{{image2|}}}|<div style="background-color:white; padding:5px">[[Image:{{{image2}}}|center]]</div>
 {{#if:{{{caption2|}}}|<div style="text-align:center; background-color:white; padding:5px">{{{caption2}}}</div>}}
 }}<div style="border-top:1px solid gray; padding:5px"><strong>Klimaty:</strong> {{{climates}}}</div>
 <div style="border-top:1px solid gray; padding:5px"><strong>Akceptuje:</strong> {{{accepts}}}</div>
@@ -30,18 +29,18 @@ Napisz:
 Napisz:
 <pre>{{pl/Przedsiębiorstwa| name=Kopalnia węgla
 | image=Coalmine.png
-| climates=[[en/Umiarkowany]], [[en/Arktyczny]]
+| climates=[[pl/Manual/Klimat]], [[pl/Manual/Klimat]]
 | accepts= Nic
-| produces= [[pl/Manual/Base Set/Economy/Węgiel|Węgiel]]
-| notes= Nie występuje w klimacie [[en/Tropikalny]]m
+| produces= [[pl/Manual/Base Set/Cargos/Węgiel|Węgiel]]
+| notes= Nie występuje w klimacie [[pl/Manual/Klimat]]m
 }}</pre>
 Wynik:
 {{pl/Przedsiębiorstwa| name=Kopalnia węgla
 | image=Coalmine.png
-| climates=[[en/Umiarkowany]], [[en/Arktyczny]]
+| climates=[[pl/Manual/Klimat]], [[pl/Manual/Klimat]]
 | accepts= Nic
-| produces= [[pl/Manual/Base Set/Economy/Węgiel|Węgiel]]
-| notes= = Nie występuje w klimacie [[en/Tropikalny]]m
+| produces= [[pl/Manual/Base Set/Cargos/Węgiel|Węgiel]]
+| notes= = Nie występuje w klimacie [[pl/Manual/Klimat]]m
 }}
 </noinclude><includeonly>
 [[Category:pl/Przedsiębiorstwa]]</includeonly>
