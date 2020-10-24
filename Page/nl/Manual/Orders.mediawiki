@@ -37,7 +37,7 @@ De ''Ga naar'' knop heeft de volgende '''opties''':
 * '''Ga naar dichtstbijzijnde garage'''
 * '''[[nl/Manual/Conditionele orders|Conditionele order]] sprong'''. Met deze optie is het mogelijk om een station over te slaan, bijvoorbeeld als de trein volgeladen is.
 * '''Orders delen'''. Met deze optie neem je de orders over van een voertuig (van hetzelfde type uiteraard) waar je op klikt met je muis, en deelt deze orders met dat voertuig.
-[[File:en/Ga naar opties.png|frame|none|Ga naar opties.]]
+[[File:nl/Ga naar opties.png|frame|none|Ga naar opties.]]
 
 Zie [[en/Archive/Manual/Settings/Quick Goto]] voor sneltoetsen om orders te maken.
 
@@ -67,7 +67,7 @@ Nu is het mogelijk het laden en lossen apart te managen. Je kunt:
 *''"Volledig laden"'' voor een volledige lading van alles wat je laden met dit voertuig
 *''"Eén soort vracht volledig laden"'' voor een volledige lading van een soort vracht
 *''"Niet laden"'' om niets te laden
-[[File:en/Laadopties hk.png|frame|none|De laadopties.]]
+[[File:nl/Laadopties hk.png|frame|none|De laadopties.]]
 
 ===Laden indien beschikbaar===
 :Het voertuig zal het station aandoen, de vracht laden die op dat moment beschikbaar is en het station verlaten op weg naar de volgende bestemming. Het is de standaard optie. Niet aanbevolen in het gebruik (behalve voor voertuigen die passagiers en post vervoeren).
@@ -86,7 +86,7 @@ Om te lossen kun je:
 *''"Alles lossen"'' om alles te lossen
 *''"Transfer"'' om lading te verplaatsen
 *''"Niet lossen"'' om niets te lossen
-[[File:en/Losopties hk.png|frame|none|De los opties]]
+[[File:nl/Losopties hk.png|frame|none|De los opties]]
 
 ===Lossen indien geaccepteerd===
 : Het voertuig zal het station aandoen, zijn lading lossen die hier wordt geaccepteerd en het station weer verlaten op weg naar de volgende bestemming. Het is de standaard optie. Niet aanbevolen in het gebruik (behalve voor passagiers en post).
@@ -114,7 +114,7 @@ Je kunt kiezen voor:
 *''"Ga non-stop naar"''
 *''"Ga via"''
 *''"Ga non-stop via"''
-[[File:en/Non stop hk.png|frame|none|De route-opties.]]
+[[File:nl/Non stop hk.png|frame|none|De route-opties.]]
 
 ===Non-Stop===
 Het is mogelijk om direct naar een station te gaan. [[en/Archive/Manual/Non-stop]] voorkomt dat het voertuig stopt op één van de stations waarlangs deze route voert op weg naar zijn bestemming.
@@ -124,16 +124,16 @@ Het is mogelijk om via een station te rijden (voor elk station is mogelijk hier 
 
 ==Onderhoud==
 Deze optie is beschikbaar als je een ''Ga naar … Garage'' order hebt geselecteerd. Dit zorgt ervoor dat het voertuig voor [[en/Manual/Servicing|onderhoud]] naar deze garage rijdt. Het kan handig zijn om onderhoud op te nemen in het schema voordat het voertuig nieuwe lading gaat ophalen. 
-[[File:en/Ganaardepotorder1.png|none|frame|De opties van de onderhoudknop]]
+[[File:nl/Ganaardepotorder1.png|none|frame|De opties van de onderhoudknop]]
 
 ==Ombouwen==
 Je kunt een instructie opnemen om een voertuig [[nl/voertuig aanpassen|om te bouwen]] in de orderlijst. Wanneer je deze optie selecteert wordt een scherm getoond waarin je moet kiezen tussen de typen vracht waarvoor dit voertuig moet worden omgebouwd. Deze order is beperkt in het gebruik omdat je normaliter een voertuig slechts één keer ombouwt voor een bepaalde vrachtsoort.
-[[File:en/Ombouwen vracht hk.png|none|frame|Kies de vracht die je wilt laten vervoeren.]]
+[[File:nl/Ombouwen vracht hk.png|none|frame|Kies de vracht die je wilt laten vervoeren.]]
 
 ==Dienstregeling==
 {{nl/Hoofd|nl/Manual/Dienstregeling}}
 Dienstregelingen laten je specificeren hoeveel tijd een voertuig mag gebruiken om elk deel van een route af te leggen, en hoeveel tijd dit voertuig mag stilstaan in elk station. Zie het [[nl/Manual/Dienstregeling|dienstregeling]] artikel voor de details hoe je deze dienstregelingen kunt inrichten.
-[[File:en/Dienstregeling hk 1.png|none|frame|De dienstregeling interface]]
+[[File:nl/Dienstregeling hk 1.png|none|frame|De dienstregeling interface]]
 
 ==Orders kopiëren==
 Als je een dienst wilt opzetten die door meerdere [[nl/Manual/Voertuigen|bussen]] wordt onderhouden, moet je elk voertuig apart dezelfde orders geven. Stel je een busdienst voor waar 5 bussen langs 5 [[nl/stations|stations]] in een stad gaan om een frequente passagiersdienst te onderhouden. Het is dan vervelend om voor elk van die 5 bussen steeds dezelfde stappen te moeten uitvoeren; hiervoor kun je de orders van de ene bus kopiëren naar de andere bussen.
@@ -156,7 +156,7 @@ Kopiëren van orders is echter nog niet de beste oplossing want je zou later mis
 #Hou de ''Ctrl'' -toets vast en klik op het andere voertuig dat de orders heeft die je wilt delen. 
 #Of kies de optie ''Orders delen'' in het '''Ga naar'''-menu en klik op het andere voertuig.
 #Nu zullen de twee voertuigen hetzelfde schema delen; zij zijn aan elkaar gekoppeld. Je zult zien dat de orders van het andere voertuig zijn overgenomen en op de laatste regel staat ''--Einde gedeelde orders--''. 
-[[File:en/Ga naar opties.png|frame|right|Ga naar opties.]]
+[[File:nl/Ga naar opties.png|frame|right|Ga naar opties.]]
 [[File:en/schema 2 bussen.png|none|frame|De schema's voor de 2 bussen zijn gedeeld]]
 
 Je kunt zoveel voertuigen aan elkaar koppelen als je wilt, er is geen limiet, maar je kunt uiteraard alleen voertuigen van hetzelfde type aan elkaar koppelen omdat zij dezelfde stations zullen aandoen.
@@ -170,14 +170,14 @@ Op een gegeven moment kun je besluiten dat je een voertuig niet meer wilt koppel
 Je zult zien dat alle orders nu zijn verwijderd uit de lijst bij dit voertuig, en op de laatste regel staat nu weer ''--Einde van orders--''. Alle orders van de andere voertuigen zijn niet gewijzigd door deze handeling. Nu kun je het voertuig dat uit de koppeling is gehaald weer onafhankelijk van de andere voertuigen nieuwe orders geven zoals normaal. 
 
 ===Lijst van voertuigen die deze orders delen===
-Het [[File:tr/SharedOrders.png]] icoontje rechts in het orderscherm (of dienstregelingscherm) is de gedeelde orders knop. Het toont een lijst van alle voertuigen die dezelfde orders delen ( [[en/#Gedeelde_orders|gedeelde orders]] ) als het huidige voertuig. Dit icoontje zal alleen beschikbaar zijn als het voertuig orders deelt met andere voertuigen. 
+Het [[File:en/SharedOrders.png]] icoontje rechts in het orderscherm (of dienstregelingscherm) is de gedeelde orders knop. Het toont een lijst van alle voertuigen die dezelfde orders delen ( [[en/#Gedeelde_orders|gedeelde orders]] ) als het huidige voertuig. Dit icoontje zal alleen beschikbaar zijn als het voertuig orders deelt met andere voertuigen. 
 [[File:en/gedeelde orders hk.png|none|frame|Lijst van voertuigen met gedeelde orders]]
 
 ===Opmerkingen===
 *In afwijking van orders kopiëren, is het bij gedeelde orders mogelijk dat een voertuig al reeds bestaande orders heeft. Dit is omdat je bij het delen van orders de ''Ctrl'' -toets moet vasthouden, waarmee het niet waarschijnlijk is dat je per ongeluk de orders van het voertuig kwijtraakt. Door dit te doen verliest het voertuig dat je toevoegt aan de gedeelde orders zijn bestaande orders, en heeft alleen de gedeelde orders. 
 *Je kunt de ''Kloon voertuig'' knop (in het garage scherm) of ''Koop een kopie'' knop (van het voertuigscherm) gebruiken om een identieke kopie van een voertuig te maken, maar standaard worden de orders gekopieerd. Als je wilt dat dit voertuig de orders deelt met gekloonde voertuigen, hou dan de ''Ctrl'' -toets vast als je klikt op het voertuig dat je kloont. 
-[[File:en/Kloon voertuig 3.png|none|frame|Kloon voertuig knop.]]
-[[File:en/Kloon in garage hk.png|none|frame|Koop een kopie knop (alleen beschikbaar als het voertuig in de garage staat).]]
+[[File:nl/Kloon voertuig 3.png|none|frame|Kloon voertuig knop.]]
+[[File:nl/Kloon in garage hk.png|none|frame|Koop een kopie knop (alleen beschikbaar als het voertuig in de garage staat).]]
 *Met gedeelde orders is er geen "master" set van orders (m.a.w. een voertuig dat de hoofd orderlijst bewaart waaraan de andere worden gekoppeld) die je per ongeluk zou kunnen verwijderen. Zo lang er ten minste een voertuig bestaat met de orders die je wilt, zo lang is de orderlijst aanwezig.
 
 ==Orders controleren==
@@ -187,11 +187,11 @@ Het [[en/Archive/Manual/Settings/Order review system|orderoverzicht system]] dra
 
 ===Te weinig orders in het schema===
 Om een voertuig winst te laten maken is het noodzakelijk ten minste twee stations op te nemen in het schema. Garages of controleposten tellen daarbij niet mee omdat deze niet toestaan hier vracht te laden of te lossen.
-[[File:en/Te weinig orders hk.png|none|frame|"<Voertuig> heeft te weinig orders in het schema".]]
+[[File:nl/Te weinig orders hk.png|none|frame|"<Voertuig> heeft te weinig orders in het schema".]]
 
 ===Dubbele invoer===
 Soms is een station per ongeluk dubbel aangeklikt. Voor de meeste voertuigen veroorzaakt dit problemen bij het zoeken naar de beste route; bijvoorbeeld een vliegtuig dat opstijgt en weer landt bij hetzelfde vliegveld. 
-[[File:en/Dubbele orders hk.png|none|frame|"<Voertuig> heeft dubbele orders".]]
+[[File:nl/Dubbele orders hk.png|none|frame|"<Voertuig> heeft dubbele orders".]]
 
 ===Ongeldige order===
 Als je een station verwijdert waar een voertuig moet stoppen, zal de geest van de station een tijdje zichtbaar blijven (in de vorm van een grijze stationsnaam). Dit geeft je de mogelijkheid een nieuw station te maken op dezelfde locatie als het oude station welk de naam van het oude station overneemt. Voertuigen zullen naar dit nieuwe station blijven komen (er van uitgaande dat het een juist type is) zonder dat je hun orders hoeft aan te passen. 
