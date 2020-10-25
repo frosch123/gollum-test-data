@@ -3,7 +3,7 @@
 <!--{{DevDoc}}-->{{pl/Rozwój}}
 
 <!--{{note|This page deals with [[Wikipedia:Internationalization_and_localization|i18n]] strings from a ''developers'' point of view. If you are interested in aspects on translations, see [[Format of langfiles]] for a more in-depth article. That article also covers language specific concepts like inflection due to gender, causes and plurality.}}-->
-{{pl/informacja|Ta strona dotyczy [https://www.wikipedia.org/wiki/Internationalization_and_localization i18n] ciągi z ''developers'' punkt widzenia. Jeśli interesują Cię aspekty tłumaczeń, zobacz [[pl/Archive/Source/Format plików lang|Format plików lang]] po bardziej szczegółowy artykuł. Artykuł ten obejmuje również pojęcia specyficzne dla języka, takie jak odmiana z powodu płci, przyczyn i mnogości.}}
+{{pl/Informacja|Ta strona dotyczy [https://www.wikipedia.org/wiki/Internationalization_and_localization i18n] ciągi z ''developers'' punkt widzenia. Jeśli interesują Cię aspekty tłumaczeń, zobacz [[pl/Archive/Source/Format plików lang|Format plików lang]] po bardziej szczegółowy artykuł. Artykuł ten obejmuje również pojęcia specyficzne dla języka, takie jak odmiana z powodu płci, przyczyn i mnogości.}}
 
 OpenTTD ma wbudowaną obsługę napisów w wielu językach. Te widoczne dla użytkownika teksty muszą być przetłumaczone na wiele języków obcych.   Łańcuchy znaków zależne od języka są przechowywane w plikach tekstowych pod '''src/lang/''' i mają wzór <code>''[language name]''.txt</code>. Jak każdy plik kodu źródłowego są pod kontrolą wersji przez SVN. Językiem głównym jest angielski (British English) i zapisany jest w pliku '''english.txt''' . Aby uzyskać szczegółowe wyjaśnienie tych plików, patrz [[pl/Archive/Source/Format plików lang|Format plików lang]] . Podczas procesu kompilacji narzędzie „strgen” kompiluje pliki językowe w odpowiadające im pliki <code>.lng</code> pliki, które z kolei są wykorzystywane podczas gry. 
 
@@ -11,7 +11,7 @@ OpenTTD ma wbudowaną obsługę napisów w wielu językach. Te widoczne dla uży
 ==Dodawanie ciągów==
 Dodajesz ciąg, podając mu identyfikator, a następnie pewną liczbę spacji, następnie dwukropek ":" , a następnie sam ciąg. Użyj do tego pliku '''english.txt''' . Zgodnie z konwencją identyfikatory ciągów zawsze zaczynają się od ''STR_'' . Linia może polubić coś takiego:
 <pre>STR_01A1_IS_GETTING_VERY_OLD   :{WHITE}{STRING} {COMMA} is getting very old</pre>
-Zauważ, że lokalizacja, do której dodajesz ciąg, nie jest całkowicie dowolna (patrz [[en/#Zakresy|Zakresy]] poniżej ) . Ciągi w nawiasach klamrowych ("{}") to ciągi znaków specjalnych interpretowane podczas ich renderowania. Jak można się domyślić, <code>{WHITE}</code> nadaje ciągowi biały kolor. Aby zapoznać się z listą specjalnych ciągów znaków, patrz <!--[[OpenTTDDevBlackBook/Special_strings|Special Strings]]-->[[pl/Archive/Source/OpenTTDDevBlackBook/Special strings|Ciągi Specjalne]] .<br />
+Zauważ, że lokalizacja, do której dodajesz ciąg, nie jest całkowicie dowolna (patrz [[#Zakresy|Zakresy]] poniżej ) . Ciągi w nawiasach klamrowych ("{}") to ciągi znaków specjalnych interpretowane podczas ich renderowania. Jak można się domyślić, <code>{WHITE}</code> nadaje ciągowi biały kolor. Aby zapoznać się z listą specjalnych ciągów znaków, patrz <!--[[OpenTTDDevBlackBook/Special_strings|Special Strings]]-->[[pl/Archive/Source/OpenTTDDevBlackBook/Special strings|Ciągi Specjalne]] .<br />
 
 ==Komentarze==
 Każda linia rozpoczynająca się od znaku skrótu "#" jest uważana za linię komentarza.
@@ -32,7 +32,7 @@ STR_MONTH_ABBREV_MAR                                            :Mar
 ############ zakres dla końców miesięcy
 </pre>
 <!--{{warning|'''Do not break ranges''' when adding strings as this might have unwanted side-effects!}}-->
-{{pl/uwaga|'''Nie przerywaj zakresów''' podczas dodawania ciągów, ponieważ może to mieć niepożądane skutki uboczne!}}
+{{pl/Uwaga|'''Nie przerywaj zakresów''' podczas dodawania ciągów, ponieważ może to mieć niepożądane skutki uboczne!}}
 Zakresy są często używane do definiowania grupy tekstów, które ''nie'' są bezpośrednio przywoływane w kodzie źródłowym. Zamiast tego wykonywane jest obliczenie przesunięcia w stosunku do pierwszego wpisu bloku. W związku z tym do tekstów odwołuje się tylko pośrednio i w czasie wykonywania.
 
 ==Wewnętrzne '''(Internals)'''==
@@ -107,7 +107,7 @@ DrawString(x, y, STR_TOP, colour);
 Ponadto zwróć uwagę, jak <code>STR_TOP</code> jest zdefiniowane jako <code>{STRING5}</code> : pierwsza zmienna <code>STR_1ST_LEVEL</code> wymaga miejsca na dwie zmienne (StringID ciągu na pokaż plus wartość jednej zmiennej). Druga zmienna <code>STR_1ST_LEVEL</code> wymaga miejsca na trzy zmienne (StringID ciągu do wyświetlenia plus dwie dodatkowe wartości zmiennych).
 
 ==Cykl życia==
-"Źródło prawdy" dla ciągów i18n znajduje się tylko w tabelach tekstowych plików językowych (to jest na przykład "'''english.txt'''" ) . Oznacza to, że [http://translator.openttd.org/en/ WebTranslator]  jest aktualizowany automatycznie na podstawie najnowszego stanu dostępnego w ''bagażniku'' (''trunk'') repozytorium SVN. Dlatego można bezpiecznie usunąć cały wpis z "english.txt" , jeśli wiesz, że nie jest już używany w innym miejscu (Uwaga: jeśli nie znajdziesz nazwy łańcucha w żadnym pliku kodu źródłowego, nie możesz zakończyć że nie jest już używany z powodu [[en/#Zakresy|zasięgu]]]). Upewnij się, że wyczyściłeś również wpis we wszystkich innych językach, ponieważ nie dzieje się to automatycznie w ''bagażniku'' (''trunk'').
+"Źródło prawdy" dla ciągów i18n znajduje się tylko w tabelach tekstowych plików językowych (to jest na przykład "'''english.txt'''" ) . Oznacza to, że [http://translator.openttd.org/en/ WebTranslator]  jest aktualizowany automatycznie na podstawie najnowszego stanu dostępnego w ''bagażniku'' (''trunk'') repozytorium SVN. Dlatego można bezpiecznie usunąć cały wpis z "english.txt" , jeśli wiesz, że nie jest już używany w innym miejscu (Uwaga: jeśli nie znajdziesz nazwy łańcucha w żadnym pliku kodu źródłowego, nie możesz zakończyć że nie jest już używany z powodu [[#Zakresy|zasięgu]]]). Upewnij się, że wyczyściłeś również wpis we wszystkich innych językach, ponieważ nie dzieje się to automatycznie w ''bagażniku'' (''trunk'').
 
 Co więcej, mówiąc bardziej ogólnie, jeśli chcesz ''zmienić'' oryginalny tekst angielski, musisz pomyśleć o wpływie również na inne języki. Oto kilka praktycznych zasad:
 * Jeśli masz pewność, że twoje zmiany wpłyną na wszystkie języki (także te, których nie znasz) w ten sam sposób (na przykład, chcesz zmienić '''{RED}''' na '''{GREEN}''' ), a następnie sam zmień go mechanicznie we wszystkich językach. Nie czekaj, aż tłumacz dostosuje wszystkie inne języki.

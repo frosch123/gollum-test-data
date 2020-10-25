@@ -48,7 +48,7 @@ Az alternatív grafikus alapcsomagokat általában [https://www.wikipedia.org/wi
 
 
 A TTD grafikus alapcsomagok nem tar formátumban léteznek. Ha már telepítve van a TTD grafikus alapcsomag egyik változata, semmi értelme a másikat is telepíteni, mert egyformán néznek ki.
-Ha az OpenTTD telepítése közben nem telepítettél TTD grafikus alapcsomagot, de utólag szeretnél, akkor csak másold be a [[en/#TTD alapgrafika|fenti]] fájlokat (kivéve az OpenTTD-vel terjesztetteket) az OpenTTD /data könyvtárába.
+Ha az OpenTTD telepítése közben nem telepítettél TTD grafikus alapcsomagot, de utólag szeretnél, akkor csak másold be a [[#TTD alapgrafika|fenti]] fájlokat (kivéve az OpenTTD-vel terjesztetteket) az OpenTTD /data könyvtárába.
 
 
 ==Váltás grafikus alapcsomagok között==
@@ -62,7 +62,7 @@ A grafikus alapcsomagok közötti váltás egyik módja a megfelelő játékbeli
 
 ===A beállító fájl szerkesztése===
 A grafikus alapcsomagok közötti váltás egy másik módja a beállító fájl szerkesztése.
-* Keresd meg és nyisd meg az [[hu/openttd.cfg|openttd.cfg]] fájlt egy sima szövegszerkesztővel (pl. Jegyzettömb).
+* Keresd meg és nyisd meg az [[hu/Archive/Manual/Settings/Openttd.cfg|openttd.cfg]] fájlt egy sima szövegszerkesztővel (pl. Jegyzettömb).
 * Keresd meg a ''[misc]'' szakaszt és add hozzá az alábbi (vagy írd át a létező) sort a szakasz végén:
  graphicsset = grafikus_alapcsomag_neve
 : A grafikus alapcsomag neve annak obg-fájljában szerepel, és nem feltétlenül egyezik meg a fájl nevével.

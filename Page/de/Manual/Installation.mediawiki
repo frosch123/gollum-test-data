@@ -53,11 +53,11 @@ Die Originalgrafiken sind '''urheberrechtlich geschützt''', es kann (in manchen
 [[File:en/Installation 2 gfx.png|frame|center|Installer setup for users without TTD files]]
 
 '''4.''' Konfig Datei editieren
-:'''4.1.''' Suche die [[de/openttd.cfg|openttd.cfg]]. Sie befindet sich in:
+:'''4.1.''' Suche die [[de/Openttd.cfg|openttd.cfg]]. Sie befindet sich in:
  Win XP : "C:\Dokumente und Einstellungen\<username>\Eigene Dateien\OpenTTD"
  Vista  : "C:\Users\<username>\Documents\OpenTTD"
  Linux  : "~/.openttd"
-:'''4.2.''' Öffne die [[de/openttd.cfg|openttd.cfg]] mit deinem Texteditor.
+:'''4.2.''' Öffne die [[de/Openttd.cfg|openttd.cfg]] mit deinem Texteditor.
 :'''4.3.''' Suche den [misc] Abschnitt und füge die folgende (oder editiere die bestehende) Zeile am Ende des Abschnittes hinzu:
  graphicsset = "OpenGFX"
 : Der Name des Basisgrafik Sets ist in seiner obg-Datei zu finden und kann vom obg Dateinamen abweichen.
@@ -72,7 +72,7 @@ Die Originalgrafiken sind '''urheberrechtlich geschützt''', es kann (in manchen
 #Du benötigst Transport Tycoon Deluxe für Windows oder DOS. Solltest Du deine CD nicht haben, schaue auf [http://www.google.com/search?q=transport+tycoon+deluxe Google]. '''Achtung''':
 Die Originalgrafiken sind '''urheberrechtlich geschützt''', es kann (in manchen Ländern) illegal sein sie herunterzuladen!
 #Erstelle einen '''openttd/''' Ordner auf deinem Computer.
-#OpenTTD benötigt einige Dateien von TTD, siehe [[en/#Dateien von TTD|unten]] um zu erfahren, welche Dateien wohin kopiert werden müssen.
+#OpenTTD benötigt einige Dateien von TTD, siehe [[#Dateien von TTD|unten]] um zu erfahren, welche Dateien wohin kopiert werden müssen.
 #Lade den OSX installer von der OpenTTD [http://www.openttd.org/download-stable Download Seite].
 #Starte OpenTTD.
 
@@ -81,7 +81,7 @@ Die Originalgrafiken sind '''urheberrechtlich geschützt''', es kann (in manchen
 
 
 :Wenn die Musik nicht funktioniert, können die Dateifreigaben der Grund sein.
-#Wähle alle .gm Dateien im '''gm/''' Ordner, drücke {{en/keypress|Strg|I}} für die ''Eigenschaften''.
+#Wähle alle .gm Dateien im '''gm/''' Ordner, drücke {{en/Keypress|Strg|I}} für die ''Eigenschaften''.
 #Unter ''Freigaben & Rechte'' wähle ''Lese- & Schreibzugriff''.
 #Starte OpenTTD neu.
 
@@ -98,7 +98,7 @@ Die Originalgrafiken sind '''urheberrechtlich geschützt''', es kann (in manchen
 ===Mit TTD Basisgrafiken===
 #Nimm die Transport Tycoon Deluxe CD für Windows oder DOS, wenn du sie nicht hast sieh unter [http://www.google.com/search?q=transport+tycoon+deluxe Google] nach. '''Hinweis''': Die Original Grafiken sind urheberrechtlich geschützt, in einigen Ländern könnte es illegal sein sie herunterzuladen.
 #Erstelle das Verzeichnis /openttd
-#OpenTTD benötigt einige Dateien von TTD, siehe bitte weiter [[en/#Dateien von TTD|unten]] nach welche das genau sind.
+#OpenTTD benötigt einige Dateien von TTD, siehe bitte weiter [[#Dateien von TTD|unten]] nach welche das genau sind.
 #Lade OpenTTD von den [http://www.openttd.org/download-stable Download Seiten] herunter.
 ##''Anmerkung'': Du kannst auch den Quellcode von OpenTTD herunterladen und selbst kompilieren. Siehe [[en/Archive/Compilation and Ports/Compiling on GNU∕Linux and *BSD]].
 #Starte OpenTTD.

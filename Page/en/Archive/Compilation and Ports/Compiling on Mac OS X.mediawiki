@@ -17,7 +17,7 @@ If you have access to the Mac App Store, you will find Xcode there as a free dow
 ===Older Mac OSes===
 First you need to install a compiler. You should do this by installing '''Xcode''' (Requires OSX 10.3+)
 They should be on the CD / DVD when you got your OS. You can also download it from the Apple Developer Connection web site (free registration required), although it is over 3gb in size. This includes, amongst many other things, gcc (in the ''UNIX Dev Support'' package), which is the compiler that are used by most opensource projects, including OpenTTD.
-{{en/note|By default, this will also install the iOS SDK, which you probably won't need. You can uncheck it in the final installation settings or just disagree with its license to save several gigabytes of disk space.}}
+{{en/Note|By default, this will also install the iOS SDK, which you probably won't need. You can uncheck it in the final installation settings or just disagree with its license to save several gigabytes of disk space.}}
 
 ==Installing required libraries==
 In order to build OpenTTD from source you need to have installed some [http://www.openttd.org/en/development libraries] which it depends upon. 
@@ -64,7 +64,7 @@ brew install lzo
 brew install pkg-config
 </pre>
 
-{{en/warning|The homebrew pages contains advice concerning how to handle directories usually only writable by root (requiring the admin password) and claims as to which of these “could safely be deleted”. It cannot be recommended to follow any of this advice if you are not 100% sure of what you do. You may corrupt your system without possibility to recover it.}}
+{{en/Warning|The homebrew pages contains advice concerning how to handle directories usually only writable by root (requiring the admin password) and claims as to which of these “could safely be deleted”. It cannot be recommended to follow any of this advice if you are not 100% sure of what you do. You may corrupt your system without possibility to recover it.}}
 
 ===Using MacPorts===
 [http://www.macports.org/ The MacPorts Project] is an open-source community initiative to design an easy-to-use system for compiling, installing, and upgrading either command-line, X11 or Aqua based open-source software on the Mac OS X operating system. As you will install libraries in your system directories, you'll need to do so as administrator via the command ''sudo'' - which will require you to enter the administrator password. Further information regarding <code>sudo</code> can be found on [https://www.wikipedia.org/wiki/Sudo wikipedia].
@@ -93,7 +93,7 @@ At least in order to compile a ''static binary'' (for redistribution), but also 
 
 It might be worth to risk a look at the [http://guide.macports.org/#using.port macports documentation]. If you need for one or another reason an old(er) library version, a short walk-through is [https://trac.macports.org/wiki/howto/InstallingOlderPort found here]
 
-{{en/note| There are issues with some gcc versions which are supplied by macports. Use one of the apple-supplied compilers if fails with illegal compiler arguments. 
+{{en/Note| There are issues with some gcc versions which are supplied by macports. Use one of the apple-supplied compilers if fails with illegal compiler arguments. 
 You can switch the compiler being used by installing ''gcc_select'' package from macports, then using ''port select <version>''}}
 
 
@@ -252,6 +252,6 @@ Compiling a universal binary is done by adding <code>--enable-universal</code> t
  <code>./configure --enable-universal</code>
 This is all if your system is set up correctly. Make will then compile for intel, PPC and PPC970 (optimized for this particular CPU. Apple renamed it to G5), so setting G5 flags and such shouldn't be needed. Static is also enabled by default as it's assumed that the binary is to be moved to another computer.
 
-For this to work, you will need universal libraries. For more info, read [[en/universal libraries]]
+For this to work, you will need universal libraries. For more info, read [[en/Archive/Compilation and Ports/Universal libraries]]
 
 [[Category:en/Compiling OpenTTD]]

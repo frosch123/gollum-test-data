@@ -113,7 +113,7 @@ Pour 15 cargaisons arrivant à A depuis SOURCE, faire:
 
 Les nombres exacts sont déduits des fournitures et des tailles relatives des différents flux passant par un nœud. En plus de ces flux ''planifiés'', les ''vrais'' flux sont tracés. Dans l'exemple ci-dessus, la quantité de cargaison provenant de SOURCE qui a été envoyée vers C ou D ou consommée localement est tracée comme le ''vrai'' flux. Quand un nouveau paquet de cargaisons venant de SOURCE arrive, il est envoyé à la destination avec la plus grande différence entre les flux réels et planifiés. Ainsi, il n'est pas nécessaire de déterminer la destination pour chaque entité de cargaison à l'avance. Seuls les correspondances de flux pour chaque nœud doivent être connues pour orienter les cargaisons. Il n'est pas non plus nécessaire de diviser les paquets pour des raisons de CargoDist. Pour les vrais flux, encore, une moyenne glissante est prise, comme pour les capacités et les utilisations.
 
-[[File:en/cargodist-station.png|frame|Image d'écran d'une IHM de station]]
+[[File:en/Cargodist-station.png|frame|Image d'écran d'une IHM de station]]
 
 L'assignation d'un flux est calculée pour chaque gare depuis la forêt de chemins que l'algorithme MCF renvoie. C'est plutôt simple. Simplement, mettez à l'échelle tous les chemins par la fourniture de la station d'origine et insérez-les dans une structure de données intelligente qui retrouve le flux le plus insuffisamment pourvu en un temps constant.
 
@@ -134,7 +134,7 @@ Les modifications d'ordre comme "Pas de déchargement", "Décharger tout", "Tran
 L'IHM de station montre les sources, les prochaines étapes et les destinations estimées de la cargaison en attente, ainsi que celles des flux de cargaison planifiés et envoyés via ce nœud. Les destinations finales sont estimées selon les flux sauvegardés à chaque gare. N'espérez pas que chaque paquet de cargaison aille exactement à cet endroit, cependant. Comme expliqué ci-dessus, les paquets sont toujours routés sans être divisés, donc les nombres donnés dans l'IHM de la gare sont toujours un peu incorrects; mais sur le long terme, tout est bien envoyé aux bonnes destinations. Vous pouvez grouper les cargaisons par station d'origine, par prochaine étape et par destination, dans n'importe quel ordre. Vous pouvez aussi trier dans les groupes par la propriété que vous avez groupé par (''station'') ou la quantité de cargaison affichée (''quantité''). Les groupes peuvent être ouverts et fermés en cliquant sur les lignes respectives de l'affichage des cargaisons.
 
 ==Zoom dans la petite carte==
-[[File:en/cargodist-smallmap-flow.png|frame|Capture d'écran de la petite carte avec des flux]]
+[[File:fr/Cargodist-smallmap-flow.png|frame|Capture d'écran de la petite carte avec des flux]]
 Afin d'améliorer la lisibilité de l'affichage des statistiques dans la petite carte, une fonction de grossissement a été ajoutée. En l'utilisant, vous pouvez non seulement diminuer pour avoir un aperçu de la petite carte, mais aussi zoomer pour avoir un affichage plus détaillé des statistiques des liaisons, par exemple dans un centre-ville.
 
 ==Statistiques de la petite carte==
@@ -154,4 +154,4 @@ Les listes de cargaison des stations sont triées par prochaine étape où veut 
 ===Réservation explicite===
 Au lieu de reconstruire la liste des réservations à chaque tour de chargement, les cargaisons réservées sont conservées dans une liste séparée dans la liste des cargaisons d'un véhicule. Ainsi, la quantité de cargaison à rechercher à chaque tour de chargement est réduite et l'effort pour reconstruire ces réservations est économisé. Les listes de réservation sont sauvegardées dans les sauvegardes avec les autres listes habituelles de cargaison des véhicules.
 
-[[en/fonsinchen|fonsinchen]] 22h39, 4 mars 2010 (UTC)
+[[en/Fonsinchen|fonsinchen]] 22h39, 4 mars 2010 (UTC)

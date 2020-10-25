@@ -16,15 +16,15 @@ La finestra principale, mostrata qui sopra, consente di definire le seguenti opz
 * '''[[en/Manual/Game options window|Opzioni di gioco]]''': Configura le opzioni generali.
 * '''[[en/Archive/Manual/Settings/Difficulty|Difficoltà]]''': Definisci le opzioni che rendono la partita più o meno difficile.
 * '''[[en/Archive/Manual/Settings/Advanced Settings|Impostazioni avanzate]]''': Configura diversi dettagli della simulazione.
-* '''[[en/NewGRF Settings|Impostazioni NewGRF]]''': Configura file di risorse addizionali.
+* '''[[en/Manual/NewGRF|Impostazioni NewGRF]]''': Configura file di risorse addizionali.
 * '''[[en/Manual/Online content|Contenuti online]]''': Scarica ulteriore materiale dalla rete.
 * '''[[en/Manual/AI settings|Impostazioni IA]]''': Configura le opzioni del modulo IA (Intelligenza Artificiale).
 * '''Esci''': Abbandona OpenTTD.
 
 ==L'interfaccia del gioco==
-Appena hai cominciato una nuova partita, ti sarà mostrata l''''interfaccia del gioco''' principale, mostrata qui sotto. Per giocare passerai la maggioranza del tempo usando questa interfaccia. Essa è suddivisa in tre sezioni: in cima c'è la ''[[en/#La barra del  menù|barra del menù]]'', in mezzo troverai la ''[[en/#Rappresentazione 3D del mondo tramite proiezione isometrica|rappresentazione 3D del mondo tramite proiezione isometrica]]'', mentre in fondo c'è la  ''[[en/#La barar di stato|barra di stato]]''.
+Appena hai cominciato una nuova partita, ti sarà mostrata l''''interfaccia del gioco''' principale, mostrata qui sotto. Per giocare passerai la maggioranza del tempo usando questa interfaccia. Essa è suddivisa in tre sezioni: in cima c'è la ''[[#La barra del  menù|barra del menù]]'', in mezzo troverai la ''[[#Rappresentazione 3D del mondo tramite proiezione isometrica|rappresentazione 3D del mondo tramite proiezione isometrica]]'', mentre in fondo c'è la  ''[[#La barar di stato|barra di stato]]''.
 
-[[File:en/interface.png|thumb|center|400px|L'interfaccia principale di gioco.]]
+[[File:en/Interface.png|thumb|center|400px|L'interfaccia principale di gioco.]]
 
 ==La barra del menù==
 I bottoni della barra del menù sono divisi in sezioni, descritte qui di seguito. Da sinistra a destra, esse sono: "Controlli del gioco", "Informazioni sulla mappa", "Informazioni sull'industria e la compagnia", "Informazioni sui veicoli", "Zoom", "Costruzioni" e "Varie".
@@ -40,7 +40,7 @@ I bottoni della barra del menù sono divisi in sezioni, descritte qui di seguito
 *[[File:en/Save Load button.png|Salva/Carica]] '''Bottone per salvare e caricare una partita:''' Consente di accedere il sotto-menù: ''Salava la partita'', ''Carica una partita'', ''Abbandona la partita'' (fa tornare alla schermata d'avvio), e ''Esci'' (chiude OpenTTD e fa tornare al sistema operativo).
 
 ===Informazioni sulla mappa===
-*[[File:en/Minimap button.png|Mappa Terrirotio]] '''Bottone della Mappa del Territorio:''' mostra la mappa di tutto il territorio, una visuale aggiuntiva e consente di vedere la lista di tutti i [[en/sings|cartelli]] sul territorio.
+*[[File:en/Minimap button.png|Mappa Terrirotio]] '''Bottone della Mappa del Territorio:''' mostra la mappa di tutto il territorio, una visuale aggiuntiva e consente di vedere la lista di tutti i [[en/Sings|cartelli]] sul territorio.
 *[[File:en/Town directory button.png|Lista della città]] '''Lista delle [[en/Manual/Towns|Città]]:''' Mostra la lista delle città e la loro popolazione.
 *[[File:en/Subsidies button.png|Sussidi]] '''[[en/Sussidi]]:''' Mostra l'elenco delle offerte di sussidio che sono state bandite o vinte dalle varie società.
 *[[File:en/Station list button.png|Elenco delle Stazioni]] '''[[en/Elenco delle stazioni]]:''' Consente di consultare l'eleonco di tutte le stazioni costruita da qualunque giocatore.
@@ -49,7 +49,7 @@ I bottoni della barra del menù sono divisi in sezioni, descritte qui di seguito
 
 ===Informazioni sulla compagnia e sui concorrenti===
 *[[File:en/Finances screen button.png|Finances screen]] '''Finances screen button:''' View the finances screen of any company.
-*[[File:en/Company information button.png|Company Information]] '''[[en/Company]] information button:''' View the company information for any company, and have the possibility to share your competitor's success by buying shares in that company
+*[[File:en/Company information button.png|Company Information]] '''[[en/Manual/Transport company]] information button:''' View the company information for any company, and have the possibility to share your competitor's success by buying shares in that company
 *[[File:en/Graphs button.png|Graphs]] '''Graphs button:''' View various graphs about companies, their performance and the economy.
 *[[File:en/Company league table button.png|Company league]] '''Company league table button:''' View the company league table showing the rankings of the various players.
 *[[File:en/Industry button.png|Industries]] '''Industry button:''' View a list of industries and their production. You can also prospect or [[en/Manual/Industries#Funding_New_Industries|fund new industries]].
@@ -82,23 +82,23 @@ The Landscaping button has a dropdown to access the tree and sign placement wind
 
 ===Varie===
 *[[File:en/Sound Music button.png|Jukebox]] '''Jukebox button:''' Change sound and music settings.
-*[[File:en/News button.png|News]] '''News button:''' Change news and [[en/message settings]]. You can also see a history of news messages.
+*[[File:en/News button.png|News]] '''News button:''' Change news and [[en/Archive/Manual/Settings/Message settings]]. You can also see a history of news messages.
 *[[File:en/Other button.png|Other]] '''Other button:''' Things that do not fit into other sections: ''[[en/Manual/Land area information]]'', ''[[en/Manual/Console|Toggle console]]'', ''[[en/AI Debug]]'', ''[[en/Manual/Screenshot|Screenshot]]'', ''[[en/Manual/Screenshot|Giant screenshot]]'', and ''About OpenTTD''.
 
 ==Rappresentazione 3D del mondo tramite proiezione isometrica==
 The OpenTTD world takes the form of a landscape, presented on [http://en.wikipedia.org/wiki/Video_games_with_isometric_graphics isometric projection] (strictly speaking rather [http://en.wikipedia.org/wiki/Dimetric_projection#Three_types_of_axonometric_projections dimetric projection]) for that 3D look.  You will spend most of your time playing here.  The world is divided up into tiles, of which there are many types.  Some are sloped, some are water, some are occupied by buildings, etc. This is where you build your transport empire!
 
 ==La barra di stato==
-[[File:en/status-bar.png|none|frame|The status bar]]
+[[File:en/Status-bar.png|none|frame|The status bar]]
 The status bar can be found at the bottom of page, as can be seen in picture 1., and above in picture 3. It is divided into three sections. 
 *On the left you can see the date. It progresses at about 1 day every 2.5 seconds.
 *The middle part, which takes up most of the space, shows various information:
-**The name of your company, initially "Unnamed". After you [[en/name your company]] it will show that name. 
+**The name of your company, initially "Unnamed". After you [[en/Manual/Transport company]] it will show that name. 
 **[[en/Archive/Manual/News messages]] pop up out of the status bar. Click on the status bar to display the last message.
-**If you have changed the [[en/message settings]] to "Summary" mode, messages will scroll by here instead of popping up.
+**If you have changed the [[en/Archive/Manual/Settings/Message settings]] to "Summary" mode, messages will scroll by here instead of popping up.
 **If you have changed the message settings to "Off" mode, messages will be notified by a red dot.
 **It also shows if the game is paused by saying: "* * PAUSED * *"
-*The right part shows how much money you have. You can change the currency in the [[en/game options window]] by pressing the "Options" button and then "Game options".
+*The right part shows how much money you have. You can change the currency in the [[en/Manual/Game options window]] by pressing the "Options" button and then "Game options".
 
 You may also hear "status bar" used to refer to the [[en/Manual/Status bar|vehicle status bar]].
 

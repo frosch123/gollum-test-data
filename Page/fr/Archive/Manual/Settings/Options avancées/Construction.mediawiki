@@ -2,7 +2,7 @@
 {{fr/Options Avancées}}
 
 ==Fenêtre des Options avancées: section Construction==
-La section Construction vous permet de positionner diverses options liées à la construction et à l'aménagement du terrain. Le but des options disponibles est expliqué ci-dessous. Pour chacune, la variable respective du [[fr/openttd.cfg|fichier de configuration]] est listée, avec ses valeurs possibles.
+La section Construction vous permet de positionner diverses options liées à la construction et à l'aménagement du terrain. Le but des options disponibles est expliqué ci-dessous. Pour chacune, la variable respective du [[fr/Archive/Manual/Settings/Openttd.cfg|fichier de configuration]] est listée, avec ses valeurs possibles.
 {{en/-}}
 {| align="center"
 |- valign="top"
@@ -37,7 +37,7 @@ Fait des sémaphores (ancien style de signalisation) les signaux placés par dé
 {{en/-}}
 ====Type de signaux construit par défaut====
 {{fr/Disponibilité|0.7|align="right"|texte=(depuis 0.7.0)}}
-Fixe le type de signaux à construire par défaut en utilisant l'ouil de signaux. Choix entre [[fr/Manual/Signaux#Signaux de blocs|signaux de bloc]], [[fr/Manual/Signaux#Signaux de chemin|signaux de voie]] et signaux de voie unidirectionnels. Si l'[[en/#Activer le GUI des signaux|interface des signaux]] est activée, ce type de signal sera sélectionné par défaut.
+Fixe le type de signaux à construire par défaut en utilisant l'ouil de signaux. Choix entre [[fr/Manual/Signaux#Signaux de blocs|signaux de bloc]], [[fr/Manual/Signaux#Signaux de chemin|signaux de voie]] et signaux de voie unidirectionnels. Si l'[[#Activer le GUI des signaux|interface des signaux]] est activée, ce type de signal sera sélectionné par défaut.
 :''Valeurs possibles:'' <span style="color:#00693E">'''Signaux de bloc'''</span>, <span style="color:#00693E">'''Signaux de chemin'''</span> ou <span style="color:#00693E">'''Signaux de chemin à sens unique'''</span>
 :''Dans le fichier de configuration openttd.cfg:'' ([gui] default_signal_type = <0-2>)
 {{en/-}}
@@ -75,7 +75,7 @@ Vous permet de construire de très [[fr/Archive/Manual/Settings/Pont plus long|l
 ===Les aéroports n'expirent jamais===
 {{fr/Disponibilité|1.0|align="right"|texte=(depuis 1.0.0)}}
 Les aéroports peuvent avoir une année d'expiration, comme les véhicules. Les aéroports expirés ne peuvent plus être construits. Quand cette option est activée, les aéroports n'expirent jamais.
-Cette option a été renommée depuis [[en/#Toujours autoriser les petits aéroports|Toujours autoriser les petits aéroports]] en r16614.
+Cette option a été renommée depuis [[#Toujours autoriser les petits aéroports|Toujours autoriser les petits aéroports]] en r16614.
 :''Valeurs possibles:'' <span style="color:green">'''Activé'''</span> ou <span style="color:red">'''Désactivé'''</span>
 :''Dans le fichier de configuration openttd.cfg:'' ([station] never_expire_airports = <true|false>)
 {{en/-}}
@@ -97,7 +97,7 @@ Avec cette option, vous pouvez activer/désactiver la génération d'arbres en c
 ===Toujours autoriser les petits aéroports===
 {{fr/Disponibilité|-0.7|align="right"|texte=(depuis 0.3.2 jusqu'à 0.7.5)}}
 Les petits aéroports ne sont [[fr/Archive/Manual/Settings/Toujours autoriser les petits aéroports|pas supprimés]] de la liste de construction des aéroports quand les plus grands apparaissent. Si cette option est désactivée, vous ne pouvez plus construire de petits aéroports dès que les grands aéroports deviennent disponibles.
-Cette option a été renommée en [[en/#Les aéroports n'expirent jamais|Les aéroports n'expirent jamais]] en r16614.
+Cette option a été renommée en [[#Les aéroports n'expirent jamais|Les aéroports n'expirent jamais]] en r16614.
 :''Valeurs possibles:'' <span style="color:green">'''Activé'''</span> ou <span style="color:red">'''Désactivé'''</span>
 :''Dans le fichier de configuration openttd.cfg:'' ([station] always_small_airport = <true|false>) 
 {{en/-}}

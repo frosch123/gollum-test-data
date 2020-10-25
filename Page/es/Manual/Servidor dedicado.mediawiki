@@ -3,31 +3,31 @@
 [[File:en/Dedicated server.png|right|frame|Ventana del servidor dedicado]]Un '''servidor dedicado''' es un [[es/Manual/Servidor|servidor]] (juego en red) de OpenTTD que no necesita un cliente local dentro del juego. Un servidor dedicado puede funcionar en un computador sin tener abierto el juego.
 
 ==Comenzando un servidor dedicado==
-Abre el ejecutable(archivo con que se abre el juego) usando {{en/c| -D|}} (D mayúscula) en la opción de la [[es/línea de comandos|línea de comandos]].
+Abre el ejecutable(archivo con que se abre el juego) usando {{en/C| -D|}} (D mayúscula) en la opción de la [[es/Línea de comandos|línea de comandos]].
 
 ===Usando sistema operativo Windows===
 Método 1:
-*Crea un acceso directo al archivo {{en/c|openttd.exe|}}
+*Crea un acceso directo al archivo {{en/C|openttd.exe|}}
 *Hacer click el botón derecho en el acceso directo y apreta Propiedades
-*Agrega {{en/c|-D|}} en el final de la línea de destino (con un espacio después de las comillas).
+*Agrega {{en/C|-D|}} en el final de la línea de destino (con un espacio después de las comillas).
 *Hacer click en Aplicar.
 *Abre el acceso directo.
 
 
 Método 2:
 *En el menú de inicio abre la opción Ejecutar
-*Escribe: {{en/c|"c:\(ruta a la carpeta del openttd)\openttd.exe" -D|}}
+*Escribe: {{en/C|"c:\(ruta a la carpeta del openttd)\openttd.exe" -D|}}
 *Haga click en Aceptar.
 
 
 ===Usando sistema operativo Linux===
-*Abre {{en/c|openttd -D|}} en un terminal. Si te estás conectando al servidor por vía SSH y le gustaría que funcione cuando cierre sesión debería usar [http://www.gnu.org/software/screen/ Pantalla GNU] o [http://dtach.sourceforge.net/ Dtach].
+*Abre {{en/C|openttd -D|}} en un terminal. Si te estás conectando al servidor por vía SSH y le gustaría que funcione cuando cierre sesión debería usar [http://www.gnu.org/software/screen/ Pantalla GNU] o [http://dtach.sourceforge.net/ Dtach].
 
 
 También puedes abrir OpenTTD con la opción -f. Eso significa que el proceso se realizará en el computador, pero la consola no estára disponible. Todas las salida serán enviadas al archivo openttd.log. Tú puedes ver el archivo en la cola -f openttd.log para seguir eventos.
 
 ===Usando sistema operativo OS/2===
-*Abre el archivo {{en/c|dedicated.cmd|}}. Si ejecutas {{en/c|openttd -D|}}, no verás una ventana de consola y serás incapaz de proprcionarle comandos al programa.
+*Abre el archivo {{en/C|dedicated.cmd|}}. Si ejecutas {{en/C|openttd -D|}}, no verás una ventana de consola y serás incapaz de proprcionarle comandos al programa.
 
 ===Usando sistema operativos Mac OS X===
 *Abre Terminal.
@@ -49,50 +49,50 @@ Cambia las opciones de servidor en la sección [network] del archivo [[es/Archiv
 *Cambia [[es/Lan internet|lan_internet]] a 0.
 *Cambia [[es/Nombre del servidor|server_name]] para que identifiques el servidor. 
 *Cambia [[es/Anuncio del servidor|server_advertise]] a true (verdadero), solo así será visible en la [[es/Lista de servidores|lista de servidores]]
-*Si tienes múltiples interfaces de red asegúrate de cambiar [[en/server bind ip]].
+*Si tienes múltiples interfaces de red asegúrate de cambiar [[en/Archive/Manual/Settings/Server bind ip]].
 *Si te conectas a través de un enrutador(router), asegúrate de abrir el puerto específicado por [[es/Puerto del servidor|server_port]] (para UDP y TCP)
 
 ==Controlando el servidor con RCON==
 Configura el servidor dedicado para aceptar comandos [[es/Manual/Consola|rcon]]:
-*En la ventana del servidor, escribe {{en/c|rcon_pw <password>|}}. 
-:Ejemplo: {{en/c|rcon_pw x8na7f|}}
+*En la ventana del servidor, escribe {{en/C|rcon_pw <password>|}}. 
+:Ejemplo: {{en/C|rcon_pw x8na7f|}}
 
 Conectándote al servidor como un cliente:
 *Abre OpenTTD normalmente.
 *Encuentra el servidor mutijugador en la lista y conéctate.
 *Abre la consola (tecla ~)(ctrl, alt y +).
-*Escribe {{en/c|rcon <password> "<command>"|}}. 
-:Ejemplo: {{en/c|rcon x8na7f "kick 5"|}}
+*Escribe {{en/C|rcon <password> "<command>"|}}. 
+:Ejemplo: {{en/C|rcon x8na7f "kick 5"|}}
 
 ==Instalando contenido online==
 Si quieres instalar contenido online usando la descarga de contenido del OpenTTD, puedes hacerlo desde la consola en tu servidor dedicado. El beneficio de usar esto a copiar los archivo manualmente a tu servidor es que automáticamente consiguen todas las dependencias que el autor del contenido declara cuando lo sube al sistema de contenido.
 
 *Primero necesitas cargar la lista de contenido disponible del servidor de contenidos:
-:{{en/c|content update|}}
+:{{en/C|content update|}}
 :Espera hasta "Content server connection closed"(Se cerró la conexión al servidor de contenidos) se muestre en la consola.
 
 *Lista todo el contenido disponible
-:{{en/c|content state|}}
+:{{en/C|content state|}}
 :La lista de contenido disponible es mostrada. Encuentra el contenido que quiera para descargar y lee sus ID, lo cual está escrito al comienzo de la línea. Ej: 2947 para Simple City Builder(Script de juego).
 
 *Después, selecciona el contenido para descargar usando sus ID:
-:{{en/c|content select 2947|}}
+:{{en/C|content select 2947|}}
 
-*Puedes agregar más contenido repitiendo el comando {{en/c|content select|}}.
+*Puedes agregar más contenido repitiendo el comando {{en/C|content select|}}.
 
 *Entonces descarga todo el contenido seleccionado:
-:{{en/c|content download|}}
+:{{en/C|content download|}}
 
-Insinuación: Si usas la versión nightly r26000+ o la estable 1.4+, puedes escribir {{en/c|content state city|}} para solamente buscar el contenido que tenga la palabra city.
+Insinuación: Si usas la versión nightly r26000+ o la estable 1.4+, puedes escribir {{en/C|content state city|}} para solamente buscar el contenido que tenga la palabra city.
 
 ==Cargando un juego==
 En la ventana del servidor dedicado (o con rcon):
-*Escrible {{en/c|ls|}} para encontrar los archivos en la carpeta actual, un número que será junto a cada uno, cual representa un {{en/c|<number>|}} (número) abajo.
-*Escribe {{en/c|cd <number>|}} para ir a esa carpeta.
-*Escribe {{en/c|load <number>|}} para cargar ese archivo.
+*Escrible {{en/C|ls|}} para encontrar los archivos en la carpeta actual, un número que será junto a cada uno, cual representa un {{en/C|<number>|}} (número) abajo.
+*Escribe {{en/C|cd <number>|}} para ir a esa carpeta.
+*Escribe {{en/C|load <number>|}} para cargar ese archivo.
 
-*También puedes cargar juegos guardados o escenario con la opción {{en/c|-g "<filename>"|}}, de la línea de comandos. 
-:Ejemplo: {{en/c|openttd.exe -D -g "scenario/echo.scn"|}}.
+*También puedes cargar juegos guardados o escenario con la opción {{en/C|-g "<filename>"|}}, de la línea de comandos. 
+:Ejemplo: {{en/C|openttd.exe -D -g "scenario/echo.scn"|}}.
 
 
 == Automáticamente empieza/para y gurada tu juego ==

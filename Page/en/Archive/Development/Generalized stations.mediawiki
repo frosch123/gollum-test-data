@@ -47,33 +47,33 @@
 {|
 !Bit!!Value!!Version!!Meaning
 |-
-|0||1||{{en/ottdp|1.1|2.6|ottdrev=r20670|ttdprev=r2340}}||Only Available in the scenario editor<ref name="incompatible">Note that bits 0 and 7 are incompatible and setting both will make an object completely unavailable.</ref>
+|0||1||{{en/Ottdp|1.1|2.6|ottdrev=r20670|ttdprev=r2340}}||Only Available in the scenario editor<ref name="incompatible">Note that bits 0 and 7 are incompatible and setting both will make an object completely unavailable.</ref>
 |-
-|1||2||{{en/ottdp|1.1|2.6|ottdrev=r20670|ttdprev=r2340}}||Irremovable<ref>Object cannot be removed through normal dynamite, control must be held and the removal cost will be multiplied by 25 (this is the usual behaviour for most class A objects in TTDPatch).</ref>
+|1||2||{{en/Ottdp|1.1|2.6|ottdrev=r20670|ttdprev=r2340}}||Irremovable<ref>Object cannot be removed through normal dynamite, control must be held and the removal cost will be multiplied by 25 (this is the usual behaviour for most class A objects in TTDPatch).</ref>
 |-
-|2||4||{{en/ottdp|1.1|2.6|ottdrev=r20670|ttdprev=r2340}}||Anything Can Remove (owned land behaviour)
+|2||4||{{en/Ottdp|1.1|2.6|ottdrev=r20670|ttdprev=r2340}}||Anything Can Remove (owned land behaviour)
 |-
-|3||8||{{en/ottdp|1.1|2.6|ottdrev=r20670|ttdprev=r2340}}||Allow construction of the object on water
+|3||8||{{en/Ottdp|1.1|2.6|ottdrev=r20670|ttdprev=r2340}}||Allow construction of the object on water
 |-
-|4||16||{{en/ottdp|1.1|2.6|ottdrev=r20670|ttdprev=r2340}}||Removal cost is actually income (owned land behaviour)
+|4||16||{{en/Ottdp|1.1|2.6|ottdrev=r20670|ttdprev=r2340}}||Removal cost is actually income (owned land behaviour)
 |-
-|5||32||{{en/ottdp|1.1|2.6|ottdrev=r20670|ttdprev=r2340}}||Do not display foundations if on a slope
+|5||32||{{en/Ottdp|1.1|2.6|ottdrev=r20670|ttdprev=r2340}}||Do not display foundations if on a slope
 |-
-|6||64||{{en/ottdp|1.1|2.6|ottdrev=r20670|ttdprev=r2340}}||Object has animation<ref>Setting this flag will allow the object's animation counter to be increased, must be set if you plan to make use of animations. Like stations you must enable animation on a per tile basis by means of the "built tile" trigger and callback 159.</ref>
+|6||64||{{en/Ottdp|1.1|2.6|ottdrev=r20670|ttdprev=r2340}}||Object has animation<ref>Setting this flag will allow the object's animation counter to be increased, must be set if you plan to make use of animations. Like stations you must enable animation on a per tile basis by means of the "built tile" trigger and callback 159.</ref>
 |-
-|7||128||{{en/ottdp|1.1|2.6|ottdrev=r20670|ttdprev=r2340}}||Only available during game play<ref name="incompatible" />
+|7||128||{{en/Ottdp|1.1|2.6|ottdrev=r20670|ttdprev=r2340}}||Only available during game play<ref name="incompatible" />
 |-
-|8||256||{{en/ottdp|1.1|2.6|ottdrev=r20670|ttdprev=r2340}}||Allows 2cc mapping for objects instead of the default 1cc
+|8||256||{{en/Ottdp|1.1|2.6|ottdrev=r20670|ttdprev=r2340}}||Allows 2cc mapping for objects instead of the default 1cc
 |-
-|9||512||{{en/ottdp|1.1|2.6|ttdprev=r2331}}||Disallows construction on land (also has bit 3 behaviour)
+|9||512||{{en/Ottdp|1.1|2.6|ttdprev=r2331}}||Disallows construction on land (also has bit 3 behaviour)
 |-
-|10||1024||{{en/ottdp|1.1|2.6|ttdprev=r2331}}||Draws the water under the object<ref>Only applies when built on top of a water tile, also replaces the ground tile of the object completely. (Does not work when object built on sloped water tiles).</ref>
+|10||1024||{{en/Ottdp|1.1|2.6|ttdprev=r2331}}||Draws the water under the object<ref>Only applies when built on top of a water tile, also replaces the ground tile of the object completely. (Does not work when object built on sloped water tiles).</ref>
 |-
-|11||2048||{{en/ottdp|1.1|no|ottdrev=r21455}}||Allow bridge over the object taking the building height into account
+|11||2048||{{en/Ottdp|1.1|no|ottdrev=r21455}}||Allow bridge over the object taking the building height into account
 |-
-|12||4096||{{en/ottdp|1.1|2.6|ottdrev=r21455|ttdprev=r2360}}||Random bits in the "next animation frame" callback
+|12||4096||{{en/Ottdp|1.1|2.6|ottdrev=r21455|ttdprev=r2360}}||Random bits in the "next animation frame" callback
 |-
-|13||8192||{{en/ottdp|1.4|no|ottdrev=r25878}}||Scale amount of objects placed on map generation not by map area, but roughly by the length of the coastline
+|13||8192||{{en/Ottdp|1.4|no|ottdrev=r25878}}||Scale amount of objects placed on map generation not by map area, but roughly by the length of the coastline
 |}
 
 === Callback flags===
@@ -137,15 +137,15 @@
 |-
 |1||2||use [[en/Callbacks#Length of animation frame (20/27/142/154/15A) |callback 154]] to decide animation speed
 |-
-|2||4||{{en/ottdp}}||(reserved)
+|2||4||{{en/Ottdp}}||(reserved)
 |-
-|3||8||{{en/ottdp}}||(reserved)
+|3||8||{{en/Ottdp}}||(reserved)
 |-
-|4||10||{{en/ottdp|1.1|ottdrev=r19204}}||use callback xx to check if a slope is suitable (not yet implemented)
+|4||10||{{en/Ottdp|1.1|ottdrev=r19204}}||use callback xx to check if a slope is suitable (not yet implemented)
 |-
-|5||20||{{en/ottdp|1.1|ottdrev=r19204}}||use [[en/Callbacks#Decide drawing default foundations (30/14E/150) |callback 150]] to decide if default foundations need to be drawn
+|5||20||{{en/Ottdp|1.1|ottdrev=r19204}}||use [[en/Callbacks#Decide drawing default foundations (30/14E/150) |callback 150]] to decide if default foundations need to be drawn
 |-
-|6||40||{{en/ottdp|1.1|ottdrev=r19204}}||use callback xx to allow or deny autosloping below the tile (not yet implemented)
+|6||40||{{en/Ottdp|1.1|ottdrev=r19204}}||use callback xx to allow or deny autosloping below the tile (not yet implemented)
 |}
 
 

@@ -4,7 +4,7 @@ __TOC__
 =Introduction=
 Since version 1.0.0 OpenTTD, installation is simplified enough, the game is completely (play and graphics) open source; everything is included in the installer. To download the latest version of OpenTTD [http://www.openttd.org/download-stable click here].
 
-Installation can be a little complicated, as the [[en/base graphics]] are not distributed with the game. So beside [http://www.openttd.org/ downloading the game], you need to obtain a set of base graphics as well.
+Installation can be a little complicated, as the [[en/Archive/Community/Base graphics]] are not distributed with the game. So beside [http://www.openttd.org/ downloading the game], you need to obtain a set of base graphics as well.
 
 Currently, there are two sets of base graphics that OpenTTD can use:
 * One fully functional set is located on the [http://en.wikipedia.org/wiki/Transport_Tycoon Transport Tycoon Deluxe] (TTD) CD. As opposed to OpenTTD, TTD is '''not''' freeware;
@@ -45,11 +45,11 @@ Currently, there are two sets of base graphics that OpenTTD can use:
 [[File:en/Installation 2 gfx.png|frame|center|Installer setup for users without TTD files]]
 
 '''4.''' Editing the config file
-:'''4.1.''' Locate [[en/openttd.cfg]]. It is located in:
+:'''4.1.''' Locate [[en/Archive/Manual/Settings/Openttd.cfg]]. It is located in:
  Win XP : "C:\Documents and Settings\<username>\My Documents\OpenTTD"
  Vista  : "C:\Users\<username>\Documents\OpenTTD"
  Linux  : "~/.openttd"
-:'''4.2.''' Open [[en/openttd.cfg]] using your favourite plain text editor.
+:'''4.2.''' Open [[en/Archive/Manual/Settings/Openttd.cfg]] using your favourite plain text editor.
 :'''4.3.''' Locate the [misc] section and add the following (or edit the existing) line to the end of that section:
  graphicsset = "OpenGFX"
 : The name of the base graphics set is listed in it's obg-file and may or may not be identical to the obg's file name.
@@ -69,7 +69,7 @@ Currently, there are two sets of base graphics that OpenTTD can use:
 
 Using original TTD base graphics
 # Get Transport Tycoon Deluxe for Windows or DOS. If you don't have your CD, see [http://www.google.com/search?q=transport+tycoon+deluxe Google]. '''Note''': The original graphics are '''copyrighted''', it may be illegal (in some countries) to download them.
-## see [[en/#Files from TTD|below]] for what files need to go where.
+## see [[#Files from TTD|below]] for what files need to go where.
 
 Using OpenGFX base graphics
 # Consult the [[en/Archive/Community/OpenGFX Readme#Manually_Installing_OpenGFX|OpenGFX Readme]] for further instructions.

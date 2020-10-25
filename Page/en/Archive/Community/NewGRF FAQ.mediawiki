@@ -15,7 +15,7 @@ A lot of, mostly older, NewGRFs are however not available via [[en/Manual/Online
 
 * [http://grfcrawler.tt-forums.net/ GRFCrawler]
 * [http://www.tt-forums.net/viewforum.php?f=67 TT-Forums.net Graphic Releases forum]
-* [[en/Community/NewGRF/NewGRF List|Non-comprehensive list of NewGRF files]]
+* [[en/Community/NewGRF/Main Page|Non-comprehensive list of NewGRF files]]
 * [[en/Archive/Lists/Links#Graphics_Links]]
 
 ===Why is it that not all NewGRFs are available via the Online content?===
@@ -26,7 +26,7 @@ If you encounter a NewGRF that is unavailable via the Online content, your best 
 
 ===I’ve loaded the grf files into OpenTTD and loaded my saved game, but the changes are not applied. How come?===
 
-The [[en/NewGRF Settings]] you configured from the Main Menu only apply to new (random) games. NewGRFs used in saved games and scenarios are stored in those files. It is generaly a bad idea to change NewGRFs in a saved game or scenario, hence the ability to do so has been disabled since OpenTTD 1.1. You can find more information on this subject in the next FAQ entry.
+The [[en/Manual/NewGRF]] you configured from the Main Menu only apply to new (random) games. NewGRFs used in saved games and scenarios are stored in those files. It is generaly a bad idea to change NewGRFs in a saved game or scenario, hence the ability to do so has been disabled since OpenTTD 1.1. You can find more information on this subject in the next FAQ entry.
 
 ===I cannot change NewGRFs in my game, why?===
 [[File:en/Newgrf warning.png|frame|right|Warning when changing NewGRF Settings in a running game.]]
@@ -35,7 +35,7 @@ In version 1.1, changing NewGRFs in-game has been disabled. Ever since NewGRFs c
 
 The reason behind this change is that too many people ignored the warning in the red error window, and complained about crashes, or problems with vehicles, industries, etc. after modifying the NewGRF Settings in a saved game.
 
-For scenario developers, a configuration option exists to enable scenario developer tools, which permit changing grfs in-game (for debugging and testing). This option (scenario_developer) is only available in [[en/openttd.cfg]] or the [[en/console]]. If you decide to change this setting, please take time to actually read the warning message when presented. It is '''highly recommended''' to save your game before changing NewGRFs. Also know that if your scenario or saved game gets messed up, the only solution is to start from scratch, or restore from a backup if you have one.
+For scenario developers, a configuration option exists to enable scenario developer tools, which permit changing grfs in-game (for debugging and testing). This option (scenario_developer) is only available in [[en/Archive/Manual/Settings/Openttd.cfg]] or the [[en/Manual/Console]]. If you decide to change this setting, please take time to actually read the warning message when presented. It is '''highly recommended''' to save your game before changing NewGRFs. Also know that if your scenario or saved game gets messed up, the only solution is to start from scratch, or restore from a backup if you have one.
 
 ===I’ve loaded a vehicle NewGRF into my saved game, but none of the new vehicle graphics I loaded appear. How come?===
 
@@ -54,7 +54,7 @@ In case the NewGRF of your choice still doesn't work, you are most likely to fin
 
 Unfortunately, there is no way of knowing ahead of time which .grf files will work with OpenTTD and which will not.  The only way to tell is to install the .grf and begin playing.
 
-* [[en/Community/NewGRF/NewGRF List|List of known OpenTTD-compatible GRF files]]
+* [[en/Community/NewGRF/Main Page|List of known OpenTTD-compatible GRF files]]
 
 
 

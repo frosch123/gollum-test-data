@@ -54,11 +54,11 @@ Poza tym, istnieją różne wersje na różne [[pl/System operacyjny|platformy]]
 [[File:en/Installation 2 gfx.png|frame|center|Installer setup for users without TTD files]]
 
 '''4.''' Editing the config file
-:'''4.1.''' Locate [[en/openttd.cfg]]. It is located in:
+:'''4.1.''' Locate [[en/Archive/Manual/Settings/Openttd.cfg]]. It is located in:
  Win XP : "C:\Documents and Settings\<username>\My Documents\OpenTTD"
  Vista  : "C:\Users\<username>\Documents\OpenTTD"
  Linux  : "~/.openttd"
-:'''4.2.''' Open [[en/openttd.cfg]] using your favourite plain text editor.
+:'''4.2.''' Open [[en/Archive/Manual/Settings/Openttd.cfg]] using your favourite plain text editor.
 :'''4.3.''' Locate the [misc] section and add the following (or edit the existing) line to the end of that section:
  graphicsset = "OpenGFX"
 : The name of the base graphics set is listed in it's obg-file and may or may not be identical to the obg's file name.
@@ -73,7 +73,7 @@ Poza tym, istnieją różne wersje na różne [[pl/System operacyjny|platformy]]
 
 '''2''' Create an '''openttd/''' folder on your computer.
 
-'''3''' OpenTTD requires some files from TTD, see [[en/#Files from TTD|below]] for what files need to go where.
+'''3''' OpenTTD requires some files from TTD, see [[#Files from TTD|below]] for what files need to go where.
 
 '''4''' Get the OSX installer for OpenTTD from the [http://www.openttd.org/download-stable downloads page].
 [[File:en/Installation 1b osx.png|frame|center|1.1.2 for Mac OSX]]

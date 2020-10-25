@@ -1,7 +1,7 @@
 [[Translation:en/Manual/AI settings]]
 {{en/Table of contents}}
 
-0.7.0'dan beri, kullanıcıların kendi [[en/Development/Script/AI Development|YZ'lerini]] oluşturmalarına izin veren NoAI çerçevesi OpenTTD'ye eklendi. Bu YZ'ler ''YZ/Oyun Betik Ayarları'' penceresinde görülebilir.
+0.7.0'dan beri, kullanıcıların kendi [[en/Development/Script/Main Page|YZ'lerini]] oluşturmalarına izin veren NoAI çerçevesi OpenTTD'ye eklendi. Bu YZ'ler ''YZ/Oyun Betik Ayarları'' penceresinde görülebilir.
 {|
 |[[File:en/AIsettings empty.png|frame|none|The ''YZ/Oyun Betik Ayarları'' penceresi]]
 |__TOC__
@@ -15,7 +15,7 @@ Diğer YZ'ler [http://www.tt-forums.net/viewforum.php?f=65 NoAI forumunda] bulun
 ==YZ'leri seçme==
 YZ'leri indirdikten sonra, ana menüdeki ''YZ/Oyun Betik Ayarları'' düğmesine tıklayın. Burada oyunda YZ rakiplerinin sayısını yapılandırabilir ve ardından her şirket için bir YZ seçebilirsiniz.
 Şirketlerden birini tıklayın, ardından ''YZ Seç'' tuşuna tıklayın. Yeni pencerede, indirilen YZ'lerin bir listesini göreceksiniz. Birini seçip ''Kabul Et'' tuşuna tıklayın.
-[[File:en/select AI.png|frame|none|YZ'lerin listesi]]
+[[File:en/Select AI.png|frame|none|YZ'lerin listesi]]
 
 ==YZ'leri yapılandırma==
 Seçilmiş bir YZ'ye tıkladıktan sonra ''Yapılandır'' tuşuna tıklarsanız, YZ yapılandırma penceresi açılır.
@@ -24,7 +24,7 @@ Bu ayarlar (birincisi dışında) farklı YZ yaratıcıları tarafından ayrı a
 Yapay zeka, belirli bir miktar gün sonra otomatik olarak, bazı küçük rastgele oluşumlarla başlayacaktır.
 
 ==Konsolu kullanma==
-YZ'leri başlatmak ve durdurmak için oyun içi [[en/konsolu]] kullanabilirsiniz.
+YZ'leri başlatmak ve durdurmak için oyun içi [[en/Konsolu]] kullanabilirsiniz.
 YZ'leri yönetmek için konsol komutları:
 
 '''list_ai''' - yüklü olan YZ'leri listeler.
@@ -40,7 +40,7 @@ YZ'leri yönetmek için konsol komutları:
 '''stop_ai <company_slot>''' - YZ'yi belirtilen şirkette durdurur ve ardından şirketi siler.
 
 ==Ayrıca bakınız==
-*[[en/Development/Script/AI Development|The NoAI framework]] - kendi YZ'nizi geliştirmek istiyorsanız yararlı
+*[[en/Development/Script/Main Page|The NoAI framework]] - kendi YZ'nizi geliştirmek istiyorsanız yararlı
 *[[en/Manual/Online content|The Online Content system]]
 *[[en/Community/AI/NoAI Forum FAQ]]
 *[http://code.google.com/p/ottd-noai-pathzilla/wiki/Installation PathZilla installation howto] - PathZilla YZ için özel olarak yazılmıştır ancak çevrimiçi içerik sistemi aracılığıyla sunulan tüm YZ'ler için uygulanabilir

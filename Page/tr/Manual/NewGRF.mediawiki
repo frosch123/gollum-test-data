@@ -9,7 +9,7 @@ OpenTTD'deki GRF dosyalarıyla ilgili genel sorunlar için [[en/Archive/Communit
 
 ==NewGRF'leri İndirmek==
 === Çevrimiçi İçerik ===
-NewGRF'leri indirmenin en yaygın ve kullanışlı yolu, oyun içi [[tr/Manual/Çevrimiçi içerik|çevrimiçi içerik indirme]] özelliğini kullanmaktır. Çoğu NewGRF orada bulunabilir. Ayrıca, bazı NewGRF'lerin geliştirme sürümlerini ve NewGRF'lerin çoğuna ve diğer kaynaklara bağlanan viki [[en/Community/NewGRF/NewGRF List|NewGRF Listesi]] bulabileceğiniz bir NewGRF [http://www.tt-forums.net/viewforum.php?f=26 <nowiki>geliştirme forumu</nowiki>] da bulunmaktadır.
+NewGRF'leri indirmenin en yaygın ve kullanışlı yolu, oyun içi [[tr/Manual/Çevrimiçi içerik|çevrimiçi içerik indirme]] özelliğini kullanmaktır. Çoğu NewGRF orada bulunabilir. Ayrıca, bazı NewGRF'lerin geliştirme sürümlerini ve NewGRF'lerin çoğuna ve diğer kaynaklara bağlanan viki [[en/Community/NewGRF/Main Page|NewGRF Listesi]] bulabileceğiniz bir NewGRF [http://www.tt-forums.net/viewforum.php?f=26 <nowiki>geliştirme forumu</nowiki>] da bulunmaktadır.
 
 === Elle kurulum ===
 Çevrimiçi içerik yüklemesinde bulunmayan diğer konumlardan elde edilen NewGRF'leri kullanmak istiyorsanız, bunları doğru yere elle yüklemeniz gerekir. NewGRF tek bir dosyadır (.grf uzantılı), örneğin: "grvts.grf". NewGRF kurmak için:
@@ -24,16 +24,16 @@ NewGRF'leri indirmenin en yaygın ve kullanışlı yolu, oyun içi [[tr/Manual/�
 
 ==NewGRF'leri Etkinleştirme==
 1.   Ana menüde "NewGRF Ayarları" na tıklayın.
-[[File:en/aname.png|Ana Menü (NewGRF Ayarları)|center]]
+[[File:tr/Aname.png|Ana Menü (NewGRF Ayarları)|center]]
 
 2.   'Etkin olmayan NewGRF dosyaları'ndan bir NewGRF seçin ve "Ekle"ye basın ya da üzerine çift tıklayın. Küçük ekranlarda şöyle görünür
-[[File:en/generictramgrf.png|NewGRF ayarları penceresi (küçük)|center]]
+[[File:tr/Generictramgrf.png|NewGRF ayarları penceresi (küçük)|center]]
 ve büyük ekranlarda daha rahat genişler:
-[[File:en/genişgrf.png|NewGRF ayarları penceresi (büyük)|center]]
+[[File:tr/Genişgrf.png|NewGRF ayarları penceresi (büyük)|center]]
 3.   Gerekirse etkin bir newgrf parametresini yapılandırın: 'etkin newgrf dosyaları' listesinden seçin ve 'parametre' düğmesini seçin. Sonuç şuna benzeyebilir
-[[File:en/grfpara.png|NewGRF parametere penceresi|center]]
+[[File:tr/Grfpara.png|NewGRF parametere penceresi|center]]
 4.   İsteğe bağlı olarak NewGRF ön ayarlarını kullanarak newgrflerin seçimini (yapılandırma parametreleriyle birlikte) kaydetmeyi ya da bu listeyi yüklemeyi seçebilirsiniz:
-[[File:en/önayar.png|center|none|frame|Ön ayar kaydetme öncesi]] [[File:en/önayars.png|center|none|frame|Ön ayar kaydetme sonrası]]
+[[File:tr/Önayar.png|center|none|frame|Ön ayar kaydetme öncesi]] [[File:tr/Önayars.png|center|none|frame|Ön ayar kaydetme sonrası]]
 
 == Birlikte ya da Değil ==
 OpenTTD, başlattığınız her yeni oyun için 59'a kadar farklı NewGRF seçmenizi sağlar. Ancak, ne ekleyeceğinizle ilgili rastgele bir seçim yapamazsınız; biraz tasarlama yapmak gerekir. Tüm NewGRF'ler birbirleriyle uyumlu değildir ve bazen birbirini tamamlayan birden fazla NewGRF'ye gereksiniminiz olabilir. Aşağıda, farklı NewGRF türlerinin yanı sıra neyi birleştirmeniz ve neyle birleştirmemeniz gerektiği konusunda bazı yorumlar yer almaktadır.
@@ -65,7 +65,7 @@ OpenTTD, başlattığınız her yeni oyun için 59'a kadar farklı NewGRF seçme
 * İstediğiniz 64 farklı demiryolunun üst sınırına ulaşana kadar. Bu, tanımlanan dört varsayılan demiryolu türünü içerir.
 * Bazı ray setleri özel tren setleri için özel olarak tasarlanmıştır.
 
-Geçersiz birleşimler yaparsanız birçok NewGRF uyarır ve olasılıkla kendilerini devre dışı bırakır. Yeni bir oyuna başladıktan sonra (Araçlar menüsü aracılığıyla) NewGRF yapılandırmasını kontrol etmeniz önerilir. Sorunlar varsa, oyundan çıkmanız, sorunları düzeltmeniz ve yeni bir oyun başlatmanız önerilir. Rastgele oyunlar için aynı seed'i kullanırken ve harita oluşturucusundaki diğer ayarları aynı tutarken aynı haritayı yeniden oluşturabilirsiniz. Bir oyuna başladıktan sonra [[en/konsola]] <code>getseed</code> yazarak seed'i elde edebilirsiniz.
+Geçersiz birleşimler yaparsanız birçok NewGRF uyarır ve olasılıkla kendilerini devre dışı bırakır. Yeni bir oyuna başladıktan sonra (Araçlar menüsü aracılığıyla) NewGRF yapılandırmasını kontrol etmeniz önerilir. Sorunlar varsa, oyundan çıkmanız, sorunları düzeltmeniz ve yeni bir oyun başlatmanız önerilir. Rastgele oyunlar için aynı seed'i kullanırken ve harita oluşturucusundaki diğer ayarları aynı tutarken aynı haritayı yeniden oluşturabilirsiniz. Bir oyuna başladıktan sonra [[en/Konsola]] <code>getseed</code> yazarak seed'i elde edebilirsiniz.
 
 == 8 bit vs 32 bit grafikler ==
 {{en/Feature|1.2}}

@@ -1,7 +1,7 @@
 [[Translation:en/Development/NewGRF/Debugging]]
 <!--{{Table of contents}}-->{{pl/Spis treści}}
 
-<!--{{Feature|1.1}}-->{{pl/zgodne Wersje|1.1}}
+<!--{{Feature|1.1}}-->{{pl/Zgodne Wersje|1.1}}
 
 == Aktywowanie narzędzi programistycznych newgrf ==
 OpenTTD r19723 i kolejne wprowadziły szereg narzędzi do debugowania dla (nowych) programistów GRF. Aby były dostępne, narzędzia do debugowania najlepiej aktywować za pomocą ukrytego ustawienia via [[pl/Manual/Konsola|console]]:
@@ -25,12 +25,12 @@ Narzędzie do wyrównywania ikonek nie przechowuje nigdzie nowych odsunięć, wi
 
 '''Dostęp do narzędzia do wyrównywania ikonek'''
 
-[[File:en/sprite aligner 1.png]]
+[[File:en/Sprite aligner 1.png]]
 
 
 '''Narzędzie do wyrównywania ikonek w użyciu'''
 
-[[File:en/sprite aligner 2.png]]
+[[File:en/Sprite aligner 2.png]]
 
 == Narzędzie do kontroli Zmiennych / Właściwości ==
 Udostępniono narzędzie do debugowania zmiennych i właściwości. Szeroki zakres zmiennych i właściwości jest zawarty w każdym typie obiektu. Niektóre właściwości nie są wyświetlane, ponieważ są już widoczne w grze (na przykład nazwa pojazdu) lub są widoczne w nfo dla akcji 0.
@@ -39,13 +39,13 @@ Okno debugowania w branży zawiera wartości 16 trwałych lokalizacji pamięci. 
 
 Widok debugowania dla zmiennych można uzyskać za pomocą narzędzia informacji o obszarze kafelków dla wszystkich newgrfs, które nie zajmują się pojazdami (zwróć uwagę na ikonę debugowania w prawym górnym rogu okna informacji o obszarze):
 
-[[File:en/variable debug1.png]]
+[[File:en/Variable debug1.png]]
 
-[[File:en/variable debug2.png]]
+[[File:en/Variable debug2.png]]
 
 
 Debugowanie zmiennych pojazdu jest dostępne bezpośrednio przez okno pojazdu.
-[[File:en/vehicle debug.png]]
+[[File:en/Vehicle debug.png]]
 
 == Przeglądarka obwiedni ==
 Dostępne za pomocą skrótu Ctrl + B lub w pobliżu narzędzia do wyrównywania ikonek, widok ramki ograniczającej pokazuje ramkę ograniczającą wszystkich ikonek narysowanych na mapie.

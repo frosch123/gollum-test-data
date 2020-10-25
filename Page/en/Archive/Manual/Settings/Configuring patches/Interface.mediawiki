@@ -10,25 +10,25 @@ The Interface section allows you to set change various options related to the ga
 
 ====Show vehicle speed in status bar====
 {{en/Feature|Old|align="right"|text=(since 0.2.0)}}
-Whether or not the vehicle [[en/show vehicle speed|speed is shown]] in the vehicle window status bar, where you can stop or start a train.
+Whether or not the vehicle [[en/Archive/Manual/Settings/Show vehicle speed|speed is shown]] in the vehicle window status bar, where you can stop or start a train.
 :''Possible Settings:'' <span style="color:green">'''On'''</span> or <span style="color:red">'''Off'''</span>
-:''In [[en/openttd.cfg]] config file:'' ([gui] vehicle_speed = <true|false>)
+:''In [[en/Archive/Manual/Settings/Openttd.cfg]] config file:'' ([gui] vehicle_speed = <true|false>)
 {{en/-}}
 ====Always show long date in status bar====
 {{en/Feature|Old|align="right"|text=(since 0.2.0)}}
-Shows the [[en/long date in status bar|full date]] all the time rather than just in pause mode.
+Shows the [[en/Archive/Manual/Settings/Long date in status bar|full date]] all the time rather than just in pause mode.
 :''Possible Settings:'' <span style="color:green">'''On'''</span> or <span style="color:red">'''Off'''</span>
 :''In Openttd.cfg config file:'' ([gui] status_long_date = <true|false>)
 {{en/-}}
 ====Show finances window at the end of the year====
 {{en/Feature|Old|align="right"|text=(since 0.2.0)}}
-Whether or not the [[en/show finances at end of year|finances window]] is shown at the end of the year.
+Whether or not the [[en/Archive/Manual/Settings/Show finances at end of year|finances window]] is shown at the end of the year.
 :''Possible Settings:'' <span style="color:green">'''On'''</span> or <span style="color:red">'''Off'''</span>
 :''In Openttd.cfg config file:'' ([gui] show_finances = <true|false>)
 {{en/-}}
 ====Pan window when mouse is at the edge====
 {{en/Feature|Old|align="right"|text=(since 0.2.0)}}
-When the mouse is at the edge of the window the view will [[en/autoscroll|scroll]].
+When the mouse is at the edge of the window the view will [[en/Archive/Manual/Settings/Autoscroll|scroll]].
 :''Possible Settings:'' <span style="color:green">'''On'''</span> or <span style="color:red">'''Off'''</span>
 :''In Openttd.cfg config file:'' ([gui] autoscroll = <true|false>)
 {{en/-}}
@@ -46,13 +46,13 @@ With this option enabled, the viewport scrolls smoothly to center the view when 
 {{en/-}}
 ====Duration of error messages====
 {{en/Feature|Old|align="right"|text=(since 0.3.2)}}
-Amount of seconds [[en/error message duration|error messages are shown]] for.
+Amount of seconds [[en/Archive/Manual/Settings/Error message duration|error messages are shown]] for.
 :''Possible Settings:'' <span style="color:red">'''0'''</span> to <span style="color:green">'''20'''</span>
 :''In Openttd.cfg config file:'' ([gui] errmsg_duration = <num_val>)
 {{en/-}}
 ====Position of main toolbar====
 {{en/Feature|Old|align="right"|text=(since 0.3.4)}}
-[[en/toolbar position|Location of the toolbar]] containing all construction tools
+[[en/Archive/Manual/Settings/Toolbar position|Location of the toolbar]] containing all construction tools
 :''Possible Settings:'' <span style="color:#00693E">'''Left'''</span>, <span style="color:#00693E">'''Centre'''</span> or <span style="color:#00693E">'''Right'''</span>
 :''In Openttd.cfg config file:'' ([gui] toolbar_pos = <0-2>)
 {{en/-}}
@@ -64,13 +64,13 @@ Show a tooltip which indicates length, area and/or height when using various bui
 {{en/-}}
 ====Windows snap radius====
 {{en/Feature|Old|align="right"|text=(since 0.3.5)}}
-Radius in pixels in which a window being dragged will [[en/window snap radius|automatically snap]] to the edge of another window or the edge of the screen.
+Radius in pixels in which a window being dragged will [[en/Archive/Manual/Settings/Window snap radius|automatically snap]] to the edge of another window or the edge of the screen.
 :''Possible Settings:'' <span style="color:red">'''disabled'''</span> or <span style="color:Green">'''1'''</span> to <span style="color:Green">'''32px'''</span>
 :''In Openttd.cfg config file:'' ([gui] window_snap_radius = <num_val>)
 {{en/-}}
 ====Invisible trees====
 {{en/Feature|-0.6|align="right"|text=(0.3.4 to 0.6.3)}}
-Whether or not trees are made entirely [[en/invisible trees|invisible]] when [[en/transparent buildings]] is selected.
+Whether or not trees are made entirely [[en/Archive/Manual/Settings/Invisible trees|invisible]] when [[en/Manual/Transparency options]] is selected.
 :''Possible Settings:'' <span style="color:green">'''On'''</span> or <span style="color:red">'''Off'''</span>
 :''In Openttd.cfg config file:'' ([gui] invisible_trees = <true|false>)
 ====Show town population in the town name label====
@@ -117,13 +117,13 @@ Enabling this option will automatically set the game in pause mode when starting
 {{en/-}}
 ==== Use the advanced vehicle list ====
 {{en/Feature|0.6|align="right"|text=(since 0.6.0)}}
-The [[en/advanced vehicle list]] allows to place vehicles in groups and perform certain actions on groups, such as replace vehicles and sending to depot.
+The [[en/Advanced vehicle list]] allows to place vehicles in groups and perform certain actions on groups, such as replace vehicles and sending to depot.
 :''Possible Settings:'' <span style="color:red">'''Off'''</span>, <span style="color:green">'''Own company'''</span> or <span style="color:#00693E">'''All companies'''</span>
 :''In Openttd.cfg config file:'' ([gui] advanced_vehicle_list = <0-2>)
 {{en/-}}
 ==== Use loading indicators ====
 {{en/Feature|0.6|align="right"|text=(since 0.6.0)}}
-This function will display [[en/loading indicators]] above vehicles, which displays the amount of cargo in a vehicle when loading/unloading in percents.
+This function will display [[en/Archive/Manual/Loading indicators]] above vehicles, which displays the amount of cargo in a vehicle when loading/unloading in percents.
 :''Possible Settings:'' <span style="color:red">'''Off'''</span>, <span style="color:green">'''Own company'''</span> or <span style="color:#00693E">'''All companies'''</span>
 :''In Openttd.cfg config file:'' ([gui] loading_indicators = <0-2>)
 {{en/-}}

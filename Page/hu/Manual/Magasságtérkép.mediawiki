@@ -3,7 +3,7 @@
 A '''magasságtérkép''' egy számítógépes képfájl, amit a pixelek világosságára alapozva tájgenerálásra használhatunk.
 
 ==Magasságtérképek használata==
-Magasságtérképnek tekinthetünk egy [http://tudasbazis.sulinet.hu/hu/informatika/informatika/informatika-9-12-evfolyam/grafikai-algoritmusok/elemi-rasztergrafikai-algoritmusok-raszterkepek-nagyitasa-kicsinyitese-megjelenitese szürkeárnyalatos képet], melynek legvilágosabb fehér (a '''#FFFFFF'''-hez legközelebbi) színe lesz a táj legmagasabb pontja, a legsötétebb fekete (a '''#000000'''-hoz legközelebbi) színe pedig a táj legmélyebb pontja. Pontosabb információért ld. lentebb: [[en/#A szürkeárnyalat-tábla|A szürkeárnyalat-tábla]].
+Magasságtérképnek tekinthetünk egy [http://tudasbazis.sulinet.hu/hu/informatika/informatika/informatika-9-12-evfolyam/grafikai-algoritmusok/elemi-rasztergrafikai-algoritmusok-raszterkepek-nagyitasa-kicsinyitese-megjelenitese szürkeárnyalatos képet], melynek legvilágosabb fehér (a '''#FFFFFF'''-hez legközelebbi) színe lesz a táj legmagasabb pontja, a legsötétebb fekete (a '''#000000'''-hoz legközelebbi) színe pedig a táj legmélyebb pontja. Pontosabb információért ld. lentebb: [[#A szürkeárnyalat-tábla|A szürkeárnyalat-tábla]].
 
 Miután a táj szélei tengerszinten kell hogy legyenek, legalább egy mezővel, a magasságtérkép széle 2 pixel szélességgel látszik.
 

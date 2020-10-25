@@ -35,7 +35,7 @@ Les horaires ont été introduits dans [[en/Archive/OpenTTD/OpenTTD 0.6.0]] (dep
 |Montre les horaires auxquels les véhicules sont prévus ou attendus à l'arrivée, le panneau attendu prenant en compte le retard/avance.
 |}
 {{fr/Avertissement|Autoriser l'autoremplissage supprime toute table d'horaires existante. Assurez-vous d'utiliser le remplissage non-destructif, activé par Ctrl+clic sur un bouton d'autoremplissage}}
-{{fr/note|Les temps attendus/prévus ne sont disponibles que pour des horaires complets qui ont déjà démarré}}
+{{fr/Note|Les temps attendus/prévus ne sont disponibles que pour des horaires complets qui ont déjà démarré}}
 
 == Utiliser les tables d'horaire ==
 Les tables d'horaire sont utiles pour éviter que les véhicules "fassent demi-tour". Étaler vos véhicules permet de garder un flux de cargaisons plus régulier entre gares, mais les pannes, le trafic et autres retards les amèneront normalement à se réunir en une seule queue.
@@ -58,7 +58,7 @@ Maintenant, démarrez les bus! Vous voudrez sûrement faire cela en pause, pour 
 Il y a des chances que, au moins au début, vous ayez mis un mauvais délai. Fixer les horaires est un art qui ne s'improvise pas, et qui est loin d'une option magique "espacer automatiquement les véhicules avec les mêmes ordres" ([http://bugs.openttd.org/task/1128 voir]). Laissez les bus tourner un moment (il faut qu'il y ait assez de temps pour avoir quelques pannes - une année devrait suffire), et voyez ce que dit la fenêtre de la table des horaires.
 [[File:en/Timetable-runninglate.png|center|frame|Sans assez de délai, les pannes et les autres retards conduiront à une accumulation des retards.]]
 Oh misère! Bien que huit jours ne soit pas énorme, les différences de retard signifient que nos bus ne sont pas si bien répartis que cela désormais. Ajoutez un peu de délai supplémentaire aux horaires. Ne cliquez '''pas''' sur le bouton '''Réinitialiser le dernier compteur''' -  cela ferait oublier à vos bus combien ils sont éloignés de leur objectif d'espacement, et les ferait plutôt essayer de garder leur groupement courant.
-{{fr/note|Si vos bus ne sont jamais en retard et semblent passer beaucoup de temps à attendre en gare sans transférer de passagers, vous avez probablement ajouté trop de délai.}}
+{{fr/Note|Si vos bus ne sont jamais en retard et semblent passer beaucoup de temps à attendre en gare sans transférer de passagers, vous avez probablement ajouté trop de délai.}}
 
 Vos bus devraient maintenant être quasiment bien réglés, et prêts à être laissés à eux-mêmes tandis que vous passerez à un autre trajet. Voici à quoi ressemble notre exemple après cinq années d'avance rapide:
 [[File:en/Timetable-fiveyears.png|center|frame|Avec assez de délai, les bus sont toujours bien répartis après cinq ans.]]
@@ -69,7 +69,7 @@ La bonne nouvelle est que les horaires continueront de fonctionner, et vos gares
 
 C'est le revers des tables d'horaires - ''vous devez les mettre à jour quand vous avez de nouveaux véhicules''. Le travail que cela représente dépend de combien de véhicules multiples vous utilisez sans régulation de vitesse par un autre mécanisme comme [[fr/Manual/Ordres#Charger complètement|Chargement complet]], et de votre compétence à estimer un délai. Je vous suggère de ne conserver cela que pour les bus, et éventuellement les fourgons postaux.
 
-L'avantage est qu'un des facteurs très importants lors du calcul de votre [[fr/Manual/Mécanique du jeu|côte de gare]] est depuis combien de temps le dernier véhicule est passé. Les gens n'aiment pas attendre le bus, même si le bus est en fait un train routier de cinq gros bus rapides qui emporteront sans effort les neuf cents passagers disponibles. Après dix années (et un peu de triche pour sauter les nouveaux modèles de bus vus ci-dessus), voici les côtes des stations de notre trajet trivial:
+L'avantage est qu'un des facteurs très importants lors du calcul de votre [[fr/Manual/Game Mechanics/Mécanique du jeu|côte de gare]] est depuis combien de temps le dernier véhicule est passé. Les gens n'aiment pas attendre le bus, même si le bus est en fait un train routier de cinq gros bus rapides qui emporteront sans effort les neuf cents passagers disponibles. Après dix années (et un peu de triche pour sauter les nouveaux modèles de bus vus ci-dessus), voici les côtes des stations de notre trajet trivial:
 [[File:en/Timetable-ratings.png|center|frame|Des bus réguliers conservent une côte plus élevée que des afflux soudains, même s'ils ne peuvent pas traiter toute la production.]]
 Trois bus est loin d'être suffisant pour desservir une station de ville importante, mais nous évitons une côte terrible (et une obstruction subséquente par les autorités locales de tout ce que nous faisons alentour) en offrant au moins un service fréquent.
 

@@ -1,7 +1,7 @@
 [[Translation:en/Manual/Orders]]
 {{de/Teilen}}
 
-{{de/tutorial}}
+{{de/Tutorial}}
 :''Dieses Tutorial erklärt die Aufträge für die Version [[en/Archive/OpenTTD/OpenTTD 0.7.0]] und für die darauffolgenden. Wenn du eine ältere Version von OpenTTD in verwendung hast siehe hierzu bitte:'' '''[[en/Archive/Manual/Orders (old)]]''' (Englisch)
 
 
@@ -13,7 +13,7 @@ Du kannst für alle Fahrzeuge welche im Besitz deiner Firma sind Aufträge erste
 *Finde das Fahrzeug für welches du einen Auftrag erteilen willst und klicke darauf. Das Fahrzeug kann sich in einem Depot befinden, solltest du es erst frisch gekauft haben oder es ist bereits in Bewegung. Für einen Zug hat es die selbe Auswirkung wenn man auf einem Waggon klickt. Dies öffnet einem das Fahrzeugfenster.<br/>[[File:en/Orders-1.png|frame|none|Das Fahrzeugfenster]]
 *Klicke auf den ''Auftrag'' Knopf (rot eingekreist im Bild). Dies öffnet das Auftragsfenster, welches alle aktuellen Aufträge des Fahrzeuges anzeigt (unser Beispielfahrzeug hat derzeit noch keinen Auftrag).<br/>[[File:en/Orders-2.png|frame|none|Das Auftragsfenster]]
 
-*Klicke ''[[en/#Fahre zu|Fahre zu]]'' und wähle dann die Zielstation auf der Karte.
+*Klicke ''[[#Fahre zu|Fahre zu]]'' und wähle dann die Zielstation auf der Karte.
 
 *Klicke auf den Auftrag welchen du gerade erstellt hast in der Liste um ihn auszuwählen, und sage dann deinem Fahrzeug was es in der Station tun soll. Klicke z.B. ''Voll Beladen'' um das Fahrzeug auf eine volle Beladung in der Station warten zu lassen.
 
@@ -30,8 +30,8 @@ Die folgenden Schaltflächen tauchen auf:
 ===Fahre zu===
 Das ist die Möglichkeit ein Fahrzeug zu einem bestimmten Ziel zu schicken. Es fügt einen neuen Auftrag oberhalb des markierten Auftrags ein, oder wenn kein Auftrag ausgewählt wurde am Ende der Liste. Möglich Ziel für ''Fahre zu'' sind:
 *Deine eigenen Stationen, aber nur solche wo das gewählte Fahrzeug akzeptiert wird. Du kannst also keinen Autobus zum Flughafen schicken, wenn dieser kein Busstation hat. Du kannst deine Fahrzeuge nicht zu Stationen der Konkurenz schicken.
-*[[de/Manual/Depot|Depots]]. Das ändert einige der anderen Schaltflächen - siehe [[en/#Wartung|Wartung]] und [[en/#Frachttyp ändern|Frachttyp ändern]] weiter unten.
-*Fahrzeuge des selben Typs um [[en/#Aufträge kopieren|Aufträge zu kopieren]] oder um [[en/#Gemeinsame Aufträge|Gemeinsame Aufträge]] zu erstellen. Siehe weiter unten für mehr Information darüber.
+*[[de/Manual/Depot|Depots]]. Das ändert einige der anderen Schaltflächen - siehe [[#Wartung|Wartung]] und [[#Frachttyp ändern|Frachttyp ändern]] weiter unten.
+*Fahrzeuge des selben Typs um [[#Aufträge kopieren|Aufträge zu kopieren]] oder um [[#Gemeinsame Aufträge|Gemeinsame Aufträge]] zu erstellen. Siehe weiter unten für mehr Information darüber.
 *[[de/Wegpunkt|Wegpunkte]]. Du kannst einen Zug zu einem bestimmten Wegpunkt schicken um seine Gleisabschnittswahl zu beeinflussen, oder wenn die Stationen zu weit auseinander sind und der Zug sich leicht verirrt. Die [[de/Boje|Boje]] ist eine Art Wegpunkt für Schiffe, welche lange Wege zurücklegen.
 
 Die ''Fahre Zu'' Schaltfläche hat die folgenden '''Optionen''':
@@ -44,7 +44,7 @@ Siehe [[de/Schnelle Aufträge|Schnelle Aufträge]] für Abkürzungen beim erstel
 ===Löschen===
 Dies löscht den ausgewählten Auftrag aus der Auftragsliste des gewählten Fahrzeugs, somit wird das Anfahren der Station mit diesem Fahrzeug beendet.
 
-Wenn die "--Ende der Aufträge--"" Linie ausgewählt wurde, dann wird die komplette Liste gelöscht wenn die Schaltfläche gedrückt wird. Vorsicht wenn die Zeile "--Ende der geteilten Aufträge--" heisst, denn dann verhält es sich anders. Für Details siehe [[en/#Geteilte Aufträge|Geteilte Aufträge]].
+Wenn die "--Ende der Aufträge--"" Linie ausgewählt wurde, dann wird die komplette Liste gelöscht wenn die Schaltfläche gedrückt wird. Vorsicht wenn die Zeile "--Ende der geteilten Aufträge--" heisst, denn dann verhält es sich anders. Für Details siehe [[#Geteilte Aufträge|Geteilte Aufträge]].
 
 ===Überspringen===
 Dies zwingt das Fahrzeug den derzeit auszuführenden Auftrag zu überspringen und zum Nächsten in der List zu springen. Wenn du ''Überspringen'' drückst während das Fahrzeug den letzten Auftrag ausführt, so wird es beim ersten Auftrag weitermachen.
@@ -120,7 +120,7 @@ Du kannst:
 [[File:en/Orders goto stopoptions.png|frame|none|Die Routenoptionen.]]
 
 ===Ohne Zwischenhalt===
-es ist möglich ohne Zwischenhalt direkt zu einer Station zu fahren. [[de/ohne Zwischenhalt|Ohne Zwischenhalt]] hält ein Fahrzeug davon ab in einer Station welche am Weg zum ausgewähltem Ziel liegt zu halten.
+es ist möglich ohne Zwischenhalt direkt zu einer Station zu fahren. [[de/Ohne Zwischenhalt|Ohne Zwischenhalt]] hält ein Fahrzeug davon ab in einer Station welche am Weg zum ausgewähltem Ziel liegt zu halten.
 
 ===Fahre Über===
 Es ist möglich die Route über eine Station zu legen. Es ist auch hier möglich ohne Zwischenhalt. Dies ist sinnvoll wenn man eine Station als Wegpunkt verwenden möchte.
@@ -149,7 +149,7 @@ Wenn du möchtest dass die selben Aufträge von mehreren [[de/Manual/Fahrzeuge|F
 
 Um Fehler zu vermeiden kannst du nur Aufträge zu Fahrzeugen kopieren, welche noch keine Aufträge erteilt bekommen haben. Der Hintergrund hierfür ist, dass man an einer stark frequentierten Station oft unabsichtlich ein anderes Fahrzeug auswählt und dann wäre all die vorangegangene Arbeit verloren.
 
-Aufträge zu kopieren ist dennoch nicht die beste Lösung, da man bei Änderungen erst recht wieder für jedes Fahrzeug die Aufträge neu kopieren muss. Für einen besseren Ansatz siehe den nächsten Absatz [[en/#Gemeinsame Aufträge|Gemeinsame Aufträge]].
+Aufträge zu kopieren ist dennoch nicht die beste Lösung, da man bei Änderungen erst recht wieder für jedes Fahrzeug die Aufträge neu kopieren muss. Für einen besseren Ansatz siehe den nächsten Absatz [[#Gemeinsame Aufträge|Gemeinsame Aufträge]].
 
 ==Gemeinsam genutzte Aufträge==
 '''Gemeinsam genutzte Aufträge''' erlauben dir Auftragslisten zwischen zwei oder mehreren Fahrzeugen zu teilen, sodass bei einer Änderung an dem Auftrag von einem beliebeigen Fahrzeug sich alle Aufträge der anderen Fahrzeuge ebenso aktualisieren. 
@@ -159,7 +159,7 @@ Aufträge zu kopieren ist dennoch nicht die beste Lösung, da man bei Änderunge
 #Halte ''Strg'' gedrückt und klicke auf das Fahrzeug dessen Auftragsliste du kopieren möchtest.
 #Nun teilen die zwei Fahrzeuge einen gemeinsamen Fahrplan, welche miteinander verknüpft sind. Du siehst die Aufträge des anderen Fahrzeugs und die letzte Zeile lautet nun ''--Ende des gemeinsam genutzen Fahrplans--''
 
-[[File:en/shared-orders.png|center|frame|Der Fahrplan für zwei Busse wurde geteilt.]]
+[[File:en/Shared-orders.png|center|frame|Der Fahrplan für zwei Busse wurde geteilt.]]
 
 Du kannst die Aufträge beliebig vieler Fahrzeuge des selben Typs miteinander verknüpfen.
 
@@ -172,11 +172,11 @@ In gewissen Situationen möchtest du vielleicht nicht weiter einen gemeinsam gen
 Nun hat sich der letzte Eintrag wieder auf ''--Ende der Aufträge--'' geändert. Alle anderen Fahrzeuge mit denen der Fahrplan geteilt wurde sind von dieser Änderung nicht betroffen. Nun kannst du von dem Fahrzeug die Aufträge wieder unabhängig bearbeiten.
 
 ===Liste der Fahrzeuge mit gemeinsam genutzten Aufträgen===
-Das [[File:en/SharedOrders.png]] Symbol auf der rechten Seite des Auftrags- bzw. Fahrplanfensters ist die geteilte Aufträge Schaltfläche. Es zeigt dir die Liste aller Fahrzeuge welche den selben [[en/#gemeinsam genutzte Aufträge|gemeinsamen Auftrag]] wie das gewählte Fahrzeug haben. Das Symbol ist nur verfügbar wenn das Fahrzeuge über einen geteilten Fahrplan verfügt.
+Das [[File:en/SharedOrders.png]] Symbol auf der rechten Seite des Auftrags- bzw. Fahrplanfensters ist die geteilte Aufträge Schaltfläche. Es zeigt dir die Liste aller Fahrzeuge welche den selben [[#gemeinsam genutzte Aufträge|gemeinsamen Auftrag]] wie das gewählte Fahrzeug haben. Das Symbol ist nur verfügbar wenn das Fahrzeuge über einen geteilten Fahrplan verfügt.
 [[File:en/SharedOrders-1.png|none|frame|Liste der Fahrzeuge mit gemeinsam genutzten Fahrplan.]]
 
 ===Zu Beachten===
-*anders als bei kopierten Aufträgen ist es möglich gemeinsam genutzte Aufträge bei Fahrzeugen zu erstellen, welche bereits Aufträge zugeteilt bekommen haben. Der Hintergrund hierfür ist, dass es unwahrscheinlich ist, dass man unbeabsichtigt die ''Strg'' Taste gedrückt hält wenn man auf ein anderes Fahrzeug klickt. Wenn man [[en/#gemeinsam genutzte Aufträge|gemeinsam genutzte Aufträge]] erstellt so gehen die vorherigen Aufträge verloren.
+*anders als bei kopierten Aufträgen ist es möglich gemeinsam genutzte Aufträge bei Fahrzeugen zu erstellen, welche bereits Aufträge zugeteilt bekommen haben. Der Hintergrund hierfür ist, dass es unwahrscheinlich ist, dass man unbeabsichtigt die ''Strg'' Taste gedrückt hält wenn man auf ein anderes Fahrzeug klickt. Wenn man [[#gemeinsam genutzte Aufträge|gemeinsam genutzte Aufträge]] erstellt so gehen die vorherigen Aufträge verloren.
 *Du kannst die ''Fahrzeug kopieren'' Schaltfläche im Depotfenster bzw. die ''Kopie des Fahrzeuges kaufen'' Schaltfläche im Fahrzeugfesnter nutzen um eine exakte Kopie des Fahrzeugs zu erstellen. Standardmäßig werden hierbei die Aufträge nur kopiert und sind daher nicht miteinander verknüpft. Wenn du das Fahrzeug kopieren möchtest und gleichzeitig einen gemeinsam genutzten Auftrag erstellen möchtest, halte beim Klicken auf die Schaltfläche ''Strg'' gedrückt.
 [[File:en/Clone-vehicle-2.png|none|frame|''Fahrzeug kopieren'' Schaltfläche.]]
 [[File:en/Clone-vehicle.png|none|frame|''Kopie des Fahrzeugs kaufen'' Schaltfläche. Nur verfügbar wenn sich das Fahrzeug in einem [[de/Depots|Depot]] befindet.]]
@@ -206,7 +206,7 @@ Wenn du einen Teil einer Station löscht (z.B. eine Bushaltestelle welche mit ei
 [[File:en/Invalid-station.png|frame|none|"<Fahrzeug> hat eine ungültige Station in der Auftragsliste".]]
 
 ==Siehe Auch==
-*[[de/abhängige Aufträge|abhängige Aufträge]]
+*[[de/Abhängige Aufträge|abhängige Aufträge]]
 *[[de/Fahrplan|Fahrplan]]
 *[[en/Archive/Manual/Orders (old)]] (Englisch)
 [[Category:de/Fahrzeuge]]

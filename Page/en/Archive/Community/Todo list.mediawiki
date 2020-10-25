@@ -24,25 +24,25 @@ This section lists tasks, which require knowledge about the OSX APIs, but not so
 === Easy ===
 This section lists small tasks which require no advanced coding skills and no big effort of time.
 * [[en/Archive/Community/Todo BigGUI]] - Issues with using bigger GUI icons.
-* {{en/flyspray|5192}} - Display date of files in save/load GUI.
+* {{en/Flyspray|5192}} - Display date of files in save/load GUI.
 *: You can sort the filelist by modification date, but you cannot see it in the list.
 * Add pending newsitems to the crashlog.
 *: News messages are a client side thing, so they are not stored in savegames (not even in singleplayer). However, news can tell a bit about what happended recently in a game, so it might be useful to have this information in the crash.log (it's not in crash.sav). Just make sure that the textprocessing involved with the news does not cause crashes while writing the crashlog :p
 * Add text filter to load savegame/scenario/heightmap GUI.
 ** Add an editbox to enter a search term which the filelist is then filtered on. (Probably only considering the filename; reading the summary of eachs save would take too long)
 ** Filter to save savegame/scenario/heightmap GUI might be consistent, but usecase is questionable. Who wants to filter on the save to overwrite?
-* {{en/flyspray|5078}} - [NOAI] API lack "vehicle is old"-event.
-* {{en/forum|post=1071916}} - Change the "give money to" function so that money is donated to the company and not a specific player
+* {{en/Flyspray|5078}} - [NOAI] API lack "vehicle is old"-event.
+* {{en/Forum|post=1071916}} - Change the "give money to" function so that money is donated to the company and not a specific player
 *: The entities that operate in OpenTTD are companies which might be controlled by multiple players. As such it is weird that you give money to a client via the clientlist, instead of to a company via the company GUI.
 * Add the user-side possibility to exclude selected AIs from being chosen as "random AI" for new games. Mind that AIs already have the option to declare themselves that they don't want to be a randomly picked AI.
-* {{en/flyspray|6078}} - Warn user about useless conditions in the orders. Conditional orders like 'vehicle load >= 0%' and others are not useful because they are either always taken or they are never taken. It would be useful to warn the user of such things as he enters them.
+* {{en/Flyspray|6078}} - Warn user about useless conditions in the orders. Conditional orders like 'vehicle load >= 0%' and others are not useful because they are either always taken or they are never taken. It would be useful to warn the user of such things as he enters them.
 * In general, more warnings about stupid setups are useful, eg stations that have no vehicles could be one, likely there are more.
 * Sprite aligner window improvements
 ** When a sprite is selected in the right column with sprite numbers, it is not coloured white.
 ** The currently selected sprite in the blue area is not removed when a new sprite-set is selected with the 'Pick sprite' button.
 ** The arrow buttons are too small.
-* {{en/flyspray|6242}} Station selection window: hightlight current selection. This could potentially be generalised to many windows, like order window, station GUI (next/prev hop), industry lists, ...
-* {{en/forum|post=1068385}} - Unify the appearance and position of "goto location" buttons.
+* {{en/Flyspray|6242}} Station selection window: hightlight current selection. This could potentially be generalised to many windows, like order window, station GUI (next/prev hop), industry lists, ...
+* {{en/Forum|post=1068385}} - Unify the appearance and position of "goto location" buttons.
 ** The button should be a small button in the window title bar, next to the close/sticky/shade buttons. (likely a new black-only icon)
 ** The button shall esp. be accessible when the window is shaded.
 ** Some windows currently lack a "goto location" button, though they should have one (see the linked forum post for suggestions).
@@ -50,13 +50,13 @@ This section lists small tasks which require no advanced coding skills and no bi
 
 === Medium ===
 This section lists medium tasks which require moderate coding skill and/or medium effort of time.
-* {{en/flyspray|5018}} - Readme/licence/changelog viewer for OpenTTD itself. (likely requires OS/packaging specific code)
+* {{en/Flyspray|5018}} - Readme/licence/changelog viewer for OpenTTD itself. (likely requires OS/packaging specific code)
 *: There are in-game text-file viewers for readmes, licences and changelogs of NewGRFs, AIs and other content stuff. OpenTTD also has these three files, but there is currently no way to display them in-game.
 *: The hard part about this task is however, that the location of these files are quite unknown. Some linux distributions might even store them only compressed, and thus unreadable for OpenTTD. So for linux this would basically need a build-time "configure" option to specify the location of those files, which may then not be compressed (the latter would be a task for the package maintainer of the distributions).
 *: Alternatively there might be some nice way to compile the files directly into the binary without duplicating the texts in the source. Maybe via some script in the build process or some other trick.
 * Translatable AI/GS options.
 *: NewGRFs and scripts can define settings which the user can adjust. While NewGRFs can localise these, scripts currently can only provide on language, i.e. usually English. For Game Scripts there is already a method to provide localised texts for in-game stuff like news or extra information in town windows. There should be a similar method (from the script point of view) to translate settings.
-* {{en/flyspray|5175}} - Accept/deny buttons in station's cargo list. (to start accepting cargo while no vehicle has arrived yet, or to deny acceptance after a vehicle had arrived once)
+* {{en/Flyspray|5175}} - Accept/deny buttons in station's cargo list. (to start accepting cargo while no vehicle has arrived yet, or to deny acceptance after a vehicle had arrived once)
 *: This has several use case:
 *:* You can start acceptance of cargo before the first vehicle arrives.
 *:* You can start acceptance of cargo in the case that all your vehicles use autorefit, in which case they do not trigger acceptance unless they are already refitted to the right cargo.
@@ -83,7 +83,7 @@ This section lists medium tasks which require moderate coding skill and/or mediu
 
 === Hard ===
 The items in this list either require good coding skills and/or bigger investment of time.
-* {{en/forum|Forum|topic=68002}} Button in the order GUI to hide implicit orders. (only GUI, no gameplay effect)
+* {{en/Forum|Forum|topic=68002}} Button in the order GUI to hide implicit orders. (only GUI, no gameplay effect)
 *: Implicit orders are somewhat a prerequisite for cargo destinations. But they make interaction with the orders list sometimes quite hard if there are a lot implicit orders. So, there should be a toggle-switch in the orders GUI to hide them. However, there is more to consider when hiding orders... Currently orders are numbered in the GUI including implcit orders. Changing the numbering when toggling would be confusing, and skipping numbers while hiding implicit orders would be confusing as well. So, maybe real orders should be numbered 1, 2, 3, and the implcit orders between them should be numbered 1.1, 1.2, 1.3, ... 2.1, 2.2 ... 
 * Map preview when loading heightmaps. And some sliders or similiar to adapt the range of heightlevels being used. (Maybe allow setting 3 control points like brightness/contrast/gamma in image processing)
 *: If you start a game from a heightmap you can only guess how the result may turn out. You might try multiple times while changing the "map rotation" setting or even start your imaging program to adjust breightness/contrast. It would be much nicer if this could be done in-game, esp. wrt. the rotation thingie.
@@ -95,7 +95,7 @@ This section lists tasks which require no coding skills.
 These tasks are never done and require constant effort (amount choosen by yourself).
 * [http://translator.openttd.org/status Translations]: [http://www.openttd.org/development How to get involved.]
 * [[en/Archive/Community/Village Pump|Improve the Wiki]]. (But consider that some out-dated stuff may not be worth updating, but rather should be deleted.)
-* Third-party projects also require translators and other non-coding help. Check out the {{en/forum|NoAI/NoGo|forum=65}} and {{en/forum|NewGRF|forum=26}} development forums.
+* Third-party projects also require translators and other non-coding help. Check out the {{en/Forum|NoAI/NoGo|forum=65}} and {{en/Forum|NewGRF|forum=26}} development forums.
 
 === GUI / settings redesign ===
 This a very huge / hard task, which requires no coding skills (in the current stage) but nevertheless a good knowledge about OpenTTD (from a player's point of view).
@@ -109,7 +109,7 @@ This a very huge / hard task, which requires no coding skills (in the current st
 ** A window for settings you want to change often during a game. (Mostly transparency settings, but also e.g. "show reserved tracks")
 * Either drop difficulty settings and highscore completely, or redesign how "difficulty profiles" could be specified. (Something like NewGRF presets, but for "some" settings; basically a difficulty profile should specify for every gameplay setting a fixed value or "any value allowed".)
 * In the settings and options, different windows have different ideas about the 'save changes' button, which is confusing for the user.
-* See also [[en/Development/Design Drafts/GUI re-arrangement]], {{en/forum|transparency options analysis|topic=54262}}
+* See also [[en/Development/Design Drafts/GUI re-arrangement]], {{en/Forum|transparency options analysis|topic=54262}}
 
 === Other GUI issues ===
 

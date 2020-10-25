@@ -1,6 +1,6 @@
 [[Translation:en/Manual/Negative income with feeder service]]
 
-There are two different situations in [[en/feeder service]]s where vehicles may show a negative income (sometimes a huge amount) although they do an important job for the service. This page explains why that happens and how to avoid it.
+There are two different situations in [[en/Manual/Feeder service]]s where vehicles may show a negative income (sometimes a huge amount) although they do an important job for the service. This page explains why that happens and how to avoid it.
 
 = Introduction =
 [[File:en/Feeder negative income.png|right|thumb|400px|A feeder service from a coal mine to a power plant.]]
@@ -19,7 +19,7 @@ Take care that the train should also have ''no loading'' set (for versions 0.7 a
 = Transfer Order =
 Now the train has the order to ''transfer'' at B. This time the train will have a positive income, however the road vehicles exhibit a negative income. Let's see how this happened.
 
-The payment for all delivered cargo no matter how it gets to its destination is done by a fixed rule (see for all the detail on the [[en/Manual/Game mechanics#Delivery payment rates|game mechanics]] page).
+The payment for all delivered cargo no matter how it gets to its destination is done by a fixed rule (see for all the detail on the [[en/Manual/Game Mechanics/Main Page#Delivery payment rates|game mechanics]] page).
 Basically,
 * you get paid by the straight distance from source (the coal mine) to destination (the power plant), and
 * you get fined for slower delivery from source to destination.

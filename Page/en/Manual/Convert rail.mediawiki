@@ -8,29 +8,29 @@ After selecting an option, one of the following toolbars will appear:
 [[File:en/Electrified Railway Construction.png|none|frame|Electrified Railway construction toolbar.]]
 [[File:en/Monorail Construction.png|none|frame|Monorail construction toolbar.]]
 [[File:en/Maglev Construction.png|none|frame|Maglev construction toolbar.]]
-The [[File:en/Convert rail.png]] '''convert rail''' button will activate a drag-and-drop tool that allows you to convert one type of rail to another (rail -> monorail -> maglev -> rail). This tool can be used on [[en/Manual/Building tracks|rail]], [[en/Manual/Building depots|depots]], [[en/bridges]], [[en/tunnel|tunnels]], [[en/stations]] and [[en/waypoints]].
+The [[File:en/Convert rail.png]] '''convert rail''' button will activate a drag-and-drop tool that allows you to convert one type of rail to another (rail -> monorail -> maglev -> rail). This tool can be used on [[en/Manual/Building tracks|rail]], [[en/Manual/Building depots|depots]], [[en/Manual/Bridges]], [[en/Manual/Tunnels|tunnels]], [[en/Manual/Stations]] and [[en/Manual/Waypoints]].
 
 * Bridges and tunnels: choose one end of it.
 
 * Station: you have to convert each tile of one platform. You can mix the railtypes within one station ([[en/Archive/Manual/Settings/Nonuniform stations|Nonuniform stations]]).
 
-* Be sure that the line is free from trains. Trains you already have running should be sent to the depot and then [[en/Manual/Sell entire train|sold]] (except when you convert from [[en/railways|normal railway]] to [[en/electrified railways|electrified railway]]).
+* Be sure that the line is free from trains. Trains you already have running should be sent to the depot and then [[en/Manual/Sell entire train|sold]] (except when you convert from [[en/Manual/Base Set/Railways|normal railway]] to [[en/Manual/Base Set/Electrified railways|electrified railway]]).
 
-* You can convert rails under trains from [[en/railways|normal railway]] to [[en/electrified railways|electrified railway]]. It doesn't need to be empty.
+* You can convert rails under trains from [[en/Manual/Base Set/Railways|normal railway]] to [[en/Manual/Base Set/Electrified railways|electrified railway]]. It doesn't need to be empty.
 
 * You can convert only to those types that are available.
 [[File:en/Convert rail tunnel.png|left|frame|Mixed railtypes]]
 [[File:en/Convert station.png|none|frame|Mixed railtypes]]
 
 ==Diagonal tracks==
-In OpenTTD there can be only one type of track on each tile (except the [[en/railways|normal railway]] and [[en/electrified railways|electrified railway]]) so it is possible that you have to rebuild your railways first if you would like to mix the type of your close diagonal railway lines.
+In OpenTTD there can be only one type of track on each tile (except the [[en/Manual/Base Set/Railways|normal railway]] and [[en/Manual/Base Set/Electrified railways|electrified railway]]) so it is possible that you have to rebuild your railways first if you would like to mix the type of your close diagonal railway lines.
 [[File:en/Convert rail close.png|left|frame|too close to mix the railtypes]]
 [[File:en/Convert rail good.png|none|frame|separate tiles for different railtypes]] 
 
 ==Tips==
 * To save time converting a train with lots of orders from one railtype to another, send your train to a depot of the old type and [[en/Manual/Sell entire train|sell it]]. While the depot window is still open, convert the depot to the new railtype, and the next train you build will have all the orders of your previous train. The depot window must remain open throughout this operation. Note that you can only convert one train at a time using this method, but you may also convert the empty depot back to the old railtype so you can convert another train using the same depot.
 
-* For converting to a compatible railtype (e.g. [[en/electrified railways|electrified railway]]), updating trains is not immediately necessary as steam and diesel trains run perfectly on electrified rails.  Electrified trains, however, will not pass over non-electrified tiles.
+* For converting to a compatible railtype (e.g. [[en/Manual/Base Set/Electrified railways|electrified railway]]), updating trains is not immediately necessary as steam and diesel trains run perfectly on electrified rails.  Electrified trains, however, will not pass over non-electrified tiles.
 
 * Vehicle replacement ([[en/Manual/Replace vehicles#Autoreplace|Autoreplace]]) doesn't work cross-depot.
 

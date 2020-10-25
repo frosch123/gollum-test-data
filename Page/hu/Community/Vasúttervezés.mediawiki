@@ -158,11 +158,11 @@ A trigger allows to control when a train may leave the station. This increases t
 
 This set of screenshots shows the trigger itself. The main component is a circle track (A). It is divided into four segments using path based signals. A train travels the circle (B). Two waypoints are used to keep it moving. The length of the train is such that it almost covers three segments of the circle. Finally, each segment has an exit (C). To show the concept, a traffic light has been added to each track. When the train moves, each of the lights will shortly jump to green. 
 
-[[File:en/trigger-a.png|frame|none|A: Segmented circle track]] [[File:en/trigger-b.png|frame|none|B: Segmented circle track with train]] [[File:en/trigger-c.png|frame|none|C: Final trigger with collectors]]
+[[File:en/Trigger-a.png|frame|none|A: Segmented circle track]] [[File:en/Trigger-b.png|frame|none|B: Segmented circle track with train]] [[File:en/Trigger-c.png|frame|none|C: Final trigger with collectors]]
 
 Now the trigger is connected to a high yield station. The station has 16 platform each 9 tiles in length. Four tracks leave the station. Later they are merged to two track:
 
-[[File:en/trigger-d.png|frame|none|Final trigger connected to station]]
+[[File:en/Trigger-d.png|frame|none|Final trigger connected to station]]
 
 Notice how the monorail an the magnetic tracks are connected. Each track leaving the station is connected with one segment of the trigger. Right after this connection a normal signal is placed. This way the trigger is able to stop trains from exiting the station.
 
@@ -170,6 +170,6 @@ Timing in this setup is crucial! Depending on the type and size of trains the ex
 
 At a similar station, there are also 16 platforms each with 9 tiles. But the trains transport goods which are much lighter than steel. Hence the trigger's time gaps can be shorter. This is achieved by having a circle track with less sharp turn. As a result, the train travels at 226 kph.
 
-[[File:en/trigger-e.png|frame|none|Faster trigger]]
+[[File:en/Trigger-e.png|frame|none|Faster trigger]]
 
 [[Category:hu/Vasút]]

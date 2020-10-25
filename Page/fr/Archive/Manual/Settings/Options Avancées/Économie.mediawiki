@@ -2,7 +2,7 @@
 {{fr/Options Avancées}}
 
 ==Fenêtre Configuration avancée: section Économie==
-La section Économie vous permet de positionner diverses options liées au modèle économique du jeu. Le but des options disponibles est expliqué ci-dessous. Pour chacune, la variable respective du [[fr/openttd.cfg|fichier de configuration]] est listée, ainsi que ses valeurs possibles.
+La section Économie vous permet de positionner diverses options liées au modèle économique du jeu. Le but des options disponibles est expliqué ci-dessous. Pour chacune, la variable respective du [[fr/Archive/Manual/Settings/Openttd.cfg|fichier de configuration]] est listée, ainsi que ses valeurs possibles.
 {{en/-right}}
 {| align="center"
 |- valign="top"
@@ -15,50 +15,50 @@ La section Économie vous permet de positionner diverses options liées au modè
 {{fr/Disponibilité|Old|align="right"|texte=(depuis 0.3.0)}}
 Vous permet de [[fr/Archive/Manual/Settings/Soudoyer les autorités|soudoyer les autorités locales]] pour qu'ils améliorent votre cote; si vous êtes découverts, cependant, vous aurez uen amende et ne pourrez plus les corrompre pendant un moment.
 :''Valeurs possibles:'' <span style="color:green">'''Activé'''</span> ou <span style="color:red">'''Désactivé'''</span>
-:''Dans le fichier de configuration [[fr/openttd.cfg|openttd.cfg]]:'' ([economy] bribe = <true|false>)
+:''Dans le fichier de configuration [[fr/Archive/Manual/Settings/Openttd.cfg|openttd.cfg]]:'' ([economy] bribe = <true|false>)
 
 ====Autoriser l'achat des droits de transports exclusifs====
 {{fr/Disponibilité|0.6|align="right"|texte=(depuis 0.6.0)}}
 Vous permet de désactiver l'achat de droits de transport exclusifs dans les villes. Utile (de le désactiver?) dans les parties multijoueurs.
 :''Valeurs possibles:'' <span style="color:green">'''Activé'''</span> ou <span style="color:red">'''Désactivé'''</span>
-:''Dans le fichier de configuration [[fr/openttd.cfg|openttd.cfg]]:'' ([economy]exclusive_rights = <true|false>)
+:''Dans le fichier de configuration [[fr/Archive/Manual/Settings/Openttd.cfg|openttd.cfg]]:'' ([economy]exclusive_rights = <true|false>)
 
 ====Agencement des routes pour les nouvelles villes====
 {{fr/Disponibilité|0.6|align="right"|texte=(depuis 0.6.0)}}
 Choisissez comment les villes devraient construire leurs routes. Vous pouvez choisir entre l'algorithme d'origine, un algorithme amélioré, une grille 2x2, une grille 3x3, ou aléatoirement. La valeur aléatoire prendra au hasard une des quatre valeurs possibles pour chaque ville. Cette option a été renommée depuis [[en/Archive/Manual/Settings/Configuring patches/Economy#Choisir l'agencement des routes d'une ville|Choisir l'agencement des routes d'une ville]] en 0.6.3.
 :''Valeurs possibles:'' <span style="color:#00693E">'''Original'''</span>, <span style="color:#00693E">'''Meilleures routes'''</span>, <span style="color:#00693E">'''Grille 2x2'''</span>, <span style="color:#00693E">'''Grille 3x3'''</span> ou <span style="color:#00693E">'''Aléatoire'''</span>
-:''Dans le fichier de configuration [[fr/openttd.cfg|openttd.cfg]]:'' ([economy] town_layout = <0-4>)
+:''Dans le fichier de configuration [[fr/Archive/Manual/Settings/Openttd.cfg|openttd.cfg]]:'' ([economy] town_layout = <0-4>)
 
 ====Autoriser la construction des routes par les villes====
 {{fr/Disponibilité|0.7|align="right"|texte=(depuis 0.7.0)}}
 Quand elle est désactivée, les villes ne peuvent pas construire des routes de leur propre chef. Afin que les villes grandissent, vous devez vous-mêmes fournir les routes (un peu comme dans SimCity, mais sans le choix des zones et des affaires).
 :''Valeurs possibles:'' <span style="color:green">'''Activé'''</span> ou <span style="color:red">'''Désactivé'''</span>
-:''Dans le fichier de configuration [[fr/openttd.cfg|openttd.cfg]]:'' ([economy] allow_town_roads = <true|false>)
+:''Dans le fichier de configuration [[fr/Archive/Manual/Settings/Openttd.cfg|openttd.cfg]]:'' ([economy] allow_town_roads = <true|false>)
 
 ====Fonder des villes en cours de jeu====
 {{fr/Disponibilité|1.0|align="right"|texte=(depuis 1.0.0)}}
 Vous permet de fonder une nouvelle ville en cours de jeu. Vous pouvez configurer si elle utilisera l'agencement de routes utilisé par les autres villes, ou choisir vous-mêmes son agencement.
 :''Valeurs possibles:'' <span style="color:#00693E">'''Interdit'''</span>, <span style="color:#00693E">'''Autorisé'''</span> ou <span style="color:#00693E">'''Autorisé, agencement des routes personnalisé'''</span>
-:''Dans le fichier de configuration [[fr/openttd.cfg|openttd.cfg]]:'' ([economy] found_town = <0-2>)
+:''Dans le fichier de configuration [[fr/Archive/Manual/Settings/Openttd.cfg|openttd.cfg]]:'' ([economy] found_town = <0-2>)
 
 ====[[fr/Archive/Manual/Settings/Supprimer les portions de route absurdes lors de la reconstruction|Retirer les éléments absurdes pendant la reconstruction des routes]]====
 {{fr/Disponibilité|0.6|align="right"|texte=(depuis 0.6.0)}}
 Définit si les villes devraient supprimer les portions de route inutiles pour nettoyer les impasses.
 :''Valeurs possibles:'' <span style="color:green">'''Activé'''</span> ou <span style="color:red">'''Désactivé'''</span>
-:''Dans le fichier de configuration [[fr/openttd.cfg|openttd.cfg]]:'' ([economy] mod_road_rebuild = <true|false>)
+:''Dans le fichier de configuration [[fr/Archive/Manual/Settings/Openttd.cfg|openttd.cfg]]:'' ([economy] mod_road_rebuild = <true|false>)
 
 ====Vitesse de croissance des villes====
 {{fr/Disponibilité|0.6|align="right"|texte=(depuis 0.6.0)}}
 Choisir à quelle vitesse les villes grossiront. Vous pouvez aussi complètement désactiver la croissance des villes.
 :''Valeurs possibles:'' <span style="color:red">'''Aucune'''</span>, <span style="color:#00693E">'''Lente'''</span>, <span style="color:#00693E">'''Normale'''</span>, <span style="color:#00693E">'''Rapide'''</span> ou <span style="color:#00693E">'''Très rapide'''</span>
-:''Dans le fichier de configuration [[fr/openttd.cfg|openttd.cfg]]:'' ([economy] town_growth_rate = <0-4>)
+:''Dans le fichier de configuration [[fr/Archive/Manual/Settings/Openttd.cfg|openttd.cfg]]:'' ([economy] town_growth_rate = <0-4>)
 
 ====Proportion des villes qui deviendront des métropoles====
 {{fr/Disponibilité|0.6|align="right"|texte=(depuis 0.6.0)}}
 Détermine combien de villes deviendront des [[fr/Manual/Ville#Métropoles|métropoles]]. Les métropoles sont des villes plus grandes qui peuvent croître plus rapidement (voir aussi le paramètre suivant).
 :''Valeurs possibles:'' <span style="color:red">'''Aucune'''</span> ou <span style="color:#00693E">'''1 sur 1'''</span> à <span style="color:#00693E">'''1 sur 255'''</span>
 :Si vous voulez que chaque ville devienne une métropole, utilisez 1; 0 conduira à n'avoir aucune métropole.
-:''Dans le fichier de configuration [[fr/openttd.cfg|openttd.cfg]]:'' ([economy] larger_towns = <0-255>)
+:''Dans le fichier de configuration [[fr/Archive/Manual/Settings/Openttd.cfg|openttd.cfg]]:'' ([economy] larger_towns = <0-255>)
 Cette option ne s'applique qu'à la fondation d'une nouvelle ville lors de la génération d'une nouvelle carte aléatoire; dans l'éditeur de scénario, vous spécifiez explicitement si vous voulez une ville ou une métropole.
 
 ====Multiplicateur de taille de ville initial====
@@ -66,7 +66,7 @@ Cette option ne s'applique qu'à la fondation d'une nouvelle ville lors de la g�
 Définit la grosseur relative d'une métropole nouvellement créée comparée à une ville.
 :''Valeurs possibles:'' <span style="color:#00693E">'''1'''</span> à <span style="color:#00693E">'''10'''</span>
 :Si vous mettez 5, alors une métropole sera 5 fois plus grande qu'une ville.
-:''Dans le fichier de configuration [[fr/openttd.cfg|openttd.cfg]]:'' ([economy] initial_city_size = <1-10>)
+:''Dans le fichier de configuration [[fr/Archive/Manual/Settings/Openttd.cfg|openttd.cfg]]:'' ([economy] initial_city_size = <1-10>)
 Cette option n'est utilisée que lors de la fondation d'une nouvelle métropole. cela ne se produit que lors de la création d'une nouvelle carte ou en utilisant l'[[fr/Manual/Éditeur Scenario|éditeur de scénario]].
 ----
 ===<u>Industries</u>===
@@ -74,46 +74,46 @@ Cette option n'est utilisée que lors de la fondation d'une nouvelle métropole.
 {{fr/Disponibilité|0.6|align="right"|texte=(depuis 0.6.0)}}
 Vous permet de [[fr/Archive/Manual/Settings/Construction d'industrie primaire|construire des industries primaires]] qui produisent des matériaux bruts, tout comme les industries qui les utilisent. Aucune: impossible de créer de nouvelles industries primaires. Comme les autres industries: peut financer de nouvelles industries primaires. Prospection: peut financer de nouvelles industries primaires aux mêmes prix que les industries secondaires, mais l'industrie apparaîtra à un endroit aléatoire de la carte, ou pas du tout.
 :''Valeurs possibles:'' <span style="color:red">'''Aucune'''</span>, <span style="color:#00693E">'''Comme les autres industries'''</span> ou <span style="color:#00693E">'''Prospection'''</span>
-:''Dans le fichier de configuration [[fr/openttd.cfg|openttd.cfg]]:'' ([construction] raw_industry_construction = <0-2>)
+:''Dans le fichier de configuration [[fr/Archive/Manual/Settings/Openttd.cfg|openttd.cfg]]:'' ([construction] raw_industry_construction = <0-2>)
 
 ====Permettre plusieurs industries similaires par ville====
 {{fr/Disponibilité|Old|align="right"|texte=(depuis 0.2.0)}}
 Une ville peut avoir [[fr/Archive/Manual/Settings/Industries multiples par ville|plus d'une industrie d'un type donné]].
 :''Valeurs possibles:'' <span style="color:green">'''Activé'''</span> ou <span style="color:red">'''Désactivé'''</span>
-:''Dans le fichier de configuration [[fr/openttd.cfg|openttd.cfg]]:'' ([economy] multiple_industry_per_town = <true|false>)
+:''Dans le fichier de configuration [[fr/Archive/Manual/Settings/Openttd.cfg|openttd.cfg]]:'' ([economy] multiple_industry_per_town = <true|false>)
 
 ====Distances max depuis les bords pour les Raffineries====
 {{fr/Disponibilité|0.5|align="right"|texte=(depuis 0.5.0)}}
 Cette option détermine la distance maximale autorisée (en cases) depuis le bord de la carte pour une raffinerie.
 Cette option a été déplacée depuis [[fr/Options avancées 0.3.0 - 0.6.3/Construction#Distance max depuis les bords pour les Raffineries|la section Construction]] en 0.7.0.
 :''Valeurs possibles:'' <span style="color:#00693E">'''12'''</span> à <span style="color:#00693E">'''48'''</span>
-:''Dans le fichier de configuration [[fr/openttd.cfg|openttd.cfg]]:'' ([game_creation] oil_refinery_limit = <12-48>)
+:''Dans le fichier de configuration [[fr/Archive/Manual/Settings/Openttd.cfg|openttd.cfg]]:'' ([game_creation] oil_refinery_limit = <12-48>)
 {{en/-}}
 ----
 ===Inflation===
 {{fr/Disponibilité|Old|align="right"|texte=(depuis 0.3.4)}}
 Contrôle si [[fr/Archive/Manual/Settings/Désactiver l'inflation|l'inflation est active ou non]]. Si l'inflation est active, les prix de tout augmenteront au cours du jeu. Pour contrebalancer cette augmentation, le montant maximal du prêt possible augmentera dans le temps.
 :''Valeurs possibles:'' <span style="color:green">'''Activé'''</span> ou <span style="color:red">'''Désactivé'''</span>
-:''Dans le fichier de configuration [[fr/openttd.cfg|openttd.cfg]]:'' ([economy] inflation = <true|false>)
+:''Dans le fichier de configuration [[fr/Archive/Manual/Settings/Openttd.cfg|openttd.cfg]]:'' ([economy] inflation = <true|false>)
 
 ===Permettre une économie stable (plus de petits changements)===
 {{fr/Disponibilité|Old|align="right"|texte=(depuis 0.3.3)}}
 Les [[fr/Archive/Manual/Settings/Économie lisse|changements de production]] interviendront moins fréquemment et par plus faibles pourcentages.
 :''Valeurs possibles:'' <span style="color:green">'''Activé'''</span> ou <span style="color:red">'''Désactivé'''</span>
-:''Dans le fichier de configuration [[fr/openttd.cfg|openttd.cfg]]:'' ([economy] smooth_economy = <true|false>)
+:''Dans le fichier de configuration [[fr/Archive/Manual/Settings/Openttd.cfg|openttd.cfg]]:'' ([economy] smooth_economy = <true|false>)
 
 ===Pourcentage du profit de branche à payer dans les systèmes multi-modaux===
 {{fr/Disponibilité|1.0|align="right"|texte=(depuis 1.0.0)}}
 Cette option contrôle combien sera payé aux véhicules lors d'un transfert de cargaison. Si cette valeur est basse, le(s) véhicule(s) faisant le transfert obtiendront moins et le véhicule final davantage, et vice versa. Cela peut être utilisé pour éviter des [[fr/Manual/Revenu négatif avec service d'approvisionnement|revenus négatifs avec un service d'approvisionnement]].
 :''Valeurs possibles:'' <span style="color:red">'''0%'''</span> à <span style="color:#00693E">'''100%'''</span>
-:''Dans le fichier de configuration [[fr/openttd.cfg|openttd.cfg]]:'' ([economy] feeder_payment_share = <0-100>)
+:''Dans le fichier de configuration [[fr/Archive/Manual/Settings/Openttd.cfg|openttd.cfg]]:'' ([economy] feeder_payment_share = <0-100>)
 
 ==Dans les versions précédentes==
 ===Les industries de même type peuvent être construites proches l'une de l'autre===
 {{fr/Disponibilité|-1.0|align="right"|texte=(de 0.2.0 à 1.0.0)}}
 Des industries du même type peuvent être [[fr/Archive/Manual/Settings/Industries semblables proches|construites à proximité]] l'une de l'autre avec cette option activée. Cela peut poser des problèmes  car vous pouvez obtenir une dizaine d'industries du même type dans une petite zone de la carte.
 :''Valeurs possibles:'' <span style="color:green">'''Activé'''</span> ou <span style="color:red">'''Désactivé'''</span>
-:''Dans le fichier de configuration [[fr/openttd.cfg|openttd.cfg]]:'' ([economy] same_industry_close = <true|false>)
+:''Dans le fichier de configuration [[fr/Archive/Manual/Settings/Openttd.cfg|openttd.cfg]]:'' ([economy] same_industry_close = <true|false>)
 {{en/-}}
 ===Voir aussi===
 *'''De 0.3.0 à 0.6.3''' - Voyez [[fr/Archive/Manual/Settings/Options avancées 0.3.0 - 0.6.3|Options avancées 0.3.0 - 0.6.3]] pour une information sur la manière de modifier les paramètres.

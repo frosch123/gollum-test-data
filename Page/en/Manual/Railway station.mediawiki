@@ -1,6 +1,6 @@
 [[Translation:en/Manual/Railway station]]
-{{en/table of contents}}
-'''Railway Stations''' are the core component of any railway network. They allow any and all goods to be loaded and unloaded onto [[en/trains]]. For your network, it is best to have your station off the main line so there is no unnecessary traffic passes through them causing delays for trains using the station.
+{{en/Table of contents}}
+'''Railway Stations''' are the core component of any railway network. They allow any and all goods to be loaded and unloaded onto [[en/Manual/Trains]]. For your network, it is best to have your station off the main line so there is no unnecessary traffic passes through them causing delays for trains using the station.
 
 
 ==Basic stations==
@@ -11,7 +11,7 @@ These stations are the end of a railway line. Trains leave the same side they en
 [[File:en/Terminus.png|center|none|frame|Simple terminus stations: the left one is using [[en/Manual/Signals#Pre-signals|Pre-signals]], the right one [[en/Manual/Signals#Path_Signals|Path signals]].]]
 
 ===Ro-Ro===
-Ro-Ro stands for Roll-On, Roll-Off (or Roll In, Roll Out, depending who you ask) - trains enter the bottom end of station and exit the other end. Trains entering the station do not have to wait for trains leaving. This is great for medium amounts of traffic. Without [[en/pre-signals]], it's no good for high-traffic stations (e.g., stations serving factories), because once all platforms are full, the train waits at the two way signal for the platform closest to the entrance. This can lead to gridlock if the blocking train has full load orders and is waiting for another train to drop off raw material [[en/cargo]].
+Ro-Ro stands for Roll-On, Roll-Off (or Roll In, Roll Out, depending who you ask) - trains enter the bottom end of station and exit the other end. Trains entering the station do not have to wait for trains leaving. This is great for medium amounts of traffic. Without [[en/Manual/Signals]], it's no good for high-traffic stations (e.g., stations serving factories), because once all platforms are full, the train waits at the two way signal for the platform closest to the entrance. This can lead to gridlock if the blocking train has full load orders and is waiting for another train to drop off raw material [[en/Manual/Cargo]].
 [[File:en/Ro-ro1.png|center|none|frame|RoRo-stations with 2 platforms, the left one using block signals, the right one using path signals. You could leave out the two straight track tiles in the front of the right one, but they also have a purpose as braking space.]]
 
 ===Drive-thru station===
@@ -44,7 +44,7 @@ Stations with [[en/Manual/Signals#Pre-signals|pre-signals]] make arriving trains
 
 ===Waiting bay===
 A good solution to hold a queue of trains waiting to enter a station is a multi-line waiting bay.  If the station is full, an arriving train picks the closest empty track in the waiting bay.  When a spot opens in the station, one of the waiting trains will move in.  Make sure a train can fit between the signals.  The pre-signals are optional; they help if your waiting bay fills up too!
-[[File:en/waitingbay.png|center|none|frame|Waiting bay for up to 4 6-wagon trains]]
+[[File:en/Waitingbay.png|center|none|frame|Waiting bay for up to 4 6-wagon trains]]
 
 ===Loop around===
 Instead of using pre-signals, you can build a loop around track. When a train enters the station and sees all the two way signals are red (platforms are full) except the loop around track, it will take the loop around track. It loops around and around, waiting for a free platform. A problem with this system is other arriving trains can steal the free platform while the first train is looping around. Remember to make the loop big enough to fit at least your longest train.
@@ -62,11 +62,11 @@ Normally, when two trains leave a station at once, one must stop and give way to
 [[File:en/Longexit.png|center|none|frame|Long exits overflow control]]
 
 ===Long exits, prioritized===
-Getting [[en/mammoth trains]] to exit a busy Ro-Ro station in a timely fashion can be challenging. By using pre-signals you can prioritize station exit tracks to allow trains on faster tracks to depart sooner. In the image below a lower priority is assigned to the topmost 5 exits (since they'll block the return track longer) and the exit at the bottom (since trains accelerate slower on the sharp bend) by requiring them to wait upon the block exit pre-signal. They must wait for the exit signal to clear (that is, when a train passes the 2nd signal on the return track). The other tracks are not forced to do so and will depart when a train passes the 1st signal as usual. 
+Getting [[en/Archive/Manual/Settings/Mammoth trains]] to exit a busy Ro-Ro station in a timely fashion can be challenging. By using pre-signals you can prioritize station exit tracks to allow trains on faster tracks to depart sooner. In the image below a lower priority is assigned to the topmost 5 exits (since they'll block the return track longer) and the exit at the bottom (since trains accelerate slower on the sharp bend) by requiring them to wait upon the block exit pre-signal. They must wait for the exit signal to clear (that is, when a train passes the 2nd signal on the return track). The other tracks are not forced to do so and will depart when a train passes the 1st signal as usual. 
 [[File:en/Priorityexit.png|center|none|frame|Long exits with priority signals]]
 
 ===Long entrances===
-If you play with [[en/realistic acceleration]], faster trains slow down a good bit before stopping in a station.  This can delay the next train from entering.  Adding a few track sections in front of the station can help with this.
+If you play with [[en/Archive/Manual/Settings/Realistic acceleration]], faster trains slow down a good bit before stopping in a station.  This can delay the next train from entering.  Adding a few track sections in front of the station can help with this.
 [[File:en/Longentrance.png|center|none|frame|Long entrance for realistic acceleration patch]]
 
 ===Double entrance===
@@ -107,10 +107,10 @@ This build allows trains to enter and exit station simultaneously. However, it t
 ====Giant Ro-Ro terminus====
 
 It's of course possible to increase the number of platforms of a Ro-Ro terminus station. You can go as far as you want as long as there's enough space.
-[[File:en/epicterminus.png|center|thumb|550px|Advanced 10 bay station]]
+[[File:en/Epicterminus.png|center|thumb|550px|Advanced 10 bay station]]
 
 Below is a little more efficient design, with two tracks each sharing an entry and exit line. It consumes half as much space while nearly not decreasing the capacity. It is important that the directions are not switched: Else trains would have to climb up when entering the track, blocking the crossing unneccessarily long.
-[[File:en/sharedepicterminus.png|center|thumb|550px|Light advanced 10 bay station]]
+[[File:en/Sharedepicterminus.png|center|thumb|550px|Light advanced 10 bay station]]
 
 Here bridges instead of tunnels
 [[File:en/8 platform station.png|center|none|frame|A high-capacity Ro-Ro Terminus mix]]
@@ -132,7 +132,7 @@ As with a standard ro-ro station, trains enter at one end of station and exit on
 ===Roundabout station===
 Can handle a huge amount of small trains.
 
-[[File:en/roundabout station.png|center|thumb|700px|A double roundabout station]]
+[[File:en/Roundabout station.png|center|thumb|700px|A double roundabout station]]
 
 ==NewGRF Stations==
 [[File:en/Newstationsgui.png|right]][[en/Manual/NewGRF]] Stations, or newstations, are available after you have activated a Newstations grf file. You will then have access to a new station-building GUI.

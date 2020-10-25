@@ -57,10 +57,10 @@ If you don't want/need music, you can skip DirectX SDK. Please read next chapter
 
 : '''Alternative''': If you are willing to compile without support for MIDI music you will not be needing the DirectX SDK. To disable music, open the "openttd" project properties dialog and:
 :* Navigate to <code>Configuration properties -> C/C++ -> Preprocessor -> Preprocessor Definitions</code> and remove <code>WIN32_ENABLE_DIRECTMUSIC_SUPPORT</code> preprocessor definition.
-[[File:en/preprocessor.png|thumb|none|200px|Preprocessor settings]]
+[[File:en/Preprocessor.png|thumb|none|200px|Preprocessor settings]]
 
 :* Navigate to <code>Configuration properties -> Linker -> Input -> Additional Dependencies</code> and remove <code>dxguid.lib</code> library. ''note: this may no longer be necessary ''
-[[File:en/linker.png|thumb|none|200px|Linker settings]]
+[[File:en/Linker.png|thumb|none|200px|Linker settings]]
 
 =Preparing your system for 64bit compilation=
 :''Note: these instructions for using a 64bit version of Windows. If you are using a 32bit version, the registry edit will be different''
@@ -113,7 +113,7 @@ Subversion is needed to download the source (the place where to find the MSVC pr
 
 ===Make the directory===
 
-Make a directory called "ottdsrc" in your C:\ drive. It is important to make a directory without spaces since [[en/Archive/Compilation and Ports/Compiling on Windows using MinGW]] (the program used later for [[en/#Bundle|making a bundle]]) can only switch to directories without spaces. This will be used as a place to download the source to.
+Make a directory called "ottdsrc" in your C:\ drive. It is important to make a directory without spaces since [[en/Archive/Compilation and Ports/Compiling on Windows using MinGW]] (the program used later for [[#Bundle|making a bundle]]) can only switch to directories without spaces. This will be used as a place to download the source to.
 
 ===Download the source===
 

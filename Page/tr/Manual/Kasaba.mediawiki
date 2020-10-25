@@ -4,9 +4,9 @@
 [[File:en/Town.png|thumb|left|436px|The small town of Potsdam.]]
 __TOC__{{en/-}}
 ==Town Buildings==
-Most [[en/building|buildings]] in the towns provide a source of [[en/Manual/Base Set/Cargos/Passengers]] and [[en/Manual/Base Set/Cargos/Mail]] which can be transported to other towns or within the same town.  During an [[en/Manual/Economy#Recession|economic recession]] there's only half of the usual amount.
+Most [[en/Archive/Manual/Building|buildings]] in the towns provide a source of [[en/Manual/Base Set/Cargos/Passengers]] and [[en/Manual/Base Set/Cargos/Mail]] which can be transported to other towns or within the same town.  During an [[en/Manual/Economy#Recession|economic recession]] there's only half of the usual amount.
 
-In some cases buildings may also accept other cargos such as Goods or Food.  For a station to accept these cargos, the buildings in the station's coverage area must accept a total of at least 8/8 of the cargo.   Use the [[en/land area information]] tool to find out about the cargo acceptance of individual buildings.
+In some cases buildings may also accept other cargos such as Goods or Food.  For a station to accept these cargos, the buildings in the station's coverage area must accept a total of at least 8/8 of the cargo.   Use the [[en/Manual/Land area information]] tool to find out about the cargo acceptance of individual buildings.
 
 Town population is calculated based on the number of buildings and how many inhabitants each building contains.
 
@@ -47,7 +47,7 @@ A big city needs plenty of space. Without obstacles, a population of 1 million r
 There are no special conditions for a Temperate or Toyland town to grow.  Simply load/unload cargo as described above.
 
 ====Sub Arctic====
-[[File:en/arctic town.png|right]]If centre square of the town is above the snow level, at least 1t of food per month must be delivered for the town to grow rapidly.  The town information window will show the amount of food delivered recently.
+[[File:en/Arctic town.png|right]]If centre square of the town is above the snow level, at least 1t of food per month must be delivered for the town to grow rapidly.  The town information window will show the amount of food delivered recently.
 
 The towns will grow very slowly on their own, so in the case of small towns not large enough to accept food, it is simply a case of waiting for them to grow. As with any other cargo a station needs at least 8/8 of food acceptance in its coverage area before it accepts food.
 
@@ -56,7 +56,7 @@ The amount of food delivered has no effect on the rate of town growth.
 If the centre square is not above the snow line food is not required for growth, although food will be accepted.
 
 ====Sub Tropical==== 
-[[File:en/town tropical.png|right]]If the centre square of the town is in the desert, at least 1t of [[en/food]] and 1,000L of [[en/water]] per month must be delivered for the town to grow.  The town information window will show the amount of food and water delivered recently.
+[[File:en/Town tropical.png|right]]If the centre square of the town is in the desert, at least 1t of [[en/Manual/Base Set/Cargos/Food]] and 1,000L of [[en/Manual/Base Set/Cargos/Water]] per month must be delivered for the town to grow.  The town information window will show the amount of food and water delivered recently.
 
 The towns will grow very slowly on their own, so in the case of small towns not large enough to accept food, it is simply a case of waiting for them to grow. As with any other cargo a station needs at least 8/8 of food acceptance in its coverage area before it accepts food.
 
@@ -83,9 +83,9 @@ Delivering the cargo "[[en/Manual/Base Set/Cargos/Goods]]" '''does not''' have a
 A city is a special form of town that will grow twice as fast as a regular town. A city is also larger to begin with. There are two settings that affect cities: ''[[en/Archive/Manual/Settings/Advanced Settings/Economy#Proportion_of_towns_that_will_become_cities|Proportion of towns that will become cities]]'' and ''[[en/Archive/Manual/Settings/Advanced Settings/Economy#Initial_city_size_multiplier|Initial city size multiplier]]''.
 
 ==Town's Local Authority==
-Each town is managed by a [[en/Manual/Local authority]] that determines which actions a [[en/company]] may take in or near each town. Clearing trees  (including those cleared by landscaping or bulldozing) and destroying town's industries, buildings, roads, tunnels and bridges all lower the company rating in the town. However, planting trees, successful bribes and providing services to the town (stations that have transferred cargo in the last 50 days) increases the company rating. To place a station, the company must have a minimum rating of -200 (Poor).
+Each town is managed by a [[en/Manual/Local authority]] that determines which actions a [[en/Manual/Transport company]] may take in or near each town. Clearing trees  (including those cleared by landscaping or bulldozing) and destroying town's industries, buildings, roads, tunnels and bridges all lower the company rating in the town. However, planting trees, successful bribes and providing services to the town (stations that have transferred cargo in the last 50 days) increases the company rating. To place a station, the company must have a minimum rating of -200 (Poor).
 
-Use the [[en/land area information]] tool to find out which local authority a tile belongs to (if any).
+Use the [[en/Manual/Land area information]] tool to find out which local authority a tile belongs to (if any).
 
 ==Towns and NewGRFs==
 Town buildings can be modified and/or replaced by NewGRF sets.  NewGRF sets are available offering a range of changes, from adding just a building or two, up to total town replacement.  NewGRF sets can also redefine which cargos are accepted and produced by town buildings.  NewGRF sets can also provide new or modified industries which locate in or near towns.

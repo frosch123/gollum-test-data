@@ -13,7 +13,7 @@ Utasításokat a járműveknek te magad tudsz adni. Járművezetőid megpróbál
 
 *Kattints a ''Jármű utasításainak mutatása'' gombra (a fenti képen pirossal bekarikáztuk). Ez az utasításablakot nyitja meg, mely a jármű minden jelenlegi utasítását tartalmazza (a példánkban szereplő járműnek nincs még egy sem).<br/>[[File:en/Orders-2.png|frame|none|Az utasításablak]]
 
-*Kattints az ''[[en/#Az "Új cél" gomb|Új cél]]'' gombra, és kattints a terepen az első [[hu/Manual/Állomások|állomásra]].
+*Kattints az ''[[#Az "Új cél" gomb|Új cél]]'' gombra, és kattints a terepen az első [[hu/Manual/Állomások|állomásra]].
 
 *Kattints az épp elkészült utasításra a kijelöléséhez, és mondd meg a járműnek, mit kell azon az állomáson tennie. Pl., kattints a ''Telerakodás bármiből'' feliratra, hogy a teljes berakodásig várjon az állomáson.
 
@@ -32,9 +32,9 @@ Az utasításablakon a következő gombok láthatók:
 
 Az "Új cél" arra szolgál, hogy úti célt adjunk a járműnek. Az utasításlista kijelölt sora elé új utasítást szúr be, vagy ha nem jelöltünk ki utasítást, a lista végére. A lehetséges úti célok:
 *Saját állomásod, de csak akkor, ha a jármű fajtáját fogadni tudja. Nem küldhetsz tehát buszt a repülőtérre, ha a repülőtérnek nincs buszmegállója. Ellenfél állomására nem küldhetsz járművet.
-*[[hu/Manual/Járműtelepek|Járműtelep]], lásd lentebb: [[en/#"Átalakítás" gomb|"Átalakítás" gomb]] és [[en/#"Javítás" gomb|"Javítás" gomb]].
+*[[hu/Manual/Járműtelepek|Járműtelep]], lásd lentebb: [[#"Átalakítás" gomb|"Átalakítás" gomb]] és [[#"Javítás" gomb|"Javítás" gomb]].
 *[[hu/Manual/Ellenőrzőpontok|Ellenőrzőpontok]]: vonatodnak egy közbülső úti célt is meghatározhatsz, ha túl nagy a távolság az állomásai közt, és eltéved emiatt, de használhatod az ellenőrzőpontot arra is, hogy a vonatod meghatározott vasúti pályán haladjon tovább. A [[hu/Kikötők|bóják]] is ellenőrzőpontok, a nagy távolságon közlekedő hajók számára.
-*Egy járműnek az [[en/#Utasításlista másolása|utasításait másolhatod]] másik jármű utasításlistájára, ha ugyanaz a járműfajtájuk, vagy [[en/#Megosztott utasításlista|megosztott utasításlista]] szerint is járathatod őket (bővebben lásd lentebb).
+*Egy járműnek az [[#Utasításlista másolása|utasításait másolhatod]] másik jármű utasításlistájára, ha ugyanaz a járműfajtájuk, vagy [[#Megosztott utasításlista|megosztott utasításlista]] szerint is járathatod őket (bővebben lásd lentebb).
 
 
 Az ''Új cél'' gomb '''opciói''':
@@ -47,7 +47,7 @@ Lásd még a [[hu/Gyors új cél|Gyors új cél]] c. fejezetet az utasítások g
 
 ==="Töröl" gomb===
 * A ''"Töröl"'' gombbal törölhetjük a kijelölt utasítást.
-* Ha az ''"-- Utasításlista vége --"'' sort jelöltük ki, a "Töröl" gomb megnyomására az egész lista kiürül (a megosztott utasításlista ebből a szempontból máshogy működik, [[en/#Utasításlista megosztásának megszüntetése|lásd lentebb]]).
+* Ha az ''"-- Utasításlista vége --"'' sort jelöltük ki, a "Töröl" gomb megnyomására az egész lista kiürül (a megosztott utasításlista ebből a szempontból máshogy működik, [[#Utasításlista megosztásának megszüntetése|lásd lentebb]]).
 
 ==="Kihagy" gomb===
 Ha megnyomjuk a ''"Kihagy"'' gombot, a jármű átugorja az utasítást (pl. vonat félbehagyja a berakodást), és a következő utasítás teljesítését kezdi meg. Ha az utolsó utasítás teljesítése során nyomjuk meg, a jármű az első utasításba kezd.
@@ -146,7 +146,7 @@ A '''megosztott utasításlista''' azt teszi lehetővé, hogy ugyanazokat az uta
 #Most a két jármű ugyanazt az ütemtervet osztja, össze lettek kapcsolva: láthatod, hogy az előbb említett jármű utasításlistáján megjelentek az utasítások, és ''--Megosztott utasításlista vége--'' olvasható az utolsó sorban.
 Annyi járművet kapcsolsz össze így, ahányat csak akarsz, nincs korlátozás, de természetesen ugyanahhoz a járműfajtához kell hogy tartozzanak, mert azonos állomásokat fognak használni. 
 
-[[File:en/shared-orders.png|center|frame|Az utasításlista két jármű számára lett megosztva]]
+[[File:en/Shared-orders.png|center|frame|Az utasításlista két jármű számára lett megosztva]]
 
 ===Utasításlista megosztásának megszüntetése===
 Van, amikor úgy döntesz, hogy nem akarod, hogy egy jármű a megosztott utasításlista szerint járjon. Természetesen az utasításokat nem törölheted, mert ezzel a listán osztozó minden jármű utasítását törlöd. Ehelyett:
@@ -157,7 +157,7 @@ Van, amikor úgy döntesz, hogy nem akarod, hogy egy jármű a megosztott utasí
 Láthatod, hogy a jármű utasításlistája megmaradt, de újra az ''--Utasításlista vége--'' sor zárja. Az utasításlistán osztozó minden más járművekre ez a változás nem hat. Most már a többi járműtől függetlenül kezelheted a jármű utasításait.
 
 ===A megosztott utasításlistát használó járművek listája===
-Ha az [[File:en/SharedOrders.png]] ikonra kattintasz az utasításablak (vagy a menetrendablak) jobb alsó sarkában, azoknak a járműveknek a listája jelenik meg, melyek a járművel [[en/#Megosztott utasításlista|megosztott utasításlista]] szerint közlekednek. Az ikon csak akkor aktív, ha a jármű utasításlistán osztozik.
+Ha az [[File:en/SharedOrders.png]] ikonra kattintasz az utasításablak (vagy a menetrendablak) jobb alsó sarkában, azoknak a járműveknek a listája jelenik meg, melyek a járművel [[#Megosztott utasításlista|megosztott utasításlista]] szerint közlekednek. Az ikon csak akkor aktív, ha a jármű utasításlistán osztozik.
 [[File:en/SharedOrders-1.png|none|frame|A megosztott utasításlistát használó járművek listája]]
 
 ===Megjegyzések===

@@ -8,10 +8,10 @@ __FORCETOC__
 
 
 =====How many players can join an OpenTTD game?=====
-:* Up to 255 players can participate in a multiplayer game. You can only open up 15 companies though. Each player can either play his own company, join another company ([[en/cooperative gameplay]]) or watch a game ([[en/spectator mode]]).
+:* Up to 255 players can participate in a multiplayer game. You can only open up 15 companies though. Each player can either play his own company, join another company ([[en/Community/Play Style/Cooperative gameplay]]) or watch a game ([[en/Archive/Manual/Spectator mode]]).
 
 =====How do I start a multiplayer game?=====
-:* You can either do that through the [[en/multiplayer window]] or by using the following command line syntax:
+:* You can either do that through the [[en/Manual/Multiplayer]] or by using the following command line syntax:
 <pre>openttd -n IP[:port][#CompanyID]</pre>
 Example:
 <pre>openttd -n 192.168.0.1:3979#1</pre> would connect to 192.168.0.1 on port 3979 and joins company 1.
@@ -56,7 +56,7 @@ Increase the values until your users can connect normally. If you set them too l
 For larger maps, it is highly recommended to enable the ''pause_on_join'', as it eliminates the need to catch-up with the game after map downloading.
 
 =====I am having trouble with cheating. Help!=====
-:* There is a guide to shielding yourself from the worst elements of [[en/multiplayer cheating]]. Also, check the [[en/Community/Play Style/Multiplayer Rules]].
+:* There is a guide to shielding yourself from the worst elements of [[en/Community/Multiplayer cheating]]. Also, check the [[en/Community/Play Style/Multiplayer Rules]].
 
 =====Are there any rules?=====
 :* There are some rules, yes. You can see the article [[en/Community/Play Style/Multiplayer Rules]]. However, the servers are not run by the OpenTTD Team, and they have no control over them what-so-ever. As such if you have any problems you should contact the person who runs the server.

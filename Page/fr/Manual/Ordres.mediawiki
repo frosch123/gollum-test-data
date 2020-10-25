@@ -12,7 +12,7 @@ Vous pouvez donner des ordres à n'importe quel véhicule qui vous appartient. V
 
 *Cliquez sur le bouton ''Ordres'' (entouré en rouge sue l'image écran). Cela affichera la fenêtre d'ordres, qui affiche tous les ordres actuels du véhicule (aucun, dans notre exemple).<br/>[[File:en/Orders-2.png|frame|none|La fenêtre d'ordres]]
 
-*Cliquez sur ''[[en/#Aller à|Aller à]]'' puis sur la gare cible, sur la carte.
+*Cliquez sur ''[[#Aller à|Aller à]]'' puis sur la gare cible, sur la carte.
 
 *Cliquez sur l'ordre que vous venez de créer dans la liste pour le sélectionner, puis dites au véhicule ce qu'il devra faire à cette gare. C'est-à-dire, cliquez sur ''Chargement complet'' pour que le véhicule attende d'être rempli à cette gare.
 
@@ -30,7 +30,7 @@ Les boutons suivants apparaissent:
 C'est le moyen de diriger un véhicule vers un endroit particulier. Il insère un nouvel ordre avant l'ordre surligné ou, s'il n'y en a aucun de sélectionné, l'ajoute à la fin de la liste. Les cibles possibles pour aller à sont:
 *Vos propres gares, mais seulement celles où ce véhicule particulier est accepté. Vous ne pouvez donc pas donner à un bus l'ordre d'aller à un aéroport, si cet aéroport n'a pas de station de bus. Vous ne pouvez pas envoyer vos véhicules dans les gares concurrentes.
 *Les [[fr/Manual/Dépôts|dépôts]], si le paramètre [[fr/Archive/Manual/Settings/Options avancées/Véhicules#Permettre les ordres d'aller au dépôt|''Permettre les ordres d'aller au dépôt'']] est positionnée dans la fenêtre ''Configuration avancée/Véhicules''. Cela modifiera certains des autres boutons - voir Maintenance et Transformation ci-dessous.
-*Des véhicules du même type pour [[en/#Copier les ordres|copier les ordres]] ou pour créer des [[en/#Ordres partagés|ordres partagés]]. Voyez plus bas pour plus d'information.
+*Des véhicules du même type pour [[#Copier les ordres|copier les ordres]] ou pour créer des [[#Ordres partagés|ordres partagés]]. Voyez plus bas pour plus d'information.
 *Des [[fr/Manual/Points de contrôle|points de passage]]; vous pouvez envoyer un train à un point de passage particulier pour influencer son choix d'itinéraire, si la gare est trop loin et que le train se perd facilement. Une [[fr/Docks|bouée]] est un type de point de passage pour els bateaux voyageant sur de grandes distances.
 
 Le bouton ''Aller à'' a les '''options''' suivantes:
@@ -44,7 +44,7 @@ Voyez [[fr/Archive/Manual/Settings/Aller à rapide|Aller à rapide]] pour des ra
 ===Supprimer===
 Cela supprimera l'ordre surligné de la liste du véhicule, annulant effectivement l'opération à cette gare avec ce véhicule.
 
-Si la ligne "-- Fin des ordres --" était surlignée, alors toute la liste est supprimée quand le bouton est pressé. Notez que la ligne porte "-- Fin des ordres partagés --" et se comporte différemment, si l'ordre est partagé. Voyez [[en/#Ordres partagés|Ordres partagés]] pour plus de détail.
+Si la ligne "-- Fin des ordres --" était surlignée, alors toute la liste est supprimée quand le bouton est pressé. Notez que la ligne porte "-- Fin des ordres partagés --" et se comporte différemment, si l'ordre est partagé. Voyez [[#Ordres partagés|Ordres partagés]] pour plus de détail.
 
 ===Sauter===
 Cela fait sauter au train l'ordre qu'il est en train de réaliser et passer au suivant. Appuyer sur ''Sauter'' quand le véhicule est sur son dernier ordre le fera recommencer au premier.
@@ -156,7 +156,7 @@ Les '''ordres partagés''' vous permettent de partager un ensemble d'ordres entr
 #Maintenez appuyée la touche ''Ctrl'' et cliquez sur un autre véhicule qui a les ordres que vous voulez partager.
 #Maintenant, les deux véhicules partagent la même liste; ils sont liés ensemble. Vous verrez que les ordres de l'autre véhicule sont affichés et que la dernière ligne affiche maintenant ''--Fin des ordres partagés--''.
 
-[[File:en/shared-orders.png|center|frame|L'agenda des deux bus a été partagé]]
+[[File:en/Shared-orders.png|center|frame|L'agenda des deux bus a été partagé]]
 
 Vous pouvez lier ensemble autant de véhicules que vous voulez; il n'y a aucune limite. Mais bien entendu, vous ne pouvez lier ensemble que le même type de véhicules, car ils utiliseront les mêmes gares.
 ===== Copie des véhicules =====
@@ -174,7 +174,7 @@ Pour obtenir de la copie qu'elle ait des ordres partagés avec son modèle, il s
 Vous verrez que tous les ordres sont supprimés de la liste de ce véhicule, et que la dernière ligne affiche maintenant ''--Fin des ordres--'' de nouveau. Tous les autres véhicules partageant ces ordres ne sont pas affectés par ce changement. Vous pouvez désormais contrôler normalement l'agenda du véhicule ainsi modifié de façon indépendante des autres véhicules.
 
 ===Liste des véhicules partageant ces ordres===
-L'icône [[File:en/SharedOrders.png]] à droite de la fenêtre des ordres (ou fenêtre d'horaires) est le bouton Ordres partagés. Il affiche une liste de tous les véhicules qui ont les mêmes [[en/#Ordres partagés|ordres partagés]] que le véhicule courant. L'icône sera active uniquement si le véhicule partage des ordres.
+L'icône [[File:en/SharedOrders.png]] à droite de la fenêtre des ordres (ou fenêtre d'horaires) est le bouton Ordres partagés. Il affiche une liste de tous les véhicules qui ont les mêmes [[#Ordres partagés|ordres partagés]] que le véhicule courant. L'icône sera active uniquement si le véhicule partage des ordres.
 [[File:en/SharedOrders-1.png|none|frame|Liste des véhicules avec ordres partagés]]
 
 ===Notes===

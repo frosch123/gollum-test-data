@@ -7,8 +7,8 @@ L'alignement des sprites peut devenir une vraie plaie, surtout pour les ensemble
 == Utiliser les modèles pour pcx et les décalages ==
 
 Une solution pour simplifier le codage et réduire le temps passé à fixer les différents décalages est d'utiliser vraiment un modèle standard dans lequel les sprites sont arrangés dans le fichier image (pcx) puis toujours utilisés avec les mêmes décalages, en utilisant des 'modèles'. [[fr/Archive/Community/LisezMoi OpenGFX|OpenGFX]] utilise pour tous les trains un modèle commun qui fonctionne ainsi: Les graphismes d'une locomotive vont dans un fichier graphique séparé avec un modèle commun:
-[[File:en/template singletrain.png]] et les versions remplies avec les sprites mises dedans comme
-[[File:en/temperate asiastar 88.png]] ou [[File:en/monorail x2001 88.png]]
+[[File:en/Template singletrain.png]] et les versions remplies avec les sprites mises dedans comme
+[[File:en/Temperate asiastar 88.png]] ou [[File:en/Monorail x2001 88.png]]
 Faites bien attention que les véhicules sont arrangés de manière à ce que la vue montante est alignée sur le bas et la vue descendante sur le haut du sprite, en général l'arrière du véhicule touche le bord de la boîte bleue alors qu'à l'avant, nous pouvons laisser quelque espace pour les véhicules un peu plus courts. Des ajustements pour les véhicules très courts sont décrits plus loin.
 Alors, nous pouvons écrire les décalages de ces sprites ainsi:
 <pre>

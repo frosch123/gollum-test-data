@@ -1,6 +1,6 @@
 [[Translation:en/Manual/Server]]
 
-If you want to host [[en/multiplayer|multiplayer network games]], you need to set up an OpenTTD '''server''' on your computer. Skip to "Starting the server" if all players will be connected to your home network.
+If you want to host [[en/Manual/Multiplayer|multiplayer network games]], you need to set up an OpenTTD '''server''' on your computer. Skip to "Starting the server" if all players will be connected to your home network.
 == If you are using a firewall ==
 For your safety, do ''not'' disable your firewall entirely. Instead, configure it to allow UDP and TCP connections to port '''3979''' ("port opening"). If you want your server to be visible on the public [http://www.openttd.org/en/servers server list] as well (recommended), you will also need to open port '''3978''' to UDP connections only.
 == If you are connecting to the Internet through a router ==
@@ -35,7 +35,7 @@ Players connected to your home network should immediately see your server on the
 If some players are connecting via the public Internet, however, your server will only appear if you have chosen "Internet (advertise)" under "Connection" (there may be a delay of several minutes before it is visible). Otherwise, they will need to know your router's IP address, or your computer's if you aren't using a router. This can be obtained by visiting https://www.whatismyip.com/.
 
 ==Dedicated server==
-If you are expecting many players and aren't going to be using the computer running the server to play yourself, you can start OpenTTD as a [[en/dedicated server]] instead of the usual interactive graphical version.
+If you are expecting many players and aren't going to be using the computer running the server to play yourself, you can start OpenTTD as a [[en/Manual/Dedicated server]] instead of the usual interactive graphical version.
 
 If you run your server on ubuntu/debian and you want to automatically start/stop and save your game, check out the init.d scripts at https://bitbucket.org/frodus/openttd-init
 

@@ -4,7 +4,7 @@ This [[en/Archive/Manual/Settings/Advanced Settings|setting]] defines maximum nu
 
 == Description ==
 
-[[en/Manual/OpenTTD]] can automatically save the game every set period of time. Naturally, more saved games means much more disk space used. This [[en/Archive/Manual/Settings/Advanced Settings|setting]] limits the number of saved games.
+[[en/Manual/Main Page]] can automatically save the game every set period of time. Naturally, more saved games means much more disk space used. This [[en/Archive/Manual/Settings/Advanced Settings|setting]] limits the number of saved games.
 
 If all savegame slots are already used, older savegames will be overwritten (oldest first).
 
@@ -12,6 +12,6 @@ This setting is not used if [[en/Archive/Manual/Settings/Keep all autosaves]] is
 
 == Use ==
 
-The value is set to 16 by default. You can change it by using the following syntax in [[en/openttd.cfg]]:
+The value is set to 16 by default. You can change it by using the following syntax in [[en/Archive/Manual/Settings/Openttd.cfg]]:
 <pre>[patches]
 max_autosave_num = value</pre>

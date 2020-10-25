@@ -38,17 +38,17 @@ Wykryj i zgłoś użytkowanie z błędnym parametrem [[Template:Ambox#Article me
 ==Używanie==
 Prosty przykład użycia:
 <pre>
-{{en/ambox| text = Jakiś tekst.}}
+{{en/Ambox| text = Jakiś tekst.}}
 </pre>
-{{en/ambox| text = Jakiś tekst.}}
+{{en/Ambox| text = Jakiś tekst.}}
 
 LUB:
 <pre>
-{{en/ambox| type = content
+{{en/Ambox| type = content
 | text = Uwaga - Jakiś tekst.
 }}
 </pre>
-{{en/ambox| type = content | text = Uwaga - Jakiś tekst.}}
+{{en/Ambox| type = content | text = Uwaga - Jakiś tekst.}}
 
 == Dostępna lista parametrów==
 <pre>
@@ -66,35 +66,35 @@ LUB:
 Poniższe przykłady używają różnych parametrów '''type''' ''(typu)'', ale nie używają parametrów obrazu, dlatego używają domyślnych obrazów dla każdego typu.
 
 
-{{en/ambox| type  = delete
-| text  = type=<u>delete</u> – Błędne z usuwaniem, takie jak {{en/s|zniesienie/Pl}}.
+{{en/Ambox| type  = delete
+| text  = type=<u>delete</u> – Błędne z usuwaniem, takie jak {{en/S|zniesienie/Pl}}.
 }}
-{{en/ambox| type  = content
-| text  = type=<u>content</u> – Niedokładności z treścią, takie jak {{en/s|uwaga/Pl}}.
+{{en/Ambox| type  = content
+| text  = type=<u>content</u> – Niedokładności z treścią, takie jak {{en/S|uwaga/Pl}}.
 }}
-{{en/ambox| type  = style
-| text  = type=<u>style</u> – Niewłaściwe ze stylem, takie jak {{en/s|czyszczenie/Pl}}.
+{{en/Ambox| type  = style
+| text  = type=<u>style</u> – Niewłaściwe ze stylem, takie jak {{en/S|czyszczenie/Pl}}.
 }}
-{{en/ambox| type  = notice
-| text  = type=<u>notice</u> – Powiadomienia o artykułach, takie jak {{en/s|bieżące/Pl}}.
+{{en/Ambox| type  = notice
+| text  = type=<u>notice</u> – Powiadomienia o artykułach, takie jak {{en/S|bieżące/Pl}}.
 }}
-{{en/ambox| type  = move
-| text  = type=<u>move</u> – Scalanie, dzielenie i transwiki, takie jak {{en/s|split}}.
+{{en/Ambox| type  = move
+| text  = type=<u>move</u> – Scalanie, dzielenie i transwiki, takie jak {{en/S|split}}.
 }}
-{{en/ambox| type  = protected
-| text  = type=<u>protected</u> – Informacje o ochronie, takie jak {{en/s|Historical}}.
+{{en/Ambox| type  = protected
+| text  = type=<u>protected</u> – Informacje o ochronie, takie jak {{en/S|Historical}}.
 }}
 
 === Inne obrazy ===
 
 Domyślne obrazy pokazane powyżej są głównie dla wygody. W wielu przypadkach bardziej odpowiednie jest użycie bardziej szczegółowych obrazów. W tym przykładzie użyto parametru '''image''' ''(obraz)'' , aby określić obraz inny niż domyślny.
 
-<pre>{{en/ambox| type  = notice
+<pre>{{en/Ambox| type  = notice
 | image = OpenttdManual.png
 | text  = Cokolwiek Cokolwiek Cokolwiek 
 }}</pre>
 
-{{en/ambox| type  = notice
+{{en/Ambox| type  = notice
 | image = OpenttdManual.png
 | text  = Cokolwiek Cokolwiek Cokolwiek 
 }}

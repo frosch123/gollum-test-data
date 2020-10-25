@@ -50,7 +50,7 @@ Alternative base graphics sets are usually distributed as [https://www.wikipedia
 
 
 TTD base graphics sets are not tarred. If you have one flavour of TTD base graphics set installed, there's absolutely no point in installing the other flavour of TTD base graphics set, as they will look the same.
-If you haven't installed a TTD base graphics set while installing OpenTTD and you want to install it afterwards, just copy the files listed [[en/#TTD base graphics|above]] (the ones that are not distributed with OpenTTD that is) to the OpenTTD /data directory.
+If you haven't installed a TTD base graphics set while installing OpenTTD and you want to install it afterwards, just copy the files listed [[#TTD base graphics|above]] (the ones that are not distributed with OpenTTD that is) to the OpenTTD /data directory.
 
 
 ==Switching between base graphics sets==
@@ -64,7 +64,7 @@ One way to switch between base graphics sets is using the ingame feature.
 
 ===Editing the config file===
 Another way to switch between base graphics sets is to edit the config file.
-* Locate and open [[en/openttd.cfg]] using your favourite plain text editor.
+* Locate and open [[en/Archive/Manual/Settings/Openttd.cfg]] using your favourite plain text editor.
 * Locate the [misc] section and add the following (or edit the existing) line to the end of that section:
  graphicsset = name_of_base_graphics_set
 : The name of the base graphics set is listed in it's obg-file and may or may not be identical to the obg's file name.
@@ -78,7 +78,7 @@ The third way to select a certain base graphics set is starting the game from th
 
 
 ==Creating a base graphics set==
-Apart from the actual drawing and aligning of [[en/sprites]], creating a base graphics set that can be used by OpenTTD is fairly easy. A base graphics set consist of the following files:
+Apart from the actual drawing and aligning of [[en/Sprites]], creating a base graphics set that can be used by OpenTTD is fairly easy. A base graphics set consist of the following files:
 * Exactly 6 .grf files;
 * Exactly 1 .obg file.
 It's useful to pack all files of a base graphics set as a tar file. This keeps all files from one base graphics set neatly together. OpenTTD can read tar files, so there's no need for the user to extract it.

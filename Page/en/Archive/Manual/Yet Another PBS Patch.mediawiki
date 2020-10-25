@@ -18,7 +18,7 @@ YAPP implements a realistic signalling system, similar to [[en/Archive/Community
 This paragraph covers the basic features of YAPP, and should get you going on using it.
 
 ====The Signals====
-[[File:en/Yapp signalgui.png|frame|right|Two new signal types in the [[en/signal GUI]].]]YAPP adds two new signal types to the game. These signals enable trains to reserve a path through a signal block before entering the block. If another train wants to enter the block, and succeeds in reserving a path through the block, both trains can use one signal block at the same time.
+[[File:en/Yapp signalgui.png|frame|right|Two new signal types in the [[en/Manual/Signal GUI]].]]YAPP adds two new signal types to the game. These signals enable trains to reserve a path through a signal block before entering the block. If another train wants to enter the block, and succeeds in reserving a path through the block, both trains can use one signal block at the same time.
 
 
 As mentioned before, there are two signal types, available in the [[en/Manual/Signal GUI]]. The first type is the basic path signal. There are two things you should know about this signal:
@@ -54,7 +54,7 @@ an already existing signal.
 
 
 There are a few more patch options which are not available through the Configure Patches windows. What these options are, and how to edit them is covered below
-under [[en/#Advanced patch options|Advanced patch options]].
+under [[#Advanced patch options|Advanced patch options]].
 
 ===Basic Examples===
 Below are some example track layouts which use the path signals. Advanced track layouts that are not recommended for beginners are on a [[en/Community/Junctionary/Advanced path signal layouts|separate page]].
@@ -72,8 +72,8 @@ This is the basic layout of a single track line that can be used in both directi
 [[File:en/Yapp single track.png|frame|center|Basic single track building block. The outward signals should be moved far enough away from the junction tiles that waiting trains do not block the junctions.]]
 
 ===Advanced patch options===
-YAPP has several options not accessible through the patch settings window. These are saved in your [[en/openttd.cfg]] and
-can be changed either with a text editor or through the in-game [[en/console]] using the "patch" command. Changes made in openttd.cfg '''will not''' affect
+YAPP has several options not accessible through the patch settings window. These are saved in your [[en/Archive/Manual/Settings/Openttd.cfg]] and
+can be changed either with a text editor or through the in-game [[en/Manual/Console]] using the "patch" command. Changes made in openttd.cfg '''will not''' affect
 already started savegames, you have to use the console to change the values of a running game.
 
 {| border = "1"

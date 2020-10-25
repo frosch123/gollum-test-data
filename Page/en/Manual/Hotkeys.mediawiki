@@ -1,13 +1,13 @@
 [[Translation:en/Manual/Hotkeys]]
 {{en/Table of contents}}
 
-{{en/merge|Hidden features|discuss=Talk:Hotkeys|date=20 September 2018}}
+{{en/Merge|Hidden features|discuss=Talk:Hotkeys|date=20 September 2018}}
 
 This is a list of '''keyboard shortcuts''' used in the game.  Their function can change depending on what window you have open.  These are based on the latest source, hence they might not work on older versions of OpenTTD.  See also the [[en/Archive/Manual/Hotkeys (most used)|most used shortcuts]] and [[en/Manual/Hidden features|undocumented key combinations]].
 
 Some parts of the key handling in OpenTTD assumes a US Qwerty layout. If a hotkey doesn't work as documented, look on an image of the US keyboard to figure out where the key with the mentioned symbol is located on your keyboard. If that still doesn't work, you can customize the hotkey to use a different key sequence by editing <code>hotkeys.cfg</code> (you will still need to mind that OpenTTD assumes a US Qwerty layout and may need to write a different symbol in <code>hotkeys.cfg</code> than what the key produces in other programs on your computer).
 
-{{en/note|1=
+{{en/Note|1=
 Note: <code>hotkeys.cfg</code> is in the same root folder as your save files, ie <code>~/.openttd/hotkeys.cfg</code> or <code>~/Documents/OpenTTD/hotkeys.cfg</code>
 }}
 
@@ -24,9 +24,9 @@ Note: <code>hotkeys.cfg</code> is in the same root folder as your save files, ie
 |-
 |colspan="2"|[[en/Tab]]||style="text-align: left;"|Fast forward (Hold button to fast forward, release to return to normal)
 |-
-|~||§||style="text-align: left;"|Display command line [[en/console]]. 
+|~||§||style="text-align: left;"|Display command line [[en/Manual/Console]]. 
 |-
-|colspan="2"|Ctrl + Enter||style="text-align: left;"|Resize the [[en/console]] to entire window and back.
+|colspan="2"|Ctrl + Enter||style="text-align: left;"|Resize the [[en/Manual/Console]] to entire window and back.
 |-
 |colspan="2"|Shift + Click||style="text-align: left;"|Instead of building, a cost estimate window pops up.
 |- 
@@ -102,7 +102,7 @@ Note: <code>hotkeys.cfg</code> is in the same root folder as your save files, ie
 |-
 |colspan="2"|V||style="text-align: left;"|Opens extra viewport
 |-
-|colspan="2"|A||style="text-align: left;"|Toggles [[en/autorail]] mode
+|colspan="2"|A||style="text-align: left;"|Toggles [[en/Archive/Manual/Autorail]] mode
 |-
 |colspan="2"|Z||style="text-align: left;"|Zooms in to the mouse pointer's location
 |-
@@ -141,21 +141,21 @@ Note: <code>hotkeys.cfg</code> is in the same root folder as your save files, ie
 |-
 |6||Demolish tool
 |-
-|7||Build [[en/depots|depot]]
+|7||Build [[en/Manual/Depots|depot]]
 |-
-|8||Build [[en/waypoints|waypoint]]
+|8||Build [[en/Manual/Waypoints|waypoint]]
 |-
 |9||Build [[en/Manual/Railway station|railway station]]
 |-
-|S||Place [[en/signals]]
+|S||Place [[en/Manual/Signals]]
 |-
-|B||Build [[en/bridges|bridge]]
+|B||Build [[en/Manual/Bridges|bridge]]
 |-
-|T||Build [[en/tunnels|tunnel]]
+|T||Build [[en/Manual/Tunnels|tunnel]]
 |-
 |R||Toggle removal tool for rails, stations etc.
 |-
-|C||[[en/convert rail|Convert to this type of rail]]
+|C||[[en/Manual/Convert rail|Convert to this type of rail]]
 |-
 |colspan="2" style="border-left:1px solid white; border-right:1px solid white" |<!-- Road construction ---->
 |- style="background:#efefef;"
@@ -169,7 +169,7 @@ Note: <code>hotkeys.cfg</code> is in the same root folder as your save files, ie
 |-
 |4||Demolish tool
 |-
-|5||Build road [[en/depots|depot]]
+|5||Build road [[en/Manual/Depots|depot]]
 |-
 |6||Build [[en/Manual/Loading Bays#Bus Loading Bay|bus station]]
 |-
@@ -227,7 +227,7 @@ Note: <code>hotkeys.cfg</code> is in the same root folder as your save files, ie
 |-
 |I||Open trees window
 |-
-|O||Place [[en/sign]]
+|O||Place [[en/Manual/Sign]]
 |-
 |colspan="2" style="border-left:1px solid white; border-right:1px solid white" |<!-- Bridge construction -->
 |- style="background:#efefef;"
@@ -261,7 +261,7 @@ Note: <code>hotkeys.cfg</code> is in the same root folder as your save files, ie
 |-
 |F9||Plant trees
 |-
-|F10||Place [[en/sign]]
+|F10||Place [[en/Manual/Sign]]
 |-
 |F11||Jukebox
 |-

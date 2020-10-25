@@ -3,7 +3,7 @@
 Une '''carte des altitudes''' est une image informatique qui peut être utilisée pour générer des cartes en fonction de la luminosité des pixels (Voyez [https://www.wikipedia.org/wiki/Heightmap wikipedia]).
 
 ==Utiliser des cartes d'altitude==
-Une carte d'altitude peut être considérée comme une image en niveaux de gris où le blanc le plus lumineux (le plus proche de '''#FFFFFF''') est considérée comme le point le plus élevé de la carte, et le noir le plus profond (le plus proche de '''#000000''') est considéré comme le point le plus bas. Voyez [[en/#Table des niveaux de gris|la table des niveaux de gris]] ci-dessous pour une information plus détaillée.
+Une carte d'altitude peut être considérée comme une image en niveaux de gris où le blanc le plus lumineux (le plus proche de '''#FFFFFF''') est considérée comme le point le plus élevé de la carte, et le noir le plus profond (le plus proche de '''#000000''') est considéré comme le point le plus bas. Voyez [[#Table des niveaux de gris|la table des niveaux de gris]] ci-dessous pour une information plus détaillée.
 
 Dans une conversion image vers carte 1:1, un pixel du fichier image représente un coin de 4 cases. Donc, si vous voulez abaisser/élever une case complète, vous devez rendre plus clairs ou sombres les pixels 2x2 l'entourant.
 

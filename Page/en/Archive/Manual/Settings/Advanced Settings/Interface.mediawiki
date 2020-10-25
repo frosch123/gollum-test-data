@@ -1,8 +1,8 @@
 [[Translation:en/Archive/Manual/Settings/Advanced Settings/Interface]]
-{{en/outdated|Setting have been substantially re-organised since this last had a major update}} 
+{{en/Outdated|Setting have been substantially re-organised since this last had a major update}} 
 {{en/Advanced Settings}}
 ==Advanced Settings window: Interface section==
-The Interface section allows you to set various options related to the game's interface. The purpose of the available settings is explained below. For each setting, the respective variable from the [[en/openttd.cfg|config file]] is listed with its possible values.{{en/-right}}
+The Interface section allows you to set various options related to the game's interface. The purpose of the available settings is explained below. For each setting, the respective variable from the [[en/Archive/Manual/Settings/Openttd.cfg|config file]] is listed with its possible values.{{en/-right}}
 {| align="center" style="margin:0;"
 |- valign="top"
 |style="padding: 0; border: 0; background: transparent;"|__TOC__
@@ -10,7 +10,7 @@ The Interface section allows you to set various options related to the game's in
 |}
 
 ===<u>Display options</u>===
-[[File:en/settings interface displayoptions.png|frame|center|Interface: Display options (OpenTTD 1.3.1)]]
+[[File:en/Settings interface displayoptions.png|frame|center|Interface: Display options (OpenTTD 1.3.1)]]
 ====Use the [long] date format for savegame names====
 {{en/Feature|0.7|float=right|text=(since 0.7.0)}}
 Allows you to choose between three types of date notation for the name of savegames. 
@@ -31,7 +31,7 @@ Show a tooltip which indicates length, area and/or height when using various bui
 {{en/-}}
 ====Use loading indicators====
 {{en/Feature|0.6|float=right|text=(since 0.6.0)}}
-This function will display [[en/loading indicators]] above vehicles, which displays the amount of cargo in a vehicle when loading/unloading in percents.
+This function will display [[en/Archive/Manual/Loading indicators]] above vehicles, which displays the amount of cargo in a vehicle when loading/unloading in percents.
 :''Possible Settings:'' <span style="color:red">'''Off'''</span>, <span style="color:#00693E">'''Own company'''</span> or <span style="color:#00693E">'''All companies'''</span>
 :''In Openttd.cfg config file:'' ([gui] loading_indicators = <0-2>)
 {{en/-}}
@@ -64,10 +64,10 @@ Sets the main colour of the minimap to green, dark green or violet.
 ----
 
 ===<u>Interaction</u>===
-[[File:en/settings interface interaction.png|frame|center|Interface Interaction settings (OpenTTD 1.3.1)]]
+[[File:en/Settings interface interaction.png|frame|center|Interface Interaction settings (OpenTTD 1.3.1)]]
 ====Window snap radius====
 {{en/Feature|Old|float=right|text=(since 0.3.5)}}
-Radius in pixels in which a window being dragged will [[en/window snap radius|automatically snap]] to the edge of another window or the edge of the screen.
+Radius in pixels in which a window being dragged will [[en/Archive/Manual/Settings/Window snap radius|automatically snap]] to the edge of another window or the edge of the screen.
 :''Possible Settings:'' <span style="color:red">'''disabled'''</span> or <span style="color:#00693E">'''1'''</span> to <span style="color:#00693E">'''32px'''</span>
 :''In Openttd.cfg config file:'' ([gui] window_snap_radius = <num_val>)
 {{en/-}}
@@ -91,7 +91,7 @@ With this option enabled, chat messages will only be sent to team members instea
 {{en/-}}
 ====Pan window when mouse is at the edge====
 {{en/Feature|Old|float=right|text=(since 0.2.0)}}
-When the mouse is at the edge of the window the view will [[en/autoscroll|scroll]].
+When the mouse is at the edge of the window the view will [[en/Archive/Manual/Settings/Autoscroll|scroll]].
 :''Possible Settings:'' <span style="color:green">'''On'''</span> or <span style="color:red">'''Off'''</span>
 :''In Openttd.cfg config file:'' ([gui] autoscroll = <true|false>)
 {{en/-}}
@@ -128,21 +128,21 @@ Sets the sensitivity of the scrollwheel.
 {{en/-}}
 ----
 ===<u>Sound Effects</u>===
-[[File:en/settings interface soundeffects.png|frame|center|Interface: Sound Effects settings (OpenTTD 1.3.1)]]
+[[File:en/Settings interface soundeffects.png|frame|center|Interface: Sound Effects settings (OpenTTD 1.3.1)]]
 
 ===<u>News and Messages</u>===
-[[File:en/settings interface news.png|frame|center|Interface: News and Message settings (OpenTTD 1.3.1)]]
+[[File:en/Settings interface news.png|frame|center|Interface: News and Message settings (OpenTTD 1.3.1)]]
 
-[[File:en/settings interface general.png|frame|center|Interface: General settings (OpenTTD 1.3.1)]]
+[[File:en/Settings interface general.png|frame|center|Interface: General settings (OpenTTD 1.3.1)]]
 ===Show finances window at the end of the year===
 {{en/Feature|Old|float=right|text=(since 0.2.0)}}
-Whether or not the [[en/show finances at end of year|finances window]] is shown at the end of the year.
+Whether or not the [[en/Archive/Manual/Settings/Show finances at end of year|finances window]] is shown at the end of the year.
 :''Possible Settings:'' <span style="color:green">'''On'''</span> or <span style="color:red">'''Off'''</span>
 :''In Openttd.cfg config file:'' ([gui] show_finances = <true|false>)
 {{en/-}}
 ===Duration of error message===
 {{en/Feature|Old|float=right|text=(since 0.3.2)}}
-Amount of seconds [[en/error message duration|error messages]] are shown for.
+Amount of seconds [[en/Archive/Manual/Settings/Error message duration|error messages]] are shown for.
 :''Possible Settings:'' <span style="color:red">'''0'''</span> to <span style="color:#00693E">'''20'''</span>
 :''In Openttd.cfg config file:'' ([gui] errmsg_duration = <num_val>)
 {{en/-}}
@@ -153,13 +153,13 @@ Amount of seconds [[en/error message duration|error messages]] are shown for.
 {{en/-}}
 ===Position of the main toolbar===
 {{en/Feature|Old|float=right|text=(since 0.3.4)}}
-[[en/toolbar position|Location of the toolbar]] containing all construction tools.
+[[en/Archive/Manual/Settings/Toolbar position|Location of the toolbar]] containing all construction tools.
 :''Possible Settings:'' <span style="color:#00693E">'''Left'''</span>, <span style="color:#00693E">'''Centre'''</span> or <span style="color:#00693E">'''Right'''</span>
 :''In Openttd.cfg config file:'' ([gui] toolbar_pos = <0-2>)
 {{en/-}}
 ===Position of statusbar===
 {{en/Feature|1.1|float=right|text=(since 1.1.0)}}
-[[en/statusbar position|Location of the statusbar]].
+[[en/Statusbar position|Location of the statusbar]].
 :''Possible Settings:'' <span style="color:#00693E">'''Left'''</span>, <span style="color:#00693E">'''Centre'''</span> or <span style="color:#00693E">'''Right'''</span>
 :''In Openttd.cfg config file:'' ([gui] statusbar_pos = <0-2>)
 {{en/-}}
@@ -171,7 +171,7 @@ Enabling this option will automatically set the game in pause mode when starting
 {{en/-}}
 ===Use the advanced vehicle list===
 {{en/Feature|0.6|float=right|text=(since 0.6.0)}}
-The [[en/advanced vehicle list]] allows to place vehicles in groups and perform certain actions on groups, such as replace vehicles and sending to depot.
+The [[en/Advanced vehicle list]] allows to place vehicles in groups and perform certain actions on groups, such as replace vehicles and sending to depot.
 :''Possible Settings:'' <span style="color:red">'''Off'''</span>, <span style="color:#00693E">'''Own company'''</span> or <span style="color:#00693E">'''All companies'''</span>
 :''In Openttd.cfg config file:'' ([gui] advanced_vehicle_list = <0-2>)
 {{en/-}}
@@ -213,7 +213,7 @@ Keeps for instance the bus station construction window open after placing a new 
 {{en/-}}
 ===Coloured news appears in===
 {{en/Feature|Old|float=right|text=(since 0.3.2)}}
-The year in which [[en/colored newspaper|coloured newspapers]] appear.
+The year in which [[en/Archive/Manual/Settings/Coloured newspaper|coloured newspapers]] appear.
 This option has been moved from [[en/Archive/Manual/Settings/Configuring patches/Economy#Coloured news appears in|Economy section]] in 0.7.0.
 :''Possible Settings:'' <span style="color:#00693E">'''0'''</span> to <span style="color:#00693E">'''5,000,000'''</span>
 :''In Openttd.cfg config file:'' ([gui] colored_news_year = <year>)
@@ -223,13 +223,13 @@ This option has been moved from [[en/Archive/Manual/Settings/Configuring patches
 ===<u>Display options</u>===
 ====Show vehicle speed in status bar====
 {{en/Feature|-1.0|float=right|text=(since 0.2.0 to 1.0.5)}}
-Whether or not the vehicle [[en/show vehicle speed|speed is shown]] in the vehicle window status bar, where you can stop or start the vehicle.
+Whether or not the vehicle [[en/Archive/Manual/Settings/Show vehicle speed|speed is shown]] in the vehicle window status bar, where you can stop or start the vehicle.
 :''Possible Settings:'' <span style="color:green">'''On'''</span> or <span style="color:red">'''Off'''</span>
 :''In Openttd.cfg config file:'' ([gui] vehicle_speed = <true|false>)
 {{en/-}}
 ====Always show long date in the status bar====
 {{en/Feature|-1.0|float=right|text=(since 0.2.0 to 1.0.5)}}
-Shows the [[en/long date in status bar|full date]] at the bottom of the screen all the time rather than just in pause mode.
+Shows the [[en/Archive/Manual/Settings/Long date in status bar|full date]] at the bottom of the screen all the time rather than just in pause mode.
 :''Possible Settings:'' <span style="color:green">'''On'''</span> or <span style="color:red">'''Off'''</span>
 :''In Openttd.cfg config file:'' ([gui] status_long_date = <true|false>)
 {{en/-}}

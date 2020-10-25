@@ -46,7 +46,7 @@ Benché il segnale a una via si presenti graficamente con un solo semaforo, tecn
 Il segnale a una via era già stato introdotto in ''[[en/Archive/OpenTTD/Transport Tycoon Deluxe]]''.
 
 ==Segnali di percorso==
-[[File:it/Yapp signalgui.png|frame|right|I due nuovi tipi di segnali nella [[en/signal GUI]].]]
+[[File:it/Yapp signalgui.png|frame|right|I due nuovi tipi di segnali nella [[en/Manual/Signal GUI]].]]
 
 C'è un nuovo tipo di segnale, detto "segnale di percorso", per ovviare alle limitazioni imposte dai segnali di blocco originali di ''Transport Tycoon''. Questi permettono ai treni di riservarsi un percorso attraverso una sezione fino al segnale seguente, prima di entrare nella sezione stessa. Se un altro convoglio vuole entrare nella sezione, e può riservarsi un suo percorso, il segnale ne autorizza il transito, anche se nella sezione c'è già un altro treno, cosa impossibile da fare con i tradizionali segnali di blocco e/o i presegnali. Risulta così possibile costruire una rete ferroviaria sofisticata.
 
@@ -123,7 +123,7 @@ Because the front of every signal is defined as a safe waiting position, you wou
 -->
 
 Questo è un altro esempio di cosa puoi fare con i segnali di percorso. Funziona molto meglio che usare i pre-segnali perché puoi lasciare due treni contemporaneamente alla stazione e condividere lo stesso deposito (non c'è modo di farlo con i pre-segnali, a causa della condivisione dei blocchi). In questo caso ci sono segnali di percorso unidirezionali per i treni che escono dalla stazione, e un segnale di percorso semplice per i treni che escono dal deposito.
-[[File:en/pathsignal station exit.png|frame|center|Stazione a due uscite. Si noti che i segnali davanti al depositi non sono necessari, poiché i depositi hanno segnali integrati. Tuttavia, i segnali di percorso di fronte a depositi come questi danno ai treni che lo lasciano la priorità di deposito sui treni che vogliono entrarvi.]]
+[[File:en/Pathsignal station exit.png|frame|center|Stazione a due uscite. Si noti che i segnali davanti al depositi non sono necessari, poiché i depositi hanno segnali integrati. Tuttavia, i segnali di percorso di fronte a depositi come questi danno ai treni che lo lasciano la priorità di deposito sui treni che vogliono entrarvi.]]
 
 Anche se dalla schermata sopra non si evince, non è necessario posizionare alcun segnale tra l'ingresso della stazione con diramazioni e la giunzione (effettivamente un "segnale di uscita" nella configurazione tradizionale del segnale di blocco) se il segnale dei binari di ingresso, di fronte alla giunzione, è segnale di percorso.
 
@@ -139,7 +139,7 @@ Although the screen shot above does not show, it is unnecessary to place any sig
 -->
 
 ==== Impostazioni avanzate ====
-[[File:en/op av perc riser binario.png|frame|right|opzione avanzata per evidenziare il binario riservato]]
+[[File:it/Op av perc riser binario.png|frame|right|opzione avanzata per evidenziare il binario riservato]]
 Tramite le [[en/Archive/Manual/Settings/Advanced Settings]] c'è la possibilità di evidenziare i binari riservati. Questa opzione è utile per controllare i tuoi raccordi con segnali di percorso poiché ti evidenzierà quali percorsi i treni si riserveranno attraversando un raccordo.
 
 Le altre due opzioni si trovano in Impostazioni avanzate\Compagnia e controllano il comportamento dell'interfaccia Selezione segnale. Con la prima, "Tipo di segnale predefinito", è possibile impostare il gruppo di segnali predefinito gia predisposto all'apertura dell'interfaccia segnale, offre tre opzioni di scelta: segnali di blocco, segnali di percorso, segnali di percorso a senso unico. Di default è impostato su segnali di percorso ovviamente. La seconda impostazione è "Tipi di segnale fra cui alternare" che offre la possibilità, con l'accoppiata CTRL+click sinistro mouse e cliccando sul segnale, di ciclare trai diversi tipi di segnale. anche questo offre tre opzioni possibilità di cliclare tra i soli segnali di blocco, solo segnali di percorso oppure tutti i tipi di segnali. Di default è impostato su "Tutti".
@@ -225,7 +225,7 @@ Pre-signals function as block signals, but additionally decide on which colour t
 
 ==== Pre-segnale di entrata blocco====
 <div style="float:left">
-[[File:en/entry presignal.png|60px]]
+[[File:en/Entry presignal.png|60px]]
 </div>
 Un pre-segnale di entrata controlla l'aspetto di tutti i pre-segnali di uscita presenti sul blocco dopo di lui. Se è presente almeno un pre-segnale di uscita verde, anche il pre-segnale di ingresso sarà verde. Se tutti i pre-segnali di uscita del blocco successivo sono rossi, anche il pre-segnale di ingresso è rosso. Ciò impedisce ai treni di entrare nel blocco e di ostruirlo finché non è disponibile un'uscita. 
 
@@ -245,7 +245,7 @@ If there are no signals designated as exits on the block directly behind the ent
 
 ==== Pre-segnale di uscita blocco ====
 <div style="float:left">
-[[File:en/exit presignal.png|60px]]
+[[File:en/Exit presignal.png|60px]]
 </div>
 I pre-segnali di uscita sono ciò che un pre-segnale di entrata cerca per decidere quale aspetto mostrare, perché si comporta come un segnale di blocco, ma "indica" al segnale di ingresso se il suo blocco binari è libero o occupato.
 
@@ -262,9 +262,9 @@ To summarize: in the direction of travel you first have an entry pre-signal, the
 -->
 {{en/-}}
 ==== Segnale combinato ====
-[[File:en/station with pre-signals2.png|frame|Stazione con 1 ingresso pre-segnale, 2 segnali combinati e 4 segnali di uscita]]
+[[File:en/Station with pre-signals2.png|frame|Stazione con 1 ingresso pre-segnale, 2 segnali combinati e 4 segnali di uscita]]
 <div style="float:left">
-[[File:en/combo presignal.png|60px]]
+[[File:en/Combo presignal.png|60px]]
 </div>
 C'è un terzo tipo di pre-segnale chiamato segnale combinato e agisce semplicemente come un segnale di ingresso e di uscita. Combinano efficacemente molti segnali di uscita in un unico segnale, copiando efficacemente il loro effetto lungo la catena. Qualsiasi segnale di uscita verde farà diventare verdi tutti i segnali combinati su tutta la linea, che verranno successivamente trasmessi al segnale di ingresso blocco originario. Ciò consente di costruire grandi "alberi" di pre-segnali che coprono diversi blocchi, come mostrato nell'immagine a destra.
 

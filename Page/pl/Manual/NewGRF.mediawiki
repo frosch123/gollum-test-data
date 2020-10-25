@@ -14,7 +14,7 @@ Aby znaleźć odpowiedzi na typowe problemy z plikami GRF w OpenTTD, odwiedź [[
 Najpopularniejszą i najłatwiejszą drogą zdobycia NewGRFów jest użycie znajdującej się w grze opcji pobierania [[pl/Manual/Dodatki Online|Dodatków Online]]. Stamtąd można pobrać większość oficjalnie dostępnych NewGRFów.
 
 === Inne źródła ===
-Dodatki NewGRF można także pobrać z innych źródeł. Wersje rozwojowe (developerskie) nowych dodatków NewGRF można znaleźć na [http://www.tt-forums.net/viewforum.php?f=26 <nowiki>forum developerskim NewGRF</nowiki>]. Przydatnym źródłem NewGRF może być także [[en/Community/NewGRF/NewGRF List|lista NewGRFów]] opublikowana na naszej wiki. Zawiera ona linki zarówno do wielu NewGRFów jak i innych repozytoriów, gdzie mogą być one przechowywane.
+Dodatki NewGRF można także pobrać z innych źródeł. Wersje rozwojowe (developerskie) nowych dodatków NewGRF można znaleźć na [http://www.tt-forums.net/viewforum.php?f=26 <nowiki>forum developerskim NewGRF</nowiki>]. Przydatnym źródłem NewGRF może być także [[en/Community/NewGRF/Main Page|lista NewGRFów]] opublikowana na naszej wiki. Zawiera ona linki zarówno do wielu NewGRFów jak i innych repozytoriów, gdzie mogą być one przechowywane.
 
 === Instalacja Manualna ===
 Aby skorzystać z NewGRFów pobranych z innych stron, a które nie były dostępne w [[pl/Manual/Dodatki Online|Dodatkach Online]], musisz je najpierw zainstalować manualnie w odpowiednim miejscu. Dodatek NewGRF jest zwykle pojedynczym plikiem z rozszerzeniem .grf, np. "grvts.grf". Aby zainstalować NewGRFa wykonaj poniższe czynności:
@@ -34,13 +34,13 @@ Aby skorzystać z NewGRFów pobranych z innych stron, a które nie były dostęp
 Interfejs pomiędzy OpenTTD 1.0 i 1.1 zmienił się, więc oba będą tu pokazane: 
 === Wersja 1.1 i późniejsze ===
 2.   Wybierz NewGRF z 'inactive NewGRFs files' (nieaktywnych plików NewGRF) i naciśnij "Add" (Dodaj) lub po prostu dwukrotnie naciśnij na niego. Na małych ekranach wygląda to tak:
-[[File:en/newgrf addnew.png|NewGRF settings window (small)|center]]
+[[File:en/Newgrf addnew.png|NewGRF settings window (small)|center]]
 a na większych tak:
-[[File:en/newgrf config big.png|NewGRF settings window (big)|center]]
+[[File:en/Newgrf config big.png|NewGRF settings window (big)|center]]
 3.   Skonfiguruj (w razie potrzeby) parametry aktywnego newgrf'a: Wybierz go z listy "Active newgrf files" ("Aktywne pliki newgrf") i kliknij przycisk "Parametr". Wynik może wyglądać podobnie do tego:
-[[File:en/newgrf parameter.png|NewGRF parameter window|center]]
+[[File:en/Newgrf parameter.png|NewGRF parameter window|center]]
 4.   Opcjonalnie można wybrać zapisanie wyboru newgrfów (wraz z ich parametrami konfiguracyjnymi) lub załadować taką listę korzystając z możliwości zapisania schematu NewGRFów:
-[[File:en/newgrf preset.png|Saving a NewGRF preset|center]]
+[[File:en/Newgrf preset.png|Saving a NewGRF preset|center]]
 
 === Wersja 1.0 i wcześniejsze ===
 2.   Klkinij "Add" ("Dodaj").
@@ -82,7 +82,7 @@ OpenTTD pozwala na jednoczesne wybranie aż 59 różnych dodatków NewGRF podcza
 Wiele NewGRF-ów będzie ostrzegać, jeśli dokonasz nieprawidłowych kombinacji i być może wyłączą się same. Zaleca się sprawdzenie konfiguracji NewGRF po uruchomieniu nowej gry (poprzez menu Narzędzia). Jeśli pojawią się problemy, zalecane jest opuszczenie gry, usunięcie problemów i rozpoczęcie nowej gry. W przypadku gier losowych można zregenerować tę samą mapę przy użyciu tego samego losowego numeru i zachowaniu pozostałych ustawień identycznych w generatorze map. Po uruchomieniu gry można uzyskać jej losowy materiał siewny wpisując <code>getseed</code> w [[pl/Manual/Konsola|konsoli]].
 
 == Grafika - 8- vs 24-bitowa ==
-<!--{{Feature|1.2}}-->{{pl/zgodne Wersje|1.2}}
+<!--{{Feature|1.2}}-->{{pl/Zgodne Wersje|1.2}}
 Od OpenTTD 1.2.0, NewGRF-y mogą zawierać nie tylko standardową grafikę 8-bitową, ale również 32-bitową. Dzięki tej zmianie, NewGRFy są w rzeczywistości jedynym sposobem na dostarczenie grafiki 32 bitowej do OpenTTD. Od tego momentu NewGRFs mogą również dostarczać inną grafikę dla różnych poziomów przybliżenia.
 
 Nie jest możliwe użycie grafiki 32-bitowej w starym formacie png/tar z OpenTTD 1.2.0 i nowszym. Nie wszystkie istniejące wcześniej grafiki 32-bitowe są już dostępne w formacie NewGRF. Zobacz [[pl/Community/NewGRF/Rozgrywka z grafiką 32 bpp|listę 32-bitowych grafik NewGRF]], dostępnych dla OpenTTD 1.2.0 i nowszych.

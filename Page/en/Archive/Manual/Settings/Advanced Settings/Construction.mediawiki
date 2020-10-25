@@ -1,9 +1,9 @@
 [[Translation:en/Archive/Manual/Settings/Advanced Settings/Construction]]
-{{en/outdated|Setting have been substantially re-organised since this last had a major update}} 
+{{en/Outdated|Setting have been substantially re-organised since this last had a major update}} 
 {{en/Advanced Settings}}
 
 ==Advanced Settings window: Construction section==
-The Construction section allows you to set various options related to construction and terraforming. The purpose of the available settings is explained below. For each setting, the respective variable from the [[en/openttd.cfg|config file]] is listed with it's possible values.
+The Construction section allows you to set various options related to construction and terraforming. The purpose of the available settings is explained below. For each setting, the respective variable from the [[en/Archive/Manual/Settings/Openttd.cfg|config file]] is listed with it's possible values.
 {| align="center"
 |- valign="top"
 |__TOC__
@@ -19,7 +19,7 @@ Whether signals are shown on the [[en/Archive/Manual/Settings/Show signals on th
 {{en/-}}
 ====Enable the signal GUI====
 {{en/Feature|0.6|align="right"|text=(since 0.6.0)}}
-With this patch enabled, clicking on the [[en/Manual/Signals|signal]] button will result in the opening of an extra signal toolbar, which allows you to pick certain types of signal (semaphore, light signal, [[en/presignals]]) directly without having to cycle trough them using the CTRL-key. Using CTRL to select your signal types is still possible when this patch is enabled.
+With this patch enabled, clicking on the [[en/Manual/Signals|signal]] button will result in the opening of an extra signal toolbar, which allows you to pick certain types of signal (semaphore, light signal, [[en/Manual/Signals]]) directly without having to cycle trough them using the CTRL-key. Using CTRL to select your signal types is still possible when this patch is enabled.
 :''Possible Settings:'' <span style="color:green">'''On'''</span> or <span style="color:red">'''Off'''</span>
 :''In Openttd.cfg config file:'' ([gui] enable_signal_gui = <true|false>) 
 {{en/-}}
@@ -37,7 +37,7 @@ Makes semaphores (old style signaling) the default placed signals until the year
 {{en/-}}
 ====Signal type to build by default====
 {{en/Feature|0.7|align="right"|text=(since 0.7.0)}}
-Set the type of signal to be built by default when using the signal tool. Choose between [[en/Manual/Signals#Block_signals|block signals]], [[en/Manual/Signals#Path_Signals|path signals]] and one-way path signals. If the [[en/#Enable the signal GUI|signal GUI]] is enabled, this type of signal is selected by default.
+Set the type of signal to be built by default when using the signal tool. Choose between [[en/Manual/Signals#Block_signals|block signals]], [[en/Manual/Signals#Path_Signals|path signals]] and one-way path signals. If the [[#Enable the signal GUI|signal GUI]] is enabled, this type of signal is selected by default.
 :''Possible Settings:'' <span style="color:#00693E">'''Block signals'''</span>, <span style="color:#00693E">'''Path signals'''</span> or <span style="color:#00693E">'''One-way path signals'''</span>
 :''In Openttd.cfg config file:'' ([gui] default_signal_type = <0-2>)
 {{en/-}}
@@ -82,7 +82,7 @@ Allows you to specify longest tunnel length, as above.  No previous similar feat
 {{en/Feature|1.0|align="right"|text=(since 1.0.0)}}
 Airports may have an expiry year, similar to engines. Expired airports can't be built any more. With this option enabled, airports never expire.
 
-This option has been renamed from [[en/#Always allow small airports|Always allow small airports]] in r16614.
+This option has been renamed from [[#Always allow small airports|Always allow small airports]] in r16614.
 :''Possible Settings:'' <span style="color:green">'''On'''</span> or <span style="color:red">'''Off'''</span>
 :''In Openttd.cfg config file:'' ([station] never_expire_airports = <true|false>)
 {{en/-}}
@@ -106,7 +106,7 @@ With this option, you can enable/disable the in-game generation of trees.
 {{en/Feature|-0.7|align="right"|text=(since 0.3.2 to 0.7.5)}}
 Small airports are [[en/Archive/Manual/Settings/Always allow small airport|not removed]] from the airport construction list when large airports appear. With this option disabled, you no longer can build small airports as soon as larger airports become available.
 
-This option has been renamed to [[en/#Airports never expire|Airports never expire]] in r16614.
+This option has been renamed to [[#Airports never expire|Airports never expire]] in r16614.
 :''Possible Settings:'' <span style="color:green">'''On'''</span> or <span style="color:red">'''Off'''</span>
 :''In Openttd.cfg config file:'' ([station] always_small_airport = <true|false>) 
 {{en/-}}

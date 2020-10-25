@@ -4,7 +4,7 @@
 {{en/Feature|1.1}}
 
 == Activating newgrf developer tools ==
-OpenTTD r19723 and following introduced a number of debugging tools for (New)GRF developers. In order to make them accessible the debugging tools need to be activated via a hidden setting, best via [[en/console]]:
+OpenTTD r19723 and following introduced a number of debugging tools for (New)GRF developers. In order to make them accessible the debugging tools need to be activated via a hidden setting, best via [[en/Manual/Console]]:
 <pre>
 set newgrf_developer_tools 1
 </pre>
@@ -24,12 +24,12 @@ A 'picker' is included to help you find the sprite you need.  This will list the
 
 '''Accessing the sprite alignment tool'''
 
-[[File:en/sprite aligner 1.png]]
+[[File:en/Sprite aligner 1.png]]
 
 
 '''The sprite alignment tool in use'''
 
-[[File:en/sprite aligner 2.png]]
+[[File:en/Sprite aligner 2.png]]
 
 == Variable / Property inspection tool ==
 A debug tool for variables and properties is provided.  A wide range of variables and properties are included for each type of object.  Some properties are not shown as they are already obvious in either in-game (for example, vehicle name), or they are obvious in the nfo for action 0.  
@@ -38,13 +38,13 @@ The industry debug window includes the values of the 16 persistent storage locat
 
 The debug view for variables can be accessed via the tile area information tool for all newgrfs which don't deal with vehicles (note the debug icon in the upper right of the area information window):
 
-[[File:en/variable debug1.png]]
+[[File:en/Variable debug1.png]]
 
-[[File:en/variable debug2.png]]
+[[File:en/Variable debug2.png]]
 
 
 The debug for vehicle variables is accessed directly via the vehicle window.
-[[File:en/vehicle debug.png]]
+[[File:en/Vehicle debug.png]]
 
 == Bounding Box viewer ==
 Accessible via the shortcut Ctrl+B or near the sprite alignment tool the bounding box view shows the bounding box of all sprites drawn on the map.

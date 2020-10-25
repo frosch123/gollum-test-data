@@ -10,7 +10,7 @@ Ta strona dokumentuje, w jaki sposób program powinien prezentować się użytko
 Ponieważ OpenTTD jest grą z lat 90., powinien również mieć taki wygląd.
 
 {|
-| [[File:en/train depot example.png|frame|Przykład depotu kolejowego]] || [[File:en/manufacturer offer.png|frame|Przykład okna wiadomości]]
+| [[File:en/Train depot example.png|frame|Przykład depotu kolejowego]] || [[File:en/Manufacturer offer.png|frame|Przykład okna wiadomości]]
 |}
 
 Ponieważ w tym czasie na ekranie było mało miejsca, okna powinny być zwarte. Każdy element okna służy do wyświetlania informacji lub udostępniania
@@ -33,7 +33,7 @@ Jeśli użytkownik może zmienić rozmiar okna , w prawym dolnym rogu powinna zn
 '''[[pl/Archive/Source/OpenTTDDevBlackBook/Window/TextEdit|Pole edycji tekstu]]''' służy do edytowania/wpisywania tekstu przez użytkowników. Aby edytować zawartość pola edycji, użytkownik musi kliknąć pole edycji, aby ustawić fokus. Skoncentrowane pola edycyjne mają migającą kreskę. Gdy użytkownik korzysta z edycji pól edycji, dobry pomysł jest kliknięcie przycisku/panelu itp. W celu cofnięcia ostrości pól edycji, ponieważ nie można użyć klawiszy skrótu, gdy pole edycji jest [[pl/Archive/Source/OpenTTDDevBlackBook/Window/WidgetFocus#Focus poziomy|globalnie fokusowany]]. W jednym oknie może znajdować się maksymalnie jedno pole edycyjne.
 
 
-<!--{{Todo|panels, buttons}}-->{{pl/do poprawki|panele, przyciski}}
+<!--{{Todo|panels, buttons}}-->{{pl/Do poprawki|panele, przyciski}}
 
 == Fokus ''(Focus)'' ==
 W niektórych oknach warto domyślnie ustawić fokus na polu edycyjnym, ale jest z tym problem: gdy pola edycyjne są fokusowe, nie można używać żadnych klawiszy skrótu, ponieważ wszystkie dane z klawiatury są wysyłane do pola edycyjnego.

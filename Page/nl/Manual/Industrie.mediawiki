@@ -15,7 +15,7 @@ De tweede waarde is het percentage van de geproduceerde hoeveelheid dat is gelev
 
 De groei van de productie van de primaire bedrijfstakken is afhankelijk van het percentage van de vervoerde lading. Hoe meer je vervoert, hoe sneller het groeit in het lange termijn gemiddelde.
 
-Details over de berekening van de genoemde getallen kan gevonden worden in de [[nl/spelmechanisme|spelmechanisme]] pagina.
+Details over de berekening van de genoemde getallen kan gevonden worden in de [[nl/Manual/Game Mechanics/Spelmechanisme|spelmechanisme]] pagina.
 
 __TOC__
 
@@ -38,12 +38,12 @@ __TOC__
   |[[nl/Manual/Base Set/Cargos/Kolen|Kolen]]
   |- style="background: #E5FFE5"
   |[[nl/Manual/Base Set/Industries/Fabriek|Fabriek]]
-  |[[nl/vee|Vee]],<br/>[[nl/Manual/Base Set/Cargos/Graan|Graan]],<br/>[[nl/Manual/Base Set/Cargos/Staal|Staal]]
+  |[[nl/Manual/Base Set/Cargos/Vee|Vee]],<br/>[[nl/Manual/Base Set/Cargos/Graan|Graan]],<br/>[[nl/Manual/Base Set/Cargos/Staal|Staal]]
   |[[nl/Manual/Base Set/Cargos/Goederen|Goederen]]
   |-
   |[[nl/Manual/Base Set/Industries/Boerderij|Boerderij]]
   |Niets
-  |[[nl/Manual/Base Set/Cargos/Graan|Graan]],<br/>[[nl/vee|Vee]]
+  |[[nl/Manual/Base Set/Cargos/Graan|Graan]],<br/>[[nl/Manual/Base Set/Cargos/Vee|Vee]]
   |- style="background: #E5FFE5"
   |[[nl/Manual/Base Set/Industries/Bos|Bos]]
   |Niets
@@ -95,12 +95,12 @@ __TOC__
   |[[nl/Manual/Base Set/Cargos/Kolen|Kolen]]
   |- style="background: #dfefef"
   |[[nl/Manual/Base Set/Industries/Voedselfabriek|Voedselfabriek]]
-  |[[nl/vee|Vee]],<br/>[[nl/tarwe|Tarwe]]
+  |[[nl/Manual/Base Set/Cargos/Vee|Vee]],<br/>[[nl/Manual/Base Set/Cargos/Tarwe|Tarwe]]
   |[[nl/Manual/Base Set/Cargos/Voedsel|Voedsel]]
   |-
   |[[nl/Manual/Base Set/Industries/Boerderij|Boerderij]]
   |Niets
-  |[[nl/Manual/Base Set/Cargos/Tarwe|Tarwe]],<br/>[[nl/vee|Vee]]
+  |[[nl/Manual/Base Set/Cargos/Tarwe|Tarwe]],<br/>[[nl/Manual/Base Set/Cargos/Vee|Vee]]
   |- style="background: #dfefef"
   |[[nl/Manual/Base Set/Industries/Bos|Bos]]
   |Niets
@@ -255,7 +255,7 @@ Normaal gesproken kun je alleen de volgende [[:Category:nl/Industrie|industrieë
 {| {{en/Wikitable}}
 !colspan=4 style="background:#ccffcc"|Gematigd
 |-
-| rowspan=7 valign="top"| [[File:en/industriegematigd.png]]
+| rowspan=7 valign="top"| [[File:nl/Industriegematigd.png]]
 | style="background:#efefef" | '''Naam'''
 | style="background:#efefef" | <span style="white-space:nowrap">'''Kosten''' (zonder inflatie)</span>
 | style="background:#efefef" | '''Opmerkingen'''
@@ -270,7 +270,7 @@ Normaal gesproken kun je alleen de volgende [[:Category:nl/Industrie|industrieë
 |-
 | [[nl/Manual/Base Set/Industries/Fabriek|Fabriek]]
 | £609.375<span style="white-space:nowrap"> </span>(€1.218.750)
-| Accepteert [[nl/Manual/Base Set/Cargos/Graan|graan]] en [[nl/vee|vee]] uit [[nl/boerderij|boerderijen]] en [[nl/Manual/Base Set/Cargos/Staal|staal]] uit [[nl/Manual/Base Set/Industries/Hoogoven|hoogovens]]. Produceert [[nl/Manual/Base Set/Cargos/Goederen|Goederen]].
+| Accepteert [[nl/Manual/Base Set/Cargos/Graan|graan]] en [[nl/Manual/Base Set/Cargos/Vee|vee]] uit [[nl/Manual/Base Set/Industries/Boerderij|boerderijen]] en [[nl/Manual/Base Set/Cargos/Staal|staal]] uit [[nl/Manual/Base Set/Industries/Hoogoven|hoogovens]]. Produceert [[nl/Manual/Base Set/Cargos/Goederen|Goederen]].
 |-
 | [[nl/Manual/Base Set/Industries/Hoogoven|Hoogoven]]
 | £629.882<span style="white-space:nowrap"> </span>(€1.259.764)
@@ -286,7 +286,7 @@ Normaal gesproken kun je alleen de volgende [[:Category:nl/Industrie|industrieë
 |-
 !colspan=4 style="background:#ccccff"|Subarctisch
 |-
-| rowspan=7 valign="top"| [[File:en/industriearctisch.png]]
+| rowspan=7 valign="top"| [[File:nl/Industriearctisch.png]]
 | style="background:#efefef" | '''Naam'''
 | style="background:#efefef" | <span style="white-space:nowrap">'''Kosten''' (zonder inflatie)</span>
 | style="background:#efefef" | '''Opmerkingen'''
@@ -309,15 +309,15 @@ Normaal gesproken kun je alleen de volgende [[:Category:nl/Industrie|industrieë
 |-
 | [[nl/Manual/Base Set/Industries/Papierfabriek|Papierfabriek]]
 | £665.039<span style="white-space:nowrap"> </span>(€1.330.078)
-| Accepteert [[nl/hout|hout]] en produceert [[nl/Manual/Base Set/Cargos/Papier|papier]].
+| Accepteert [[nl/Manual/Base Set/Cargos/Hout|hout]] en produceert [[nl/Manual/Base Set/Cargos/Papier|papier]].
 |-
 | [[nl/Manual/Base Set/Industries/Voedselfabriek|Voedselfabriek]]
 | £603.515<span style="white-space:nowrap"> </span>(€1.307.030)
-| Accepteert [[nl/vee|vee]] en [[nl/tarwe|tarwe]] en produceert [[nl/voedsel|voedsel]].
+| Accepteert [[nl/Manual/Base Set/Cargos/Vee|vee]] en [[nl/Manual/Base Set/Cargos/Tarwe|tarwe]] en produceert [[nl/Manual/Base Set/Cargos/Voedsel|voedsel]].
 |-
 !colspan=4 style="background:#ffffcc"|Tropisch
 |-
-| rowspan=7 valign="top"| [[File:en/industrietropisch.png]]
+| rowspan=7 valign="top"| [[File:nl/Industrietropisch.png]]
 | style="background:#efefef" | '''Naam'''
 | style="background:#efefef" | <span style="white-space:nowrap">'''Kosten''' (zonder inflatie)</span>
 | style="background:#efefef" | '''Opmerkingen'''
@@ -328,11 +328,11 @@ Normaal gesproken kun je alleen de volgende [[:Category:nl/Industrie|industrieë
 |-
 | [[nl/Manual/Base Set/Industries/Fabriek|Fabriek]]
 | £609.375<span style="white-space:nowrap"> </span>(€1.218.750)
-| Accepteert [[nl/Manual/Base Set/Cargos/Rubber|rubber]] uit [[nl/Manual/Base Set/Industries/Rubberplantage|rubberplantages]], [[nl/Manual/Base Set/Cargos/Kopererts|kopererts]] uit [[nl/Manual/Base Set/Industries/Kopermijn|kopermijnen]] en [[nl/hout|hout]] uit [[nl/houtzagerij|houtzagerijen]]. Produceert [[nl/Manual/Base Set/Cargos/Goederen|goederen]].
+| Accepteert [[nl/Manual/Base Set/Cargos/Rubber|rubber]] uit [[nl/Manual/Base Set/Industries/Rubberplantage|rubberplantages]], [[nl/Manual/Base Set/Cargos/Kopererts|kopererts]] uit [[nl/Manual/Base Set/Industries/Kopermijn|kopermijnen]] en [[nl/Manual/Base Set/Cargos/Hout|hout]] uit [[nl/Manual/Base Set/Industries/Houtzagerij|houtzagerijen]]. Produceert [[nl/Manual/Base Set/Cargos/Goederen|goederen]].
 |-
 | [[nl/Manual/Base Set/Industries/Houtzagerij|Houtzagerij]]
 | £395.507<span style="white-space:nowrap"> </span>(€791.014)
-| Produceert [[nl/hout|hout]].
+| Produceert [[nl/Manual/Base Set/Cargos/Hout|hout]].
 |-
 | [[nl/Manual/Base Set/Industries/Olieraffinaderij|Olieraffinaderij]]
 | £714.843<span style="white-space:nowrap"> </span>(€1.429.686)
@@ -340,7 +340,7 @@ Normaal gesproken kun je alleen de volgende [[:Category:nl/Industrie|industrieë
 |-
 | [[nl/Manual/Base Set/Industries/Voedselfabriek|Voedselfabriek]]
 | £603.515<span style="white-space:nowrap"> </span>(€1.307.030)
-| Accepteert [[nl/Manual/Base Set/Cargos/Fruit|fruit]] uit [[nl/boomgaard|boomgaarden]] en [[nl/Manual/Base Set/Cargos/Mais|mais]] van [[nl/boerderij|boerderijen]] en produceert [[nl/voedsel|voedsel]].
+| Accepteert [[nl/Manual/Base Set/Cargos/Fruit|fruit]] uit [[nl/Manual/Base Set/Industries/Boomgaard|boomgaarden]] en [[nl/Manual/Base Set/Cargos/Mais|mais]] van [[nl/Manual/Base Set/Industries/Boerderij|boerderijen]] en produceert [[nl/Manual/Base Set/Cargos/Voedsel|voedsel]].
 |-
 | [[nl/Manual/Base Set/Industries/Watertoren|Watertoren]]
 | £336.914<span style="white-space:nowrap"> </span>(€673.828)
@@ -348,7 +348,7 @@ Normaal gesproken kun je alleen de volgende [[:Category:nl/Industrie|industrieë
 |-
 !colspan=4 style="background:#ff9999"|Speelgoedland
 |-
-| rowspan=5 valign="top"| [[File:en/industriespeelgoed.png]]
+| rowspan=5 valign="top"| [[File:nl/Industriespeelgoed.png]]
 | style="background:#efefef" | '''Naam'''
 | style="background:#efefef" | <span style="white-space:nowrap">'''Kosten''' (zonder inflatie)</span>
 | style="background:#efefef" | '''Opmerkingen'''
@@ -359,15 +359,15 @@ Normaal gesproken kun je alleen de volgende [[:Category:nl/Industrie|industrieë
 |-
 | [[nl/Manual/Base Set/Industries/Snoepfabriek|Snoepfabriek]]
 | £603.515<span style="white-space:nowrap"> </span>(€1.207.030)
-| Accepteert [[nl/Manual/Base Set/Cargos/Suiker|suiker]], [[nl/Manual/Base Set/Cargos/Toffee|toffee]] en [[nl/suikerspin|suikerspin]]. Produceert [[nl/Manual/Base Set/Cargos/Snoep|snoep]].
+| Accepteert [[nl/Manual/Base Set/Cargos/Suiker|suiker]], [[nl/Manual/Base Set/Cargos/Toffee|toffee]] en [[nl/Manual/Base Set/Cargos/Suikerspin|suikerspin]]. Produceert [[nl/Manual/Base Set/Cargos/Snoep|snoep]].
 |-
 | [[nl/Manual/Base Set/Industries/Speelgoedfabriek|Speelgoedfabriek]]
 | £477.539<span style="white-space:nowrap"> </span>(€955.078)
-| Accepteert [[nl/Manual/Base Set/Cargos/Plastic|plastic]] uit [[nl/Manual/Base Set/Industries/Plasticfonteinen|plasticfonteinen]] en [[nl/Manual/Base Set/Cargos/Batterijen|batterijen]] uit [[nl/Manual/Base Set/Industries/Batterijenboerderij|batterijenboerderijen]]. Produceert [[nl/speelgoed|speelgoed]].
+| Accepteert [[nl/Manual/Base Set/Cargos/Plastic|plastic]] uit [[nl/Manual/Base Set/Industries/Plasticfonteinen|plasticfonteinen]] en [[nl/Manual/Base Set/Cargos/Batterijen|batterijen]] uit [[nl/Manual/Base Set/Industries/Batterijenboerderij|batterijenboerderijen]]. Produceert [[nl/Manual/Base Set/Cargos/Speelgoed|speelgoed]].
 |-
 | [[nl/Manual/Base Set/Industries/Speelgoedwinkel|Speelgoedwinkel]]
 | £389.648<span style="white-space:nowrap"> </span>(€779.296)
-| Accepteert [[nl/speelgoed|speelgoed]] uit [[nl/speelgoedfabriek|speelgoedfabrieken]].
+| Accepteert [[nl/Manual/Base Set/Cargos/Speelgoed|speelgoed]] uit [[nl/Manual/Base Set/Industries/Speelgoedfabriek|speelgoedfabrieken]].
 |}
 
 Om in het spel nieuwe industrie te bouwen hou je de ''Industrieën'' werkbalk knop ingedrukt [[File:en/Manual html m4d6ba21e.png]] (zie ''Bedrijf en industrie informatie'' in de [[nl/Manual/Spelinterface|Spelinterface]] pagina) en selecteer ''Financier nieuwe industrie''.

@@ -1,4 +1,4 @@
-Players often see a train reversing (swapping ends) at a signal, as opposed to at a station or end of line. This is usually caused by a [[en/breakdown]], [[en/jam]], or [[en/deadlock]] on heavily-loaded track: 
+Players often see a train reversing (swapping ends) at a signal, as opposed to at a station or end of line. This is usually caused by a [[en/Archive/Manual/Breakdowns]], [[en/Jam]], or [[en/Manual/Deadlock]] on heavily-loaded track: 
 
 [[File:en/Reversing-at-signal.png]]
 
@@ -20,13 +20,13 @@ If you are playing with an older version of the game, you will need to disable r
 
 These control how many days a train will wait at each type of signal before reversing; a setting of 255 will disable reversing entirely. If you use only one type of signal, you only need to change one value. 
 
-If you want to disable reversing during a game, you must use the [[en/console]]. Type: 
+If you want to disable reversing during a game, you must use the [[en/Manual/Console]]. Type: 
 
 :''']''' set pf.wait_oneway_signal 255
 :''']''' set pf.wait_twoway_signal 255
 :''']''' set pf.wait_for_pbs_path 255
 
-You may then use the '''patch''' command, if you like, to write the changed settings to your [[en/openttd.cfg]] file, making them permanent. 
+You may then use the '''patch''' command, if you like, to write the changed settings to your [[en/Archive/Manual/Settings/Openttd.cfg]] file, making them permanent. 
 
 If you want to disable reversing permanantly in future games, you may do so by editing openttd.cfg directly. Change these lines: 
 
@@ -44,6 +44,6 @@ In the example given, there is no use for Train 14 to reverse; it cannot go anyw
 
 Train reversing is usually a symptom, not a cause, of disruptions in traffic flow. The train isn't going anywhere anyway; so reversing is basically harmless. You will probably have to clear the jam up ahead by hand anyway; and while you are doing so, it won't help to have more trains rushing into the jam. When you have cleared the way, you can re-reverse the reversed trains. 
 
-When you see reversed trains, you may well have a more serious issue than a temporary jam. For example, the default ''wait_for_pbs_path'' is 30 days; you probably don't want trains stuck for a month. Besides clearing any jam, you may well want to rebuild a [[en/junction]] or two that is forcing trains to wait while others pass. If the junctions look good, you may have trains that are not getting sufficient service; in which case you may want to add [[en/Manual/Building depots|depots]] to your layout or change your train [[en/Archive/Manual/Settings/Allow goto depot orders|orders]]. 
+When you see reversed trains, you may well have a more serious issue than a temporary jam. For example, the default ''wait_for_pbs_path'' is 30 days; you probably don't want trains stuck for a month. Besides clearing any jam, you may well want to rebuild a [[en/Community/Junctionary/Junction]] or two that is forcing trains to wait while others pass. If the junctions look good, you may have trains that are not getting sufficient service; in which case you may want to add [[en/Manual/Building depots|depots]] to your layout or change your train [[en/Archive/Manual/Settings/Allow goto depot orders|orders]]. 
 
 Reversed trains are an indication that something is wrong. You may want to let trains show you clearly when they're in trouble.

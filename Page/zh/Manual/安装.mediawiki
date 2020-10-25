@@ -8,7 +8,7 @@ __TOC__
 =简介=
 自从推出1.0.0版本开始，OpenTTD的安装程序变得更简单，游戏及图形都完全使用开放源代码，并不需要额外下载基本图形。如要下载OpenTTD，请[http://www.openttd.org/download-stable 点击这里]。
 
-在安装过程中，您需要下载一套[[en/base graphics|基本图形]]。
+在安装过程中，您需要下载一套[[en/Archive/Community/Base graphics|基本图形]]。
 
 现在有两套基本图形供玩家下载：
 * 使用[http://zh.wikipedia.org/wiki/开放源代码 开放源代码]的[[en/Archive/Community/OpenGFX Readme]]基本图形。如您没有运输大亨的游戏光盘，请下载此套基本图形。
@@ -40,11 +40,11 @@ __TOC__
 # 安装OpenTTD.
 # 取消勾选"Copy Game Graphics"来跳过需要运输大亨基本图形的安装程序。[[File:en/Installation 2 gfx.png|frame|center|不使用运输大亨档案的安装设置]]
 #Editing the config file
-::'''4.1.''' Locate [[en/openttd.cfg]]. It is located in:
+::'''4.1.''' Locate [[en/Archive/Manual/Settings/Openttd.cfg]]. It is located in:
  Win XP : "C:\Documents and Settings\<username>\My Documents\OpenTTD"
  Vista  : "C:\Users\<username>\Documents\OpenTTD"
  Linux  : "~/.openttd"
-:'''4.2.''' Open [[en/openttd.cfg]] using your favourite plain text editor.
+:'''4.2.''' Open [[en/Archive/Manual/Settings/Openttd.cfg]] using your favourite plain text editor.
 :'''4.3.''' Locate the [misc] section and add the following (or edit the existing) line to the end of that section:
  graphicsset = "OpenGFX"
 : The name of the 基本图形 set is listed in it's obg-file and may or may not be identical to the obg's file name.
@@ -59,7 +59,7 @@ __TOC__
 
 '''2''' Create an '''openttd/''' folder on your computer.
 
-'''3''' OpenTTD requires some files from运输大亨, see [[en/#Files from运输大亨|below]] for what files need to go where.
+'''3''' OpenTTD requires some files from运输大亨, see [[#Files from运输大亨|below]] for what files need to go where.
 
 '''4''' Get the OSX installer for OpenTTD from the [http://www.openttd.org/download-stable downloads page].
 [[File:en/Installation 1b osx.png|frame|center|1.1.2 for Mac OSX]]

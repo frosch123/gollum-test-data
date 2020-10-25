@@ -51,7 +51,7 @@ Une option est de surligner les voies réservées. Cette option est utile pour v
 Les deux autres options contrôlent comment l'outil de construction des signaux doit se comporter. Vous pouvez fixer le type de signal qui doit être construit par défaut en construisant un nouveau signal avec l'outil des signaux, et modifier quels types de signaux doivent faire partie du cycle en ctrl-cliquant sur un signal déjà existant.
 
 
-Il y a quelques autres options qui ne sont pas disponibles via la fenêtre de configuration avancée. Ce que sont ces options et comment les éditer est couvert ci-dessous sous [[en/#Options avancées de l'ajout|Options avancées de l'ajout]].
+Il y a quelques autres options qui ne sont pas disponibles via la fenêtre de configuration avancée. Ce que sont ces options et comment les éditer est couvert ci-dessous sous [[#Options avancées de l'ajout|Options avancées de l'ajout]].
 
 ===Exemples de base===
 Ci-dessous quelques exemples de modèle de voie qui utilisent les signaux de voie. Des modèles de voies avancés qui ne sont pas recommandés pour les débutants se trouvent sur une [[fr/Community/Junctionary/Signalisation du réseau ferroviaire/agencements complexes|page séparée]].
@@ -69,7 +69,7 @@ C'est le modèle de base d'une ligne à voie simple qui peut être utilisée dan
 [[File:en/Yapp single track.png|frame|center|Bloc de construction de base de voie unique. Les signaux vers l'extérieur devraient être mis assez loin des cases de la jonction pour que les trains qui y attendent ne bloquent pas celle-ci]]
 
 ===Options avancées de l'ajout===
-YAPP a plusieurs options non accessibles via la fenêtre de configuration avancée. Elles sont sauvegardée dans votre [[fr/openttd.cfg|openttd.cfg]] et peuvent être modifiées soit par un éditeur de texte, ou en cours de jeu via la [[fr/Manual/Console|console]] en utilisant la commande "patch". Les changement faits dans openttd.cfg '''n'affecteront pas''' les sauvegardes déjà démarrées; vous devrez utiliser la console pour modifier les valeurs d'une partie en cours.
+YAPP a plusieurs options non accessibles via la fenêtre de configuration avancée. Elles sont sauvegardée dans votre [[fr/Archive/Manual/Settings/Openttd.cfg|openttd.cfg]] et peuvent être modifiées soit par un éditeur de texte, ou en cours de jeu via la [[fr/Manual/Console|console]] en utilisant la commande "patch". Les changement faits dans openttd.cfg '''n'affecteront pas''' les sauvegardes déjà démarrées; vous devrez utiliser la console pour modifier les valeurs d'une partie en cours.
 
 {| border = "1"
 !colspan="3"| Options avancées

@@ -2,20 +2,20 @@
 
 [[File:en/Stations.png|right]]
 
-'''Stations''' zijn de belangrijkste onderdelen van elk netwerk. Daar wordt [[nl/vracht|vracht]] verzameld en geladen of gelost van [[nl/voertuigen|voertuigen]]. De vracht wordt opgehaald en geleverd aan de gebouwen in het [[nl/Manual/Handelsgebied|handelsgebied]] van het station. Elk station kost 50 pond/100 euro per maand om te onderhouden, ongeacht de grootte.
+'''Stations''' zijn de belangrijkste onderdelen van elk netwerk. Daar wordt [[nl/Manual/Vracht|vracht]] verzameld en geladen of gelost van [[nl/Manual/Voertuigen|voertuigen]]. De vracht wordt opgehaald en geleverd aan de gebouwen in het [[nl/Manual/Handelsgebied|handelsgebied]] van het station. Elk station kost 50 pond/100 euro per maand om te onderhouden, ongeacht de grootte.
 
 Elke soort transport heeft zijn eigen type station:
-*'''[[nl/Manual/Spoorwegstation|Spoorwegstations]]''' worden gebruikt bij [[nl/treinen|treinen]].  De basis station layout blijft hetzelfde voor alle [[en/types of railway|typen sporen]].
-*'''[[nl/Manual/Vliegveld|Vliegvelden]]''' zijn de laad- en lospunten voor vliegtuigen. Er zijn verschillende typen vliegvelden, inclusief [[nl/vliegveld#heliport|helipoorten]] voor [[:Category:en/Helicopters|helikopters]].
-*'''[[nl/Havens|Havens]]''' zijn voor [[nl/schepen|schepen]] om aan te leggen.
-*'''[[nl/Manual/Laadperrons|Laadperrons]]''' zijn voor [[nl/bussen|bussen]] en [[nl/wegvoertuigen|vrachtwagens]] om hun vracht te laden en te lossen.
+*'''[[nl/Manual/Spoorwegstation|Spoorwegstations]]''' worden gebruikt bij [[nl/Manual/Treinen|treinen]].  De basis station layout blijft hetzelfde voor alle [[en/Manual/Base Set/Types of railway|typen sporen]].
+*'''[[nl/Manual/Vliegveld|Vliegvelden]]''' zijn de laad- en lospunten voor vliegtuigen. Er zijn verschillende typen vliegvelden, inclusief [[nl/Manual/Vliegveld#heliport|helipoorten]] voor [[:Category:en/Helicopters|helikopters]].
+*'''[[nl/Havens|Havens]]''' zijn voor [[nl/Manual/Schepen|schepen]] om aan te leggen.
+*'''[[nl/Manual/Laadperrons|Laadperrons]]''' zijn voor [[nl/Manual/Base Set/Road Vehicles/Bussen|bussen]] en [[nl/Manual/Wegvoertuigen|vrachtwagens]] om hun vracht te laden en te lossen.
 
 ==Combineren van stations==
 Stations die je plaatst direct aaneengesloten bij een ander station (ongeacht de soort) zullen gecombineerd worden tot één station. Dat betekent dat zij hun vrachtacceptatie delen, de naam en de pool van vracht die wordt verzameld. Zij onderhouden uiteraard hun fysieke locatie en layout. Zo zal bijvoorbeeld een treinstation met een busstation er aan vast het busstation dezelfde pool van vracht delen met het treinstation, maar ook toestaan dat passagiers worden opgepikt en afgezet door bussen en treinen.
 
 Je kunt stations combineren om verschillende redenen:
 *Om een verladersdienst op te zetten waar een soort van transport vracht vervoert naar een andere soort, welke deze vracht verder vervoert naar zijn nieuwe bestemming.
-*Om het [[nl/handelsgebied|handelsgebied]] van een station uit te breiden (tot aan het niveau van de maximale stationsomvang [[nl/Archive/Manual/Settings/Geavanceerde instellingen|geavanceerde instellingen]]).
+*Om het [[nl/Manual/Handelsgebied|handelsgebied]] van een station uit te breiden (tot aan het niveau van de maximale stationsomvang [[nl/Archive/Manual/Settings/Geavanceerde instellingen|geavanceerde instellingen]]).
 *Om overbevolking op een station te verlichten met additionele terminals
 *Om onderhoudskosten te verminderen die met meerdere station ontstaan.
 
@@ -31,7 +31,7 @@ Gecombineerde stations hoeven niet fysiek tegen elkaar aan te liggen - tenminste
 Vanaf 0.7.0 kun je gecombineerde stations bouwen met Ctrl-linksklikken bij het plaatsen van het nieuwe station. Een pop-up venster zal je vragen of je dit nieuwe station wilt samenvoegen (en met welk station), of dat je een nieuw afzonderlijk station wilt bouwen. Stations die te ver weg liggen van de plek waar je op hebt geklikt zullen niet verschijnen in het venster. Je kunt ook de Ctrl-toets ingedrukt houden bij het uitbreiden van een station en de nieuwe uitbreiding is fysiek gekoppeld aan meervoudige stations.
 
 ===Verwijderen van gecombineerde stations===
-Je kunt een component van een gecombineerd station verwijderen door gebruik te maken van het ''bom/dynamiet'' gereedschap, waardoor alleen dat individuele station wordt verwijderd, en niet de gehele constructie. De uitzondering hierop vormen de treinstations, waar het met de bomgereedschap weghalen van een deel van het treinstation zal resulteren in het totaal verwijderen van het gecombineerde station (of niet, als er treinen in één van de stations staan). Om deze te verwijderen, moet je het "bouw station" gereedschap selecteren [[File:en/Build station.png]] en dan het "verwijder" gereedschap [[File:en/bulldozer.png]] waarmee je treinstations tegel voor tegel kunt verwijderen.
+Je kunt een component van een gecombineerd station verwijderen door gebruik te maken van het ''bom/dynamiet'' gereedschap, waardoor alleen dat individuele station wordt verwijderd, en niet de gehele constructie. De uitzondering hierop vormen de treinstations, waar het met de bomgereedschap weghalen van een deel van het treinstation zal resulteren in het totaal verwijderen van het gecombineerde station (of niet, als er treinen in één van de stations staan). Om deze te verwijderen, moet je het "bouw station" gereedschap selecteren [[File:en/Build station.png]] en dan het "verwijder" gereedschap [[File:nl/Bulldozer.png]] waarmee je treinstations tegel voor tegel kunt verwijderen.
 
 Wees voorzichtig bij het verwijderen van een deel van een gecombineerd station dat fysiek is gescheiden van de rest van het gecombineerde station als je het naderhand wilt vervangen. Simpel vervangen zal een nieuw, afzonderlijk station opleveren - om het gekoppeld te houden moet je of koppel-en-verwijder uit het gekoppelde station gebruiken, of vanaf versie OpenTTD 0.7.0-beta1 de Ctrl-linksklikken methode gebruiken zoals in de vorige sectie is aangegeven.
 

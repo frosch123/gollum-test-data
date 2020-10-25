@@ -1,5 +1,5 @@
 [[Translation:en/Community/NewGRF/FIRS]]
-{{en/outdated|FIRS 0.9 release changed multiple aspects of FIRS, notably behaviour of supplies for primary industries and the advice on gameplay strategy.  There are also many features in FIRS not documented here.}}
+{{en/Outdated|FIRS 0.9 release changed multiple aspects of FIRS, notably behaviour of supplies for primary industries and the advice on gameplay strategy.  There are also many features in FIRS not documented here.}}
 
 
 
@@ -43,7 +43,7 @@ Farming supplies are easier to generate and will have many more customers on the
 
 Manufacturing supplies help to boost production too, but they work in a different way. The [[en/Community/NewGRF/FIRS#Production Rates|Production Rates]] section below explains the behaviour of secondary industries receiving mixed cargos. For an industry that uses manufacturing supplies, manufacturing supplies must be one of the mixed cargos in order to qualify for the production boost. For example, the textile mill accepts wool, plant fibres and manufacturing supplies. Any combination of wool and plant fibres produces output at a rate of 5t per 8t delivered. Only if manufacturing supplies are delivered as well can the ideal 8t per 8t ratio be achieved.
 
-[[File:en/manufacturing supplies behaviour.png|frame|center|Production behaviour with manufacturing supplies.]]
+[[File:en/Manufacturing supplies behaviour.png|frame|center|Production behaviour with manufacturing supplies.]]
 
 To summarize:
 
@@ -60,7 +60,7 @@ Hence this is another case where 'supply orders' may be useful. See below.
 === Feeder Systems ===
 
 Farms are good candidates for setting up a feeder system. They provide raw materials like milk, and need farm supplies.
-[[File:en/farm feeder.png|frame|center|Feeder station to and from a number of farms.]]
+[[File:en/Farm feeder.png|frame|center|Feeder station to and from a number of farms.]]
 In this image, big trucks bring farm supplies to the feeder station and collect the milk from it.
 Small cargo trucks distribute the supplies to all the farms, and small milk trucks drive around along all the farms collecting milk, until fully loaded. Then they bring the milk to the big milk truck at the feeder station.
 
@@ -89,7 +89,7 @@ Fishing grounds are individually modest producers, but there are lots of them an
 
 Do keep an eye out for oil wells, dredging sites and fishing grounds close enough to shore to be within the catchment area of an on-shore station. Delivering engineering supplies becomes much easier in such cases as well. You can let the industry transport its production to shore in its own (invisible) vessels; you may not even need to provide a dock.
 
-[[File:en/no fleet needed.png|frame|center|No fleet needed here!]]
+[[File:en/No fleet needed.png|frame|center|No fleet needed here!]]
 
 === Production Rates ===
 
@@ -101,7 +101,7 @@ While there is some variation, to count as part of the same 'production cycle' g
 
 Note that this is another case where supply orders become useful; deliver 100 tonnes of coal and stone using a transfer order, then supply them to the lime kiln a tonne each a month, in just the same way as you might handle engineering supplies to a mine. Whenever your larger deliveries of coal or stone arrive, even if they don't appear within 30 days (approx.) of one another, they will still qualify for the increased production rate. Once the kiln gets very busy, and you can be certain both cargos will always arrive in the same 30 day period, you can cancel the supply order as no longer needed.
 
-[[File:en/sample production rates.png|frame|center|Sample production rates for a FIRS stockyard.]] 
+[[File:en/Sample production rates.png|frame|center|Sample production rates for a FIRS stockyard.]] 
 
 Some industries &ndash; including steel mills and aluminium plants &ndash; accept ''three'' different delivery types. This gives several combinations of possible production rates. For example, a steel mill produces 2t per 8t of iron ore delivered, 2t per 8t of coal and 4t per 8t of scrap metal. If you deliver coal and scrap metal, you'll get 2t + 4t = 6t of output per 8t delivered. Coal plus iron ore gives 2t + 2t = 4t per 8t delivered. If you deliver all three, you'll get 2t + 2t + 4t = 8t per 8t delivered. The older and less efficient iron works generates 2t per 8t of iron ore, and 2t per 8t of wood; so even if you deliver both within 30 days, you'll still only get an output rate of 4t per 8t.
 

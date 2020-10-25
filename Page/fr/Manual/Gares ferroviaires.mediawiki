@@ -11,7 +11,7 @@ Ces gares se situent en fin de ligne. Les trains entrent et sortent du même cô
 [[File:en/Terminus.png|center|none|frame|Gare simple de terminaux, celle de gauche utilise des [[fr/Manual/Signaux#Signaux_de_bloc|signaux de blocs]], celle de droite des [[fr/Manual/Signaux#Signaux_de_chemin|signaux de chemin]].]]
 
 ===Ro-Ro===
-Dans les gares Ro-Ro (Roll-On, Roll-Off), les trains entrent par un côté et ressortent par l'autre. Les trains entrant n'ont pas besoin d'attendre la sortie des trains à quai. C'est très bien pour les trafics moyens. Sans [[en/pre-signals|signaux dépendants]], ce n'est pas bon pour les gares à fort trafic (càd les gares desservant des usines), parce que quand tous les quais sont occupés, un train entrant attend au signal à double sens le plus proche de l'entrée, ce qui peut créer des embouteillages si le train à quai a un ordre de ''chargement complet'' et attend (longtemps) le chargement en provenance d'un autre train.
+Dans les gares Ro-Ro (Roll-On, Roll-Off), les trains entrent par un côté et ressortent par l'autre. Les trains entrant n'ont pas besoin d'attendre la sortie des trains à quai. C'est très bien pour les trafics moyens. Sans [[en/Manual/Signals|signaux dépendants]], ce n'est pas bon pour les gares à fort trafic (càd les gares desservant des usines), parce que quand tous les quais sont occupés, un train entrant attend au signal à double sens le plus proche de l'entrée, ce qui peut créer des embouteillages si le train à quai a un ordre de ''chargement complet'' et attend (longtemps) le chargement en provenance d'un autre train.
 [[File:en/Ro-ro1.png|center|none|frame|Gares Ro-Ro avec deux quais, celle du haut utilise des signaux de bloc, celle du bas des signaux de chemin. Vous pourriez ne pas mettre les deux tronçons de voie longs d'une case, en face de la gare du bas, mais ils font aussi office d'aire de freinage.]]
 
 ===Gare avec voie d'évitement===
@@ -43,7 +43,7 @@ Les gares avec des [[fr/Manual/Signaux#Pré-signaux d'entrée|pré-signaux]] fon
 
 ===Baie d'attente===
 Un bon moyen d'absorber une file d'attente de trains voulant entrer en gare est de créer un faisceau de [https://www.wikipedia.org/wiki/Fr:Évitement_(chemin_de_fer) voies d'évitements], qui formeront une baie d'attente. Si tous les quais d'une gare sont occupés, un train en arrivée s'engage vers la voie la plus proche de la baie d'attente. Dès qu'un quai se libère, un des trains en attente va s'y diriger. Vérifiez bien la longueur de la voie d'évitement afin que le train puisse tenir entre les deux signaux. Les pré-signaux sont optionnels ; ils sont utiles si votre baie d'attente est, elle aussi, complète !
-[[File:en/waitingbay.png|center|none|frame|Baie d'attente pour un train de 4 à 6 [https://www.wikipedia.org/wiki/Fr:Wagon wagons] ou [https://www.wikipedia.org/wiki/Fr:Voiture_de_chemin_de_fer trains voitures]]]
+[[File:en/Waitingbay.png|center|none|frame|Baie d'attente pour un train de 4 à 6 [https://www.wikipedia.org/wiki/Fr:Wagon wagons] ou [https://www.wikipedia.org/wiki/Fr:Voiture_de_chemin_de_fer trains voitures]]]
 
 ===Voie d'évitement en boucle===
 Au lieu d'utiliser des pré-signaux, vous pouvez construire une voie d'évitement en boucle. Quand un train entre en gare et voit que tous les signaux de bloc sont rouges (les quais sont tous occupés) sauf celui de la voie en boucle, il va s'engager dans celle-ci. Il va tourner et tourner jusqu'à ce qu'un quai se libère. Un problème avec ce système est que si un autre train arrive, il peut griller la place du premier train pendant que celui-ci est encore en milieu de boucle. Pensez à faire une boucle assez grande pour contenir au moins votre train le plus long.
@@ -62,11 +62,11 @@ Normalement, quand deux trains quittent une gare en même temps, un train doit a
 [[File:en/Longexit.png|center|none|frame|Gestion de sur-trafic avec des sorties longues]]
 
 ===Sorties longues, prioritisées===
-Faire sortir des [[en/mammoth trains|trains mammouth]] d'une station ro-ro en un temps opportun peut être un vrai défi. En utilisant des pré-signaux, vous pouvez prioritiser les voies de sorties pour permettre aux trains des voies les plus rapides de partir plus tôt. Dans l'image ci-dessous, une priorité plus basse est attribuée aux 5 sorties du haut (car elle bloqueront la voie de retour plus longtemps) et à la sortie tout en bas (car les trains accélèrent plus lentement dans des virages serrés). Ça fonctionne parce que les sorties à faible priorité attendront que le signal de sortie soit vert (càd quand un train passe le second signal sur la voie de retour). Les autres trains partiront normalement, càd quand un train aura dépassé le premier signal de bloc.
+Faire sortir des [[en/Archive/Manual/Settings/Mammoth trains|trains mammouth]] d'une station ro-ro en un temps opportun peut être un vrai défi. En utilisant des pré-signaux, vous pouvez prioritiser les voies de sorties pour permettre aux trains des voies les plus rapides de partir plus tôt. Dans l'image ci-dessous, une priorité plus basse est attribuée aux 5 sorties du haut (car elle bloqueront la voie de retour plus longtemps) et à la sortie tout en bas (car les trains accélèrent plus lentement dans des virages serrés). Ça fonctionne parce que les sorties à faible priorité attendront que le signal de sortie soit vert (càd quand un train passe le second signal sur la voie de retour). Les autres trains partiront normalement, càd quand un train aura dépassé le premier signal de bloc.
 [[File:en/Priorityexit.png|center|none|frame|Sortie longues avec signaux prioritisants]]
 
 ===Entrées longues===
-Si vous jouez avec les [[en/realistic acceleration|accélérations réalistes (en)]], les trains les plus rapides ralentiront un peu avant de s'arrêter dans une gare. Cela peut retarder l'entrée du train suivant. Ajouter une longueur de voie devant la gare peut alors être utile.
+Si vous jouez avec les [[en/Archive/Manual/Settings/Realistic acceleration|accélérations réalistes (en)]], les trains les plus rapides ralentiront un peu avant de s'arrêter dans une gare. Cela peut retarder l'entrée du train suivant. Ajouter une longueur de voie devant la gare peut alors être utile.
 [[File:en/Longentrance.png|center|none|frame|Entrée longue pour le patch d'accélération réaliste]]
 
 ===Double entrée===
@@ -115,10 +115,10 @@ Ce type de gare est un mixte entre le ro-ro et le terminus. Essentiellement, le 
 ====Terminus ro-ro géants====
 
 Les gares peuvent aussi être modifiées facilement pour ajuster le nombre de quais. Vous pouvez donc faire des gares gigantesques sur ce principe.
-[[File:en/epicterminus.png|center|thumb|550px|Terminus ro-ro à 10 quais]]
+[[File:en/Epicterminus.png|center|thumb|550px|Terminus ro-ro à 10 quais]]
 
 Ci-dessous, un concept un peu plus efficace, avec une voie pour les entrées et une pour les sorties. Elle prend moitié moins de place, sans pratiquement perdre en capacité. Il est important que le sens d'entrée et de sortie ne soit pas inversé, ou les trains devront grimper en même temps qu'ils sortent, ce qui bloquera le croisement pendant un temps inutilement long.
-[[File:en/sharedepicterminus.png|center|thumb|550px|Terminus ro-ro à 10 quais, allégé]]
+[[File:en/Sharedepicterminus.png|center|thumb|550px|Terminus ro-ro à 10 quais, allégé]]
 
 Ici des ponts au lieu de tunnels. 
 [[File:en/8 platform station.png|center|none|frame|Un terminus ro-ro à haute capacité]]

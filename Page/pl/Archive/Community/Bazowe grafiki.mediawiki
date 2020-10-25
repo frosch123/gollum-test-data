@@ -50,7 +50,7 @@ Alternatywne podstawowe zestawy graficzne są zwykle dystrybuowane jako [https:/
 
 
 Podstawowe zestawy graficzne TTD nie są tarowane. Jeśli masz zainstalowany jeden zestaw podstawowego zestawu graficznego TTD, absolutnie nie ma sensu instalować drugiego zestawu podstawowego zestawu graficznego TTD, ponieważ będą one wyglądały tak samo.
-Jeśli nie zainstalowałeś podstawowego zestawu graficznego TTD podczas instalacji OpenTTD, a chcesz go zainstalować później, po prostu skopiuj pliki z listy [[en/#Podstawowa grafika TTD|powyżej]] (te, które nie są dystrybuowane z OpenTTD, to) do katalog OpenTTD /data.
+Jeśli nie zainstalowałeś podstawowego zestawu graficznego TTD podczas instalacji OpenTTD, a chcesz go zainstalować później, po prostu skopiuj pliki z listy [[#Podstawowa grafika TTD|powyżej]] (te, które nie są dystrybuowane z OpenTTD, to) do katalog OpenTTD /data.
 
 ==Przełączanie między podstawowymi zestawami graficznymi==
 W danym momencie może być aktywny tylko jeden podstawowy zestaw graficzny. Jeśli masz zainstalowanych wiele podstawowych zestawów graficznych, istnieje kilka sposobów przełączania się między nimi.
@@ -63,7 +63,7 @@ Jednym ze sposobów przełączania między podstawowymi zestawami graficznymi je
 
 ===Edycja pliku konfiguracyjnego===
 Innym sposobem przełączania między podstawowymi zestawami graficznymi jest edycja pliku konfiguracyjnego.
-* Znajdź i otwórz [[pl/openttd.cfg|openttd.cfg]] za pomocą ulubionego edytora zwykłego tekstu.
+* Znajdź i otwórz [[pl/Archive/Manual/Settings/Openttd.cfg|openttd.cfg]] za pomocą ulubionego edytora zwykłego tekstu.
 * Znajdź sekcję [misc] i dodaj następującą (lub edytuj istniejącą) linię na końcu tej sekcji:
  graphicsset = name_of_base_graphics_set
 : Nazwa podstawowego zestawu graficznego jest wymieniona w jego pliku obg i może, ale nie musi, być identyczna z nazwą pliku obg.
@@ -77,7 +77,7 @@ Trzecim sposobem na wybranie określonego podstawowego zestawu graficznego jest 
 
 
 ==Tworzenie podstawowego zestawu graficznego==
-Oprócz faktycznego rysowania i wyrównywania [[en/sprites]] , tworzenie podstawowego zestawu graficznego, który może być używany przez OpenTTD, jest dość łatwe. Podstawowy zestaw graficzny składa się z następujących plików:
+Oprócz faktycznego rysowania i wyrównywania [[en/Sprites]] , tworzenie podstawowego zestawu graficznego, który może być używany przez OpenTTD, jest dość łatwe. Podstawowy zestaw graficzny składa się z następujących plików:
 * Dokładnie 6 plików .grf;
 * Dokładnie 1 plik .obg.
 Przydatne jest spakowanie wszystkich plików podstawowego zestawu graficznego jako pliku tar. Dzięki temu wszystkie pliki z jednego podstawowego zestawu graficznego są uporządkowane razem. OpenTTD może odczytywać pliki tar, więc użytkownik nie musi ich rozpakowywać.

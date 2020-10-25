@@ -38,17 +38,17 @@ Detect and report usage with faulty [[Template:Ambox#Article message box types|"
 ==Usage==
 Simple usage example:
 <pre>
-{{en/ambox| text = Some text.}}
+{{en/Ambox| text = Some text.}}
 </pre>
-{{en/ambox| text = Some text.}}
+{{en/Ambox| text = Some text.}}
 
 OR:
 <pre>
-{{en/ambox| type = content
+{{en/Ambox| type = content
 | text = Warning - Some text.
 }}
 </pre>
-{{en/ambox| type = content | text = Warning - Some text.}}
+{{en/Ambox| type = content | text = Warning - Some text.}}
 
 == Available List of parameters==
 <pre>
@@ -66,35 +66,35 @@ OR:
 The following examples use different '''type''' parameters but use no image parameters thus they use the default images for each type.
 
 
-{{en/ambox| type  = delete
-| text  = type=<u>delete</u> – Deletion issues, such as {{en/s|delete}}.
+{{en/Ambox| type  = delete
+| text  = type=<u>delete</u> – Deletion issues, such as {{en/S|delete}}.
 }}
-{{en/ambox| type  = content
-| text  = type=<u>content</u> – Content issues, such as {{en/s|Warning}}.
+{{en/Ambox| type  = content
+| text  = type=<u>content</u> – Content issues, such as {{en/S|Warning}}.
 }}
-{{en/ambox| type  = style
-| text  = type=<u>style</u> – Style issues, such as {{en/s|cleanup}}.
+{{en/Ambox| type  = style
+| text  = type=<u>style</u> – Style issues, such as {{en/S|cleanup}}.
 }}
-{{en/ambox| type  = notice
-| text  = type=<u>notice</u> – Article notices, such as {{en/s|current}}.
+{{en/Ambox| type  = notice
+| text  = type=<u>notice</u> – Article notices, such as {{en/S|current}}.
 }}
-{{en/ambox| type  = move
-| text  = type=<u>move</u> – Merge, split and transwiki proposals, such as {{en/s|split}}.
+{{en/Ambox| type  = move
+| text  = type=<u>move</u> – Merge, split and transwiki proposals, such as {{en/S|split}}.
 }}
-{{en/ambox| type  = protected
-| text  = type=<u>protected</u> – Protection notices, such as {{en/s|Historical}}.
+{{en/Ambox| type  = protected
+| text  = type=<u>protected</u> – Protection notices, such as {{en/S|Historical}}.
 }}
 
 === Other images ===
 
 The default images shown above are mostly for convenience. In many cases it is more appropriate to use more specific images. These example use the '''image''' parameter to specify an image other than the default images.
 
-<pre>{{en/ambox| type  = notice
+<pre>{{en/Ambox| type  = notice
 | image = OpenttdManual.png
 | text  = Something Something Something 
 }}</pre>
 
-{{en/ambox| type  = notice
+{{en/Ambox| type  = notice
 | image = OpenttdManual.png
 | text  = Something Something Something 
 }}

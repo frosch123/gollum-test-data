@@ -1,9 +1,9 @@
 [[Translation:en/Manual/Railway station]]
-{{es/tabla de contenido}}
+{{es/Tabla de contenido}}
 Las '''estaciones de tren''' es el componente principal de cualquier red ferroviaria. Permiten la carga y descarga de pasajeros y cargas en los [[es/Manual/Trenes|trenes]]. Para su red, lo mejor es situar su estación fuera de la vía principal para evitar un tráfico innecesario dentro de la estación (estaciones [https://www.wikipedia.org/wiki/es:Estación de ferrocarril pasantes]) causando retrasos en los trenes que se vean obligados a pasar por allí.
 
 ==Estaciones básicas==
-Las siguientes estaciones son fáciles de construir y funcionan bastante bien cuando sólo dan servicio a un puñado de trenes. Cuando aumenta la densidad del tráfico, es posible que quiera probar un diseño de [[en/#Estaciones avanzadas|estación avanzada]].
+Las siguientes estaciones son fáciles de construir y funcionan bastante bien cuando sólo dan servicio a un puñado de trenes. Cuando aumenta la densidad del tráfico, es posible que quiera probar un diseño de [[#Estaciones avanzadas|estación avanzada]].
 
 ===Estación de término===
 Las '''estaciones de término''' (o [https://www.wikipedia.org/wiki/es:Estación de ferrocarril terminales]) están al final de una línea de ferrocarril. Los trenes salen y entran por el mismo lado, por lo que podrían quedar bloqueados por trenes procedentes o con destino en la estación. A menudo se utilizan para estaciones pequeñas y sencillas, o cuando el espacio disponible no permite la construcción de una estación de un solo sentido.
@@ -14,7 +14,7 @@ Las '''estaciones de término''' (o [https://www.wikipedia.org/wiki/es:Estación
 
 Las '''estaciones de un solo sentido''' o ''estaciones en línea'' son aquellas estaciones en las que los trenes entran por un extremo y salen por el otro. Se trata pues de un tipo particular de estación [https://www.wikipedia.org/wiki/es:Estación de ferrocarril pasante].
 
-Los trenes que entran en la estación no bloquean la salida de los que salen. Esto funciona para un tráfico de mediana intensidad, pero sin [[es/señales previas|Señales previas]] se pueden crear problemas en las estaciones con tráfico denso (por ejemplo, las estaciones próximas a las fábricas) ya que cuando todos los andenes estén llenos, el tren esperará en el andén situado más cercano a la entrada bloqueando el acceso al resto de trenes. Esto puede provocar un embotellamiento si el tren de la estación tiene órdenes de carga completa y está esperando la [[es/Manual/Carga|carga]] proveniente de otro tren que no puede acceder a la estación.
+Los trenes que entran en la estación no bloquean la salida de los que salen. Esto funciona para un tráfico de mediana intensidad, pero sin [[es/Manual/Señales|Señales previas]] se pueden crear problemas en las estaciones con tráfico denso (por ejemplo, las estaciones próximas a las fábricas) ya que cuando todos los andenes estén llenos, el tren esperará en el andén situado más cercano a la entrada bloqueando el acceso al resto de trenes. Esto puede provocar un embotellamiento si el tren de la estación tiene órdenes de carga completa y está esperando la [[es/Manual/Carga|carga]] proveniente de otro tren que no puede acceder a la estación.
 [[File:en/Ro-ro1.png|center|none|frame|Estaciones de un solo sentido con dos andenes, la superior con señales de bloque, la inferior con señales de ruta. Puede quitar las dos casillas de vías situadas en las entradas de la estación inferior, aunque también tienen un efecto de espacio de frenado.]]
 
 ===Estación con vías sin andén===
@@ -61,7 +61,7 @@ Una buena solución para tener una cola de trenes esperando para entrar en una e
 Si la estación está llena, un tren que llegue se sitúa en la vía vacía más próxima dentro de la playa de vías. Cuando queda libre un andén en la estación, uno de los trenes que espera lo ocupará. Asegúrese de que el tren quepa entre las señales.
 
 Aunque las señales previas son opcionales, pueden ser de ayuda si su playa de vías se llena también.
-[[File:en/waitingbay.png|center|none|frame|Playa de vías de espera para 4 trenes de 6 vagones.]]
+[[File:en/Waitingbay.png|center|none|frame|Playa de vías de espera para 4 trenes de 6 vagones.]]
 
 ===Con bucle de desbordamiento===
 En lugar de utilizar señales previas, puede crear un lazo o '''bucle de desbordamiento'''. Cuando un tren llega a la estación y se encuentra con todas las señales de dos sentidos de los andenes de color rojo excepto el bucle, tomará este. Continuará dando vueltas en el bucle hasta que un andén quede libre. Un problema de este sistema es que otros trenes que lleguen después pueden robarle el andén libre y que el primer tren continúe dando vueltas. Recuerde hacer el bucle lo suficientemente grande como para que quepa el tren de mayor longitud.
@@ -123,10 +123,10 @@ Este tipo de estación permite que los trenes entren y salgan de la estación al
 
 ====Estación de término mejorada gigante====
 Por supuesto puede seguir aumentando el número de andenes de una estación de término mejorada. Puede ir tan lejos como quiera, siempre y cuando tenga suficiente espacio.
-[[File:en/epicterminus.png|center|thumb|550px|Estación avanzada con 10 andenes]]
+[[File:en/Epicterminus.png|center|thumb|550px|Estación avanzada con 10 andenes]]
 
 A continuación se muestra un diseño un poco más eficiente que el anterior, con dos vías principales, de entrada y de salida, compartidas por todos los andenes. Se consume la mitad de espacio sin disminuir su capacidad. Es importante no cambiar las direcciones y mantener los túneles en las vías de salida, de otro forma los trenes tendrían que subir al entrar, disminuyendo la velocidad y bloqueando el cruce principal durante más tiempo.
-[[File:en/sharedepicterminus.png|center|thumb|550px|Estación avanzada de 10 andenes, ligera.]]
+[[File:en/Sharedepicterminus.png|center|thumb|550px|Estación avanzada de 10 andenes, ligera.]]
 Y lo mismo cambiando los túneles por puentes:
 [[File:en/8 platform station.png|center|none|thumb|700px|Estación de término avanzada de gran capacidad.]]
 

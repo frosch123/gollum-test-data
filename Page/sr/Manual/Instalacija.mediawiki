@@ -4,7 +4,7 @@ __TOC__
 =Uvod=
 Počev od verzije 1.0.0 OpenTTD, instalacije je uprošćena jer je igra u potpunosti (igra i grafika) zasnovana na otvorenom kodu; sve je uključeno u instalaciju. Za preuzimanje poslednje verzije OpenTTD [http://www.openttd.org/download-stable kliknite ovde].
 
-Instalacija može biti malo komplikovanija, uzimajući u obzir da [[en/base graphics|grafika iz originala]] nije distribuirana zajedno sa igrom. Dakle, pored [http://www.openttd.org/ preuzimanja igre], morate da nabavite i grafiku iz originalne igre.
+Instalacija može biti malo komplikovanija, uzimajući u obzir da [[en/Archive/Community/Base graphics|grafika iz originala]] nije distribuirana zajedno sa igrom. Dakle, pored [http://www.openttd.org/ preuzimanja igre], morate da nabavite i grafiku iz originalne igre.
 
 Trenutno postoje dve grafičke verzije OpenTTD koje možete igrati:
 * Prva verzija nalazi se na [http://en.wikipedia.org/wiki/Transport_Tycoon Transport Tycoon Deluxe] (TTD) CD-u. Za razliku od OpenTTD, TTD nije besplatan;
@@ -50,11 +50,11 @@ Takođe, tu su različite verzije za različite [[en/Archive/Compilation and Por
 [[File:en/Installation 2 gfx.png|frame|center|Podešavanje instalacije za korisnike bez grafičkih fajlova TTD]]
 
 '''4.''' Izmena config fajla
-:'''4.1.''' Pronađite fajl [[en/openttd.cfg]]. On se nalazi na sledećoj lokaciji (zavisno od operativnog sistema):
+:'''4.1.''' Pronađite fajl [[en/Archive/Manual/Settings/Openttd.cfg]]. On se nalazi na sledećoj lokaciji (zavisno od operativnog sistema):
  Win XP : "C:\Documents and Settings\<username>\My Documents\OpenTTD"
  Vista  : "C:\Users\<username>\Documents\OpenTTD"
  Linux  : "~/.openttd"
-:'''4.2.''' Otvorite [[en/openttd.cfg]] koristeći obični editor teksta.
+:'''4.2.''' Otvorite [[en/Archive/Manual/Settings/Openttd.cfg]] koristeći obični editor teksta.
 :'''4.3.''' Pronađite [misc] odeljak i dodajte sledeću (ili izmenite postojeću) liniju teksta na kraju tog odeljka:
  graphicsset = "OpenGFX"
 : Naziv grafičke verzije originala nalazi se u njegovom obg-fajlu i možda nije istog naziva kao naziv obg's fajla.
@@ -69,7 +69,7 @@ Takođe, tu su različite verzije za različite [[en/Archive/Compilation and Por
 
 '''2''' Napravite '''openttd/''' folder na vašem računaru.
 
-'''3''' OpenTTD zahteva neke TTD fajlove, pogledajte [[en/#Files from TTD|dole]] koji fajlovi gde idu.
+'''3''' OpenTTD zahteva neke TTD fajlove, pogledajte [[#Files from TTD|dole]] koji fajlovi gde idu.
 
 '''4''' Preuzmite OSX instalaciju za OpenTTD sa [http://www.openttd.org/download-stable downloads page].
 [[File:en/Installation 1b osx.png|frame|center|1.1.2 za Mek OSX]]

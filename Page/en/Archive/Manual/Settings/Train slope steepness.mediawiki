@@ -2,7 +2,7 @@
 
 {{en/Feature|1.1|align="right"|text=(since 1.0.0)}}
 ==== Train slope steepness====
-Sets the steepness of slopes, trains will slow down more on slopes if this setting is set to a higher value. It only applies if the [[en/realistic acceleration]] is selected.
+Sets the steepness of slopes, trains will slow down more on slopes if this setting is set to a higher value. It only applies if the [[en/Archive/Manual/Settings/Realistic acceleration]] is selected.
 
 ;Valid options<nowiki>:</nowiki> [0 <= n <= 10]
 : 0: 0% (lowest)
@@ -11,6 +11,6 @@ Sets the steepness of slopes, trains will slow down more on slopes if this setti
 : ...
 : 10: 10% (steepest)
 
-;[[en/openttd.cfg]]
+;[[en/Archive/Manual/Settings/Openttd.cfg]]
 :[vehicle]
 :train_slope_steepness

@@ -26,7 +26,7 @@ These stations are the end of a railway line. Trains leave the same side they en
 -->
 
 === Stazione a senso unico ===
-Nella stazione a senso unico (in inglese detta Ro-Ro che sta per Roll-On, Roll-Off o Roll-In, Roll Out secondo altri) i treni entrano nella parte inferiore della stazione e escono dall'altra parte. I treni che entrano nella stazione non devono aspettare quelli in partenza. Questo è ottimo per medie quantità di traffico. Senza [[it/Manual/Segnali#Pre-segnali|pre-segnali]], non va bene per le stazioni ad alto traffico (ad esempio, le stazioni che servono le fabbriche), perché una volta che tutte le piattaforme sono piene, il treno attende il segnale bidirezionale per la piattaforma più vicina all'ingresso. Ciò può portare a un ingorgo se il treno di blocco ha ordini a pieno carico e sta aspettando che un altro treno scarichi la materia prima [[en/cargo]].
+Nella stazione a senso unico (in inglese detta Ro-Ro che sta per Roll-On, Roll-Off o Roll-In, Roll Out secondo altri) i treni entrano nella parte inferiore della stazione e escono dall'altra parte. I treni che entrano nella stazione non devono aspettare quelli in partenza. Questo è ottimo per medie quantità di traffico. Senza [[it/Manual/Segnali#Pre-segnali|pre-segnali]], non va bene per le stazioni ad alto traffico (ad esempio, le stazioni che servono le fabbriche), perché una volta che tutte le piattaforme sono piene, il treno attende il segnale bidirezionale per la piattaforma più vicina all'ingresso. Ciò può portare a un ingorgo se il treno di blocco ha ordini a pieno carico e sta aspettando che un altro treno scarichi la materia prima [[en/Manual/Cargo]].
 [[File:en/Ro-ro1.png|center|none|frame|Stazioni Ro-Ro con 2 banchine, quella di sinistra che utilizza segnali di blocco, quella di destra che utilizza segnali di percorso. Si potrebbero tralasciare i due tiles di binari dritti nella parte anteriore di quella destra, ma sono utili perchè forniscono spazio di frenata.]]
 
 <!--
@@ -102,7 +102,7 @@ Stations with [[Signals#Pre-signals|pre-signals]] make arriving trains wait outs
 
 === Area di attesa ===
 Una buona soluzione per gestire una coda di treni in attesa di entrare in una stazione è un'area di attesa con più binari. Se la stazione è piena, un treno in arrivo prende il binario libero più vicino nell'area di attesa. Quando un posto si libera nella stazione uno dei treni in attesa si muoverà. Assicurarsi che un treno possa entrare tra i segnali. I pre-segnali sono opzionali ma aiutano se si riempie anche la tua area di attesa!
-[[File:en/waitingbay.png|center|none|frame|Area di attesa per un massimo di 4 treni di 6 vagoni ciascuno]]
+[[File:en/Waitingbay.png|center|none|frame|Area di attesa per un massimo di 4 treni di 6 vagoni ciascuno]]
 
 <!--
 === Waiting bay ===
@@ -157,7 +157,7 @@ Getting [[mammoth trains]] to exit a busy Ro-Ro station in a timely fashion can 
 -->
 
 === Ingressi lunghi ===
-Se giochi con [[en/realistic acceleration]], i treni più veloci rallentano un bel po' prima di fermarsi in una stazione. Questo può ritardare l'ingresso del prossimo treno. L'aggiunta di alcune sezioni di traccia di fronte alla stazione può essere d'aiuto.
+Se giochi con [[en/Archive/Manual/Settings/Realistic acceleration]], i treni più veloci rallentano un bel po' prima di fermarsi in una stazione. Questo può ritardare l'ingresso del prossimo treno. L'aggiunta di alcune sezioni di traccia di fronte alla stazione può essere d'aiuto.
 [[File:en/Longentrance.png|center|none|frame|Ingresso lungo per la patch di accelerazione realistica]]
 
 <!--
@@ -251,10 +251,10 @@ This build allows trains to enter and exit station simultaneously. However, it t
 ==== Mega stazione terminal a senso unico ====
 
 Ovviamente è possibile aumentare il numero di banchine di una stazione terminal a senso unico. Il solo limite è lo spazio disponibile.
-[[File:en/epicterminus.png|center|thumb|550px|Stazione avanzata a 10 banchine]]
+[[File:en/Epicterminus.png|center|thumb|550px|Stazione avanzata a 10 banchine]]
 
 Di seguito è riportato un progetto un po' più efficiente, con due tracce ognuna che condivide una linea di entrata e di uscita. Utilizza metà spazio e quasi non diminuisce la capacità. È importante che le direzioni non vengano cambiate altrimenti i treni sarebbero costretti a risalire quando entrano nel binario, bloccando il percorso inutilmente.
-[[File:en/sharedepicterminus.png|center|thumb|550px|Versione avanzata a dieci banchine più snella]]
+[[File:en/Sharedepicterminus.png|center|thumb|550px|Versione avanzata a dieci banchine più snella]]
 
 Qui ponti invece di tunnel
 [[File:en/8 platform station.png|center|none|frame|Esempio di terminal a senso unico ad alta capacità]]
@@ -303,7 +303,7 @@ As with a standard ro-ro station, trains enter at one end of station and exit on
 === Stazione con rotatoria ===
 Può gestire una grande quantità di piccoli treni.
 
-[[File:en/roundabout station.png|center|thumb|700px|Una versione con doppia rotatoria]]
+[[File:en/Roundabout station.png|center|thumb|700px|Una versione con doppia rotatoria]]
 
 <!--
 ===Roundabout station===
@@ -317,7 +317,7 @@ Can handle a huge amount of small trains.
 
 La nuova interfaccia grafica ha un menu a discesa con i vari gruppi di stazioni. Ogni gruppo offre più modelli di stazioni ma di default è impostata la stazione standard non grf. Alcuni tiles newstation non consentono ai treni di entrarvi per la presenza di costruzioni piene o di respingenti. Si tenga presente quando si posizionano le newstation che alcuni modelli non consentono più di un certo numero di banchine o di costruirle oltre una determinata lunghezza. Quando un modello non è utilizzabile sarà automaticamente disattivato e non selezionabile. Alcuni set di newstations offrono più effetti grafici di altri. Ad esempio, nelle newstations di Michael Blunck, i passeggeri si accumuleranno sulle banchine delle stazioni in attesa del'arrivo del treno che dovranno prendere.
 
-Se il set stazione contiene [[en/waypoint]] (punti di controllo) newgrf, la GUI Waypoint si aprirà dopo averlo selezionato. Avrai le anteprime complete di tutti i waypoint che puoi costruire. La maggior parte di essi ha una data di creazione e una di obsolescenza, oltre la quale sarà possibile sostituirli con versioni più recenti. Tuttavia, i waypoint già creati non verranno automaticamente modificati, consentendo una maggiore varietà grafica delle vostre reti ferroviarie.
+Se il set stazione contiene [[en/Manual/Waypoints]] (punti di controllo) newgrf, la GUI Waypoint si aprirà dopo averlo selezionato. Avrai le anteprime complete di tutti i waypoint che puoi costruire. La maggior parte di essi ha una data di creazione e una di obsolescenza, oltre la quale sarà possibile sostituirli con versioni più recenti. Tuttavia, i waypoint già creati non verranno automaticamente modificati, consentendo una maggiore varietà grafica delle vostre reti ferroviarie.
 
 Le newstation si comportano come le stazioni normali; l'unica differenza sono i tile senza binari che bloccano i treni.
 [[File:en/NewGRFstation.png|center|none|frame|NewGRF stazione in un'azienda agricola]]

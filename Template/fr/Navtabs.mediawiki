@@ -4,15 +4,15 @@
 -->__NOTOC__
 {| style="background:#F8FCFF; text-align:center" width="100%" cellspacing="0" cellpadding="0" border="0"
 |
-{{en/Navtab{{|{{{1}}}}}
-{{ #if:  {{{2|}}} |{{en/Navtab{{|{{{2}}}}}
-{{ #if:  {{{3|}}} |{{en/Navtab{{|{{{3}}}}}
-{{ #if:  {{{4|}}} |{{en/Navtab{{|{{{4}}}}}
-{{ #if:  {{{5|}}} |{{en/Navtab{{|{{{5}}}}}
-{{ #if:  {{{6|}}} |{{en/Navtab{{|{{{6}}}}}
-{{ #if:  {{{7|}}} |{{en/Navtab{{|{{{7}}}}}
-{{ #if:  {{{8|}}} |{{en/Navtab{{|{{{8}}}}}
-{{ #if:  {{{9|}}} |{{en/Navtab{{|{{{9}}}}}|}}}}}}}}}}}}}}}}
+{{Template:Navtab{{ #ifeq:{{{This}}}|1|1|2}}/Fr|{{{1}}}}}
+{{ #if:  {{{2|}}} |{{Template:Navtab{{ #ifeq:{{{This}}}|2|1|2}}|{{{2}}}}}
+{{ #if:  {{{3|}}} |{{Template:Navtab{{ #ifeq:{{{This}}}|3|1|2}}|{{{3}}}}}
+{{ #if:  {{{4|}}} |{{Template:Navtab{{ #ifeq:{{{This}}}|4|1|2}}|{{{4}}}}}
+{{ #if:  {{{5|}}} |{{Template:Navtab{{ #ifeq:{{{This}}}|5|1|2}}|{{{5}}}}}
+{{ #if:  {{{6|}}} |{{Template:Navtab{{ #ifeq:{{{This}}}|6|1|2}}|{{{6}}}}}
+{{ #if:  {{{7|}}} |{{Template:Navtab{{ #ifeq:{{{This}}}|7|1|2}}|{{{7}}}}}
+{{ #if:  {{{8|}}} |{{Template:Navtab{{ #ifeq:{{{This}}}|8|1|2}}|{{{8}}}}}
+{{ #if:  {{{9|}}} |{{Template:Navtab{{ #ifeq:{{{This}}}|9|1|2}}|{{{9}}}}}|}}}}}}}}}}}}}}}}
 | style="border-bottom:2px solid #A3B1BF" width="3000" | &nbsp;
 |}<noinclude>
 

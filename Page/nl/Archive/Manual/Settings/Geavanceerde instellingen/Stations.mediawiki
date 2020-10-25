@@ -2,7 +2,7 @@
 {{nl/Geavanceerde instellingen}}
 
 ==Geavanceerde instellingen venster: Stations sectie==
-De stations sectie geeft je de mogelijkheid verschillende opties gerelateerd aan stations in te stellen Het deol van de beschikbare instellingen wordt hieronder toegelicht. Voor elke instelling, zijn de respectievelijke variabelen van het [[en/openttd.cfg|config file]] hieronder opgesomd, tezamen met de mogelijke waarden.
+De stations sectie geeft je de mogelijkheid verschillende opties gerelateerd aan stations in te stellen Het deol van de beschikbare instellingen wordt hieronder toegelicht. Voor elke instelling, zijn de respectievelijke variabelen van het [[en/Archive/Manual/Settings/Openttd.cfg|config file]] hieronder opgesomd, tezamen met de mogelijke waarden.
 {| align="center"
 |- valign="top"
 |__TOC__
@@ -18,32 +18,32 @@ Een [[en/Archive/Manual/Settings/Improved Loading|verbeterd laadalgoritme]], het
 {{en/-}}
 ====Voertuigen geleidelijk laden====
 {{nl/Kenmerken|0.5|align="right"|text=(0.5.0)}}
-Voertuigen zullen geleidelijk geladen worden, niet direct vol in één keer. Als de optie om [[nl/laadindicatoren|laadindicatoren]] te tonen aan staat, zal dit correct worden weergegeven.
+Voertuigen zullen geleidelijk geladen worden, niet direct vol in één keer. Als de optie om [[nl/Archive/Manual/Laadindicatoren|laadindicatoren]] te tonen aan staat, zal dit correct worden weergegeven.
 :''Mogelijke instellingen:'' <span style="color:green">'''Aan'''</span> of <span style="color:red">'''Uit'''</span>
 :''In Openttd.cfg config file:'' ([order] gradual_loading = <true|false>) 
 {{en/-}}
 ====Vracht alleen bezorgen aan een station als er vraag naar is====
 {{nl/Kenmerken|Old|align="right"|text=(0.2.0)}}
-Vracht zal alleen worden gegenereerd op een station wanneer een voertuig met de [[en/select goods|capaciteit om die vracht te laden]] het station heeft bezocht. Dit heeft effect op de stationsrangorde.
+Vracht zal alleen worden gegenereerd op een station wanneer een voertuig met de [[en/Archive/Manual/Settings/Select goods|capaciteit om die vracht te laden]] het station heeft bezocht. Dit heeft effect op de stationsrangorde.
 :''Mogelijke instellingen:'' <span style="color:green">'''Aan'''</span> of <span style="color:red">'''Uit'''</span>
 :''In Openttd.cfg config file:'' ([order] selectgoods = <true|false>)
 {{en/-}}
 ----
 ===Bouwen van aangrenzende stations toestaan===
 {{nl/Kenmerken|Old|align="right"|text=(0.2.0)}}
-Stations die direct naast elkaar worden gebouwd zullen worden [[nl/samenvoegen treinstations|samengevoegd]] zolang de spreiding van het station niet te groot wordt.
+Stations die direct naast elkaar worden gebouwd zullen worden [[nl/Archive/Manual/Settings/Samenvoegen treinstations|samengevoegd]] zolang de spreiding van het station niet te groot wordt.
 :''Mogelijke instellingen:'' <span style="color:green">'''Aan'''</span> of <span style="color:red">'''Uit'''</span>
 :''In Openttd.cfg config file:'' ([station] join_stations = <true|false>)
 {{en/-}}
 ===Sta het samenvoegen van niet direct aaneensluitende stations toe===
 {{nl/Kenmerken|0.7|align="right"|text=(0.7.0)}}
-Met het vasthouden van de Ctrl-toets tijdens het bouwen van een [[nl/stations|station]] komt er een dialoogvenster waarin gevraagd wordt of je het station wil samenvoegen met een bestaand station binnen het [[nl/handelsgebied|handelsgebied]] of een nieuw, losstaand station wilt realiseren.
+Met het vasthouden van de Ctrl-toets tijdens het bouwen van een [[nl/Manual/Stations|station]] komt er een dialoogvenster waarin gevraagd wordt of je het station wil samenvoegen met een bestaand station binnen het [[nl/Manual/Handelsgebied|handelsgebied]] of een nieuw, losstaand station wilt realiseren.
 :''Mogelijke instellingen:'' <span style="color:green">'''Aan'''</span> of <span style="color:red">'''Uit'''</span>
 :''In Openttd.cfg config file:'' ([station] distant_join_stations = <true|false>)
 {{en/-}}
 ===Maximale stationsomvang===
 {{nl/Kenmerken|Old|align="right"|text=(0.3.2)}}
-Hoe [[en/change station spread|uitgebreid een station]] kan zijn van het ene naar het andere eind. Als je een vierkant om het station heen trekt, dan is dit de maximale omvang van elke zijde van het vierkant in tegels.
+Hoe [[en/Archive/Manual/Settings/Change station spread|uitgebreid een station]] kan zijn van het ene naar het andere eind. Als je een vierkant om het station heen trekt, dan is dit de maximale omvang van elke zijde van het vierkant in tegels.
 :''Mogelijke instellingen:'' <span style="color:#00693E">'''4 tegels'''</span> tot <span style="color:#00693E">'''64 tegels'''</span> <span style="color:red">(Waarschuwing: hoge waarden vertragen het spel)</span>
 :''In Openttd.cfg config file:'' ([station] station_spread = <num_val>)
 {{en/-}}
@@ -55,13 +55,13 @@ Met deze geactiveerd, zal het aantal vliegvelden die in de nabijheid van een gem
 {{en/-}}
 ===Gebruik meer realistische handelsgebieden===
 {{nl/Kenmerken|Old|align="right"|text=(0.3.5)}}
-Verandert het [[nl/handelsgebied|handelsgebied]] naar een meer [[en/modified catchment|realistische omvang]]. Met deze instelling ingeschakeld zal het handelsgebied van een stationstegel variëren met het "type" stationstegel. Bijvoorbeeld, treinstations hebben een groter handelsgebied dan bushaltes en vliegvelden hebben een nog groter handelsgebied. Met vliegvelden variëren de handelsgebieden weer met het type vliegveld, waarbij de intercontinentale vliegvelden het grootste gebied bestrijken.
+Verandert het [[nl/Manual/Handelsgebied|handelsgebied]] naar een meer [[en/Archive/Manual/Settings/Modified catchment|realistische omvang]]. Met deze instelling ingeschakeld zal het handelsgebied van een stationstegel variëren met het "type" stationstegel. Bijvoorbeeld, treinstations hebben een groter handelsgebied dan bushaltes en vliegvelden hebben een nog groter handelsgebied. Met vliegvelden variëren de handelsgebieden weer met het type vliegveld, waarbij de intercontinentale vliegvelden het grootste gebied bestrijken.
 :''Mogelijke instellingen:'' <span style="color:green">'''Aan'''</span> of <span style="color:red">'''Uit'''</span>
 :''In Openttd.cfg config file:'' ([station] modified_catchment = <true|false>)
 {{en/-}}
 ===Sta toe dat doorrijwegstops worden geplaatst op door stad beheerde wegen===
 {{nl/Kenmerken|0.6|align="right"|text=(0.6.0)}}
-Het wordt mogelijk om [[nl/Manual/Doorrijwegstations|doorrijwegstations]] te bouwen om wegen die in het bezit zijn van de [[nl/gemeente|gemeente]].
+Het wordt mogelijk om [[nl/Manual/Doorrijwegstations|doorrijwegstations]] te bouwen om wegen die in het bezit zijn van de [[nl/Manual/Gemeente|gemeente]].
 :''Mogelijke instellingen:'' <span style="color:green">'''Aan'''</span> of <span style="color:red">'''Uit'''</span>
 :''In Openttd.cfg config file:'' ([construction] road_stop_on_town_road = <true|false>) 
 {{en/-}}
@@ -81,7 +81,7 @@ Deze optie is niet meer aan of uit te zetten, want je kunt stationstegels van ve
 {{en/-}}
 ===Sta het bouwen van aaneensluitende stations toe===
 {{nl/Kenmerken periode|0.6|1.0|align="right"|text=(0.6.0 t/m 1.0.0)}}
-Deze optie is niet meer aan of uit te zetten maar je kunt nog steeds een [[nl/station|station]] direct tegen een ander station aanbouwen met de CTRL-toets ingedrukt waarbij je de keuze hebt om een nieuw station (met een nieuwe naam) type bouwen zonder dat de naam van het bestaande station overneemt.
+Deze optie is niet meer aan of uit te zetten maar je kunt nog steeds een [[nl/Station|station]] direct tegen een ander station aanbouwen met de CTRL-toets ingedrukt waarbij je de keuze hebt om een nieuw station (met een nieuwe naam) type bouwen zonder dat de naam van het bestaande station overneemt.
 :''Mogelijke instellingen:'' <span style="color:green">'''Aan'''</span> of <span style="color:red">'''Uit'''</span>
 :''In Openttd.cfg config file:'' ([station] adjacent_stations = <true|false>)
 {{en/-}}

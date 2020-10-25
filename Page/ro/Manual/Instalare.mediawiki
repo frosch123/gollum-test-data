@@ -4,7 +4,7 @@ __TOC__
 =Introducere=
 De la versiunea 1.0.0, instalarea este destul de simplificată, jocul este complet (jocul și graficile) open source; totul este inclus în instalator. Pentru a descărca cea mai recentă versiune a OpenTTD, [http://www.openttd.org/download-stable faceți click aici].
 
-Instalarea poate fi puțin complicată, având în vedere că [[en/base graphics|graficile de bază]] nu sunt distribuite cu jocul. Așa că pe lângă [http://www.openttd.org/ descărcarea jocului], aveți nevoie să obțineți un set de grafici de bază de asemenea.
+Instalarea poate fi puțin complicată, având în vedere că [[en/Archive/Community/Base graphics|graficile de bază]] nu sunt distribuite cu jocul. Așa că pe lângă [http://www.openttd.org/ descărcarea jocului], aveți nevoie să obțineți un set de grafici de bază de asemenea.
 
 În acest moment, sunt două seturi de grafici de bază ce OpenTTD poate folosi:
 * Un set complet funcțional se află pe CD-ul [http://en.wikipedia.org/wiki/Transport_Tycoon Transport Tycoon Deluxe] (TTD). Contrar lui OpenTTD, TTD '''nu'''
@@ -50,11 +50,11 @@ De asemenea, există diferite versiuni pentru diferite [[en/Archive/Compilation 
 [[File:en/Installation 2 gfx.png|frame|center|Setările instalatorului pentru utilizatorii fără TTD]]
 
 '''4.''' Editarea fișierului config
-:'''4.1.''' Localizați [[en/openttd.cfg]]. Se află în:
+:'''4.1.''' Localizați [[en/Archive/Manual/Settings/Openttd.cfg]]. Se află în:
  Win XP : "C:\Documents and Settings\<username>\My Documents\OpenTTD"
  Vista  : "C:\Users\<username>\Documents\OpenTTD"
  Linux  : "~/.openttd"
-:'''4.2.''' Deschideți [[en/openttd.cfg]] folosind programul de editare text simplu preferat.
+:'''4.2.''' Deschideți [[en/Archive/Manual/Settings/Openttd.cfg]] folosind programul de editare text simplu preferat.
 :'''4.3.''' Localizați secțiunea [misc] și adăugați următoarul (sau editați existentul) text la sfârșitul acelei secțiuni:
  graphicsset = "OpenGFX"
 : Numele setului de grafici de bază apare în fișierul său obg și s-ar putea să fie identic cu numele fișierului obg.
@@ -69,7 +69,7 @@ De asemenea, există diferite versiuni pentru diferite [[en/Archive/Compilation 
 
 '''2''' Creați un folder '''openttd/''' în computer-ul dvs.
 
-'''3''' OpenTTD necesită niște fișiere din TTD, vedeți [[en/#Files from TTD|mai jos]] ce fișiere trebuie să meargă și unde.
+'''3''' OpenTTD necesită niște fișiere din TTD, vedeți [[#Files from TTD|mai jos]] ce fișiere trebuie să meargă și unde.
 
 '''4''' Obțineți instalatorul OSX pentru OpenTTD de la [http://www.openttd.org/download-stable pagina de descărcări].
 [[File:en/Installation 1b osx.png|frame|center|1.1.2 for Mac OSX]]
