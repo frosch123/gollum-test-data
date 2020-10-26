@@ -103,9 +103,9 @@ Poiché la parte anteriore di ogni segnale è definita come una posizione di att
 |}
 <!--
 {|class=wikitable style="margin:auto"
-|style="background:#fee"|[[File:Yapp unsafewaitinglocation.png|center]]
+|style="background:#fee"|[[File:en/Yapp unsafewaitinglocation.png|center]]
 ''' Cattivo ''':Il segnale indicato dalla freccia è un pessimo luogo di attesa, poiché il treno nella giunzione ora blocca il percorso altrimenti libero del treno proveniente dall'alto. C'è una seconda cattiva posizione di attesa in questa immagine. Puoi trovarla?
-|style="background:#efe"|[[File:Yappgoodexample.png|center]]
+|style="background:#efe"|[[File:en/Yappgoodexample.png|center]]
 '''Buono''': Qui c'è abbastanza spazio dopo la giunzione affinchè un treno possa aspettare. Finché questo spazio non sarà disponibile il prossimo treno attenderà prima del nodo anziché bloccarlo. Ciò consentirà al treno proveniente dall'alto di procedere.
 |}
 -->
@@ -115,9 +115,9 @@ The two new signal types behave a bit differently than standard block signal typ
 Because the front of every signal is defined as a safe waiting position, you would normally not want to place a signal immediately behind a junction, only in front of a junction. This is because it is only safe for a train to wait in front of a junction. It is not safe for a a train to wait at a signal immediately after a junction before the whole train has cleared the junction, as it would be blocking the junction while waiting, as illustrated in the example below. This is a major advantage against traditional block signals, where you had to place signals before and after junctions, which caused trains to block junctions while waiting.
 
 {|class=wikitable style="margin:auto"
-|style="background:#fee"|[[File:Yapp unsafewaitinglocation.png|center]]
+|style="background:#fee"|[[File:en/Yapp unsafewaitinglocation.png|center]]
 '''Bad''': The signal indicated by the arrow is a bad waiting location, as the train in the junction now blocks the otherwise free path of the train coming from the top. There's a second bad waiting location in this picture. Can you find it?
-|style="background:#efe"|[[File:Yappgoodexample.png|center]]
+|style="background:#efe"|[[File:en/Yappgoodexample.png|center]]
 '''Good''': Here there is enough space after the juction for a train to wait. As long as this space is unavailable, the next train will wait before the junction rather than blocking it. This allows the train coming from the top to proceed.
 |}
 -->
@@ -131,11 +131,11 @@ Anche se dalla schermata sopra non si evince, non è necessario posizionare alcu
 
 <!--
 This is one other example of what you can do with those path signals. This works far better than using pre-signals because you can have two trains leaving the station at the same time AND share the same depot (there is no way to make it with pre-signals, because of the block share). In this case there are one-way path signals for trains leaving the station, and simple path signal for trains leaving the depot.
-[[File:pathsignal station exit.png|frame|center|Two exit station. Note that the signals in front of the depot are not required, as depots have built-in signals. However, path signals in front of depots like this give trains leaving the depot priority over trains wanting to enter the depot.]]
+[[File:en/Pathsignal station exit.png|frame|center|Two exit station. Note that the signals in front of the depot are not required, as depots have built-in signals. However, path signals in front of depots like this give trains leaving the depot priority over trains wanting to enter the depot.]]
 
 Although the screen shot above does not show, it is unnecessary to place any signal between the pass-through station entrance and junction (effectively an "exit-signal" in the traditional block signal setup) if the signal of entrance tracks in front of the junction is path signal.
 
-[[File:Rpbs_img10.png|center|frame|Pass-through station does not require exit signal in front of the station entrance, if all signals are path signal type.]]
+[[File:en/Rpbs img10.png|center|frame|Pass-through station does not require exit signal in front of the station entrance, if all signals are path signal type.]]
 -->
 
 ==== Impostazioni avanzate ====
@@ -150,7 +150,7 @@ Ci sono altre opzioni relative al segnale di percorso che non sono disponibili a
 
 <!--
 ====Advanced Settings====
-[[File:Yapp patch-options.png|frame|right|YAPP Advanced Settings]]
+[[File:en/Yapp patch-options.png|frame|right|YAPP Advanced Settings]]
 There are three new [[Advanced Settings]] related to path signals.
 
 One option is to highlight reserved tracks. This option is useful to troubleshoot your path-signaled junctions, as you can see what paths trains have reserved through a junction.
@@ -179,7 +179,7 @@ Questo incrocio di base attualmente ha un livello di attraversamento più alto p
 ====Basic junction====
 This basic junction now has a much higher throughput because trains only have to wait for trains running on the same line. The train coming from the right (going up) would usually have to wait for other trains coming back from the left tracks. It would now only have to wait if it wishes to switch lines. Note the 6 bounding signals to the 'junction block', and 3 total path signals, one at each entryway.
 
-[[File:Yapp basicjunction.png|frame|center|Basic junction for trains (optimised for 3-tile length). Path signals are present at all entries to the junction block. Note the use of normal signals on plain track.]]
+[[File:en/Yapp basicjunction.png|frame|center|Basic junction for trains (optimised for 3-tile length). Path signals are present at all entries to the junction block. Note the use of normal signals on plain track.]]
 -->
 
 ==== Stazione base a due vie ====
@@ -191,7 +191,7 @@ Con questo tipo di stazione, i treni possono utilizzare entrambe le banchine qua
 ====Basic two-way station====
 With this station layout, trains can use both platforms when coming from either direction. Because path signals do not create blocks on their reverse, the train cannot enter until there is a clear path until the signal on the ''opposite'' side of the platform (which must include the platform space), allowing it to safely stop. Note that this setup could alternatively be replicated with a set of block-exit presignals in-front of the station.
 
-[[File:Yapp basicstation.png|frame|center|Basic station.]]
+[[File:en/Yapp basicstation.png|frame|center|Basic station.]]
 -->
 
 {{en/Feature|0.7}}
@@ -215,8 +215,8 @@ I pre-segnali fungono da segnali di blocco, ma decidono quale colore mostrare da
 Pre-signals are a group of specialised block signals. They are so named because block entry pre-signal input comes from not just the track in the block, but any other pre-signals placed on the other side of the block (that is to say exits from that block). They are used to limit the entry of trains into blocks that cannot be obstructed or occupied. In most cases you can use path signals to solve situations where trains can choose between multiple alternatives, for instance at stations or single-track lines that are used by trains in both directions.
 
 <div style="float:right">
-[[File:Station no pre-signals.png|frame|right|A problem with block signal only setup - the left train may leave first, the train waiting behind may get stuck in the track right behind the right train.]]
-[[File:Station_with_pre-signals.png|frame|right|Solve the problem using presignals]]
+[[File:en/Station no pre-signals.png|frame|right|A problem with block signal only setup - the left train may leave first, the train waiting behind may get stuck in the track right behind the right train.]]
+[[File:en/Station with pre-signals.png|frame|right|Solve the problem using presignals]]
 </div>
 The image on the top right shows a setup where entry to a station is controlled using ordinary signals.  When at least one platform is empty, this works well, as an incoming train is always directed to a free platform. However, consider what happens when all platforms are full, as in the screenshot. All branches are showing red, so the incoming train picks the shortest path - straight on.  But suppose the train on the platform to the right is going to be in the station for some time. Meanwhile, the train on the left leaves.  The incoming train has committed itself to a platform and is stuck between the signals, waiting for a train to depart even though there is now an empty platform available. We need to stop that incoming train before the track splits so that it picks the empty platform when a train leaves. For this you can use path signals, but you can also solve this situation with pre-signals. In fact, this was the way to build stations before path signals were invented.
 
@@ -234,7 +234,7 @@ Nota che i depositi ferroviari hanno un segnale bidirezionale incorporato (funzi
 <!--
 ====Block Entry Pre-signal====
 <div style="float:right">
-[[File:entry presignal.png|60px]]
+[[File:en/Entry presignal.png|60px]]
 </div>
 An entry pre-signal checks the signal aspect of all exit pre-signals of the signal block following the entry pre-signal. If there is at least one green exit pre-signal, the entry pre-signal wil also show green. If all exit pre-signals of the next block are red, then the entry pre-signal is also red.
 
@@ -254,7 +254,7 @@ Riassumendo: nella direzione del viaggio hai prima un segnale di ingresso, poi u
 <!--
 ====Block Exit pre-signal====
 <div style="float:right">
-[[File:exit presignal.png|60px]]
+[[File:en/Exit presignal.png|60px]]
 </div>
 The exit pre-signals are what an entry pre-signal looks for to decide what aspect to show. They otherwise behave in the same way as a normal block signal.
 
@@ -272,9 +272,9 @@ In un albero di pre-segnali, quelli combinati sono posizionati tra i pre-segnali
 
 <!--
 ====Combo-signal====
-[[File:station with pre-signals2.png|frame|Station with 1 entry pre-signal, 2 combo-signals, and 4 exit-signals]]
+[[File:en/Station with pre-signals2.png|frame|Station with 1 entry pre-signal, 2 combo-signals, and 4 exit-signals]]
 <div style="float:right">
-[[File:combo presignal.png|60px]]
+[[File:en/Combo presignal.png|60px]]
 </div>
 There is a third type of pre-signal called the combo signal and simply acts as both an entry and exit signal. They effectively combine many exit signals into one signal, effectively copying their effect down the chain. Any one green exit signal will make any combo signals up the line become green, which will successively relay up to the original block entry signal. This allows you to build large "trees" of pre-signals spanning several blocks, as shown on the right. 
 
@@ -307,7 +307,7 @@ Uno dei bug elencati sotto la voce "non verrà risolto" è: i treni persi ignora
 
 <!--
 ====Limitation====
-[[File:PresignalLimitation.png|frame|The problem with pre-signals...]]
+[[File:en/PresignalLimitation.png|frame|The problem with pre-signals...]]
 An important point to note with exit signals is that a green exit signal will trigger a green on the entry pre-signal at the beginning of the block even if it is not actually possible for a train to get to that exit signal because of the track layout (as in the image to the right with a train entering on the bottom track cannot technically exit from the top track). This can ruin more complicated pre-signaling setups, so care needs to be taken with planning.
 
 One of the bugs that are noted as "will not be solved" is: lost trains ignore (block) exit signals. If trains are lost, a random direction is chosen at each junction, so they ignore block exit signals, and may easily block junctions with pre-signals.

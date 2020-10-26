@@ -36,7 +36,7 @@ Prima di far circolare il secondo treno è necessario assicurarsi che non entri 
 
 cliccate sull'icona [[File:en/RailCnstr.png]] nella barra superiore per aprire la barra ''Costruzione ferrovie'', quindi cliccate sull'icona [[File:en/Place signal.png]] per aprire il pannello '''Selezione segnale'''.
 
-<!--Click the [[File:Place signal.png]] '''Build Railway Signals''' button from the railway constuction toolbar. This will open the '''Signal Selection''' toolbar.-->
+<!--Click the [[File:en/Place signal.png]] '''Build Railway Signals''' button from the railway constuction toolbar. This will open the '''Signal Selection''' toolbar.-->
 
 Esistono sei diversi tipi di segnali in OpenTTD. Fortunatamente, quasi tutte le esigenze possono essere soddisfatte con solo due di essi. Si chiamano [[it/Manual/Segnali#Segnali di percorso|segnali di percorso]] e sono di gran lunga i più facili da usare. Per il momento si possono anche ignorare gli altri quattro tipi di segnale.
 
@@ -49,7 +49,7 @@ Esistono sei diversi tipi di segnali in OpenTTD. Fortunatamente, quasi tutte le 
 {{en/Phototable|[[File:it/Yapp signalgui.png]]|Contornati in rosso i bottoni relativi ai ''Segnali di percorso''|left}} I segnali di percorso, evidenziati nell'immagine sopra, nella barra di selezione dei segnali si trovano sulla sinistra. Quello più a sinistra dei due è il cosiddetto ''segnale di percorso a due vie''. I treni possono oltrepassare questo segnale da entrambi i lati, ma obbediranno al segnale solo se il macchinista può ''vedere'' la luce dalla parte anteriore. L'altro invece, quello più a destra con la barra rossa orizzontale, è il segnale di ''percorso a senso unico''. Si comporta allo stesso modo della sua controparte a due vie, ma i treni possono solo passare da un lato (frontalmente).
 
 
-<!--{{Phototable|[[File:Yapp signalgui.png]]|Path signals|left}} The path signals are marked in the image of the signal selection toolbar at the left. The leftmost of the two path signals is the so-called two-way path signal. Trains can pass this signal from both sides, but will only obey the signal if the train driver can 'see' the light from the front. The rightmost with the horizontal red bar is the one-way path signal. It behaves the same as its two-way counterpart, but trains can only pass it from one side (the front).-->
+<!--{{Phototable|[[File:en/Yapp signalgui.png]]|Path signals|left}} The path signals are marked in the image of the signal selection toolbar at the left. The leftmost of the two path signals is the so-called two-way path signal. Trains can pass this signal from both sides, but will only obey the signal if the train driver can 'see' the light from the front. The rightmost with the horizontal red bar is the one-way path signal. It behaves the same as its two-way counterpart, but trains can only pass it from one side (the front).-->
 
 Questi segnali di percorso sono segnali intelligenti, poiché considerano il percorso che un treno vuole intraprendere. Non appena un treno incontra un segnale di percorso, ''riserva'' il suo percorso al segnale successivo. Un secondo treno sarà ammesso sullo stesso raccordo purché il suo itinerario (o percorso, da qui ''segnali di percorso'') non attraversi la prenotazione di altri treni sul quel raccordo. Se dovrà attraversare un percorso già riservato, aspetterà fino a che il segnale non gli darà via libera e potrà effettuare la propria prenotazione. Detto questo, c'è una regola importante da tenere a mente: posiziona i segnali solo dove vuoi che un treno possa aspettare. Approfondiremo i dettagli in seguito. Se non vi è chiara questa attività di prenotazione adesso, continuate facendo le stesse cose delle immagini.
 
@@ -61,9 +61,9 @@ Adesso selezionate l'icona [[File:en/Signal Electric Path.png]] '''segnale di pe
 {{en/Phototable|[[File:en/Tutorial two platforms.png|400px]]|La seconda banchina dotata dei segnali di percorso (clicca per ingrandire)|none}}
 
 
-<!--Now select the [[File:Signal Electric Path.png]] '''two-way path signal'''. Click the first piece of track in front of the platform to build the signal there. Make sure the signal faces the platform; you may need to click the tile a second time to turn the signal around. Repeat this for the other platform.
+<!--Now select the [[File:en/Signal Electric Path.png]] '''two-way path signal'''. Click the first piece of track in front of the platform to build the signal there. Make sure the signal faces the platform; you may need to click the tile a second time to turn the signal around. Repeat this for the other platform.
 
-{{Phototable|[[File:Tutorial two platforms.png|400px]]|The second platform equipped with path signals (click to enlarge)|none}}-->
+{{Phototable|[[File:en/Tutorial two platforms.png|400px]]|The second platform equipped with path signals (click to enlarge)|none}}-->
 
 A questo punto potreste chiedervi se non sia necessaria la segnaletica anche davanti al deposito ferroviario: la riasposta è no. I depositi hanno segnali integrati, quindi non ce n'è bisogno. Altrove potresti anche aver letto che non hai nemmeno bisogno di segnali di percorso davanti alle stazioni. Questo è vero in una certa misura per le stazioni terminali ma non per le stazioni intermedie. Se siete pratici della segnaletica di OpenTTD è consigliabile di posizionare i segnali anche davanti alle stazioni terminali. Oltre al fatto che è anche più bello, potete tranquillamente creare un capolinea in una stazione di transito senza dimenticare di aggiungere i segnali e dovervi chiedere perché non funziona. 
 
@@ -81,7 +81,7 @@ Oltre a ciò, se terrete premuto il tasto Control sulla tastiera mentre si fa cl
 
 <!--In addition to this, if you hold the Control button on the keyboard while clicking on the first train to clone it, the orders of both trains will be ''shared''. This means that when you change the orders of one of the two trains, the orders of the other train will be changed automatically as well. Might be useful in the future.
 
-{{Phototable|[[File:Tutorial two trains.png|400px]]|Mine station with two platforms and path signals in action (click to enlarge)|none}}-->
+{{Phototable|[[File:en/Tutorial two trains.png|400px]]|Mine station with two platforms and path signals in action (click to enlarge)|none}}-->
 
 Ora avete due treni sulla stessa linea ferroviaria. Buon lavoro!
 
