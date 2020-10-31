@@ -4,7 +4,7 @@
 <!--{{Outdated|Advanced Settings have been replaced by Settings}}-->
 {{pl/Nieaktualizowane|Ustawienia Zaawansowane zostały zastąpione Ustawieniami}}
 
-W tym artykule krótko wyjaśniono, jak można utworzyć niestandardową zmienną ustawień, zmieniając kod źródłowy OpenTTD. Samouczek opisuje proces dodawania dwóch dodatkowych opcji do okna dialogowego ''Ustawienia zaawansowane'' - jednej opcji liczby całkowitej i jednej wartości logicznej.
+W tym artykule krótko wyjaśniono, jak można utworzyć niestandardową zmienną ustawień, zmieniając kod źródłowy OpenTTD. Tutorial opisuje proces dodawania dwóch dodatkowych opcji do okna dialogowego ''Ustawienia zaawansowane'' - jednej opcji liczby całkowitej i jednej wartości logicznej.
 
 
 
@@ -85,7 +85,7 @@ Deklaracja zmiennych znajduje się w [http://svn.openttd.org/trunk/src/settings_
  }
 </code>
 
-Zauważ, że komentarze mają <code>/<</code> 'prefix' (przedrostek) do tworzenia dokumentacji za pomocą [http://docs.openttd.org/ doxygen]. 
+Należy odnotować, że komentarze mają <code>/<</code> prefix <small>''(przedrostek)''</small> do tworzenia dokumentacji za pomocą [http://docs.openttd.org/ doxygen].
 
 ===Nazwa zmiennej w pliku konfiguracyjnym - ''settings_gui.cpp''===
 Nazwa, w której będzie miała zmienna [[pl/Archive/Manual/Settings/Openttd.cfg|openttd.cfg]] są zdefiniowane w [http://svn.openttd.org/trunk/src/settings_gui.cpp settings_gui.cpp]. Tutaj wybrana jest również konkretna podstrona, na której będzie wyświetlana zmienna. 

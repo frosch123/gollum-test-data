@@ -70,7 +70,7 @@ Interfejs OpenTTD jest wypełniony tekstem w dwóch głównych formatach, z wła
 * Przykładami tekstów opisowych są podpowiedzi, wiadomości w gazetach, instrukcje lub kontekstowe wskazówki i zapytania w grze.
 * Teksty opisowe wykorzystają jedno lub więcej pełnych zdań, które zaczynają się od dużej litery na pierwszym słowie. Jeśli akapit składa się z więcej niż jednego zdania, zawsze kończą się kropką lub innym znakiem końca zdania.
 
-=== Etykiety UI ''(interfejsu użytkownika)'' ===
+===<span title="UI labels" id="UI_labels">Etykiety UI ''(interfejsu użytkownika)''</span>===
 [[File:en/Uielements.png|frame|Niektóre przykłady etykiet interfejsu użytkownika: etykiety pól i przycisków.]]
 * Etykiety interfejsu użytkownika to tekst służący do nazwania konkretnej funkcji lub pola.
 * Najczęściej stosowany do nazewnictwa części interfejsu użytkownika, takich jak przyciski, ramki okien i pola tabeli.
@@ -300,7 +300,7 @@ Tytuły odnoszą się do nazw poszczególnych prac (książek, piosenek, aplikac
 | ''Example''|| Playing song 1 - Taxi Ride
 |}
 
-==== Podpowiedzi ====
+====<span title="Tooltips" id="Tooltips">Podpowiedzi</span>====
 [[File:en/Tooltiplegend.png|frame|Elementy podpowiedzi: Zielony''(Green)'' - tytuł; czerwony''(red)'' - opis; niebieski''(blue)'' - dodatkowe skróty.]]
 Podpowiedzi to teksty drukowane w małych wyskakujących oknach, które pojawiają się po najechaniu kursorem myszy na niektóre funkcje interfejsu użytkownika. Są dużą częścią tekstów opisowych OpenTTD. Podpowiedzi mogą składać się z co najmniej jednej z trzech możliwych części:
 * Tytuł - nazwa funkcji lub narzędzia
@@ -330,7 +330,7 @@ Jeśli podpowiedź jest powiązana z tabelą, obowiązują następujące zasady:
 * Jeśli tabela nie ma tytułu, powiązana etykieta musi zawsze mieć tytuł.
 [[File:en/Tabletooltip.png|none|frame|Jeśli tabela ma tytuł lub nie dzieli okna z innymi tabelami, podpowiedź wymaga tylko opisu.]]
 
-=== Etykiety IU ''(interfejsu użytkownika)'' ===
+===<span title="UI labels" id="UI_labels_2">Etykiety IU ''(interfejsu użytkownika)''</span>===
 ==== Ogólne formatowanie etykiet IU ====
 * Użyj środkowego wyrównania w normalnych przyciskach i tytułach okien.
 * Użyj wyrównania do lewej dla przycisków, które generują menu rozwijane.
@@ -420,7 +420,7 @@ Używaj cyfr (nie przeliterowanych) w następujących przypadkach:
 * Nie używaj złożonego żargonu.
 * Nie używaj języka slangu ani wulgaryzmów.
 
-=== Podpowiedzi ===
+===<span title="Tooltips" id="Tooltips_2">Podpowiedzi</span>===
 * W opisie opisu unikaj wyrażeń wskazujących na aktywację samego narzędzia, chyba że jest to absolutnie konieczne lub odnosi się do skrótów klawiszowych.
 :{|
 |-
@@ -449,7 +449,7 @@ Używaj cyfr (nie przeliterowanych) w następujących przypadkach:
 |-
 | ''Example 2'' || Build road: '''Place''' a section of road in a single direction.
 |}
-* In a tooltip title don't use the word "and". Replace it with an ampersand (&).
+* W tytule podpowiedzi nie używaj słowa "and". Zastąp go znakiem ampersand (&).
 :{|
 |-
 | ''Correct'' || <span style="color:green;">Music '''&''' sound</span>
@@ -464,7 +464,7 @@ Używaj cyfr (nie przeliterowanych) w następujących przypadkach:
 | ''Incorrect'' || <span style="color:brown;">Ctrl+Click+Drag selects an area, and Shift+Click shows price preview.</span>
 |}
 
-=== Etykiety Interfejsu Użytkownika ''(UI)'' ===
+===<span title="UI labels" id="UI_labels_3">Etykiety Interfejsu Użytkownika ''(UI)''</span>===
 * Zawsze staraj się pisać tekst etykiet interfejsu użytkownika, używając jak najmniej słów.
 * W etykietach przycisków nie używaj słowa "and" ('i'). Zamień go na znak 'ampersand' (&).
 :{|

@@ -4,7 +4,7 @@ This is a Template for Industries. '''DO NOT EDIT THIS PAGE''', edit the specifi
 -->
 <div style="float:right; width:300px; font-size:90%; border:1px solid gray; background-color:#f2f2f2; margin-left:10px; margin-bottom:10px">
 <div style="text-align:center; border-bottom:1px solid gray; padding:5px"><strong>{{{name}}}</strong></div>
-<div style="background-color:white; padding:5px">[[File:{{{image|Industries.png}}}|center]]</div>
+<div style="background-color:white; padding:5px">[[File:{{{image|en/Industries.png}}}|center]]</div>
 {{#if:{{{caption|}}}|<div style="text-align:center; background-color:white; padding:5px">{{{caption}}}</div>}}
 {{#if:{{{image2|}}}|<div style="background-color:white; padding:5px">[[File:{{{image2}}}|center]]</div>
 {{#if:{{{caption2|}}}|<div style="text-align:center; background-color:white; padding:5px">{{{caption2}}}</div>}}
@@ -18,8 +18,7 @@ This is a Template for Industries. '''DO NOT EDIT THIS PAGE''', edit the specifi
 ==Używanie==
 Napisz:
 <pre>{{pl/Przedsiębiorstwa| name= ''nazwa''
-| image= ''link do obrazka''
-| climates= ''klimaty, w których występuje''
+| image=en/.''link do obrazka''| climates= ''klimaty, w których występuje''
 | accepts= ''ładunki, które akceptuje''
 | produces= ''ładunki, które produkuje''
 | notes= ''uwagi''
@@ -28,16 +27,14 @@ Napisz:
 ==Przykład==
 Napisz:
 <pre>{{pl/Przedsiębiorstwa| name=Kopalnia węgla
-| image=Coalmine.png
-| climates=[[pl/Manual/Klimat]], [[pl/Manual/Klimat]]
+| image=en/Coalmine.png| climates=[[pl/Manual/Klimat]], [[pl/Manual/Klimat]]
 | accepts= Nic
 | produces= [[pl/Manual/Base Set/Cargos/Węgiel|Węgiel]]
 | notes= Nie występuje w klimacie [[pl/Manual/Klimat]]m
 }}</pre>
 Wynik:
 {{pl/Przedsiębiorstwa| name=Kopalnia węgla
-| image=Coalmine.png
-| climates=[[pl/Manual/Klimat]], [[pl/Manual/Klimat]]
+| image=en/Coalmine.png| climates=[[pl/Manual/Klimat]], [[pl/Manual/Klimat]]
 | accepts= Nic
 | produces= [[pl/Manual/Base Set/Cargos/Węgiel|Węgiel]]
 | notes= = Nie występuje w klimacie [[pl/Manual/Klimat]]m

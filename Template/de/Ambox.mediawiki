@@ -9,15 +9,15 @@
   | Beschützt    =#bba;
   | #default     =#1e90ff;
 }} padding: 4px 8px; background:#efefef; min-height: 44px;">}}
-<div style="position: absolute;">[[File:{{#if:{{{Bild|}}}
-  | {{{Bild}}}
+<div style="position: absolute;">[[{{#if:{{{Bild|}}}
+  | File:{{{Bild}}}
   | {{#switch:{{{Typ|}}}
-    | Löschen    =Deletion.png
-    | Inhalt     =Content.png
-    | Stil       =Edit-clear.png
-    | Bewegen    =Move.png
-    | Beschützt  =Protection.png
-    | #default   =Notice.png
+    | Löschen    =File:en/Deletion.png
+    | Inhalt     =File:en/Content.png
+    | Stil       =File:en/Edit-clear.png
+    | Bewegen    =File:en/Move.png
+    | Beschützt  =File:en/Protection.png
+    | #default   =File:en/Notice.png
   }}
 }}|40px]]</div>
 <div style="border: none; padding: 2px 2px 2px 62px;">
@@ -53,7 +53,7 @@ ODER:
 == Liste verfügbarer Parameter ==
 <pre>
 {{de/Ambox| Typ        = Löschen / Inhalt / Stil / Notiz / Bewegen / Beschützt
-| Bild       = Picture.Png / Picture.Png|alt=Picture (wenn der Parameter nicht funktioniert, wird ein Standard-Bild angezeigt)
+| Bild       =en/Picture.Png/Picture.png|alt=Picture (wenn der Parameter nicht funktioniert, wird ein Standard-Bild angezeigt)
 | Text       = Um genau zu beschreiben, was das Problem ist.
 
 | Stil      = Verschiedene Stile. (Sollte am Besten nicht benutzt werden)
@@ -91,13 +91,11 @@ Die folgenden Beispiele benutzen verschiedene '''Typ''' Parameter, aber keine ''
 Die Standard-Bilder (s.O.) werden meistens wegen der Verständlichkeit benutzt. In vielen Fällen ist es angemessener gezielte Bilder zu benutzen. Dieses Beispiel benutzt den '''image''' Parameter um ein gezieltes Bild zu benutzen, das anders von den Standard-Bildern ist.
 
 <pre>{{de/Ambox| Typ  = notice
-| Bild = OpenttdManual.png
-| Text = Beispielbild Beispielbild Beispielbild Beispielbild Beispielbild Beispielbild
+| Bild =en/OpenttdManual.png| Text = Beispielbild Beispielbild Beispielbild Beispielbild Beispielbild Beispielbild
 }}</pre>
 
 {{de/Ambox| Typ  = Notiz
-| Bild = OpenttdManual.png
-| Text = Beispielbild Beispielbild Beispielbild Beispielbild Beispielbild Beispielbild
+| Bild =en/OpenttdManual.png| Text = Beispielbild Beispielbild Beispielbild Beispielbild Beispielbild Beispielbild
 }}
 
 [[Category:de/Vorlagen|Ambox]][[Category:de/Message-Boxen|Ambox]]
