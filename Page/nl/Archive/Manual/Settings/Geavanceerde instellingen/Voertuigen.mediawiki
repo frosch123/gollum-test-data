@@ -110,7 +110,7 @@ Zelfs als deze instelling is ingeschakeld, zullen voertuigen wel naar het depot 
 {{en/-}}
 ====Helikopters automatisch repareren op helipads====
 {{nl/Kenmerken|Old|align="right"|text=(0.3.3)}}
-Als ingeschakeld, zullen helikopters automatisch worden onderhouden elke keer als zij op een helipad landen. Op deze manier hoef je geen vliegveld te hebben langs de route van de helikopter waar deze naar toe kan gaan voor zijn onderhoud. In vorige versies zat dit in [[en/Archive/Manual/Settings/Configuring patches/Stations#Service helicopters at helipads|de stations sectie]].
+Als ingeschakeld, zullen helikopters automatisch worden onderhouden elke keer als zij op een helipad landen. Op deze manier hoef je geen vliegveld te hebben langs de route van de helikopter waar deze naar toe kan gaan voor zijn onderhoud. In vorige versies zat dit in [[en/Archive/Manual/Settings/Configuring patches/Stations#service-helicopters-at-helipads|de stations sectie]].
 :''Mogelijke instellingen:'' <span style="color:green">'''Aan'''</span> of <span style="color:red">'''Uit'''</span>
 :''In Openttd.cfg config file:'' ([order] serviceathelipad = <true|false>)
 {{en/-}}
@@ -126,7 +126,7 @@ Treinen zullen wel/niet automatisch omdraaien bij rode seinen als er geen vrije 
 ====Trein acceleratie model====
 {{nl/Kenmerken|0.7|align="right"|text=(0.7.0)}}
 Selecteer de standaard of een meer [[nl/Archive/Manual/Settings/Realistische acceleratie|realistische acceleratie]] berekening voor treinen. Met deze instelling op ''realistisch'' zullen treinen sneller heuvel op rijden, maar langzamer in krappe bochten.
-Deze optie is hernoemd van [[en/Archive/Manual/Settings/Configuring patches/Vehicles#Enable realistic acceleration for trains|sta realistische acceleratie voor treinen toe]].
+Deze optie is hernoemd van [[en/Archive/Manual/Settings/Configuring patches/Vehicles#enable-realistic-acceleration-for-trains|sta realistische acceleratie voor treinen toe]].
 :''Mogelijke instellingen:'' <span style="color:#00693E">'''Origineel'''</span> of <span style="color:#00693E">'''Realistisch'''</span>
 :''In Openttd.cfg config file:'' ([vehicle] train_acceleration_model = <0-1>)
 {{en/-}}
@@ -183,8 +183,8 @@ Deze optie kan worden ingeschakeld voor alle voertuigen, uitgeschakeld voor gest
 {{en/-}}
 ===Waarschuw als inkomsten van een voertuig negatief zijn===
 {{nl/Kenmerken|0.7|align="right"|text=(0.7.0)}}
-Als een voertuiginkomen [[en/Archive/Manual/Settings/Train income warning|negatief]] is, zal dit worden gerapporteerd in een nieuwsbericht. Gebruik de [[nl/Manual/Orders#Transfer|transfer]] optie bij de voertuigorders als je een [[nl/Manual/Verladersdienst|verladersdienst]] wilt opzetten.
-Deze optie is hernoemd van [[en/Archive/Manual/Settings/Configuring patches/Vehicles#Warn if a train's income is negative|waarschuwen als een treininkomen negatief is]] in 0.7.0.
+Als een voertuiginkomen [[en/Archive/Manual/Settings/Train income warning|negatief]] is, zal dit worden gerapporteerd in een nieuwsbericht. Gebruik de [[nl/Manual/Orders#transfer|transfer]] optie bij de voertuigorders als je een [[nl/Manual/Verladersdienst|verladersdienst]] wilt opzetten.
+Deze optie is hernoemd van [[en/Archive/Manual/Settings/Configuring patches/Vehicles#warn-if-a-train-s-income-is-negative|waarschuwen als een treininkomen negatief is]] in 0.7.0.
 :''Mogelijke instellingen:'' <span style="color:green">'''Aan'''</span> of <span style="color:red">'''Uit'''</span>
 :''In Openttd.cfg config file:'' ([gui] vehicle_income_warn = <true|false>)
 {{en/-}}
@@ -263,13 +263,13 @@ Geeft aan of er geen, origineel of een realistische hoeveelheid rook en vonken z
 ==In vorige versies==
 ====Sta het bouwen van zeer lange treinen toe====
 {{nl/Kenmerken periode|0.2|1.0|align="right"|text=(0.2.0 t/m 1.0.5) (vervangen door Maximum lengte van treinen)}}
-Vervangen door [[#Maximum_lengte_van_treinen|maximum lengte van treinen]].
+Vervangen door [[#maximum-lengte-van-treinen|maximum lengte van treinen]].
 {{en/-}}
 
 ===Waarschuw wanneer een trein verdwaald is===
 {{nl/Kenmerken periode|0.5|1.0|align="right"|text=(0.5.0 t/m 1.0.0) (vervangen door Waarschuw wanneer een voertuig verdwaald is)}}
 Een trein wordt [[en/Archive/Manual/Settings/Train is lost warning|verdwaald gemeld]] als het geen route kan vinden naar het station van zijn huidige bestemming.
-Vervangen door [[#Waarschuw_wanneer_een_voertuig_verdwaald_is|waarschuw wanneer een voertuig verdwaald is]]
+Vervangen door [[#waarschuw-wanneer-een-voertuig-verdwaald-is|waarschuw wanneer een voertuig verdwaald is]]
 {{en/-}}
 
 ===Sta ga naar depot orders toe===

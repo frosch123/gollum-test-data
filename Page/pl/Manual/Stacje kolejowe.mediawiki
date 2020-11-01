@@ -8,14 +8,14 @@
 
 
 ==Podstawowe stacje==
-Przedstawione poniżej stacje są proste w budowie i działają całkiem sprawnie, kiedy obsługują tylko kilka pociągów. Kiedy natężenie ruchu wzrośnie, możesz zechcieć sprawdzić konstrukcję [[pl/Manual/Stacje kolejowe#Zaawansowane stacje|zaawansowanej stacji]]
+Przedstawione poniżej stacje są proste w budowie i działają całkiem sprawnie, kiedy obsługują tylko kilka pociągów. Kiedy natężenie ruchu wzrośnie, możesz zechcieć sprawdzić konstrukcję [[pl/Manual/Stacje kolejowe#zaawansowane-stacje|zaawansowanej stacji]]
 
 ===Stacja końcowa ===
 Te stacje są końcem linii kolejowej. Pociągi opuszczają je w tym samym kierunku z którego wjeżdżały, więc mogą zablokować, pociąg wjeżdżający na stację bądź opuszczający ją (lub zostać zablokowane przez taki pociąg). Używane często jako proste i małe stacje lub kiedy nie ma wystarczająco miejsca na budowę stacji Ro-Ro.
-[[File:en/Terminus.png|<!--center-->|none|frame|Prosta stacja końcowa: ta po lewej używa [[pl/Manual/Sygnalizacja#Sygnalizatory blokowe|sygnalizatorów blokowych]], prawa zaś [[pl/Manual/Sygnalizacja#Sygnały Trasy|sygnalizatorów trasy]].]]
+[[File:en/Terminus.png|<!--center-->|none|frame|Prosta stacja końcowa: ta po lewej używa [[pl/Manual/Sygnalizacja#sygnalizatory-blokowe|sygnalizatorów blokowych]], prawa zaś [[pl/Manual/Sygnalizacja#sygnaly-trasy|sygnalizatorów trasy]].]]
 
 ===Stacja Ro-Ro===
-Ro-Ro jest skrótem od ''Roll-On, Roll-Off'' - pociągi wjeżdżają na nią z jednej strony i opuszczają z drugiej. Pociągi chcące wjechać na stację nie muszą czekać, aż inne z niej odjadą. Jest to dobre rozwiązanie dla średniego ruchu kolejowego. Nie jest to najlepsze rozwiązanie dla dużego zagęszczenia ruchu kolejowego (np. stacje obsługujące fabryki) bez instalowania [[pl/Manual/Sygnalizacja#pre-sygnały|pre-sygnałów]] , ponieważ kiedy wszystkie platformy są zajęte, pociągi mijają zwrotnicę i czekają na zwolnienie najbliższej platformy blokując tym samym zwrotnicę i nie pozwalając innym wjechać na drugą platformę, jeśli ta się zwolni.
+Ro-Ro jest skrótem od ''Roll-On, Roll-Off'' - pociągi wjeżdżają na nią z jednej strony i opuszczają z drugiej. Pociągi chcące wjechać na stację nie muszą czekać, aż inne z niej odjadą. Jest to dobre rozwiązanie dla średniego ruchu kolejowego. Nie jest to najlepsze rozwiązanie dla dużego zagęszczenia ruchu kolejowego (np. stacje obsługujące fabryki) bez instalowania [[pl/Manual/Sygnalizacja#pre-sygnaly|pre-sygnałów]] , ponieważ kiedy wszystkie platformy są zajęte, pociągi mijają zwrotnicę i czekają na zwolnienie najbliższej platformy blokując tym samym zwrotnicę i nie pozwalając innym wjechać na drugą platformę, jeśli ta się zwolni.
 [[File:en/Ro-ro1.png|center|none|frame|Stacja Ro-Ro z dwiema platformami. Lewa wykorzystuje sygnalizatory bloku, prawa path signals. Możesz pominąć dwa proste odcinki toru na przedzie prawej stacji ale pełnią one dodatkowo rolę miejsca hamowania.]]
 
 ===Stacja===
@@ -44,7 +44,7 @@ Co się stanie gdy trzeci pociąg przyjedzie na którąś z powyższych stacji? 
 A co z kolejkami formującymi się za wjazdem na stację? Mogą one rozciągać się na duże odległości i doprowadzić do zaglokowania całej sieci kolejowej!
 
 ===Pre-sygnały===
-Stacje z [[pl/Manual/Sygnalizacja#Pre-ssygnały|pre-sygnałami]] sprawiają, że nadjeżdżające pociągi czekają na zewnątrz stacji na zwolnienie platformy.
+Stacje z [[pl/Manual/Sygnalizacja#pre-ssygnaly|pre-sygnałami]] sprawiają, że nadjeżdżające pociągi czekają na zewnątrz stacji na zwolnienie platformy.
 [[File:en/Presignalstation.png|center|none|frame|Stacja z pre-sygnałami]]
 
 ===Poczekalnia===
@@ -79,7 +79,7 @@ If you play with [[en/Archive/Manual/Settings/Realistic acceleration]], faster t
 
 ===Double entrance===
 This is a type of design used for stations that handle a huge number of trains, such as the stations servicing factories or food processing plants. Trains coming from one place can use loading bays meant for other trains if need be.  Be sure to use pre-signals.
-[[File:en/Doubleentrance.png|center|none|frame|Double entrance. Those 4 platforms are divided into 2 groups with each handling 1 entry track. The [[en/Manual/Signals#Combo-signals|combo-signal]] inbetween the junctions allows the trains from both entries entering the platforms simultaneously without interfering each other, but reserving the way for trains to cross-over to the other group when no platform is available on its group.]]
+[[File:en/Doubleentrance.png|center|none|frame|Double entrance. Those 4 platforms are divided into 2 groups with each handling 1 entry track. The [[en/Manual/Signals#combo-signals|combo-signal]] inbetween the junctions allows the trains from both entries entering the platforms simultaneously without interfering each other, but reserving the way for trains to cross-over to the other group when no platform is available on its group.]]
 [[File:en/DoubleEntrance2.png|center|none|frame|Faster double entrance, avoiding sharp bends (for trainlength <=5)]]
 
 ===Feeder bays===

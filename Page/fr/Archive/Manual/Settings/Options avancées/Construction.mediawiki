@@ -19,7 +19,7 @@ Indique si les signaux sont affichés du [[fr/Archive/Manual/Settings/Signal du 
 {{en/-}}
 ====Activer le GUI des signaux====
 {{fr/Disponibilité|0.6|align="right"|texte=(depuis 0.6.0)}}
-Avec cette option activée, cliquer sur le bouton [[Signaux/Fr|signal] conduira à l'ouverture d'une barre d'outils de signaux supplémentaire, qui vous permet de choisir certains types de signaux (sémaphore, signal lumineux, [[fr/Manual/Signaux#Signaux dépendants|pré-signaux]]) directement, sans avoir à boucler entre eux en utilisant la touche Ctrl. Utilisez Ctrl pour choisir vos types de signaux est toujours possible quand cette option est activée.
+Avec cette option activée, cliquer sur le bouton [[Signaux/Fr|signal] conduira à l'ouverture d'une barre d'outils de signaux supplémentaire, qui vous permet de choisir certains types de signaux (sémaphore, signal lumineux, [[fr/Manual/Signaux#signaux-dependants|pré-signaux]]) directement, sans avoir à boucler entre eux en utilisant la touche Ctrl. Utilisez Ctrl pour choisir vos types de signaux est toujours possible quand cette option est activée.
 :''Valeurs possibles:'' <span style="color:green">'''Activé'''</span> ou <span style="color:red">'''Désactivé'''</span>
 :''Dans le fichier de configuration openttd.cfg:'' ([gui] enable_signal_gui = <true|false>) 
 {{en/-}}
@@ -37,13 +37,13 @@ Fait des sémaphores (ancien style de signalisation) les signaux placés par dé
 {{en/-}}
 ====Type de signaux construit par défaut====
 {{fr/Disponibilité|0.7|align="right"|texte=(depuis 0.7.0)}}
-Fixe le type de signaux à construire par défaut en utilisant l'ouil de signaux. Choix entre [[fr/Manual/Signaux#Signaux de blocs|signaux de bloc]], [[fr/Manual/Signaux#Signaux de chemin|signaux de voie]] et signaux de voie unidirectionnels. Si l'[[#Activer le GUI des signaux|interface des signaux]] est activée, ce type de signal sera sélectionné par défaut.
+Fixe le type de signaux à construire par défaut en utilisant l'ouil de signaux. Choix entre [[fr/Manual/Signaux#signaux-de-blocs|signaux de bloc]], [[fr/Manual/Signaux#signaux-de-chemin|signaux de voie]] et signaux de voie unidirectionnels. Si l'[[#activer-le-gui-des-signaux|interface des signaux]] est activée, ce type de signal sera sélectionné par défaut.
 :''Valeurs possibles:'' <span style="color:#00693E">'''Signaux de bloc'''</span>, <span style="color:#00693E">'''Signaux de chemin'''</span> ou <span style="color:#00693E">'''Signaux de chemin à sens unique'''</span>
 :''Dans le fichier de configuration openttd.cfg:'' ([gui] default_signal_type = <0-2>)
 {{en/-}}
 ====Cycle de types de signaux====
 {{fr/Disponibilité|0.7|align="right"|texte=(depuis 0.7.0)}}
-Définit quels types de signaux doivent être parcourus lors du cloc avec Ctrl sur un signal prêt à être construit. Choisit de boucler entre tous les types de [[fr/Manual/Signaux|signaux]], simplement entre les types de [[fr/Manual/Signaux#Signaux de blocs|signaux de bloc]] ou seulement les types de [[fr/Manual/Signaux#Signaux de chemin|signaux de voie]].
+Définit quels types de signaux doivent être parcourus lors du cloc avec Ctrl sur un signal prêt à être construit. Choisit de boucler entre tous les types de [[fr/Manual/Signaux|signaux]], simplement entre les types de [[fr/Manual/Signaux#signaux-de-blocs|signaux de bloc]] ou seulement les types de [[fr/Manual/Signaux#signaux-de-chemin|signaux de voie]].
 :''Valeurs possibles:'' <span style="color:#00693E">'''Signaux de bloc uniquement'''</span>, <span style="color:#00693E">'''Signaux de chemin uniquement'''</span> ou <span style="color:#00693E">'''Tous'''</span>
 :''Dans le fichier de configuration openttd.cfg:'' ([gui] cycle_signal_types = <0-2>)
 {{en/-}}
@@ -75,7 +75,7 @@ Vous permet de construire de très [[fr/Archive/Manual/Settings/Pont plus long|l
 ===Les aéroports n'expirent jamais===
 {{fr/Disponibilité|1.0|align="right"|texte=(depuis 1.0.0)}}
 Les aéroports peuvent avoir une année d'expiration, comme les véhicules. Les aéroports expirés ne peuvent plus être construits. Quand cette option est activée, les aéroports n'expirent jamais.
-Cette option a été renommée depuis [[#Toujours autoriser les petits aéroports|Toujours autoriser les petits aéroports]] en r16614.
+Cette option a été renommée depuis [[#toujours-autoriser-les-petits-aeroports|Toujours autoriser les petits aéroports]] en r16614.
 :''Valeurs possibles:'' <span style="color:green">'''Activé'''</span> ou <span style="color:red">'''Désactivé'''</span>
 :''Dans le fichier de configuration openttd.cfg:'' ([station] never_expire_airports = <true|false>)
 {{en/-}}
@@ -97,7 +97,7 @@ Avec cette option, vous pouvez activer/désactiver la génération d'arbres en c
 ===Toujours autoriser les petits aéroports===
 {{fr/Disponibilité|-0.7|align="right"|texte=(depuis 0.3.2 jusqu'à 0.7.5)}}
 Les petits aéroports ne sont [[fr/Archive/Manual/Settings/Toujours autoriser les petits aéroports|pas supprimés]] de la liste de construction des aéroports quand les plus grands apparaissent. Si cette option est désactivée, vous ne pouvez plus construire de petits aéroports dès que les grands aéroports deviennent disponibles.
-Cette option a été renommée en [[#Les aéroports n'expirent jamais|Les aéroports n'expirent jamais]] en r16614.
+Cette option a été renommée en [[#les-aeroports-n-expirent-jamais|Les aéroports n'expirent jamais]] en r16614.
 :''Valeurs possibles:'' <span style="color:green">'''Activé'''</span> ou <span style="color:red">'''Désactivé'''</span>
 :''Dans le fichier de configuration openttd.cfg:'' ([station] always_small_airport = <true|false>) 
 {{en/-}}

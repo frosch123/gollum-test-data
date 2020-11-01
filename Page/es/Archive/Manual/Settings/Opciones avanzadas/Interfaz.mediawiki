@@ -43,7 +43,7 @@ Los colores se pueden establecer a través de ''Empresa''/''Esquema de color'' y
 {{en/-}}
 ====Ver rutas reservadas====
 {{es/Disponibilidad|0.7|float=right|texto=(desde 0.7.0)}}
-Cuando está activada, los tramos de vías reservados a los trenes se muestran de un color más oscuro. Útil para depurar/mejorar el uso de [[es/Manual/Señales#Señales de ruta|señales de ruta]] en las intersecciones.
+Cuando está activada, los tramos de vías reservados a los trenes se muestran de un color más oscuro. Útil para depurar/mejorar el uso de [[es/Manual/Señales#senales-de-ruta|señales de ruta]] en las intersecciones.
 :''Valores posibles:'' <span style="color:green">'''Sí'''</span> o <span style="color:red">'''No'''</span>
 :''En el archivo de configuración Openttd.cfg:'' ([gui] show_track_reservation = <true|false>)
 {{en/-}}
@@ -142,13 +142,13 @@ La cantidad de segundos que dura un mensaje de error.
 {{en/-}}
 ===Posición de la barra de herramientas principal===
 {{es/Disponibilidad|Old|float=right|texto=(desde 0.3.4)}}
-Posición en la que se muestra la [[es/Manual/Interfaz del juego#La barra de menú|barra de menú principal]], en el borde superior de la ventana principal.
+Posición en la que se muestra la [[es/Manual/Interfaz del juego#la-barra-de-menu|barra de menú principal]], en el borde superior de la ventana principal.
 :''Valores posibles:'' <span style="color:#00693E">'''Izquierda'''</span>, <span style="color:#00693E">'''Centro'''</span> o <span style="color:#00693E">'''Derecha'''</span>
 :''En el archivo de configuración Openttd.cfg:'' ([gui] toolbar_pos = <0-2>)
 {{en/-}}
 ===Posición de la barra de estado===
 {{es/Disponibilidad|1.1|float=right|texto=(desde 1.1.0)}}
-Posición en la que se muestra la [[es/Manual/Interfaz del juego#La barra de estado|barra de estado]], en el borde inferior de la ventana principal.
+Posición en la que se muestra la [[es/Manual/Interfaz del juego#la-barra-de-estado|barra de estado]], en el borde inferior de la ventana principal.
 :''Valores posibles:'' <span style="color:#00693E">'''Izquierda'''</span>, <span style="color:#00693E">'''Centro'''</span> o <span style="color:#00693E">'''Derecha'''</span>
 :''En el archivo de configuración Openttd.cfg:'' ([gui] statusbar_pos = <0-2>)
 {{en/-}}
@@ -178,7 +178,7 @@ Activa o desactiva la columna de llegadas y salidas de la ventana de horarios.
 {{en/-}}
 ===Creación rápida de órdenes para vehículos===
 {{es/Disponibilidad|0.7|float=right|texto=(desde 0.7.0)}}
-Con esta opción activada, la opción '[[es/Manual/Órdenes#Ir_a|Ir a]]' de la ventana ''Órdenes'' de un vehículo permanecerá activa después de hacer clic en una estación. Esto le permitirá hacer clic con rapidez en varias estaciones sin tener que hacer clic en el botón 'Ir a' entre estación y estación.
+Con esta opción activada, la opción '[[es/Manual/Órdenes#ir-a|Ir a]]' de la ventana ''Órdenes'' de un vehículo permanecerá activa después de hacer clic en una estación. Esto le permitirá hacer clic con rapidez en varias estaciones sin tener que hacer clic en el botón 'Ir a' entre estación y estación.
 :''Valores posibles:'' <span style="color:green">'''Sí'''</span> o <span style="color:red">'''No'''</span>
 :''En el archivo de configuración Openttd.cfg:'' ([gui] quick_goto = <true|false>)
 {{en/-}}
@@ -197,7 +197,7 @@ Hace posible el uso de determinadas herramientas de construcción, incluso cuand
 
 ===Mantener activas las herramientas de construcción tras su uso===
 {{es/Disponibilidad|0.7|float=right|texto=(desde 0.7.0)}}
-Mantiene, por ejemplo, la ventana de construir una estación de autobús abierta después construir una estación de autobuses. Esto le permite colocar rápidamente varias estaciones de autobuses sin tener que hacer clic en el botón ''[[es/Manual/Construcción de carreteras#Barra_de_herramientas_Construcción_de_carreteras|Construir estación de autobús]]'' cada vez.
+Mantiene, por ejemplo, la ventana de construir una estación de autobús abierta después construir una estación de autobuses. Esto le permite colocar rápidamente varias estaciones de autobuses sin tener que hacer clic en el botón ''[[es/Manual/Construcción de carreteras#barra-de-herramientas-construccion-de-carreteras|Construir estación de autobús]]'' cada vez.
 :''Valores posibles:'' <span style="color:green">'''Sí'''</span> o <span style="color:red">'''No'''</span>
 :''En el archivo de configuración Openttd.cfg:'' ([gui] persistent_buildingtools = <true|false>)
 {{en/-}}

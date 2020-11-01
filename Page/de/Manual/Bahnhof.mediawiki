@@ -6,14 +6,14 @@
 
 
 ==Einfache Bahnhöfe==
-Die folgenden Bahnhöfe sind einfach zu bauen und werden ordentlich funktionieren, wenn sie nur von wenigen Zügen benutzt werden. Wenn die Verkehrsdichte steigt, sind die [[de/Manual/Bahnhof#Erweiterte Bahnhöfe|erweiterten Bahnhöfe]] die bessere Wahl.
+Die folgenden Bahnhöfe sind einfach zu bauen und werden ordentlich funktionieren, wenn sie nur von wenigen Zügen benutzt werden. Wenn die Verkehrsdichte steigt, sind die [[de/Manual/Bahnhof#erweiterte-bahnhofe|erweiterten Bahnhöfe]] die bessere Wahl.
 
 ===Kopfbahnhöfe===
 Diese Bahnhöfe bilden das Ende einer Bahnlinie. Ein- und Ausfahrt der Züge erfolgen auf derselben Seite. Daher können sich ein- und ausfahrende Züge gegenseitig blockieren. Kopfbahnhöfe werden oft für kleine, einfache Bahnhöfe verwendet oder wenn der Bauplatz einen Ro-Ro-Bahnhof nicht zulässt.
-[[File:en/Terminus.png|center|none|frame|Einfache Kopfbahnhöfe: der linke benutzt [[de/Manual/Signale#Blocksignale|Blocksignale]], der rechte [[de/Manual/Signale#Pfadsignale|Pfadsignale]].]]
+[[File:en/Terminus.png|center|none|frame|Einfache Kopfbahnhöfe: der linke benutzt [[de/Manual/Signale#blocksignale|Blocksignale]], der rechte [[de/Manual/Signale#pfadsignale|Pfadsignale]].]]
 
 ===Ro-Ro===
-Ro-Ro steht für Roll-On, Roll-Off (Reinfahren, Rausfahren). Züge fahren an einem Ende des Bahnhofs ein und fahren aus dem anderen heraus. Einfahrende Züge müssen also nicht auf Züge warten, welche den Bahnhof verlassen. Das ist praktisch für ein mittleres Verkehrsaufkommen. Ohne [[de/Manual/Signale#Vorsignale|Vorsignale]] ist dieser Bahnhof für ein hohes Verkehrsaufkommen (d.h., Bahnhöfe die an Fabriken arbeiten) eher ungeeignet. Das liegt daran, dass sich der nächste ankommende Zug bei Belegung aller Bahnsteige den nächstgelegenen Bahnsteig aussucht und am Zweiwegesignal wartet. Dies kann zu einem Verkehrsinfarkt führen, wenn der blockierende Zug Volllast-Aufträge hat und darauf wartet, dass ein anderer Zug seine Rohstoff[[de/Fracht|fracht]] entlädt.
+Ro-Ro steht für Roll-On, Roll-Off (Reinfahren, Rausfahren). Züge fahren an einem Ende des Bahnhofs ein und fahren aus dem anderen heraus. Einfahrende Züge müssen also nicht auf Züge warten, welche den Bahnhof verlassen. Das ist praktisch für ein mittleres Verkehrsaufkommen. Ohne [[de/Manual/Signale#vorsignale|Vorsignale]] ist dieser Bahnhof für ein hohes Verkehrsaufkommen (d.h., Bahnhöfe die an Fabriken arbeiten) eher ungeeignet. Das liegt daran, dass sich der nächste ankommende Zug bei Belegung aller Bahnsteige den nächstgelegenen Bahnsteig aussucht und am Zweiwegesignal wartet. Dies kann zu einem Verkehrsinfarkt führen, wenn der blockierende Zug Volllast-Aufträge hat und darauf wartet, dass ein anderer Zug seine Rohstoff[[de/Fracht|fracht]] entlädt.
 [[File:en/Ro-ro1.png|center|none|frame|RoRo-Bahnhof mit zwei Plattformen, der obere benutzt Blocksignale und der untere benutzt Pfadsignale. Man könnte die beiden Gleis-Geraden vor dem unteren Bahnhof weglassen, allerdings dienen diese auch als Bremsweg.]]
 
 ===Durchfahrtsbahnhof===
@@ -41,7 +41,7 @@ Was, wenn ein dritter Zug bei einem der obigen Bahnhöfe ankommt? Es sieht, dass
 Was ist mit den Staus, die wachsen, wenn Züge darauf warten, in den Bahnhof einzufahren? Diese Staus können sich weit nach hinten verlängern und das gesamte Netzwerk blockieren!
 
 ===Vorsignale===
-Bahnhöfe mit [[de/Manual/Signale#Vorsignale|Vorsignale]]n lassen ankommende Züge vor dem Bahnhof warten, bis ein Bahnsteig frei ist.
+Bahnhöfe mit [[de/Manual/Signale#vorsignale|Vorsignale]]n lassen ankommende Züge vor dem Bahnhof warten, bis ein Bahnsteig frei ist.
 [[File:en/Presignalstation.png|center|none|frame|Bahnhof mit Vorsignalen]]
 
 ===Wartebucht===
@@ -73,7 +73,7 @@ Wenn du mit [[de/Realistische Beschleunigung|realistischer Beschleunigung]] spie
 
 ===Doppelte Einfahrt===
 Dies ist ein Design, das für Bahnhöfe benutzt wird, die eine riesige Menge von Zügen verarbeiten (z.B. Bahnhöfe, die Fabriken wie Lebensmittelverarbeitungswerke beliefern). Züge, die von einem Ort kommen können, wenn nötig, Bahnsteige benutzen, die für andere Züge bestimmt waren. Benutze hierbei Vorsignale!
-[[File:en/Doubleentrance.png|center|none|frame|Doppelte Einfahrt. Die vier Plattformen sind in zwei Gruppen unterteilt, die jeweils eine Einfahrtstrecke bedienen. Die [[de/Manual/Signale#Kombinationssignale|Kombinationssignale]] zwischen den Kreuzungen erlauben den Zügen, von beiden Einfahrten gleichzeitig einzufahren, ohne dass sie sich gegenseitig blockieren, erlauben aber Zügen, zur anderen Gruppe zu fahren, wenn kein Bahnsteig in der eigenen Gruppe frei ist.]]
+[[File:en/Doubleentrance.png|center|none|frame|Doppelte Einfahrt. Die vier Plattformen sind in zwei Gruppen unterteilt, die jeweils eine Einfahrtstrecke bedienen. Die [[de/Manual/Signale#kombinationssignale|Kombinationssignale]] zwischen den Kreuzungen erlauben den Zügen, von beiden Einfahrten gleichzeitig einzufahren, ohne dass sie sich gegenseitig blockieren, erlauben aber Zügen, zur anderen Gruppe zu fahren, wenn kein Bahnsteig in der eigenen Gruppe frei ist.]]
 [[File:en/DoubleEntrance2.png|center|none|frame|Schnellere doppelte Einfahrt, die scharfe Kurven vermeidet (für Zuglänge <=5)]]
 
 ===Feeder-Bucht===

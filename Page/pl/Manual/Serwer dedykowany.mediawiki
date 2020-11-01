@@ -40,7 +40,7 @@ Możesz także uruchomić openttd z opcją -f . Oznacza to, że proces będzie d
 ==Konfigurowanie serwera==
 Istnieją 3 sposoby zmiany opcji gry:
 * Uruchom grę dla jednego gracza, zmień ustawienia i zamknij grę.
-* Użyj [[pl/Manual/Konsola#Server_commands|console commands]] do sterowania serwerem podczas jego działania.
+* Użyj [[pl/Manual/Konsola#server-commands|console commands]] do sterowania serwerem podczas jego działania.
 * Edytuj plik [[pl/Archive/Manual/Settings/Openttd.cfg|openttd.cfg]] manualnie . Aby uzyskać pomoc, zobacz [[pl/Archive/Manual/Settings/Diff custom|diff custom]] .
 Dostępne narzędzia:
 *[http://www.tt-forums.net/viewtopic.php?f=29&t=33967 Web Interface]
@@ -55,7 +55,7 @@ Zmień ustawienia sieci <small>''(network)''</small> w sekcji Sieć w [[pl/Archi
 *Jeśli jesteś za routerem, upewnij się, że przekazałeś port określony przez [[pl/Archive/Manual/Settings/Port serwera|server_port]] (zarówno TCP, jak i UDP)
 
 ==Kontrolowanie serwera za pomocą rcon==
-Skonfiguruj serwer dedykowany do akceptowania [[pl/Manual/Konsola#Server_commands|rcon]]<!--[[Console#Server_commands|rcon]] --> komendy:
+Skonfiguruj serwer dedykowany do akceptowania [[pl/Manual/Konsola#server-commands|rcon]]<!--[[Console#Server_commands|rcon]] --> komendy:
 *W oknie serwera dedykowanego wpisz {{en/C|rcon_pw <password>|}}. 
 :Przykład: {{en/C|rcon_pw x8na7f|}}
 

@@ -46,7 +46,7 @@ A: Set in advanced setting>Vehicles airplane speed factor to 1/1
 :* Observe 'Cargo payment rates' (under chart icon [[File:en/Manual html 36354981.png]]) to see what will give you good profit
 :* Search for large cities (in Town directory [[File:en/Manual html m58c015ad.png]]), and industries that have the greatest production (in Industry directory [[File:en/Manual html m4d6ba21e.png]])
 :* Build long routes, try to keep them flat and without many turns (to maximize speed)
-:* Use '[[en/Manual/Orders#Full_Load|Full load]]' in vehicle orders
+:* Use '[[en/Manual/Orders#full-load|Full load]]' in vehicle orders
 :* The optimum distance to deliver cargos is approximately 70 days' travel for cargos with a late delivery penalty (passengers, mail, perishable goods), and ~130 days for those without (oil, coal, wood, etc.) The precise distance varies slightly from cargo to cargo but 70 and 130 are reasonable base values.
 ::* In 70 days, a vehicle will move a distance equal to its average speed x 2.5 tiles, and in 130 days, its average speed x 4.5. So if a vehicle has a speed of 60 kph, its optimum delivery distance is about 150 tiles for perishables, and 270 tiles for non-perishables.
 ::* Vehicle speeds in mph would give multipliers of x4 and x7; so a 45 mph vehicle should travel 180 or 315 tiles.
@@ -65,7 +65,7 @@ That happens when you are not providing a sufficiently good service to the stati
 To fix this problem, increase the rating. See also the answer to the next question.
 
 ==How to maximize 'Local rating of transport service'==
-:Read about [[en/Manual/Game Mechanics/Main Page#Station_rating|station rating]] and [[en/Manual/Game Mechanics/Main Page#Local_authority_rating|town rating]].
+:Read about [[en/Manual/Game Mechanics/Main Page#station-rating|station rating]] and [[en/Manual/Game Mechanics/Main Page#local-authority-rating|town rating]].
 
 ==How to disable opening and closing of industries==
 :[http://grfcrawler.tt-forums.net/details.php?do=details&id=244 Manual Industries]
@@ -76,7 +76,7 @@ A newer version for OpenTTD, 1.1.x (currently, nightlies only) is available as '
 It is possible, with a few minor changes to the code, but at the moment there is no option for it. Alternatively, you might code a [[en/Manual/NewGRF]] to do it.
 
 ==How do I relocate the main toolbar and statusbar, since it's 'centred' on a dual-display?==
-In [[en/Archive/Manual/Settings/Advanced Settings/Interface]] there are options to set the position of the [[en/Archive/Manual/Settings/Advanced Settings/Interface#Position of the main toolbar|main toolbar]] and the [[en/Archive/Manual/Settings/Advanced Settings/Interface#Position of statusbar|statusbar]] to left, centre or right.
+In [[en/Archive/Manual/Settings/Advanced Settings/Interface]] there are options to set the position of the [[en/Archive/Manual/Settings/Advanced Settings/Interface#position-of-the-main-toolbar|main toolbar]] and the [[en/Archive/Manual/Settings/Advanced Settings/Interface#position-of-statusbar|statusbar]] to left, centre or right.
 
 ==How to get expired vehicles back?==
 After 2050 vehicles expire, which means they are no longer available for you. That is really bad if you want to open a new service!
@@ -115,7 +115,7 @@ The path finder is quite clever in routing the trains. If they head off in the '
 * Signals of wrong type and/or direction
 
 ==Why are my aircraft disappearing?==
-Big planes have a high chance to crash while landing at small or commuter airports. See also [[en/Manual/Aircraft#Accidents]].
+Big planes have a high chance to crash while landing at small or commuter airports. See also [[en/Manual/Aircraft#accidents]].
 
 ==Why are my road vehicles disappearing?==
 If you have very fast trains and level crossings, vehicles may not be able to get out of the way before the train arrives. The vehicle will be crushed and destroyed, and the train will just continue on its way. There is also a 'small UFO' disaster which will destroy road vehicles occasionally.

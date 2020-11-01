@@ -1,7 +1,7 @@
 [[Translation:en/Manual/Towns]]
 {{hu/Tartalomjegyzék}}Az OpenTTD lakosai '''településeken''' élnek. Minden település népessége növekszik vagy csökken, bizonyos feltételek függvényében.[[File:en/Town.png|left|thumb|436px|Potsdam, a kis település.]]__TOC__{{en/-}}
 ==A település épületei==
-A település legtöbb [[hu/Archive/Manual/Épület|épülete]] [[hu/Manual/Base Set/Cargos/Utasok|utasok]], és [[hu/Manual/Base Set/Cargos/Levél|levelek]] származási helyeként szolgál, ezeket más településre, vagy a településen belül lehet szállítani, [[hu/Manual/Gazdaság#A recesszió|Gazdasági recesszió]] idején a máskor szokásosnak a fele mennyiségben csak.
+A település legtöbb [[hu/Archive/Manual/Épület|épülete]] [[hu/Manual/Base Set/Cargos/Utasok|utasok]], és [[hu/Manual/Base Set/Cargos/Levél|levelek]] származási helyeként szolgál, ezeket más településre, vagy a településen belül lehet szállítani, [[hu/Manual/Gazdaság#a-recesszio|Gazdasági recesszió]] idején a máskor szokásosnak a fele mennyiségben csak.
 
 Néhány esetben az épületek más rakomány fogadására is alkalmasak, mint pl. az áru vagy az étel. Ahhoz, hogy az állomás ilyen rakomány fogadására alkalmas legyen, az szükséges, hogy a vonzáskörzetébe eső épületekben legalább 8/8 legyen az ilyen rakomány elfogadására képes összesen. Használd a [[hu/Manual/Területinformáció|Területinformáció]] eszközt az egyes épületek fogadóképességének megállapítására.
 
@@ -60,7 +60,7 @@ Ha a település központja nincs hóhatár fölött, fejlődéséhez étel nem 
 A települések önmaguktól nagyon lassan fejlődnek, így az olyan kis települések esetében, amelyek nem elég nagyok ahhoz, hogy ételt fogadjanak, egyszerűen várni kell, hogy fejlődjenek. Mint más rakomány esetében is, az állomás vonzáskörzetébe eső házakban összesen legalább 8/8 ételfogadás szükséges, mielőtt az állomás ételt fogadna el. 
 
 {{en/-}}[[File:en/Water tower.gif|right]]
-A vizet a Víztorony gazdasági épülethez kell küldeni. A víztornyok maguktól jönnek létre a településeken, de a játékos is megalapíthatja, a [[File:en/Industry button.png]] ''Gazdasági épületek'' - [[hu/Manual/Gazdasági épületek#Új gazdasági épület alapítása|Új gazdasági épületek építése]] menü használatával.
+A vizet a Víztorony gazdasági épülethez kell küldeni. A víztornyok maguktól jönnek létre a településeken, de a játékos is megalapíthatja, a [[File:en/Industry button.png]] ''Gazdasági épületek'' - [[hu/Manual/Gazdasági épületek#uj-gazdasagi-epulet-alapitasa|Új gazdasági épületek építése]] menü használatával.
 
 A beszállított víz és étel mennyiségének nincs hatása a település fejlődési ütemére.
 
@@ -79,7 +79,7 @@ Mérsékelt éghajlaton a település népességét még egy egyszerű buszszolg
 Áru beküldésének '''nincs''' külön hatása a település fejlődésére egyetlen éghajlaton sem. Ennek a gyakori félreértésnek az lehet az oka, hogy azok a települések, amelyek a játék korai szakaszában elfogadnak árut, rendszerint városi rangúak (ami azt jelenti, hogy eleve gyorsabban fejlődnek, mint a nem városi rangúak) és a játékosok hajlamosak elfeledkezni az árufogadó településekről. Így aztán, ha megint a településre néznek, úgy tűnik, hogy a település hirtelen megnőtt.
 
 ==A városok==
-A város a település sajátos formája, mely kétszer olyan gyorsan fejlődik, mint egy átlagos település. Egy város már a kezdetektől nagyobb. Két beállítás van a ''Haladó beállítások'' közt: a ''[[hu/Haladó beállítások/Gazdaság#Várossá váló települések aránya/Hu|Várossá váló települések aránya]]'', és a ''[[hu/Haladó beállítások/Gazdaság#Kezdeti városméret-szorzó|Kezdeti városméret-szorzó]]''.
+A város a település sajátos formája, mely kétszer olyan gyorsan fejlődik, mint egy átlagos település. Egy város már a kezdetektől nagyobb. Két beállítás van a ''Haladó beállítások'' közt: a ''[[hu/Haladó beállítások/Gazdaság#varossa-valo-telepulesek-aranya-hu|Várossá váló települések aránya]]'', és a ''[[hu/Haladó beállítások/Gazdaság#kezdeti-varosmeret-szorzo|Kezdeti városméret-szorzó]]''.
 
 ==A települési önkormányzatok==
 Minden települést [[hu/Manual/Önkormányzat|önkormányzat]] irányít, mely meghatározza, melyik [[hu/Manual/Szállítási vállalat|cég]] milyen tevékenységet végezhet a településen vagy ahhoz közel. A fák kivágása (beleértve a területrendezést vagy a bulldózer-eszköz használatát is) és a településhez tartozó gazdasági épületek, más épületek, utak, alagutak, hidak lerombolása mind-mind a cég települési értékelését rontja. Ezzel szemben a faültetés, a sikeres vesztegetés és a településnek nyújtott szolgáltatások (az elmúlt ötven napban rakományt forgalmazó állomások) javítják a cég értékelését. Ahhoz, hogy a cég állomást tudjon elhelyezni a településen, legalább -200 ("Rossz") értékeléssel kell rendelkeznie.
@@ -90,7 +90,7 @@ Használd a [[hu/Manual/Területinformáció|Területinformáció]] eszközt ann
 A települési épületeket NewGRF-ekkel módosítani lehet és/vagy kicserélni. A NewGRF-csomagok változtatások sokaságát teszik lehetővé, egy-két új épület hozzáadásától kezdve egészen a teljes települési épületkészlet kicseréléséig. A NewGRF-csomagok azt is újradefiniálhatják, hogy az épületek milyen rakományt fogadnak el vagy termelnek, de új vagy módosított, a településen vagy azokhoz közel található gazdasági épületeket is tartalmazhatnak.
 
 ==A Csodabulldózer cheat==
-Ha a [[en/Csalások#Csodabulldózer|Csodabulldózer]] csalás be van kapcsolva, előfordulhat, hogy egy terjeszkedő település véletlenül lerombol egy gazdasági épületet. A kockázat abból adódik, hogy bekapcsolva maradhat azután is, hogy használatára már nincs szükség. A cheat biztonságos használatához tehát az kell, hogy addig tartsd bekapcsolva, amíg feltétlenül szükséges, aztán ne feledd újra kikapcsolni. 
+Ha a [[en/Csalások#csodabulldozer|Csodabulldózer]] csalás be van kapcsolva, előfordulhat, hogy egy terjeszkedő település véletlenül lerombol egy gazdasági épületet. A kockázat abból adódik, hogy bekapcsolva maradhat azután is, hogy használatára már nincs szükség. A cheat biztonságos használatához tehát az kell, hogy addig tartsd bekapcsolva, amíg feltétlenül szükséges, aztán ne feledd újra kikapcsolni. 
 
 ==A település útépítése==
 Ahogyan a település terjeszkedik, automatikusan utakat épít. Minden második-harmadik mező után útkereszteződést készít sík talajon (lejtőn útkereszteződést építeni nem lehet). Néhány esetben (sík talajon) három vagy több épület épülhet egy egyenes út mellett, viszont a település, ahogy terjeszkedik, lebonthat a néhány épületből egyet, hogy kereszteződés folytatásaként utat építsen (még akkor is, ha az út csak egyetlen mezőnyit nyúlik ki a kereszteződésből).

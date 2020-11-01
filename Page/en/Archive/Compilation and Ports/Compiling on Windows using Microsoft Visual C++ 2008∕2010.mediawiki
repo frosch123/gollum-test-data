@@ -39,7 +39,7 @@ You will need to install the windows SDK in order to compile the 64bit version
 If you don't want/need music, you can skip DirectX SDK. Please read next chapter on that.
 :'''Install the version August 2007'''
 :From the components screen remove the documentation and sample source code you'll save a lot of space. They're pretty useless if you just need to compile OpenTTD (see the image below). For those of you who don't want to download the whole DirectX SDK package with several hundred megabytes you can use this handy [http://www.tt-forums.net/download/file.php?id=118839&sid=554843a58fb26683eeacb7642ea2446d zip file] containg only headers needed for successfull OpenTTD compilation. You ''don't'' need the included dxguid.lib file for compiling trunk.
-{{en/Note|You should not use a version newer then August 2007 as DirectMusic is no longer support as of the November 2007 release. If you install a newer version, you should follow the instructions of [[#Microsoft.C2.AE_DirectX_SDK_earlier_than_August_2007]]}}
+{{en/Note|You should not use a version newer then August 2007 as DirectMusic is no longer support as of the November 2007 release. If you install a newer version, you should follow the instructions of [[#microsoft-r-directx-sdk-earlier-than-august-2007]]}}
 
 :As August 2007 or earlier installer doesn't support Microsoft® Visual Studio 2008, you will have to set up the VC++ directories manually.
 
@@ -113,7 +113,7 @@ Subversion is needed to download the source (the place where to find the MSVC pr
 
 ===Make the directory===
 
-Make a directory called "ottdsrc" in your C:\ drive. It is important to make a directory without spaces since [[en/Archive/Compilation and Ports/Compiling on Windows using MinGW]] (the program used later for [[#Bundle|making a bundle]]) can only switch to directories without spaces. This will be used as a place to download the source to.
+Make a directory called "ottdsrc" in your C:\ drive. It is important to make a directory without spaces since [[en/Archive/Compilation and Ports/Compiling on Windows using MinGW]] (the program used later for [[#bundle|making a bundle]]) can only switch to directories without spaces. This will be used as a place to download the source to.
 
 ===Download the source===
 
@@ -159,7 +159,7 @@ When you do not use make bundle, all files end up in <code>ottdsrc\bin</code> wi
 
 =Bundle=
 
-This is not necessary in compiling OpenTTD, only if you want to upload your binary publicly. The purpose of this article is to get the equivalent of a "<code>make bundle</code>" for MSVC builds. {{en/Note|You must have MSYS or Cygwin installed for this to work. To get MSYS, follow [[en/Archive/Compilation and Ports/Compiling on Windows using MinGW#Setting_up_MinGW|this guide]]. You only need to use the part which says "Setting Up MinGW", "Setting up MSYS" and "Install SVN", then you are good to go. Note that when installing MinGW, you do ''not'' need to install the g++ compiler, but you still need to install the candidate.}}
+This is not necessary in compiling OpenTTD, only if you want to upload your binary publicly. The purpose of this article is to get the equivalent of a "<code>make bundle</code>" for MSVC builds. {{en/Note|You must have MSYS or Cygwin installed for this to work. To get MSYS, follow [[en/Archive/Compilation and Ports/Compiling on Windows using MinGW#setting-up-mingw|this guide]]. You only need to use the part which says "Setting Up MinGW", "Setting up MSYS" and "Install SVN", then you are good to go. Note that when installing MinGW, you do ''not'' need to install the g++ compiler, but you still need to install the candidate.}}
 You will first need to change the directory to your OpenTTD source. Use this command to change directory: <code>cd <directory></code>. To change to your new source directory, type <code>cd /c/ottdsrc</code>
 
 Then, enter the command:
@@ -170,7 +170,7 @@ After this is done, you can find the contents in the <code>/bundle</code> direct
 
 =Running/Debugging the game=
 
-Make sure you have either the [[en/Manual/Installation#Files_from_TTD|original game files]] or our free alternatives [[en/Archive/Community/Sound Effects Replacement]] and [[en/Archive/Community/OpenGFX Readme]] placed in ~\Documents\OpenTTD\baseset\ , that way they're shared by all your OpenTTD installations and you don't have to copy them to every new installation.
+Make sure you have either the [[en/Manual/Installation#files-from-ttd|original game files]] or our free alternatives [[en/Archive/Community/Sound Effects Replacement]] and [[en/Archive/Community/OpenGFX Readme]] placed in ~\Documents\OpenTTD\baseset\ , that way they're shared by all your OpenTTD installations and you don't have to copy them to every new installation.
 
 =Microsoft® DirectX SDK earlier than August 2007=
 

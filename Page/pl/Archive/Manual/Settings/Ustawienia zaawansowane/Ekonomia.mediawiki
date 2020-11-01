@@ -25,7 +25,7 @@ Umożliwia wyłączenie zakupu wyłącznych praw transportowych w miastach. Przy
 
 ====Układ drogowy dla nowych miejscowości====
 {{pl/Zgodne Wersje|0.6|align="right"|text=(since 0.6.0)}}
-Wybierz, w jaki sposób miasta powinny budować swoje drogi. Możesz wybrać między oryginalnym algorytmem, ulepszonym algorytmem, siatką 2x2, siatką 3x3 lub losową. Ustawienie losowe wybiera losowo jedną z czterech opcji dla każdego miasta. Ta opcja została przemianowana z [[en/Archive/Manual/Settings/Configuring patches/Economy#Select town road layout|Wybór układu dróg miejskich]] w wersji 0.6.3.
+Wybierz, w jaki sposób miasta powinny budować swoje drogi. Możesz wybrać między oryginalnym algorytmem, ulepszonym algorytmem, siatką 2x2, siatką 3x3 lub losową. Ustawienie losowe wybiera losowo jedną z czterech opcji dla każdego miasta. Ta opcja została przemianowana z [[en/Archive/Manual/Settings/Configuring patches/Economy#select-town-road-layout|Wybór układu dróg miejskich]] w wersji 0.6.3.
 :''Możliwe Ustawienia:'' <span style="color:#00693E">'''original'''</span>, <span style="color:#00693E">'''lepsze drogi <small>''(better roads)''</small>'''</span>, <span style="color:#00693E">'''2x2 siatka <small>''(grid)''</small>'''</span>, <span style="color:#00693E">'''3x3 siatka'''</span> lub <span style="color:#00693E">'''losowe <small>''(random)''</small>'''</span>
 :''W pliku konfiguracyjnym [[pl/Archive/Manual/Settings/Openttd.cfg|Openttd.cfg]] :'' ([economy] town_layout = <0-4>)
 
@@ -55,7 +55,7 @@ Wybierz, jak szybko mają się rozwijać miasta. Możesz także całkowicie wył
 
 ====Odsetek miejscowości, które staną się miastami<!--Proporcje miejscowości-->====
 {{pl/Zgodne Wersje|0.6|align="right"|text=(since 0.6.0)}}
-Określ, ile miejscowości stanie się [[pl/Manual/Miasta#Metropolia|miastami]]. Miasta to większe miejscowości , które mogą rosnąć szybciej (zobacz także następne ustawienie).
+Określ, ile miejscowości stanie się [[pl/Manual/Miasta#metropolia|miastami]]. Miasta to większe miejscowości , które mogą rosnąć szybciej (zobacz także następne ustawienie).
 :''Możliwe Ustawienia:'' <span style="color:red">'''None'''</span> lub <span style="color:#00693E">'''1 in 1'''</span> to <span style="color:#00693E">'''1 in 255'''</span>
 :Jeśli chcesz, aby każda miejscowość była miastem, użyj 1, 0 spowoduje brak miast.
 :''W pliku konfiguracyjnym [[pl/Archive/Manual/Settings/Openttd.cfg|Openttd.cfg]] :'' ([economy] larger_towns = <0-255>)
@@ -89,7 +89,7 @@ Miejscowość może mieć [[en/Archive/Manual/Settings/Multiple industries per t
 ====Maks. odległość od krawędzi dla rafinerii ropy naftowej====
 {{pl/Zgodne Wersje|0.5|align="right"|text=(since 0.5.0)}}
 Ta opcja określa maksymalną dozwoloną odległość (w kaflach) od krawędzi mapy dla rafinerii ropy naftowej.
-Ta opcja została przeniesiona z [[en/Archive/Manual/Settings/Configuring patches/Construction#Max distance from edge for Oil Refineries|Sekcja konstrukcyjna]] w wersji 0.7.0. W najnowszych wersjach OpenTTD wartość tego ustawienia jest skalowana według wymiaru zgodnie z rozmiarem mapy dla map większych niż 256x256.
+Ta opcja została przeniesiona z [[en/Archive/Manual/Settings/Configuring patches/Construction#max-distance-from-edge-for-oil-refineries|Sekcja konstrukcyjna]] w wersji 0.7.0. W najnowszych wersjach OpenTTD wartość tego ustawienia jest skalowana według wymiaru zgodnie z rozmiarem mapy dla map większych niż 256x256.
 :''Możliwe Ustawienia:'' <span style="color:#00693E">'''12'''</span> to <span style="color:#00693E">'''48'''</span>
 :''W pliku konfiguracyjnym [[pl/Archive/Manual/Settings/Openttd.cfg|Openttd.cfg]] :'' ([game_creation] oil_refinery_limit = <12-48>)
 {{en/-}}
@@ -103,7 +103,7 @@ Określa, czy [[en/Archive/Manual/Settings/Disable inflation|inflacja jest wł. 
 
 ===Włączona płynna <small>''(smooth)''</small> ekonomia (więcej, mniejsze zmiany)===
 {{pl/Zgodne Wersje|Old|align="right"|text=(since 0.3.3)}}
-[[pl/<!--smooth economy-->Łagodna ekonomia#.C5.81agodna_ekonomia|Zmiany w produkcji]] będzą się zdarzać częściej i w mniejszych procentach.
+[[pl/<!--smooth economy-->Łagodna ekonomia#lagodna-ekonomia|Zmiany w produkcji]] będzą się zdarzać częściej i w mniejszych procentach.
 :''Możliwe Ustawienia:'' <span style="color:green">'''On'''</span> lub <span style="color:red">'''Off'''</span>
 :''W [[pl/Archive/Manual/Settings/Openttd.cfg|Openttd.cfg]] config file:'' ([economy] smooth_economy = <true|false>)
 

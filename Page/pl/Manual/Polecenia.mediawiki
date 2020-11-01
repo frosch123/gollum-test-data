@@ -19,7 +19,7 @@ Możesz wydawać polecenia każdemu pojazdowi, który posiadasz. Twoi kierowcy b
 
 *Znajdź i kliknij na pojazd, któremu chcesz wydać rozkaz. Pojazd może znajdować się w zajezdni, jeśli właśnie go kupiłeś, lub może już się przemieszczać. W przypadku pociągu, kliknięcie na dowolny wagon będzie miało ten sam efekt. Wyświetlone zostanie okno pojazdu.<br/>[[File:en/Orders-1.png|frame|none|Okno pojazdu]]
 *Kliknij przycisk Polecenia. Spowoduje to wyświetlenie okna poleceń, w którym wyświetlane są wszystkie polecenia, jakie aktualnie posiada dany pojazd (w naszym przykładzie nie ma jeszcze żadnego).<br/>[[File:en/Orders-2.png|frame|none|Okno poleceń]]
-*Kliknij ''[[#Idź do|Idź do]]'', a następnie wybierz stację na mapie.
+*Kliknij ''[[#idz-do|Idź do]]'', a następnie wybierz stację na mapie.
 *Kliknij na utworzoną właśnie na liście pozycję, aby ją wybrać, a następnie powiedz pojazdowi, co powinien zrobić na tej stacji (np. kliknij 'Pełen załadunek któregoś z towarów', aby pojazd czekał na stacji na pełen załadunek).
 
 ==Obecny cel pojazdu==
@@ -35,10 +35,10 @@ W oknie poleceń widoczne są następujące przyciski:
 ===Idź do===
 Pozwala na skierowanie pojazdu w określone miejsce. Wstawia nową pozycję przed tą zaznaczoną, lub jeśli nie ma wybranej pozycji, dodaje nową na końcu listy. Dostępne cele podróży to:
 *[[pl/Manual/Stacje|Własne stacje]], ale tylko te, na których ten konkretny pojazd jest akceptowany. Nie możesz więc wydać autobusowi rozkazu wyjazdu na lotnisko, jeśli to lotnisko nie ma dworca autobusowego. Nie możesz wysyłać swoich pojazdów na stacje konkurentów.
-*[[pl/Zajezdnie|Zajezdnia]]. Więcej poleceń związanych z zajezdniami znajdziesz poniżej, w sekcjach [[#Serwis|Serwis]] i [[#Przebudowa|Przebudowa]].
+*[[pl/Zajezdnie|Zajezdnia]]. Więcej poleceń związanych z zajezdniami znajdziesz poniżej, w sekcjach [[#serwis|Serwis]] i [[#przebudowa|Przebudowa]].
 *[[pl/Manual/Punkty orientacyjne|Punkt orientacyjny]], do którego możesz wysłać pociąg, aby wpłynąć na jego wybór toru, lub jeśli stacje są zbyt oddalone od siebie i pociąg łatwo może się zgubić. Boja jest rodzajem punktu orientacyjnego dla poruszających się na długich dystansach statków.
 
-Pojazdy tego samego typu mogą [[#Kopiowanie poleceń|kopiować polecenia]] lub [[#Polecenia współdzielone|współdzielić je]].
+Pojazdy tego samego typu mogą [[#kopiowanie-polecen|kopiować polecenia]] lub [[#polecenia-wspoldzielone|współdzielić je]].
 
 Przycisk '''Idź do''' posiada następujące '''opcje''':
 * '''Idź do'''
@@ -51,7 +51,7 @@ Przeczytaj artykuł o [[pl/Archive/Manual/Settings/Szybkie tworzenie poleceń|sz
 ===Usuń===
 Usunie zaznaczone polecenie z isty poleceń pojazdu.
 
-Jeśli zaznaczony jest "-- Koniec poleceń --", cała lista zostanie usunięta. Inaczej działa to w przypadku [[#Polecenia współdzielone|poleceń współdzielonych]], szczegóły opisano niżej.
+Jeśli zaznaczony jest "-- Koniec poleceń --", cała lista zostanie usunięta. Inaczej działa to w przypadku [[#polecenia-wspoldzielone|poleceń współdzielonych]], szczegóły opisano niżej.
 
 ===Pomiń===
 Powoduje to, że pociąg pomija pozycję, którą aktualnie wykonuje i przechodzi do następnej. Naciśnięcie przycisku "Pomiń", gdy pojazd znajduje się na ostatnim zamówieniu, spowoduje ponowne uruchomienie pojazdu przy pierwszym.
@@ -60,14 +60,14 @@ Powoduje to, że pociąg pomija pozycję, którą aktualnie wykonuje i przechodz
 Poza przyciskami Pomiń, Usuń i Idź do, są też inne przyciski, które dokładnie określają, co pojazd powinien robić na stacji, np. każą mu czekać na pełny ładunek lub zmuszają do rozładunku. [[pl/Manual/Statki|Statki]] i [[pl/Manual/Samoloty|samoloty]] posiadają przyciski Pełen załadunek, Rozładunek, Transfer; [[pl/Manual/Pociągi|pociągi]] i [[pl/Manual/Pojazdy drogowe|pojazdy drogowe]] posiadają dodatkowy przycisk Non-Stop. Aby dodać nową instrukcję do polecenia, kliknij na to polecenie (co umożliwia użycie innych przycisków), a następnie na instrukcję (Pełen załadunek, Rozładunek, itp.)
 
 Po wyborze polecenia ''Idź do [[pl/Manual/Stacje|'''stacji''']]'', są dostępne następujące kategorie opcji:
-* [[#Opcje zatrzymania|'''Opcje zatrzymania''']]
-* [[#Opcje załadunku|'''Opcje załadunku''']]
-* [[#Opcje rozładunku|'''Opcje rozładunku''']]
-* [[#Przebudowa|'''Przebudowa na stacji''']] (tylko jeśli dany typ pojazdu na to pozwala)
+* [[#opcje-zatrzymania|'''Opcje zatrzymania''']]
+* [[#opcje-zaladunku|'''Opcje załadunku''']]
+* [[#opcje-rozladunku|'''Opcje rozładunku''']]
+* [[#przebudowa|'''Przebudowa na stacji''']] (tylko jeśli dany typ pojazdu na to pozwala)
 
 Po wyborze polecenia ''Idź do [[pl/Zajezdnie|'''zajezdni''']]'', są dostępne następujące kategorie opcji:
-* [[#Przebudowa|'''Przebudowa''']]
-* [[#Serwis|'''Serwis''']]
+* [[#przebudowa|'''Przebudowa''']]
+* [[#serwis|'''Serwis''']]
 
 ==Opcje załadunku==
 Tutaj możesz zadecydować, co dzieje się z ładunkiem dostępnym do załadunku na stacji. Dostępne są następujące opcje:
@@ -175,7 +175,7 @@ Czasami możesz chcieć, żeby pojazdy przestały dzielić się poleceniami. Ocz
 Możesz zauważyć, że ostatnia linia to znowu ''--Koniec poleceń--''. Wszystkie pozostałe pojazdy nadal współdzielą polecenia, jednak ten, którego polecenia przed chwilą modyfikowałeś, posiada już osobną listę poleceń. Zmiany dokonane w nich nie wpłyną na żaden inny pojazd.
 
 ===Lista pojazdów współdzielących===
-Widoczny w prawym dolny rogu okna poleceń przycisk [[File:en/SharedOrders.png]], to właśnie przycisk ''Pojazdy współdzielące''. It shows a list of all the vehicles that have the same [[#Shared orders|shared orders]] as the current vehicle. The icon will only be enabled if the vehicle is sharing orders.
+Widoczny w prawym dolny rogu okna poleceń przycisk [[File:en/SharedOrders.png]], to właśnie przycisk ''Pojazdy współdzielące''. It shows a list of all the vehicles that have the same [[#shared-orders|shared orders]] as the current vehicle. The icon will only be enabled if the vehicle is sharing orders.
 [[File:en/SharedOrders-1.png|none|frame|List of vehicles with shared orders]]
 
 ===Uwagi===

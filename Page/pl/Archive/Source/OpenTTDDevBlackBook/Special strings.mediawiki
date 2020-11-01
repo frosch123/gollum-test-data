@@ -138,7 +138,7 @@ Poniżej znajduje się pełna lista aktualnie dostępnych poleceń:
 |-
 | <tt>{STRING}</tt> || 1 || pobierz ciąg bez parametrów z indeksu ||
 |-
-| <tt>{STRING1}</tt> || 2 || uzyskać ciąg z 1 parametrem || rowspan="7" | Użyj w '''english.txt''' tylko; w użyciu innych plików językowych zamiast <tt>{STRING}</tt> .<br />Zauważ, że te polecenia mogą prowadzić do zagnieżdżonej rozdzielczości poleceń. Aby uzyskać szczegółowe informacje, patrz [[pl/Archive/Source/Ciągi znaków#nested_resolution|tutaj]].
+| <tt>{STRING1}</tt> || 2 || uzyskać ciąg z 1 parametrem || rowspan="7" | Użyj w '''english.txt''' tylko; w użyciu innych plików językowych zamiast <tt>{STRING}</tt> .<br />Zauważ, że te polecenia mogą prowadzić do zagnieżdżonej rozdzielczości poleceń. Aby uzyskać szczegółowe informacje, patrz [[pl/Archive/Source/Ciągi znaków#nested-resolution|tutaj]].
 |-
 | <tt>{STRING2}</tt> || 3 || uzyskać ciąg z 2 parametrami 
 |-
@@ -152,7 +152,7 @@ Poniżej znajduje się pełna lista aktualnie dostępnych poleceń:
 |-
 | <tt>{STRING7}</tt> || 8 || get a string with 7 parameters 
 |-
-| <tt>{RAW_STRING}</tt> || 1 || uzyskać pełny ciąg || Użyj w '''english.txt''' tylko; w użyciu innych plików językowych zamiast <tt>{STRING}</tt> .<br />Można znaleźć dodatkowe informacje o tym, jak wykorzystywane są RAW_STRING [[pl/Archive/Source/Ciągi znaków#using_raw_string|tutaj]].
+| <tt>{RAW_STRING}</tt> || 1 || uzyskać pełny ciąg || Użyj w '''english.txt''' tylko; w użyciu innych plików językowych zamiast <tt>{STRING}</tt> .<br />Można znaleźć dodatkowe informacje o tym, jak wykorzystywane są RAW_STRING [[pl/Archive/Source/Ciągi znaków#using-raw-string|tutaj]].
 |-
 |}
 {| border = "1"
@@ -195,9 +195,9 @@ Poniżej znajduje się pełna lista aktualnie dostępnych poleceń:
 |-
 | '''Komenda''' || '''Liczba użytych Parametrów''' || '''Opis''' || '''Referencje'''
 |-
-| <tt>{P}</tt> || 0 || Plural modyfikator || Dalsze informacje na temat korzystania <!--[[OpenTTDDevBlackBook/Format_of_langfiles#plural_form|plural special strings]]-->[[pl/Archive/Source/Format plików lang#Liczba mnoga|specialne ciągi plural]] w ciągach
+| <tt>{P}</tt> || 0 || Plural modyfikator || Dalsze informacje na temat korzystania <!--[[OpenTTDDevBlackBook/Format_of_langfiles#plural_form|plural special strings]]-->[[pl/Archive/Source/Format plików lang#liczba-mnoga|specialne ciągi plural]] w ciągach
 |-
-| <tt>{G}</tt> || 0 || Gender modyfikator || Dalsze informacje na temat korzystania <!--[[OpenTTDDevBlackBook/Format_of_langfiles#genders_special_string|genders]]-->[[pl/Archive/Source/Format plików lang#genders special string|płcie]] w ciągach
+| <tt>{G}</tt> || 0 || Gender modyfikator || Dalsze informacje na temat korzystania <!--[[OpenTTDDevBlackBook/Format_of_langfiles#genders_special_string|genders]]-->[[pl/Archive/Source/Format plików lang#genders-special-string|płcie]] w ciągach
 |-
 |}
 

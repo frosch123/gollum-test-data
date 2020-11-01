@@ -41,7 +41,7 @@ Geeft aan dat wel of niet de voertuig de bedrijfskleuren worden getoond, die bij
 {{en/-}}
 ====Toon gereserveerd spoor====
 {{nl/Kenmerken|0.7|float=right|text=(0.7.0)}}
-Wanneer aan gezet wordt het spoor dat is gereserveerd voor een trein zichtbaar. Handig om eventuele fouten bij de [[nl/Manual/Seinen#Routeseinen|routeseinen]] tussen secties op te sporen.
+Wanneer aan gezet wordt het spoor dat is gereserveerd voor een trein zichtbaar. Handig om eventuele fouten bij de [[nl/Manual/Seinen#routeseinen|routeseinen]] tussen secties op te sporen.
 :''Mogelijke instellingen:'' <span style="color:green">'''Aan'''</span> of <span style="color:red">'''Uit'''</span>
 :''In Openttd.cfg config file:'' ([gui] show_track_reservation = <true|false>)
 {{en/-}}
@@ -72,7 +72,7 @@ Stelt het aantal vensters in dat kan worden geopend op hetzelfde moment, zonder 
 :''In Openttd.cfg config file:'' ([gui] window_soft_limit = <num_val>)
 ====Verbind de knoppenbalk voor terreinvorming met die voor spoor/weg/water/vliegveld====
 {{nl/Kenmerken|Old|float=right|text=(0.4.0.1)}}
-Wanneer op een van de [[File:en/Manual html m772c5b23.png]] [[nl/Manual/Spoorwegconstructies|Spoorwegconstructies]], [[File:en/Manual html ma6d6c8c.png]] [[nl/Manual/Wegconstructies|Wegconstructies]], [[File:en/Manual html m2cc0c4cd.png]] [[nl/Manual/Waterwegconstructies|Waterwegconstructies]] of [[File:en/Manual html 1ae92703.png]] [[nl/Manual/Bouw vliegveld|Vliegveldconstructies]] knoppen op de [[nl/Manual/Spelinterface#De_menubalk|menubalk]] wordt geklikt zal de [[nl/Manual/Terreinvorming|terreinvorming]] werkbalk worden geopend naast de relevante constructiewerkbalk. Wanneer je een geopende constructiewerkbalk sluit, zal de geopende terreinvorming werkbalk ook gesloten worden.
+Wanneer op een van de [[File:en/Manual html m772c5b23.png]] [[nl/Manual/Spoorwegconstructies|Spoorwegconstructies]], [[File:en/Manual html ma6d6c8c.png]] [[nl/Manual/Wegconstructies|Wegconstructies]], [[File:en/Manual html m2cc0c4cd.png]] [[nl/Manual/Waterwegconstructies|Waterwegconstructies]] of [[File:en/Manual html 1ae92703.png]] [[nl/Manual/Bouw vliegveld|Vliegveldconstructies]] knoppen op de [[nl/Manual/Spelinterface#de-menubalk|menubalk]] wordt geklikt zal de [[nl/Manual/Terreinvorming|terreinvorming]] werkbalk worden geopend naast de relevante constructiewerkbalk. Wanneer je een geopende constructiewerkbalk sluit, zal de geopende terreinvorming werkbalk ook gesloten worden.
 :''Mogelijke instellingen:'' <span style="color:green">'''Aan'''</span> of <span style="color:red">'''Uit'''</span>
 :''In Openttd.cfg config file:'' ([gui] link_terraform_toolbar = <true|false>){{en/-}}
 ====Voorkeur voor team chat met <ENTER>====
@@ -174,7 +174,7 @@ Aan- of uitzetten van de kolom met aankomst- en vertrektijden in het dienstregel
 {{en/-}}
 ===Snel voertuigorders maken===
 {{nl/Kenmerken|0.7|float=right|text=(0.7.0)}}
-Met deze optie aangezet wordt de '[[nl/Manual/Orders#Ga_naar|ga naar]]' functie van het voertuig actief na het klikken op een station. Dit geeft je de mogelijkheid om snel een volgende order in te voeren zonder dat he opnieuw de 'Ga naar' knop moet indrukken tussen elk station.
+Met deze optie aangezet wordt de '[[nl/Manual/Orders#ga-naar|ga naar]]' functie van het voertuig actief na het klikken op een station. Dit geeft je de mogelijkheid om snel een volgende order in te voeren zonder dat he opnieuw de 'Ga naar' knop moet indrukken tussen elk station.
 :''Mogelijke instellingen:'' <span style="color:green">'''Aan'''</span> of <span style="color:red">'''Uit'''</span>
 :''In Openttd.cfg config file:'' ([gui] quick_goto = <true|false>)
 {{en/-}}
@@ -192,14 +192,14 @@ Maakt het mogelijk bepaalde bouwgereedschappen te gebruiken ondanks det er geen 
 {{en/-}}
 ===Hou bouwgereedschappen actief na gebruik===
 {{nl/Kenmerken|0.7|float=right|text=(0.7.0)}}
-Houdt bijvoorbeeld de bus station constructievenster open nadat je een nieuw busstation hebt geplaatst. Dit staat je toe om snel meerdere busstations achter elkaar te plaatsen zonder dat je de [[nl/Manual/Bouw bushaltes en vrachtwagenlaadhallen#Een_bushalte_bouwen|bouw bushalte]] knop eerst moet aanklikken.
+Houdt bijvoorbeeld de bus station constructievenster open nadat je een nieuw busstation hebt geplaatst. Dit staat je toe om snel meerdere busstations achter elkaar te plaatsen zonder dat je de [[nl/Manual/Bouw bushaltes en vrachtwagenlaadhallen#een-bushalte-bouwen|bouw bushalte]] knop eerst moet aanklikken.
 :''Mogelijke instellingen:'' <span style="color:green">'''Aan'''</span> of <span style="color:red">'''Uit'''</span>
 :''In Openttd.cfg config file:'' ([gui] persistent_buildingtools = <true|false>)
 {{en/-}}
 ===Kleurenfoto's komen in===
 {{nl/Kenmerken|Old|float=right|text=(0.3.2)}}
 Het jaar waarin [[en/Archive/Manual/Settings/Coloured newspaper|kleurenfoto's]] verschijnen.
-Deze optie is verplaatst uit de [[en/Archive/Manual/Settings/Configuring patches/Economy#Coloured news appears in|economie sectie]] in 0.7.0.
+Deze optie is verplaatst uit de [[en/Archive/Manual/Settings/Configuring patches/Economy#coloured-news-appears-in|economie sectie]] in 0.7.0.
 :''Mogelijke instellingen:'' <span style="color:#00693E">'''0'''</span> tot <span style="color:#00693E">'''5.000.000'''</span>
 :''In Openttd.cfg config file:'' ([gui] colored_news_year = <year>)
 {{en/-}}

@@ -36,13 +36,13 @@ Maakt semafoor (arm)seinen (oude stijl van seinen) de standaard te plaatsen sein
 {{en/-}}
 ====Seintype dat standaard moet worden gebouwd====
 {{nl/Kenmerken|0.7|align="right"|text=(0.7.0)}}
-Stelt het type sein in dat standaard wordt gebouwd bij gebruik van het sein gereedschap. Kies tussen [[nl/Manual/Seinen|normale seinen]], [[nl/Manual/Seinen#Routeseinen|routeseinen]] of [[nl/Manual/Seinen#Eenrichtingsseinen|eenrichtingsrouteseinen]]. Als de [[#Activeer_sein-GUI|sein-GUI]] is geactiveerd, wordt dit type sein standaard geselecteerd.
+Stelt het type sein in dat standaard wordt gebouwd bij gebruik van het sein gereedschap. Kies tussen [[nl/Manual/Seinen|normale seinen]], [[nl/Manual/Seinen#routeseinen|routeseinen]] of [[nl/Manual/Seinen#eenrichtingsseinen|eenrichtingsrouteseinen]]. Als de [[#activeer-sein-gui|sein-GUI]] is geactiveerd, wordt dit type sein standaard geselecteerd.
 :''Mogelijke instellingen:'' <span style="color:#00693E">'''Normale seinen'''</span>, <span style="color:#00693E">'''Routeseinen'''</span> of <span style="color:#00693E">'''Eenrichtingsrouteseinen'''</span>
 :''In Openttd.cfg config file:'' ([gui] default_signal_type = <0-2>)
 {{en/-}}
 ====Blader door seintype====
 {{nl/Kenmerken|0.7|align="right"|text=(0.7.0)}}
-Stelt in door welk type van seien moet worden gebladerd met ctrl-klikken op een reeds geplaatst sein. Kies tussen bladeren door alle [[nl/Manual/Seinen|sein]] types, alleen de [[nl/Manual/Seinen|normale sein]] types of alleen de [[nl/Manual/Seinen#Routeseinen|routesein]] types.
+Stelt in door welk type van seien moet worden gebladerd met ctrl-klikken op een reeds geplaatst sein. Kies tussen bladeren door alle [[nl/Manual/Seinen|sein]] types, alleen de [[nl/Manual/Seinen|normale sein]] types of alleen de [[nl/Manual/Seinen#routeseinen|routesein]] types.
 :''Mogelijke instellingen:'' <span style="color:#00693E">'''Alleen normaal'''</span>, <span style="color:#00693E">'''Alleen routeseinen'''</span> of <span style="color:#00693E">'''Allemaal'''</span>
 :''In Openttd.cfg config file:'' ([gui] cycle_signal_types = <0-2>)
 {{en/-}}
@@ -81,7 +81,7 @@ Geeft de mogelijkheid om de maximale tunnellengte in te voeren.
 {{nl/Kenmerken|1.0|align="right"|text=(1.0.0)}}
 Vliegvelden kunnen een verloopdatum hebben, gelijk aan motoren. Verlopen vliegvelden kunnen niet meer gebouwd worden. Met deze optie ingeschakeld zullen vliegvelden niet meer verlopen.
 
-Deze optie is hernoemd van [[#Sta_altijd_kleine_vliegvelden_toe|sta altijd kleine vliegvelden toe]] in r16614.
+Deze optie is hernoemd van [[#sta-altijd-kleine-vliegvelden-toe|sta altijd kleine vliegvelden toe]] in r16614.
 :''Mogelijke instellingen:'' <span style="color:green">'''Aan'''</span> of <span style="color:red">'''Uit'''</span>
 :''In Openttd.cfg config file:'' ([station] never_expire_airports = <true|false>)
 {{en/-}}
@@ -107,12 +107,12 @@ Met deze optie kun je aangeven welke mogelijkheden tijdens een spelpauze toegela
 ==In vorige versies==
 ===Sta altijd kleine vliegvelden toe===
 {{nl/Kenmerken periode|0.2|0.7|align="right"|text=(0.3.2 t/m 0.7.5)}}
-Deze optie is hernoemd naar [[#Vliegvelden_verlopen_niet|vliegvelden verlopen niet]] in r16614.
+Deze optie is hernoemd naar [[#vliegvelden-verlopen-niet|vliegvelden verlopen niet]] in r16614.
 {{en/-}}
 
 ===Sta het bouwen van zeer lange bruggen toe===
 {{nl/Kenmerken periode|0.2|1.0|align="right"|text=(0.2.0 t/m 1.0.0)}}
-Deze optie is hernoemd naar [[#Maximum_bruglengte|maximum bruglengte]].
+Deze optie is hernoemd naar [[#maximum-bruglengte|maximum bruglengte]].
 {{en/-}}
 
 ===Zie ook===

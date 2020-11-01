@@ -202,7 +202,7 @@ Momenteel kun je het spel uitbuiten door ongeveer 200 bomen te planten in het in
 |-
 |Onsuccesvol omkopen|| n.v.t. ||Teruggezet naar -50.
 |}
-<nowiki>*</nowiki> "Vereiste beoordeling" is opgesomd voor de instellingen Toegeeflijk / Neutraal / Vijandig van de waarde van ''[[nl/Archive/Manual/Settings/Moeilijkheidsgraad#Houding_van_gemeenten_m.b.t._landschapsaanpassingen|Houding van gemeentebestuur ten opzichte van herstructurering omgeving]]''.<br>
+<nowiki>*</nowiki> "Vereiste beoordeling" is opgesomd voor de instellingen Toegeeflijk / Neutraal / Vijandig van de waarde van ''[[nl/Archive/Manual/Settings/Moeilijkheidsgraad#houding-van-gemeenten-m-b-t-landschapsaanpassingen|Houding van gemeentebestuur ten opzichte van herstructurering omgeving]]''.<br>
 <nowiki>**</nowiki> Voor standaardgebouwen. NewGRFs kunnen deze waarde aanpassen tussen 0 en >1000, wat een gebouw praktisch niet-verwijderbaar maakt.
 </td></tr></table>
 
@@ -223,7 +223,7 @@ De code voor de reputatie bij de gemeenteraad is te vinden in de bestanden <code
 
 Hier wordt aangegeven hoe in het spel wordt bepaald hoeveel vracht een industrie produceert per maand. Productie van ruwe materialen gebeurt 8 of 9 keren per maand. Het gebeurt elke 256 ''ticks''. Er zijn 74 ticks in een dag en 28 tot 31 dagen in een maand, zie <code>[https://github.com/OpenTTD/OpenTTD/blob/97c0594cedcad866bbdea8a0f86406b5c38694a3/src/date_type.h#L30 date_type.h]</code>. Dit betekent dat ongeveer 9% van de industrieën 9 keren zullen produceren in een maand met 28 dagen, maar dat 96% van de industrieën 9 keren zal produceren in een maand met 31 dagen. De productie zal altijd een veelvoud van 8 of 9 zijn, tenzij de productiehoeveelheid aangepast wordt in die maand.
 
-Deze tabel geeft een overzicht van mogelijke startproducties die worden bestuurd door de optie [[nl/Archive/Manual/Settings/Geavanceerde instellingen/Economie#Vloeiende_economie_inschakelen_(meer,_kleinere_veranderingen)|vloeiende economie]]. Deze waarden zijn veelvouden van 8. Als het spel een nieuwe kaart genereert, zal elke industrie 8 keren geproduceerd hebben en zullen de productiehoeveelheden niet veranderd zijn in de december die vooraf ging aan het begin van het spel.
+Deze tabel geeft een overzicht van mogelijke startproducties die worden bestuurd door de optie [[nl/Archive/Manual/Settings/Geavanceerde instellingen/Economie#vloeiende-economie-inschakelen-meer-kleinere-veranderingen|vloeiende economie]]. Deze waarden zijn veelvouden van 8. Als het spel een nieuwe kaart genereert, zal elke industrie 8 keren geproduceerd hebben en zullen de productiehoeveelheden niet veranderd zijn in de december die vooraf ging aan het begin van het spel.
 
 {| {{en/Wikitable}}
 |- style="background:#efefef"
@@ -318,7 +318,7 @@ Laten we eens kijken wat de veranderingen zijn voor 256x256 kaarten om de dingen
 ** Goede service: '''11.12%''' dat 1 mogelijke verandering per maand een verhoging is en '''5.56%''' dat 1 mogelijke kans per maand een verlaging is.
 
 ====Regels bij vloeiende economie====
-:''Maak onderscheid tussen [[nl/Archive/Manual/Settings/Geavanceerde instellingen/Economie#Vloeiende_economie_inschakelen_.28meer.2C_kleinere_veranderingen.29|vloeiende economie]] en  [[nl/Archive/Manual/Settings/Moeilijkheidsgraad|stabiele economie]]''
+:''Maak onderscheid tussen [[nl/Archive/Manual/Settings/Geavanceerde instellingen/Economie#vloeiende-economie-inschakelen-meer-kleinere-veranderingen|vloeiende economie]] en  [[nl/Archive/Manual/Settings/Moeilijkheidsgraad|stabiele economie]]''
 
 *De kans op een productiewijziging per maand is '''4,5%''' ofwel 4,5% van de producerende industrieën uit de list wijzigen de productie.
 
@@ -337,7 +337,7 @@ Laten we eens kijken wat de veranderingen zijn voor 256x256 kaarten om de dingen
 ** Excellent service: '''3.75%''' to increase and '''0.75%''' to decrease
 Weet niet zeker of het zo goed is vertaald, daarom originele tekst laten staan.-->
 
-*Met de optie [[nl/Archive/Manual/Settings/Geavanceerde instellingen/Economie#Vloeiende_economie_inschakelen_.28meer.2C_kleinere_veranderingen.29|vloeiende economie]] ingeschakeld zijn de productiewijzigingen per maand tussen 3% en 23%.
+*Met de optie [[nl/Archive/Manual/Settings/Geavanceerde instellingen/Economie#vloeiende-economie-inschakelen-meer-kleinere-veranderingen|vloeiende economie]] ingeschakeld zijn de productiewijzigingen per maand tussen 3% en 23%.
 **Industrieën met zeer lage productie (zo'n 12-40 ton per maand) hebben grotere kansen.
 **Primaire industrieën produceren 8 of 9 keer (10 keer is voor bos mogelijk) per maand. Maandelijkse productie kan worden berekend door de 'basisproductie' te vermenigvuldigen met het aantal keer per maand. Bijvoorbeeld: de basisproductie van een kolenmijn is 15 ton, de maandelijkse productie is dus 120 of 135 ton. De basisproductie is gemaximeerd op 255 dus is de maximale maandelijkse productie voor iedere industrie 2040 of 2295 (of 2550 voor bos). {{en/Forum|Bron|topic=163733}}
 
@@ -612,7 +612,7 @@ Stel nu voor dat een voertuig 1km-achtig/uur gaat: (1 * 16 * 256) / (74 * 2) * 2
 
 == Groei van gemeenten ==
 
-Zie [[nl/Manual/Gemeente#De_groei_van_een_gemeente|Gemeente/De groei van een gemeente]].
+Zie [[nl/Manual/Gemeente#de-groei-van-een-gemeente|Gemeente/De groei van een gemeente]].
 
 [[Category:nl/Spelen]]
 [[Category:nl/Ontwikkelingen]]

@@ -12,7 +12,7 @@
 |-
 |0A||W||Text ID for this object
 |-
-|0B||B||[[en/Action0General#Climate availability|Climate availability]]
+|0B||B||[[en/Action0General#climate-availability|Climate availability]]
 |-
 |0C||B||Byte representing size in x, see below
 |-
@@ -133,9 +133,9 @@
 |-
 !Bit!!value!!version!!meaning
 |-
-|0||1||use [[en/Callbacks#Next animation frame (1A/26/141/153/158) |callback 153]] to decide the next animation frame
+|0||1||use [[en/Callbacks#next-animation-frame-1a-26-141-153-158 |callback 153]] to decide the next animation frame
 |-
-|1||2||use [[en/Callbacks#Length of animation frame (20/27/142/154/15A) |callback 154]] to decide animation speed
+|1||2||use [[en/Callbacks#length-of-animation-frame-20-27-142-154-15a |callback 154]] to decide animation speed
 |-
 |2||4||{{en/Ottdp}}||(reserved)
 |-
@@ -143,7 +143,7 @@
 |-
 |4||10||{{en/Ottdp|1.1|ottdrev=r19204}}||use callback xx to check if a slope is suitable (not yet implemented)
 |-
-|5||20||{{en/Ottdp|1.1|ottdrev=r19204}}||use [[en/Callbacks#Decide drawing default foundations (30/14E/150) |callback 150]] to decide if default foundations need to be drawn
+|5||20||{{en/Ottdp|1.1|ottdrev=r19204}}||use [[en/Callbacks#decide-drawing-default-foundations-30-14e-150 |callback 150]] to decide if default foundations need to be drawn
 |-
 |6||40||{{en/Ottdp|1.1|ottdrev=r19204}}||use callback xx to allow or deny autosloping below the tile (not yet implemented)
 |}

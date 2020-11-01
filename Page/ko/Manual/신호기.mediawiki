@@ -29,7 +29,7 @@ __TOC__
 [[File:en/1-way signal loop.png|frame|center|One-way signals in a loop]]
 
 단방향 신호기를 쓰는 것이 일반 폐색 신호등을 쓰는 것보다 유용한 두가지 상황이 있습니다:
-*[[en/Manual/Building railway stations#Single_stations|회차역]]은 열차가 입구를 막지 않고 거꾸로 나가는 것을 막으면서 역에 정차하게 합니다. 이것은 열차가 역을 들어가고 나가는 것을 더 효율적으로 만듭니다. 
+*[[en/Manual/Building railway stations#single-stations|회차역]]은 열차가 입구를 막지 않고 거꾸로 나가는 것을 막으면서 역에 정차하게 합니다. 이것은 열차가 역을 들어가고 나가는 것을 더 효율적으로 만듭니다. 
 *2대 이상의 열차가 있는 복선에서 서로 역방향으로 달리지 않도록 해줍니다. 열차가 운행중인 단선의 선로에서 그들은 같은 지점에서 충돌할 것이기 때문에 어떤 열차도 역주행할 수 없습니다.복선에서 모든 열차는 한 방향으로만 달릴 수 있고 그들은 절대 충돌하지 않습니다, 열차가 다른 열차를 기다릴 필요가 없다는 것을 의미하며,항상 그 선로로 달릴 수 있게 해줍니다.
 
 열차가 단방향 신호기의 잘못된 방향에서 진입을 하면, 그 열차는 정지되고 사용자가 고급 신호 설정에서 '''신호 앞에서 회차'''를 '''비활성화'''하지 않는한 즉시 회차합니다. 단방향 신호기를 사용할 때,반드시 신호기가 ''모두'' 올바른 방향을 바라보는지 확인해야 합니다. 새롭게 신호등을 설치한 선로에서 목적지까지 가는 첫번째 열차를 따라가보는 것은 어떠한 실수도 저지르지 않았다는 것을 보장하는 좋은 방법입니다. 
@@ -169,7 +169,7 @@ There is a third type of pre-signal called the combo signal and simply acts as b
 In a tree of pre-signals, combo-signals are placed in between the entry pre-signals and exit-signals for that reason above, the other 2 types of signals are placed at the very beginning and end of the setup respectively.
 {{en/-}}
 ====Building pre-signals====
-To build a pre-signal select the appropriate button in [[#Signal Interface|signal selection toolbar]].
+To build a pre-signal select the appropriate button in [[#signal-interface|signal selection toolbar]].
 
 In previous versions, first place an ordinary signal.  Then, with ''Ctrl'' held down, click the signal to cycle through the different kinds of presignal:
 *Note that you can build one way pre-signals in the same way as you build ordinary one way signals.  Remember: holding ''Ctrl'' and clicking toggles the type of (pre)signal, clicking without ''Ctrl'' changes the direction of signaling - if interface signals not enabled.
@@ -179,7 +179,7 @@ In previous versions, first place an ordinary signal.  Then, with ''Ctrl'' held 
 [[File:en/PresignalLimitation.png|frame|The problem with pre-signals...]]
 An important point to note with exit signals is that a green exit signal will trigger a green on the entry pre-signal at the beginning of the block even if it is not actually possible for a train to get to that exit signal because of the track layout (as in the image to the right with a train entering on the bottom track cannot technically exit from the top track). This can ruin more complicated pre-signaling setups, so care needs to be taken with planning.
 
-One of the bugs that are noted as "will not be solved" is: lost trains ignore (block) exit signals. If trains are lost, a random direction is chosen at each junction, so they ignore block exit signals, and may easily block junctions with pre-signals. Such case, however, can be easily resolved by replacing with [[#Path signals|path signals]].
+One of the bugs that are noted as "will not be solved" is: lost trains ignore (block) exit signals. If trains are lost, a random direction is chosen at each junction, so they ignore block exit signals, and may easily block junctions with pre-signals. Such case, however, can be easily resolved by replacing with [[#path-signals|path signals]].
 {{en/-}}
 
 ==Directing trains==

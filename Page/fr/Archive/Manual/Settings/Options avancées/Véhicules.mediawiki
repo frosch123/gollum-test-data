@@ -108,7 +108,7 @@ Si vous avez désactivé les pannes et activé cette option, vos véhicules n'ir
 {{en/-}}
 ====Entretenir automatiquement les hélicoptères à l'héliport====
 {{fr/Disponibilité|Old|align="right"|texte=(depuis 0.3.3)}}
-Si l'option est activée, les hélicoptères seront révisés automatiquement chaque fois qu'ils arriveront à  un hélipad. Ainsi, vous n'aurez pas besoin d'avoir un aéroport sur le trajet de l'hélicoptère pour sa maintenance. Dans les versions précédentes, cette option se trouvait sous la [[fr/Options avancées 0.3.0 - 0.6.3/Stations#Réviser les hélicoptères à l'hélipad|section Gares]].
+Si l'option est activée, les hélicoptères seront révisés automatiquement chaque fois qu'ils arriveront à  un hélipad. Ainsi, vous n'aurez pas besoin d'avoir un aéroport sur le trajet de l'hélicoptère pour sa maintenance. Dans les versions précédentes, cette option se trouvait sous la [[fr/Options avancées 0.3.0 - 0.6.3/Stations#reviser-les-helicopteres-a-l-helipad|section Gares]].
 :''Valeurs possibles:'' <span style="color:green">'''Activé'''</span> ou <span style="color:red">'''Désactivé'''</span>
 :''Dans le fichier de configuration [[fr/Archive/Manual/Settings/Openttd.cfg|openttd.cfg]]:'' ([order] serviceathelipad = <true|false>)
 {{en/-}}
@@ -118,7 +118,7 @@ Si l'option est activée, les hélicoptères seront révisés automatiquement ch
 ====Modèle d'accélération des trains====
 {{fr/Disponibilité|0.7|align="right"|texte=(depuis 0.7.0)}}
 Choisit le mode de calcul par défaut ou une [[fr/Archive/Manual/Settings/Accélération réaliste|accélération plus réaliste]] pour les trains. Avec cette option mise à ''réaliste'', les trains circuleront plus vite en montant, mais moins vite dans les virages serrés.
-Cette option a été renommée depuis [[fr/Options avancées 0.3.0 - 0.6.3/Véhicules#Activer l'accélération réaliste pour les trains|Activer l'accélération réaliste pour les trains]].
+Cette option a été renommée depuis [[fr/Options avancées 0.3.0 - 0.6.3/Véhicules#activer-l-acceleration-realiste-pour-les-trains|Activer l'accélération réaliste pour les trains]].
 :''Valeurs possibles:'' <span style="color:#00693E">'''Original'''</span> ou <span style="color:#00693E">'''Réaliste'''</span>
 :''Dans le fichier de configuration [[fr/Archive/Manual/Settings/Openttd.cfg|openttd.cfg]]:'' ([vehicle] train_acceleration_model = <0-1>)
 {{en/-}}
@@ -187,7 +187,7 @@ Cette option peut être activée pour tous les véhicules, désactivée pour ceu
 ===Alerte en cas de profit négatif pour un véhicule===
 {{fr/Disponibilité|0.7|align="right"|texte=(depuis 0.7.0)}}
 Si le revenu d'un véhicule [[fr/Archive/Manual/Settings/Revenu négatif d'un train|est négatif]], cela se rapporté dans les messages des journaux. Utilisez l'option [[fr/Manual/Ordres|Transférer|de transfert]] dans la fenêtre des ordres du véhicule si vous voulez mettre en place un [[fr/Manual/Service d'approvisionnement|service d'approvisionnement]].
-Cette option a été renommée depuis [[fr/Options avancées 0.3.0 - 0.6.3/Véhicules#Avertir si le revenu d'un train est négatif|Avertir si le revenu d'un train est négatif]] en 0.7.0.
+Cette option a été renommée depuis [[fr/Options avancées 0.3.0 - 0.6.3/Véhicules#avertir-si-le-revenu-d-un-train-est-negatif|Avertir si le revenu d'un train est négatif]] en 0.7.0.
 :''Valeurs possibles:'' <span style="color:green">'''Activé'''</span> ou <span style="color:red">'''Désactivé'''</span>
 :''Dans le fichier de configuration [[fr/Archive/Manual/Settings/Openttd.cfg|openttd.cfg]]:'' ([gui] vehicle_income_warn = <true|false>)
 {{en/-}}

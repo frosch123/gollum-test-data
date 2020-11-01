@@ -175,7 +175,7 @@ make</pre>(note that ~ means your MSYS home folder)</li>
 Place the patch you want to apply into the directory the OpenTTD source code is located in (<MinGW installation folder>\MSYS\1.0\home\<your Windows user name>\trunk in this example). Then, in the MSYS shell:
 <pre>cd ~/trunk
 patch -p1/p0 < <patch name></pre>
-Use p0 for Subversion style patches, p1 for all others (it's probably a good idea to try p1 first). Explanation of the difference: [[en/Development/FAQ development#How to apply a patch]]
+Use p0 for Subversion style patches, p1 for all others (it's probably a good idea to try p1 first). Explanation of the difference: [[en/Development/FAQ development#how-to-apply-a-patch]]
 
 
 [[Category:en/Compiling OpenTTD]]

@@ -216,7 +216,7 @@ Code for town ratings is in town.h, town_cmd.c, tree_cmd.c, and road_cmd.c.
 ==Industry production==
 Here is how the game determines how much cargo an industry produces per month.  Production of raw materials happens 8 or 9 times per month.  (It happens every 256 ticks.  There are 74 ticks in a day, and 28 to 31 days in a month ([https://github.com/OpenTTD/OpenTTD/blob/97c0594cedcad866bbdea8a0f86406b5c38694a3/src/date_type.h#L30 date_type.h]).  This means that only about 9% of industries will produce 9 times in a 28-day February, but about 96% of industries will produce 9 times in a 31-day month like March.)  The production will always be a multiple of 8 or 9, unless the industry changed production during that month.
 
-This table lists possible starting productions governed by the [[en/Archive/Manual/Settings/Advanced Settings/Economy#Enable smooth economy (more, smaller changes)|smooth economy]] patch.  These numbers are multiples of 8.  When the game generates a new map, each industry produced 8 times and had no production changes in the December before the game started.
+This table lists possible starting productions governed by the [[en/Archive/Manual/Settings/Advanced Settings/Economy#enable-smooth-economy-more-smaller-changes|smooth economy]] patch.  These numbers are multiples of 8.  When the game generates a new map, each industry produced 8 times and had no production changes in the December before the game started.
 
 {| {{en/Wikitable}}
 |- style="background:#efefef"
@@ -309,7 +309,7 @@ To make things simple, let's look what are the chances for 256x256 maps (max. 1 
 ** Good service: '''11.12%''' that 1 possible change per month is an increase and '''5.56%''' that 1 possible change per month is a decrease.
 
 ====Smooth Economy Rules====
-:''Distinguish [[en/Archive/Manual/Settings/Advanced Settings/Economy#Enable smooth economy (more, smaller changes)|Smooth economy]] (advanced setting) and [[en/Archive/Manual/Settings/Difficulty|Steady economy]] (difficulty setting)''
+:''Distinguish [[en/Archive/Manual/Settings/Advanced Settings/Economy#enable-smooth-economy-more-smaller-changes|Smooth economy]] (advanced setting) and [[en/Archive/Manual/Settings/Difficulty|Steady economy]] (difficulty setting)''
 
 *The chance for a production change each month is '''4.5%''', i.e. 4.5% of producing industries from industry list change production.
 
@@ -639,7 +639,7 @@ Given the same values, the equilibrium speed, eg the speed the train would event
 
 == Crescita delle città ==
 
-Vedi [[it/Città#Crescita delle città|Crescita delle città]].
+Vedi [[it/Città#crescita-delle-citta|Crescita delle città]].
 
 [[Category:it/Giocare]]
 [[Category:it/Sviluppo]]

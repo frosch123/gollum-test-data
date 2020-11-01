@@ -21,7 +21,7 @@ To use an existing library, you just have to load it into your AI. Doing this is
    priority_queue/
    fibonacci_heap/
 
-Say you want to use the [[en/Development/Script/Library#Priority Queue|Priority Queue]], you simply do:
+Say you want to use the [[en/Development/Script/Library#priority-queue|Priority Queue]], you simply do:
 
  import("queue.priority_queue", "PriorityQueue", 2);
 
@@ -58,7 +58,7 @@ Now what you need to do is to create a file called '<code>main.nut</code>'. It s
 There are some things you can not do:
 
 * Register 2 libraries in one <code>library.nut</code>
-* Define more than 1 class in the <code>main.nut</code> (or any required file). However, you can define sub-classes. Say you need an extra class in <code>PriorityQueue</code>. You can name it <code>PriorityQueue.Subclass</code>. To access it from within your main class, use <code>this.Subclass</code>. See <code>[[en/Development/Script/Library#AyStar|graph.AyStar]]</code> for an example how it's done.
+* Define more than 1 class in the <code>main.nut</code> (or any required file). However, you can define sub-classes. Say you need an extra class in <code>PriorityQueue</code>. You can name it <code>PriorityQueue.Subclass</code>. To access it from within your main class, use <code>this.Subclass</code>. See <code>[[en/Development/Script/Library#aystar|graph.AyStar]]</code> for an example how it's done.
 
 == Multiple libraries of different versions ==
 
@@ -78,7 +78,7 @@ There are several libraries for common tasks bundled together with NoAI. These h
 
 This is an implementation of [https://www.wikipedia.org/wiki/A* AyStar pathfinding algorithm]. It solves graphs by finding the fastest route from one point to the other.
 
-'''Required libraries:''' <code>[[en/Development/Script/Library#Binary Heap|queue.binary_heap]]</code>
+'''Required libraries:''' <code>[[en/Development/Script/Library#binary-heap|queue.binary_heap]]</code>
 
 '''Version History''':
 * aystar.1: r13461
@@ -92,7 +92,7 @@ This is an implementation of [https://www.wikipedia.org/wiki/A* AyStar pathfindi
 
 This is an implementation of a basic road pathfinder. You can use it to find the length of existing routes and / or to build new routes. Since version 3 building of tunnels / bridges is supported. For more information, see [[en/Development/Script/RoadPathfinder]]
 
-'''Required libraries:''' <code>[[en/Development/Script/Library#AyStar|graph.aystar]]</code>
+'''Required libraries:''' <code>[[en/Development/Script/Library#aystar|graph.aystar]]</code>
 
 '''Version History''':
 * road.1: r13500
@@ -103,7 +103,7 @@ This is an implementation of a basic road pathfinder. You can use it to find the
 
 This is an implementation of a basic rail pathfinder. You can use it to find a path for new railways. For more information, see [[en/Development/Script/RailPathfinder]]
 
-'''Required libraries:''' <code>[[en/Development/Script/Library#AyStar|graph.aystar]]</code>
+'''Required libraries:''' <code>[[en/Development/Script/Library#aystar|graph.aystar]]</code>
 
 '''Version History''':
 * rail.1: r14382

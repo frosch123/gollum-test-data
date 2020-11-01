@@ -38,7 +38,7 @@ Ce qui se passe là est que si le renommage de l'IA en ''MaNouvelleIA'' échoue,
 
 ==Afficher des sorties de débogage==
 
-Pour afficher une sortie dans la [[fr/Development/Script/IA/A savoir#Trace et fenêtre de débogage|fenêtre de débogage de l'IA]], vous pouvez utiliser <code>[http://noai.openttd.org/docs/trunk/classAILog.html AILog]</code>. Ces messages sont aussi écrits dans la console (<code>AILog.Info</code> avec niveau de débogage de l'IA à 4 ou plus, <code>AILog.Warning</code> avec niveau 3 ou plus et <code>AILog.Error</code> avec niveau 1 ou plus). Notez que ces fonctions n'acceptent qu'une chaîne en paramètre. Si vous voulez écrire autre chose, convertissez-le d'abord en chaîne. La manière la plus simple de le faire est d'ajouter une chaîne vide, par exemple:
+Pour afficher une sortie dans la [[fr/Development/Script/IA/A savoir#trace-et-fenetre-de-debogage|fenêtre de débogage de l'IA]], vous pouvez utiliser <code>[http://noai.openttd.org/docs/trunk/classAILog.html AILog]</code>. Ces messages sont aussi écrits dans la console (<code>AILog.Info</code> avec niveau de débogage de l'IA à 4 ou plus, <code>AILog.Warning</code> avec niveau 3 ou plus et <code>AILog.Error</code> avec niveau 1 ou plus). Notez que ces fonctions n'acceptent qu'une chaîne en paramètre. Si vous voulez écrire autre chose, convertissez-le d'abord en chaîne. La manière la plus simple de le faire est d'ajouter une chaîne vide, par exemple:
 
  AILog.Info(un_entier + "");
 

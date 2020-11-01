@@ -19,7 +19,7 @@ Faites attention que le train devrait avoir aussi ''pas de chargement'' position
 = Ordre de transfert =
 Maintenant, le train a l'ordre de ''transférer'' à B. Cette fois, le train aura un revenu positif, mais ce seront les véhicules routiers qui afficheront un revenu négatif. Voyons comment cela se produit.
 
-Le paiement pour toute la cargaison livrée, quelque soit le moyen par lequel elle est arrivée à destination, est fait via une règle fixe (voyez le détail sur la page des [[fr/Manual/Game Mechanics/Main Page#Taux de paiement des livraisons|mécanismes du jeu]]).
+Le paiement pour toute la cargaison livrée, quelque soit le moyen par lequel elle est arrivée à destination, est fait via une règle fixe (voyez le détail sur la page des [[fr/Manual/Game Mechanics/Main Page#taux-de-paiement-des-livraisons|mécanismes du jeu]]).
 Sommairement,
 * vous êtes payé pour la distance en ligne droite depuis la source (la mine de charbon) jusqu'à la destination (la centrale électrique), et
 * vous êtes pénalisé pour une livraison plus lente de la source à la destination.
@@ -44,6 +44,6 @@ Tout d'abord, comme expliqué ci-dessus, le revenu négatif est fait pour compen
 Donc, bien que cela semble un peu étrange, vous serez payé pour toute cargaison livrée. Il n'y a pas vraiment besoin de s'inquiéter de cela.
 
 [[File:en/Feeder systems percentage.png|right|thumb|Paramètre avancé pour réduire les paiements intermédiaires]]
-Si vous n'êtes heureux qu'avec des paiements verts ou jaunes pour tous vos véhicules, vous pouvez réduire ou éliminer les revenus négatifs en modifiant une option avancée. Dans la [[fr/Archive/Manual/Settings/Options Avancées/Économie#Pourcentage du profit de branche à payer dans les systèmes multi-modaux|fenêtre 'Configuration avancée', section 'Économie']], il y a un paramètre "Pourcentage du profit de branche à payer dans les systèmes multi-modaux". Avec lui, vous pouvez réduire le montant touché par chaque véhicule aux stations intermédiaires. En conséquence, il y a davantage d'argent à toucher en fin de trajet, quand le véhicule livre la cargaison à sa destination finale.
+Si vous n'êtes heureux qu'avec des paiements verts ou jaunes pour tous vos véhicules, vous pouvez réduire ou éliminer les revenus négatifs en modifiant une option avancée. Dans la [[fr/Archive/Manual/Settings/Options Avancées/Économie#pourcentage-du-profit-de-branche-a-payer-dans-les-systemes-multi-modaux|fenêtre 'Configuration avancée', section 'Économie']], il y a un paramètre "Pourcentage du profit de branche à payer dans les systèmes multi-modaux". Avec lui, vous pouvez réduire le montant touché par chaque véhicule aux stations intermédiaires. En conséquence, il y a davantage d'argent à toucher en fin de trajet, quand le véhicule livre la cargaison à sa destination finale.
 
 Notez qu'il s'agit d'un paramètre global; tous les véhicules utilisant l'ordre de transfert seront affectés par celui-ci.

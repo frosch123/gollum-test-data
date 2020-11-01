@@ -111,7 +111,7 @@ Even if this setting is enabled, vehicles will still go to depot for auto-renewa
 {{en/-}}
 ====Mantener los helicópteros en helipuertos automáticamente====
 {{en/Feature|Old|align="right"|text=(since 0.3.3)}}
-When enabled, helicopters will be serviced automatically each time they arrive at a helipad. This way, you don't need to have some airport along the helicopter's route for it to service. In previous versions this  was located in [[en/Archive/Manual/Settings/Configuring patches/Stations#Service helicopters at helipads|Stations section]].
+When enabled, helicopters will be serviced automatically each time they arrive at a helipad. This way, you don't need to have some airport along the helicopter's route for it to service. In previous versions this  was located in [[en/Archive/Manual/Settings/Configuring patches/Stations#service-helicopters-at-helipads|Stations section]].
 :''Possible Settings:'' <span style="color:green">'''On'''</span> or <span style="color:red">'''Off'''</span>
 :''In Openttd.cfg config file:'' ([order] serviceathelipad = <true|false>)
 {{en/-}}
@@ -121,7 +121,7 @@ When enabled, helicopters will be serviced automatically each time they arrive a
 ====Modelo de aceleración de trenes====
 {{en/Feature|0.7|align="right"|text=(since 0.7.0)}}
 Select the default or a more [[en/Archive/Manual/Settings/Realistic acceleration]] calculation for trains. With this setting set to ''realistic'', trains will travel faster up hill, but slower through tight corners.
-This option has been renamed from [[en/Archive/Manual/Settings/Configuring patches/Vehicles#Enable realistic acceleration for trains|Enable realistic acceleration for trains]].
+This option has been renamed from [[en/Archive/Manual/Settings/Configuring patches/Vehicles#enable-realistic-acceleration-for-trains|Enable realistic acceleration for trains]].
 :''Possible Settings:'' <span style="color:#00693E">'''Original'''</span> or <span style="color:#00693E">'''Realistic'''</span>
 :''In Openttd.cfg config file:'' ([vehicle] train_acceleration_model = <0-1>)
 {{en/-}}
@@ -189,8 +189,8 @@ This option may be enabled for all vehicles, disabled for stopped vehicles, or d
 {{en/-}}
 ===Avisar si las ganancias de un vehículo son negativas===
 {{en/Feature|0.7|align="right"|text=(since 0.7.0)}}
-If a vehicle's [[en/Archive/Manual/Settings/Train income warning|income is negative]] it will be reported in a news message. Use the [[en/Manual/Orders#Transfer|transfer]] option in the vehicles order window if you want to set up a [[en/Manual/Feeder service]].
-This option has been renamed from [[en/Archive/Manual/Settings/Configuring patches/Vehicles#Warn if a train's income is negative|Warn if a train's income is negative]] in 0.7.0.
+If a vehicle's [[en/Archive/Manual/Settings/Train income warning|income is negative]] it will be reported in a news message. Use the [[en/Manual/Orders#transfer|transfer]] option in the vehicles order window if you want to set up a [[en/Manual/Feeder service]].
+This option has been renamed from [[en/Archive/Manual/Settings/Configuring patches/Vehicles#warn-if-a-train-s-income-is-negative|Warn if a train's income is negative]] in 0.7.0.
 :''Possible Settings:'' <span style="color:green">'''On'''</span> or <span style="color:red">'''Off'''</span>
 :''In Openttd.cfg config file:'' ([gui] vehicle_income_warn = <true|false>)
 {{en/-}}

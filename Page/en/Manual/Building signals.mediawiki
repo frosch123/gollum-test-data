@@ -9,30 +9,30 @@ __TOC__
 * Cannot place signals on a [[en/Manual/Bridges]] or inside a [[en/Manual/Tunnels]]. But a [[en/HackaLittleBit/Tunnel Signals|patch by HackaLittleBit]] can simulate signals being placed automatically.
 
 == Constructing a signal ==
-#Click the '''Build railway track''' [[File:en/Manual html m772c5b23.png]] button on the [[en/Manual/Game interface#The_Menu_bar|menu bar]] to display the Railway Construction toolbar:<br/>[[File:en/Railroad Construction.png|none|frame|The Railway Construction toolbar]]
-#Click the '''Build railway signals''' [[File:en/Place signal.png]] button from the Railway Construction toolbar to display the Signal Selection toolbar:<br/>[[File:en/Signal Selection.png|none|frame|The Signal Selection toolbar]]<br/>Explanation (you can ignore everything except path signals, they're all you need - see also [[en/Manual/Building signals#Which signal type to use|Which signal type to use]]):
+#Click the '''Build railway track''' [[File:en/Manual html m772c5b23.png]] button on the [[en/Manual/Game interface#the-menu-bar|menu bar]] to display the Railway Construction toolbar:<br/>[[File:en/Railroad Construction.png|none|frame|The Railway Construction toolbar]]
+#Click the '''Build railway signals''' [[File:en/Place signal.png]] button from the Railway Construction toolbar to display the Signal Selection toolbar:<br/>[[File:en/Signal Selection.png|none|frame|The Signal Selection toolbar]]<br/>Explanation (you can ignore everything except path signals, they're all you need - see also [[en/Manual/Building signals#which-signal-type-to-use|Which signal type to use]]):
 {|
 |-
 |colspan=2|'''Signal types'''
 |-
-|[[File:en/Signal Semaphore.png]] and [[File:en/Signal Electric.png]]||[[en/Manual/Signals#Block signals|Block signal]]
+|[[File:en/Signal Semaphore.png]] and [[File:en/Signal Electric.png]]||[[en/Manual/Signals#block-signals|Block signal]]
 |-
-|[[File:en/Signal Semaphore Pre-Signal.png]] and [[File:en/Signal Electric Pre-Signal.png]]||[[en/Manual/Signals#Entry Pre-signals|Entry pre-signal]]
+|[[File:en/Signal Semaphore Pre-Signal.png]] and [[File:en/Signal Electric Pre-Signal.png]]||[[en/Manual/Signals#entry-pre-signals|Entry pre-signal]]
 |-
-|[[File:en/Signal Semaphore Exit-Signal.png]] and [[File:en/Signal Electric Exit-Signal.png]]||[[en/Manual/Signals#Exit-signals|Exit-signal]]
+|[[File:en/Signal Semaphore Exit-Signal.png]] and [[File:en/Signal Electric Exit-Signal.png]]||[[en/Manual/Signals#exit-signals|Exit-signal]]
 |-
-|[[File:en/Signal Semaphore Combo-Signal.png]] and [[File:en/Signal Electric Combo-Signal.png]]||[[en/Manual/Signals#Combo-signals|Combo-signal]]
+|[[File:en/Signal Semaphore Combo-Signal.png]] and [[File:en/Signal Electric Combo-Signal.png]]||[[en/Manual/Signals#combo-signals|Combo-signal]]
 |-
-|[[File:en/Signal Semaphore Path.png]] and [[File:en/Signal Electric Path.png]]||[[en/Manual/Signals#Path signals|Standard path signal]] (can be passed in the reverse direction, and is ignored in that case)
+|[[File:en/Signal Semaphore Path.png]] and [[File:en/Signal Electric Path.png]]||[[en/Manual/Signals#path-signals|Standard path signal]] (can be passed in the reverse direction, and is ignored in that case)
 |-
-|[[File:en/Signal Semaphore Path One-Way.png]] and [[File:en/Signal Electric Path One-Way.png]]||[[en/Manual/Signals#Path signals|One-way path signal]] (can not be passed in the reverse direction)
+|[[File:en/Signal Semaphore Path One-Way.png]] and [[File:en/Signal Electric Path One-Way.png]]||[[en/Manual/Signals#path-signals|One-way path signal]] (can not be passed in the reverse direction)
 |-
 |-
 |colspan=2|'''Other icons'''
 |-
-|[[File:en/Signal Convert.png]]|| Signal conversion tool - converts the signal type on the ''track'' to the one selected in the ''gui''. See [[en/Manual/Building signals#Converting_signals_to_different_types|Building signals]]
+|[[File:en/Signal Convert.png]]|| Signal conversion tool - converts the signal type on the ''track'' to the one selected in the ''gui''. See [[en/Manual/Building signals#converting-signals-to-different-types|Building signals]]
 |-
-|[[File:en/Signal Density.png]]|| Signal density tool - sets how closely the signals are placed when auto build of signals are used. See [[en/Manual/Building signals#Constructing_a_line_of_signals|Building signals]]
+|[[File:en/Signal Density.png]]|| Signal density tool - sets how closely the signals are placed when auto build of signals are used. See [[en/Manual/Building signals#constructing-a-line-of-signals|Building signals]]
 |}<br/>There is no functional difference between the signal styles - it's only a question of aesthetics which one you use. Generally speaking, the left style (semaphores - older electro-mechanical signals) is appropriate until the 1970s, and the right style (modern electric light signals) afterwards.<br/>Furthermore, semaphores will be created by default instead of light signals before a configurable year, 1975 by default. The setting is called "Automatically build semaphores before" and can be found in the "Advanced settings" under "Construction" and then "Signals"..<br/>
 #Once you have selected a signal type, '''position your cursor over the railway tracks''', where you wish to build your signal.<br/>[[File:en/SignalTutorial2.png|none|frame]]
 #'''Click once''' to construct a signal on the track. ''Unless you chose a path signal'', you will build a '''two-way signal'''. Path signals always face one direction only.<br/>[[File:en/Two-way signal.png|frame|left]][[File:en/SignalTutorial3.png|none|frame]]

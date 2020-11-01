@@ -87,7 +87,7 @@ Jak można zauważyć, nie można używać <code>GetTick()</code> do niczego inn
 
 === Kody ''(Opcodes)''===
 
-Pamiętasz w [[pl/Development/Script/SI/Introduction#Twoje Pierwsze AI|Introduction]]  , kiedy powiedzieliśmy ci, że AI zostanie zawieszone po X kodach? To była półprawda. Aby zagłębić się trochę w szczegóły, kod operacyjny to w zasadzie jedna instrukcja squirrel . Struktura po prostu liczy liczbę instrukcji squirrel, które wykonuje twoja sztuczna inteligencja, i uśpia ją po określonej ilości. Podstępne w tym jest to, że można wywołać kod C++ z poziomu squirrel, których instrukcje nie są liczone, ponieważ, cóż, to nie jest squirrel.
+Pamiętasz w [[pl/Development/Script/SI/Introduction#twoje-pierwsze-ai|Introduction]]  , kiedy powiedzieliśmy ci, że AI zostanie zawieszone po X kodach? To była półprawda. Aby zagłębić się trochę w szczegóły, kod operacyjny to w zasadzie jedna instrukcja squirrel . Struktura po prostu liczy liczbę instrukcji squirrel, które wykonuje twoja sztuczna inteligencja, i uśpia ją po określonej ilości. Podstępne w tym jest to, że można wywołać kod C++ z poziomu squirrel, których instrukcje nie są liczone, ponieważ, cóż, to nie jest squirrel.
 
 Na przykład, gdybym grał na mapie 2048 x 2048 i używał Valuatora do wyceny wszystkich kafelków na mapie za pomocą kalkulatora napisanego w C++, ukradłbym wszystkie zasoby procesora i zawiesiłby grę na jakiś czas. (Dzięki [http://www.tt-forums.net/viewtopic.php?p=892576#p892576 Morloth] za wyjaśnienie i przykład!)
 

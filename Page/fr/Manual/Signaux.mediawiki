@@ -10,15 +10,15 @@ Les signaux interdisent la présence de plus d'un train sur un même bloc à l'e
 
 ==Construction de signaux==
 [[File:fr/Signals-icon2.png|frame|center|Mode construction de signaux]]
-Pour construire des signaux, vous devez être en mode ''Signaux''. Ouvrez la barre d'outils ''[[fr/Manual/Construction Ferroviaire|Construction ferroviaire]]'' et cliquez sur l'icône ''Signaux'' [[File:en/Place signal.png]]. Une interface avancée est désormais disponible et activée par défaut (consulter [[fr/Manual/Signaux#Interface de sélection des signaux|Interface de sélection des signaux]])
+Pour construire des signaux, vous devez être en mode ''Signaux''. Ouvrez la barre d'outils ''[[fr/Manual/Construction Ferroviaire|Construction ferroviaire]]'' et cliquez sur l'icône ''Signaux'' [[File:en/Place signal.png]]. Une interface avancée est désormais disponible et activée par défaut (consulter [[fr/Manual/Signaux#interface-de-selection-des-signaux|Interface de sélection des signaux]])
 .
 Pour les opérations suivantes, le mode ''signaux'' doit être activé :
 *Pour '''placer un signal''', cliquez sur une section libre de la voie ferrée. Par défaut un ''signal à double sens'', qui est le signal de base. Voir ci-dessous pour le changer en un autre type de signal.  Si vous placez un signal dans une case partagé par deux voies parallèles, prenez soin de cliquer exactement sur la voie concernée. 
 *Placez des '''signaux multiples''' en une fois en cliquant sur un signal existant et en [https://www.wikipedia.org/wiki/fr:Drag-and-drop glissant] le curseur le long de la voie. Ils seront espacés selon les paramètres du greffon ''[[en/Archive/Manual/Settings/Drag signal density|densité des signaux en mode Glisser/Déposer]]'' et dans la même direction que le premier signal (depuis la version 0.7, ce paramètre se modifie dans les options avancées).
 *Placez des '''signaux multiples''' le long d'une ligne ''complète'' en maintenant le bouton ''Ctrl'' appuyé et en glissant le curseur depuis un signal existant. Vous n'avez besoin de glisser que sur une seule case et toute la ligne sera complétée automatiquement, en fonction de la [[en/Archive/Manual/Settings/Drag signal density|densité des signaux en mode Glisser/Déposer]] jusqu'à la prochaine gare, le prochain signal ou la prochaine intersection. (0.6.0-beta 2 et supérieur).
 *'''Supprimez les signaux''' en cliquant sur l'icône [[File:en/Toggle clear active.png]] bulldozer (ou bouteur), tout en étant dans le mode ''Signaux''. Puis cliquez sur le signal non désiré. Vous pouvez glisser le curseur pour supprimer plusieurs signaux, ou Ctrl-Glisser pour supprimer tous les signaux jusqu'à la prochaine intersection.
-* Créez des '''[[fr/Manual/Signaux#Signaux à sens unique|Signaux à sens unique]]''' en cliquant sur un signal existant. Le signal basculera cycliquement entre un signal double sens, un signal à sens unique et un signal à sens unique dans le sens opposé.
-* Créez d'autres catégories de '''[[fr/Manual/Signaux#Signaux de bloc|signaux de bloc]]''' et de '''[[fr/Manual/Signaux#Signaux de chemin|signaux de chemin]]''' en cliquant sur un signal existant tout en maintenant la touche ''Ctrl'' appuyée.
+* Créez des '''[[fr/Manual/Signaux#signaux-a-sens-unique|Signaux à sens unique]]''' en cliquant sur un signal existant. Le signal basculera cycliquement entre un signal double sens, un signal à sens unique et un signal à sens unique dans le sens opposé.
+* Créez d'autres catégories de '''[[fr/Manual/Signaux#signaux-de-bloc|signaux de bloc]]''' et de '''[[fr/Manual/Signaux#signaux-de-chemin|signaux de chemin]]''' en cliquant sur un signal existant tout en maintenant la touche ''Ctrl'' appuyée.
 
 ===Limitation===
 Les signaux ne peuvent être placés :
@@ -35,37 +35,37 @@ Si l'interface n'est pas activée, cliquez en maintenant ''Ctrl'' appuyé sur l'
 |-
 |colspan=2|'''Électro-sémaphores''' (signalisation électro-mécanique, donne un « cachet ancien »)
 |-
-|[[File:en/Signal Semaphore.png]]||[[fr/Manual/Signaux#Signaux de bloc|signaux de bloc]] standards
+|[[File:en/Signal Semaphore.png]]||[[fr/Manual/Signaux#signaux-de-bloc|signaux de bloc]] standards
 |-
-|[[File:en/Signal Semaphore Pre-Signal.png]]||[[fr/Manual/Signaux#Pré-signaux d'entrée|pré-signaux d'entrée]]
+|[[File:en/Signal Semaphore Pre-Signal.png]]||[[fr/Manual/Signaux#pre-signaux-d-entree|pré-signaux d'entrée]]
 |-
-|[[File:en/Signal Semaphore Exit-Signal.png]]||[[fr/Manual/Signaux#Signaux de sortie|signaux de sortie]]
+|[[File:en/Signal Semaphore Exit-Signal.png]]||[[fr/Manual/Signaux#signaux-de-sortie|signaux de sortie]]
 |-
-|[[File:en/Signal Semaphore Combo-Signal.png]]||[[fr/Manual/Signaux#Signaux combinés|signaux combinés]]
+|[[File:en/Signal Semaphore Combo-Signal.png]]||[[fr/Manual/Signaux#signaux-combines|signaux combinés]]
 |-
-|[[File:en/Signal Semaphore Path.png]]||[[fr/Manual/Signaux#Signaux de chemin|signaux de chemin]] (autorisant les trains en sens inverse)
+|[[File:en/Signal Semaphore Path.png]]||[[fr/Manual/Signaux#signaux-de-chemin|signaux de chemin]] (autorisant les trains en sens inverse)
 |-
-|[[File:en/Signal Semaphore Path One-Way.png]]||[[fr/Manual/Signaux#Signaux de chemin|signaux de chemin]] à sens unique (interdisant les trains en sens inverse)
+|[[File:en/Signal Semaphore Path One-Way.png]]||[[fr/Manual/Signaux#signaux-de-chemin|signaux de chemin]] à sens unique (interdisant les trains en sens inverse)
 |-
 |colspan=2|'''Signaux lumineux'''
 |-
-|[[File:en/Signal Electric.png]]||[[fr/Manual/Signaux#Signaux de bloc|signaux de bloc]] standards
+|[[File:en/Signal Electric.png]]||[[fr/Manual/Signaux#signaux-de-bloc|signaux de bloc]] standards
 |-
-|[[File:en/Signal Electric Pre-Signal.png]]||[[fr/Manual/Signaux#Pré-signaux d'entrée|pré-signaux d'entrée]]
+|[[File:en/Signal Electric Pre-Signal.png]]||[[fr/Manual/Signaux#pre-signaux-d-entree|pré-signaux d'entrée]]
 |-
-|[[File:en/Signal Electric Exit-Signal.png]]||[[fr/Manual/Signaux#Signaux de sortie|signaux de sortie]]
+|[[File:en/Signal Electric Exit-Signal.png]]||[[fr/Manual/Signaux#signaux-de-sortie|signaux de sortie]]
 |-
-|[[File:en/Signal Electric Combo-Signal.png]]||[[fr/Manual/Signaux#Signaux combinés|signaux combinés]]
+|[[File:en/Signal Electric Combo-Signal.png]]||[[fr/Manual/Signaux#signaux-combines|signaux combinés]]
 |-
-|[[File:en/Signal Electric Path.png]]||[[fr/Manual/Signaux#Signaux de chemin|signaux de chemin]] (autorisant les trains en sens inverse)
+|[[File:en/Signal Electric Path.png]]||[[fr/Manual/Signaux#signaux-de-chemin|signaux de chemin]] (autorisant les trains en sens inverse)
 |-
-|[[File:en/Signal Electric Path One-Way.png]]||[[fr/Manual/Signaux#Signaux de chemin|signaux de chemin]] à sens unique (interdisant les trains en sens inverse)
+|[[File:en/Signal Electric Path One-Way.png]]||[[fr/Manual/Signaux#signaux-de-chemin|signaux de chemin]] à sens unique (interdisant les trains en sens inverse)
 |-
 |colspan=2|'''Autres icônes'''
 |-
-|[[File:en/Signal Convert.png]]|| Conversion de signaux - convertit un signal sur la voie en le type de signal sélectionné sur l'interface. Voir ''[[fr/Manual/Construire des signaux#Converting_signals_to_different_types|Convertir le type de signal]]''
+|[[File:en/Signal Convert.png]]|| Conversion de signaux - convertit un signal sur la voie en le type de signal sélectionné sur l'interface. Voir ''[[fr/Manual/Construire des signaux#converting-signals-to-different-types|Convertir le type de signal]]''
 |-
-|[[File:en/Signal Density.png]]|| Densité - paramètre la fréquence de placement des signaux en utilisant le placement automatique. Voir ''[[fr/Manual/Construire des signaux#Constructing_a_line_of_signals|Construire une ligne de signaux]]''
+|[[File:en/Signal Density.png]]|| Densité - paramètre la fréquence de placement des signaux en utilisant le placement automatique. Voir ''[[fr/Manual/Construire des signaux#constructing-a-line-of-signals|Construire une ligne de signaux]]''
 |}
 
 '''Note''' : changer de type de signal est gratuit, mais changer un signal lumineux en signal électro-mécanique ou réciproquement coûte de l'argent. L'électro-sémaphore a son utilité pour, dans certains cas, rendre plus visible la signalisation au joueur (notamment lorsque la couleur des signaux lumineux ne peut être vue à cause de l'orientation).
@@ -128,8 +128,8 @@ Si il n'y a pas de signal de sortie après un pré-signal d'entrée, celui-ci se
 {{en/-}}
 
 ====Construire des signaux dépendants====
-* Sans l'interface de sélection des signaux, voir le paragraphe ''[[fr/Manual/Signaux#Construction de signaux|Construction de signaux]]''
-* Avec l'interface de sélection des signaux, voir le paragraphe ''[[fr/Manual/Signaux#Interface de sélection des signaux|Interface de sélection des signaux]]''
+* Sans l'interface de sélection des signaux, voir le paragraphe ''[[fr/Manual/Signaux#construction-de-signaux|Construction de signaux]]''
+* Avec l'interface de sélection des signaux, voir le paragraphe ''[[fr/Manual/Signaux#interface-de-selection-des-signaux|Interface de sélection des signaux]]''
 {{en/-}}
 ====Limitations====
 [[File:en/PresignalLimitation.png|frame|Le problèmes avec les signaux dépendants...]]

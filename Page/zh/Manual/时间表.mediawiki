@@ -1,7 +1,7 @@
 [[Translation:en/Manual/Timetable]]
 
 == 界面 ==
-时间表自[[en/Archive/OpenTTD/OpenTTD 0.6.0]]-beta2面世（[https://github.com/OpenTTD/OpenTTD/commit/cf0118ee63603132dc1d08d7f7e800b26e53fc97 r10236]）。时间表按钮可在指令窗口的右上角找到，选定车辆的所有指令都有显示在时间表窗口里。你可以选择车辆要在站点停留多久（以天数或周期-可在[[en/Archive/Manual/Settings/Advanced Settings/Interface#Show_timetable_in_ticks_rather_than_days |进阶设置]]修改）以及车辆在两站之间要开多久（包括设定某段路城的最高时速），此外有个计数器用来显示车辆是否准点或出现误点情形。
+时间表自[[en/Archive/OpenTTD/OpenTTD 0.6.0]]-beta2面世（[https://github.com/OpenTTD/OpenTTD/commit/cf0118ee63603132dc1d08d7f7e800b26e53fc97 r10236]）。时间表按钮可在指令窗口的右上角找到，选定车辆的所有指令都有显示在时间表窗口里。你可以选择车辆要在站点停留多久（以天数或周期-可在[[en/Archive/Manual/Settings/Advanced Settings/Interface#show-timetable-in-ticks-rather-than-days |进阶设置]]修改）以及车辆在两站之间要开多久（包括设定某段路城的最高时速），此外有个计数器用来显示车辆是否准点或出现误点情形。
 
 [[File:en/Orders-timetable.png|center|frame|时间表界面，可从指令窗口进入]]
 
@@ -43,7 +43,7 @@
 == 使用时间表 ==
 时间表可以避免车辆全部"黏在一起"，分散你的车辆可以协助各站间的货物流更均匀，不过故障丶车流量等致延迟的因素还是可能会让车辆全部挤在某个路段。
 
-为了示范，我们简单以三个公车行驶在三个城市间作示范，首先从已经设置好路线并使用[[en/Manual/Orders#Shared_Orders|共享调度任务]]的公车开始（共享调度任务在这里非常实用，因为它们也同时共享时间表）
+为了示范，我们简单以三个公车行驶在三个城市间作示范，首先从已经设置好路线并使用[[en/Manual/Orders#shared-orders|共享调度任务]]的公车开始（共享调度任务在这里非常实用，因为它们也同时共享时间表）
 
 一开始打开第一辆公车的时间表并开启「自动制表」，然後开始运行，每当车辆完成路线的一段，时间表会填入车辆花费的时间。
 [[File:en/Timetable-autofill.png|center|frame|'自动制表'会计算车辆在运行的每一段行驶时间及在站点的停留时间]] 

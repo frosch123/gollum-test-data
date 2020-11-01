@@ -10,32 +10,32 @@ __TOC__
 * Non si possono piazzare segnali sui [[en/Ponti]] i nei [[en/Manual/Tunnels]] però c'è la [[en/HackaLittleBit/Tunnel Signals|patch di HackaLittleBit]] che simula la presenza dei segnali in automatico. &Egrave; possibile reperire la patch in qualche pacchetto, vedi [https://www.tt-forums.net/viewforum.php?f=33 OpenTTD Development]
 
 == Costruire un segnale ==
-#Clicca sul pulsante '''Costruisci ferrovie''' [[File:en/Manual html m772c5b23.png]] nel [[en/Manual/Game interface#The_Menu_bar|menu bar]] per visualizzare la toolbar ''Costruzione ferrovie'':<br /> [[File:it/Railroad Construction.png|none|frame|La toolbar Costruzione ferrovie]]
+#Clicca sul pulsante '''Costruisci ferrovie''' [[File:en/Manual html m772c5b23.png]] nel [[en/Manual/Game interface#the-menu-bar|menu bar]] per visualizzare la toolbar ''Costruzione ferrovie'':<br /> [[File:it/Railroad Construction.png|none|frame|La toolbar Costruzione ferrovie]]
 #Clicca il pulsante '''Costruisci segnali ferroviari''' [[File:en/Place signal.png]] della toolbar Costruzione ferrovie per visualizzare l'interfaccia ''Selezione segnale'':<br />[[File:it/Signal Selection.png|none|frame|L'interfaccia Selezione segnale, si noti il segnale di percorso preselezionato di default]]
 
-<br />Illustrazione dei segnali (Puoi anche ignorarli tutti tranne i segnali di percorso - vedi [[it/Piazzare i segnali#Quale tipo di segnale usare|Quale tipo di segnale usare]]):
+<br />Illustrazione dei segnali (Puoi anche ignorarli tutti tranne i segnali di percorso - vedi [[it/Piazzare i segnali#quale-tipo-di-segnale-usare|Quale tipo di segnale usare]]):
 {|
 |-
 |colspan=2|'''Tipi di segnale'''
 |-
-|[[File:en/Signal Semaphore.png]] and [[File:en/Signal Electric.png]]||[[it/Manual/Segnali#Segnali di blocco|Segnali di blocco]]
+|[[File:en/Signal Semaphore.png]] and [[File:en/Signal Electric.png]]||[[it/Manual/Segnali#segnali-di-blocco|Segnali di blocco]]
 |-
-|[[File:en/Signal Semaphore Pre-Signal.png]] and [[File:en/Signal Electric Pre-Signal.png]]||[[it/Manual/Segnali#Pre-segnali di ingresso blocco|Pre-segnali di ingresso]]
+|[[File:en/Signal Semaphore Pre-Signal.png]] and [[File:en/Signal Electric Pre-Signal.png]]||[[it/Manual/Segnali#pre-segnali-di-ingresso-blocco|Pre-segnali di ingresso]]
 |-
-|[[File:en/Signal Semaphore Exit-Signal.png]] and [[File:en/Signal Electric Exit-Signal.png]]||[[it/Manual/Segnali#Pre-segnale di uscita blocco|Pre-segnali di uscita]]
+|[[File:en/Signal Semaphore Exit-Signal.png]] and [[File:en/Signal Electric Exit-Signal.png]]||[[it/Manual/Segnali#pre-segnale-di-uscita-blocco|Pre-segnali di uscita]]
 |-
-|[[File:en/Signal Semaphore Combo-Signal.png]] and [[File:en/Signal Electric Combo-Signal.png]]||[[it/Manual/Segnali#Segnali combinati|Segnali combinati]]
+|[[File:en/Signal Semaphore Combo-Signal.png]] and [[File:en/Signal Electric Combo-Signal.png]]||[[it/Manual/Segnali#segnali-combinati|Segnali combinati]]
 |-
-|[[File:en/Signal Semaphore Path.png]] and [[File:en/Signal Electric Path.png]]||[[it/Manual/Segnali#Segnali di percorso|Segnali di percorso standard (o a due vie o a doppio senso)]] (può essere passato nella direzione opposta e in questo caso viene ignorato)
+|[[File:en/Signal Semaphore Path.png]] and [[File:en/Signal Electric Path.png]]||[[it/Manual/Segnali#segnali-di-percorso|Segnali di percorso standard (o a due vie o a doppio senso)]] (può essere passato nella direzione opposta e in questo caso viene ignorato)
 |-
-|[[File:en/Signal Semaphore Path One-Way.png]] and [[File:en/Signal Electric Path One-Way.png]]||[[it/Manual/Segnali#Segnali di percorso|Segnali di percorso a senso unico (o a una via)]] (non può essere passato nella direzione opposta)
+|[[File:en/Signal Semaphore Path One-Way.png]] and [[File:en/Signal Electric Path One-Way.png]]||[[it/Manual/Segnali#segnali-di-percorso|Segnali di percorso a senso unico (o a una via)]] (non può essere passato nella direzione opposta)
 |-
 |-
 |colspan=2|'''Altre icone'''
 |-
-|[[File:en/Signal Convert.png]]|| Strumento conversione segnale - converte il tipo di segnale gia piazzato sul tracciato in quello selezionato nell'interfaccia Selezione segnale). Vedi [[it/Costruire segnali#Conversione di un tipo di segnale in altri|Costruire segnali]]
+|[[File:en/Signal Convert.png]]|| Strumento conversione segnale - converte il tipo di segnale gia piazzato sul tracciato in quello selezionato nell'interfaccia Selezione segnale). Vedi [[it/Costruire segnali#conversione-di-un-tipo-di-segnale-in-altri|Costruire segnali]]
 |-
-|[[File:en/Signal Density.png]]|| Strumento dendità segnale - imposta la distanza tra i segnali quando viene utilizzata la generazione automatica della segnaletica. Vedi [[it/Costruire segnali#Costruire una serie di segnali|Costruire segnali]]
+|[[File:en/Signal Density.png]]|| Strumento dendità segnale - imposta la distanza tra i segnali quando viene utilizzata la generazione automatica della segnaletica. Vedi [[it/Costruire segnali#costruire-una-serie-di-segnali|Costruire segnali]]
 |}
 
 <br />Non esiste alcuna differenza funzionale tra gli stili del segnale: è solo una questione di scelta estetica. In generale, lo stile di sinistra (semafori - vecchi segnali elettromeccanici) è appropriato fino agli anni '70, e lo stile a destra (i moderni segnali luminosi elettrici) per gli anni successivi. <br /> Inoltre, i semafori verranno creati di default invece dei segnali luminosi prima un anno, configurabile, per impostazione predefinita è attualmente, versione client 1.8.0, l'anno 1950. L'impostazione si chiama "Costruisci segnali semaforici prima del" e può essere trovata nelle "Impostazioni avanzate" sotto "Compagnia".

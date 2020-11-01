@@ -21,7 +21,7 @@ Pour utiliser une bibliothèque existante, vous devez simplement la charger dans
    priority_queue/
    fibonacci_heap/
 
-Disons que vous voulez utiliser la [[fr/Development/Script/IA/Bibliothèque#File de priorité|file de priorités]], vous feriez simplement:
+Disons que vous voulez utiliser la [[fr/Development/Script/IA/Bibliothèque#file-de-priorite|file de priorités]], vous feriez simplement:
 
  import("queue.priority_queue", "PriorityQueue", 2);
 
@@ -58,7 +58,7 @@ Maintenant, ce que vous devez faire est créer un fichier appelé '<code>main.nu
 Il y a certaines choses que vous ne pouvez pas faire:
 
 * Enregistrer 2 bibliothèques dans un même <code>library.nut</code>
-* Définir plus d'une classe dans le <code>main.nut</code> (ou n'importe quel fichier requis). Cependant, vous pouvez définir des sous-classes. Disons que vous avez besoin d'une classe supplémentaire dans <code>PriorityQueue</code>. Vous pouvez l'appeler <code>PriorityQueue.Subclass</code>. Pour y accéder depuis votre classe principale, utilisez <code>this.Subclass</code>. Voyez <code>[[fr/Development/Script/IA/Bibliothèque#AyStar|graph.AyStar]]</code> pour un exemple de la manière de faire cela.
+* Définir plus d'une classe dans le <code>main.nut</code> (ou n'importe quel fichier requis). Cependant, vous pouvez définir des sous-classes. Disons que vous avez besoin d'une classe supplémentaire dans <code>PriorityQueue</code>. Vous pouvez l'appeler <code>PriorityQueue.Subclass</code>. Pour y accéder depuis votre classe principale, utilisez <code>this.Subclass</code>. Voyez <code>[[fr/Development/Script/IA/Bibliothèque#aystar|graph.AyStar]]</code> pour un exemple de la manière de faire cela.
 
 == Bibliothèques multiples en différentes versions ==
 
@@ -78,7 +78,7 @@ Il y a plusieurs bibliothèques pour des tâches courantes qui sont livrées ave
 
 C'est une implémentation de [http://en.wikipedia.org/wiki/A* l'algorithme de détermination de chemin AyStar]. Il résout des graphes en trouvant le chemin le plus rapide d'un point à un autre.
 
-'''Bibliothèques requises:''' <code>[[fr/Development/Script/IA/Bibliothèque#Pile binaire|queue.binary_heap]]</code>
+'''Bibliothèques requises:''' <code>[[fr/Development/Script/IA/Bibliothèque#pile-binaire|queue.binary_heap]]</code>
 
 '''Historique des versions''':
 * aystar.1: r13461
@@ -92,7 +92,7 @@ C'est une implémentation de [http://en.wikipedia.org/wiki/A* l'algorithme de d�
 
 C'est une implémentation d'une détermination de chemin routier basique? Vous pouvez l'utiliser pour trouver la longueur de routes existantes et/ou construire de nouvelles routes. Depuis la version 3, la construction de tunnels et de ponts est supportée. Pour plus d'information, voyez [[fr/Development/Script/IA/Détermination de chemin routier|IA:Détermination de chemin routier]].
 
-'''Bibliothèques requises:''' <code>[[fr/Development/Script/IA/Bibliothèque#AyStar|graph.aystar]]</code>
+'''Bibliothèques requises:''' <code>[[fr/Development/Script/IA/Bibliothèque#aystar|graph.aystar]]</code>
 
 '''Historique des versions''':
 * road.1: r13500
@@ -103,7 +103,7 @@ C'est une implémentation d'une détermination de chemin routier basique? Vous p
 
 C'est une implémentation d'une détermination de chemin ferroviaire basique. Vous pouvez l'utiliser pour trouver un trajet pour une nouvelle voie ferrée. Pour plus d'information, voyez [[fr/Development/Script/IA/Détermination de chemin ferroviaire|IA:Détermination de chemin ferroviaire]].
 
-'''Bibliothèques requises:''' <code>[[fr/Development/Script/IA/Bibliothèque#AyStar|graph.aystar]]</code>
+'''Bibliothèques requises:''' <code>[[fr/Development/Script/IA/Bibliothèque#aystar|graph.aystar]]</code>
 
 '''Historique des versions''':
 * rail.1: r14382

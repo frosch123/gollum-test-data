@@ -19,25 +19,25 @@ Permet d'avoir des joueurs contrôlés par l'ordinateur dans les parties multijo
 ====Désactiver les trains pour l'ordinateur====
 {{fr/Disponibilité|Old|align="right"|texte=(depuis 0.3.2)}}
 L'ordinateur ne peut pas construire des [[fr/Manual/Trains|trains]] ou des [[fr/Manual/Construction Ferroviaire|infrastructures ferroviaires]].
-Cette option a été déplacée depuis la [[fr/Options avancées 0.3.0 - 0.6.3/Véhicules#Désactiver les trains pour l'ordinateur|section Véhicules]] en 0.3.4.
+Cette option a été déplacée depuis la [[fr/Options avancées 0.3.0 - 0.6.3/Véhicules#desactiver-les-trains-pour-l-ordinateur|section Véhicules]] en 0.3.4.
 :''Valeurs possibles:'' <span style="color:green">'''Activé'''</span> ou <span style="color:red">'''Désactivé'''</span>
 :''Dans le fichier de configuration [[fr/Archive/Manual/Settings/Openttd.cfg|openttd.cfg]]:'' ([ai] ai_disable_veh_train = <true|false>)
 
 ====Désactiver les véhicules routiers pour l'ordinateur====
 {{fr/Disponibilité|Old|align="right"|texte=(depuis 0.3.2)}}
-L'ordinateur ne peut pas construire des [[fr/Manual/Véhicules Routiers|véhicules routiers]] ou des [[fr/Manual/Construction Routière|routes]]. Cette option a été déplacée depuis la [[fr/Options avancées 0.3.0 - 0.6.3/Véhicules#Désactiver les véhicules routiers pour l'ordinateur|section Véhicules]]
+L'ordinateur ne peut pas construire des [[fr/Manual/Véhicules Routiers|véhicules routiers]] ou des [[fr/Manual/Construction Routière|routes]]. Cette option a été déplacée depuis la [[fr/Options avancées 0.3.0 - 0.6.3/Véhicules#desactiver-les-vehicules-routiers-pour-l-ordinateur|section Véhicules]]
 :''Valeurs possiblesActi:'' <span style="color:green">'''Activé'''</span> ou <span style="color:red">'''Désactivé'''</span>
 :''Dans le fichier de configuration [[fr/Archive/Manual/Settings/Openttd.cfg|openttd.cfg]]:'' ([ai] ai_disable_veh_roadveh = <true|false>)
 
 ====Désactiver les aéronefs pour l'ordinateur====
 {{fr/Disponibilité|Old|align="right"|texte=(depuis 0.3.2)}}
-L'ordinateur ne peut pas construire des [[fr/Manual/Avions|avions]] ou des [[fr/Manual/Aéroports|aéroports]]. Cette option a été déplacée depuis la [[fr/Options avancées 0.3.0 - 0.6.3/Véhicules#Désactiver les aéronefs pour l'ordinateur|section Véhicules]]
+L'ordinateur ne peut pas construire des [[fr/Manual/Avions|avions]] ou des [[fr/Manual/Aéroports|aéroports]]. Cette option a été déplacée depuis la [[fr/Options avancées 0.3.0 - 0.6.3/Véhicules#desactiver-les-aeronefs-pour-l-ordinateur|section Véhicules]]
 :''Valeurs possibles:'' <span style="color:green">'''Activé'''</span> ou <span style="color:red">'''Désactivé'''</span>
 :''Dans le fichier de configuration [[fr/Archive/Manual/Settings/Openttd.cfg|openttd.cfg]]:'' ([ai] ai_disable_veh_aircraft = <true|false>)
 
 ====Désactiver les navires pour l'ordinateur====
 {{fr/Disponibilité|Old|align="right"|texte=(depuis 0.3.2)}}
-L'ordinateur ne peut pas construire des [[fr/Manual/Bateaux|bateaux]]. Cette option a été déplacée depuis la [[fr/Options avancées 0.3.0 - 0.6.3/Véhicules#Désactiver les navires pour l'ordinateur|section Véhicules]]
+L'ordinateur ne peut pas construire des [[fr/Manual/Bateaux|bateaux]]. Cette option a été déplacée depuis la [[fr/Options avancées 0.3.0 - 0.6.3/Véhicules#desactiver-les-navires-pour-l-ordinateur|section Véhicules]]
 :''Valeurs possibles:'' <span style="color:green">'''Activé'''</span> ou <span style="color:red">'''Désactivé'''</span>
 :''Dans le fichier de configuration [[fr/Archive/Manual/Settings/Openttd.cfg|openttd.cfg]]:'' ([ai] ai_disable_veh_ship = <true|false>)
 
@@ -57,7 +57,7 @@ Vous permet de donner de l'argent à une autre compagnie.
 {{en/-}}
 ===Permettre d'acheter des actions d'autres compagnies===
 {{fr/Disponibilité|0.7|align="right"|texte=(depuis 0.7.0)}}
-Vous permet d'autoriser ou non la possibilité d'[[fr/Manual/Économie#Actions|acheter des actions]] de vos concurrents. Vous devez aussi attendre que la compagnie soit assez vieille avant d'en  acheter 25% ou de la reprendre complètement. Cet âge est fixé à 6 années.
+Vous permet d'autoriser ou non la possibilité d'[[fr/Manual/Économie#actions|acheter des actions]] de vos concurrents. Vous devez aussi attendre que la compagnie soit assez vieille avant d'en  acheter 25% ou de la reprendre complètement. Cet âge est fixé à 6 années.
 :''Valeurs possibles:'' <span style="color:green">'''Activé'''</span> ou <span style="color:red">'''Désactivé'''</span>
 :''In Openttd.cfg config file:'' ([economy] allow_shares = <true|false>)
 {{en/-}}

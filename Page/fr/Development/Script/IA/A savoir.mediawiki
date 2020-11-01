@@ -84,7 +84,7 @@ Comme vous l'aurez remarqué, vous ne pouvez pas utiliser <code>GetTick()</code>
 
 === Opcodes ===
 
-Vous souvenez-vous, dans l'[[fr/Development/Script/IA/Introduction#Votre première IA|introduction]], quand nous vous avons dit que l'IA serait suspendue après X opcodes? Bien, c'était une semi-vérité. Pour entrer un peu plus dans les détails, un opcode est, au fond, une instruction Squirrel. Le framework compte simplement le nombre d'instructions Squirrel que fait votre IA et la met en sommeil après un certain nombre. Ce qu'il y a d'insidieux avec cela est qu'il est possible d'appeler du code C++ depuis Squirrel, dont les instructions ne sont pas comptées puisque ce n'est pas du Squirrel.
+Vous souvenez-vous, dans l'[[fr/Development/Script/IA/Introduction#votre-premiere-ia|introduction]], quand nous vous avons dit que l'IA serait suspendue après X opcodes? Bien, c'était une semi-vérité. Pour entrer un peu plus dans les détails, un opcode est, au fond, une instruction Squirrel. Le framework compte simplement le nombre d'instructions Squirrel que fait votre IA et la met en sommeil après un certain nombre. Ce qu'il y a d'insidieux avec cela est qu'il est possible d'appeler du code C++ depuis Squirrel, dont les instructions ne sont pas comptées puisque ce n'est pas du Squirrel.
 
 Par exemple, si je joue sur une carte 2048x2048 et utilise un Valuator pour évaluer toutes les cases de la carte en utilisant un évaluateur écrit en C++, je volerai toutes les ressources CPU et "gèlerai" le jeu pendant un moment (merci à [http://www.tt-forums.net/viewtopic.php?p=892576#p892576 Morloth] pour l'explication et l'exemple!)
 

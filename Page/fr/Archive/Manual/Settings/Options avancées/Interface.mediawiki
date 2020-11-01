@@ -41,7 +41,7 @@ Indique d'afficher ou non les couleurs de la livrée du type particulier de véh
 {{en/-}}
 ====Afficher les voies réservées====
 {{fr/Disponibilité|0.7|float=right|texte=(depuis 0.7.0)}}
-Quand elle est activée, les voies qui sont réservées par des trains sont rendues visibles. C'est utile pour déboguer vos croisements [[fr/Manual/Signaux#Signaux de chemin|avec signaux de voie]].
+Quand elle est activée, les voies qui sont réservées par des trains sont rendues visibles. C'est utile pour déboguer vos croisements [[fr/Manual/Signaux#signaux-de-chemin|avec signaux de voie]].
 :''Valeurs possibles:'' <span style="color:green">'''Activé'''</span> ou <span style="color:red">'''Désactivé'''</span>
 :''Dans le fichier de configuration openttd.cfg:'' ([gui] show_track_reservation = <true|false>)
 {{en/-}}
@@ -73,7 +73,7 @@ Limite la quantité de fenêtres qui peuvent être ouvertes à un moment donné,
 {{en/-}}
 ====Relier la barre d'outils paysage avec celle des rails/routes/eau et aéroport====
 {{fr/Disponibilité|Old|float=right|texte=(depuis 0.4.0.1)}}
-En cliquant sur un des boutons [[File:en/Manual html m772c5b23.png]] [[fr/Manual/Construction Ferroviaire|Construction ferroviaire]], [[File:en/Manual html ma6d6c8c.png]] [[fr/Manual/Construction Routière|Construction routière]], [[File:en/Manual html m2cc0c4cd.png]] [[fr/Manual/Construction Maritime|Construction maritime]] ou [[File:en/Manual html 1ae92703.png]] [[fr/Manual/Construction Aéroportuaire|Construction aéronautique]] dans la [[fr/Manual/Interface#Barre d'outils principale|barre de menu]], la barre d'outils [[fr/Manual/Aménagement Paysager|Manipulation du paysage]] s'ouvrira en même temps que la barre de construction appropriée. Quand vous fermez une barre d'outils de construction, la barre d'outils d'aménagement du paysage se fermera avec.
+En cliquant sur un des boutons [[File:en/Manual html m772c5b23.png]] [[fr/Manual/Construction Ferroviaire|Construction ferroviaire]], [[File:en/Manual html ma6d6c8c.png]] [[fr/Manual/Construction Routière|Construction routière]], [[File:en/Manual html m2cc0c4cd.png]] [[fr/Manual/Construction Maritime|Construction maritime]] ou [[File:en/Manual html 1ae92703.png]] [[fr/Manual/Construction Aéroportuaire|Construction aéronautique]] dans la [[fr/Manual/Interface#barre-d-outils-principale|barre de menu]], la barre d'outils [[fr/Manual/Aménagement Paysager|Manipulation du paysage]] s'ouvrira en même temps que la barre de construction appropriée. Quand vous fermez une barre d'outils de construction, la barre d'outils d'aménagement du paysage se fermera avec.
 :''Valeurs possibles:'' <span style="color:green">'''Activé'''</span> ou <span style="color:red">'''Désactivé'''</span>
 :''Dans le fichier de configuration openttd.cfg:'' ([gui] link_terraform_toolbar = <true|false>){{en/-}}
 ====Préférer le chat d'équipe avec <ENTER>====
@@ -176,7 +176,7 @@ Active/désactive la colonne des arrivées et des départs dans la fenêtre des 
 {{en/-}}
 ===Création rapide des ordres de véhicule===
 {{fr/Disponibilité|0.7|float=right|texte=(depuis 0.7.0)}}
-Avec cette option activée, la fonction [[fr/Manual/Ordres#Aller à|Aller à]] de la fenêtre d'ordres d'un véhicule restera active après avoir cliqué sur une gare. Cela vous permet de cliquer rapidement plusieurs gares sans avoir à recliquer sur le bouton 'Aller à' entre chaque.
+Avec cette option activée, la fonction [[fr/Manual/Ordres#aller-a|Aller à]] de la fenêtre d'ordres d'un véhicule restera active après avoir cliqué sur une gare. Cela vous permet de cliquer rapidement plusieurs gares sans avoir à recliquer sur le bouton 'Aller à' entre chaque.
 :''Valeurs possibles:'' <span style="color:green">'''Activé'''</span> ou <span style="color:red">'''Désactivé'''</span>
 :''Dans le fichier de configuration openttd.cfg:'' ([gui] quick_goto = <true|false>)
 {{en/-}}
@@ -194,14 +194,14 @@ Permet d'utiliser un outil de construction particulier même si aucun véhicule 
 {{en/-}}
 ===Conserver les outils de construction actifs après usage===
 {{fr/Disponibilité|0.7|float=right|texte=(depuis 0.7.0)}}
-Garde, par exemple, la fenêtre de construction de station de bus ouverte après en avoir placé une nouvelle. Cela vous permet de placer rapidement plusieurs stations de bus sans avoir à cliquer d'abord chaque fois sur le [[fr/Manual/Construction Routière#Barre d'outils de construction routière|bouton de construction de station de bus]].
+Garde, par exemple, la fenêtre de construction de station de bus ouverte après en avoir placé une nouvelle. Cela vous permet de placer rapidement plusieurs stations de bus sans avoir à cliquer d'abord chaque fois sur le [[fr/Manual/Construction Routière#barre-d-outils-de-construction-routiere|bouton de construction de station de bus]].
 :''Valeurs possibles:'' <span style="color:green">'''Activé'''</span> ou <span style="color:red">'''Désactivé'''</span>
 :''Dans le fichier de configuration openttd.cfg:'' ([gui] persistent_buildingtools = <true|false>)
 {{en/-}}
 ===Les journaux en couleur apparaissent en===
 {{fr/Disponibilité|Old|float=right|texte=(depuis 0.3.2)}}
 L'année en laquelle les [[fr/Archive/Manual/Settings/Journal en couleur|journaux en couleur]] apparaissent.
-Cette option a été déplacée depuis [[fr/Options avancées 0.3.0 - 0.6.3/Économie#Les journaux en couleur apparaissent en|section Économie]] en 0.7.0.
+Cette option a été déplacée depuis [[fr/Options avancées 0.3.0 - 0.6.3/Économie#les-journaux-en-couleur-apparaissent-en|section Économie]] en 0.7.0.
 :''Valeurs possibles:'' <span style="color:#00693E">'''0'''</span> à <span style="color:#00693E">'''5000000'''</span>
 :''Dans le fichier de configuration openttd.cfg:'' ([gui] colored_news_year = <year>)
 {{en/-}}

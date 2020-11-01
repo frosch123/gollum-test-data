@@ -21,7 +21,7 @@ Aby skorzystać z istniejącej biblioteki, wystarczy załadować ją do swojej A
    priority_queue/
    fibonacci_heap/
 
-Powiedz, że chcesz użyć [[pl/Development/Script/SI/Library#Priority Queue|Priority Queue]], po prostu to robisz:
+Powiedz, że chcesz użyć [[pl/Development/Script/SI/Library#priority-queue|Priority Queue]], po prostu to robisz:
 
  import("queue.priority_queue", "PriorityQueue", 2);
 
@@ -58,7 +58,7 @@ Teraz musisz utworzyć plik o nazwie '<code>main.nut</code>' . Powinien zawiera�
 Są rzeczy, których nie możesz zrobić:
 
 * Zarejestruj 2 biblioteki w jednym <code>library.nut</code>
-* Zdefiniuj więcej niż 1 klasę w <code>main.nut</code> (lub dowolnym wymaganym pliku). Możesz jednak zdefiniować podklasy ''(sub-classes)''. Powiedz, że potrzebujesz dodatkowej klasy w <code>PriorityQueue</code>. Możesz go nazwać <code>PriorityQueue.Subclass</code> . Aby uzyskać do niego dostęp z głównej klasy, użyj <code>this.Subclass</code>. Zobacz <code>[[pl/Development/Script/SI/Library#AyStar|graph.AyStar]]</code> , aby zobaczyć, jak to się robi.
+* Zdefiniuj więcej niż 1 klasę w <code>main.nut</code> (lub dowolnym wymaganym pliku). Możesz jednak zdefiniować podklasy ''(sub-classes)''. Powiedz, że potrzebujesz dodatkowej klasy w <code>PriorityQueue</code>. Możesz go nazwać <code>PriorityQueue.Subclass</code> . Aby uzyskać do niego dostęp z głównej klasy, użyj <code>this.Subclass</code>. Zobacz <code>[[pl/Development/Script/SI/Library#aystar|graph.AyStar]]</code> , aby zobaczyć, jak to się robi.
 
 == Wiele bibliotek różnych wersji ==
 
@@ -78,7 +78,7 @@ Istnieje kilka bibliotek dla typowych zadań w pakiecie z NoAI. Zostały one prz
 
 To implementacja [https://www.wikipedia.org/wiki/A* AyStar pathfinding algorithm] . Rozwiązuje wykresy, znajdując najszybszą trasę z jednego punktu do drugiego.
 
-'''Wymagane biblioteki:''' <code>[[pl/Development/Script/SI/Library#Binary Heap|queue.binary_heap]]</code>
+'''Wymagane biblioteki:''' <code>[[pl/Development/Script/SI/Library#binary-heap|queue.binary_heap]]</code>
 
 '''Historia wersji''':
 * aystar.1: r13461
@@ -92,7 +92,7 @@ To implementacja [https://www.wikipedia.org/wiki/A* AyStar pathfinding algorithm
 
 Jest to implementacja podstawowego identyfikatora drogi. Możesz go użyć, aby znaleźć długość istniejących tras i / lub zbudować nowe trasy. Od wersji 3 obsługiwane jest budowanie tuneli / mostów. Aby uzyskać więcej informacji, zobacz [[pl/Development/Script/SI/RoadPathfinder|AI:RoadPathfinder]]
 
-'''Wymagane biblioteki:''' <code>[[pl/Development/Script/SI/Library#AyStar|graph.aystar]]</code>
+'''Wymagane biblioteki:''' <code>[[pl/Development/Script/SI/Library#aystar|graph.aystar]]</code>
 
 '''Historia wersji''':
 * road.1: r13500
@@ -103,7 +103,7 @@ Jest to implementacja podstawowego identyfikatora drogi. Możesz go użyć, aby 
 
 Jest to implementacja podstawowego identyfikatora torów kolejowych. Możesz go użyć, aby znaleźć ścieżkę dla nowych kolei. Aby uzyskać więcej informacji, zobacz [[pl/Development/Script/SI/RailPathfinder|AI:RailPathfinder]]
 
-'''Wymagane biblioteki:''' <code>[[pl/Development/Script/SI/Library#AyStar|graph.aystar]]</code>
+'''Wymagane biblioteki:''' <code>[[pl/Development/Script/SI/Library#aystar|graph.aystar]]</code>
 
 '''Historia Wersji''':
 * rail.1: r14382

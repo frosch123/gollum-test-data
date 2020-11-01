@@ -10,7 +10,7 @@ This window of the [[en/Manual/Main Page]] patches section enables you to set va
 ====Enable realistic acceleration for trains====
 {{en/Feature|-0.6|align="right"|text=(since 0.3.2 to 0.6.3)}}
 Enables a more [[en/Archive/Manual/Settings/Realistic acceleration]] calculation for trains. With this setting enabled, trains will travel faster up hill, but slower through tight corners.
-This option has been renamed to [[en/Archive/Manual/Settings/Advanced Settings/Vehicles#Train acceleration model|Train acceleration model]] in 0.7.0.
+This option has been renamed to [[en/Archive/Manual/Settings/Advanced Settings/Vehicles#train-acceleration-model|Train acceleration model]] in 0.7.0.
 :''Possible Settings:'' <span style="color:green">'''On'''</span> or <span style="color:red">'''Off'''</span>
 :''In [[en/Archive/Manual/Settings/Openttd.cfg]] config file:'' ([patches] realistic_acceleration=<true|false>)
 {{en/-}}
@@ -40,25 +40,25 @@ Trucks [[en/Archive/Manual/Settings/Road vehicle queueing|queue up]] at a busy s
 {{en/-}}
 ====Pathfinder for trains====
 {{en/Feature|0.6|align="right"|text=(since 0.6.0)}}
-Select the pathfinding algorithm for trains. [[en/Archive/Manual/Yet Another Pathfinder]] is the default and recommended setting, but you can still select the older pathfinders.  This option has been renamed from [[#Use YAPF for trains|Use YAPF for trains]].
+Select the pathfinding algorithm for trains. [[en/Archive/Manual/Yet Another Pathfinder]] is the default and recommended setting, but you can still select the older pathfinders.  This option has been renamed from [[#use-yapf-for-trains|Use YAPF for trains]].
 :''Possible Settings:'' <span style="color:#FF7E00">'''NPF'''</span> or <span style="color:#FF7E00">'''YAPF'''</span> <span style="color:blue">(Recommended)</span>
 :''In [[en/Archive/Manual/Settings/Openttd.cfg]] config file:'' ([patches] pathfinder_for_trains = <0-2>)
 {{en/-}}
 ====Pathfinder for road vehicles====
 {{en/Feature|0.6|align="right"|text=(since 0.6.0)}}
-Select the pathfinding algorithm for road vehicles. [[en/Archive/Manual/Yet Another Pathfinder]] is the default and recommended setting, but you can still select the older pathfinders. This option has been renamed from [[#Use YAPF for roadvehs|Use YAPF for roadvehs]].
+Select the pathfinding algorithm for road vehicles. [[en/Archive/Manual/Yet Another Pathfinder]] is the default and recommended setting, but you can still select the older pathfinders. This option has been renamed from [[#use-yapf-for-roadvehs|Use YAPF for roadvehs]].
 :''Possible Settings:'' <span style="color:#FF7E00">'''NPF'''</span> or <span style="color:#FF7E00">'''YAPF'''</span> <span style="color:blue">(Recommended)</span>
 :''In Openttd.cfg config file:'' ([patches] pathfinder_for_roadvehs = <0-2>)
 {{en/-}}
 ====Pathfinder for ships====
 {{en/Feature|0.6|align="right"|text=(since 0.6.0)}}
-Select the pathfinding algorithm for ships. The original is the default and recommended setting, but you can select newer pathfinder. YAPF for ships has the advantage of not having to use buoys for long distances, but has serious performance issues when using a large number of ships (i.e. more than ten). This option has been renamed from [[#Use YAPF for ships|Use YAPF for ships]].
+Select the pathfinding algorithm for ships. The original is the default and recommended setting, but you can select newer pathfinder. YAPF for ships has the advantage of not having to use buoys for long distances, but has serious performance issues when using a large number of ships (i.e. more than ten). This option has been renamed from [[#use-yapf-for-ships|Use YAPF for ships]].
 :''Possible Settings:'' <span style="color:#FF7E00">'''Original'''</span> <span style="color:blue">(Recommended)</span>, <span style="color:#FF7E00">'''NPF'''</span> or <span style="color:#FF7E00">'''YAPF'''</span> <span style="color:red">(Not recommended)</span>
 :''In Openttd.cfg config file:'' ([patches] pathfinder_for_ships = <0-2>)
 {{en/-}}
 ====Warn if a train's income is negative====
 {{en/Feature|-0.6|align="right"|text=(since 0.3.2 to 0.6.3)}}
-(train_income_warn) If a train's [[en/Archive/Manual/Settings/Train income warning|income is negative]] it will be reported in a news message. Use the [[en/Manual/Orders]] option in the vehicles order window if you want to set up a [[en/Manual/Feeder service]]. This option has been renamed to [[en/Archive/Manual/Settings/Advanced Settings/Vehicles#Warn if a vehicle's income is negative|Warn if a vehicle's income is negative]] in 0.7.0.
+(train_income_warn) If a train's [[en/Archive/Manual/Settings/Train income warning|income is negative]] it will be reported in a news message. Use the [[en/Manual/Orders]] option in the vehicles order window if you want to set up a [[en/Manual/Feeder service]]. This option has been renamed to [[en/Archive/Manual/Settings/Advanced Settings/Vehicles#warn-if-a-vehicle-s-income-is-negative|Warn if a vehicle's income is negative]] in 0.7.0.
 :''Possible Settings:'' <span style="color:green">'''On'''</span> or <span style="color:red">'''Off'''</span>
 :''In Openttd.cfg config file:'' ([patches] train_income_warn = <true|false>)
 {{en/-}}
@@ -221,28 +221,28 @@ Allows you to use [[en/Manual/Timetable]] for vehicles.
 {{en/-}}
 ====Disable trains for computer====
 {{en/Feature|Old|align="right"|text=(since 0.3.2)}}
-The AI competitors are not allowed to use this type of vehicle when the patch is enabled. This option has been moved to [[en/Archive/Manual/Settings/Configuring patches/Competitors#Disable trains for computer|Competitors section]] in 0.3.4.
+The AI competitors are not allowed to use this type of vehicle when the patch is enabled. This option has been moved to [[en/Archive/Manual/Settings/Configuring patches/Competitors#disable-trains-for-computer|Competitors section]] in 0.3.4.
 :''Possible Settings:'' <span style="color:green">'''On'''</span> or <span style="color:red">'''Off'''</span>
 :''In Openttd.cfg config file:'' ([patches] ai_disable_veh = <byte_num_val>)
 :''In Openttd.cfg since 0.3.4:'' ([patches] ai_disable_veh_train = <true|false>) 
 {{en/-}}
 ====Disable road vehicles for computer====
 {{en/Feature|Old|align="right"|text=(since 0.3.2)}}
-The AI competitors are not allowed to use this type of vehicle when the patch is enabled. This option has been moved to [[en/Archive/Manual/Settings/Configuring patches/Competitors#Disable road vehicles for computer|Competitors section]] in 0.3.4.
+The AI competitors are not allowed to use this type of vehicle when the patch is enabled. This option has been moved to [[en/Archive/Manual/Settings/Configuring patches/Competitors#disable-road-vehicles-for-computer|Competitors section]] in 0.3.4.
 :''Possible Settings:'' <span style="color:green">'''On'''</span> or <span style="color:red">'''Off'''</span>
 :''In Openttd.cfg config file:'' ([patches] ai_disable_veh = <byte_num_val>)
 :''In Openttd.cfg since 0.3.4:'' ([patches] ai_disable_veh_roadveh = <true|false>)
 {{en/-}}
 ====Disable aircraft for computer====
 {{en/Feature|Old|align="right"|text=(since 0.3.2)}}
-The AI competitors are not allowed to use this type of vehicle when the patch is enabled. This option has been moved to [[en/Archive/Manual/Settings/Configuring patches/Competitors#Disable aircraft for computer|Competitors section]] in 0.3.4.
+The AI competitors are not allowed to use this type of vehicle when the patch is enabled. This option has been moved to [[en/Archive/Manual/Settings/Configuring patches/Competitors#disable-aircraft-for-computer|Competitors section]] in 0.3.4.
 :''Possible Settings:'' <span style="color:green">'''On'''</span> or <span style="color:red">'''Off'''</span>
 :''In Openttd.cfg config file:'' ([patches] ai_disable_veh = <byte_num_val>)
 :''In Openttd.cfg since 0.3.4:'' ([patches] ai_disable_veh_aircraft = <true|false>) 
 {{en/-}}
 ====Disable ships for computer====
 {{en/Feature|Old|align="right"|text=(since 0.3.2)}}
-The AI competitors are not allowed to use this type of vehicle when the patch is enabled. This option has been moved to [[en/Archive/Manual/Settings/Configuring patches/Competitors#Disable ships for computer|Competitors section]] in 0.3.4.
+The AI competitors are not allowed to use this type of vehicle when the patch is enabled. This option has been moved to [[en/Archive/Manual/Settings/Configuring patches/Competitors#disable-ships-for-computer|Competitors section]] in 0.3.4.
 :''Possible Settings:'' <span style="color:green">'''On'''</span> or <span style="color:red">'''Off'''</span>
 :''In Openttd.cfg config file:'' ([patches] ai_disable_veh = <byte_num_val>)
 :''In Openttd.cfg since 0.3.4:'' ([patches] ai_disable_veh_ship = <true|false>)
@@ -255,19 +255,19 @@ The AI competitors are not allowed to use this type of vehicle when the patch is
 {{en/-}}
 ====Use YAPF for ships====
 {{en/Feature period|0.5|0.5|align="right"|text=(since 0.5.0 to 0.5.3)}}
-(explanation) This option has been renamed to [[#Pathfinder for ships|Pathfinder for ships]] in 0.6.0.
+(explanation) This option has been renamed to [[#pathfinder-for-ships|Pathfinder for ships]] in 0.6.0.
 :''Possible Settings:'' <span style="color:green">'''On'''</span> or <span style="color:red">'''Off'''</span>
 :''In Openttd.cfg config file:'' ([yapf] ship_use_yapf = <true|false>) 
 {{en/-}}
 ====Use YAPF for roadvehs====
 {{en/Feature period|0.5|0.5|align="right"|text=(since 0.5.0 to 0.5.3)}}
-(explanation) This option has been renamed to [[#Pathfinder for road vehicles|Pathfinder for road vehicles]] in 0.6.0.
+(explanation) This option has been renamed to [[#pathfinder-for-road-vehicles|Pathfinder for road vehicles]] in 0.6.0.
 :''Possible Settings:'' <span style="color:green">'''On'''</span> or <span style="color:red">'''Off'''</span>
 :''In Openttd.cfg config file:'' ([yapf] road_use_yapf = <true|false>) 
 {{en/-}}
 ====Use YAPF for trains====
 {{en/Feature period|0.5|0.5|align="right"|text=(since 0.5.0 to 0.5.3)}}
-(explanation) This option has been renamed to [[#Pathfinder for trains|Pathfinder for trains]] in 0.6.0.
+(explanation) This option has been renamed to [[#pathfinder-for-trains|Pathfinder for trains]] in 0.6.0.
 :''Possible Settings:'' <span style="color:green">'''On'''</span> or <span style="color:red">'''Off'''</span>
 :''In Openttd.cfg config file:'' ([yapf] rail_use_yapf = <true|false>) 
 {{en/-}}

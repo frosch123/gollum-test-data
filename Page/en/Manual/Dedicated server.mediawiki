@@ -40,7 +40,7 @@ You can also start openttd with -f option. It means that the process will run in
 ==Configuring the server==
 There are 3 ways to change the game options:
 *Launch a single player game, change the settings, and close the game.
-*Use the [[en/Manual/Console#Server_commands|console commands]] to control the server while it is running.
+*Use the [[en/Manual/Console#server-commands|console commands]] to control the server while it is running.
 *Edit the [[en/Archive/Manual/Settings/Openttd.cfg]] file manually. See [[en/Archive/Manual/Settings/Diff custom]] for some help.
 Available Tools:
 *[http://www.tt-forums.net/viewtopic.php?f=29&t=33967 Web Interface]
@@ -55,7 +55,7 @@ Change the network settings in the Network section of [[en/Archive/Manual/Settin
 *If you are behind a router, make sure that you forward the port specified by [[en/Archive/Manual/Settings/Server port]] (both TCP and UDP)
 
 ==Controlling the server with rcon==
-Configure the dedicated server to accept [[en/Manual/Console#Server_commands|rcon]] commands:
+Configure the dedicated server to accept [[en/Manual/Console#server-commands|rcon]] commands:
 *In the dedicated server window, type {{en/C|rcon_pw <password>|}}. 
 :Example: {{en/C|rcon_pw x8na7f|}}
 

@@ -4,7 +4,7 @@
 :''Zobacz też: [[pl/Archive/Manual/Scenariusz|Scenariusz]]''
 __NOTOC__
 ==Używanie map wysokościowych==
-Mapa wysokości może być rozumiana jako obraz w skali szarości, gdzie najjaśniejszy biały (najbliższy <span style="background-color:black; color:white;">'''&nbsp;"#FFFFFF" '''</span>) jest uważany za najwyższy punkt mapy, a najciemniejszy czarny (najbliższy '''&nbsp;"#000000" ''') jest uważany za najniższy punkt mapy. Więcej informacji znajdziesz w sekcji [[#Skala szarości|skala szarości]], zamieszczonej poniżej.
+Mapa wysokości może być rozumiana jako obraz w skali szarości, gdzie najjaśniejszy biały (najbliższy <span style="background-color:black; color:white;">'''&nbsp;"#FFFFFF" '''</span>) jest uważany za najwyższy punkt mapy, a najciemniejszy czarny (najbliższy '''&nbsp;"#000000" ''') jest uważany za najniższy punkt mapy. Więcej informacji znajdziesz w sekcji [[#skala-szarosci|skala szarości]], zamieszczonej poniżej.
 
 W przypadku konwersji obrazu na mapę 1:1, jeden piksel z pliku obrazu reprezentuje wspólny róg 4 kratek Dlatego też, jeśli chcesz obniżyć/podnieść jeden cały kafel, musisz rozjaśnić/przyciemninić otaczające go 2x2 piksele.
 
@@ -24,7 +24,7 @@ File:en/Heightmap map.png|...otrzymasz efekt jak widoczny tutaj
 
 UWAGA: Od r27010 OpenTTD obsługuje poziomy wysokości do 255 (włącznie z poziomem morza); a 8-bitowa paleta nie jest zmuszona do generowania 16 poziomów, jak przedstawiono poniżej.
 W związku z tym tabela przestaje obowiązywać, gdy włączone jest więcej niż 16 poziomów wysokości.
-Zakres kolorów pomiędzy poziomami jest teraz podzielony zgodnie z 255/n, gdzie "n" jest liczbą poziomów wysokości określonych w ustawieniach ([[pl/Ustawienia/Ograniczenia#Maksymalna_wysoko.C5.9B.C4.87_mapy|maksymalna wysokość mapy]])
+Zakres kolorów pomiędzy poziomami jest teraz podzielony zgodnie z 255/n, gdzie "n" jest liczbą poziomów wysokości określonych w ustawieniach ([[pl/Ustawienia/Ograniczenia#maksymalna-wysokosc-mapy|maksymalna wysokość mapy]])
 
 {|
 ! kolor ([https://pl.wikipedia.org/wiki/Kolory_w_Internecie#Zapis_szesnastkowy szesnastkowy])

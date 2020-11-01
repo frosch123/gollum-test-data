@@ -7,7 +7,7 @@
 __TOC__
 {{en/-}}
 == Block signals ==
-Block signals divide tracks into blocks, and operate according to the train movement on the blocks. Block signals stop the train if the next block of track is occupied by a train, and show red. If not, it allows it to pass and is green. Any and all track tiles physically reachable from the signal up to the next signal on that track are counted as the same block, regardless if there are multiple branches. Even if the expected path of the train does not collide with the path of the other train which is currently occupying the block, the block signal will not authorize the train in front of it to enter the block ahead, as opposed to [[#Path signals|path signals]].
+Block signals divide tracks into blocks, and operate according to the train movement on the blocks. Block signals stop the train if the next block of track is occupied by a train, and show red. If not, it allows it to pass and is green. Any and all track tiles physically reachable from the signal up to the next signal on that track are counted as the same block, regardless if there are multiple branches. Even if the expected path of the train does not collide with the path of the other train which is currently occupying the block, the block signal will not authorize the train in front of it to enter the block ahead, as opposed to [[#path-signals|path signals]].
 
 ===Two-way signal===
 [[File:en/2-way signals.png|frame|Two-way signals at a loading station]]
@@ -28,7 +28,7 @@ One-way signals limit train movement to one direction. In the example below, the
 [[File:en/1-way signal loop.png|frame|center|One-way signals in a loop]]
 
 There are two main situations where these signals are more useful than simple block signals:
-*[[en/Manual/Building railway stations#Single_stations|RoRo stations]] allow trains to stop at a station without reversing out and blocking the entry. This makes trains enter and exit stations more efficiently.
+*[[en/Manual/Building railway stations#single-stations|RoRo stations]] allow trains to stop at a station without reversing out and blocking the entry. This makes trains enter and exit stations more efficiently.
 *Double tracks allow more than 2 trains to travel without them reversing into each other. On a single-track line, if a train is present, then no trains can move in the opposite direction because they will collide at some point. On a double-track line any train can take one direction and they will never collide, meaning trains don't have to wait for other trains, and can always move on that line.
 
 If a train arrives at the wrong side of a one-way signal, it will be blocked and immediately reverse unless player has disabled this behavior in the advanced signal options. When using one-way signals, be sure that they are ''all'' facing the correct direction. It is a good idea to watch the first train you run on the newly signaled line all the way to its destination to ensure you haven't made any mistakes. 
@@ -37,7 +37,7 @@ Click on an existing two-way signal to toggle it to a one-way signal. Click on i
 
 If a train has a choice of tracks, each with a one way signal, it will pick the track heading towards its destination (i.e. it will wait until the signal on the track heading towards its destination turns green, as opposed to taking whichever signal is green if one of the signals is red).  This is in contrast with two way signals.
 
-Although the one-way (block) signal appears there is only one side of the signal facing the passing direction, technically speaking, the disappeared signal of the other side still exists and is red permanently to block the entrance from that side. This appearance is not true in the real world signalling system and is misleading for players who wish to learn the usage of the more advanced [[#Path Signals|path signalling system]] which is more realistic and efficient in handling junction traffic.
+Although the one-way (block) signal appears there is only one side of the signal facing the passing direction, technically speaking, the disappeared signal of the other side still exists and is red permanently to block the entrance from that side. This appearance is not true in the real world signalling system and is misleading for players who wish to learn the usage of the more advanced [[#path-signals|path signalling system]] which is more realistic and efficient in handling junction traffic.
 
 One-way signal was first introduced to ''[[en/Archive/OpenTTD/Transport Tycoon Deluxe]]''.
 
@@ -173,7 +173,7 @@ There is a third type of pre-signal called the combo signal and simply acts as b
 In a tree of pre-signals, combo-signals are placed in between the entry pre-signals and exit-signals for that reason above, the other 2 types of signals are placed at the very beginning and end of the setup respectively.
 {{en/-}}
 ====Building pre-signals====
-To build a pre-signal select the appropriate button in [[#Signal Interface|signal selection toolbar]].
+To build a pre-signal select the appropriate button in [[#signal-interface|signal selection toolbar]].
 
 In previous versions, first place an ordinary signal.  Then, with ''Ctrl'' held down, click the signal to cycle through the different kinds of presignal:
 *Note that you can build one way pre-signals in the same way as you build ordinary one way signals.  Remember: holding ''Ctrl'' and clicking toggles the type of (pre)signal, clicking without ''Ctrl'' changes the direction of signaling - if interface signals not enabled.
@@ -183,7 +183,7 @@ In previous versions, first place an ordinary signal.  Then, with ''Ctrl'' held 
 [[File:en/PresignalLimitation.png|frame|The problem with pre-signals...]]
 An important point to note with exit signals is that a green exit signal will trigger a green on the entry pre-signal at the beginning of the block even if it is not actually possible for a train to get to that exit signal because of the track layout (as in the image to the right with a train entering on the bottom track cannot technically exit from the top track). This can ruin more complicated pre-signaling setups, so care needs to be taken with planning.
 
-One of the bugs that are noted as "will not be solved" is: lost trains ignore (block) exit signals. If trains are lost, a random direction is chosen at each junction, so they ignore block exit signals, and may easily block junctions with pre-signals. Such case, however, can be easily resolved by replacing with [[#Path signals|path signals]].
+One of the bugs that are noted as "will not be solved" is: lost trains ignore (block) exit signals. If trains are lost, a random direction is chosen at each junction, so they ignore block exit signals, and may easily block junctions with pre-signals. Such case, however, can be easily resolved by replacing with [[#path-signals|path signals]].
 {{en/-}}
 
 ==Directing trains==

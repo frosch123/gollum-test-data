@@ -4,11 +4,11 @@
 Les '''Gares ferroviaires''' sont le composant de base d'un réseau ferroviaire. Elles permettent le chargement de passagers et de biens dans les [[fr/Manual/Trains|trains]], et leur déchargement. Pour votre réseau, il est mieux d'avoir votre gare en dehors de la voie principale pour éviter un trafic inutile dans la gare, et ainsi du retard pour les trains qui s'y arrêtent.
 
 ==Gares basiques==
-Les gares suivantes sont faciles à construire et marcheront correctement en étant desservies par quelques trains. Quand la densité de trafic augmente, vous voudrez sûrement essayer une configuration de [[en/Manual/Railway station#Advanced_stations|gare avancée]].
+Les gares suivantes sont faciles à construire et marcheront correctement en étant desservies par quelques trains. Quand la densité de trafic augmente, vous voudrez sûrement essayer une configuration de [[en/Manual/Railway station#advanced-stations|gare avancée]].
 
 ===Terminus===
 Ces gares se situent en fin de ligne. Les trains entrent et sortent du même côté, et peuvent donc bloquer ou être bloqués par des trains quittant la gare ou y entrant. Elles sont souvent utilisées pour des gares petites et simples quand l'espace disponible ne permet pas de placer une gare à roulements.
-[[File:en/Terminus.png|center|none|frame|Gare simple de terminaux, celle de gauche utilise des [[fr/Manual/Signaux#Signaux_de_bloc|signaux de blocs]], celle de droite des [[fr/Manual/Signaux#Signaux_de_chemin|signaux de chemin]].]]
+[[File:en/Terminus.png|center|none|frame|Gare simple de terminaux, celle de gauche utilise des [[fr/Manual/Signaux#signaux-de-bloc|signaux de blocs]], celle de droite des [[fr/Manual/Signaux#signaux-de-chemin|signaux de chemin]].]]
 
 ===Ro-Ro===
 Dans les gares Ro-Ro (Roll-On, Roll-Off), les trains entrent par un côté et ressortent par l'autre. Les trains entrant n'ont pas besoin d'attendre la sortie des trains à quai. C'est très bien pour les trafics moyens. Sans [[en/Manual/Signals|signaux dépendants]], ce n'est pas bon pour les gares à fort trafic (càd les gares desservant des usines), parce que quand tous les quais sont occupés, un train entrant attend au signal à double sens le plus proche de l'entrée, ce qui peut créer des embouteillages si le train à quai a un ordre de ''chargement complet'' et attend (longtemps) le chargement en provenance d'un autre train.
@@ -22,7 +22,7 @@ Une simple gare avec une, ou plusieurs, [https://www.wikipedia.org/wiki/Fr:Évit
 ===Gares combinées roro-terminus===
 Il est aussi possible de construire des gares qui servent à la fois de terminus et de gare ro-ro. Cependant, la fenêtre « Niveau de difficulté », l'option « Demi-tour des trains » doit être paramétrée à « À la fin de la ligne et aux gares » pour pouvoir fonctionner. Les trains peuvent entrer dans la gare et la quitter dans les deux sens.
 
-Si l’utilisation des [[fr/Manual/Signaux#Signaux de chemin|signaux de chemin]] fonctionne parfaitement, l'utilisation de [[fr/Manual/Signaux#Signaux de bloc|signaux de bloc]] sera cause de blocage. Quand deux trains entrant dans le sens opposé traverseront les [[fr/Manual/Signaux#Pré-signaux d'entrée|pré-signaux d'entrée]] quasi simultanément, et voudront entrer sur le même quai, le premier train pourra entrer alors que le deuxième sera coincé en face du [[fr/Manual/Signaux#Signaux de sortie|signal de sortie]] rouge. Vous devriez donc éviter d'utiliser un système de signaux de blocs à moins qu'il ne s'agisse d'une gare à très faible trafic.
+Si l’utilisation des [[fr/Manual/Signaux#signaux-de-chemin|signaux de chemin]] fonctionne parfaitement, l'utilisation de [[fr/Manual/Signaux#signaux-de-bloc|signaux de bloc]] sera cause de blocage. Quand deux trains entrant dans le sens opposé traverseront les [[fr/Manual/Signaux#pre-signaux-d-entree|pré-signaux d'entrée]] quasi simultanément, et voudront entrer sur le même quai, le premier train pourra entrer alors que le deuxième sera coincé en face du [[fr/Manual/Signaux#signaux-de-sortie|signal de sortie]] rouge. Vous devriez donc éviter d'utiliser un système de signaux de blocs à moins qu'il ne s'agisse d'une gare à très faible trafic.
 [[File:en/Two-way-roro-station.png|center|none|frame|Gare combinée roro-terminus, celle du haut utilisant des signaux de bloc, et celle du bas des signaux de chemin.]]
 
 ===Gare de sac===
@@ -38,7 +38,7 @@ Qu'advient-il quand un troisième train arrive dans l'une des gares qui précèd
 Que dire alors des files d'attente qui se créent à l'entrée des gares. Elles peuvent même s'allonger jusqu'à bloquer votre réseau entier !
 
 ===Signaux dépendants===
-Les gares avec des [[fr/Manual/Signaux#Pré-signaux d'entrée|pré-signaux]] font attendre les trains en dehors de la gare le temps qu'un quai se libère.
+Les gares avec des [[fr/Manual/Signaux#pre-signaux-d-entree|pré-signaux]] font attendre les trains en dehors de la gare le temps qu'un quai se libère.
 [[File:en/Presignalstation.png|center|none|frame|Gare avec pré-signal]]
 
 ===Baie d'attente===

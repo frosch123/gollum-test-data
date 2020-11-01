@@ -15,7 +15,7 @@ Sei autorizzato a dare ordini a qualsiasi veicolo in tuo possesso. I tuoi autist
 
 <div style="padding: 10px 10px 5px; 10px; border-width: 0px; background-color: transparent;">[[File:it/Orders-2.png|frame|none|La finestra degli ordini]]</div>
 
-* Clicca su [[#Vai a|'''Vai a''']] e poi clicca sulla stazione di destinazione nella mappa.
+* Clicca su [[#vai-a|'''Vai a''']] e poi clicca sulla stazione di destinazione nella mappa.
 * Clicca sull'ordine appena creato nell'elenco per selezionarlo, quindi comunica al veicolo cosa dovrebbe fare in quella stazione. Ad esempio, clicca su '''Attendi pieno carico''' per fare in modo che il veicolo in quella stazione attenda il caricamento completo del carico per cui è predisposto.
 * Per cancellare un ordine cliccaci sopra per evidenziarlo, diventerà di colore bianco, quindi clicca sul pulsante '''Elimina''', in basso al centro della finestra ordini.
 * Per saltare momentaneamente un ordine senza eliminarlo, perchè per esempio un treno blocca la banchina e la vogliamo liberare, clicca sull'ordine corrente che il veicolo stà eseguendo e poi clicca sul pulsante '''Salta''' in basso a sinistra della finestra ordini. 
@@ -35,18 +35,18 @@ Appena abbiamo comprato il treno, oppure se sono stati cancellati tutti gli ordi
 I possibili obiettivi a cui possiamo mandare il veicolo sono:
 
 * Le tue [[it/Manual/Stazioni|stazioni]], ma solo le stazioni in cui viene accettato quel particolare veicolo. Quindi non puoi dare a un autobus un ordine di andare in un aeroporto se quell'aeroporto non ha una stazione degli autobus. Non puoi inviare i tuoi veicoli alle stazioni dei concorrenti.
-* [[it/Manual/Depositi|depositi]]. Questo cambierà alcuni degli altri pulsanti - vedi [[#Servizio | Servizio]] e [[#Riadatta|riadattare]] nei paragrafi seguienti.
+* [[it/Manual/Depositi|depositi]]. Questo cambierà alcuni degli altri pulsanti - vedi [[#servizio | Servizio]] e [[#riadatta|riadattare]] nei paragrafi seguienti.
 * [[it/Manual/Waypoint|waypoint]], solo per i treni, è possibile inviare un treno a un determinato waypoint per influenzarne la scelta della traccia o se le stazioni sono troppo distanti e il treno si perde facilmente. 
 * [[it/Boa|boa]], solo per le navi, è un tipo di waypoint per le navi che percorrono lunghe distanze.
 
-''Puoi [[#Ordini condivisi|condividere gli ordini]] tra i [[it/Manual/Veicoli|veicoli]] dello stesso tipo. Vedi sotto per maggiori informazioni.''
+''Puoi [[#ordini-condivisi|condividere gli ordini]] tra i [[it/Manual/Veicoli|veicoli]] dello stesso tipo. Vedi sotto per maggiori informazioni.''
 
 Il menu del pulsante ''Vai a'' offre le seguenti opzioni:
 
 * '''Vai a''' serve per dirigere il veicolo ad una determinata stazione a lui adatta, quindi sia essa ferroviaria, automezzi, di carico, aeroporto o molo.
 * '''Vai al deposito più vicino''' dirigerà il veicolo ad un qualsiasi deposito più vicino a lui adatto anche se ha dei depositi preimpostati a cui andare, vedi [[it/Manual/Manutenzione|manutenzione]].
-* [[#Salto condizionale|'''Salto condizionale''']] con questa opzione è possibile lasciare fuori le stazioni se, ad esempio, il treno è completamente carico.
-* '''Condividi ordini''' è un altro modo per attivare la [[#Ordini condivisi|condivisione]] della lista degli ordini tra i veicoli. 
+* [[#salto-condizionale|'''Salto condizionale''']] con questa opzione è possibile lasciare fuori le stazioni se, ad esempio, il treno è completamente carico.
+* '''Condividi ordini''' è un altro modo per attivare la [[#ordini-condivisi|condivisione]] della lista degli ordini tra i veicoli. 
 
 <div style="padding: 10px 10px 5px; 10px; border-width: 0px; background-color: transparent;">[[File:it/Orders gotooptions.png|none|frame|Le varie opzioni offerte dal pulsante ''Vai a''.]]</div>
 
@@ -75,7 +75,7 @@ Per modificare la condizione occorre selezionarla, cliccandoci sopra, e comparir
 # '''0''' (zero)
 
 ===== Pulsante "Percentuale di carico" =====
-Sono i parametri che possiamo condizionare, sono tutti parametri del veicolo e non c'è bisogno di ulteriori spiegazioni, tutti possono essere sottoposti alle condizioni espresse dal pulsante '''è uguale a''' trannel le ultime due, '''Manuntenzione richiesta''' che attiverà un nuovo pulsante '''è vero''' con due nuove condizioni, vero o falso. l'Opzione '''Sempre''' invece non offre altre scelte ma da la possibilità di effettuare sempre il salto ad un altro ordine come avviene premendo il pulsante [[it/Manual/Ordini#Salta|'''Salta''']] con la differenza che in questo caso saltiamo l'ordine corrente mentre con l'opzione '''Sempre''' possiamo decidere a quale ordine dell'elenco saltare.
+Sono i parametri che possiamo condizionare, sono tutti parametri del veicolo e non c'è bisogno di ulteriori spiegazioni, tutti possono essere sottoposti alle condizioni espresse dal pulsante '''è uguale a''' trannel le ultime due, '''Manuntenzione richiesta''' che attiverà un nuovo pulsante '''è vero''' con due nuove condizioni, vero o falso. l'Opzione '''Sempre''' invece non offre altre scelte ma da la possibilità di effettuare sempre il salto ad un altro ordine come avviene premendo il pulsante [[it/Manual/Ordini#salta|'''Salta''']] con la differenza che in questo caso saltiamo l'ordine corrente mentre con l'opzione '''Sempre''' possiamo decidere a quale ordine dell'elenco saltare.
 
 {|style="margin: 5px auto 25px 0px;"
 |style="padding: 0px; background-color: transparent; border: 0px;" colspan="2"|[[File:it/Ordini condizionati-parametri.png|none|frame|Il menu con i parametri che si possono condizionare.]]
@@ -99,7 +99,7 @@ il pulsante '''Elimina''' cancellerà l'ordine evidenziato dalla lista del veico
 
 Se si evidenzia la riga ''Fine degli ordini'' e la si cancella l'intera lista degli ordini verrà cancellata. 
 
-''<span style="color: red; font-weight: bold;">Attenzione</span>: se la riga  evidenziata è '''Fine degli ordini condivisi''' il pulsante '''Elimina''' diventa '''Termina condivisione''', cliccandolo non si cancellerà l'elenco degli ordini ma solo la condivisione, vedi [[#Ordini condivisi|ordini condivisi]] per i dettagli.''
+''<span style="color: red; font-weight: bold;">Attenzione</span>: se la riga  evidenziata è '''Fine degli ordini condivisi''' il pulsante '''Elimina''' diventa '''Termina condivisione''', cliccandolo non si cancellerà l'elenco degli ordini ma solo la condivisione, vedi [[#ordini-condivisi|ordini condivisi]] per i dettagli.''
 
 === Salta ===
 Questo fa sì che il treno salti l'ordine che sta attualmente adempiendo e passa a quello successivo. Premendo '''Salta''' mentre il veicolo stà eseguendo l'ultimo ordine dell'elenco andrà direttamente al primo.
@@ -140,7 +140,7 @@ Avremo comportamenti diversi a seconda del [[it/Prefisso ordine|'''prefisso dell
 <li> ''Non scaricare'' </li>
 </ul></li>
 
-<li> [[it/Archive/Manual/No-stop#Nuovo comportamento "No-stop"|'''No-stop''']] (solo treni e automezzi hanno questo pulsante). Il suo menu offre queste opzioni: 
+<li> [[it/Archive/Manual/No-stop#nuovo-comportamento-no-stop|'''No-stop''']] (solo treni e automezzi hanno questo pulsante). Il suo menu offre queste opzioni: 
 <ul>
 <li> ''Vai a'' </li>
 <li> ''Vai no-stop a'' </li>

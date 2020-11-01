@@ -7,7 +7,7 @@
 
 {{en/Todo|Fill in missing section ''Destination Algorithm''.}}
 
-Support for [[en/Community/Patches/Passenger and cargo destinations]] in OpenTTD exists in the new cargo packets branch by [[en/Archive/Community/Celestar]] and [[en/Archive/Community/Peter1138]]. An explanation on how to download and install this branch is given in the [[en/Community/Patches/Passenger and cargo destinations#Installation|Installation]] section of this page.
+Support for [[en/Community/Patches/Passenger and cargo destinations]] in OpenTTD exists in the new cargo packets branch by [[en/Archive/Community/Celestar]] and [[en/Archive/Community/Peter1138]]. An explanation on how to download and install this branch is given in the [[en/Community/Patches/Passenger and cargo destinations#installation|Installation]] section of this page.
 
 == Overview ==
 [[File:en/Example.png|thumb|Example city with long distance and local trains as well as an assortment of trams and buses]]
@@ -24,9 +24,9 @@ This page provides a short manual on how to use [[en/Community/Patches/Passenger
 This section explains how to install and use [[en/Community/Patches/Passenger and cargo destinations]].
 
 === Installation ===
-You can download a precompiled binary or source code [http://www.openttd.org/download-cargodest here]. Like any normal OpenTTD version, it needs the trg*.grf and sample.cat files to work, as described in the [[en/Archive/Manual/Installation FAQ#What_files_do_I_need_from_TTD.3F|Installation FAQ]].
+You can download a precompiled binary or source code [http://www.openttd.org/download-cargodest here]. Like any normal OpenTTD version, it needs the trg*.grf and sample.cat files to work, as described in the [[en/Archive/Manual/Installation FAQ#what-files-do-i-need-from-ttd|Installation FAQ]].
 
-If you want to obtain the newest source code from the mercurial repository, look in the section [[en/Community/Patches/Passenger and cargo destinations#Obtaining the source code|Obtaining the source code]].
+If you want to obtain the newest source code from the mercurial repository, look in the section [[en/Community/Patches/Passenger and cargo destinations#obtaining-the-source-code|Obtaining the source code]].
 
 === Usage ===
 CargoDest is easy enough to use: Once it is enabled in the Advanced Settings menu, the cargo will find its routes on its own. The Routing Network is built up using the orders of the vehicles. If you have two vehicles, one which goes from A to B and another from B to C, there will be (among others) cargo generated in A with C as its destination. That cargo at A will board '''''any''''' vehicle that goes to B (the ''transfer station''), unload there and then use '''''any''''' vehicle that goes to C. Any vehicle implies any vehicle going directly from A to B, vehicles with a stopover in D (meaning A-D-B) will not be used.
@@ -38,14 +38,14 @@ Some settings were added to the ''Advanced Settings'' menu to tune [[en/Communit
 * Enable or disable the usage destinations for passengers, mail, valuables and other cargo individually in the ''Economy'' tab.
 * Select your preferred cargo view method for the station window in the ''Interface'' tab. You can still switch between those views during the game by CTRL-clicking in the station window.
 
-More details about the new settings can be found in the [[en/Community/Patches/Passenger and cargo destinations#Configuring|Configuring]] section.
+More details about the new settings can be found in the [[en/Community/Patches/Passenger and cargo destinations#configuring|Configuring]] section.
 
 === New GUI ===
 Some changes were made to the user interface to help you finding out more about your routes.
 
-* The minimap got a new map overlay, see [[en/Community/Patches/Passenger and cargo destinations#Minimap Route Network|Minimap Route Network]]
-* The station window has new options for displaying the waiting cargo, see [[en/Community/Patches/Passenger and cargo destinations#Station Cargo List|Station Cargo List]]
-* The vehicle detail window now shows the destination of its transported cargos under ''Total Cargo'', see [[en/Community/Patches/Passenger and cargo destinations#Vehicle Cargo List|Vehicle Cargo List]]
+* The minimap got a new map overlay, see [[en/Community/Patches/Passenger and cargo destinations#minimap-route-network|Minimap Route Network]]
+* The station window has new options for displaying the waiting cargo, see [[en/Community/Patches/Passenger and cargo destinations#station-cargo-list|Station Cargo List]]
+* The vehicle detail window now shows the destination of its transported cargos under ''Total Cargo'', see [[en/Community/Patches/Passenger and cargo destinations#vehicle-cargo-list|Vehicle Cargo List]]
 
 == Detailed description ==
 In this section, the implementation of [[en/Community/Patches/Passenger and cargo destinations]] by Celestar and Peter is described in detail.
@@ -165,13 +165,13 @@ Connections (edges) are shown as thin lines in the color of the cargo type they 
 The Station Cargo List will be one of your main tools to work with. To ease network optimization,
 several different cargo views are available in the station view window:
 
-* [[en/Community/Patches/Passenger and cargo destinations#Conventional View|Conventional View]]
+* [[en/Community/Patches/Passenger and cargo destinations#conventional-view|Conventional View]]
 * Detailed Views:
-** [[en/Community/Patches/Passenger and cargo destinations#Full View|Full View]]
-** [[en/Community/Patches/Passenger and cargo destinations#Destination View|Destination View]]
-** [[en/Community/Patches/Passenger and cargo destinations#NextHop View|NextHop View]]
-** [[en/Community/Patches/Passenger and cargo destinations#Tree View|Tree View]]
-** [[en/Community/Patches/Passenger and cargo destinations#Source View|Source View]]
+** [[en/Community/Patches/Passenger and cargo destinations#full-view|Full View]]
+** [[en/Community/Patches/Passenger and cargo destinations#destination-view|Destination View]]
+** [[en/Community/Patches/Passenger and cargo destinations#nexthop-view|NextHop View]]
+** [[en/Community/Patches/Passenger and cargo destinations#tree-view|Tree View]]
+** [[en/Community/Patches/Passenger and cargo destinations#source-view|Source View]]
 
 You can expand the conventional view to a detailed view, which gives you more information about the waiting cargo's routing. It's possible to switch between the different detailed views by using the drop down box in the in station view. The view type can be set for each window individually, and the default view type (which will be selected each time you open a window) can be set in the advanced options.
 

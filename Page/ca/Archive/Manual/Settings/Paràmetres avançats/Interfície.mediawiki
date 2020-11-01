@@ -42,7 +42,7 @@ Permet establir si es pot utilitzar un color específic (diferent del color de l
 {{en/-}}
 ====Mostra les vies reservades====
 {{ca/Característica|0.7|float=right|text=(des de 0.7.0)}}
-Quan està activada, els trams de les vies reservats pels trens es mostren d'un color més fosc. És útil per a depurar i millorar l'ús de [[ca/Manual/Senyals#Senyals de camí|senyals de camí]] a les interseccions.
+Quan està activada, els trams de les vies reservats pels trens es mostren d'un color més fosc. És útil per a depurar i millorar l'ús de [[ca/Manual/Senyals#senyals-de-cami|senyals de camí]] a les interseccions.
 :''Valors possibles:'' <span :''Valors possibles:'' <span style="color:green">'''Actiu'''</span> o <span style="color:red">'''Inactiu'''</span>
 :''En el fitxer de configuració Openttd.cfg:'' ([gui] show_track_reservation = <true|false>)
 {{en/-}}
@@ -179,7 +179,7 @@ Activa o desactiva la columna d'arribades i sortides de la finestra d'horaris.
 {{en/-}}
 ===Creació ràpida d'ordres per a vehicles===
 {{ca/Característica|0.7|float=right|text=(des de 0.7.0)}}
-Con este paràmetre activat, l'opció '[[ca/Manual/Ordres#Ves a|Ves a]]' de la finestra ''Ordres'' d'un vehicle romandrà activa després de fer clic a una estació. Això permet fer clic amb rapidesa en diverses estación sense haber de clicar el botó 'Ves a' entre estació i estació.
+Con este paràmetre activat, l'opció '[[ca/Manual/Ordres#ves-a|Ves a]]' de la finestra ''Ordres'' d'un vehicle romandrà activa després de fer clic a una estació. Això permet fer clic amb rapidesa en diverses estación sense haber de clicar el botó 'Ves a' entre estació i estació.
 :''Valors possibles:'' <span style="color:green">'''Actiu'''</span> o <span style="color:red">'''Inactiu'''</span>
 :''En el fitxer de configuració Openttd.cfg:'' ([gui] quick_goto = <true|false>)
 {{en/-}}
@@ -197,7 +197,7 @@ Fa possible l'ús d'algunes eines de construcció, tot i que no hi haja vehicles
 {{en/-}}
 ===Manté les eines de construcció d'infraestructures quan no hi hagi disponibles vehicles adequats===
 {{ca/Característica|0.7|float=right|text=(des de 0.7.0)}}
-Manté, per exemple, la finestra de construcció d'estacions d'autobusos oberta, després de construir una nova estació d'autobusos. Això li permet posar ràpidament diverses estacions d'autobusos sense haver de fer clic al botó [[ca/Manual/Construcció de carreteres#Barra d'eines construcció de carreteres|construeix carreteres]] abans.
+Manté, per exemple, la finestra de construcció d'estacions d'autobusos oberta, després de construir una nova estació d'autobusos. Això li permet posar ràpidament diverses estacions d'autobusos sense haver de fer clic al botó [[ca/Manual/Construcció de carreteres#barra-d-eines-construccio-de-carreteres|construeix carreteres]] abans.
 :''Valors possibles:'' <span style="color:green">'''Actiu'''</span> o <span style="color:red">'''Inactiu'''</span>
 :''En el fitxer de configuració Openttd.cfg:'' ([gui] persistent_buildingtools = <true|false>)
 {{en/-}}

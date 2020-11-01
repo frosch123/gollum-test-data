@@ -37,13 +37,13 @@ Makes semaphores (old style signaling) the default placed signals until the year
 {{en/-}}
 ====Signal type to build by default====
 {{en/Feature|0.7|align="right"|text=(since 0.7.0)}}
-Set the type of signal to be built by default when using the signal tool. Choose between [[en/Manual/Signals#Block_signals|block signals]], [[en/Manual/Signals#Path_Signals|path signals]] and one-way path signals. If the [[#Enable the signal GUI|signal GUI]] is enabled, this type of signal is selected by default.
+Set the type of signal to be built by default when using the signal tool. Choose between [[en/Manual/Signals#block-signals|block signals]], [[en/Manual/Signals#path-signals|path signals]] and one-way path signals. If the [[#enable-the-signal-gui|signal GUI]] is enabled, this type of signal is selected by default.
 :''Возможные настройки:'' <span style="color:#00693E">'''Block signals'''</span>, <span style="color:#00693E">'''Path signals'''</span> или <span style="color:#00693E">'''One-way path signals'''</span>
 :''В конфигурационном файле openttd.cfg:'' ([gui] default_signal_type = <0-2>)
 {{en/-}}
 ====Cycle through signal types====
 {{en/Feature|0.7|align="right"|text=(since 0.7.0)}}
-Set which type of signal should be cycled through when ctrl-clicking on a ready-built signal. Choose between cycling through all [[en/Manual/Signals|signal]] types, just the [[en/Manual/Signals#Block_signals|block signals]] types or only the [[en/Manual/Signals#Path_Signals|path signals]] types.
+Set which type of signal should be cycled through when ctrl-clicking on a ready-built signal. Choose between cycling through all [[en/Manual/Signals|signal]] types, just the [[en/Manual/Signals#block-signals|block signals]] types or only the [[en/Manual/Signals#path-signals|path signals]] types.
 :''Возможные настройки:'' <span style="color:#00693E">'''Block signals only'''</span>, <span style="color:#00693E">'''Path signals only'''</span> или <span style="color:#00693E">'''All'''</span>
 :''В конфигурационном файле openttd.cfg:'' ([gui] cycle_signal_types = <0-2>)
 {{en/-}}
@@ -69,7 +69,7 @@ The town’s attitude is more lenient towards you [[en/Archive/Manual/Settings/E
 ===Allow building very long bridges===
 {{ru/Устарело}} 
 {{en/Feature period|Old|1.0|align="right"|text=(since 0.2.0)}}
-Allowed you to build very [[en/Archive/Manual/Settings/Longer bridges|long bridges]]. Now it is replaced with [[en/Archive/OpenTTD/OpenTTD 1.1.0#1.1.0-beta5 .282011-02-04.29|custom maximum bridge and tunnel length setting]].
+Allowed you to build very [[en/Archive/Manual/Settings/Longer bridges|long bridges]]. Now it is replaced with [[en/Archive/OpenTTD/OpenTTD 1.1.0#1-1-0-beta5-2011-02-04|custom maximum bridge and tunnel length setting]].
 :''Возможные настройки:'' <span style="color:green">'''Вкл'''</span> или <span style="color:red">'''Выкл'''</span>
 :''В конфигурационном файле openttd.cfg:'' ([construction] longbridges = <true|false>)
 {{en/-}}
@@ -78,7 +78,7 @@ Allowed you to build very [[en/Archive/Manual/Settings/Longer bridges|long bridg
 {{en/Feature|1.0|align="right"|text=(since 1.0.0)}}
 Airports may have an expiry year, similar to engines. Expired airports can't be built any more. With this option enabled, airports never expire.
 
-This option has been renamed from [[#Always allow small airports|Always allow small airports]] in r16614.
+This option has been renamed from [[#always-allow-small-airports|Always allow small airports]] in r16614.
 :''Возможные настройки:'' <span style="color:green">'''Вкл'''</span> или <span style="color:red">'''Выкл'''</span>
 :''В конфигурационном файле openttd.cfg:'' ([station] never_expire_airports = <true|false>)
 {{en/-}}
@@ -101,7 +101,7 @@ With this option, you can enable/disable the in-game generation of trees.
 {{en/Feature|-0.7|align="right"|text=(since 0.3.2 to 0.7.5)}}
 Small airports are [[en/Archive/Manual/Settings/Always allow small airport|not removed]] from the airport construction list when large airports appear. With this option disabled, you no longer can build small airports as soon as larger airports become available.
 
-This option has been renamed to [[#Airports never expire|Airports never expire]] in r16614.
+This option has been renamed to [[#airports-never-expire|Airports never expire]] in r16614.
 :''Возможные настройки:'' <span style="color:green">'''Вкл'''</span> или <span style="color:red">'''Выкл'''</span>
 :''В конфигурационном файле openttd.cfg:'' ([station] always_small_airport = <true|false>) 
 {{en/-}}

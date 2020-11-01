@@ -214,7 +214,7 @@ A játékos értékelése a településen -300 (nagyon rossz), ahol két működ
 A települési értékelés kódjainak helye a programban: town.h, town_cmd.c, tree_cmd.c, és road_cmd.c. alatt.
 
 ==A gazdasági épületek termelése==
-Itt arról olvashatsz, hogyan határozza meg a játék, hogy egy gazdasági épület mennyit termeljen havonta. A táblázat a ''Haladó beállítások - [[hu/Haladó beállítások/Gazdaság#Gazdaság - Egyéb beállítások|Gazdaság - Egyéb beállítások]] - Egyenletes gazdaság'' bekapcsolt állapotával meghatározott kezdő termelési értékekre alapul. A termelés a 8 vagy 9 (erdők esetében néha a 10) többszöröse.
+Itt arról olvashatsz, hogyan határozza meg a játék, hogy egy gazdasági épület mennyit termeljen havonta. A táblázat a ''Haladó beállítások - [[hu/Haladó beállítások/Gazdaság#gazdasag-egyeb-beallitasok|Gazdaság - Egyéb beállítások]] - Egyenletes gazdaság'' bekapcsolt állapotával meghatározott kezdő termelési értékekre alapul. A termelés a 8 vagy 9 (erdők esetében néha a 10) többszöröse.
 
 {| {{en/Wikitable}}
 |- style="background:#efefef"
@@ -252,7 +252,7 @@ Itt arról olvashatsz, hogyan határozza meg a játék, hogy egy gazdasági ép�
 |-
 |Farm||Kukorica||40 - 128
 |-
-|Favágó||Fa||180 vagy 225 (ha a fa [[hu/Manual/Éghajlatok#Szubtrópusi|engedélyezett]])
+|Favágó||Fa||180 vagy 225 (ha a fa [[hu/Manual/Éghajlatok#szubtropusi|engedélyezett]])
 |-
 |colspan="5"|
 |-
@@ -304,7 +304,7 @@ Az egyszerűség kedvéért lássuk, milyen lehetőségek vannak egy 256x256-os 
 ** Jó elszállítás: '''11,12%''' hogy havi 1 lehetséges változás: növekedés, és '''5,56%''' hogy havi 1 lehetséges változás: csökkenés.
 
 ====Az egyenletes gazdaság szabályai====
-:''Értsük jól: nem a gazdasági válság nélküli gazdaságról van szó, hanem a ''Haladó beállítások - [[hu/Haladó beállítások/Gazdaság#Gazdaság - Egyéb beállítások|Gazdaság - Egyéb beállítások]] - Egyenletes gazdaság'' beállításról''
+:''Értsük jól: nem a gazdasági válság nélküli gazdaságról van szó, hanem a ''Haladó beállítások - [[hu/Haladó beállítások/Gazdaság#gazdasag-egyeb-beallitasok|Gazdaság - Egyéb beállítások]] - Egyenletes gazdaság'' beállításról''
 
 *Esély a termelés változására havonként: '''4,5%''', vagyis a gazdasági épületek listájáról a termelő gazdasági épületek 4,5%-a megváltoztatja a termelését.
 
@@ -615,7 +615,7 @@ A programkódokért ld. aircraft_cmd.c, roadveh_cmd.c, ship_cmd.c, train_cmd.c, 
 
 == A települések növekedése ==
 
-Lásd [[hu/Manual/Települések#A település fejlődése]].
+Lásd [[hu/Manual/Települések#a-telepules-fejlodese]].
 
 [[Category:hu/Játszás]]
 [[Category:hu/Fejlesztés]]

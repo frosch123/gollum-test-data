@@ -25,7 +25,7 @@ Vous permet de désactiver l'achat de droits de transport exclusifs dans les vil
 
 ====Agencement des routes pour les nouvelles villes====
 {{fr/Disponibilité|0.6|align="right"|texte=(depuis 0.6.0)}}
-Choisissez comment les villes devraient construire leurs routes. Vous pouvez choisir entre l'algorithme d'origine, un algorithme amélioré, une grille 2x2, une grille 3x3, ou aléatoirement. La valeur aléatoire prendra au hasard une des quatre valeurs possibles pour chaque ville. Cette option a été renommée depuis [[en/Archive/Manual/Settings/Configuring patches/Economy#Choisir l'agencement des routes d'une ville|Choisir l'agencement des routes d'une ville]] en 0.6.3.
+Choisissez comment les villes devraient construire leurs routes. Vous pouvez choisir entre l'algorithme d'origine, un algorithme amélioré, une grille 2x2, une grille 3x3, ou aléatoirement. La valeur aléatoire prendra au hasard une des quatre valeurs possibles pour chaque ville. Cette option a été renommée depuis [[en/Archive/Manual/Settings/Configuring patches/Economy#choisir-l-agencement-des-routes-d-une-ville|Choisir l'agencement des routes d'une ville]] en 0.6.3.
 :''Valeurs possibles:'' <span style="color:#00693E">'''Original'''</span>, <span style="color:#00693E">'''Meilleures routes'''</span>, <span style="color:#00693E">'''Grille 2x2'''</span>, <span style="color:#00693E">'''Grille 3x3'''</span> ou <span style="color:#00693E">'''Aléatoire'''</span>
 :''Dans le fichier de configuration [[fr/Archive/Manual/Settings/Openttd.cfg|openttd.cfg]]:'' ([economy] town_layout = <0-4>)
 
@@ -55,7 +55,7 @@ Choisir à quelle vitesse les villes grossiront. Vous pouvez aussi complètement
 
 ====Proportion des villes qui deviendront des métropoles====
 {{fr/Disponibilité|0.6|align="right"|texte=(depuis 0.6.0)}}
-Détermine combien de villes deviendront des [[fr/Manual/Ville#Métropoles|métropoles]]. Les métropoles sont des villes plus grandes qui peuvent croître plus rapidement (voir aussi le paramètre suivant).
+Détermine combien de villes deviendront des [[fr/Manual/Ville#metropoles|métropoles]]. Les métropoles sont des villes plus grandes qui peuvent croître plus rapidement (voir aussi le paramètre suivant).
 :''Valeurs possibles:'' <span style="color:red">'''Aucune'''</span> ou <span style="color:#00693E">'''1 sur 1'''</span> à <span style="color:#00693E">'''1 sur 255'''</span>
 :Si vous voulez que chaque ville devienne une métropole, utilisez 1; 0 conduira à n'avoir aucune métropole.
 :''Dans le fichier de configuration [[fr/Archive/Manual/Settings/Openttd.cfg|openttd.cfg]]:'' ([economy] larger_towns = <0-255>)
@@ -85,7 +85,7 @@ Une ville peut avoir [[fr/Archive/Manual/Settings/Industries multiples par ville
 ====Distances max depuis les bords pour les Raffineries====
 {{fr/Disponibilité|0.5|align="right"|texte=(depuis 0.5.0)}}
 Cette option détermine la distance maximale autorisée (en cases) depuis le bord de la carte pour une raffinerie.
-Cette option a été déplacée depuis [[fr/Options avancées 0.3.0 - 0.6.3/Construction#Distance max depuis les bords pour les Raffineries|la section Construction]] en 0.7.0.
+Cette option a été déplacée depuis [[fr/Options avancées 0.3.0 - 0.6.3/Construction#distance-max-depuis-les-bords-pour-les-raffineries|la section Construction]] en 0.7.0.
 :''Valeurs possibles:'' <span style="color:#00693E">'''12'''</span> à <span style="color:#00693E">'''48'''</span>
 :''Dans le fichier de configuration [[fr/Archive/Manual/Settings/Openttd.cfg|openttd.cfg]]:'' ([game_creation] oil_refinery_limit = <12-48>)
 {{en/-}}

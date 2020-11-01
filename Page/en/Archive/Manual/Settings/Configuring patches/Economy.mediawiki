@@ -10,7 +10,7 @@ The Economy section allows you to set various options related to the
 
 ====Inflation====
 {{en/Feature|Old|align="right"|text=(since 0.3.4)}}
-Whether [[en/Archive/Manual/Settings/Disable inflation|inflation is on or off]], if it is on the prices of things will increase as you progress. This option has been renamed from [[#Turn off inflation|Turn off inflation]].
+Whether [[en/Archive/Manual/Settings/Disable inflation|inflation is on or off]], if it is on the prices of things will increase as you progress. This option has been renamed from [[#turn-off-inflation|Turn off inflation]].
 :''Possible Settings:'' <span style="color:green">'''On'''</span> or <span style="color:red">'''Off'''</span>
 :''In [[en/Archive/Manual/Settings/Openttd.cfg]] config file:'' (inflation = [true|false])
 {{en/-}}
@@ -53,7 +53,7 @@ Allows you to donate money to other companies.
 ====Coloured news appears in====
 {{en/Feature|Old|align="right"|text=(since 0.3.2)}}
 The year in which [[en/Archive/Manual/Settings/Coloured newspaper|coloured newspapers]] appear in.
-This option has been moved to [[en/Archive/Manual/Settings/Advanced Settings/Interface#Coloured news appears in|Interface section]] in 0.7.0.
+This option has been moved to [[en/Archive/Manual/Settings/Advanced Settings/Interface#coloured-news-appears-in|Interface section]] in 0.7.0.
 :''Possible Settings:'' <span style="color:#00693E">'''0'''</span> to <span style="color:#00693E">'''5,000,000'''</span>
 :''In Openttd.cfg config file:'' (colored_news_year = <num_val>)
 {{en/-}}
@@ -77,7 +77,7 @@ Allows you to enable or disable the ability to [[en/Manual/Economy|buy shares]] 
 {{en/-}}
 ==== Select town road layout ====
 {{en/Feature|0.6|align="right"|text=(since 0.6.0)}}
-Select how towns should build their roads. You can choose between the default algorithm, an improved algorithm, a 2x2 grid, a 3x3 grid or random. The random setting picks one of the four option randomly for each town. This option has been renamed to [[en/Archive/Manual/Settings/Advanced Settings/Economy#Road layout for new towns|Road layout for new towns]] in 0.7.0.
+Select how towns should build their roads. You can choose between the default algorithm, an improved algorithm, a 2x2 grid, a 3x3 grid or random. The random setting picks one of the four option randomly for each town. This option has been renamed to [[en/Archive/Manual/Settings/Advanced Settings/Economy#road-layout-for-new-towns|Road layout for new towns]] in 0.7.0.
 :''Possible Settings:'' <span style="color:#00693E">'''original'''</span>, <span style="color:#00693E">'''better roads'''</span>, <span style="color:#00693E">'''2x2 grid'''</span>, <span style="color:#00693E">'''3x3 grid'''</span> or <span style="color:#00693E">'''random'''</span>
 :''In [[en/Archive/Manual/Settings/Openttd.cfg]] config file:'' (town_layout = <num_val>)
 ====Remove absurd road-elements during the road construction====
@@ -107,7 +107,7 @@ Set how fast cities should grow.
 ==In previous versions==
 ===Turn off inflation===
 {{en/Feature|-Old|align="right"|text=(since 0.2.0 to 0.3.3)}}
-Whether [[en/Archive/Manual/Settings/Disable inflation|turn off inflation is on or off]], if it is on the prices of things will increase as you progress. This option has been renamed to [[#Inflation|Inflation]] in 0.3.4.
+Whether [[en/Archive/Manual/Settings/Disable inflation|turn off inflation is on or off]], if it is on the prices of things will increase as you progress. This option has been renamed to [[#inflation|Inflation]] in 0.3.4.
 :''Possible Settings:'' <span style="color:red">'''0%'''</span> to <span style="color:#00693E">'''100%'''</span>
 :''In [[en/Archive/Manual/Settings/Openttd.cfg]] config file:'' (noinflation = <true|false>)
 {{en/-}}

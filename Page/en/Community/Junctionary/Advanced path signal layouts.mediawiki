@@ -9,7 +9,7 @@ The crossover increases the chance that a train finds a path, even if the juncti
 
 == Track configurations ==
 ====Prioritised single track layout====
-The [[en/Archive/Manual/Yet Another PBS Patch#Basic_single_track|basic single track]] layout can be improved to prioritise trains going in the same direction as the previous train over trains in the other direction. It is realised by placing two two-way path signals facing each other on two tiles. This improves the throughput of the single line stretch, but can potentially cause long waits for one travel direction.
+The [[en/Archive/Manual/Yet Another PBS Patch#basic-single-track|basic single track]] layout can be improved to prioritise trains going in the same direction as the previous train over trains in the other direction. It is realised by placing two two-way path signals facing each other on two tiles. This improves the throughput of the single line stretch, but can potentially cause long waits for one travel direction.
 [[File:en/Yapp adv single track.png|frame|center|Prioritised single track with trains.]]
 
 ====Basic two-way double track layout====
@@ -34,7 +34,7 @@ At heavily used two-way stations sometimes deadlock can occur. The use of one-wa
 [[File:en/Yapp advancedstation.png|frame|center|Notice the use of one-way signals.]]
 
 ====High capacity railway station====
-This is an example of a compact and high performance [[en/Manual/Railway station#Ro-Ro|RoRo station]] design. The greatest attention has been paid on the entrance tracks. Not only are they easy to build, but efficiency is also maintained. If many platforms are free, trains will keep filling them without any major stops.
+This is an example of a compact and high performance [[en/Manual/Railway station#ro-ro|RoRo station]] design. The greatest attention has been paid on the entrance tracks. Not only are they easy to build, but efficiency is also maintained. If many platforms are free, trains will keep filling them without any major stops.
 
 You will also notice, that the station is divided into two sides. Vehicles that come from Side A will try to occupy Side's A platforms. Same goes with Side B. When traffic load gets lower or many platforms are filled, trains will also occupy adjacent sides if it is better/faster. NOTE: it is worth building a [http://wiki.openttdcoop.org/Balancing load balancer] after this station as trains don't have a choice over two exiting tracks.
 [[File:en/Roro pbs4.png|frame|center|High capacity RoRo station]]

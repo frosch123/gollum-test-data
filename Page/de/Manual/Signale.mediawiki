@@ -9,15 +9,15 @@
 
 ==Signalbau==
 [[File:en/Signals-icon2.png|frame|center|Signalbaumodus]]
-Um Signale zu bauen, musst du dich im Signalbaumodus befinden. Öffne das [[de/Manual/Schienenkonstruktion|Schienenkonstruktions-Menü]] und klicke auf das Signal-Icon, um das [[de/Manual/Signale#Signal-Menü|Signal-Menü]] zu öffnen.
+Um Signale zu bauen, musst du dich im Signalbaumodus befinden. Öffne das [[de/Manual/Schienenkonstruktion|Schienenkonstruktions-Menü]] und klicke auf das Signal-Icon, um das [[de/Manual/Signale#signal-menu|Signal-Menü]] zu öffnen.
 
 Im Signal-Menü:
 * Um ein '''Signal zu setzen''', klicke auf ein Stück Gleis. Am Anfang wird dies ein ''Zwei-Wege-Signal'' sein, welches die Voreinstellung und die grundlegenste Art eines Signals ist. Siehe unten wie man dies zu einer anderen Art ändert. Wenn du ein Signal auf ein Feld baust, wo zwei parallele und diagonale Gleise drauf sind, gehe sicher dass du das richtige Gleisstück nimmst.
 * Platziere '''mehrere Signale''' gleichzeitig indem du ein Signal auswählst und es entlang des Gleises [https://www.wikipedia.org/wiki/Drag-and-drop ziehst]. Sie werden wie in der Option [[de/Signal zieh Dichte|Signal-Dichte beim Ziehen]] platziert und sind genauso gedreht wie das Anfangssignal.
 * Platziere '''mehrere Signale''' entlang der '''gesamten''' Strecke indem du {{en/Keypress|Strg}} gedrückt hältst, während du ziehst. Du brauchst nur ein Feld lang ziehen und es wird automatisch die gesamte Strecke bis zur nächsten Kreuzung, dem nächsten vorhandenen Signal oder dem nächsten Bahnhof mit Signalen bebaut. Wie oben, werden die Signale wie in der [[de/Signal zieh Dichte|"Signal-Zieh-Dichte-Option"]] festgelegt und in der gleichen Richtung wie das Anfangssignal gesetzt.
 * '''Entferne Signale''' indem du den [[File:en/Toggle clear active.png]]-Button (während du im Signalbaumodus bist) klickst und dann auf das zu entfernende Signal drückst. Beide Arten von Ziehen, wie oben erklärt, gelten auch für das Löschen von mehreren Signalen.
-* Baue '''[[de/Manual/Signale#Einweg_Signale|Einweg-Signale]]''' indem du nochmals auf ein vorhandenes Signal klickst. Das Signal wird durch 2-Weg, Einweg und Einweg (andere Richtung) wechseln.
-* Baue andere Arten von '''[[de/Manual/Signale#Blocksignale|Block-]]''' und '''[[de/Manual/Signale#Wegsignale|Wegsignalen]]''' indem Du mit gedrücktem {{en/Keypress|Strg}} auf ein vorhandenes Signal klickst.
+* Baue '''[[de/Manual/Signale#einweg-signale|Einweg-Signale]]''' indem du nochmals auf ein vorhandenes Signal klickst. Das Signal wird durch 2-Weg, Einweg und Einweg (andere Richtung) wechseln.
+* Baue andere Arten von '''[[de/Manual/Signale#blocksignale|Block-]]''' und '''[[de/Manual/Signale#wegsignale|Wegsignalen]]''' indem Du mit gedrücktem {{en/Keypress|Strg}} auf ein vorhandenes Signal klickst.
 
 ===Einschränkungen===
 * Du kannst keine Signale auf Felder mit Kreuzungen oder Straßenübergängen bauen.
@@ -30,37 +30,37 @@ Das Signal-Menü kann dazu benutzt werden, Signale zu setzen, ohne den {{en/Keyp
 |-
 |colspan=2|'''Formsignale''' (Elektro-Mechanische Signale, altmodisch - weit bis mitte 70-er Jahre genutzt)
 |-
-|[[File:en/Signal Semaphore.png]]||[[de/Manual/Signale#Blocksignale|Blocksignal]]
+|[[File:en/Signal Semaphore.png]]||[[de/Manual/Signale#blocksignale|Blocksignal]]
 |-
-|[[File:en/Signal Semaphore Pre-Signal.png]]||[[de/Manual/Signale#Einfahrsignale|Einfahrsignal]]
+|[[File:en/Signal Semaphore Pre-Signal.png]]||[[de/Manual/Signale#einfahrsignale|Einfahrsignal]]
 |-
-|[[File:en/Signal Semaphore Exit-Signal.png]]||[[de/Manual/Signale#Ausfahrsignale|Ausfahrsignal]]
+|[[File:en/Signal Semaphore Exit-Signal.png]]||[[de/Manual/Signale#ausfahrsignale|Ausfahrsignal]]
 |-
-|[[File:en/Signal Semaphore Combo-Signal.png]]||[[de/Manual/Signale#Kombinationssignale|Kombinationssignal]]
+|[[File:en/Signal Semaphore Combo-Signal.png]]||[[de/Manual/Signale#kombinationssignale|Kombinationssignal]]
 |-
-|[[File:en/Signal Semaphore Path.png]]||[[de/Manual/Signale#Pfadsignale|Pfadsignal]] (wird ignoriert wenn, man es in umgekehrter Richtung passiert)
+|[[File:en/Signal Semaphore Path.png]]||[[de/Manual/Signale#pfadsignale|Pfadsignal]] (wird ignoriert wenn, man es in umgekehrter Richtung passiert)
 |-
-|[[File:en/Signal Semaphore Path One-Way.png]]||[[de/Manual/Signale#Einseitige_Pfadsignale|Einseitiges Pfadsignal]] (kann nicht in umgekehrter Richtung passiert werden)
+|[[File:en/Signal Semaphore Path One-Way.png]]||[[de/Manual/Signale#einseitige-pfadsignale|Einseitiges Pfadsignal]] (kann nicht in umgekehrter Richtung passiert werden)
 |-
 |colspan=2|'''Lichtsignale''' (gleiches Verhalten, aber anders im Aussehen, wird heutzutage benutzt)
 |-
-|[[File:en/Signal Electric.png]]||Elektrisches Standard-[[de/Manual/Signale#Blocksignale|Blocksignal]]
+|[[File:en/Signal Electric.png]]||Elektrisches Standard-[[de/Manual/Signale#blocksignale|Blocksignal]]
 |-
-|[[File:en/Signal Electric Pre-Signal.png]]|| Elektrisches [[de/Manual/Signale#Einfahrsignale|Einfahrsignal]]
+|[[File:en/Signal Electric Pre-Signal.png]]|| Elektrisches [[de/Manual/Signale#einfahrsignale|Einfahrsignal]]
 |-
-|[[File:en/Signal Electric Exit-Signal.png]]|| Elektrisches [[de/Manual/Signale#Ausfahrsignale|Ausfahrsignal]]
+|[[File:en/Signal Electric Exit-Signal.png]]|| Elektrisches [[de/Manual/Signale#ausfahrsignale|Ausfahrsignal]]
 |-
-|[[File:en/Signal Electric Combo-Signal.png]]|| Elektrisches [[en/Manual/Signals#Kombinationssignale|Kombinationssignal]]
+|[[File:en/Signal Electric Combo-Signal.png]]|| Elektrisches [[en/Manual/Signals#kombinationssignale|Kombinationssignal]]
 |-
-|[[File:en/Signal Electric Path.png]]|| Elektrisches [[de/Manual/Signale#Pfadsignale|Pfadsignal]] (wird ignoriert, wenn man es in umgekehrter Richtung passiert)
+|[[File:en/Signal Electric Path.png]]|| Elektrisches [[de/Manual/Signale#pfadsignale|Pfadsignal]] (wird ignoriert, wenn man es in umgekehrter Richtung passiert)
 |-
-|[[File:en/Signal Electric Path One-Way.png]]|| Elektrisches [[de/Manual/Signale#Einseitige_Pfadsignale|Einseitiges Pfadsignal]] (kann nicht in umgekehrter Richtung passiert werden)
+|[[File:en/Signal Electric Path One-Way.png]]|| Elektrisches [[de/Manual/Signale#einseitige-pfadsignale|Einseitiges Pfadsignal]] (kann nicht in umgekehrter Richtung passiert werden)
 |-
 |colspan=2|'''Andere Buttons'''
 |-
-|[[File:en/Signal Convert.png]]|| Signal-Umwandlungswerkzeug - wandelt Signaltyp auf ''Gleis'' in den ausgwählten Signaltyp im ''Gui''. Siehe [[de/Manual/Gleissignale setzen#Umwandlung_von_Signalen_in_verschiedene_Typen|Signale bauen]]
+|[[File:en/Signal Convert.png]]|| Signal-Umwandlungswerkzeug - wandelt Signaltyp auf ''Gleis'' in den ausgwählten Signaltyp im ''Gui''. Siehe [[de/Manual/Gleissignale setzen#umwandlung-von-signalen-in-verschiedene-typen|Signale bauen]]
 |-
-|[[File:en/Signal Density.png]]|| Signal-Dichtenwerkzeug - legt fest wie nahe aneinander Signale gesetzt werden wenn Signale automatisch gesetzt werden. Siehe [[de/Manual/Gleissignale setzen#Bau_einer_Linie_von_Signalen|Signale bauen]]
+|[[File:en/Signal Density.png]]|| Signal-Dichtenwerkzeug - legt fest wie nahe aneinander Signale gesetzt werden wenn Signale automatisch gesetzt werden. Siehe [[de/Manual/Gleissignale setzen#bau-einer-linie-von-signalen|Signale bauen]]
 |}
 {{en/Feature|0.7}}
 
@@ -112,7 +112,7 @@ Wenn hinter dem Einfahrsignal kein Signal als Ausfahrsignal gekennzeichnet ist, 
 [[File:en/Combo presignal.png|60px|left]]Es gibt eine dritte Art von Vorsignal. Es heißt '''Kombinationssignal''' und ist ein Einfahr- und ein Ausfahrsignal in einem. Dies erlaubt dir, große "Zweige" von Vorsignalen zu bauen (siehe rechts).
 {{en/-}}
 ====Vorsignale bauen====
-Um ein Vorsignal zu bauen, wähle den entsprechenden Button im [[de/Manual/Signale#Signal-Menü|Signal-Menü]].
+Um ein Vorsignal zu bauen, wähle den entsprechenden Button im [[de/Manual/Signale#signal-menu|Signal-Menü]].
 
 In vorherigen Versionen musst du zuerst ein normales Signal platzieren. Dann, mit {{en/Keypress|Strg}} gedrückt, klicke das Signal um durch die verschieden Arten von Vorsignalen zu wechseln:
 * Merke, dass du Einweg-Vorsignale genauso bauen kannst wie normale Einwegsignale. Merke: {{en/Keypress|Strg}} halten und klicken wechselt die Art von (Vor-)Signal, klicken ohne {{en/Keypress|Strg}} ändert die Richtung des Signals - wenn das Signal-Menü nicht aktiviert ist.
@@ -201,7 +201,7 @@ Signale sind dazu da, um den Zusammenstoß zweier Züge zu verhindern und den Z�
 
 ==Siehe auch==
 * [[de/Erweiterte Signalisierungs Beispiele|Beispiele Erweiterter Signalisierung]]
-* [[de/Manual/Zugdepot bauen#Erweiterte Depotkonfigurationen|Erweiterte Depotkonfigurationen]]
+* [[de/Manual/Zugdepot bauen#erweiterte-depotkonfigurationen|Erweiterte Depotkonfigurationen]]
 * [[:Category:de/Kreuzung]] Gute Beispiele für komplexe Kreuzungen die Vorteile von Vorsignalen nutzen.
 * [http://www.darkcoding.net/misc/openttd-trains-and-signals-for-beginners-a-tutorial/ Signale für den Anfänger]
 * [http://kokolokus.de/?s=blog&v=6 Ein Tutorial geschrieben von domsson, auf den Foren] [http://www.tt-forums.net/viewtopic.php?f=29&t=51395 Hier]

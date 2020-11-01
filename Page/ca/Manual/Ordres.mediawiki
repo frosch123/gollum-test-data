@@ -9,8 +9,8 @@ Se li permet donar ordres a qualsevol vehicle que vosté posseïsca. Els seus co
 
 * Busque i faça clic al vehicle al què desitge donar-li ordres. El vehicle pot estar dins d’una cotxera si l'acaba de comprar, o en moviment. Per a un tren, fer clic a qualsevol vagó tindrà el mateix efecte. Açò li mostrarà la finestra del vehicle.<br/>[[File:ca/Orders-1.png|frame|none|La finestra del vehicle i el botó ordres]]
 * Faça clic en el botó d'''Ordres'' (el del cercle roig a la captura de pantalla). Açò li mostrarà la finestra ordres, que mostra les ordres que té actualment el vehicle (exemple: el nostre vehicle no té cap ordre).<br/>[[File:ca/Orders-2.png|frame|none|La finestra ordres]]
-* Clique en el botó [[#Ves a|Ves a]]i faça clic a una destinació del mapa. S’afegirà una ordre a la llista.
-* Faça clic a l'ordre que acaba de crear a la llista per a seleccionar-la, i després indique al vehicle el que ha de fer (instruccions) en aqueix lloc. Pot indicar-li que [[#Carrega|carregue]], que [[#Descarrega|descarregue]] i altres opcions de [[#Comportament de parada|comportament a la parada]]. Per exemple: Si activa ''Càrrega del tot totes les càrregues''el vehicle s'esperarà a l’estació fins que estiga completament ple de qualsevol càrrega que siga capaç de transportar.
+* Clique en el botó [[#ves-a|Ves a]]i faça clic a una destinació del mapa. S’afegirà una ordre a la llista.
+* Faça clic a l'ordre que acaba de crear a la llista per a seleccionar-la, i després indique al vehicle el que ha de fer (instruccions) en aqueix lloc. Pot indicar-li que [[#carrega|carregue]], que [[#descarrega|descarregue]] i altres opcions de [[#comportament-de-parada|comportament a la parada]]. Per exemple: Si activa ''Càrrega del tot totes les càrregues''el vehicle s'esperarà a l’estació fins que estiga completament ple de qualsevol càrrega que siga capaç de transportar.
 
 ==Destinació actual==
 Sempre pot veure la destinació del vehicle a la seua [[ca/Manual/Barra d'estat|barra d’estat]] i també a la finestra ''ordres'': A l’esquerra de les ordres individuals hi ha un triangle negre que indica quin és la destinació actual.
@@ -25,8 +25,8 @@ Hi apareixen els botons següents:
 ===Ves a===
 Amb aquest botó pot enviar un vehicle a un lloc determinat. S’insereix una nova ordre abans de l’ordre ressaltada (de color blanc), o si no n'hi ha cap ordre seleccionada, s’afig al final de la llista. Els destins possibles on hi anar són:
 *Les seues pròpies estacions, però només les estacions on s’accepta el vehicle en qüestió. Així que no pot donar-li a un autobús l’ordre d’anar a un aeroport si aqueix aeroport no té estació d’autobusos. Tampoc pot enviar els seus vehicles a les estacions de la competència.
-*A les [[ca/Manual/Cotxeres i depòsits|cotxeres]] si està activada l’opció [[ca/Paràmetres avançats/Vehicles#Permet ordres per anar a cotxeres|"Permet ordres per anar a cotxeres"]] de la finestra ''Paràmetres avançats/Vehicles''. Açò canviarà els botons disponibles (veja [[#Servei|Servei]] i [[#Remodela|Remodela]] més endavant)
-*Els vehicles del mateix tipus poden [[#Copiar ordres|copiar ordres]] o [[#Compartir ordres|compartir ordres]] (veure avall més informació).
+*A les [[ca/Manual/Cotxeres i depòsits|cotxeres]] si està activada l’opció [[ca/Paràmetres avançats/Vehicles#permet-ordres-per-anar-a-cotxeres|"Permet ordres per anar a cotxeres"]] de la finestra ''Paràmetres avançats/Vehicles''. Açò canviarà els botons disponibles (veja [[#servei|Servei]] i [[#remodela|Remodela]] més endavant)
+*Els vehicles del mateix tipus poden [[#copiar-ordres|copiar ordres]] o [[#compartir-ordres|compartir ordres]] (veure avall més informació).
 *Als [[ca/Punts de control|Punts de control]]. Pot enviar un tren a un punt de control particular per a influir en la seua elecció de via o per si de cas les estacions estan molt allunyades i el tren es pot perdre fàcilment. Una [[en/Boia/Cas|boia]] és un tipus de punt de referència per als vaixells que recorren llargues distàncies.
 
 El botó ''Ves a'' té les següents '''opcions''':

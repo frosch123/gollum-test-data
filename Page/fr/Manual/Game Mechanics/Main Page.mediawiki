@@ -208,7 +208,7 @@ Un joueur a une cote de -300 (Très pauvre), 2 gares actives et 1 inactive, pour
 Le code pour les cotes des villes est dans town.h, town_cmd.c, tree_cmd.c, et road_cmd.c.
 
 ==Production des industries==
-Voici comment le jeu détermine combien de cargaison une industrie produira par mois. Cette table liste les productions de départ possibles, régies par l'option [[fr/Archive/Manual/Settings/Options Avancées/Économie#Permettre une économie stable (plus de petits changements)|Économie stable]]. La production est un multiple de 8 ou 9 (quelquefois 10, pour les forêts).
+Voici comment le jeu détermine combien de cargaison une industrie produira par mois. Cette table liste les productions de départ possibles, régies par l'option [[fr/Archive/Manual/Settings/Options Avancées/Économie#permettre-une-economie-stable-plus-de-petits-changements|Économie stable]]. La production est un multiple de 8 ou 9 (quelquefois 10, pour les forêts).
 
 {| {{en/Wikitable}}
 |- style="background:#efefef"
@@ -298,7 +298,7 @@ Pour rendre les choses plus simples, voyons quelles sont les chances sur une car
 ** Bon service: '''11,12%''' qu'un changement possible apr mois soit une augmentation et '''5,56%''' qu'un changement possible par mois soit une baisse.
 
 ====Règle de l'économie lissée====
-:''Distinguez [[fr/Archive/Manual/Settings/Options Avancées/Économie#Permettre une économie stable (plus de petits changements)|Économie plus stable]] (changements plus petits et plus fréquents) et [[fr/Archive/Manual/Settings/Difficulté|Économie stable]] (paramètre de difficulté)''
+:''Distinguez [[fr/Archive/Manual/Settings/Options Avancées/Économie#permettre-une-economie-stable-plus-de-petits-changements|Économie plus stable]] (changements plus petits et plus fréquents) et [[fr/Archive/Manual/Settings/Difficulté|Économie stable]] (paramètre de difficulté)''
 
 *La chance d'un changement de production par mois est de '''4,5%''', par ex. 4,5% des industries productrices de la liste des industries changera de production.
 

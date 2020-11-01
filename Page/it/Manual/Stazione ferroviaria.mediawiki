@@ -8,7 +8,7 @@ Le '''stazioni ferroviarie''' sono l'elemento principale di qualsiasi rete ferro
 -->
 
 == Stazioni base ==
-Le seguenti stazioni sono facili da costruire e funzioneranno in modo abbastanza decente se venissero servite solo da una manciata di treni. Quando la densità del traffico aumenterà, potresti provare un tracciato di [[it/Manual/Stazione ferroviaria#Stazioni avanzate|stazione avanzata]].
+Le seguenti stazioni sono facili da costruire e funzioneranno in modo abbastanza decente se venissero servite solo da una manciata di treni. Quando la densità del traffico aumenterà, potresti provare un tracciato di [[it/Manual/Stazione ferroviaria#stazioni-avanzate|stazione avanzata]].
 
 <!--
 ==Basic stations==
@@ -17,7 +17,7 @@ The following stations are easy to build and will work quite decently if only be
 
 === Terminal === 
 Queste stazioni sono i capolinea di una o più linee ferroviarie. I treni partono dallo stesso lato in cui sono entrati e quindi potrebbero bloccare o essere bloccati dai treni che stanno arrivando o partendo dalla stazione. Sono spesso usati per stazioni piccole e semplici o quando lo spazio disponibile non consente la costruzione di una stazione ro-ro.
-[[File:en/Terminus.png|center|none|frame|Stazioni terminali semplici: quella di sinistra sta usando [[it/Manual/Segnali#Pre-segnali|Pre-segnali]], quello di destra [[it/Manual/Segnali#Segnali di percorso|Segnali di percorso]].]]
+[[File:en/Terminus.png|center|none|frame|Stazioni terminali semplici: quella di sinistra sta usando [[it/Manual/Segnali#pre-segnali|Pre-segnali]], quello di destra [[it/Manual/Segnali#segnali-di-percorso|Segnali di percorso]].]]
 
 <!--
 ===Terminus===
@@ -26,7 +26,7 @@ These stations are the end of a railway line. Trains leave the same side they en
 -->
 
 === Stazione a senso unico ===
-Nella stazione a senso unico (in inglese detta Ro-Ro che sta per Roll-On, Roll-Off o Roll-In, Roll Out secondo altri) i treni entrano nella parte inferiore della stazione e escono dall'altra parte. I treni che entrano nella stazione non devono aspettare quelli in partenza. Questo è ottimo per medie quantità di traffico. Senza [[it/Manual/Segnali#Pre-segnali|pre-segnali]], non va bene per le stazioni ad alto traffico (ad esempio, le stazioni che servono le fabbriche), perché una volta che tutte le piattaforme sono piene, il treno attende il segnale bidirezionale per la piattaforma più vicina all'ingresso. Ciò può portare a un ingorgo se il treno di blocco ha ordini a pieno carico e sta aspettando che un altro treno scarichi la materia prima [[en/Manual/Cargo]].
+Nella stazione a senso unico (in inglese detta Ro-Ro che sta per Roll-On, Roll-Off o Roll-In, Roll Out secondo altri) i treni entrano nella parte inferiore della stazione e escono dall'altra parte. I treni che entrano nella stazione non devono aspettare quelli in partenza. Questo è ottimo per medie quantità di traffico. Senza [[it/Manual/Segnali#pre-segnali|pre-segnali]], non va bene per le stazioni ad alto traffico (ad esempio, le stazioni che servono le fabbriche), perché una volta che tutte le piattaforme sono piene, il treno attende il segnale bidirezionale per la piattaforma più vicina all'ingresso. Ciò può portare a un ingorgo se il treno di blocco ha ordini a pieno carico e sta aspettando che un altro treno scarichi la materia prima [[en/Manual/Cargo]].
 [[File:en/Ro-ro1.png|center|none|frame|Stazioni Ro-Ro con 2 banchine, quella di sinistra che utilizza segnali di blocco, quella di destra che utilizza segnali di percorso. Si potrebbero tralasciare i due tiles di binari dritti nella parte anteriore di quella destra, ma sono utili perchè forniscono spazio di frenata.]]
 
 <!--
@@ -91,7 +91,7 @@ What about the queues that form as trains line up to enter a station?  These lin
 -->
 
 === Pre-segnali === 
-Le stazioni con [[it/Manual/Segnali#Pre-segnali|pre-segnali]] fanno in modo che i treni in arrivo aspettino fuori dalla stazione finché non c'è una piattaforma libera.
+Le stazioni con [[it/Manual/Segnali#pre-segnali|pre-segnali]] fanno in modo che i treni in arrivo aspettino fuori dalla stazione finché non c'è una piattaforma libera.
 [[File:en/Presignalstation.png|center|none|frame|Postazione di pre-segnale]]
 
 <!--
@@ -147,7 +147,7 @@ Normally, when two trains leave a station at once, one must stop and give way to
 -->
 
 === Uscite lunghe con priorità ===
-Controllare la partenza dei treni [[en/Archive/Manual/Settings/Advanced Settings/Vehicles#Maximum_train_length|mammoth trains]] da una stazione a senso unico al momento giusto può essere una vera sfida. Utilizzando i pre-segnali è possibile dare la priorità alle tracce di uscita della stazione per consentire ai treni su binari più veloci di partire prima. Nell'immagine sottostante viene assegnata una priorità inferiore alle 5 uscite più in alto (poiché bloccano la traccia di ritorno più a lungo) e l'uscita in basso (poiché i treni accelerano più lentamente sulla curva acuta) richiedendo loro di attendere l'uscita del blocco pre-segnale. Devono aspettare che il segnale di uscita si cancelli (ovvero, quando un treno passa il secondo segnale sulla traccia di ritorno). Le altre tracce non sono obbligate a farlo e partiranno quando un treno passa il primo segnale come al solito.
+Controllare la partenza dei treni [[en/Archive/Manual/Settings/Advanced Settings/Vehicles#maximum-train-length|mammoth trains]] da una stazione a senso unico al momento giusto può essere una vera sfida. Utilizzando i pre-segnali è possibile dare la priorità alle tracce di uscita della stazione per consentire ai treni su binari più veloci di partire prima. Nell'immagine sottostante viene assegnata una priorità inferiore alle 5 uscite più in alto (poiché bloccano la traccia di ritorno più a lungo) e l'uscita in basso (poiché i treni accelerano più lentamente sulla curva acuta) richiedendo loro di attendere l'uscita del blocco pre-segnale. Devono aspettare che il segnale di uscita si cancelli (ovvero, quando un treno passa il secondo segnale sulla traccia di ritorno). Le altre tracce non sono obbligate a farlo e partiranno quando un treno passa il primo segnale come al solito.
 [[File:en/Priorityexit.png|center|none|frame|Uscite lunghe con segnali di priorità]]
 
 <!--
@@ -169,7 +169,7 @@ If you play with [[realistic acceleration]], faster trains slow down a good bit 
 === Doppio accesso  ===
 Questo è un tipo di impostazione utilizzato per le stazioni che gestiscono un numero enorme di treni, come le stazioni che servono industrie o gli impianti di trasformazione degli alimenti. I treni provenienti da un posto possono utilizzare, se necessario le zone di carico destinate agli altri treni. Assicurati di utilizzare i pre-segnali.
 
-[[File:en/Doubleentrance.png|center|none|frame|Doppio accesso. Quelle 4 banchine sono divise in 2 gruppi che gestiscono ciascuno un binario di ingresso. Il [[it/Signali#Combo-signali|segnale combinato]] tra le giunzioni consente ai treni di entrambe le entrate di accedere simultaneamente nelle piattaforme senza interferire l'un l'altro, ma riservando il passaggio ai treni dell'altro gruppo quando nessuna banchina è disponibile nel suo gruppo.]]
+[[File:en/Doubleentrance.png|center|none|frame|Doppio accesso. Quelle 4 banchine sono divise in 2 gruppi che gestiscono ciascuno un binario di ingresso. Il [[it/Signali#combo-signali|segnale combinato]] tra le giunzioni consente ai treni di entrambe le entrate di accedere simultaneamente nelle piattaforme senza interferire l'un l'altro, ma riservando il passaggio ai treni dell'altro gruppo quando nessuna banchina è disponibile nel suo gruppo.]]
 [[File:en/DoubleEntrance2.png|center|none|frame|Ingresso doppio più veloce, evitando curve brusche (per treni di lunghezza <= 5 vagoni)]]
 
 [[File:en/Screen shot 2012-03-24 at 7.08.39 AM.png|center|frame|Puoi anche usare segnali di percorso. Quello superiore consente al treno di attendere all'interno della struttura, ma i treni possono rimanere bloccati su un lato se l'altro si apre, in modo analogo a quando i segnali di blocco vengono utilizzati quando sono necessari i pre-segnali. Per quello in basso, non c'è nessuna ragione di fare i binari davanti alla banchina così lunghi finché i Suoi treni sono nella strattura, in quanto saranno comunque in attesa del via libera del segnale di percorso. Il design è stato leggermente modificato per eliminare alcune svolte brusche, quindi è agevole per i treni lunghi ed è un ottimo compromesso tra velocità e dimensioni. È anche funzionale con un'accelerazione realistica; l'area dopo la PBS funge da spazio di frenata.]]

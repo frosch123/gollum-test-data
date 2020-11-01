@@ -16,11 +16,11 @@ La touche Ctrl peut être très utile. La maintenir appuyée tout en cliquant pe
 |-
 |Emprunter/Rembourser la somme maximale||Fenêtre des finances -> Ctrl + clic du bouton Emprunter/Rembourser
 |-
-|[[fr/Manual/Ordres#Copier des ordres|Copier des ordres]]||Fenêtre des ordres -> Aller à -> Clic sur un véhicule
+|[[fr/Manual/Ordres#copier-des-ordres|Copier des ordres]]||Fenêtre des ordres -> Aller à -> Clic sur un véhicule
 |-
-|Assigner des [[fr/Manual/Ordres#Ordres partagés|ordres partagés]]||Fenêtre des ordres -> Aller à -> Ctrl + clic sur un véhicule
+|Assigner des [[fr/Manual/Ordres#ordres-partages|ordres partagés]]||Fenêtre des ordres -> Aller à -> Ctrl + clic sur un véhicule
 |-
-|Cloner un véhicule avec des [[fr/Manual/Ordres#Ordres partagés|ordres partagés]]||Fenêtre de dépôt -> Cloner un véhicule -> Ctrl + clic sur un véhicule
+|Cloner un véhicule avec des [[fr/Manual/Ordres#ordres-partages|ordres partagés]]||Fenêtre de dépôt -> Cloner un véhicule -> Ctrl + clic sur un véhicule
 |-
 |Déplacer plusieurs parties de train dans un dépôt||Fenêtre de dépôt -> Ctrl + déplacer un wagon
 |-
@@ -32,13 +32,13 @@ La touche Ctrl peut être très utile. La maintenir appuyée tout en cliquant pe
 |-
 |Voir un emplacement dans une vue||Ctrl + clic sur un bouton d'emplacement montre celui-ci dans une nouvelle vue plutôt que de faire défiler la vue principale jusque-là
 |-
-|Placer des [[fr/Manual/Signaux#Semaphores|sémaphores]]||Construction ferroviaire -> Construire des signaux -> Ctrl + clic sur une voie ferrée rectiligne
+|Placer des [[fr/Manual/Signaux#semaphores|sémaphores]]||Construction ferroviaire -> Construire des signaux -> Ctrl + clic sur une voie ferrée rectiligne
 |-
-|Placer des [[fr/Manual/Signaux#Signaux dépendants|pré-signaux]]||Construction ferroviaire -> Construire des signaux -> Ctrl + clic sur un signal déjà existant
+|Placer des [[fr/Manual/Signaux#signaux-dependants|pré-signaux]]||Construction ferroviaire -> Construire des signaux -> Ctrl + clic sur un signal déjà existant
 |-
 |Auto-complétion de [[fr/Manual/Signaux|signaux]]<br/> (0.6.0)||Construction ferroviaire -> Construire des signaux -> Ctrl + tirer le long d'une voie ferrée droite. Fonctionne aussi pour les supprimer.
 |-
-|Placer des stations adjacentes||Maintenir Ctrl et placer une station à côté d'une autre existante pour en créer une au lieu d'agrandir l'existante. Nécessite que l'option [[fr/Archive/Manual/Settings/Options avancées/Stations#Autoriser la construction de stations adjacentes|Stations adjacentes]] soit positionnée.
+|Placer des stations adjacentes||Maintenir Ctrl et placer une station à côté d'une autre existante pour en créer une au lieu d'agrandir l'existante. Nécessite que l'option [[fr/Archive/Manual/Settings/Options avancées/Stations#autoriser-la-construction-de-stations-adjacentes|Stations adjacentes]] soit positionnée.
 |-
 |Joindre avec une station existante<br/> (r14919 / 0.7.0)||Maintenir Ctrl enfoncée tout en construisant une gare pour obtenir une liste des gares voisines à choisir pour que la nouvelle station soit jointe avec. Vous pouvez toujours choisir de créer une nouvelle gare (adjacente).
 |-
@@ -65,7 +65,7 @@ La touche Ctrl peut être très utile. La maintenir appuyée tout en cliquant pe
 |Modificateurs des ordres<br/> (r14827 / 0.7.0) ||Fenêtre des ordres -> Aller à -> Maintenir Ctrl tout en cliquant sur un...
 *station pour créer automatiquement un ordre "Chargement complet par un seul type"
 *dépôt pour créer un ordre "Maintenance au dépôt" (au lieu de "Aller au dépôt")
-*point de passage pour utiliser l'autre option sans arrêt que celle spécifiée par défaut dans les [[fr/Archive/Manual/Settings/Options avancées/Véhicules#Les nouveaux ordres sont 'sans-arrêt' par défaut|options avancées]]
+*point de passage pour utiliser l'autre option sans arrêt que celle spécifiée par défaut dans les [[fr/Archive/Manual/Settings/Options avancées/Véhicules#les-nouveaux-ordres-sont-sans-arret-par-defaut|options avancées]]
 |-
 |Auto-remplissage non destructif de la table des horaires<br/> (r14592 / 0.7.0) || Maintenir Ctrl en cliquant sur un bouton d'auto-remplissage
 |-
@@ -91,5 +91,5 @@ La touche Ctrl peut être très utile. La maintenir appuyée tout en cliquant pe
 * La roulette de la souris fait défiler les listes ou zoome sur la carte
 * Mises à jour de ponts: Construisez un nouveau pont par-dessus un ancien pour l'améliorer. Vous ne pouvez pas modifier son type, par ex. de route à voir ferrée, ainsi. Si vous améliorez un pont de ville, le nouveau pont doit avoir une vitesse maximale supérieure; à part cela, il peut être ce que vous voulez (0.6.0).
 * [[fr/Development/NewGRF/Débogage de NewGRF|Outils de développement NewGRF]] (versions nocturnes uniquement)
-* Pour les développeurs d'I.A.: [[fr/Development/Script/IA/A savoir#Césure dans un message de log|Césure dans un message de log]] (versions nocturnes uniquement)
+* Pour les développeurs d'I.A.: [[fr/Development/Script/IA/A savoir#cesure-dans-un-message-de-log|Césure dans un message de log]] (versions nocturnes uniquement)
 [[Category:fr/Jouer]]

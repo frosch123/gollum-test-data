@@ -306,7 +306,7 @@ Para simplificar las cosas, vamos a ver cuáles son las posibilidades para mapas
 *Si se produce un cambio en la producción (aprox. un 16,7% de probabilidades al mes):
 ** Para una industria que tiene un servicio pobre o nulo (con menos de un 60% de su producción transportada): '''33%''' de posibilidades de que incremente, '''67%''' de posibilidades de que disminuya.
 ** Para una industria que tiene un buen servicio (superior al 60%): '''67%''' de posibilidades de que incremente, '''33%''' de posibilidades de que disminuya.
-** No hay bonificación por un servicio excelente con la [[es/Archive/Manual/Settings/Opciones avanzadas/Economía#Activar economía suave (cambios más pequeños)|economía suave]].
+** No hay bonificación por un servicio excelente con la [[es/Archive/Manual/Settings/Opciones avanzadas/Economía#activar-economia-suave-cambios-mas-pequenos|economía suave]].
 
 
 *Para calcular la probabilidad de un cambio en particular, es decir, 50% x 1/3 x 33% = 5,56%:
@@ -314,7 +314,7 @@ Para simplificar las cosas, vamos a ver cuáles son las posibilidades para mapas
 ** Para una industria con buen servicio: Un '''11,12%''' de probabilidades de que se produzca un incremento en la producción y un'''5,56%''' de probabilidades de que se produzca una disminución, al mes.
 
 ====Reglas para la economía suave====
-:''Distíngase [[es/Archive/Manual/Settings/Opciones avanzadas/Economía#Activar economía suave (cambios más pequeños)|economía suave]] (opciones avanzadas) y [[es/Archive/Manual/Settings/Dificultad#Economía|economía estable]] (opciones de dificultad)''
+:''Distíngase [[es/Archive/Manual/Settings/Opciones avanzadas/Economía#activar-economia-suave-cambios-mas-pequenos|economía suave]] (opciones avanzadas) y [[es/Archive/Manual/Settings/Dificultad#economia|economía estable]] (opciones de dificultad)''
 
 *La posibilidad de un cambio en la producción cada mes es del '''4,5%''', es decir, el 4,5% de las industrias productoras, de la lista de industrias, cambia su producción.
 
@@ -359,7 +359,7 @@ Para industrias con un buen servicio, son necesarios '''29,6 años''' de promedi
 
 Sin embargo, en el juego puede encontrarse con industrias que cambian su ritmo de producción muy aleatoriamente. Debe tener en cuenta, que los ejemplos anteriores sólo se cumplen cuando se observan muchas industrias en un largo periodo de tiempo; individualmente cada industria puede desviarse de estos promedios. Estadísticamente hablando, 6 de cada 10 industrias no pasará de 100 a 2100 incluso con el mejor servicio durante 65 años. Cerca de 1 de cada 9 industrias incluso bajará su producción con un servicio de transporte del 60-80% de su producción durante 50 años. La 
 
-Para obtener una mayor capacidad de respuesta de las industrias, adapte el número de vagones a la producción de la industria (para la producción menor debe utilizar dos vagones). La [[es/Manual/Órdenes#Carga completa|orden "carga completa"]] se usa normalmente para estos trenes de carga.
+Para obtener una mayor capacidad de respuesta de las industrias, adapte el número de vagones a la producción de la industria (para la producción menor debe utilizar dos vagones). La [[es/Manual/Órdenes#carga-completa|orden "carga completa"]] se usa normalmente para estos trenes de carga.
 
 
 '''Nota:'''  La fórmula exacta se puede ver en "[http://vcs.openttd.org/svn/browser/trunk/src/industry_cmd.cpp#L2151 ChangeIndustryProduction()]" en el archivo industry_cmd.cpp.
@@ -490,7 +490,7 @@ Esto significa que a efectos del cálculo de la velocidad de un vehículo, una c
 *Un barco "parado" vuelve a su última velocidad instantáneamente.
 
 ==== Trenes ==== 
-(con la [[es/Archive/Manual/Settings/Opciones avanzadas#Modelo de aceleración de trenes|opción avanzada "modelo de aceleración de trenes"]] [[es/Archive/Manual/Settings/Aceleración realista|realista]])<br>
+(con la [[es/Archive/Manual/Settings/Opciones avanzadas#modelo-de-aceleracion-de-trenes|opción avanzada "modelo de aceleración de trenes"]] [[es/Archive/Manual/Settings/Aceleración realista|realista]])<br>
 *Los [[es/Manual/Trenes|trenes]] no se ven afectados por las pendientes si son suficientemente potentes.
 *Están limitados a una velocidad de 61km/h cuando entran y salen de los depósitos.
 *Pueden tomar una curva de 45° sin penalización de velocidad.
