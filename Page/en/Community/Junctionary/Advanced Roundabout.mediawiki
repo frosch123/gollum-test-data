@@ -1,13 +1,13 @@
 [[Translation:en/Community/Junctionary/Advanced Roundabout]]
 
-{{en/Junctionsmenu}}
+{{en/Community/Junctionary/Junctionsmenu}}
 Unlike the basic [[en/Community/Junctionary/Roundabout]], this junction has 1 level above the default Track-Level. Trains can pass straight through and turn right without entering the circle.
 
 Some problems are minimized by using [[en/Manual/Signals#pre-signals|pre-signals]]
 
-[[File:en/Advanced roundabout.png|center|frame|Advanced roundabout junction]]
+[[File:en/Community/Junctionary/Advanced roundabout.png|center|frame|Advanced roundabout junction]]
 
-{{en/Junction Criteria|Expensive (Stepped)|2|1|0|3|1|0|1|0|1|1|2||Broken down trains affect one line or all left turns.|
+{{en/Community/Junctionary/Junction Criteria|Expensive (Stepped)|2|1|0|3|1|0|1|0|1|1|2||Broken down trains affect one line or all left turns.|
 *Can handle lots of trains moving N-E or S-W
 *Tracks split and only trains going to the left need to take the round-a-bout
 '''Tips'''
@@ -16,16 +16,16 @@ Some problems are minimized by using [[en/Manual/Signals#pre-signals|pre-signals
 *Area: 16 x 16
 }}
 
-[[File:en/Flying roundabout.png|center|frame|Flying roundabout junction]]
+[[File:en/Community/Junctionary/Flying roundabout.png|center|frame|Flying roundabout junction]]
 
 *Area: 14 x 14
 
 
 == Advanced Roundabout without Deadlock ==
 
-[[File:en/4WayNoLock.png|Image caption]]
+[[File:en/Community/Junctionary/4WayNoLock.png|Image caption]]
 
-{{en/Junction Criteria|Moderate|2|1|1|2|1|0|1|0|0|1|2||Broken down trains only affect one direction. (Worst case: Inner circle, between two segments, will block 3 left turn directions)|
+{{en/Community/Junctionary/Junction Criteria|Moderate|2|1|1|2|1|0|1|0|0|1|2||Broken down trains only affect one direction. (Worst case: Inner circle, between two segments, will block 3 left turn directions)|
 Pros:
 * High capacity 
 * Slopes only for left turns (1 up, 1 down in total) 
@@ -43,9 +43,9 @@ The presignal logic only lets trains enter, when the next and any of the other s
 
 == Advanced Roundabout without Deadlock Compact ==
 
-[[File:en/4WayNoLockSmall.png|Image caption]]
+[[File:en/Community/Junctionary/4WayNoLockSmall.png|Image caption]]
 
-{{en/Junction Criteria|Moderate|3|1|1|2|1|0|1|0|0|1|2||Broken down trains only affect the one direction. (Worst case: Inner circle, between two segments, will block all left turn directions)|
+{{en/Community/Junctionary/Junction Criteria|Moderate|3|1|1|2|1|0|1|0|0|1|2||Broken down trains only affect the one direction. (Worst case: Inner circle, between two segments, will block all left turn directions)|
 Pros:
 * High capacity 
 * Slopes only for left turns (1 up, 1 down in total)
@@ -59,4 +59,4 @@ Cons:
 }}
 
 
-[[Category:en/Train Junctions]]
+[[Category:en/Manual/Train Junctions]]

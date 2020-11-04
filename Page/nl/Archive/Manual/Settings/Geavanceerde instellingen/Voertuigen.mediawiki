@@ -1,12 +1,12 @@
 [[Translation:en/Archive/Manual/Settings/Advanced Settings/Vehicles]]
-{{nl/Geavanceerde instellingen}}
+{{nl/Archive/Manual/Settings/Geavanceerde instellingen}}
 
 ==Geavanceerde instellingen venster: Voertuigen sectie==
 De voertuigen sectie geeft je de mogelijkheid verschillende opties gerelateerd aan treinen, wegvoertuigen, vliegtuigen en schepen in te stellen. Het doel van de beschikbare instellingen wordt hieronder toegelicht. Voor elke instelling, de respectievelijke variabelen van de [[en/Archive/Manual/Settings/Openttd.cfg|config file]] zijn in de lijst opgenomen met de mogelijke waarden.
 {| align="center"
 |- valign="top"
 |__TOC__
-|[[File:nl/Geavanceerde instellingen venster.png|frame|left|De voertuigen sectie van het Geavanceerde instellingen venster (1.1.1)]]
+|[[File:nl/Archive/Manual/Settings/Geavanceerde instellingen venster.png|frame|left|De voertuigen sectie van het Geavanceerde instellingen venster (1.1.1)]]
 |}
 
 ===<u>Routebepaling</u>===
@@ -44,7 +44,7 @@ Selecteer de routezoeker algoritme voor schepen. De originele is de standaard en
 ===<u>Automatisch vervangen</u>===
 Ben je het zat om alle voertuigen steeds te moeten vervangen elke twintig jaar? Laat deze patch hier voor zorgen. Wanneer je deze inschakelt zullen voertuigen automatisch worden vervangen. Met de volgende instellingen kun je de automatische vervanging aanpassen naar eigen inzicht.
 
-{{nl/Opmerking|Als het voertuig niet een depot ingaat, zal het niet worden vervangen. Je krijgt geen '''voertuig wordt oud'''  waarschuwing!}}
+{{nl/Manual/Opmerking|Als het voertuig niet een depot ingaat, zal het niet worden vervangen. Je krijgt geen '''voertuig wordt oud'''  waarschuwing!}}
 
 ====Vervang voertuig automatisch wanneer deze oud wordt====
 {{nl/Kenmerken|Old|align="right"|text=(0.3.3)}}
@@ -262,23 +262,23 @@ Geeft aan of er geen, origineel of een realistische hoeveelheid rook en vonken z
 {{en/-}}
 ==In vorige versies==
 ====Sta het bouwen van zeer lange treinen toe====
-{{nl/Kenmerken periode|0.2|1.0|align="right"|text=(0.2.0 t/m 1.0.5) (vervangen door Maximum lengte van treinen)}}
+{{nl/Wiki/Kenmerken periode|0.2|1.0|align="right"|text=(0.2.0 t/m 1.0.5) (vervangen door Maximum lengte van treinen)}}
 Vervangen door [[#maximum-lengte-van-treinen|maximum lengte van treinen]].
 {{en/-}}
 
 ===Waarschuw wanneer een trein verdwaald is===
-{{nl/Kenmerken periode|0.5|1.0|align="right"|text=(0.5.0 t/m 1.0.0) (vervangen door Waarschuw wanneer een voertuig verdwaald is)}}
+{{nl/Wiki/Kenmerken periode|0.5|1.0|align="right"|text=(0.5.0 t/m 1.0.0) (vervangen door Waarschuw wanneer een voertuig verdwaald is)}}
 Een trein wordt [[en/Archive/Manual/Settings/Train is lost warning|verdwaald gemeld]] als het geen route kan vinden naar het station van zijn huidige bestemming.
 Vervangen door [[#waarschuw-wanneer-een-voertuig-verdwaald-is|waarschuw wanneer een voertuig verdwaald is]]
 {{en/-}}
 
 ===Sta ga naar depot orders toe===
-{{nl/Kenmerken periode|Old|1.0|align="right"|text=(0.2.0 t/m 1.0.0) (is nu standaard toegestaan)}}
+{{nl/Wiki/Kenmerken periode|Old|1.0|align="right"|text=(0.2.0 t/m 1.0.0) (is nu standaard toegestaan)}}
 Alle voertuigen kunnen nu standaard een [[nl/Archive/Manual/Settings/Sta ga naar depot orders toe|ga naar depot order in hun schema hebben]].
 {{en/-}}
 
 ===Sta dienstregelingen voor voertuigen toe===
-{{nl/Kenmerken periode|0.6|1.0|align="right"|text=(0.6.0 t/m 1.0.0 (is nu standaard toegestaan))}}
+{{nl/Wiki/Kenmerken periode|0.6|1.0|align="right"|text=(0.6.0 t/m 1.0.0 (is nu standaard toegestaan))}}
 Staat nu standaard toe om [[nl/Manual/Dienstregeling|een dienstregeling]] voor voertuigen te gebruiken.
 {{en/-}}
 
@@ -286,4 +286,4 @@ Staat nu standaard toe om [[nl/Manual/Dienstregeling|een dienstregeling]] voor v
 *'''Voor 0.3.0 tot 0.6.3''' - Zie [[en/Archive/Manual/Settings/Configuring patches]] voor informatie over hoe de instellingen te veranderen.
 *'''Voor 0.2.0 en 0.2.1''' - Zie [[en/Archive/Manual/Settings/Configuring patches in 0.2.0]].
 
-[[Category:nl/Instellingen en voorkeuren]]
+[[Category:nl/Manual/Instellingen en voorkeuren]]

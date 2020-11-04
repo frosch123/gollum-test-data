@@ -1,15 +1,15 @@
 [[Translation:en/Manual/Convert rail]]
-{{it/Tutorial}}
+{{it/Manual/Tutorial}}
 ==Convertire rotaia==
 Per selezionare  il [[it/Manual/Base Set/Tipi di ferrovia|tipo di ferrovia]] da convertire, cliccare e tenere premuto il pulsante di costruisci ferrovia [[File:en/Railroad build button.png]] del menu principale.
-[[File:it/Ferrovie costruibili 2020.png|none|frame|Per poter visualizzare tutte le opzioni occorre arrivare all'anno 2020]]
+[[File:it/Manual/Ferrovie costruibili 2020.png|none|frame|Per poter visualizzare tutte le opzioni occorre arrivare all'anno 2020]]
 Dopo aver selezionato un'opzione, verrà visualizzata una delle seguenti barre degli strumenti:
-[[File:it/Railroad Construction.png|none|frame|[[it/Manual/Realizzazione ferrovia#barra-degli-strumenti-costruzione-ferrovie|Barra degli strumenti Costruzione ferrovie]].]]
-[[File:it/Electrified Railway Construction.png|none|frame|Barra degli strumenti Costruzione ferrovie elettrificate.]]
-[[File:it/Monorail Construction.png|none|frame|Barra degli strumenti Costruzione Monorotaia.]]
-[[File:it/Maglev Construction.png|none|frame|Barra degli strumenti Costruzione MagLev.]]
+[[File:it/Manual/Railroad Construction.png|none|frame|[[it/Manual/Realizzazione ferrovia#barra-degli-strumenti-costruzione-ferrovie|Barra degli strumenti Costruzione ferrovie]].]]
+[[File:it/Manual/Electrified Railway Construction.png|none|frame|Barra degli strumenti Costruzione ferrovie elettrificate.]]
+[[File:it/Manual/Monorail Construction.png|none|frame|Barra degli strumenti Costruzione Monorotaia.]]
+[[File:it/Manual/Maglev Construction.png|none|frame|Barra degli strumenti Costruzione MagLev.]]
 
-Il pulsante [[File:en/Convert rail.png]] '''converti rotaia''' attiverà uno strumento di trascinamento della selezione che consente di convertire un tipo di rail in un altro: da rotaia in rotaia elettrificata, da questa in monorotaia e poi MagLev o qualsiasi altro tipo delle precedenti). Questo strumento può essere utilizzato su [[it/Manual/Costruire binari|binari]], [[it/Costruire depositi|depositi]], [[it/Manual/Ponti|ponti]], [[it/Manual/Tunnel|tunnel]], [[it/Manual/Stazione ferroviaria|stazioni]] e [[it/Punto di passaggio|punti di passaggio]].
+Il pulsante [[File:en/Manual/Convert rail.png]] '''converti rotaia''' attiverà uno strumento di trascinamento della selezione che consente di convertire un tipo di rail in un altro: da rotaia in rotaia elettrificata, da questa in monorotaia e poi MagLev o qualsiasi altro tipo delle precedenti). Questo strumento può essere utilizzato su [[it/Manual/Costruire binari|binari]], [[it/Costruire depositi|depositi]], [[it/Manual/Ponti|ponti]], [[it/Manual/Tunnel|tunnel]], [[it/Manual/Stazione ferroviaria|stazioni]] e [[it/Punto di passaggio|punti di passaggio]].
 
 * Ponti e gallerie: scegli una delle estremità.
 
@@ -21,15 +21,15 @@ Il pulsante [[File:en/Convert rail.png]] '''converti rotaia''' attiverà uno str
 
 * È possibile convertire solo nei tipi di rotaia che sono disponibili. I vari tipi di rotai vengono sbloccati nel tempo, vedi: [[it/Manual/Base Set/Tipi di ferrovia|tipi di ferrovie]].
 {|style="border-collapse: separate; margin: auto;" cellspacing="10"
-|style="vertical-align: middle; padding: 10px 10px 5px 10px;"|[[File:en/Convert rail tunnel.png|center|frame|Tutti i tipi di rotaie nella stessa area]]
-|style="vertical-align: middle; padding: 10px 10px 5px 10px;"|[[File:en/Convert station.png|center|frame|Stazione non uniforme con tutti i tipi di rotaie possibili]]
+|style="vertical-align: middle; padding: 10px 10px 5px 10px;"|[[File:en/Manual/Convert rail tunnel.png|center|frame|Tutti i tipi di rotaie nella stessa area]]
+|style="vertical-align: middle; padding: 10px 10px 5px 10px;"|[[File:en/Manual/Convert station.png|center|frame|Stazione non uniforme con tutti i tipi di rotaie possibili]]
 |}
 
 == Binari in diagonale ==
 In OpenTTD è possibile avere due sezioni di binario dello stesso tipo in diagonale su un solo tile. Se si volesse convertire queste linee in due diversi tipi di rotaia ci si troverebe di fronte all'impossibilità di farlo, perchè, come mostra l'immagine di sinistra, lo strumento di selezione per convertire non consente di selezionare mezzo tile, e nemmeno di selezionare in diagonale, ed anche perché non possono coesistere due tipi differenti di rotaia sullo stesso tile (tranne quello normale ed elettrificato). Quindi se un giorno si volesse convertire queste due linee in due linee di tipo diverse sarà necessario ricostruirle facendole passare in tile differenti, come nell'immagine di destra.
 {|style="border-collapse: separate; margin: auto;" cellspacing="10"
-|style="vertical-align: middle; padding: 10px 10px 5px 10px;"|[[File:en/Convert rail close.png|center|frame|troppo vicino per mescolare i tipi di rotaia (monorotaia e maglev]]
-|style="vertical-align: middle; padding: 10px 10px 5px 10px;"|[[File:en/Convert rail good.png|center|frame|Un tile per ogni tipo di rotaia (tranne che per normale ed elettrificato in diagonale)]]
+|style="vertical-align: middle; padding: 10px 10px 5px 10px;"|[[File:en/Manual/Convert rail close.png|center|frame|troppo vicino per mescolare i tipi di rotaia (monorotaia e maglev]]
+|style="vertical-align: middle; padding: 10px 10px 5px 10px;"|[[File:en/Manual/Convert rail good.png|center|frame|Un tile per ogni tipo di rotaia (tranne che per normale ed elettrificato in diagonale)]]
 |}
 
 == Suggerimenti ==
@@ -46,5 +46,5 @@ In OpenTTD è possibile avere due sezioni di binario dello stesso tipo in diagon
 *[[it/Archive/Manual/Settings/Stazioni non uniformi|Stazioni non uniformi]]
 *[[en/Impostazioni avanzate/It/Veicoli#disattiva-rotaie-elettrificate|Disattiva rotaie elettrificate]]
 
-[[Category:it/Costruzioni]]
-[[Category:it/Ferrovie]]
+[[Category:it/Manual/Costruzioni]]
+[[Category:it/Manual/Base Set/Trains/Ferrovie]]

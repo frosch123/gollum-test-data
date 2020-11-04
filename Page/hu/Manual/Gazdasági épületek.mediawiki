@@ -1,7 +1,7 @@
 [[Translation:en/Manual/Industries]]
 {{hu/Tartalomjegyzék}}
 
-:''Ez a fejezet az OpenTTD gazdasági épületekhez kapcsolódó koncepcióját ismerteti. A gazdasági épületek típusainak részletes ismertetőit a [[:Category:hu/Gazdasági épületek|Gazdasági épületek kategóriában]] találod.
+:''Ez a fejezet az OpenTTD gazdasági épületekhez kapcsolódó koncepcióját ismerteti. A gazdasági épületek típusainak részletes ismertetőit a [[:Category:hu/Manual/Base Set/Industries/Gazdasági épületek|Gazdasági épületek kategóriában]] találod.
 
 '''A gazdasági épületek''' olyan szervezetek, amelyek adott [[hu/Manual/Rakomány|rakományt]] és/vagy szolgáltatást állítanak elő. Az OpenTTD-ben három csoportjuk van: az elsődleges, a másodlagos és aharmadlagos gazdasági épületek. Az elsődleges gazdasági épületek, mint a bányák, anélkül állítanak elő nyersanyagot, hogy ehhez bármire szükségük lenne. Ezeket a nyersanyagokat aztán [[hu/Manual/Szállítási vállalat|szállítási vállalat]] továbbítja egy másodlagos gazdasági épülethez. A másodlagos gazdasági épületek terméke vagy a településekre kerülnek (mint az áru vagy az étel), vagy harmadlagos gazdasági épületek alapanyagaiként szolgálnak.
 
@@ -11,7 +11,7 @@ A gazdasági épület ablaka két számot jelez ki minden ott előállított rak
 
 A második érték azt mutatja, hogy az előállított mennyiségnek milyen arányát adta ki a gazdasági épület a közeli állomásoknak elosztásra. A gazdasági épület úgy is dönthet, hogy a termelés egy részét visszatartja, és nem adja ki egy állomásnak sem.
 
-[[File:en/Industry window.png|frame|center|Szénbánya információs ablaka]]
+[[File:en/Manual/Industry window.png|frame|center|Szénbánya információs ablaka]]
 
 A gazdasági épületek kibocsátásának növekedése a tőlük elszállított rakomány arányától függ. Minél többet szállítasz el, a növekedés - hosszú idő átlagában - annál gyorsabb. 
 A fent említett számítások részleteit a [[hu/Manual/Game Mechanics/Main Page|Játéktechnika]] oldalon találhatod.
@@ -249,12 +249,12 @@ __TOC__
 
 Ha közlekedés vállalkozásod elég gazdag ahhoz, hogy új gazdasági épületet építését finanszírozza, az új gazdasági épület akkor és oda fog épülni, amikor és ahova akarod. Befektetésed fejében nem számíthatsz azonnali megtérülésre, nyereségéből sem részesülsz, csak a rakományszállításodból. Abban az értelemben sem válsz a gazdasági épület tulajdonosává, hogy jogot szereznél a lebontására, tehát győződj meg arról, hogy megfelelő helyen alapítod.
 
-Rendesen csak a következő [[:Category:hu/Gazdasági épületek|gazdasági épületeket]] alapíthatod:
+Rendesen csak a következő [[:Category:hu/Manual/Base Set/Industries/Gazdasági épületek|gazdasági épületeket]] alapíthatod:
 
 {| {{en/Wikitable}}
 !colspan=4 style="background:#ccffcc"|Mérsékelt éghajlat
 |-
-| rowspan=7 valign="top"| [[File:en/Fund Industry template.png]]
+| rowspan=7 valign="top"| [[File:en/Manual/Fund Industry template.png]]
 | style="background:#efefef" | '''Név'''
 | style="background:#efefef" | <span style="white-space:nowrap">'''Ár''' (infláció nélkül)</span>
 | style="background:#efefef" | '''Megjegyzések'''
@@ -285,7 +285,7 @@ Rendesen csak a következő [[:Category:hu/Gazdasági épületek|gazdasági ép�
 |-
 !colspan=4 style="background:#ccccff"|Szubarktikus
 |-
-| rowspan=7 valign="top"| [[File:en/Fund Industry subarctic.png]]
+| rowspan=7 valign="top"| [[File:en/Manual/Fund Industry subarctic.png]]
 | style="background:#efefef" | '''Név'''
 | style="background:#efefef" | <span style="white-space:nowrap">'''Ár''' (infláció nélkül)</span>
 | style="background:#efefef" | '''Megjegyzések'''
@@ -316,7 +316,7 @@ Rendesen csak a következő [[:Category:hu/Gazdasági épületek|gazdasági ép�
 |-
 !colspan=4 style="background:#ffffcc"|Szubtrópusi
 |-
-| rowspan=7 valign="top"| [[File:en/Fund Industry subtropical.png]]
+| rowspan=7 valign="top"| [[File:en/Manual/Fund Industry subtropical.png]]
 | style="background:#efefef" | '''Név'''
 | style="background:#efefef" | <span style="white-space:nowrap">'''Ár''' (infláció nélkül)</span>
 | style="background:#efefef" | '''Megjegyzések'''
@@ -347,7 +347,7 @@ Rendesen csak a következő [[:Category:hu/Gazdasági épületek|gazdasági ép�
 |-
 !colspan=4 style="background:#ff9999"|Játékvilág
 |-
-| rowspan=5 valign="top"| [[File:en/Fund Industry toyland.png]]
+| rowspan=5 valign="top"| [[File:en/Manual/Fund Industry toyland.png]]
 | style="background:#efefef" | '''Név'''
 | style="background:#efefef" | <span style="white-space:nowrap">'''Ár''' (infláció nélkül)</span>
 | style="background:#efefef" | '''Megjegyzések'''
@@ -382,7 +382,7 @@ beállítás.
 A 0.6.1. verzió óta új gazdasági épület ''kutatását'' is finanszírozhatod. Új gazdasági épület alapítása és kutatása közt két fontos különbség is van. Az egyik, hogy a kutatás csak elsődleges gazdasági épületekre használatos (pl. nyersanyag-lelőhelyek), a másik pedig, hogy a kutatott gazdasági épület nem ott jön létre, ahol te kijelölnéd a helyét, hanem ott, ahol a kutatók a megfelelő nyersanyagot megtalálják.
 Ezt a lehetőséget is a ''Haladó beállítások - [[en/Haladó beállítások/Gazdaság#gazdasagi-epuletek|Gazdaság]] - Gazdasági épületek'' csoportjában befolyásolja a ''Kézi nyersanyaglelőhely-létesítési módszer'' beállítással engedélyezheted.
 
-[[File:en/Coalmine.png|center|frame|A szénbánya az OpenTTD-ben csak egy a sok gazdasági épület között]]
+[[File:en/Manual/Base Set/Industries/Coalmine.png|center|frame|A szénbánya az OpenTTD-ben csak egy a sok gazdasági épület között]]
 
-[[Category:hu/Gazdasági épületek]]
-[[Category:hu/Szervezetek]]
+[[Category:hu/Manual/Base Set/Industries/Gazdasági épületek]]
+[[Category:hu/Manual/Szervezetek]]

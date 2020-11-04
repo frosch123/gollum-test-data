@@ -33,7 +33,7 @@ To load a specific scenario immediately, use:
 
 AI Debug panel is accessible from the Land Area Information (red question mark) labelled "AI Debug Console". All outputs of <code>AILog.XXX()</code> go to here, and can be selected per AI. The AI can also be restarted here. When restarting, the company of that AI is removed (with all his property), and a new AI controlled by the same script (which is reloaded from disk) is started. So when changing the AI, it is enough to just hit the Reload button to get your new AI to work.
 
-[[File:en/Ai-debug-panel.png|frame|none|AI Debug Panel]]
+[[File:en/Development/Script/Ai-debug-panel.png|frame|none|AI Debug Panel]]
 
 ==== Break on log message ====
 {{en/Feature|1.1}}
@@ -41,7 +41,7 @@ As of revision r19544 there has been added a few new controls at the bottom of t
 
 To enable this feature you need to have the setting "gui.ai_developer_tools" enabled. To enable it you can open the in-game console and enter "set gui.ai_developer_tools 1".
 
-[[File:en/AIDebug break on.png|frame|none|AI Debug Panel - break on string]]
+[[File:en/Development/Script/AIDebug break on.png|frame|none|AI Debug Panel - break on string]]
 
 ==== AIController::Break ====
 [http://noai.openttd.org/api/trunk/classAIController.html#9a99eff898d772565ee61029c596f484 From documentation]: Break execution of the script when script developer tools are active (setting "gui.ai_developer_tools" is enabled). For other users, nothing will happen when you call this function. To resume the script, you have to click on the continue button in the AI debug window.
@@ -56,7 +56,7 @@ To get a separate window (Windows Only) use the <code>-d</code> parameter by its
 
 This provides this output (Windows Only):
 
-[[File:en/Openttd -d.png|frame|none|Zuu's example of the developer console -d version outputting AI errors.]]
+[[File:en/Development/Script/Openttd -d.png|frame|none|Zuu's example of the developer console -d version outputting AI errors.]]
 
 For linux, using <code>-d script=5</code> will send all information to the stdout.
 
@@ -95,7 +95,7 @@ For example, if I were to play on a 2048x2048 map and make use of a Valuator to 
 
 === Map Coordinates ===
 
-[[File:en/Ai-placed-coordinate-of-airport.png|frame|right|The AI placed this airport, using the top right most coordinate, which is also its returned location. The airport size is X=4, Y=3]]
+[[File:en/Development/Script/Ai-placed-coordinate-of-airport.png|frame|right|The AI placed this airport, using the top right most coordinate, which is also its returned location. The airport size is X=4, Y=3]]
 
 Map (X, Y) coordinates are done from the top to the bottom - the top-most coordinate is (0,0), the bottom-most coordinate is (Max_X-1, Max_Y-1). X is increased by going SW, and Y increased by going SE. Any time a more than one tile dimension object is returned, it'll be the most top coordinate, tending towards the top right.
 

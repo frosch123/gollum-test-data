@@ -532,11 +532,11 @@ Esto significa que a efectos del cálculo de la velocidad de un vehículo, una c
 *La aceleración de los trenes MagLev (trenes de Levitación Magnética) es = 37 x (0,022 x Potencia - 0,24 x Velocidad^2 - 60 x Masa_vagones_pendiente_ascendente + 60 x Masa_vagones_pendiente_descendente) / Masa (km/h por día)
 *El frenado es el doble que la aceleración, excepto al entrar a un depósito o a una estación.
 *Los límites de velocidad sólo se aplican cuando todos los giros se producen dentro de la longitud del tren:
-[[File:en/Speed-limits.png]]
+[[File:en/Manual/Game Mechanics/Speed-limits.png]]
 
 ''Vea también: [[es/Archive/Manual/Settings/Aceleración realista|Aceleración realista]] y [[es/Community/Curvas|curvas]].''
 
 Vea los archivos aircraft_cmd.c, roadveh_cmd.c, ship_cmd.c, train_cmd.c y vechicle.c para conocer el código de programación.
 
-[[Category:es/Juego]]
+[[Category:es/Manual/Base Set/Juego]]
 [[Category:es/Desarrollo]]

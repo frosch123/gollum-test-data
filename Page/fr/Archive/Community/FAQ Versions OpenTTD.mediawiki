@@ -14,7 +14,7 @@ Le terme "construction" sera utilisé dans le reste de ce document pour se réf�
 ====Version====
 Une "Version" officielle est simplement cela -- une version stable et complète du jeu. Bien qu'il puisse y avoir des corrections de bogues mineures appliquées à une Version, elle est supposée ne pas avoir de changements significatifs dans sa construction dans le jeu, et tout ajout de nouvelles fonctionnalités viendra dans une version ultérieure.
 
-Une Version de OpenTTD est exactement comme tout paquet logiciel, et est numérotée de même. Par exemple, la dernière Version de OpenTTD est {{fr/Version}}. Les versions majeures sont notées par le premier ou par le second nombre, alors que les versions mineures sont représentées par le troisième numéro.
+Une Version de OpenTTD est exactement comme tout paquet logiciel, et est numérotée de même. Par exemple, la dernière Version de OpenTTD est {{fr/Manual/Version}}. Les versions majeures sont notées par le premier ou par le second nombre, alors que les versions mineures sont représentées par le troisième numéro.
 
 ====Version candidate (RC, ou test)====
 Vous pouvez la considérer comme une version proposée. Une construction de version candidate est une version en construction. Bien que de petites fonctionnalités puissent être ajoutées à une RC, pour sa plus grande partie, la liste des fonctionnalités est figée.
@@ -31,7 +31,7 @@ Les RCs devraient toujours être assez stables; si l'une d'elles est disponible,
 ====Construction nocturne (Nocturne)====
 Les "constructions nocturnes" sont généralement des travaux en cours. Une nocturne contiendra les fonctionnalités les plus récentes de OpenTTD (en général, les fonctionnalités prévues pour la prochaine version), mais qui peuvent encore être instables et boguées. Les nocturnes ont la possibilité de corrompre vos sauvegardes; vous devriez donc sauvegarder tous vos fichiers de données importants avant d'installer une construction nocturne.
 
-Comme leur nom le suggère, les constructions nocturnes sont compilées fréquemment, et donc, les nouvelles fonctionnalités deviennent disponibles dans OpenTTD sur une base régulière. Si vous entendez parler d'une fonctionnalité de OpenTTD mais ne la voyez pas dans votre version, elle fait très certainement partie d'une construction nocturne. Pesez les risques (qui sont fortement diminués par la sauvegarde de vos données -- n'est-ce pas?  {{en/Emoticon|:)}}), et installez une nocturne si vous voulez une fonctionnalité qui n'est pas encore disponible dans une Version ou une RC.
+Comme leur nom le suggère, les constructions nocturnes sont compilées fréquemment, et donc, les nouvelles fonctionnalités deviennent disponibles dans OpenTTD sur une base régulière. Si vous entendez parler d'une fonctionnalité de OpenTTD mais ne la voyez pas dans votre version, elle fait très certainement partie d'une construction nocturne. Pesez les risques (qui sont fortement diminués par la sauvegarde de vos données -- n'est-ce pas?  {{en/Manual/Emoticon|:)}}), et installez une nocturne si vous voulez une fonctionnalité qui n'est pas encore disponible dans une Version ou une RC.
 
 Note: une construction nocturne devrait toujours être installée ''par-dessus une version stable''. En d'autres termes, installez une Version ou une RC d'abord, puis installez une nocturne par-dessus.
 
@@ -41,7 +41,7 @@ Les constructions nocturnes ont un schéma de numérotation différent des versi
 ''r8642''
 
 ====Tronc====
-[[File:en/Version Illustration.gif|frame|right|Comment sont reliés le tronc, les branches, les versions, les nocturnes et les versions candidates]]
+[[File:en/Archive/Community/Version Illustration.gif|frame|right|Comment sont reliés le tronc, les branches, les versions, les nocturnes et les versions candidates]]
 Le terme "tronc" (comme pour le tronc d'un arbre) se réfère à l'environnement de développement principal pour les développeurs de OpenTTD (en contraste avec la terminologie de "branche" décrite ci-dessous). Le tronc contient le code soit développé ou approuvé par les développeurs cœur du jeu. Le code contenu dans le tronc est anticipé pour arriver dans une version officielle. Par extension, le code dans le tronc peut être vu comme le code "officiel" de OpenTTD.
 
 Les constructions nocturnes, comme décrit ci-dessus, contiendront toujours le dernier code "dans le tronc". Ainsi, si vous voyez une fonctionnalité décrite comme "dans le tronc", vous pouvez être sûr qu'elle sera disponible dans la prochaine construction nocturne, si elle ne l'est pas déjà.
@@ -67,7 +67,7 @@ Les ajouts ne peuvent pas être installés directement, comme les nocturnes -- i
 ''Voyez aussi: [http://www.tt-forums.net/viewtopic.php?t=21678 Comment appliquer des ajouts] sur les forums''
 
 ====MiniIN====
-[[File:en/MiniIN Illustration.gif|frame|right|Le MiniIN]]
+[[File:en/Archive/Community/MiniIN Illustration.gif|frame|right|Le MiniIN]]
 ''Article principal: [[fr/Nocturne intégré a minima|MiniIN]]''<br>
 
 Le MiniIN est un environnement de développement séparé du tronc, qui contient le code du tronc ''plus'' beaucoup d'ajouts utilisateur. Après la version 0.5.0, le MiniIN n'a plus été mis à jour avec le code du tronc. À cette étape, le MiniIN sera la 0.5.0 plus tous les ajouts utilisateur.

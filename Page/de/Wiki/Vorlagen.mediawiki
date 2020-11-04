@@ -9,7 +9,7 @@ Du kannst eine Liste von Templates hier finden:
 Siehe auch [[:Category:en/Editing Resources]] um herauszufinden, was noch gemacht werden kann.
 __TOC__
 
-== [[:Category:de/Message-Boxen|Message-Box Vorlagen]] ==
+== [[:Category:de/Manual/Base Set/Message-Boxen|Message-Box Vorlagen]] ==
 
 Es gibt 6 Arten (Farben) von Vorlagen:
 
@@ -38,23 +38,23 @@ Es gibt 6 Arten (Farben) von Vorlagen:
 {| style="border:0px; padding:5px; width=100%;"
 |- valign="top"
 |{{en/S|Notiz/De|Text=TEXT}}
-|{{de/Notiz|Bitte nicht {{en/Keypress|Strg|Alt|F4}} drücken}}
+|{{de/Wiki/Notiz|Bitte nicht {{en/Keypress|Strg|Alt|F4}} drücken}}
 |- valign="top"
 |{{en/S|Todo/De|Text=TEXT}}
-|{{de/Todo|Diese Seite ist in Bearbeitung}}
+|{{de/Wiki/Todo|Diese Seite ist in Bearbeitung}}
 |- valign="top"
 |{{en/S|Erweitern/De| TEXT }}
-|{{de/Erweitern| TEXT |2= }}
+|{{de/Wiki/Erweitern| TEXT |2= }}
 |- valign="top"
 |{{en/S|Aktuell/De}}
-|{{de/Aktuell|1= }}
+|{{de/Wiki/Aktuell|1= }}
 |}
 
 ===Stil (Gelb)===
 {| style="border:0px; padding: 5px; width=100%;"
 |- valign="top"
 |width=150;|{{en/S|Aufräumen/De}}
-|{{de/Aufräumen|1= }}
+|{{de/Wiki/Aufräumen|1= }}
 |- valign="top"
 |{{en/S|Übersetzung/De| origin=Herkunftsartikel &#124; von &#124; bis &#124; Prozentangabe}}
 |{{de/Übersetzung||origin=title}}
@@ -64,20 +64,20 @@ Es gibt 6 Arten (Farben) von Vorlagen:
 {| style="border:0px; padding: 5px; width=100%;"
 |- valign="top"
 |width=150;|{{en/S|Warnung/De| TEXT }}
-|{{de/Warnung| TEXT }}
+|{{de/Manual/Base Set/Warnung| TEXT }}
 |- valign="top"
 |{{en/S|Unvollständig/De}}
-|{{de/Unvollständig|1= }}
+|{{de/Wiki/Unvollständig|1= }}
 |- valign="top"
 |{{en/S|Veraltet/De}} <br> {{en/S|Veraltet/De| TEXT }} 
-|{{de/Veraltet|2= }} 
+|{{de/Community/Junctionary/Veraltet|2= }} 
 |}
 
 ===Löschen (Rot)===
 {| style="border:0px; padding:5px; width=100%;"
 |- valign="top"
 |width=150;|{{en/S|Löschen/De| Grund &#124; Benutzername}}
-|{{de/Löschen|3= }} 
+|{{de/Wiki/Löschen|3= }} 
 |- valign="top"
 |{{en/S|Vandalismus/De}}
 |{{de/Vandalismus|1= }}
@@ -87,23 +87,23 @@ Es gibt 6 Arten (Farben) von Vorlagen:
 {| style="border:0px; padding: 5px; width=100%;"
 |- valign="top"
 |width=150;|{{en/S|Einfügen/De| Seitenname}}
-|{{de/Einfügen|en/Irgendeineseite|2= }}
+|{{de/Wiki/Einfügen|en/Irgendeineseite|2= }}
 |- valign="top"
 |width=150;|{{en/S|Einfügenin/De| Seitenname}}
-|{{de/Einfügenin|en/Irgendeineseite|2= }}
+|{{de/Wiki/Einfügenin|en/Irgendeineseite|2= }}
 |- valign="top"
 |width=150;|{{en/S|Einfügenvon/De| Seitenname}}
-|{{de/Einfügenvon|en/Irgendeineseite|2= }}
+|{{de/Wiki/Einfügenvon|en/Irgendeineseite|2= }}
 |- valign="top"
 |{{en/S|Teilen/De|TEXT}}
-|{{de/Teilen|TEXT|2= }} 
+|{{de/Manual/Teilen|TEXT|2= }} 
 |}
 
 ===Geschützt (Grau)===
 {| style="border:0px; padding: 5px; width=100%;"
 |- valign="top"
 |width=150;|{{en/S|Historisch/De}}
-|{{de/Historisch|1= }} 
+|{{de/Wiki/Historisch|1= }} 
 |}
 
 == Bestimmte Vorlagen ==
@@ -111,13 +111,13 @@ Es gibt 6 Arten (Farben) von Vorlagen:
 {| style="border:0px; padding: 5px; width=100%;"
 |- valign="top"
 |width=150;|{{en/S|Linken/De}}
-|{{de/Linken}}
+|{{de/Wiki/Linken}}
 |- valign="top"
 |{{en/S|Vorschläge/De}}
-|{{de/Vorschläge|1= }}
+|{{de/Wiki/Vorschläge|1= }}
 |- valign="top"
 |{{en/S|Lizenz/De|Typ=Dein Typ}}
-|{{de/Lizenz|Typ=PD}}
+|{{de/Wiki/Lizenz|Typ=PD}}
 |}
 
 == OTTD Versionen ==
@@ -130,7 +130,7 @@ Es gibt 6 Arten (Farben) von Vorlagen:
 |{{de/ZukunftsFeature}}
 |-
 |{{en/S|Feature/De| Version }}
-|{{de/Feature|1.0}}
+|{{de/Wiki/Feature|1.0}}
 |-
 |{{en/S|Nightly/De| TEXT }}
 |{{de/Nightly| TEXT }}
@@ -167,22 +167,22 @@ Link zum TT-Forum Forum/Topic/Post. Siehe auch diese [[Template:en/Forum|Beispie
 |{{en/S|Benutzer/De| Name }}
 {{en/S|User| User name }}
 |{{de/Benutzer|Name}} 
-{{en/User| User name }}
+{{en/Manual/User| User name }}
 |-
 |{{en/S|Haken/De| Typ &#124; Farbe &#124; Größe }}
 {{en/S|Check| Type &#124; Color &#124; Size }}
 |{{de/Haken|Ja|Grün|20px}} oder {{de/Haken|Nein|Rot|20px}} oder {{de/Haken|Nein|Schwarz|20px}} usw...
-{{en/Check|Yes|Green|20px}} oder {{en/Check|No|Red|20px}} oder {{en/Check|No|Black|20px}} usw...
+{{en/Wiki/Check|Yes|Green|20px}} oder {{en/Wiki/Check|No|Red|20px}} oder {{en/Wiki/Check|No|Black|20px}} usw...
 |-
 |{{en/S|Emoticon/De| Code &#124; Größe }}
 {{en/S|Emoticon| Code &#124; Size }}
 |{{de/Emoticon|:)}} oder {{de/Emoticon|;)}} oder {{de/Emoticon|:((}} usw...
-{{en/Emoticon|:)}} oder {{en/Emoticon|;)}} oder {{en/Emoticon|:((}} usw...
+{{en/Manual/Emoticon|:)}} oder {{en/Manual/Emoticon|;)}} oder {{en/Manual/Emoticon|:((}} usw...
 |}
 
 == Navigation ==
 
-Siehe [[:Category:de/Navigation]] oder [[:Category:en/Navigation]] für eine Liste aller navigierenden Vorlagen/Templates.
+Siehe [[:Category:de/Manual/Navigation]] oder [[:Category:en/Manual/Base Set/Navigation]] für eine Liste aller navigierenden Vorlagen/Templates.
 
 
 === [[Template:de/Navbox|Navbox]] ===
@@ -215,4 +215,3 @@ Siehe [[:Category:de/Navigation]] oder [[:Category:en/Navigation]] für eine Lis
 Bitte die [[en/Templates|Diskussionsseite]] für Fragen oder Vorschläge benutzen.
 
 
-[[Category:de/Vorlagen|T]]

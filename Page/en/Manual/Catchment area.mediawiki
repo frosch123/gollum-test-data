@@ -2,7 +2,7 @@
 
 
 {{en/Outdated|Recent OpenTTD versions have reworked the catchment area mechanics.}}
-[[File:en/Catchmentarea.png|thumb|right|250px|In the screenshot, the blue zone is the station's catchment area.]]
+[[File:en/Manual/Catchmentarea.png|thumb|right|250px|In the screenshot, the blue zone is the station's catchment area.]]
 The '''Catchment Area''' of a [[en/Manual/Stations]] is the radius around the stage that it can service. [[en/Manual/Towns|Town-buildings]] and [[en/Manual/Industries]] that are within a station's catchment area accept [[en/Manual/Cargo]] through this station, and will place their cargo at the station to be delivered elsewhere.
 
 == Setting: Allow more realistically sized catchment areas ==
@@ -17,13 +17,13 @@ For a single physical station, [[en/Archive/Manual/Settings/Modified catchment]]
 {|
 |-
 |
-[[File:en/Catch-one-rail.png|thumb|left|288px|Altoona West ([[en/Manual/Railway station|rail]])]]
+[[File:en/Manual/Catch-one-rail.png|thumb|left|288px|Altoona West ([[en/Manual/Railway station|rail]])]]
 
 |
-[[File:en/Catch-one-road.png|thumb|left|288px|Altoona ([[en/Manual/Loading Bays|road]])]]
+[[File:en/Manual/Catch-one-road.png|thumb|left|288px|Altoona ([[en/Manual/Loading Bays|road]])]]
 
 |
-[[File:en/Catch-promotion.png|thumb|right|288px|Altoona (promoted by combination with disjoint rail)]]
+[[File:en/Manual/Catch-promotion.png|thumb|right|288px|Altoona (promoted by combination with disjoint rail)]]
 
 |}
 </div>
@@ -36,7 +36,7 @@ So, the lone road station shown, '''Altoona''', has a radius of 3. The lone rail
 
 In some industries only certain squares can accept the cargo required by that industry. You can use the [[en/Manual/Land area information]] tool to find out which square accept cargo. When building a station you can see, in the station building dialog, which types of cargo will be accepted by the industries in the catchment area. For [[en/Manual/Stations#building-non-physically-attached-stations|non-physically attached combined stations]] the catchment area also covers all the space between the individual stations. Both stations in the picture wouldn't accept oil if they were built as separate stations because they are too far away from the refinery. But since they form a single combined station their catchment area extends over the refinery and makes them accept oil. This only applies for delivery, not for pickup of cargo. Thus the pictured stations won't get the goods produced by the refinery. (The described case and picture applies when the ''Allow more realistically sized catchment areas'' option is enabled.)
 
-[[File:en/Catch-altoona-produce.png|thumb|400px|Altoona production catchment area. Catchment is shown in red; the bounding box of each industry is shown in bright green.]]
+[[File:en/Manual/Catch-altoona-produce.png|thumb|400px|Altoona production catchment area. Catchment is shown in red; the bounding box of each industry is shown in bright green.]]
 
 : ''For production, catchment area of a logical station is the union of the physical station radii.''
 
@@ -50,7 +50,7 @@ The Brick Works overlaps Altoona's production catchment by a single tile, in its
 == Cargo Acceptance area of stations ==
 Every industry square can provide the cargo produced by that industry. Having multiple catchment area squares overlapping an industry doesn't give any advantages. However, coverage for town-building has direct effect on [[en/Manual/Base Set/Cargos/Passengers]] and [[en/Manual/Base Set/Cargos/Mail]] received. So the strategy to boost the [[en/Manual/Towns#town-growth|town growth]] and building non-physically attached stations to increase the catchment area will improve the patronage of large station which is difficult to be built near the center of the town.
 
-[[File:en/Catch-altoona-accept.png|thumb|400px|Altoona acceptance catchment area. Catchment is shown in blue; the footprint of each industry is shown in light brown.]]
+[[File:en/Manual/Catch-altoona-accept.png|thumb|400px|Altoona acceptance catchment area. Catchment is shown in blue; the footprint of each industry is shown in light brown.]]
 
 : ''For acceptance, catchment area of a logical station is the bounding box of its physical station radii.'' Equivalently, ''Acceptance catchment area is the station radius around the bounding box of its physical stations.'' 
 
@@ -66,4 +66,4 @@ When a building is covered by multiple catchment areas, the station with the hig
 
 For details see the [[en/Manual/Game Mechanics/Main Page#cargo-delivery-to-stations|Game mechanics]] page.
 
-[[Category:en/Construction]]
+[[Category:en/Manual/Base Set/Aircraft/Construction]]

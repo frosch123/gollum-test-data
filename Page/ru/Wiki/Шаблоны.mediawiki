@@ -11,7 +11,7 @@
 
 __TOC__
 
-== [[:Category:ru/Окна сообщений|Шаблоны окон сообщений]] ==
+== [[:Category:ru/Manual/Base Set/Окна сообщений|Шаблоны окон сообщений]] ==
 
 Существует 6 типов (цветов) сообщений:
 
@@ -40,23 +40,23 @@ __TOC__
 {| style="border:0px; padding:5px; width=100%;"
 |- valign="top"
 |width=150;|{{en/S|Заметка/Ru|текст| ТЕКСТ }}
-|{{ru/Заметка|текст| ТЕКСТ }}
+|{{ru/Manual/Заметка|текст| ТЕКСТ }}
 |- valign="top"
 |{{en/S|Необходимо сделать/Ru|комментарий| ТЕКСТ }}
 |{{ru/Необходимо сделать|комментарий| ТЕКСТ |2= }}
 |- valign="top"
 |{{en/S|Расширить/Ru|заметка| ТЕКСТ }}
-|{{ru/Расширить|заметка| ТЕКСТ |2= }}
+|{{ru/Wiki/Расширить|заметка| ТЕКСТ |2= }}
 |- valign="top"
 |{{en/S|Текущие событие/Ru}}
-|{{ru/Текущие событие|1= }}
+|{{ru/Wiki/Текущие событие|1= }}
 |}
 
 ===Тип стиль (жёлтый)===
 {| style="border:0px; padding: 5px; width=100%;"
 |- valign="top"
 |width=150;|{{en/S|Правка/Ru}}
-|{{ru/Правка|1= }}
+|{{ru/Wiki/Правка|1= }}
 |- valign="top"
 |{{en/S|Перевод/Ru | название оригинала на английском|Процент}}
 |{{en/Ambox| type  = style
@@ -80,16 +80,16 @@ __TOC__
 |{{ru/Внимание|текст}}
 |- valign="top"
 |{{en/S|Не завершено/Ru}}
-|{{ru/Не завершено|1= }}
+|{{ru/Wiki/Не завершено|1= }}
 |- valign="top"
 |{{en/S|Устарело/Ru}} <br> {{en/S|Устарело/Ru|текст заметки}} 
-|{{ru/Устарело|2= }} 
+|{{ru/Manual/Устарело|2= }} 
 |}
 ===Тип удалить (красный)===
 {| style="border:0px; padding:5px; width=100%;"
 |- valign="top"
 |width=150;|{{en/S|Удалить/Ru| Причина &#124; Имя пользователя}}
-|{{ru/Удалить|3= }} 
+|{{ru/Wiki/Удалить|3= }} 
 |- valign="top"
 |{{en/S|Вандал/Ru}} [[en/Frosch|Frosch удалил]]
 |{{ru/Вандал|1= }} [[en/Frosch|Frosch удалил]]
@@ -102,10 +102,10 @@ __TOC__
 |{{en/Merge|en/Какое-нибудь название страницы|2= }}
 |- valign="top"
 |width=150;|{{en/S|Mergeto| Название страницы}}
-|{{en/Mergeto|en/Какое-нибудь название страницы|2= }}
+|{{en/Wiki/Mergeto|en/Какое-нибудь название страницы|2= }}
 |- valign="top"
 |width=150;|{{en/S|Mergefrom| Название страницы}}
-|{{en/Mergefrom|en/Какое-нибудь название страницы|2= }}
+|{{en/Wiki/Mergefrom|en/Какое-нибудь название страницы|2= }}
 |- valign="top"
 |{{en/S|Split|ТЕКСТ }}
 |{{en/Split|ТЕКСТ |2= }} 
@@ -115,7 +115,7 @@ __TOC__
 {| style="border:0px; padding: 5px; width=100%;"
 |- valign="top"
 |width=150;|{{en/S|Исторический/Ru}}
-|{{ru/Исторический|1= }} 
+|{{ru/Wiki/Исторический|1= }} 
 |}
 
 == Особые шаблоны ==
@@ -123,13 +123,13 @@ __TOC__
 {| style="border:0px; padding: 5px; width=100%;"
 |- valign="top"
 |width=150;|{{en/S|Linking}}
-|{{en/Linking}}
+|{{en/Wiki/Linking}}
 |- valign="top"
 |{{en/S|Suggestions}}
-|{{en/Suggestions|1= }}
+|{{en/Wiki/Suggestions|1= }}
 |- valign="top"
 |{{en/S|License|type=Ваш тип лицензии}}
-|{{en/License|type=PD}}
+|{{en/Wiki/License|type=PD}}
 |}
 
 == Версии OTTD ==
@@ -139,13 +139,13 @@ __TOC__
 !|Result
 |-
 |{{en/S|FutureFeature}}
-|{{en/FutureFeature}}
+|{{en/Wiki/FutureFeature}}
 |-
 |{{en/S|Feature| Ваша версия }}
 |{{en/Feature|1.0}}
 |-
 |{{en/S|nightly| ТЕКСТ }}
-|{{en/Nightly| ТЕКСТ }}
+|{{en/Wiki/Nightly| ТЕКСТ }}
 |}
 
 == Другие ==
@@ -155,10 +155,10 @@ __TOC__
 !|Результат
 |-
 |{{en/S|Progress bar | 50 }}
-|{{en/Progress bar| 50}}
+|{{en/Development/Design Drafts/Progress bar| 50}}
 |-
 |{{en/S|Progress bar 32bpp tracker | category}}
-|{{en/Progress bar 32bpp tracker|ground terrain}}
+|{{en/Wiki/Progress bar 32bpp tracker|ground terrain}}
 |-
 |{{en/S|Other_languages | ... }}}
 |
@@ -173,18 +173,18 @@ __TOC__
 |{{en/Forum|0|0}}
 |-
 |{{en/S|User| Имя пользователя }}
-| {{en/User| Имя пользователя }} 
+| {{en/Manual/User| Имя пользователя }} 
 |-
 |{{en/S|Check| Type &#124; Color &#124; Size }}
-|{{en/Check|Yes|Green|20px}} или {{en/Check|No|Red|20px}} или {{en/Check|No|Black|20px}} и т.д...
+|{{en/Wiki/Check|Yes|Green|20px}} или {{en/Wiki/Check|No|Red|20px}} или {{en/Wiki/Check|No|Black|20px}} и т.д...
 |-
 |{{en/S|Emoticon| Code &#124; Size }}
-|{{en/Emoticon|:)}} или {{en/Emoticon|;)}} или {{en/Emoticon|:((}} и т.д...
+|{{en/Manual/Emoticon|:)}} или {{en/Manual/Emoticon|;)}} или {{en/Manual/Emoticon|:((}} и т.д...
 |}
 
 == Навигация ==
 
-Смотрите [[:Category:en/Navigation]] для списка доступных в настоящее время шаблонов навигации.
+Смотрите [[:Category:en/Manual/Base Set/Navigation]] для списка доступных в настоящее время шаблонов навигации.
 
 
 === [[Template:en/Navbox|Navbox]] ===
@@ -213,4 +213,3 @@ __TOC__
 Используйте страницу обсуждения для запросов.
 
 
-[[Category:ru/Шаблоны|*]][[Category:ru/Редактирование ресурсов]]

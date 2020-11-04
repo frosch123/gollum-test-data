@@ -1,6 +1,7 @@
+[[Translation:en/Archive/Compilation and Ports/Compiling on Mac OS X]]
 
 ==Compiling and developing OpenTTD on MacOSX==
-[[File:en/Terminal Mac OSX.png|left|64px]]
+[[File:en/Archive/Compilation and Ports/Terminal Mac OSX.png|left|64px]]
 A quick guide to get started with OpenTTD development on OSX.
 Note: if you have not installed any of this, it will take a while and there will be a lot to download, but you will get access to a lot more software than just OpenTTD.
 
@@ -11,7 +12,7 @@ Compiling OpenTTD requires use of the command line, so before you start, you sho
 :* Git is either pre-installed by Apple on your Mac, or is available by installing Apple's XCode Developer Tools, which can be found via Apple's Site or the Mac App store
 
 ==Installing Developer Tools (Xcode)==
-[[File:en/Compiling MacOSX 02-Xcode.png|center|128px]]
+[[File:en/Archive/Compilation and Ports/Compiling MacOSX 02-Xcode.png|center|128px]]
 ===Recent OSes===
 If you have access to the Mac App Store, you will find Xcode there as a free download.
 ===Older Mac OSes===
@@ -140,7 +141,7 @@ For those just wanting a working copy for themselves, enter the following into a
  make
  make bundle
 </code>
-After the compiler is done doing all it's stuff, you should find yourself a working '''OpenTTD.app''' in the bundles folder! [[File:en/Smile 22px.png]]
+After the compiler is done doing all it's stuff, you should find yourself a working '''OpenTTD.app''' in the bundles folder! [[File:en/Manual/Smile 22px.png]]
 
 
 For more detailed instructions, and options, read on...
@@ -254,4 +255,4 @@ This is all if your system is set up correctly. Make will then compile for intel
 
 For this to work, you will need universal libraries. For more info, read [[en/Archive/Compilation and Ports/Universal libraries]]
 
-[[Category:en/Compiling OpenTTD]]
+[[Category:en/Development/Compiling OpenTTD]]

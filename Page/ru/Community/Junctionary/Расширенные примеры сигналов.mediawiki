@@ -4,7 +4,7 @@
 
 {{ru/Необходимо сделать|Tidy this up into a proper showcase of complicated signaling arrangements.  Maybe even export it all to new types of [[en/Community/Junctionary/Main Page]] or into [[en/Manual/Stations]].}}{{en/-}}{{ru/Перевод|Advenced signalling examples|5}}
 
-[[File:en/Presig3.png|center|frame|Fig 1. - Пре-сигналы используются для выравнивания нагрузки на каждую из этих линий.]]
+[[File:en/Community/Junctionary/Presig3.png|center|frame|Fig 1. - Пре-сигналы используются для выравнивания нагрузки на каждую из этих линий.]]
 
 ==Пре-сигналы на одноколейном перекрестке==
 Этот пример даёт хорошее представление о пользе ''пре-сигналов'' и о применении ''комбинированных сигналов''.
@@ -20,7 +20,7 @@
 
 '''Как это работает:''' Назовём южные въездные сигналы A и B, комбинированные сигналы на перекрёстке X и Y, и северные въездные сигналы C и D (см. Рис 2). Когда поезд с юга на север входит на однокалейный участок через светофоры A или B, они работают как обычные сигналы. X включает красный для поездов с севера. Поскольку X - выездной сигнал для Y, то Y тоже включает красный для поездов с севера. Y - выездной сигнал для C и D, поэтому они тоже оба включают красный для поездов с севера.
 
-[[File:en/Presig single sect.png|center|frame|Рис 2. - Пре-сигналы позволяют сделать перекрёсток на однокалейном участке. На снимке показан второй пример, когда поезд входит через сигнал C. Обратите внимание, что сигналы A и B красные.]]
+[[File:en/Community/Junctionary/Presig single sect.png|center|frame|Рис 2. - Пре-сигналы позволяют сделать перекрёсток на однокалейном участке. На снимке показан второй пример, когда поезд входит через сигнал C. Обратите внимание, что сигналы A и B красные.]]
 
 ==Оптимальная станция с пре-сигналаи==
 
@@ -28,7 +28,7 @@
 
 С такими сигналами поезд будет выбирать любую свободную платформу, и если нет ни одной свободной, будет ждать на входе, а не выбирать первую попавшуюся и не ждать пока её освободит другой состав. Большое преимущество этой станции в том, что поезда редко будут вынуждены останавливаться перед входом на станцию.
 
-[[File:en/Station presigs explained more.png|center|frame|Рис. 3 - "Оптимальная" схема станции с пре-сигналами.]]
+[[File:en/Community/Junctionary/Station presigs explained more.png|center|frame|Рис. 3 - "Оптимальная" схема станции с пре-сигналами.]]
 
 '''Типы используемых сигналов:'''
 * Сигналы с '''1''' по '''12''' выездные пре-сигналы.
@@ -49,13 +49,13 @@
 
 Ниже показана анимация работы этой станции.
 
-[[File:en/Presigs.gif|center|frame|Рис. 4 - Как будет работать "оптимальная" станция с пре-сигналами.]]
+[[File:en/Community/Junctionary/Presigs.gif|center|frame|Рис. 4 - Как будет работать "оптимальная" станция с пре-сигналами.]]
 
 
 Как видно из анимации, поезда выбирают путь без особых затруднений.
 
 ==Другой пример==
-[[File:en/Station Leave.jpeg|center|frame|Рис. 5 - Станция с пре-сигналами.]]
+[[File:en/Community/Junctionary/Station Leave.jpeg|center|frame|Рис. 5 - Станция с пре-сигналами.]]
 
 ==Double entry "RoRo" stations==
 The layouts we have seen above are great for their purpose - allowing lots of trains coming from one place to enter a free platform efficiently.
@@ -64,7 +64,7 @@ However, such station layouts can mean a lot of queuing further up the track as 
 
 Now that you are familiar with the basic RoRo station above, you can look at ways to reduce this:
 
-[[File:en/Doubleentryexplained.png|frame|This style of RoRo station allows more than one train to enter the station at once]]
+[[File:en/Community/Junctionary/Doubleentryexplained.png|frame|This style of RoRo station allows more than one train to enter the station at once]]
 
 The Double-Entry Split Signal is simply a combo signal that manages the whole system.
 
@@ -81,7 +81,7 @@ However, the double-entry split signal saw that the 4th platform from the left w
 Had a second train arrived on the red line, it would be able to utilise the now free platform 3rd from the right (which had cleared since the train above had entered the system).
 
 ==Free tracks==
-[[File:en/SpareTunnel.png|frame|Fig. 6 - Using presignals to allow trains to use spare tracks more intelligently]]
+[[File:en/Community/Junctionary/SpareTunnel.png|frame|Fig. 6 - Using presignals to allow trains to use spare tracks more intelligently]]
 Suppose you have two tracks leading from two sources to the same location.  You want each source's own traffic to have priority on its own track but want to utilize spare capacity on one of the tracks because the other is getting busy. This can be achieved with presignals.
 
 In the diagram, the two tracks are labelled ''A'' and ''B'' leading into tunnels ''A'' and ''B'' respectively.  Track ''A'' is the one with a less frequent service whose spare capacity we want to use.  Track ''B'' is very busy and needs some breathing space, which we can get by diverting traffic onto ''A''.  However, what we don't want to do is let B's traffic disrupt the service on ''A'' - in other words ''A'' needs priority on its own tunnel.  We arrange this by using presignals.
@@ -95,5 +95,5 @@ So when ''3'' is red, a train on ''B'' is only allowed to proceed on its own tra
 
 In that way, trains on ''B'' use track ''A'' if there is spare capacity but any vehicles already on ''A'' get priority.
 
-[[Category:ru/Железные дороги]]
+[[Category:ru/Manual/Base Set/Trains/Железные дороги]]
 [[Category:Строительство/Ru]

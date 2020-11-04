@@ -9,9 +9,9 @@ Une '''capture d'écran''' est une image de ce qui est vu à l'écran. Dans Open
 La ''capture d'écran géante'', d'un autre côté, sauvegarde une image de toute la carte au zoom le plus rapproché (sans les fenêtres actuellement ouvertes); il ne tient pas compte de l'emplacement de la caméra utilisateur ou de son niveau de grossissement. Si la carte est très grande, cela prendra un bon moment pour sauvegarder l'image, et produira un fichier volumineux.
 
 ==Prendre une capture d'écran==
-[[File:en/Screenshot successbox.png|frame|Un message d'une capture d'écran réussie]]
+[[File:en/Manual/Screenshot successbox.png|frame|Un message d'une capture d'écran réussie]]
 Il y a deux moyens de prendre une capture d'écran:
-*Ouvrir le menu ''Autres'' ([[File:en/Manual html 51cda05b.png|Autres]]) et choisir ''Copie d'écran'' ou ''Copie d'écran de la carte entière''.
+*Ouvrir le menu ''Autres'' ([[File:en/Manual/Manual html 51cda05b.png|Autres]]) et choisir ''Copie d'écran'' ou ''Copie d'écran de la carte entière''.
 *Appuyez sur ''Ctrl-S'' ou ''Ctrl-G'' sur le clavier pour avoir une copie d'écran normale ou géante, respectivement.
 
 Un message sera bientôt affiché, une fois la capture d'écran effectuée, montrant le nom assigné au fichier, qui est le nom de votre compagnie suivi de la date dans le jeu.
@@ -32,14 +32,14 @@ Les BMP sont assez gros et ne font pas de bons formats à télécharger, pour le
 
 Voyons pourquoi:
 {|
-|[[File:en/Screenshot optimised pngout.png|none|frame|Format PNG (256 couleurs) - 11ko]]
+|[[File:en/Manual/Screenshot optimised pngout.png|none|frame|Format PNG (256 couleurs) - 11ko]]
 La capture d'écran PNG avec 256 couleurs n'a aucune perte d'image, car OpenTTD n'utilise que 256 couleurs! C'est la sortie par défaut du format PNG.
-|[[File:en/Screenshot png.png|none|frame|Format PNG (16 millions de couleurs) - 30ko]]
+|[[File:en/Manual/Screenshot png.png|none|frame|Format PNG (16 millions de couleurs) - 30ko]]
 La capture d'écran PNG en vraies couleurs n'a pas non plus de perte, mais est plus gros car il n'indexe pas les couleurs.
 |-
-|[[File:en/Screenshot jpg.jpeg|none|frame|Format JPG (16 millions de couleurs) - 33ko]]
+|[[File:en/Manual/Screenshot jpg.jpeg|none|frame|Format JPG (16 millions de couleurs) - 33ko]]
 La capture d'écran JPG n'est pas la plus fine. Il y a des pertes de couleur qui font que les signaux combinés et de sortie semblent les mêmes.
-|[[File:en/Screenshot gif.gif|none|frame|Format GIF (256 couleurs) - 40ko]]
+|[[File:en/Manual/Screenshot gif.gif|none|frame|Format GIF (256 couleurs) - 40ko]]
 La capture d'écran GIF n'a pas de perte d'image, mais le fichier est plus gros qu'un PNG. GIF est toujours limité à 256 couleurs.
 |}
 * Un outil tiers, [http://advsys.net/ken/utils.htm pngout], peut davantage compresser les images png.

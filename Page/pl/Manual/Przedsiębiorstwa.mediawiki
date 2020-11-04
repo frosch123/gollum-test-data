@@ -1,9 +1,9 @@
 [[Translation:en/Manual/Industries]]
 {{pl/Spis treści}}
 
-:''Ta strona zawiera opis działania przedsiębiorstw w [[pl/Manual/Main Page|OpenTTD]].  Pełną listę przedsiębiorstw znajdziesz w [[:Category:pl/Przedsiębiorstwa|kategorii: Przedsiębiorstwa]].''
+:''Ta strona zawiera opis działania przedsiębiorstw w [[pl/Manual/Main Page|OpenTTD]].  Pełną listę przedsiębiorstw znajdziesz w [[:Category:pl/Manual/Base Set/Przedsiębiorstwa|kategorii: Przedsiębiorstwa]].''
 
-'''Przedsiębiorstwa''' to jednostki, które produkują określony [[pl/Manual/Ładunek|ładunek]] i/lub usługi. W [[pl/Manual/Main Page|OpenTTD]] są trzy typy przedsiębiorstw; [[:Category:pl/Przedsiębiorstwa wydobywcze/produkcyjne|wydobywcze/produkcyjne]], [[:Category:pl/Przedsiębiorstwa drugorzędne|drugo-]] i [[:Category:pl/Przedsiębiorstwa trzeciorzędne|trzeciorzędne]]. Przedsiębiorstwa wydobywcze, takie jak kopalnie (czy produkcyjne, jak farmy) zapewniają surowce niczego przy tym nie potrzebując. Zasoby te są następnie transportowane przez [[pl/Manual/Firma transportowa|firmę transportową]] do przedsiębiorstwa drugorzędnego. Czasami przedsiębiorstwa drugorzędne będą produkowały zasoby, które albo będą transportowane do [[pl/Domy|miast]] ([[pl/Manual/Base Set/Cargos/Towary|towary]] lub [[pl/Manual/Base Set/Cargos/Żywność|żywność]]) lub do przedsiębiorstw trzeciorzędnych. 
+'''Przedsiębiorstwa''' to jednostki, które produkują określony [[pl/Manual/Ładunek|ładunek]] i/lub usługi. W [[pl/Manual/Main Page|OpenTTD]] są trzy typy przedsiębiorstw; [[:Category:pl/Manual/Base Set/Przedsiębiorstwa wydobywcze/produkcyjne|wydobywcze/produkcyjne]], [[:Category:pl/Manual/Base Set/Industries/Przedsiębiorstwa drugorzędne|drugo-]] i [[:Category:pl/Manual/Base Set/Industries/Przedsiębiorstwa trzeciorzędne|trzeciorzędne]]. Przedsiębiorstwa wydobywcze, takie jak kopalnie (czy produkcyjne, jak farmy) zapewniają surowce niczego przy tym nie potrzebując. Zasoby te są następnie transportowane przez [[pl/Manual/Firma transportowa|firmę transportową]] do przedsiębiorstwa drugorzędnego. Czasami przedsiębiorstwa drugorzędne będą produkowały zasoby, które albo będą transportowane do [[pl/Manual/Base Set/Domy|miast]] ([[pl/Manual/Base Set/Cargos/Towary|towary]] lub [[pl/Manual/Base Set/Cargos/Żywność|żywność]]) lub do przedsiębiorstw trzeciorzędnych. 
 
 Twoja firma wyłącznie '''transportuje''' ładunek w imieniu producentów. Wszelkie zyski pochodzą jedynie z opłat za transport, a nie ze sprzedaży ładunku.
 
@@ -11,7 +11,7 @@ Okno przedsiębiorstwa pokazuje dwie liczby mówiące o produkcji każdego typu 
 
 Druga liczba to procent wyprodukowanej wartości, która została dostarczona na najbliższe stacje do dalszej dystrybucji. Przedsiębiorstwa mogą zadecydować, aby zatrzymać część wyprodukowanego surowca i nie dostarczać jej na żadną stację.
 
-[[File:pl/OknoPrzedsiębiorstwaPL.png|frame|center|Okno przedsiębiorstwa - [[pl/Manual/Base Set/Industries/Kopalnia węgla|kopalni węgla]]]]
+[[File:pl/Manual/OknoPrzedsiębiorstwaPL.png|frame|center|Okno przedsiębiorstwa - [[pl/Manual/Base Set/Industries/Kopalnia węgla|kopalni węgla]]]]
 
 Wzrost produkcji przedsiębiorstwa wydobywczego zależy od procentu przewiezionego z nich ładunku. Im więcej transportujesz, tym szybciej przedsiębiorstwo rośnie (w perspektywie długoterminowej).
 
@@ -251,7 +251,7 @@ Poniżej przedstawiono tabelę, przedstawiającą koszty budowy poszczególnych 
 {| {{en/Wikitable}}
 !colspan=4 style="background:#ccffcc"|Umiarkowany
 |-
-| rowspan=7 valign="top"| [[File:pl/Fund Industry template.png]]
+| rowspan=7 valign="top"| [[File:pl/Manual/Fund Industry template.png]]
 | style="background:#efefef" | '''Nazwa'''
 | style="background:#efefef" | <span style="white-space:nowrap">'''Koszt''' (bez inflacji)</span>
 | style="background:#efefef" | '''Opis'''
@@ -282,7 +282,7 @@ Poniżej przedstawiono tabelę, przedstawiającą koszty budowy poszczególnych 
 |-
 !colspan=4 style="background:#ccccff"|Arktyczny
 |-
-| rowspan=7 valign="top"| [[File:pl/Fund Industry subarctic.png]]
+| rowspan=7 valign="top"| [[File:pl/Manual/Fund Industry subarctic.png]]
 | style="background:#efefef" | '''Nazwa'''
 | style="background:#efefef" | <span style="white-space:nowrap">'''Koszt''' (bez inflacji)</span>
 | style="background:#efefef" | '''Opis'''
@@ -313,7 +313,7 @@ Poniżej przedstawiono tabelę, przedstawiającą koszty budowy poszczególnych 
 |-
 !colspan=4 style="background:#ffffcc"|Tropikalny
 |-
-| rowspan=7 valign="top"| [[File:pl/Fund Industry subtropical.png]]
+| rowspan=7 valign="top"| [[File:pl/Manual/Fund Industry subtropical.png]]
 | style="background:#efefef" | '''Nazwa'''
 | style="background:#efefef" | <span style="white-space:nowrap">'''Koszt''' (bez inflacji)</span>
 | style="background:#efefef" | '''Opis'''
@@ -344,7 +344,7 @@ Poniżej przedstawiono tabelę, przedstawiającą koszty budowy poszczególnych 
 |-
 !colspan=4 style="background:#ff9999"|Zabawkowy
 |-
-| rowspan=5 valign="top"| [[File:pl/Fund Industry toyland.png]]
+| rowspan=5 valign="top"| [[File:pl/Manual/Fund Industry toyland.png]]
 | style="background:#efefef" | '''Nazwa'''
 | style="background:#efefef" | <span style="white-space:nowrap">'''Koszt''' (bez inflacji)</span>
 | style="background:#efefef" | '''Opis'''
@@ -366,7 +366,7 @@ Poniżej przedstawiono tabelę, przedstawiającą koszty budowy poszczególnych 
 | Akceptuje [[pl/Manual/Base Set/Cargos/Cukier|Cukier]] z [[pl/Manual/Base Set/Industries/Kopalnia cukru|Kopalni cukru]], [[pl/Manual/Base Set/Cargos/Toffi|Toffi]] z [[pl/Manual/Base Set/Industries/Odkrywka toffi|Odkrywek toffi]] i [[pl/Manual/Base Set/Cargos/Wata cukrowa|Watę cukrową]] z [[pl/Manual/Base Set/Industries/Las waty cukrowej|Lasów waty cyukrowej]]. Produkuje [[pl/Manual/Base Set/Cargos/Słodycze|Słodycze]].
 |}
 
-Aby ufundować nowe przedsiębiorstwo w grze, przytrzymaj przycisk ''Przedsiębiorstwa'' na pasku [[File:en/Manual html m4d6ba21e.png]] (zobacz stronę ''Informacje o firmach i przedsiębiorstwach'' w [[pl/Manual/Interfejs gry|Interfejs gry]]) i wybierz ''Ufunduj nowe przedsiębiorstwo''.
+Aby ufundować nowe przedsiębiorstwo w grze, przytrzymaj przycisk ''Przedsiębiorstwa'' na pasku [[File:en/Manual/Manual html m4d6ba21e.png]] (zobacz stronę ''Informacje o firmach i przedsiębiorstwach'' w [[pl/Manual/Interfejs gry|Interfejs gry]]) i wybierz ''Ufunduj nowe przedsiębiorstwo''.
 
 Kilka ustawień zmienia zasady budowania nowych przedsiębiorstw: 
 * [[en/Archive/Manual/Settings/Build raw material industries]]
@@ -378,7 +378,7 @@ Od wersji 0.6.1 można ''poszukiwać'' nowych przedsiębiorstw. Ufundowanie nowe
 
 Istnieje możliwość włączenia tej funkcjonalności w grze z okna ustawień w zakładce ''środowisko'', ''budowa przedsiębiorstw wydobywczych'' może przyjmować trzy wartości: ''niedostępna'', ''jak inne przedsiębiorstwa'' i ''poszukiwania''.
 
-[[File:en/Coalmine.png|center|frame|[[pl/Manual/Base Set/Industries/Kopalnia węgla|Kopalnia węgla]] jest jednym z wielu przedsiębiorstw w grze.]]
+[[File:en/Manual/Base Set/Industries/Coalmine.png|center|frame|[[pl/Manual/Base Set/Industries/Kopalnia węgla|Kopalnia węgla]] jest jednym z wielu przedsiębiorstw w grze.]]
 
-{{pl/Navbox Industries}}
-[[Category:pl/Przedsiębiorstwa]]
+{{pl/Manual/Navbox Industries}}
+[[Category:pl/Manual/Base Set/Przedsiębiorstwa]]

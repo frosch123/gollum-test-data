@@ -20,8 +20,8 @@ __TOC__
 
 Poniższe zdjęcia pokazują charakterystyczny styl SimpleAI:
 {|
-|[[File:en/Simpleai.png|frame|none|Stacja kolejowa i miejsce załadunku ciężarówki]]
-|[[File:en/Simpleai passinglane.png|frame|none|Mijanie linii zbudowanych przez AI]]
+|[[File:en/Community/AI/Simpleai.png|frame|none|Stacja kolejowa i miejsce załadunku ciężarówki]]
+|[[File:en/Community/AI/Simpleai passinglane.png|frame|none|Mijanie linii zbudowanych przez AI]]
 |}
 Stacje pojazdów drogowych są budowane razem z magazynami i zwykle 5-25 pojazdów drogowych może jechać na jednej trasie (górna granica jest konfigurowalna). AI nie korzysta z tramwajów ani pojazdów przegubowych, ponieważ buduje tylko stacje w stylu terminalowym.
 
@@ -45,11 +45,11 @@ SimpleAI jest głównie kompatybilny z pojazdami i zestawami branżowymi NewGRF.
 
 Jednak AI ma problemy z NewGRF, które obejmują dodatkowe typy kolei, i mogą mieć problemy finansowe, jeśli niektóre pojazdy mają wysokie koszty eksploatacji.
 
-[[File:en/Simpleai firs.png|frame|none|SimpleAI z przemysłowym zestawem zastępczym FIRS, brytyjskim zestawem do odnawiania i odnawianiem stacji przemysłowych]]
+[[File:en/Community/AI/Simpleai firs.png|frame|none|SimpleAI z przemysłowym zestawem zastępczym FIRS, brytyjskim zestawem do odnawiania i odnawianiem stacji przemysłowych]]
 
 ==Konfiguracja==
 
-[[File:en/Simpleai configuration.png|frame|none|Okno konfiguracji SimpleAI]]
+[[File:en/Community/AI/Simpleai configuration.png|frame|none|Okno konfiguracji SimpleAI]]
 
 * '''Number of days to start this AI after the previous one (give or take)''': Jest to ustawienie, które pojawia się we wszystkich AI, tutaj możesz skonfigurować czas oczekiwania przed uruchomieniem AI.
 
@@ -79,7 +79,7 @@ SimpleAI nie jest konkurencyjną AI, więc nie buduje tras, które mają najwyż
 
 Podczas korzystania z SimpleAI zaleca się włączenie kolei o 90 stopni dla kolei, ponieważ domyślny wzór stacji (stary styl AI) obejmuje zwrot o 90 stopni, gdy pociąg opuszcza zajezdnię w kierunku drugiej stacji. Jeśli zakręty o 90 stopni są wyłączone, pociąg opuszczający zajezdnię najpierw jedzie na stację, zawraca i odjeżdża.
 
-[[File:en/Simpleai 90degturn.png|frame|none|Obrót o 90 stopni]]
+[[File:en/Community/AI/Simpleai 90degturn.png|frame|none|Obrót o 90 stopni]]
 
 Wskazane jest również włączenie ustawienia  ''buduj na zboczach'' , ponieważ AI nie wykona żadnego terraformowania podczas budowania tras.
 

@@ -1,12 +1,12 @@
 [[Translation:en/Manual/Tutorial/Two Tracks]]
 __NOTOC__
 
-{{en/Tabs|3|2
+{{en/Manual/Tutorial/Tabs|3|2
 |hu/Manual/Tutorial/Állomás két vágánnyal|1. Állomás két vágánnyal<!--
 -->|hu/Manual/Tutorial/Kétvágányú vasúti pálya|2. Kétvágányú vasúti pálya<!--
 -->|hu/Manual/Tutorial/Kezdő vasúthálózatok|3. Kezdő vasúthálózatok}}
 <div style="padding:.5em 1em 1em 1em; border-top:none; background-color:#f1f2fe; color:#000;">
-{{hu/Oktatás}}
+{{hu/Manual/Oktatás}}
 == Két pálya ==
 
 Ha egy egyszerű vasúti pályát több vonat használ két állomás közt, előfordulhat, hogy ''az egyik vonatnak sokat kell várnia, mielőtt a pályát használhatná'', főleg, ha hosszú a pálya. Ez azért van, mert -- a vonatok ütközésének megelőzése céljából  -- egy pályaszakaszon csak egy vonat tartózkodhat (pályaszakasz: a pálya jelzővel meg nem szakított része).
@@ -19,9 +19,9 @@ A kerülővágány a pálya jelzőkkel biztosított rövid része, mely a pály�
 A kerülővágány sikerének nyitja, hogy elég hosszú legyen ahhoz, hogy a leghosszabb vonat elférjen rajta. Miután az állomásaink ötmezőnyi hosszúak, úgy logikus, ha a kerülővágány is ötmezőnyi hosszúra épül. Mivel a jelző is elfoglal egy mezőt, a végeredmény ennél valamivel hosszabb.
 
 
-Ami a jelzőket illeti, [[File:en/Signal Electric Path One-Way.png]] '''egyirányú útvonaljelzőket''' használunk. Használhatsz kétirányú útvonaljelzőket is, csak akkor előfordulhat, hogy a vonatok előrelopakodnak, az egyirányú útvonaljelző ezt akadályozza meg. Tartsd szem előtt: fontos, hogy a vonatoknak elegendő helyük legyen a jelzőnél a várakozásra, lásd a lentebbi példát.
+Ami a jelzőket illeti, [[File:en/Manual/Signal Electric Path One-Way.png]] '''egyirányú útvonaljelzőket''' használunk. Használhatsz kétirányú útvonaljelzőket is, csak akkor előfordulhat, hogy a vonatok előrelopakodnak, az egyirányú útvonaljelző ezt akadályozza meg. Tartsd szem előtt: fontos, hogy a vonatoknak elegendő helyük legyen a jelzőnél a várakozásra, lásd a lentebbi példát.
 
-{{en/Phototable|[[File:en/Tutorial passing siding.png|400px]]|Egy kerülővágány (Kattints a nagyításhoz)|none}}
+{{en/Manual/Phototable|[[File:en/Manual/Tutorial/Tutorial passing siding.png|400px]]|Egy kerülővágány (Kattints a nagyításhoz)|none}}
 
 Ha a pályád hosszabb, mint a példánkban, az útvonal mentén több kerülővágányt is építhetsz. Ha a vonatok kezeléséhez ez nem felel meg eléggé, érdemes a teljes pályát megkettőzni.
 
@@ -31,24 +31,24 @@ Dupla pálya esetén mindkét irányban egy-egy pálya szolgál, ezáltal sokkal
 
 A pálya megduplázásához a legelső lépés, hogy a két állomás közt egy nagyon hosszú kerülővágányt építsünk. Ez elég ahhoz, hogy a harmadik vonatot is elindíthassuk, pont úgy, mint a kisebb kerülővágány esetében is.
 
-{{en/Phototable|[[File:en/Tutorial three trains.png|400px]]|Teljesen megkettőzött pálya és a harmadik vonat (Kattints a nagyításhoz)|none}}
+{{en/Manual/Phototable|[[File:en/Manual/Tutorial/Tutorial three trains.png|400px]]|Teljesen megkettőzött pálya és a harmadik vonat (Kattints a nagyításhoz)|none}}
 
 Ez három vonattal működik ugyan, de még mindig egy vonatunk halad csak az erőmű felé, és vele egy időben egy vonatunk halad csak a szénbánya felé. Ha elég hosszú a pályád, azt szeretnéd, hogy több vonat közlekedhessen egyszerre ugyanabban az irányban. Építhetsz további pályákat is, de a jelzőépítés sokkal hatékonyabb (és olcsóbb) megoldás.
 
-Ezt tesszük tehát. Építsünk több jelzőt! Ehhez használhatod a két útvonaljelző-típust, de miután csomópont nélküli pályán az egyébként csodás útvonal-foglalásra nincs szükség, használhatjuk az egyszerű jelzőt is. Ez a standard szakaszjelző, mely a jelzőválasztó bal szélén található: [[File:en/Signal Electric.png]].
+Ezt tesszük tehát. Építsünk több jelzőt! Ehhez használhatod a két útvonaljelző-típust, de miután csomópont nélküli pályán az egyébként csodás útvonal-foglalásra nincs szükség, használhatjuk az egyszerű jelzőt is. Ez a standard szakaszjelző, mely a jelzőválasztó bal szélén található: [[File:en/Manual/Signal Electric.png]].
 
 A jelzőtávolság (vagy jelzősűrűség) itt nem annyira fontos. Ha valamennyire valósághű pályát szeretnél, válassz legalább akkora jelzőtávolságot, mint a vonat hossza. Ha némileg nagyobb kapacitást szeretnél elérni, nagyon sűrű jelzősort építs. De mindkét esetben fontos, hogy szem előtt tartsd: oda építs csak jelzőt, ahol a vonat szabadon várakozhat! Példánk szerint tehát öt mezőnyi helyet számolj mindkét csomóponttól, és a hatodikra tedd a jelzőt. Ha így teszel, a jelzőnél várakozó mozdony soha nem fogja megállítani a csomópont forgalmát.
 
 Jelöld ki azt a jelzőtípust, amelyiket meg szeretnéd építeni, majd kattints arra a mezőre, amelyiken meg szeretnéd építeni. A szakaszjelzők kihelyezésükkor kétirányúak. Kattints megint a most már jelzőzött mezőre (a jelzőépítő eszköztár még mindig aktív), és egyirányúvá válik. Ha a másik irányban szeretnéd egyirányúvá tenni, kattints megint. A szakaszjelzők mellett a túloldalról érkező vonatok nem haladnak el. A jelzők grafikája első alkalommal talán egyértelműen világos. A szakaszjelző kisebb, és zöld jelzést mutat, ha nincs ott vonat. Az útvonaljelző magasabb, és vörös jelzést ad addig, amíg egy vonat le nem egy útvonalat a jelzőn át. Ha mindez zavarba hoz, használd csak az útvonaljelzőket, az elhelyezésükre ugyanazok a szabályok érvényesek.
 
-{{en/Phototable|[[File:en/Tutorial intermediate signals.png|400px]]|Dupla pálya közbülső jelzőkkel. Az útvonaljelzők ezeken a helyeken szintén működnek(kattints a kép nagyításához)|none}}
+{{en/Manual/Phototable|[[File:en/Manual/Tutorial/Tutorial intermediate signals.png|400px]]|Dupla pálya közbülső jelzőkkel. Az útvonaljelzők ezeken a helyeken szintén működnek(kattints a kép nagyításához)|none}}
 
 Elkészültek a jelzőid? Remek! Ebben a példában hat vonat fér el a pályán (bár négy vonat sokkal jobban dolgozik, próbáld ki magad is!). Van egy kiajánlott pályánk az erőmű felé, és egy másik kiajánlott pályánk a szénbányához visszatérő vonatok számára. A jelzők szakaszokra osztják a pályát, hogy több vonat közlekedhessen.
 
 === A másik állomás második vágánya ===
 Már megépítettük a második vágányt a szénbányánál. Viszont ha a forgalom igazán erőssé válik, valószínűleg egy második vágányt akarsz építeni az erőműnél is. Az elvek ugyanazok, mint a szénbánya állomásánál, és biztosan meg tudod magad is építeni a korábbi iránymutatások figyelembe vételével.
 
-{{en/Phototable|[[File:en/Tutorial two platforms both ends.png|400px]]|Második vágány az erőműnél (Kattints a kép nagyításához)|none}}
+{{en/Manual/Phototable|[[File:en/Manual/Tutorial/Tutorial two platforms both ends.png|400px]]|Második vágány az erőműnél (Kattints a kép nagyításához)|none}}
 
 Ha a távolság a két állomás közt (sokkal) nagyobb, felmerülhet, hogy a pálya másik végén is járműtelepet kellene építened. Ha a [[hu/Archive/Manual/Lerobbanások|lerobbanásokat]] engedélyezted (alapértelmezés szerint engedélyezettek), a másik járműtelep építése lehetőséget biztosít a járművek javítására, a lerobbanások ritkulását eredményezve.
 
@@ -56,4 +56,4 @@ Ha a távolság a két állomás közt (sokkal) nagyobb, felmerülhet, hogy a p�
 
 <span style="float: right">[[hu/Manual/Tutorial/Kezdő vasúthálózatok|'''Következő:''' Kezdő vasúthálózatok]] &raquo;</span>
 </div>
-[[Category:hu/Haladó vasúti oktatás]]
+[[Category:hu/Manual/Tutorial/Haladó vasúti oktatás]]

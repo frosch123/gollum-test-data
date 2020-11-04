@@ -22,27 +22,27 @@ Ha olyan NewGRF-eket szeretnél használni, melyek nem találhatók meg a tartal
 
 == NewGRF-ek aktiválása ==
 1.   A főmenüben kattins a ''NewGRF beállítások'' gombra.
-[[File:hu/Main window (NewGRF Settings).png|Főablak (NewGRF beállítások)|center]]
+[[File:hu/Manual/Main window (NewGRF Settings).png|Főablak (NewGRF beállítások)|center]]
 
 A felület megváltozott az OpenTTD 1.0 és 1.1 között, ezért az alábbiakban egymás után mindkettőt bemutatjuk.
 
 === 1.1-es és későbbi verziók ===
 2.   Válassz ki egyet az ''Inaktív NewGRF fájlok'' közül, majd kattints a ''Hozzáad'' gombra, vagy csak kattins duplán a NewGRF nevére. Kis képernyőkön így néz ki:
-[[File:hu/NewGRF beállítások (kicsi).png|NewGRF beállítások ablaka (kicsi)|center]]
+[[File:hu/Manual/NewGRF beállítások (kicsi).png|NewGRF beállítások ablaka (kicsi)|center]]
 Nagy képernyőkön pedig kényelmesen nagyra nő:
-[[File:hu/NewGRF beállítások (nagy).png|NewGRF beállítások ablaka (nagy)|center]]
+[[File:hu/Manual/NewGRF beállítások (nagy).png|NewGRF beállítások ablaka (nagy)|center]]
 3.   Ha szükséges, módosítsd egy aktív NewGRF beállításait: válaszd ki az ''Aktív NewGRF fájlok'' listájából, majd kattints a ''Paraméterek beállítása'' gombra. Ennek nyomán ilyesmi fog megjelenni:
-[[File:hu/NewGRF paraméterek.png|NewGRF paraméterablak|center]]
+[[File:hu/Manual/NewGRF paraméterek.png|NewGRF paraméterablak|center]]
 4.   Arra is van lehetőséged, hogy elmentsd a kiválasztott NewGRF-ek összeállítását (beállításaikkal együtt), illetve, hogy betölts egy ilyen listát. A mentés a ''Lista mentése'' gombbal lehetséges, a már elmentett listák pedig a ''Lista kiválasztása'' melletti legördülő menüből tölthetők be.
-[[File:hu/NewGRF lista mentése.png|NewGRF-lista mentése|center]]
+[[File:hu/Manual/NewGRF lista mentése.png|NewGRF-lista mentése|center]]
 
 === 1.0-s és korábbi verziók ===
 2.   Kattints a ''Hozzáad'' gombra.
-[[File:hu/NewGRF beállítások (Hozzáad).png|NewGRF beállítások ablaka (Hozzáad)|center]]
+[[File:hu/Manual/NewGRF beállítások (Hozzáad).png|NewGRF beállítások ablaka (Hozzáad)|center]]
 3.   Válaszd ki a használni kívánt NewGRF fájlt, majd kattints a ''Kiválasztáshoz hozzáad'' gombra.
-[[File:hu/Elérhető NewGRF fájlok ablaka.png|Elérhető NewGRF fájlok ablaka|center]]
+[[File:hu/Manual/Elérhető NewGRF fájlok ablaka.png|Elérhető NewGRF fájlok ablaka|center]]
 4.   Kattints a ''Hozzáad'' gombra további NewGRF-ek hozzáadásához, majd élesítsd a módosításokat az ''Alkalmazás'' gombbal, ha elkészültél.
-[[File:hu/NewGRF beállítások (Alkalmazás).png|NewGRF beállítások ablaka (Alkalmazás)|center]]
+[[File:hu/Manual/NewGRF beállítások (Alkalmazás).png|NewGRF beállítások ablaka (Alkalmazás)|center]]
 
 == Keverjük vagy ne keverjük ==
 Az OpenTTD lehetőséget ad akár 59 különböző NewGRF kiválasztására minden megkezdendő játékhoz. Mégsem válogathatod össze őket akárhogyan, némi tervezés szükségeltetik. Egyes NewGRF-ek nem kompatibilisek bizonyos más NewGRF-ekkel, néha pedig több NewGRF is kell, hogy kiegészítsék egymást. Az alábbiakban olvashatsz egy összefoglalót különböző NewGRF-ek társításáról, kiegészítve némi útmutatással arról, hogy mit szabad és mit nem érdemes keverni.
@@ -75,7 +75,7 @@ Az OpenTTD lehetőséget ad akár 59 különböző NewGRF kiválasztására mind
 Számos NewGRF figyelmeztet, ha nem megengedett társításokat teszel, és esetleg kikapcsolják magukat. Egy játék elindítása után javasolt ellenőrizni a NewGRF konfigurációt (az ''Eszközök'' menün keresztül). Probléma esetén érdemes elvetni a játékot, kijavítani a problémát, majd új játékot kezdeni. Véletlen játék esetén újragenerálható ugyanaz a térkép ugyanazon ''véletlen alapszám'' megadásával, egyidejűleg a többi térképgenerátorbeli beállítás változatlanul hagyásával. Egy játék véletlen alapszámát úgy tudhatod meg a játék megkezdése után, ha a [[hu/Konzol|konzolban]] kiadod a <code>getseed</code> parancsot.
 
 == 8 bites kontra 32 bites grafika ==
-{{hu/Programjellemző|1.2}}
+{{hu/Manual/Programjellemző|1.2}}
 Az OpenTTD 1.2.0-tól kezdődően a NewGRF-ek nemcsak a szokásos 8 bites, hanem 32 bites grafikát is tartalmazhatnak. Ezzel a változással voltaképpen a NewGRF-ek váltak az egyetlen eszközévé annak, hogy 32 bites grafika kerüljön az OpenTTD 1.2.0-ba és újabb kiadásaiba. Innentől kezdve a NewGRF-ek arra is képesek lehetnek, hogy a különböző nagyítási szintekhez különböző grafikát nyújtsanak.
 
 Az OpenTTD 1.2.0-s és újabb verzióiban 32 bites grafikát már nem lehet a régi png/tar formátumban használni. A régebb óta létező 32 bites grafikáknak még nem mindegyike érhető el NewGRF formátumban. Az OpenTTD 1.2.0-s és újabb verzióihoz elérhető 32 bites grafikákért lásd a [[hu/32 bites NewGRF-ek listája|32 bites NewGRF-ek listáját]].
@@ -85,7 +85,7 @@ Ha a régi 32 bites grafikai formátumot kívánod használni, az OpenTTD Extra 
 == Záró megjegyzések ==
 Ezek után új játék kezdésekor a kiválasztott NewGRF-ek működésbe lépnek, és az általuk előidézett változások a játékban meg is jelennek. Ugyanakkor a NewGRF-ek listájának módosítása nem befolyásolja a korábban mentett játékokat, ugyanis a NewGRF-ek a játékmentések szerves részét képezik, a használt NewGRF-ek listája tárolódik azokban.
 
-[[File:en/Newgrfexampless.png|thumb|600px|center|Képernyőkép egy játékból, melyben használják az UKRS és a Newstations NewGRF fájlokat]]
+[[File:en/Manual/Newgrfexampless.png|thumb|600px|center|Képernyőkép egy játékból, melyben használják az UKRS és a Newstations NewGRF fájlokat]]
 
 Az aktív NewGRF fájlok sorrendje is fontos, ez határozza meg a különböző NewGRF-ek egymásra hatását. Egy, a listában lentebb szereplő NewGRF felülírja egy fentebb szereplő NewGRF hatását.
 
@@ -95,7 +95,7 @@ Az aktív NewGRF fájlok sorrendje is fontos, ez határozza meg a különböző 
 * [http://newgrf-specs.tt-wiki.net/wiki/Main_Page NewGraphicSpecs] A GRF formátum részletei
 * [http://www.tt-forums.net/viewforum.php?f=66 NewGRF fórum]
 
-{{hu/Navbox NewGRF}}
+{{hu/Manual/Navbox NewGRF}}
 
-[[Category:hu/Beállítások és finomhangolás]]
-[[Category:hu/NewGRF]]
+[[Category:hu/Manual/Beállítások és finomhangolás]]
+[[Category:hu/Manual/NewGRF]]

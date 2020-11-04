@@ -1,7 +1,7 @@
 [[Translation:en/Manual/Industries]]
 {{nl/Inhoudsopgave}}
 
-:''Dit artikel gaat over het concept van een industrie in OpenTTD. Een gecategoriseerde lijst van industrieën kun je vinden in [[:Category:nl/Industrie]]''
+:''Dit artikel gaat over het concept van een industrie in OpenTTD. Een gecategoriseerde lijst van industrieën kun je vinden in [[:Category:nl/Manual/Base Set/Industries/Industrie]]''
 
 '''Industrieën''' zijn entiteiten die specifieke ladingen en/of diensten produceren. Er zijn drie soorten industrieën in OpenTTD: primaire, secundaire en tertiaire. Primaire industrieën, zoals mijnen, creëren middelen zonder dat er iets voor nodig is. Deze middelen worden vervolgens vervoerd door een transportbedrijf naar een secundaire industrie. Soms bieden secundaire industrieën een middel aan dat weer vervoerd kan worden naar steden (goederen of voedsel), of naar een tertiaire sector.
 
@@ -11,7 +11,7 @@ De industrie-vensters tonen twee getallen over de productie van elke vrachttype 
 
 De tweede waarde is het percentage van de geproduceerde hoeveelheid dat is geleverd aan de nabijgelegen stations voor de distributie. Industrieën kunnen besluiten om een deel van de productie achter te houden en het niet leveren aan een station.
 
-[[File:en/Industry window.png|frame|center|Industrie-venster van een kolenmijn]]
+[[File:en/Manual/Industry window.png|frame|center|Industrie-venster van een kolenmijn]]
 
 De groei van de productie van de primaire bedrijfstakken is afhankelijk van het percentage van de vervoerde lading. Hoe meer je vervoert, hoe sneller het groeit in het lange termijn gemiddelde.
 
@@ -250,12 +250,12 @@ __TOC__
 
 Het is mogelijk voor een voldoende rijk transportbedrijf om nieuwe industrie te financieren op het moment en waar jij wilt. Hou er wel rekening mee dat je niet onmiddellijk iets terugkrijgt voor je investering (zoals een deel van de winst), maar wel de lading kunt vervoeren. Je wordt ook geen eigenaar, dus je kunt het ook niet vernietigen. Zorg er dus voor dat je 'm op de juiste locatie plant. 
 
-Normaal gesproken kun je alleen de volgende [[:Category:nl/Industrie|industrieën]] financieren:
+Normaal gesproken kun je alleen de volgende [[:Category:nl/Manual/Base Set/Industries/Industrie|industrieën]] financieren:
 
 {| {{en/Wikitable}}
 !colspan=4 style="background:#ccffcc"|Gematigd
 |-
-| rowspan=7 valign="top"| [[File:nl/Industriegematigd.png]]
+| rowspan=7 valign="top"| [[File:nl/Manual/Industriegematigd.png]]
 | style="background:#efefef" | '''Naam'''
 | style="background:#efefef" | <span style="white-space:nowrap">'''Kosten''' (zonder inflatie)</span>
 | style="background:#efefef" | '''Opmerkingen'''
@@ -286,7 +286,7 @@ Normaal gesproken kun je alleen de volgende [[:Category:nl/Industrie|industrieë
 |-
 !colspan=4 style="background:#ccccff"|Subarctisch
 |-
-| rowspan=7 valign="top"| [[File:nl/Industriearctisch.png]]
+| rowspan=7 valign="top"| [[File:nl/Manual/Industriearctisch.png]]
 | style="background:#efefef" | '''Naam'''
 | style="background:#efefef" | <span style="white-space:nowrap">'''Kosten''' (zonder inflatie)</span>
 | style="background:#efefef" | '''Opmerkingen'''
@@ -317,7 +317,7 @@ Normaal gesproken kun je alleen de volgende [[:Category:nl/Industrie|industrieë
 |-
 !colspan=4 style="background:#ffffcc"|Tropisch
 |-
-| rowspan=7 valign="top"| [[File:nl/Industrietropisch.png]]
+| rowspan=7 valign="top"| [[File:nl/Manual/Industrietropisch.png]]
 | style="background:#efefef" | '''Naam'''
 | style="background:#efefef" | <span style="white-space:nowrap">'''Kosten''' (zonder inflatie)</span>
 | style="background:#efefef" | '''Opmerkingen'''
@@ -348,7 +348,7 @@ Normaal gesproken kun je alleen de volgende [[:Category:nl/Industrie|industrieë
 |-
 !colspan=4 style="background:#ff9999"|Speelgoedland
 |-
-| rowspan=5 valign="top"| [[File:nl/Industriespeelgoed.png]]
+| rowspan=5 valign="top"| [[File:nl/Manual/Industriespeelgoed.png]]
 | style="background:#efefef" | '''Naam'''
 | style="background:#efefef" | <span style="white-space:nowrap">'''Kosten''' (zonder inflatie)</span>
 | style="background:#efefef" | '''Opmerkingen'''
@@ -370,7 +370,7 @@ Normaal gesproken kun je alleen de volgende [[:Category:nl/Industrie|industrieë
 | Accepteert [[nl/Manual/Base Set/Cargos/Speelgoed|speelgoed]] uit [[nl/Manual/Base Set/Industries/Speelgoedfabriek|speelgoedfabrieken]].
 |}
 
-Om in het spel nieuwe industrie te bouwen hou je de ''Industrieën'' werkbalk knop ingedrukt [[File:en/Manual html m4d6ba21e.png]] (zie ''Bedrijf en industrie informatie'' in de [[nl/Manual/Spelinterface|Spelinterface]] pagina) en selecteer ''Financier nieuwe industrie''.
+Om in het spel nieuwe industrie te bouwen hou je de ''Industrieën'' werkbalk knop ingedrukt [[File:en/Manual/Manual html m4d6ba21e.png]] (zie ''Bedrijf en industrie informatie'' in de [[nl/Manual/Spelinterface|Spelinterface]] pagina) en selecteer ''Financier nieuwe industrie''.
 
 Verschillende patches veranderen de regels voor de bouw van nieuwe industrie:
 * [[nl/Archive/Manual/Settings/Bouw ruw materiaal industrieën|Bouw ruw materiaal industrieën]]
@@ -382,6 +382,6 @@ Vanaf versie 0.6.1 kun je nieuwe industrieën ''proberen''. Proberen en betalen 
 
 Je kunt deze functie in het spel aanzetten in de geavanceerde instellingen, onder Economie -> Industrieën => Handmatige bouwmethode voor primaire industrieën. Het kan ingesteld worden op ''geen'', ''zoals andere industrieën'' en ''proberen'' (standaard).
 
-[[File:en/Coalmine.png|center|frame|De kolenmijn is slechts één van de vele OpenTTD industrieën]]
+[[File:en/Manual/Base Set/Industries/Coalmine.png|center|frame|De kolenmijn is slechts één van de vele OpenTTD industrieën]]
 
-[[Category:nl/Industrie]]
+[[Category:nl/Manual/Base Set/Industries/Industrie]]

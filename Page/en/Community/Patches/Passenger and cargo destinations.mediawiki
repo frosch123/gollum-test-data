@@ -10,7 +10,7 @@
 Support for [[en/Community/Patches/Passenger and cargo destinations]] in OpenTTD exists in the new cargo packets branch by [[en/Archive/Community/Celestar]] and [[en/Archive/Community/Peter1138]]. An explanation on how to download and install this branch is given in the [[en/Community/Patches/Passenger and cargo destinations#installation|Installation]] section of this page.
 
 == Overview ==
-[[File:en/Example.png|thumb|Example city with long distance and local trains as well as an assortment of trams and buses]]
+[[File:en/Community/Patches/Example.png|thumb|Example city with long distance and local trains as well as an assortment of trams and buses]]
 
 [[en/Community/Patches/Passenger and cargo destinations]], or in short ''Cargodest'', is a system where cargo (this term includes passengers in the following) has a fixed destination to be delivered to, instead of the player deciding where to deliver it (by sending vehicles somewhere). This greatly increases the challenge and detail of the game and frankly, it's more fun and realistic as well. There have been a number of attempts at integrating this feature into OpenTTD and we're nearly there meanwhile.
 This page provides a short manual on how to use [[en/Community/Patches/Passenger and cargo destinations]], and a more detailed section on the technical side of its implementation in OpenTTD.
@@ -92,7 +92,7 @@ This is stuff which will ''not'' be in the first incarnation of cargodest, no ma
 
 === Missing features ===
 * Modification of the vehicle detail window so that is shows the origins
-* New icon for the Route Network view of the map: Suggestion: [[File:en/Minimaprouting.png]] Full quality TIF here: [http://www.fvfischer.de/minimaprouting.tif]
+* New icon for the Route Network view of the map: Suggestion: [[File:en/Community/Patches/Minimaprouting.png]] Full quality TIF here: [http://www.fvfischer.de/minimaprouting.tif]
 
 === Configuring ===
 
@@ -150,7 +150,7 @@ The "cost" of a route is the distance (Manhattan) times the vehicle penalty fact
 |}
 
 === Minimap Route Network ===
-[[File:en/Paxdest-graph.png|thumb|An example of a graph showing the route network]]
+[[File:en/Community/Patches/Paxdest-graph.png|thumb|An example of a graph showing the route network]]
 
 The minimap has received a new overlay called ''Route Network''. If you select this mode, you can view a visual representation of the route graph, where you can see exactly which stations (= nodes) are connected with (= have edges to) which for the selected cargo type(s). You can toggle each type of cargo at the bottom of the window individually, or use the ''Enable/Disable All'' buttons.
 
@@ -177,7 +177,7 @@ You can expand the conventional view to a detailed view, which gives you more in
 
 When using one of the detailed views, you can click on any station name mentioned in the window to move your main viewport there, or Ctrl-Click to open a new viewport on the station's location.
 
-[[File:en/Svw retract.png|frame|conventional view]]
+[[File:en/Community/Patches/Svw retract.png|frame|conventional view]]
 ==== Conventional View ====
 
 We all know this view from the early days of TTO, but it doesn't reveal much information except how much cargo we have for each type.
@@ -185,7 +185,7 @@ We all know this view from the early days of TTO, but it doesn't reveal much inf
 The little "+" sign indicates that there is more information about this cargo type. This is available for routed and unrouted cargo, however, the unrouted cargo needs this by far not as badly as the routed stuff. Click on the "+" and you can be bombarded with loads of information.
 
 {{en/-}}
-[[File:en/Svw full.png|frame|"full" view - Shows origin and destination for everything]]
+[[File:en/Community/Patches/Svw full.png|frame|"full" view - Shows origin and destination for everything]]
 ==== Full View ====
 This is possibly less useful a view but it's there nonetheless. It shows, for every piece of the selected cargo type, the origin and the destination. This is more for the detail-loving people among us than to really help optimizing your network.
 
@@ -196,14 +196,14 @@ The main problem with it is the sheer amount of entries you get even for a mid-s
 The Full View can be sorted alphabetically (by destination) or by the amount of cargo.
 
 {{en/-}}
-[[File:en/Svw destination.png|frame|"destination" view - Shows the ultimate destination of the cargo]]
+[[File:en/Community/Patches/Svw destination.png|frame|"destination" view - Shows the ultimate destination of the cargo]]
 ==== Destination View ====
 Here we go simple and straightforward again. We see all the destinations are currently "in use" along with the amount. However, we don't know how the cargo is attempting to get there.
 
 The Destination View can be sorted alphabetically or by the amount of cargo.
 
 {{en/-}}
-[[File:en/Svw nexthop.png|frame|"nexthop" view - Shows the station the cargo wishes to go next, independent of the question whether the cargo will leave the vehicle there or not]]
+[[File:en/Community/Patches/Svw nexthop.png|frame|"nexthop" view - Shows the station the cargo wishes to go next, independent of the question whether the cargo will leave the vehicle there or not]]
 ==== NextHop View ====
 We call this the NextHop view.
 
@@ -214,7 +214,7 @@ This is quite helpful if you have a lot of cargo at a station and need to find o
 The NextHop View can be sorted alphabetically or by the amount of cargo.
 
 {{en/-}}
-[[File:en/Svw tree.png|frame|"tree" view - Shows a logical tree where the cargo is going from the current station, includes information on how many units transfer or arrive at subsequent stations]]
+[[File:en/Community/Patches/Svw tree.png|frame|"tree" view - Shows a logical tree where the cargo is going from the current station, includes information on how many units transfer or arrive at subsequent stations]]
 
 ==== Tree View ====
 This view is possibly the most useful, if you get used to it. It shows a forward-tree of the cargo and its destinations (i.e. forward tree because this tree doesn't care about where the cargo comes from).
@@ -302,7 +302,7 @@ Check the doxygen documentation of the tree for more info, everything is documen
 Routes are added to the Routing Graph when the corresponding orders are inserted in a vehicle's order list.
 
 Look at the following example:
-[[File:en/Addroute.png|frame|center]]
+[[File:en/Community/Patches/Addroute.png|frame|center]]
 
 The first four orders don't add any route from one station to another, but they're there for some kind of realistic depot usage of the train.
 

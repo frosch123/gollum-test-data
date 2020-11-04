@@ -33,7 +33,7 @@ Aby natychmiast załadować określony scenariusz, użyj:
 
 Panel AI Debugowania jest dostępny z Informacji o obszarze lądowym (czerwony znak zapytania) oznaczonej "Konsola Debugowania SI" ''('AI Debug Console')''. Wszystkie wyjścia <code>AILog.XXX()</code> znajdują się tutaj i można je wybrać według AI. AI można również zrestartować tutaj. Podczas ponownego uruchamiania firma tego AI jest usuwana (wraz z całą jego własnością) i uruchamiana jest nowa AI kontrolowana przez ten sam skrypt (który jest ponownie ładowany z dysku). Dlatego przy zmianie AI wystarczy nacisnąć przycisk Przeładuj, aby uruchomić nową sztuczną inteligencję.
 
-[[File:en/Ai-debug-panel.png|frame|none|AI Debug Panel]]
+[[File:en/Development/Script/Ai-debug-panel.png|frame|none|AI Debug Panel]]
 
 ==== Przerwij komunikat w dzienniku log ====
 <!--{{Feature|1.1}}-->{{pl/Zgodne Wersje|1.1}}
@@ -41,7 +41,7 @@ Od wersji r19544 na dole panelu debugowania dodano kilka nowych elementów steru
 
 Aby włączyć tę funkcję, musisz włączyć ustawienie "gui.ai_developer_tools" enabled. Aby ją włączyć, możesz otworzyć konsolę w grze i wpisać "set gui.ai_developer_tools 1".
 
-[[File:en/AIDebug break on.png|frame|none|AI Debug Panel - zatrzymanie na ciągu]]
+[[File:en/Development/Script/AIDebug break on.png|frame|none|AI Debug Panel - zatrzymanie na ciągu]]
 
 ==== AIController::Break ====
 [http://noai.openttd.org/api/trunk/classAIController.html#9a99eff898d772565ee61029c596f484 Z dokumentacji]: Przerwij wykonywanie skryptu, gdy aktywne są narzędzia programistyczne skryptów (ustawienie "gui.ai_developer_tools" jest włączone). W przypadku innych użytkowników nic się nie stanie po wywołaniu tej funkcji. Aby wznowić skrypt, kliknij przycisk Kontynuuj w oknie debugowania AI.
@@ -56,7 +56,7 @@ Aby uzyskać osobne okno (tylko Windows), użyj parametru <code>-d</code> (użyj
 
 Zapewnia to wyjście (tylko Windows):
 
-[[File:en/Openttd -d.png|frame|none|Przykład Zuu dotyczący wersji -d konsoli programisty wyświetlającej błędy AI.]]
+[[File:en/Development/Script/Openttd -d.png|frame|none|Przykład Zuu dotyczący wersji -d konsoli programisty wyświetlającej błędy AI.]]
 
 W systemie Linux użycie <code>-d script=5</code> wyśle ​​wszystkie informacje na standardowe wyjście.
 
@@ -95,7 +95,7 @@ Na przykład, gdybym grał na mapie 2048 x 2048 i używał Valuatora do wyceny w
 
 === Współrzędne mapy ===
 
-[[File:en/Ai-placed-coordinate-of-airport.png|frame|right|AI umieściło to lotnisko, używając współrzędnej w prawym górnym rogu, która jest również jego zwróconą lokalizacją. Rozmiar lotniska wynosi X=4, Y=3]]
+[[File:en/Development/Script/Ai-placed-coordinate-of-airport.png|frame|right|AI umieściło to lotnisko, używając współrzędnej w prawym górnym rogu, która jest również jego zwróconą lokalizacją. Rozmiar lotniska wynosi X=4, Y=3]]
 
 Współrzędne mapy (X, Y) są wykonywane od góry do dołu - najwyższa współrzędna to (0,0), najniższa współrzędna to (Max_X-1, Max_Y-1). X zwiększa się, przechodząc w SW, a Y zwiększa się, przechodząc w SE. Za każdym razem, gdy zwracany jest więcej niż jeden obiekt wymiaru płytki, będzie to najwyższa współrzędna górna, zmierzająca w kierunku prawego górnego rogu.
 

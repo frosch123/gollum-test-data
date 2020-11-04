@@ -1,5 +1,5 @@
 [[Translation:en/Archive/Old 32bpp/32bit Graphics Development Documentation]]
-<!--{{outdated|References outdated forum threads etc.  The 32bpp project referred to in this section is, as of 2017, dead}}-->{{pl/Nieaktualizowane|Odnośniki do starszych wątków na forum itp. Projekt 32bpp, o którym mowa w tej sekcji, od 2017 r. zanika poza wyjątkami}}
+<!--{{outdated|References outdated forum threads etc.  The 32bpp project referred to in this section is, as of 2017, dead}}-->{{pl/Community/Nieaktualizowane|Odnośniki do starszych wątków na forum itp. Projekt 32bpp, o którym mowa w tej sekcji, od 2017 r. zanika poza wyjątkami}}
 
 
 ''« Wrócić do [[pl/Archive/Old 32bpp/Rozwój Grafiki 32bpp|Rozwój Grafik 32bpp]]''
@@ -21,11 +21,11 @@ Pliki szablonów zawierają prawidłowe oświetlenie, położenie kamery, rozdzi
 <div style="margin:1em;padding:1em;border:1px solid #c7c8fe;background:#f1f2fe;">
 <font size="3">'''Rozmiary'''</font>
 
-[[File:en/Model square.png|128px|lewo]]
+[[File:en/Archive/Old 32bpp/Model square.png|128px|lewo]]
 
 W maximum zoom level '''one square equals 12,5 m x 12,5 m equals 64px across'''. Jest to podstawowa jednostka dla torów kolejowych i dróg. Ponieważ budynki oryginalnego Transport Tycoon wyglądają tak, jakby miały około 25 m x 25 m na kwadrat, wiele nowych budynków zajmie 2 x 2 nowe kwadraty 12,5 m. Do porównania skali [[en/Ben|Ben Robbins]] modelowane [http://tt-forums.net/download.php?id=48953 Ottis, real-rozmiar ludzki].
 
-[[File:en/3dsmeasurements.jpeg|thumb|200px|right|Rozmiary dla jednego kwadratu budynku.]]
+[[File:en/Archive/Old 32bpp/3dsmeasurements.jpeg|thumb|200px|right|Rozmiary dla jednego kwadratu budynku.]]
 
 Jeśli pracujesz z 3D Studio Max, masz półprzezroczystą kwadratową siatkę na ziemi w rzutni Perspektywa. Ma domyślne wymiary 140 x 140 jednostek. Korzystając z tych pomiarów, jeśli przyjmiemy, że ten raster naziemny reprezentuje jeden kwadrat potentata transportu, możemy założyć, że człowiek o wysokości dwóch metrów zająłby 22,4 jednostki. Użyj tego, aby przeskalować swój budynek, rekwizyt lub pojazd. Jeśli utworzysz budynek 2x2, po prostu podziel odpowiednie liczby przez 2. W ten sposób, gdy wszystkie budynki się połączą, jeden duży budynek nie będzie wyglądał jak miniatura w porównaniu z rzekomo małym budynkiem. Jeśli chcesz, aby siatka domowa miała inny rozmiar, przejdź do <code>Customize</code>, i w <code>Grid and Snap</code> Okno dialogowe ustawień, przejdź do <code>Home Grid</code> tab.
 </div>
@@ -39,7 +39,7 @@ Jeśli pracujesz z 3D Studio Max, masz półprzezroczystą kwadratową siatkę n
 
 Dla '''every''' materiał, który tworzysz w <code>shaders</code> tab, zaleca się zmianę <code>Amb</code> parametru ('''0.5''' domyślnie) dopasować <code>Ref</code> parametr ('''1''' domyślnie). Zawsze musisz zmodyfikować <code>Ref</code> i <code>Amb</code> razem. Zdecydowano, że <code>Amb</code> powinna zawsze mieć tę samą wartość co <code>Ref</code>, ponieważ materiał powinien odbijać światło słoneczne lub inne źródła światła w taki sam sposób, jak odbija światło z otoczenia (światło otoczenia). Dlatego dla maksymalnego realizmu wartości powinny być takie same. Oczywiście nie jest to surowa zasada, masz swobodę artystyczną, aby się od tego odstąpić.
 
-[[File:en/Official materials.png|150px|prawe]]
+[[File:en/Archive/Old 32bpp/Official materials.png|150px|prawe]]
 
 Archiwum plików szablonu zawiera plik o nazwie '''official_materials.blend'''. Zawiera niektóre materiały, których będziesz często potrzebować i które powinny wyglądać tak samo w różnych obiektach, na przykład chodniku. Umieść ten plik w miejscu, w którym może się zatrzymać. Gdy zbudujesz model i chcesz użyć oficjalnego materiału, '''link the material rather than just append it'''. Aby uzyskać dodatkowe instrukcje, zobacz [[en/Using Official Materials]].
 </div>
@@ -47,7 +47,7 @@ Archiwum plików szablonu zawiera plik o nazwie '''official_materials.blend'''. 
 <div style="margin:1em;padding:1em;border:1px solid #c7c8fe;background:#f1f2fe;">
 <font size="3">'''Minimalizowanie czasu renderowania'''</font>
 
-[[File:en/AO-samples.png|400px|center]]
+[[File:en/Archive/Old 32bpp/AO-samples.png|400px|center]]
 
 Renderowanie może być dość wolne. Aby skrócić czas renderowania podglądu, zmniejsz <code>Samples</code> wartość poniżej <code>Ambient Occlusion</code>.
 </div>
@@ -98,7 +98,7 @@ __NOTOC__
 |}
 
 
-<!--{{Navbox Graphics Development}}-->{{pl/Navbox Programowanie grafik}}
+<!--{{Navbox Graphics Development}}-->{{pl/Community/NewGRF/Navbox Programowanie grafik}}
 
-[[Category:en/New Graphics]][[Category:en/32bpp Graphics]][[Category:en/32bpp Graphics Developer resources|D]]
-[[Category:pl/Nowe Grafiki]][[Category:pl/Grafiki 32bpp]][[Category:pl/Zasoby Twórców Grafik 32bpp|D]]
+[[Category:en/Development/NewGRF/New Graphics]][[Category:en/Development/NewGRF/32bpp Graphics]][[Category:en/Community/NewGRF/32bpp Graphics Developer resources|D]]
+[[Category:pl/Development/NewGRF/Nowe Grafiki]][[Category:pl/Community/NewGRF/Grafiki 32bpp]][[Category:pl/Community/NewGRF/Zasoby Twórców Grafik 32bpp|D]]

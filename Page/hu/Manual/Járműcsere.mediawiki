@@ -1,5 +1,5 @@
 [[Translation:en/Manual/Replace vehicles]]
-{{hu/Oktatás}}
+{{hu/Manual/Oktatás}}
 = Manuális csere =
 Járműveket egyesével is le lehet cserélni a következők szerint:
 # Küldd a szóban forgó járművet járműtelepre.
@@ -16,10 +16,10 @@ Ez az a fajta helyzet, amikor szükséged van az automatikus járműcserére. Le
 Ha az elöregedett járműveket az eredeti típussal akarod helyettesíteni, használd inkább a ''Haladó beállításoknál'' a [[hu/Járművek automatikus felújítása|Járművek automatikus felújítása]] funkciót.
 
 
-# A ''Járművek lecserélése'' ablak elérése érdekében először is nyisd meg annak a járműtípusnak a járműlistáját, amit le szeretnél cserélni (az alábbi képernyőmentésen a vonatok listája látható). Majd, miután a ''Lista kezelése'' menüre kattintottál, válaszd a ''Járművek lecserélése'' opciót.<br/>[[File:en/ManageList.png|frame|none|Itt található a ''Járművek lecserélése'' opció.]]<br/>
-# A ''Jármű lecserélése'' ablak jelenik meg a jármű típusának megfelelően, mely vonatok esetében az alábbihoz hasonlít:<br/>[[File:en/ReplaceTrain.png|frame|none|A ''Vonatok lecserélése'' ablak]]<br/>
+# A ''Járművek lecserélése'' ablak elérése érdekében először is nyisd meg annak a járműtípusnak a járműlistáját, amit le szeretnél cserélni (az alábbi képernyőmentésen a vonatok listája látható). Majd, miután a ''Lista kezelése'' menüre kattintottál, válaszd a ''Járművek lecserélése'' opciót.<br/>[[File:en/Manual/ManageList.png|frame|none|Itt található a ''Járművek lecserélése'' opció.]]<br/>
+# A ''Jármű lecserélése'' ablak jelenik meg a jármű típusának megfelelően, mely vonatok esetében az alábbihoz hasonlít:<br/>[[File:en/Manual/ReplaceTrain.png|frame|none|A ''Vonatok lecserélése'' ablak]]<br/>
 # A bal oldali panel az általad éppen használt járművek listáját és darabszámát, a jobb oldali panel a korszerűsítéshez elérhető járművek listáját mutatja. A járműcserét meghatározandó kattints a lecserélendő régi és a kívánt új típusokra.<br/>Ha vonatokat korszerűsítesz, a lecserélendő mozdonyok (bal oldali) listáján általában számos típus megjelenik, ezen módosíthatsz az ablak alján középen látható vasúttípus-választóval (a fenti képen a normál vasúti járművek láthatók). A jobb oldalon a választható mozdonyok vasúttípusonként, név szerinti rendben szerepelnek. Ugyancsak vonatok esetében válthatsz a mozdonyok és a vagonok cseréje közt ha a ''Lecserél: Mozdonyok'' gombra kattintasz.<br/>A csere céljaként másik vasúttípushoz tartozó mozdonyt természetesen nem lehet választani, mert a vonat nem lenne képes a járműtelepre behajtani és azt az új típusként elhagyni. A szabály alól egyetlen kivétel, amikor a normál vasúti mozdonyról villamosítottra korszerűsítünk (ha tudunk már villamosított vasutat építeni), mivel villamosított vasúton mindkettő futhat, és villamosított vasúti járműtelepen meg is vehetők.<br/><br/>
-# A járműcsere elkezdéséhez jelöld ki mindkét panelen a választásod szerinti járműveket, és kattints a ''Járműcsere elkezdése'' gombra.<br/>Ha egy járműtípus automatikus lecserélése teljesen befejeződött, a régi járműtípus ikonja szürkével jelenik meg a bal oldali panelen (mint az alábbi képen a ''Floss 47'').  Kattints a ''Járműcsere befejezése'' gombra a folyamat befejezéséhez, és a járműtípus eltűnik a listáról.<br/>[[File:en/ReplaceTrain2.png|frame|none|A ''Floss 47'' lecserélése ''SH 125''-re véget ért: a régi járműtípus szürkén jelenik meg]]
+# A járműcsere elkezdéséhez jelöld ki mindkét panelen a választásod szerinti járműveket, és kattints a ''Járműcsere elkezdése'' gombra.<br/>Ha egy járműtípus automatikus lecserélése teljesen befejeződött, a régi járműtípus ikonja szürkével jelenik meg a bal oldali panelen (mint az alábbi képen a ''Floss 47'').  Kattints a ''Járműcsere befejezése'' gombra a folyamat befejezéséhez, és a járműtípus eltűnik a listáról.<br/>[[File:en/Manual/ReplaceTrain2.png|frame|none|A ''Floss 47'' lecserélése ''SH 125''-re véget ért: a régi járműtípus szürkén jelenik meg]]
 
 ==Vagontörlés==
 Vonatok cseréje során a járműcsere-ablak jobb alsó sarkában található egy ''Vagontörlés ki/be'' feliratú gomb. Ha ez az opció be van kapcsolva, és egy 1 egységből álló mozdonyt cserélünk 2 egységből állóra (pl. Ginzu A4-et SH-125-re vagy valamelyik DMU-ra), az első vagont a játék automatikusan eladja, megőrzendő a vonat eredeti hosszát.
@@ -33,4 +33,4 @@ Ilyenkor az automatikus járműcsere szabályai eltérőek a pénzügyi helyzete
 * A lecserélendő jármű átalakítható kell hogy legyen az elvárt rakománytípusra.
 * A cégnek több pénze kell hogy legyen, mint az ''automatikus járműcsere limit + 2 * (új járművek ára)''.<br/>A képlet a régi járművek eladási árát nem veszi figyelembe. Az automatikus járműcsere limit megegyezik az automatikus felújításhoz szükséges minimum összeggel (ez a Haladó beállításoknál, az automatikus felújításhoz szükséges minimális pénznél szerepel). 
 * A javítási intervallumot (mely szintén a Haladó beállításoknál állítható be) el kell érni.
-[[Category:hu/Járművek]]
+[[Category:hu/Manual/Base Set/Járművek]]

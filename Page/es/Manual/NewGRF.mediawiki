@@ -1,6 +1,6 @@
 [[Translation:en/Manual/NewGRF]]
 {{es/Tabla de contenido}}
-'''NewGRF''' es un acrónimo de ''New G''raphics ''R''esource ''F''ile' (Archivo de Recurso de Nuevos Gráficos). Hay dos clases de gráficos de reemplazo. Uno son los NewGRF que se describen aquí (que son mucho más potentes que la mera introducción de más y nuevos gráficos), el otro son los [[es/Jugar con gráficos de 32 bits|gráficos de reemplazo de 32 bits]] que solo sustituyen los gráficos existentes de 8 bits con diferentes gráficos.
+'''NewGRF''' es un acrónimo de ''New G''raphics ''R''esource ''F''ile' (Archivo de Recurso de Nuevos Gráficos). Hay dos clases de gráficos de reemplazo. Uno son los NewGRF que se describen aquí (que son mucho más potentes que la mera introducción de más y nuevos gráficos), el otro son los [[es/Community/NewGRF/Jugar con gráficos de 32 bits|gráficos de reemplazo de 32 bits]] que solo sustituyen los gráficos existentes de 8 bits con diferentes gráficos.
 
 NewGRF es la forma de poder introducir en OpenTTD nuevos gráficos, vehículos, edificios, cargas e industrias. Los archivos NewGRF se pueden descargar e instalar en el juego para introducir estas nuevas características. A diferencia de las [[es/Archive/Manual/Settings/Opciones avanzadas|Opciones avanzadas]] que se pueden modificar a mitad de una juego, NewGRF debe instalarse antes de comenzar un nuevo juego con el fin de garantizar un funcionamiento correcto. El nombre "NewGRF" se refiere a las nuevas características añadidas a los archivos GRF (archivos gráficos de Transport Tycoon) que se pueden usar para cambiar los gráficos y el comportamiento del juego. NewGRF es un formato común para OpenTTD y para [[es/Archive/OpenTTD/TTDPatch|TTDPatch]], y es casi totalmente compatible en ambos.
 
@@ -49,14 +49,14 @@ Si instala una versión incorrecta de un archivo NewGRF, el juego funciona, pero
 
 ==Activar archivos NewGRF==
 # Inicie OpenTTD.
-# En el menú principal, pulse el botón "[[es/Configuración de NewGRF|Configuración NewGRF]]"<br/>[[File:es/Main window (NewGRF Settings).png|Pulse el botón ''Configuración NewGRF'' del ''Menú principal'']]<br/><br/>
-# Pulse ''Añadir''.<br/>[[File:es/NewGRF settings window (Add).png|Pulse el botón ''Añadir'' de la ventana ''Configuración de NewGRF'']]<br/><br/>
-# Seleccione el archivo NewGRF que desee utilizar y, a continuación, haga clic en ''Añadir a la selección''.<br/>[[File:es/Available NewGRF files window.png|Pulse ''Añadir en la selección'' en la ventana de ''Ficheros NewGRF disponibles'']]<br/><br/>
-# Haga clic en ''Añadir'' para añadir más NewGRF, a continuación, pulse ''Aplicar cambios'' cuando haya terminado.<br/>[[File:es/NewGRF settings window (Apply).png|Pulse ''Aplicar cambios'' de la ventana de ''Configuración de NewGRF'']]<br/><br/>
+# En el menú principal, pulse el botón "[[es/Manual/Configuración de NewGRF|Configuración NewGRF]]"<br/>[[File:es/Manual/Main window (NewGRF Settings).png|Pulse el botón ''Configuración NewGRF'' del ''Menú principal'']]<br/><br/>
+# Pulse ''Añadir''.<br/>[[File:es/Manual/NewGRF settings window (Add).png|Pulse el botón ''Añadir'' de la ventana ''Configuración de NewGRF'']]<br/><br/>
+# Seleccione el archivo NewGRF que desee utilizar y, a continuación, haga clic en ''Añadir a la selección''.<br/>[[File:es/Manual/Available NewGRF files window.png|Pulse ''Añadir en la selección'' en la ventana de ''Ficheros NewGRF disponibles'']]<br/><br/>
+# Haga clic en ''Añadir'' para añadir más NewGRF, a continuación, pulse ''Aplicar cambios'' cuando haya terminado.<br/>[[File:es/Manual/NewGRF settings window (Apply).png|Pulse ''Aplicar cambios'' de la ventana de ''Configuración de NewGRF'']]<br/><br/>
 
 Ahora, cada vez que inicia un nuevo juego, los NewGRF estarán activos, y cualquier cambio que haga se hará visible.
 
-[[File:en/Newgrfexampless.png|thumb|600px|center|Un pantallazo que muestra el uso de archivos NewGRF con UKRS y Newstations]]
+[[File:en/Manual/Newgrfexampless.png|thumb|600px|center|Un pantallazo que muestra el uso de archivos NewGRF con UKRS y Newstations]]
 
 ===Botones de las ventanas===
 '''Ventana Configuración de NewGRF'''
@@ -84,7 +84,7 @@ El orden de los NewGRF es importante para determinar cómo interactúan diferent
 
 Si bien los nuevos juegos usarán automáticamente los archivos .grf recién instalados, los juegos que hayan sido iniciados con anterioridad requieren los siguientes pasos para incluir los nuevos gráficos:
 
-# Mantenga pulsado el botón ''Opciones'' [[File:en/Manual html md7ebe52.png]] y seleccione la opción ''Configuración NewGRF''.
+# Mantenga pulsado el botón ''Opciones'' [[File:en/Manual/Manual html md7ebe52.png]] y seleccione la opción ''Configuración NewGRF''.
 # Añada el NewGRF que desee con el botón ''Añadir''
 # Al ''Aplicar cambios'' el programa le preguntará si está completamente seguro. Como precaución puede guardar la partida antes. 
 # Supongamos que está seguro de que quiere hacer estos cambios con el juego en marcha y que el programa no falla.
@@ -145,7 +145,7 @@ Las palabras colocadas detrás de # son interpretadas como comentarios, y se omi
 Se pueden probar algunas combinaciones como "DBset + Subarcticoset", "Templadoset + Subtropicalset" y así sucesivamente... aunque por el momento la única combinación que funciona bien es "Templadoset + Subarcticoset" (tenga en cuenta que esta información puede ser obsoleta y no tiene por qué reflejar el estado actual de las cosas; por favor, consulte los foros para conocer la situación actual)
 
 ===Parámetros===
-Algunos archivos NewGRF requieren uno o más parámetros. Véase el artículo [[es/Configuración de NewGRF|Configuración de NewGRF]] para información sobre cómo agregar parámetros a un archivo GRF, o haga lo siguiente en su archivo openttd.cfg:
+Algunos archivos NewGRF requieren uno o más parámetros. Véase el artículo [[es/Manual/Configuración de NewGRF|Configuración de NewGRF]] para información sobre cómo agregar parámetros a un archivo GRF, o haga lo siguiente en su archivo openttd.cfg:
 
  [newgrf]
  primersetw.grf           # No requiere ningún parámetro
@@ -169,5 +169,5 @@ Otros enlaces para descargar algunos archivos GRF (tenga en cuenta que son para 
 
 {{es/Navbox NewGRF}}
 
-[[Category:es/Configuración y preferencias]]
+[[Category:es/Manual/Configuración y preferencias]]
 [[Category:es/NewGRF]]

@@ -586,11 +586,11 @@ Cela veut dire qu'en ce qui concerne la vitesse des véhicules, une case mesure 
 *Accélération d'un train MagLev = 37 * (0,022 * Puissance - 0,24 * Vitesse^2 - 60 * Poids des voitures sur une pente montante + 60 * Poids des voitures sur une pente descendante) / Poids (km/h/jour)
 *Freiner est le double de l'accélération, sauf en entrant dans un dépôt ou une gare.
 *Les limites de vitesse ne s'appliquent que quand tous les virages ont lieu sur la longueur du train:
-[[File:en/Speed-limits.png]]
+[[File:en/Manual/Game Mechanics/Speed-limits.png]]
 
 ''Voir aussi: [[fr/Archive/Manual/Settings/Accélération réaliste|Accélération réaliste]] et [[fr/Community/Virage|Virages]].''
 
 Voyez aircraft_cmd.c, roadveh_cmd.c, ship_cmd.c, train_cmd.c, vechicle.c pour le code.
 
-[[Category:fr/Jouer]]
+[[Category:fr/Manual/Base Set/Jouer]]
 [[Category:fr/Développement]]

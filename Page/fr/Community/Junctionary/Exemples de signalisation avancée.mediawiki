@@ -4,7 +4,7 @@
 
 {{fr/À faire|Arranger tout cela dans un modèle propre d'arrangement de signaux compliqués. Peut-être même tout exporter vers les nouveaux types de [[fr/Community/Junctionary/Main Page|croisements]] ou dans les [[fr/Manual/Gares|gares]].}}
 
-[[File:en/Presig3.png|center|frame|Fig 1. - Pré-signaux utilisés à leur plein potentiel.]]
+[[File:en/Community/Junctionary/Presig3.png|center|frame|Fig 1. - Pré-signaux utilisés à leur plein potentiel.]]
 {{fr/À faire|Expliquer ce qui se passe sur l'image ci-dessus.}}
 
 ==Pré-signaux avec un croisement de voies simples==
@@ -18,13 +18,13 @@ La solution: les pré-signaux. Positionnez les pré-signaux d'entrée (horizonta
 
 Comment cela fonctionne: Appelons les signaux d'entrée sud AB, les signaux composés au croisement X (côté sud) et Y (côté nord), et les signaux d'entrée du nord CD. Un train en direction du nord entrera sur la voie unique en AB. Ab fonctionnent comme des signaux normaux. X devient rouge pour les trains allant au sud. X est un signal de sortie pour Y, donc Y devient aussi rouge pour les trains venant du nord. Y est un signal de sortie pour CD, donc les deux deviennent également rouge pour les trains allant au sud. Dans le même temps, un train est-ouest peut passer. Voici comment cela se passe de l'autre côté: Un train vers le sud entre sur la voie unique en CD. Y devient rouge pour les trains allant au nord, et Y est un signal de sortie pour X, donc X passe au rouge, ce qui un signal de sortie pour AB qui deviennent aussi rouges.
 
-[[File:en/Presig single sect.png|center|frame|Fig 2. - Pré-signaux utilisés pour permettre un croisement sur une voie unique. La capture d'écran illustre le second exemple ci-dessus, où le train entre au signal C. Remarquez que les signaux A et B sont rouges.]]
+[[File:en/Community/Junctionary/Presig single sect.png|center|frame|Fig 2. - Pré-signaux utilisés pour permettre un croisement sur une voie unique. La capture d'écran illustre le second exemple ci-dessus, où le train entre au signal C. Remarquez que les signaux A et B sont rouges.]]
 
 ==Gare pré-signalée optimale==
 Ci-dessous une image d'un modèle de gare pré-signalée "optimale".
 Avec ces signaux, les trains choisiront n'importe quel quai libre et, s'il n'y en a aucun, attendra à l'entrée plutôt que d'en choisir un arbitrairement et attendre que le train le quitte.
 
-[[File:en/Station presigs explained more.png|center|frame|Fig. 3 - Un modèle de gare RoRo "optimale" avec des pré-signaux.]]
+[[File:en/Community/Junctionary/Station presigs explained more.png|center|frame|Fig. 3 - Un modèle de gare RoRo "optimale" avec des pré-signaux.]]
 
 '''Explication des types de signaux:'''
 * Les signaux '''1''' à '''12''' sont des pré-signaux de sortie
@@ -46,14 +46,14 @@ Avec ces signaux, les trains choisiront n'importe quel quai libre et, s'il n'y e
 
 Ci-dessous une animation de la manière dont cela fonctionne dans le jeu.
 
-[[File:en/Presigs.gif|center|frame|Fig. 4 - Comment la station RoRo "optimale" fonctionnera avec les pré-signaux.]]
+[[File:en/Community/Junctionary/Presigs.gif|center|frame|Fig. 4 - Comment la station RoRo "optimale" fonctionnera avec les pré-signaux.]]
 
 
 Comme le montre l'animation, les trains peuvent choisir n'importe quelle voie sans trop de problèmes.
 
 
 ==Un autre exemple==
-[[File:en/Station Leave.jpeg|center|frame|Fig. 5 - Gare avec pré-signaux]]
+[[File:en/Community/Junctionary/Station Leave.jpeg|center|frame|Fig. 5 - Gare avec pré-signaux]]
 
 ==Gares "RoRo" avec double entrée==
 Les modèles que nous avons vu ci-dessus sont intéressants dans leur objectif - permettre à beaucoup de trains venant d'un endroit d'entrée efficacement sur un quai libre.
@@ -62,7 +62,7 @@ Cependant, de tels modèles de gare peuvent impliquer beaucoup de queue en amont
 
 Maintenant que vous êtes familiarisé avec la gare RoRo basique ci-dessus, vous pouvez considérer des moyens de réduire cela:
 
-[[File:en/Doubleentryexplained.png|frame|Ce style de gare RoRo permet à plus d'un train d'entrer dans la gare à la fois]]
+[[File:en/Community/Junctionary/Doubleentryexplained.png|frame|Ce style de gare RoRo permet à plus d'un train d'entrer dans la gare à la fois]]
 
 Le signal de séparation de double entrée est un simple signal combiné qui gère tout le système.
 
@@ -79,7 +79,7 @@ Cependant, le signal de séparation de double entrée a vu que le quatrième qua
 Si un second train était arrivé sur la ligne rouge, il aurait pu utiliser le quai 3 depuis la droite, maintenant libéré (qui a été libéré après que le premier train est entré dans le système).
 
 ==Voies libres==
-[[File:en/SpareTunnel.png|frame|Fig. 6 - Utiliser les pré-signaux pour permettre aux trains d'utiliser les voies disponibles plus efficacement]]
+[[File:en/Community/Junctionary/SpareTunnel.png|frame|Fig. 6 - Utiliser les pré-signaux pour permettre aux trains d'utiliser les voies disponibles plus efficacement]]
 Supposons que vous avez deux voies menant de deux sources vers le même endroit. Vous voulez que le trafic propre de chaque source ait la priorité sur sa propre voie, mais voulez utiliser la capacité disponible sur une des voies car l'autre est encombrée. cela peut se faire avec les pré-signaux.
 
 Dans le diagramme, les deux voies sont marquées ''A'' et ''B'', menant aux tunnels ''A'' et ''B'' respectivement. La voie ''A'' est celle avec le service le moins fréquent, dont nous voulons utiliser la capacité libre. La voie ''B'' est très encombrée et a besoin d'espace libre, ce que nous pouvons obtenir en déroutant du trafic sur ''A''. Toutefois, ce que nous ne voulons pas est que le trafic B perturbe le service sur ''A'' - en d'autres termes, ''A'' a besoin de la priorité sur son propre tunnel. Nous arrangeons cela en utilisant les pré-signaux.
@@ -93,5 +93,5 @@ Donc, quand ''3'' est rouge, un train sur ''B'' n'est autorisé à circuler que 
 
 De cette manière, les trains sur ''B'' utilisent la voie ''A'' s'il y a de la capacité libre, mais tout véhicule déjà sur ''A'' obtiendra la priorité.
 
-[[Category:fr/Chemins de fer]]
-[[Category:fr/Construction]]
+[[Category:fr/Manual/Base Set/Trains/Chemins de fer]]
+[[Category:fr/Manual/Base Set/Aircraft/Construction]]

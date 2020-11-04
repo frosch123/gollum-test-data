@@ -19,8 +19,8 @@ __TOC__
 
 The following pictures show the characteristic style of SimpleAI:
 {|
-|[[File:en/Simpleai.png|frame|none|A railway station and a lorry loading bay]]
-|[[File:en/Simpleai passinglane.png|frame|none|Passing lanes built by the AI]]
+|[[File:en/Community/AI/Simpleai.png|frame|none|A railway station and a lorry loading bay]]
+|[[File:en/Community/AI/Simpleai passinglane.png|frame|none|Passing lanes built by the AI]]
 |}
 Road vehicle stations are built together with depots, and usually 5-25 road vehicles can run on a single route (the upper limit is configurable). The AI doesn't use trams nor articulated vehicles, because it only builds terminus style stations.
 
@@ -44,11 +44,11 @@ SimpleAI is mostly compatibile with NewGRF vehicle and industry sets. It has bee
 
 However, the AI has problems with NewGRFs that include additional railway types, and may have financial problems if certain vehicles have high running costs.
 
-[[File:en/Simpleai firs.png|frame|none|SimpleAI with the FIRS Industry Replacement Set, the UK Renewal Set and the Industrial Stations Renewal]]
+[[File:en/Community/AI/Simpleai firs.png|frame|none|SimpleAI with the FIRS Industry Replacement Set, the UK Renewal Set and the Industrial Stations Renewal]]
 
 ==Configuration==
 
-[[File:en/Simpleai configuration.png|frame|none|The configuration window of SimpleAI]]
+[[File:en/Community/AI/Simpleai configuration.png|frame|none|The configuration window of SimpleAI]]
 
 * '''Number of days to start this AI after the previous one (give or take)''': This is a setting which appears with all AIs, here you can configure the waiting time before the AI is started.
 
@@ -78,7 +78,7 @@ SimpleAI is not a competitive AI, so it doesn't build routes which have the high
 
 It is advisable to enable 90 degree turns for railways when using SimpleAI, as the default (old AI-style) station pattern includes a 90 degree turn when the train is leaving the depot in the direction og the other station. If 90 degree turns are disabled, the train leaving the depot will go to the station first, turn around there and leave afterwards.
 
-[[File:en/Simpleai 90degturn.png|frame|none|90 degree turn]]
+[[File:en/Community/AI/Simpleai 90degturn.png|frame|none|90 degree turn]]
 
 It is also advisable to have the ''build on slopes'' setting on, as the AI will not do any terraforming while building routes.
 

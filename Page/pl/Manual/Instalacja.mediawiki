@@ -21,37 +21,37 @@ Poza tym, istnieją różne wersje na różne [[pl/<!--System operacyjny-->Syste
 '''Select the installation instructions for the base graphics set you chose and your operating system:'''
 :<p style="font-size: 90%">''(If you have access to the TTD base graphics and can't decide what base graphics to use, install the game using the TTD base graphics. OpenGFX can easily be installed afterwards. However, the easiest way is to install the game with all files from the start: TTD base graphics, OpenGFX, OpenMFX and OpenSFX files.'')</p>
 
-[[File:en/Installation 1a.png|frame|center|Downloads page of OpenTTD: ''www.openttd.org/download-stable'']]
+[[File:en/Manual/Installation 1a.png|frame|center|Downloads page of OpenTTD: ''www.openttd.org/download-stable'']]
 
 ===Instalacja na Windows===
 ====Użycie podstawowych grafik TTD====
 '''1.''' Get Transport Tycoon Deluxe for Windows. If you don't have your CD, see [http://www.google.com/search?q=transport+tycoon+deluxe Google]. '''Note''': The original graphics are '''copyrighted''', it may be illegal (in some countries) to download them.
 
 '''2.''' Download the Windows installer for OpenTTD from the [http://www.openttd.org/download-stable downloads page].
-[[File:en/Installation 1b.png|frame|center|The Windows installer for OpenTTD]]
+[[File:en/Manual/Installation 1b.png|frame|center|The Windows installer for OpenTTD]]
 
 '''3.''' Install OpenTTD. Chose the components '''OpenTTD''' and '''Copy data from TTD CD-ROM'''.
-[[File:en/Installation 2.png|frame|center|Chose components]]
+[[File:en/Manual/Installation 2.png|frame|center|Chose components]]
 
 '''4.''' Tell OpenTTD where to find your TTD files; it should find them automatically if you used the TTD Windows installer, if not point it to the TTD CD in the drive.
-[[File:en/Installation 3.png|frame|center|Locate TTD]]
+[[File:en/Manual/Installation 3.png|frame|center|Locate TTD]]
 
 '''5.''' Chose the folder in which to install OpenTTD.
-[[File:en/Installation 4.png|frame|center|Chose Install Location]]
+[[File:en/Manual/Installation 4.png|frame|center|Chose Install Location]]
 
 '''6.''' Select the Start Menu folder in which you would like to create the program's shortcuts.
-[[File:en/Installation 5.png|frame|center|Chose Start Menu Folder]]
+[[File:en/Manual/Installation 5.png|frame|center|Chose Start Menu Folder]]
 
 '''7.''' Select Run OpenTTD and click Finish
-[[File:en/Installation 6.png|frame|center|OpenTTD has been installed!]]
+[[File:en/Manual/Installation 6.png|frame|center|OpenTTD has been installed!]]
 
 ====Użycie podstawowych grafik OpenGFX====
 '''1.''' Download the Windows installer for OpenTTD from the [http://www.openttd.org/ OpenTTD website].
-[[File:en/Installation 1b.png|frame|center|The Windows installer for OpenTTD]]
+[[File:en/Manual/Installation 1b.png|frame|center|The Windows installer for OpenTTD]]
 '''2.''' Install OpenTTD.
 
 '''3.''' Skip the step where the installer asks for the TTD files. Do this by unchecking "Copy Game Graphics" in the "Choose Components" menu.
-[[File:en/Installation 2 gfx.png|frame|center|Installer setup for users without TTD files]]
+[[File:en/Manual/Installation 2 gfx.png|frame|center|Installer setup for users without TTD files]]
 
 '''4.''' Editing the config file
 :'''4.1.''' Locate [[pl/Archive/Manual/Settings/Openttd.cfg|openttd.cfg]]. It is located in:
@@ -62,7 +62,7 @@ Poza tym, istnieją różne wersje na różne [[pl/<!--System operacyjny-->Syste
 :'''4.3.''' Locate the [misc] section and add the following (or edit the existing) line to the end of that section:
  graphicsset = "OpenGFX"
 : The name of the base graphics set is listed in it's obg-file and may or may not be identical to the obg's file name.
-[[File:en/Installation 9 grx manual configuration cfg.png|frame|center|Example]]
+[[File:en/Manual/Installation 9 grx manual configuration cfg.png|frame|center|Example]]
 :'''4.4.''' Save the changes you made and run OpenTTD.
 
 ===Instalacja na Mac OS X===
@@ -75,7 +75,7 @@ Poza tym, istnieją różne wersje na różne [[pl/<!--System operacyjny-->Syste
 '''3''' OpenTTD requires some files from TTD, see [[#files-from-ttd|below]] for what files need to go where.
 
 '''4''' Get the OSX installer for OpenTTD from the [http://www.openttd.org/download-stable downloads page].
-[[File:en/Installation 1b osx.png|frame|center|1.1.2 for Mac OSX]]
+[[File:en/Manual/Installation 1b osx.png|frame|center|1.1.2 for Mac OSX]]
 
 '''5''' Run OpenTTD.
 
@@ -142,4 +142,4 @@ Jest kilka możliwości, aby uzyskać te pliki:
 * [[pl/Archive/Manual/FAQ Instalacji|Installation FAQ]] dla innych metod instalacji
 * [[pl/Archive/Community/OpenGFX Readme|OpenGFX Readme]]
 
-[[Category:pl/Instalacja]]
+[[Category:pl/Manual/Base Set/Trains/Instalacja]]

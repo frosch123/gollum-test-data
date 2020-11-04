@@ -1,6 +1,6 @@
 [[Translation:en/Manual/Waypoints]]
 
-'''''Punkt orientacyjny''' to każda struktura pozwalająca jakiemuś pojazdowi na wybór właściwej trasy. W [[pl/Manual/Main Page|OpenTTD]] występują dwa rodzaje punktów orientacyjnych: kolejowy posterunek i boja dla statków. Szczegóły na temat boi znajdują się w artykule [[pl/Infrastruktura wodna#boja|Infrastruktura wodna: boja]], w tym artykule opisano szczegółowo posterunki (w rzeczywistości te dwa elementy działają bardzo podobnie)''
+'''''Punkt orientacyjny''' to każda struktura pozwalająca jakiemuś pojazdowi na wybór właściwej trasy. W [[pl/Manual/Main Page|OpenTTD]] występują dwa rodzaje punktów orientacyjnych: kolejowy posterunek i boja dla statków. Szczegóły na temat boi znajdują się w artykule [[pl/Manual/Infrastruktura wodna#boja|Infrastruktura wodna: boja]], w tym artykule opisano szczegółowo posterunki (w rzeczywistości te dwa elementy działają bardzo podobnie)''
 
 '''Posterunek''' to [[pl/Manual/Linie kolejowe|kolejowa]] struktura, zajmująca (przynajmniej) jedną kratkę prostych torów kolejowych. Jest to punkt orientacyjny (zwany również punktem kontrolnym) dla pociągów. Posterunek należy dodać do [[pl/Manual/Polecenia|poleceń]] pociągu, jako polecenie [[pl/Manual/Polecenia#opcje-postoju|''Idź przez'']], co oznacza, że pociąg nie zatrzyma się na posterunku, a jedynie przejedzie przez niego. Niemożliwe jest w jego przypadku dodanie polecenia ''Idź do''. Powodem dla którego będziesz chciał zbudować posterunek jest to, że algorytm wyznaczania drogi z punktu A do punktu B dla pociągów, nie jest idealny. Jeśli Twoja sieć kolejowa osiągnęła naprawdę pokaźne rozmiary, pociągi mogą się od czasu do czasu w niej gubić.
 
@@ -13,9 +13,9 @@
 
 Punkty orientacyjne zwiększają kontrolę gracza nad jego pociągami.
 
-[[File:en/Checkpoints.png|center|frame|Kilkanaście posterunków]]
+[[File:en/Manual/Checkpoints.png|center|frame|Kilkanaście posterunków]]
 
-[[File:en/Waypoints.png|center|thumb|500px||Używacie posterunków do rozdzielenia ruchu pasażerskiego i towarowego]]
+[[File:en/Manual/Waypoints.png|center|thumb|500px||Używacie posterunków do rozdzielenia ruchu pasażerskiego i towarowego]]
 
 ==Jak zbudować i zastosować posterunek==
 
@@ -29,7 +29,7 @@ Możesz dodać posterunek do [[pl/Manual/Polecenia|poleceń]] pociągu, w ten sa
 Oryginalny wygląd posterunków może być zmieniony przez [[pl/Manual/NewGRF|NewGRFy]], przykładowo [http://grfcrawler.tt-forums.net/details.php?do=details&id=13 Newstations] Michael'a Blunck'a lub [http://grfcrawler.tt-forums.net/details.php?do=details&id=104 UK Waypoints] autorstwa Born_Acorn'a.
 
 Kliknij na budowę posterunku, zostanie otwarte specjalne okno z dostępnymi typami posterunków. Nie różnią się one niczym poza wyglądem.
-[[File:en/Newgrfwayp.png|center|frame|Przykładowy wygląd posterunków przy użyciu NewGRFów]]
+[[File:en/Manual/Newgrfwayp.png|center|frame|Przykładowy wygląd posterunków przy użyciu NewGRFów]]
 
-[[Category:pl/Konstrukcje]]
+[[Category:pl/Manual/Konstrukcje]]
 [[Category:pl/Kolej]]

@@ -41,7 +41,7 @@ Tramtypes use labels very close to railtype labels.
 
 Note, that catenary is not specific to tramtypes. Trolley busses are not trams.
 
-[[File:en/Nrt defaulttypes.png]]
+[[File:en/Archive/Development/Nrt defaulttypes.png]]
 
 === Compatibility/Poweredness ===
 
@@ -80,7 +80,7 @@ Compatibility:
 Note: Technically the specs do not enforce any "transitivity" for the compatibility.
 That means, if A can drive on B and B can drive on C, A does not necessarily drive on C.
 
-[[File:en/Nrt example1 dot.png]]
+[[File:en/Archive/Development/Nrt example1 dot.png]]
 
 (the image does not include the transitive relations)
 
@@ -109,7 +109,7 @@ There are no vehicles which require both 3rd rail and catenary.
 | 3ORC || ELRL, 3RDR, 3RDC
 |}
 
-[[File:en/Nrt example2 dot.png]]
+[[File:en/Archive/Development/Nrt example2 dot.png]]
 
 (the image does not include the transitive relations)
 
@@ -135,7 +135,7 @@ General rules:
 !colspan=2| Composition
 |-
 | Foundation                     || baseset  || X || X || X || (1)
-|rowspan=15| [[File:en/Nrt layers.png]]
+|rowspan=15| [[File:en/Archive/Development/Nrt layers.png]]
 |-
 | Grass or paved sidewalks       || baseset  || X || X || X || (2)
 |-
@@ -414,37 +414,37 @@ There is a global limit of 15 roadtypes and 15 tramtypes, including the default 
 ! NFO Action3 Id !! NML !! Required !! Notes !! Action 5 equivalent
 |-
 | 0x00 || gui             || optional                             || 12 sprites (6 gui icons, 6 cursors)
-[[File:en/Nrt gui.png]]
+[[File:en/Archive/Development/Nrt gui.png]]
 | 0-1, 4 new, 2-3, 4 new
 |-
 | 0x01 || track_overlay   || optional for road, required for tram || 19 sprites (11 roadbit combinations, 4 slopes, 4 dead ends)
-[[File:en/Nrt overlay.png]]
+[[File:en/Archive/Development/Nrt overlay.png]]
 | 4-22
 |-
 | 0x02 || underlay        || required                             || 19 sprites (11 roadbit combinations, 4 slopes, 4 dead ends)
-[[File:en/Nrt underlay.png]]
+[[File:en/Archive/Development/Nrt underlay.png]]
 | 27-45
 |-
 | 0x04 || catenary_front  || optional                             || 29 sprites (11 roadbit combinations, 4 slopes, 4 dead ends, 4 tunnels, 2 bridge middle, 4 bridge ramps)
-[[File:en/Nrt catenary front.png]]
+[[File:en/Archive/Development/Nrt catenary front.png]]
 | 56-62, 64-67, 72-75, 4 new, 80-83, 97-98, 103-106
 |-
 | 0x05 || catenary_back   || optional                             || 29 sprites (11 roadbit combinations, 4 slopes, 4 dead ends, 4 tunnels (unused), 2 bridge middle, 4 bridge ramps)
-[[File:en/Nrt catenary back.png]]
+[[File:en/Archive/Development/Nrt catenary back.png]]
 | 84-94, 68-71, 4 new, 4 new, 95-96, 99-102
 |-
 | 0x06 || bridge_surfaces || required                             || 6 sprites (2 bridge middle, 4 bridge ramps)
-[[File:en/Nrt bridge.png]]
+[[File:en/Archive/Development/Nrt bridge.png]]
 | 107-112
 |-
 | 0x08 || depots          || optional                             || 6 sprites
-[[File:en/Nrt depot.png]]<br/>
+[[File:en/Archive/Development/Nrt depot.png]]<br/>
 If not present, the default depot sprites (depending on catenary flag) plus track overlay are drawn.<br>
 If present, the depot sprites are expected to include track overlay graphics.
 | 49-54 or 113-118
 |-
 | 0x0A || drive-in stops  || require for road, invalid for tram   || 4 sprites (overlays for drive-in road stops)
-[[File:en/Nrt drivein.png]]
+[[File:en/Archive/Development/Nrt drivein.png]]
 | new
 |}
 
@@ -513,7 +513,7 @@ Future:
 * "Vehicle-only types" are used by vehicles and reference other types for compatibility, but are not buildable themself.
 * "Vehicle-only types" should not count towards the "maximum 15 types" limit.
 * "Vehicle-only types" are visible in dropdowns that filter vehicles, like in the autoreplace GUI.
-* See also [[#example-2 | Example 2]] above, and {{en/Flyspray|5006}}.
+* See also [[#example-2 | Example 2]] above, and {{en/Development/Design Drafts/Flyspray|5006}}.
 
 === Foundations ===
 Current status:

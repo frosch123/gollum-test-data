@@ -33,7 +33,7 @@ Pour charger un scénario spécifique immédiatement, utilisez:
 
 La fenêtre de débogage de l'IA est accessible depuis l'information sur le terrain (point d'interrogation rouge) intitulé "Console de débogage de l'IA". Toutes les sorties de <code>AILog.XXX()</code> vont là, et peuvent être sélectionnées par IA. L'IA peut aussi être redémarrée ici. Lors de son redémarrage, la compagnie de cette IA est supprimée (avec toutes ses propriétés), et une nouvelle IA contrôlée par le même script (qui est rechargé depuis le disque) est démarrée. Donc, pour changer l'IA, il suffit simplement de cliquer sur le bouton Recharger pour que votre nouvelle IA fonctionne.
 
-[[File:en/Ai-debug-panel.png|frame|none|Fenêtre de débogage de l'IA]]
+[[File:en/Development/Script/Ai-debug-panel.png|frame|none|Fenêtre de débogage de l'IA]]
 
 ==== Arrêt sur message de trace ====
 {{fr/Disponibilité|1.1}}
@@ -41,7 +41,7 @@ Depuis la révision r19544, il a été ajouté certains contrôles supplémentai
 
 Pour activer cette fonctionnalité, vous devez avoir le paramètre "gui.ai_developer_tools" activé. Pour le faire, vous pouvez ouvrir la console du jeu et entrer "set gui.ai_developer_tools 1".
 
-[[File:en/AIDebug break on.png|frame|none|Fenêtre de débogage de l'IA - arrêt sur chaîne]]
+[[File:en/Development/Script/AIDebug break on.png|frame|none|Fenêtre de débogage de l'IA - arrêt sur chaîne]]
 
 ==== Utilisation de la console pour le développeur ====
 
@@ -53,7 +53,7 @@ Pour avoir une fenêtre séparée (seulement sous Windows), utilisez le paramèt
 
 Cela produit cet affichage (uniquement sur Windows):
 
-[[File:en/Openttd -d.png|frame|none|Exemple de Zuu de la console de développement version -d affichant les erreurs de l'IA]]
+[[File:en/Development/Script/Openttd -d.png|frame|none|Exemple de Zuu de la console de développement version -d affichant les erreurs de l'IA]]
 
 Pour Linux, utiliser <code>-d ai=5</code> enverra toutes les informations sur stdout.
 
@@ -92,7 +92,7 @@ Par exemple, si je joue sur une carte 2048x2048 et utilise un Valuator pour éva
 
 === Coordonnées de la carte ===
 
-[[File:en/Ai-placed-coordinate-of-airport.png|frame|right|L'IA a placé cet aéroport en utilisant la coordonnée la plus en haut à droite, qui est aussi l'emplacement renvoyé. La taille de l'aéroport est X=4, Y=3]]
+[[File:en/Development/Script/Ai-placed-coordinate-of-airport.png|frame|right|L'IA a placé cet aéroport en utilisant la coordonnée la plus en haut à droite, qui est aussi l'emplacement renvoyé. La taille de l'aéroport est X=4, Y=3]]
 
 Les coordonnées (X,Y) de la carte vont de haut en bas - la coordonnée la plus haute est (0,0), la plus basse (Max_X-1,Max_Y-1). X est incrémenté en allant au SO, et Y en allant au SE. Chaque fois qu'un objet de plus d'une case est renvoyé, ce sera sa plus haute coordonnée, la plus proche du bord haut droit.
 

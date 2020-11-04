@@ -1,5 +1,5 @@
 [[Translation:en/Manual/Replace vehicles]]
-{{es/Tutorial}}
+{{es/Manual/Tutorial}}
 = Reemplazar manualmente =
 Se puede reemplazar un solo vehículo sin perder su lista de órdenes siguiendo estos pasos:
 #Envíe el vehículo a un depósito.
@@ -11,11 +11,11 @@ Se puede reemplazar un solo vehículo sin perder su lista de órdenes siguiendo 
 El autoreemplazo (o reemplazo automático) es una función muy útil implementada por [[en/Archive/Community/Bjarni]] que le permite actualizar su flota entera de cierto tipo de vehículo a un tipo diferente sin tener que venderlos o reemplazarlos individualmente. Imagínese que usted acaba de terminar la construcción de una red de 40 autobuses y luego llega un nuevo tipo de autobús: se necesitaría una cantidad significativa de tiempo y esfuerzo para enviarlos a todos a los depósitos, venderlos y luego comprarlos nuevos (todo ello 40 veces); este es el tipo de situación en el que usted necesita Autoreemplazar. Puede sustituir un modelo de tren a otro modelo de tren, y los vagones también se pueden reemplazar. Esto es muy útil con sets [[es/Manual/NewGRF|NewGRF]] que introducen nuevos y más rápidos tipos de vagones, según el juego avanza.
 
 
-Para llegar a la pantalla de reemplazar vehículos, en primer lugar abra la lista de vehículos del tipo que desee haciendo clic en el botón correspondiente [[File:en/Vehicle list button.png]] (en el ejemplo de abajo se muestran los trenes). Luego, desde el menú ''Administrar lista'', haga clic en ''Reemplazar vehículos''.
-[[File:es/ManageList.png|frame|none|Aquí puede encontrar el botón ''Reemplazar vehículos''.]]
+Para llegar a la pantalla de reemplazar vehículos, en primer lugar abra la lista de vehículos del tipo que desee haciendo clic en el botón correspondiente [[File:en/Manual/Vehicle list button.png]] (en el ejemplo de abajo se muestran los trenes). Luego, desde el menú ''Administrar lista'', haga clic en ''Reemplazar vehículos''.
+[[File:es/Manual/ManageList.png|frame|none|Aquí puede encontrar el botón ''Reemplazar vehículos''.]]
 
 Aparece la ventana ''Reemplazar <tipo de vehículo>'', parecida a la de los trenes que se muestra a continuación.
-[[File:es/ReplaceTrain.png|frame|none|La ventana ''Reemplazar vehículos'' para trenes.]]
+[[File:es/Manual/ReplaceTrain.png|frame|none|La ventana ''Reemplazar vehículos'' para trenes.]]
 
 El panel izquierdo muestra los vehículos que se están utilizando actualmente (y que se pueden reemplazar). El panel derecho muestra los nuevos vehículos disponibles (para sustituir a los viejos). Haga clic en el tipo que desea sustituir y en el nuevo para seleccionarlos y así definir el reemplazo.
 
@@ -28,7 +28,7 @@ Naturalmente, no es posible hacer un reemplazo entre distintos tipos de trenes p
 Para empezar a reemplazar vehículo sólo tiene que hacer la selección y pulsar ''Empezar a reemplazar vehículos''.
 
 Una vez que todos los vehículos de un tipo han sido reemplazados, el tipo viejo de vehículo que ha sido reemplazado se vuelve de color gris en la ventana reemplazar (como el ''Floss 47'' que se muestra abajo). Haga clic en él y en ''Parar de reemplazar vehículos'' para finalizar el procedimiento. Luego el vehículo sustituido desaparecerá de la lista.
-[[File:es/ReplaceTrain2.png|frame|none|Después de reemplazar todos los ''Floss 47'' el vehículo se vuelve de color gris.]]
+[[File:es/Manual/ReplaceTrain2.png|frame|none|Después de reemplazar todos los ''Floss 47'' el vehículo se vuelve de color gris.]]
 
 ==Retirar vagon: Sí/No==
 En la esquina inferior derecha de la ventana Reemplazar hay un botón en el que pone ''Retirar vagón'' con las opciones ''Sí/No''. Si se activa la opción ''Sí'', cuando un motor (máquina de tren) compuesta por una sola unidad (por ejemplo la máquina ''Gresley A4'') se sustituye por otro motor compuesto por dos unidades (la máquina ''IC125'' por ejemplo), el primer vagón del tren se venderá para mantener la longitud original del tren.
@@ -43,4 +43,4 @@ Pero si tiene activada la opción avanzada ''[[es/Archive/Manual/Settings/Opcion
 * La empresa necesita tener más dinero que (dinero límite Autoreemplazar) + 2 * (precio para los vehículos nuevos)<br/> No se tiene en cuenta el precio de venta de los vehículos viejos.
 * Se debe realizar el intervalo de servicio completo. Es decir, si está desactivado el mantenimiento de los vehículos, se intentará reemplazar el vehículo una sola vez, y si falla, sólo se hará un segundo intento después de haber completado todo el intervalo de servicio (un intervalo de la lista de órdenes).
 
-[[Category:es/Vehículos]]
+[[Category:es/Manual/Base Set/Vehículos]]

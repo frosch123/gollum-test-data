@@ -216,7 +216,7 @@ Below is a detailed explanation of some of the attributes:
 ** SC_EXPERT
 
 ====Making your build compatible with older savegames====
-[[File:en/Setting tutorial small.png|right|frame|Final result]]
+[[File:en/Archive/Source/Setting tutorial small.png|right|frame|Final result]]
 
 If you don't use the flag <code>SLF_NOT_IN_SAVE</code>, OpenTTD will expect to find your variable in every savegame. Therefore, it's important to tell the game from which version this setting was added. The savegame version number is found near the start of [http://svn.openttd.org/trunk/src/saveload/saveload.cpp saveload.cpp]. 
 
@@ -237,5 +237,5 @@ So for our example above, we bump the savegame to 189 in [http://svn.openttd.org
 Now there's only one thing left to do - compile! I you've everything correct, you should see something similar as the picture to the right.
 
 
-[[Category:en/OpenTTDDevBlackBook|P]]
+[[Category:en/Archive/Source/OpenTTDDevBlackBook|P]]
 [[Category:en/Development]]

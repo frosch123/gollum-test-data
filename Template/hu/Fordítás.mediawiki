@@ -16,18 +16,18 @@
 === A sablon használata ===
 Gépelje be a <code><nowiki>{{</nowiki>Fordítás/Hu|''title original in english''|''percentage''<nowiki>}}</nowiki></code> sort a cikk elejére jelezvén, hogy a fordítás folyamatban van.
 
-A cikk hozzá lesz adva a [[:Category:hu/Fordításban|Fordításban/Hu]] és a [[:Category:hu/Cikkek magyar|Cikkek magyar/Hu]] kategóriákhoz.
+A cikk hozzá lesz adva a [[:Category:hu/Manual/Base Set/Cargos/Fordításban|Fordításban/Hu]] és a [[:Category:hu/Cikkek magyar|Cikkek magyar/Hu]] kategóriákhoz.
 
 === A fordítás befejezése ===
 Távolítsa el ezt a sablont, ha a cikk fordítása teljesen befejeződött.
 
 === További cikkek ===
-*[[:Category:hu/Fordításban]]
+*[[:Category:hu/Manual/Base Set/Cargos/Fordításban]]
 *[[:Category:en/Other languages|Más nyelvek]] fordítási statisztikái.
 
-[[Category:hu/Sablonok|Fordítás]]
-[[Category:hu/Üzenet dobozok|Fordítás]]
-[[Category:hu/Cikkek magyar]]
-[[Category:hu/Fordítás|Fordítás]]
 
-</noinclude><includeonly>[[Category:hu/Fordításban]]{{ #ifexpr: {{{2|0}}}=100 | |[[Category:hu/Cikkek magyar]]{{ #ifexpr: {{{2|0}}}>10 | [[Category:hu/Lefordítva több mint 10 százalék]] | [[Category:hu/Lefordítva a 10 százalékot]]}}}}</includeonly>
+[[Category:hu/Manual/Base Set/Aircraft/Üzenet dobozok|Fordítás]]
+
+
+
+</noinclude><includeonly>[[Category:hu/Manual/Base Set/Cargos/Fordításban]]{{ #ifexpr: {{{2|0}}}=100 | |{{ #ifexpr: {{{2|0}}}>10 | [[Category:hu/Manual/Base Set/Cargos/Lefordítva több mint 10 százalék]] | [[Category:hu/Lefordítva a 10 százalékot]]}}}}</includeonly>

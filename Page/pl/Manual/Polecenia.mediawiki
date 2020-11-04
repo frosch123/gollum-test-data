@@ -17,8 +17,8 @@
 
 Możesz wydawać polecenia każdemu pojazdowi, który posiadasz. Twoi kierowcy będą starali się wykonywać te polecenia (choć mogą się zgubić, jeśli Twoja sieć jest źle zaprojektowana, ale jest to osobny temat). Aby wydać polecenia:
 
-*Znajdź i kliknij na pojazd, któremu chcesz wydać rozkaz. Pojazd może znajdować się w zajezdni, jeśli właśnie go kupiłeś, lub może już się przemieszczać. W przypadku pociągu, kliknięcie na dowolny wagon będzie miało ten sam efekt. Wyświetlone zostanie okno pojazdu.<br/>[[File:en/Orders-1.png|frame|none|Okno pojazdu]]
-*Kliknij przycisk Polecenia. Spowoduje to wyświetlenie okna poleceń, w którym wyświetlane są wszystkie polecenia, jakie aktualnie posiada dany pojazd (w naszym przykładzie nie ma jeszcze żadnego).<br/>[[File:en/Orders-2.png|frame|none|Okno poleceń]]
+*Znajdź i kliknij na pojazd, któremu chcesz wydać rozkaz. Pojazd może znajdować się w zajezdni, jeśli właśnie go kupiłeś, lub może już się przemieszczać. W przypadku pociągu, kliknięcie na dowolny wagon będzie miało ten sam efekt. Wyświetlone zostanie okno pojazdu.<br/>[[File:en/Manual/Orders-1.png|frame|none|Okno pojazdu]]
+*Kliknij przycisk Polecenia. Spowoduje to wyświetlenie okna poleceń, w którym wyświetlane są wszystkie polecenia, jakie aktualnie posiada dany pojazd (w naszym przykładzie nie ma jeszcze żadnego).<br/>[[File:en/Manual/Orders-2.png|frame|none|Okno poleceń]]
 *Kliknij ''[[#idz-do|Idź do]]'', a następnie wybierz stację na mapie.
 *Kliknij na utworzoną właśnie na liście pozycję, aby ją wybrać, a następnie powiedz pojazdowi, co powinien zrobić na tej stacji (np. kliknij 'Pełen załadunek któregoś z towarów', aby pojazd czekał na stacji na pełen załadunek).
 
@@ -44,7 +44,7 @@ Przycisk '''Idź do''' posiada następujące '''opcje''':
 * '''Idź do'''
 * '''Idź do najbliższego serwisu'''
 * '''[[pl/Polecenia warunkowe|Warunkowy skok poleceń]]'''. Ta opcja pozwala na przykład pominąć jakąś stację, jeśli pojazd jest w pełni załadowany.
-[[File:en/Orders gotooptions.png|frame|none|Opcje ''Idź do'']]
+[[File:en/Manual/Orders gotooptions.png|frame|none|Opcje ''Idź do'']]
 
 Przeczytaj artykuł o [[pl/Archive/Manual/Settings/Szybkie tworzenie poleceń|szybkim tworzeniu poleceń]], aby poznać skróty z użyciem klawisza Ctrl.
 
@@ -75,7 +75,7 @@ Tutaj możesz zadecydować, co dzieje się z ładunkiem dostępnym do załadunku
 *''Pełen załadunek wszystkiego''
 *''Pełen załadunek któregoś z towarów''
 *''Nie ładować''
-[[File:en/Orders goto load.png|frame|none|The load options.]]
+[[File:en/Manual/Orders goto load.png|frame|none|The load options.]]
 
 ===Załaduj, jeśli dostępne===
 :Jest to opcja domyślna. Pojazd przyjedzie na stację, załaduje dostępny ładunek i pojedzie dalej. Nie jest to opcja zalecana do [[pl/Manual/Ładunek|ładunku]] innego niż [[pl/Manual/Base Set/Cargos/Pasażerowie|Pasażerowie]] i [[pl/Manual/Base Set/Cargos/Poczta|Poczta]], ponieważ prawdopodobnie zechcesz, żeby Twoje pojazdy czekały na:
@@ -95,7 +95,7 @@ Dla załadunku możesz wybrać następujące opcje:
 *''Rozładuj wszystko''.
 *''Przeładunek''
 *''Nie rozładowuj''
-[[File:en/Orders goto unload.png|frame|none|The unload options.]]
+[[File:en/Manual/Orders goto unload.png|frame|none|The unload options.]]
 
 ===Rozładuj, jeśli akceptowane===
 :To opcja domyślna. Ładunek zostanie rozładowany, jeśli w [[pl/Manual/Zasięg stacji|zasięgu stacji]] znajduje się przedsiębiorstwo akceptujące go.
@@ -119,7 +119,7 @@ Możesz wybrać opcje:
 *''Idź bezpośrednio do''
 *''Idź przez''
 *''Idź bezpośrednio poprzez''
-[[File:en/Orders goto stopoptions.png|frame|none|The route options.]]
+[[File:en/Manual/Orders goto stopoptions.png|frame|none|The route options.]]
 
 ===Non-stop===
 W tym przypadku pojazd jedzie na stację '''bezpośrednio'''. Opcja [[pl/Non-stop|Non-stop]] zapobiegnie zatrzymaniu się pojazdu na którejkolwiek ze stacji, przez którą przejeżdża w drodze do zaznaczonego celu.
@@ -129,16 +129,16 @@ Pojazd przejedzie przez stację '''bez zatrzymywania się''' na niej. Powoduje, 
 
 ==Przebudowa==
 You can include an instruction to [[en/Manual/Refit]] a vehicle in the orders list.  When you select this you will be prompted to choose the type of cargo to refit the vehicle to carry.  This order is of limited use, as normally you only refit a vehicle for a cargo once.
-[[File:en/Order-Refit.png|none|frame|When asked to reform mandates the type of load.]]
+[[File:en/Manual/Order-Refit.png|none|frame|When asked to reform mandates the type of load.]]
 
 ==Serwis==
 Ta opcja jest dostępna, jeśli wybierzesz polecenie ''Idź do zajezdni''. Szczegóły znajdziesz w artykułach [[pl/Serwisowanie|Serwisowanie]] oraz [[pl/Dodawanie zajezdni do poleceń|Dodawanie zajezdni do poleceń]].
-[[File:en/Service-options.png|none|frame|The options of the service button.]]
+[[File:en/Manual/Service-options.png|none|frame|The options of the service button.]]
 
 ==Rozkład==
 :''Główny artykuł: [[pl/Manual/Rozkład|Rozkład jazdy]]''
 Rozkłady jazdy pozwalają określić, jak długo pojazdy powinny podróżować po każdej części trasy i jak długo powinny przebywać na każdej stacji, a także określić ograniczenia prędkości pomiędzy kolejnymi poleceniami. Zobacz artykuł [[pl/Manual/Rozkład|Rozkład jazdy]], aby dowiedzieć się, jak z nich korzystać.
-[[File:en/Orders-timetable.png|none|frame|The timetable interface.]]
+[[File:en/Manual/Orders-timetable.png|none|frame|The timetable interface.]]
 
 ==Kopiowanie poleceń==
 Jeśli więcej niż jeden pojazd jeździ tą samą trasą (na przykłas: wiele autobusów obsługuje tę samą linię), opcja ta znacznie może Ci ułatwić tworzenie poleceń. Zamiast przy każdym autobusie wydawać polecenia z osobna, wystarczy, że nadasz je jednemu, a następnie skopiujesz do pozosałych.
@@ -162,7 +162,7 @@ Kopiowanie poleceń sprawdza się, gdy na bazie listy poleceń jednego pojazdu m
 #Przytrzymując '''Ctrl''', kliknij na jakiś pojazd, który już ma polecenia.
 #Pojazdy współdzielą już polecenia.  Możesz zauważyć, że na końcu poleceń widnieje napis ''--Koniec współdzielonych poleceń--''.
 
-[[File:en/Shared-orders.png|center|frame|The schedules for the 2 buses have been shared]]
+[[File:en/Manual/Shared-orders.png|center|frame|The schedules for the 2 buses have been shared]]
 
 Polecenia mogą być współdzielone przez dowolną liczbę pojazdów, jednak zawsze muszą być to pojazdy tego samego typu (na przykład: nie mogą współdzielić poleceń ciężarówka i pociąg z [[pl/Manual/Base Set/Cargos/Węgiel|węglem]], nawet, jeśli i w pobliżu kopalni, i w pobliżu elektrowni (Nie rozumiesz? Przeczytaj artykuły: [[pl/Manual/Base Set/Cargos/Węgiel|Węgiel]], [[pl/Manual/Base Set/Industries/Kopalnia węgla|Kopalnia węgla]], [[pl/Manual/Base Set/Industries/Elektrownia|Elektrownia]]) znajduje się [[pl/Manual/Stacje|stacja (łączona)]] ze stanowiskami dla pociągów i ciężarówek).
 
@@ -175,13 +175,13 @@ Czasami możesz chcieć, żeby pojazdy przestały dzielić się poleceniami. Ocz
 Możesz zauważyć, że ostatnia linia to znowu ''--Koniec poleceń--''. Wszystkie pozostałe pojazdy nadal współdzielą polecenia, jednak ten, którego polecenia przed chwilą modyfikowałeś, posiada już osobną listę poleceń. Zmiany dokonane w nich nie wpłyną na żaden inny pojazd.
 
 ===Lista pojazdów współdzielących===
-Widoczny w prawym dolny rogu okna poleceń przycisk [[File:en/SharedOrders.png]], to właśnie przycisk ''Pojazdy współdzielące''. It shows a list of all the vehicles that have the same [[#shared-orders|shared orders]] as the current vehicle. The icon will only be enabled if the vehicle is sharing orders.
-[[File:en/SharedOrders-1.png|none|frame|List of vehicles with shared orders]]
+Widoczny w prawym dolny rogu okna poleceń przycisk [[File:en/Manual/SharedOrders.png]], to właśnie przycisk ''Pojazdy współdzielące''. It shows a list of all the vehicles that have the same [[#shared-orders|shared orders]] as the current vehicle. The icon will only be enabled if the vehicle is sharing orders.
+[[File:en/Manual/SharedOrders-1.png|none|frame|List of vehicles with shared orders]]
 
 ===Uwagi===
 *Możesz również użyć przycisku ''Sklonuj pojazd'' (w oknie zajezdni) lub ''Skopiuj pojazd'' (w oknie pojazdu) do stworzenia pojazdu ze skopiowanymi lub współdzielonymi poleceniami. Domyślnie polecenia zostaną skopiowane, jeśli chcesz, aby były współdzielone, należy przytrzymać Ctrl podczas kopiowania.
-[[File:en/Clone-vehicle-2.png|none|frame|Clone vehicle button.]]
-[[File:en/Clone-vehicle.png|none|frame|Buy a copy button.Only available if the vehicle is in the depot.]]
+[[File:en/Manual/Clone-vehicle-2.png|none|frame|Clone vehicle button.]]
+[[File:en/Manual/Clone-vehicle.png|none|frame|Buy a copy button.Only available if the vehicle is in the depot.]]
 *W przypadku poleceń współdzielonych, nie ma "głównego" zestawu poeleceń (to znaczy: nie ma jednego pojazdu przechowującego zestaw, po którego przypadkowym usunięciu wszystkie pojazdy się pogubią). Tak długo, jak istnieje przynajmniej jeden pojazd współdzielący daną listę, tak długo będzie ona istniała.
 
 ==Sprawdzanie poleceń==
@@ -191,15 +191,15 @@ Kiedy prowadzisz dużą firmę z wieloma różnymi pojazdami i rozległą sieci�
 
 ===Za mało poleceń===
 Aby pojazd mógł osiągać zyski, potrzebuje w swoim rozkładzie jazdy co najmniej dwóch stacji. Zajezdnie lub punkty orientacyjne nie liczą się, ponieważ nie pozwalają na podbieranie lub odstawianie ładunku.
-[[File:en/Few-orders.png|none|frame|"<Vehicle> has too few orders in the schedule".]]
+[[File:en/Manual/Few-orders.png|none|frame|"<Vehicle> has too few orders in the schedule".]]
 
 ===Zduplikowane polecenia===
 Czasami stacja zostaje przypadkowo wybrana dwa razy po kolei. Dla większości pojazdów powoduje to spory bałagan w trakcie poszukiwania drogi; na przykład samolot, który startuje i ląduje ponownie na tym samym lotnisku.
-[[File:en/Duplicate-orders.png|none|frame|"<Vehicle> has duplicate orders".]]
+[[File:en/Manual/Duplicate-orders.png|none|frame|"<Vehicle> has duplicate orders".]]
 
 ===Nieprawidłowe polecenia===
 Jeśli usuniesz stację, na której ma się zatrzymać pojazd, przez jakiś czas będzie widoczny duch stacji (w postaci szarej etykiety z nazwą stacji). Pozwala to na zbudowanie nowej stacji w tym samym miejscu co stara, która przyjmie nazwę starej stacji . Pojazdy zaczną docierać do tej stacji (jeśli nadal jest ona właściwego typu) bez konieczności zmiany ich poleceń.
-[[File:en/Invalid-order.png|frame|none|"Invalid order"]]
+[[File:en/Manual/Invalid-order.png|frame|none|"Invalid order"]]
 
 However, if you leave it too long or deliberately don't build a new station to replace an old one, the ghost station will eventually disappear.  Any orders that vehicles had that referred to it will be replaced with '''Invalid Order''' and will be skipped.
 
@@ -208,8 +208,8 @@ When you remove a depot, any orders that vehicles have that refer to it will be 
 ===Nieprawidłowa stacja===
 Jeśli usuniesz część stacji (np. przystanek autobusowy, który jest dołączony do stacji kolejowej), polecenie nie stanie się nieważne, ponieważ stacja nadal istnieje. Pojazd nie ma jednak możliwości dotarcia na stację, ponieważ brakuje odpowiedniego obiektu. Może się tak zdarzyć, gdy stacja nie obsługuje właściwego typu pojazdu (np. autobus jadący na stację kolejową), pojazd przegubowy próbuje zatrzymać się na stacji bez [[pl/Manual/Przystanki przelotowe|przystanków przelotowych]], lub pociąg próbuje zatrzymać się na stacji z niekompatybilnymi typami kolei (np. zwykły pociąg na Maglev). Prowadzi to do tego, że pojazd poszukuje stacji bez końca. 
 
-[[File:en/Invalid-station.png|frame|none|"<Vehicle> has an invalid station in its orders".]]
+[[File:en/Manual/Invalid-station.png|frame|none|"<Vehicle> has an invalid station in its orders".]]
 
-[[Category:pl/Pojazdy]]
-[[Category:pl/Podręcznik]]
-[[Category:pl/Tutorial]]
+[[Category:pl/Manual/Base Set/Trains/Pojazdy]]
+[[Category:pl/Manual/Base Set/Trains/Podręcznik]]
+[[Category:pl/Manual/Tutorial]]

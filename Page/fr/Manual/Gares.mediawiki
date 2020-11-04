@@ -1,13 +1,13 @@
 [[Translation:en/Manual/Stations]]
 
-[[File:en/Stations.png|right]]
+[[File:en/Manual/Stations.png|right]]
 
 Les '''stations''' sont la partie la plus importante de tout réseau. C'est là que les [[fr/Manual/Cargaison|cargaisons]] sont chargées et déchargées depuis les [[fr/Manual/Véhicules|véhicules]]. La cargaison est livrée depuis et à des bâtiments dans la [[fr/Manual/Zone de captage|zone de captage]] de la gare. Chaque station coûte 50£/100€ par mois en entretien, quelle que soit sa taille.
 
 Chaque mode de transport a son propre type de station:
 *Les '''[[fr/Manual/Gares ferroviaires|gares ferroviaires]]''' sont utilisées par les [[fr/Manual/Trains|trains]]. Le modèle de gare de base reste le même pour tous les [[fr/Manual/Base Set/Types de chemin de fer|types de voie]].
 *Les '''[[fr/Manual/Aéroports|aéroports]]''' sont les points de chargement/déchargement pour les aéronefs. Il y a de nombreux types d'aéroport, y compris des [[fr/Manual/Aéroports|héliports]] pour les [[:Category:en/Hélicoptères|hélicoptères]].
-*Les '''[[fr/Docks|docks]]''' sont là où vous mouillent vos [[fr/Manual/Bateaux|bateaux]].
+*Les '''[[fr/Manual/Docks|docks]]''' sont là où vous mouillent vos [[fr/Manual/Bateaux|bateaux]].
 *Les '''[[fr/Manual/Aire de chargement|aires de chargement]]''' sont là où les [[fr/Manual/Base Set/Road Vehicles/Bus|bus]] et les [[fr/Manual/Véhicules Routiers|camions]] chargement et déchargement leur cargaison.
 
 ==Gares combinées==
@@ -24,15 +24,15 @@ Il y a une limite à la zone maximale qu'une gare combinée peut couvrir. Par d�
 Note pour les joueurs des ''Transport Tycoon'' et ''Deluxe'' originaux: dans OpenTTD, vous pouvez connecter 2 ou plus stations du même type (par ex. gare ferroviaire conventionnelle avec gare monorail), tout comme ''Locomotion de Christ Sawyer'', mais avec une plus grande liberté d'extension.
 
 ===Construire des gares non attachées physiquement===
-[[File:en/Join station leftclick.png|thumb|Joindre une gare nouvellement construite en cliquant à gauche avec touche Ctrl enfoncée]]
+[[File:en/Manual/Join station leftclick.png|thumb|Joindre une gare nouvellement construite en cliquant à gauche avec touche Ctrl enfoncée]]
 
 Des gares combinées n'ont pas besoin d'être adjacentes l'une l'autre - du moins, pas sur le long terme. Vous pouvez construire une chaîne de gares et supprimer les liens intermédiaires de cette chaîne, et les gares "détachées" resteront comme partie de la même gare logique.
 
 Depuis la bêta 1 de la version 0.7.0, vous pouvez aussi construire des gares combinées en faisant un clic gauche avec la touche Ctrl enfoncée, tout en plaçant une nouvelle gare. Une fenêtre s'affichera pour demander quelle station vous voulez rejoindre, ou si vous voulez construire une nouvelle gare. Les stations qui sont trop éloignées du lieu où vous avez cliqué ne seront pas listées. Vous devez aussi tenir la touche Ctrl enfoncée lorsque vous étendez  une partie quelconque de cette gare, et que la nouvelle extension est physiquement adjacente à une partie quelconque de votre gare.
 
 ===Supprimer des gares combinées===
-Vous pouvez supprimer un élément d'une gare combinée en utilisant l'outil dynamite, qui ne supprimera qu'une station individuelle, et non l'ensemble. L'exception à cela concerne les gares ferroviaires, pour lesquelles dynamiter une partie de la gare supprimera toutes les autres (ou pas, s'il y a des trains sur l'une d'elles). Pour supprimer ces dernières, vous devez choisir l'outil "construction de gare" [[File:en/Build station.png]] puis le bouton "nettoyage" [[File:en/Toggle clear active.png]] qui vous permettra de supprimer les gares ferroviaires une case à la fois.
+Vous pouvez supprimer un élément d'une gare combinée en utilisant l'outil dynamite, qui ne supprimera qu'une station individuelle, et non l'ensemble. L'exception à cela concerne les gares ferroviaires, pour lesquelles dynamiter une partie de la gare supprimera toutes les autres (ou pas, s'il y a des trains sur l'une d'elles). Pour supprimer ces dernières, vous devez choisir l'outil "construction de gare" [[File:en/Manual/Build station.png]] puis le bouton "nettoyage" [[File:en/Manual/Toggle clear active.png]] qui vous permettra de supprimer les gares ferroviaires une case à la fois.
 
 Il faut bien faire attention en détruisant une partie d'une gare combinée qui est physiquement séparée du reste de la gare combinée, si vous voulez la remettre en place par la suite. La remplacer simplement créera une nouvelle gare logique séparée - pour la conserver attachée, vous devez soit avoir un lien temporaire vers une des stations attachées, ou, à partir de OpenTTD 0.7.0 bêta 1, utiliser la méthode clic avec touche Ctrl, comme expliqué dans la section précédente.
 
-[[Category:fr/Construction]]
+[[Category:fr/Manual/Base Set/Aircraft/Construction]]

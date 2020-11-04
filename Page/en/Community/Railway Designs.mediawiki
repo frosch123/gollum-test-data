@@ -8,9 +8,9 @@ This page is intended as a theoretical treatment purely of carrying capacity. Ju
 
 ==Signal distance (SD)==
 This is a fairly obvious one. Widely-spaced signals will result in a lower carrying capacity. With an '''SD''' of one signal every N tiles, the minimum gap between two full-speed trains can never be less than N+1 (Figure 1). On diagonal track one signal every 2N "half tiles" or N "full tiles" the minimum gap cannot be less than 2N+1 "half tiles" or N+1/2 "full tiles". When trains are this close together, you have reached the theoretical maximum train density. In practice, reaching this density is impossible.
-[[File:en/Pat Fig1.png|frame|none|Figure 1: Minimum train gap of five from a signal distance of four]]
+[[File:en/Community/Pat Fig1.png|frame|none|Figure 1: Minimum train gap of five from a signal distance of four]]
 
-[[File:en/Pat Fig2.png|frame|right|Figure 2: Signalling gap inefficiency]]
+[[File:en/Community/Pat Fig2.png|frame|right|Figure 2: Signalling gap inefficiency]]
 One important consideration is consistency. The capacity of a track is determined by whichever individual signal gap is the largest. Thus, a track with one signal every two tiles, that has an anomalous one-off gap of three or four tiles, will suffer from greatly diminished capacity and can potentially jam and violate rule 1 (Figure 2). Remember that this also holds for corners and splits/merges.
 
 ===Diagonal track===
@@ -106,10 +106,10 @@ Merges present us with a unique problem. For a trivial merge, trains on the main
 Consider a typical non-junction merge, at the exit of a pickup station. A tightly-packed optimised stream of trains enters the station, but because of differences in loading times, this order is disrupted on the station exit, and you end up with two tracks of loosely-packed trains. One of these lines, designated the main line, will have, on average, train-train gaps large enough to fit a third train into. Simply connecting the two lines together will not work, and a priority merge is required.
 
 Note that, because trains that drop off cargo always spend the same length of time at a platform, it is possible to dematerialise and reassemble a tightly packed stream of trains, even one above the critical density! (Figure 3)
-[[File:en/Diamond Stream.png|thumb|800px|none|Figure 3: Dropoff with stream reassembly]]
+[[File:en/Community/Diamond Stream.png|thumb|800px|none|Figure 3: Dropoff with stream reassembly]]
 
 A first-pass merge using a priority block will reduce the traffic ratio from 1:1 to about 3:1 in favour of the main track (Figure 4). Adding a second priority merge straight after the first one would be a futile gesture, since trains on both lines would continue at the same speed and the mainline train would simply claim priority again. Introducing a delay by a loop of track, followed by a second priority merge, will reduce the sideline to a mere trickle of trains and will have filled in most of the available slots on the mainline. Existing solutions would involve a pre-acceleration track, however a cyclotron eliminates the need to lose momentum.
-[[File:en/Priority Merge.png|thumb|800px|none|Figure 4: Priority merge]]
+[[File:en/Community/Priority Merge.png|thumb|800px|none|Figure 4: Priority merge]]
 
 ===Cyclotrons===
 
@@ -117,18 +117,18 @@ A first-pass merge using a priority block will reduce the traffic ratio from 1:1
 
 A cyclotron is a priority merge with a loop, so that a train can wait for a slot on the mainline at full speed.
 
-[[File:en/Simple Cyclotron.png|thumb|800px|none|Simple Cyclotron]]
+[[File:en/Community/Simple Cyclotron.png|thumb|800px|none|Simple Cyclotron]]
 
 ===Trigger===
 A trigger allows to control when a train may leave the station. This increases the capacity of the track significantly. You can use the trigger to have several trains leave the station at a defined time gap. After they have accelerated, you can merge them to a single track. As the gap between them is always equal, the merge will always succeed.
 
 This set of screenshots shows the trigger itself. The main component is a circle track (A). It is divided into four segments using path based signals. A train travels the circle (B). Two waypoints are used to keep it moving. The length of the train is such that it almost covers three segments of the circle. Finally, each segment has an exit (C). To show the concept, a traffic light has been added to each track. When the train moves, each of the lights will shortly jump to green. 
 
-[[File:en/Trigger-a.png|frame|none|A: Segmented circle track]] [[File:en/Trigger-b.png|frame|none|B: Segmented circle track with train]] [[File:en/Trigger-c.png|frame|none|C: Final trigger with collectors]]
+[[File:en/Community/Trigger-a.png|frame|none|A: Segmented circle track]] [[File:en/Community/Trigger-b.png|frame|none|B: Segmented circle track with train]] [[File:en/Community/Trigger-c.png|frame|none|C: Final trigger with collectors]]
 
 Now the trigger is connected to a high yield station. The station has 16 platform each 9 tiles in length. Four tracks leave the station. Later they are merged to two track:
 
-[[File:en/Trigger-d.png|thumb|800px|none|Final trigger connected to station]]
+[[File:en/Community/Trigger-d.png|thumb|800px|none|Final trigger connected to station]]
 
 Notice how the monorail an the magnetic tracks are connected. Each track leaving the station is connected with one segment of the trigger. Right after this connection a normal signal is placed. This way the trigger is able to stop trains from exiting the station.
 
@@ -136,23 +136,23 @@ Timing in this setup is crucial! Depending on the type and size of trains the ex
 
 At a similar station, there are also 16 platforms each with 9 tiles. But the trains transport goods which are much lighter than steel. Hence the trigger's time gaps can be shorter. This is achieved by having a circle track with less sharp turn. As a result, the train travels at 226 km/h.
 
-[[File:en/Trigger-e.png|frame|none|Faster trigger]]
+[[File:en/Community/Trigger-e.png|frame|none|Faster trigger]]
 
 === Step-by-Step-Merge ===
 A Step-by-Step-Merge is an easy way to merge several tracks, usually from a station, one by one into each other, until only the main line is left.
 
 The first task is to get trains out of the station as quickly as possible. Platform room is precious, and a train needs to clear the station completely, before the next one can enter. We do this by providing one exit lane for every platform, and it should be about 150% of the length of the longest train. Add a path signal on the first track behind the station in order to clear the platform for the next train. Common errors here might be to miss one of the path signs, or designing the exit lanes too long or too short.
 
-[[File:en/Step by step merge station exit.jpeg|frame|none|Make sure trains can clear the depot quickly]]
+[[File:en/Community/Step by step merge station exit.jpeg|frame|none|Make sure trains can clear the depot quickly]]
 
 Next we start with a merge. You can merge on a straight track, but it's easiest and usually most efficient to merge in a turn. Make sure to place a path signal on every exit lane, as close to the merge as possible - but do not place a signal after the merge. Make sure that there is again plenty of room for trains to accelerate after every merge, about 150% of the longest train. Do not place any additional signals here, not even pathing signals. All following merges are designed the same way.
 
-[[File:en/Step by step merge step one.jpeg|frame|left|Merging 8 to 4]]
-[[File:en/Step by step merge step two.jpeg|frame|none|Merging 4 to 2]]
+[[File:en/Community/Step by step merge step one.jpeg|frame|left|Merging 8 to 4]]
+[[File:en/Community/Step by step merge step two.jpeg|frame|none|Merging 4 to 2]]
 
 
 The nicest aspect about this merge layout is, that it actually works best under high traffic or even jam conditions: Once one train [A] clears the merge, the other tracks train [B] is allowed to accelerate. But the first train also cleared it's own segment, which permits one of the trains [C] from the merge behind to accelerate. Thus, you have two trains accelerating at the same time. This way, trains synchronize up to the station.
 
-[[File:en/Step by step merge advantage.jpeg|thumb|400px|none|Train A allowing B and C to accelerate synchronously]]
+[[File:en/Community/Step by step merge advantage.jpeg|thumb|400px|none|Train A allowing B and C to accelerate synchronously]]
 
 The example shown here handles traffic generated by 80 trains and 25000 crates of goods.

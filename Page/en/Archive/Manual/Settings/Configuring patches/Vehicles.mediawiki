@@ -1,11 +1,11 @@
-{{en/-}}{{en/Patch Config}}
+{{en/-}}{{en/Archive/Manual/Settings/Patch Config}}
 
 ==Configure Patches Window: Vehicles Section==
 This window of the [[en/Manual/Main Page]] patches section enables you to set various settings that affect vehicles and their behaviour. The image below shows the default settings in OpenTTD 0.6.0.
 {| align="center"
 |- valign="top"
 |__TOC__
-|[[File:en/0.6.0 configurepatches vehicles.png|center|frame|Configure Patches -> Vehices (0.6.0)]]
+|[[File:en/Archive/Manual/Settings/0.6.0 configurepatches vehicles.png|center|frame|Configure Patches -> Vehices (0.6.0)]]
 |}
 ====Enable realistic acceleration for trains====
 {{en/Feature|-0.6|align="right"|text=(since 0.3.2 to 0.6.3)}}
@@ -254,23 +254,23 @@ The AI competitors are not allowed to use this type of vehicle when the patch is
 :''In Openttd.cfg config file:'' ([patches] new_pathfinding_all = <true|false>) 
 {{en/-}}
 ====Use YAPF for ships====
-{{en/Feature period|0.5|0.5|align="right"|text=(since 0.5.0 to 0.5.3)}}
+{{en/Archive/Feature period|0.5|0.5|align="right"|text=(since 0.5.0 to 0.5.3)}}
 (explanation) This option has been renamed to [[#pathfinder-for-ships|Pathfinder for ships]] in 0.6.0.
 :''Possible Settings:'' <span style="color:green">'''On'''</span> or <span style="color:red">'''Off'''</span>
 :''In Openttd.cfg config file:'' ([yapf] ship_use_yapf = <true|false>) 
 {{en/-}}
 ====Use YAPF for roadvehs====
-{{en/Feature period|0.5|0.5|align="right"|text=(since 0.5.0 to 0.5.3)}}
+{{en/Archive/Feature period|0.5|0.5|align="right"|text=(since 0.5.0 to 0.5.3)}}
 (explanation) This option has been renamed to [[#pathfinder-for-road-vehicles|Pathfinder for road vehicles]] in 0.6.0.
 :''Possible Settings:'' <span style="color:green">'''On'''</span> or <span style="color:red">'''Off'''</span>
 :''In Openttd.cfg config file:'' ([yapf] road_use_yapf = <true|false>) 
 {{en/-}}
 ====Use YAPF for trains====
-{{en/Feature period|0.5|0.5|align="right"|text=(since 0.5.0 to 0.5.3)}}
+{{en/Archive/Feature period|0.5|0.5|align="right"|text=(since 0.5.0 to 0.5.3)}}
 (explanation) This option has been renamed to [[#pathfinder-for-trains|Pathfinder for trains]] in 0.6.0.
 :''Possible Settings:'' <span style="color:green">'''On'''</span> or <span style="color:red">'''Off'''</span>
 :''In Openttd.cfg config file:'' ([yapf] rail_use_yapf = <true|false>) 
 {{en/-}}
 
-[[Category:en/Settings & Preferences]]
-[[Category:en/Vehicles]]
+[[Category:en/Manual/Settings & Preferences]]
+[[Category:en/Manual/Base Set/Vehicles]]

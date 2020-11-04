@@ -1,6 +1,6 @@
 [[Translation:en/Manual/Orders]]
-{{fr/Découpe|Il faudrait séparer le manuel et le tutoriel}}
-{{fr/Tutoriel}}{{fr/Table des matières}}
+{{fr/Manual/Découpe|Il faudrait séparer le manuel et le tutoriel}}
+{{fr/Manual/Tutoriel}}{{fr/Table des matières}}
 : ''Ce tutoriel explique les ordres pour la version [[fr/Archive/OpenTTD/OpenTTD 0.7.0|OpenTTD 0.7.0]] et suivantes. Si vous utilisez une version plus ancienne de OpenTTD, reportez-vous à l'article:'' '''[[fr/Archive/Manual/Ordres (ancien)|Ordres (anciens)]]
 
 Les '''ordres''' sont fondamentaux pour jouer et réussir dans OpenTTD. Les [[fr/Manual/Ordres conditionnels|ordres conditionnels]] sont des ordres avancés qui vous offrent davantage de contrôle. Si vous ne fournissez aucun ordre, vos [[fr/Manual/Véhicules|véhicules]] erreront sans but, et vous serez très chanceux s'ils vous rapportent de l'argent. Afin de réussir à charger et livrer les [[fr/Manual/Cargaison|cargaisons]] (ce qui, après tout, est l'objectif du jeu), vous devez des ordres à vos véhicules. Ce sont des instructions telles que "aller là, charger la cargaison, puis l'amener ici".
@@ -8,9 +8,9 @@ Les '''ordres''' sont fondamentaux pour jouer et réussir dans OpenTTD. Les [[fr
 ==Donner des ordres==
 Vous pouvez donner des ordres à n'importe quel véhicule qui vous appartient. Vos conducteurs essaieront de suivre ces ordres (bien que parfois ils puissent être perdus si votre réseau est mal conçu, mais c'est un autre problème). Pour donner des ordres:
 
-*Trouvez et cliquez sur le véhicule auquel vous voulez donner un ordre. Ce véhicule peut être dans un dépôt si vous venez de l'acheter, ou peut être déjà en circulation. Pour un train,, cliquez sur un wagon aura le même effet. Cela affichera la fenêtre du véhicule.<br/>[[File:en/Orders-1.png|frame|none|La fenêtre du véhicule]]
+*Trouvez et cliquez sur le véhicule auquel vous voulez donner un ordre. Ce véhicule peut être dans un dépôt si vous venez de l'acheter, ou peut être déjà en circulation. Pour un train,, cliquez sur un wagon aura le même effet. Cela affichera la fenêtre du véhicule.<br/>[[File:en/Manual/Orders-1.png|frame|none|La fenêtre du véhicule]]
 
-*Cliquez sur le bouton ''Ordres'' (entouré en rouge sue l'image écran). Cela affichera la fenêtre d'ordres, qui affiche tous les ordres actuels du véhicule (aucun, dans notre exemple).<br/>[[File:en/Orders-2.png|frame|none|La fenêtre d'ordres]]
+*Cliquez sur le bouton ''Ordres'' (entouré en rouge sue l'image écran). Cela affichera la fenêtre d'ordres, qui affiche tous les ordres actuels du véhicule (aucun, dans notre exemple).<br/>[[File:en/Manual/Orders-2.png|frame|none|La fenêtre d'ordres]]
 
 *Cliquez sur ''[[#aller-a|Aller à]]'' puis sur la gare cible, sur la carte.
 
@@ -31,13 +31,13 @@ C'est le moyen de diriger un véhicule vers un endroit particulier. Il insère u
 *Vos propres gares, mais seulement celles où ce véhicule particulier est accepté. Vous ne pouvez donc pas donner à un bus l'ordre d'aller à un aéroport, si cet aéroport n'a pas de station de bus. Vous ne pouvez pas envoyer vos véhicules dans les gares concurrentes.
 *Les [[fr/Manual/Dépôts|dépôts]], si le paramètre [[fr/Archive/Manual/Settings/Options avancées/Véhicules#permettre-les-ordres-d-aller-au-depot|''Permettre les ordres d'aller au dépôt'']] est positionnée dans la fenêtre ''Configuration avancée/Véhicules''. Cela modifiera certains des autres boutons - voir Maintenance et Transformation ci-dessous.
 *Des véhicules du même type pour [[#copier-les-ordres|copier les ordres]] ou pour créer des [[#ordres-partages|ordres partagés]]. Voyez plus bas pour plus d'information.
-*Des [[fr/Manual/Points de contrôle|points de passage]]; vous pouvez envoyer un train à un point de passage particulier pour influencer son choix d'itinéraire, si la gare est trop loin et que le train se perd facilement. Une [[fr/Docks|bouée]] est un type de point de passage pour els bateaux voyageant sur de grandes distances.
+*Des [[fr/Manual/Points de contrôle|points de passage]]; vous pouvez envoyer un train à un point de passage particulier pour influencer son choix d'itinéraire, si la gare est trop loin et que le train se perd facilement. Une [[fr/Manual/Docks|bouée]] est un type de point de passage pour els bateaux voyageant sur de grandes distances.
 
 Le bouton ''Aller à'' a les '''options''' suivantes:
 * '''Aller à'''
 * '''Aller au dépôt le plus proche'''
 * '''[[fr/Manual/Ordres conditionnels|Ordre conditionnel]] de saut'''. Avec cette option, il est possible de quitter les gares si, par exemple, le train est complètement chargé.
-[[File:en/Orders gotooptions.png|frame|none|Options Aller à]]
+[[File:en/Manual/Orders gotooptions.png|frame|none|Options Aller à]]
 
 Voyez [[fr/Archive/Manual/Settings/Aller à rapide|Aller à rapide]] pour des raccourcis de création des ordres.
 
@@ -67,7 +67,7 @@ Il est maintenant possible de gérer le chargement et le déchargement séparém
 *''"Charger complètement toutes les cargaisons"'' pour prendre un plein chargement de tout
 *''"Charger complètement une cargaison"'' pour charger complètement une des cargaisons
 *''"Pas de chargement"'' pour ne rien charger.
-[[File:en/Orders goto load.png|frame|none|Les options de chargement]]
+[[File:en/Manual/Orders goto load.png|frame|none|Les options de chargement]]
 
 ===Charger si disponible===
 :Le véhicule passera par la gare, chargera la cargaison disponible à ce moment-là et partira vers la destination suivante. C'est l'option par défaut initiale. Elle n'est pas recommandée (sauf pour des véhicules transportant des passagers ou du courrier).
@@ -86,7 +86,7 @@ Pour décharger, vous pouvez:
 *''"Décharger tout"'' pour tout décharger.
 *''"Transférer"'' pour transférer le chargement.
 *''"Pas de déchargement"'' pour ne rien décharger.
-[[File:en/Orders goto unload.png|frame|none|Les options de déchargement]]
+[[File:en/Manual/Orders goto unload.png|frame|none|Les options de déchargement]]
 
 ===Décharger si accepté===
 : Le véhicule s'arrêtera à la gare, déchargera toutes les cargaisons qui y sont acceptées, et partira vers sa destination suivante. C'est l'option initiale par défaut. Il n'est pas recommandé de l'utiliser (sauf pour les véhicules transportant des passagers ou du courrier).
@@ -114,7 +114,7 @@ Vous pouvez:
 *''"Aller sans arrêt à"''
 *''"Aller via"''
 *''"Aller sans arrêt via"''
-[[File:en/Orders goto stopoptions.png|frame|none|Les options de trajet]]
+[[File:en/Manual/Orders goto stopoptions.png|frame|none|Les options de trajet]]
 
 ===Sans arrêt===
 Il est possible d'aller directement à une gare. [[fr/Archive/Manual/Sans arrêt|Sans arrêt]] empêchera un véhicule de s'arrêter dans une gare par laquelle il passerait dans son trajet vers la destination surlignée.
@@ -124,16 +124,16 @@ Il est possible d'aller via une gare (pour chaque gare, il est possible d'aller 
 
 ==Maintenance==
 L'option est disponible si vous avez un ordre ''Aller au dépôt'' sélectionné. Cela forcera le véhicule à être [[fr/Manual/Maintenance|maintenu]] dans le dépôt. Il peut être utile d'inclure la maintenance dans l'agenda, avant que les véhicules ne prennent un nouveau chargement de cargaison.
-[[File:en/Service-options.png|none|frame|Les options du bouton de maintenance]]
+[[File:en/Manual/Service-options.png|none|frame|Les options du bouton de maintenance]]
 
 ==Transformation==
 Vous pouvez inclure une instruction de [[fr/Manual/Transformation|transformer]] un véhicule dans la liste d'ordres. Quand vous la sélectionnez, il vous sera demandé de choisir le type de cargaison à transporter pour le véhicule à transformer. Cet ordre a une utilité limitée, car normalement, vous ne transformerez un véhicule pour une cargaison qu'une seule fois.
-[[File:en/Order-Refit.png|none|frame|La demande de transformation requiert le type de chargement]]
+[[File:en/Manual/Order-Refit.png|none|frame|La demande de transformation requiert le type de chargement]]
 
 ==Horaires==
-{{fr/Principal|fr/Manual/Horaires|Horaires}}
+{{fr/Manual/Principal|fr/Manual/Horaires|Horaires}}
 Les horaires vous permettent de spécifier la durée pendant laquelle les véhicules tenteront de voyager sur chaque partie de leur trajet, et combien de temps passer dans chaque gare. Voyez l'article [[fr/Manual/Horaires|Horaires]] pour plus de détail sur leur utilisation.
-[[File:en/Orders-timetable.png|none|frame|L'interface des horaires]]
+[[File:en/Manual/Orders-timetable.png|none|frame|L'interface des horaires]]
 
 ==Copier des ordres==
 Si vous voulez mettre en place un service utilisé par plusieurs [[fr/Manual/Véhicules|véhicules]], il est répétitif de donner des ordres séparément à chacun. Imaginez un service bus où 5 bus tournent entre 5 [[fr/Manual/Gares|stations]] dans une ville pour un service de passagers fréquent. Il est pénible de reproduire 5 fois les mêmes étapes; vous pouvez donc copier tous les ordres d'un véhicule vers un autre.
@@ -156,7 +156,7 @@ Les '''ordres partagés''' vous permettent de partager un ensemble d'ordres entr
 #Maintenez appuyée la touche ''Ctrl'' et cliquez sur un autre véhicule qui a les ordres que vous voulez partager.
 #Maintenant, les deux véhicules partagent la même liste; ils sont liés ensemble. Vous verrez que les ordres de l'autre véhicule sont affichés et que la dernière ligne affiche maintenant ''--Fin des ordres partagés--''.
 
-[[File:en/Shared-orders.png|center|frame|L'agenda des deux bus a été partagé]]
+[[File:en/Manual/Shared-orders.png|center|frame|L'agenda des deux bus a été partagé]]
 
 Vous pouvez lier ensemble autant de véhicules que vous voulez; il n'y a aucune limite. Mais bien entendu, vous ne pouvez lier ensemble que le même type de véhicules, car ils utiliseront les mêmes gares.
 ===== Copie des véhicules =====
@@ -174,14 +174,14 @@ Pour obtenir de la copie qu'elle ait des ordres partagés avec son modèle, il s
 Vous verrez que tous les ordres sont supprimés de la liste de ce véhicule, et que la dernière ligne affiche maintenant ''--Fin des ordres--'' de nouveau. Tous les autres véhicules partageant ces ordres ne sont pas affectés par ce changement. Vous pouvez désormais contrôler normalement l'agenda du véhicule ainsi modifié de façon indépendante des autres véhicules.
 
 ===Liste des véhicules partageant ces ordres===
-L'icône [[File:en/SharedOrders.png]] à droite de la fenêtre des ordres (ou fenêtre d'horaires) est le bouton Ordres partagés. Il affiche une liste de tous les véhicules qui ont les mêmes [[#ordres-partages|ordres partagés]] que le véhicule courant. L'icône sera active uniquement si le véhicule partage des ordres.
-[[File:en/SharedOrders-1.png|none|frame|Liste des véhicules avec ordres partagés]]
+L'icône [[File:en/Manual/SharedOrders.png]] à droite de la fenêtre des ordres (ou fenêtre d'horaires) est le bouton Ordres partagés. Il affiche une liste de tous les véhicules qui ont les mêmes [[#ordres-partages|ordres partagés]] que le véhicule courant. L'icône sera active uniquement si le véhicule partage des ordres.
+[[File:en/Manual/SharedOrders-1.png|none|frame|Liste des véhicules avec ordres partagés]]
 
 ===Notes===
 *À l'inverse des ordres copiés, les ordres partagés sont possibles pour des véhicules ayant déjà un agenda. Ceci, parce que pour partager des ordres, vous devez maintenir appuyée la touche ''Ctrl'', ce qui rend peu probable la perte accidentelle de l'agenda du véhicule. En faisant ainsi, le véhicule perdre tous ses ordres existants, et n'aura que les ordres partagés.
 *Vous pouvez utiliser le bouton ''dupliquer le véhicule'' (dans la fenêtre du dépôt) ou le bouton ''acheter une copie'' (de la fenêtre du véhicule) pour créer une copie exacte du véhicule; mais par défaut, les ordres sont copiés. Si vous voulez les partager avec les véhicules dupliqués, tenez appuyé ''Ctrl'' quand vous cliquez sur le véhicule à cloner.
-[[File:en/Clone-vehicle-2.png|none|frame|Bouton de duplication de véhicule]]
-[[File:en/Clone-vehicle.png|none|frame|Bouton d'achat d'une copie. Disponible uniquement si le véhicule est dans le dépôt]]
+[[File:en/Manual/Clone-vehicle-2.png|none|frame|Bouton de duplication de véhicule]]
+[[File:en/Manual/Clone-vehicle.png|none|frame|Bouton d'achat d'une copie. Disponible uniquement si le véhicule est dans le dépôt]]
 *Avec les ordres partagés, il n'y a pas d'ensemble d'ordres "maître" (par ex., un véhicule qui conserve la liste d'ordres principale à laquelle se réfèrent les autres) que vous pourriez détruire par erreur. Tant qu'il existe au moins un véhicule avec les ordres voulus, la liste d'ordres est conservée.
 
 ==Vérification des ordres==
@@ -191,25 +191,25 @@ Le [[fr/Archive/Manual/Settings/Système d'examen des ordres|système d'examen d
 
 ===Peu d'ordres dans l'agenda===
 Pour qu'un véhicule soit rentable, il doit avoir au moins deux gares dans ses ordres. Les dépôts ou les points de passage ne comptent pas, car ils ne permettent pas de charger ou décharger des cargaisons.
-[[File:en/Few-orders.png|none|frame|"<Véhicule> a trop peu d'ordres dans son agenda"]]
+[[File:en/Manual/Few-orders.png|none|frame|"<Véhicule> a trop peu d'ordres dans son agenda"]]
 
 ===Entrées dupliquées===
 Quelquefois, une gare est accidentellement sélectionnée deux fois de suite. Pour la plupart des véhicules, cela entraîne un désordre dans le trouveur de chemin; par exemple, un avion qui décolle et atterrit de nouveau du même aéroport.
-[[File:en/Duplicate-orders.png|none|frame|"<Véhicule> a des ordres dupliqués"]]
+[[File:en/Manual/Duplicate-orders.png|none|frame|"<Véhicule> a des ordres dupliqués"]]
 
 ===Ordre invalide===
 Si vous supprimez une gare dans laquelle un véhicule doit s'arrêter, le fantôme de la gare restera visible quelque temps (sous forme d'une gare au nom grisé). Cela vous permet de construire une nouvelle gare au même endroit, qui conservera le nom de l'ancienne gare. Les véhicules commenceront à arriver à cette gare (si elle est toujours du bon type) sans besoin de modifier leurs ordres.
-[[File:en/Invalid-order.png|frame|none|"Ordre invalide"]]
+[[File:en/Manual/Invalid-order.png|frame|none|"Ordre invalide"]]
 
 Cependant, si vous attendez trop ou si vous ne construisez délibérément pas de gare pour remplacer l'ancienne, la gare fantôme finira par disparaître.  Tous les ordres que les véhicules ont se référant à celle-ci seront remplacés par '''Ordre invalide''' et seront ignorés.
 
 ===Gares invalides===
 Si vous supprimez une partie d'une gare (par exemple, l'arrêt de bus attaché à une gare ferroviaire), l'ordre ne se videra pas car la gare existe toujours. Cependant, le véhicule n'a pas de chemin pour aller à la gare, car l'infrastructure adéquate est absente. Cela amène le véhicule à chercher définitivement une autre gare.
-[[File:en/Invalid-station.png|frame|none|"<Véhicule> a une gare invalide dans ses ordres"]]
+[[File:en/Manual/Invalid-station.png|frame|none|"<Véhicule> a une gare invalide dans ses ordres"]]
 
 ==Voir aussi==
 * [[fr/Manual/Ordres conditionnels]]
 * [[fr/Manual/Horaires]]
 * [[fr/Archive/Manual/Ordres (ancien)]]
 
-[[Category:fr/Véhicules]]
+[[Category:fr/Manual/Base Set/Véhicules]]

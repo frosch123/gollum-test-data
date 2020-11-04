@@ -14,11 +14,11 @@ Download the required and Example files from this site http://ottd.mudpuddle.co.
 
 {{en/Note|Those files aren't currently there.}}
 
-[[File:en/Files.png|left|frame|1. example file structure]] <br> The important files and folders that must be kept are '''Outlines, Outlines2, *.Blend,''' and if on windows with photoshop '''Black-AlphaZero.exe'''<br>
+[[File:en/Archive/Old 32bpp/Files.png|left|frame|1. example file structure]] <br> The important files and folders that must be kept are '''Outlines, Outlines2, *.Blend,''' and if on windows with photoshop '''Black-AlphaZero.exe'''<br>
 <br style="clear: left"/>
 
-[[File:en/Outlines.png|left|frame|2. Outlines -(north corner raised) ]]
-[[File:en/Outlines2.png|left|frame|3. Outlines2]]<br>
+[[File:en/Archive/Old 32bpp/Outlines.png|left|frame|2. Outlines -(north corner raised) ]]
+[[File:en/Archive/Old 32bpp/Outlines2.png|left|frame|3. Outlines2]]<br>
 Outlines the folder contains overlays used by blender to cut the renders, thus making the testilate fully. Outlines would be used for flat standard ground tiles.<br>
 Outlines2 the folder contains overlays which just cut the bottom off, this lets things such a fields, shrubs, rocks etc... stick aobve the top of the sprite. for correct visual display both overlays may need to be used. (ask me "Alltaken" if that is the case)
 <br style="clear: left"/>
@@ -27,16 +27,16 @@ Outlines2 the folder contains overlays which just cut the bottom off, this lets 
 ----
 
 
-[[File:en/Field1.png|left|frame|2.fields]]
-[[File:en/Field2.png|left|frame|3. fields2]]<br>
+[[File:en/Archive/Old 32bpp/Field1.png|left|frame|2.fields]]
+[[File:en/Archive/Old 32bpp/Field2.png|left|frame|3. fields2]]<br>
 Fields one and Fields2 are optional folders (i created them as output folders for rendered ground sprites) these particular images used the outlines2 overlays to allow for the crops to go above the top of the sprite.
 <br style="clear: left"/>
 
-[[File:en/Grass.png|left|frame|2.Grass]]<br>
+[[File:en/Archive/Old 32bpp/Grass.png|left|frame|2.Grass]]<br>
 Grass is the name of the folder i created to store my rendered "standard" grass tiles. (i.e. not with shores, not with rocks on them.....)  this could be named anything you like. i.e. you could name it desert, snow....
 <br style="clear: left"/>
 
-[[File:en/Shore.png|left|frame|2.Shore]]<br>
+[[File:en/Archive/Old 32bpp/Shore.png|left|frame|2.Shore]]<br>
 the Shore folders, are fairly important, these are also part of the "Grass set" but are Shore tiles for it.  you could call the shore folders anything you like, but i adopted Shore-Shore3 refering to the water level and how far up the tile the water was ((for underwater sprites)
 <br style="clear: left"/>
 
@@ -51,7 +51,7 @@ i am not designing this tutorial to teach people how to use blenders basic featu
 
 for basic tutorials on things like texturing and blender navigation visit this page and work throught their tutorials. http://blender3d.org/cms/Using_Blender.80.0.html
 
-[[File:en/Openscreen.png|right|frame|2. Opening screen]]<br>
+[[File:en/Archive/Old 32bpp/Openscreen.png|right|frame|2. Opening screen]]<br>
 This is the Opening screen that most users should see when they open the ground*.blend file.  The left pane is the 3d window and should be looking through the camera, the right view is the sequencer, and can be removed for most things you need to deal with, but may be required towards the end of your modeling/rendering process.  the bottom pane is your Button panel with all the functions you need to edit textures and other settings. (as you should know from your tutorials)
 <br style="clear: right"/>
 
@@ -59,7 +59,7 @@ This is the Opening screen that most users should see when they open the ground*
 === Layers ===
 
 
-[[File:en/Layers.png|left|frame|2. Layers]]<br>
+[[File:en/Archive/Old 32bpp/Layers.png|left|frame|2. Layers]]<br>
 First and foremost, the layers of the files should be interesting to you.<br>
 '''layer 1''' is the standard ground sprites. these are used for rendering combinations 1-85 of the normal ground sprites, (i.e. no shores, no rocks, no added stuff)<br>
 '''Layer 2-5''' are the various shore height layers, these contain a plane at the water level height which will cut the ground at water level and not render anything below that level (do not touch these large planes unless you know what you are doing)<br>
@@ -73,7 +73,7 @@ First and foremost, the layers of the files should be interesting to you.<br>
 ===Objects===
 
 
-[[File:en/Objects.png|right|frame|2. Objects]]<br>
+[[File:en/Archive/Old 32bpp/Objects.png|right|frame|2. Objects]]<br>
 The objects that we are presented with on the front screen as as follows.
 '''lattice''' the deforming lattice controls the deformation of the ground sprites which are children of it. this must NOT be edited (unless you know exactly what you are doing) as it provides the shape to the sprites when they are rendered, this is one of the most important elements of the automation process.<br>
 '''Ground object''' the Ground object can be edited and messed with freely, this is what we will be seeing when rendering,  please '''don't delete''' this object, unless you know how to parent a new object to the lattice.<br>
@@ -84,7 +84,7 @@ The objects that we are presented with on the front screen as as follows.
 ===Editing linked objects===
 
 
-[[File:en/Editing.png|left|frame|2. Editing]]<br>
+[[File:en/Archive/Old 32bpp/Editing.png|left|frame|2. Editing]]<br>
 The file is Automated so that if you edit one Object, "All" (or most) objects within that layer will be equally edited.  this means 85 sprites can be edited with a single operation, the limitations of this (with current blender releases 2.37a) is that you cannot use Sub Surf on your items. 
 if you are wishing to edit individual tiles, then you will need to create new objects, or split the mesh data (you will need to learn how to do that yourself)
 <br style="clear: left"/>
@@ -96,15 +96,15 @@ Rendering you images is a fairly important part of the process but is "very easy
 ----
 ===choosing the correct overlay===
 
-[[File:en/Outlines.png|left|frame|2. Outlines]]
-[[File:en/Outlines2.png|left|frame|3. Outlines2]]<br>
+[[File:en/Archive/Old 32bpp/Outlines.png|left|frame|2. Outlines]]
+[[File:en/Archive/Old 32bpp/Outlines2.png|left|frame|3. Outlines2]]<br>
 you need to first decide if you should be using the images from "outlines/" or "outlines2/" (depending if you have objects that will stick above the back of the sprite), Outlines of course being the standard and Outlines2 being for items that stick up the back.
 <br style="clear: left"/>
 
 ----
 ===setting the overlay images===
 
-[[File:en/Sequencer.png|right|frame|2. Outlines]]<br>
+[[File:en/Archive/Old 32bpp/Sequencer.png|right|frame|2. Outlines]]<br>
 In this image the only important object in the Sequencer is the botton "Blue" bar.  to set your overlay sprites (to make the tiles testelate in-game) you must follow these steps.<br>
 '''Right Click the Bottom Blue object''' to select it<br>
 '''Press the C key''' and select Change images, to select which overlays to use.<br>
@@ -117,7 +117,7 @@ you should now be ready to render
 ----
 ===setting the overlay images===
 
-[[File:en/Rendering.png|left|frame|2. Outlines]]<br>
+[[File:en/Archive/Old 32bpp/Rendering.png|left|frame|2. Outlines]]<br>
 I have circled the buttons you should touch in these panels, (unless you know what you are doing of course)<br>
 The '''Circled''' buttons are how you get to the render options (assuming you don't know that about blender already)<br>
 '''Output Folder''' In here type the name of your output folder, in my earlier example i used names like Grass, Shore, Shore1, Shore5, Fields, Fields2.  you can name it anything you like (follow it by a slash to show its a folder) it will create a folder in the same folder that the .blend file resides in (unless you choose to select another folder within your system) do not set this to outlines, or outlines2<br>
@@ -134,6 +134,6 @@ If in Windows and Using Photoshop, then once you have rendered your images, you 
 This section cannot be completed yet, as it is waiting for the format to be defined and finalised.
 
 
-{{en/Navbox Graphics Development}}
+{{en/Community/NewGRF/Navbox Graphics Development}}
 
-[[Category:en/New Graphics]][[Category:en/32bpp Graphics Developer resources]]
+[[Category:en/Development/NewGRF/New Graphics]][[Category:en/Community/NewGRF/32bpp Graphics Developer resources]]

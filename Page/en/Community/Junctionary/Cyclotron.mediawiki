@@ -3,7 +3,7 @@ A '''Cyclotron''' is a priority merge -or rather a [http://blog.openttdcoop.org/
 ==History==
 
 According to the edition history of [[en/Community/Railway Designs]], the first design was proposed by user [[en/Pitt2|Pitt2]] as follows:
-[[File:en/Cyclotron Full.png|thumb|800px|none|Full-featured cyclotron]]
+[[File:en/Community/Cyclotron Full.png|thumb|800px|none|Full-featured cyclotron]]
 
 "Consider a sideline that loops back on itself after a failed priority merge. A train in this loop would continue to re-test the mainline for entry conditions, once every 8 * '''TL'' tiles until it found a space large enough to merge with the main line. After the cyclotron was empty, the next waiting train could pre-accelerate and be injected into the cyclotron, ready to continue the cycle. This system has some flaws, however, as it has a capacity of one train and there will be many missed opportunities due to the train being in the wrong position in the accelerator. Junctions are a large and well-trodden area of openttd; I have restricted myself to unbranched feeder structures. You will find that a highly-optimised stream of trains does NOT weather a junction well."
 
@@ -18,7 +18,7 @@ Refinements on those two points lead to the following design:
 
 [http://www.youtube.com/watch?v=F-Rbjjk8nts YouTube video]
 
-[[File:en/Enhanced Cyclotron.png|none|Enhanced Cyclotron]]
+[[File:en/Community/Junctionary/Enhanced Cyclotron.png|none|Enhanced Cyclotron]]
 
 The size of the loop is tailored to the train size. This one is specific for 7-tiles (14 cars) trains.
 
@@ -26,15 +26,15 @@ Let's explain all the details from the mainline up to the side line, so that one
 
 The mainline has the necessary crossings that feed the priority merge's two-sided entry pre signal. One should not allow a gap between signals of more than 1 tile, otherwise a train following too closely another one would come to a stop, causing a traffic jam. Then length of the priority merge depends on the train length.
 
-[[File:en/Cyclotron signalling 1.png|thumb|300px|center|Train present on the main line forbidding entry]]
+[[File:en/Community/Junctionary/Cyclotron signalling 1.png|thumb|300px|center|Train present on the main line forbidding entry]]
 
 The first parallel line contains combo signals. Those signals forward the presence of a train on the mainline to the two-sided entry pre signal. When there is a train on the main line in the priority merge, the two-sided entry pre signal is red, forbidding the train in the cyclotron to enter the main line. The two-sided entry pre signal allows for a train to choose another path when red, so the train loops instead of stopping at the signal.
 
 There is another two-sided entry pre signal at the entrance of the loop. It forbids other trains to enter the loop when a train is already inside. Two signals in the loop allow for a train to enter the loop when the train that is already inside is on its way out.
 
-[[File:en/Cyclotron signalling 2.png|center|thumb|300px|Where in the loop a train forbids entry of the next]]
+[[File:en/Community/Junctionary/Cyclotron signalling 2.png|center|thumb|300px|Where in the loop a train forbids entry of the next]]
 
-[[File:en/Cyclotron signalling 3.png|center|thumb|300px|Train on its way out, allowing the next to enter the cyclotron]]
+[[File:en/Community/Junctionary/Cyclotron signalling 3.png|center|thumb|300px|Train on its way out, allowing the next to enter the cyclotron]]
 
 With those signals in the loop, others are necessary to allow the train to loop and not stop at a signal.
 
@@ -42,7 +42,7 @@ There is one connection lane from the loop to the first parallel lane. This one 
 
 The connection lane between the loop and the first parallel forces the two-sided entry pre signal to stay green after the train in the loop has taken the decision to enter the main line, thus forcing it to go on even if a train has come on the main line. The position of this connection lane on the loop must be very precise. It should force the two-sided entry pre signal green as soon as the train in the loop has taken the decision to enter the main line, but no sooner, otherwise the train would always enter the main line, regardless of the presence of a train on it.
 
-[[File:en/Cyclotron signalling 4.png|center|thumb|300px|Connection lane forces engaged train to go anyway]]
+[[File:en/Community/Junctionary/Cyclotron signalling 4.png|center|thumb|300px|Connection lane forces engaged train to go anyway]]
 
 There is another connection lane between the loop and the two-sided pre signal before the loop, so that it stays red when a train is in the loop, but not when the train is on its way out.
 
@@ -67,7 +67,7 @@ The waiting bays are so organized to allow for a maximum gap of 1 between signal
 
 The following design features a smaller loop, increasing tests for slot by a third.
 
-[[File:en/Advanced Cyclotron.png|center|thumb|500px|Shorter-loop twin cyclotrons]]
+[[File:en/Community/Junctionary/Advanced Cyclotron.png|center|thumb|500px|Shorter-loop twin cyclotrons]]
 
 A train that has choice will chose cyclotron 0 -which is optional- if it is empty, because it is the shortest route -no to the main line but to the final destination. Otherwise, they will enter cyclotron 1.
 Unline all previous cyclotrons including cyclotron 0, trains loop counterclockwise in cyclotron 1. This allows for an elegant factorization. The only connection line (crossing the loop at 90 degrees) has both purposes of allowing a train that is engaged on its way to the mainline to go ahead even if a train has arrived on the main line, and keeps the two-way entry pre signal always red when there's a train in the loop.

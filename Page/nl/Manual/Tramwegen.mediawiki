@@ -2,9 +2,9 @@
 {{nl/Inhoudsopgave}}
 
 '''Trams''' vormen een toepassing die je de mogelijkheid geven om [[nl/Manual/Tramwegen|tramwegen]] te construeren, welke kunnen worden gebouwd op open grond en op een bestaand wegennet. De standaard tram infrastructurele afbeeldingen zijn geleverd door [[en/Archive/Community/PikkaBird]]. Om met trams te kunnen spelen, moet je een actief tramvoertuig hebben [[nl/Manual/NewGRF|NewGRF]]. Zoals met andere transport systemen, verlangen trams hun eigen infrastructuur, inclusief [[nl/Manual/Depots|depots]].
-[[File:en/Tramroute.png|thumb|600px|left|Een voorbeeld van een tram route]]
+[[File:en/Manual/Tramroute.png|thumb|600px|left|Een voorbeeld van een tram route]]
 __TOC__
-{{en/Html-clear-left}}
+{{en/Manual/Html-clear-left}}
 
 ===Typen van wegen===
 Om te selecteren welk type van wegen je wilt bouwen, klik en hou je de wegenconstructieknop vast in het hoofdmenu.
@@ -18,10 +18,10 @@ Omdat dit een relatief nieuwe toepassing is in OpenTTD en [[en/Archive/OpenTTD/T
 
 Om een tram te bouwen moet je er eerst voor zorgen dat je enkele [[en/Manual/NewGRF]] bestanden hebt '''geïnstalleerd en geactiveerd:'''
 *'''Om te installeren:''' Gebruik de ''"NewGRF-instellingen"'' en de ''"Online inhoud zoeken"'' knop in het startvenster (''Let op: In versie 1.1.1 is het niet meer mogelijk om in een lopend spel nieuwe GRF's te installeren.''); dan type je achter ''tag/naamfilter:'' '''tram'''; je vinkt het gewenste NewGRF bestand aan en download het. 
-:[[File:en/Tramways install.png|none|frame|Om een NewGRF bestand te installeren.]]
+:[[File:en/Manual/Tramways install.png|none|frame|Om een NewGRF bestand te installeren.]]
 *'''Om te activeren:''' Gebruik de ''"NewGRF-instellingen"'' knop en het NewGRF-instellingen venster verschijnt. Om een nog niet geactiveerd bestand toe te voegen kies je het gewenste bestand en klikt op ''"Toevoegen"''. Het bestand komt dan in de lijst van actieve NewGRF's te staan. Met de knop ''"Wijzigingen doorvoeren"'' neem je deze wijziging op in je algemene NewGRF-instellingen voor elk nieuw spel.
 :{|
-|[[File:nl/NewGRF inst venster 111a.png|none|frame|Om een NewGRF bestand te installeren klik je op '''Toevoegen'''.]]
+|[[File:nl/Manual/NewGRF inst venster 111a.png|none|frame|Om een NewGRF bestand te installeren klik je op '''Toevoegen'''.]]
 |}
 ===Tram sets===
 * [[en/Community/NewGRF/Generic Road Vehicle and Tram Set]] (or GRVTS)
@@ -35,7 +35,7 @@ Om een tram te bouwen moet je er eerst voor zorgen dat je enkele [[en/Manual/New
 ==Bouw tramwegen werkbalk==
 Klik en hou de wegenbouwknop vast [[File:en/Road build button.png]] op de [[nl/Manual/Spelinterface#de-menubalk|menubalk]], en kies ''Bouw tramwegen'' om de werkbalk te tonen.
 
-[[File:nl/Tramway construction.png|none|frame|De tramwegen werkbalk]]
+[[File:nl/Manual/Tramway construction.png|none|frame|De tramwegen werkbalk]]
 
 Functies van de knoppen (van links naar rechts):
 {| {{en/Wikitable}}
@@ -45,23 +45,23 @@ Functies van de knoppen (van links naar rechts):
 !Sneltoets
 !Beschrijving
 |-
-|[[File:en/Build tram.png]]||'''Bouw tramweg knoppen'''||1, 2||Bouwt een tramweg in de geselecteerde richting; je kunt klikken en slepen.
+|[[File:en/Manual/Build tram.png]]||'''Bouw tramweg knoppen'''||1, 2||Bouwt een tramweg in de geselecteerde richting; je kunt klikken en slepen.
 |-
-|[[File:en/Autotram.png]]||'''Autotram-methode knop'''||3||Een zeer efficiënt gereedschap om tramwegsecties te bouwen in elke richting. Bij gebruik samen met de Ctrl-toets ingedrukt kunnen eenvoudig secties worden verwijderd.
+|[[File:en/Manual/Autotram.png]]||'''Autotram-methode knop'''||3||Een zeer efficiënt gereedschap om tramwegsecties te bouwen in elke richting. Bij gebruik samen met de Ctrl-toets ingedrukt kunnen eenvoudig secties worden verwijderd.
 |-
-|[[File:en/Clear title.png]]||'''[[nl/Manual/Terreinvorming|Verwijder object]] knop'''||4||Maakt de tegel leeg van objecten.
+|[[File:en/Manual/Clear title.png]]||'''[[nl/Manual/Terreinvorming|Verwijder object]] knop'''||4||Maakt de tegel leeg van objecten.
 |-
-|[[File:en/Build roaddepot.png]]||'''Bouw [[nl/Manual/Depots|tramdepot]] knop'''||5||Opent het depotvenster waarin je de richting van het te bouwen depot kunt aangeven.
+|[[File:en/Manual/Build roaddepot.png]]||'''Bouw [[nl/Manual/Depots|tramdepot]] knop'''||5||Opent het depotvenster waarin je de richting van het te bouwen depot kunt aangeven.
 |-
-|[[File:en/Build busstation.png]]||'''Bouw [[nl/Manual/Stations|passagiertramhalte]] knop'''||6||Opent het passagierstramhalte venster om de richting van de te bouwen tramhalte aan te geven.
+|[[File:en/Manual/Build busstation.png]]||'''Bouw [[nl/Manual/Stations|passagiertramhalte]] knop'''||6||Opent het passagierstramhalte venster om de richting van de te bouwen tramhalte aan te geven.
 |-
-|[[File:en/Build truckstation.png]]||'''Bouw [[nl/Manual/Stations|vrachttramstation]] knop'''||7||Opent het vrachttramstation venster om de richting van het te bouwen laadperron aan te geven.
+|[[File:en/Manual/Build truckstation.png]]||'''Bouw [[nl/Manual/Stations|vrachttramstation]] knop'''||7||Opent het vrachttramstation venster om de richting van het te bouwen laadperron aan te geven.
 |-
-|[[File:en/Build roadbridge.png]]||'''Bouw [[nl/Manual/Bruggen|brug]]'''||B||Staat je toe een brug te bouwen.
+|[[File:en/Manual/Build roadbridge.png]]||'''Bouw [[nl/Manual/Bruggen|brug]]'''||B||Staat je toe een brug te bouwen.
 |-
-|[[File:en/Build roadtunnel.png]]||'''Bouw [[nl/Manual/Tunnels|tunnel]]'''||T||Staat je toe een tunnel te bouwen.
+|[[File:en/Manual/Build roadtunnel.png]]||'''Bouw [[nl/Manual/Tunnels|tunnel]]'''||T||Staat je toe een tunnel te bouwen.
 |-
-|[[File:en/Toggle clear active.png]]||'''Bulldozer'''||R (CTRL)||Selecteer een ander gereedschap en dan deze knop om het item te verwijderen. Je kunt dit ook doen met de Ctrl-toets.
+|[[File:en/Manual/Toggle clear active.png]]||'''Bulldozer'''||R (CTRL)||Selecteer een ander gereedschap en dan deze knop om het item te verwijderen. Je kunt dit ook doen met de Ctrl-toets.
 |}
 
 Behalve het bouwen op vlakke wegen, kunnen depots en stations ook worden gebouwd op [[nl/Archive/Manual/Settings/Bouwen op hellingen|hellingen]].
@@ -71,4 +71,4 @@ Wanneer je tramwegen bouwt, denk er dan aan dat tramwagens een eindlus moeten he
 ==Trams bouwen==
 Plaats dan een tramdepot, bouw een tramvoertuig door op ''nieuwe wegvoertuigen'' te klikken, selecteer dan een voertuig en koop het. Het zal worden geplaatst in het tramdepot en het voertuigvenster wordt geopend. Geef het [[nl/Manual/Orders|orders]], en klik op de balk onderaan met de tekst "Gestopt" om de tram te laten rijden. 
 
-[[Category:en/0.6.0 Features]]
+[[Category:en/Manual/0.6.0 Features]]

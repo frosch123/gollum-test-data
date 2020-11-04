@@ -1,7 +1,7 @@
 [[Translation:en/Manual/Orders]]
-{{de/Teilen}}
+{{de/Manual/Teilen}}
 
-{{de/Tutorial}}
+{{de/Manual/Tutorial}}
 :''Dieses Tutorial erklärt die Aufträge für die Version [[en/Archive/OpenTTD/OpenTTD 0.7.0]] und für die darauffolgenden. Wenn du eine ältere Version von OpenTTD in verwendung hast siehe hierzu bitte:'' '''[[en/Archive/Manual/Orders (old)]]''' (Englisch)
 
 
@@ -10,8 +10,8 @@
 ==Aufträge erstellen==
 Du kannst für alle Fahrzeuge welche im Besitz deiner Firma sind Aufträge erstellen. Deine Fahrer werden versuchen diese Aufträge befolgen (außer du hast dein Netzwerk schlecht ausgelegt, aber das ist ein anderes Problem). Um einen Auftrag zu erteilen:
 
-*Finde das Fahrzeug für welches du einen Auftrag erteilen willst und klicke darauf. Das Fahrzeug kann sich in einem Depot befinden, solltest du es erst frisch gekauft haben oder es ist bereits in Bewegung. Für einen Zug hat es die selbe Auswirkung wenn man auf einem Waggon klickt. Dies öffnet einem das Fahrzeugfenster.<br/>[[File:en/Orders-1.png|frame|none|Das Fahrzeugfenster]]
-*Klicke auf den ''Auftrag'' Knopf (rot eingekreist im Bild). Dies öffnet das Auftragsfenster, welches alle aktuellen Aufträge des Fahrzeuges anzeigt (unser Beispielfahrzeug hat derzeit noch keinen Auftrag).<br/>[[File:en/Orders-2.png|frame|none|Das Auftragsfenster]]
+*Finde das Fahrzeug für welches du einen Auftrag erteilen willst und klicke darauf. Das Fahrzeug kann sich in einem Depot befinden, solltest du es erst frisch gekauft haben oder es ist bereits in Bewegung. Für einen Zug hat es die selbe Auswirkung wenn man auf einem Waggon klickt. Dies öffnet einem das Fahrzeugfenster.<br/>[[File:en/Manual/Orders-1.png|frame|none|Das Fahrzeugfenster]]
+*Klicke auf den ''Auftrag'' Knopf (rot eingekreist im Bild). Dies öffnet das Auftragsfenster, welches alle aktuellen Aufträge des Fahrzeuges anzeigt (unser Beispielfahrzeug hat derzeit noch keinen Auftrag).<br/>[[File:en/Manual/Orders-2.png|frame|none|Das Auftragsfenster]]
 
 *Klicke ''[[#fahre-zu|Fahre zu]]'' und wähle dann die Zielstation auf der Karte.
 
@@ -37,7 +37,7 @@ Das ist die Möglichkeit ein Fahrzeug zu einem bestimmten Ziel zu schicken. Es f
 Die ''Fahre Zu'' Schaltfläche hat die folgenden '''Optionen''':
 *'''Fahre Zu'''
 *'''Nächstes Depot'''
-*'''[[de/Bedingter Auftrag|Bedingter Sprung zu Auftrag]]'''. Mit dieser Option ist es möglich Aufträge zu überspringen, wenn z.B. der Zug voll beladen ist.[[File:en/Orders gotooptions.png|frame|none|''Fahre zu'' Optionen.]]
+*'''[[de/Bedingter Auftrag|Bedingter Sprung zu Auftrag]]'''. Mit dieser Option ist es möglich Aufträge zu überspringen, wenn z.B. der Zug voll beladen ist.[[File:en/Manual/Orders gotooptions.png|frame|none|''Fahre zu'' Optionen.]]
 
 Siehe [[de/Schnelle Aufträge|Schnelle Aufträge]] für Abkürzungen beim erstellen von Aufträgen.
 
@@ -69,7 +69,7 @@ Nun ist es möglich Be- und Entladung seperat zu verwalten. Du kannst:
 *''Volladen jeder Fracht'' um eine Volle Ladung von allen Frachtarten zu erhalten
 *''Volladen einer Fracht'' um eine Volle Ladung von einer Frachtart zu erhalten
 *''nicht Beladen'' um nichts zu Laden
-[[File:en/Orders goto load.png|frame|none|Die Ladeoptionen.]]
+[[File:en/Manual/Orders goto load.png|frame|none|Die Ladeoptionen.]]
 
 ===Lade, wenn verfügbar===
 :Das Fahrzeug wird sich zur ausgewählten Station begeben um dort all jene Fracht aufzuladen welche zu dieser Zeit sich in der Station befindet und anschließend die Station verlassen um zum nächsten Auftrag überzugehen. Dies ist die Standardeinstellung. Es wird nicht empfohlen dies zu verwenden, weil du möchtest, dass ein Fahrzeug die Station voll verlässt um die benötigte Fahrzeit zu reduzieren. (Außer bei Fahrezeugen die Passagiere oder Post transportieren)
@@ -89,7 +89,7 @@ Um zu Entladen kannst du:
 *''Alles entladen'', um alles zu entladen.
 *''Umladen'', um die Fracht umzuladen.
 *''Nicht entladen'', um nichts zu entladen.
-[[File:en/Orders goto unload.png|frame|none|The unload options.]]
+[[File:en/Manual/Orders goto unload.png|frame|none|The unload options.]]
 
 ===Entladen, falls angenommen===
 :Das Fahrzeug wird sich zur Station begeben um dort all jene Ladung zu entladen, welche an dieser Station angenommen wird und wird dann zum nächsten Auftrag übergehen. Dies ist die Standardeinstellung.
@@ -117,7 +117,7 @@ Du kannst:
 *''Fahre ohne Zwischenhalt zu''
 *''Fahre über''
 *''Fahre ohne Zwischenhalt über''
-[[File:en/Orders goto stopoptions.png|frame|none|Die Routenoptionen.]]
+[[File:en/Manual/Orders goto stopoptions.png|frame|none|Die Routenoptionen.]]
 
 ===Ohne Zwischenhalt===
 es ist möglich ohne Zwischenhalt direkt zu einer Station zu fahren. [[de/Ohne Zwischenhalt|Ohne Zwischenhalt]] hält ein Fahrzeug davon ab in einer Station welche am Weg zum ausgewähltem Ziel liegt zu halten.
@@ -127,16 +127,16 @@ Es ist möglich die Route über eine Station zu legen. Es ist auch hier möglich
 
 ==Wartung==
 Diese Option wird verfügbar wenn man einen ''Fahre zu Depot'' Auftrag ausgewählt hat. Siehe [[de/Wartung|Wartung]] und [[de/Erlaube Fahre zu Depot Aufträge|Erlaube Fahre zu Depot Aufträge Option]] für weitere Details.
-[[File:en/Service-options.png|none|frame|Die Optionen der Wartungsschaltfläche.]]
+[[File:en/Manual/Service-options.png|none|frame|Die Optionen der Wartungsschaltfläche.]]
 
 ==Umrüsten==
 Du kannst einen Auftrag zum [[de/Manual/Umrüsten|Umrüsten]] in der Auftragsliste erstellen. Wenn du die Option wählst wirst du gefragt auf welche Art von Fracht das Fahrzeug umgerüstet werden soll. Diese Auftragsart wird selten verwendet, da man im Normalfall ein Fahrzeug nur einmal auf eine Frachtart umrüstet.
-[[File:en/Order-Refit.png|none|frame|Abfrage auf welche Frachtart umgerüstet werden soll.]]
+[[File:en/Manual/Order-Refit.png|none|frame|Abfrage auf welche Frachtart umgerüstet werden soll.]]
 
 ==Fahrplan==
-{{de/Hauptartikel|de/Fahrplan}}
+{{de/Manual/Hauptartikel|de/Fahrplan}}
 Fahrpläne geben dir die Möglichkeit zu wählen wie viel Zeit das Fahrzeug versuchen soll für diesen Teil der Route zu benötigen, ebenso wie lange es in der Station bleiben soll und auch Geschwindigkeitsbeschränkungen zu geben.
-[[File:en/Orders-timetable.png|none|frame|Die Fahrplan Oberfläche.]]
+[[File:en/Manual/Orders-timetable.png|none|frame|Die Fahrplan Oberfläche.]]
 
 ==Aufträge kopieren==
 Wenn du möchtest dass die selben Aufträge von mehreren [[de/Manual/Fahrzeuge|Fahrzeugen]] erledigt werden, so ist es mühsam jedem Fahrzeug die Aufträge manuell aufzutragen. Denke an eine Buslinie, welche 5 [[de/Station|Stationen]] mit 5 Bussen bedient um der großen Passagiernachfrage nachzukommen. Hier wäre es extrem mühsam 5 mal die selben Schritte in die Auftragsliste einzutragen. Einfacher ist es die Aufträge zu kopieren.
@@ -159,7 +159,7 @@ Aufträge zu kopieren ist dennoch nicht die beste Lösung, da man bei Änderunge
 #Halte ''Strg'' gedrückt und klicke auf das Fahrzeug dessen Auftragsliste du kopieren möchtest.
 #Nun teilen die zwei Fahrzeuge einen gemeinsamen Fahrplan, welche miteinander verknüpft sind. Du siehst die Aufträge des anderen Fahrzeugs und die letzte Zeile lautet nun ''--Ende des gemeinsam genutzen Fahrplans--''
 
-[[File:en/Shared-orders.png|center|frame|Der Fahrplan für zwei Busse wurde geteilt.]]
+[[File:en/Manual/Shared-orders.png|center|frame|Der Fahrplan für zwei Busse wurde geteilt.]]
 
 Du kannst die Aufträge beliebig vieler Fahrzeuge des selben Typs miteinander verknüpfen.
 
@@ -172,14 +172,14 @@ In gewissen Situationen möchtest du vielleicht nicht weiter einen gemeinsam gen
 Nun hat sich der letzte Eintrag wieder auf ''--Ende der Aufträge--'' geändert. Alle anderen Fahrzeuge mit denen der Fahrplan geteilt wurde sind von dieser Änderung nicht betroffen. Nun kannst du von dem Fahrzeug die Aufträge wieder unabhängig bearbeiten.
 
 ===Liste der Fahrzeuge mit gemeinsam genutzten Aufträgen===
-Das [[File:en/SharedOrders.png]] Symbol auf der rechten Seite des Auftrags- bzw. Fahrplanfensters ist die geteilte Aufträge Schaltfläche. Es zeigt dir die Liste aller Fahrzeuge welche den selben [[#gemeinsam-genutzte-auftrage|gemeinsamen Auftrag]] wie das gewählte Fahrzeug haben. Das Symbol ist nur verfügbar wenn das Fahrzeuge über einen geteilten Fahrplan verfügt.
-[[File:en/SharedOrders-1.png|none|frame|Liste der Fahrzeuge mit gemeinsam genutzten Fahrplan.]]
+Das [[File:en/Manual/SharedOrders.png]] Symbol auf der rechten Seite des Auftrags- bzw. Fahrplanfensters ist die geteilte Aufträge Schaltfläche. Es zeigt dir die Liste aller Fahrzeuge welche den selben [[#gemeinsam-genutzte-auftrage|gemeinsamen Auftrag]] wie das gewählte Fahrzeug haben. Das Symbol ist nur verfügbar wenn das Fahrzeuge über einen geteilten Fahrplan verfügt.
+[[File:en/Manual/SharedOrders-1.png|none|frame|Liste der Fahrzeuge mit gemeinsam genutzten Fahrplan.]]
 
 ===Zu Beachten===
 *anders als bei kopierten Aufträgen ist es möglich gemeinsam genutzte Aufträge bei Fahrzeugen zu erstellen, welche bereits Aufträge zugeteilt bekommen haben. Der Hintergrund hierfür ist, dass es unwahrscheinlich ist, dass man unbeabsichtigt die ''Strg'' Taste gedrückt hält wenn man auf ein anderes Fahrzeug klickt. Wenn man [[#gemeinsam-genutzte-auftrage|gemeinsam genutzte Aufträge]] erstellt so gehen die vorherigen Aufträge verloren.
 *Du kannst die ''Fahrzeug kopieren'' Schaltfläche im Depotfenster bzw. die ''Kopie des Fahrzeuges kaufen'' Schaltfläche im Fahrzeugfesnter nutzen um eine exakte Kopie des Fahrzeugs zu erstellen. Standardmäßig werden hierbei die Aufträge nur kopiert und sind daher nicht miteinander verknüpft. Wenn du das Fahrzeug kopieren möchtest und gleichzeitig einen gemeinsam genutzten Auftrag erstellen möchtest, halte beim Klicken auf die Schaltfläche ''Strg'' gedrückt.
-[[File:en/Clone-vehicle-2.png|none|frame|''Fahrzeug kopieren'' Schaltfläche.]]
-[[File:en/Clone-vehicle.png|none|frame|''Kopie des Fahrzeugs kaufen'' Schaltfläche. Nur verfügbar wenn sich das Fahrzeug in einem [[de/Depots|Depot]] befindet.]]
+[[File:en/Manual/Clone-vehicle-2.png|none|frame|''Fahrzeug kopieren'' Schaltfläche.]]
+[[File:en/Manual/Clone-vehicle.png|none|frame|''Kopie des Fahrzeugs kaufen'' Schaltfläche. Nur verfügbar wenn sich das Fahrzeug in einem [[de/Depots|Depot]] befindet.]]
 *Bei gemeinsam genutzten Aufträgen gibt es kein Hauptfahrzeug. So lange du Fahrzeuge hast die einen Fahrplan teilen, so lange ist dieser verfügbar.
 
 ==Aufträge kontrollieren==
@@ -189,24 +189,24 @@ Das [[de/Auftragskontrollsystem|Auftragskontrollsystem]] läuft automatisch im H
 
 ===Zu wenige Aufträge===
 Um Geld zu verdienen müssen sich im Fahrplan eines Fahrzeuges zwei Stationen befinden. Depots und Wegpunkte zählen hierbei nicht, da hier keine Fracht be- oder entladen werden kann.
-[[File:en/Few-orders.png|none|frame|"<Fahrzeug> hat zu wenige Aufträge".]]
+[[File:en/Manual/Few-orders.png|none|frame|"<Fahrzeug> hat zu wenige Aufträge".]]
 
 ===Doppelter Auftrag===
 Manchmal passiert es, dass eine Station zwei mal selektiert wird. Für die meisten Fahrzeuge hinterlässt dies ein großes Chaos in den Pfadfinder. Man denke hier an ein Flugzeug welches von einem Flughafen startet um dann am selben wieder zu landen.
-[[File:en/Duplicate-orders.png|none|frame|"<Fahrzeug> hat doppellte Aufträge".]]
+[[File:en/Manual/Duplicate-orders.png|none|frame|"<Fahrzeug> hat doppellte Aufträge".]]
 
 ===Ungültige Aufträge===
 Wenn du eine Station löschst welche noch von Fahrzeugen angesteuert wird, so ist der "Geist" der Station weiterhin in Form eines grauen Stationsnamen sichtbar für eine Weile. Das erlaubt dir eine neue Station an der selben Stelle zu bauen wo einst die alte Station stand welche dann den Namen der alten Station annimmt. Fahrzeuge werden die neue Station dann anfahren solange es sich um den korrekten Typ handelt, ohne dass die Aufträge extra geändert werden müssen.
-[[File:en/Invalid-order.png|frame|none|"Ungültiger Auftrag"]]
+[[File:en/Manual/Invalid-order.png|frame|none|"Ungültiger Auftrag"]]
 
 Solltest du aber zu lange warten, so verschwindet der graue Stationsname und alle Fahrzeuge die auf diese Station verweisen erhalten statt dieser den Eintrag '''Ungültiger Auftrag''' in der Auftragsliste. Dieser Auftrag wird übersprungen.
 
 ===Ungültige Station===
 Wenn du einen Teil einer Station löscht (z.B. eine Bushaltestelle welche mit einem Bahnhof verbunden ist) so wird der Auftrag nicht ungültig gesetzt, da die Station ja immernoch existiert. Das Fahrzeug hat dennoch keine Möglichkeit zu dieser Station zu gelangen, da die korrekte Einrichtung dafür nicht vorhanden ist. (Das ist ebenso der Fall für künstliche Straßenfahrzeuge welche in manchen NewGRFs zu verfügung stehen, diese können nur an Durchfahrtstationen halten.) Dies führt dazu, dass das Fahrzeug ewig nach dieser Station sucht.
-[[File:en/Invalid-station.png|frame|none|"<Fahrzeug> hat eine ungültige Station in der Auftragsliste".]]
+[[File:en/Manual/Invalid-station.png|frame|none|"<Fahrzeug> hat eine ungültige Station in der Auftragsliste".]]
 
 ==Siehe Auch==
 *[[de/Abhängige Aufträge|abhängige Aufträge]]
 *[[de/Fahrplan|Fahrplan]]
 *[[en/Archive/Manual/Orders (old)]] (Englisch)
-[[Category:de/Fahrzeuge]]
+[[Category:de/Manual/Fahrzeuge]]

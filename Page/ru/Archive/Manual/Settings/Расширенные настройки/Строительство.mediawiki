@@ -1,13 +1,13 @@
 [[Translation:en/Archive/Manual/Settings/Advanced Settings/Construction]]
 {{ru/Перевод|Advanced Settings/Construction|1}}
-{{ru/Расширенные настройки}}
+{{ru/Archive/Manual/Settings/Расширенные настройки}}
 
 ==Advanced Settings window: Construction section==
 The Construction section allows you to set various options related to construction and terraforming. The purpose of the available settings is explained below. For each setting, the respective variable from the [[ru/Archive/Manual/Settings/Openttd.cfg|config file]] is listed with it's possible values.
 {| align="center"
 |- valign="top"
 |__TOC__
-|[[File:en/Advset construction.png|frame|left|The Construction section of the Advanced Settings window (1.0.1)]]
+|[[File:en/Archive/Manual/Settings/Advset construction.png|frame|left|The Construction section of the Advanced Settings window (1.0.1)]]
 |}
 
 ===<u>Signals</u>===
@@ -67,8 +67,8 @@ The town’s attitude is more lenient towards you [[en/Archive/Manual/Settings/E
 :''В конфигурационном файле openttd.cfg:'' ([construction] extra_dynamite = <true|false>) 
 {{en/-}}
 ===Allow building very long bridges===
-{{ru/Устарело}} 
-{{en/Feature period|Old|1.0|align="right"|text=(since 0.2.0)}}
+{{ru/Manual/Устарело}} 
+{{en/Archive/Feature period|Old|1.0|align="right"|text=(since 0.2.0)}}
 Allowed you to build very [[en/Archive/Manual/Settings/Longer bridges|long bridges]]. Now it is replaced with [[en/Archive/OpenTTD/OpenTTD 1.1.0#1-1-0-beta5-2011-02-04|custom maximum bridge and tunnel length setting]].
 :''Возможные настройки:'' <span style="color:green">'''Вкл'''</span> или <span style="color:red">'''Выкл'''</span>
 :''В конфигурационном файле openttd.cfg:'' ([construction] longbridges = <true|false>)
@@ -108,4 +108,4 @@ This option has been renamed to [[#airports-never-expire|Airports never expire]]
 ===See also===
 *'''For 0.3.0 to 0.6.3''' - See [[en/Archive/Manual/Settings/Configuring patches]] for information of how to change settings.
 *'''For 0.2.0 and 0.2.1''' - See [[en/Archive/Manual/Settings/Configuring patches in 0.2.0]].
-[[Category:ru/Настройки и предпочтения]]
+[[Category:ru/Manual/Настройки и предпочтения]]

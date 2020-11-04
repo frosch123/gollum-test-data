@@ -1,6 +1,6 @@
 [[Translation:en/Manual/Orders]]
 {{en/Split|Its necessary to separate Manual/Tutorial}}
-{{zh/教程}}
+{{zh/Manual/教程}}
 :''本文适用于 [[en/Archive/OpenTTD/OpenTTD 0.7.0]] 或更新的版本．'''
 
 '''调度任务'''是进行 OpenTTD 游戏的基础。[[en/Manual/Conditional Orders|条件性调度任务]] 则允许你对任务更多的定制．如果你不设置任何任务，运输工具将毫无目标地乱转，除非你很幸运才能有所收益．为了能装卸货物 (这正是本游戏的目的），就需要设置调度任务，这个概念就像是「前往，装货，然後把货载到目的地」。
@@ -9,10 +9,10 @@
 你可以给任何已有的运输工具设置调度任务。它们会试图执行这些任务（虽然当运输网络设计不良时，运输工具仍会迷路）．
 
 要给出指令：
-*点击你想要设置任务的运输工具．它可能正在车库里或已上路运行．对于火车，点击任意车厢也可以．之后会显示运输工具窗口．<br/>[[File:en/Orders-1.png|frame|none|运输工具窗口]]
+*点击你想要设置任务的运输工具．它可能正在车库里或已上路运行．对于火车，点击任意车厢也可以．之后会显示运输工具窗口．<br/>[[File:en/Manual/Orders-1.png|frame|none|运输工具窗口]]
 
 *点击 '''调度任务''' 按钮（图中红圈的位置），显示任务窗口．
-<br/>[[File:en/Orders-2.png|frame|none|调度任务窗口]]
+<br/>[[File:en/Manual/Orders-2.png|frame|none|调度任务窗口]]
 
 *点击 '''前往''' 按钮后，点击地图上的目的地站点．
 
@@ -35,7 +35,7 @@
 * '''前往'''
 * '''前往最近的车库'''
 * '''[[zh/教程/指定条件调度任务|条件性命令]] 跳转'''．点击该选项后再点击相应任务可设置条件跳转．
-[[File:en/Orders gotooptions.png|frame|none|'''前往'''选项]]
+[[File:en/Manual/Orders gotooptions.png|frame|none|'''前往'''选项]]
 
 ===删除===
 这将删除高亮选择的任务．如果'''调度计划结束'''被选择，整个任务清单会被清除．在共享任务清单的相应位置选择，则会有'''退出共享计划'''选项．
@@ -53,14 +53,14 @@
 *''"装满所有货物"'' 会装满货物使运输工具满载离开．
 *''"装满任意货物"'' 只要运输工具装满能运的其中一种货物就离开．
 *''"不装载'' 什么都不装就离开.
-[[File:en/Orders goto load.png|frame|none|装货选项]]
+[[File:en/Manual/Orders goto load.png|frame|none|装货选项]]
 
 ==卸货选项==
 *''"若接受的话就卸载"'' 将卸载给站点能接受的货物．
 *''"卸载全部"'' 不管站点是否接受都卸载．货物将被保存在站点直到其他车辆来接收，或者货物过期为止．
 *''"转运"'' 把货物转交其他运输者并结算运费．
 *''"不卸载"''
-[[File:en/Orders goto unload.png|frame|none|卸载选项]]
+[[File:en/Manual/Orders goto unload.png|frame|none|卸载选项]]
 
 ===卸载全部===
 对于站点不接受的货物，卸载后保留在站点，同时运输车辆对于该次运输收不到运费．
@@ -75,7 +75,7 @@
 *''"直达"''
 *''"经由"''
 *''"经由且直达"''
-[[File:en/Orders goto stopoptions.png|frame|none|停车选项]]
+[[File:en/Manual/Orders goto stopoptions.png|frame|none|停车选项]]
 
 ===直达===
 指定运输工具在到达指定站点前不停车．
@@ -84,16 +84,16 @@
 通过某个站点不停车．效果和使用路点相同．
 
 ==保养==
-[[File:en/Service-options.png|none|frame|保养选项]]
+[[File:en/Manual/Service-options.png|none|frame|保养选项]]
 
 ==改装==
 能够让指定运输工具到车库进行改装．
-[[File:en/Order-Refit.png|none|frame|提示要改装的类型]]
+[[File:en/Manual/Order-Refit.png|none|frame|提示要改装的类型]]
 
 ==时间表==
-{{en/Main|时间表}}
+{{en/Manual/Main|时间表}}
 时间表指定列车在每一段路线行驶耗时，以及在每个站点的停留时间，还能限定火车时速．
-[[File:en/Orders-timetable.png|none|frame|时间表设置界面]]
+[[File:en/Manual/Orders-timetable.png|none|frame|时间表设置界面]]
 
 ==复制调度任务==
 #给第一个运输工具设置调度任务．
@@ -107,7 +107,7 @@
 
 ==共享调度计划==
 '''共享调度计划'''允许把一系列调度任务共享给多个运输工具．这样当一个运输工具的调度任务更新后，所有其它运输工具的调度任务也更新了（无论你选择修改其中哪一个运输工具的调度任务，所有共享任务的运输工具同时更新）．操作与复制列表相似，区别在于要按下Ctrl选择要共享的目标运输工具．
-[[File:en/Shared-orders.png|center|frame|2辆客车的调度计划被共享]]
+[[File:en/Manual/Shared-orders.png|center|frame|2辆客车的调度计划被共享]]
 ===移除共享调度===
 你可能会基於某些因素决定不再用共享调度，当然你无法直接按删除，因为那会直接删掉所有共享的车辆。要移除共享调度，你需要：
 #打开想要移除共享车辆的指令
@@ -118,18 +118,18 @@
 
 
 ===显示共享某个调度计划的所有运输工具===
-调度任务窗口右侧的 [[File:en/SharedOrders.png]]
+调度任务窗口右侧的 [[File:en/Manual/SharedOrders.png]]
 按钮，点击后将显示所有共享相同调度计划的运输工具 [[#shared-orders]]．<br/>
-[[File:en/SharedOrders-1.png|none|frame|所有共享该调度计划的运输工具]]
+[[File:en/Manual/SharedOrders-1.png|none|frame|所有共享该调度计划的运输工具]]
 
 ===注意===
 *和　'''复制任务'''　不同，共享任务操作会覆盖已有的调度计划．
 *可以通过　车库窗口的克隆选项　或者　运输工具窗口的复制购买选项（只有在车库里才显示），来同时复制调度计划．如果你想让新车辆共享调度，可以在选择的时候按住Ctrl键．<br/>
-[[File:en/Clone-vehicle-2.png|none|frame|克隆按钮]]
-[[File:en/Clone-vehicle.png|none|frame|复制购买]]
+[[File:en/Manual/Clone-vehicle-2.png|none|frame|克隆按钮]]
+[[File:en/Manual/Clone-vehicle.png|none|frame|复制购买]]
 
 ==参考==
 * [[en/Manual/Conditional Orders|条件性调度任务]]
 * [[en/Manual/Timetable|时间表]]
 
-[[Category:zh/中文文章]][[Category:en/Tutorial]]
+[[Category:en/Manual/Tutorial]]

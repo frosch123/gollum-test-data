@@ -1,33 +1,58 @@
 [[Translation:en/Manual/Tutorial/Main Page]]
+{{ca/Manual/Tutorial}}
 
-{{en/Tabs|5|1
-|ca/Manual/Tutorial/Main Page|1. Començament<!--
--->|ca/Manual/Tutorial/Autobusos|2. Autobusos<!--
--->|ca/Manual/Tutorial/Trens|3. Trens<!--
--->|ca/Manual/Tutorial/Avions|4. Avions<!--
--->|ca/Manual/Tutorial/Final|5. Per a acabar...}}
-<div style="padding:.5em 1em 1em 1em; border-top:none; background-color:#f1f2fe; color:#000;">
-<div style="float: right">
-{{ca/Tutorial}}
-</div>
-Benvingut al tutorial del joc OpenTTD. Ací aprendràs com començar a jugar i com crear rutes d'autobús i de tren. Este pas et portarà aproximadament uns 30 minuts. Si et quedes embossat, feix clic-dret en els botons del joc per a obtindre una descripció del que fan. El menú de la dreta (de moment en anglés) mostra tutorials més detallats sobre aspectes concrets del joc perquè, si vols, pugues mirar coses més específiques que vullgues aprendre.
+Si vosté és nou i mai abans ha jugat amb [[en/Archive/OpenTTD/Transport Tycoon Deluxe]], [[en/Archive/OpenTTD/Transport Tycoon Deluxe]], [[en/Archive/OpenTTD/TTDPatch]] o [[en/Manual/Main Page]], aquest article '''Primers passos''' li mostrarà com fer la seua primera ruta de tren.
 
-==Començar a jugar==
-{{en/Phototable|[[File:ca/Main menu new game.png]]|Menú principal de OpenTTD.|center}}
-A l'obrir OpenTTD, li apareixerà el menú principal.
+En primer lloc, polse ''Nou joc'' en el menú principal. Això genera un nou mapa de clima temperat.
 
+La càrrega més rendible per a transportar en OpenTTD és el carbó. Portar carbó a les centrals tèrmiques és la millor manera de guanyar diners. Desplaça't pel mapa mantenint polsat el botó dret del ratolí i arrossegant fins que trobes una mina de carbó i una central tèrmica prop. ¡Però no massa prop!
 
-*Cliquea en el botó '''Nou Joc'''. Açò obrirà la pantalla '''Generació del món''', ple d'opcions encara més enlluernadors. Deixa els valors predeterminats de moment.
-{{en/Phototable|[[File:ca/Worldgenerationdialog.png]]|Dialogue Generació de món. Les quatre imatges a la part superior et permeten canviar el clima. Deixarem totes les opcions tal com estan per aquest tutorial.|center}}
+[[File:en/Manual/Tutorial/Tutorial1.png|thumb|500px|center|Una cosa així es perfecta.]]
 
-*Cliquea en el gran botó verd '''Genera'''. D'aquesta manera es crearà un nou món, i el joc començarà.
+Però ara que ja hem trobat les indústries... Com podem portar el carbó a la central tèrmica? Necessitem vehicles. Tenim quatre tipus de transport per a triar:
 
-==Dins del joc==
-{{en/Phototable|[[File:en/Aftergamestart.png|320px]]|Només començar un nou joc.|right}}
-La pantalla OpenTTD que veus ara és amb la que jugaràs. Al centre es pot veure el paisatge verd, tal vegada amb alguna indústria, ciutat o bosc, per aquí o per allà. Aquest és el món que has de dominar amb les eines que disposa la teua empresa: carreteres, ferrocarrils, ports i aeroports. 
+*Transport per carretera: no servirà de gran cosa ja que necessita massa temps per a generar diners pel fet que la seua capacitat de càrrega és molt xicoteta.
+*Els vaixells: poden portar tones de pes, però com podem construir rutes de vaixells ací sense esgotar les nostres 100.000£? Impossible!
+*Els avions: estan pensats per a viatges de llarga distància, i no tindria diners prou ràpid.
+*Els trens, per altra banda, són eficients, poden portar gran quantitat de carbó, i són prou barats.
 
-En el part superior de la pantalla veuràs una barra de menús. Fes clic-dreta en alguns botons: una finestra emergent de color groc apareixerà per a informar-te sobre el que fa el botó. Alguns dels botons despleguen un menú davall d'ells en polsar-los. Es pot accedir a les opcions del menú polsant i mantenint polsat el botó, soltant quan tingues seleccionada l'opció que desitges.
+Òbriga la barra de ferramentes del tren fent clic en la icona que s’assembla a les vies ferroviàries [[File:en/Manual/RailCnstr.png]]. La icona es troba en la barra de ferramentes principal, que està en la part superior de la pantalla. 
 
-<br style="clear:both;">
-<span style="float: right">[[ca/Manual/Tutorial/Autobusos|'''Següent:''' Creant una línia d'autobusos]] &raquo;</span>
-</div>
+[[File:ca/Manual/Railroad Construction.png|center|Es mostrarà aquesta finestra.]]
+
+Per a començar, faça clic en la icona que pareix un edifici d’estació [[File:en/Manual/RailSt.png]]. S’obrirà una nova finestra per a construir l’estació.
+
+[[File:ca/Manual/Stationgui.png|center|frame|S'assembla a aquesta]]
+
+Faça clicodreta en qualsevol botó per a obtenir una descripció del que fa.
+
+Usant els botons, cree una estació prop de la mina de carbó amb el nombre de vies ajustat a u, i la mida de les andanes a tres. Seleccione l’orientació del costat esquerre.
+
+Torne a obrir la finestra d’estacions, i canvie l’orientació. Ara construïsca una estació junt la planta d’energia.
+
+[[File:en/Manual/Tutorial/Tutorial2.png|thumb|500px|center|Ha de tenir un aspecte com aquest.]]
+
+Ja té les seues estacions, però encara ha de construir la via entre elles. El suggerisc usar la ferramenta [[ca/Autorail|Autorail]] [[File:en/Manual/Autorl.png]], però també pot usar els trams de via direccionals si el desitja. Connecte les estacions usant els trams de via adequats. Tracte d’evitar les revoltes de 90 graus.
+
+[[File:en/Manual/Tutorial/Tutorial3.png|thumb|500px|center|Com aquesta.]]
+
+Per tant, ja tenim les indústries, les estacions i la via, però què passa amb els trens? Use la barra de ferramentes del tren, seleccione la icona Construeix unes cotxeres [[File:en/Manual/Tutorial/TrnDpt.png]]. Una nova finestra s’obrirà. Col·loca aquestes cotxeres enfront d’un tram recte de la via prop de l’estació de la mina de carbó. Si es col·loquen correctament les cotxeres es connectaran a la via de forma automàtica.
+
+Faça clic en les cotxeres i s’obrirà una finestra nova.
+
+[[File:ca/Manual/Tutorial/Tutorial4.png|thumb|500px|center|La finestra de cotxeres.]]
+
+Faça clic en el botó ''Nous Vehicles'' per a obrir la finestra dels ''Nous Trens''. Seleccione una locomotora de la part superior de la llista, i polse ''Compra Vehicle''. S’obrirà una altra finestra, no li faça cas de moment. A continuació, desplace’s cap avall en la finestra de ''Nous vehicles'' i compre '''sis''' vagons per carbó. Huuuy! Vaig voler dir cinc! Bé... Per a eliminar un vagó, arrossegue el vagó de carbó sobre el botó ''Vendre vehicle'' [[File:en/Manual/SellTrainVehicle.png]] i solte'l.
+
+Ara tornem a la finestra que va aparèixer quan va comprar la locomotora: Faça clic en la icona de ''[[ca/Ordes|ordes]]'' que pareix a una fletxa trencada [[File:en/Manual/Orders.png]].
+
+Polse el botó ''Ves a'' i faça clic en l’estació de la mina de carbó. El nom s’introduirà en la llista d’ordres. Faça clic en el nom de l’estació en la llista i en el botó de ''càrrega del tot''. Ara faça clic en ''--Fi d’Ordres--''. Utilitzant el mateix mètode, afija l’estació de la central elèctrica a les ordres, però no utilitze el botó ''càrrega completa'' ja que no hi ha res a carregar. Una vegada que haja acabat, faça clic en el botó ''"Parat"'' en la part inferior para... posar en marxa el tren!
+
+Felicitats! Ha creat vosté la seua primera línia ferroviària. No obstant això, ha de tenir present que aquest model no és recomanable pel fet que només pot funcionar un tren al mateix temps en aquest tipus de via.
+
+==Veja també==
+*[[ca/Manual/Main Page|Manual del joc]]
+*[[ca/Manual/Tutorial/Tutorial|Tutorial bàsic]]
+*[[ca/Archive/Community/Preguntes més freqüents|Preguntes més freqüents]]
+
+[[Category:ca/Manual/Jugar]]

@@ -1,5 +1,5 @@
 [[Translation:en/Archive/Manual/Settings/Advanced Settings/Vehicles]]
-{{fr/Options Avancées}}
+{{fr/Archive/Manual/Settings/Options Avancées}}
 
 ==Fenêtre de Configuration avancée: section Véhicules==
 La section Véhicules vous permet de définir diverses options liées aux trains, aux véhicules routiers, aux avions et aux bateaux. Le but de ces options disponibles est expliqué ci-dessous. Pour chacune, la variable respective du [[fr/Archive/Manual/Settings/Openttd.cfg|fichier de configuration]] est indiquée avec ses valeurs possibles.
@@ -7,7 +7,7 @@ La section Véhicules vous permet de définir diverses options liées aux trains
 {| align="center"
 |- valign="top"
 |__TOC__
-|[[File:fr/Advset vehicles v1.1.3.png|frame|left|La section Véhicules de la fenêtre de Configuration avancée (v1.1.3)]]
+|[[File:fr/Archive/Manual/Settings/Advset vehicles v1.1.3.png|frame|left|La section Véhicules de la fenêtre de Configuration avancée (v1.1.3)]]
 |}
 
 ===<u>Routage</u>===
@@ -241,7 +241,7 @@ Vous permet d'utiliser les [[fr/Manual/Horaires|horaires]] pour les véhicules.
 {{en/-}}
 ===Utiliser plusieurs NewGRF de véhicules===
 {{fr/Disponibilité|0.7|align="right"|texte=(depuis 0.7.0)}}
-Quand elle est activée, cette fonctionnalité ''[[fr/Pool de véhicules|Pool de véhicules]] permet à de multiples ensembles de véhicules [[fr/Manual/NewGRF|NewGRF]] de coexister. Sans cela, le nombnre maximal de véhicules différents est très limité et des ensembles de véhicules du même type s'écraseront les véhicules ou les fonctions. Note: utiliser de multiples ensembles de véhicules en même temps peut conduire à des coûts d'achat et der maintenance très bas ou très élevés pour les véhicules. Mélanger des wagons et des trains de différents ensembles de trains peut conduire à des problèmes d'affichage.
+Quand elle est activée, cette fonctionnalité ''[[fr/Archive/Manual/Settings/Pool de véhicules|Pool de véhicules]] permet à de multiples ensembles de véhicules [[fr/Manual/NewGRF|NewGRF]] de coexister. Sans cela, le nombnre maximal de véhicules différents est très limité et des ensembles de véhicules du même type s'écraseront les véhicules ou les fonctions. Note: utiliser de multiples ensembles de véhicules en même temps peut conduire à des coûts d'achat et der maintenance très bas ou très élevés pour les véhicules. Mélanger des wagons et des trains de différents ensembles de trains peut conduire à des problèmes d'affichage.
 :''Valeurs possibles:'' <span style="color:green">'''Activé'''</span> ou <span style="color:red">'''Désactivé'''</span>
 :''Dans le fichier de configuration [[fr/Archive/Manual/Settings/Openttd.cfg|openttd.cfg]]:'' ([vehicle] dynamic_engines = <true|false>)
 {{en/-}}
@@ -251,4 +251,4 @@ Quand elle est activée, cette fonctionnalité ''[[fr/Pool de véhicules|Pool de
 *'''De 0.3.0 à 0.6.3''' - Voyez [[fr/Archive/Manual/Settings/Options avancées 0.3.0 - 0.6.3|Options avancées 0.3.0 - 0.6.3]] pour une information sur comment modifier les paramètres.
 *'''Pour 0.2.0 et 0.2.1''' - Voyez [[fr/Options avancées 0.2.0|Options avancées 0.2.0]].
 
-[[Category:fr/Réglages et préférences]]
+[[Category:fr/Manual/Réglages et préférences]]

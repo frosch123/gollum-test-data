@@ -1,7 +1,7 @@
 [[Translation:en/Manual/Towns]]
 {{en/Table of contents}}
 '''Towns''' are where the inhabitants of OpenTTD live.  Each town has a population which can grow or shrink depending on certain conditions.
-[[File:en/Town.png|thumb|left|436px|The small town of Potsdam.]]
+[[File:en/Manual/Base Set/Cargos/Town.png|thumb|left|436px|The small town of Potsdam.]]
 __TOC__{{en/-}}
 ==Town Buildings==
 Most [[en/Archive/Manual/Building|buildings]] in the towns provide a source of [[en/Manual/Base Set/Cargos/Passengers]] and [[en/Manual/Base Set/Cargos/Mail]] which can be transported to other towns or within the same town.  During an [[en/Manual/Economy#recession|economic recession]] there's only half of the usual amount.
@@ -31,13 +31,13 @@ Town growth can be accelerated by loading and unloading at least one item of car
 
 Towns will expand physically by extending roads onto empty areas of the map, then constructing new buildings next to the new roads.  Roads can't be built over diagonal train tracks or tracks with signals on, so be careful not to hem your towns in completely when building your transport empire.
 
-[[File:en/Town-nogrow.png|frame|left|This town cannot grow outside the railway]]
-[[File:en/Town-grow.png|frame|right|This town will grow rapidly]]
+[[File:en/Manual/Town-nogrow.png|frame|left|This town cannot grow outside the railway]]
+[[File:en/Manual/Town-grow.png|frame|right|This town will grow rapidly]]
 <br clear="all" />
 
 Pre-built road networks can speed up town growth, as the town can build houses all the time instead of houses plus roads. If towns are allowed to build roads and the road layout is a grid, the pre-built roads should match this grid, otherwise they block house tiles.
-[[File:en/Town-2x2.png|frame|left| a Town with 2x2 Grid]]
-[[File:en/Town-3x3.png|frame|right| a Town with 3x3 Grid]]
+[[File:en/Manual/Town-2x2.png|frame|left| a Town with 2x2 Grid]]
+[[File:en/Manual/Town-3x3.png|frame|right| a Town with 3x3 Grid]]
 <br clear="all" />
 
 A big city needs plenty of space. Without obstacles, a population of 1 million requires roughly 150-200 tiles diameter, transportation systems or other objects may increase this number.
@@ -47,7 +47,7 @@ A big city needs plenty of space. Without obstacles, a population of 1 million r
 There are no special conditions for a Temperate or Toyland town to grow.  Simply load/unload cargo as described above.
 
 ====Sub Arctic====
-[[File:en/Arctic town.png|right]]If centre square of the town is above the snow level, at least 1t of food per month must be delivered for the town to grow rapidly.  The town information window will show the amount of food delivered recently.
+[[File:en/Manual/Arctic town.png|right]]If centre square of the town is above the snow level, at least 1t of food per month must be delivered for the town to grow rapidly.  The town information window will show the amount of food delivered recently.
 
 The towns will grow very slowly on their own, so in the case of small towns not large enough to accept food, it is simply a case of waiting for them to grow. As with any other cargo a station needs at least 8/8 of food acceptance in its coverage area before it accepts food.
 
@@ -56,11 +56,11 @@ The amount of food delivered has no effect on the rate of town growth.
 If the centre square is not above the snow line food is not required for growth, although food will be accepted.
 
 ====Sub Tropical==== 
-[[File:en/Town tropical.png|right]]If the centre square of the town is in the desert, at least 1t of [[en/Manual/Base Set/Cargos/Food]] and 1,000L of [[en/Manual/Base Set/Cargos/Water]] per month must be delivered for the town to grow.  The town information window will show the amount of food and water delivered recently.
+[[File:en/Manual/Town tropical.png|right]]If the centre square of the town is in the desert, at least 1t of [[en/Manual/Base Set/Cargos/Food]] and 1,000L of [[en/Manual/Base Set/Cargos/Water]] per month must be delivered for the town to grow.  The town information window will show the amount of food and water delivered recently.
 
 The towns will grow very slowly on their own, so in the case of small towns not large enough to accept food, it is simply a case of waiting for them to grow. As with any other cargo a station needs at least 8/8 of food acceptance in its coverage area before it accepts food.
 
-[[File:en/Water tower.gif|right]]
+[[File:en/Manual/Base Set/Industries/Water tower.gif|right]]
 Water must be delivered to a Water Tower industry. Water Towers may be generated automatically in towns, or a player may choose to fund one using the "Fund new industry" menu.
 
 The amount of food and water delivered has no effect on the rate of town growth.
@@ -106,4 +106,4 @@ Obviously if a player wants the town to expand more efficiently, building the pl
 * [http://wiki.openttdcoop.org/User:Mfb/Towns Article on town growth mechanics by mfb at #openttdcoop]
 
 
-[[Category:en/Entities]]
+[[Category:en/Manual/Entities]]

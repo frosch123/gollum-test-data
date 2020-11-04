@@ -1,5 +1,5 @@
 [[Translation:en/Manual/Replace vehicles]]
-{{fr/Tutoriel}}
+{{fr/Manual/Tutoriel}}
 = Remplacement manuel =
 Vous pouvez remplacer un véhicule donné sans perdre sa liste d'ordres en suivant ces étapes:
 #envoyez le véhicule visé dans un dépôt
@@ -12,10 +12,10 @@ Vous pouvez remplacer un véhicule donné sans perdre sa liste d'ordres en suiva
 L'autoremplacement est une fonctionnalité utile implémentée par [[en/Archive/Community/Bjarni]] qui vous permet d'améliorer toute votre flotte d'un certain type de véhicule en un autre type, sans avoir à les vendre et les remplacer individuellement. Imaginez que vous venez juste de terminer un réseau de 40 bus, et qu'alors arrive un nouveau type de bus - cela prendrait un certain temps et pas mal d'efforts pour les envoyer tous aux dépôts, les vendre et racheter le nouveau bus - c'est dans ce genre de situation que vous avez besoin de l'autoremplacement. Vous pouvez remplacer des modèles de train par un autre, et les wagons peuvent aussi être changés. C'est encore plus utile dans les ensembles [[fr/Manual/NewGRF|NewGRF]] qui introduisent de nouveaux types de wagon plus rapides, au fur et à mesure que le jeu avance.
 
 Pour obtenir l'écran de ''remplacement de véhicules'', ouvrez d'abord la liste des véhicules du type que vous voulez remplacer (les trains sont montrés dans l'image ci-dessous). Puis, depuis le menu ''Gestion de la liste'', cliquez sur ''Remplacer les véhicules''.
-[[File:en/ManageList.png|frame|none|Où trouver ''Remplacer les véhicules'']]
+[[File:en/Manual/ManageList.png|frame|none|Où trouver ''Remplacer les véhicules'']]
 
 La fenêtre ''remplacer (type du véhicule)'' apparaît, qui ressemble à celle pour les trains ci-dessus.
-[[File:en/ReplaceTrain.png|frame|none|La fenêtre ''Remplacement de véhicules'' pour les trains]]
+[[File:en/Manual/ReplaceTrain.png|frame|none|La fenêtre ''Remplacement de véhicules'' pour les trains]]
 
 La partie gauche du panneau montre les véhicules que vous utilisez actuellement. Celui de droite montre les nouveaux véhicules disponibles pour votre amélioration. Vous cliquez sur l'ancien et le nouveau types pour les choisir et définir le remplacement.
 
@@ -26,7 +26,7 @@ Naturellement, il n'est pas possible de faire des améliorations entre différen
 Pour commencer à remplacer des véhicules une fois la sélection faite, cliquez sur ''Commencer le remplacement des véhicules''.
 
 Une fois que tous les véhicules d'un type ont été remplacés, l'ancien type de véhicules sera grisé dans la fenêtre de remplacement des véhicules (comme le montre le ''Floss 47''). Cliquez dessus puis sur ''Stopper le remplacement des véhicules'' pour achever la procédure, et il disparaîtra alors de la liste.
-[[File:en/ReplaceTrain2.png|frame|none|Après le remplacement du ''Floss 47'' par le ''SH 125''. L'ancien type de véhicule est grisé]]
+[[File:en/Manual/ReplaceTrain2.png|frame|none|Après le remplacement du ''Floss 47'' par le ''SH 125''. L'ancien type de véhicule est grisé]]
 
 ==Retrait de wagons==
 Dans le coin en bas à droite de la fenêtre de remplacement des véhicules se trouve un bouton intitulé ''Retrait de wagon oui/non''. Si cette option est mise à ''oui'', alors, quand une locomotive de 1 unité (par exemple, la Gresley A4) est remplacée par une de 2 unités (par exemple l'IC125), le premier wagon du train sera vendu pour conserver la longueur d'origine du train.
@@ -42,4 +42,4 @@ Mais si vous avez activé ''[[fr/Archive/Manual/Settings/Options avancées/Véhi
 * L'intervalle de maintenance doit être atteint. Cela, même si la maintenance est désactivée; les véhicules tenteront seulement d'être remplacés et, si cela échoue, ils ne feront qu'un autre essai après la durée de maintenance.
 
 
-[[Category:fr/Véhicules]]
+[[Category:fr/Manual/Base Set/Véhicules]]

@@ -9,7 +9,7 @@ Je kunt een lijst van sjablonen vinden in:
 Kijk ook bij [[:Category:en/Editing Resources]] voor andere editing bronnen die beschikbaar zijn.
 __TOC__
 
-== [[:Category:nl/Berichtenbox|Berichtenbox sjablonen]] ==
+== [[:Category:nl/Manual/Base Set/Berichtenbox|Berichtenbox sjablonen]] ==
 
 Er zijn 6 types (kleuren) van boxen voor berichten:
 
@@ -38,39 +38,39 @@ Er zijn 6 types (kleuren) van boxen voor berichten:
 {| style="border:0px; padding:5px; width=100%;"
 |- valign="top"
 |width=150;|{{en/S|Opmerking/Nl| TEKST }}
-|{{nl/Opmerking| TEKST }}
+|{{nl/Manual/Opmerking| TEKST }}
 |- valign="top"
 |{{en/S|Te doen/Nl| TEKST }}
-|{{nl/Te doen| TEKST |2= }}
+|{{nl/Wiki/Te doen| TEKST |2= }}
 |- valign="top"
 |{{en/S|Uitbreiding/Nl| TEKST }}
-|{{nl/Uitbreiding| TEKST |2= }}
+|{{nl/Wiki/Uitbreiding| TEKST |2= }}
 |- valign="top"
 |{{en/S|Actueel/Nl}}
-|{{nl/Actueel|1= }}
+|{{nl/Manual/Actueel|1= }}
 |}
 
 ===Stijl type (geel)===
 {| style="border:0px; padding: 5px; width=100%;"
 |- valign="top"
 |width=150;|{{en/S|Opschonen/Nl}}
-|{{nl/Opschonen|1= }}
+|{{nl/Wiki/Opschonen|1= }}
 |- valign="top"
 |{{en/S|Vertaling/Nl | Titel in het Engels; percentage}}
-|{{nl/Vertaling||origin=title}}
+|{{nl/Development/Script/Vertaling||origin=title}}
 |}
 
 ===Inhoud type (oranje)===
 {| style="border:0px; padding: 5px; width=100%;"
 |- valign="top"
 |width=150;|{{en/S|waarschuwing/Nl| TEKST }}
-|{{nl/Waarschuwing| TEKST }}
+|{{nl/Manual/Waarschuwing| TEKST }}
 |- valign="top"
 |{{en/S|Incompleet/Nl}}
-|{{nl/Incompleet|1= }}
+|{{nl/Manual/Incompleet|1= }}
 |- valign="top"
 |{{en/S|Verlopen/Nl}} <br> {{en/S|Verlopen/Nl| TEKST }} 
-|{{nl/Verlopen|2= }} 
+|{{nl/Manual/Verlopen|2= }} 
 |}
 
 ===Verwijder type (rood)===
@@ -87,23 +87,23 @@ Er zijn 6 types (kleuren) van boxen voor berichten:
 {| style="border:0px; padding: 5px; width=100%;"
 |- valign="top"
 |width=150;|{{en/S|Samenvoegen/Nl| paginanaam}}
-|{{nl/Samenvoegen|en/Een paginanaam|2= }}
+|{{nl/Manual/Samenvoegen|en/Een paginanaam|2= }}
 |- valign="top"
 |width=150;|{{en/S|Samenvoegenin/Nl| paginanaam}}
-|{{nl/Samenvoegenin|en/Een paginanaam|2= }}
+|{{nl/Wiki/Samenvoegenin|en/Een paginanaam|2= }}
 |- valign="top"
 |width=150;|{{en/S|Samenvoegenvan/Nl| paginanaam}}
-|{{nl/Samenvoegenvan|en/Een paginanaam|2= }}
+|{{nl/Wiki/Samenvoegenvan|en/Een paginanaam|2= }}
 |- valign="top"
 |{{en/S|Splitsen/Nl|TEKST}}
-|{{nl/Splitsen|TEKST|2= }} 
+|{{nl/Wiki/Splitsen|TEKST|2= }} 
 |}
 
 ===Afgeschermd type (grijs)===
 {| style="border:0px; padding: 5px; width=100%;"
 |- valign="top"
 |width=150;|{{en/S|Historical}}
-|{{en/Historical|1= }} 
+|{{en/Wiki/Historical|1= }} 
 |}
 
 == Specifieke sjablonen ==
@@ -111,13 +111,13 @@ Er zijn 6 types (kleuren) van boxen voor berichten:
 {| style="border:0px; padding: 5px; width=100%;"
 |- valign="top"
 |width=150;|{{en/S|Linking}}
-|{{en/Linking}}
+|{{en/Wiki/Linking}}
 |- valign="top"
 |{{en/S|Suggestions}}
-|{{en/Suggestions|1= }}
+|{{en/Wiki/Suggestions|1= }}
 |- valign="top"
 |{{en/S|License|type=your type}}
-|{{en/License|type=PD}}
+|{{en/Wiki/License|type=PD}}
 |}
 
 == ottd versies ==
@@ -125,26 +125,26 @@ Er zijn 6 types (kleuren) van boxen voor berichten:
 {| style="border:0px; padding: 5px; width=100%;"
 |- valign="top"
 | width=150;|{{en/S|FutureFeature}}
-|{{en/FutureFeature}}
+|{{en/Wiki/FutureFeature}}
 |-
 |{{en/S|Kenmerken/Nl| jouw versie }}
 |{{nl/Kenmerken|1.0|align="center"|text=(1.0.0)}}
 |-
 |{{en/S|Kenmerken_periode/Nl| jouw versie }}
-|{{nl/Kenmerken periode|0.5|1.0|align="center"|text=(0.5 t/m 1.0)}}
+|{{nl/Wiki/Kenmerken periode|0.5|1.0|align="center"|text=(0.5 t/m 1.0)}}
 |-
 |{{en/S|nightly| TEKST }}
-|{{en/Nightly| TEKST }}
+|{{en/Wiki/Nightly| TEKST }}
 |}
 
 == Andere ==
 
 {| style="border:0px; padding:5px; width=100%;"
 | width=150;|{{en/S|Progress bar | 50 }}
-|{{en/Progress bar| 50}}
+|{{en/Development/Design Drafts/Progress bar| 50}}
 |-
 |{{en/S|Progress bar 32bpp tracker | category}}
-|{{en/Progress bar 32bpp tracker|ground terrain}}
+|{{en/Wiki/Progress bar 32bpp tracker|ground terrain}}
 |-
 |{{en/S|Other_languages | ... }}}
 |
@@ -159,18 +159,18 @@ Er zijn 6 types (kleuren) van boxen voor berichten:
 |Link naar form/topic/post op een TT-forum. Zie [[Template:en/Forum|voorbeelden]].
 |-
 |{{en/S|User|Gebruikersnaam}}
-| {{en/User|Gebruikersnaam}}
+| {{en/Manual/User|Gebruikersnaam}}
 |-
 |{{en/S|Check|Type|Color|Size}}
-|{{en/Check|Yes|Green|20px}} of {{en/Check|No|Red|20px}} of {{en/Check|No|Black|20px}} enz...
+|{{en/Wiki/Check|Yes|Green|20px}} of {{en/Wiki/Check|No|Red|20px}} of {{en/Wiki/Check|No|Black|20px}} enz...
 |-
 |{{en/S|Emoticon|Code|Size}}
-|{{en/Emoticon|:)}} of {{en/Emoticon|;)}} of {{en/Emoticon|:((}} enz...
+|{{en/Manual/Emoticon|:)}} of {{en/Manual/Emoticon|;)}} of {{en/Manual/Emoticon|:((}} enz...
 |}
 
 == Navigatie ==
 
-Zie [[:Category:en/Navigation]] voor een lijst van actuele navigatiesjablonen.
+Zie [[:Category:en/Manual/Base Set/Navigation]] voor een lijst van actuele navigatiesjablonen.
 
 === [[Template:en/Navbox|Navbox]] ===
 
@@ -196,4 +196,3 @@ Zie [[:Category:en/Navigation]] voor een lijst van actuele navigatiesjablonen.
 
 Gebruik a.u.b. de [[nl/Modellen|discussie pagina]] voor verzoeken.
 
-[[Category:nl/Sjablonen|M]][[Category:en/Editing Resources]]

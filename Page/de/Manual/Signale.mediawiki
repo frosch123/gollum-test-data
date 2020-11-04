@@ -8,14 +8,14 @@
 '''Signale''' sind nützliche Mittel, die dir erlauben [[de/Manual/Züge|Züge]] zu steuern. Sie sind notwendig, um Züge vor Unfällen auf [[de/Manual/Schienenkonstruktion|Schienennetzwerken]] mit mehr als einem Zug zu bewahren.
 
 ==Signalbau==
-[[File:en/Signals-icon2.png|frame|center|Signalbaumodus]]
+[[File:en/Manual/Signals-icon2.png|frame|center|Signalbaumodus]]
 Um Signale zu bauen, musst du dich im Signalbaumodus befinden. Öffne das [[de/Manual/Schienenkonstruktion|Schienenkonstruktions-Menü]] und klicke auf das Signal-Icon, um das [[de/Manual/Signale#signal-menu|Signal-Menü]] zu öffnen.
 
 Im Signal-Menü:
 * Um ein '''Signal zu setzen''', klicke auf ein Stück Gleis. Am Anfang wird dies ein ''Zwei-Wege-Signal'' sein, welches die Voreinstellung und die grundlegenste Art eines Signals ist. Siehe unten wie man dies zu einer anderen Art ändert. Wenn du ein Signal auf ein Feld baust, wo zwei parallele und diagonale Gleise drauf sind, gehe sicher dass du das richtige Gleisstück nimmst.
 * Platziere '''mehrere Signale''' gleichzeitig indem du ein Signal auswählst und es entlang des Gleises [https://www.wikipedia.org/wiki/Drag-and-drop ziehst]. Sie werden wie in der Option [[de/Signal zieh Dichte|Signal-Dichte beim Ziehen]] platziert und sind genauso gedreht wie das Anfangssignal.
 * Platziere '''mehrere Signale''' entlang der '''gesamten''' Strecke indem du {{en/Keypress|Strg}} gedrückt hältst, während du ziehst. Du brauchst nur ein Feld lang ziehen und es wird automatisch die gesamte Strecke bis zur nächsten Kreuzung, dem nächsten vorhandenen Signal oder dem nächsten Bahnhof mit Signalen bebaut. Wie oben, werden die Signale wie in der [[de/Signal zieh Dichte|"Signal-Zieh-Dichte-Option"]] festgelegt und in der gleichen Richtung wie das Anfangssignal gesetzt.
-* '''Entferne Signale''' indem du den [[File:en/Toggle clear active.png]]-Button (während du im Signalbaumodus bist) klickst und dann auf das zu entfernende Signal drückst. Beide Arten von Ziehen, wie oben erklärt, gelten auch für das Löschen von mehreren Signalen.
+* '''Entferne Signale''' indem du den [[File:en/Manual/Toggle clear active.png]]-Button (während du im Signalbaumodus bist) klickst und dann auf das zu entfernende Signal drückst. Beide Arten von Ziehen, wie oben erklärt, gelten auch für das Löschen von mehreren Signalen.
 * Baue '''[[de/Manual/Signale#einweg-signale|Einweg-Signale]]''' indem du nochmals auf ein vorhandenes Signal klickst. Das Signal wird durch 2-Weg, Einweg und Einweg (andere Richtung) wechseln.
 * Baue andere Arten von '''[[de/Manual/Signale#blocksignale|Block-]]''' und '''[[de/Manual/Signale#wegsignale|Wegsignalen]]''' indem Du mit gedrücktem {{en/Keypress|Strg}} auf ein vorhandenes Signal klickst.
 
@@ -25,42 +25,42 @@ Im Signal-Menü:
 
 ==Signal-Menü==
 Das Signal-Menü kann dazu benutzt werden, Signale zu setzen, ohne den {{en/Keypress|Strg}}+Klick benutzen zu müssen, mit dem du durch die Signalarten navigieren kannst. Entweder {{en/Keypress|Strg}}+Klicke den Signalbau-Button oder stelle in den [[en/Erweiterte Einstellungen/De/Konstruktion|Erweiterten Einstellungen]] ''Aktiviere Signal-Menü'' auf "an" (ältere Versionen im openttd.cfg enable_signal_gui als "true"). Wenn du auf "Signal errichten" klickst, kommt dann dieses Menü:
-[[File:de/Signal Selection.png|none|frame|Geöffnetes Signal-Menü]]
+[[File:de/Manual/Signal Selection.png|none|frame|Geöffnetes Signal-Menü]]
 {|
 |-
 |colspan=2|'''Formsignale''' (Elektro-Mechanische Signale, altmodisch - weit bis mitte 70-er Jahre genutzt)
 |-
-|[[File:en/Signal Semaphore.png]]||[[de/Manual/Signale#blocksignale|Blocksignal]]
+|[[File:en/Manual/Signal Semaphore.png]]||[[de/Manual/Signale#blocksignale|Blocksignal]]
 |-
-|[[File:en/Signal Semaphore Pre-Signal.png]]||[[de/Manual/Signale#einfahrsignale|Einfahrsignal]]
+|[[File:en/Manual/Signal Semaphore Pre-Signal.png]]||[[de/Manual/Signale#einfahrsignale|Einfahrsignal]]
 |-
-|[[File:en/Signal Semaphore Exit-Signal.png]]||[[de/Manual/Signale#ausfahrsignale|Ausfahrsignal]]
+|[[File:en/Manual/Signal Semaphore Exit-Signal.png]]||[[de/Manual/Signale#ausfahrsignale|Ausfahrsignal]]
 |-
-|[[File:en/Signal Semaphore Combo-Signal.png]]||[[de/Manual/Signale#kombinationssignale|Kombinationssignal]]
+|[[File:en/Manual/Signal Semaphore Combo-Signal.png]]||[[de/Manual/Signale#kombinationssignale|Kombinationssignal]]
 |-
-|[[File:en/Signal Semaphore Path.png]]||[[de/Manual/Signale#pfadsignale|Pfadsignal]] (wird ignoriert wenn, man es in umgekehrter Richtung passiert)
+|[[File:en/Manual/Signal Semaphore Path.png]]||[[de/Manual/Signale#pfadsignale|Pfadsignal]] (wird ignoriert wenn, man es in umgekehrter Richtung passiert)
 |-
-|[[File:en/Signal Semaphore Path One-Way.png]]||[[de/Manual/Signale#einseitige-pfadsignale|Einseitiges Pfadsignal]] (kann nicht in umgekehrter Richtung passiert werden)
+|[[File:en/Manual/Signal Semaphore Path One-Way.png]]||[[de/Manual/Signale#einseitige-pfadsignale|Einseitiges Pfadsignal]] (kann nicht in umgekehrter Richtung passiert werden)
 |-
 |colspan=2|'''Lichtsignale''' (gleiches Verhalten, aber anders im Aussehen, wird heutzutage benutzt)
 |-
-|[[File:en/Signal Electric.png]]||Elektrisches Standard-[[de/Manual/Signale#blocksignale|Blocksignal]]
+|[[File:en/Manual/Signal Electric.png]]||Elektrisches Standard-[[de/Manual/Signale#blocksignale|Blocksignal]]
 |-
-|[[File:en/Signal Electric Pre-Signal.png]]|| Elektrisches [[de/Manual/Signale#einfahrsignale|Einfahrsignal]]
+|[[File:en/Manual/Signal Electric Pre-Signal.png]]|| Elektrisches [[de/Manual/Signale#einfahrsignale|Einfahrsignal]]
 |-
-|[[File:en/Signal Electric Exit-Signal.png]]|| Elektrisches [[de/Manual/Signale#ausfahrsignale|Ausfahrsignal]]
+|[[File:en/Manual/Signal Electric Exit-Signal.png]]|| Elektrisches [[de/Manual/Signale#ausfahrsignale|Ausfahrsignal]]
 |-
-|[[File:en/Signal Electric Combo-Signal.png]]|| Elektrisches [[en/Manual/Signals#kombinationssignale|Kombinationssignal]]
+|[[File:en/Manual/Signal Electric Combo-Signal.png]]|| Elektrisches [[en/Manual/Signals#kombinationssignale|Kombinationssignal]]
 |-
-|[[File:en/Signal Electric Path.png]]|| Elektrisches [[de/Manual/Signale#pfadsignale|Pfadsignal]] (wird ignoriert, wenn man es in umgekehrter Richtung passiert)
+|[[File:en/Manual/Signal Electric Path.png]]|| Elektrisches [[de/Manual/Signale#pfadsignale|Pfadsignal]] (wird ignoriert, wenn man es in umgekehrter Richtung passiert)
 |-
-|[[File:en/Signal Electric Path One-Way.png]]|| Elektrisches [[de/Manual/Signale#einseitige-pfadsignale|Einseitiges Pfadsignal]] (kann nicht in umgekehrter Richtung passiert werden)
+|[[File:en/Manual/Signal Electric Path One-Way.png]]|| Elektrisches [[de/Manual/Signale#einseitige-pfadsignale|Einseitiges Pfadsignal]] (kann nicht in umgekehrter Richtung passiert werden)
 |-
 |colspan=2|'''Andere Buttons'''
 |-
-|[[File:en/Signal Convert.png]]|| Signal-Umwandlungswerkzeug - wandelt Signaltyp auf ''Gleis'' in den ausgwählten Signaltyp im ''Gui''. Siehe [[de/Manual/Gleissignale setzen#umwandlung-von-signalen-in-verschiedene-typen|Signale bauen]]
+|[[File:en/Manual/Signal Convert.png]]|| Signal-Umwandlungswerkzeug - wandelt Signaltyp auf ''Gleis'' in den ausgwählten Signaltyp im ''Gui''. Siehe [[de/Manual/Gleissignale setzen#umwandlung-von-signalen-in-verschiedene-typen|Signale bauen]]
 |-
-|[[File:en/Signal Density.png]]|| Signal-Dichtenwerkzeug - legt fest wie nahe aneinander Signale gesetzt werden wenn Signale automatisch gesetzt werden. Siehe [[de/Manual/Gleissignale setzen#bau-einer-linie-von-signalen|Signale bauen]]
+|[[File:en/Manual/Signal Density.png]]|| Signal-Dichtenwerkzeug - legt fest wie nahe aneinander Signale gesetzt werden wenn Signale automatisch gesetzt werden. Siehe [[de/Manual/Gleissignale setzen#bau-einer-linie-von-signalen|Signale bauen]]
 |}
 {{en/Feature|0.7}}
 
@@ -69,14 +69,14 @@ Das Signal-Menü kann dazu benutzt werden, Signale zu setzen, ohne den {{en/Keyp
 Blocksignale, wie der Name sagt, teilen die Strecke in einzelne Blöcke/Abteilungen. Wenn der Block auf der nachfolgenden Seite besetzt ist, dann ist das Signal rot. Wenn nicht, dann ist es grün. Ein Block besteht aus allen Feldern der nachfolgenden Strecke ohne ein weiteres Signal.
 
 ===Zwei-Wege-Signal===
-[[File:en/Two-way signal.png|frame|left]][[File:en/2-way signals.png|frame|right|Zwei-Wege-Signal an einem Lade-Bahnhof]]
+[[File:en/Manual/Two-way signal.png|frame|left]][[File:en/Manual/2-way signals.png|frame|right|Zwei-Wege-Signal an einem Lade-Bahnhof]]
 Zwei-Wege-Signale werden auf Strecken benutzt, auf denen Züge auf dem gleichen Gleis in beide Richtungen fahren. Die am häufigsten genutzten Orte hierfür sind Kopfbahnhöfe, bei denen die Züge am gleichen Ende des Bahnhofs ein- und ausfahren. Im Beispiel rechts zeigen die Signale, wo die Züge in einen Ladeplatz einfahren können. Sie verhindern auch, dass ein Zug den Bahnhof verlässt, wenn ein anderer Zug auf dem Weg zum Bahnhof ist, sowie dass ein Zug einen belegten Ladeplatz ansteuert.
 
 Hat ein Zug die Auswahl zwischen mehreren Richtungen, jede Richtung mit Zwei-Wege-Signalen, wird er die Richtung mit dem grünen Signal wählen. Wenn alle Signale rot sind, wird er den einfachsten Weg nehmen und warten, bis sich das Signal ändert.
 {{en/-}}
 ===Ein-Weg-Signal===
-[[File:en/One-way signal.png|frame|left]]
-[[File:en/1-way signal loop.png|frame|right|Einwegsignale in einer Schleife]]
+[[File:en/Manual/One-way signal.png|frame|left]]
+[[File:en/Manual/1-way signal loop.png|frame|right|Einwegsignale in einer Schleife]]
 Einwegsignale weisen einen Zug an, in einer bestimmten Richtung zu fahren. In dem unteren Beispiel zwingen die Signale die Züge dazu, einen Kreis zu fahren. Dies hat zwei Vorteile: Züge fahren effizient ein und aus dem Bahnhof aus, und auf der Strecke können mehr als zwei Züge fahren.  
 
 Wenn du Einwegsignale benutzt, achte darauf dass sie ''alle'' in die richtige Richtung gedreht sind. Es ist sinnvoll, den ersten Zug auf einer Strecke mit neuen Signalen zu beobachten, um sicherzustellen, dass er das Ziel erreicht und keine Fehler auftreten.
@@ -91,25 +91,25 @@ Wenn ein Zug an der falschen Seite eines Einwegsignals ankommt, dreht er sofort 
 ===Vorsignale===
 Hinweis: In diesem Spiel werden "Vorsignal", "Einfahrsignal" und "Ausfahrsignal" NICHT in dem Sinne benutzt, wie das bei den deutschen Bahnen der Fall ist! Das "Einfahrsignal"  dieses Spiels steht vor der Weichengruppe, in die der Zug einfahren soll, das "Ausfahrsignal" am Ende dieser Weichengruppe, aber vor dem Bahnhof (nicht am Ende des Bahnhofes)!
 
-[[File:en/Station no pre-signals.png|frame|right|Ein Problem - der linke Zug könnte zuerst abfahren.]]
-[[File:en/Station with pre-signals.png|frame|right|Löse das Problem mit Vorsignalen.]]
+[[File:en/Manual/Station no pre-signals.png|frame|right|Ein Problem - der linke Zug könnte zuerst abfahren.]]
+[[File:en/Manual/Station with pre-signals.png|frame|right|Löse das Problem mit Vorsignalen.]]
 Das Bild rechts zeigt einen Aufbau, in dem die Einfahrt des Bahnhofs durch einfache Blocksignale kontrolliert wird. Wenn mindestens ein Bahnsteig leer ist, funktioniert dies gut, da ein einfahrender Zug immer zu einem freien Bahnsteig geführt wird. Bedenken wir nun, dass alle Bahnsteige belegt sind, wie in dem Bild. Alle Signale zeigen rot, also nimmt der Zug den einfachsten Weg - geradeaus. Nehmen wir an, dass der Zug an diesem Bahnsteig länger braucht. Währenddessen verlässt der andere Zug den Bahnsteig. Der einfahrende Zug hat sich auf einen Bahnsteig festgelegt, weil dieser Abschnitt näher am Ziel und frei war. Er wartet jetzt darauf, dass der Zug den Bahnhof verlässt, obwohl der andere Bahnsteig frei ist! Wir müssen die Entscheidung zwischen zwei roten Signalen für die Züge anders gestalten, um dieses Problem zu lösen. Dafür benutzen wir '''Vorsignale'''.
 
 Der Status eines Vorsignal ist nicht nur abhängig vom Status der Strecke direkt danach, sondern auch vom Status anderer Vorsignale weiter hinten auf der Strecke. Genauer: ein Einfahrvorsignal ist grün, wenn der dahinterliegende Abschnitt ein grünes Ausgangssignal hat. Du als Planer musst entscheiden, welche Signale Vorsignale sind und welche die Ausfahrten kennzeichnen sollen.
 {{en/-}}
 ====Einfahrsignale====
-[[File:en/Entry presignal.png|left|60px]]Ein '''Einfahrsignal''' zeigt nur grün, solange sich mindestens ein grünes Ausfahrsignal auf dem folgenden Streckenabschnitt befindet. Dies verhindert, dass ein Zug einfährt, bevor eine Ausfahrt frei ist. Merke, dass Depots eingebaute Zwei-Wege-Signale haben (sie funktionieren wie ein Einfahrsignal in einem Vorsignal-Set).
+[[File:en/Manual/Entry presignal.png|left|60px]]Ein '''Einfahrsignal''' zeigt nur grün, solange sich mindestens ein grünes Ausfahrsignal auf dem folgenden Streckenabschnitt befindet. Dies verhindert, dass ein Zug einfährt, bevor eine Ausfahrt frei ist. Merke, dass Depots eingebaute Zwei-Wege-Signale haben (sie funktionieren wie ein Einfahrsignal in einem Vorsignal-Set).
 
 Wenn hinter dem Einfahrsignal kein Signal als Ausfahrsignal gekennzeichnet ist, verhält es sich wie ein normales Signal. Dies ist praktisch für Zwei-Wege-Vorsignale, bei denen nur eine Richtung ein Vorsignal braucht.
 {{en/-}}
 
 ====Ausfahrsignale====
-[[File:en/Exit presignal.png|60px|left]]Ein '''Ausfahrsignal''' verhält sich genau wie ein Blocksignal, sendet seinen Status jedoch an das Einfahrsignal des vorherigen Streckenabschnitts. Ausfahrsignale sind hilfreich, um die richtige Farbe auf Einfahr- und Kombinationssignalen zu schalten.
+[[File:en/Manual/Exit presignal.png|60px|left]]Ein '''Ausfahrsignal''' verhält sich genau wie ein Blocksignal, sendet seinen Status jedoch an das Einfahrsignal des vorherigen Streckenabschnitts. Ausfahrsignale sind hilfreich, um die richtige Farbe auf Einfahr- und Kombinationssignalen zu schalten.
 {{en/-}}
 
 ====Kombinationssignale====
-[[File:en/Station with pre-signals2.png|frame|right|Bahnhof mit einem Einfahrsignal, zwei Kombinationssignale und vier Ausfahrsignale]]
-[[File:en/Combo presignal.png|60px|left]]Es gibt eine dritte Art von Vorsignal. Es heißt '''Kombinationssignal''' und ist ein Einfahr- und ein Ausfahrsignal in einem. Dies erlaubt dir, große "Zweige" von Vorsignalen zu bauen (siehe rechts).
+[[File:en/Manual/Station with pre-signals2.png|frame|right|Bahnhof mit einem Einfahrsignal, zwei Kombinationssignale und vier Ausfahrsignale]]
+[[File:en/Manual/Combo presignal.png|60px|left]]Es gibt eine dritte Art von Vorsignal. Es heißt '''Kombinationssignal''' und ist ein Einfahr- und ein Ausfahrsignal in einem. Dies erlaubt dir, große "Zweige" von Vorsignalen zu bauen (siehe rechts).
 {{en/-}}
 ====Vorsignale bauen====
 Um ein Vorsignal zu bauen, wähle den entsprechenden Button im [[de/Manual/Signale#signal-menu|Signal-Menü]].
@@ -119,34 +119,34 @@ In vorherigen Versionen musst du zuerst ein normales Signal platzieren. Dann, mi
 * Vergiss nicht {{en/Keypress|Strg}} zu drücken, wenn du ein neues Signal platzierst, sonst bekommst du ein (altmodisches) Formsignal (siehe unten). Benutze auch {{en/Keypress|Strg}} wenn du das Signal-Menü aktiviert hast.
 {{en/-}}
 ====Einschränkungen====
-[[File:en/PresignalLimitation.png|frame|Das Problem mit Vorsignalen...]]
+[[File:en/Manual/PresignalLimitation.png|frame|Das Problem mit Vorsignalen...]]
 Ein wichtiger Punkt bei Ausfahrtsignalen ist, dass ein grünes Ausfahrtssignal ein grünes Einfahrtssignal am Anfang eines Blocks bewirkt, auch wenn es für den Zug wegen des Streckenlayouts nicht möglich sein sollte, zu diesem Signal zu gelangen (wie im Bild rechts mit einem Zug, der vom unteren Gleis kommt). Dies kann kompliziertere Vorsignal-Aufstellungen ruinieren, also musst du bei der Planung vorsichtig sein.
 
 Einer der Bugs, die als "wird nicht gelöst" gekennzeichnet sind: Verlorene Züge ignorieren (Block-) Ausfahrsignale. Wenn Züge sich verirrt haben, wird eine zufällige Richtung an jeder Kreuzung eingeschlagen, d.h. dass sie Block-Ausfahrsignale ignorieren und so vielleicht ganze Kreuzungen blockieren, obwohl diese mit korrekten Signalen ausgestattet sind.
 {{en/-}}
 
 ==Pfadsignale==
-[[File:en/Yapp signalgui.png|frame|right|Zwei neue Signalarten im [[de/Signal GUI|Signal GUI]].]]
+[[File:en/Manual/Yapp signalgui.png|frame|right|Zwei neue Signalarten im [[de/Signal GUI|Signal GUI]].]]
 Es gibt zwei neue Signalarten. Diese Signale erlauben Zügen, einen Weg bis zum nächsten Signal zu reservieren, bevor sie in den nächsten Block einfahren. Wenn ein anderer Zug den Block befahren will und es schafft, den Weg zu reservieren, wird das Pfadsignal dem Zug erlauben den Block zu betreten, auch wenn ein anderer Streckenteil des Blocks belegt ist.
 {{en/-}}
-[[File:en/Signal bloc.png|frame|right|Y-Block zwischen drei ''Blocksignalen'']]
+[[File:en/Manual/Signal bloc.png|frame|right|Y-Block zwischen drei ''Blocksignalen'']]
 Hier ist ein Beispiel als Erklärung 
 
 Wir haben hier einen Y-Block zwischen drei Signalen. Die rechte Strecke ist von einem Zug benutzt. Ein Zug kommt von der unteren Strecke an und will auf die linke Strecke fahren. Ein standardmäßiges Blocksignal sieht es so, dass der gesamte Block besetzt ist (auch wenn die linke Strecke frei ist).
 {{en/-}}
-[[File:en/Multiples standard.png|frame|right|Mit zwei weiteren Blocksignalen wurde das ''Y'' in drei Blöcke geteilt: rechter Arm, linker Arm und Kreuzung]]
+[[File:en/Manual/Multiples standard.png|frame|right|Mit zwei weiteren Blocksignalen wurde das ''Y'' in drei Blöcke geteilt: rechter Arm, linker Arm und Kreuzung]]
 Eine Lösung ist es diesen Block in kleinere Blöcke zu teilen indem man Signale hinter der Kreuzung platziert.
 {{en/-}}
-[[File:en/Chemin.png|frame|right|Y-Block zwischen einem ''Pfadsignal'' und zwei ''Blocksignalen'']]
+[[File:en/Manual/Chemin.png|frame|right|Y-Block zwischen einem ''Pfadsignal'' und zwei ''Blocksignalen'']]
 Im Gegenzug dazu, erlaubt das Pfadsignal dem Zug, der von unten kommt, den Y-Block zu betreten, weil der Streckenteil den der Zug belegen will frei ist (die linke Strecke). Kein Anlass, den Block in kleinere Blöcke zu teilen. (d.h. kein Anlass für Signale direkt hinter der Kreuzung).
 {{en/-}}
 Es gibt zwei Dinge die du über dieses Signal wissen solltest:
 * Platziere es nur dort, wo Züge anhalten und warten können ohne die Kreuzung zu blockieren;
 * Dieses Signal funktioniert nur in einer Richtung. In der anderen Richtung wird es entweder ignoriert oder als Einwegsignal erkannt (siehe unten).
-[[File:en/Yapp pbssignal.png|frame|left|PS]]
+[[File:en/Manual/Yapp pbssignal.png|frame|left|PS]]
 * '''Pfadsignal''': Züge können dieses Signal von hinten durchfahren.
 {{en/-}}
-[[File:en/Yapp onewaypbssignal.png|frame|left|1W PS]]
+[[File:en/Manual/Yapp onewaypbssignal.png|frame|left|1W PS]]
 * '''Einweg-Pfadsignal''': Züge können dieses Signal '''nicht''' von hinten durchfahren.
 {{en/-}}
 In den meisten Fällen genügt es, ein einfaches Pfadsignal zu nehmen, da das Durchfahren von hinten von der Wegfindungsroutine benachteiligt wird. Einweg-Pfadsignale können jedoch in bestimmten Fällen hilfreich sein.
@@ -154,14 +154,14 @@ In den meisten Fällen genügt es, ein einfaches Pfadsignal zu nehmen, da das Du
 Die beiden neuen Signalarten reagieren etwas anders als die standardmäßigen OpenTTD-Signalarten. Die Pfadsignale sind standardmäßig rot und zeigen nur grün, wenn ein Zug die Strecke bis zum nächsten sicheren Wartepunkt auf seiner Route reservieren kann. Sichere Wartepunkte befinden sich vor Signalen, in Depots und am Ende einer Strecke. Die Rückseite eines Pfadsignals wird nicht als sichere Warteposition betrachtet; aus diesem Grund wird das Pfadsignal bei Reservierungen von der Rückseite aus übergangen.
 
 Weil die Vorderseite jedes Signals als sicherer Wartepunkt definiert ist, würdest du normalerweise kein Signal direkt hinter eine Kreuzung stellen, nur vor eine Kreuzung. Dies ist so, weil ein Zug nur vor einer Kreuzung sicher warten kann. Es ist nicht sicher für einen Zug, bei einem Signal direkt hinter einer Kreuzung zu warten, da er die gesamte Kreuzung blockieren würde, so wie unten im Bild gezeigt. Dies ist ein großer Vorteil gegenüber den standardmäßigen OpenTTD-Signalen, bei denen man Signale vor und hinter Kreuzungen platzieren musste, was dazu führte, dass Züge während des Wartens die Kreuzung blockierten.
-[[File:en/Yapp unsafewaitinglocation.png|frame|center|Das durch den Pfeil gekennzeichnete Signal zeigt einen schlechten Wartepunkt, da der Zug in der Kreuzung die normalerweise freie Strecke für den Zug von oben blockiert. Im Bild befindet sich auch ein zweiter schlechter Wartepunkt. Kannst du ihn finden?]]
+[[File:en/Manual/Yapp unsafewaitinglocation.png|frame|center|Das durch den Pfeil gekennzeichnete Signal zeigt einen schlechten Wartepunkt, da der Zug in der Kreuzung die normalerweise freie Strecke für den Zug von oben blockiert. Im Bild befindet sich auch ein zweiter schlechter Wartepunkt. Kannst du ihn finden?]]
 
 Dies ist noch ein Beispiel dafür, was du mit diesen Pfadsignalen machen kannst. Das funktioniert viel besser als mit Vorsignalen, weil zwei Züge gleichzeitig den Bahnhof verlassen UND das gleiche Depot benutzen können. Es gibt wegen der Aufteilung in Streckenabschnitte keine Möglichkeit, es mit Vorsignalen zu erreichen. In diesem Fall gibt es Einweg-Pfadsignale für die Züge, die den Bahnhof verlassen und einfache Pfadsignale für Züge, die die Depots verlassen.
-[[File:en/Pathsignal station exit.png|frame|center|Zwei-Ausfahrten-Bahnhof.]]
+[[File:en/Manual/Pathsignal station exit.png|frame|center|Zwei-Ausfahrten-Bahnhof.]]
 
 
 ====Erweiterte Einstellungen====
-[[File:en/Yapp patch-options.png|frame|right|YAPP Erweiterte Einstellungen]]
+[[File:en/Manual/Yapp patch-options.png|frame|right|YAPP Erweiterte Einstellungen]]
 Es gibt drei neue [[de/Archive/Manual/Settings/Erweiterte Einstellungen|Einstellungen]] in Bezug auf Pfadsignale.
 
 Eine Option ist das Hervorheben reservierte Strecken. Dies ist nützlich, um Probleme bei Pfad-signalisierten Kreuzungen zu beheben, da man sehen kann, welche Wege von Zügen reserviert wurden.
@@ -175,15 +175,15 @@ Unten sind ein paar Beispiel-Gleis-Layouts, die Pfadsignale benutzen. Es gibt au
 
 ====Grundlegende Kreuzung====
 Diese grundlegende Kreuzung hat jetzt eine viel höhere Durchflussmenge.
-[[File:en/Yapp basicjunction.png|frame|center|Grundlegende Kreuzung für Züge mit maximaler Länge von drei Feldern. Beachte die Benutzung von normalen Signalen vor unverzweigten Signalblöcken.]]
+[[File:en/Manual/Yapp basicjunction.png|frame|center|Grundlegende Kreuzung für Züge mit maximaler Länge von drei Feldern. Beachte die Benutzung von normalen Signalen vor unverzweigten Signalblöcken.]]
 
 ====Grundlegender Zwei-Weg-Bahnhof====
 Mit diesem Bahnhofs-Layout können Züge von beiden Richtungen beide Plattformen benutzen.
-[[File:en/Yapp basicstation.png|frame|center|Grundlegender Bahnhof.]]
+[[File:en/Manual/Yapp basicstation.png|frame|center|Grundlegender Bahnhof.]]
 {{en/Feature|0.7}}
 
 ==Formsignale==
-[[File:en/Semaphore.png|frame|left]]
+[[File:en/Manual/Semaphore.png|frame|left]]
 '''Formsignale''' sind eine Signalart mit einem altmodischen Aussehen, die aber die gleiche Funktion wie normale Signale haben.
 
 Vor OpenTTD 0.6.0 konnte man Formsignale nur mit gedrücktem {{en/Keypress|Strg}} bauen. Seit 0.6.0 werden vor 1975 statt Lichtsignalen standardmäßig Formsignale und mit {{en/Keypress|Strg}} Lichtsignale gebaut. Diese Einstellung wird "Automatischer Bau von Formsignalen bis:" genannt und ist unter den "Erweiterten Einstellungen" unter "Konstruktion", "Signale" zu finden.
@@ -202,9 +202,9 @@ Signale sind dazu da, um den Zusammenstoß zweier Züge zu verhindern und den Z�
 ==Siehe auch==
 * [[de/Erweiterte Signalisierungs Beispiele|Beispiele Erweiterter Signalisierung]]
 * [[de/Manual/Zugdepot bauen#erweiterte-depotkonfigurationen|Erweiterte Depotkonfigurationen]]
-* [[:Category:de/Kreuzung]] Gute Beispiele für komplexe Kreuzungen die Vorteile von Vorsignalen nutzen.
+* [[:Category:de/Manual/Kreuzung]] Gute Beispiele für komplexe Kreuzungen die Vorteile von Vorsignalen nutzen.
 * [http://www.darkcoding.net/misc/openttd-trains-and-signals-for-beginners-a-tutorial/ Signale für den Anfänger]
 * [http://kokolokus.de/?s=blog&v=6 Ein Tutorial geschrieben von domsson, auf den Foren] [http://www.tt-forums.net/viewtopic.php?f=29&t=51395 Hier]
 
-[[Category:de/Eisenbahn]]
-[[Category:de/Bauen]]
+[[Category:de/Manual/Eisenbahn]]
+[[Category:de/Manual/Base Set/Aircraft/Bauen]]

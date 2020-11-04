@@ -21,11 +21,11 @@ The template files contains correct lighting, camera position, resolution etc. 1
 <div style="margin:1em;padding:1em;border:1px solid #c7c8fe;background:#f1f2fe;">
 <font size="3">'''Sizes'''</font>
 
-[[File:en/Model square.png|128px|left]]
+[[File:en/Archive/Old 32bpp/Model square.png|128px|left]]
 
 In maximum zoom level '''one square equals 12,5 m x 12,5 m equals 64px across'''. This is the basic unit for railway tracks and roads. As the buildings in the original Transport Tycoon look as if they are about 25 m x 25 m per square, many new buildings will occupy 2 x 2 new 12,5 m squares. For scale comparison [[en/Ben|Ben Robbins]] modelled [http://tt-forums.net/download.php?id=48953 Ottis, a real-size human].
 
-[[File:en/3dsmeasurements.jpeg|thumb|200px|right|The sizes for a single square building.]]
+[[File:en/Archive/Old 32bpp/3dsmeasurements.jpeg|thumb|200px|right|The sizes for a single square building.]]
 
 If you work with 3D Studio Max, you have a semi-transparent square grid on the ground in the Perspective viewport. It is 140x140 units big on its default settings. Using these measurements, if we assume this ground raster to represent one Transport Tycoon square, we can assume that a human being of two meters tall would take up 22,4 units. Use this to scale your building, prop or vehicle. If you create a 2x2 building, just divide the appropriate figures by 2. This way, when all buildings will come together, one large building will not look like a miniature when compared to a supposedly small building. If you want the home grid to have a different size, go to <code>Customize</code>, and in the <code>Grid and Snap</code> Settings dialogue, go to <code>Home Grid</code> tab.
 </div>
@@ -39,7 +39,7 @@ If you work with 3D Studio Max, you have a semi-transparent square grid on the g
 
 For '''every''' material you create, in the <code>shaders</code> tab, you are advised to change the <code>Amb</code> parameter ('''0.5''' by default) to match the <code>Ref</code> parameter ('''1''' by default). You always have to modify <code>Ref</code> and <code>Amb</code> together. It has been decided that <code>Amb</code> should always have the same value as <code>Ref</code>, because a material should reflect light from the sun or other light sources the same way it reflects light from the environment (ambient light). Hence, for maximum realism, the values should be the same. Naturally this is not a strict rule, you do have artistic freedom to deviate from this.
 
-[[File:en/Official materials.png|150px|right]]
+[[File:en/Archive/Old 32bpp/Official materials.png|150px|right]]
 
 The template file archive contains a file named '''official_materials.blend'''. It contains some materials which you will need often, and which should look the same in different objects, like pavement for example. Put this file in a location where it can stay. When you have built a model and want to use an official material, '''link the material rather than just append it'''. For additional instructions, see [[en/Using Official Materials]].
 </div>
@@ -47,7 +47,7 @@ The template file archive contains a file named '''official_materials.blend'''. 
 <div style="margin:1em;padding:1em;border:1px solid #c7c8fe;background:#f1f2fe;">
 <font size="3">'''Minimize render time'''</font>
 
-[[File:en/AO-samples.png|400px|center]]
+[[File:en/Archive/Old 32bpp/AO-samples.png|400px|center]]
 
 Rendering can be quite slow. To reduce time it takes to render for previews, reduce the <code>Samples</code> value under <code>Ambient Occlusion</code>.
 </div>
@@ -98,6 +98,6 @@ __NOTOC__
 |}
 
 
-{{en/Navbox Graphics Development}}
+{{en/Community/NewGRF/Navbox Graphics Development}}
 
-[[Category:en/New Graphics]][[Category:en/32bpp Graphics]][[Category:en/32bpp Graphics Developer resources|D]]
+[[Category:en/Development/NewGRF/New Graphics]][[Category:en/Development/NewGRF/32bpp Graphics]][[Category:en/Community/NewGRF/32bpp Graphics Developer resources|D]]

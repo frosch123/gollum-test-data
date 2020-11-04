@@ -72,12 +72,12 @@ DrawStringRightAligned(x, y, STR_XYZ, colour);
 | Zauważ, że ''str'' jest używane dosłownie, tzn. Wartość zmiennej jest drukowana "as is" ''(jak jest)'' bez żadnego wyszukiwania pomiędzy nimi (zwykle używana do dostarczania nieprzetłumaczonych nazw zmiennych). Używaj tylko <code>{RAW_STRING}</code> jako zmiennej!
 |-
 | <code>SetDParamMaxDigits(uint n, uint count)</code>
-| '''available since {{en/Revision|24801}}''': Emuluj wartość zmiennej przy indeksie ''n'', który jest liczbą całkowitą, tworząc liczbę, która ma ''count'' cyfry o maksymalnej szerokości.
+| '''available since {{en/Development/Design Drafts/Revision|24801}}''': Emuluj wartość zmiennej przy indeksie ''n'', który jest liczbą całkowitą, tworząc liczbę, która ma ''count'' cyfry o maksymalnej szerokości.
 | Załóżmy, że dla bieżącej czcionki cyfra „8” jest cyfrą o największej szerokości czcionki. Jeśli wywołasz <code>SetDParamMaxDigits(1, 4)</code> , będzie to równoznaczne z wywołaniem  <code>SetDParam(1, 8888)</code> .
 | rowspan="2" | Te funkcje są zwykle używane, gdy istnieje potrzeba odgadnięcia maksymalnej szerokości określonego łańcucha, na przykład w '''UpdateWidgetSize'''. Skorzystaj z tej funkcji, jeśli znasz górną granicę zmiennej i obliczenie dokładnej wartości może być kosztowne, ale potrzebujesz tylko "dobrego odgadnięcia" ''(good guess)'' dla całkowitej szerokości końcowego łańcucha.
 |-
 | <code>SetDParamMaxValue(uint n, uint64 max_value, uint min_count = 0)</code>
-| '''available since {{en/Revision|24801}}''': Emuluj wartość zmiennej przy indeksie ''n'', który jest liczbą całkowitą, tworząc liczbę z tyloma cyframi o maksymalnej szerokości, ile zapewnia ''max_value'' . Jeśli podano ''min_count'' upewnij się , że utworzono co najmniej cyfry ''min_count'' .
+| '''available since {{en/Development/Design Drafts/Revision|24801}}''': Emuluj wartość zmiennej przy indeksie ''n'', który jest liczbą całkowitą, tworząc liczbę z tyloma cyframi o maksymalnej szerokości, ile zapewnia ''max_value'' . Jeśli podano ''min_count'' upewnij się , że utworzono co najmniej cyfry ''min_count'' .
 | Załóżmy, że dla bieżącej czcionki cyfra  ''8'' jest cyfrą o największej szerokości czcionki. Jeśli wywołasz <code>SetDParamMaxValue(1, 1234)</code> , this would be equivalent to calling <code>SetDParam(1, 8888)</code> , ponieważ ''1234'' składa się z czterech cyfr. Jeśli wywołasz  <code>SetDParamMaxValue(2, 123, 5)</code> , będzie to równoznaczne z wywołaniem <code>SetDParam(2, 88888)</code> , ponieważ ''123'' ma tylko trzy cyfry, ale poprosiłeś o co najmniej pięć cyfr.
 |}
 

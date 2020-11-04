@@ -7,13 +7,13 @@ Listę szablonów znajdziesz w tych miejscach:
 * [[:Category:en/Templates]] (szablony w kategorii "Szablony")
 * [[Special:Allpages/Template:]] (wszystkie stworzone szablony)
 
-Zajrzyj też stronę [[Category:pl/Zasoby edycji]].
+Zajrzyj też stronę .
 
 '''''Od tłumacza:''' tylko niektóre z szablonów zostały przetłumaczone na język polski. W tabelach w dalszej części artykułu pozostawiono angielskie oryginały, w przypadku, jeśli taki szablon w języku polskim nie istnieje.''
 
 __TOC__
 
-== [[:Category:en/Message boxes|Ramki informacyjne]] ==
+== [[:Category:en/Manual/Base Set/Message boxes|Ramki informacyjne]] ==
 
 Istnieje 6 typów (kolorów) dostępnych w ramkach informacyjnych (ang. message box, w skrócie msgbox):
 
@@ -49,20 +49,20 @@ Istnieje 6 typów (kolorów) dostępnych w ramkach informacyjnych (ang. message 
 |{{pl/Do poprawki| TEKST |2= }}
 |- valign="top"
 |{{en/S|Rozbudowa/Pl| TEKST }}
-|{{pl/Rozbudowa| TEKST |2= }}
+|{{pl/Wiki/Rozbudowa| TEKST |2= }}
 |- valign="top"
 |{{en/S|<!--Current-->Bieżące/Pl}}
-|{{pl/Bieżące|1= }}
+|{{pl/Wiki/Bieżące|1= }}
 |- valign="top"
 |{{en/S|Edytowane/Pl| NICK &#124; DATA}}
-|{{pl/Edytowane| NICK | DATA }}
+|{{pl/Wiki/Edytowane| NICK | DATA }}
 |}
 
 ===Styl (żółty)===
 {| style="border:0px; padding: 5px; width=100%;"
 |- valign="top"
 |width=150;|{{en/S|Czyszczenie/Pl}}
-|{{pl/Czyszczenie|1= }}
+|{{pl/Wiki/Czyszczenie|1= }}
 |- valign="top"
 |{{en/S|Tłumaczenie/Pl| oryg. &#124; z &#124; Postępy}}
 |{{pl/Tłumaczenie||origin=title}}
@@ -75,16 +75,16 @@ Istnieje 6 typów (kolorów) dostępnych w ramkach informacyjnych (ang. message 
 |{{pl/Uwaga| TEKST }}
 |- valign="top"
 |{{en/S|Niekompletne/Pl}}
-|{{pl/Niekompletne|1= }}
+|{{pl/Development/Niekompletne|1= }}
 |- valign="top"
 |{{en/S|<!--Outdated-->nieaktualizowane/Pl}} <br> {{en/S|<!--Outdated-->nieaktualizowane/Pl| TEXT }} 
-|{{pl/Nieaktualizowane|2= }} 
+|{{pl/Community/Nieaktualizowane|2= }} 
 |}
 ===Do usunięcia (czerwony)===
 {| style="border:0px; padding:5px; width=100%;"
 |- valign="top"
 |width=150;|{{en/S|<!--Delete-->zniesienie/Pl| <!--Reason-->powód &#124; User name}}
-|{{pl/Zniesienie|3= }} 
+|{{pl/Wiki/Zniesienie|3= }} 
 |}
 
 ===Do przeniesienia (fioletowy)===
@@ -94,10 +94,10 @@ Istnieje 6 typów (kolorów) dostępnych w ramkach informacyjnych (ang. message 
 |{{en/Merge|en/Page name|2= }}
 |- valign="top"
 |width=150;|{{en/S|Mergeto|Page name}}
-|{{en/Mergeto|en/Page name|2= }}
+|{{en/Wiki/Mergeto|en/Page name|2= }}
 |- valign="top"
 |width=150;|{{en/S|Mergefrom|Page name}}
-|{{en/Mergefrom|en/Page name|2= }}
+|{{en/Wiki/Mergefrom|en/Page name|2= }}
 |- valign="top"
 |{{en/S|Split|TEXT}}
 |{{en/Split|TEXT|2= }} 
@@ -107,7 +107,7 @@ Istnieje 6 typów (kolorów) dostępnych w ramkach informacyjnych (ang. message 
 {| style="border:0px; padding: 5px; width=100%;"
 |- valign="top"
 |width=150;|{{en/S|Historical}}
-|{{en/Historical|1= }} 
+|{{en/Wiki/Historical|1= }} 
 |}
 
 == Specyficzne szablony ==
@@ -115,13 +115,13 @@ Istnieje 6 typów (kolorów) dostępnych w ramkach informacyjnych (ang. message 
 {| style="border:0px; padding: 5px; width=100%;"
 |- valign="top"
 |width=150;|{{en/S|<!--Linking-->linkowanie/Pl}}
-|{{pl/Linkowanie}}
+|{{pl/Wiki/Linkowanie}}
 |- valign="top"
 |{{en/S|<!--Suggestions-->sugestie/Pl}}
-|{{pl/Sugestie|1= }}
+|{{pl/Wiki/Sugestie|1= }}
 |- valign="top"
 |{{en/S|<!--License-->licencja/Pl|type=your type}}
-|{{pl/Licencja|type=PD}}
+|{{pl/Wiki/Licencja|type=PD}}
 |}
 
 == Szablony związane z wersjami OpenTTD ==
@@ -131,13 +131,13 @@ Istnieje 6 typów (kolorów) dostępnych w ramkach informacyjnych (ang. message 
 !|Result
 |-
 |{{en/S|<!--FutureFeature-->funkcjaPrzyszłości/Pl}}
-|{{pl/FunkcjaPrzyszłości}}
+|{{pl/Wiki/FunkcjaPrzyszłości}}
 |-
 |{{en/S|Zgodne Wersje/Pl| numery wersji }}
 |{{pl/Zgodne Wersje|1.2}}
 |-
 |{{en/S|<!--nightly-->nightly/Pl| <!--TEXT-->Wyjaśnienie }}
-|{{pl/Nightly| TEXT }}
+|{{pl/Wiki/Nightly| TEXT }}
 |}
 
 == Inne ==
@@ -147,10 +147,10 @@ Istnieje 6 typów (kolorów) dostępnych w ramkach informacyjnych (ang. message 
 !|Result
 |-
 |{{en/S|Progress bar | 50 }}
-|{{en/Progress bar| 50}}
+|{{en/Development/Design Drafts/Progress bar| 50}}
 |-
 |{{en/S|Progress bar 32bpp tracker | category}}
-|{{en/Progress bar 32bpp tracker|ground terrain}}
+|{{en/Wiki/Progress bar 32bpp tracker|ground terrain}}
 |-
 |{{en/S|Other_languages | ... }}}
 |
@@ -165,18 +165,18 @@ Istnieje 6 typów (kolorów) dostępnych w ramkach informacyjnych (ang. message 
 |Link do TT-forums (forum/temat/post). Zobacz [[Template:en/Forum|przykłady]].
 |-
 |{{en/S|User| Nazwa użytkownika }}
-| {{en/User| Nazwa użytkownika }} 
+| {{en/Manual/User| Nazwa użytkownika }} 
 |-
 |{{en/S|Check| Type &#124; Color &#124; Size }}
-|{{en/Check|Yes|Green|20px}} lub {{en/Check|No|Red|20px}} lub {{en/Check|No|Black|20px}} itd...
+|{{en/Wiki/Check|Yes|Green|20px}} lub {{en/Wiki/Check|No|Red|20px}} lub {{en/Wiki/Check|No|Black|20px}} itd...
 |-
 |{{en/S|Emoticon| Code &#124; Size }}
-|{{en/Emoticon|:)}} lub {{en/Emoticon|;)}} lub {{en/Emoticon|:((}} itd...
+|{{en/Manual/Emoticon|:)}} lub {{en/Manual/Emoticon|;)}} lub {{en/Manual/Emoticon|:((}} itd...
 |}
 
 == Nawigacja ==
 
-Lista szablonów nawigacyjnych: [[:Category:en/Navigation]].
+Lista szablonów nawigacyjnych: [[:Category:en/Manual/Base Set/Navigation]].
 
 
 === [[Template:en/Navbox|Navbox]] ===
@@ -205,4 +205,3 @@ Lista szablonów nawigacyjnych: [[:Category:en/Navigation]].
 Zapytaj na [[en/Templates|stronie dyskusji angielskiej wersji tego artykułu]].
 
 
-[[Category:en/Templates|*]][[Category:en/Editing Resources]][[Category:pl/Szablony|*]]

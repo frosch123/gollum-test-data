@@ -13,8 +13,8 @@
 You are allowed to give orders to any vehicle you own.  Your drivers will try to follow these orders (although they may get lost if your network is poorly designed, but that's a separate issue). To give orders:
 
 
-*[[File:en/Orders-1-old.png|frame|right|The vehicle window]]Find and click on vehicle you want to give the order to.  The vehicle may be inside a depot if you have just bought it, or it may already be moving. For a train, clicking any carriage will have the same effect.  This will display the vehicle window.{{en/-}}
-*[[File:en/Orders-2-old.png|frame|right|The orders window]]Click the ''Orders'' button (circled in red in the screenshot). This will display the Orders window, which displays any orders the vehicle currently has (our example vehicle doesn't have any).{{en/-}}
+*[[File:en/Archive/Manual/Orders-1-old.png|frame|right|The vehicle window]]Find and click on vehicle you want to give the order to.  The vehicle may be inside a depot if you have just bought it, or it may already be moving. For a train, clicking any carriage will have the same effect.  This will display the vehicle window.{{en/-}}
+*[[File:en/Archive/Manual/Orders-2-old.png|frame|right|The orders window]]Click the ''Orders'' button (circled in red in the screenshot). This will display the Orders window, which displays any orders the vehicle currently has (our example vehicle doesn't have any).{{en/-}}
 *Click ''[[#go-to|Go To]]'' and then click the target station on the map.
 *Click the order you just created in the list to select it, and then tell the vehicle what it should do at that station.  Ie., click ''Full Load'' to make the vehicle wait for a full load at that station.
 
@@ -62,13 +62,13 @@ This option is available if you have a ''go to depot'' order selected.  This wil
 You can include an instruction to [[en/Manual/Refit]] a vehicle in the orders list.  When you select this you will be prompted to choose the type of cargo to refit the vehicle to carry.  This order is of limited use as normally you only refit a vehicle for a cargo once.
 
 ===List of vehicles sharing these orders===
-The [[File:en/SharedOrders.png]] icon to the right of the Transfer button is the Shared Orders button. It shows a list of all the vehicles that have the same [[#shared-orders|shared orders]] as the current vehicle. The icon will only be enabled if the vehicle is sharing orders.
+The [[File:en/Manual/SharedOrders.png]] icon to the right of the Transfer button is the Shared Orders button. It shows a list of all the vehicles that have the same [[#shared-orders|shared orders]] as the current vehicle. The icon will only be enabled if the vehicle is sharing orders.
 
-[[File:en/Orders-4.png|center|frame|Non-Stop and Unload modifiers set]]
+[[File:en/Archive/Manual/Orders-4.png|center|frame|Non-Stop and Unload modifiers set]]
 
 ==Timetable==
-{{en/Main|Timetable}}
-[[File:en/Orders-timetable-Old.png|none|frame|The timetable interface.]]
+{{en/Manual/Main|Timetable}}
+[[File:en/Archive/Manual/Orders-timetable-Old.png|none|frame|The timetable interface.]]
 Timetables let you specify how long vehicles should try to take to travel along each part of the route, and how long to spend in each station. See the [[en/Manual/Timetable|timetable]] article for details on how to use them.
 
 ==Copying orders==
@@ -92,7 +92,7 @@ Copying orders is still not the best solution because if you want to change orde
 #Hold down ''Ctrl'' and click on another vehicle that has the orders you want to share.
 #Now the two vehicles share the same schedule; they are linked together.  You will see that the orders from the other vehicle are displayed and the last line now reads ''--End of Shared Orders--''.
 
-[[File:en/Shared-orders-Old.png|center|frame|The schedules for the 2 buses have been shared]]
+[[File:en/Archive/Manual/Shared-orders-Old.png|center|frame|The schedules for the 2 buses have been shared]]
 
 You can link together as many vehicles as you want, there is no limit, but of course you can only link the same type of vehicle together because they will be using the same stations.
 
@@ -109,7 +109,7 @@ You will see that all orders are removed from the schedule of that vehicle, and 
 *You can use the ''clone vehicle'' option to create an identical copy of a vehicle but by default orders are copied.  If you want to share orders with cloned vehicles, hold ''Ctrl'' as you click on the vehicle to clone.
 *With shared orders, there is no "master" set of orders (e.g. one vehicle that stores the main orders list that the others link to) that you can inadvertantly delete.  As long as at least one vehicle with the orders you want exists, the orders list is preserved.
 
-[[Category:en/Vehicles]]
+[[Category:en/Manual/Base Set/Vehicles]]
 
 ==Order checking ==
 When you are running a large company with many different vehicles and a vast network, it is inevitable that mistakes will be introduced into some orders lists. For example, this can occur when a station is deleted or if you accidentally click on a hangar instead of an airport when giving orders to an aircraft.
@@ -123,7 +123,7 @@ In order for a vehicle to make profit, it needs at least two stations in its sch
 Sometimes a station is accidentally selected twice consecutively. For most vehicles, this causes quite a mess in the pathfinder; for example an aircraft that takes off and lands again at the same airport.
 
 ===Invalid orders===
-[[File:en/Order-checker.png|frame|right|Station has been deleted, giving the bus an ''invalid order'']]
+[[File:en/Archive/Manual/Order-checker.png|frame|right|Station has been deleted, giving the bus an ''invalid order'']]
 If you delete a station a vehicle is due to stop at, the ghost of the station will be visible for a while (in the form of a grey station name label).  This allows you to construct a new station in the same location as the old one which will assume the old station's name.  Vehicles will start arriving at that station (if it's still of the correct type) without any need to change their orders.
 
 However, if you leave it too long or deliberately don't build a new station to replace an old one, the ghost station will eventually disappear.  Any orders that vehicles had that referred to it will be replaced with '''Invalid Order''' and will be skipped.

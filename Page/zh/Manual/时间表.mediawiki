@@ -3,7 +3,7 @@
 == 界面 ==
 时间表自[[en/Archive/OpenTTD/OpenTTD 0.6.0]]-beta2面世（[https://github.com/OpenTTD/OpenTTD/commit/cf0118ee63603132dc1d08d7f7e800b26e53fc97 r10236]）。时间表按钮可在指令窗口的右上角找到，选定车辆的所有指令都有显示在时间表窗口里。你可以选择车辆要在站点停留多久（以天数或周期-可在[[en/Archive/Manual/Settings/Advanced Settings/Interface#show-timetable-in-ticks-rather-than-days |进阶设置]]修改）以及车辆在两站之间要开多久（包括设定某段路城的最高时速），此外有个计数器用来显示车辆是否准点或出现误点情形。
 
-[[File:en/Orders-timetable.png|center|frame|时间表界面，可从指令窗口进入]]
+[[File:en/Manual/Orders-timetable.png|center|frame|时间表界面，可从指令窗口进入]]
 
 {|
 | '''修改时间'''
@@ -46,15 +46,15 @@
 为了示范，我们简单以三个公车行驶在三个城市间作示范，首先从已经设置好路线并使用[[en/Manual/Orders#shared-orders|共享调度任务]]的公车开始（共享调度任务在这里非常实用，因为它们也同时共享时间表）
 
 一开始打开第一辆公车的时间表并开启「自动制表」，然後开始运行，每当车辆完成路线的一段，时间表会填入车辆花费的时间。
-[[File:en/Timetable-autofill.png|center|frame|'自动制表'会计算车辆在运行的每一段行驶时间及在站点的停留时间]] 
+[[File:en/Manual/Timetable-autofill.png|center|frame|'自动制表'会计算车辆在运行的每一段行驶时间及在站点的停留时间]] 
 
 每当有新公车运行时，请让最後一辆的巴士在停靠站点时按停止，以便车辆之间可以散开（如果站点间的行驶车辆数不一样，请试着让它们保持相同的车距，如果误点了就归零为准点）一旦第一辆公车完成一趟路线，就会产生时间表，接着你可以关闭自动制表，然後停止该公车。
-[[File:en/Timetable-autofilled.png|center|frame|我们公车路线的范例（自动计算後）]]
+[[File:en/Manual/Timetable-autofilled.png|center|frame|我们公车路线的范例（自动计算後）]]
 
 除非你不走运，不然这个时间表会是完美情况下的运行时间，没有故障丶没受到车流量影响，就只有一台公车全速前进，如果站点还是新的也可能没有太多装载/卸载货物的时间。
 
 这意味着这个时间表呈现的是过於乐观的情况，它代表「最好的情况」而不是一般情况。要更改这个情况，你需要修改每一段路程的时间表，点「修改时间」修改新的时间把时间表排松一点。
-[[File:en/Timetable-slack.png|center|frame|修改时间让时间表排松一点]]
+[[File:en/Manual/Timetable-slack.png|center|frame|修改时间让时间表排松一点]]
 
 现在发动公车群！你可能会想让游戏暂停确保它们在同一时间发动，不然你为了分散它们而作的努力就全白费了。
 
@@ -87,4 +87,4 @@
 
 你可能会在时间表完成填充後按下暂停键来复制车辆并设定好时间表，这样就不用担心因游戏进行而让第一台车越跑越远。
 
-[[Category:zh/中文文章]] [[Category:en/Tutorial]]
+ [[Category:en/Manual/Tutorial]]

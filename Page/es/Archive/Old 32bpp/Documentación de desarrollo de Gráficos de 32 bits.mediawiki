@@ -1,6 +1,6 @@
 [[Translation:en/Archive/Old 32bpp/32bit Graphics Development Documentation]]
 {{es/Traducción|32bit Graphics Development Documentation|60}}
-{{es/Ampliar}}
+{{es/Wiki/Ampliar}}
 ''« Volver a [[es/Archive/Old 32bpp/Desarrollo de gráficos de 32 bits|Desarrollo de gráficos de 32 bits]]''
 
 
@@ -21,11 +21,11 @@ Los archivos de las plantillas contienen la iluminación correcta, la posición 
 <div style="margin:1em;padding:1em;border:1px solid #c7c8fe;background:#f1f2fe;">
 <font size="3">'''Tamaños'''</font>
 
-[[File:en/Model square.png|128px|left]]
+[[File:en/Archive/Old 32bpp/Model square.png|128px|left]]
 
 En el máximo nivel de zoom '''una casilla mide 12,5 m x 12,5 m y equivale a 64px de ancho'''. Esta es la unidad básica para los tramos de vías y carreteras. Como los edificios en el original TTD parecen como si midieran 25 m x 25 m por casilla, muchos nuevos edificios ocuparán 2x2 nuevas casillas de 12,5 m. Para tener una escala de comparación [[en/Ben|Ben Robbins]] modeló a [http://tt-forums.net/download.php?id=48953 Ottis, un hombre a tamaño real].
 
-[[File:en/3dsmeasurements.jpeg|thumb|200px|right|El tamaño de un sencillo edificio cuadrado.]]
+[[File:en/Archive/Old 32bpp/3dsmeasurements.jpeg|thumb|200px|right|El tamaño de un sencillo edificio cuadrado.]]
 
 Si usted trabaja con 3D Studio Max, hay una cuadrícula semi-transparente sobre el terreno en el visor ''Perspective'', que tiene 140x140 unidades grandes como configuración predeterminada. Usando estas medidas, si aplicamos esta trama en el suelo en una casilla de Transport Tycoon, podemos suponer que un ser humano de dos metros de altura ocupará de 22,4 unidades. Use esta escala para sus edificios, accesorios y vehículos. Si crea un edificio de 2x2, sólo divida las cifras adecuadas por 2. De esta manera, cuando todos los edificios se pongan juntos, un edificio grande no se verá como una miniatura en comparación con un edificio supuestamente pequeño. Si desea que la cuadrícula tenga un tamaño distinto, seleccione <code>Customize</code> ''[Personalizar]'', y en el diálogo de Configuración <code>Grid and Snap</code> ''[Cuadrícula y Ajustar]'', seleccione la pestaña <code>Home Grid</code> ''[cuadrícula interna]''.
 </div>
@@ -39,7 +39,7 @@ Si usted trabaja con 3D Studio Max, hay una cuadrícula semi-transparente sobre 
 
 Para '''todo''' material que se crea, en la ficha <code>shaders</code>, se recomienda cambiar el parámetro <code>Amb</code> (con '''0.5''' por defecto) para que coincida con el parámetro <code>Ref</code> (con '''1''' por defecto). Siempre hay que modificar <code>Ref</code> y <code>Amb</code> al mismo tiempo. Se ha decidido que <code>Amb</code> siempre debe tener el mismo valor que <code>Ref</code>, para que los materiales reflejen la la luz del sol (o de otras fuentes de luz) de la misma manera que refleja la luz de entorno (luz ambiente).  Por lo tanto, para obtener el máximo realismo, los valores deben ser los mismos. Naturalmente, esto no es una regla estricta, usted tiene libertad artística para apartarse de ella.
 
-[[File:en/Official materials.png|150px|right]]
+[[File:en/Archive/Old 32bpp/Official materials.png|150px|right]]
 
 El archivo de plantillas contiene un archivo llamado '''official_materials.blend'''. Contiene algunos de los materiales que se necesitan a menudo, y que deberían ser los mismos en diferentes objetos, como el pavimento por ejemplo. Coloque este archivo en un lugar fijo. Cuando usted haya construido un modelo y desee utilizar un material oficial, '''simplemente vincule el material en lugar añadirlo''', Para más instrucciones consulte [[es/Usar materiales oficiales|Usar materiales oficiales]].
 </div>
@@ -47,7 +47,7 @@ El archivo de plantillas contiene un archivo llamado '''official_materials.blend
 <div style="margin:1em;padding:1em;border:1px solid #c7c8fe;background:#f1f2fe;">
 <font size="3">'''Minimize render time'''</font>
 
-[[File:en/AO-samples.png|400px|center]]
+[[File:en/Archive/Old 32bpp/AO-samples.png|400px|center]]
 
 Rendering can be quite slow. To reduce time it takes to render for previews, reduce the <code>Samples</code> value under <code>Ambient Occlusion</code>.
 </div>
@@ -92,6 +92,6 @@ __NOTOC__
 |-
 |}
 
-{{es/Caja de navegación de desarrollo gráfico}}
+{{es/Community/NewGRF/Caja de navegación de desarrollo gráfico}}
 
-[[Category:es/Nuevos gráficos]][[Category:es/Gráficos de 32 bits]][[Category:es/Recursos de desarrollo gráfico de 32 bits]]
+[[Category:es/Development/NewGRF/Nuevos gráficos]][[Category:es/Community/NewGRF/Gráficos de 32 bits]][[Category:es/Community/NewGRF/Recursos de desarrollo gráfico de 32 bits]]

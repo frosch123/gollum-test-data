@@ -5,7 +5,7 @@ K, I have this idea, let's see what people think.
 == Definitions ==
 First, let's just define some stuff. Look at the image for examples.
 
-[[File:en/RadicalTrackIdea.png|thumb|Example tracks, combos and placables]]
+[[File:en/Archive/Development/RadicalTrackIdea.png|thumb|Example tracks, combos and placables]]
 
 === Tracks ===
 These model track pieces. This is basically the information that the train controller and the pathfinder need. Information stored is:
@@ -52,4 +52,4 @@ This system is quite usable for the pathfinder, since it can easily get a list o
 == Signals == 
 Signals might pose a problem, specifically because it is non-trivial to determine which tracks are joined together. We could just specify this explicitely, but it will change according to which signals are placed. So, needs thought.
 
-[[Category:en/Map Re-write]]
+[[Category:en/Archive/Development/Map Re-write]]

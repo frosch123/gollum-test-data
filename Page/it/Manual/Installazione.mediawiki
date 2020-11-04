@@ -1,6 +1,6 @@
 [[Translation:en/Manual/Installation]]
-{{it/Traduzione|Installation|85}}
-{{it/Indice dei contenuti}}
+{{it/Manual/Traduzione|Installation|85}}
+{{it/Manual/Indice dei contenuti}}
 __TOC__
 
 =Introduzione=
@@ -18,38 +18,38 @@ Ci sono inoltre diverse versioni di OpenTTD per vari [[en/Archive/Compilation an
 '''Seleziona le istruzioni di installazione per la grafica di base ed il tuo sistema operativo:'''
 :<p style="font-size: 90%">''(Se hai accesso alla grafica di base di TTD e non sai quale scegliere, usa quest'ultima, OpenGFX può essere facilmente instsallata successivamente. Comunque la maniera più semplice di installare il gioco è quella di usare tutti i file necessari fin dal principio: grafica di base TTD, OpenGFX, OpenMFX e OpenSFX.'')</p>
 
-[[File:en/Installation 1a.png|frame|center|Downloads page of OpenTTD: ''www.openttd.org/download-stable'']]
+[[File:en/Manual/Installation 1a.png|frame|center|Downloads page of OpenTTD: ''www.openttd.org/download-stable'']]
 
 == Installazione per Windows ==
 ===Usando la grafica di base di TTD===
 '''1.''' Ottieni una copia di Transport Tycoon Deluxe per Windows. Se non il tuo CD, prova a cercare su [http://www.google.com/search?q=transport+tycoon+deluxe Google]. '''Nota''': Le grafiche originali sono protette da '''copyright''', può essere illegale (in alcuni paesi) scaricarle.
 
 '''2.''' Scarica l'installatore OpenTTD per Windows dalla [http://www.openttd.org/download-stable pagina di download].
-[[File:en/Installation 1b.png|frame|center|L'installazione di OpenTTD su Windows]]
+[[File:en/Manual/Installation 1b.png|frame|center|L'installazione di OpenTTD su Windows]]
 
 '''3.''' Installa OpenTTD. Scegli i componenti '''OpenTTD''' e '''Copy data from TTD CD-ROM'''.
-[[File:en/Installation 2.png|frame|center|Scelta dei componenti]]
+[[File:en/Manual/Installation 2.png|frame|center|Scelta dei componenti]]
 
 '''4.''' Fai che OpenTTD trovi dove sono i files di TDD; dovrebbe trovarli automaticamente sei ahi usato l'instasllatore di TDD per Windows, altrimenti specifica il drove del CD.
-[[File:en/Installation 3.png|frame|center|Trova TTD]]
+[[File:en/Manual/Installation 3.png|frame|center|Trova TTD]]
 
 '''5.''' Seleziona la cartella dove installare OpenTTD.
-[[File:en/Installation 4.png|frame|center|Scegli la cartella di destinazione]]
+[[File:en/Manual/Installation 4.png|frame|center|Scegli la cartella di destinazione]]
 
 '''6.''' Si consiglia di selezionare il Menù di Avvio dove creare la scorciatoia per OpenTTD.
-[[File:en/Installation 5.png|frame|center|Scegliere il Menù di Avvio]]
+[[File:en/Manual/Installation 5.png|frame|center|Scegliere il Menù di Avvio]]
 
 '''7.''' Scegli di eseguire OpenTTD e clicca su "Finish".
-[[File:en/Installation 6.png|frame|center|OpenTTD è ora installato!]]
+[[File:en/Manual/Installation 6.png|frame|center|OpenTTD è ora installato!]]
 
 ===Usando la grafica OpenGFX===
 '''1.''' Scarica l'installatore di OpenTTD per Windows dal [http://www.openttd.org/ sito OpenTTD].
-[[File:en/Installation 1b.png|frame|center|L'installatore di OpenTTD per Windows.]]
+[[File:en/Manual/Installation 1b.png|frame|center|L'installatore di OpenTTD per Windows.]]
 
 '''2.''' Installa OpenTTD.
 
 '''3.''' Salta la richiesta dei files di TTD: deseleziona l'opzione "Copy Game Graphics" nel menù "Choose Components".
-[[File:en/Installation 2 gfx.png|frame|center|Setup di installazione senza i file TTD]]
+[[File:en/Manual/Installation 2 gfx.png|frame|center|Setup di installazione senza i file TTD]]
 
 '''4.''' Modifica il file di configurazione.
 :'''4.1.''' Trova il file [[en/Archive/Manual/Settings/Openttd.cfg]], dovrebbe essere nella seguente cartella (dipende dal sistema operativo usato):
@@ -60,11 +60,11 @@ Ci sono inoltre diverse versioni di OpenTTD per vari [[en/Archive/Compilation an
 :'''4.3.''' Vai alla sezione [misc] e aggiungi il seguente testo (può darsi che un testo simile ci sia già, nel qual caso modificalo perché sia uguale a quello qui riportato) alla fine di questa sezione:
  graphicsset = "OpenGFX"
 : Il nome del set di file di grafica di base è salvato nel proprio file ''obg'' e non può essere identico al nome del file obg stesso.
-[[File:en/Installation 9 grx manual configuration cfg.png|frame|center|Esempio]]
+[[File:en/Manual/Installation 9 grx manual configuration cfg.png|frame|center|Esempio]]
 :'''4.4.''' Salva i cambiamenti fatti ed esegui OpenTTD.
 
 == Installazione su Mac OS X ==
-{{it/Nota| 1=Non ci sono file binari per Mac OS X per le versioni 1.0.x. Comunque il supporto è ripreso per le versioni 1.1.x, scarica la più recente versione '''ufficiale''' dei file binari di test (attualmente 1.1.0 beta5) per essere sicuro che gli ultimi bachi siano stati trovati e corretti.}}
+{{it/Manual/Nota| 1=Non ci sono file binari per Mac OS X per le versioni 1.0.x. Comunque il supporto è ripreso per le versioni 1.1.x, scarica la più recente versione '''ufficiale''' dei file binari di test (attualmente 1.1.0 beta5) per essere sicuro che gli ultimi bachi siano stati trovati e corretti.}}
 
 ===Usando la grafica di base di TTD===
 '''1.''' Ottieni una copia di Transport Tycoon Deluxe per Windows. Se non il tuo CD, prova a cercare su [http://www.google.com/search?q=transport+tycoon+deluxe Google]. '''Nota''': Le grafiche originali sono protette da '''copyright''', può essere illegale (in alcuni paesi) scaricarle.
@@ -74,7 +74,7 @@ Ci sono inoltre diverse versioni di OpenTTD per vari [[en/Archive/Compilation an
 '''3.''' OpenTTD ha bisogno di alcuni files da TTD, vedi [[#files-da-ttd|più giù]] per le istruzioni precise su quali file copiare e dove.
 
 '''4.''' Scarica l'installatore per OpenTTD su OSX dalla [http://www.openttd.org/download-stable pagina di download].
-[[File:en/Installation 1b osx.png|frame|center|1.1.2 per Mac OSX]]
+[[File:en/Manual/Installation 1b osx.png|frame|center|1.1.2 per Mac OSX]]
 
 '''5.''' Esegui OpenTTD.
 
@@ -137,4 +137,4 @@ Ci sono diverse maniere per ottenere questi file:
 * [[en/Archive/Manual/Installation FAQ|FAQ di installazione]] per altre metodi di installazione.
 * [[en/Archive/Community/OpenGFX Readme]]
 
-[[Category:it/Installazione]]
+[[Category:it/Manual/Installazione]]

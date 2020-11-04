@@ -1,7 +1,7 @@
 [[Translation:en/Wiki/Manual of Style]]
 
-[[File:en/StyleGuide.png|left|64px]]
-{{en/TOCright}}
+[[File:en/Wiki/StyleGuide.png|left|64px]]
+{{en/Community/NewGRF/TOCright}}
 This page lists the policies for creating and editing [[en/Manual/Main Page]] wiki articles.
 
 See [[en/Editing help|wiki editing help]] if you are new to editing wikis.
@@ -79,12 +79,12 @@ Use whatever format works best.  PNG files are the best choice for most OpenTTD 
 {|
 !Code!!Result
 |-
-|<pre>[[File:en/Longerbridges.png|frame|Image caption]]</pre>
-|[[File:en/Longerbridges.png|frame|Image caption]]
+|<pre>[[File:en/Wiki/Longerbridges.png|frame|Image caption]]</pre>
+|[[File:en/Wiki/Longerbridges.png|frame|Image caption]]
 |}
 
 ===Annotated screenshots===
-[[File:en/WhyPresignals.png|frame|right|Format for labelling screenshots]]
+[[File:en/Wiki/WhyPresignals.png|frame|right|Format for labelling screenshots]]
 If you are posting screenshots to explain game concepts or junctions you should keep the amount of explanatory text in the actual image to a minimum and instead make reference to labelled parts in the main text.  The labelled parts should be done in a contrasting colour (for temperate climate, white is good) using an anti-aliased sans-serif font in bold on a transparent background.  Arrows can be used if needed but it is better to position the label near the item to be explained.  The image on the right is an example of this format (but remember the labels don't necessarily have to be letters or numbers as long as they don't clutter the screenshot and leave the job of explaining what's going on to the main text).
 ===Screenshots of windows===
 If you need to include a screenshot of a game window, try to make sure you crop it to exactly the edges of the window for a more professional appearance.  OpenTTD windows are perfect rectangles so this should be easy enough - zoom in if necessary.
@@ -153,7 +153,7 @@ You can find a list of existing categories here: [[Special:Categories]].
 
 Place the code at the very bottom of the article.
 <pre>[[category:categoryname]]</pre>
-However, you should first check what kind of article is using the category already - for example [[:Category:en/Engines]] is only for articles about specific engines - not for any train related articles that mention train engines.  The idea is if users want a simple "unpolluted" list of Engines, they will go to the category.
+However, you should first check what kind of article is using the category already - for example [[:Category:en/Manual/Base Set/Trains/Engines]] is only for articles about specific engines - not for any train related articles that mention train engines.  The idea is if users want a simple "unpolluted" list of Engines, they will go to the category.
 
 ==Scenarios==
 See instructions here: [[en/Community/Scenarios/Scenarios Team#procedure-to-add-a-scenario]].
@@ -171,4 +171,3 @@ Place scenarios in the scenario namespace:
 *[http://www.mediawiki.org/wiki/Help:Magic_words Magic words in MediaWiki]
 *[http://www.mediawiki.org/wiki/Help:Extension:ParserFunctions ParserFunctions in MediaWiki]
 
-[[Category:en/OpenTTD Wiki]]

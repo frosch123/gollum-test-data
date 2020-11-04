@@ -2,7 +2,7 @@
 <!--{{DevDoc}}-->{{pl/Rozwój}}
 
 <!--{{Outdated|Advanced Settings have been replaced by Settings}}-->
-{{pl/Nieaktualizowane|Ustawienia Zaawansowane zostały zastąpione Ustawieniami}}
+{{pl/Community/Nieaktualizowane|Ustawienia Zaawansowane zostały zastąpione Ustawieniami}}
 
 W tym artykule krótko wyjaśniono, jak można utworzyć niestandardową zmienną ustawień, zmieniając kod źródłowy OpenTTD. Tutorial opisuje proces dodawania dwóch dodatkowych opcji do okna dialogowego ''Ustawienia zaawansowane'' - jednej opcji liczby całkowitej i jednej wartości logicznej.
 
@@ -11,9 +11,9 @@ W tym artykule krótko wyjaśniono, jak można utworzyć niestandardową zmienn�
 ==Sekcje==
 Różne kategorie ustawień można zobaczyć w oknie ''Ustawienia zaawansowane'' :
 
-*[[en/Archive/Manual/Settings/Advanced Settings/Interface|Interface]] <font color=white> _ _ </font> lub [[pl/Ustawienia/Interfejs|Interfejs]] (pl)
-*[[en/Archive/Manual/Settings/Advanced Settings/Construction|Construction]] -"- [[pl/Ustawienia/Interfejs#konstrukcje|Konstrukcja]]
-*[[en/Archive/Manual/Settings/Advanced Settings/Vehicles|Vehicles]] <font color=white> _ _ __ </font> [[pl/Ustawienia/Pojazdy|Pojazdy]]
+*[[en/Archive/Manual/Settings/Advanced Settings/Interface|Interface]] <font color=white> _ _ </font> lub [[pl/Manual/Base Set/Trains/Ustawienia/Interfejs|Interfejs]] (pl)
+*[[en/Archive/Manual/Settings/Advanced Settings/Construction|Construction]] -"- [[pl/Manual/Base Set/Trains/Ustawienia/Interfejs#konstrukcje|Konstrukcja]]
+*[[en/Archive/Manual/Settings/Advanced Settings/Vehicles|Vehicles]] <font color=white> _ _ __ </font> [[pl/Manual/Base Set/Trains/Ustawienia/Pojazdy|Pojazdy]]
 *[[en/Archive/Manual/Settings/Advanced Settings/Stations|Stations]] <font color=white> _ _ __ </font>  [[pl/Archive/Manual/Settings/Ustawienia#grupy-ustawien|Stacje]]
 *[[en/Archive/Manual/Settings/Advanced Settings/Economy|Economy]] <font color=white> _ _ _ </font>  [[pl/Archive/Manual/Settings/Ustawienia|Ekonomia]]
 *[[en/Archive/Manual/Settings/Advanced Settings/Competitors|Competitors]] , <font color=white> _ </font>  [[pl/Archive/Manual/Settings/Zaawansowane ustawienia/Rywale|Współzawodnik]]
@@ -219,7 +219,7 @@ Poniżej znajduje się szczegółowe wyjaśnienie niektórych atrybutów:
 ** SC_EXPERT
 
 ====Robienie swojego budowania ('build') kompatybilnym ze starszymi zapisami ('savegames')====
-[[File:en/Setting tutorial small.png|right|frame|Rezultat Finalny]]
+[[File:en/Archive/Source/Setting tutorial small.png|right|frame|Rezultat Finalny]]
 
 Jeśli nie użyjesz flagi <code>SLF_NOT_IN_SAVE</code> , OpenTTD spodziewa się znaleźć twoją zmienną w każdej zapisanej grze. Dlatego ważne jest, aby powiedzieć grze, z której wersji zostało dodane to ustawienie. Numer wersji zapisanej gry znajduje się na początku [http://svn.openttd.org/trunk/src/saveload/saveload.cpp saveload.cpp] .
 
@@ -240,5 +240,5 @@ Tak więc w powyższym przykładzie podbiliśmy grę do 189 w [http://svn.opentt
 Teraz pozostaje tylko jedna rzecz do zrobienia - kompilacja! Jeśli wszystko jest w porządku, powinieneś zobaczyć coś podobnego do tego po prawej stronie.
 
 
-[[Category:en/OpenTTDDevBlackBook|P]] [[Category:pl/OpenTTDDevBlackBook|P]]
+[[Category:en/Archive/Source/OpenTTDDevBlackBook|P]] [[Category:pl/Archive/Source/OpenTTDDevBlackBook|P]]
 <!--[[Category:Development]]--> [[Category:pl/Rozwój]]

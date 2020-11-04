@@ -1,5 +1,5 @@
 [[Translation:en/Manual/Signals]]
-{{ko/목차}}
+{{ko/Manual/목차}}
 {{ko/번역|from=en|to=ko|origin=Signals|Percentage=65}}
 ''[[ko/신호기 설치|신호기 설치]] 튜토리얼을 읽어서 어떻게 신호기를 설치하는지 알아보세요.''
 
@@ -10,9 +10,9 @@ __TOC__
 일반 폐색 신호기는 선로를 폐색 구가으로 나누고 그 블럭에서의 열차의 움직임에 따라 바뀝니다. 일반 폐색 신호기는 다음 폐색 구간이 열차에 의해 점유중일 때 열차를 멈추고 빨간 불로 바뀝니다. 그렇지 않으면 열차의 통과를 허락하고 초록불로 바뀝니다. 해당 신호기에서 접근 가능한 모든 선로 타일이 하나의 폐색 구간으로 간주됩니다. 열차의 진행 예정 경로가 선로를 점유중인 다른 열차와 겹치지 않는다고 할지라도, 일반 폐색 신호기는 열차의 다음 폐색 구간으로의 진행을 허가하지 않을 것입니다.
 
 ===양방향 신호기===
-[[File:en/2-way signals.png|frame|두단식 역에 존재하는 양방향 신호기]]
+[[File:en/Manual/2-way signals.png|frame|두단식 역에 존재하는 양방향 신호기]]
 <div style="float:right">
-[[File:en/Two-way signal.png]]
+[[File:en/Manual/Two-way signal.png]]
 </div>
 양방향 신호기는 열차가 양방향으로 다닐 수 있게 하는 신호등입니다.  역의 같은 쪽으로 열차가 들어오고 나가는 종점에 있는 역에서 가장 많이 쓰이는 신호기입니다. 오른쪽에 있는 예시에서, 신호기는 다음 열차에게 역의 빈 홈으로 들어올 수 있도록 방향을 지정해줍니다.  게다가 다른 열차가 같은 경로 상에 있다면 역의 홈을 벗어나는 것을 막습니다.
 
@@ -22,11 +22,11 @@ __TOC__
 {{en/-}}
 
 ===단방향 신호기===
-[[File:en/One-way signal.png|right]]
+[[File:en/Manual/One-way signal.png|right]]
 
 단방향 신호기는 열차를 한방향으로만 갈 수 있도록 제한합니다. 아래의 예시에서, 신호가 열차들이 원을 그리며 돌 수 있도록 합니다.
 
-[[File:en/1-way signal loop.png|frame|center|One-way signals in a loop]]
+[[File:en/Manual/1-way signal loop.png|frame|center|One-way signals in a loop]]
 
 단방향 신호기를 쓰는 것이 일반 폐색 신호등을 쓰는 것보다 유용한 두가지 상황이 있습니다:
 *[[en/Manual/Building railway stations#single-stations|회차역]]은 열차가 입구를 막지 않고 거꾸로 나가는 것을 막으면서 역에 정차하게 합니다. 이것은 열차가 역을 들어가고 나가는 것을 더 효율적으로 만듭니다. 
@@ -42,11 +42,11 @@ __TOC__
 단방향 신호기는 ''[[en/트랜스포트 타이쿤 디럭스]]''에서 제일 먼저 도입되었습니다.
 
 ==경로 신호기 ==
-[[File:en/Yapp signalgui.png|frame|right|신호기 설정창의 두 가지 새로운 신호기.]]
+[[File:en/Manual/Yapp signalgui.png|frame|right|신호기 설정창의 두 가지 새로운 신호기.]]
 
 트랜스포트 타이쿤시절 도입된 블럭 신호기의 단점을 보완하기 위하여 '경로 신호기'라는 새로운 신호기가 도입되었습니다. 이 신호기들은 열차들이 신호기를 통과하기 전에 다음 신호기까지의 열차의 진행 경로를 미리 예약하도록 합니다. 경로 신호기는 한 대의 열차가 이미 블럭을 점유중일 지라도 다른 열차의 예약된 경로가 원래의 열차와 겹치지 않을 경우 다른 열차의 진입을 허가하는데, 이는 기존의 블럭 신호기나 사전 신호기에서는 불가능한 개념입니다. 이 신호기를 통해 보다 복잡하고 집적화된 교차로와 분기점을 데드락현상 없이 제작할 수 있습니다.
 
-[[File:en/Difference block path signals.png|frame|center|일반 폐색 신호기와 경로 신호기가 대조되는 가장 대표적인 상황은 바로 건넘선이 설치되어 있을 경우입니다.
+[[File:en/Manual/Difference block path signals.png|frame|center|일반 폐색 신호기와 경로 신호기가 대조되는 가장 대표적인 상황은 바로 건넘선이 설치되어 있을 경우입니다.
 <ul>
 <li>일반 폐색 신호기의 경우, 두 열차의 경로가 전혀 마주치지 않음에도 불구하고 해당 블록이 이미 윗쪽 열차에 의해 점유되어 있으므로 아래쪽 선로 열차의 진입을 제한합니다..</li>
 <li>경로 신호기의 경우, 두 열차의 경로가 전혀 겹치지 않을 때 한 블럭에 열차가 동시에 진입하는 것을 허가합니다.</li>
@@ -68,11 +68,11 @@ __TOC__
 |이 문제에 대한 해결 방법은 교차로 바로 뒤에 신호기를 추가하여 폐색 구간을 작게 쪼개는 것입니다. 두 개의 신호기의 추가를 통해 Y자 형태의 폐색 구간을 3개로 쪼개어, 분기점과 왼쪽 선로, 오른쪽 선로로 나누었습니다.
 |style="background:white"|대조적으로, 경로 신호기는 교차로에 진입하는 새로운 열차가 진행하려는 왼쪽 방향의 선로가 비어있기에 열차가 왼쪽 선로로 들어가도록 허용합니다. 폐색 구간을 작게 쪼갤 필요(교차로 뒤에 신호기를 추가로 설치할 필요)가 없습니다.
 |-
-|style="background:white"|[[File:en/Signal bloc.png]]
+|style="background:white"|[[File:en/Manual/Signal bloc.png]]
 세 블록 신호기 사이에 위치한 Y자형태의 선로.
-|[[File:en/Multiples standard.png]]
+|[[File:en/Manual/Multiples standard.png]]
 두 개의 추가적인 신호기 설치를 통한 폐색 구간 분할(오른쪽 선로, 왼쪽 선로, 분기점)
-|style="background:white"|[[File:en/Chemin.png|Chemin.png]]
+|style="background:white"|[[File:en/Manual/Chemin.png|Chemin.png]]
 두 블록 신호기와 경로 신호기 사이의 Y자 형태의 선로
 |}
 
@@ -80,10 +80,10 @@ __TOC__
 * 열차가 교차로를 막지 않고 대기할 수 있는 곳에만 신호기를 설치해야 합니다.
 * 이 신호기는 한 쪽 방향으로만 작동합니다. 다른 쪽 방향에서는 후술할 예시처럼 종류에 따라서 신호기가 무시되거나 단방향 신호기로 취급될 수 있습니다.
 {|class=wikitable style="width:600px; margin:auto"
-|[[File:en/Yapp pbssignal.png]]
+|[[File:en/Manual/Yapp pbssignal.png]]
 |'''경로 신호기''': 열차는 신호기의 뒷편에서 앞쪽으로 통과할 수 있습니다. 단방향 블록 신호기와 착오가 없도록 주의하십시오.
 |-
-|[[File:en/Yapp onewaypbssignal.png]]
+|[[File:en/Manual/Yapp onewaypbssignal.png]]
 |'''단방향 경로 신호기''': 열차는 신호기의 뒷편에서 앞쪽으로 통과할 수 '''없습니다'''. 기술적으로는, 반대 방향으로의 진입은 영구적으로 빨간색을 지시하여 차단하게 됩니다. 
 |}
 대부분의 경우에는 일방통행이라는 단점을 가진 단방향 경로 신호기보다 기본 경로 신호기만을 사용하는 것으로 충분하지만, 단방향 경로 신호기는 분명히 특정 경우에는 유용하게 사용될 수 있습니다.
@@ -92,21 +92,21 @@ __TOC__
 
 모든 신호기의 앞은 안전 대기 지점으로 취급되기에, 교차로를 빠져나간 직후에 신호기를 설치하는 것은 추천되지 않고, 오로지 교차로 진입 전에 설치하는 것만이 추천됩니다. 이는 열차가 교차로 진입 전에 대기하는 것만이 안전하기 때문입니다. 아래 예시처럼 열차가 교차로를 완전히 빠져나오기 전에 신호 대기에 걸리는 것은 교차로의 통행을 막고 사고의 위험이 있기에 안전하지 않습니다. 이는 교차로 전후에 모두 신호기를 설치해야 해 교차로를 막고 열차가 대기해야 했던 기존의 블록 신호기에 비해 경로 신호기가 가지는 장점입니다.
 {|class=wikitable style="margin:auto"
-|style="background:#fee"|[[File:en/Yapp unsafewaitinglocation.png|center]]
+|style="background:#fee"|[[File:en/Manual/Yapp unsafewaitinglocation.png|center]]
 '''안좋은 예시''': 화살표로 표시된 대기 지점은 교차로 상에 대기하는 열차가 사진 윗쪽에서 진입하는 열차의 경로가 비어있음에도 불구하고 진행을 막고 있게 되기에 좋지 않은 예시입니다. 이 사진에는 또 한 가지의 문제점이 있는데, 직접 찾아보시기 바랍니다.
-|style="background:#efe"|[[File:en/Yappgoodexample.png|center]]
+|style="background:#efe"|[[File:en/Manual/Yappgoodexample.png|center]]
 '''좋은 예시''': 열차가 대기할 수 있는 적절한 공간이 확보되기에 좋은 예시입니다. 다음 진행 공간이 확보되기 전까지는 열차는 교차로 진입 전에 대기할 것이며, 이는 상단에서 진입하는 열차가 진행할 수 있도록 해줍니다.
 |}
 
 이 사진은 경로 신호기로 만들 수 있는 선로의 또 다른 예시입니다. 이러한 신호 구조 배치는 두 대의 열차가 동시에 한 차량 기지를 공유하면서 역을 빠져나갈 수 있게 해줍니다.(블록 신호기로는 폐색 구간 하나에 해당하기에 이를 구현할 방법이 없습니다.) 이런 배치는 역을 빠져나가는 출구에 단방향 경로 신호기를, 차량 기지를 빠져나가는 출구에 양방향 경로 신호기를 하나씩 설치하여 구현할 수 있습니다.
-[[File:en/Pathsignal station exit.png|frame|center|두 개의 출구를 가진 역. 차량 기지 앞에 설치된 신호기는, 차량 기지 내부에 이미 동작하고 있는 신호기가 있기에 필수적으로 설치해야하는 것은 아니지만, 차량 기지를 들어오는 열차보다 나가는 열차에 우선권을 부여하기 때문에 권장되는 형태의 배치입니다.]]
+[[File:en/Manual/Pathsignal station exit.png|frame|center|두 개의 출구를 가진 역. 차량 기지 앞에 설치된 신호기는, 차량 기지 내부에 이미 동작하고 있는 신호기가 있기에 필수적으로 설치해야하는 것은 아니지만, 차량 기지를 들어오는 열차보다 나가는 열차에 우선권을 부여하기 때문에 권장되는 형태의 배치입니다.]]
 
 비록 상단의 사진이 나타내고 있는 것은 아니지만, 통과역의 경우에도 경로 신호기를 역 진입 전에 사용할 경우 기존의 블록 신호기에서는 필수였던 '역 진입 분기 직전에 출구 신호기 설치'가 불필요해집니다.
 
-[[File:en/Rpbs img10.png|center|frame|통과역에서 경로 신호기를 사용할 경우 역 진입 전의 교차로에 출구 신호기를 설치할 필요가 없어집니다.]]
+[[File:en/Manual/Rpbs img10.png|center|frame|통과역에서 경로 신호기를 사용할 경우 역 진입 전의 교차로에 출구 신호기를 설치할 필요가 없어집니다.]]
 
 ====상세 설정====
-[[File:en/Yapp patch-options.png|frame|right|YAPP 상세 설정]]
+[[File:en/Manual/Yapp patch-options.png|frame|right|YAPP 상세 설정]]
 경로 신호기와 관련된 세 가지의 상세 설정이 존재합니다. 
 
 첫 번째 옵션은 예약된 경로의 강조 표시입니다. 이 옵션은 경로 신호기를 사용하여 제작된 교차로에 문제가 없는지를 확인할 수 있게 해주며, 교차로에서 어떤 경로가 예약이 되어 사용될 예정인지 표시할 수 있게 됩니다.
@@ -119,12 +119,12 @@ __TOC__
 ====기본 교차로====
 기본 교차로는 자신이 진행할 경로만 확보되면 폐색 구간은 상대적으로 덜 중요하기에 전보다 더 많은 통과량을 처리할 수 있습니다. 우하단에서 올라오는 열차는 기존의 블록 신호기를 사용한 경우 왼쪽에서 오는 열차가 폐색 구간을 완전히 통과할 때까지 기다려야 하지만, 경로 신호기를 사용할 경우 더 이상은 대기하지 않아도 됩니다. 교차로 진입 전의 3개만이 경로 신호기인 점을 유의하십시오.
 
-[[File:en/Yapp basicjunction.png|frame|center|3칸 길이의 열차에 최적화된 기본 교차로. 경로 신호기는 교차로 폐색 구간 앞에 설치되어있고, 일반 블록 신호기가 다른 선로에 사용된 점을 유의하십시오.]]
+[[File:en/Manual/Yapp basicjunction.png|frame|center|3칸 길이의 열차에 최적화된 기본 교차로. 경로 신호기는 교차로 폐색 구간 앞에 설치되어있고, 일반 블록 신호기가 다른 선로에 사용된 점을 유의하십시오.]]
 
 ====기본 양방향 정차역====
 이러한 역 배선 구조를 통해, 양방향에서 오는 열차 모두 양쪽 플랫폼을 사용할 수 있습니다. 양방향 경로 신호기는 반대편에서 통과하는 경우 폐색 구간을 나누는 역할을 하지 않기에, 열차는 역을 포함한 역 뒤의 신호기까지의 경로가 확보될 때까지 역에 진입하지 못합니다. 이런 선로 배치는 출구 사전 신호기를 통해서도 구현 가능하다는 것을 유의하십시오.
 
-[[File:en/Yapp basicstation.png|frame|center|기본 정차역.]]
+[[File:en/Manual/Yapp basicstation.png|frame|center|기본 정차역.]]
 
 {{en/Feature|0.7}}
 
@@ -132,8 +132,8 @@ __TOC__
 Pre-signals are a group of specialised block signals. They are so named because block entry pre-signal input comes from not just the track in the block, but any other pre-signals placed on the other side of the block (that is to say exits from that block). They are used to limit the entry of trains into blocks that cannot be obstructed or occupied. In most cases you can use path signals to solve situations where trains can choose between multiple alternatives, for instance at stations or single-track lines that are used by trains in both directions.
 
 <div style="float:right">
-[[File:en/Station no pre-signals.png|frame|right|A problem with block signal only setup - the left train may leave first, the train waiting behind may get stuck in the track right behind the right train.]]
-[[File:en/Station with pre-signals.png|frame|right|Solve the problem using presignals]]
+[[File:en/Manual/Station no pre-signals.png|frame|right|A problem with block signal only setup - the left train may leave first, the train waiting behind may get stuck in the track right behind the right train.]]
+[[File:en/Manual/Station with pre-signals.png|frame|right|Solve the problem using presignals]]
 </div>
 The image on the top right shows a setup where entry to a station is controlled using ordinary signals.  When at least one platform is empty, this works well, as an incoming train is always directed to a free platform. However, consider what happens when all platforms are full, as in the screenshot. All branches are showing red, so the incoming train picks the shortest path - straight on.  But suppose the train on the platform to the right is going to be in the station for some time. Meanwhile, the train on the left leaves.  The incoming train has committed itself to a platform and is stuck between the signals, waiting for a train to depart even though there is now an empty platform available. We need to stop that incoming train before the track splits so that it picks the empty platform when a train leaves. For this you can use path signals, but you can also solve this situation with pre-signals. In fact, this was the way to build stations before path signals were invented.
 
@@ -141,7 +141,7 @@ Pre-signals function as block signals, but additionally decide on which colour t
 
 ====Block Entry Pre-signal====
 <div style="float:right">
-[[File:en/Entry presignal.png|60px]]
+[[File:en/Manual/Entry presignal.png|60px]]
 </div>
 An entry pre-signal checks the signal aspect of all exit pre-signals of the signal block following the entry pre-signal. If there is at least one green exit pre-signal, the entry pre-signal wil also show green. If all exit pre-signals of the next block are red, then the entry pre-signal is also red.
 
@@ -151,7 +151,7 @@ If there are no signals designated as exits on the block directly behind the ent
 
 ====Block Exit pre-signal====
 <div style="float:right">
-[[File:en/Exit presignal.png|60px]]
+[[File:en/Manual/Exit presignal.png|60px]]
 </div>
 The exit pre-signals are what an entry pre-signal looks for to decide what aspect to show. They otherwise behave in the same way as a normal block signal.
 
@@ -160,9 +160,9 @@ To summarize: in the direction of travel you first have an entry pre-signal, the
 {{en/-}}
 
 ====Combo-signal====
-[[File:en/Station with pre-signals2.png|frame|Station with 1 entry pre-signal, 2 combo-signals, and 4 exit-signals]]
+[[File:en/Manual/Station with pre-signals2.png|frame|Station with 1 entry pre-signal, 2 combo-signals, and 4 exit-signals]]
 <div style="float:right">
-[[File:en/Combo presignal.png|60px]]
+[[File:en/Manual/Combo presignal.png|60px]]
 </div>
 There is a third type of pre-signal called the combo signal and simply acts as both an entry and exit signal. They effectively combine many exit signals into one signal, effectively copying their effect down the chain. Any one green exit signal will make any combo signals up the line become green, which will successively relay up to the original block entry signal. This allows you to build large "trees" of pre-signals spanning several blocks, as shown on the right. 
 
@@ -176,7 +176,7 @@ In previous versions, first place an ordinary signal.  Then, with ''Ctrl'' held 
 *Remember not to hold down ''Ctrl'' when placing the signal initially or you will end up with a semaphore (see below). Also use ''Ctrl'' if you have enabled the signal interface.
 
 ====Limitation====
-[[File:en/PresignalLimitation.png|frame|The problem with pre-signals...]]
+[[File:en/Manual/PresignalLimitation.png|frame|The problem with pre-signals...]]
 An important point to note with exit signals is that a green exit signal will trigger a green on the entry pre-signal at the beginning of the block even if it is not actually possible for a train to get to that exit signal because of the track layout (as in the image to the right with a train entering on the bottom track cannot technically exit from the top track). This can ruin more complicated pre-signaling setups, so care needs to be taken with planning.
 
 One of the bugs that are noted as "will not be solved" is: lost trains ignore (block) exit signals. If trains are lost, a random direction is chosen at each junction, so they ignore block exit signals, and may easily block junctions with pre-signals. Such case, however, can be easily resolved by replacing with [[#path-signals|path signals]].
@@ -188,9 +188,9 @@ Signals are intended to prevent trains from crashing into each other, and to hel
 ==See Also==
 * [[en/Community/Junctionary/Advanced signalling examples|Examples of advanced presignal setups]]
 * [[en/Manual/Building depots]]
-* [[:Category:en/Train Junctions]] for examples of complex junctions that take advantage of pre-signals.
+* [[:Category:en/Manual/Train Junctions]] for examples of complex junctions that take advantage of pre-signals.
 * [http://www.darkcoding.net/misc/openttd-trains-and-signals-for-beginners-a-tutorial/ Signals for the complete beginner]
 * [http://kokolokus.de/?s=blog&v=6 A tutorial written by domsson, on the forums] [http://www.tt-forums.net/viewtopic.php?f=29&t=51395 here]
 
-[[Category:en/Railways]]
-[[Category:en/Construction]]
+[[Category:en/Manual/Base Set/Trains/Railways]]
+[[Category:en/Manual/Base Set/Aircraft/Construction]]

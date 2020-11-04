@@ -10,9 +10,9 @@ __TOC__
 Block signals divide tracks into blocks, and operate according to the train movement on the blocks. Block signals stop the train if the next block of track is occupied by a train, and show red. If not, it allows it to pass and is green. Any and all track tiles physically reachable from the signal up to the next signal on that track are counted as the same block, regardless if there are multiple branches. Even if the expected path of the train does not collide with the path of the other train which is currently occupying the block, the block signal will not authorize the train in front of it to enter the block ahead, as opposed to [[#path-signals|path signals]].
 
 ===Two-way signal===
-[[File:en/2-way signals.png|frame|Two-way signals at a loading station]]
+[[File:en/Manual/2-way signals.png|frame|Two-way signals at a loading station]]
 <div style="float:right">
-[[File:en/Two-way signal.png]]
+[[File:en/Manual/Two-way signal.png]]
 </div>
 Two-way signals are used in a railway that has trains moving in both directions on the same track.  The most common use is at end-of-line stations, where trains enter and exit the same end of the station.  In the example at the right, the signals direct the next train to come into the empty loading bay.  They also prevent the train from leaving the loading bay if another train is in the way.
 
@@ -21,11 +21,11 @@ If a train has a choice of two or more directions, each with two-way signals on 
 Two-way signal was the very first and only railway signal introduced in the original ''[[en/Archive/OpenTTD/Transport Tycoon Deluxe]]''.
 {{en/-}}
 ===One-way signal===
-[[File:en/One-way signal.png|right]]
+[[File:en/Manual/One-way signal.png|right]]
 
 One-way signals limit train movement to one direction. In the example below, the signals force the trains to move in a circle.
 
-[[File:en/1-way signal loop.png|frame|center|One-way signals in a loop]]
+[[File:en/Manual/1-way signal loop.png|frame|center|One-way signals in a loop]]
 
 There are two main situations where these signals are more useful than simple block signals:
 *[[en/Manual/Building railway stations#single-stations|RoRo stations]] allow trains to stop at a station without reversing out and blocking the entry. This makes trains enter and exit stations more efficiently.
@@ -42,11 +42,11 @@ Although the one-way (block) signal appears there is only one side of the signal
 One-way signal was first introduced to ''[[en/Archive/OpenTTD/Transport Tycoon Deluxe]]''.
 
 ==Path signals ==
-[[File:en/Yapp signalgui.png|frame|right|Two new signal types in the [[en/Manual/Signal GUI]].]]
+[[File:en/Manual/Yapp signalgui.png|frame|right|Two new signal types in the [[en/Manual/Signal GUI]].]]
 
 There is a signal type, "path signal", to overcome the limitations of the original block based signalling of ''Transport Tycoon''. These signals enable trains to reserve a path through a block until the next signal, before entering the block. If another train wants to enter the block, and succeeds in reserving a path through the block, the path signal authorizes the train to enter the signal block, even if another track of the block is used at the same time, which is impossible with the traditional block signals only and/or pre-signals setup. It is entirely possible to build a sophisticated railway network with path signals only due to their better ability in preventing junction deadlock.
 
-[[File:en/Difference block path signals.png|frame|center|The most important difference between block signal setup and path signal setup as shown in this example: two parallel tracks are connected by a crossover.
+[[File:en/Manual/Difference block path signals.png|frame|center|The most important difference between block signal setup and path signal setup as shown in this example: two parallel tracks are connected by a crossover.
 <ul>
 <li>In the block signal setup, the signal does not authorize the lower train to enter the signal block because it is currently occupied by the upper train, even though there is absolutely no risk of letting the lower train pass through it.</li>
 <li>In the path signal setup, the lower train is authorized to pass through the junction as long as the upper train does not switch path from upper tracks to lower.</li>
@@ -68,11 +68,11 @@ The right track is used by a train. A train arrives from the lower track and wan
 |A solution is to split this block into smaller blocks by adding signals after the junction. With two additional block signals, the''Y'' has been split into three blocks: right arm, left arm and junction.
 |style="background:white"|On the contrary, the path signal authorizes the train coming from the bottom to enter the Y block, as the path it tries to reserve is free (the left track). No need to split the block into smaller blocks (i.e. no need for signals immediately after the junction).
 |-
-|style="background:white"|[[File:en/Signal bloc.png]]
+|style="background:white"|[[File:en/Manual/Signal bloc.png]]
 Y block among three ''block signals''.
-|[[File:en/Multiples standard.png]]
+|[[File:en/Manual/Multiples standard.png]]
 With two additional block signals, the Y has been split into three blocks: right arm, left arm and junction.
-|style="background:white"|[[File:en/Chemin.png|Chemin.png]]
+|style="background:white"|[[File:en/Manual/Chemin.png|Chemin.png]]
 Y block between a ''path signal'' and two ''block signals''.
 |}
 
@@ -80,10 +80,10 @@ There are two things you should know about this signal:
 * Place it only where trains can stop and wait without blocking junctions ;
 * This signal only works in one direction. In the other direction, it is either ignored or considered a one-way signal, depending on the signal path (see below).
 {|class=wikitable style="width:600px; margin:auto"
-|[[File:en/Yapp pbssignal.png]]
+|[[File:en/Manual/Yapp pbssignal.png]]
 |'''Path Signal''' (PS): trains can pass through this signal from the back side. Not to be confused with the one-way (block) signal.
 |-
-|[[File:en/Yapp onewaypbssignal.png]]
+|[[File:en/Manual/Yapp onewaypbssignal.png]]
 |'''One-way Path Signal''' (1W PS): trains '''cannot''' pass through this signal from the back side, as if there is another signal facing the opposite side permanently red.
 |}
 Most of the time it will be sufficient to use a default path signal, as passing a path signal from the back is penalised by the pathfinder, unless the destination (station or waypoint) is right after the path signal facing backward. However, one-way path signals might be useful in certain specific cases.
@@ -92,21 +92,21 @@ The two new signal types behave a bit differently than standard block signal typ
 
 Because the front of every signal is defined as a safe waiting position, you would normally not want to place a signal immediately behind a junction, only in front of a junction. This is because it is only safe for a train to wait in front of a junction. It is not safe for a a train to wait at a signal immediately after a junction before the whole train has cleared the junction, as it would be blocking the junction while waiting, as illustrated in the example below. This is a major advantage against traditional block signals, where you had to place signals before and after junctions, which caused trains to block junctions while waiting.
 {|class=wikitable style="margin:auto"
-|style="background:#fee"|[[File:en/Yapp unsafewaitinglocation.png|center]]
+|style="background:#fee"|[[File:en/Manual/Yapp unsafewaitinglocation.png|center]]
 '''Bad''': The signal indicated by the arrow is a bad waiting location, as the train in the junction now blocks the otherwise free path of the train coming from the top. There's a second bad waiting location in this picture. Can you find it?
-|style="background:#efe"|[[File:en/Yappgoodexample.png|center]]
+|style="background:#efe"|[[File:en/Manual/Yappgoodexample.png|center]]
 '''Good''': Here there is enough space after the juction for a train to wait. As long as this space is unavailable, the next train will wait before the junction rather than blocking it. This allows the train coming from the top to proceed.
 |}
 
 This is one other example of what you can do with those path signals. This works far better than using pre-signals because you can have two trains leaving the station at the same time AND share the same depot (there is no way to make it with pre-signals, because of the block share). In this case there are one-way path signals for trains leaving the station, and simple path signal for trains leaving the depot.
-[[File:en/Pathsignal station exit.png|frame|center|Two exit station. Note that the signals in front of the depot are not required, as depots have built-in signals. However, path signals in front of depots like this give trains leaving the depot priority over trains wanting to enter the depot.]]
+[[File:en/Manual/Pathsignal station exit.png|frame|center|Two exit station. Note that the signals in front of the depot are not required, as depots have built-in signals. However, path signals in front of depots like this give trains leaving the depot priority over trains wanting to enter the depot.]]
 
 Although the screen shot above does not show, it is unnecessary to place any signal between the pass-through station entrance and junction (effectively an "exit-signal" in the traditional block signal setup) if the signal of entrance tracks in front of the junction is path signal.
 
-[[File:en/Rpbs img10.png|center|frame|Pass-through station does not require exit signal in front of the station entrance, if all signals are path signal type.]]
+[[File:en/Manual/Rpbs img10.png|center|frame|Pass-through station does not require exit signal in front of the station entrance, if all signals are path signal type.]]
 
 ====Advanced Settings====
-[[File:en/Yapp patch-options.png|frame|right|YAPP Advanced Settings]]
+[[File:en/Manual/Yapp patch-options.png|frame|right|YAPP Advanced Settings]]
 There are three [[en/Archive/Manual/Settings/Advanced Settings]] related to path signals.
 
 One option is to highlight reserved tracks. This option is useful to troubleshoot your path-signaled junctions, as you can see what paths trains have reserved through a junction.
@@ -123,12 +123,12 @@ Below are some example track layouts which use the path signals. There are also 
 ====Basic junction====
 This basic junction now has a much higher throughput because trains only have to wait for trains running on the same line. The train coming from the right (going up) would usually have to wait for other trains coming back from the left tracks. It would now only have to wait if it wishes to switch lines. Note the 6 bounding signals to the 'junction block', and 3 total path signals, one at each entryway.
 
-[[File:en/Yapp basicjunction.png|frame|center|Basic junction for trains (optimised for 3-tile length). Path signals are present at all entries to the junction block. Note the use of normal signals on plain track.]]
+[[File:en/Manual/Yapp basicjunction.png|frame|center|Basic junction for trains (optimised for 3-tile length). Path signals are present at all entries to the junction block. Note the use of normal signals on plain track.]]
 
 ====Basic two-way station====
 With this station layout, trains can use both platforms when coming from either direction. Because path signals do not create blocks on their reverse, the train cannot enter until there is a clear path until the signal on the ''opposite'' side of the platform (which must include the platform space), allowing it to safely stop. Note that this setup could alternatively be replicated with a set of block-exit presignals in-front of the station.
 
-[[File:en/Yapp basicstation.png|frame|center|Basic station.]]
+[[File:en/Manual/Yapp basicstation.png|frame|center|Basic station.]]
 
 {{en/Feature|0.7}}
 
@@ -136,8 +136,8 @@ With this station layout, trains can use both platforms when coming from either 
 Pre-signals are a group of specialised block signals. They are so named because block entry pre-signal input comes from not just the track in the block, but any other pre-signals placed on the other side of the block (that is to say exits from that block). They are used to limit the entry of trains into blocks that cannot be obstructed or occupied. In most cases you can use path signals to solve situations where trains can choose between multiple alternatives, for instance at stations or single-track lines that are used by trains in both directions.
 
 <div style="float:right">
-[[File:en/Station no pre-signals.png|frame|right|A problem with block signal only setup - the left train may leave first, the train waiting behind may get stuck in the track right behind the right train.]]
-[[File:en/Station with pre-signals.png|frame|right|Solve the problem using presignals]]
+[[File:en/Manual/Station no pre-signals.png|frame|right|A problem with block signal only setup - the left train may leave first, the train waiting behind may get stuck in the track right behind the right train.]]
+[[File:en/Manual/Station with pre-signals.png|frame|right|Solve the problem using presignals]]
 </div>
 The image on the top right shows a setup where entry to a station is controlled using ordinary signals.  When at least one platform is empty, this works well, as an incoming train is always directed to a free platform. However, consider what happens when all platforms are full, as in the screenshot. All branches are showing red, so the incoming train picks the shortest path - straight on.  But suppose the train on the platform to the right is going to be in the station for some time. Meanwhile, the train on the left leaves.  The incoming train has committed itself to a platform and is stuck between the signals, waiting for a train to depart even though there is now an empty platform available. We need to stop that incoming train before the track splits so that it picks the empty platform when a train leaves. For this you can use path signals, but you can also solve this situation with pre-signals. In fact, this was the way to build stations before path signals were invented.
 
@@ -145,7 +145,7 @@ Pre-signals function as block signals, but additionally decide on which colour t
 
 ====Block Entry Pre-signal====
 <div style="float:right">
-[[File:en/Entry presignal.png|60px]]
+[[File:en/Manual/Entry presignal.png|60px]]
 </div>
 An entry pre-signal checks the signal aspect of all exit pre-signals of the signal block following the entry pre-signal. If there is at least one green exit pre-signal, the entry pre-signal wil also show green. If all exit pre-signals of the next block are red, then the entry pre-signal is also red.
 
@@ -155,7 +155,7 @@ If there are no signals designated as exits on the block directly behind the ent
 
 ====Block Exit pre-signal====
 <div style="float:right">
-[[File:en/Exit presignal.png|60px]]
+[[File:en/Manual/Exit presignal.png|60px]]
 </div>
 The exit pre-signals are what an entry pre-signal looks for to decide what aspect to show. They otherwise behave in the same way as a normal block signal.
 
@@ -164,9 +164,9 @@ To summarize: in the direction of travel you first have an entry pre-signal, the
 {{en/-}}
 
 ====Combo-signal====
-[[File:en/Station with pre-signals2.png|frame|Station with 1 entry pre-signal, 2 combo-signals, and 4 exit-signals]]
+[[File:en/Manual/Station with pre-signals2.png|frame|Station with 1 entry pre-signal, 2 combo-signals, and 4 exit-signals]]
 <div style="float:right">
-[[File:en/Combo presignal.png|60px]]
+[[File:en/Manual/Combo presignal.png|60px]]
 </div>
 There is a third type of pre-signal called the combo signal and simply acts as both an entry and exit signal. They effectively combine many exit signals into one signal, effectively copying their effect down the chain. Any one green exit signal will make any combo signals up the line become green, which will successively relay up to the original block entry signal. This allows you to build large "trees" of pre-signals spanning several blocks, as shown on the right. 
 
@@ -180,7 +180,7 @@ In previous versions, first place an ordinary signal.  Then, with ''Ctrl'' held 
 *Remember not to hold down ''Ctrl'' when placing the signal initially or you will end up with a semaphore (see below). Also use ''Ctrl'' if you have enabled the signal interface.
 
 ====Limitation====
-[[File:en/PresignalLimitation.png|frame|The problem with pre-signals...]]
+[[File:en/Manual/PresignalLimitation.png|frame|The problem with pre-signals...]]
 An important point to note with exit signals is that a green exit signal will trigger a green on the entry pre-signal at the beginning of the block even if it is not actually possible for a train to get to that exit signal because of the track layout (as in the image to the right with a train entering on the bottom track cannot technically exit from the top track). This can ruin more complicated pre-signaling setups, so care needs to be taken with planning.
 
 One of the bugs that are noted as "will not be solved" is: lost trains ignore (block) exit signals. If trains are lost, a random direction is chosen at each junction, so they ignore block exit signals, and may easily block junctions with pre-signals. Such case, however, can be easily resolved by replacing with [[#path-signals|path signals]].
@@ -198,7 +198,7 @@ Real life signals uses a combination of [http://en.wikipedia.org/wiki/Applicatio
 
 '''Here's an example:'''
 
-[[File:en/Difference between real and in game signals.png|400px|thumb|right|In game example with signals replaced with UK railway signals. Real life signals would not allow a train to have two green blocks ahead, only the specific path a train will take is lit green.]]
+[[File:en/Manual/Difference between real and in game signals.png|400px|thumb|right|In game example with signals replaced with UK railway signals. Real life signals would not allow a train to have two green blocks ahead, only the specific path a train will take is lit green.]]
 
 On the picture on the right is an in game example using real signals instead of the in game ones. The fastest train is catching up to the second train and the second train is catching up to the first. The UK railway signal system would indicate to the driver that the two blocks ahead of the train is red, by giving a double yellow. The single yellow tells the train that the next signal in the next block will indicate "Stop". By using this kind of three step system before a complete stop, the driver can slow down the train but doesn't have to bring the train to a complete stop.
 
@@ -236,9 +236,9 @@ The biggest comparison between the game and real train signals is that the game 
 ==See Also==
 * [[en/Community/Junctionary/Advanced signalling examples|Examples of advanced presignal setups]]
 * [[en/Manual/Building depots]]
-* [[:Category:en/Train Junctions]] for examples of complex junctions that take advantage of pre-signals.
+* [[:Category:en/Manual/Train Junctions]] for examples of complex junctions that take advantage of pre-signals.
 * [http://www.darkcoding.net/misc/openttd-trains-and-signals-for-beginners-a-tutorial/ Signals for the complete beginner]
 * [http://kokolokus.de/?s=blog&v=6 A tutorial written by domsson, on the forums] [http://www.tt-forums.net/viewtopic.php?f=29&t=51395 here]
 
-[[Category:en/Railways]]
-[[Category:en/Construction]]
+[[Category:en/Manual/Base Set/Trains/Railways]]
+[[Category:en/Manual/Base Set/Aircraft/Construction]]

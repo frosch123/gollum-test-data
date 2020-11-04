@@ -23,13 +23,13 @@ I(c,a,d,t)=c_\mathrm{Base} \cdot a \cdot d \cdot \max\left(31,
 </math>
 -->
 
-[[File:en/Income Formula.png|Income Formula.png]]
+[[File:en/Manual/Game Mechanics/Income Formula.png|Income Formula.png]]
 
 Revenu(cargaison, quantité, distance, temps) = taux de paiement de la cargaison ...
 
 Cette fonction a la forme suivante:
 
-[[File:en/Income vs time.png]]
+[[File:en/Manual/Game Mechanics/Income vs time.png]]
 
 ==Nombres magiques==
 
@@ -107,25 +107,25 @@ Ici, "Base" signifie le taux de paiement de la cargaison.
 
 ==Visualisation==
 
-[[File:en/Speed vs income.png]]
+[[File:en/Manual/Game Mechanics/Speed vs income.png]]
 
 Le graphique montre comment le revenu varie pour 20 passagers livrés à '''100''' cases à la vitesse v (en km/h). Selon l'équation de cette page, le revenu des passagers transportés à 100 km/h équivaut à 96,2% du revenu obtenu à 600 km/h. Cela veut dire que la vitesse du véhicule n'a pas toujours besoin d'être priorisée autant que, par exemple, la capacité de chargement des véhicules (surtout pour ce qui concerne les avions).
 
 De plus, les plus grandes distances sont plus sensibles à la vitesse. Regardez ce que donne le transport de passagers sur '''500''' cases:
 
-[[File:en/Speed1.png]]
+[[File:en/Manual/Game Mechanics/Speed1.png]]
 
 Cette fois, le revenu à 100 km/h n'est que 67,1% de celui à 600 km/h, ce qui veut dire qu'un véhicule plus rapide augmentera votre revenu de façon significative.
 
 En outre, nous obtenons un graphe très intéressant en comparant distance et revenu (toujours pour 20 passagers, mais à '''100''' km/h):
 
-[[File:en/Distance vs income.png]]
+[[File:en/Manual/Game Mechanics/Distance vs income.png]]
 
 Il est intéressant de voir qu'à partir d'environ 600 cases, vous obtiendrez de moins en moins d'argent, car la valeur des passagers décroîtra plus rapidement que l'accroissement dû à la distance supérieure. De plus, si vous faites très attention à l'équation de cette page, vous noterez que s'il faut trop de temps pour livrer une cargaison, vous n'obtiendrez plus qu'une valeur constante de 31 quel que soit la durée. Cela veut dire que vous pouvez obtenir de très gros revenus uniquement dépendants de la distance, si celle-ci est extrêmement grande (en ligne droite).
 
 Également, si la vitesse du véhicule est plus grande, de plus longues distances peuvent être atteintes sans perte de revenu. Voici un exemple à la vitesse de '''300''' km/h:
 
-[[File:en/Distance vs income2.png]]
+[[File:en/Manual/Game Mechanics/Distance vs income2.png]]
 
 Des graphes similaires peuvent être réalisés dans le jeu en utilisant l'[http://www.tt-forums.net/viewtopic.php?f=33&t=31984 ajout de nouveaux graphiques].
 

@@ -3,13 +3,13 @@
 
 '''Tramvay''', açık zeminde ve mevcut yol sistemlerinde [[en/Tramvaylar]] inşa etmenizi sağlayan bir özelliktir. Varsayılan tramvay altyapı grafikleri [[en/Archive/Community/PikkaBird]] tarafından sağlanmaktadır. Tramvaylarla oynamak için etkin bir tramvay [[en/Manual/NewGRF]]'sine gereksiniminiz var. Diğer ulaşım sistemlerinde olduğu gibi, tramvaylar [[en/Garajları]] da içermek üzere kendi altyapılarına gerek duymaktadır.
 ''Tramvaylar yalnızca yeni oyunlarda görünecek.''
-[[File:en/Tramroute.png|thumb|600px|left|Örnek bir tramvay yolu]]
+[[File:en/Manual/Tramroute.png|thumb|600px|left|Örnek bir tramvay yolu]]
 __TOC__
-{{en/Html-clear-left}}
+{{en/Manual/Html-clear-left}}
 
 ===Yol türleri===
 Hangi yol türünün inşa edileceğini seçmek için ana menüdeki yol yapımı düğmesini tıklayın ve basılı tutun.
-[[File:en/Tramwaymenu.png|none|frame|Tramvay Yapımı'nı seçin]]
+[[File:en/Manual/Tramwaymenu.png|none|frame|Tramvay Yapımı'nı seçin]]
 * [[en/Manual/Roadway construction|Normal yollar]] - [[en/Kamyonlar]] ve [[en/Manual/Base Set/Road Vehicles/Buses|otobüsler]] bu yolda çalışır.
 * Tramvaylar - Tramvaylar bu yolda çalışır.
 * Çift amaçlı karayolu - Kamyonların, otobüslerin ve tramvayların seyahat etmesini sağlar. Bu tip bir yol yapmak için bir tramvay hattı inşa edin.
@@ -19,14 +19,14 @@ Bunun OpenTTD ve [[en/Archive/OpenTTD/TTDPatch]]'a nispeten yeni bir özellik ol
 
 Bir tramvay yapmak için, önce bazı tramvay aracı [[en/Manual/NewGRF]] dosyalarının '''kurulu ve etkinleştirilmiş''' olduğundan emin olun:
 *'''Yüklemek için:''' Ana ekranda "Çevrimiçi İçeriği Kontrol Et"e girin, ''etiket/isim süzgecine'' '''tramvay''' yazın ve istediğiniz dosyaları NewGRF olarak etiketleyip indirirsiniz.
-:[[File:tr/Generictram.png|none|frame|NewGRF dosyalarını yükleme]]
+:[[File:tr/Manual/Generictram.png|none|frame|NewGRF dosyalarını yükleme]]
 *'''Etkinleştirmek için:''' Ana ekranda "NewGRF Ayarları"na girin ve üstte ''Etkin NewGRF dosyaları'' birlikte ''NewGRF Ayarları'' penceresi görünür, dosyaları eklemek için bunları ''Etkin Olmayan NewGRF dosyaları'' listesinden seçin ve "Ekle"ye basın.
-:[[File:tr/Generictramgrf.png|none|frame|Ekle tuşunu seçin]]
+:[[File:tr/Manual/Generictramgrf.png|none|frame|Ekle tuşunu seçin]]
 
 ===Tramvay setleri===
 * [[en/Community/NewGRF/Extended Generic Road Vehicle and Tram Set]] (ya da eGRVTS)
 {{en/Feature|0.6|text='' - Generic Tram Set''|align="right"}}
-* [[en/Community/NewGRF/Generic Tram Set]] (OpenTTD'nin resmi 0.6.0 sürümünün bir parçası) (Aynı yaratıcıdan olmasına karşın, ilk setin ikincisinin bir üst kümesi olmadığını unutmayın: [http://www.tt-forums.net/viewtopic.php?p=643673#p643673]){{en/-right}}
+* [[en/Community/NewGRF/Generic Tram Set]] (OpenTTD'nin resmi 0.6.0 sürümünün bir parçası) (Aynı yaratıcıdan olmasına karşın, ilk setin ikincisinin bir üst kümesi olmadığını unutmayın: [http://www.tt-forums.net/viewtopic.php?p=643673#p643673]){{en/Manual/-right}}
 * [[en/Dutch Tram Set]]
 * [[en/Lightrail/Tramtracks]]
 * [[en/New Tram Tracks]]
@@ -34,9 +34,9 @@ Bir tramvay yapmak için, önce bazı tramvay aracı [[en/Manual/NewGRF]] dosyal
 
 ==Tramvay yapımı araç çubuğu==
 
-[[en/Manual/Game interface#the-menu-bar|Menü çubuğundaki]] yol oluşturma düğmesini tıklayın [[File:tr/Yoltuşu.png]] ve basılı tutun ve Tramvay yapımı araç çubuğunu görüntülemek için Tramvay yapımını seçin.
+[[en/Manual/Game interface#the-menu-bar|Menü çubuğundaki]] yol oluşturma düğmesini tıklayın [[File:tr/Manual/Yoltuşu.png]] ve basılı tutun ve Tramvay yapımı araç çubuğunu görüntülemek için Tramvay yapımını seçin.
 
-[[File:en/Tramway construction.png|none|frame|Tramvay yapımı araç çubuğu]]
+[[File:en/Manual/Tramway construction.png|none|frame|Tramvay yapımı araç çubuğu]]
 
 Düğmelerin işlevleri (soldan sağa):
 {| {{en/Wikitable}}
@@ -46,23 +46,23 @@ Düğmelerin işlevleri (soldan sağa):
 !Kısayol
 !Açıklama
 |-
-|[[File:en/Build tram.png]]||'''Tramvay yapımı düğmeleri'''||1, 2||Seçilen yönde bir tramvay inşa eder; tıklayıp sürükleyebilirsiniz.
+|[[File:en/Manual/Build tram.png]]||'''Tramvay yapımı düğmeleri'''||1, 2||Seçilen yönde bir tramvay inşa eder; tıklayıp sürükleyebilirsiniz.
 |-
-|[[File:en/Autotram.png]]||'''[[en/Otomatik tramvay yolu]] düğmesi'''||3||Herhangi bir yönde tramvay yolları oluşturmak için çok verimli bir araç. Ctrl tuşuna basılıyken kullanılırsa yolları kolayca kaldırır.
+|[[File:en/Manual/Autotram.png]]||'''[[en/Otomatik tramvay yolu]] düğmesi'''||3||Herhangi bir yönde tramvay yolları oluşturmak için çok verimli bir araç. Ctrl tuşuna basılıyken kullanılırsa yolları kolayca kaldırır.
 |-
-|[[File:en/Clear title.png]]||'''[[en/Manual/Landscaping|Arazi temizleme]] düğmesi'''||4||Kareleri temizler.
+|[[File:en/Manual/Clear title.png]]||'''[[en/Manual/Landscaping|Arazi temizleme]] düğmesi'''||4||Kareleri temizler.
 |-
-|[[File:en/Build roaddepot.png]]||'''[[en/Manual/Depots|Garaj]] oluşturma düğmesi'''||5||Bir garaj yönlendirmeniz ve oluşturmanız için garaj penceresini açar.
+|[[File:en/Manual/Build roaddepot.png]]||'''[[en/Manual/Depots|Garaj]] oluşturma düğmesi'''||5||Bir garaj yönlendirmeniz ve oluşturmanız için garaj penceresini açar.
 |-
-|[[File:en/Build busstation.png]]||'''[[en/Manual/Stations#tramway-stations|Yolcu durağı]] oluşturma düğmesi'''||6||Bir yolcuyu tramvay durağına yönlendirmeniz ve oluşturmanız için yolcu tramvay durağı penceresini açar.
+|[[File:en/Manual/Build busstation.png]]||'''[[en/Manual/Stations#tramway-stations|Yolcu durağı]] oluşturma düğmesi'''||6||Bir yolcuyu tramvay durağına yönlendirmeniz ve oluşturmanız için yolcu tramvay durağı penceresini açar.
 |-
-|[[File:en/Build truckstation.png]]||'''[[en/Manual/Stations#truck-stations|Yük durağı]] oluşturma düğmesi'''||7||Bir yük tramvay durağı yönlendirmeniz ve kurmanız için yük tramvay istasyonu penceresini açar.
+|[[File:en/Manual/Build truckstation.png]]||'''[[en/Manual/Stations#truck-stations|Yük durağı]] oluşturma düğmesi'''||7||Bir yük tramvay durağı yönlendirmeniz ve kurmanız için yük tramvay istasyonu penceresini açar.
 |-
-|[[File:en/Build roadbridge.png]]||'''[[en/Manual/Bridges|Köprü]] yapımı'''||B||Bir köprü inşa etmenizi sağlar.
+|[[File:en/Manual/Build roadbridge.png]]||'''[[en/Manual/Bridges|Köprü]] yapımı'''||B||Bir köprü inşa etmenizi sağlar.
 |-
-|[[File:en/Build roadtunnel.png]]||'''[[en/Manual/Tunnels|Tünel]] yapımı'''||T||Bir tünel inşa etmenizi sağlar.
+|[[File:en/Manual/Build roadtunnel.png]]||'''[[en/Manual/Tunnels|Tünel]] yapımı'''||T||Bir tünel inşa etmenizi sağlar.
 |-
-|[[File:en/Toggle clear active.png]]||'''Yol silme'''||R (CTRL)||Başka bir araç seçin ve ardından bu öğeyi kaldırmak için bunu seçin. Ctrl tuşuna basarak durumu değiştirebilirsiniz.
+|[[File:en/Manual/Toggle clear active.png]]||'''Yol silme'''||R (CTRL)||Başka bir araç seçin ve ardından bu öğeyi kaldırmak için bunu seçin. Ctrl tuşuna basarak durumu değiştirebilirsiniz.
 |}
 
 Kara yollarında, depolarda ve istasyonlarda inşa etmenin yanı sıra [[en/Archive/Manual/Settings/Build on slopes|yamaçlarda da]] inşa edilebilir.
@@ -72,5 +72,5 @@ Yolları döşerken, tramvayların geri dönmek için durak döngülerine gerek 
 ==Tramvay yapımı==
 Bir Tramvay garajı yerleştirin, ''Yeni Araçlara'' tıklayarak bir araç oluşturun, ardından bir araç seçin ve satın alın. Daha sonra garaja yerleştirilecek ve araç penceresi açılacaktır. [[en/Talimat]] verin ve Tramvayı başlatmak için "Durdu" yazan alt çubuğa tıklayın.
 
-[[Category:en/0.6.0 Features]]
-[[Category:en/Road Vehicles]]
+[[Category:en/Manual/0.6.0 Features]]
+[[Category:en/Manual/Base Set/Road Vehicles/Road Vehicles]]

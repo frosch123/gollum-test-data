@@ -15,11 +15,11 @@ Pobierz wymagane i przykładowe pliki z tej witryny http://ottd.mudpuddle.co.nz/
 
 <!--{{note|Those files aren't currently there.}}-->{{pl/Informacja|Tych plików obecnie nie ma.}}
 
-[[File:en/Files.png|left|frame|1. przykładowa struktura pliku]] <br> Ważne pliki i foldery, które należy zachować, to '''Outlines, kontury 2, *.Blend,''' a jeśli w systemie Windows ze zdjęciami - '''Black-AlphaZero.exe'''<br>
+[[File:en/Archive/Old 32bpp/Files.png|left|frame|1. przykładowa struktura pliku]] <br> Ważne pliki i foldery, które należy zachować, to '''Outlines, kontury 2, *.Blend,''' a jeśli w systemie Windows ze zdjęciami - '''Black-AlphaZero.exe'''<br>
 <br style="clear: left"/>
 
-[[File:en/Outlines.png|left|frame|2. Kontury - (podniesiony narożnik północny) ]]
-[[File:en/Outlines2.png|left|frame|3. Outlines2]]<br>
+[[File:en/Archive/Old 32bpp/Outlines.png|left|frame|2. Kontury - (podniesiony narożnik północny) ]]
+[[File:en/Archive/Old 32bpp/Outlines2.png|left|frame|3. Outlines2]]<br>
 Kontury folder zawiera nakładki używane przez blender do wycinania renderów, dzięki czemu testilate jest całkowicie. Kontury byłyby stosowane do płaskich standardowych płytek gruntowych.<br>
 Kontury2 folder zawiera nakładki, które po prostu odcinają dno, dzięki czemu takie pola, krzewy, skały itp. ... przyklejają się nad górą 'sprite' . w celu poprawnego wyświetlania może być konieczne użycie obu nakładek. (jeśli tak jest, zapytaj mnie "Alltaken" )
 <br style="clear: left"/>
@@ -28,16 +28,16 @@ Kontury2 folder zawiera nakładki, które po prostu odcinają dno, dzięki czemu
 ----
 
 
-[[File:en/Field1.png|left|frame|2.pola]]
-[[File:en/Field2.png|left|frame|3. fields2]]<br>
+[[File:en/Archive/Old 32bpp/Field1.png|left|frame|2.pola]]
+[[File:en/Archive/Old 32bpp/Field2.png|left|frame|3. fields2]]<br>
 Pola pierwsze i Pola 2 są folderami opcjonalnymi (utworzyłem je jako foldery wyjściowe dla renderowanych ikonek naziemnych), te konkretne obrazy wykorzystywały nakładki kontury2, aby pozwolić uprawom przejść nad górną ikoną.
 <br style="clear: left"/>
 
-[[File:en/Grass.png|left|frame|2.Grass]]<br>
+[[File:en/Archive/Old 32bpp/Grass.png|left|frame|2.Grass]]<br>
 Grass to nazwa folderu, który utworzyłem do przechowywania moich renderowanych "standard" kafelków trawy. (tj. nie z brzegami, nie ze skałami na nich .....) można to nazwać jak tylko chcesz. możesz nazwać to pustynią, śniegiem ...
 <br style="clear: left"/>
 
-[[File:en/Shore.png|left|frame|2.Wybrzeże]]<br>
+[[File:en/Archive/Old 32bpp/Shore.png|left|frame|2.Wybrzeże]]<br>
 foldery Shore, są dość ważne, są one również częścią "Zestaw traw" <small>''(Grass set)''</small> , ale są do niego kafelkami Shore. możesz nazwać foldery brzegowe jak tylko chcesz, ale przyjąłem Shore-Shore3, odnosząc się do poziomu wody i tego, jak daleko w górę płytki była woda ((w przypadku podwodnych 'sprites')
 <br style="clear: left"/>
 
@@ -52,7 +52,7 @@ nie projektuję tego samouczka, aby nauczyć ludzi, jak korzystać z podstawowyc
 
 aby zapoznać się z podstawowymi samouczkami na temat teksturowania i nawigacji w blenderze, odwiedź tę stronę i zapoznaj się z ich samouczkami. http://blender3d.org/cms/Using_Blender.80.0.html
 
-[[File:en/Openscreen.png|right|frame|2. Opening screen]]<br>
+[[File:en/Archive/Old 32bpp/Openscreen.png|right|frame|2. Opening screen]]<br>
 Jest to ekran początkowy, który większość użytkowników powinna zobaczyć, gdy otwierają plik ground*.blend . Lewy panel jest oknem 3d i powinien patrzeć przez kamerę, prawy widok to sekwencer, i można go usunąć dla większości rzeczy, z którymi musisz sobie poradzić, ale może być wymagany pod koniec procesu modelowania / renderowania. dolny panel to panel przycisków ze wszystkimi funkcjami potrzebnymi do edycji tekstur i innych ustawień. (jak powinieneś wiedzieć z tutoriali)
 <br style="clear: right"/>
 
@@ -60,7 +60,7 @@ Jest to ekran początkowy, który większość użytkowników powinna zobaczyć,
 === Warstwy <small>''(Layers)''</small> ===
 
 
-[[File:en/Layers.png|left|frame|2. Warstwy ]]<br>
+[[File:en/Archive/Old 32bpp/Layers.png|left|frame|2. Warstwy ]]<br>
 Przede wszystkim warstwy plików powinny być dla Ciebie interesujące.<br>
 '''layer 1''' to standardowe 'sprites' naziemne. są one używane do renderowania kombinacji 1-85 normalnych 'sprite' ziemi (tj. bez brzegów, bez skał, bez dodanych rzeczy)<br>
 '''Layer 2-5''' to różne warstwy wysokości brzegu, które zawierają płaszczyznę na wysokości wody, która przecina ziemię na poziomie wody i nie renderuje niczego poniżej tego poziomu (nie dotykaj tych dużych płaszczyzn, chyba że wiesz, co robisz)<br>
@@ -74,7 +74,7 @@ Przede wszystkim warstwy plików powinny być dla Ciebie interesujące.<br>
 ===Obiekty===
 
 
-[[File:en/Objects.png|right|frame|2. Obiekty]]<br>
+[[File:en/Archive/Old 32bpp/Objects.png|right|frame|2. Obiekty]]<br>
 Obiekty, z którymi jesteśmy prezentowani na ekranie przednim, w następujący sposób.
 '''lattice''' krata odkształcająca kontroluje deformację 'sprites' ziemi, które są jej dziećmi. NIE należy go edytować (chyba że dokładnie wiesz, co robisz), ponieważ zapewnia kształt 'sprites' podczas ich renderowania, jest to jeden z najważniejszych elementów procesu automatyzacji.<br>
 '''Ground object''' obiekt Ground można dowolnie edytować i zmieniać, to zobaczymy podczas renderowania, proszę '''nie usuwaj''' <small>''(don't delete)''</small>  tego obiektu, chyba że wiesz, jak nadać nowy obiekt do sieci..<br>
@@ -85,7 +85,7 @@ Obiekty, z którymi jesteśmy prezentowani na ekranie przednim, w następujący 
 ===Edycja 'zlinkowanych' obiektów===
 
 
-[[File:en/Editing.png|left|frame|2. Editing]]<br>
+[[File:en/Archive/Old 32bpp/Editing.png|left|frame|2. Editing]]<br>
 Plik jest zautomatyzowany, więc jeśli edytujesz jeden obiekt, "Wszystkie" <small>''(All)''</small>  (lub większość) obiektów w tej warstwie będzie równo edytowanych. oznacza to, że 85 'sprites' można edytować za pomocą jednej operacji, ograniczenia tego (w aktualnych wersjach blendera 2.37a) są takie, że nie możesz używać Sub Surf na swoich przedmiotach.
 jeśli chcesz edytować pojedyncze kafelki, musisz utworzyć nowe obiekty lub podzielić dane siatki (musisz nauczyć się, jak to zrobić)
 <br style="clear: left"/>
@@ -97,15 +97,15 @@ Renderowanie obrazów jest dość ważną częścią tego procesu, ale jest "bar
 ----
 ===wybór właściwej nakładki===
 
-[[File:en/Outlines.png|left|frame|2. Kontury <small>''(Outlines)''</small>]]
-[[File:en/Outlines2.png|left|frame|3. Outlines2]]<br>
+[[File:en/Archive/Old 32bpp/Outlines.png|left|frame|2. Kontury <small>''(Outlines)''</small>]]
+[[File:en/Archive/Old 32bpp/Outlines2.png|left|frame|3. Outlines2]]<br>
 musisz najpierw zdecydować, czy powinieneś używać obrazów z "outlines/" czy "outlines2/" (w zależności od tego, czy masz obiekty, które wystają nad grzbietem 'sprite'), oczywiście kontury są standardowe, a kontury2 dla przedmiotów które wystają z tyłu.
 <br style="clear: left"/>
 
 ----
 ===ustawianie obrazów nakładki===
 
-[[File:en/Sequencer.png|right|frame|2. Kontury <small>''(Outlines)''</small>]]<br>
+[[File:en/Archive/Old 32bpp/Sequencer.png|right|frame|2. Kontury <small>''(Outlines)''</small>]]<br>
 Na tym obrazie jedynym ważnym przedmiotem w Sekwenserze jest pasek "Niebieski" <small>''(Blue)''</small> . aby ustawić 'sprites' nakładki (aby płytki testowały się w grze), musisz wykonać następujące kroki.<br>
 '''Kliknij prawym przyciskiem dolny niebieski obiekt''' , aby go wybrać<br>
 '''Naciśnij przycisk C''' i wybierz Zmień obrazy, aby wybrać nakładki.<br>
@@ -118,7 +118,7 @@ powinieneś teraz być gotowy do renderowania
 ----
 ===ustawianie obrazów nakładki===
 
-[[File:en/Rendering.png|left|frame|2. Kontury <small>''(Outlines)''</small>]]<br>
+[[File:en/Archive/Old 32bpp/Rendering.png|left|frame|2. Kontury <small>''(Outlines)''</small>]]<br>
 Krążyłem wokół przycisków, które powinieneś dotknąć w tych panelach (chyba że wiesz, co robisz). <br>
 Przyciski '''Zakreślone''' <small>''(Circled)''</small> umożliwiają przejście do opcji renderowania (zakładając, że nie wiesz już o blenderze)<br>
 '''Folder wyjściowy''' <small>''(Output Folder)''</small> W tym miejscu wpisz nazwę folderu wyjściowego, w moim wcześniejszym przykładzie użyłem nazw takich jak Grass, Shore, Shore1, Shore5, Fields, Fields2. możesz nazwać go, jak chcesz (po ukośniku, aby pokazać jego folder), utworzy folder w tym samym folderze, w którym znajduje się plik .blend (chyba że wybierzesz inny folder w systemie), nie ustawiaj to do konturów lub konturów 2<br>
@@ -135,6 +135,6 @@ Jeśli w systemie Windows i przy użyciu programu Photoshop, po renderowaniu obr
 Nie można jeszcze wypełnić tej sekcji, ponieważ oczekuje ona na zdefiniowanie i sfinalizowanie formatu.
 
 
-<!--{{Navbox Graphics Development}}-->{{pl/Navbox Programowanie grafik}}
+<!--{{Navbox Graphics Development}}-->{{pl/Community/NewGRF/Navbox Programowanie grafik}}
 
-<!--[[Category:New Graphics]][[Category:32bpp Graphics Developer resources]]-->[[Category:pl/Nowe Grafiki]][[Category:pl/Zasoby Twórców Grafik 32bpp]]
+<!--[[Category:New Graphics]][[Category:32bpp Graphics Developer resources]]-->[[Category:pl/Development/NewGRF/Nowe Grafiki]][[Category:pl/Community/NewGRF/Zasoby Twórców Grafik 32bpp]]

@@ -1,5 +1,5 @@
 [[Translation:en/Manual/Orders]]
-{{ca/Tutorial}}{{ca/Taula de contingut}}
+{{ca/Manual/Tutorial}}{{ca/Taula de contingut}}
 :''En aquest tutorial s’expliquen les ordres per a la versió [[ca/OpenTTD 0.7.0|OpenTTD 0.7.0]] i posteriors. Si està usant una versió anterior d’OpenTTD consulte el [[ca/Ordres(antic)|article antic sobre ordres]]''.
 
 Les '''ordres''' són fonamentals per a jugar a OpenTTD amb èxit. Les [[ca/Ordres condicionades|ordres condicionades]] són ordres avançades que permeten un control addicional. Si no emet cap tipus d’ordres, els seus vehicles donaran voltes sense rumb i tindrà molta sort si guanyen un poc de diners. A fi d’arreplegar i entregar amb èxit la càrrega (que és després de tot, l’objecte del joc), necessita donar ordres als seus vehicles. Aquestes són instruccions tipus "ves ací, carrega açó i després descarrega allà".
@@ -7,8 +7,8 @@ Les '''ordres''' són fonamentals per a jugar a OpenTTD amb èxit. Les [[ca/Ordr
 ==Donant ordres==
 Se li permet donar ordres a qualsevol vehicle que vosté posseïsca. Els seus conductors intentaran seguir aquestes ordres (encara que poden perdre’s si la xarxa està mal dissenyada, però això és una altra qüestió). Per a donar ordres:
 
-* Busque i faça clic al vehicle al què desitge donar-li ordres. El vehicle pot estar dins d’una cotxera si l'acaba de comprar, o en moviment. Per a un tren, fer clic a qualsevol vagó tindrà el mateix efecte. Açò li mostrarà la finestra del vehicle.<br/>[[File:ca/Orders-1.png|frame|none|La finestra del vehicle i el botó ordres]]
-* Faça clic en el botó d'''Ordres'' (el del cercle roig a la captura de pantalla). Açò li mostrarà la finestra ordres, que mostra les ordres que té actualment el vehicle (exemple: el nostre vehicle no té cap ordre).<br/>[[File:ca/Orders-2.png|frame|none|La finestra ordres]]
+* Busque i faça clic al vehicle al què desitge donar-li ordres. El vehicle pot estar dins d’una cotxera si l'acaba de comprar, o en moviment. Per a un tren, fer clic a qualsevol vagó tindrà el mateix efecte. Açò li mostrarà la finestra del vehicle.<br/>[[File:ca/Manual/Orders-1.png|frame|none|La finestra del vehicle i el botó ordres]]
+* Faça clic en el botó d'''Ordres'' (el del cercle roig a la captura de pantalla). Açò li mostrarà la finestra ordres, que mostra les ordres que té actualment el vehicle (exemple: el nostre vehicle no té cap ordre).<br/>[[File:ca/Manual/Orders-2.png|frame|none|La finestra ordres]]
 * Clique en el botó [[#ves-a|Ves a]]i faça clic a una destinació del mapa. S’afegirà una ordre a la llista.
 * Faça clic a l'ordre que acaba de crear a la llista per a seleccionar-la, i després indique al vehicle el que ha de fer (instruccions) en aqueix lloc. Pot indicar-li que [[#carrega|carregue]], que [[#descarrega|descarregue]] i altres opcions de [[#comportament-de-parada|comportament a la parada]]. Per exemple: Si activa ''Càrrega del tot totes les càrregues''el vehicle s'esperarà a l’estació fins que estiga completament ple de qualsevol càrrega que siga capaç de transportar.
 
@@ -33,7 +33,7 @@ El botó ''Ves a'' té les següents '''opcions''':
 * '''Ves a'''
 * '''Ves al dipòsit més proper'''
 * '''Ordre de salt [[ca/Ordres condicionades|condicionada]]'''. Amb aquesta opció és possible no passar per les estacions si, per exemple, el tren ja està completament carregat.
-[[File:ca/Orders goto options.png|frame|none|Opcions del botó ''Ves a''.]]
+[[File:ca/Manual/Orders goto options.png|frame|none|Opcions del botó ''Ves a''.]]
 
 Veja també [[ca/Creació ràpida d’ordres per a vehicles|Creació ràpida d’ordres per a vehicles]] per a mètodes abreviats sobre donar ordres.
 
@@ -60,7 +60,7 @@ El botón ''Comportament de càrrega'' (on posa "Carrega del tot qualsevol càrr
 *''"Carrega si està disponible"''
 *''"Carrega del tot totes les càrregues"''
 *''"Carrega del tot qualsevol càrrega"''
-*''"No carreguis"''.<br/>[[File:ca/Orders-Cargo-options.png|frame|none|Botó Comportament de càrrega.]]
+*''"No carreguis"''.<br/>[[File:ca/Manual/Orders-Cargo-options.png|frame|none|Botó Comportament de càrrega.]]
 
 ===Carrega si està disponible===
 :El vehicle passarà per la parada, carregarà les mercaderies que en aqueix moment hi estiguen disponibles i se n'eixirà cap al següent destí. És l’opció inicial per defecte. En general no és recomanable usar-la (excepte per a vehicles que transporten passatgers o correu...).
@@ -78,7 +78,7 @@ El botó ''Comportament de descàrrega'' (posa "Descarregar tot") té les opcion
 *''"Descarrega si s'accepta"''
 *''"Descarrega tot"''
 *''"Transfereix"''
-*''"No descarreguis"''.<br/>[[File:ca/Orders-Unload-options.png|frame|none|Botó Comportament de descàrrega.]]
+*''"No descarreguis"''.<br/>[[File:ca/Manual/Orders-Unload-options.png|frame|none|Botó Comportament de descàrrega.]]
 
 ===Descarrega si s'accepta===
 :El vehicle passarà per la parada, descarregarà totes les mercaderies que siguen acceptades en aqueixa parada i eixirà cap al següent destí. És l’opció inicial per defecte. No és recomanable usar-la (excepte per a vehicles que transporten passatgers, correu...).
@@ -105,7 +105,7 @@ El botó ''Comportament de parada'' (on posa "Sense parar") té les opcions:
 *''"Ves a"''
 *''"Ves sense parar a"''
 *''"Ves via"''
-*''"Ves sense parar via"''.<br/>[[File:ca/Orders-Stopping-options.png|frame|none|Botó Comportament de parada.]]
+*''"Ves sense parar via"''.<br/>[[File:ca/Manual/Orders-Stopping-options.png|frame|none|Botó Comportament de parada.]]
 
 ===Sense parar===
 :Ves [[ca/Sense parar|sense parar]] fa que el vehicle no pare en cap de les estacions que no tinguen instruccions marcades fins a arribar al destí marcat.
@@ -115,16 +115,16 @@ El botó ''Comportament de parada'' (on posa "Sense parar") té les opcions:
 
 ==Servei==
 Aquesta opció està disponible si vosté té una ordre ''"ves a cotxeres"'' seleccionada. Açò obligarà al vehicle a ser reparat a les cotxeres (o al dipòsit corresponent: drassana o hangar). Pot ser útil incloure el [[ca/Servei|servei de manteniment]] a la llista d’ordres abans de que els vehicles arrepleguen una nova càrrega.
-[[File:ca/Service-options.png|none|frame|Les opcions del botó ''Servei''.]]
+[[File:ca/Manual/Service-options.png|none|frame|Les opcions del botó ''Servei''.]]
 
 ==Remodela==
 Pot incloure una instrucció de [[ca/Manual/Remodelar vehicles|remodelar]] un vehicle a la llista d’ordres. En seleccionar aquesta se li demana que trie el tipus de càrrega que el vehicle haurà de transportar després de la remodelació. Aquesta ordre és d’ús limitat ja que normalment només es reforma un vehicle per a un tipus de càrrega una sola vegada quan s'adquireix.
-[[File:ca/Order-Refit.png|none|frame|Quan ordene una remodelació li preguntaran pel tipus de càrrega.]]
+[[File:ca/Manual/Order-Refit.png|none|frame|Quan ordene una remodelació li preguntaran pel tipus de càrrega.]]
 
 ==Horari==
-{{ca/Principal|ca/Horari}}
+{{ca/Manual/Principal|ca/Horari}}
 L'horari li permet especificar el temps que els vehicles han de tractar de tardar per a viatjar al llarg de cada tram de la ruta, i quant temps passen en cada estació. Consulte l’article sobre l'[[ca/Horari|horari]] per a més detalls sobre com usar-lo.
-[[File:ca/Orders-timetable.png|none|frame|La finestra d’Horari apareix en polsar el botó corresponent.]]
+[[File:ca/Manual/Orders-timetable.png|none|frame|La finestra d’Horari apareix en polsar el botó corresponent.]]
 
 ==Copiar ordres==
 Si desitja crear una ruta que siga utilitzada per diversos [[ca/Manual/Vehicles|vehicles]], pot ser repetitiu donar a cada un d’aquests vehicles les ordres per separat. Imagine un servei d’autobusos, en el que els 5 autobusos recorren 5 [[ca/Estacions|estacions]] en una ciutat amb un servei freqüent de viatgers. És més avorrit dur a terme els mateixos 5 passos 5 vegades (una per cada vehicle), que copiar totes les ordres d’un vehicle a un altre.
@@ -145,7 +145,7 @@ Les '''ordres compartides''' li permeten compartir una sèrie d’ordres entre u
 ===Instruccions===
 #Òbriga la llista d’ordres del vehicle al què desitja assignar-li les ordres compartides d’un altre vehicle, i faça clic a ''Ves a''.
 #Mantinga pressionada la tecla ''Ctrl'' i faça clic en l’altre vehicle, el que ja té les ordres que vosté desitja compartir.
-#Ara els dos vehicles comparteixen el mateix horari, i a més estan units entre si. Veurà que les ordres d’un altre vehicle es mostren i en l’última línia ara diu ''--Fi d’Ordres compartides--''.<br/>[[File:ca/Shared-orders.png|center|frame|Els horaris dels 2 autobusos s’han compartit.]]
+#Ara els dos vehicles comparteixen el mateix horari, i a més estan units entre si. Veurà que les ordres d’un altre vehicle es mostren i en l’última línia ara diu ''--Fi d’Ordres compartides--''.<br/>[[File:ca/Manual/Shared-orders.png|center|frame|Els horaris dels 2 autobusos s’han compartit.]]
 
 Vosté pot enllaçar tants vehicles com vullga, no hi ha límit, però per descomptat només pot vincular el mateix tipus de vehicles ja que utilitzarà les mateixes estacions per a transportar les mateixes mercaderies fent el mateix recorregut.
 
@@ -158,14 +158,14 @@ En qualsevol moment pot decidir que un vehicle no compartisca les ordres amb els
 Veurà que totes les ordes desapareixeran de la llista d’aqueix vehicle, i que en l’última línia diu ''--Fi d’Ordres--'' de nou. Tots els altres vehicles que comparteixen les ordres no es veuen afectats per aquest canvi. Ara pot controlar la llista d'ordres del vehicle descompartit de forma independent dels altres vehicles, com de costum.
 
 ===Llista dels vehicles que comparteixen ordres===
-El botó [[File:en/SharedOrders.png]] a la dreta de la finestra ''Ordres'' (o de la finestra ''Horari'') mostra una llista de tots els vehicles que tenen les mateixes ordres compartides que el vehicle actual. La icona només s’activa si el vehicle té ordres compartides amb altres.
-[[File:ca/SharedOrders-1.png|none|frame|Llista dels vehicles amb ordes compartides]]
+El botó [[File:en/Manual/SharedOrders.png]] a la dreta de la finestra ''Ordres'' (o de la finestra ''Horari'') mostra una llista de tots els vehicles que tenen les mateixes ordres compartides que el vehicle actual. La icona només s’activa si el vehicle té ordres compartides amb altres.
+[[File:ca/Manual/SharedOrders-1.png|none|frame|Llista dels vehicles amb ordes compartides]]
 
 ===Notes===
 *A diferència de copiar ordres, es poden compartir ordres amb vehicles que ja tenen una llista d’ordres assignada. Açò es deu al fet de que per a compartir ordres és necessari mantenir pressionada la tecla ''Ctrl'', fent poc probable que, accidentalment, perda la llista d'ordres d’un altre vehicle. En fer açò el vehicle esborrarà tots les ordres existents, i només tindrà les noves ordres compartides.
 *Pot utilitzar el botó ''clona vehicle'' (de la finestra cotxeres) o el botó ''compra copia de vehicle'' (de la finestra del vehicle) per a comprar una còpia idèntica d’un vehicle, però per defecte les ordres ''es copien''. Si desitja ''compartir les ordres'' en compte de copiar-les, mantinga ''Ctrl'' polsat mentres fa clic en el botó de clonar el vehicle.
-[[File:ca/Clone-vehicle-2.png|none|frame|Botó clona vehicle.]]
-[[File:ca/Clone-vehicle.png|none|frame|Botó copia vehicle. Només disponible si el vehicle està dins de les cotxeres.]]
+[[File:ca/Manual/Clone-vehicle-2.png|none|frame|Botó clona vehicle.]]
+[[File:ca/Manual/Clone-vehicle.png|none|frame|Botó copia vehicle. Només disponible si el vehicle està dins de les cotxeres.]]
 *Amb compartir ordres, no n'hi ha un vehicle que siga el cap del conjunt d’ordres (per exemple, un vehicle que emmagatzema la llista principal d’ordres, del que depèn la resta dels vehicles) que vosté puga esborrar inadvertidament. Si queda, encara que siga un vehicle només amb les ordres, la llista d’ordres es mantindrà.
 
 ==Missatges d’error==
@@ -175,26 +175,26 @@ El [[ca/Sistema de revisió d’ordres|Sistema de revisió d’ordres]] s’exec
 
 ===Té massa poques ordres a l'agenda===
 Perquè alguns vehicles puguen obtenir beneficis, necessiten almenys dues estacions en la seua llista (una de càrrega i una altra de descàrrega). Les cotxeres o punts de control no compten, ja que no permeten carregar o descarregar.
-[[File:ca/Few-orders.png|none|frame|"<Vehicle> té massa poques ordres a l'agenda".]]
+[[File:ca/Manual/Few-orders.png|none|frame|"<Vehicle> té massa poques ordres a l'agenda".]]
 
 ===Té ordres duplicades===
 A veces una estación de forma accidental, seleccione dos veces consecutivas. Para la mayoría de los vehículos, esto puede causar un gran desorden, como por ejemplo que un avión que despegue y aterrice de nuevo en el mismo aeropuerto.
-[[File:ca/Duplicate-orders.png|none|frame|"<Vehículo> tiene órdenes duplicadas".]]
+[[File:ca/Manual/Duplicate-orders.png|none|frame|"<Vehículo> tiene órdenes duplicadas".]]
 
 ===Ordre incorrecte===
 ''(Deuria dir “ordre incorrecta”, puix la paraula «ordre», sinònima de manament o prescripció, [http://dlc.iec.cat/results.asp?txtEntrada=ordre&operEntrada=0 és femenina])''<br/>
 Si elimina una estació on un vehicle té una parada, el "fantasma" de l’estació serà visible per un temps (en forma d’etiqueta de color gris). Açò li permet tornar a construir una estació en la mateixa ubicació que l’antiga amb el mateix nom. Els vehicles tornaran a anar a aqueixa estació (si encara és del tipus correcte) sense necessitat de canviar les ordres.
-[[File:ca/Invalid-order.png|frame|none|S’ha eliminat una estació, i ha quedat en la llista una ''ordre incorrecta''.]]
+[[File:ca/Manual/Invalid-order.png|frame|none|S’ha eliminat una estació, i ha quedat en la llista una ''ordre incorrecta''.]]
 
 No obstant això, si vosté la deixa massa temps o de manera deliberada i no construeix una nova estació per a reemplaçar l’antiga, l’estació fantasma desapareixerà al poc de temps. Qualsevol ordre en els vehicles referida a aqueixa estació, serà reemplaçada amb el missatge en roig ''Orde incorrecta'' i es saltarà.
 
 ===Té una estació invàlida en les seves ordres===
 Si elimina una part d’una estació (per exemple una parada d’autobús que estiga connectada a una estació de tren) l’ordre no s’anul·larà ja que l’estació encara existeix. No obstant això, el vehicle no té manera d’arribar a l’estació ja que la instal·lació no accepta aquest tipus de vehicles (autobusos). Açò obliga al vehicle a buscar repetidament l’estació.
-[[File:ca/Invalid-station.png|frame|none|L’estació encara existeix, però ja no admet autobusos.]]
+[[File:ca/Manual/Invalid-station.png|frame|none|L’estació encara existeix, però ja no admet autobusos.]]
 
 ==Veja també==
 * [[ca/Ordres condicionades|Ordres condicionades]]
 * [[ca/Horari|Horari]]
 * [[ca/Ordres(antic)|Article antic sobre les ordres]]
 
-[[Category:ca/Vehicles]]
+[[Category:ca/Manual/Vehicles]]

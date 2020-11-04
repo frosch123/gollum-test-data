@@ -1,7 +1,7 @@
 [[Translation:en/Archive/OpenTTD/OpenTTD 0.4.6]]
 
-{{en/OTTDVersions}}
-{{en/Release|prev=OpenTTD 0.4.5|next=OpenTTD 0.4.7|date=2006-03-22}}
+{{en/Development/OTTDVersions}}
+{{en/Archive/OpenTTD/Release|prev=OpenTTD 0.4.5|next=OpenTTD 0.4.7|date=2006-03-22}}
 
 You can download this release from [http://www.openttd.org/download-stable/0.4.6 openttd.org].
 __TOC__
@@ -25,15 +25,15 @@ __TOC__
 * Fix: Slope and height information returned for some tile types is wrong (r4014)
 * Fix: Fixes a bug introduced by r3228 which allowed steep rail tiles resulting in ... unwanted effects such as display artifacts (r4012)
 * Fix: Update french translation (r3978)
-* Fix: Missing glyph(s) in big-font. Added several missing glyphs for the big font {{en/Flyspray|56}} (r3970)
+* Fix: Missing glyph(s) in big-font. Added several missing glyphs for the big font {{en/Development/Design Drafts/Flyspray|56}} (r3970)
 * Fix: Increase client list window width so at least most languages fit [SF#1439907] (r3969)
 * Fix: Update german and finnish languages (r3968)
 * Fix: Properly set back the owner of a crossing/road-under bridge after removing it (r3967)
-* Fix: [Autoreplace] Autoreplacing trains now keep their tile length instead of their pixel length {{en/Flyspray|67}} (r3964)
+* Fix: [Autoreplace] Autoreplacing trains now keep their tile length instead of their pixel length {{en/Development/Design Drafts/Flyspray|67}} (r3964)
 * Fix: Mark the right tile as dirty. It's just a graphical glitch which happend in r1592 (r3962)
 * Fix: Fix crash when resizing news history window (r3961)
 * Fix: Correctly implement minimum search, so road vehicles head twoards the closest station, not the last one in the list (r3960)
-* Fix: The tooltips for raising and lowering land buttons in the scenario editor are interchanged {{en/Flyspray|61}} (r3959)
+* Fix: The tooltips for raising and lowering land buttons in the scenario editor are interchanged {{en/Development/Design Drafts/Flyspray|61}} (r3959)
 * Fix: Correctly restore the roadside after roadworks are finished (r3957)
 * Fix: [Multistop] Check the status of the destination road stop instead of a station's first road stop. This only has effect with road vehicle queuing disabled (r3956)
 * Fix: Validate the setting of max_companies/spectators through the console (r3955)

@@ -1,0 +1,18 @@
+<noinclude>[[Translation:Template/en/Wiki/Mergeto]]</noinclude><noinclude></noinclude>
+{{en/Ambox| type  = move
+| image = mergeto.png
+| text  =  {{#IF: {{{1|}}} |Il a été suggéré que le contenu de cet article soit <span class="plainlinks">[http://fr.wikipedia.org/wiki/Wikip%C3%A9dia:Pages_%C3%A0_fusionner fusionné]</span> à <!--
+                            --> ''[[:{{NAMESPACE}}:{{{1}}}|{{{1}}}]]''. ([[:{{NAMESPACE}} talk:{{{1}}}|Discuster]]) | Aucun non de page n'a été donné. Corrigez cela ou supprimez ce modèle.
+}} }}<includeonly>{{{2|[[Category:en/Manual/Articles to be merged|{{PAGENAME}}]]}}}</includeonly><noinclude>
+
+==Utilisation==
+Entrer <nowiki>{{</nowiki>'''FusionnerA/Fr'''|'''Nom de la page'''<nowiki>}}</nowiki>. Exemple :
+<pre>{{fr/Wiki/FusionnerA|en/Des pages}}</pre>
+Ceci va ajouter l'article à [[:Category:en/Manual/Articles to be merged]].
+
+== Quel modèle de fusion devrais-je utiliser ? ==
+* {{en/S|Fusionner/Fr}} &ndash; pour fusionner au moins deux articles en un emplacement non spécifié.
+* {{en/S|FusionnerA/Fr}} &ndash; pour fusionner le contenu de cet article ''à'' un autre article spécifié.
+* {{en/S|FusionnerDepuis/Fr}} &ndash; l'opposé de {{en/S|FusionnerA/Fr}}; le contenu de l'article spécifié devrait être fusionné à cet article .
+
+[[Category:fr/Manual/Base Set/Infobox|FussionnerA/Fr]]</noinclude>

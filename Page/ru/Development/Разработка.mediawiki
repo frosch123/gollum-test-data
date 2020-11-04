@@ -1,0 +1,76 @@
+[[Translation:en/Development/Main Page]]
+{{ru/Необходимо сделать|поправить ссылки после перевода соответствующих страниц}}
+
+<div style="background-color: #f1f2fe; border: 1px solid #c7c8fe; margin:0; padding: 1em 1em 1em 1em; text-align:left">
+[[File:ru/Development/BlackBook.png|64px|left]]
+<strong style="font-size:1.4em; display:block">Руководство разработчика OpenTTD</strong>
+[[ru/Manual/Main Page|OpenTTD]] &mdash; проект с открытым исходным кодом, распространяемый под лицензией [http://www.gnu.org/copyleft/gpl.html GPL]. Вы можете [http://svn.openttd.org/ просматривать исходный код онлайн] или скачать свежее дерево [[ru/Development/Часто задаваемые вопросы разработчика|SVN]]. Изменив исходники, вы можете разместить на [http://bugs.openttd.org патч-трекере] файл [[ru/Development/Часто задаваемые вопросы разработчика#kak-sdelat-diff-fail-chtoby-podelitsia-izmeneniiami-s-drugimi|diff]], отражающий внесенные изменения.
+</div>
+{| cellspacing="3" class="mainpagetable" align="center" cellpadding="10px" style="background-color: #E7EBFF; border: 1px solid #c7c8fe; margin:0; border-top:none; padding:0"
+|- valign="top" 
+|width="33%"|
+<font size="3">'''Разработка'''</font> <!-----------------------Development--------->
+
+[[en/Development/Objectives|Главные цели]] &mdash; долгосрочные цели проекта OpenTTD, отражающие его миссию.
+
+[[ru/Недавние и последние события|Свежие изменения]] &mdash; изменения в главной ветке с момента последнего основного релиза, а также описание других веток в нашем репозитории [[ru/Development/Часто задаваемые вопросы разработчика|SVN]].
+
+Последние изменения в дереве [[ru/Development/Часто задаваемые вопросы разработчика|SVN]] OpenTTD можно посмотреть по адресу [http://cia.navi.cx/stats/project/OpenTTD cia.navi.cx service] ([http://cia.navi.cx/stats/project/OpenTTD/.rss?ver=2&medium=unquoted&limit=15 также доступен канал RSS]).
+
+|width="33%"|
+<font size="3">'''Исходный код'''</font>  <!-----------------------Coding--------->
+
+*[[en/Archive/Community/Developers|Разработчики]] проекта OpenTTD
+*[[en/Development/Coding style|Стилистика кода]] &mdash; как оформлять исходный код OpenTTD
+*[[en/Development/GUI Style Guide|Визуальное оформление пользовательского интерфейса]]
+*[[en/Coding Tools|Инструментарий разработчика]] для сборки и отладки OpenTTD
+*[[en/Archive/Community/Todo list|Список задач (TODO)]] &mdash; подборка результатов обсуждений еще не реализованных улучшений
+*[[en/Archive/Lists/Roadmap|Дорожная карта]] &mdash; что запланировано к реализации в будущих версиях
+*[http://docs.openttd.org Doxygen] &mdash; обзор документации исходного кода
+*[[en/Archive/Community/Patch Checklist|Требования к патчам]]
+*[http://bugs.openttd.org/ Баг-трекер]
+
+|width="33%"|
+<font size="3">'''Подпроекты'''</font> <!-----------------------Subprojects--------->
+
+*[[ru/Development/NewGRF/Main Page|Разработка графики]] &mdash; подробная информация о 32-битной графике, newGrf, замене графики и т.д.
+*[[en/Development/Script/Main Page|NoAI]] &mdash; новый фреймворк для создания подключаемого ИИ
+*[[ru/Archive/Community/Замена звуковых эффектов|Замена звуковых эффектов]] &mdash; создание новых звуковых эффектов для игры взамен проприетарных
+*[[en/Community/Patches/Passenger and cargo destinations]] (cargodest) &mdash; новая модель спроса на транспортные услуги, требующая доставки грузов и пассажиров в определенные места
+*[[en/Manual/Passenger and cargo distribution]] (cargodist) &mdash; новая улучшенная модель спроса на транспортные услуги, требующая доставки грузов и пассажиров в определенные места
+
+|}  <!------------- 3th part ------------->
+{| cellspacing="3" class="mainpagetable" align="center" cellpadding="10px" style="background-color: #E7EBFF; border: 1px solid #c7c8fe; margin:0; border-top:none; padding:0; margin-bottom:2em"
+|- valign="top"
+|width="33%"|
+<font size="3">'''Документация разработчика'''</font>  <!---------Development documentation--------->
+
+*[[ru/Development/Main Page|Документация разработчика]]
+*[[en/Development/Coding style|Комментарии к транзакциям (commits)]]
+*[[en/Development/Doing an OpenTTD release|Действия при выпуске релиза]]
+*[[ru/Archive/Community/Версия разработчиков|Ночные сборки]]
+*[[en/Archive/Community/Compile Farm]]
+*[[:Category:ru/Development/Компиляция OpenTTD|Компиляция OpenTTD]]
+*[[ru/Archive/OpenTTD/Main Page|История релизов]]
+
+|width="33%"|
+<font size="3">'''Помощь в написании исходников'''</font>  <!------------- Help with coding ------------->
+
+Ниже даны ссылки на информацию, которая должна помочь в написании/отладке кода и создании хороших патчей.
+*[[en/Development/Coding style|Стилистика кода]] &mdash; чтобы поддерживать единообразие кода, мы просим вас при написании патчей придерживаться определенных правил
+*[[en/Development/Debugging|Отладка]]
+*[[en/Archive/Source/Strings|Строки]] &mdash; учитывая не слишком большую "дружественность" строковой подсистемы, эта информация может оказаться весьма полезной
+
+|width="33%"|
+<font size="3">'''Прочее'''</font>  <!------------- Miscellaneous ------------->
+
+* [http://www.openttd.org Веб-сайт OpenTTD]
+* [http://www.tt-forums.net/viewforum.php?f=55 Форум OpenTTD]
+* [http://cia.vc/stats/project/OpenTTD Статистика CIA]
+* [[ru/Archive/Community/Запрашиваемые возможности|Запрашиваемые возможности]]
+* [[en/Archive/Community/Rejected features|Отвергнутые возможности]]
+* [[en/Miscellaneous suggestions|Прочие предложения]]
+|}
+
+
+[[Category:ru/Разработка]]

@@ -1,6 +1,6 @@
 [[Translation:en/Archive/Community/FAQ OpenTTD versions]]
 <!-- {{outdated|MiniIN is dead and OpenTTD migrated to GitHub.}} -->
-{{pl/Nieaktualizowane|MiniIN nie działa, a OpenTTD migruje do GitHub.}}
+{{pl/Community/Nieaktualizowane|MiniIN nie działa, a OpenTTD migruje do GitHub.}}
 
 {{pl/FAQmenu}}
 
@@ -34,14 +34,14 @@ RC powinny zawsze być dość stabilne, więc jeśli jest dostępny, zaleca się
 ====Nocne Budowanie (Nightly)====
 "Nightly budowania" są na ogół w trakcie realizacji. Co noc będzie zawierał najnowsze funkcje OpenTTD (zwykle funkcje planowane na następną wersję), ale można oczekiwać, że będzie niestabilny i zawiera błędy. Nightlies mogą uszkodzić zapisane gry, dlatego przed zainstalowaniem kompilacji nocnej należy wykonać kopię zapasową wszystkich ważnych plików danych.
 
-Jak sama nazwa wskazuje, kompilacje nocne są często kompilowane, dlatego nowe funkcje są regularnie udostępniane w OpenTTD. Jeśli słyszysz o funkcji OpenTTD, ale nie widzisz jej w swojej wersji, najprawdopodobniej została wydana w wersji nocnej. Zważ ryzyko ( które jest znacznie zmniejszone przez utworzenie kopii zapasowej danych - otrzymujesz podpowiedź?  {{en/Emoticon|:)}}),  i instalujesz co noc, jeśli chcesz, aby funkcja nie była jeszcze dostępna w wersji lub RC. Najnowsze wydanie nocne można zawsze pobrać ze strony http://www.openttd.org/en/download-trunk. Pamiętaj, że kompilacja nocna nie wymaga instalacji - po prostu rozpakuj folder i otwórz plik OpenTTD.exe, aby rozpocząć odtwarzanie.
+Jak sama nazwa wskazuje, kompilacje nocne są często kompilowane, dlatego nowe funkcje są regularnie udostępniane w OpenTTD. Jeśli słyszysz o funkcji OpenTTD, ale nie widzisz jej w swojej wersji, najprawdopodobniej została wydana w wersji nocnej. Zważ ryzyko ( które jest znacznie zmniejszone przez utworzenie kopii zapasowej danych - otrzymujesz podpowiedź?  {{en/Manual/Emoticon|:)}}),  i instalujesz co noc, jeśli chcesz, aby funkcja nie była jeszcze dostępna w wersji lub RC. Najnowsze wydanie nocne można zawsze pobrać ze strony http://www.openttd.org/en/download-trunk. Pamiętaj, że kompilacja nocna nie wymaga instalacji - po prostu rozpakuj folder i otwórz plik OpenTTD.exe, aby rozpocząć odtwarzanie.
 
 
 Kompilacje nocne mają inny schemat numeracji niż wersje. Wersja nocna będzie ponumerowana jak:
 ''r8642''
 
 ====Trunk====
-[[File:en/Version Illustration.gif|frame|right|Relacje między <span title='Bagażnikiem'>'Trunk'</span>, Gałęziami <small>''(Branches)''</small>, Wydania, Nightlies i Kandydatami do Wydania ''(R.C)'']]
+[[File:en/Archive/Community/Version Illustration.gif|frame|right|Relacje między <span title='Bagażnikiem'>'Trunk'</span>, Gałęziami <small>''(Branches)''</small>, Wydania, Nightlies i Kandydatami do Wydania ''(R.C)'']]
 Termin "trunk" (jak w pniu drzewa) odnosi się do głównego środowiska programistycznego dla programistów OpenTTD (kontrast z terminologią "gałąź" <small>''(branch)''</small> opisaną poniżej). <span title='Bagażnik'>'Trunk'</span> zawiera kod opracowany lub zatwierdzony przez głównych twórców gry. Oczekuje się, że kod zawarty w 'bagażniku' znajdzie się w oficjalnej wersji. Według rozszerzenia, kod znaleziony w 'bagażniku' może być uważany za "oficjalny" kod OpenTTD.
 
 Kompilacje <span title='Nocne builds'>'nightly'</span> , jak opisano powyżej, zawsze będą zawierały najnowszy kod "w bagażniku" <small>''(in the trunk)''</small> . Dlatego jeśli zobaczysz funkcję opisaną jako  "w bagażniku" , możesz być pewien, że będzie ona dostępna w kolejnej nocnej kompilacji, jeśli jeszcze jej nie ma.
@@ -67,8 +67,8 @@ Podczas gdy prace nad 'pniem' (oraz, w mniejszym stopniu, gałąź SVN), są wyk
 ''Zobacz też: [http://www.tt-forums.net/viewtopic.php?t=21678 Jak zastosować 'patches'] na forums''
 
 ====MiniIN====
-<!--{{Feature_period|Old|0.5}}-->{{pl/Zgodne zakresy|Old|0.5}}
-[[File:en/MiniIN Illustration.gif|frame|right| MiniIN]]
+<!--{{Feature_period|Old|0.5}}-->{{pl/Archive/Zgodne zakresy|Old|0.5}}
+[[File:en/Archive/Community/MiniIN Illustration.gif|frame|right| MiniIN]]
 ''Główny artykuł: [[pl/Archive/Community/Mini Integrated Nightly|MiniIN]]''<br>
 
 MiniIN to środowisko programistyczne odrębne od linii głównej, które zawiera kod linii głównej ''plus'' wiele poprawek użytkownika. Po wydaniu wersji 0.5.0 MiniIN nie będzie już aktualizowany przy użyciu kodu 'trunk'. Na tym etapie MiniIN będzie wynosił 0.5.0 plus wszystkie łatki użytkownika.

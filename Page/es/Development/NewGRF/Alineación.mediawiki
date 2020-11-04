@@ -7,8 +7,8 @@ La alineación de los sprites puede convertirse en un verdadero dolor de cabeza,
 Actualmente una solución para simplificar la codificación y reducir el tiempo empleado en fijar las diferentes compensaciones es usar un diseño estándar en el que los sprites se organizan en un archivo de imagen (pcx) que utiliza siempre las mismas compensaciones, mediante "plantillas".
 
 [[es/Archive/Community/OpenGFX Léame|OpenGFX]] utiliza para todos los trenes un diseño común que funciona así: Los gráficos de cada locomotora individual se colocan en un archivo gráfico independiente con un diseño común 
-[[File:en/Template singletrain.png]] y las versiones rellenadas con los sprites colocados se parecen a 
-[[File:en/Temperate asiastar 88.png]] o [[File:en/Monorail x2001 88.png]] Preste atención a que los vehículos estén dispuestos de tal forma que la vista vertical ascendente se alinee con la parte inferior y la vista vertical descendente con la parte superior del sprite. Por lo general la parte posterior del vehículo toca el borde de la caja azul mientras que en la parte delantera podemos permitirnos dejar espacio en los vehículos un poco más cortos. Los ajustes para los vehículos muy cortos se describen más abajo. Después podemos escribir las compensaciones para estos sprites como
+[[File:en/Development/NewGRF/Template singletrain.png]] y las versiones rellenadas con los sprites colocados se parecen a 
+[[File:en/Development/NewGRF/Temperate asiastar 88.png]] o [[File:en/Development/NewGRF/Monorail x2001 88.png]] Preste atención a que los vehículos estén dispuestos de tal forma que la vista vertical ascendente se alinee con la parte inferior y la vista vertical descendente con la parte superior del sprite. Por lo general la parte posterior del vehículo toca el borde de la caja azul mientras que en la parte delantera podemos permitirnos dejar espacio en los vehículos un poco más cortos. Los ajustes para los vehículos muy cortos se describen más abajo. Después podemos escribir las compensaciones para estos sprites como
 <pre>
 -1 TRAIN_88.pcx   0   0 01 24  8  -3 -13
 -1 TRAIN_88.pcx   9   0 09 20 22 -13 -11

@@ -29,26 +29,26 @@ Aby skorzystać z NewGRFów pobranych z innych stron, a które nie były dostęp
 
 == Aktywowanie NewGRFów ==
 1. W Menu głównym naciśnij "NewGRF Settings" (Ustawienia NewGRF).
-[[File:pl/Okno główne (Ustawienia NewGRF).png|Okno główne (Ustawienia NewGRF)|center]]
+[[File:pl/Manual/Okno główne (Ustawienia NewGRF).png|Okno główne (Ustawienia NewGRF)|center]]
 
 Interfejs pomiędzy OpenTTD 1.0 i 1.1 zmienił się, więc oba będą tu pokazane: 
 === Wersja 1.1 i późniejsze ===
 2.   Wybierz NewGRF z 'inactive NewGRFs files' (nieaktywnych plików NewGRF) i naciśnij "Add" (Dodaj) lub po prostu dwukrotnie naciśnij na niego. Na małych ekranach wygląda to tak:
-[[File:en/Newgrf addnew.png|NewGRF settings window (small)|center]]
+[[File:en/Manual/Newgrf addnew.png|NewGRF settings window (small)|center]]
 a na większych tak:
-[[File:en/Newgrf config big.png|NewGRF settings window (big)|center]]
+[[File:en/Manual/Newgrf config big.png|NewGRF settings window (big)|center]]
 3.   Skonfiguruj (w razie potrzeby) parametry aktywnego newgrf'a: Wybierz go z listy "Active newgrf files" ("Aktywne pliki newgrf") i kliknij przycisk "Parametr". Wynik może wyglądać podobnie do tego:
-[[File:en/Newgrf parameter.png|NewGRF parameter window|center]]
+[[File:en/Manual/Newgrf parameter.png|NewGRF parameter window|center]]
 4.   Opcjonalnie można wybrać zapisanie wyboru newgrfów (wraz z ich parametrami konfiguracyjnymi) lub załadować taką listę korzystając z możliwości zapisania schematu NewGRFów:
-[[File:en/Newgrf preset.png|Saving a NewGRF preset|center]]
+[[File:en/Manual/Newgrf preset.png|Saving a NewGRF preset|center]]
 
 === Wersja 1.0 i wcześniejsze ===
 2.   Klkinij "Add" ("Dodaj").
-[[File:en/NewGRF settings window (Add).png|NewGRF settings window (Add)|center]]
+[[File:en/Manual/NewGRF settings window (Add).png|NewGRF settings window (Add)|center]]
 3.   Wybierz plik NewGRF, którego chcesz użyć, a następnie kliknij "Add To Selection" ("Dodaj do zaznaczenia").
-[[File:en/Available NewGRF files window.png|Available NewGRF files window|center]]
+[[File:en/Manual/Available NewGRF files window.png|Available NewGRF files window|center]]
 4.   Dodaj więcej NewGRFów, a po zakończeniu kliknij "Apply Changes" ("Zastosuj zmiany").
-[[File:en/NewGRF settings window (Apply).png|NewGRF settings window (Apply)|center]]
+[[File:en/Manual/NewGRF settings window (Apply).png|NewGRF settings window (Apply)|center]]
 
 == Mieszanie dodatków NewGRF ==
 OpenTTD pozwala na jednoczesne wybranie aż 59 różnych dodatków NewGRF podczas uruchamiania każdej nowej gry. Jednakże lista aktywowanych NewGRFów nie powinna być efektem przypadku; konieczne jest choć pobieżne zaplanowanie. Nie wszystkie bowiem dodatki NewGRF są ze sobą kompatybilne, a czasami konieczne jest użycie kilku dodatków NewGRF, które wzajemnie się uzupełniają. Poniżej zamieszczona jest lista spotykanych typów NewGRF wraz z komentarzami, które z nich można ze sobą łączyć, a których pod żadnym pozorem nie powinno się mieszać:
@@ -93,7 +93,7 @@ Jeśli chcesz użyć starego 32-bitowego formatu grafiki, musisz skorzystać z p
 
 Od teraz kiedy tylko rozpoczniesz nową grę, wybór NewGRFów stanie się aktywny, a wszelkie zmiany, jakie wprowadzą do gry, zaczną przynosić efekty. Jednak zmiana tych ustawień nie będzie miała wpływu na istniejące gry, ponieważ newgrfy są integralną częścią zapisu gry, a lista używanych newgrfów jest w nim przechowywana.
 
-[[File:en/Newgrfexampless.png|thumb|600px|center|Zrzut ekranu pokazujący wykorzystanie plików newgrf, użyto UKRS i Newstations]]
+[[File:en/Manual/Newgrfexampless.png|thumb|600px|center|Zrzut ekranu pokazujący wykorzystanie plików newgrf, użyto UKRS i Newstations]]
 
 Kolejność (aktywnych) NewGRF-ów jest ważna przy określaniu, jak różne NewGRF-y oddziałują na siebie. NewGRF znajdujący się niżej na liście zastępuje efekty NewGRFów znajdujących się wyżej na liście.
 
@@ -106,5 +106,5 @@ Kolejność (aktywnych) NewGRF-ów jest ważna przy określaniu, jak różne New
 
 <!--{{Navbox NewGRF}}-->{{pl/Navbox NewGRF}}
 
-[[Category:pl/Ustawienia]]
+[[Category:pl/Manual/Base Set/Trains/Ustawienia]]
 [[Category:pl/NewGRF]]

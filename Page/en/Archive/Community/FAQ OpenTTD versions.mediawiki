@@ -33,14 +33,14 @@ RCs should always be fairly stable, so if one is available, it is recommended to
 ====Nightly Build (Nightly)====
 "Nightly builds" are generally works-in-progress.  A nightly will contain OpenTTD's cutting-edge features (usually features planned for the next Release), but can expected to be unstable and buggy.  Nightlies have the potential to corrupt your saved games, so you should backup all your important data files before installing a nightly build.
 
-As the name suggests, nightly builds are compiled frequently, and thus new features become available in OpenTTD on a regular basis.  If you find yourself hearing about a feature of OpenTTD, but don't see it in your version, it was most likely released in a nightly build.  Weigh the risks (which are substantially lowered by backing up your data -- get the hint?  {{en/Emoticon|:)}}), and install a nightly if you want a feature not yet available in a Release or an RC. The latest nightly can always be downloaded at http://www.openttd.org/en/download-trunk. Note that a nightly build does not require installation - simply unzip the folder and open OpenTTD.exe to play.
+As the name suggests, nightly builds are compiled frequently, and thus new features become available in OpenTTD on a regular basis.  If you find yourself hearing about a feature of OpenTTD, but don't see it in your version, it was most likely released in a nightly build.  Weigh the risks (which are substantially lowered by backing up your data -- get the hint?  {{en/Manual/Emoticon|:)}}), and install a nightly if you want a feature not yet available in a Release or an RC. The latest nightly can always be downloaded at http://www.openttd.org/en/download-trunk. Note that a nightly build does not require installation - simply unzip the folder and open OpenTTD.exe to play.
 
 
 Nightly builds have a different numbering schema than Releases do.  A nightly version will be numbered like:
 ''r8642''
 
 ====Trunk====
-[[File:en/Version Illustration.gif|frame|right|How the Trunk, Branches, Releases, Nightlies, and Release Candidates relate]]
+[[File:en/Archive/Community/Version Illustration.gif|frame|right|How the Trunk, Branches, Releases, Nightlies, and Release Candidates relate]]
 The term "trunk" (as in the trunk of a tree) refers to the main development environment for the developers of OpenTTD (contrast this with the "branch" terminology described below).  The trunk contains code either developed  or approved by the core developers of the game.  The code contained in the trunk is anticipated to make its way into an official Release.  By extension, code found in the trunk can be thought of as the "official" code of OpenTTD.
 
 Nightly builds, as described above, will always contain the latest code "in the trunk."  Thus, if you see a feature described as "in the trunk", you can be sure it will be available in the next nightly build, if it is not already.
@@ -66,8 +66,8 @@ Patches cannot be directly installed like nightlies can -- they must be compiled
 ''See also: [http://www.tt-forums.net/viewtopic.php?t=21678 How to apply patches] on the forums''
 
 ====MiniIN====
-{{en/Feature period|Old|0.5}}
-[[File:en/MiniIN Illustration.gif|frame|right|The MiniIN]]
+{{en/Archive/Feature period|Old|0.5}}
+[[File:en/Archive/Community/MiniIN Illustration.gif|frame|right|The MiniIN]]
 ''Main Article: [[en/Archive/Community/Mini Integrated Nightly]]''<br>
 
 The MiniIN is a development environment separate from the trunk that contains the trunk code ''plus'' many user patches.  After the release of 0.5.0, the MiniIN will no longer be updated with the trunk code. At that stage the MiniIN will be 0.5.0 plus all the user patches.

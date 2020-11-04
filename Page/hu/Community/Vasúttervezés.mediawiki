@@ -9,14 +9,14 @@ Ez az oldal a vasúthálózat terhelhetőségének tisztán elméleti kezelésé
 
 Ez egy eléggé nyilvánvaló tényező. A túl nagy távolságra elhelyezett jelzők kisebb terhelhetőséget eredményeznek. 
 
-[[File:en/Pat Fig1.png|frame|left|1. ábra: A legkisebb követési távolság négyes jelzőtávolság esetén]]
+[[File:en/Community/Pat Fig1.png|frame|left|1. ábra: A legkisebb követési távolság négyes jelzőtávolság esetén]]
 Könnyen belátható az is (lásd. 1. ábra), hogy ha a jelzőtávolság N mezőnyi, a legkisebb távolság két teljes sebességű vonat közt sosem lehet kevesebb, mint N+1. Átlós pályán az első jelzőtől minden 2N "félmezőnyit" vagy N "teljes mezőnyit" számítva a legkisebb követési távolság sosem lehet kisebb, mint 2N+1 "félmező", vagy N+0,5 "egész mező".  Amikor a vonatok ilyen közel kerülnek egymáshoz, akkor elérted a pálya elméleti maximális vonatsűrűségét. A gyakorlatban ezt a sűrűséget elérni lehetetlen.
 {{en/-}}
-[[File:en/Pat Fig2.png|frame|right|Figure 2: Hatástalan jelzőtávolság]]
+[[File:en/Community/Pat Fig2.png|frame|right|Figure 2: Hatástalan jelzőtávolság]]
 Az egyik fontos szempont az összhang. Egy pálya kapacitását az határozza meg, hogy melyik jelzőtávolság a legnagyobb. Így egy kétmezőnként jelzőzött pálya, amelyen van egy egyszeri rendhagyó három-vagy négymezős jelzőtávolság, jelentősen csökkent kapacitástól fog szenvedni és valószínűleg torlódást fog okozni (2. ábra). 
 {{en/-}}
 ===Az átlós sín===
-[[File:en/Tiles.png|frame|right|A képen lent: 1-es jelzősűrűség átlós, majd egyenes pályán. A képen fent: maximális ("félmezős") jelzősűrűség ferde pályán]][[File:en/Pitagoras.png|frame|right|A Pitagorasz-tétel az OpenTTD-ben]]
+[[File:en/Community/Tiles.png|frame|right|A képen lent: 1-es jelzősűrűség átlós, majd egyenes pályán. A képen fent: maximális ("félmezős") jelzősűrűség ferde pályán]][[File:en/Community/Pitagoras.png|frame|right|A Pitagorasz-tétel az OpenTTD-ben]]
 
 Az OpenTTD-ben a vonatok lassabban haladnak ferde pályán (hála SmatZ-nek), ez pedig megnövelt jelzősűrűséget igényel a torlódások elkerülése végett. Fontos, hogy a vonatok legkisebb követési távolsága (nem azonos a jelzőtávolsággal) egyenes és átlós pályán annyira azonosak, amennyire csak lehetséges. Egyébiránt a vonatok torlódhatnak, amikor egyenesről átlós szakaszra, vagy átlósról egyenesre térnek.
 
@@ -118,10 +118,10 @@ Vegyünk például egy tipikus, nem csomóponti pályaegyesítést, egy berakó 
 
 Egy optimalizált, szoros rendben érkező vonatsor lép be az állomásra, de a berakási idő eltérései miatt ez a rend megborul az állomás végén, és lazább rendben távozó vonatokat kapsz eredményül a kilépésnél két pályán. Ezek közül az egyik vonal a fővonalra csatlakozik, amelyen az átlagos vonatkövetési távolság elég nagy ahhoz, hogy beférjen egy harmadik vonat is. A két vonal egyszerű összekapcsolása nem fog működni, elsőbbségi pályaegyesítés szükséges.
 
-Megjegyzendő, hogy miután a kirakodó vonatok mindig azonos időt töltenek a vágánynál, a vonatok szoros rendjének kialakítása lehetséges, akár a kritikus sűrűség felett is! (3. ábra)[[File:en/Diamond Stream.png|thumb|800px|none|3. ábra: Kirakodóállomás az ágak összegyűjtésével]]
+Megjegyzendő, hogy miután a kirakodó vonatok mindig azonos időt töltenek a vágánynál, a vonatok szoros rendjének kialakítása lehetséges, akár a kritikus sűrűség felett is! (3. ábra)[[File:en/Community/Diamond Stream.png|thumb|800px|none|3. ábra: Kirakodóállomás az ágak összegyűjtésével]]
 
 A first-pass merge using a priority block will reduce the traffic ratio from 1:1 to about 3:1 in favour of the main track (Figure 4). Adding a second priority merge straight after the first one would be a futile gesture, since trains on both lines would continue at the same speed and the mainline train would simply claim priority again. Introducing a delay by a loop of track, followed by a second priority merge, will reduce the sideline to a mere trickle of trains and will have filled in most of the available slots on the mainline. Existing solutions would involve a pre-acceleration track, however a cyclotron eliminates the need to lose momentum.
-[[File:en/Priority Merge.png|frame|none|4. ábra: Elsőbbségi pályaegyesítés]]
+[[File:en/Community/Priority Merge.png|frame|none|4. ábra: Elsőbbségi pályaegyesítés]]
 
 ===Cyclotrons===
 Consider a sideline that loops back on itself after a failed priority merge. A train in this loop would continue to re-test the mainline for entry conditions, once every 8 * '''TL'' tiles until it found a space large enough to merge with the main line. After the cyclotron was empty, the next waiting train could pre-accelerate and be injected into the cyclotron, ready to continue the cycle. This system has some flaws, however, as it has a capacity of one train and there will be many missed opportunities due to the train being in the wrong position in the accelerator. ''[Broken link to Simple Cyclotron removed.]'' Junctions are a large and well-trodden area of openttd; I have restricted myself to unbranched feeder structures. You will find that a highly-optimised stream of trains does NOT weather a junction well.
@@ -131,7 +131,7 @@ Refinements to the cyclotron are possible. There is enough space on the track lo
 The injection delay assumes that the second injected train is accelerating from standstill, and there is a small chance that second train has in fact chanced upon the cyclotron entrance at full speed. In this case, the timing will be wrong and the second train will almost certainly cause a jam within the cyclotron (and consequently on the main line). This can be compensated for by some additional signalling to filter out full-speed trains. The filtered out full-speed trains can either be diverted onto a second loop, or simply drained of momentum by a signal. 
 
 A cyclotron incorporating all the optimisations discussed, and some additional fixes, is shown in Figure 5.
-[[File:en/Cyclotron Full.png|thumb|800px|none|5. ábra: full-featured cyclotron]]
+[[File:en/Community/Cyclotron Full.png|thumb|800px|none|5. ábra: full-featured cyclotron]]
 
 '''''Editor's note:''''' Whilst I would like to defend my cyclotron refinements, experimentation has proven that pre-acceleration is a more robust system. The two have been combined in the savegame linked previously.
 {{en/Feature|0.7}}
@@ -140,7 +140,7 @@ A cyclotron incorporating all the optimisations discussed, and some additional f
 An attempt to minimize the drawbacks of the full featured cyclotron leads to parallel, small, 1-train cyclotrons. In this design, an array of cyclotrons, each handling one train, may be fed simultaneously. They may have different loop size in order to prevent synchronization between the cycling trains, giving more chance to find a slot in the flow of the main line. Each loop still needs it own acceleration lane so the trains enter the loop at full speed. If a train happened to enter the loop at low speed, it would get a chance to join the main line at non-max speed and cause a possibly large traffic jam.
 
 Figure 6 shows a parallel cyclotron with two loops.
-[[File:en/Parallel Cyclotron.png|thumb|800px|none|6. ábra: Parallel cyclotron]]
+[[File:en/Community/Parallel Cyclotron.png|thumb|800px|none|6. ábra: Parallel cyclotron]]
 
 A savegame with the example given in Figure 6 is available [http://gbizzotto.free.fr/parallel_cyclotron.sav Here] (one of the GRF files used in this savegame is not available for download at the moment) (version 0.7 or higher required to open).
 
@@ -158,11 +158,11 @@ A trigger allows to control when a train may leave the station. This increases t
 
 This set of screenshots shows the trigger itself. The main component is a circle track (A). It is divided into four segments using path based signals. A train travels the circle (B). Two waypoints are used to keep it moving. The length of the train is such that it almost covers three segments of the circle. Finally, each segment has an exit (C). To show the concept, a traffic light has been added to each track. When the train moves, each of the lights will shortly jump to green. 
 
-[[File:en/Trigger-a.png|frame|none|A: Segmented circle track]] [[File:en/Trigger-b.png|frame|none|B: Segmented circle track with train]] [[File:en/Trigger-c.png|frame|none|C: Final trigger with collectors]]
+[[File:en/Community/Trigger-a.png|frame|none|A: Segmented circle track]] [[File:en/Community/Trigger-b.png|frame|none|B: Segmented circle track with train]] [[File:en/Community/Trigger-c.png|frame|none|C: Final trigger with collectors]]
 
 Now the trigger is connected to a high yield station. The station has 16 platform each 9 tiles in length. Four tracks leave the station. Later they are merged to two track:
 
-[[File:en/Trigger-d.png|frame|none|Final trigger connected to station]]
+[[File:en/Community/Trigger-d.png|frame|none|Final trigger connected to station]]
 
 Notice how the monorail an the magnetic tracks are connected. Each track leaving the station is connected with one segment of the trigger. Right after this connection a normal signal is placed. This way the trigger is able to stop trains from exiting the station.
 
@@ -170,6 +170,6 @@ Timing in this setup is crucial! Depending on the type and size of trains the ex
 
 At a similar station, there are also 16 platforms each with 9 tiles. But the trains transport goods which are much lighter than steel. Hence the trigger's time gaps can be shorter. This is achieved by having a circle track with less sharp turn. As a result, the train travels at 226 kph.
 
-[[File:en/Trigger-e.png|frame|none|Faster trigger]]
+[[File:en/Community/Trigger-e.png|frame|none|Faster trigger]]
 
-[[Category:hu/Vasút]]
+[[Category:hu/Manual/Base Set/Trains/Vasút]]

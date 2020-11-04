@@ -2,14 +2,14 @@
 {{pl/Spis treści}}
 '''Miasta''' są nieodłączną częścią życia w OpenTTD.  Każde miasta ma daną populację, która może zwiększyć się lub zmniejszyć zależnie od warunków.
 
-'''''Zobacz też:''' [[pl/Domy|Domy]] opisane jako przedsiębiorstwa''
+'''''Zobacz też:''' [[pl/Manual/Base Set/Domy|Domy]] opisane jako przedsiębiorstwa''
 
-[[File:en/Town.png|thumb|left|436px|Małe miasto Postdam.]]
+[[File:en/Manual/Base Set/Cargos/Town.png|thumb|left|436px|Małe miasto Postdam.]]
 __TOC__{{en/-}}
 ==Budynki==
-Większość [[pl/Domy|budynków]] w miastach jest źródłem [[pl/Manual/Base Set/Cargos/Pasażerowie|pasażerów]] i [[pl/Manual/Base Set/Cargos/Poczta|poczty]], które mogą być transportowane do innych miast bądź do tego samego miasta.  W ciągu [[pl/Manual/Ekonomia#kryzys-ekonomiczny|recesji]] ilość zmniejsza się o połowę.
+Większość [[pl/Manual/Base Set/Domy|budynków]] w miastach jest źródłem [[pl/Manual/Base Set/Cargos/Pasażerowie|pasażerów]] i [[pl/Manual/Base Set/Cargos/Poczta|poczty]], które mogą być transportowane do innych miast bądź do tego samego miasta.  W ciągu [[pl/Manual/Ekonomia#kryzys-ekonomiczny|recesji]] ilość zmniejsza się o połowę.
 
-W niektórych przypadkach budynki mogą przyjmować ładunek - np. [[pl/Manual/Base Set/Cargos/Towary|Towary]] lub [[pl/Manual/Base Set/Cargos/Żywność|Żywność]].  Aby stacja mogła akceptować rozwożony towar, budynki w strefie zasięgu stacji muszą akceptować przynajmniej 8/8 pojemności towarowej pojazdu. Użyj narzędzia [[pl/Manual/Informacja o terenie|informacji o terenie]] aby znaleźć informację o akceptacji przez pojedyncze budynki (Zobacz: [[pl/Domy]]).
+W niektórych przypadkach budynki mogą przyjmować ładunek - np. [[pl/Manual/Base Set/Cargos/Towary|Towary]] lub [[pl/Manual/Base Set/Cargos/Żywność|Żywność]].  Aby stacja mogła akceptować rozwożony towar, budynki w strefie zasięgu stacji muszą akceptować przynajmniej 8/8 pojemności towarowej pojazdu. Użyj narzędzia [[pl/Manual/Informacja o terenie|informacji o terenie]] aby znaleźć informację o akceptacji przez pojedyncze budynki (Zobacz: [[pl/Manual/Base Set/Domy]]).
 
 Populacja miasta bazuje na ilości budynków miejskich oraz ilości mieszkańców zamieszkujących dane budynki.
 
@@ -17,7 +17,7 @@ Populacja miasta bazuje na ilości budynków miejskich oraz ilości mieszkańcó
 Przedsiębiorstwa znajdujące się w mieście:
 * [[pl/Manual/Base Set/Industries/Bank]] znajdujący się w miastach o populacji powyżej 1200.
 * [[pl/Manual/Base Set/Industries/Wieża ciśnień|Wieża ciśnień]] znajdująca się wyłącznie w miastach w tropikalnym klimacie.
-* [[pl/Domy|Domy]] - nie są przedsiębiorstwami, ale posiadają pewne ich funkcje.
+* [[pl/Manual/Base Set/Domy|Domy]] - nie są przedsiębiorstwami, ale posiadają pewne ich funkcje.
 
 ==Wielkość miasta==
 Populacja miasta może wzrosnąć przez zapewnianie większego transportu pasażerów/poczty.
@@ -35,8 +35,8 @@ Rozwój miast może zostać przyspieszony przez '''rozwożenie <small>''(loading
 
 Miasto będzie się rozrastać budując drogi w pustych miejscach i budować obok nich budynki. Drogi nie mogą być budowane ukośnie ani nie mogą przecinać tory kolejowe po przekątnej, więc należy być ostrożnym, aby nie zagrodzić miasta zamiast go rozszerzać.
 
-[[File:en/Town-nogrow.png|frame|left|To miasto nie rozrośnie się ponad 215 mieszkańców]]
-[[File:en/Town-grow.png|frame|right|To miasto gwałtownie się rozrasta]]
+[[File:en/Manual/Town-nogrow.png|frame|left|To miasto nie rozrośnie się ponad 215 mieszkańców]]
+[[File:en/Manual/Town-grow.png|frame|right|To miasto gwałtownie się rozrasta]]
 <br clear="all" />
 
 ===Wpływ klimatu na rozwój miasta===
@@ -57,7 +57,7 @@ Jeśli centralny kwadrat miasta jest na pustyni, przynajmniej 1 tona [[pl/Manual
 
 Miasta same będą same bardzo wolno się rozwijały, więc w przypadku małych miast, nie dość dużych, by przyjmować jedzenie, najprościej poczekać, aby się rozrosły. Jak z każdym innym ładunkiem, stacja potrzebuje przynajmniej 8/8 akceptacji jedzenia w swoim obszarze pokrycia zanim będzie akceptować jedzenie.
 
-[[File:en/Water tower.gif|right]]
+[[File:en/Manual/Base Set/Industries/Water tower.gif|right]]
 Woda musi być dostarczana do [[pl/Manual/Base Set/Industries/Wieża ciśnień|wież ciśnień]]. Wieże ciśnień mogą być generowane w miastach automatycznie, albo gracz może zdecydować, by założyć nową, korzystając z menu "Załóż nowe przedsiębiorstwo.
 
 Ilość dostarczonego jedzenia i wody nie mają wpływu na szybkość rozwoju miasta.
@@ -75,7 +75,7 @@ W umiarkowanym klimacie zwyczajny autobus może drastycznie podnieść populacj�
 * Rozbudowa dróg dla miasta tylko nieznacznie zwiększa szanse na budowę nowych budynków, ale i tak jest tam o to łatwiej niż w mieście bez pustej drogi.  Jeśli w mieście jest mnóstwo pustych dróg, jest mało prawdopodobne, że przyniesie to efekt, dopóki na większości dróg nie powstaną obok nich budynki. Droga powinna być zbudowana równomiernie wokół miasta, a nie rozciągać się na kilka konkretnych stron. Również rozciągające się budynki miasta zależą od odległości podróży (nie odległości w linii prostej) wzdłuż drogi do centrum miasta (miejsca, gdzie wyświetlana jest jego nazwa). Przy drodze, która nie jest połączona z centrum miasta, nie powstanie żaden budynek.
 
 ==Metropolia==
-Metropolia to specjalna forma miasta, która rośnie dwa razy szybciej niż zwykłe miasto. Metropolia jest również większa już od początku. Są dwa ustawienia, które na nie wpływają: ''[[pl/Ustawienia/Tworzenie mapy#proporcje-miejscowosci-ktore-beda-miastami|Proporcje miasta, które stają się metropoliami]]'' i ''[[pl/Ustawienia/Tworzenie mapy#poczatkowy-mnoznik-rozmiaru-metropolii|Początkowy mnożnik rozmiaru metropolii]]''.
+Metropolia to specjalna forma miasta, która rośnie dwa razy szybciej niż zwykłe miasto. Metropolia jest również większa już od początku. Są dwa ustawienia, które na nie wpływają: ''[[pl/Manual/Base Set/Trains/Ustawienia/Tworzenie mapy#proporcje-miejscowosci-ktore-beda-miastami|Proporcje miasta, które stają się metropoliami]]'' i ''[[pl/Manual/Base Set/Trains/Ustawienia/Tworzenie mapy#poczatkowy-mnoznik-rozmiaru-metropolii|Początkowy mnożnik rozmiaru metropolii]]''.
 
 ==Lokalne władze==
 Każde miasto jest zarządzane przez [[pl/Manual/Władze lokalne|lokalne władze]] które określają jakie działania firma może podjąć w lub koło każdego z miast. Wycinanie drzew  (włącznie z tymi wyciętymi przez kształtowanie terenu lub buldożery) i niszczenie miejskich przedsiębiorstw, budynków, dróg, tuneli i mostów obniża ocenę firmy w mieście. Jednakże sadzenie drzew, udane łapówki i dostarczanie usług komunikacyjnych miastu (stacje, które przewiozły ładunek w ciągu ostatnich 50-ciu dni) zwiększają ocenę firmy. By umieścić stację, firma musi mieć ocenę przynajmniej -200 (Słabo).
@@ -101,4 +101,4 @@ Oczywiście, jeśli gracz chce, by miasto rozwijało się bardziej efektywnie, w
 * [http://wiki.openttdcoop.org/User:Mfb/Towns Artykuł o mechanice rozwoju miasta autorstwa mfb na #openttdcoop]
 * [[pl/Archive/Manual/Settings/Ustawienia zaawansowane/Ekonomia|poprzednie ustawienia miejscowości]]
 
-[[Category:pl/Podmioty]]
+[[Category:pl/Manual/Podmioty]]

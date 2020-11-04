@@ -5,7 +5,7 @@ The Story book is a collection of Story pages that a Game Script can create. It 
 
 If you want to try out the Story Book in-game, get NoCarGoal via online content download and then start a game with NoCarGoal. (you need nightly r25621 or later)
 
-[[File:en/Story-book4.png]]
+[[File:en/Development/Script/Story-book4.png]]
 
 == GS API ==
 Pages can be company specific or global. Each company will only show the pages that are either company specific or global.
@@ -34,7 +34,7 @@ Additionally, both [http://www.tt-forums.net/viewtopic.php?f=65&t=62212 NoCarGoa
 === Create a page ===
 The following code creates the page as shown in this image below. It uses a wrapper function NewStoryPage which is given later.
 
-[[File:en/Story-book4.png|the image above]]:
+[[File:en/Development/Script/Story-book4.png|the image above]]:
 
 <pre>NewStoryPage(0, GSText(GSText.STR_TITLE1), [
 		[GSStoryPage.SPET_TEXT,     0, GSText(GSText.STR_PAGE1a)],

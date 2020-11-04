@@ -214,7 +214,7 @@ Istnieje możliwość wykorzystania gry, poprzez posadzenie około 200 drzew w p
 |-
 |Nieudane łapówkarstwo|| - ||Spada do -50.
 |}
-<nowiki>*</nowiki> Jeśli w tubryce "wymagana ocena" podane są trzy wartości, to zależą one<br> od [[pl/Archive/Manual/Settings/Ustawienia|ustawienia]] [[pl/Ustawienia/Środowisko#nastawienie-wladz-miasta-do-przeksztalcania-terenu|Nastawienie władz miasta do przekształcania terenu]]<br> (zapisane w kolejności Przyjazne / Tolerancyjne / Wrogie) <br><nowiki>**</nowiki> Dla budynków domyślnych. NewGRF-y mogą zmienić tę wartość<br> w zakresie od 0 do powyżej 1000, co pozwala sprawić,<br> że budynek stanie się nieusuwalny.
+<nowiki>*</nowiki> Jeśli w tubryce "wymagana ocena" podane są trzy wartości, to zależą one<br> od [[pl/Archive/Manual/Settings/Ustawienia|ustawienia]] [[pl/Manual/Base Set/Trains/Ustawienia/Środowisko#nastawienie-wladz-miasta-do-przeksztalcania-terenu|Nastawienie władz miasta do przekształcania terenu]]<br> (zapisane w kolejności Przyjazne / Tolerancyjne / Wrogie) <br><nowiki>**</nowiki> Dla budynków domyślnych. NewGRF-y mogą zmienić tę wartość<br> w zakresie od 0 do powyżej 1000, co pozwala sprawić,<br> że budynek stanie się nieusuwalny.
 </td></tr></table>
 
 Każdego miesiąca ocena gracza zmienia się automatycznie:
@@ -242,7 +242,7 @@ Poczta: 196 / 4 kratki / (6 - poziom siedziby)
 ==Produkcja przedsiębiorstw==
 Oto jak gra określa, ile ładunku produkuje przedsiębiorstwo w ciągu miesiąca. Produkcja surowców odbywa się 8 lub 9 razy w miesiącu. (Zdarza się to co 256 ticków. W jednym dniu są 74 ticki, a w miesiącu 28 do 31 dni ([https://github.com/OpenTTD/OpenTTD/blob/97c0594cedcad866bbdea8a0f86406b5c38694a3/src/date_type.h#L30 date_type.h]). Oznacza to, że tylko około 9% przedsiębiorstw będzie produkować 9 razy w 28-dniowym lutym, ale około 96% przedsiębiorstw będzie produkować 9 razy w 31-dniowym miesiącu, takim jak marzec). Produkcja będzie zawsze wielokrotnością 8 lub 9 razy, chyba że dana branża zmieniła produkcję w ciągu tego miesiąca.
 
-Ta tabela zawiera listę możliwych produkcji początkowych regulowanych przez [[pl/Ustawienia/Środowisko#pozwol-na-lagodna-ekonomie-wiecej-malych-zmian|łagodną ekonomię]]. Liczby te są wielokrotnością 8. Kiedy gra generuje nową mapę, każde przedsiębiorstwo produkowało 8 razy, a w grudniu przed rozpoczęciem gry nie było żadnych zmian w produkcji. 
+Ta tabela zawiera listę możliwych produkcji początkowych regulowanych przez [[pl/Manual/Base Set/Trains/Ustawienia/Środowisko#pozwol-na-lagodna-ekonomie-wiecej-malych-zmian|łagodną ekonomię]]. Liczby te są wielokrotnością 8. Kiedy gra generuje nową mapę, każde przedsiębiorstwo produkowało 8 razy, a w grudniu przed rozpoczęciem gry nie było żadnych zmian w produkcji. 
 
 {| {{en/Wikitable}}
 |- style="background:#efefef"
@@ -335,7 +335,7 @@ Dla uproszczenia, spójrzmy jakie są szanse na mapie 256x256 (max. 1 zmiana mie
 ** Dobra obsługa: '''11,12%''' że 1 możliwa zmiana na miesiąc to wzrost produkcji, '''5,56%''' że ta zmiana to spadek.
 
 ====Łagodna ekonomia====
-:''Można ją włączyć w [[pl/Ustawienia/Środowisko#pozwol-na-lagodna-ekonomie-wiecej-malych-zmian|Ustawieniach]]''
+:''Można ją włączyć w [[pl/Manual/Base Set/Trains/Ustawienia/Środowisko#pozwol-na-lagodna-ekonomie-wiecej-malych-zmian|Ustawieniach]]''
 
 *Szansa na zmianę produkcji w każdym miesiącu wynosi '''4,5%''', tzn. 4,5% przedsiębiorstw z listy zmienia produkcję.
 
@@ -504,7 +504,7 @@ Ta metoda pozwala obliczyć przychód za ładunek z dokładnością +/-5%
 '''Uwagi:'''
 * Dokładna formuła jest znacznie bardziej skomplikowana i nieco bardziej dokładna, ze względu na błąd zaokrąglenia przy przeliczaniu z większych wartości dyskretnych. Zobacz economy.cpp (GetTransportedGoodsIncome) i [[pl/Manual/Game Mechanics/Przychód za ładunek|Przychód za ładunek]]. 
 
-* Pamiętaj że dystans mierzony jest ([[pl/Geometria taksówkarska|metodą manhattańską]]), nie w linii prostej.
+* Pamiętaj że dystans mierzony jest ([[pl/Archive/Geometria taksówkarska|metodą manhattańską]]), nie w linii prostej.
 
 * Każdy ładunek ma charakterystyczny czas, przy którym płatność jest zmaksymalizowana, przy założeniu, że można utrzymać dla niego stałą prędkość.  Dla ładunku z karą za "późną dostawę " czas ten wynosi zazwyczaj około 70 dni; dla ładunku bez tej kary wynosi zazwyczaj około 130 dni.
 
@@ -533,14 +533,14 @@ Rezultatem obliczeń jest to, że 100 km/godz. to ~3,6 kafli/dzień.
 *Zjeżdżając ze wzgórz przyspieszają dodatkowo o 74 km-ish/h/dzień.
 *Wjeżdżając na wzgórza, samochody zwalniają o 10% 4 razy na jednej kratce.
 
-(Uwaga: nie dotyczy ulepszonego [[pl/Ustawienia/Pojazdy#model-przyspieszania-pojazdow|modelu przyspieszenia pojazdów]])
+(Uwaga: nie dotyczy ulepszonego [[pl/Manual/Base Set/Trains/Ustawienia/Pojazdy#model-przyspieszania-pojazdow|modelu przyspieszenia pojazdów]])
 
 ==== Statki ====
 *Statki przyspieszają o 37 km-ish/h/dzień.
 *Statek "zatrzymany" natychmiast wznawia swoją ostatnią prędkość.
 
 ==== Pociągi ==== 
-(Przy włączonym [[pl/Ustawienia/Pojazdy#model-przyspieszania-pociagu|realistycznym modelu przyspieszenia pociągów]])<br>
+(Przy włączonym [[pl/Manual/Base Set/Trains/Ustawienia/Pojazdy#model-przyspieszania-pociagu|realistycznym modelu przyspieszenia pociągów]])<br>
 *Prędkość pociągów nie ulega zmianie podczas jazdy w górę lub w dół wzgórz, jeśli są one wystarczająco silne.
 *Podczas wjeżdżania i wyjeżdżania z zajezdni lub wykonywania skrętów o 90°, prędkość pociągu jest ograniczona do 61 km/h.
 *Pociągi mogą wykonać jeden zakręt o 45° lub dwa zakręty o 45° w przeciwnych (S) kierunkach jednocześnie, bez zwalniania.
@@ -603,7 +603,7 @@ Rezultatem obliczeń jest to, że 100 km/godz. to ~3,6 kafli/dzień.
 *Na przyspieszenie pociągu i maksymalną prędkość ma wpływ moc lokomotywy, maksymalna moc pociągowa (wszystkie lokomotywy i wagony silnikowe łącznie), aktualna prędkość, opór powietrza, całkowita masa pociągu oraz lokomotywy/wagony na zboczach.
 *Więcej o przyspieszeniu pociągów można znaleźć na: [http://www.tt-forums.net/viewtopic.php?f=31&t=55972&p=960678#p960672 tt-forums]
 *Hamowanie odbywa się dwukrotnie szybciej niż przyspieszenie, chyba że przy wjeździe do zajezdni lub na stację..
-[[File:en/Speed-limits.png]]
+[[File:en/Manual/Game Mechanics/Speed-limits.png]]
 
 '''''Zobacz też:''' [[pl/Archive/Manual/Settings/Przyspieszenie realistyczne|Przyspieszenie realistyczne]] i [[pl/Community/Zakręty|Zakręty]].''
 Kod znajduje się w plikach ground_vehicle.cpp, aircraft_cmd.cpp, roadveh_cmd.cpp, ship_cmd.cpp, train_cmd.cpp, vechicle.cpp.
@@ -616,7 +616,7 @@ Od OpenTTD 1.6.1, mając podane:
 *opór powietrza działający na pierwszą lokomotywę składu <code>(air_drag_value)</code> (może być zmieniony przez NewGRFy, domyślnie to <code>min(192,max(1,floor(2048/max_speed)))</code>, co oznacza, że pociągi szybsze są również budowane jako bardziej aerodynamiczne)
 *łączny ciężar wszelkich części składowych pociągu (lokomotyw i wagonów) zjeżdżających obecnie ze zbocza <code>(weight_on_downslope)</code>
 *łączny ciężar wszelkich części składowych pociągu (lokomotyw i wagonów) wjeżdżających obecnie na zbocze <code>(weight_on_upslop)</code>
-*[[pl/Ustawienia/Pojazdy|Nachylenie stoków dla pociągów|nachylenie zbocza]] ([1-10], domyślnie 3) <code>(slope_steepness)</code>
+*[[pl/Manual/Base Set/Trains/Ustawienia/Pojazdy|Nachylenie stoków dla pociągów|nachylenie zbocza]] ([1-10], domyślnie 3) <code>(slope_steepness)</code>
 *aktualną prędkość pociągu w km/h <code>(current_speed)</code>
 można obliczyć przyspieszenie <code>(acceleration)</code> pociągu (nie magnetycznego), korzystając następujących zależności:
 
@@ -641,5 +641,5 @@ Given the same values, the equilibrium speed, eg the speed the train would event
 
 Zobacz [[pl/Manual/Miasta#wielkosc-miasta]].
 
-[[Category:pl/Rozgrywka]]
+[[Category:pl/Manual/Base Set/Rozgrywka]]
 [[Category:pl/Rozwój]]

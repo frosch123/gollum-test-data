@@ -1,7 +1,7 @@
 [[Translation:en/Manual/Industries]]
 {{fr/Table des matières}}
 
-:''Cet article concerne le concept d'industrie dans OpenTTD. Pour une liste d'industries par catégorie, reportez-vous à [[:Category:fr/Industries]]''
+:''Cet article concerne le concept d'industrie dans OpenTTD. Pour une liste d'industries par catégorie, reportez-vous à [[:Category:fr/Manual/Base Set/Industries/Industries]]''
 
 Les '''industries''' sont des entités qui produisent des [[fr/Manual/Cargaison|cargaisons]] et/ou des services spécifiques. Il y a trois types d'industrie dans OpenTTD: primaire, secondaire et tertiaire. Les industries primaires, comme les mines, fournissent des ressources sans avoir besoin de quoi que ce soit. Ces ressources sont alors transportées par une [[fr/Manual/Compagnie de transport|compagnie de transport]] vers une industrie secondaire. Quelquefois, les industries secondaires fournissent à leur tour une ressource qui sera soit transportée vers les villes (marchandises ou nourriture), ou vers une industrie tertiaire.
 
@@ -11,7 +11,7 @@ La fenêtre d'une industrie montre deux nombres concernant la production de chaq
 
 La seconde valeur est le pourcentage de la quantité produite qui a été livrée aux gares à proximité pour être distribuée. Les industries peuvent décider de conserver une partie de leur production et de ne pas la livrer à une gare.
 
-[[File:en/Industry window.png|frame|center|Fenêtre d'industrie d'une mine de charbon]]
+[[File:en/Manual/Industry window.png|frame|center|Fenêtre d'industrie d'une mine de charbon]]
 
 La croissance de la production d'une industrie primaire dépend du pourcentage de cargaison transportée depuis elle. Plus vous en transportez, plus rapidement elle croîtra sur le long terme, en moyenne.
 
@@ -249,12 +249,12 @@ __TOC__
 ==Financer de nouvelles industries==
 Il est possible, pour une compagnie de transport suffisamment riche, de financer la construction d'une nouvelle industrie, qui s'installera là où et quand vous l'indiquez. Cependant, vous n'aurez pas de retour immédiat sur votre investissement (comme un partage du bénéfice), sauf la cargaison supplémentaire à transporter. Vous ne posséderez pas l'usine, ce qui veut dire que vous n'êtes normalement pas autorisés à la détruire; assurez-vous donc de la placer au bon endroit!
 
-Normalement, vous ne pouvez financer que les [[:Category:fr/Industries|industries]] suivantes:
+Normalement, vous ne pouvez financer que les [[:Category:fr/Manual/Base Set/Industries/Industries|industries]] suivantes:
 
 {| {{en/Wikitable}}
 !colspan=4 style="background:#ccffcc"|Tempéré
 |-
-| rowspan=7 valign="top"| [[File:en/Fund Industry template.png]]
+| rowspan=7 valign="top"| [[File:en/Manual/Fund Industry template.png]]
 | style="background:#efefef" | '''Nom'''
 | style="background:#efefef" | <span style="white-space:nowrap">'''Coût''' (sans inflation)</span>
 | style="background:#efefef" | '''Notes'''
@@ -285,7 +285,7 @@ Normalement, vous ne pouvez financer que les [[:Category:fr/Industries|industrie
 |-
 !colspan=4 style="background:#ccccff"|Subarctique
 |-
-| rowspan=7 valign="top"| [[File:en/Fund Industry subarctic.png]]
+| rowspan=7 valign="top"| [[File:en/Manual/Fund Industry subarctic.png]]
 | style="background:#efefef" | '''Nom'''
 | style="background:#efefef" | <span style="white-space:nowrap">'''Coût''' (sans inflation)</span>
 | style="background:#efefef" | '''Notes'''
@@ -316,7 +316,7 @@ Normalement, vous ne pouvez financer que les [[:Category:fr/Industries|industrie
 |-
 !colspan=4 style="background:#ffffcc"|Subtropical
 |-
-| rowspan=7 valign="top"| [[File:en/Fund Industry subtropical.png]]
+| rowspan=7 valign="top"| [[File:en/Manual/Fund Industry subtropical.png]]
 | style="background:#efefef" | '''Nom'''
 | style="background:#efefef" | <span style="white-space:nowrap">'''Coût''' (sans inflation)</span>
 | style="background:#efefef" | '''Notes'''
@@ -347,7 +347,7 @@ Normalement, vous ne pouvez financer que les [[:Category:fr/Industries|industrie
 |-
 !colspan=4 style="background:#ff9999"|Pays des jouets
 |-
-| rowspan=5 valign="top"| [[File:en/Fund Industry toyland.png]]
+| rowspan=5 valign="top"| [[File:en/Manual/Fund Industry toyland.png]]
 | style="background:#efefef" | '''Nom'''
 | style="background:#efefef" | <span style="white-space:nowrap">'''Coût''' (sans inflation)</span>
 | style="background:#efefef" | '''Notes'''
@@ -369,7 +369,7 @@ Normalement, vous ne pouvez financer que les [[:Category:fr/Industries|industrie
 | Accepte du [[fr/Manual/Base Set/Cargos/Coca-Cola|coca-cola]] depuis les [[fr/Manual/Base Set/Industries/Source de coca-cola|sources de coca-cola]] et des [[fr/Manual/Base Set/Cargos/Bulles|bulles]] depuis les [[fr/Manual/Base Set/Industries/Générateur de bulles|générateurs de bulles]]. Produit des [[fr/Manual/Base Set/Cargos/Boisson gazeuse|boissons gazeuses]].
 |}
 
-Pour financer une nouvelle industrie dans le jeu, laissez appuyé sur le bouton ''Industries'' de la barre d'outils [[File:en/Manual html m4d6ba21e.png]] (voyez ''Information sur la compagnie et les industries'' dans la page [[fr/Manual/Interface|Interface du jeu]]) et choisissez ''Financer une nouvelle industrie''.
+Pour financer une nouvelle industrie dans le jeu, laissez appuyé sur le bouton ''Industries'' de la barre d'outils [[File:en/Manual/Manual html m4d6ba21e.png]] (voyez ''Information sur la compagnie et les industries'' dans la page [[fr/Manual/Interface|Interface du jeu]]) et choisissez ''Financer une nouvelle industrie''.
 
 Plusieurs corrections modifient les règles pour construire de nouvelles industries:
 * [[fr/Construire des industries de matériau brut|Construire des industries de matériau brut]]
@@ -381,6 +381,6 @@ Depuis la version 0.6.1, vous pouvez ''prospecter'' de nouvelles industries. Fin
 
 Vous pouvez activer cette fonctionnalité dans le jeu depuis la fenêtre de configuration corrigée, onglet ''Économie'', ''Méthode de construction manuelle d'une industrie primaire'', qui peut prendre trois valeurs: ''aucune'', ''comme les autres industries'' et ''prospection'' (par défaut).
 
-[[File:en/Coalmine.png|center|frame|La mine de charbon n'est qu'une des nombreuses industries de OpenTTD.]]
+[[File:en/Manual/Base Set/Industries/Coalmine.png|center|frame|La mine de charbon n'est qu'une des nombreuses industries de OpenTTD.]]
 
-[[Category:fr/Industries]]
+[[Category:fr/Manual/Base Set/Industries/Industries]]

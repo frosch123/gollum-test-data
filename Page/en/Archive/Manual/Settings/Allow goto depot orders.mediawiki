@@ -3,7 +3,7 @@
 '''Allow go to depot orders''' is a [[en/Archive/Manual/Settings/Advanced Settings|setting]] that enables players to put a depot in a vehicle's [[en/Manual/Orders]]. 
 
 == Description ==
-[[File:en/Scheduled servicing.png|right|frame|"Go to depot" order in the vehicle's order list]]
+[[File:en/Manual/Scheduled servicing.png|right|frame|"Go to depot" order in the vehicle's order list]]
 When enabled, this option lets you include a depot in a vehicle's orders. This is useful for compulsory servicing at a particular point in the orders (maybe before a complicated junction you definitely don't want a train breaking down at).
 
 Having a go to depot order anywhere in a vehicle's orders will disable automatic servicing for that vehicle. It won't look for a depot on its own, regardless of the service interval set. So when you add a go to depot order, you become responsible for all of that vehicle's servicing. 
@@ -24,5 +24,5 @@ This option is enabled by default. You can disable it through the [[en/Archive/M
 <pre>[order]
 gotodepot = false</pre>
 
-[[Category:en/Settings & Preferences]]
-[[Category:en/Vehicles]]
+[[Category:en/Manual/Settings & Preferences]]
+[[Category:en/Manual/Base Set/Vehicles]]

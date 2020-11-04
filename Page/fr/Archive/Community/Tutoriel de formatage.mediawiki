@@ -1,0 +1,139 @@
+{{fr/Archive/Community/Navtab Tutoriel|This=3}}
+
+<div style="border:2px solid #A3B1BF; padding:.5em 1em 1em 1em; border-top:none; background-color:#fff; color:#000">
+{{fr/Archive/Table des matières droite}}
+
+'''Formater des articles du wiki''' est un peu différent d'écrire sur un traitement de texte standard. Au lieu de l'approche "Ce que vous voyez est ce que vous obtenez", le wiki utilise des codes texte pour créer des éléments particuliers de la page (par ex. des entêtes). Ce "langage" est connu comme le '''marquage Wiki''' et est conçu pour faciliter l'édition.
+
+
+== Gras et italique ==
+Les marques wiki les plus utilisées sont '''gras''' et ''italique''. '''Mettre en gras''' et ''mettre en italique'' se fait en entourant un mot ou une phrase avec des apostrophes multiples(<tt>'</tt>):
+
+{| style="background: #f9f9f9; width: 100%; border: 1px #aaa solid; border-collapse: collapse; margin: 1em 1em 1em 0;"
+! style="background: #f2f2f2; border: 1px #aaa solid; width: 50%;" | À quoi cela ressemble
+! style="background: #f2f2f2; border: 1px #aaa solid; width: 50%;" | Ce que vous tapez
+|-
+| style="border: 1px #aaa solid; padding: 0.2em;"|
+''mettez le texte en italique'' en mettant deux apostrophes de chaque côté. 
+
+3 apostrophes mettront '''le texte''' en gras.
+
+5 apostrophes mettront '''''le texte''''' en gars et en italique.
+| style="border: 1px #aaa solid; padding: 0.2em;"|<pre>
+''mettez le texte en italique'' en mettant 2 apostrophes de chaque côté. 
+
+3 apostrophes mettront '''le texte''' en gras. 
+
+5 apostrophes mettront '''''le texte''''' dans les deux.
+</pre>
+|}
+
+== Listes ==
+Les types de liste de base sont les listes ordonnées ou non ordonnées; elles sont créées en plaçant '''#''' ou '''*''' au début de chaque ligne; par exemple:
+
+{| style="background: #f9f9f9; width: 100%; border: 1px #aaa solid; border-collapse: collapse; margin: 1em 1em 1em 0;"
+! style="background: #f2f2f2; border: 1px #aaa solid; width: 50%;" | À quoi cela ressemble
+! style="background: #f2f2f2; border: 1px #aaa solid; width: 50%;" | ce que vous tapez
+|-
+| style="border: 1px #aaa solid; padding: 0.2em;"|
+# Les ''listes numérotées'' sont:
+## Très organisées
+## Faciles à suivre
+# L'élément précédent continue
+Une nouvelle ligne marque la fin de la liste.
+# Nouvelle numérotation commençant à  1.
+| style="border: 1px #aaa solid; padding: 0.2em;"|<pre>
+# Les ''listes numérotées'' sont:
+## Très organisées
+## Faciles à suivre
+# L'élément précédent continue
+Une nouvelle ligne marque la fin de la liste.
+# Nouvelle numérotation commençant à  1.
+</pre>
+|-
+| style="border: 1px #aaa solid; padding: 0.2em;"|
+* Les ''listes non ordonnées'' sont faciles à faire:
+** Commencez chaque ligne avec une étoile.
+*** Plus d'étoiles indiquent un niveau plus profond.
+* L'élément précédent continue.
+** Une nouvelle ligne
+* dans la liste 
+marque la fin de la liste
+*Bien sûr, vous pouvez recommencer.
+| style="border: 1px #aaa solid; padding: 0.2em;"|<pre>
+* Les ''listes non ordonnées'' sont faciles à faire:
+** Commencez chaque ligne avec une étoile.
+*** Plus d'étoiles indiquent un niveau plus profond.
+* L'élément précédent continue.
+** Une nouvelle ligne
+* dans la liste 
+marque la fin de la liste
+*Bien sûr, vous pouvez recommencer.
+</pre>
+|}
+
+==Titres et sous-titres==
+Les titres et les sous-titres sont une moyen simple d'améliorer l'organisation d'un article. Si vous pouvez voir deux ou plus sujets discutés, vous pouvez séparer l'article en insérant un titre pour chaque section.
+
+{| style="background: #f9f9f9; width: 100%; border: 1px #aaa solid; border-collapse: collapse; margin: 1em 1em 1em 0;"
+! style="background: #f2f2f2; border: 1px #aaa solid; width: 50%;" | À quoi cela ressemble
+! style="background: #f2f2f2; border: 1px #aaa solid; width: 50%;" | Ce que vous tapez
+|-
+| style="border: 1px #aaa solid; padding: 0.2em;"|
+==Titres de section==
+
+Les ''titres'' organisent votre article en sections.
+
+===Sous-section===
+Utiliser davantage de signes "égal" (=) crée une sous-section.
+
+====Une sous-section plus petite====
+
+Ne sautez pas de niveaux, comme passer de 2 à 4 signes égal.
+
+| style="border: 1px #aaa solid; padding: 0.2em;"|<pre>
+==Titres de section==
+
+Les ''titres'' organisent votre article en sections.
+
+===Sous-section===
+Utiliser davantage de signes "égal" (=) crée une sous-section.
+
+====Une sous-section plus petite====
+
+Ne sautez pas de niveaux, comme passer de 2 à 4 signes égal.
+</pre>
+|}
+
+Si un article a au moins quatre titres, une table des matières sera automatiquement générée. Essayez de créer un titre dans la page du [[fr/Bac à sable|bac à sable]]. il sera automatiquement ajouté à la table des matières de la page, s'il en existe déjà deux autres.
+
+
+== Paragraphes ==
+Le Wiki de OpenTTD ignore les sauts de ligne normaux. Pour commencer un nouveau paragraphe, laissez une ligne vide. Vous pouvez forcer un saut de ligne dans un paragraphe avec les balises HTML <code>&lt;br /></code>.
+
+{| style="background: #f9f9f9; width: 100%; border: 1px #aaa solid; border-collapse: collapse; margin: 1em 1em 1em 0;"
+! style="background: #f2f2f2; border: 1px #aaa solid; width: 50%;" | À quoi cela ressemble
+! style="background: #f2f2f2; border: 1px #aaa solid; width: 50%;" | Ce que vous tapez
+|-
+| style="border: 1px #aaa solid; padding: 0.2em;"|
+Vous pouvez aller à la ligne<br/>
+sans nouveau paragraphe.<br/>
+À utiliser avec parcimonie.
+| style="border: 1px #aaa solid; padding: 0.2em;"|<pre>
+Vous pouvez aller à la ligne<br/>
+sans nouveau paragraphe.<br/>
+À utiliser avec parcimonie.
+</pre>
+|}
+
+== HTML ==
+Wikitext contient toutes les fonctionnalités requises pour suivre les conventions de formatage de Wikipedia, et la connaissance du code HTML n'est pas nécessaire, bien qu'il soit souvent utilisé pour un formatage plus spécifique comme utiliser des couleurs, des styles de texte et de paragraphe, et un modèle de page.
+
+
+<div style="float:right; background-color:#f2f2f2; padding: .2em .6em; margin-bottom:10px; border: 1px solid #aaa;">
+
+'''Pour plus d'information sur les fonctionnalités avancées, référez-vous à la page [http://en.wikipedia.org/wiki/Help:List Lists].'''<br /></div>
+<div style="float:left; background-color: #f2f2f2; padding: .2em .6em; font-size: 130%; border: 1px solid #aaa;">'''Testez ce que vous avez appris dans le [[fr/Bac à sable|bac à sable]]'''</div>{{en/-}}
+
+<div style="float:right; margin-top: 0.0em; margin-bottom:3px; background-color: #cedff2; color: #000; padding: .2em .6em; font-size: 130%; border: 1px solid #B8C7D9;">'''Continuez le tutoriel avec [[fr/Archive/Community/Tutoriel de lien|Lier]]''' <span style="font-size: larger; font-weight: bold;">&rarr;</span></div>
+</div><noinclude></noinclude>

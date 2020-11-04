@@ -1,5 +1,5 @@
 [[Translation:en/Manual/Orders]]
-{{es/Tutorial}}{{es/Tabla de contenido}}
+{{es/Manual/Tutorial}}{{es/Tabla de contenido}}
 :''En este tutorial se explican las órdenes para la versión [[es/OpenTTD 0.7.0|OpenTTD 0.7.0]] y posteriores. Si está usando una versión anterior de OpenTTD consulte el [[es/Órdenes (antiguo)|artículo antiguo sobre órdenes]]''.
 
 Las '''órdenes''' son fundamentales para jugar a OpenTTD con éxito. Las [[es/Órdenes condicionales|órdenes condicionales]] son órdenes avanzadas que permiten un control adicional. Si no emite ningún tipo de órdenes, sus vehículos darán vueltas sin rumbo y tendrás mucha suerte si ganan algo de dinero. Con el fin de recoger y entregar con éxito la carga (que es después de todo, el objeto del juego), necesita dar órdenes a sus vehículos. Estas son instrucciones tipo "ir aquí, recoger la carga, luego descargar aquí".
@@ -7,8 +7,8 @@ Las '''órdenes''' son fundamentales para jugar a OpenTTD con éxito. Las [[es/�
 ==Dando órdenes==
 Se le permite dar órdenes a cualquier vehículo que usted posea. Sus conductores intentarán seguir estas órdenes (aunque pueden perderse si la red está mal diseñada, pero eso es una cuestión aparte). Para dar órdenes:
 
-* Busque y haga clic en el vehículo al que desea dar órdenes. El vehículo puede estar dentro de un depósito si lo acaba de comprar, o moviéndose. Para un tren, hacer clic en cualquier vagón tendrá el mismo efecto. Esto le mostrará la ventana del vehículo.<br/>[[File:es/Orders-1.png|frame|none|La ventana del vehículo y el botón órdenes]]
-* Haga clic en el botón de ''Órdenes'' (el del círculo rojo en la captura de pantalla). Esto mostrará la ventana órdenes, que muestra las órdenes que el vehículo tiene actualmente (ejemplo: nuestro vehículo no tiene ninguna orden).<br/>[[File:es/Orders-2.png|frame|none|La ventana órdenes]]
+* Busque y haga clic en el vehículo al que desea dar órdenes. El vehículo puede estar dentro de un depósito si lo acaba de comprar, o moviéndose. Para un tren, hacer clic en cualquier vagón tendrá el mismo efecto. Esto le mostrará la ventana del vehículo.<br/>[[File:es/Manual/Orders-1.png|frame|none|La ventana del vehículo y el botón órdenes]]
+* Haga clic en el botón de ''Órdenes'' (el del círculo rojo en la captura de pantalla). Esto mostrará la ventana órdenes, que muestra las órdenes que el vehículo tiene actualmente (ejemplo: nuestro vehículo no tiene ninguna orden).<br/>[[File:es/Manual/Orders-2.png|frame|none|La ventana órdenes]]
 * Clique en el botón [[#ir-a|Ir a]] y haga clic en un destino en el mapa. Se añadirá un orden a la lista.
 * Haga clic en la orden que acaba de crear en la lista para seleccionarla, y luego indíquele al vehículo lo que debe hacer (instrucciones) en ese lugar. Puede indicarle que [[#carga|cargue]], que [[#descarga|descargue]] y otras opciones de [[#comportamiento-de-parada|comportamiento en la parada]]. Por ejemplo: Si activa ''Carga completa de todas las cargas'' el vehículo esperará en la estación hasta que esté completamente lleno de cualquier carga que sea capaz de transportar.
 
@@ -33,7 +33,7 @@ El botón Ir a tiene las siguientes '''opciones''':
 * '''Ir a'''
 * '''Ir al depósito más cercano'''
 * '''Salto de orden condicional'''. Con esta opción es posible no pasar por las estaciones si, por ejemplo, el tren ya está completamente cargado.
-[[File:es/Orders goto options.png|frame|none|Opciones del botón Ir a.]]
+[[File:es/Manual/Orders goto options.png|frame|none|Opciones del botón Ir a.]]
 
 Vea también [[es/Creación rápida de órdenes para vehículos|Creación rápida de órdenes para vehículos]] para métodos abreviados sobre dar órdenes.
 
@@ -60,7 +60,7 @@ El botón ''Comportamiento de carga'' (pone "Carga completa de cualquier carga")
 *''"Cargar si está disponible"''
 *''"Carga completa de todas las cargas"''
 *''"Carga completa de cualquier carga"''
-*''"Sin cargar"''.<br/>[[File:es/Orders-Cargo-options.png|frame|none|Botón Comportamiento de carga]]
+*''"Sin cargar"''.<br/>[[File:es/Manual/Orders-Cargo-options.png|frame|none|Botón Comportamiento de carga]]
 
 ===Carga si está disponible===
 :El vehículo pasará por la parada, cargará las mercancías que en ese momento estén disponibles y saldrá hacia el siguiente destino. Es la opción inicial por defecto. No es recomendable usarla (salvo para vehículos que transporten pasajeros, correo...).
@@ -78,7 +78,7 @@ El botón ''Comportamiento de descarga'' (pone "Descargar todo") tiene las opcio
 *''"Descargar si es aceptado"''
 *''"Descargar todo"''
 *''"Transferir"''
-*''"No descargar"''.<br/>[[File:es/Orders-Unload-options.png|frame|none|Botón Comportamiento de descarga]]
+*''"No descargar"''.<br/>[[File:es/Manual/Orders-Unload-options.png|frame|none|Botón Comportamiento de descarga]]
 
 ===Descargar si es aceptado===
 :El vehículo pasará por la parada, descargará todas las mercancías que sean aceptadas en esa parada y saldrá hacia el siguiente destino. Es la opción inicial por defecto. No es recomendable usarla (salvo para vehículos que transporten pasajeros, correo...).
@@ -105,7 +105,7 @@ El botón ''Comportamiento de parada'' (pone "Sin paradas") tiene las opciones:
 *''"Ir a"''
 *''"Ir sin paradas a"''
 *''"Ir vía"''
-*''"Ir sin paradas vía"''.<br/>[[File:es/Orders-Stopping-options.png|frame|none|Botón Comportamiento de descarga]]
+*''"Ir sin paradas vía"''.<br/>[[File:es/Manual/Orders-Stopping-options.png|frame|none|Botón Comportamiento de descarga]]
 
 ===Sin paradas===
 :Ir [[es/Sin paradas|sin paradas]] hace que el vehículo no pare en ninguna de las estaciones que no tengan instrucciones marcadas hasta llegar al destino marcado.
@@ -115,16 +115,16 @@ El botón ''Comportamiento de parada'' (pone "Sin paradas") tiene las opciones:
 
 ==Mantenimiento==
 Esta opción está disponible si usted tiene una orden ''"ir a depósito"'' seleccionada. Esto obligará al vehículo a ser reparado en el depósito. Puede ser útil incluir el [[es/Manual/Mantenimiento|mantenimiento]] en la lista de órdenes antes de que los vehículos recojan una nueva carga.
-[[File:es/Service-options.png|none|frame|Las opciones del botón mantenimiento.]]
+[[File:es/Manual/Service-options.png|none|frame|Las opciones del botón mantenimiento.]]
 
 ==Reformar==
 Puede incluir una instrucción de [[es/Manual/Reformar vehículos|reformar]] un vehículo en la lista de órdenes. Al seleccionar esta se le pide que elija el tipo de carga que el vehículo deberá transportar tras la reforma. Esta orden es de uso limitado ya que normalmente sólo se reforma un vehículo para un tipo de carga una sola vez.
-[[File:es/Order-Refit.png|none|frame|Al ordenar reformar le preguntan el tipo de carga.]]
+[[File:es/Manual/Order-Refit.png|none|frame|Al ordenar reformar le preguntan el tipo de carga.]]
 
 ==Horarios==
-{{es/Principal|es/Horarios}}
+{{es/Manual/Principal|es/Horarios}}
 Los horarios le permiten especificar el tiempo que los vehículos deben tratar de tardar para viajar a lo largo de cada tramo de la ruta, y cuánto tiempo pasan en cada estación. Consulte el artículo de [[es/Horarios|Horarios]] para más detalles sobre cómo usarlos.
-[[File:es/Orders-timetable.png|none|frame|La ventana de Horarios aparece al pulsar el botón correspondiente.]]
+[[File:es/Manual/Orders-timetable.png|none|frame|La ventana de Horarios aparece al pulsar el botón correspondiente.]]
 
 ==Copiar órdenes==
 Si desea crear una ruta que sea utilizada por varios [[es/Manual/Vehículos|vehículos]], es repetitivo dar a cada uno de estos vehículos las órdenes por separado. Imagine un servicio de autobuses, en el que los 5 autobuses recorren 5 [[es/Manual/Estaciones|estaciones]] en una ciudad con un servicio frecuente de viajeros. Es más aburrido llevar a cabo los mismos 5 pasos 5 veces (una por cada vehículo), que copiar todas las órdenes de un vehículo a otro.
@@ -145,7 +145,7 @@ Las '''órdenes compartidas''' le permiten compartir una serie de órdenes entre
 ===Instrucciones===
 #Abra la lista de órdenes del vehículo del que desea compartir las órdenes de otro vehículo, y haga clic en ''Ir a''.
 #Mantenga presionada la tecla ''Ctrl'' y haga clic en el otro vehículo, el que tiene las órdenes que usted desea compartir.
-#Ahora los dos vehículos comparten el mismo horario, además están unidos entre sí. Verá que las órdenes de otro vehículo se muestran y en la última línea ahora dice ''--Fin de órdenes compartidas--''.<br/>[[File:es/Shared-orders.png|center|frame|Los horarios de los 2 autobuses se han compartido.]]
+#Ahora los dos vehículos comparten el mismo horario, además están unidos entre sí. Verá que las órdenes de otro vehículo se muestran y en la última línea ahora dice ''--Fin de órdenes compartidas--''.<br/>[[File:es/Manual/Shared-orders.png|center|frame|Los horarios de los 2 autobuses se han compartido.]]
 
 Usted puede enlazar tantos vehículos como quiera, no hay límite, pero por supuesto sólo puede vincular el mismo tipo de vehículos ya que va a utilizar las mismas estaciones para transportar las mismas mercancías haciendo el mismo recorrido.
 
@@ -158,14 +158,14 @@ En cualquier momento puede decidir que un vehículo no comparta las órdenes con
 Verá que todas las órdenes desaparecerán de la lista de ese vehículo, y que en la última línea dice ''--Fin de órdenes--'' de nuevo. Todos los demás vehículos que comparten las órdenes no se ven afectadas por este cambio. Ahora puede controlar el calendario del vehículo descompartido de forma independiente de los demás vehículos, como de costumbre.
 
 ===Lista de los vehículos que comparten órdenes===
-El botón [[File:en/SharedOrders.png]] a la derecha de la ventana ''Órdenes'' (o de la ventana ''Horarios'') muestra una lista de todos los vehículos que tienen las mismas órdenes compartidas que el vehículo actual. El icono sólo se activa si el vehículo tiene órdenes compartidas con otros.
-[[File:es/SharedOrders-1.png|none|frame|Lista de los vehículos con órdenes compartidas]]
+El botón [[File:en/Manual/SharedOrders.png]] a la derecha de la ventana ''Órdenes'' (o de la ventana ''Horarios'') muestra una lista de todos los vehículos que tienen las mismas órdenes compartidas que el vehículo actual. El icono sólo se activa si el vehículo tiene órdenes compartidas con otros.
+[[File:es/Manual/SharedOrders-1.png|none|frame|Lista de los vehículos con órdenes compartidas]]
 
 ===Notas===
 *A diferencia de copiar órdenes, se pueden compartir órdenes con vehículos que ya tienen una lista de órdenes asignada. Esto se debe a que para compartir órdenes es necesario mantener presionada la tecla ''Ctrl'', haciendo poco probable que, accidentalmente, pierda el calendario de otro vehículo. Al hacer esto el vehículo borrará todos las órdenes existentes, y sólo tendrá las nuevas órdenes compartidas.
 *Puede utilizar el botón ''clonar vehículo'' (de la ventana depósito) o el botón ''copiar vehículo'' (de la ventana del vehículo) para crear una copia idéntica de un vehículo, pero por defecto las órdenes ''se copian''. Si desea ''compartir las órdenes'' en lugar de copiarlas, mantenga ''Ctrl'' pulsado mientras hace clic en el botón de clonar el vehículo.
-[[File:es/Clone-vehicle-2.png|none|frame|Botón clonar vehículo.]]
-[[File:es/Clone-vehicle.png|none|frame|Botón copiar vehículo. Sólo disponible si el vehículo está en el depósito.]]
+[[File:es/Manual/Clone-vehicle-2.png|none|frame|Botón clonar vehículo.]]
+[[File:es/Manual/Clone-vehicle.png|none|frame|Botón copiar vehículo. Sólo disponible si el vehículo está en el depósito.]]
 *Con compartir órdenes, no hay un amo o jefe del conjunto de órdenes (por ejemplo, un vehículo que almacena la lista principal de órdenes, del que depende el resto de vehículos) que usted pueda borrar inadvertidamente. Mientras quede aunque sea un solo vehículo con las órdenes, la lista de ordenes se mantendrá.
 
 ==Mensajes de error==
@@ -175,25 +175,25 @@ El [[es/Sistema de revisión de órdenes|Sistema de revisión de órdenes]] se e
 
 ===Muy pocas órdenes en lista===
 Para que algunos vehículos puedan obtener beneficios, necesitan al menos dos estaciones en su lista (una de carga y otra de descarga). Los depósitos o puntos de ruta no cuentan, ya que no permiten cargar o descargar.
-[[File:es/Few-orders.png|none|frame|"<Vehículo> tiene muy pocas órdenes en lista".]]
+[[File:es/Manual/Few-orders.png|none|frame|"<Vehículo> tiene muy pocas órdenes en lista".]]
 
 ===Órdenes duplicadas===
 A veces una estación de forma accidental, seleccione dos veces consecutivas. Para la mayoría de los vehículos, esto puede causar un gran desorden, como por ejemplo que un avión que despegue y aterrice de nuevo en el mismo aeropuerto.
-[[File:es/Duplicate-orders.png|none|frame|"<Vehículo> tiene órdenes duplicadas".]]
+[[File:es/Manual/Duplicate-orders.png|none|frame|"<Vehículo> tiene órdenes duplicadas".]]
 
 ===Orden inválida===
 Si elimina una estación donde un vehículo tiene una parada, el "fantasma" de la estación será visible por un tiempo (en forma de etiqueta de color gris). Esto le permite reconstruir una estación en la misma ubicación que la antigua con el mismo nombre. Los vehículos volverán a ir a ese estación (si todavía es del tipo correcto) sin necesidad de cambiar las órdenes.
-[[File:es/Invalid-order.png|frame|none|Se ha eliminado una estación, y ha quedado en la lista una ''orden inválida''.]]
+[[File:es/Manual/Invalid-order.png|frame|none|Se ha eliminado una estación, y ha quedado en la lista una ''orden inválida''.]]
 
 Sin embargo, si usted la deja demasiado tiempo o de manera deliberada no construye una nueva estación para reemplazar la antigua, la estación fantasma desaparecerá al poco tiempo. Cualquier orden en los vehículos referida a esa estación, será reemplazada con el mensaje en rojo ''Orden inválida'' y se saltará.
 
 ===Estación inválida===
 Si elimina una parte de una estación (por ejemplo una parada de autobús que esté conectada a una estación de tren) la orden no se anulará ya que la estación todavía existe. Sin embargo, el vehículo no tiene manera de llegar a la estación ya que la instalación no acepta este tipo de autobuses. Esto obliga al vehículo a buscar repetidamente la estación.
-[[File:es/Invalid-station.png|frame|none|La estación todavía existe, pero ya no admite autobuses.]]
+[[File:es/Manual/Invalid-station.png|frame|none|La estación todavía existe, pero ya no admite autobuses.]]
 
 ==Vea también==
 * [[es/Órdenes condicionales|órdenes condicionales]]
 * [[es/Horarios|Horarios]]
 * [[es/Órdenes (antiguo)|artículo antiguo sobre órdenes]]
 
-[[Category:es/Vehículos|Ordenes]]
+[[Category:es/Manual/Base Set/Vehículos|Ordenes]]

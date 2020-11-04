@@ -3,7 +3,7 @@
 Il y a deux situations différentes avec les [[fr/Manual/Service d'approvisionnement|services d'approvisionnement]] dans lesquelles les véhicules peuvent afficher un revenu négatif (parfois d'un montant très élevé), bien qu'ils participent de façon importante à ce service. Cette page explique ce qui arrive et comment l'éviter.
 
 = Introduction =
-[[File:en/Feeder negative income.png|right|thumb|400px|Un service d'approvisionnement d'une mine de charbon vers une centrale électrique]]
+[[File:en/Manual/Feeder negative income.png|right|thumb|400px|Un service d'approvisionnement d'une mine de charbon vers une centrale électrique]]
 Considérez l'image comme un exemple de réseau. Le service transporte du charbon depuis la mine à la station A en bas à gauche, via une station B intermédiaire, jusqu'à la centrale électrique en haut à droite utilisant la station C. La première partie du trajet est effectuée par un train, la seconde par des véhicules routiers. Il est vrai que cet exemple est une manière assez stupide de livrée le charbon. Il aurait été bien plus facile et rapide de livrer le charbon en ligne droite en mettant la station B à l'emplacement de la C. Cependant, cela servira d'exemple pour notre sujet.
 
 Les deux cas sont différenciés par la manière dont la cargaison est échangée à la station intermédiaire B.
@@ -43,7 +43,7 @@ Un autre cas fréquent est la vitesse de livraison. Le paiement du train est fai
 Tout d'abord, comme expliqué ci-dessus, le revenu négatif est fait pour compenser des paiements effectués par avance pour une cargaison à des points intermédiaires du système d'approvisionnement.
 Donc, bien que cela semble un peu étrange, vous serez payé pour toute cargaison livrée. Il n'y a pas vraiment besoin de s'inquiéter de cela.
 
-[[File:en/Feeder systems percentage.png|right|thumb|Paramètre avancé pour réduire les paiements intermédiaires]]
+[[File:en/Manual/Feeder systems percentage.png|right|thumb|Paramètre avancé pour réduire les paiements intermédiaires]]
 Si vous n'êtes heureux qu'avec des paiements verts ou jaunes pour tous vos véhicules, vous pouvez réduire ou éliminer les revenus négatifs en modifiant une option avancée. Dans la [[fr/Archive/Manual/Settings/Options Avancées/Économie#pourcentage-du-profit-de-branche-a-payer-dans-les-systemes-multi-modaux|fenêtre 'Configuration avancée', section 'Économie']], il y a un paramètre "Pourcentage du profit de branche à payer dans les systèmes multi-modaux". Avec lui, vous pouvez réduire le montant touché par chaque véhicule aux stations intermédiaires. En conséquence, il y a davantage d'argent à toucher en fin de trajet, quand le véhicule livre la cargaison à sa destination finale.
 
 Notez qu'il s'agit d'un paramètre global; tous les véhicules utilisant l'ordre de transfert seront affectés par celui-ci.
