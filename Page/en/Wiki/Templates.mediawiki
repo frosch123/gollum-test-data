@@ -38,82 +38,82 @@ There are 6 types (colors) of boxes of messages:
 ===Notice type (blue)===
 {| style="border:0px; padding:5px; width=100%;"
 |- valign="top"
-|width=150;|{{en/S|Note| TEXT }}
+|width=150;|{{en/S|en/Note| TEXT }}
 |{{en/Note| TEXT }}
 |- valign="top"
-|{{en/S|Todo| TEXT }}
+|{{en/S|en/Todo| TEXT }}
 |{{en/Todo| TEXT |2= }}
 |- valign="top"
-|{{en/S|Expand| TEXT }}
-|{{en/Manual/Expand| TEXT |2= }}
+|{{en/S|en/Expand| TEXT }}
+|{{en/Expand| TEXT |2= }}
 |- valign="top"
-|{{en/S|Current}}
-|{{en/Wiki/Current|1= }}
+|{{en/S|en/Current}}
+|{{en/Current|1= }}
 |}
 
 ===Style type (yellow)===
 {| style="border:0px; padding: 5px; width=100%;"
 |- valign="top"
-|width=150;|{{en/S|Cleanup}}
-|{{en/Wiki/Cleanup|1= }}
+|width=150;|{{en/S|en/Cleanup}}
+|{{en/Cleanup|1= }}
 |- valign="top"
-|{{en/S|Translation | origin &#124; from &#124; to &#124; percentage}}
+|{{en/S|en/Translation | origin &#124; from &#124; to &#124; percentage}}
 |{{en/Translation||origin=en/Title}}
 |}
 
 ===Content type (orange)===
 {| style="border:0px; padding: 5px; width=100%;"
 |- valign="top"
-|width=150;|{{en/S|Warning| TEXT }}
+|width=150;|{{en/S|en/Warning| TEXT }}
 |{{en/Warning| TEXT }}
 |- valign="top"
-|{{en/S|Incomplete}}
+|{{en/S|en/Incomplete}}
 |{{en/Incomplete|1= }}
 |- valign="top"
-|{{en/S|Outdated}} <br> {{en/S|Outdated| TEXT }} 
+|{{en/S|en/Outdated}} <br> {{en/S|en/Outdated| TEXT }} 
 |{{en/Outdated|2= }} 
 |}
 ===Delete type (red)===
 {| style="border:0px; padding:5px; width=100%;"
 |- valign="top"
-|width=150;|{{en/S|Delete| Reason &#124; User name}}
+|width=150;|{{en/S|en/Delete| Reason &#124; User name}}
 |{{en/Delete|3= }} 
 |}
 
 ===Move type (purple)===
 {| style="border:0px; padding: 5px; width=100%;"
 |- valign="top"
-|width=150;|{{en/S|Merge|Page name}}
+|width=150;|{{en/S|en/Merge|Page name}}
 |{{en/Merge|en/Page name|2= }}
 |- valign="top"
-|width=150;|{{en/S|Mergeto|Page name}}
-|{{en/Wiki/Mergeto|en/Page name|2= }}
+|width=150;|{{en/S|en/Mergeto|Page name}}
+|{{en/Mergeto|en/Page name|2= }}
 |- valign="top"
-|width=150;|{{en/S|Mergefrom|Page name}}
-|{{en/Wiki/Mergefrom|en/Page name|2= }}
+|width=150;|{{en/S|en/Mergefrom|Page name}}
+|{{en/Mergefrom|en/Page name|2= }}
 |- valign="top"
-|{{en/S|Split|TEXT}}
+|{{en/S|en/Split|TEXT}}
 |{{en/Split|TEXT|2= }} 
 |}
 
 ===Protection type (gray)===
 {| style="border:0px; padding: 5px; width=100%;"
 |- valign="top"
-|width=150;|{{en/S|Historical}}
-|{{en/Wiki/Historical|1= }} 
+|width=150;|{{en/S|en/Historical}}
+|{{en/Historical|1= }} 
 |}
 
 == Specific Templates ==
 
 {| style="border:0px; padding: 5px; width=100%;"
 |- valign="top"
-|width=150;|{{en/S|Linking}}
+|width=150;|{{en/S|en/Wiki/Linking}}
 |{{en/Wiki/Linking}}
 |- valign="top"
-|{{en/S|Suggestions}}
+|{{en/S|en/Wiki/Suggestions}}
 |{{en/Wiki/Suggestions|1= }}
 |- valign="top"
-|{{en/S|License|type=your type}}
+|{{en/S|en/Wiki/License|type=your type}}
 |{{en/Wiki/License|type=PD}}
 |}
 
@@ -123,13 +123,13 @@ There are 6 types (colors) of boxes of messages:
 ! width=150;|Tags 
 !|Result
 |-
-|{{en/S|FutureFeature}}
+|{{en/S|en/Wiki/FutureFeature}}
 |{{en/Wiki/FutureFeature}}
 |-
-|{{en/S|Feature| your Version }}
+|{{en/S|en/Feature| your Version }}
 |{{en/Feature|1.0}}
 |-
-|{{en/S|nightly| TEXT }}
+|{{en/S|en/Wiki/Nightly| TEXT }}
 |{{en/Wiki/Nightly| TEXT }}
 |}
 
@@ -139,13 +139,13 @@ There are 6 types (colors) of boxes of messages:
 ! width=150;|Tags 
 !|Result
 |-
-|{{en/S|Progress bar | 50 }}
+|{{en/S|en/Development/Design Drafts/Progress bar | 50 }}
 |{{en/Development/Design Drafts/Progress bar| 50}}
 |-
-|{{en/S|Progress bar 32bpp tracker | category}}
+|{{en/S|en/Wiki/Progress bar 32bpp tracker | category}}
 |{{en/Wiki/Progress bar 32bpp tracker|ground terrain}}
 |-
-|{{en/S|Other_languages | ... }}}
+|{{en/S|en/Other languages | ... }}}
 |
 |}
 
@@ -154,16 +154,16 @@ There are 6 types (colors) of boxes of messages:
 !width=150px| What to type 
 !width=55%| What it produces 
 |-
-|{{en/S|Forum| Caption &#124; Forum/Topic/Post }}
+|{{en/S|en/Forum| Caption &#124; Forum/Topic/Post }}
 |Link to TT-Forums forum/topic/post. See [[Template:en/Forum|examples]].
 |-
-|{{en/S|User| User name }}
+|{{en/S|en/Manual/User| User name }}
 | {{en/Manual/User| User name }} 
 |-
-|{{en/S|Check| Type &#124; Color &#124; Size }}
+|{{en/S|en/Wiki/Check| Type &#124; Color &#124; Size }}
 |{{en/Wiki/Check|Yes|Green|20px}} or {{en/Wiki/Check|No|Red|20px}} or {{en/Wiki/Check|No|Black|20px}} etc...
 |-
-|{{en/S|Emoticon| Code &#124; Size }}
+|{{en/S|en/Manual/Emoticon| Code &#124; Size }}
 |{{en/Manual/Emoticon|:)}} or {{en/Manual/Emoticon|;)}} or {{en/Manual/Emoticon|:((}} etc...
 |}
 
