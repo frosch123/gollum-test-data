@@ -1,0 +1,380 @@
+= NewGRF Road Types Specification =
+
+== Action 0 - Properties for road types ==
+
+Defining properties of road types.
+
+Note: This feature is not currently available in Openttd.
+
+''' Properties '''
+
+{| class="wikitable"
+|-
+!'''Number'''
+!'''Size'''
+!'''Description'''
+|-
+|08
+|4*B
+|Road type label
+|-
+|09
+|W
+|StringID: Build road toolbar caption
+|-
+|0A
+|W
+|StringID: Road construction dropdown text
+|-
+|0B
+|W
+|StringID: Build vehicle window caption
+|-
+|0C
+|W
+|StringID: Autoreplace text
+|-
+|0D
+|W
+|StringID: New vehicle text
+|-
+|0E
+|B n*D 
+|Compatible road/tramway type list
+|-
+|0F
+|B n*D 
+|Powered road/tramway type list
+|-
+|10
+|B
+|Road type flags
+|-
+|11
+|B
+|Curve speed advantage multiplier
+|-
+|12
+|B
+|Station (and depot) graphics
+|-
+|13
+|W 
+|Construction costs
+|-
+|14
+|W
+|Speed limit
+|-
+|15
+|B
+|Acceleration model
+|-
+|16
+|B
+|Minimap colour
+|-
+|17
+|D
+|Introduction date
+|-
+|18
+|B n*D 
+|Introduction required road/tramway type list
+|-
+|19
+|B n*D 
+|Introduced road type list
+|-
+|1A
+|B
+|Sort order
+|}
+
+In NFO, road type IDs will be GRF local, with an ID to label mapping. Therefore to modify an existing road type, specify its label in property 08. To create a new road type, again just specify its label in property 08. This way there is no need for complex GRM mechanisms to allocate IDs. If a label 'clashes' with another GRF, then one GRF will end up modifying the properties instead of creating a new road type.
+
+When a new road type is created, it is populated with the information from the first road type, except that the compatible and powered list contain only the road type being created. However, no default values should be assumed, as the first road type may have been modified.
+
+''' Comments '''
+
+''' Road type label (08) '''
+
+These are globally unique four-letter identifiers for specific road types (analoguous to [[en/Action0Cargos#cargo-label-17|cargo labels]]), used to make various road types accessible from road vehicle grfs. Reserved labels for default road types are:
+
+{| class="wikitable
+|-
+!'''Label'''
+!'''Road Type'''
+|-
+|ROAD 
+| Normal Road
+|-
+|TRAM 
+| Electrified Tramway
+|}
+
+Road type sets may use up to 16 roadtypes and have to specify their own [[en/RoadtypeLabels|labels]].
+
+See also [[en/Action0GeneralVariables#road-type-translation-table-12|Road Type Translation Table]] for further info.
+
+''' Build road toolbar caption (09) '''
+
+String ID of the name of the road type as shown in the toolbar caption.
+
+OpenTTD before r20342 and 1.0.3 require the string to start with the white control code. Later versions of OpenTTD will automatically default to white.
+
+''' Road construction dropdown text (0A) '''
+
+String ID for text in the dropdown of all road types.
+
+This string must never start with a colour control code.
+
+''' Build vehicle window caption (0B) '''
+
+String ID for build vehicle window caption.
+
+OpenTTD before r20342 and 1.0.3 require the string to start with the white control code. Later versions of OpenTTD will automatically default to white.
+
+''' Autoreplace text (0C) '''
+
+String ID for road type shown in autoreplace window.
+
+''' New vehicles (0D) '''
+
+StringID to use for showing texts of the type "We have invented a new &lt;road type&gt; vehicle".
+
+''' Compatible road type list (0E) '''
+
+List of road types on which vehicles of this road type can run.
+
+The format is:
+
+<pre>0E &lt;nvar&gt; (&lt;road type label&gt;){n}</pre>
+
+That is you give the number of compatible road types in a single byte followed by a list of that length of road type labels. A road type is automatically compatible (and powered) with itself, so you don't need to list the current road type.
+
+Note that these properties apply to vehicles of this road type, not the road itself. If you want vehicles of other road types to be able to run on your road types, you must set the compatible road types property for each road type. Setting these properties behaves always incremental, so you only need to the set additional bits for each other road type, you cannot remove compatibility/poweredness once it is set (by some other grf).
+
+''' Powered road type list (0F) '''
+
+List of road types on which vehicles of this road type are powered. E.g. vehicles of "normal tramway"-type are powered on "electrified tramway"-type as well.
+
+Same format as for property 0E above.
+
+''' Road type flags (10) '''
+
+Flags to define properties related to the road type:
+
+{| class="wikitable"
+|-
+!'''Bit'''
+!'''Value'''
+!'''Meaning'''
+|-
+|0
+|1
+|Draw catenary for this road
+|}
+
+''' Curve Speed advantage multiplier (11) '''
+
+This property sets the multiplier to the curve speed advantage which all vehicles running on this track type get. The base curve speed advantage is given by the multiplication of the value of this property with the base speed advantage - which depends on the curve length in wagons:
+
+{| class="wikitable"
+|-
+!'''Curve Length'''
+!'''Base Speed Adv.'''
+|-
+|0 (90° turn) 
+|30
+|-
+|1 (2x45° turn) 
+|44
+|-
+|2
+| 55
+|-
+|3
+| 66
+|-
+|4
+| 75
+|-
+|5
+| 84
+|-
+|6
+| 91
+|-
+|7
+| 98
+|-
+|8
+| 103
+|-
+|9
+| 108
+|-
+|10
+| 111
+|-
+|11
+| 114
+|-
+|12+
+| 115
+|}
+
+"Curve length" is the average number of wagons of the vehicle between turns. However, very sharp turns (values 0 and 1) are not averaged out in longer vehicles.
+
+The maximum speed for a vehicle in a curve is defined by "base speed advantage" * (2 + "property 11").
+
+For the default road types this property is 0 for normal road and 1 for electrified tramway/
+
+''' Station (and depot) graphics (12) '''
+
+This property defines the default graphics for the stations. If no depot sprites are defined, this also defines at the same time the depot sprites to be used. There are two kind of default stations (and depots), usually associated with roads and tramways. Valid values are:
+
+{| class="wikitable"
+|-
+!'''Value'''
+!'''Meaning'''
+|-
+|0
+|Normal road
+|-
+|1
+|Tramway
+|}
+
+''' Speed limit (14) '''
+
+Speed limit in mph*1.6 (approx. km/h). Set to "0" for no limit at all.
+
+''' Acceleration model (15) '''
+
+This property defines the acceleration model used. Valid values range from 0 to 1:
+
+{| class="wikitable"
+|-
+!'''Value'''
+!'''Meaning'''
+|-
+|0
+|Normal road
+|-
+|1
+|Tramway
+|}
+
+''' Map colour (16) '''
+
+This property defines the colour this track type is drawn in the minimap view. The byte value specifies the colour entry in the [[en/PalettesAndCoordinates|DOS palette]].
+
+''' Introduction date (17) '''
+
+This property defines the long date formatted introduction date of this road type. With this property set the road type will be introduced at (or after) this date when all of the introduction required road types are available to the company of the player, or whenever a vehicle using this road type gets introduced whichever is first.
+
+''' Introduction required road type list (18) '''
+
+List of road types on that need to be available to the company of the player for this road type to be introduced at (or after) the introduction date. This limit does not apply when the road type is introduced by the introduction of a vehicle.
+
+Same format as for property 0E above.
+
+This can, for example, be used to introduce a third road with catenary track type when both third road and catenary road types are available.
+
+''' Introduced road type list (19) '''
+
+List of road types that get introduced when this road type is introduced. For example, to make sure that when a fast road type is introduced the slow variant exists.
+
+Same format as for property 0E above.
+
+''' Sort order (1A) '''
+
+Property for influencing the sort order of the drop down lists with road types. Default values are as follows:
+
+{| class="wikitable"
+|-
+!'''Value'''
+!'''Meaning'''
+|-
+|07
+|Normal road
+|-
+|17
+|Tramway
+|-
+|n7
+|roadtype #n
+|}
+
+Thus the road type that (internally) gets index 8 will get a default value of 87. These defaults are to keep the ordering when this property is not supported as they were.
+
+
+== Action 3 Cargo Types ==
+
+Roadtypes are currently unavailable in OpenTTD. As with roadtypes, its action 3 will re-use the 'cargo'-type definition in order to assign the type of graphics defined by the associated set-ID:
+
+{| class="wikitable"
+|-
+!'Cargo' Type
+!Sprite Type
+!#Sprites
+!Useage
+|-
+|00
+|Icons and cursors
+|16
+|4 road directions (in cases diagonal roads is implemented), autoroad, depot, tunnel and convert road . First all icons, then all cursors.
+|-
+|01
+|Tunnel
+|4
+|1 sprite for each direction. Sprite is overlay for track in existing tunnel graphics. The original ground sprite is drawn, then the overlay, then possibly a road vehicle and the original tunnel head is drawn over the top. This keeps compatibility with different landscape types. Sprite order: SW, NW, NE, SE.
+|-
+|02
+|Catenary wire
+|28
+|Follows the same layout for wires of the first 28 sprites as Action5 type 5.
+|-
+|03
+|Catenary pylons
+|8
+|Follows the same layout for pylons of the 8 sprites after the wires as Action5 type 5.
+|-
+|04
+|Bridge surfaces
+|6
+|10 sprites if we ever include diagonal bridges.
+|-
+|05
+|Depots
+|6
+|2 sprites for each southish, 1 sprite for each northish. Follows the original layout for depot sprites.(a)
+|}
+
+(a)Depot sprites:
+
+{| class="wikitable
+|-
+!Sprite Number
+!Usage
+|-
+|0
+| &nbsp; &nbsp;NE wall for SE-entry depot.
+|-
+|1
+| &nbsp; &nbsp;Depot building for SE-entry depot.
+|-
+|2
+| &nbsp; &nbsp;NW wall for SW-entry depot.
+|-
+|3
+| &nbsp; &nbsp;Depot building for SW-entry depot.
+|-
+|4
+| &nbsp; &nbsp;Depot building for NE-entry depot.
+|-
+|5
+| &nbsp; &nbsp;Depot building for NW-entry depot.
+|}

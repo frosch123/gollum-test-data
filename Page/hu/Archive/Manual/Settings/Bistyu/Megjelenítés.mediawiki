@@ -1,0 +1,635 @@
+[[Translation:en/Archive/Manual/Settings/Advanced Settings/Interface]]
+
+{| align="center" style="margin:0;<br />"
+|- valign="top"
+|style="padding: 0;<br /> border: 0;<br /> background: transparent;<br />"|__TOC__
+|}
+===Honosítás===
+{| class="wikitable mw-collapsible" style="margin: auto;"
+|- 
+! Név
+! Lehetséges értékek
+! Alapértelmezett érték
+! Beállítás szintje
+! Hatóköre
+|- 
+| '''Sebesség mértékegysége'''
+| Angolszász (mi/h);<br /> metrikus (km/h);<br /> SI (m/s)
+| metrikus
+| Alap                 
+| Játék
+|- 
+| '''Teljesítmény mértékegysége'''
+| Angolszász (LE);<br /> Metrikus (LE);<br /> SI (kW)
+| Metrikus (LE)
+| Alap                 
+| Játék
+|- 
+| '''Tömeg mértékegysége'''
+| Angolszász (angolszász tonna);<br /> Metrikus (t/tonna);<br /> SI (kg)
+| Metrikus (t/tonna)
+| Alap                 
+| Játék
+|-
+| '''Űrtartalom mértékegysége'''
+| Angolszász (gal);<br /> Metrikus (l);<br /> SI (m3)
+| Metrikus (l)
+| Alap                 
+| Játék
+|- 
+| '''Vonóerő mértékegysége'''
+| Angolszász (lbf);<br /> Metrikus (kp);<br /> SI (kN)
+| SI (kN)
+| Alap                 
+| Játék
+|- 
+| '''Hosszúságok mértékegysége'''
+| Angolszász (láb);<br /> Metrikus (m);<br /> SI (m)
+| Metrikus (m)
+| Alap                 
+| Játék
+|}
+===Megjelenítési beállítások===
+{| class="wikitable mw-collapsible" style="margin: auto;"
+|- 
+! Név
+! Lehetséges értékek
+! Alapértelmezett érték
+! Leírás
+! Beállítás szintje
+! Hatóköre
+! Bevezető verzió
+! Az openttd.cfg változójaként
+|- 
+| '''Játékmentés dátumformátuma'''
+| Hosszú (31th Dec 2008);<br /> Rövid (31-12-2008);<br /> ISO (2008-12-31)
+| Hosszú (31th Dec 2008)
+| A játékmentés elnevezésében használt dátum formátuma
+| Haladó               
+| Kliens
+| 0.7.0
+| [gui] date_format_in_default_names
+|-
+| '''Mutassa a település lakosságát a feliratban'''
+| Be/Ki
+| Be
+| Település lakosságszámának kijelzése a címkéjén
+| Haladó               
+| Kliens
+| 0.3.6
+| [gui] population_in_label
+|-
+| '''Területinformációk mutatása építési eszközök használatakor'''
+| Be/Ki
+| Be
+| Mezők közti távolságok és/vagy magasságkülönbségek megjelenítése húzás közben építkezéskor
+| Alap                 
+| Kliens
+| 0.5.0
+| [gui] measure_tooltip
+|-
+|'''Rakodásjelző használata'''
+| Kikapcsolva;<br /> Saját vállalat;<br /> Minden vállalat
+| Saját vállalat
+| A [[hu/Archive/Manual/Rakodásjelző|rakodásjelző]] megjelenítése a be- és kirakodó járművek felett
+| Alap                 
+| Kliens
+| 0.5.0
+| [gui] loading_indicators
+|- 
+| '''Járművek egyedi színezésének mutatása'''
+| Egyikét sem;<br /> Csak a sajátét;<br /> Minden vállalatét
+| Minden vállalatét
+| A [[File:en/Company information button.png|Céginformáció]] Céginformáció-menü '''Színséma''' pontjában meghatározott színek használata
+| Haladó               
+| Kliens
+| 0.5.0
+| [gui] liveries
+|-
+| '''Vágányszakasz foglaltságának jelzése'''
+| Be/Ki
+| Ki
+| A vonatok által lefoglalt vágányutak jelölése más színnel. Hasznos az [[hu/Manual/Jelzők#utvonaljelzok|irányjelzési rendszerrel]] kapcsolatos vonatmegállási problémák megoldása során.
+| Alap                 
+| Kliens
+| 0.7.0
+| [gui] show_track_reservation
+|- 
+| '''Kiadási/bevételi adatok csoportosítása a pénzügyi ablakban'''
+| Be/Ki
+| Ki
+| A [[File:en/Finances screen button.png|Pénzügyi adatok]] '''Pénzügyi adatok''' ablak elrendezésének beállítása
+| Haladó               
+| Kliens
+| 0.7.0
+| [gui] expenses_layout
+|- 
+| '''Föld színe a térképen'''
+| Zöld;<br /> Sötétzöld;<br /> Sötétkék
+| Zöld
+| A talaj színe a [[File:en/Minimap button.png|Világtérkép]] Világtérképen
+| Haladó               
+| Kliens
+| 1.0.0
+| [gui] smallmap_land_colour
+|- 
+| '''A nagyítás maximális mértéke'''
+| 4x;<br /> 2x;<br /> Normál
+| 4x
+| Maximális nagyítás mértéke. A nagyobb nagyítási mérték több memóriát igényel
+| Haladó               
+| Kliens
+| 1.2.0
+| [gui] zoom_max
+|- 
+| '''A kicsinyítés maximális mértéke'''
+| 2x;<br /> 4x;<br /> 8x
+| 8x
+| Maximális kicsinyítés mértéke. A nagyobb kicsinyítési mérték szaggatást okozhat
+| Haladó               
+| Kliens
+| 1.2.0
+| [gui] zoom_min
+|- 
+| '''A vonalak vastagsága a grafikonokon'''
+| 1-5
+| 3
+| Vonalak szélessége a [[File:en/Graphs button.png|Grafikonok]] grafikonokon. A vékony vonal pontosabb információt nyújt, míg a vastagabb jobban látható, és a színek jobban megkülönböztethetőek.
+| Haladó               
+| Kliens
+| 1.2.0
+| [gui] graph_line_thickness
+|}
+===Irányítás===
+{| class="wikitable mw-collapsible" style="margin: auto;"
+|- 
+! scope="col" width="225px" | Név
+! Lehetséges értékek
+! Alapértelmezett érték
+! Leírás
+! Beállítás szintje
+! Hatóköre
+! Bevezető verzió
+! Az openttd.cfg változójaként
+|-
+| '''Ablakillesztés távolsága'''
+| 0-32 pixel
+| 10 pixel
+| Az ablakok közti automatikus távolság, ha egérhúzással két ablakot illesztünk egymás mellé.
+| Szakértő                      
+| Kliens
+| 0.3.5
+| [gui] window_snap_radius
+|-
+| '''Nem zárolt ablakok maximális száma'''
+| Kikapcsolva;<br /> 5-255
+| 20
+| Ha a nem [[hu/Archive/Manual/Felhasználói felület egyéb elemei#zarolt-ablakok|zárolt]] ablakok száma a beállított értéket a képernyőn elérte, új ablak megnyitása esetén a régi ablakok bezárásra kerülnek, hogy legyen hely az új ablakok számára.
+| Szakértő                      
+| Kliens
+| 0.7.0
+| [gui] window_soft_limit
+|-
+| '''Tájrendező eszköztár megnyitása az építési eszköztárakkal'''
+| Be/Ki
+| Ki
+| Egy közlekedési ág építési eszköztárának megnyitásakor a [[hu/Manual/Tájrendezés|Tájrendező eszköztárat]] is nyissa meg
+| Haladó               
+| Kliens
+| 0.4.0.1
+| [gui] link_terraform_toolbar
+|-
+| '''Alapesetben csapatban beszélsz <ENTER>-rel'''
+| Be/Ki
+| Ki
+| Az <ENTER> és a <Ctrl+ENTER> billentyű működésének felcserélése a csapaton belüli és publikus beszélgetésekhez. Így <ENTER>-rel elküldött üzenetedet csak a csapattársak látják. ''Lásd: [[hu/Manual/Hálózati játék|Hálózati játék]]''
+| Alap                 
+| Kliens
+| 0.5.0
+| [gui] prefer_teamchat
+|-
+| '''Ablakmozgatás, ha az egér a képernyő szélén van'''
+| - Kikapcsolva;<br /> <br /> - fő nézet, csak teljes képernyős módban;<br /> <br />- fő nézet;<br /><br />- Minden látkép
+| Kikapcsolva
+| Bekapcsolva görgetődik a látkép, ha az egér az ablak széléhez közel van
+| Alap                 
+| Kliens
+| 0.2.0
+| [gui] autoscroll
+|-
+| '''Inverz görgetési irány'''
+| Ki, Be
+| Ki
+| A térkép jobb gombbal történő görgetésének viselkedése. Kikapcsolva az egér a kamerát mozgatja, bekapcsolva pedig a térképet.
+| Alap                 
+| Kliens
+| 0.4.5
+| [gui] reverse_scroll
+|-
+| '''Finomított nézőpont-görgetés'''
+| Be/Ki
+| Ki
+| Beállítható, hogy a fő nézet hogyan mozogjon egy adott pozícióra a térképre kattintáskor, ha egy adott objektumra történik mozgás. Bekapcsolva a nézet egyenletesen mozog, ha egy '''Megnéz''' gombra vagy egy újsághírre kattintunk, míg kikapcsolva közvetlenül a kijelölt helyre ugrik.
+| Haladó               
+| Kliens
+| 0.6.0
+| [gui] smooth_scroll
+|-
+| '''Bal gombos térképmozgatás'''
+| Be/Ki
+| Ki
+| Bal egérgombbal történő térképmozgatás engedélyezése. Különösen hasznos érintőképernyős mozgatás használata esetén. A funkció a régi, jobb egérgombbal történő húzás lehetőségét nem érinti, az most is érvényes.
+| Alap                 
+| Kliens
+| 0.7.0
+| [gui] left_mouse_btn_scrolling]]
+|-
+| '''Egérgörgő funkció'''
+| Térképnagyítás;<br /> Térképmozgatás;<br /> Ki
+| Térképnagyítás
+| Kétdimenziós egérgörgővel történő mozgatás engedélyezése
+| Alap                 
+| Kliens
+| 0.6.0
+| [gui] scrollwheel_scrolling
+|-
+| '''Egérgörgő sebessége a térképen'''
+| 1-15
+| 5
+| Egérgörgős mozgatás érzékenységének beállítása
+| Alap                 
+| Kliens
+| 0.6.0
+| [gui] scrollwheel_multiplier
+|-
+| '''Képernyőbillentyűzet'''
+| Kikapcsolva;<br /> Dupla kattintás;<br /> Egyszeres kattintás (amikor előtérben van);<br /> Egyszeres kattintás (azonnal)
+| Dupla kattintás
+| Válaszd ki a képernyőbillentyűzet ablak megnyitásának módját, hogy csak mutatóeszközzel is be tudj írni szöveget vagy számot. Ez a billentyűzet nélküli játéknál hasznos.
+| Alap                 
+| Kliens
+| 0.7.0
+| 
+|}
+===Hangeffektek===
+{| class="wikitable mw-collapsible" style="margin: auto;"
+|- 
+! Név
+! Lehetséges értékek
+! Alapértelmezett érték
+! Leírás
+! Beállítás szintje
+! Hatóköre
+|-
+| '''Gombra kattintás'''
+| Be/Ki
+| Be
+| 
+| Haladó               
+| Kliens
+|-
+| '''Építkezés'''
+| Be/Ki
+| Be
+| Hanglejátszás sikeres építkezés vagy más tevékenység után
+| Haladó               
+| Kliens
+|-
+| '''Hírsáv'''
+| Be/Ki
+| Be
+| Hanglejátszás új hír érkezésekor
+| Haladó               
+| Kliens
+|-
+| '''Újság'''
+| Be/Ki
+| Be
+| Hanglejátszás az újság megjelenésekor
+| Haladó               
+| Kliens
+|-
+| '''Év vége'''
+| Be/Ki
+| Be
+| 
+| Haladó               
+| Kliens
+|-
+| '''Katasztrófák/balesetek'''
+| Be/Ki
+| Be
+| 
+| Haladó               
+| Kliens
+|-
+| '''Járművek'''
+| Be/Ki
+| Be
+| 
+| Haladó               
+| Kliens
+|-
+| '''Terület'''
+| Be/Ki
+| Be
+| Az ipar, városok és tájak környezeti hangjainak lejátszása
+| Haladó               
+| Kliens
+|}
+===Hírek és üzenetek===
+{| class="wikitable mw-collapsible" style="margin: auto;"
+|- 
+! Név
+! Lehetséges értékek
+! Alapértelmezett érték
+! Leírás
+! Beállítás szintje
+! Hatóköre
+! Bevezető verzió
+! Az openttd.cfg változójaként
+|- 
+|-
+| '''Első jármű megérkezése a játékos megállójába'''
+| Ki; Kivonat; Teljes
+| Teljes
+| Újság megjelenítése amikor a cég '''új''' állomásához megérkezik az első jármű
+| Haladó               
+| Kliens
+| 
+| 
+|-
+| '''Első jármű megérkezése az ellenfél megállójába'''
+| Ki; Kivonat; Teljes
+| Kivonat
+| 
+| Haladó               
+| Kliens
+| 
+| 
+|-
+| '''Balesetek / természeti csapások'''
+| Ki; Kivonat; Teljes
+| Teljes
+| 
+| Haladó               
+| Kliens
+| 
+| 
+|-
+| '''Vállalati információk'''
+| Ki; Kivonat; Teljes
+| Teljes
+| Újságcikk megjelenítése  amikor egy új cég alapul vagy csődközelbe kerül
+| Haladó               
+| Kliens
+| 
+| 
+|-
+| '''Új gazdasági épületek megjelenése'''
+| Ki; Kivonat; Teljes
+| Kivonat
+| Újságcikk megjelenítése  amikor új ipartelep nyílik
+| Haladó               
+| Kliens
+| 
+| 
+|-
+| '''Gazdasági épületek bezárása'''
+| Ki; Kivonat; Teljes
+| Teljes
+| 
+| Haladó               
+| Kliens
+| 
+| 
+|-
+| '''Gazdasági változások'''
+| Ki; Kivonat; Teljes
+| Teljes
+| Újságcikk megjelenítése a '''globális''' gazdasági változásokkal kapcsolatban
+| Haladó               
+| Kliens
+| 
+| 
+|-
+| '''Termelésváltozások a vállalatod által kiszolgált gazdasági létesítményeknél'''
+| Ki; Kivonat; Teljes
+| Kivonat
+| 
+| Haladó               
+| Kliens
+| 
+| 
+|-
+| '''Termelésváltozások a konkurenseid által kiszolgált gazdasági létesítményeknél'''
+| Ki; Kivonat; Teljes
+| Ki
+| 
+| Haladó               
+| Kliens
+| 
+| 
+|-
+| '''Más gazdasági termelési változások'''
+| Ki; Kivonat; Teljes
+| Ki
+| 
+| Haladó               
+| Kliens
+| 
+| 
+|-
+| '''A vállalat járműveire vonatkozó ötletek / információk'''
+| Ki; Kivonat; Teljes
+| Teljes
+| Üzenet megjelenítése beavatkozást igénylő járművekkel kapcsolatban
+| Haladó               
+| Kliens
+| 
+| 
+|-
+| '''Új járművek'''
+| Ki; Kivonat; Teljes
+| Teljes
+| Újság megjelenítése, amikor egy új jármű elérhetővé válik
+| Haladó               
+| Kliens
+| 
+| 
+|-
+| '''Rakományok elfogadásának változásai'''
+| Ki; Kivonat; Teljes
+| Teljes
+| 
+| Haladó               
+| Kliens
+| 
+| 
+|-
+| '''Támogatások'''
+| Ki; Kivonat; Teljes
+| Kivonat
+| Újság megjelenítése szállítási támogatásokkal kapcsolatban
+| Haladó               
+| Kliens
+| 
+| 
+|-
+| '''Általános információk'''
+| Ki; Kivonat; Teljes
+| Teljes
+| Újság megjelenítése mely információkat tartalmaz általános eseményekről, mint például exkluzív szállítási jogok vásárlása vagy új útfelújítási hozzájárulás
+| Haladó               
+| Kliens
+| 
+| 
+|-
+| '''Színes újságcikkek megjelenése'''
+| 0-5000000
+| 2000
+| Az év, amelytől az újságok színesben jelennek meg. Az adott év előtt azok fekete-fehérek
+| Szakértő                      
+| Kliens
+| 0.3.2
+| [gui] colored_news_year
+|}
+===Megjelenítés - Egyéb beállítások ===
+{| class="wikitable mw-collapsible" style="margin: auto;"
+|- 
+! Név
+! Lehetséges értékek
+! Alapértelmezett érték
+! Leírás
+! Beállítás szintje
+! Hatóköre
+! Bevezető verzió
+! Az openttd.cfg változójaként
+|-
+| '''Pénzügyi összesítés minden év végén'''
+| Be/Ki
+| Be
+| Bekapcsolva a pénzügyi összesítő minden év végén felbukkan, elősegítve a vállalat anyagi helyzetének könnyű ellenőrzését
+| Alap                 
+| Kliens
+| 0.2.0
+| [gui] show_finances
+|-
+| '''Hibaüzenetek időtartama'''
+| 1-20 másodperc
+| 5 másodperc
+| A piros ablakban megjelenő hibaüzenetek kijelzésének időtartama. Bizonyos (kritikus) hibaüzenetek nem záródnak be automatikusan egy idő után, hanem kézzel kell őket bezárni.
+| Haladó               
+| Kliens
+| 0.3.2
+| [gui] errmsg_duration
+|-
+| '''Leírás megjelenítése'''
+| Jobb klikk; <br /> Várakozás 0-5 másodpercig
+| Várakozás 2 másodpercig
+| Késleltetés beállítása, mielőtt megjelenne az eszközleírás az egér ráhúzása után egy felületi elemen, vagy a leírás az egér jobb gombjával legyen elérhető
+| Haladó               
+| Kliens
+| 1.1.0
+| [gui] hover_delay
+|-
+| '''A fő eszközsor helye'''
+| Balra; <br /> Középen; <br /> Jobbra
+| Középen
+| A fő eszközsor vízszintes elhelyezésének beállítása a képernyő tetején
+| Alap                 
+| Kliens
+| 0.3.4
+| [gui] toolbar_pos
+|-
+| '''Állapotsor elhelyezkedése'''
+| Balra; <br /> Középen; <br /> Jobbra
+| Középen
+| Az állapotsor vízszintes elhelyezésének beállítása a képernyő alján
+| Alap                 
+| Kliens
+| 1.1.0
+| [gui] statusbar_pos
+|-
+| '''Alapértelmezett paletta NewGRF-eknek ha nincs meghatározva'''
+| Alapértelmezett (D) paletta; <br /> Hagyományos (W) paletta
+| Hagyományos (W) paletta
+| Alapértelmezett paletta, melyet a NewGRF-ek használnak amennyiben nincs meghatározva, hogy melyikre van szükségük
+| Szakértő                      
+| Kliens
+| 
+|
+|-
+| '''Automatikus szünettel kezdés új játék esetén'''
+| Be/Ki
+| Ki
+| Bekapcsolva a játék szünettel kezdődik, időt hagyva a térkép közelebbi tanulmányozására
+| Alap                 
+| Kliens
+| 0.6.0
+| [gui] pause_on_newgame
+|-
+| '''Továbbfejlesztett járműlista használata'''
+| Kikapcsolva; <br /> Saját vállalat; <br /> Minden vállalat
+| Saját vállalat
+| Továbbfejlesztett járműlista használatának engedélyezése a [[hu/Manual/Járműcsoportok|járművek csoportosításához]]
+| Haladó               
+| Kliens
+| 0.6.0
+| [gui] advanced_vehicle_list
+|-
+| '''Menetrend-idő alapegység tick a nap helyett'''
+| Be/Ki
+| Ki
+| Az utazási idők megjelenítése napok helyett tickekben, ezzel növelve meg a menetrend pontosságát. 1 játéknap (kb. 2,5 másodperc) kb. = 74 tick
+| Szakértő                      
+| Kliens
+| 0.6.0
+| [gui] timetable_in_ticks
+|-
+| '''Indulás és érkezés megjelenítése a menetrendekben'''
+| Be/Ki
+| Be
+| Várható indulás és érkezés megjelenítése a menetrendekben
+| Haladó               
+| Kliens
+| 1.0.0
+| [gui] timetable_arrival_departure
+|-
+| '''Utasításlista gyors elkészítése'''
+| Be/Ki
+| Ki
+| Ha új jármű utasításlistája üres, az '''Új cél''' gombot aktíválja és kijelölve tartja, így az állomásokat sorban az utasításlistára vehetjük anélkül, hogy az egyes állomások felvétele után az '''Új cél''' gombra kellene kattintani.
+| Alap                 
+| Kliens
+| 0.7.0
+| [gui] quick_goto
+|-
+| '''Alapértelmezett vasúti pályatípus'''
+| Első elérhető; <br /> Utolsó elérhető; <br /> Legtöbbet használt
+| Első elérhető
+| Egy játék kezdete vagy betöltése után a [[hu/Manual/Vasútépítés|vasútépítő eszköztár]] -- első megnyitásakor -- az ennek a beállításnak megfelelő pálya építését kínálja fel. <br />'''Első elérhető''': a legrégebbi típusú pálya, '''Utolsó elérhető''': a legújabb típusú pálya, '''Legtöbbet használt''': az a pályatípus, amelyet a mentett és betöltött játék a legtöbb helyen használ.
+| Alap                 
+| Kliens
+| 0.6.0
+| [gui] default_rail_type
+|-
+| '''Infrastruktúra építésének tiltása amíg nem elérhető megfelelő jármű'''
+| Be/Ki
+| Be
+| Bekapcsolva az infrastruktúra csak akkor elérhető, ha van megfelelő jármű, megakadályozva a felesleges pénzköltést a kihasználhatatlan infrastruktúrára
+| Szakértő                      
+| Kliens
+| 0.6.0
+| [gui] always_build_infrastructure
+|-
+| '''Építő eszközök aktívak maradnak használat után'''
+| Be/Ki
+| Be
+| Az építő eszközök, pl. hidak, alagutak stb. aktívan tartása használatuk után
+| Alap                 
+| Kliens
+| 0.7.0
+| [gui] persistent_buildingtools
+
+|}

@@ -1,0 +1,186 @@
+This is a *heavy* WIP detailing the installation and setting up of MinGW64 and MSYS64, to allow Win64 builds to be made. WARNING: Use at own risk! Do not at any point overwrite any existing MinGW32 folders!
+
+==Introduction==
+This page contains guidelines for compiling OpenTTD for Win64 with '''MinGW64'''.
+
+==List of packages==
+This tutorial has been tested with the following versions of the required packages:
+
+* OpenTTD 1.2.x or trunk.
+* [http://sourceforge.net/projects/mingw/files/Installer/mingw-get-inst/mingw-get-inst-20120426/ mingw-get-inst-20120426]
+* [http://sourceforge.net/projects/mingw-w64/files/External%20binary%20packages%20%28Win64%20hosted%29/MSYS%20%2832-bit%29/ msys64-20111123]
+* [http://sourceforge.net/projects/mingw-w64/files/Toolchains%20targetting%20Win64/Automated%20Builds/mingw-w64-bin_i686-mingw_20111220.zip/download mingw64-20111220]
+* [http://dll-files.org/public/www_dll-files_org_libgcc_s_sjlj-1.dll.zip libgcc_s_sjlj-1.dll]
+* [http://zlib.net/zlib-1.2.7.tar.gz zlib-1.2.7]
+* [http://sourceforge.net/projects/libpng/files/libpng15/1.5.11/libpng-1.5.11.tar.xz/download libpng-1.5.11]
+* [http://www.oberhumer.com/opensource/lzo/download/lzo-2.06.tar.gz lzo-2.06]
+* [http://sourceforge.net/projects/freetype/files/freetype2/2.4.9/freetype-2.4.9.tar.gz/download freetype-2.4.9]
+* [http://ftp.gnome.org/pub/gnome/binaries/win64/dependencies/gettext-runtime_0.18.1.1-2_win64.zip gettext-runtime_0.18.1.1-2]
+* [http://ftp.gnome.org/pub/gnome/binaries/win64/glib/2.26/glib_2.26.1-1_win64.zip glib_2.26.1-1]
+* [http://ftp.gnome.org/pub/gnome/binaries/win64/dependencies/pkg-config_0.23-2_win64.zip pkg-config_0.23-2]
+* [http://tukaani.org/xz/xz-5.0.3.tar.gz xz-5.0.3]
+* [http://download.icu-project.org/files/icu4c/4.6/icu4c-4_6-src.zip libicu-4.6]
+
+Note that you should not need to download any of these in advance except for the first four. All others will be obtained within MinGW/MSYS. Subversion is not included here, as there exists no compatible command-line version for MinGW/MSYS64 - and you may wish to use Git or Mercurial instead. Obtaining the source here is up to you.
+
+==Installing MinGW and MSYS - 32 bit==
+We need a working 32-bit installation ready, just as if we were compiling for win32:
+#Download and run mingw-get-inst (the download link can be found in the previous section).
+#Select "Use pre-packaged repository catalogues".
+#Review and accept the License agreement.
+#Please note that MinGW should be installed to a directory path that doesn't contain any spaces. This method has been tested with a directory path of C:\MinGW.
+#Select C++ Compiler and MSYS Basic System as optional components.
+#Wait until every package has been downloaded and installation is finished.
+
+==Setting up MSYS - 32 bit==
+<b>Go to your msys folder (by default it is found at C:\MinGW\msys\1.0), open etc\fstab with a text editor (for example Notepad) and add the following line at the end of the file:
+<pre>C:\MinGW\   /usr/local</pre></b>
+On Windows 7 and Vista if you have UAC enabled, to let MSYS fully work you'll need additional steps. Go to your msys folder (C:\MinGW\msys\1.0), open msys.bat with a text editor (for example Notepad) and add the following line after @echo off:
+<pre>cd "C:\MinGW\msys\1.0"</pre>
+And if disk C: (or where you have msys installed) is not disk where your Windows is installed add one more line
+<pre>C:</pre>
+After saving the file, right click on msys.bat and choose "Run as Administrator". After that programs requiring admin rights, such as install and patch will work. (You will need right-click and run as administrator every time you run msys).
+
+==Installing MinGW and MSYS - 64 bit==
+Now that we have the 32-bit MinGW/MSYS, we are ready to install the 64-bit version.
+#Download mingw64 - link is in the list of packages.
+#Create a folder to extract the downloaded archive into.
+#Extract the contents of the archive into it.
+#Please note that MinGW64 should also be installed to a directory path that doesn't contain any spaces. This method has been tested with a directory path of C:\MinGW64.
+Unlike the 32-bit edition, there are no further steps.
+
+==Setting up MSYS - 64 bit==
+This is a little different to the 32-bit install, requiring a few additional steps:
+#Download msys64 - link is in the list of packages.
+#Create a folder to extract it into
+#Extract the contents of the 'msys' directory inside the archive into the folder you created
+#Like MinGW, no spaces in the name - this has been tested using C:\msys64
+#Run the msys.bat contained within and enter the command:
+<pre>sh /postinstall/pi.sh</pre>
+#Answer the questions - when prompted for MinGW, do not give it the path to the 32-bit version. It may fail to find your installation. If this is so, keep reading.
+#Edit C:\msys64\etc\fstab or create it if it does not exist, and add the following line to it:
+<pre>C:\MinGW64\   /usr/local</pre>
+#This will fix it not being able to find MinGW64.
+#Due to an issue with the 'find.exe' included, we must now copy over the file from MinGW32. Copy 'find.exe' from C:\MinGW\msys\1.0\bin to C:\msys64\bin to solve this issue.
+#Due to the toolchain getting a little confused when it comes to the 'strip' command, also run this command from within the msys64 shell:
+<pre>cp /mingw/bin/x86_64-w64-mingw32-strip.exe /mingw/bin/strip.exe</pre>
+#Now repeat for gcc and g++:
+<pre>cp /mingw/bin/x86_64-w64-mingw32-gcc.exe /mingw/bin/gcc.exe
+cp /mingw/bin/x86_64-w64-mingw32-g++.exe /mingw/bin/g++.exe</pre>
+Congratulations! After jumping through all those hoops, you (should) now have a working MinGW/MSYS 64-bit environment.
+
+==Testing MinGW/MSYS installation==
+From here on, unless otherwise noted we are working purely with the 64-bit MinGW/MSYS, and not the 32-bit environment.
+<ul><li>Open the MinGW shell (MSYS).</li>
+<li>Run the following commands:<pre>make -v
+gcc -v</pre></li>
+<li>They should output something.  Check if something goes wrong.</li></ul>
+
+==Compilation and installation of the required packages==
+For additional information about the libraries, check part 7.1) of OpenTTD Readme. The following entries are (mostly) identical to the '''Compiling on MinGW''' page, but some have required alterations to take into account the 64-bit build environment. Please do not skip over these, just in case!
+
+==Compiling zlib==
+In MSYS:
+
+<pre>wget http://zlib.net/zlib-1.2.7.tar.gz
+tar xvfz zlib-1.2.7.tar.gz
+cd zlib-1.2.7</pre>
+At this point we must patch zlib to make it compile correctly:
+#Edit the zlib-1.2.5/win32/Makefile.gcc file. At line 44 (or thereabouts) you should see 'PREFIX = '. Change this to read 'PREFIX = x86_64-w64-mingw32-'
+#After making this edit, you are now to build zlib:
+<pre>make -f win32/Makefile.gcc BINARY_PATH=/usr/local/bin INCLUDE_PATH=/usr/local/include LIBRARY_PATH=/usr/local/lib install
+cp zlib1.dll /usr/local/bin
+cp zconf.h zlib.h /usr/local/include
+cp libz.a /usr/local/lib
+cp libz.dll.a /usr/local/lib/libz.dll.a
+cd ..</pre>
+
+==Compiling libpng==
+In MSYS:
+
+<pre>wget http://sourceforge.net/projects/libpng/files/libpng15/1.5.11/libpng-1.5.11.tar.xz/download
+tar xvfJ libpng-1.5.11.tar.xz
+cd libpng-1.5.11
+mv INSTALL INSTALL.txt
+export "CFLAGS=-I/usr/local/include"
+export "LDFLAGS=-L/usr/local/lib"
+./configure --host=x86_64-w64-mingw32
+make install
+cd ..</pre>
+
+If this fails claiming that '''/usr/local/bin''' is not a directory, run the following commands and then re-run '''make install'''
+<pre>rm /usr/local/bin
+mkdir -p /usr/local/bin</pre>
+
+==Compiling liblzo2==
+In MSYS:
+
+<pre>wget http://www.oberhumer.com/opensource/lzo/download/lzo-2.06.tar.gz
+tar xvfz lzo-2.06.tar.gz
+cd lzo-2.06
+./configure --enable-static --host=x86_64-w64-mingw32
+make install
+cd ..</pre>
+
+==Compiling libfreetype==
+In MSYS:
+
+<pre>wget http://sourceforge.net/projects/freetype/files/freetype2/2.4.9/freetype-2.4.9.tar.gz/download
+tar zxvf freetype-2.4.9.tar.gz
+cd freetype-2.4.9
+./configure --enable-static --host=x86_64-w64-mingw32
+make install
+cd ..</pre>
+
+==Compiling xz==
+Liblzma (which is a part of xz) is required for compiling OpenTTD since [http://vcs.openttd.org/svn/changeset/21044/ r21044]. It also needs pkg-config and its dependencies. In MSYS:
+
+<pre>wget http://ftp.gnome.org/pub/gnome/binaries/win64/dependencies/gettext-runtime_0.18.1.1-2_win64.zip
+unzip gettext-runtime_0.18.1.1-2_win64.zip -d /mingw
+wget http://ftp.gnome.org/pub/gnome/binaries/win64/glib/2.26/glib_2.26.1-1_win64.zip
+unzip glib_2.26.0-2_win64.zip -d /mingw
+wget http://ftp.gnome.org/pub/gnome/binaries/win64/dependencies/pkg-config_0.23-2_win64.zip
+unzip pkg-config_0.23-3_win64.zip -d /mingw
+wget http://tukaani.org/xz/xz-5.0.3.tar.gz
+tar xvfz xz-5.0.3.tar.gz
+cd xz-5.0.3
+./configure --enable-static --disable-threads --host=x86_64-w64-mingw32
+make install
+cd ..</pre>
+
+Note that at this time, the build environment cannot find the compiled result - you may wish to omit this step. However, without xz available you will not be able to load savegames and scenarios made with versions that have xz available, and you will not be able to join any servers.
+
+==Compiling libicu==
+libicu is an optional library used for handling of right-to-left scripts (e.g. Arabic and Persian) and the natural sorting of lists. It can take a long time to compile, so you can safely omit this step if you don't require libicu.
+
+Unfortunately due to an unresolved issue, it will not compile in the MinGW/MSYS64 environment. Instructions will be added when a workaround has been found.
+
+==Getting the source code==
+Check the [[en/Development/FAQ development#how-can-i-obtain-the-source-code|development FAQ]] for different methods for obtaining the source. If you download it without using MSYS (for example downloading the source code from the website) don't forget to place it in your home folder (by default it is C:\MinGW\msys\1.0\home\<user_name>).
+
+==Compiling OpenTTD==
+
+<ol><li>Start MSYS.</li>
+<li>Run:<pre>cd ~/<path_to_source>
+./configure --host=x86_64-w64-mingw32
+make</pre>(note that ~ means your home folder)</li>
+<li>The compiling is complete when the openttd.exe file is made. It will be copied to the <code>./bin</code> subfolder.</li>
+<li>To test your compilation you can run (from the same folder in which you compiled OpenTTD):<pre>./bin/openttd</pre>Don't forget to install a [http://wiki.openttd.org/Base_graphics base graphics set] before this step if you don't have one (the simplest solution is to install [http://wiki.openttd.org/Opengfx#Installing_OpenGFX_Manually OpenGFX])</li>
+<li>If you want to generate a installation bundle you can use: <pre>make bundle</pre>After this command is done you will find a complete OpenTTD ready for distribution in the ~/<path_to_source>/bundle folder.</li></ol>
+
+==Notes==
+* When running configure for all packages above, it will output a warning. According to the warning, one should specifcy '''build=...''' instead of '''host=...''' - however, it does not appear to make a difference - both will set the target build correctly.
+* libicu fails to compile due to an apparently cursed library, libgcc_s_sjlj-1.dll which the environment cannot find at a possibly important stage. This dll file was located and placed in a number of locations where it should have been picked up by the environment, but the same issue happened every time. Until someone can find a work-around for this, it appears impossible to compile OpenTTD with icu support in this environment
+* xz's lzma libraries cannot be found by OpenTTD when running configure. This may be due to using the win64 dependency packages - planning to re-do them with the win32 ones to find out if they'll work.
+* At present, attempting to compile OpenTTD with the --without-lzma paramater results in the following error almost immediately:
+<pre>make[1]: Entering directory `/c/Users/Liam/ottddev/trunk/objs/lang'
+[LANG] Compiling string.cpp
+c:/Users/Liam/ottddev/trunk/src/string.cpp: In function 'int snprintf<char*, size_t, const char*, ...)':
+c:/Users/Liam/ottddev/trunk/src/string.cpp:381:11: error: redefinition of 'int snprintf<char*, size_t, const char*, ...)'
+In file included from c:\mingw64\bin\../lib/gcc/x86_64-w64-mingw32/4.7.0/../../../../x86_64-w64-mingw32/include/c++/4.7.0/cdstdio:44:0'
+from c:/Users/Liam/ottddev/trunk/src/stdafx/h:59,
+from c:/Users/Liam/ottddev/trunk/src/string.cpp:12:
+cL\mingw64\bin\../lib/gcc/x86_64-w64-mingw32/4.7.0/../../../../x86_64-w64-mingw32/include/stdio.h:555:5: error 'int snprintf<char*, size_t, const char*, ...)' previously defined here
+make[1]: *** [string.o] Error 1
+make[1]: Leaving directory `/c/Users/Liam/ottddev/trunk/objs/lang'
+make: *** [all] Error 1</pre>

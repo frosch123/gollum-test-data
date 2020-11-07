@@ -1,0 +1,37 @@
+Drive-through depots are depots that have a door in both sides. A train or road vehicle can enter and leave from either side. This allows build of space-efficient sidings, service areas, etc.
+
+== Current patch ==
+
+* Dead URL [http://cataclysm.cx/random/openttd/drive-through-depots.r15905.diff drive-through-depots.r15905.diff] (against r15905)
+* Active URL [http://www.tt-forums.net/viewtopic.php?p=1105956#p1105956 drive-through-depots.r15905.diff] (against r15905)
+
+== Features ==
+
+* Enter/leave road and rail depots from front and back sides
+* Leaving depot triggers "leave station" codepaths, ie determine path to next order and reverse/don't reverse as necessary. If no path found or no next order, vehicle leaves as it entered, just like regular depots
+* Building a depot will also build junction rails/roads on both sides as required
+* Vehicles can drive through depots without stopping if they don't need to (configurable via advanced settings)
+* Speed limit for driving through without stopping
+
+== Todo ==
+
+* Be more deliberate about allowing pathfinder to find a path through the depot, with some explicit cost
+* Expose drive-through depots to AIs
+
+=== To be considered ===
+
+* Are single-entry depots required anymore?
+** If you only want to use one side, just don't hook up the other side.
+** On the other hand, a front-side door to nowhere looks silly
+** Also potential frustration with the autotrack/road stuff if you didn't want to join the depot to one side
+* Are new graphics required?
+
+== Videos ==
+
+* [http://www.youtube.com/watch?v=sGnZAC5kpOo 16 March 2009 (r15736)] - road vehicles in action
+* [http://www.youtube.com/watch?v=EyndHZ6Bqtk 13 March 2009 (r15684)] - shows trains driving through the depot if their orders require it
+* [http://www.youtube.com/watch?v=zsEpFy_RSuU 4 March 2009] - early demo showing trains entering/leaving from the reverse side of the depot
+
+== Discussion ==
+
+http://www.tt-forums.net/viewtopic.php?f=33&t=42312

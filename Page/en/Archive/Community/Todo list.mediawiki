@@ -24,24 +24,24 @@ This section lists tasks, which require knowledge about the OSX APIs, but not so
 === Easy ===
 This section lists small tasks which require no advanced coding skills and no big effort of time.
 * [[en/Archive/Community/Todo BigGUI]] - Issues with using bigger GUI icons.
-* {{en/Development/Design Drafts/Flyspray|5192}} - Display date of files in save/load GUI.
+* {{en/Flyspray|5192}} - Display date of files in save/load GUI.
 *: You can sort the filelist by modification date, but you cannot see it in the list.
 * Add pending newsitems to the crashlog.
 *: News messages are a client side thing, so they are not stored in savegames (not even in singleplayer). However, news can tell a bit about what happended recently in a game, so it might be useful to have this information in the crash.log (it's not in crash.sav). Just make sure that the textprocessing involved with the news does not cause crashes while writing the crashlog :p
 * Add text filter to load savegame/scenario/heightmap GUI.
 ** Add an editbox to enter a search term which the filelist is then filtered on. (Probably only considering the filename; reading the summary of eachs save would take too long)
 ** Filter to save savegame/scenario/heightmap GUI might be consistent, but usecase is questionable. Who wants to filter on the save to overwrite?
-* {{en/Development/Design Drafts/Flyspray|5078}} - [NOAI] API lack "vehicle is old"-event.
+* {{en/Flyspray|5078}} - [NOAI] API lack "vehicle is old"-event.
 * {{en/Forum|post=1071916}} - Change the "give money to" function so that money is donated to the company and not a specific player
 *: The entities that operate in OpenTTD are companies which might be controlled by multiple players. As such it is weird that you give money to a client via the clientlist, instead of to a company via the company GUI.
 * Add the user-side possibility to exclude selected AIs from being chosen as "random AI" for new games. Mind that AIs already have the option to declare themselves that they don't want to be a randomly picked AI.
-* {{en/Development/Design Drafts/Flyspray|6078}} - Warn user about useless conditions in the orders. Conditional orders like 'vehicle load >= 0%' and others are not useful because they are either always taken or they are never taken. It would be useful to warn the user of such things as he enters them.
+* {{en/Flyspray|6078}} - Warn user about useless conditions in the orders. Conditional orders like 'vehicle load >= 0%' and others are not useful because they are either always taken or they are never taken. It would be useful to warn the user of such things as he enters them.
 * In general, more warnings about stupid setups are useful, eg stations that have no vehicles could be one, likely there are more.
 * Sprite aligner window improvements
 ** When a sprite is selected in the right column with sprite numbers, it is not coloured white.
 ** The currently selected sprite in the blue area is not removed when a new sprite-set is selected with the 'Pick sprite' button.
 ** The arrow buttons are too small.
-* {{en/Development/Design Drafts/Flyspray|6242}} Station selection window: hightlight current selection. This could potentially be generalised to many windows, like order window, station GUI (next/prev hop), industry lists, ...
+* {{en/Flyspray|6242}} Station selection window: hightlight current selection. This could potentially be generalised to many windows, like order window, station GUI (next/prev hop), industry lists, ...
 * {{en/Forum|post=1068385}} - Unify the appearance and position of "goto location" buttons.
 ** The button should be a small button in the window title bar, next to the close/sticky/shade buttons. (likely a new black-only icon)
 ** The button shall esp. be accessible when the window is shaded.
@@ -50,13 +50,13 @@ This section lists small tasks which require no advanced coding skills and no bi
 
 === Medium ===
 This section lists medium tasks which require moderate coding skill and/or medium effort of time.
-* {{en/Development/Design Drafts/Flyspray|5018}} - Readme/licence/changelog viewer for OpenTTD itself. (likely requires OS/packaging specific code)
+* {{en/Flyspray|5018}} - Readme/licence/changelog viewer for OpenTTD itself. (likely requires OS/packaging specific code)
 *: There are in-game text-file viewers for readmes, licences and changelogs of NewGRFs, AIs and other content stuff. OpenTTD also has these three files, but there is currently no way to display them in-game.
 *: The hard part about this task is however, that the location of these files are quite unknown. Some linux distributions might even store them only compressed, and thus unreadable for OpenTTD. So for linux this would basically need a build-time "configure" option to specify the location of those files, which may then not be compressed (the latter would be a task for the package maintainer of the distributions).
 *: Alternatively there might be some nice way to compile the files directly into the binary without duplicating the texts in the source. Maybe via some script in the build process or some other trick.
 * Translatable AI/GS options.
 *: NewGRFs and scripts can define settings which the user can adjust. While NewGRFs can localise these, scripts currently can only provide on language, i.e. usually English. For Game Scripts there is already a method to provide localised texts for in-game stuff like news or extra information in town windows. There should be a similar method (from the script point of view) to translate settings.
-* {{en/Development/Design Drafts/Flyspray|5175}} - Accept/deny buttons in station's cargo list. (to start accepting cargo while no vehicle has arrived yet, or to deny acceptance after a vehicle had arrived once)
+* {{en/Flyspray|5175}} - Accept/deny buttons in station's cargo list. (to start accepting cargo while no vehicle has arrived yet, or to deny acceptance after a vehicle had arrived once)
 *: This has several use case:
 *:* You can start acceptance of cargo before the first vehicle arrives.
 *:* You can start acceptance of cargo in the case that all your vehicles use autorefit, in which case they do not trigger acceptance unless they are already refitted to the right cargo.

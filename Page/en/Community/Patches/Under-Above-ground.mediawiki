@@ -1,0 +1,65 @@
+= Under/Aboveground Solution =
+
+== Why? ==
+
+Right now the way tunnels and bridges are handled in this game is trickery. Tunnel/Bridge ramps are wormholes that fake a vehicle moving through them and over a bridge or through a tunnel. Having a bridge over a tile is just a flag in the map array saying there is a bridge.
+
+What this does is make it complicated to do more advanced things with tunnels and bridges, such as having signals on them or having custom bridgeheads, etc.
+
+== One Approach ==
+
+Instead of having bridges/tunnels as tricks in the map array, you could have tunnel and bridge tiles as actual tiles in a map array over/under each tile. The problem with this approach is that you double the map memory usage for having just one of these extra arrays and triple the memory usage to have underground AND overground. The other problem is you have a lot more tiles to process, you are doubling or tripling the number of tiles the tile processing loop has to run through, even if the tiles don't need much processing this brings a lot more computations
+
+== Improved Approach ==
+
+Don't have extra map arrays for over/under but instead have tile 'pools' for over/under layers.
+
+When a tunnel is built, for example, create a ramp on the normal layer map array tile in the two tiles where the ramps should be, then allocate tiles in the underground tile pool in the right places and place rails over them. The same can be done with bridges.
+
+This approach doesn't increase memory usage in an extreme way. Only tiles that are necessary are made (when things are built on them), so memory usage only goes up each time you build something, and only by a small amount (under/over ground tiles don't need as much space as normal tiles and you only need the minimal amount of them). Processing doesn't increase in an extreme way because only the minimal amount of tiles in a pool are processed, the other tiles corresponding to the normal map array don't exist.
+
+== Why do it this way? ==
+
+* Memory usage is kept to a minimum
+* Extra computation is kept to a minimum
+* This allows bridges and tunnels to actually be useful constructs
+** Signals can be built because they are actual tiles instead of faked 'scenery'
+* This facilitates building underground in other ways (having underground subways, having underground tracks for a station, etc.)
+
+== Details ==
+
+* Store an extra layer 'pool', this is a construct that is abstracted behind a class with public functions to gather information from it
+** The pool can be kept using linked lists, or a dynamic array, etc.
+** Need a fast function to index the tiles by tile location (x,y)
+* Tile processing loop processes normal map array normally, then runs on a list of tiles in the extra pools, just as if it was a normal map array
+* Drawing loop draws underground pool first, then normal map array, then above ground pool
+** Layers can be disabled same as any other transparency
+** Underground can be viewed alone by just drawing the underground tile pool
+* Tunnel and bridge entrances/exits get changed from wormhole entrances to triggers signalling a vehicle should be switched to being on another tile pool (underground for tunnels, aboveground for bridge)
+
+<pre>
+class ExtraTileLayer{
+private:
+	<data type that holds the tiles>
+
+public:
+	<constructor>
+
+	Tile * getTile(x coordinate, y coordinate)
+		{ /* returns tile at given index if it exists, otherwise creates the tile and returns it */}
+
+	bool hasTile(x coordinate, y coordinate) 
+		{ /* checks whether tile exists in pool */}
+
+	Tile[] getLayerList()
+		{ /* returns the entire layer pool as a list (or other type) to perform batch operations (tile processing, drawing, etc.) */ }
+
+	void cleanUpTiles( <criteria> )
+		{ /* performs garbage collection on tile pool according to specific criteria */ }
+
+}
+
+</pre>
+
+== Who will do it ==
+Hopefully you, maybe me eventually, this is the big drawback to this plan.

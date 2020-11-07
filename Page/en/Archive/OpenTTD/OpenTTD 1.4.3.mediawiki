@@ -21,11 +21,11 @@ You can download this release from [http://www.openttd.org/en/download-stable/1.
 * Fix: Loading a game with order backups leaked Orders and left unreachable items in the pool (r26787)
 * Fix: Buffer overrun in SQCompiler::Error (r26764)
 * Fix: Desync due to not always properly restoring game state from the savegame (r26753)
-* Fix: [Script] Crashes and infinite loops when using lists in item-descending order {{en/Development/Design Drafts/Flyspray|6085}} (r26744)
+* Fix: [Script] Crashes and infinite loops when using lists in item-descending order {{en/Flyspray|6085}} (r26744)
 * Fix: Incorrect CFLAGS when enabling gprof profiling (r26737, r26735)
-* Fix: Do not reset the last selected airport or layout, unless it is really necessary {{en/Development/Design Drafts/Flyspray|6083}} (r26732)
-* Fix: Use the normal search path to look for xdg-open at Unix {{en/Development/Design Drafts/Flyspray|6077}} (r26724)
-* Fix: Properly check for cargo acceptance of houses {{en/Development/Design Drafts/Flyspray|5997}} (r26723)
+* Fix: Do not reset the last selected airport or layout, unless it is really necessary {{en/Flyspray|6083}} (r26732)
+* Fix: Use the normal search path to look for xdg-open at Unix {{en/Flyspray|6077}} (r26724)
+* Fix: Properly check for cargo acceptance of houses {{en/Flyspray|5997}} (r26723)
 
 ==See Also==
 * {{en/Forum|topic=71310|Forum topic for 1.4.3}}

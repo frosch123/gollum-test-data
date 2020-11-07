@@ -1,0 +1,129 @@
+{{en/TOCleft}}
+
+{{en/Note|This user is inactive since 21/03/2010}}
+{{en/Note|This is My work/test space  please ignore it.}}
+
+{{en/-}}
+
+==Reminder TODO list==
+# [[:Category:en/Templates]]
+# [[:Category:en/Editing Resources]]
+# 32bpp stuff
+# [[en/Tutorial Editing]]
+# [[en/Archive/Lists/NewGRF Sets]]
+
+
+# waiting for an answer on the collapsible tables.
+
+
+==Templates:==
+
+*[[:Category:en/Templates|All Templates]]
+*[[:Category:en/Manual/Base Set/Message boxes|Message boxes Templates]]
+*[[:Category:en/Manual/Base Set/Navigation|Navigation Templates]]
+
+
+===links for Tutorial===
+
+*[http://en.wikipedia.org/wiki/Wikipedia:Tutorial Tutorial]
+
+*[http://www.mediawiki.org/wiki/Help:Magic_words Help:Magic_words]
+
+*[http://meta.wikimedia.org/wiki/Help:Link Links]
+*[http://www.mediawiki.org/wiki/Help:Images Images]
+*[http://meta.wikimedia.org/wiki/Help:Advanced_editing Text markup], making your page look the way you want
+*[http://meta.wikimedia.org/wiki/Help:Table Tables]
+*[http://www.mediawiki.org/wiki/Help:Extension:ParserFunctions If,case, etc...]
+
+* [http://meta.wikimedia.org/wiki/Cheatsheet]
+
+
+=== links for style guide ===
+* [http://en.wikipedia.org/wiki/Wikipedia:The perfect article]
+* [http://en.wikipedia.org/wiki/Wikipedia:Manual_of_Style]
+
+
+==FAQ==
+<!--
+{{Navtab Tutorial|This=7}}
+
+<div style="border:2px solid #A3B1BF; padding:.5em 1em 1em 1em; border-top:none; background-color:#fff; color:#000">
+-->
+
+
+
+===Links:===
+* The first letter of articles is automatically capitalized, so [[en/Manual/Main Page]] goes to the same place as [[en/Manual/Main Page]]. Capitalization matters after the first letter.
+* [[en/Intentionally permanent red link]] is a page that doesn't exist yet. You could create it by clicking on the link.
+
+===Paragraphs:===
+* A single newline generally has no effect on the layout. These can be used to separate sentences within a paragraph.
+* empty line starts a new paragraph.
+* When used in a list, a newline does affect the layout
+
+
+
+
+===Templates===
+; Are templates case sensitive? : Yes, except usually the first letter.
+; Can I add parameters? : Yes, see [[en/Template]] for instructions.
+; How many templates can I use in a page? : As many as you like.
+; I edited the template, so why didn't the page it is used on change? : There are some caching bugs. One way to force refresh is to do '''edit''' on the page in which the template appears, and to then click on '''Save page''' without having changed anything&nbsp;— there is no need to fill in the ''Summary'' field since there will not be any ''history'' of this as a change generated.  Alternatively, refreshing by pressing Ctrl and F5 often helps.  Another way is add "&action=purge" to the address, like you would for "&action=edit" (e.g, :index.php?title=foo&action=purge).
+; Can I use a template within a template? : Yes.
+;How do I add a new template?: You start a new template in the same way you would start a normal page. The only difference is that its title must start with Template:.
+; Can I move a template to a new name? : Yes, this works in exactly the same way as normal [[en/Renaming (moving) a page|page moves]]. When a page called for inclusion is a redirect page, the redirect target is included instead.
+; Where is the manual for the programming language used to write templates?: The language inside templates is the same language as regular wiki markup, but template writers tend to use the more complex available functions such as #if: statements.  See [[en/Mw/Help/Extension/ParserFunctions|ParserFunctions]] and see the other "advanced functioning" help pages listed below.
+
+<!--
+</div><noinclude>[[Category:OpenTTD Wiki|*7]]</noinclude>
+-->
+
+
+==Misc stuff==
+<!-- leave a message :) -->
+<div class="plainlinks" style="background-color:#C0C0C0;border:2px outset #9999bb;text-align:center;padding:2px 5px;width:125px">[{{fullurl:User talk:{{PAGENAMEE}}|action=edit&section=new}} <font color=#000000>Leave a message</font>]</div><br><noinclude>
+
+
+http://wiki.openttd.org/?target=&offset=&limit=50&title=Special%3AWhatlinkshere&namespace=
+
+
+
+==Template sandbox==
+
+<onlyinclude>
+<!--Picture Template-->
+
+{| style="background:#c0c0c0; border:1px solid #000000; -moz-border-radius:5px;"
+|- align="center"
+|
+
+<div style="position:relative; height: 100px; width: 125px;">
+<div style="position: absolute; top: 80px; left: 0px; width: 125px; overflow: hidden; line-height: 12px; z-index: 4; text-align: right;">
+
+<noinclude>Text</noinclude>
+</div>
+
+<div style="position: absolute; top: 0px; left: 0px; z-index: 2"><includeonly>[[File:en/Community/NewGRF/No image.png|125x100px]]</includeonly><noinclude>image</noinclude></div>
+</div>
+|}
+
+
+<!--framework Template-->
+
+{| style="margin-bottom:.5em; width:100%; font-size:95%; text-align:left; padding:-2px; background:none" cellpadding="0" cellspacing="0"
+| rowspan="2" width="100%" style="background:#F0F0F0; border:2px solid #ABCDEF; border-bottom:0; padding-right:1em; -moz-border-radius-topright:5em" | 
+<div style="font-size:130%; margin-top:-33px; padding-left:43px"> '''{{{Title}}}'''</div><div style="font-size:130%; margin-top:-16px; padding-left:12px; cursor:default;">Placeholder</div> 
+|-
+| style="border-bottom:2px solid #ABCDEF;" |
+|-
+| colspan="3" style="padding:4px; background:#F0F0F0; border:2px solid #; border-top:0; border-bottom:0" width="50%" valign="top" | {{{Text}}}
+----  
+|-
+| colspan="3" style="padding:4px; background:#FFF; border:2px solid #ABCDEF; border-top:0; border-bottom:0" width="50%" valign="top" | <span style="float:right; font-family:Verdana, Arial, Helvetica, sans-serif; font-size: 80%; padding:0 .5em 0 2em">{{{Footer}}}</span> 
+|-
+| colspan="3" | <div style="-moz-border-radius-bottomright:1em; -moz-border-radius-bottomleft:1em; background:#ABCDEF; height:10px; border:1px solid #ABCDEF; border-right:2px solid #ABCDEF; border-left:2px solid #ABCDEF;">
+</div>
+|}
+
+
+</onlyinclude>

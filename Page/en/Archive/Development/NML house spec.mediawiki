@@ -1,0 +1,291 @@
+== NML house spec ==
+A multi-tile house should be considered a single entity, from the POV of the NML user. This is mainly because many properties and callbacks can be shared between house tiles. Also, letting NML handle the (somewhat complicated) mechanics of multi-tile houses prevents the possibility of user error.
+
+It may make sense to add a property 'size', which (along with the substitute type) would have to be set first.  When it's a separate property, we can easily determine the size of an item before action generation (as we need the size to generate the correct actions). The substitute type must be set to a house of the same size as the new house.
+
+House IDs for multi-tile houses have to be numbered consecutively. We should document this and also verify that the user doesn't accidentally mess this up by using IDs reserved for additional tiles of multi-tile houses.
+
+Below an overview of the properties and callbacks and how they would interact with multi-tile buildings. Variables are not listed, because the multi-tile issues should cause relatively problems.
+
+Furthermore I propose to add a variable 'building_tile' to distinguish between building tiles. This should be stored in a register (perhaps reserve register FF for this) before the varaction2 chain . 'north_tile_offset' (for use with vars 66/67) may also be useful.
+===Properties===
+{|  
+! Property
+! Size
+! Description
+! NML implementation
+! Multi-tile buildings
+|- 
+| 8
+| B
+| Substitute building type
+| Must be set first
+| Set to (tile0_value + i) (i = 1..3)
+|- 
+| 9
+| B
+| Building flags
+| Combined with prop 19
+| prop 09 bit 5 and prop 19 bit 1..3 same as north tile, others 0
+|- 
+| 0A
+| W
+| Availability years
+| Combined with prop 21/22
+| Doesn't matter
+|- 
+| 0B
+| B
+| Population
+| 
+| Zero
+|- 
+| 0C
+| B
+| Mail generation multiplier
+| 
+| Divide generation over tiles (x / N + (x % N) > i)
+|- 
+| 0D
+| B
+| Passenger acceptance
+| Part of accepted_cargos (like for industry tiles)
+| Same
+|- 
+| 0E
+| B
+| Mail acceptance
+| Part of accepted_cargos (like for industry tiles)
+| Same
+|- 
+| 0F
+| B
+| Goods, food or fizzy drinks acceptance
+| Part of accepted_cargos (like for industry tiles)
+| Same
+|- 
+| 10
+| W
+| LA rating decrease on removal (should be set to the same value for every tile for multi-tile buildings)
+| 
+| Same
+|- 
+| 11
+| B
+| Removal cost multiplier (should be set to the same value for every tile for multi-tile buildings)
+| 
+| Same
+|- 
+| 12
+| W
+| Building name ID
+| String (0xDCxx)
+| Same
+|- 
+| 13
+| W
+| Building availability mask
+| Array of 2 values (town zones, climates)
+| Zero
+|- 
+| 14
+| B
+| See callbacks section
+| Bits for north-tile-only callbacks masked out
+| 
+|- 
+| 15
+| B
+| House override byte
+| 
+| Set to (tile0_value + i) (i = 1..3)
+|- 
+| 16
+| B
+| Periodic refresh multiplier
+| Array with up to 4 values
+| Value taken from array
+|- 
+| 17
+| 4*B
+| Four random colours to use
+| Array with up to 4 random colours
+| Same
+|- 
+| 18
+| B
+| Relative probability of appearing
+| 
+| Zero
+|- 
+| 19
+| B
+| Extra flags
+| See prop 09
+| 
+|- 
+| 1A
+| B
+| Animation frames
+| Array with up to 4 values
+| Value taken from array
+|- 
+| 1B
+| B
+| Animation speed
+| Array with up to 4 values
+| Value taken from array
+|- 
+| 1C
+| B
+| Class of the building type
+| Building class
+| Should not be set
+|- 
+| 1D
+| B
+| Callback flags 2
+| See callbacks section
+| Bits for north-tile-only callbacks masked out
+|- 
+| 1E
+| D
+| Accepted cargo types
+| Part of accepted_cargos (like industry tiles)
+| Same
+|- 
+| 1F
+| W
+| Minimum life span in years
+| 
+| Doesn't matter
+|- 
+| 20
+| W
+| Cargo acceptance watch list
+| Array of cargo types
+| Same
+|- 
+| 21
+| W
+| Long year (zero based) of minimum appearance
+| See prop 0A
+| 
+|- 
+| 22
+| W
+| Long year (zero based) of maximum appearance
+| See prop 0A
+| 
+|}
+
+===Callbacks===
+{|  
+! Callback
+! Flag bit
+! Description
+! Multi-tile buildings
+! Remarks
+|- 
+| 1
+| -
+| Random trigger
+| All tiles (differ by building_tile)
+| 
+|- 
+| 17
+| 0
+| Construction check
+| Only for first tile
+| 
+|- 
+| 1A
+| 1
+| Next animation frame
+| All tiles (differ by building_tile)
+| 
+|- 
+| 1B
+| 2
+| Animation control
+| All tiles (differ by building_tile)
+| 
+|- 
+| 1C
+| 3
+| Construction animation
+| All tiles (differ by building_tile)
+| 
+|- 
+| 1E
+| 4
+| colour
+| All tiles (differ by building_tile)
+| 
+|- 
+| 1F
+| 5
+| Cargo amount accepted
+| All tiles (differ by building_tile)
+| May be reworked to call repeatedly (like industries)
+|- 
+| 20
+| 6
+| Animation speed
+| All tiles (differ by building_tile)
+| 
+|- 
+| 21
+| 7
+| Destruction
+| Implement only for the north tile (?)
+| Is regularly (tileloop) called for all tiles
+|- 
+| 2A
+| 8
+| Accepted cargo types
+| All tiles (differ by building_tile)
+| May be reworked to call repeatedly (like industries)
+|- 
+| 2E
+| 9
+| Cargo production
+| All tiles (differ by building_tile)
+| 
+|- 
+| 143
+| 10
+| Protection
+| All tiles (should be same)
+| Should return same result for every tile
+|- 
+| 148
+| -
+| Watched cargo accepted
+| All tiles (differ by building_tile)
+| May or may not be called repeatedly
+|- 
+| 14D
+| -
+| Name
+| All tiles (should be same)
+| 
+|- 
+| 14E
+| 11
+| Foundations
+| All tiles (differ by building_tile)
+| 
+|- 
+| 14F
+| 12
+| Autoslope
+| All tiles (differ by building_tile)
+| 
+|- 
+| 0
+| -
+| Graphics
+| graphics_(north&#124;east&#124;south&#124;west) per tile, or default as catch-all
+| 
+|}

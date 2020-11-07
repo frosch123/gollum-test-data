@@ -1,0 +1,54 @@
+== Patch Pipeline by Eagle_Rainbow ==
+
+=== Patches pending for inclusion ===
+
+{| class="wikitable"
+|-
+! Title !! Links !! Internal name of Branch !! Current Status !! Next Step
+|-
+| Script assisting with mass-invalidating all translations || || stringlifecycle || not published yet || evaluate if to publish 
+|-
+| Aircraft distance visible in order list || {{en/Flyspray|5401}} || orderlistrange || patch provided || waiting for (additional) code reviews to happen
+|-
+| CPUID coding correction: compilers make make a bad guess with EBX || [http://paste.openttdcoop.org/show/2966/ Pastebin 2966] || cpuidtest || patch provided || waiting for code review by Rubidium 
+|}
+
+=== Contributing to patches ===
+{| class="wikitable"
+|-
+! Title !! Links !! Internal name of Branch !! Current Status !! Next Step
+|-
+| "Transfer" and "unload"/"load" by using keyboard || {{en/Forum|thread|topic=54549}} || ordermodifiersduringgoto_* || implemented || split up of coding in smaller chunks, second pass on comments and readability; fix of remaining bug (see forum thread)
+|}
+
+=== Patches merged into trunk ===
+
+{| class="wikitable"
+|-
+! Title !! Links !! In trunk since
+|-
+| Typo fixes 
+|| {{en/Flyspray|5394}}
+|| {{en/Development/Design Drafts/Revision|24900}}
+|-
+| Moving message settings (newspaper settings) into advanced settings dialog (major modifications required) 
+|| {{en/Forum|thread|t=63164#p1053552}} {{en/Flyspray|5361}} 
+|| {{en/Development/Design Drafts/Revision|24845}}
+|-
+| Network Game List Name Filter a.k.a. Multiplayer Filter 
+|| {{en/Forum|thread|topic=59329}} {{en/Flyspray|3852}} 
+|| {{en/Development/Design Drafts/Revision|24769}}
+|-
+| Settings Categories and Filtering in Advanced Settings 
+|| {{en/Forum|thread|topic=63164}} {{en/Flyspray|5355}} 
+|| {{en/Development/Design Drafts/Revision|24671}}
+|-
+| Skip screen for "Preview Engine" if Vehicle type is not used 
+|| {{en/Forum|thread|topic=63153}} 
+|| {{en/Development/Design Drafts/Revision|24660}}
+|-
+| Show only deviating settings in the Advanced Settings Screen 
+|| {{en/Forum|thread|topic=62958}} 
+|| {{en/Development/Design Drafts/Revision|24647}}
+|-
+|}

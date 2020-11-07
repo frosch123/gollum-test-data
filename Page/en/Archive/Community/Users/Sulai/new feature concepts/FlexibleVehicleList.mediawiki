@@ -1,0 +1,147 @@
+Since Version 0.6.0 there are vehicle groups where you can put your vehicles in. This is a great improvement to the game!
+
+Based on groups, I worked out some concepts on how to extend the capabilities of groups. Because the better the group handling, the better and more convenient you can mange a huge amount of vehicles.
+
+So, what about computer-generated groups (lets call them '''auto-groups''') that contain vehicles that match the same properties, like
+* use the same station
+* have the same shared orders
+* match the same vehicle property (age, profit, reliability, ...)
+* are on the same network
+
+We can divide different '''categories''', which are independent to each other and can be implemented to the game separately.
+
+* The two new categories: '''same station''' and '''shared orders'''.
+* '''tagged vehicles''' and ordinary '''groups'''
+* '''property based groups''', where you can define ''vehicle property based conditions'' to form these groups.
+* [[en//NetworkGroupManagement|NetworkGroupManagement]] is about groups reflecting adjacent transportation networks. It needs way more effort to be implemented, but it enables really nice features like "evaluate network" or "sell/request network".
+
+Let's discuss these categories a little closer.
+
+= the categories "shared orders" and "same stations" =
+
+Imagine playing OTTD. You want to have a look at all your trains. You press "list trains" buttons from the upper menu. In older versions of OTTD a window similar to this appears:
+
+[[File:en/Archive/Community/Users/FVL without groups.png]]
+
+Nice. But note the little difference in the upper right corner. This will expand your vehicle list to the new-styled vehicle list with groups:
+
+[[File:en/Archive/Community/Users/FVL with groups.png]]
+
+This window works like the window we know from ottd060. But again, note the little difference in the upper left corner of the window. It's a drop down menu with currently selected "Groups". Lets click on that.
+
+[[File:en/Archive/Community/Users/FVL with groups and dropdown clicked.png]]
+
+This dropdown element lists all available '''categories''' of groups.
+
+You can choose between:
+* '''same station''', which allows you to get groups of vehicles that ''use the same station''
+* '''shared orders''', which allows you to get groups of vehicles that ''have the same orders''
+* '''groups''', which contains the groups we know from ottd060.
+
+These categories contain computer generated groups that contain the corresponding vehicles.
+
+With these groups available you can do apply group commands like "go to depot" and "replace". Note: the replace feature needs some overhaul. See "details on implementation".
+
+Now this slightly modified vehicle list window can replace the other vehicle lists of the game.
+
+[[File:en/Archive/Community/Users/FVL - same station.png]]
+
+# open the station window
+# click the little "show all trains to this station" button. At this point we get the vehicle list as expected.
+# click the "extend window" button. Now we see whats really behind the window: just a group of the type "same station".
+
+Note1: you can apply all commands under "manage list" to the vehicles shown. This is much more consistent compared to what we have now.
+
+Note2: create/delete/rename group is grayed out as this makes no sense to vehicles groups in the "same station" category.
+
+Note3: drag&drop should not be allowed
+
+The same thing for the "shared orders":
+
+[[File:en/Archive/Community/Users/FVL - shared orders.png]]
+
+# open the orders menu of a vehicle
+# click the little "show all trains that share these orders" button. Again this window looks familiar.
+# click on the expand button. Again you see it's just a group.
+
+Note1:  Deleting a "shared orders" group means: every vehicle in the group gets a unshared copy of the orders.
+
+Note2: Also creating new (empty) shared orders and giving them a appropriate name makes sense.
+
+Note3: you can easily drag and drop the vehicles to put them into shared orders groups. (also if these are on other railway networks... =()
+
+= the categories: "tagged groups" and just "groups" =
+
+Lets say the category '''tagged vehicles''' lists that sort of groups we know from Version 0.6.0. The vehicles contained in those groups get little tags on the vehicle list window, reflecting the group they belong to. This automatically means, that ''one'' vehicle can only belong to ''one'' of the groups in the "tagged vehicles" section.
+
+Let's define yet another category: lets just call them ''groups'''. Here, you can also create you own groups and place your vehicles there. But they are different from "tagged vehicles", since ''one'' vehicle can be placed in ''many'' groups. This makes sense if you want to sort your trains into groups called "long trains" and "old trains". One train could be both long and old.
+
+If there is one vehicle in many groups, the "auto replace" feature must be adapted to the new group definition. See the end of this page.
+
+= the category: "property based groups" =
+
+To have the powerful group commands at hand for a variety of vehicle groups, it makes sense to have groups for many vehicle properties. '''property based groups''' allows the player to define own criterias to auto-group vehicles.
+
+Through the vehicle list you can access the category "property based groups". Let's assume we do that in the train list window.
+
+ '''property based train groups'''
+   old trains                 (age>15)
+   old trains making loss     (age>15 profit<0)
+   alte Klapperkisten         (reliability<50 max_speed<100)
+<!--   long trains on net2        (train group=network002 wagons>10)-->
+   worthless trains           (value<2000)
+   old trains in Rome         (group="Rome" age>20)  -- the group "Rome" is one of the "same station" category
+   red                        (profit<0)
+   yellow                     (profit>0 profit<20k)
+   green                      (profit>20k)
+
+
+[http://www.tt-forums.net/viewtopic.php?f=33&t=36648 see this patch] and these [http://www.tt-forums.net/viewtopic.php?f=33&t=11431 screenshots]
+
+= details on implementation =
+
+== game ressources ==
+
+Of course first priority is to keep the game as efficient as possible regarding cpu usage and network/internet bandwidth. Especially for the [[en//NetworkGroupManagement|NetworkGroupManagement]] there are deeper examinations necessary.
+
+
+
+== changes on "autoreplace" ==
+
+Currently autoreplace works global and takes distinct groups into account. This means autoreplace is not stored as a "per-vehicle command" just like "send to depot" or "stop vehicle" is. To make auto-replace work on groups in a more general way, it has to be a per-vehicle command. Looking at the ottd source, this is rather difficult and needs many code changes. Anyway, what could it look like?
+
+:* make "replace" a per-vehicle command (command should be saved per vehicle like "go to depot" is)
+::* note: the autoreplace window has to be adapted a little to support per-vehicle autoreplace:
+:::* the left side may show the same vehicle type several times, if vehicles of this type have different replace assignments (maybe there is 3 times SH40 because some SH40 vehicles are not replaced, some are replaced by TIM, and some by "Asia Star").
+:::* some dot in front of the vehicle types in the left row indicate that these vehicles are replaced at the moment.
+:* If you give the replace command to a group,
+::* the "protect from autoreplace" button will be deactivated for that group.
+::* overwrite the vehicle's current autoreplace assignment, except those being protected by some other group
+
+
+== Mile Stones ==
+
+Some mile stones of implementation. Each milestone could result in a patch, which would be already an improvement to the game.
+
+* '''add the "maximize" button to the vehicle list window'''
+* '''Change the autoreplace behavior'''
+:* treat "all trains" and "ungrouped trains" like all other groups
+:* overhaul the "replace" command
+:* this patch doesn't change much. Just all groups are treated the same. And it's needed to path the way for new categories:
+* '''add "tagged groups" and "groups" categories'''
+:* add the category dropdown menu to the maximized vehicle list window
+:* the behavior of the "tagged groups" category is the same like now. (one train in one group at most)
+:* in the "groups" category, one train can be in many groups.
+:* allow "protect from autoreplace" to the groups contained in this new category
+:* in the "groups" category, you can remove vehicles from some group by dragging them to the "ungrouped vehicles" group
+* '''add "shared orders" and "same station" categories'''
+:* replace the corresponding vehicle list windows by a minimized version of this new window.
+* '''add the "property based groups" category'''
+
+= web links =
+
+related Flyspray tasks {{en/Flyspray|1324}}, {{en/Flyspray|1448}}, {{en/Flyspray|1042}}, {{en/Flyspray|1321}}
+
+related patches [http://www.tt-forums.net/viewtopic.php?t=33148 group info (profit)], [http://bugs.openttd.org/task/1060 vehicles console command], [http://www.tt-forums.net/viewtopic.php?f=33&t=36648 Routing Restriction (Programmable waypoint) / Virtual group] [http://www.tt-forums.net/viewtopic.php?f=33&t=11431&p=684770#p684770 (obsolete)]
+
+Forum: http://www.tt-forums.net/viewtopic.php?f=32&t=37075

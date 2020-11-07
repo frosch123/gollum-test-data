@@ -1,0 +1,93 @@
+{{en/Ambox| type=notice
+| image=en/Manual/Current event.png | alt=Status
+| text=The current fase of this document is a '''draft''' that discribes a possible user interface. There is currently no implementation and this document doesn't care about coding, with the exception of limitations.
+}}<br /><!-- small hack -->
+
+= Lines =
+
+I have the feeling that many people, like me, are unhappy with the current shared orders features. While I have heard some requests to ban the current vehicles clone system, I wasn't happy with that choose. I felt more that the cloned orders are incompleet, and my hope is, by adding some more features for better vehicle management, to improve the game with much better management and easier sorting.
+
+{{en/Warning| the content is a draft and may be unreadable for people NOT having the same idea as I do. I will try to do my best to make the content more readable in the future.}}
+
+{{en/Note| Feedback is always possible in the discussion section, so if you want more information, have questions about this project, feel free to ask there. Suggestions are welcome too.}}
+
+== Overview implementing features ==
+
+* Routes with support for templates (simple for now)
+* Route manager, for route managing (orders, shared orders and routes)
+* Filters for better management over te orders collections
+* Better lists (directory system)
+
+== Differences between route, shared order and simple orders ==
+
+=== Simple orders ===
+
+Simple orders for 1 vehicle, cloning (without the use of special actions) will result in 2 independent ordersets.
+
+=== Shared orders ===
+
+1 orderset for many trains, "shared" cloning a vehicle with simple orders or shared orders would not create new orderlists, but add a train into a group with the same orders.
+
+=== Routes (or incomplete (shared) orders) *NEW*===
+
+''Detailed information about this feature will be explained on [[en/Avd/Lines/Route]]''
+
+Routes are abstract version orders, you can give them to any vehicle type in the map, on condition that routes are compatible (waypoints for example are not compatible with any vehicle type).
+
+Routes may be simple orderlists, with or without missing parameters. A route with missing parameters is called a template.
+
+Templates could be close to programming language, with support for loops, conditions and ways to sort orders in functions, but is out of scope of this article.
+
+To complete a template, it requires orders in the form of parameters. There are 2 'data' types:
+
+* A single orderlist. This is the same as a simple orderlist.
+
+* An array of orderlists. A list of orderlists, useful to share multiple orders. An example would be if there is 1 drop station and multiple load stations. The template could have 2 parameters in this case: an orderlist to reach the drop station and an array or orderlists to reach the load stations.
+
+An orderlist can exist of 0 or more orders. If an order is required, this would be 1 or more orders. Support for multiple orders instead of 1 order must prevent cases where more then 1 orders (such as waypoints) are required.
+
+== Limitations for orders ==
+
+With adding such features, there should also be added some limitations to prevent impossible implementations. Here a short list:
+
+* The go to order can only refer to orders in his own list of orders, you can't jump to an order declared in a template
+
+== Vehicle management ==
+
+The vehicle management would not change much on the first view, with the exception of 2 changes:
+
+* There are subgroups of groups, allowing subgrouping of trains. In the front of each group, there would be 2 icons;<br />1 for the content of the current group and 1 for the content of the whole group (including subgroups).<br /> Support for saving filters would be great, but moving the filtered trains into a group would be very great.
+
+Note that this filtering system can also be implemented in the routemanagers, but instead of moving the results in groups, we could group them in orders, shared orders or routes and may require some other filters (with focus on orders).
+
+* Above the groups, there is an option to add filters (like a mailbox). Defining what features would make its currently out of my scope, but it would be great if there was support for filtering by groups (or not grouped trains), filter between values like age, profit of previous year etc. and support for multiple filters (in combination with logical operations like and, or, not).
+
+== Route manager ==
+
+The route manager is the place to check current orders and change or improve them. It can also be used to assign trains orders if it would have a drag/drop or add order (of vehicle) feature.
+
+=== Viewing orders ===
+''This section is under construction and may lack/mis much information''
+
+The routemanager will show all orders, it will look almost the same as a vehicle list, but customized for orders. This means that the right part is much more smaller and the left side much more wider. The left side is for showing all ordersets available minus duplicates, each orderset will show the duplicated sets of orders lists (giving cloning without sharing orders less chances). The right side is to display all ordersets under it. On the left side, anything that expands a template of a route may be appear in its sublist (this means, it will be listed under that route, but indented). Routes are marked bolt to make them more visible.
+
+A filter may be added, which may make life easier by filtering for example by station and/or cargo type (may be for a big part the same as the one for vehicles) so it would be a lifesaver if you are searching for forgotten routes that connects that specific station.
+
+With options on the status bar, create options such as creating new routes.
+
+There is currently no idea where to add this feature on the menubar. I want to prevent the addition of a menu item, but adding it under all 4 menus of the vehicle types sounds like duplication. Hints are welcome.
+
+==== Advanced stuff ====
+The maximized window will show more advanced stuff. It adds the feature to filter vehicles, massive edit orders
+
+= FAQ =
+''Will be filled if there are questions''
+
+= Todo and references =
+== References ==
+* [[en/Development/Design Drafts/Reworked groups]]: An overview of some problems for the implementation, but luckily also with some solutions.
+
+== Todo ==
+
+* Maybe a few images may be useful while explaining the differences between normal orders, shared orders and routes.
+* Maybe some notes about the cocktail templates and scripts

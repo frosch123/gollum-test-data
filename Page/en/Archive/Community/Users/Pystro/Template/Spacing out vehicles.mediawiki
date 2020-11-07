@@ -1,0 +1,117 @@
+<includeonly>
+<table style='border: 1px solid #c0c0c0; background-color: #DEDEDE;'>
+<tr><th colspan='3'>Timetabling method criteria</th></tr>
+<tr><td>'''Orders'''
+  <table border='none' width='100%'>
+  <tr bgcolor='#DEDEDE'> <th></th> <th>Order</th> <th>Timetable</th> </tr>
+  {{#if:{{{L1A|}}}{{{L1B|}}}|<tr bgcolor='#DEDEDE'>
+    <th>Special Loading</th>
+    <td>Go non-stop to ''Stationname'' <!--De Fahre ohne Halt zu ''Stationsname'' De--> {{{L1A|undefined}}}</td>
+    <td>{{{L1B|undefined}}}</td>
+  </tr>|}}
+  <tr bgcolor='#DEDEDE'>
+    <th>Loading</th>
+    <td>Go non-stop to ''Stationname'' {{{LA|undefined}}}</td>
+    <td>{{{LB|undefined}}}</td>
+  </tr>
+  {{#if:{{{U1A|}}}{{{U1B|}}}|<tr bgcolor='#DEDEDE'>
+    <th>Special Unloading</th>
+    <td>Go non-stop to ''Stationname'' {{{U1A|undefined)}}}</td>
+    <td>{{{U1B|undefined}}}</td>
+  </tr>|}}
+  <tr bgcolor='#DEDEDE'>
+    <th>Unloading</th>
+    <td>Go non-stop to ''Stationname'' {{{UA|undefined}}}</td>
+    <td>{{{UB|undefined}}}</td>
+  </tr>
+  <tr bgcolor='#DEDEDE'>
+    <th>Travel<!--De Fahrt De--></th>
+    <td></td>
+    <td><!--De Unterwegs De-->Travelling {{{DB|(Not timetabled)}}}</td>
+  </tr>
+  {{#if:{{{ORDERSPECIAL|}}}|<tr bgcolor='#DEDEDE'>
+    <td colspan='3'>{{#if:{{{ORDERSPECIAL|}}}|{{{ORDERSPECIAL|}}}|}}<BR/></td>
+  </tr>|}}
+  </table>
+</td></tr>
+<tr><td>'''Features''' <!--De '''Eigenschaften/Bewertung/Fazit:''' De-->
+  <table border='none' width='100%'>
+  {{#if:{{{BUNCHING_TXT|}}}|<tr style='background-color:#{{#switch:{{{BUNCHING_R}}}|0=FFCCCC |1=FFFFCC |2=CCFFCC |FFFFFF}};'>
+    <th>Bunching</th>
+    <td>{{{BUNCHING_TXT}}}</td>
+  </tr>|}}
+  <tr bgcolor='#DEDEDE'>
+    <th>Waiting Times</th>
+    <td>{{{WAITING|undefined}}}</td>
+  </tr>
+  <tr bgcolor='#DEDEDE'>
+    <th>Manual (re-)adjusting</th>
+    <td rowspan='2'>{{#if:{{{ADJ_TRAVEL|}}}|*{{{ADJ_TRAVEL|}}}|}} {{#if:{{{ADJ_NVEHICLES|}}}|*{{{ADJ_NVEHICLES|}}}|}} {{#if:{{{ADJ_LOADING|}}}|*{{{ADJ_LOADING|}}}|}} {{#if:{{{ADJ_BIGSTATION|}}}|*{{{ADJ_BIGSTATION|}}}|}} </td>
+  </tr>
+  <tr bgcolor='#DEDEDE'>
+    <td>'''Independent of:''' {{#if:{{{ADJ_TRAVEL|}}}||*Travelling time (vehicle speed, routing, ...)|}} {{#if:{{{ADJ_NVEHICLES|}}}||*Amount of vehicles|}} {{#if:{{{ADJ_LOADING|}}}||*Cargo generated on that station|}} {{#if:{{{ADJ_BIGSTATION|}}}||*Position of biggest source|}} {{#if:{{{ADJ_TRAVEL|}}}|{{#if:{{{ADJ_NVEHICLES|}}}|{{#if:{{{ADJ_LOADING|}}}|{{#if:{{{ADJ_BIGSTATION|}}}|Nothing}}|}}|}}|}}</td>
+  </tr>
+  {{#if:{{{OVERTAKING_TXT|}}}|<tr style='background-color:#{{#switch:{{{OVERTAKING_R}}}|0=FFCCCC |1=FFFFCC |2=CCFFCC |FFFFFF}};'>
+    <th>Overtaking</th>
+    <td>{{{OVERTAKING_TXT}}}</td>
+  </tr>|}}
+  {{#if:{{{NVEHICLES_TXT|}}}|<tr style='background-color:#{{#switch:{{{NVEHICLES_R}}}|0=FFCCCC |1=FFFFCC |2=CCFFCC |FFFFFF}};'>
+    <th>Amount of vehicles</th>
+    <td>{{{NVEHICLES_TXT}}}</td>
+  </tr>|}}
+  </table>
+{{#if:{{{FEATURESPECIAL|}}}|{{{FEATURESPECIAL|}}}|}}
+</td></tr>
+</table>
+</includeonly><noinclude>
+
+Example:
+{{Page:en/Archive/Community/Users/Pystro/Template/Spacing out vehicles|LA = (Lade, wenn verfügbar) ||LB = und X Tage/Ticks lang bleiben
+|L1A= (Voll laden einer Fracht)/(Voll laden jeder Fracht) ||L1B= 
+|UA = (Entlade, falls akzeptiert) ||UB = und Y Tage/Ticks lang bleiben
+|DB = for Z Days/Ticks
+|ORDERSPECIAL =* The "Full load"-order doesn't get timed!
+|BUNCHING_R = 2||BUNCHING_TXT = Die komplette Fartzeit wird für alle Züge gleich gehalten, ...
+|WAITING = Die Fahrzeuge bleiben länger an der "voll laden"-Station und fahren nicht leer ab und die Fahrzeuge bleiben deutlich länger an den anderen Stationen und fahren weniger wahrscheinlich leer ab.
+|ADJ_TRAVEL =
+|ADJ_NVEHICLES =
+|ADJ_LOADING = 
+|ADJ_BIGSTATION = ... has to be set for the biggest source and adjusted (manually) if that changes.
+|OVERTAKING_R = 0||OVERTAKING_TXT = Any overtaking will be reverted.
+|NVEHICLES_R = 1||NVEHICLES_TXT = More vehicles don't speed up Transportation. To keep more Vehicles ready than needed for transportation, you need an overflow-depot in front of the "full load"-station.
+|FEATURESPECIAL =* Eine der einfachen Möglichkeiten, die Fahrzeuge fast perfekt gleichmäßig abfahren zu lassen. Dürfte die Beliebteste sein.
+}}
+
+Code for Example:
+<pre>{{Page:en/Archive/Community/Users/Pystro/Template/Spacing out vehicles|LA = (Lade, wenn verfügbar) ||LB = und X Tage/Ticks lang bleiben
+|L1A= (Voll laden einer Fracht)/(Voll laden jeder Fracht) ||L1B= 
+|UA = (Entlade, falls akzeptiert) ||UB = und Y Tage/Ticks lang bleiben
+|DB = for Z Days/Ticks
+|ORDERSPECIAL =* The "Full load"-order doesn't get timed!
+|BUNCHING_R = 2||BUNCHING_TXT = Die komplette Fartzeit wird für alle Züge gleich gehalten, ...
+|WAITING = Die Fahrzeuge bleiben länger an der "voll laden"-Station und fahren nicht leer ab und die Fahrzeuge bleiben deutlich länger an den anderen Stationen und fahren weniger wahrscheinlich leer ab.
+|ADJ_TRAVEL = 
+|ADJ_NVEHICLES = 
+|ADJ_LOADING = 
+|ADJ_BIGSTATION = ... has to be set for the biggest source and adjusted (manually) if that changes.
+|OVERTAKING_R = 0||OVERTAKING_TXT = Any overtaking will be reverted.
+|NVEHICLES_R = 1||NVEHICLES_TXT = More vehicles don't speed up Transportation. To keep more Vehicles ready than needed for transportation, you need an overflow-depot in front of the "full load"-station.
+|FEATURESPECIAL =* Eine der einfachen Möglichkeiten, die Fahrzeuge fast perfekt gleichmäßig abfahren zu lassen. Dürfte die Beliebteste sein.
+}}</pre>
+
+Explanations:
+
+* L?? are the Loading-order-string(s)
+* U?? are the Unloading-order-string(s)
+* DB are travelling strings from "Timetable view"
+* ?1? are special orders (once or a few times per Route)
+* ??A are strings from "Orders view"
+* ??B are strings from "Timetable view"
+* ???_TXT is the Text
+* ???_R is rating:
+*: 0=Bad
+*: 1=Neutral
+*: 2=Good
+* ???SPECIAL is a list of specialities to note (or a text)
+
+</noinclude>

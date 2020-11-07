@@ -1,0 +1,88 @@
+==Challenging Casual Server Setup==
+
+I manage a small unpatched server where we try to keep things challenging yet fun. It was difficult for me to find configs and explanations, so I'm posting mine here.
+
+===CargoDist===
+
+[[en/Manual/Passenger and cargo distribution|Best Explained Here]]
+
+===FIRS 2 Simple City Builder===
+
+We're using the "Temperate Basic" economy. Here's [http://bundles.openttdcoop.org/firs/releases/LATEST/docs/html/get_started.html#firs-gameplay an explanation of FIRS] and here's [http://bundles.openttdcoop.org/firs/releases/LATEST/docs/html/temperate_basic.dot.svg a flowchart for this economy]
+
+[http://www.novapolis.net/downloads Simple City Builder's] menu doesn't correspond correctly to FIRS 2. However, this is our current setup:
+
+* 100 Passengers from 500 pop Decay 50%
+
+* 25 Mail from 1000 pop Decay 50%
+
+* 100 Food from 2500 pop Decay 50%
+
+* 50 Goods from 5000 pop Decay 50%
+
+* 10 Alcohol from 10000 pop Decay 50%
+
+===Infrastructure Maintenance & Inflation===
+
+[[en/Archive/Manual/Settings/Inflation]] is off to make the game easier to join at any point, and to make longer games more viable.
+
+[[en/Manual/Economy#property-maintenance|Property Maintenance]] is on but at 1/4th (through Base Costs newGRF) default, to make the game more challenging but not too difficult.
+
+===Vehicles===
+
+[[en/Archive/Manual/Settings/Realistic acceleration]] is on.
+
+====Trains====
+
+[https://www.tt-forums.net/viewtopic.php?t=50423 OpenGFX+ Trains], which are [[en/Manual/Base Set/Trains/Train Comparison|basically default]], with all but toyland active.
+
+[https://www.tt-forums.net/viewtopic.php?t=53743 Vacuum Tube Trains] for that post-2030 gameplay.
+
+[https://www.tt-forums.net/viewtopic.php?t=49287 SMITS] for a nicer looking maglev track.
+
+[http://minchin.ca/openttd-progressive-rail/ Progressive rail] which makes it possible to run an engine on the next-level-up track, for easier upgrade. Even works with maglevs on vactracks.
+
+====Road Vehicles====
+
+[[en/Community/NewGRF/Extended Generic Road Vehicle and Tram Set|eGRVTS]]
+
+====Planes====
+
+[[en/Community/NewGRF/Aviators Aircraft Set|Av8]]
+
+====Boats====
+
+[https://www.tt-forums.net/viewtopic.php?f=67&t=45435 FISH]
+
+==My "Must-use" Client Settings==
+
+There’s some big changes you can make for convenience. First, click and hold on the gear, go to settings, change Category to “Expert”. You may want to look through the options, there’s a fuckton of settings you can change. If something is greyed out, it’s a server-side setting or can’t be changed mid-game.
+
+Password protecting your company: In game, click your guy’s face. Go to password, enter a password. NB: If you select “set default password” every company you make will have the same password by default.
+
+
+Opening/closing the landscaping menu automatically: Go to settings, search ‘landscape’ and select “Link landscape…” It’ll open whenever you do any construction menus.
+
+
+Showing reserved train routes (makes understanding signals easier): Go to settings, search ‘path’ and select “show path reservations for tracks.” Now when you look at you tracks the part ‘reserved’ by a train will be a darker color.
+
+==Misc. Tips==
+
+Things I wish people told me when I started.
+
+See how much something would cost? Shift-click.
+
+
+How do I delete without the selecting the bulldozer? Crtl-click
+
+
+How do I see past trees, structures, etc? Press ‘x’ or crtl+ any number for more selective.
+
+
+Make signals the length of a train line without dragging the whole thing? Crtl+click and drag a portion of it. Will make signals in the direction you dragged until the next intersection.
+
+
+Manage multiple vehicles doing the same thing? Make a single one and give it the orders you want. Hold control while cloning it to make another vehicle with the same orders. If you held crtl, changing one will change both of them. This is the only way to do this, AFAIK, and there’s no menu to find these synced clones, so remember to group them also.
+
+
+Make stations bigger without making each bit adjacent? Crl+click while placing a station/stop and it’ll pop up a window to combine it with nearby stations. There are size limits.

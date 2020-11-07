@@ -1,5 +1,5 @@
 This page is to discuss the envisioned re-structuring of the game menu, newgame settings, advanced settings and options.
-See also {{en/Development/Design Drafts/Flyspray|5147}}
+See also {{en/Flyspray|5147}}
 
 This is a big task and can certainly be structured into several sub-tasks
 
@@ -37,7 +37,7 @@ The game options contain a few settings which better belong to the advanced sett
 
 === Remove message/newspaper settings window ===
 
-This item is being addressed with {{en/Development/Design Drafts/Flyspray|5361}}.
+This item is being addressed with {{en/Flyspray|5361}}.
 
 This a weird hidden window. Esp. it is only available in game.
 * The window should just be dropped, and all options be moved to the adv. settings window.
@@ -57,7 +57,7 @@ Allow users to apply various filters on the settings:
 * client/company/game settings
 * settings differing from default values (''commited with r24647'', see also [http://www.tt-forums.net/viewtopic.php?f=32&t=62958 forum thread])
 * settings differing from newgame values (''commited with r24647'', see also [http://www.tt-forums.net/viewtopic.php?f=32&t=62958 forum thread])
-* basic/advanced/expert settings (''committed with r24671'', see also {{en/Development/Design Drafts/Flyspray|5355}})
+* basic/advanced/expert settings (''committed with r24671'', see also {{en/Flyspray|5355}})
 *: The advanced settings (esp. in its new form) contain a lot of settings, which confuse novice players. So it needs some filtering to hide more advanced settings.
 *:* These filter options belong into the same dropdown as the "differences to newgame/default values". When you want to see differences, you want to see all, not just "basic" ones.
 *:* The category would be assigned to every setting via a new key-value-pair in the settings.ini files.
@@ -117,7 +117,7 @@ In game you can currently edit the settings of the current game. It might also b
 
 == Window Re-arangement ==
 
-See also {{en/Development/Design Drafts/Flyspray|3826}} and [http://dev.openttdcoop.org/projects/openttd-gui OpenTTD-gui project].
+See also {{en/Flyspray|3826}} and [http://dev.openttdcoop.org/projects/openttd-gui OpenTTD-gui project].
 
 In general the layout could be like
 
@@ -132,7 +132,7 @@ In general the layout could be like
 
 === New game dialog (tabs) ===
 
-See also {{en/Development/Design Drafts/Flyspray|5147}}
+See also {{en/Flyspray|5147}}
 
 ==== Map settings ====
 [[File:en/Development/Design Drafts/Newgame draft.png|frame|draft of the re-designed new game dialogue]]

@@ -1,0 +1,37 @@
+Tunnels and Bridges with signals.
+
+Not being able to use signals in long tunnels and bridges limited their use dramatically.
+I normally located depots next to them as to absorb traffic jams.
+I made a solution now that simulates signals in the tunnel.
+The working is quite simple.
+Every time after a train enters the tunnel, it becomes invisible for the train behind it.
+When the train behind is faster it will be stopped when coming too close to the train in front.
+On bridges and tunnels this is one  signal every six tiles.
+
+== Features ==
+
+* Capability to place signal on entrance.
+* Allowing more than one train at the same time inside tunnel or on bridge.
+* The moment you place signal, the tunnel / bridge becomes one-way.
+* Ability to see vehicles inside tunnels.(Click on tunnel entrance)
+* The signals work like block signal only.
+
+== Activation ==
+
+* To activate this feature just build signal on entrance.
+* distance between each train is 6 tiles.
+* Switching direction works the same like normal signals.
+[[File:en/Community/Patches/Put and remove signal.png|frame|Putting and removing of signals]]
+
+== Removal ==
+
+* Removing the signal from tunnel / bridge is the same as with normal signals.
+Just remove the signal on the ramp.
+
+== Current patch ==
+
+See first page of ''Signals in tunnels and on bridges'' topic.
+
+== Discussion ==
+
+http://www.tt-forums.net/viewtopic.php?f=33&t=41260&start=0

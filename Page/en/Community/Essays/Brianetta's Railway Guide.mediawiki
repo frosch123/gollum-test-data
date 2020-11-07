@@ -1,0 +1,71 @@
+=Brianetta's Railway Guide=
+==Introduction==
+Hello!
+
+I've been playing TT(D) and OpenTTD since late 1994.  I'm a big fan of railways, and although I will use other modes of transport it's the whole logical aspect of track, signals and trains that really keeps me playing year after year.  Over the years, I've developed a few techniques with respect to railways.  Some of them are rather uncommon, and I thought I'd finally share them with the community at large.
+
+==Brianetta's style==
+Those who watch me play online will notice that my railway networks are often very small indeed.  There will be stretches of single track, two-way track, and sometimes a mixture of types of train.  Another thing that will be noticed is that it's an extremely rare occurrence for my railway networks to jam up.  This is a direct result of the fact that my networks are uncomplicated.
+
+While working on a railway network in TTD you are, in effect, doing the same kind of thinking that a programmer is doing.  You're holding a lot of state in your head.  Sometimes you're mentally simulating your layout; other times you're holding a complex picture in your mind, which you then build for real on the terrain.  All of this thinking has to be maintained while you're being interrupted by other aspects of the game, such as waiting for cash, or responding to changes of production at industries you serve.
+
+Making an effective network is easier if you're not holding an awful lot of complex state in your mind.  Networks which are simple to understand are easier to plan, even with interruptions.  It's easier to spot what's wrong, when things are not acting as expected.  A simple network is far more robust.  Less can go wrong because less can happen in the first place.
+
+So, the style that comes from this approach is one of simplicity.  Long signal blocks are more simple than short ones.  Trains don't occupy more than two at once, and they have a bit of room between them.  Mainlines are made up of two tracks, with a little gap between them occasionally.  Branch lines are often just a single track, with perhaps a couple of passing places if they're long ones.  The infrastructure is cheap.  It's not as profitable as some of the more elaborate play styles going around, but it's easily profitable enough to both sustain itself and allow growth.  Think small and functional.
+
+==Networks that don't jam==
+A network jams up if there's ever a situation where a train has to stop and wait for itself to move.  If you plan your network so that a train never has to wait for itself to move before it can move, your network won't ever jam.  Let me re-iterate that:  It won't ''ever'' jam.
+
+When you plan a route, also plan how many trains you want to run on it.  Think about where these trains will wait if things get busy, and make sure that there's room for them all.  Try to avoid the paradigm of building general purpose highway style lines; all lines have a finite capacity.  If you run lots of trains, they will often have to wait for each other.  If you run too many, then eventually they'll have to wait for themselves, and that's a jam.
+
+Rather than making a huge mainline with a huge capacity, then adding trains to it until you find the upper limit of its capacity the hard way, it's easier to keep things quiet.  Design for a certain target capacity.  If later services would overload it, think about adding relief lines - and know how many trains they can hold, too.  If every train has its place, you won't be wondering whether it'll keep working forever.
+
+==A simple train line==
+A railway line starts with a plan.  Decide first where it's ultimately going to go.  The idea isn't to build it all in one go, but to start off with a section of it, and to get it in revenue service.
+
+My main railway lines have two one-way tracks.  Stations on the railway line have two platforms if quiet, and four if busy.  Half of the platforms are dedicated to one direction, the other half to the other.  Nothing fancy.  No turning loops, no crossovers, no depots.  Just a simple station where a train will stop on its way to somewhere else.
+
+At the end of the line is a terminus.  Very occasionally I'll use a roll-on, roll-off style station, where every train moves through the station in the same direction.  More often, I'll use a traditional bay platform terminus, where trains leave the platform by the way they came in.
+
+At a temporary terminus, I use a slightly modified inline station (the type I described first, above) where trains go through in one direction, then turn around and go through again in the other.
+
+==Stations==
+===Inline Stations===
+*[[:File:en/Wide inline terminus visible.png]]
+*[[:File:en/Wide inline terminus invisible.png]]
+The images above both show four inline stations which I regularly use.  These are only suitable for cargos with rapid turnover; passengers, mail and valuables are ideal.  Anything where the trains must wait for a while are best done at a terminus (see later).  From top left to bottom right, these inline stations are as follows:
+====Simple Inline Station====
+The very simplest station on a mainline.  I also use single platform stations on single track lines; occasionally I use a two platform inline station as a passing place on single track lines.
+
+The point here is that the station is dead simple.  It takes up no space that wasn't going to be taken up by the track itself anyway.  It can cause delays for trains, because it is a place where trains stop.  Following trains cannot pass, and must wait also.
+====Wide Inline Station====
+This is my simplest big station.  The principle can be used to build stations with larger number of platforms, too, although I normally find that unnecessary.  The idea with a station like this is that while one train is stopped at a platform, the one behind it is pulling in to the other platform. By the time the ''next'' train has arrived, the first one has left.  This avoids delays on the railway line really well.
+====Inline Terminus====
+This station was designed for use at a location which is temporarily serving as the end of the line.  The station itself is built and signalled as if it were a regular inline station.  The difference is that instead of continuing, the mainline terminates on a short spur track.  The orders of trains that come here must be adjusted as in the orders window visible in the images linked above.  The pathfinder will be temporarily unable to find the way, but the track layout and signals will force the train into the right position and the pathfinder will quickly sort itself out once the train has turned.
+
+One useful modification to this station is to add a depot to the spur line.  This has drawbacks if the line is very busy (the depot will fill with trains until it isn't busy any more) but can be very useful for refit orders and to keep trains serviced.  This is good for players with a distaste for servicing trains whilst they are full of passengers.  It's also good for carrying different types of cargo; if your train set supports it, you can use refit orders to carry cargo in both directions.  Wagons such as Pikka's UKRS bolster trucks can carry wood to a sawmill, and goods away.
+=====Demonstration=====
+=====Demonstration=====
+These four images show the path of a train as it enters, turns and leaves:
+
+[[File:en/Community/Essays/Inline action 1.png]]
+[[File:en/Community/Essays/Inline action 2.png]]
+[[File:en/Community/Essays/Inline action 3.png]]
+[[File:en/Community/Essays/Inline action 4.png]]
+
+====Wide Inline Terminus====
+This is just a larger version of the above, with two spur lines linking up the pairs of stations.  Here, I've used a bridge to link platform 1 to 3, and 2 to 4.  You could just as easily use nested tracks to link 1 to 4 and 2 to 3.  There's really very little practical difference; it's purely a matter of aesthetics.
+===Terminus Stations===
+*[[:File:en/Wide terminus visible.png]]
+*[[:File:en/Wide terminus visible annotated.png]]
+*[[:File:en/Wide terminus invisible.png]]
+*[[:File:en/Wide terminus invisible annotated.png]]
+The images above all show three terminus stations which I regularly use.  These are suitable for all cargos.  From top left to bottom right, these terminus stations are as follows:
+====Wide Terminus (4x)====
+This rather complex looking station is actually two of the next kind of station, interlaced using bridges.  It can handle an astonishing amount of traffic for a station where trains leave the way they came.  Two trains can enter and leave at the same time, completely unimpeded.  Trains start to wait when it gets busy, but far less than with a cross-over terminus.  Short of using path based signals, this is about as efficient as a terminus can get in this small space.  It does need all that space, though, and this is its drawback.
+====Wide Terminus (2x)====
+This is one half of the previous station.  It's capable of handling quite heavy traffic.  Exactly as capable as a two platform path based cross-over; just without the path based signals.  Variations of the form can be constructed to suit the local environment; the platforms can even be angled to face each other if space is really tight.  Additionally, a second pair of platforms can be interleaved, providing a second terminus facing in the opposite direction.  One of my favourite tricks is putting a short hop single platform maglev service in the gap, perhaps to a local airport or nearby city centre.
+====Wide Bridged Terminus====
+This is the most efficient two-platform terminus concept I know of, although it's slightly more expensive and isn't quite as flexible in terms of fitting in to the environment.
+==Example saved game==
+An example saved game [http://ppcis.org/standard/brianetta_style.sav can be found here] (no newgrfs required).  This small saved game was created in version 0.6.2, and demonstrates a wide terminus (2x), an inline terminus and two inline four-platform stations, one of which is staggered to save space.  The line is very much in my own style.
