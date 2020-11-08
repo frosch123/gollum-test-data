@@ -35,7 +35,7 @@ If you work with 3D Studio Max, you have a semi-transparent square grid on the g
 <div style="margin:1em;padding:1em;border:1px solid #c7c8fe;background:#f1f2fe;">
 <font size="3">'''Materials'''</font>
 
-[[File:en/Ref-%26-amb.png|400px|center]]
+[[File:en/Archive/Old 32bpp/Ref-&-amb.png|400px|center]]
 
 For '''every''' material you create, in the <code>shaders</code> tab, you are advised to change the <code>Amb</code> parameter ('''0.5''' by default) to match the <code>Ref</code> parameter ('''1''' by default). You always have to modify <code>Ref</code> and <code>Amb</code> together. It has been decided that <code>Amb</code> should always have the same value as <code>Ref</code>, because a material should reflect light from the sun or other light sources the same way it reflects light from the environment (ambient light). Hence, for maximum realism, the values should be the same. Naturally this is not a strict rule, you do have artistic freedom to deviate from this.
 

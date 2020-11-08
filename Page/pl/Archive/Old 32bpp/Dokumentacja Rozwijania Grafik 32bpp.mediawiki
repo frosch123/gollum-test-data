@@ -35,7 +35,7 @@ Jeśli pracujesz z 3D Studio Max, masz półprzezroczystą kwadratową siatkę n
 <div style="margin:1em;padding:1em;border:1px solid #c7c8fe;background:#f1f2fe;">
 <font size="3">'''Materiały'''</font>
 
-[[File:en/Ref-%26-amb.png|400px|center]]
+[[File:en/Archive/Old 32bpp/Ref-&-amb.png|400px|center]]
 
 Dla '''every''' materiał, który tworzysz w <code>shaders</code> tab, zaleca się zmianę <code>Amb</code> parametru ('''0.5''' domyślnie) dopasować <code>Ref</code> parametr ('''1''' domyślnie). Zawsze musisz zmodyfikować <code>Ref</code> i <code>Amb</code> razem. Zdecydowano, że <code>Amb</code> powinna zawsze mieć tę samą wartość co <code>Ref</code>, ponieważ materiał powinien odbijać światło słoneczne lub inne źródła światła w taki sam sposób, jak odbija światło z otoczenia (światło otoczenia). Dlatego dla maksymalnego realizmu wartości powinny być takie same. Oczywiście nie jest to surowa zasada, masz swobodę artystyczną, aby się od tego odstąpić.
 
