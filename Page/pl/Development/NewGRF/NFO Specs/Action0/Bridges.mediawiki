@@ -1,0 +1,285 @@
+{{pl/Development/NewGRF/inne strony|en=newgrf-specs.tt-wiki.net/wiki/Action0/Bridges|pl=pl/Development/NewGRF/NFO Specs/Action0/Bridges |sub=nfo}}
+<!--{{-}}<br>--><!--{{ambox | text = w trakcie edycji.}}--><!-- -->
+==Wprowadzenie==
+
+Definiowanie właściwości mostów. Domyślnie zdefiniowane są następujące mosty:
+
+{| 
+|-
+!'''ID (dec)'''!!'''ID (hex)'''!!'''Opis'''
+|-
+|0||00||Drewniany Most
+|-
+|1||01||Most Betonowy
+|-
+|2||02||<span title=Girder>'Dźwigar'</span>, Most Stalowy
+|-
+|3||03||<span title=Suspension>'Zawieszenie'</span>, Most Betonowy
+|-
+|4||04||Zawieszenie, Most Stalowy (Bronze) 
+|-
+|5||05||Zawieszenie, Stalowy (Złoty) Most
+|-
+|6||06||<span title=Cantilever>'Wspornik'</span>, Most Stalowy (Bronze) 
+|-
+|7||07||Wspornikowy, Stalowy (<span title=Brown>brązowy</span>) most
+|-
+|8||08||Wspornikowy, Stalowy (czerwony) Bridg
+|-
+|9||09||Dźwigar, Most Stalowy
+|-
+|10||0A||Most Rurowy, Stalowy (Bronze)
+|-
+|11||0B||{{pl/Development/NewGRF/ottdp|0.6|no}} <span title=tubular>Rurowy</span>, Stalowy (złoty) Most
+|-
+|12||0C||{{pl/Development/NewGRF/ottdp|0.6|no}} Rurowy, Silikonowy Mostek
+|}
+
+==Properties==
+
+{| 
+|-
+!Numer!![[pl/Development/NewGRF/NFO Specs/GRFActionsDetailed|Rozmiar]]!!Wersja!!Opis
+|-
+|00||B||{{pl/Development/NewGRF/ottdp|no|2.6|ttdprev=r1994}}||Typ powrotu po awarii, domyślny ID mostka TTD
+|-
+|08<!--<ref>-->{{pl/Development/NewGRF/NFO Specs/refs|text=Znaczenie prop. 08 zmieniło się w TTDPatch 2.0.1 alfa 34, było to, co jest teraz prop. 0D.|1}}<!--</ref>-->||B||{{pl/Development/NewGRF/ottdp|0.6|2.5|ttdprev=alpha 34}}||Rok dostępności liczony od 1920 (ustawiony na 1920 dla pierwszego mostu, jeśli newstartyear&lt;1930)
+|-
+|09||B||{{pl/Development/NewGRF/ottdp|0.6|2.5|ttdprev=alpha 34}}||Minimalna długość, nie licząc ramp
+|-
+|0A||B||{{pl/Development/NewGRF/ottdp|0.6|2.5|ttdprev=alpha 34}}||Maksymalna długość, nie licząc ramp
+|-
+|0B||B||{{pl/Development/NewGRF/ottdp|0.6|2.5|ttdprev=alpha 34}}||Koszt <small>''(..factor)''</small>
+|-
+|0C||W||{{pl/Development/NewGRF/ottdp|0.6|2.5|ttdprev=alpha 34}}||Max. prędkość
+|-
+|0D||V||{{pl/Development/NewGRF/ottdp|0.6|2.5|ttdprev=alpha 34}}||Układ sprite, patrz poniżej
+|-
+|0E||B||{{pl/Development/NewGRF/ottdp|0.6|2.5|ttdprev=alpha 34}}||Różne flagi, kodowane 'bitchem' <small>''(bitcoded)''</small>
+|-
+|0F||D||{{pl/Development/NewGRF/ottdp|0.6|2.5|ttdprev=r1702|ottdrev=r7191}}||Rok dostępności w długim formacie, liczony od roku 0
+|-
+|10||W||{{pl/Development/NewGRF/ottdp|0.6|2.5|ttdprev=r1824|ottdrev=r10269}}||'Zakup' <small>''(Purchase)'</small> tekst
+|-
+|11||W||{{pl/Development/NewGRF/ottdp|0.6|2.5|ttdprev=r1824|ottdrev=r10269}}||Opis mostu kolejowego
+|-
+|12||W||{{pl/Development/NewGRF/ottdp|0.6|2.5|ttdprev=r1824|ottdrev=r10269}}||Opis mostu drogowego
+|-
+|13||W||{{pl/Development/NewGRF/ottdp|0.7|2.6|ttdprev=r1994|ottdrev=r14172}}||Koszt dostępu do słów
+|}
+<!--<references/>-->{{pl/Development/NewGRF/NFO Specs/przypisy|101}}{{pl/Development/NewGRF/NFO Specs/refs|text=Znaczenie prop. 08 zmieniło się w TTDPatch 2.0.1 alfa 34, było to, co jest teraz prop. 0D.|przypis}}
+
+
+Nieoficjalne uzupełnienia i zmiany. Nie polegaj na nich, aby kiedykolwiek działały w ten sposób lub w ogóle w OpenTTD lub TTDPatch: 
+{| 
+|-
+!Numer!![[pl/Development/NewGRF/NFO Specs/GRFActionsDetailed|Rozmiar]]!!Wersja!!Opis
+|-
+|valign=middle|14||valign=middle|D||valign=middle|Nowe funkcje mapy||valign=middle|Ikony menu <!--<ref name="nmf">-->{{pl/Development/NewGRF/NFO Specs/refs|name=nmf|text=Nowe funkcje mapy (NMF) dodają trzy <span title=identyfikatory>ID</span> mostów (0x0D ... 0x0F). Brak grafiki. Obecnie do przypisywania prawdziwych duszków należy używać zarządzania zasobami graficznymi (GRM).|<!--1(2)-->2-021}}<!--</ref>-->
+|}
+<!--<references/>-->{{pl/Development/NewGRF/NFO Specs/przypisy|1101|name=nmf}}{{pl/Development/NewGRF/NFO Specs/refs|name=nmf|text=Nowe funkcje mapy (NMF) dodają trzy <span title=identyfikatory>ID</span> mostów (0x0D ... 0x0F). Brak grafiki. Obecnie do przypisywania prawdziwych duszków należy używać zarządzania zasobami graficznymi (GRM)|przypis}}
+
+==Descriptions==
+
+===Sprite layout (0D)===
+
+Właściwość 0D określa układ 'sprite' dla mostów.     Każda część mostu ma osiem 'sprites' dla każdego z czterech typów (kolej, droga, jednoszynowy, maglev), co daje w sumie 32 'sprites' .     Każdy most ma 7 części, choć nie wszystkie mają inną grafikę.
+
+Dane dla właściwości 0D są zmienne, a format ma postać
+
+{| 
+|-
+!Rozmiar!!<span title=Pole>'Field'</span>!!Opis
+|-
+|B||tableid||Pierwsza tabela do zdefiniowania 'sprites'
+|-
+|B||numtables||Liczba tabel, dla których można zdefiniować 'sprites'
+|-
+|V||spritedata||spritedata, numtables*32 DWORDs z numerami 'sprite'
+|}
+
+Tableid to numer pierwszej tabeli do zmiany.     Każdy most ma siedem tabel, przy czym pierwsze sześć (0–5) to różne środkowe części, a ostatnia (6) to części końcowe.
+
+W każdej z sześciu tabel części środkowej znajdują się cztery wpisy dla następujących:
+* Rail X, Rail Y, Road X, Road Y, Monorail X, Monorail Y, Maglev X, Maglev Y
+
+Gdzie X jest mostem w /-direction, a Y mostem w \-direction.
+
+Cztery wpisy to
+* Tył i podłoga, przód, filary, 0
+
+Front i filary mogą mieć wartość 0, co oznacza, że ​​nie można rysować 'sprite' .     Czwarty wpis jest zawsze ignorowany.
+
+W tabeli części końcowej znajdują się ponownie cztery wpisy, ale teraz dla Równina <small>''(flat)''</small> , Rail ramp, Road flat, Road ramp, Monorail flat, Monorail ramp i Maglev flat, Maglev pochylnia <small>''(ramp)''</small>.
+
+Cztery wpisy w tym przypadku to
+* północny koniec X, północny koniec Y, południowy koniec X, południowy koniec Y
+
+Liczby 'sprites' mogą być dowolnymi liczbami 'sprites' TTD.
+
+Podsumowując, istnieje 7 tabel dla każdego z 11 mostów.     Każda tabela zawiera 4*8 pozycji, dzięki czemu zajmuje 128 (80h) bajtów.     Pierwsze sześć stołów, od 0 do 5, to środkowe elementy, ostatni stół, numer 6, jest końcowymi.
+
+====Colour Translations====
+
+Aby zmienić kolor mostka, możesz dodać jedną z wartości z poniższej tabeli do liczby ikonek, które chcesz zmienić. Translacje kolorów z tabeli będą używać domyślnych tabel translacji kolorów z zestawów podstawowych. Te tabele translacji będą tłumaczyć 'brązowawo-czerwony' <small>''(brownish red)''</small> stosowany w domyślnych mostkach na określony kolor.
+
+{| 
+|-
+!'''Wartość dodana'''!!''' 'Little Endian' '''!!'''Kolor'''
+|-
+|031B8000h||00 80 1B 03||Blue
+|-
+|031C8000h||00 80 1C 03||Brown
+|-
+|031D8000h||00 80 1D 03||Czysty biały
+|-
+|031E8000h||00 80 1E 03||Red
+|-
+|031F8000h||00 80 1F 03||Green
+|-
+|03208000h||00 80 20 03||Niebieskawo-biały (beton)
+|-
+|03218000h||00 80 21 03||Żółty (złota stal)
+|}
+
+Spójrz na [[pl/Development/NewGRF/NFO Specs/RecolorSprites#default-recolour-sprites | default recolour tables]]  dla innych tłumaczeń kolorów. Jednak inne mapy pokolorowane niż siedem wymienionych powyżej będą tłumaczyć inne kolory niż te używane przez oryginalne mosty.
+
+''Przykład: Translate 'sprite' 4366 na żółty''
+:4366 tłumaczy się na 0E 11 w małej wartości endian i jako taki na 0E 11 00 00 w dworze. Aby zmienić kolor na żółty, musisz dodać 00 80 21 03 do wartości dwordu. Daje to 0E 91 21 03. Użyj tego ostatniego w tabeli mostków, aby pokolorować jeden z przyczółków jednoszynowych na szary.
+
+====Bridge Layouts====
+
+Istnieje pięć możliwych układów mostów w TTD. Liczby w poniższej tabeli odzwierciedlają numery tabel pomostowych w kodzie NFO.
+
+{| 
+|-
+!<span title="układ">Layout</span>!!Opis
+|-
+|__ ||Most bez części środkowej
+|-
+|_0_||Most długości 3
+|-
+|_0(23)1_||Most o równej długości
+|-
+|_0(23)4(23)1_||Most o (nierównych) długościach 5, 9, 13, 17 etc.
+|-
+|_0(23)253(23)1_||Most o (nierównych) długościach 7, 11, 15, 19 etc.
+|}
+
+_ służy jako symbol do oznaczenia przyczółków (zgodnie z definicją w tabeli 6).
+
+Część 0 zawsze znajduje się najdalej od widza.
+
+Części (23) są powtarzane ''n'' w razie potrzeby, gdzie ''n'' oznacza dowolną liczbę równą lub większą niż 0.
+
+===Flags (0E)===
+
+Tutaj można ustawić następujące flagi:
+
+{| 
+|-
+!'''Bit'''!!'''Wartość'''!!'''Znaczenie'''
+|-
+|0||1||Nie rysuj odległych filarów dla wyższych mostów
+|}
+
+===Long format year of availability (0F)===
+
+Ustaw rok dostępności mostu w latach od 0. Zakres dat wynosi od 0 do 5000000. Ta właściwość musi zostać ustawiona po właściwości 08, aby obowiązywać.
+
+{{pl/Development/NewGRF/ottdp|no||}} W TTDPatch daty wprowadzenia mostu poza zakresem 1920..2175 będą ograniczone do tego zakresu.
+
+===Purchase text (10)===
+
+Ustaw tekst pojawiający się w oknie zakupu, opisujący, z czego wykonany jest ten most lub z jakiego rodzaju jest mostka.
+
+Powinien to być ID oryginalnej nazwy mostu lub ID tekstowy w zakresie DCxx.
+
+===Description of a rail(11) or road(12) bridge===
+
+Ustaw tekst używany jako opis przez narzędzie do wysyłania zapytań. Kiedy most jest używany do przenoszenia szyny, będzie używał nieruchomości 11 i użyje nieruchomości 12, kiedy będzie na drodze.
+
+Powinien to być ID oryginalnej nazwy mostu lub IDtekstowy w zakresie DCxx.
+
+===Menu icons (14)===
+
+Wcześniej ikony menu można było zastąpić ActionA, z wyjątkiem sześciu mostków zmieniających kolor, które zawsze zachowywały ikonę jednego z trzech mostów nadrzędnych.
+Właściwość 14 umożliwia dostęp do wszystkich ikon, w tym trzech nowych <span title="identyfikatorów">ID<span> mostów (0D, 0E, 0F) w nowych funkcjach mapy cirdana.
+
+Uwaga: Ta właściwość jest obecnie dostępna tylko dla rozwojowego <span title=fork>rozwidlenia</span> "Nowe funkcje mapy" (NMF) OpenTTD.
+
+==Example==
+
+Poniżej znajduje się przykładowy kod, który odbudowuje most wiszący z brązu (ID 04). Fragment kodu sam w sobie nie ma zastosowania (brak wizualnej różnicy w grze), ale może być przydatny do zrozumienia kodu mostu. Liczby 'sprites' odnoszą się do liczb w bazie GRF. Kod może być również przydatny do ponownej oceny domyślnego mostu, jeśli chcesz zastąpić tylko jeden określony 'tracktyp' .
+
+Pełne przekodowanie wszystkich domyślnych mostów, w tym tłumaczenie kolorów, jest dostępne na forach TT: https://www.tt-forums.net/viewtopic.php?f=26&t=75209&p=1221899#p1221899
+
+<pre>//SUSPENSION, STEEL (BRONZE) bridge (04)
+
+-1 * 0 00 06 01 01 04 0D 00 07 //action 00 bridges, 01 property, 01 ID, ID, prop 0D, tableID 00, 07 
+	  		       ∆ tables
+
+//table 00
+
+A9 09 00 00     9F 09 00 00     B1 09 00 00     00 00 00 00 //rail X: Back&amp;Floor, Front, Pillars, 0
+A5 09 00 00     97 09 00 00     AD 09 00 00     00 00 00 00 //rail Y: Back&amp;Floor, Front, Pillars, 0
+9D 09 00 00     9F 09 00 00     B1 09 00 00     00 00 00 00 //Road X: Back&amp;Floor, Front, Pillars, 0
+95 09 00 00     97 09 00 00     AD 09 00 00     00 00 00 00 //Road Y: Back&amp;Floor, Front, Pillars, 0
+F2 10 00 00     9F 09 00 00     B1 09 00 00     00 00 00 00 //Mono X: Back&amp;Floor, Front, Pillars, 0
+EE 10 00 00     97 09 00 00     AD 09 00 00     00 00 00 00 //Mono Y: Back&amp;Floor, Front, Pillars, 0
+1A 11 00 00     9F 09 00 00     B1 09 00 00     00 00 00 00 //Mlev X: Back&amp;Floor, Front, Pillars, 0
+16 11 00 00     97 09 00 00     AD 09 00 00     00 00 00 00 //Mlev Y: Back&amp;Floor, Front, Pillars, 0
+//table 01
+AA 09 00 00     A0 09 00 00     B2 09 00 00     00 00 00 00 //rail X: Back&amp;Floor, Front, Pillars, 0
+A6 09 00 00     98 09 00 00     AE 09 00 00     00 00 00 00 //rail Y: Back&amp;Floor, Front, Pillars, 0
+9E 09 00 00     A0 09 00 00     B2 09 00 00     00 00 00 00 //Road X: Back&amp;Floor, Front, Pillars, 0
+96 09 00 00     98 09 00 00     AE 09 00 00     00 00 00 00 //Road Y: Back&amp;Floor, Front, Pillars, 0
+F3 10 00 00     A0 09 00 00     B2 09 00 00     00 00 00 00 //Mono X: Back&amp;Floor, Front, Pillars, 0
+EF 10 00 00     98 09 00 00     AE 09 00 00     00 00 00 00 //Mono Y: Back&amp;Floor, Front, Pillars, 0
+1B 11 00 00     A0 09 00 00     B2 09 00 00     00 00 00 00 //Mlev X: Back&amp;Floor, Front, Pillars, 0
+17 11 00 00     98 09 00 00     AE 09 00 00     00 00 00 00 //Mlev Y: Back&amp;Floor, Front, Pillars, 0
+//table 02
+AC 09 00 00     A4 09 00 00     B4 09 00 00     00 00 00 00 //rail X: Back&amp;Floor, Front, Pillars, 0
+A8 09 00 00     9C 09 00 00     B0 09 00 00     00 00 00 00 //rail Y: Back&amp;Floor, Front, Pillars, 0
+A2 09 00 00     A4 09 00 00     B4 09 00 00     00 00 00 00 //Road X: Back&amp;Floor, Front, Pillars, 0
+9A 09 00 00     9C 09 00 00     B0 09 00 00     00 00 00 00 //Road Y: Back&amp;Floor, Front, Pillars, 0
+F5 10 00 00     A4 09 00 00     B4 09 00 00     00 00 00 00 //Mono X: Back&amp;Floor, Front, Pillars, 0
+F1 10 00 00     9C 09 00 00     B0 09 00 00     00 00 00 00 //Mono Y: Back&amp;Floor, Front, Pillars, 0
+1D 11 00 00     A4 09 00 00     B4 09 00 00     00 00 00 00 //Mlev X: Back&amp;Floor, Front, Pillars, 0
+19 11 00 00     9C 09 00 00     B0 09 00 00     00 00 00 00 //Mlev Y: Back&amp;Floor, Front, Pillars, 0
+//table 03
+AB 09 00 00     A3 09 00 00     B3 09 00 00     00 00 00 00 //rail X: Back&amp;Floor, Front, Pillars, 0
+A7 09 00 00     9B 09 00 00     AF 09 00 00     00 00 00 00 //rail Y: Back&amp;Floor, Front, Pillars, 0
+A1 09 00 00     A3 09 00 00     B3 09 00 00     00 00 00 00 //Road X: Back&amp;Floor, Front, Pillars, 0
+99 09 00 00     9B 09 00 00     AF 09 00 00     00 00 00 00 //Road Y: Back&amp;Floor, Front, Pillars, 0
+F4 10 00 00     A3 09 00 00     B3 09 00 00     00 00 00 00 //Mono X: Back&amp;Floor, Front, Pillars, 0
+F0 10 00 00     9B 09 00 00     AF 09 00 00     00 00 00 00 //Mono Y: Back&amp;Floor, Front, Pillars, 0
+1C 11 00 00     A3 09 00 00     B3 09 00 00     00 00 00 00 //Mlev X: Back&amp;Floor, Front, Pillars, 0
+18 11 00 00     9B 09 00 00     AF 09 00 00     00 00 00 00 //Mlev Y: Back&amp;Floor, Front, Pillars, 0
+//table 04
+B6 09 00 00     BA 09 00 00     BC 09 00 00     00 00 00 00 //rail X: Back&amp;Floor, Front, Pillars, 0
+B5 09 00 00     B9 09 00 00     BB 09 00 00     00 00 00 00 //rail Y: Back&amp;Floor, Front, Pillars, 0
+B8 09 00 00     BA 09 00 00     BC 09 00 00     00 00 00 00 //Road X: Back&amp;Floor, Front, Pillars, 0
+B7 09 00 00     B9 09 00 00     BB 09 00 00     00 00 00 00 //Road Y: Back&amp;Floor, Front, Pillars, 0
+F7 10 00 00     BA 09 00 00     BC 09 00 00     00 00 00 00 //Mono X: Back&amp;Floor, Front, Pillars, 0
+F6 10 00 00     B9 09 00 00     BB 09 00 00     00 00 00 00 //Mono Y: Back&amp;Floor, Front, Pillars, 0
+1F 11 00 00     BA 09 00 00     BC 09 00 00     00 00 00 00 //Mlev X: Back&amp;Floor, Front, Pillars, 0
+1E 11 00 00     B9 09 00 00     BB 09 00 00     00 00 00 00 //Mlev Y: Back&amp;Floor, Front, Pillars, 0
+//table 05
+BD 09 00 00     C1 09 00 00     00 00 00 00     00 00 00 00 //rail X: Back&amp;Floor, Front, Pillars, 0
+BE 09 00 00     C2 09 00 00     00 00 00 00     00 00 00 00 //rail Y: Back&amp;Floor, Front, Pillars, 0
+BF 09 00 00     C1 09 00 00     00 00 00 00     00 00 00 00 //Road X: Back&amp;Floor, Front, Pillars, 0
+C0 09 00 00     C2 09 00 00     00 00 00 00     00 00 00 00 //Road Y: Back&amp;Floor, Front, Pillars, 0
+F8 10 00 00     C1 09 00 00     00 00 00 00     00 00 00 00 //Mono X: Back&amp;Floor, Front, Pillars, 0
+F9 10 00 00     C2 09 00 00     00 00 00 00     00 00 00 00 //Mono Y: Back&amp;Floor, Front, Pillars, 0
+20 11 00 00     C1 09 00 00     00 00 00 00     00 00 00 00 //Mlev X: Back&amp;Floor, Front, Pillars, 0
+21 11 00 00     C2 09 00 00     00 00 00 00     00 00 00 00 //Mlev Y: Back&amp;Floor, Front, Pillars, 0
+//table 06
+86 09 00 00     88 09 00 00     85 09 00 00     87 09 00 00 //rail flat: northern end X, northern end Y, southern end X, southern end Y
+8A 09 00 00     8C 09 00 00     89 09 00 00     8B 09 00 00 //rail ramp: northern end X, northern end Y, southern end X, southern end Y
+8E 09 00 00     90 09 00 00     8D 09 00 00     8F 09 00 00 //road flat: northern end X, northern end Y, southern end X, southern end Y
+92 09 00 00     94 09 00 00     91 09 00 00     93 09 00 00 //road ramp: northern end X, northern end Y, southern end X, southern end Y
+E7 10 00 00     E9 10 00 00     E6 10 00 00     E8 10 00 00 //mono flat: northern end X, northern end Y, southern end X, southern end Y
+EB 10 00 00     ED 10 00 00     EA 10 00 00     EC 10 00 00 //mono ramp: northern end X, northern end Y, southern end X, southern end Y
+0F 11 00 00     11 11 00 00     0E 11 00 00     10 11 00 00 //mlev flat: northern end X, northern end Y, southern end X, southern end Y
+13 11 00 00     15 11 00 00     12 11 00 00     14 11 00 00 //mlev ramp: northern end X, northern end Y, southern end X, southern end Y

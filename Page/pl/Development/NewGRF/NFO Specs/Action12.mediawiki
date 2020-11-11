@@ -1,0 +1,98 @@
+{{pl/Development/NewGRF/inne strony|en=newgrf-specs.tt-wiki.net/wiki/Action12|pl=pl/Development/NewGRF/NFO Specs/Action12 |sub=nfo}}
+<!--{{-}}<br>{{ambox | text = w trakcie edycji.}}-->
+
+==Wprowadzenie==
+{{pl/Development/NewGRF/ottdp|0.6|2.5|ttdprev=2.0.1 alpha 73}}
+Ta akcja umożliwia ładowanie i definiowanie glifów dla dowolnego [http://www.unicode.org/ Unicode] znak w BMP (Basic Multilingual Plane), tj. do U+FFFF .
+
+''Note'': Jeśli załadowany zostanie jakikolwiek plik .grf zawierający akcję 12 (nawet jeśli jest nieaktywny), TTDPatch przechodzi w tryb UTF-8. Zmienia to sposób przetwarzania wprowadzania znaków i sposób przechowywania niestandardowych ciągów w grze (są one konwertowane na kodowanie UTF-8). Nie można temu zapobiec, a ze względu na możliwe błędy w trybie UTF-8 zaleca się umieszczanie wszystkich glifów czcionek w osobnych plikach .grf, aby nie były ładowane w przypadku problemów.
+
+== Format ==
+
+Dane wyglądają następująco:
+
+ <sprite-number> * <length> 12 <num-def> <nowiki>(<font> <num-char> <base-char>){n}</nowiki>
+
+{| 
+|-
+!'''Element'''!![[pl/Development/NewGRF/NFO Specs/GRFActionsDetailed|'''Rozmiar''']]!!'''Opis'''
+|-
+|<sprite-number>||dec||Sekwencyjny numer 'sprite'
+|-
+|<length>||dec||Łączna liczba bajtów w akcji
+|-
+|12||B||Action 12
+|-
+|num-def||B||Liczba definicji
+|-
+|font||B||Czcionka, dla której mają być dostarczane glify <small>''(glyphs)''</small>
+|-
+|num-char||B||Liczba kolejnych glifów
+|-
+|base-char||W||Pierwszy znak Unicode, dla którego mają być dostarczane glify
+|}
+
+Po akcji 12 muszą być prawdziwymi 'sprites' dla wszystkich glifów, tyle samo 'sprites' , ile wszystkich <num-char> dodanych.
+
+'Sprites' glifów mogą używać tylko kolorów 00 (przezroczysty), 01 (pierwszy plan) i 02 (cień). 'Sprite', który używa koloru cienia, NIE MOŻE używać [[pl/Development/NewGRF/NFO Specs/RealSprites#compression|porcjowanego <small>''(chunked)''</small> formatu danych]].
+
+== Description ==
+
+=== sprite-number ===
+
+Aktualny numer 'sprite'.
+
+=== length ===
+
+Całkowita liczba bajtów w tym działaniu 12.
+
+=== num-def ===
+
+Określa liczbę następujących definicji, z których każda ma <nowiki><font></nowiki>, <num-char> i <base-char>.
+
+=== font ===
+
+Czcionka do zdefiniowania glifów. Wartość może wynosić 0 dla czcionki proporcjonalnej normalnego rozmiaru, 1 dla czcionki proporcjonalnej małego rozmiaru, 2 dla czcionki proporcjonalnej dużego rozmiaru lub {{pl/Development/NewGRF/ottdp|1.2|no|ottdrev=23274}} 3 dla nieproporcjonalnego rozmiaru normalnego czcionka.
+
+=== num-char ===
+
+Liczba znaków w zakresie.
+
+=== base-char ===
+
+Pierwszy znak Unicode w zakresie, który udostępnia glify. &nbsp;Może to być dowolny znak Unicode w BMP.
+
+Zauważ, że wszystkie znaki definicji (tj. <nowiki><font></nowiki> <num-char> <base-char> triplet) muszą mieścić się w "bloku" <small>''(block)''</small> 128 znaków, tzn. Nie można zdefiniować znaków U+00E0..U+011F z jedną definicją; zamiast tego musisz podzielić go na U+00E0..U+00FF i U+0100..U+011F, ponieważ są to dwa różne bloki.
+
+== Example ==
+
+ 583 * 10 12 02 00 08 F8 00 00 0C 00 01
+
+{| 
+|-
+!'''Byte'''!!'''Meaning'''
+|-
+|583||<sprite-number>
+|-
+|10||<length> of the action in bytes; start counting at 12 (<action>)
+|-
+|12||<action>: sets this pseudo-sprite to function as action 12
+|-
+|02||<num-def>: we're defining two ranges of characters
+|-
+|00||<nowiki><font></nowiki>: first range, defining font 0 (normal size)
+|-
+|08||<num-char>: defining 8 characters in a row
+|-
+|F8 00||<base-char>: character U+00F8 is the first character
+|-
+|00||<nowiki><font></nowiki>: second range, also defining font 0 (normal size)
+|-
+|0C||<num-char>: defining another 12 characters
+|-
+|00 01||<base-char>: character U+0100 is the first character
+|}
+
+Dlatego działanie 12 określa glify znaków Unicode U+00F8..U+010B. Są one podzielone na dwie definicje, ponieważ definicja nie może przekroczyć granicy bloku.
+
+Po tej akcji 12 śledzi 20 prawdziwych 'sprites' zawierających glify dla powyższych postaci.

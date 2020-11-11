@@ -1,0 +1,41 @@
+<includeonly>
+[[{{#switch: {{{1|}}} | no | No ={{#switch: {{{2|}}} 
+  | black  | Black  = File:en/No check Black.png
+  | orange | Orange = File:en/No check Orange.png
+  | #default        = File:en/No check Red.png}}
+|{{#switch: {{{2|}}} 
+  | black  | Black  = File:en/Yes check Black.png
+  | orange | Orange = File:en/Yes check Orange.png
+  | red    | Red    = File:en/Yes check Red.png
+  | blue   | Blue   = File:en/Yes check Blue.png
+  | yellow |Yellow  = File:en/Yes check Yellow.png
+  | #default        = File:en/Yes check Green.png}}}}|{{{size|11px}}}]]</includeonly><noinclude>
+
+==Usage==
+Enter <nowiki>{{</nowiki>'''Check'''|''Yes/No''|''Color''|''size''<nowiki>}}</nowiki> inside an article section. Example:
+<pre>
+{{Check|Yes}                  Defaults to Yes green
+{{Check|No}                   Defaults to No  red
+{{en/Check|Yes|Blue|size=50px}}  Size is optional Default to 11px
+</pre>
+
+current available colors:
+
+<gallery widths=30px heights=30px perrow=7 caption="Yes check">
+File:en/Yes check Red.png
+File:en/Yes check Orange.png
+File:en/Yes check Black.png
+File:en/Yes check Green.png
+File:en/Yes check Blue.png
+File:en/Yes check Yellow.png
+</gallery>
+
+<gallery widths=30px heights=30px perrow=7 caption="No check">
+File:en/No check Red.png
+File:en/No check Orange.png
+File:en/No check Black.png
+</gallery>
+
+
+
+</noinclude>

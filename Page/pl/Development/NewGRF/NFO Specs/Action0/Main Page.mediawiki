@@ -1,0 +1,152 @@
+{{pl/Development/NewGRF/inne strony|en=newgrf-specs.tt-wiki.net/wiki/Action0
+|pl=pl/Development/NewGRF/NFO Specs/Action0/Main Page |sub=nfo
+<!--|language_page=pl-->
+}}
+<!--[[Category:Artykuły w języku polskim/Pl]]-->
+<!--{{-}}<br>{{ambox | text = w trakcie edycji.}}-->
+==Wprowadzenie==
+
+Działanie 0 pozwala zmienić właściwości funkcji 'features' , tj. Pojazdów, stacji, mostów, domów i innych.
+Każda funkcja ma swoje bardzo specyficzne właściwości. Zostały one szczegółowo wyjaśnione na osobnych stronach.
+
+Na stronach znajdziesz również minimalne wymagania dotyczące wersji dla poprawek.
+Uwaga: ze względu na charakter Akcji 0 nieznanych właściwości nie można zignorować. Można pominąć tylko całą akcję 0.
+OpenTTD i TTDPatch wyłączą GRF, gdy napotkają nieznaną właściwość. Jeśli więc korzystasz z niektórych właściwości opcjonalnych funkcji, które chcesz wyłączyć w starszych wersjach OpenTTD lub TTDPatch, musisz pominąć akcję 0 za pomocą [[pl/Development/NewGRF/NFO Specs/Action7|Action 9]].
+
+
+== Syntax ==
+
+Dane dla działania 0 wyglądają następująco:
+
+ <Sprite-number> * <Length> 00 <Feature> <Num-props> <Num-info> <Id> (<Property <New-info>)...
+
+Oto krótki przegląd tego, co oznacza każdy termin:
+
+{| 
+|-
+!Element!![[pl/Development/NewGRF/NFO Specs/GRFActionsDetailed|Rozmiar]]!!Opis
+|-
+|<Sprite-number> ||dec||Sekwencyjny numer 'sprite'
+|-
+|<Length> ||dec||Łączna liczba bajtów w akcji
+|-
+|00 ||B||Rodzaj działania. W tym przypadku 00
+|-
+|<Feature> ||B||Jaki typ funkcji chcesz zmienić
+|-
+|<Num-props> ||B||Ile właściwości chcesz zmienić na pojazd lub stację
+|-
+|<Num-info> ||B||Ile pojazdów/stacji chcesz zmienić
+|-
+|<Id> ||B*||ID pierwszego pojazdu/stacji do zmiany
+|-
+|<Property> ||B||Jakie właściwości zmienić dla każdego pojazdu/stacji
+|-
+|<New-info> ||V||Nowa wartość właściwości <small>''(property)''</small>
+|}
+Możesz umieścić akcję 0 w dowolnym miejscu po [[pl/Development/NewGRF/NFO Specs/Action8|Action 8]] w pliku GRF.
+
+{{pl/Development/NewGRF/ottdp|0.6|2.5|ttdprev=2.0.1 alpha 61}} <Id> jest rozszerzonym bajtem od TTDPatch 2.0.1 alpha 61, w celu obsługi definicji> 255 efektów dźwiękowych.
+
+{{pl/Development/NewGRF/ottdp|0.7|ottdrev=r13482}} {{pl/Development/NewGRF/grf|7|<7}} W OpenTTD od r13482 rozszerzone ID''`y'' (do 65535) mogą być również używane w pojazdach. Jednak obecnie istnieje zastrzeżenie, że części przegubowe muszą być poniżej 128.
+{{pl/Development/NewGRF/ottdp|1.2}} {{pl/Development/NewGRF/grf|8}} W OpenTTD 1.2 rozszerzone ID''`y'' (do 65535) mogą być również używane w pojazdach. ID pojazdów przegubowych musi wynosić poniżej 8192.
+
+== Descriptions ==
+
+=== Sprite-number ===
+
+Działanie 0 może pojawić się w dowolnym miejscu w pliku GRF, więc ustaw go na numer 'sprite', w którym aktualnie jesteś.
+
+=== Length ===
+
+Całkowita liczba bajtów w Akcji 0 . Rozpocznij odliczanie od <Action>, bitu, który ustawia pseudo-'sprite', aby działał jako określona akcja.
+
+=== Action ===
+
+Rodzaj akcji definiowany przez te pseudo-'sprites'. Powinno tu być 00, ponieważ chcemy, aby ten pseudo-sprites działał jako Akcja 0 .
+
+=== Feature ===
+
+Ustawia to rodzaj [[pl/Development/NewGRF/NFO Specs/Features|feature]] , który chcesz zmienić. Ustaw na:
+{|
+!Wartość
+!colspan="2"|[[pl/Development/NewGRF/NFO Specs/Features|Feature]]
+|-
+|00 || [[pl/Development/NewGRF/NFO Specs/Action0/Vehicles/Trains|Trains]]
+|rowspan="4"|[[pl/Development/NewGRF/NFO Specs/Action0/Vehicles|Common vehicle properties]]
+|-
+|01 || [[pl/Development/NewGRF/NFO Specs/Action0/Vehicles/RoadVehicles|Road Vehicles]]
+|-
+|02 || [[pl/Development/NewGRF/NFO Specs/Action0/Vehicles/Ships|Ships]]
+|-
+|03 || [[pl/Development/NewGRF/NFO Specs/Action0/Vehicles/Planes|Aircraft]]
+|-
+|04
+|colspan="2"| [[pl/Development/NewGRF/NFO Specs/Action0/Stations|Stations]]
+|-
+|05 
+|colspan="2"| [[pl/Development/NewGRF/NFO Specs/Action0/Canals|Canals]]
+|-
+|06 
+|colspan="2"| [[pl/Development/NewGRF/NFO Specs/Action0/Bridges|Bridges]]
+|-
+|07 
+|colspan="2"| [[pl/Development/NewGRF/NFO Specs/Action0/Houses|Houses]] (zerknij  [[pl/Development/NewGRF/NFO Specs/DefaultHouseProps|defaults]])
+|-
+|08 
+|colspan="2"| [[pl/Development/NewGRF/NFO Specs/Action0/Global Settings|Global Settings]]
+|-
+|09 
+|colspan="2"| [[pl/Development/NewGRF/NFO Specs/Action0/Industry Tiles|Industry Tiles]] (zerknij [[pl/Development/NewGRF/NFO Specs/IndustryTileDefaultProps|defaults]])
+|-
+|0A 
+|colspan="2"| [[pl/Development/NewGRF/NFO Specs/Action0/Industries|Industries]] (zerknij  [[pl/Development/NewGRF/NFO Specs/IndustryDefaultProps|defaults]])
+|-
+|0B 
+|colspan="2"| [[pl/Development/NewGRF/NFO Specs/Action0/Cargos|Cargos]] (zerknij  [[pl/Development/NewGRF/NFO Specs/CargoDefaultProps|defaults]])
+|-
+|0C 
+|colspan="2"| [[pl/Development/NewGRF/NFO Specs/Action0/Sound Effects|Sound Effects]]
+|-
+|0D 
+|colspan="2"| [[pl/Development/NewGRF/NFO Specs/Action0/Airports|Airports]]
+|-
+|0F 
+|colspan="2"| [[pl/Development/NewGRF/NFO Specs/Action0/Objects|Objects]]
+|-
+|10 
+|colspan="2"| {{pl/Development/NewGRF/ottdp|1.0|no|ottdrev=r18969}} [[pl/Development/NewGRF/NFO Specs/Action0/Railtypes|Railtypes]]
+|-
+|11 
+|colspan="2"| {{pl/Development/NewGRF/ottdp|1.1|no|ottdrev=r19204}} [[pl/Development/NewGRF/NFO Specs/Action0/Airport Tiles|Airport Tiles]]
+|-
+|12 
+|colspan="2"| {{pl/Development/NewGRF/ottdp|1.10|no|ottdrev=gc02ef3e456}} [[pl/Development/NewGRF/NFO Specs/Action0/Roadtypes|Roadtypes]]
+|-
+|13 
+|colspan="2"| {{pl/Development/NewGRF/ottdp|1.10|no|ottdrev=gc02ef3e456}} [[pl/Development/NewGRF/NFO Specs/Action0/Tramtypes|Tramtypes]]
+|}
+
+=== Num-props ===
+
+Jest to liczba właściwości, które chcesz zmienić na pojazd lub stację. Uwaga: nawet jeśli chcesz ustawić te same właściwości na tę samą wartość dla różnych pojazdów, nadal musisz powtórzyć właściwości i ich wartości dla każdego pojazdu.
+
+=== Num-info ===
+
+Po prostu liczba pojazdów, które zmienisz za pomocą tej akcji 0.
+
+=== Id ===
+[[pl/Development/NewGRF/NFO Specs/VehicleIDs|Vehicle ID]] pierwszego pojazdu lub stacji do zmiany. Jeśli liczba informacji jest większa niż jeden, ten pojazd/stacja i następujące pojazdy/stacje zostaną zmienione.
+
+=== Właściwość ===
+
+Numer właściwości, która zostanie zmieniona. Ta i sekcja Nowe informacje są powtarzane tyle razy, ile są właściwości do ustawienia; w sumie jest < num-props> bajty właściwości.
+
+Aby uzyskać więcej informacji, zobacz odpowiednią podsekcję (łącza u dołu).
+
+=== Nowe info ===
+
+Nowe informacje, które zastąpią poprzednie informacje dla określonej właściwości. To jest zmienny rozmiar; zależy od nieruchomości. Po każdym bajcie właściwości następują sekcje <num-info> new-info.
+Odpowiednie sekwencje specjalne \b, \w i \d mogą być bardzo przydatne dla większości < new-info>s. Zobacz [[pl/Development/NewGRF/NFO Specs/GRFActionsDetailed#byte-order |the discussion of escape sequences]] w celu uzyskania dalszych informacji.
+
+==Przykład==

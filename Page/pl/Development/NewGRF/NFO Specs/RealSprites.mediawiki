@@ -1,0 +1,201 @@
+{{pl/Development/NewGRF/inne strony|en=newgrf-specs.tt-wiki.net/wiki/RealSprites|pl=pl/Development/NewGRF/NFO Specs/RealSprites |sub=nfo}}
+<!--{{-}}<br>--><!--{{ambox | text = w trakcie edycji.}}--><!-- -->
+== Wprowadzenie ==
+
+Prawdziwe 'sprites' są graficzną częścią plików .grf; są tym, co faktycznie widzi użytkownik w grze.
+
+Istnieją dwa wyraźnie różne sposoby pisania prawdziwych 'sprites', w zależności od używanej wersji informacyjnej. TTDPatch i OpenTTD, dopóki wersja 1.2 nie zrozumie tylko [[pl/Development/NewGRF/NFO Specs/Version numbers#grf-container-version|GRF container version 1]] lub <small>''(resp.)''</small> [[pl/Development/NewGRF/NFO Specs/Version numbers#nfo-version|info version 7]] .
+
+== Info version 7 ==
+Dostępne w {{pl/Development/NewGRF/ottdp||}}
+
+=== Syntax ===
+
+Prawdziwy 'sprite' ma następujący format:
+
+ <Sprite-number> <filename> <xpos> <ypos> <compression> <ysize> <xsize> <xrel> <yrel>
+
+{|
+!Element!![[pl/Development/NewGRF/NFO Specs/GRFActionsDetailed|Rozmiar]]!!Opis
+|-
+|<Sprite-number>||dec||Sekwencyjny numer 'sprite'
+|-
+|valign=middle|<filename>||valign=middle|string<!--<ref>-->{{pl/Development/NewGRF/NFO Specs/refs|text=W przeciwieństwie do ciągów w pseudo-'sprites', ciąg ten nie powinien kończyć się "00" i nie powinien być umieszczany w cudzysłowie.|1}}<!--</ref>-->||valign=middle|Nazwa pliku .pcx lub .png, w którym można znaleźć 'sprite'
+|-
+|<xpos>||dec||Pozycja x lewego górnego rogu 'sprite' w pliku
+|-
+|<ypos>||dec||Pozycja y lewego górnego rogu 'sprite' w pliku
+|-
+|<compression>||B||"kompresja"; patrz poniżej
+|-
+|<ysize>||dec||Rozmiar y 'sprite'
+|-
+|<xsize>||dec||Rozmiar x 'sprite'
+|-
+|<xrel>||dec||Pozycja x lewego górnego rogu 'sprite', względem <span title='center'>"środka"</span> (zwykle ujemna)
+|-
+|<yrel>||dec||Pozycja y lewego górnego rogu 'sprite', względem "środka" (zwykle ujemna)
+|}
+<!--
+<references />-->{{pl/Development/NewGRF/NFO Specs/przypisy|101}}<!--
+  -->{{pl/Development/NewGRF/NFO Specs/refs|text=W przeciwieństwie do ciągów w pseudo-'sprites', ciąg ten nie powinien kończyć się "00" i nie powinien być umieszczany w cudzysłowie.|<!--1-->przypis}}
+
+==== filename ====
+
+Określa nazwę i ścieżkę pliku .pcx. Ścieżkę można określić na jeden z dwóch sposobów:
+# Absolutna ścieżka. (np. C:\GRF\sprites\filename.pcx)
+# Ścieżka względna; są one określone względem położenia pliku .grf. (np. sprites\filename.pcx)
+
+W większości przypadków preferowane są ścieżki względne, ponieważ pliki .nfo ze ścieżkami względnymi są bardziej przenośne niż pliki .nfo ze ścieżkami bezwzględnymi.
+
+==== xpos, ypos, ysize, and xsize ====
+
+Są one dość łatwe do ustawienia, o ile pamiętasz, że kolejność to X, Y, Y, X, a nie X, Y, X, Y.
+
+Ponadto żaden 'sprite' nie może zawierać zerowych pikseli; ysize i xsize muszą mieć co najmniej 1.
+
+Uwaga: w grfcodec 0.9.7 i wcześniejszych występuje błąd, który uniemożliwia im prawidłowe kodowanie 'sprite' o mniejszej wartości ypos niż jakikolwiek wcześniejszy 'sprite'. Najlepszym sposobem na obejście tego błędu jest aktualizacja do najnowszej wersji.
+
+==== compression ====
+
+W przeciwieństwie do innych liczb, kompresja jest szesnastkowym polem bitowym. Obecnie obsługiwane są następujące bity:
+
+{|
+!bit!!wartość!!znaczenie
+|-
+|0||1||Indeks koloru 0 jest przezroczysty (powinien być ustawiony '''zawsze''' ; ignorowany, jeśli ustawiony jest bit 3)
+|-
+|1||2||Przechowuj skompresowanego 'sprite' w pamięci
+|-
+|3||8||Sprite ma format danych fragmentarycznych <small>''~ chunked''</small> (inaczej "kompresja kafli")
+|-
+|6||40||'Sprite' nie należy przycinać <small>''~cropped''</small>. (przestrzegane przez GRFCodec r1604 i nowsze)
+|}
+
+Jedynymi poprawnymi wartościami dla kompresji są 00, 01, 02, 03 i 09 (z wyjątkiem specjalnej flagi 0x40, która jest ważna tylko dla grfcodec).
+Wartości 00 - 03 są obsługiwane tak samo przez OpenTTD. Jeśli nie zależy ci na różnicy dla TTDPatch, użyj 01 lub 09.
+
+Najlepsza wartość zależy od tego, które i ile pikseli jest przezroczystych: Jeśli nieprzezroczyste piksele są rozmieszczone w większych blokach wzdłuż pikseli (jak w przypadku płytek gruntowych lub przekątnych widoków pojazdów), użyj 09 (format danych fragmentów). Jeśli nie ma przezroczystych pikseli lub przezroczystych pikseli i nieprzeźroczyste naprzemiennie dużo wzdłuż pikseli, użyj 01.
+
+Jeśli chcesz poprawić rysowanie w TTDPatch (nie robi to różnicy w OpenTTD): Możesz użyć 00 lub. 02, jeśli w ogóle NIE ma przezroczystych pikseli. 00 jest nieco szybsze niż 01. 02 jest prawidłową wartością, ale nie ma większego sensu.
+
+Możesz użyć 02 odpowiednio. 03 do przechowywania sprite skompresowanego w pamięci. Rysowanie będzie wolniejsze, ale 'sprite' potrzebuje mniej pamięci, gdy nie jest używany. Przydatny dla dużych 'sprites', które są rzadko używane (jak nowy papier "potentat stulecia" <small>''(tycoon of the century)''</small> pod koniec gry)
+
+Zasadniczo używanie innych wartości jest złym pomysłem, ponieważ może to powodować problemy. FF to szczególnie zły pomysł.
+
+==== xrel and yrel ====
+
+Te dwie liczby prawdopodobnie staną się zmorą twojego istnienia.
+
+TTD przechowuje jeden punkt dla każdego 'sprite'. xrel i yrel określają, jak daleko w prawo i w dół (odpowiednio), aby przejść od punktu TTD do lewego górnego rogu 'sprite'.
+
+Zmniejszenie o połowę xsize i ysize oraz zanegowanie wyników tworzy przyzwoity punkt początkowy dla tych wartości, a dalsze korekty można wprowadzić ręcznie, np. W OpenTTD, aktywując <!--[http://wiki.openttd.org/NewGRF_Debugging NewGRF developer tools]-->[[pl/Development/NewGRF/Debugowanie NewGRF|narzędzia deweloperskie]] i używając Aligner sprite lub w TTDPatch 2.0.1 alpha 69 i późniejszych z [http://www.tt-wiki.net/wiki/GRFAuthorHelperWindow GRFAuthorHelperWindow] .
+
+==== Ranges ====
+
+Zakresy czterech liczb po kompresji są następujące:
+
+ysize: 1..255
+
+xsize: 1..65535
+
+xrel: -32768..32767
+
+yrel: -32768..32767
+
+ysize*xsize may not exceed 65535.
+
+==== Other notes ====
+
+Powszechną praktyką w blokach akcji 1 jest używanie pseudosprite  "-1 * 1 00"  w celu zastąpienia prawdziwego 'sprite', który nigdy nie zostanie użyty. Najczęstszym zastosowaniem są zestawy pojazdów, które będą używane tylko w oknie zakupu. Zmniejsza to rozmiar pliku .grf w porównaniu do zastąpienia ich 'sprites' jednopikselowymi (ale nie w porównaniu do podziału akcji 1 i uczynienia drugiego definiującym tylko jednego 'sprite'), ale nie oszczędza gniazd prawdziwych 'sprites'. Jeśli TTD kiedykolwiek spróbuje narysować jeden z tych 'sprites', w najlepszym wypadku się zawiesi.
+
+== Info version 32 ==
+Dostępne w {{pl/Development/NewGRF/ottdp|1.2|ottdrev=r23890}}
+
+=== Syntax ===
+
+ <Sprite-number> <filename> 8bpp <xpos> <ypos> <xsize> <ysize> <xrel> <yrel> normal <flags>
+
+  <Sprite-number> <filename> 8bpp  <xpos> <ypos> <xsize> <ysize> <xrel> <yrel> normal      <flags>
+  |               <filename> 8bpp  <xpos> <ypos> <xsize> <ysize> <xrel> <yrel> <zoomlevel> <flags>
+  |               <filename> 32bpp <xpos> <ypos> <xsize> <ysize> <xrel> <yrel> <zoomlevel> <flags>
+  |               <filename> mask  <xpos> <pos>
+                  ...
+==== Sprite-number ====
+Jest to sekwencyjna liczba 'sprites' , maksymalna wartość to 2**32
+==== Filename ====
+Nazwa pliku graficznego, w którym znajduje się prawdziwy 'sprite'
+==== Type ====
+Rodzaj 'sprite'. Typ 1. 'sprite'musi zawsze wynosić 8 bpp i 'normal' poziom powiększenia (patrz poniżej). Kolejne wiersze dla alternatywnych ikonek mogą być dowolnego typu i poziomu powiększenia. Dostępne typy to:
+{|
+!Nazwa!!Opis
+|-
+|8bpp || Sprite z 8-bitową głębią kolorów w jednej z zaakceptowanych palet
+|-
+|32bpp|| Prawdziwy 'sprite' z 32-bitową głębią kolorów
+|-
+|mask || Jeśli zostanie użyty, ten typ musi natychmiast następować po wpisie '32bpp' . Sam w sobie jest to sprite z paletą 8bpp , dokładnie takiej samej wielkości, jak poprzednia duszka 32 pz. Definiuje translację kolorów dla tego poprzedzającego 'sprite' 32bpp: Wpis 0 w palecie oznacza narysowanie 32bpp jak zwykle, pozostałe kolory definiują kolor zastępczy, a następnie poprzedzający 'sprite' 32bpp jest interpretowany jako dający intensywność i informacje o kanale alfa.
+|}
+
+==== xpos, ypos ====
+Współrzędne lewego górnego rogu 'sprite' w pliku graficznym.
+==== xsize, ysize ====
+Szerokość i wysokość 'sprite' w pliku graficznym. Prawidłowy zakres wartości wynosi od 1 do 65535 dla obu.
+==== xrel, yrel ====
+Położenie lewego górnego rogu 'sprite' w stosunku do "center" (zwykle ujemnego). Prawidłowy zakres wartości wynosi od -32768 do 32767.
+==== zoom level ====
+OpenTTD obsługuje wiele poziomów powiększenia. Dla 'normal' poziomu powiększenia kafelek ma szerokość 64 pikseli i wysokość 31 (patrz współrzędne). Dostępne poziomy powiększenia to:
+{|
+!nazwa  !!zoom level!!Rozmiar <span title='Grid'>'Siatki'</span>        !!Groundsprite z zig-zag ramą!!Groundsprite z <span title='smooth border'>'gładką ramą'</span>!!xrel, yrel z gładką ramą!!Opis
+|-
+|zo8   || 8x out   ||      8 x   4    ||      8 x   3    ||      8 x   3      ||      -3,  0
+|rowspan="3"| <span title='zoomed-out'>pomniejszone</span>
+|-
+|zo4   || 4x out   ||     16 x   8    ||     16 x   7    ||     16 x   7      ||      -7,  0
+|-
+|zo2   || 2x out   ||     32 x  16    ||     32 x  15    ||     32 x  15      ||     -15,  0
+|- style="background:lightblue"
+|normal|| (normal) ||     64 x  32    ||     64 x  31    ||     64 x  31      ||     -31,  0       ||  standard
+|-
+|zi2   || 2x in    ||    128 x  64    ||    128 x  62    ||    128 x  63      ||     -62, -1
+|rowspan="2"| <span title='zoomed-in'>powiększone</span>
+|-
+|zi4   || 4x in    ||    256 x 128    ||    256 x 124    ||    256 x 127      ||    -124, -2
+|-
+|zi(X) || (X)x in  || (X*32) x (X*16) || (X*32) x floor(X*15) || (X*32) x (X*16-1) || ceil(X*-31), ceil(X*-1/2) || <span title='Generalisation'>Generalizacja</span>
+|}
+
+Wskazówka:
+Jeśli masz 'sprite' z normalnym powiększeniem i (xrel, yel), 'sprite' 2x z powiększeniem będzie miał (2*xrel, 2*yrel-1), a 'sprite' z 4x powiększeniem będzie miał (4*xrel, 4*yrel-2).
+
+Konwersje te są implikowane przez sposób, w jaki OpenTTD rysuje fundamenty, w szczególności fundamenty połówkowe. Przy powiększeniu 1x pionowa krawędź nachylenia znajduje się między dwoma pikselami, a pozioma krawędź nachylenia znajduje się w środku piksela. Oznacza to, że: Środek płytek (zielona linia) musi się zrównać, górna część płytek (czerwona linia) następnie się nie ustawia:
+<!--[[File:Groundsprites_4x.png]]--><span title='obraz w linku'>[http://newgrf-specs.tt-wiki.net/wiki/File:Groundsprites_4x.pngFile:Groundsprites_4x.png File:Groundsprites_4x.png]</span>
+
+==== Flags ====
+Flagi pozwalają opisać pewne specjalne traktowanie 'sprites':
+{|
+!nazwa!!Opis
+|-
+|nocrop  || Nie zezwalaj grfcodecowi na przycinanie przezroczystych pikseli ze 'sprite' do minimalnego możliwego rozmiaru bez utraty informacji. Użyj tego, gdy rzeczywisty rozmiar 'sprite' ma znaczenie (tj. Gdy 'sprites' potomne na nim polegają).
+|-
+|chunked || Przechowuj sprite skompresowany. Oszczędza miejsce dla 'diagonalnych' <small>''(diagonal)''</small> 'sprites'z dużą przezroczystością, taką jak diagonalne widoki pojazdów.
+|}
+
+== Transparency and glass effect ==
+
+Przezroczystość i efekty szkła można uzyskać za pomocą [[pl/Development/NewGRF/NFO Specs/RecolorSprites|RecolorSprites]]
+
+
+== Przykład ==
+
+Najlepszym sposobem, aby zobaczyć prawdziwe 'sprites' , jest dekodowanie jednego ze standardowych plików .grf TTD. Z nielicznymi wyjątkami wszystkie 'sprites' w tych plikach są prawdziwymi 'sprites'; kilka, które nie są, to RecolorSprites.
+
+Przykłady prawdziwych 'sprites' można również znaleźć na dole [[pl/Development/NewGRF/NFO Specs/Action1|Action1]] lub [[pl/Development/NewGRF/NFO Specs/ActionA|ActionA]].
+
+Te 'sprites' używają ścieżek absolutnych. Usunięcie części C:\TTD\ z każdej nazwy pliku działałoby równie dobrze, zakładając, że chcesz, aby plik .grf pojawił się w C:\TTD.
+
+Info version 32:
+    3 sprites/58_8.png 8bpp 0 0 128 64 -63 -23 normal nocrop
+    | sprites/58_x2_8.png 8bpp 0 0 256 128 -127 -46 zi2 chunked nocrop // comment
+    | sprites/58_x2_32.png 32bpp 0 0 256 128 -127 -46 zi2 chunked nocrop 
+    | sprites/58_x2_32m.png mask 0 0

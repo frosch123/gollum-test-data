@@ -1,0 +1,94 @@
+{{pl/Development/NewGRF/inne strony|en=newgrf-specs.tt-wiki.net/wiki/Action0/Airports|pl=pl/Development/NewGRF/NFO Specs/Action0/Airports |sub=nfo}}
+<!--{{-}}<br>--><!--{{ambox | text = w trakcie edycji.}}--><!-- -->
+==<span id="Introduction" title="Introduction">Wprowadzenie</span>==
+
+Lotniska działają podobnie jak przemysł i budynki miejskie. Maksymalna liczba możliwych portów lotniczych wynosi 128. Wszystkie (nawet przesłonięte) typy oryginalne liczą się do tego limitu.
+
+Definiowanie lotnisk odbywa się według tego samego schematu, co w branżach: aby rozpocząć korzystanie z <span title=identyfikatora>'ID'</span>, najpierw należy go zdefiniować, ustawiając dla niego właściwość 8 lub 9. Jeśli spróbujesz odwołać się do ID (poprzez akcję 0 lub przez akcję 3), który nie jest zdefiniowany, twoje żądanie zostanie zignorowane, ale również nie zostanie zgłoszone jako błąd. Oznacza to, że jeśli chcesz warunkowo zdefiniować ID, wystarczy pominąć akcję0, która ustawia właściwość8/właściwość9, a wszystko inne zostanie automatycznie pominięte.
+
+==<span id="Properties" title="Properties">Właściwości</span>==
+
+{| 
+|-
+!Numer!![[pl/Development/NewGRF/NFO Specs/GRFActionsDetailed|Rozmiar]]!!Wersja!!opis
+|-
+|08||B||{{pl/Development/NewGRF/ottdp|1.1|no|ottdrev=r19459}}||<span title=override>'Zastąpienie'</span> typu lotniska
+|-
+|0A||V||{{pl/Development/NewGRF/ottdp|1.1|no|ottdrev=r20377}}||Ustaw układ(y) lotniska
+|-
+|0C||2*W||{{pl/Development/NewGRF/ottdp|1.1|no|ottdrev=r19459}}||Lata dostępności
+|-
+|0D||B||{{pl/Development/NewGRF/ottdp|1.1|no|ottdrev=r19459}}||Najlepszy zgodny typ lotniska TTD
+|-
+|0E||B||{{pl/Development/NewGRF/ottdp|1.1|no|ottdrev=r19459}}||<span title='Rejon "przechwytu" '>'Catchment area'</span>
+|-
+|0F||B||{{pl/Development/NewGRF/ottdp|1.1|no|ottdrev=r19459}}||Poziom hałasu
+|-
+|10||W||{{pl/Development/NewGRF/ottdp|1.1|no|ottdrev=r19459}}||TextID, który ma być używany jako nazwa lotniska
+|-
+|11||W||{{pl/Development/NewGRF/ottdp|1.2|no|ottdrev=r23415}}||Współczynnik kosztów utrzymania infrastruktury
+|}
+
+==<span id="Descriptions" title="Descriptions">Opis</span>==
+
+===<span id="Airport_type_override_(08)"></span><span title="Airport type override (08)" id="Airport_type_override_.2808.29">Zastąpienie typu lotniska (08)</span>===
+
+Działa zarówno jako typ zastępczy, jak i zastępujący. Przypisanie tej właściwości powoduje skopiowanie wszystkich właściwości starego typu do tego nowego typu. Lista prawidłowych typów: [[pl/Development/NewGRF/NFO Specs/AirportTypes|AirportTypes]]
+
+Istnieje specjalne zastosowanie tej właściwości: jeśli ustawisz FFh, możesz wyłączyć oryginalne lotnisko. W takim przypadku użyty identyfikator musi być numerem lotniska, które chcesz wyłączyć. Żądania wyłączenia są ignorowane dla lotnisk, które zostały już zastąpione.
+
+===<span id="Set_airportlayout(s)_(0A)"></span><span title="Set airportlayout(s) (0A)" id="Set_airportlayout.28s.29_.280A.29">Ustawienie układu(ów) lotniska (0A)</span>===
+
+Format tabel układu lotniska:
+
+{| 
+|-
+!Size!!Variable!!Meaning
+|-
+|B||numlayouts||Całkowita liczba kolejnych układów
+|-
+|D||size||Rozmiar w bajtach całej definicji, z wyłączeniem numlayouts i size
+|-
+|V||layouts||numlayout układy, zobacz format poniżej
+|}
+
+Format układu lotniska:
+
+{| 
+|-
+!Rozmiar!!Zmienna!!Znaczenie
+|-
+|B||xoffs
+|-
+|B||yoffs||Przesunięcia liczone od najbardziej wysuniętego na północ pola lotniska, określające położenie bieżącego pola. Obie są traktowane jako liczby całkowite ze znakiem, ale nie mogą być ujemne, z wyjątkiem specjalnego przypadku opisanego poniżej.
+|-
+|B||oldtile||Stary typ kafla do umieszczenia na danym kaflu
+|-
+|||--<span title=or>lub</span>--||
+|-
+|0xFE,W||newtile||ID już zdefiniowanego kafla lotniska, uzupełniony o 0, aby utworzyć wartość słowa. Ten typ kafla zostanie umieszczony na danym kaflu.
+|-
+|||--<span title=or>lub</span>--||
+|-
+|0xFF|| ||Dany kafel jest sprawdzany pod kątem luzu, ale nic na niej nie zostanie umieszczone. Przydatne, aby zapewnić trochę wolnego miejsca wokół lotniska. Jest to jedyny przypadek, w którym xoffs i yoffs mogą być ujemne. Jeśli xoffs jest ujemne, yoffs musi być o jeden mniejszy od żądanej wartości.
+|}
+
+Układ składa się z jednego bajtu zapewniającego obrót układu (0: północ, 2: wschód, 4: południe, 6: zachód), a następnie lista powyższych definicji kafelków, zakończona dwoma bajtami: 0,80h
+
+===<span id="Availability_years_(0C)"></span><span title="Availability years (0C)" id="Availability_years_.280C.29">Lata dostępności (0C)</span>===
+
+Lotnisko jest dostępne w pierwszym i ostatnim roku. Odpowiednio 0 i FFFF są wieczne.
+
+===<span id="Best_compatible_TTD_airport_type_(0D)"></span><span title="Best compatible TTD airport type (0D)" id="Best_compatible_TTD_airport_type_.280D.29">Najlepszy zgodny typ lotniska TTD (0D)</span>===
+
+Służy do kompatybilności z [[pl/Development/NewGRF/NFO Specs/VariationalAction2/Vehicles#aircraft-info-44| vehicle var 44]]. Prawidłowe wartości:
+
+0: small airport
+
+1: large airport
+
+2: heliport
+
+3: oilrig
+
+==<span id="Example" title="Example">Przykład</span>==

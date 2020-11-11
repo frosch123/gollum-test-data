@@ -1,5 +1,5 @@
 [[Translation:en/Manual/Conditional Orders]]
-{{en/Manual/Tutorial}}{{en/Table of contents}}
+{{en/Manual/Tutorial/Navigation}}{{en/Manual/Navigation}}
 
 ''Conditional Orders'' allow more fine grained control than regular orders.
 
@@ -38,4 +38,4 @@ Set the condition to ''Vehicle age'' - ''is less than'' - ''some number''. In th
 This bus will now visit the two stations for 10 years. When the vehicle is 11 years old the vehicle will follow order 4 and go stop in the depot.
 This is because order 3 will jump back to order number one while the condition is true. Once the vehicle ages to 11 years, the condition will no longer be true and the order will be skipped.
 
-[[Category:en/Manual/Base Set/Vehicles]]
+[[Category:en/Manual/Vehicles]]

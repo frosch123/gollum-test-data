@@ -1,0 +1,93 @@
+<noinclude>{{pl/Development/NewGRF/inne strony|en=newgrf-specs.tt-wiki.net/wiki/Callback:_AI_construction/purchase_selection
+|pl=pl/Development/NewGRF/NFO Specs/Callback/AI construction∕purchase selection
+}}
+<!--{{-}}<br>{{ambox | text = w trakcie edycji.}}--></noinclude><!--
+-->==<span id="AI_construction/purchase_selection_(18)"></span><span title="AI construction/purchase selection (18)" id="AI_construction.2Fpurchase_selection_.2818.29">Wybór konstrukcji/zakupu AI (18)</span>==
+
+Ta funkcja <span title=callback>'zwrotna'</span> funkcji ogólnej jest wywoływana w celu podjęcia różnych decyzji, gdy <span title='sztuczna inteligencja'>'SI'</span> buduje nową trasę. Na przykład, AI zazwyczaj ma ustaloną na stałe listę wagonów dla każdego rodzaju ładunku, ale dzięki temu wywołaniu zwrotnemu możesz uzależnić wybór od branż źródłowych i docelowych, a także odległości między usługami.
+
+Ponieważ pojazd nie został jeszcze kupiony, nie możesz używać zwykłych zmiennych pojazdu 40+x lub 80+x, zamiast tego masz następujące:
+
+{| 
+|-
+!Zmienna!![[pl/Development/NewGRF/NFO Specs/GRFActionsDetailed|Rozmiar]]!!Content
+|-
+|80||B||typ ładunku (specyficzny dla klimatu, kolumna 3, typ B w [[pl/Development/NewGRF/NFO Specs/CargoTypes|cargo type list]])
+|-
+|81||B||typu ładunku (niezależny od klimatu, kolumna 1, typ A w [[pl/Development/NewGRF/NFO Specs/CargoTypes|cargo type list]])
+|-
+|82||B||wybór domyślny
+|-
+|valign=middle|83||valign=middle|B||valign=middle|źródło [[pl/Development/NewGRF/NFO Specs/IndustryDefaultProps|industry type]] (ID). W przypadku nowych branż typ zastępczy jest zwracany począwszy od OpenTTD r20108.<!--<ref name="IndustryTypeAI">-->{{pl/Development/NewGRF/NFO Specs/refs|name=IndustryTypeAI|text=Dostępne są dwie specjalne wartości zwrotu: 0xFE, która wskazuje nieznany typ branży i 0xFF wich wskazuje miasto|1}}<!--</ref>-->
+|-
+|84||B||valign=middle| przeznaczenie [[pl/Development/NewGRF/NFO Specs/IndustryDefaultProps|industry type]] (ID). W przypadku nowych branż typ zastępczy jest zwracany począwszy od OpenTTD r20108.<!--<ref name="IndustryTypeAI" />-->{{pl/Development/NewGRF/NFO Specs/refs|name=IndustryTypeAI|<!--2-->1-1}}
+|-
+|85||B||odległość między źródłem a miejscem docelowym, (dx+dy)/2
+|-
+|86||B||Wydarzenie budowy SI
+|-
+|87||B||Numer konstrukcyjny; dla wagonów: liczba wagonów; dla stacji 0=source station, 1=destination station
+|-
+|88||B||Rozmiar stacji w formie NL; N=number of platforms, L=length
+|-
+|40||D||xxxxxxTT, TT=cargo slot z tabeli tłumaczeń ładunku lub taka sama jak w przypadku braku tabeli, dostępna od r1167/2.5b9
+|}
+<!--
+<references />-->{{pl/Development/NewGRF/NFO Specs/przypisy|name=IndustryTypeAI|2001}}<!-- 1.0
+ -->{{pl/Development/NewGRF/NFO Specs/przypisy|name=IndustryTypeAI|2001-1}}<!-- 1.0
+  -->{{pl/Development/NewGRF/NFO Specs/refs|name=IndustryTypeAI|text=Dostępne są dwie specjalne wartości zwrotu: 0xFE, która wskazuje nieznany typ branży i 0xFF wich wskazuje miasto|<!--1-->przypis}}<!-- 1-0
+  -->{{pl/Development/NewGRF/NFO Specs/refs|name=IndustryTypeAI|<!--2--><!--1-1-->przypis}}<!-- 1-1 --><br><br>
+
+<span title=Callback>'Wywołanie zwrotne'</span> zostanie wywołane dla następujących zdarzeń konstrukcyjnych, zapisanych w zmiennej 86:
+
+{| 
+|-
+!Grupa!!Cecha!!Var.86!!Typ!!Opis
+|-
+|<span title=koleje>'Trains'</span>||00||00||<span title=sparawdzenie>'Check'</span>||Zwykły silnik kolejowy
+|-
+||| ||01||Check||Elektryczna lokomotywa
+|-
+||| ||02||Check||Monorail engine
+|-
+||| ||03||Check||Maglev engine
+|-
+||| ||08||<span title=Otrzymanie>'Get'</span>||Zwykły wagon kolejowy
+|-
+||| ||09||Get||Elektryczny wagon kolejowy
+|-
+||| ||0A||Get||Monorail wagon
+|-
+||| ||0B||Get||Maglev wagon
+|-
+||| ||0F||Get||Typ toru do zbudowania
+|-
+|Pojazdy drogowe||01||00||Check||Pojazd drogowy
+|-
+||| ||01||Get||Pierwszy ID pojazdu drogowego do wypróbowania
+|-
+||| ||02||Get||Liczba pojazdów drogowych do wypróbowania
+|-
+|Ships||02||00||Check||Ship
+|-
+||| ||01||Get||Pierwszy ID statku do wypróbowania
+|-
+||| ||02||Get||Liczba statków do wypróbowania
+|-
+|<span title=Aircraft>'Samolot'</span>||03||00||Check||Samolot
+|-
+|Stacje||04||00||Get||ID stacji
+|}
+
+Notes:
+* "Check" oznacza sprawdzenie, czy powinien spróbować kupić ten pojazd (z ID w var. 82). Zwróć 0, aby zabronić zakupu, lub 1, aby na to pozwolić. Jeśli jest to dozwolone, komputer kupi najdroższy pojazd (lub stopień AI dla silników pociągów), jaki może znaleźć, i jest dostępny i ma wystarczająco wysoką niezawodność.
+* "Pobierz" <small>''(Get)''</small> oznacza dowiedzieć się, którego ID (itp.) Użyć. Wartość domyślna w var.82 będzie używana, jeśli wywołanie zwrotne nie powiedzie się.
+* W przypadku silników pociągów i samolotów AI zawsze sprawdza wszystkie dostępne silniki.
+* W przypadku pojazdów drogowych i statków, AI ma wbudowaną listę pojazdów do wypróbowania, możesz użyć zdarzenia <span title='wywołania zwrotnego'>'callback'</span> 01 i 02, aby zmienić tę listę.
+* W przypadku pociągów typy torów (0=<span title="normalny">'regular'</span>, 1=electric, 2=monorail, 3=maglev) <small>''(electrifiedrailways/unifiedmaglev)''</small> są automatycznie mapowane odpowiednio w zależności od przełączników zelektryfikowanych/zunifikowanych. Aby uzyskać najlepsze wyniki, załóż, że wszystkie cztery są dostępne. Gra użyje wtedy poprawnego, jeśli nie jest dostępny.
+
+To wywołanie zwrotne jest <span title=chained>"powiązane"</span> , tzn. Jeśli wynik nie jest wynikiem wywołania zwrotnego (wysoki bit nie jest ustawiony), wówczas żądanie jest przekazywane do poprzedniej ogólnej procedury obsługi wywołania zwrotnego, tj. Są sprawdzane w odwrotnej kolejności. Umożliwia to pozostawienie niektórych decyzji poprzedniemu programowi obsługi i pozwala na pewną współpracę między kilkoma plikami .grf.
+
+{{pl/Development/NewGRF/grfTill|7}} Zauważ, że GRF w wersji 7 i niższej rozróżniały tylko zerowe i niezerowe wartości zwracane dla "Check" .
+
+<!--[[Category:Callbacks]]-->

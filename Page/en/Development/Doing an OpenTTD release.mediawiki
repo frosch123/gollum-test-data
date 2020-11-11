@@ -1,5 +1,5 @@
 [[Translation:en/Development/Doing an OpenTTD release]]
-{{en/DevDoc}}
+{{en/Development/Navigation}}
 
 These things have to be done for each release:
 
@@ -33,7 +33,7 @@ These things have to be done for each release:
 * update the IRC topic
 * forwardport/merge the changes made in the prerelease
 * for non-RC releases:
-** create a wiki page and update the [[en/Archive/OpenTTD/Main Page|release history]] and [[Template:en/Development/OTTDVersions|template]]
+** create a wiki page and update the [[en/Archive/OpenTTD/Main Page|release history]] and [[Template:en/Archive/OpenTTD/Navigation|template]]
 ** update wiki templates: [[Template:en/Version]]
 ** Add the new version to bananas minimal/maximum version list
 ** poke package maintainers on IRC: blathijs (debian), heffer (fedora)
@@ -51,4 +51,3 @@ These things have to be done for each release:
 * Backport changelog (and debian/changelog) to master branch
 * Update wiki pages: [[Template:en/VersionBox]]
 
-[[Category:en/Development]]

@@ -1,0 +1,164 @@
+{{pl/Development/NewGRF/inne strony|en=newgrf-specs.tt-wiki.net/wiki/Action2/Vehicles|pl=pl/Development/NewGRF/NFO Specs/Action2/Vehicles |sub=nfo}}
+<!--{{-}}<br>--><!--{{ambox | text = w trakcie edycji.}}--><!-- -->
+== Wprowadzenie ==
+
+Definiowanie set-IDs dla pojazdów .
+
+W przypadku cech 0, 1, 2 i 3 (pojazdy) Action2 jest używane głównie do definiowania zestawów 'sprites' , które pokazują jeden pojazd w różnych stanach obciążenia dla jednego określonego rodzaju ładunku.
+
+Nie pomijaj Action2 za pomocą [[pl/Development/NewGRF/NFO Specs/Action7|Action9]] (chyba że pomija cały plik). Action2 nie może zostać pominięte przez Action9, ponieważ TTDPatch najprawdopodobniej ulegnie awarii. Zamiast tego pomiń lub zmodyfikuj [[pl/Development/NewGRF/NFO Specs/Action3/Main Page|Action3]]. Pominięcie czynności 2 za pomocą [[pl/Development/NewGRF/NFO Specs/Action7|Action7]] nie ma żadnego efektu.
+
+Jeśli istnieje tylko jeden typ obciążenia, jest pokazywany dla wszystkich obciążeń.
+
+Jeśli istnieją dwa typy obciążeń, pierwszy pokazany jest poniżej 50%, a drugi powyżej 50%. Jeśli istnieją trzy typy obciążeń, są one pokazane powyżej/poniżej 33% i 66%. Jeśli istnieją cztery typy obciążeń, są one pokazane powyżej/poniżej 25%, 50% i 75% itd.
+
+== Variable 10 ==
+
+[[pl/Development/NewGRF/NFO Specs/GlobalVariables#extra-callback-info-10-and-18|Variable 10]] zawiera dodatkowe informacje na temat rysowanego 'sprite' .
+
+{| 
+|-
+! Bity !! znaczenie
+|-
+| 0 - 7 || {{pl/Development/NewGRF/ottdp|1.2|no|ottdrev=r23080}} Określa miejsce wyświetlania 'sprite'. Patrz poniżej.
+|-
+| 8 - 15 || {{pl/Development/NewGRF/ottdp|1.7|no|ottdrev=r27668}} Numer iteracji podczas komponowania pojazdów z wielu 'sprites'. Patrz poniżej.
+|-
+| 16 - 31 || Zarezerwowane. Maskuje się.
+|}
+
+=== Drawing different sprites on map in various GUIs ===
+{{pl/Development/NewGRF/ottdp|1.2|no|ottdrev=r23080}} Od wersji OpenTTD R23080 możesz używać zmiennej 10 do wyświetlania różnych 'sprites' w GUI i na mapie. Obecnie skrzynki te są dostępne:
+{| 
+|-
+! Bity 0 – 7 z [[pl/Development/NewGRF/NFO Specs/GlobalVariables#extra-callback-info-10-and-18|variable 10]] !! Znaczenie
+|-
+| 00 || Pojazd jest rysowany w rzutni <small>''(viewport)''</small>, tj. Na mapie.
+|-
+| 01..0F || zarezerwowane
+|-
+| 10 ||valign=middle| Pojazd jest rysowany w graficznym interfejsie zajezdni. <!--<ref>-->{{pl/Development/NewGRF/NFO Specs/refs|text=OpenTTD korzysta również z tej wartości w łańcuchu list zakupów (Cargotype FF), aby określić rozmiar siatki w depotach statków i samolotów.|1}}<!--</ref>-->
+|-
+| 11 || Pojazd jest rysowany w GUI szczegółów pojazdu. (Obejmuje to graficzny interfejs użytkownika.)
+|-
+| 12 || Pojazd jest rysowany na liście pojazdów.
+|-
+| 13..1F || zarezerwowane dla innych przyszłych GUI.
+|-
+| 20 || Pojazd jest rysowany na liście zakupów. (Obejmuje to GUI autoreplace.)
+|-
+| 21 || Pojazd jest rysowany w ekskluzywnym interfejsie GUI lub w wiadomościach reklamowych.
+|-
+| 22..2F || zarezerwowane dla innych przyszłych GUI z niezakupionymi pojazdami.
+|-
+| 30..FF || reserved
+|}
+<!--<references/>-->{{pl/Development/NewGRF/NFO Specs/przypisy|101}}{{pl/Development/NewGRF/NFO Specs/refs|text=OpenTTD korzysta również z tej wartości w łańcuchu list zakupów (Cargotype FF), aby określić rozmiar siatki w depotach statków i samolotów.|<!--1-->przypis}}
+
+Pozostałe bajty zmiennej 10 są zarezerwowane i muszą być zamaskowane.
+Przypadki 20..2F są wywoływane przy użyciu łańcucha listy zakupów (ładunek FF), pozostałe przypadki są wywoływane dla rzeczywistych pojazdów (z wyjątkiem specjalnego wywołania depot-gridsize).
+
+=== Composing vehicles from multiple sprites ===
+{{pl/Development/NewGRF/ottdp|1.7|no|ottdrev=r27668}} Od OpenTTD r27668 możesz rysować pojazdy, rysując wiele 'sprites' jeden na drugim.
+* 'Sprites' mogą korzystać z różnych kolorów.
+* Podczas korzystania ze sprite'ów 32bpp, sprites mogą używać kanału alfa do łączenia się z innymi sprites. W szczególności możesz użyć tego do mieszania kolorów firmowych alfa w stosunku do innych 'sprites' .
+
+Aby to umożliwić, musisz ustawić bit 7 różnych flag (śmigło pociągu 27, śmigło rv 1C, śmigło statku 17, śmigło samolotu 17).
+
+Po włączeniu 'sprites' są rozwiązywane wiele razy, zwiększając liczbę iteracji w bitach od 8 do 15 zmiennej 10.
+Obecnie jest to ograniczone do maksymalnie 4 'sprites' na część przegubową.
+
+Oprócz zwracania 'sprite' , musisz ustawić rejestr 100, aby zwrócić tę informację:
+
+{| 
+|-
+! Bity !! Znaczenie
+|-
+| 0 - 15 || Przekoloruj 'sprite' do użycia. Ustaw na 0, aby użyć domyślnego kolorowania pojazdu (od oddzwaniania 2D). Ustaw na 775, aby nie zmieniać koloru.
+|-
+| 16 - 30 || Zarezerwowane, ustawione na zero.
+|-
+| 31 || Jeśli jest ustawiony, do rysowania jest więcej 'sprites'. Rozwiąż 'sprites' ponownie z przyrostową liczbą iteracji.
+|}
+
+==Syntax==
+
+W przypadku pojazdów dane wyglądają następująco:
+
+ <Sprite-number> * <Length> 02 <veh-type> <set-id> <num-loadtypes> <num-loadingtypes> <loadtypes...>
+
+{|
+!Element!![[pl/Development/NewGRF/NFO Specs/GRFActionsDetailed|Rozmiar]]!!Opis
+
+|-
+|<Sprite-number>||dec||Kolejny numer sprite'a
+
+|-
+|<length>||dec||Całkowita liczba bajtów użytych w tej akcji
+
+|-
+|02||B||Definiuje action2
+
+|-
+|<veh-type>||B||Do jakiego typu pojazdu należy stosować następujące sprite'y?
+
+|-
+|<set-id>||B||Set-ID tej akcji2
+
+|-
+|<num-loadtypes>||B||Liczba różnych stanów podczas ruchu
+
+|-
+|<num-loadingtypes>||B||Liczba różnych stanów podczas załadunku/rozładunku
+
+|-
+|<loadtypes>||W||Zestawy z ostatniej akcji1 do użycia dla różnych stanów ładowania.
+|}
+
+==Description==
+
+=== Sprite-number ===
+
+To tylko numer, na którym jesteś.
+
+=== Length ===
+
+Policz liczbę bajtów w tej akcji.
+
+=== veh-type ===
+
+Ustawia typ pojazdu, który chcesz zmienić. Ustaw na
+
+00 dla pociągów
+
+01 dla pojazdów drogowych
+
+02 dla statków
+
+03 dla samolotów
+
+=== Set-id ===
+
+Jest to liczba, którą podajesz temu zestawowi 'sprites' . Możesz wybrać dowolną wartość z przedziału od 00 do FF, i możesz użyć ich ponownie w pliku grf w późniejszym momencie (jeśli jest równy istniejącemu identyfikatorowi zestawu, istniejący jest zastępowany i używany jest nowy).
+
+=== num-loadtypes ===
+
+Jest to liczba różnych grafik, które pojazd ma, gdy nie jest ładowany ani rozładowywany, w zależności od ilości przewożonego ładunku. Na przykład, jeśli ma dwa stany, pełny lub pusty, będzie to 02. Jeśli ma trzy stany, pełny, w połowie pełny lub pusty, będzie to 03.
+
+=== num-loadingtypes ===
+
+Taki sam jak typ num-load, z tym wyjątkiem, że pojazd jest załadowywany lub rozładowywany. Na przykład, jeśli pojazd jest zamknięty, może on mieć tylko jeden stan podczas ruchu (tj. Typem num-load jest 01), ale może pokazywać kilka stanów obciążenia, gdy jest ładowany lub rozładowywany, a tym samym otwarty.
+
+Ani typy obciążeń num, ani typy obciążeń num nie mogą być zerowe, dla każdego musi istnieć co najmniej jeden stan.
+
+=== loadtypes ===
+
+'Sprite' ustawia się dla stanów obciążenia. Każdy wpis jest wartością '''WORD''' w małym formacie endian i odnosi się do najnowszych zestawów akcji1. Na przykład zestawy akcji 1, 4, 5 i 7 będą kodowane odpowiednio jako <tt>04 00</tt>, <tt>05 00</tt> i <tt>07 00</tt> . Zwróć uwagę na dodatkowy 00, który jest potrzebny, ponieważ tutaj musi być wartością słowa.
+
+Pierwsze wpisy są używane, gdy nie są ładowane. Musi być ich wiele rodzajów. Następnie postępuj zgodnie z zestawami, które mają być używane podczas ładowania/rozładowywania, i musi być ich typ num-load.
+
+Pamiętaj, że możesz udostępniać zestawy akcji 1 między kilkoma wpisami akcji 2. Na przykład możesz mieć wagon, który może pomieścić węgiel lub rudę żelaza, i wyglądałby tak samo, gdyby był pusty. Wtedy pusty zestaw 'sprite' może być współdzielony przez wpisy action2 dla rudy żelaza i węgla.
+
+= Przykład =
+
+<span style='color:#808080'>Something to go here</span>

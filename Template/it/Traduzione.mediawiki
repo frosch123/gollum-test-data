@@ -1,5 +1,5 @@
 <noinclude>[[Translation:Template/en/Translation]]</noinclude>{{en/Ambox| type  = style
-| image = en/Manual/Base Set/Translation.png
+| image = en/Translation.png
 | text  = <strong>Questo articolo è tradotto dall'originale inglese: <includeonly>[[{{{1}}}|{{{1}}}]]</includeonly><noinclude>{{{1}}}</noinclude>.</strong>
 <div style="font-size: 90%">
 <div style="margin:auto; text-align:Left;">Percentuale: {{{2|0}}}%
@@ -19,7 +19,7 @@ Tipo <code><nowiki>{{</nowiki>'''traduzione/It'''|''Titolo in inglese''|''percen
 Restituisce:
 {{it/Traduzione|en/Main page|100}}
 In questo esempio l'articolo originale in inglese è ''Main page'' (''Pagina principale'').
-<p>Aggiungere anche l'articolo di Categoria [[:Category:it/Manual/Base Set/Cargos/Articoli in fase di traduzione]].</p>
+<p>Aggiungere anche l'articolo di Categoria [[:Category:it/Articoli in fase di traduzione]].</p>
 
 === Dopo la traduzione===
 Una volta completamente tradotta rimuovere questa pagina del modello e utilizzare il modello [[Template:en/Other languages]].
@@ -28,5 +28,5 @@ Una volta completamente tradotta rimuovere questa pagina del modello e utilizzar
 *[[Template:it/In attesa di traduzione]]
 *[[:Category:en/Other languages]] per le statistiche di traduzione.
 
-[[Category:it/Manual/Base Set/Message box]]
-</noinclude><includeonly>{{ #ifexpr: {{{2|0}}}=100 | |[[Category:it/Manual/Base Set/Cargos/Articoli in fase di traduzione]]{{ #ifexpr: {{{2|0}}}>10 | [[Category:it/Manual/Base Set/Cargos/Tradotto più 10 per cento]] | [[Category:it/Manual/Base Set/Cargos/Tradotto meno 10 per cento]]}}}}</includeonly>
+[[Category:it/Message box]]
+</noinclude><includeonly>{{ #ifexpr: {{{2|0}}}=100 | |[[Category:it/Articoli in fase di traduzione]]{{ #ifexpr: {{{2|0}}}>10 | [[Category:it/Tradotto più 10 per cento]] | [[Category:it/Tradotto meno 10 per cento]]}}}}</includeonly>

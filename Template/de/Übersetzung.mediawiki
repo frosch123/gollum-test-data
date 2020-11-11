@@ -1,5 +1,5 @@
 <noinclude>[[Translation:Template/en/Translation]]</noinclude>{{en/Ambox| type  = style
-| image = en/Manual/Base Set/Translation.png
+| image = en/Translation.png
 | text  = <strong>Dieser Artikel wird aus dem Originaltext vom Englischen in die deutsche Sprache übersetzt: <includeonly>[[{{{1}}}|{{{1}}}]]</includeonly><noinclude>{{{1}}}</noinclude>.</strong>
 <div style="font-size: 90%">
 <div style="margin:auto; text-align:Left;">Prozentsatz: {{{2|0}}}%
@@ -15,7 +15,7 @@ Bitte hilf mit, diese Übersetzung zu verbessern.
 === Diese Vorlage benutzen ===
 Füge <code><nowiki>{{</nowiki>Übersetzung/De|''englischer Originaltitel''|''Prozentzahl''<nowiki>}}</nowiki></code> am Anfang des Artikels ein, um anzuzeigen, dass dieser Artikel gerade übersetzt wird.
 
-Die Artikel werden automatisch zu den Kategorien [[:Category:de/Manual/Base Set/Artikel, welche in die deutsche Sprache übersetzt werden]] und [[:Category:de/Artikel in deutscher Sprache]] hinzugefügt.
+Die Artikel werden automatisch zu den Kategorien [[:Category:de/Artikel, welche in die deutsche Sprache übersetzt werden]] und [[:Category:de/Artikel in deutscher Sprache]] hinzugefügt.
 
 === Nach Beendung der Übersetzung ===
 Entferne diese Vorlage, wenn der Artikel komplett übersetzt ist.
@@ -25,8 +25,8 @@ Entferne diese Vorlage, wenn der Artikel komplett übersetzt ist.
 *[[:Category:en/Other languages]] für statistische Übersetzung.
 
 
-[[Category:de/Manual/Base Set/Message-Boxen|Übersetzung]]
+[[Category:de/Message-Boxen|Übersetzung]]
 
 
 
-</noinclude><includeonly>{{ #ifexpr: {{{2|0}}}=100 | |[[Category:de/Manual/Base Set/Artikel, welche in die deutsche Sprache übersetzt werden]]{{ #ifexpr: {{{2|0}}}>10 | [[Category:de/Manual/Base Set/Übersetzt von über 10 Prozent]] | [[Category:de/Manual/Base Set/Übersetzt nichts]]}}}}</includeonly>
+</noinclude><includeonly>{{ #ifexpr: {{{2|0}}}=100 | |[[Category:de/Artikel, welche in die deutsche Sprache übersetzt werden]]{{ #ifexpr: {{{2|0}}}>10 | [[Category:de/Übersetzt von über 10 Prozent]] | [[Category:de/Übersetzt nichts]]}}}}</includeonly>

@@ -1,0 +1,212 @@
+{{pl/Development/NewGRF/inne strony|en=newgrf-specs.tt-wiki.net/wiki/RecolorSprites|pl=pl/Development/NewGRF/NFO Specs/RecolorSprites |sub=nfo}}
+<!--{{-}}<br>--><!--{{ambox | text = w trakcie edycji.}}--><!-- -->
+== Wprowadzenie ==
+
+Ponowne kolorowanie ikonek to pseudosprite używane do ponownego kolorowania innych ikonek, najczęściej do stosowania kolorów firmowych. Ponowny kolor sprite to po prostu ponowne mapowanie oryginalnej tabeli kolorów TTD.
+
+== Syntax ==
+
+Ponowne kolorowanie 'sprite' ma następujący format:
+
+ <Sprite-number> * 257 00 <recolor-table>
+
+{|
+!Element!![[pl/Development/NewGRF/NFO Specs/GRFActionsDetailed|Rozmiar]]!!Opis
+
+|-
+|<Sprite-number>||dec||Sekwencyjny numer 'sprite'
+
+|-
+|257||dec||Całkowita liczba bajtów użytych w tej akcji, zawsze 257
+
+|-
+|00||B||dosłowny <small>''(literal)''</small> 00
+
+|-
+|<recolor-table>||256*B||Patrz poniżej
+|}
+
+== Description ==
+
+=== 00 ===
+
+Na pierwszy rzut oka łatwo pomylić zmiennokolorowego 'sprite' z działaniem 0, najczęściej w pociągach. Próba odczytania sprite'a odbarwiającego jako akcji 0 zwykle ujawni, że jest o wiele za dużo bajtów. Kolejną wskazówką jest to, że sprajniki o ponownym kolorze mają zawsze długość 257 bajtów.
+
+Prawidłową metodą rozróżnienia sprite'ów od zera i akcji 0 jest zwrócenie uwagi, że sprite'y z ponownym kolorowaniem mogą pojawić się tylko w bloku [[pl/Development/NewGRF/NFO Specs/Action5|Action5]] lub [[pl/Development/NewGRF/NFO Specs/ActionA|ActionA]], a akcja 0s może pojawić się tylko poza takim blokiem.
+
+=== recolor-table ===
+
+256-bajtowa tabela ponownego kolorowania. Bajt przy przesunięciu równym indeksowi koloru źródłowego określa kolor, który ma zostać narysowany.
+
+Zauważ, że przesunięcia i bajty różnią się w zależności od tego, czy GRF jest ładowany do TTD DOS czy TTD Win. Jeśli utworzysz GRF, który zawiera sprite'y, może okazać się konieczne utrzymanie dwóch osobnych wersji, lub użyj Action7, który sprawdza zmienną 83, aby zabezpieczyć wprowadzającą akcję 5/A i sprite'y recolor.
+
+== Usage ==
+
+Ponowne kolorowanie 'sprites' jest stosowane na jeden z dwóch sposobów.
+
+;Nieprzejrzysty: każdy piksel w ikonce jest sprawdzany w tabeli kolorów, a następnie kolor określony w tym przesunięciu jest rysowany na ekranie. Jeśli wynikowy kolor to 00 ("przezroczysty niebieski" <small>''~transparent blue''</small>)), to jeśli bit  [[pl/Development/NewGRF/NFO Specs/RealSprites#compression|sprite's compression]] ustawiony jest na ''nie'' , nic nie jest rysowane; w przeciwnym razie (tj. jeśli 'sprite' ma format danych fragmentów), rysowany jest rzeczywisty kolor 00 (czyli ''czarny'').
+
+;Przezroczysty: Dla każdego piksela sprite, który nie jest przezroczysty, bieżący (ekranowy) kolor piksela w miejscu, w którym piksel sprite miałby zostać narysowany, jest sprawdzany w tabeli ponownego kolorowania, a następnie przerysowany w nowym kolorze. Jeśli wyszukiwanie ponownie koloru zwraca 00 ("przezroczysty niebieski"), wynikowy kolor jest w rzeczywistości czarny. Inne niż przezroczysty-niebieski/nieprzezroczysty-niebieski, rzeczywiste kolory pikseli w ikonce, która jest rysowana przezroczysto, są bez znaczenia.
+
+== Default recolour sprites ==
+
+TTD definiuje już wiele przekolorowanych 'sprites' do różnych zastosowań, np. do półprzezroczystości szkła lub ponownego barwienia rurowych mostów, kolorów firmowych lub niektórych domów.
+
+{|
+!Sprite numer (dec)!!Sprite numer (hex)!!Opis
+
+|-
+!colspan="3"|tłumaczenia wybranych wyróżnień
+
+|-
+|771||0x303|| Pulsująca czerwona płytka jest rysowana, jeśli spróbujesz zbudować zły tunel lub podniesiesz/opuścisz ziemię, gdzie nie jest to możliwe
+
+|-
+|772||0x304|| Sprawia, że ​​kwadrat jest czerwony. jest używany podczas usuwania szyn lub innych rzeczy
+
+|-
+|773||0x305 || To rysuje niebieskawy kwadrat (na przykład obszary zlewni)
+
+|-
+!colspan="3"|tłumaczenia na kolor firmy (kolory niebiesko-zielone są zastępowane)
+
+|-
+|775||0x307 || company colour to dark blue
+
+|-
+|776||0x308 || company colour to pale green
+
+|-
+|777||0x309 || company colour to pink
+
+|-
+|778||0x30A || company colour to yellow
+
+|-
+|779||0x30B || company colour to red
+
+|-
+|780||0x30C || company colour to light blue
+
+|-
+|781||0x30D || company colour to green
+
+|-
+|782||0x30E || company colour to dark green
+
+|-
+|783||0x30F || company colour to blue
+
+|-
+|784||0x310 || company colour to cream
+
+|-
+|785||0x311 || company colour to mauve
+
+|-
+|786||0x312 || company colour to purple
+
+|-
+|787||0x313 || company colour to orange
+
+|-
+|788||0x314 || company colour to brown
+
+|-
+|789||0x315 || company colour to grey
+
+|-
+|790||0x316 || company colour to white (ciemniejsze części są blue-ish)
+
+|-
+!colspan="3"|tłumaczenie dla ikonek naziemnych infrastruktury
+
+|-
+|791||0x317 || 'czyste' tereny, dla kolei i dróg (przejazdy)
+
+|-
+!colspan="3"|tłumaczenia dla koloru "brązowo-czerwonego" używanego przez niektóre budynki miejskie i mosty
+
+|-
+|795||0x31B || structure to blue
+
+|-
+|796||0x31C || structure to brownish (na przykład mosty wspornikowe)
+
+|-
+|797||0x31D || structure to white
+
+|-
+|798||0x31E || structure to red (e.g. bridges)
+
+|-
+|799||0x31F || structure to green (e.g. bridges)
+
+|-
+|800||0x320 || structure to concrete (e.g. suspension bridge)
+
+|-
+|801||0x321 || structure to yellow (na przykład most wiszący + rurowy)
+
+|-
+!colspan="3"| inne
+
+|-
+|802||0x322 || efekt szkła
+
+|-
+|803||0x323 || mapy do skali szarości (gazeta)
+
+|-
+|804||0x324 || pojazd powypadkowy (szary)
+
+|-
+|1438||0x59E || kościół czerwony
+
+|-
+|1439||0x59F || church cream
+|}
+
+W firmowym tłumaczeniu kolorów tłumaczenie na ciemnoniebieski (0x307) to tłumaczenie tożsamości, które zastępuje każdy kolor samym sobą. Możesz go użyć w przypadkach, gdy konieczne jest ponowne mapowanie, ale nie chcesz niczego zmieniać koloru.
+
+== Dual company colours ==
+{{pl/Development/NewGRF/ottdp|0.6|2.5}}
+Możesz również użyć 'sprites' zmieniających kolor w dwóch firmach. Nie są one jednak domyślnymi 'sprites' TTD, a zatem nie mają ustalonych numerów 'sprites' . Możesz określić liczbę znaków dla pierwszego 'sprite' zmieniającego kolor na 2CC poprzez [[pl/Development/NewGRF/NFO Specs/ReadingPatchVariables|Patch Variable 11]] . Następnie potrzebujesz [[pl/Development/NewGRF/NFO Specs/Action6|Action 6]] , aby wprowadzić potrzebne zmiany koloru do akcji w razie potrzeby.
+
+Począwszy od numeru sprit ze zmiennej patcha 11, jest 256 'sprites' o zmienionym kolorze. Ich kolejność jest zgodna z domyślnymi kolorami firmy powyżej. Kolor drugiej firmy zmienia się co 16 'sprites' , więc dostępna jest każda kombinacja pierwszego i drugiego koloru:
+
+{|
+!Offset od pierwszego sprite (dec) !!Offset od pierwszego sprite (hex) !! Pierwszy kolor (zabarwienie 0xC6 do 0xCD) !! Drugi kolor (zabarwienie 0x50 to 0x57)
+
+|-
+|0 || 0x00 || dark blue || dark blue
+
+|-
+|1 || 0x01 || pale green || dark blue
+
+|-
+|<nowiki>:</nowiki> || : || : || :
+
+|-
+|15 ||  0x0F || white || dark blue
+
+|-
+|16 ||  0x10 || dark blue ||pale green
+
+|-
+|<nowiki>:</nowiki> || : || : || :
+
+|-
+|31 || 0x1F || white ||pale green
+
+|-
+|32 || 0x20 || dark blue || pink
+
+|-
+|<nowiki>:</nowiki> || : || : || :
+
+|-
+|255 || 0xFF || white || white 
+|}
+
+Zauważysz w kodzie szesnastkowym, że niby przesunięcie odsunięcia reprezentuje pierwszy kolor firmy od 0 (ciemnoniebieski) do F (biały), a wysoki 'nibble' reprezentuje drugi kolor firmowy.

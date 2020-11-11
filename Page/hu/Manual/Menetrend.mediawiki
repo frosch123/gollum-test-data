@@ -41,7 +41,7 @@ A menetrend az [[hu/OpenTTD 0.6.0|OpenTTD 0.6.0]] verziójával került bevezet�
 |}
 |}
 <br/>
-{{hu/Manual/Figyelmeztetés|A menetrend automatikus kitöltése minden korábbi menetrendi bejegyegyzést töröl. Győződj meg arról, hogy a menetrend frissítése során a kímélő automatikus kitöltést használod: CTRL + kattints az Automatikus kitöltés gombra.}}
+{{hu/Figyelmeztetés|A menetrend automatikus kitöltése minden korábbi menetrendi bejegyegyzést töröl. Győződj meg arról, hogy a menetrend frissítése során a kímélő automatikus kitöltést használod: CTRL + kattints az Automatikus kitöltés gombra.}}
 
 <!-- [This section no longer appears as of OTTD 1.3.0.] '''Expected / Scheduled'''
 |Switches Expected and Scheduled panels.
@@ -70,7 +70,7 @@ Magyarán a menetrended reménytelenül optimista, inkább a ''legjobb lehetség
 Esélyes, legalábbis először, hogy a ráhagyást nem jól adod meg. A menetrendkészítés még mindig egy kicsit tanult műhelymunka, és messze van a csodás "automatikusan húzd szét az útvonalon az azonos menetrend szerint közlekedő járművek sorát" opciótól ([http://bugs.openttd.org/task/1128 még]). Hagyd a buszokat futni egy ideig (elég hosszú időt hagyj néhány lerobbanáshoz -- mondjuk egy évet), és nézd meg, mit mutat a menetrendablakuk.
 [[File:en/Manual/Timetable-runninglate.png|center|frame|Elég ráhagyás nélkül a lerobbanások és más késedelmi okok a késési idő halmozódásához vezetnek]]
 A példánkban nyolc napnyi késés halmozódott fel, ami nem sok, de a késésben jelentkező különbségek ténye azt jelenti, hogy a buszok nem húzódnak szét egyenletesen az útvonalon. Adjunk több ráhagyást a menetrendhez. '''Ne nyomd meg a ''''Késés nullázása'''' gombot''', mert ez arra készteti őket, hogy próbáljanak egymáshoz közelíteni ahelyett, hogy egyenletesen eloszlanának az útvonalon.
-{{hu/Manual/Megjegyzés|Ha sosem késnek a buszaid, és úgy tűnik, hogy sok időt töltenek a megállókban anélkül, hogy utasokat szállítanának ki vagy be, valószínűleg túl sok ráhagyást adtál a menetrendbe.}}
+{{hu/Megjegyzés|Ha sosem késnek a buszaid, és úgy tűnik, hogy sok időt töltenek a megállókban anélkül, hogy utasokat szállítanának ki vagy be, valószínűleg túl sok ráhagyást adtál a menetrendbe.}}
 
 A buszaid most már valószínűleg jól vannak beállítva, és nyugodtan magukra hagyhatod őket, amíg más útvonalakkal foglalkozol. Lássuk, hogy néz ki példánk öt év után:
 [[File:en/Manual/Timetable-fiveyears.png|center|frame|Elég menetrendi ráhagyással a buszok szépen eloszlanak az útvonalon]]
@@ -102,4 +102,4 @@ A menetrendek alkalmazásához nincs általános keret, minden menetrend attól 
 * Indíts minden járművet egyszerre.
 * Ismételd meg a hangolást a '''Kímélő automatikus kitöltés''' segítségével, ha a járműveket új típusra frissíted.
 
-[[Category:0.6.0 verzió újításai] [[Category:hu/Manual/Oktatás]] [[Category:hu/Manual/Base Set/Járművek]]
+[[Category:0.6.0 verzió újításai] [[Category:hu/Manual/Oktatás]] [[Category:hu/Manual/Járművek]]

@@ -1,15 +1,15 @@
 [[Translation:en/Manual/Tutorial/Two Tracks]]
-{{en/Manual/Tutorial/Tabs|2|2
+{{en/Tabs|2|2
 |fr/Manual/Tutorial/Deux Quais|1. Deux quais<!--
 -->|fr/Manual/Tutorial/Deux Voies|2. Deux voies}}
 <div style="padding:.5em 1em 1em 1em; border-top:none; background-color:#f1f2fe; color:#000;">
-{{fr/Manual/Tutoriel}}
+{{fr/Manual/Tutorial/Tutoriel}}
 En utilisant une voie unique pour plusieurs trains entre deux gares, il peut arriver alors qu'un train doive attendre longtemps avant de pouvoir utiliser la voie, tout particulièrement quand le tracé est long.
 La raison en est qu'un seul train est autorisé sur un bloc de voies, afin d'éviter les collisions ferroviaires.
 
 == Doubler partiellement la voie ==
 Pour résoudre cela, vous pouvez couper votre longue voie unique en plusieurs morceaux, comme illustré ci-dessous.
-{{en/Manual/Phototable|[[File:en/Manual/Tutorial/PartlyDoubleTracks.png|400px]]|Voie partiellement doublée.|none}}
+{{en/Phototable|[[File:en/Manual/Tutorial/PartlyDoubleTracks.png|400px]]|Voie partiellement doublée.|none}}
 
 La longue voie unique entre les deux gares est partiellement doublée. Les trains allant à la centrale électrique circulent sur la voie du bas, et les trains voyageant vers la mine utilisent la ligne du haut. De cette manière, les trains peuvent se croiser.
 
@@ -17,7 +17,7 @@ Les signaux sur la partie à voie double sont tous des signaux unidirectionnels.
 
 == Doubler complètement le tracé ==
 Construire une double voie partielle pour que les trains puissent se croiser a été couronné de succès, mais cela engendre encore des retards quand les trains ne sont pas suffisamment synchronisés. Une extension logique est de doubler toute la voie.
-{{en/Manual/Phototable|[[File:en/Manual/Tutorial/FullyDoubleTracks.png|400px]]|Voie entièrement doublée.|none}}
+{{en/Phototable|[[File:en/Manual/Tutorial/FullyDoubleTracks.png|400px]]|Voie entièrement doublée.|none}}
 
 Ainsi, il y a une voie dédiée aux trains allant vers la centrale électrique, et une autre réservée aux trains allant vers la mine.
 

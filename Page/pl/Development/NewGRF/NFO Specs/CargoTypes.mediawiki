@@ -1,0 +1,1063 @@
+{{pl/Development/NewGRF/inne strony|en=newgrf-specs.tt-wiki.net/wiki/CargoTypes|pl=pl/Development/NewGRF/NFO Specs/CargoTypes |sub=nfo}}
+<!--{{-}}<br>--><!--{{ambox | text = w trakcie edycji.}}--><!-- -->
+'''Etykiety ładunku w OpenTTD'''
+
+{{pl/Development/NewGRF/grfFrom|8}} W wersji 8 GRF wartością, która ma być stosowana we wszystkich właściwościach pojazdu i przemysłu, a w [[pl/Development/NewGRF/NFO Specs/Action3/Main Page|action 3]] , jest pozycja etykiety ładunku w  [[pl/Development/NewGRF/NFO Specs/Action0/Global Settings#cargo-translation-table-09|cargo translation table]] zawarte w GRF.
+
+{{pl/Development/NewGRF/grfTill|7}} GRF w wersji 7 i niższej wykorzystywał różne właściwości ładunku dla różnych właściwości (zwanych "Type A" lub "przetłumaczonymi" <small>''~translated''</small> i "Type B" lub "nieprzetłumaczonymi" <small>''~untranslated''</small>  przedziałami ładunkowymi <small>''~cargo slots''</small>) ze względów historycznych. Ta metoda jest przestarzała, ponieważ oznaczała ślepe poleganie na ładunkach zawsze korzystających z tych samych miejsc. Możesz zobaczyć tabelę gniazd typu A i typu B [http://newgrf-specs.tt-wiki.net/index.php?title=CargoTypes&oldid=2861 tutaj] , jeśli naprawdę chcesz.
+
+== Cargo Labels ==
+
+Dotychczas zdefiniowano następujące etykiety ładunków:
+
+
+{|class="wikitable"
+|-
+! Etykieta
+! Opis ładunku
+! [[pl/Development/NewGRF/NFO Specs/Action0/Cargos#cargoclasses-16|Cargo classes]]
+! colspan="4" | Używanie 
+! Notes
+|-
+| align="center" colspan="2" | '''Basic Cargos'''
+| align="center" colspan="6" | Te ładunki są obecne, gdy nie jest używany NewGRF lub w niektórych popularnych branżowych NewGRF
+|-
+| PASS
+| Pasażerowie
+| 0001 Passengers
+| style="background: #CC00CC; color: black" | TTD
+| style="background: #FFCC00; color: black" | <!--[[ttwiki:ECS|ECS]]-->[http://www.tt-wiki.net/wiki/ECS ECS]
+| style="background: #1AD74C; color: white" | <!--[[ttwiki:FIRS|FIRS]]-->[http://www.tt-wiki.net/wiki/FIRS FIRS]
+|
+|
+|-
+| COAL
+| Węgiel
+| 0010 'Masa luzem' 
+| style="background: #CC00CC; color: black" | TTD
+| style="background: #FFCC00; color: black" | [http://www.tt-wiki.net/wiki/ECS ECS]
+| style="background: #1AD74C; color: white" | [http://www.tt-wiki.net/wiki/FIRS FIRS]
+|
+|
+|-
+| MAIL
+| Poczta
+| 0002 Mail
+| style="background: #CC00CC; color: black" | TTD
+| style="background: #FFCC00; color: black" | [http://www.tt-wiki.net/wiki/ECS ECS]
+| style="background: #1AD74C; color: white" | [http://www.tt-wiki.net/wiki/FIRS FIRS]
+|
+|
+|-
+| OIL_
+| Oil
+| 0040 Liquid
+| style="background: #CC00CC; color: black" | TTD
+| style="background: #FFCC00; color: black" | [http://www.tt-wiki.net/wiki/ECS ECS]
+| style="background: #1AD74C; color: white" | [http://www.tt-wiki.net/wiki/FIRS FIRS]
+| style="background: #009fe3; color: black" | <!--[[ttwiki:ECS|ECS]]-->[http://www.tt-wiki.net/wiki/YETI YETI]
+|
+|-
+| LVST
+| Żywiec
+| 0020 Towary w szt.
+| style="background: #CC00CC; color: black" | TTD
+| style="background: #FFCC00; color: black" | [[en/Ttwiki/ECS|ECS]]
+| style="background: #1AD74C; color: white" | [http://www.tt-wiki.net/wiki/FIRS FIRS]
+| style="background: #009fe3; color: black" | [http://www.tt-wiki.net/wiki/YETI YETI]
+|
+|-
+| GOOD
+| Towary
+| 0004 Express
+| style="background: #CC00CC; color: black" | TTD
+| style="background: #FFCC00; color: black" | [http://www.tt-wiki.net/wiki/ECS ECS]
+| style="background: #1AD74C; color: white" | [http://www.tt-wiki.net/wiki/FIRS FIRS]
+|
+|
+|-
+| GRAI
+| Zboże
+| 0010 Luzem
+| style="background: #CC00CC; color: black" | TTD
+|
+| style="background: #1AD74C; color: white" | [http://www.tt-wiki.net/wiki/FIRS FIRS]
+| style="background: #009fe3; color: black" | [http://www.tt-wiki.net/wiki/YETI YETI]
+| Umiarkowany; zobacz także WHEA, MAIZ, CERE. YETI dodaje również 0200 Objęte.
+|-
+| WOOD
+| Drewno
+| 0020 Towary w szt.
+| style="background: #CC00CC; color: black" | TTD
+| style="background: #FFCC00; color: black" | [http://www.tt-wiki.net/wiki/ECS ECS]
+| style="background: #1AD74C; color: white" | [http://www.tt-wiki.net/wiki/FIRS FIRS]
+| style="background: #009fe3; color: black" | [http://www.tt-wiki.net/wiki/YETI YETI]
+|
+|-
+| IORE
+| Ruda żelaza
+| 0010 'Masa luzem'
+| style="background: #CC00CC; color: black" | TTD
+| style="background: #FFCC00; color: black" | [http://www.tt-wiki.net/wiki/ECS ECS]
+| style="background: #1AD74C; color: white" | [http://www.tt-wiki.net/wiki/FIRS FIRS]
+| style="background: #009fe3; color: black" | [http://www.tt-wiki.net/wiki/YETI YETI]
+|
+|-
+| STEL
+| Stal
+| 0020 Towary w szt.
+| style="background: #CC00CC; color: black" | TTD
+| style="background: #FFCC00; color: black" | [http://www.tt-wiki.net/wiki/ECS ECS]
+| style="background: #1AD74C; color: white" | [http://www.tt-wiki.net/wiki/FIRS FIRS]
+| style="background: #009fe3; color: black" | [http://www.tt-wiki.net/wiki/YETI YETI]
+| W YETI zmieniono nazwę "Balls of Steel"
+|-
+| VALU
+| Kosztowności
+| 0008 Opancerzone
+| style="background: #CC00CC; color: black" | TTD
+| style="background: #FFCC00; color: black" | [[en/Ttwiki/ECS|ECS]]
+|
+|
+| Umiarkowany; zobacz także ZŁOTO, DIAM
+|-
+| PAPR
+| Papier
+| 0020 Towary w szt.
+| style="background: #CC00CC; color: black" | TTD
+| style="background: #FFCC00; color: black" | [http://www.tt-wiki.net/wiki/ECS ECS]
+| style="background: #1AD74C; color: white" | [http://www.tt-wiki.net/wiki/FIRS FIRS]
+|
+|
+|-
+| WHEA
+| Pszenica
+| 0010 'Masa luzem'
+| style="background: #CC00CC; color: black" | TTD
+|
+|
+|
+| Arktyczny; zobacz także GRAI, MAIZ, CERE
+|-
+| FOOD
+| Żywność
+| 0084 Express, mrożone
+| style="background: #CC00CC; color: black" | TTD
+| style="background: #FFCC00; color: black" | [http://www.tt-wiki.net/wiki/ECS ECS]
+| style="background: #1AD74C; color: white" | [http://www.tt-wiki.net/wiki/FIRS FIRS]
+| style="background: #009fe3; color: black" | [http://www.tt-wiki.net/wiki/YETI YETI]
+| Żywność YETI ma towary chłodnicze i drobnicowe
+|-
+| GOLD
+| Złoto
+| 0008 Opancerzone
+| style="background: #CC00CC; color: black" | TTD
+| style="background: #FFCC00; color: black" | [http://www.tt-wiki.net/wiki/ECS ECS]
+| style="background: #1AD74C; color: white" | [http://www.tt-wiki.net/wiki/FIRS FIRS]
+|
+| Arktyczny; patrz także VALU, DIAM
+|-
+| RUBR
+| Kauczuk
+| 0040 Płynne
+| style="background: #CC00CC; color: black" | TTD
+| style="background: #FFCC00; color: black" | [http://www.tt-wiki.net/wiki/ECS ECS]
+| style="background: #1AD74C; color: white" | [http://www.tt-wiki.net/wiki/FIRS FIRS]
+|
+|
+|-
+| FRUT
+| Owoc
+| 0090 'Luzem masa', mrożone
+| style="background: #CC00CC; color: black" | TTD
+| style="background: #FFCC00; color: black" | [http://www.tt-wiki.net/wiki/ECS ECS]
+| style="background: #1AD74C; color: white" | [http://www.tt-wiki.net/wiki/FIRS FIRS]
+| style="background: #009fe3; color: black" | [http://www.tt-wiki.net/wiki/YETI YETI]
+| W FIRS: 00A4 Express, towary drobnicowe, chłodnia. W YETI: Drobne towary, objęte ubezpieczeniem.
+|-
+| MAIZ
+| Kukurydza
+| 0010 'Luzem masa'
+| style="background: #CC00CC; color: black" | TTD
+|
+| style="background: #1AD74C; color: white" | [http://www.tt-wiki.net/wiki/FIRS FIRS]
+|
+| Tropic; zobacz też GRAI, WHEA, CERE
+|-
+| CORE
+| Ruda miedzi
+| 0010 'Luzem masa'
+| style="background: #CC00CC; color: black" | TTD
+| style="background: #FFCC00; color: black" | [http://www.tt-wiki.net/wiki/ECS ECS]
+| style="background: #1AD74C; color: white" | [http://www.tt-wiki.net/wiki/FIRS FIRS]
+|
+|
+|-
+| WATR
+| Woda
+| 0040 Płynne
+| style="background: #CC00CC; color: black" | TTD
+| style="background: #FFCC00; color: black" | [http://www.tt-wiki.net/wiki/ECS ECS]
+|
+|
+|
+|-
+| DIAM
+| Diamenty
+| 0008 Opancerzone
+| style="background: #CC00CC; color: black" | TTD
+| style="background: #FFCC00; color: black" | [http://www.tt-wiki.net/wiki/ECS ECS]
+| style="background: #1AD74C; color: white" | [http://www.tt-wiki.net/wiki/FIRS FIRS]
+|
+| Tropikalny; Zobacz też VALU, GOLD
+|-
+| SUGR
+| Cukier
+| 0010 'Luzem masa'
+| style="background: #CC00CC; color: black" | TTD
+|
+| style="background: #1AD74C; color: white" | [http://www.tt-wiki.net/wiki/FIRS FIRS]
+|
+| Toyland.  W FIRS FIRS 0030 Luzem, towary w sztukach
+|-
+| AORE
+| Boksyt (Ruda aluminium)
+| 0010 'Luzem masa'
+|
+| style="background: #FFCC00; color: black" | [http://www.tt-wiki.net/wiki/ECS ECS]
+| style="background: #1AD74C; color: white" | [http://www.tt-wiki.net/wiki/FIRS FIRS]
+|
+|
+|-
+| BEAN
+| Fasolki
+| 0010 'Luzem masa'
+|
+|
+| style="background: #1AD74C; color: white" | [http://www.tt-wiki.net/wiki/FIRS FIRS]
+|
+|
+|-
+| BEER
+| Alkohol
+| 0064 Express, Drobne towary, Płyny
+|
+|
+| style="background: #1AD74C; color: white" | [http://www.tt-wiki.net/wiki/FIRS FIRS]
+|
+|
+|-
+| BDMT
+| Materiały Budowlane
+| 0220 Drobne towary, pokryte/osłonięte
+|
+| style="background: #FFCC00; color: black" | [http://www.tt-wiki.net/wiki/ECS ECS]
+| style="background: #1AD74C; color: white" | [http://www.tt-wiki.net/wiki/FIRS FIRS]
+| style="background: #009fe3; color: black" | [http://www.tt-wiki.net/wiki/YETI YETI]
+| In FIRS: 0030 Luzem, Drobne towary. Tylko w YETI Drobne towary.
+|-
+| BOOM
+| Explosives
+| 0024 Express, drobne towary
+|
+|
+| style="background: #1AD74C; color: white" | [http://www.tt-wiki.net/wiki/FIRS FIRS]
+|
+|
+|-
+| BRCK
+| Cegły
+| 0020 Drobne towary
+|
+| style="background: #FFCC00; color: black" | [http://www.tt-wiki.net/wiki/ECS ECS]
+|
+|
+|
+|-
+| CBLK
+| Carbon Black
+| 0230 Drobne towary, Luzem, pokryte/osłonięte
+|
+|
+| style="background: #1AD74C; color: white" | [http://www.tt-wiki.net/wiki/FIRS FIRS]
+|
+|
+|-
+| CERA
+| Ceramika
+| 0020 Drobne towary
+|
+| style="background: #FFCC00; color: black" | [http://www.tt-wiki.net/wiki/ECS ECS]
+|
+|
+|
+|-
+| CERE
+| Cereals
+| 0210 Luzem, pokryte/osłonięte
+|
+| style="background: #FFCC00; color: black" | [http://www.tt-wiki.net/wiki/ECS ECS]
+|
+|
+| <!--<ref name="ecs_cargo_change" />-->{{pl/Development/NewGRF/NFO Specs/refs|name=ecs_cargo_change|1}}
+|-
+| CLAY
+| Glina
+| 0210 Luzem pokryte/osłonięte
+|
+|
+| style="background: #1AD74C; color: white" | [http://www.tt-wiki.net/wiki/FIRS FIRS]
+| style="background: #009fe3; color: black" | [http://www.tt-wiki.net/wiki/YETI YETI]
+|
+|-
+| CMNT
+| Cement
+| 0210 Luzem pokryte/osłonięte
+|
+| style="background: #FFCC00; color: black" | [http://www.tt-wiki.net/wiki/ECS ECS]
+| style="background: #1AD74C; color: white" | [http://www.tt-wiki.net/wiki/FIRS FIRS]
+|
+|
+|-
+| COPR
+| Miedź
+| 0020 Drobne towary
+|
+|
+| style="background: #1AD74C; color: white" | [http://www.tt-wiki.net/wiki/FIRS FIRS]
+|
+|
+|-
+| CSTI
+| Żeliwo
+| 0020 Drobne towary
+|
+|
+| style="background: #1AD74C; color: white" | [http://www.tt-wiki.net/wiki/FIRS FIRS]
+|
+|
+|-
+| CTAR
+| Smoła węglowa
+| 0140 Płyny, hazardous
+|
+|
+| style="background: #1AD74C; color: white" | [http://www.tt-wiki.net/wiki/FIRS FIRS]
+|
+|
+|-
+| DYES
+| Barwniki
+| 0060 Drobne towary, Płyny
+|
+| style="background: #FFCC00; color: black" | [http://www.tt-wiki.net/wiki/ECS ECS]
+|
+|
+|
+|-
+| ENSP
+| Asortyment Inżynieryjny
+| 0024 Express, drobne towary
+|
+|
+| style="background: #1AD74C; color: white" | [http://www.tt-wiki.net/wiki/FIRS FIRS]
+|
+|
+|-
+| FECR
+| Ferrochrom
+| 0010 Luzem
+|
+|
+| style="background: #1AD74C; color: white" | [http://www.tt-wiki.net/wiki/FIRS FIRS]
+|
+|
+|-
+| FERT
+| Nawóz
+| 0030 Luzem, drobne towary
+|
+| style="background: #FFCC00; color: black" | [http://www.tt-wiki.net/wiki/ECS ECS]
+| style="background: #1AD74C; color: white" | [http://www.tt-wiki.net/wiki/FIRS FIRS]
+|
+|valign=middle| FIRS: 0024 Express, drobne towary. ECS: <!--<ref name="ecs_cargo_change" />-->{{pl/Development/NewGRF/NFO Specs/refs|name=ecs_cargo_change|<!--2-->1-1}}
+|-
+| FICR
+| Uprawy włókniste
+| 0030 Luzem, drobne towary
+|
+| style="background: #FFCC00; color: black" | [http://www.tt-wiki.net/wiki/ECS ECS]
+| style="background: #1AD74C; color: white" | [http://www.tt-wiki.net/wiki/FIRS FIRS]
+|
+|
+|-
+| FISH
+| Ryba
+| 0084 Express, mrożone
+|
+| style="background: #FFCC00; color: black" | [http://www.tt-wiki.net/wiki/ECS ECS]
+| style="background: #1AD74C; color: white" | [http://www.tt-wiki.net/wiki/FIRS FIRS]
+|
+|
+|-
+| FMSP
+| Artykuły Rolnicze
+| 0024 Express, drobne towary
+|
+|
+| style="background: #1AD74C; color: white" | [http://www.tt-wiki.net/wiki/FIRS FIRS]
+|
+|
+|-
+| GLAS
+| Szkło
+| 0420 Drobne towary, przewymiarowane
+|
+| style="background: #FFCC00; color: black" | [http://www.tt-wiki.net/wiki/ECS ECS]
+|
+|
+|
+|-
+| GRVL
+| Kamień 
+| 0010 Luzem
+|
+|
+| style="background: #1AD74C; color: white" | [http://www.tt-wiki.net/wiki/FIRS FIRS]
+| style="background: #009fe3; color: black" | [http://www.tt-wiki.net/wiki/YETI YETI]
+| Było "Żwir / Podsypka""
+|-
+| JAVA
+| Kawa
+| 0020 Drobne towary
+|
+|
+| style="background: #1AD74C; color: black" | [http://www.tt-wiki.net/wiki/FIRS FIRS]
+|
+| FIRS: 0024 Drobne towary, express. Units in FIRS are 'bags'
+|-
+| KAOL
+| Kaolin (Glinka Chińska)
+| 0250 Luzem, Płyny, covered
+|
+|
+| style="background: #1AD74C; color: black" | [http://www.tt-wiki.net/wiki/FIRS FIRS]
+|
+|
+|-
+| LIME
+| Wapień
+| 0010 Luzem
+|
+| style="background: #FFCC00; color: black" | [http://www.tt-wiki.net/wiki/ECS ECS]
+|
+|
+|
+|-
+| MILK
+| Mleko
+| 00C4 Express, liquid, refrigerated
+|
+|
+| style="background: #1AD74C; color: white" | [http://www.tt-wiki.net/wiki/FIRS FIRS]
+|
+|
+|-
+| NITR
+| Azotan
+| 0010 Luzem
+|
+|
+| style="background: #1AD74C; color: white" | [http://www.tt-wiki.net/wiki/FIRS FIRS]
+|
+|
+|-
+| OLSD
+| Nasiona oleiste
+| 0210 Luzem, pokryte/osłonięte
+|
+| style="background: #FFCC00; color: black" | [http://www.tt-wiki.net/wiki/ECS ECS]
+|
+|
+| <!--<ref name="ecs_cargo_change" />-->{{pl/Development/NewGRF/NFO Specs/refs|name=ecs_cargo_change|<!--3-->1-2}}
+|-
+| PEAT
+| Torf
+| 0010 Luzem
+|
+|
+| style="background: #1AD74C; color: white" | [http://www.tt-wiki.net/wiki/FIRS FIRS]
+|
+|
+|-
+| PETR
+| Benzyna / Olej Opałowy
+| 0040 Płynne
+|
+| style="background: #FFCC00; color: black" | [http://www.tt-wiki.net/wiki/ECS ECS]
+| style="background: #1AD74C; color: white" | [http://www.tt-wiki.net/wiki/FIRS FIRS]
+|
+|
+|-
+| PHOS
+| Fosforan
+| 0010 Luzem
+|
+|
+| style="background: #1AD74C; color: white" | [http://www.tt-wiki.net/wiki/FIRS FIRS]
+|
+|
+|-
+| PLAS
+| Plastyk
+| 0060 Drobne towary, liquid
+|
+| style="background: #FFCC00; color: black" | [http://www.tt-wiki.net/wiki/ECS ECS]
+|
+|
+|
+|-
+| PORE
+| Ruda pirytu
+| 0010 Luzem
+|
+|
+| style="background: #1AD74C; color: white" | [http://www.tt-wiki.net/wiki/FIRS FIRS]
+|
+|
+|-
+| POTA
+| Potash
+| 0210 Luzem, pokryte/osłonięte
+|
+| style="background: #FFCC00; color: black" | [http://www.tt-wiki.net/wiki/ECS ECS]
+| style="background: #1AD74C; color: white" | [http://www.tt-wiki.net/wiki/FIRS FIRS]
+|
+|valign=middle| FIRS: 0010 Luzem. ECS: <!--<ref name="ecs_cargo_change" />-->{{pl/Development/NewGRF/NFO Specs/refs|name=ecs_cargo_change|<!--4-->1-3}}
+|-
+| RFPR
+| Produkty rafinowane
+| 0040 <span title=Liquid>'Płynne'</span>
+|
+| style="background: #FFCC00; color: black" | [http://www.tt-wiki.net/wiki/ECS ECS]
+| style="background: #1AD74C; color: white" | [http://www.tt-wiki.net/wiki/FIRS FIRS]
+| style="background: #009fe3; color: black" | [http://www.tt-wiki.net/wiki/YETI YETI]
+|
+|-
+| SAND
+| Piasek
+| 0010 <span title=Bulk>'Luzem'</span>
+|
+| style="background: #FFCC00; color: black" | [http://www.tt-wiki.net/wiki/ECS ECS]
+| style="background: #1AD74C; color: white" | [http://www.tt-wiki.net/wiki/FIRS FIRS]
+|
+|
+|-
+| SCMT
+| <span title='Scrap Metal'>'Złom'</span>
+| 1010 Luzem, non-pourable
+|
+|
+| style="background: #1AD74C; color: white" | [http://www.tt-wiki.net/wiki/FIRS FIRS]
+|
+|
+|-
+| SULP
+| Siarka
+| 0210 Luzem, pokryte/osłonięte
+|
+| style="background: #FFCC00; color: black" | [http://www.tt-wiki.net/wiki/ECS ECS]
+| style="background: #1AD74C; color: white" | [http://www.tt-wiki.net/wiki/FIRS FIRS]
+|
+| FIRS: 0250 luzem, płynny, zakryty/osłonięty. ECS:<!-- <ref name="ecs_cargo_change">-->{{pl/Development/NewGRF/NFO Specs/refs|name=ecs_cargo_change|text=Klasy ładunków ECS zmieniły się od 31 grudnia 2010 r|<!--5-->1-4}}<!--</ref>-->
+|-
+| TOUR
+| Turyści
+| 0005 Pasażerowie, express
+|
+| style="background: #FFCC00; color: black" | [http://www.tt-wiki.net/wiki/ECS ECS]
+|
+|
+|
+|-
+| TYRE
+| Opony
+| 0020 Drobne towary
+|
+|
+| style="background: #1AD74C; color: white" | [http://www.tt-wiki.net/wiki/FIRS FIRS]
+|
+|
+|-
+| URAN
+| Uranium
+| 0110 Luzem, Hazardous
+|
+|
+|
+| style="background: #009fe3; color: black" | [http://www.tt-wiki.net/wiki/YETI YETI]
+|
+|-
+| VEHI
+| Vehicles
+| 0420 Drobne towary, przewymiarowane
+|
+| style="background: #FFCC00; color: black" | [http://www.tt-wiki.net/wiki/ECS ECS]
+| style="background: #1AD74C; color: white" | [http://www.tt-wiki.net/wiki/FIRS FIRS]
+| style="background: #009fe3; color: black" | [http://www.tt-wiki.net/wiki/YETI YETI]
+|
+|-
+| WDPR
+| Drewniane produkty
+| 0030 Luzem, drobne towary
+|
+| style="background: #FFCC00; color: black" | [http://www.tt-wiki.net/wiki/ECS ECS]
+| style="background: #1AD74C; color: white" | [http://www.tt-wiki.net/wiki/FIRS FIRS]
+|
+|
+|-
+| WOOL
+| Wełna
+| 0220 Drobne towary, pokryte/osłonięte
+|
+| style="background: #FFCC00; color: black" | [http://www.tt-wiki.net/wiki/ECS ECS]
+| style="background: #1AD74C; color: white" | [http://www.tt-wiki.net/wiki/FIRS FIRS]
+|
+| <!--<ref name="ecs_cargo_change" />-->{{pl/Development/NewGRF/NFO Specs/refs|name=ecs_cargo_change|<!--6-->1-5}}
+|-
+| ZINC
+| Cynk
+| 0020 Drobne towary
+|
+|
+| style="background: #1AD74C; color: white" | [http://www.tt-wiki.net/wiki/FIRS FIRS]
+|
+|
+|-
+| align="center" colspan="2" | '''Extended Cargos'''
+| align="center" colspan="6" | ładunki te występują tylko w rzadkich/szczególnych sytuacjach
+|-
+| ACID
+| Kwas
+| 0140 Płyny, hazardous
+|
+|
+| style="background: #1AD74C; color: white" | [http://www.tt-wiki.net/wiki/FIRS FIRS]
+|
+|
+|-
+| CASS
+| Maniok
+| 0010 Luzem
+|
+|
+| style="background: #1AD74C; color: white" | [http://www.tt-wiki.net/wiki/FIRS FIRS]
+|
+|
+|-
+| CHLO
+| Chlor
+| 0140 Płyny, hazardous
+|
+|
+| style="background: #1AD74C; color: white" | [http://www.tt-wiki.net/wiki/FIRS FIRS]
+|
+|
+|-
+| COKE
+| Koks
+| 0010 Luzem
+|
+|
+| style="background: #1AD74C; color: white" | [http://www.tt-wiki.net/wiki/FIRS FIRS]
+|
+|
+|-
+| EOIL
+| Jadalny Olej
+| 0060 Drobne towary, Płyny
+|
+|
+| style="background: #1AD74C; color: white" | [http://www.tt-wiki.net/wiki/FIRS FIRS]
+|
+|
+|-
+| IRON
+| Surówka Hutnicza 
+| 0020 Drobne towary
+|
+|
+| style="background: #1AD74C; color: white" | [http://www.tt-wiki.net/wiki/FIRS FIRS]
+|
+|
+|-
+| METL
+| Metal
+| 0020 Drobne towary
+|
+|
+| style="background: #1AD74C; color: white" | [http://www.tt-wiki.net/wiki/FIRS FIRS]
+|
+|
+|-
+| MNO2
+| Mangan
+| 0010 Luzem
+|
+|
+| style="background: #1AD74C; color: white" | [http://www.tt-wiki.net/wiki/FIRS FIRS]
+|
+|
+|-
+| MNSP
+| <span title=Supplies>'Zaopatrzenie'</span> Manufaktury
+| 0024 Drobne towary, express
+|
+|
+| style="background: #1AD74C; color: white" | [http://www.tt-wiki.net/wiki/FIRS FIRS]
+|
+|
+|-
+| NUTS
+| Orzechy
+| 0020 Drobne towary
+|
+|
+| style="background: #1AD74C; color: white" | [http://www.tt-wiki.net/wiki/FIRS FIRS]
+|
+|
+|-
+| PIPE
+| Rura
+| 0020 Drobne towary
+|
+|
+| style="background: #1AD74C; color: white" | [http://www.tt-wiki.net/wiki/FIRS FIRS]
+|
+|
+|-
+| POWR
+| Maszyny elektryczne
+| 0020 Drobne towary
+|
+|
+| style="background: #1AD74C; color: white" | [http://www.tt-wiki.net/wiki/FIRS FIRS]
+|
+|
+|-
+| QLME
+| <span title=Quicklime>Wapno 'palone'</span>
+| 0210 Luzem, pokryte/osłonięte
+|
+|
+| style="background: #1AD74C; color: white" | [http://www.tt-wiki.net/wiki/FIRS FIRS]
+|
+|
+|-
+| RCYC
+| 'surowce wtórne'
+| 0220 Drobne towary, pokryte
+|
+|
+| style="background: #1AD74C; color: white" | [http://www.tt-wiki.net/wiki/FIRS FIRS]
+|
+| FIRS: 0030 Luzem, towary w szt. <small>''do recykling'u''</small>
+|-
+| SALT
+| Sól
+| 0010 Luzem
+|
+|
+| style="background: #1AD74C; color: white" | [http://www.tt-wiki.net/wiki/FIRS FIRS]
+|
+|
+|-
+| SASH
+| Soda Ash
+| 0210 Luzem, pokryte/osłonięte
+|
+|
+| style="background: #1AD74C; color: white" | [http://www.tt-wiki.net/wiki/FIRS FIRS]
+|
+|
+|-
+| SGBT
+| Burak cukrowy
+| 0010 Luzem
+|
+|
+| style="background: #1AD74C; color: white" | [http://www.tt-wiki.net/wiki/FIRS FIRS]
+|
+| nie w tropical
+|-
+| SGCN
+| <span title='Trzcina cukrowa'>'Cukrowiec'</span> 
+| 1010 Luzem, non-pourable
+|
+|
+| style="background: #1AD74C; color: white" | [http://www.tt-wiki.net/wiki/FIRS FIRS]
+|
+| tylko tropikalny
+|-
+| SLAG
+| Żużel
+| 0010 Luzem
+|
+|
+| style="background: #1AD74C; color: white" | [http://www.tt-wiki.net/wiki/FIRS FIRS]
+|
+|
+|-
+| STAL
+| <span title='Alloy Steel'>'Stal stopowa'</span>
+| 0020 Drobne towary
+|
+|
+| style="background: #1AD74C; color: white" | [http://www.tt-wiki.net/wiki/FIRS FIRS]
+|
+|
+|-
+| STCB
+| <span title=Carbon>'Stal Węglowa'</span>
+| 0020 Drobne towary
+|
+|
+| style="background: #1AD74C; color: white" | [http://www.tt-wiki.net/wiki/FIRS FIRS]
+|
+|
+|-
+| STST
+| Stal nierdzewna
+| 0020 Drobne towary
+|
+|
+| style="background: #1AD74C; color: white" | [http://www.tt-wiki.net/wiki/FIRS FIRS]
+|
+|
+|-
+| VBOD
+| Nadwozia pojazdów
+| 0020 Drobne towary
+|
+|
+| style="background: #1AD74C; color: white" | [http://www.tt-wiki.net/wiki/FIRS FIRS]
+|
+|
+|-
+| VENG
+| Silniki pojazdów
+| 0020 Drobne towary
+|
+|
+| style="background: #1AD74C; color: white" | [http://www.tt-wiki.net/wiki/FIRS FIRS]
+|
+|
+|-
+| VPTS
+| Części pojazdu
+| 0024 Drobne towary, express
+|
+|
+| style="background: #1AD74C; color: white" | [http://www.tt-wiki.net/wiki/FIRS FIRS]
+|
+|
+|-
+| align="center" colspan="2" | '''Fantasy Cargos'''
+| align="center" colspan="6" | te ładunki są przeznaczone do użytku w scenerii fantasy lub science fiction
+|-
+| BATT
+| Batteries
+| 0020 Drobne towary
+| style="background: #CC00CC; color: black" | TTD
+|
+|
+| style="background: #009fe3; color: black" | [http://www.tt-wiki.net/wiki/YETI YETI]
+| Toyland
+|-
+| BUBL
+| Bubbles
+| 0020 Drobne towary
+| style="background: #CC00CC; color: black" | TTD
+|
+|
+|
+| Toyland
+|-
+| COLA
+| Cola
+| 0040 Liquid
+| style="background: #CC00CC; color: black" | TTD
+|
+|
+|
+| Toyland
+|-
+| CTCD
+| Cotton Candy (Candyfloss)
+| 0010 Luzem
+| style="background: #CC00CC; color: black" | TTD
+|
+|
+|
+| Toyland
+|-
+| FZDR
+| Fizzy Drinks
+| 0020 Piece goods
+| style="background: #CC00CC; color: black" | TTD
+|
+|
+|
+| Toyland
+|-
+| PLST
+| Plastic
+| 0040 Liquid
+| style="background: #CC00CC; color: black" | TTD
+|
+|
+|
+| Toyland; Zobacz też PLAS
+|-
+| SWET
+| Sweets (Candy)
+| 0004 Express
+| style="background: #CC00CC; color: black" | TTD
+|
+|
+|
+| Toyland
+|-
+| TOFF
+| Toffee
+| 0010 Luzem
+| style="background: #CC00CC; color: black" | TTD
+|
+|
+|
+| Toyland
+|-
+| TOYS
+| Toys
+| 0020 Piece goods
+| style="background: #CC00CC; color: black" | TTD
+|
+|
+|
+| Toyland
+|-
+| YETI
+| Workers, YETI dudes
+| 0404 Express, przewymiarowane
+|
+|
+|
+| style="background: #009fe3; color: black" | [http://www.tt-wiki.net/wiki/YETI YETI]
+|
+|-
+| YETY
+| Tired Workers, Tired YETI dudes
+| 0404 Express, przewymiarowane
+|
+|
+|
+| style="background: #009fe3; color: black" | [http://www.tt-wiki.net/wiki/YETI YETI]
+|
+|-
+| align="center" colspan="2" | '''Special Cargos'''
+| align="center" colspan="6" | ładunki te są przeznaczone do użytku poza zestawami branżowymi i nie stanowią transportu niczego
+|-
+| DFLT
+| 'Default'
+| ---- None
+|
+|
+|
+|
+| Używane przez andythenorth do identyfikacji domyślnej grafiki ładunku w newgrf , które używają generowania kodu/grafiki. 
+
+Nie jest przeznaczony do wykorzystania jako rzeczywisty ładunek w tabelach tłumaczeń.
+|-
+| GEAR
+| 'Regearing' lokomotywy
+| 8000 Special
+|
+|
+|
+|
+| Korzystanie z tego ładunku może spowodować, że zestaw pojazdów będzie niekompatybilny z niektórymi zestawami branżowymi
+
+zamiast tego użyj CB36, aby ustawić pojemność na 0
+|-
+| align="center" colspan="2" | '''<span title=Deprecated> 'Przestarzałe'</span> Cargos'''
+| align="center" colspan="6" | ładunki te nie są używane przez żaden obecny zestaw branżowy i są wymienione tutaj w celu zapewnienia kompatybilności wstecznej
+|-
+| FRVG
+| Owoc (i opcjonalnie warzywa)
+| 00A4 Express, drobnicowe, chłodnicze
+|
+|
+|
+|
+| Przestarzały ładunek FIRS. Zastąpiony przez FRUT na FIRS > v1.3.0
+|-
+| FUEL
+| Paliwo
+| 0040 Ciekłe 
+|
+|
+|
+|
+| Użyj PETR do rafinowanego paliwa naftowego
+|-
+| RSGR
+| Cukier surowy
+| 0010 Luzem
+|
+|
+|
+|
+| Przestarzałe w FIRS. Zobacz SGBT i SGCN
+|-
+| SCRP
+| <span title='Scrap Metal'>'Złom' </span>
+| 0010 Drobne towary
+|
+|
+|
+|
+| Przestarzałe w FIRS, zamiast tego użyj SCMT
+|-
+| TWOD
+| Drewno Tropikalne
+| 0020 Drobne towary
+|
+|
+|
+|
+| dawniej przeznaczony jako ładunek domyślny
+|-
+| WSTE
+| Odpady 
+| 0010 Luzem
+|
+|
+|
+|
+| Przestarzałe w FIRS.
+|}
+
+<!--<references />-->{{pl/Development/NewGRF/NFO Specs/przypisy|name=ecs_cargo_change|2001}}<!-- 1.0
+ -->{{pl/Development/NewGRF/NFO Specs/przypisy|name=ecs_cargo_change|2001-1}}<!-- 1.1
+ -->{{pl/Development/NewGRF/NFO Specs/przypisy|name=ecs_cargo_change|4101-2}}<!-- 1.2
+ -->{{pl/Development/NewGRF/NFO Specs/przypisy|name=ecs_cargo_change|401-3}}<!-- 1.3
+ -->{{pl/Development/NewGRF/NFO Specs/przypisy|name=ecs_cargo_change|1-4}}<!-- 1.4
+ -->{{pl/Development/NewGRF/NFO Specs/przypisy|name=ecs_cargo_change|1-5}}<!-- 1.5
+  -->{{pl/Development/NewGRF/NFO Specs/refs|name=ecs_cargo_change|<!--1-->przypis}}<!-- 1-0
+  -->{{pl/Development/NewGRF/NFO Specs/refs|name=ecs_cargo_change|<!--2--><!--1-1-->przypis}}<!-- 1-1
+  -->{{pl/Development/NewGRF/NFO Specs/refs|name=ecs_cargo_change|<!--3--><!--1-2-->przypis}}<!-- 1-2
+  -->{{pl/Development/NewGRF/NFO Specs/refs|name=ecs_cargo_change|<!--4--><!--1-3-->przypis}}<!-- 1-3
+  -->{{pl/Development/NewGRF/NFO Specs/refs|name=ecs_cargo_change|text=Klasy ładunków ECS zmieniły się od 31 grudnia 2010 r|<!--5--><!--1-4-->przypis}}<!-- 1-4
+  -->{{pl/Development/NewGRF/NFO Specs/refs|name=ecs_cargo_change|<!--6--><!--1-5-->przypis}}<!-- 1-5 -->
+
+Jeśli napiszesz lub opublikujesz NewGRF, który wprowadza nową etykietę ładunkową, dodaj również komentarz w miejscu, w którym używana jest nowa etykieta.

@@ -1,0 +1,29 @@
+<noinclude>{{pl/Development/NewGRF/inne strony|en=newgrf-specs.tt-wiki.net/wiki/Callback:_Refit_cost_factor|pl=pl/Development/NewGRF/NFO Specs/Callback/Refit cost factor}}
+<!--{{-}}<br>--><!--{{ambox | text = w trakcie edycji.}}--></noinclude><!-- 
+-->==<span id="Refit_cost_factor_(15E)"></span><span title="Refit cost factor (15E)" id="Refit_cost_factor_.2815E.29">Współczynnik kosztu refit (15E)</span>==
+
+To <span title=callback>'wywołanie zwrotne'</span> może być użyte do zastąpienia właściwości kosztów <s>remontu</s> <small>''(refit'u)''</small> pojazdów. To wywołanie zwrotne będzie również wywoływane w zakresie listy zakupów, więc albo ogranicz używane zmienne do tego, co jest dostępne na liście zakupów, albo <span title=branch>gałąź</span> na specjalnym typie ładunku listy zakupów.
+
+Zmienna 10 zawiera informacje o docelowym typie ładunku podobnym do zmiennej 47.
+
+'''Format:''' ccccwwtt
+
+{| 
+|-
+!Zmienna!!Wartość
+|-
+|tt||[[pl/Development/NewGRF/NFO Specs/CargoTypes|cargo typ]] jest doliczany do; <span title=translated>'przetłumaczone'</span>, jeśli zainstalowano tabelę <span title=translation>translacji'</span>
+|-
+|ww||Podtyp jest przekieruwany do
+|-
+|cccc||Wartość [[pl/Development/NewGRF/NFO Specs/Action0/Cargos#cargoclasses-16|cargo class]] ładunku, który został
+|}
+
+
+'''Zwracane wartości:'''
+* Bity 0–13: Podpisany współczynnik kosztu refit'u, podstawa kosztu zależy od typu pojazdu i jest taka sama jak dla właściwości kosztu remontu. Negatywne czynniki kosztów pozwalają na przychody z 'refit'.
+* Bit 14: Jeśli jest ustawiony, 'refit' jest dozwolony jako 'auto-refit', pod warunkiem, że ustawiony jest również bit 4 różnych flag.
+Nie zezwalaj na 'autorefit', jeśli zmieni się długość pojazdu (np. Używając cb36 do ustawienia długości). Długość pojazdu nie może się zmieniać na stacjach.
+
+Jeśli wywołanie zwrotne nie powiedzie się, zostanie użyta wartość właściwości kosztu 'refit'.
+

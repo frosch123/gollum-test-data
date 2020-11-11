@@ -1,0 +1,208 @@
+{{pl/Development/NewGRF/inne strony|en=newgrf-specs.tt-wiki.net/wiki/ActionB|pl=pl/Development/NewGRF/NFO Specs/ActionB |sub=nfo}}
+<!--{{-}}<br>{{ambox | text = w trakcie edycji.}}-->
+
+==<span id="Introduction" title="Introduction">Wprowadzenie</span>==
+
+
+Generuj komunikaty o błędach.
+
+
+Za pomocą tej akcji możesz ostrzec użytkownika o problemach związanych ze sposobem ładowania pliku grf, np. niewłaściwa kolejność, niewłaściwa wersja łaty lub złe parametry.
+
+==<span id="Syntax" title="Syntax">Składnia</span>==
+
+Dane wyglądają następująco:
+
+ <Sprite-number> * <Length> 0B <severity> <language-id> <message-id> [<message>] [<data> [<parnum>
+ [<parnum>]]]
+
+{|
+!Element!![[pl/Development/NewGRF/NFO Specs/GRFActionsDetailed|Rozmiar]]!!Opis
+
+|-
+|<Sprite-number>||dec||Sekwencyjny numer 'sprite'
+
+|-
+|<length>||dec||Łączna liczba bajtów użytych w tej akcji
+
+|-
+|0B||B||Definiuje action 0B
+
+|-
+|<severity>||B||Jak poważny jest ten komunikat (<span title='notice/warning/error/fatal error'>'zawiadomienie/ostrzeżenie/błąd/błąd krytyczny'</span>)
+
+|-
+|<language-id>||B||W jakich językach wyświetla się ten komunikat
+
+|-
+|<message-id>||B||Jaką wiadomość pokazać
+
+|-
+|<message>||S||Tekst niestandardowej wiadomości, tylko jeśli <message-id>==FF
+
+|-
+|<data>||S||Ciąg do wstawienia we wbudowanych lub niestandardowych komunikatach
+
+|-
+|<parnum>||B||Parametry GRF do wyświetlenia w komunikacie
+|}
+
+==<span id="Description" title="Description">Opis</span>==
+
+=== Sprite-number ===
+
+To tylko numer, na którym jesteś.
+
+=== Length ===
+
+Policz liczbę bajtów w tej akcji.
+
+=== severity ===
+
+Określa to, jak poważna jest wiadomość.
+
+{|
+!<span title=rygor>'Severity'</span>!!Znaczenie!!Prefix!!<span title='Action taken'>'Działania podjęte'</span>
+
+|-
+|00||<span title=Notice>'Wzmianka'</span>||(none)||kontynuuj ładowanie pliku grf
+
+|-
+|01||Ostrzeżenie||"Warning: "||kontynuuj ładowanie pliku grf
+
+|-
+|02||Błąd||"Error: "||kontynuuj ładowanie pliku grf
+
+|-
+|03||<span title='Fatal error'>'Fatalny błąd'</span>||"Error: "||przerwać ładowanie pliku grf
+|}
+
+Zwykle Akcja B jest ignorowana podczas <span title= initialization>'inicjalizacji'</span>. Jeśli istotność ma ustawiony bit 7, działanie krytyczne B zostanie zastosowane nawet podczas inicjalizacji. Może to być przydatne, aby zapobiec błędom spowodowanym przez nieprawidłowe 'sprites' podczas inicjalizacji. <span title=Note>'Należy odnotować'</span>, że działa to poprawnie tylko od TTDPatch 2.0.1 alpha 66, we wcześniejszych wersjach pokazane okienko błędu jest uszkodzone, jeśli ustawiony jest bit 7.
+
+Wiadomości są wyświetlane ze znakiem "/!\" W [[en/GRFStatusWindow|GRF Status window]] <!--strony nie ma w oryginale--> . Pierwszy komunikat krytyczny podczas każdej aktywacji jest również wyświetlany jako czerwone okienko wyskakujące.
+
+=== language-id ===
+
+Ma ten sam format, co [[pl/Development/NewGRF/NFO Specs/Action4#language-id|language-id in action 4]].
+
+Użyj 7F (wszystkie języki) dla wbudowanych wiadomości, ponieważ automatycznie używają właściwego języka.
+
+=== message-id ===
+
+Ustaw rodzaj wiadomości do wyświetlenia. Masz następujące opcje:
+
+{|
+!ID wiadomości!!Content
+
+|-
+|00||80 <span title="wymaga co najmniej wersji TTDPatch">" requires at least TTDPatch version "</span> 80 00
+
+|-
+|01||80 <span title="dotyczy wersji TTD 80">" is for the " 80 " version of TTD."</span> 00
+
+|-
+|||<data> <span title='Powinien być'>should be</span> "DOS" or "Windows"
+
+|-
+|02||80 <span title="jest przeznaczony do użytku z">" is designed to be used with "</span> 80 00
+
+|-
+|||<data> <span title='powinno być'>should be a</span> switchname + value, e.g. "multihead 0"
+
+|-
+|03||<span title="Nieprawidłowy parametr dla">"Invalid parameter for "</span> 80 ": parameter " 80 " (" 7B ")" 00
+
+|-
+|||<data> <span title='powinien być wypisany numer przełącznika'>should be the switch number written out</span> ("5")
+
+|-
+|04||80 <span title="należy załadować wcześniej">" must be loaded before "</span> 80 "." 00
+
+|-
+|05||80 <span title="musi zostać załadowany później">" must be loaded after "</span> 80 "." 00
+
+|-
+|06||80 <span title='wymaga OpenTTD w wersji " 80 " lub nowszej'>" requires OpenTTD version " 80 " or better."</span> 00
+
+|-
+|FF||<span title='Wiadomość niestandardowa, użyj tekstu od'>Custom message, use text from</span> <message>
+|}
+
+ID''`y'' wiadomości 04 i 05 są dostępne od TTDPatch 2.6 alfa 1 (r858).
+
+Wiadomość ID 06 jest dostępna od OpenTTD r11330. Tego komunikatu należy używać tylko wtedy, gdy zmienna 9D Działania 7/9 ma wartość 1 (OpenTTD).
+
+=== message ===
+
+Niestandardowy tekst wiadomości do wyświetlenia.
+
+=== parnum ===
+
+Numery parametrów (maksymalnie dwa) do wyświetlenia zamiast 7B w tekście wiadomości.
+
+=== Notes ===
+
+We wszystkich komunikatach (wbudowanych i niestandardowych) pierwsze 80 jest zastąpione nazwą pliku pliku grf, drugie 80 jest zastąpione treścią <data>. Po dwóch 80 bajtach możesz mieć jeden lub dwa bajty 7B, które są zastąpione wartością parametru (parametrów) określoną przez <parnum>. Zauważ, że posiadanie 7B jest nieprawidłowe przed napotkaniem dokładnie dwóch 80 bajtów. Oznacza to, że dozwolone są następujące kombinacje bajtów specjalnych:
+
+<pre>(none)
+
+80
+
+80 80
+
+80 80 7B
+
+80 80 7B 7B</pre>
+
+Przed, po lub pomiędzy bajtami możesz mieć dowolne znaki.
+
+Zaletą wbudowanych komunikatów jest to, że można je tłumaczyć przy użyciu mechanizmu mkpttxt, podczas gdy niestandardowe komunikaty będą dostępne tylko w językach dostarczonych z plikiem grf.
+
+Zauważ, że jeśli kilka plików grf próbuje wyświetlić krytyczne komunikaty o błędach, w tej chwili jest pokazywany tylko pierwszy komunikat, ponieważ TTD nie ma kolejki dla wyskakujących czerwonych błędów. Wszystkie pozostałe zostaną jednak wyświetlone w oknie Status GRF.
+
+Należy również pamiętać, że ponieważ ta akcja została wprowadzona tylko w TTDPatch 2.0.1 alpha 13, nie ma sensu sprawdzać, czy wersja jest co najmniej alfa 13, jeśli chcesz użyć komunikatu o błędzie 00. We wcześniejszych wersjach łatka wyświetla się komunikat o błędzie "invalid sprite" ''(nieprawidłowy)'' , ponieważ działanie jest nieznane.
+
+== Przykład ==
+
+Poniżej znajduje się przykład tego, jak mogłaby wyglądać pseudo-sprite' Action B wraz z [[pl/Development/NewGRF/NFO Specs/Action7|Action 7]] wymagane, aby pominąć go w odpowiednich okolicznościach.
+
+<pre>2 * 6  07 85 01 01 37 01
+
+3 * 17 0B 03 7F 02 "newtrains on" 00</pre>
+
+{|
+!Bajt(y)!!Nazwa!!Znaczenie
+
+|-
+|07||<action>||Ustawia tego pseudo-sprite, aby działał jako action 7
+
+|-
+|85||<variable>||Sprawdź [[pl/Development/NewGRF/NFO Specs/TTDPatchFlags| patch flags]]
+
+|-
+|01||<size>||zmienny rozmiar; ignorowane, ponieważ jest to trochę test
+
+|-
+|01||<cond>||pomiń, jeśli bit jest ustawiony
+
+|-
+|37||<val>||sprawdź bit 37 (newtrains)
+
+|-
+|01||<num-sprites>||pomiń jednego 'sprite'
+
+|-
+|0B||<action>||Ustawia tego pseudo-sprite, aby działał jako action B
+
+|-
+|03||<severity>||Ustawia to na błąd krytyczny
+
+|-
+|7F||<language-id>||Uruchom ten 'sprite' we wszystkich językach
+
+|-
+|02||<message-id>||Użyj wiadomości 02 (80 <span title="jest przeznaczony do użytku z">" is designed to be used with "</span> 80)
+
+|-
+|"newtrains on" 00||<data>||Ciąg do wstawienia w miejsce drugich 80 w wiadomości
+|}

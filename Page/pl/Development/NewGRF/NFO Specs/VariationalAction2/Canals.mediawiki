@@ -1,0 +1,63 @@
+{{pl/Development/NewGRF/inne strony|en=newgrf-specs.tt-wiki.net/wiki/VariationalAction2/Canals|pl=pl/Development/NewGRF/NFO Specs/VariationalAction2/Canals |sub=nfo}}
+<!--{{-}}<br>--><!--{{ambox | text = w trakcie edycji.}}--><!-- -->
+==Wprowadzenie==
+
+== Variables ==
+
+{|
+|-
+!'''Zmienna'''
+!'''Wersja'''
+![[pl/Development/NewGRF/NFO Specs/GRFActionsDetailed|'''Rozmiar''']]
+!'''Zawartość'''
+|-
+|80
+|{{pl/Development/NewGRF/ottdp|0.6|2.5}}
+|B
+|Wysokość nad ziemią, górne części zamków mają taką samą wysokość jak dolne części. Uwaga: zwraca wysokość w przyrostach co 1 (a nie 8)
+|-
+|81
+|{{pl/Development/NewGRF/ottdp|0.6|2.5}}
+|B
+|Typ terenu: 0 normalny, 1 pustynia, 2 <span title='rainforest'>'lasy deszczowe'</span>, 4 na lub powyżej granicy śniegu
+|-
+|82
+|{{pl/Development/NewGRF/ottdp|1.4|2.5|ottdrev=r25229}}
+|B
+|<span title="Mapa 'barier'">'Dike map'</span>
+|-
+|83
+|{{pl/Development/NewGRF/ottdp|0.6|2.6|ttdprev=r1562}}
+|B
+|Losowy bajt dla zwykłych kanałów i kafelków rzek, w przeciwnym razie zero (na przykład pod mostami lub starymi zapisami gry)||
+|}
+
+Akcja wariacyjna 2 jest dostępna dla ID''`ów'' 0/1/2/5/6 &nbsp;(Watercliffs, Locks, Dikes, River Slopes, River waterside)
+
+== Description ==
+
+=== Dike map (0x82) ===
+Zmienna zwraca boki i krawędzie, na których woda ma wał, tzn. Brak połączenia z wodą. Zmienna jest zestawem bitów, w którym pojedyncze bity wskazują wał w kierunku ośmiu sąsiadujących płytek:
+{| 
+|-
+!Bit!!Value!!Direction
+|-
+|0||1||North-East
+|-
+|1||2||South-East
+|-
+|2||4||South-West
+|-
+|3||8||North-West
+|-
+|4||16||East
+|-
+|5||32||South
+|-
+|6||64||West
+|-
+|7||128||North
+|}
+{{pl/Development/NewGRF/ttdp|}} W TTDPatch ta zmienna jest przeznaczona wyłącznie do użytku wewnętrznego.
+
+==Przykład==

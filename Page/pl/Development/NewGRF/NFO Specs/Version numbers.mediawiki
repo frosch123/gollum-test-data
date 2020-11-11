@@ -1,0 +1,168 @@
+{{pl/Development/NewGRF/inne strony|en=newgrf-specs.tt-wiki.net/wiki/Version_numbers|pl=pl/Development/NewGRF/NFO Specs/Version numbers |sub=nfo}}
+Te specyfikacje NewGRF dotyczą różnych numerów wersji. Ta strona wyjaśnia warunki dotyczące numerów wersji.
+
+== Version of a specific NewGRF ==
+{{pl/Development/NewGRF/ottdp|1.1|no}}
+
+Numer wersji określonego NewGRF wyróżnia wersje tego samego NewGRF i określa, która wersja jest "nowsza" czy "starsza" .
+Nie ma to wpływu na specyfikacje NewGRF ani ogólne zachowanie NewGRF.
+NewGRF definiuje swoją wersję za pomocą [[pl/Development/NewGRF/NFO Specs/Action14#grf-version-info-vrsn|Action 14]] ,
+może także zdefiniować [[pl/Development/NewGRF/NFO Specs/Action14#minimal-compatible-grf-version-info-minv|minimum version]]  , z którą jest kompatybilny z zapisywaniem.
+
+Przed wprowadzeniem Action14 - i zawartych w niej numerów wersji - NewGRF służyły do ​​zmiany GRFID w przypadku niezgodności zapisu.
+Jednak autorzy NewGRF nie zrobili tego konsekwentnie, szczególnie. ponieważ spowodował problemy w innych miejscach (np. testy NewGRF dla innych NewGRF).
+
+== GRF version ==
+
+Wersja GRF definiuje wersję specyfikacji NewGRF, do której stosuje się NewGRF.
+Zmiana wersji GRF  może wpłynąć na działanie NewGRF, ponieważ może zmienić zachowanie różnych funkcji NewGRF.
+
+W specyfikacjach zależności i zmiany między wersjami GRF są wskazywane za pomocą ikony {{pl/Development/NewGRF/grf|}} .
+
+NewGRF definiuje wersję specyfikacji, do której się stosuje [[pl/Development/NewGRF/NFO Specs/Action8|Action8]].
+
+=== GRF version 0 and 1 ===
+{{pl/Development/NewGRF/ottdp|no|no}}
+
+Te wersje GRF pochodzą ogólnie z dni alfa i beta NewGRF.
+W szczególności wprowadzono wersję 1 [[pl/Development/NewGRF/NFO Specs/Action8|Action8]] , która pozwala NewGRF na określenie wersji GRF, do której się stosuje.
+Wersja 2 GRF jest zgodna z TTDPatch 2.0, pierwszą stabilną wersją TTDPatch obsługującą NewGRF. Jest wyposażony w twardą obniżkę kompatybilności w NewGRF:
+TTDPatch 2.0 jest pierwszą wersją obsługującą GRF w wersji 2, jednocześnie usuwa obsługę wersji 0 i 1 w tym samym czasie (co oznacza, że ​​działanie 8 jest obowiązkowe).
+
+Podczas opracowywania specyfikacji GRF zaprojektowano, wdrożono i przeprojektowano różne funkcje. Jako taka GRF wersja 2 jest pierwszą stabilną wersją specyfikacji.
+
+=== GRF version 2 to 6 ===
+{{pl/Development/NewGRF/ottdp|0.6|2.0}}
+
+Te wersje GRF zostały wprowadzone w nieco arbitralnych miejscach rozwoju TTDPatch, aby umożliwić NewGRF określenie wymagań dla nowszych funkcji GRF.
+Później to podejście do wersjonowania specyfikacji zostało porzucone. Zamiast tego NewGRF mogą teraz czytać i testować wersję TTDPatch / OpenTTD w [[pl/Development/NewGRF/NFO Specs/Action7|Action9]] i wyłączać się przy pomocy [[pl/Development/NewGRF/NFO Specs/ActionB|ActionB]] z odpowiednim komunikatem o błędzie.
+
+=== GRF version 7 ===
+{{pl/Development/NewGRF/ottdp|0.6|2.5}}
+
+Wersja 7 GRF wprowadza różne zmiany semantyczne do różnych funkcji NewGRF. Ten sam kod może być poprawny zarówno dla wersji 6, jak i 7, ale będzie miał inne znaczenie.
+Najważniejsze zmiany to:
+* Kody języków w [[pl/Development/NewGRF/NFO Specs/Action4|Action4]] zostały całkowicie przeprojektowane.
+* Różne wywołania zwrotne, właściwości i zmienne używają cargobitów zamiast cargoslotów.
+Zmiany zostały szczegółowo opisane na stronach dla funkcji, których dotyczą.
+
+=== GRF version 8 ===
+{{pl/Development/NewGRF/ottdp|1.2|no}}
+
+GRF wersja 8 ponownie wprowadza różne zmiany semantyczne do różnych funkcji NewGRF.
+Najważniejsze zmiany to:
+* Różne warstwy kompatybilności w ramach specyfikacji zostały usunięte, aby uprościć pisanie NewGRF lub. aby usunąć arbitralne ograniczenia.
+: Np. specjalne znaczenie 0xFF ?? wyniki wywołania zwrotnego zostały usunięte. Również wszystkie połączenia zwrotne są teraz 15-bitowymi połączeniami zwrotnymi.
+* Wszystkie pozostałości ładunków zostały usunięte. (Oczywiście z wyjątkiem samej definicji ładunku.)
+* Wyjaśniono różne części specyfikacji, różne wywołania zwrotne, które pozwalały na różne wyniki o tym samym znaczeniu, teraz pozwalają tylko na określone wartości dla każdego możliwego wyniku, podczas gdy inne wartości pozostają zastrzeżone.
+: Np. wyniki wywołania zwrotnego, które wcześniej były testowane tylko na zero lub niezerowe, muszą teraz zwracać określoną wartość 0 lub 1.
+* Wszystkie zmienne "wysokość" <small>''(height)''</small> zostały zmienione, aby lepiej rozróżniać wysokość w poziomach wysokości lub w pikselach. Jest to przygotowanie do wprowadzenia ponad 16 poziomów wysokości.
+
+== GRF container version ==
+
+Format kontenera GRF to format binarny pliku GRF. Podczas gdy wersja GRF kontroluje znaczenie zawartości NewGRF, to
+Wersja kontenera GRF określa dla niego format przechowywania. W związku z tym ta wersja wpływa na oprogramowanie, które odczytuje/zapisuje pliki NewGRF, takie jak grfcodec, nml i oczywiście także
+OpenTTD i TTDPatch.
+
+Format kontenera GRF jest określony w [http://dev.openttdcoop.org/projects/grfcodec/repository/entry/docs/grf.txt grfcodec documentation].
+
+=== GRF container version 1 ===
+{{pl/Development/NewGRF/ottdp|0.6|2.0}}
+
+Jest to tradycyjny format pliku z TTD.
+
+=== GRF container version 2 ===
+{{pl/Development/NewGRF/ottdp|1.2|no}}
+
+Jest to nowy format pliku wprowadzony w GRFCodec 6.0. Implementacje, które znają tylko wersję 1 kontenera GRF, uznają GRF z tą wersją za pustą / niepoprawną.
+
+Nowe funkcje w tej wersji to:
+* Pseudosprite (i binarne to sprite) może być większy niż 64 KB.
+* Realsprites może być większy niż 255 pikseli.
+* Realsprites mogą zawierać różne wersje tego samego 'sprite' o różnych poziomach powiększenia i głębi kolorów (8bpp/32bpp).
+
+Brak wpływu na wersję kontenera GRF, wersję GRF i wersję NFO. Chociaż oczywiście niektóre rzeczy są możliwe tylko w przypadku kontenera GRF w wersji 2.
+
+== NFO version ==
+
+Jest to format pliku NFO, wejście/wyjście <small>''(input/output)''</small> GRFCodec i NFORenum.
+Brak wpływu na wersję kontenera GRF, wersję GRF i wersję NFO. Chociaż oczywiście niektóre rzeczy mogą być reprezentowane tylko przy użyciu nowszych wersji NFO.
+
+Różnice między formatami są ''udokumentowane'' <small>''(documented)''</small> w [http://dev.openttdcoop.org/projects/grfcodec/repository/entry/src/readinfo.cpp GRFCodec source code] , 
+który nadal może czytać wszystkie formaty (choć nie pisać).
+
+=== NFO version 1 to 7 ===
+
+Wzdłuż tych wersji do GRFCodec dodano wiele zaawansowanych formularzy składniowych. Jednak każdą wersję można przekonwertować na każdą z tych wersji bez utraty
+informacje podczas kodowania/dekodowania NewGRF (z wyjątkiem komentarzy do kodu źródłowego, które są tracone podczas kodowania GRF). Chociaż starsze wersje NFO mogą nie być tak wygodne
+do reprezentowania niektórych funkcji GRF (np. binarne obejmują 'sprites').
+
+=== NFO versions 8 to 31 ===
+Historycznie wartości liczbowe wersji GRF i wersji NFO były często takie same (szczególnie w przypadku długo trwających wersji 6 i 7), powodując dość pewne zamieszanie wśród autorów NewGRF, którzy następnie używali numerów wersji
+nieprawidłowo. Kiedy GRF wersja 8 ponownie zbiegła się (w czasie) z wymogiem nowej wersji NFO, postanowiono pominąć wersje NFO od 8 do 31, aby uzyskać wartości liczbowe
+znacznie się różni, przez co prawdopodobieństwo pomieszania jest mniejsze.
+
+Wartość "32" dla nowej wersji została wybrana z nieokreślonych powodów. Plotki mówią, że wartość 32 oznacza:
+* Obsługa grafiki 32bpp.
+* Obsługa kontenera GRF w wersji 2.0. (Wersje są zwykle kodowane szesnastkowo, a 20h = 32)
+
+=== NFO version 32 ===
+
+Wersja NFO 32 dodaje obsługę specyficznych funkcji kontenera GRF w wersji 2, takich jak grafika 32bpp lub grafika specyficzna dla poziomu powiększenia.
+Jednak NFO wersja 32 i wcześniejsze wersje mogą być również zakodowane w kontenerze GRF wersja 1 lub. 2)
+Kodowanie do kontenera GRF w wersji 1 lub dekodowanie do wersji NFO < 32 może jednak spowodować usunięcie dodatkowych 'sprites', których nie można przedstawić w tych formatach.
+
+== TTDPatch version ==
+
+Niektóre funkcje NewGRF są obsługiwane tylko od niektórych wersji TTDPatch. Te wymagania dotyczące wersji są wymienione w specyfikacji za pomocą ikony {{pl/Development/NewGRF/ttdp|}} .
+NewGRF mogą sprawdzić wersję TTDPatch za pomocą [[pl/Development/NewGRF/NFO Specs/Action7|Action9]] dla zmiennych [[pl/Development/NewGRF/NFO Specs/GlobalVariables|0B and 1D]] i wyłączyć się, używając [[pl/Development/NewGRF/NFO Specs/ActionB|ActionB]] .
+
+TTDPatch jest w wersji alfa, beta i stabilnej.
+Jednak przed wersją 2.6 alfy wersje alfa zostały nazwane innymi numerami wersji niż wersje beta / stabilne, do których by doprowadziły; zamiast tego używali poprzedniej stabilnej wersji z przyrostem o 0.0.1.
+
+{| 
+|-
+! Seria !! Wersje alfa !! Wersje beta !! Stabilne !! <span title='Maintenance releases of stables'>'Konserwacje wydań stabilnych'</span>
+|-
+|valign=middle| 1.9 <!--<ref>-->{{pl/Development/NewGRF/NFO Specs/refs|text=Te wersje nie miały w ogóle obsługi NewGRF i są wymienione tylko w celu wyjaśnienia <span title='following lines'>'następujących wierszy'</span>.|1}}<!--</ref>--> ||valign=middle| 1.8.1 alpha XX ||valign=middle| 1.9 beta X ||valign=middle| 1.9 || 
+|-
+| 2.0 || 1.9.1 alpha XX || 2.0 beta X || 2.0 || 2.0r1 
+|-
+|valign=middle| 2.5 ||valign=middle| 2.0.1 alpha XX ||valign=middle| 2.5 beta X ||valign=middle| 2.5 <!--<ref>-->{{pl/Development/NewGRF/NFO Specs/refs|text=<span title='Not released yet'>'Jeszcze nie wydane'.</span>|2}}<!--</ref>--> ||
+|-
+| 2.6 || 2.6 nightly rXXXX || || ||
+|}
+<!--
+<references/>-->{{pl/Development/NewGRF/NFO Specs/przypisy|101}}<!-- 1
+  -->{{pl/Development/NewGRF/NFO Specs/refs|text=Te wersje nie miały w ogóle obsługi NewGRF i są wymienione tylko w celu wyjaśnienia <span title='following lines'>'następujących wierszy'</span>.|<!--1-->przypis}}<!--
+ -->{{pl/Development/NewGRF/NFO Specs/przypisy|222012}}<!-- 2
+  -->{{pl/Development/NewGRF/NFO Specs/refs|text=<span title='Not released yet'>'Jeszcze nie wydane'.</span>|<!--2-->przypis}}<!-- 2 -->
+
+== OpenTTD version ==
+
+Niektóre funkcje NewGRF są obsługiwane tylko od niektórych wersji OpenTTD. Te wymagania dotyczące wersji są wymienione w specyfikacjach za pomocą ikony {{pl/Development/NewGRF/ottd|}} .
+NewGRF mogą sprawdzić wersję OpenTTD za pomocą [[pl/Development/NewGRF/NFO Specs/Action7|Action9]] dla zmiennych [[pl/Development/NewGRF/NFO Specs/GlobalVariables#openttd-version-21-a1|21 and 1D]] i wyłącz się przy użyciu [[pl/Development/NewGRF/NFO Specs/ActionB|ActionB]].
+
+OpenTTD ma wersje alfa, beta i stabilne. Główny i podrzędny numer wersji pozostaje taki sam dla alf, bet i 'stables'  prowadzących do siebie,
+z wyjątkiem sytuacji, gdy główny numer wersji jest zwiększony.
+
+{| 
+|-
+! Seria !! wersje Alpha !! wersje Beta !! Stabilne !! Konserwacje wydań stabilnych
+|-
+| 0.6 || 0.6 nightly rXXXX || 0.6.0-beta X || 0.6.0 || 0.6.x
+|-
+| 0.7 || 0.7 nightly rXXXX || 0.7.0-beta X || 0.7.0 || 0.7.x
+|-
+|valign=middle| 1.0 ||valign=middle| 0.8 nightly rXXXX, 1.0 nightly rXXXX <!--<ref>-->{{pl/Development/NewGRF/NFO Specs/refs|text='Nightlies; zmienili wersję po decyzji, że 1.0 będzie następował po 0.7 zamiast 0.8.|31}}<!--</ref>--> ||valign=middle| 1.0.0-beta X ||valign=middle| 1.0.0 ||valign=middle| 1.0.x
+|-
+| 1.1 || 1.1 nightly rXXXX || 1.1.0-beta X || 1.1.0 || 1.1.x
+|-
+| 1.2 || 1.2 nightly rXXXX || 1.2.0-beta X || 1.2.0 || 1.2.x
+|-
+| 1.3 || 1.3 nightly rXXXX || || ||
+|-
+| ... ||  || || [[pl/Archive/OpenTTD/Main Page#wersje-1-4-x|1.4 - 8]]||
+|}
+
+<!--<references/>-->{{pl/Development/NewGRF/NFO Specs/przypisy|222021}}{{pl/Development/NewGRF/NFO Specs/refs|text='Nightlies'; zmienili wersję po decyzji, że 1.0 będzie następował po 0.7 zamiast 0.8.|<!--31-->przypis}}

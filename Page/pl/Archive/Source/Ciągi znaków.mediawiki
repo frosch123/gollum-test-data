@@ -1,6 +1,6 @@
 [[Translation:en/Archive/Source/Strings]]
  
-<!--{{DevDoc}}-->{{pl/Rozwój}}
+<!--{{DevDoc}}-->{{pl/Development/Rozwój}}
 
 <!--{{note|This page deals with [[Wikipedia:Internationalization_and_localization|i18n]] strings from a ''developers'' point of view. If you are interested in aspects on translations, see [[Format of langfiles]] for a more in-depth article. That article also covers language specific concepts like inflection due to gender, causes and plurality.}}-->
 {{pl/Informacja|Ta strona dotyczy [https://www.wikipedia.org/wiki/Internationalization_and_localization i18n] ciągi z ''developers'' punkt widzenia. Jeśli interesują Cię aspekty tłumaczeń, zobacz [[pl/Archive/Source/Format plików lang|Format plików lang]] po bardziej szczegółowy artykuł. Artykuł ten obejmuje również pojęcia specyficzne dla języka, takie jak odmiana z powodu płci, przyczyn i mnogości.}}
@@ -72,12 +72,12 @@ DrawStringRightAligned(x, y, STR_XYZ, colour);
 | Zauważ, że ''str'' jest używane dosłownie, tzn. Wartość zmiennej jest drukowana "as is" ''(jak jest)'' bez żadnego wyszukiwania pomiędzy nimi (zwykle używana do dostarczania nieprzetłumaczonych nazw zmiennych). Używaj tylko <code>{RAW_STRING}</code> jako zmiennej!
 |-
 | <code>SetDParamMaxDigits(uint n, uint count)</code>
-| '''available since {{en/Development/Design Drafts/Revision|24801}}''': Emuluj wartość zmiennej przy indeksie ''n'', który jest liczbą całkowitą, tworząc liczbę, która ma ''count'' cyfry o maksymalnej szerokości.
+| '''available since {{en/Revision|24801}}''': Emuluj wartość zmiennej przy indeksie ''n'', który jest liczbą całkowitą, tworząc liczbę, która ma ''count'' cyfry o maksymalnej szerokości.
 | Załóżmy, że dla bieżącej czcionki cyfra „8” jest cyfrą o największej szerokości czcionki. Jeśli wywołasz <code>SetDParamMaxDigits(1, 4)</code> , będzie to równoznaczne z wywołaniem  <code>SetDParam(1, 8888)</code> .
 | rowspan="2" | Te funkcje są zwykle używane, gdy istnieje potrzeba odgadnięcia maksymalnej szerokości określonego łańcucha, na przykład w '''UpdateWidgetSize'''. Skorzystaj z tej funkcji, jeśli znasz górną granicę zmiennej i obliczenie dokładnej wartości może być kosztowne, ale potrzebujesz tylko "dobrego odgadnięcia" ''(good guess)'' dla całkowitej szerokości końcowego łańcucha.
 |-
 | <code>SetDParamMaxValue(uint n, uint64 max_value, uint min_count = 0)</code>
-| '''available since {{en/Development/Design Drafts/Revision|24801}}''': Emuluj wartość zmiennej przy indeksie ''n'', który jest liczbą całkowitą, tworząc liczbę z tyloma cyframi o maksymalnej szerokości, ile zapewnia ''max_value'' . Jeśli podano ''min_count'' upewnij się , że utworzono co najmniej cyfry ''min_count'' .
+| '''available since {{en/Revision|24801}}''': Emuluj wartość zmiennej przy indeksie ''n'', który jest liczbą całkowitą, tworząc liczbę z tyloma cyframi o maksymalnej szerokości, ile zapewnia ''max_value'' . Jeśli podano ''min_count'' upewnij się , że utworzono co najmniej cyfry ''min_count'' .
 | Załóżmy, że dla bieżącej czcionki cyfra  ''8'' jest cyfrą o największej szerokości czcionki. Jeśli wywołasz <code>SetDParamMaxValue(1, 1234)</code> , this would be equivalent to calling <code>SetDParam(1, 8888)</code> , ponieważ ''1234'' składa się z czterech cyfr. Jeśli wywołasz  <code>SetDParamMaxValue(2, 123, 5)</code> , będzie to równoznaczne z wywołaniem <code>SetDParam(2, 88888)</code> , ponieważ ''123'' ma tylko trzy cyfry, ale poprosiłeś o co najmniej pięć cyfr.
 |}
 
@@ -114,4 +114,4 @@ Co więcej, mówiąc bardziej ogólnie, jeśli chcesz ''zmienić'' oryginalny te
 * Jeśli nie możesz ocenić, czy zmiana zmieni rzeczy w innych językach (na przykład zmieniłeś jedno słowo w zdaniu) lub jeśli wiesz, że to na pewno zmieni (na przykład zmieniłeś całą frazę), to wykonaj modyfikacja w języku angielskim i usunięcie wszystkich innych tłumaczeń tego ciągu z innych tabel tekstowych. Dla tłumaczy dużo łatwiej jest znaleźć brakujące tłumaczenie niż szukać zmienionego! Ponieważ SVN przechowuje historię, oryginalne tłumaczenie również nie jest tracone i może zostać przywrócone, jeśli jest to naprawdę konieczne.<br /> Także w bieżącym przypadku, jeśli jesteś pewien określonego języka (na przykład jest to język ojczysty) jak należy dostosować tłumaczenie, dostosuj je sam. Wciąż pozbywaj się innych ciągów w innych językach, których nie znasz wystarczająco dobrze. W razie wątpliwości, czy to, co robisz, jest prawidłowe, nie zmieniaj wpisu, ale go usuń.
 
 
-<!--[[Category:Development]]--> [[Category:pl/Rozwój]]
+<!--[[Category:Development]]--> 

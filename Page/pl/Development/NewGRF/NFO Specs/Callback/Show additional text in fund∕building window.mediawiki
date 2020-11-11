@@ -1,0 +1,10 @@
+<noinclude>{{pl/Development/NewGRF/inne strony|en=newgrf-specs.tt-wiki.net/wiki/Callback:_Show_additional_text_in_fund/building_window|pl=pl/Development/NewGRF/NFO Specs/Callback/Show additional text in fund∕building window}}
+</noinclude>== Show additional text in fund/building window (38/15C) ==
+
+To wywołanie zwrotne pozwala wyświetlić dodatkowe informacje w oknie funduszu branżowego i okien budowy obiektów. Zwracana wartość powinna być liczbą tekstu D0xx, który ma zostać wyświetlony. Tekst musi zaczynać się od kolorowego znaku specjalnego i nie powinien być dłuższy niż trzy linie (zapewnione są automatyczne łamanie linii, ale można użyć znaku char 0D do ręcznego podziału linii). Ponieważ branża nie została jeszcze zbudowana, nie można uzyskać dostępu do żadnych zmiennych branżowych podczas tego wywołania zwrotnego. To samo dotyczy przedmiotów.
+
+{{pl/Development/NewGRF/grfFrom|8}} W przypadku wersji GRF 8 i nowszych możesz zwrócić wartość 400, aby nie wyświetlać tekstu (zamiast niepowodzenia połączenia zwrotnego).
+
+Callback 38 jest dostępny od wersji TTDPatch 2.0.1 a72 i nowszych.
+Od czasu OpenTTD r20086 i TTDPatch r2354 zawartość rejestrów 100h..105h jest kopiowana na stos tekstowy.
+<!--[[Category:Callbacks]]-->

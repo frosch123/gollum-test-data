@@ -12,12 +12,12 @@
 <div style="position: absolute;">[[{{#if:{{{imagen|}}}
   | File:{{{imagen}}}
   | {{#switch:{{{tipo|}}}
-    | borrar     =File:en/Manual/Base Set/Deletion.png
+    | borrar     =File:en/Deletion.png
     | contenido  =File:en/Content.png
-    | estilo     =File:en/Manual/Base Set/Edit-clear.png
-    | fusionar   =File:en/Manual/Base Set/Move.png
-    | protección =File:en/Manual/Base Set/Protection.png
-    | #default  =File:en/Manual/Base Set/Notice.png
+    | estilo     =File:en/Edit-clear.png
+    | fusionar   =File:en/Move.png
+    | protección =File:en/Protection.png
+    | #default  =File:en/Notice.png
   }}
 }}|40px]]</div>
 <div style="border: none; padding: 2px 2px 2px 62px;">
@@ -88,16 +88,16 @@ Los siguientes ejemplos utilizan diferentes valores para el parámetro '''tipo''
 Las imágenes predeterminadas mostradas arriba se han fijado, en su mayoría, por conveniencia. En muchos casos es más apropiado usar imágenes más específicas. Estos ejemplos usan el parámetro '''imagen''' para especificar una imagen distinta a las predeterminadas.
 
 <pre>{{es/Metaplantilla de avisos| tipo   = Información
-| imagen = en/Manual/Base Set/OpenttdManual.png
+| imagen = en/Manual/OpenttdManual.png
 | texto  = Algo Algo Algo 
 }}</pre>
 
 {{es/Metaplantilla de avisos| tipo   = Información
-| imagen = en/Manual/Base Set/OpenttdManual.png
+| imagen = en/Manual/OpenttdManual.png
 | texto  = Algo Algo Algo 
 }}
 
-[[Category:es/Manual/Base Set/Cajas de mensajes|Metaplantilla de avisos]]
+[[Category:es/Cajas de mensajes|Metaplantilla de avisos]]
 </noinclude><!--
 
   CSS if the option will become available

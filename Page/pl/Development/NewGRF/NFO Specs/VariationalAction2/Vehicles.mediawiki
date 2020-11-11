@@ -1,0 +1,385 @@
+{{pl/Development/NewGRF/inne strony|en=newgrf-specs.tt-wiki.net/wiki/VariationalAction2/Vehicles|pl=pl/Development/NewGRF/NFO Specs/VariationalAction2/Vehicles |sub=nfo}}
+{{en/-}}<!--<br>--><!--{{ambox | text = w trakcie edycji.}}--><!-- -->
+<div style="float:right; padding-left:12px; background:none;">{{pl/Development/NewGRF/NFO Specs/Navigation}}</div>
+
+==<span id="Introduction" title=Introduction>Wprowadzenie</span>==
+
+==<span id="Variables" title="Variables"> Zmienne </span>==
+
+{| border=1
+!zmienna!![[pl/Development/NewGRF/NFO Specs/GRFActionsDetailed|Rozmiar]]!!Wersja!!Opis!!Dostępne na liście zakupów
+|+
+|10||D||{{pl/Development/NewGRF/ottdp|1.2|no|ottdrev=r23080}}||Wybieranie sprite'ów dla różnych okien GUI - Zobacz [[pl/Development/NewGRF/NFO Specs/Action2/Vehicles|Action2/Vehicles]].||{{pl/Development/NewGRF/ottdp|1.2|no|ottdrev=r23080}}
+|+
+|40||D||{{pl/Development/NewGRF/ottdp|0.6|2.5}}||Pozycja w składzie i długość składu||nie
+|+
+|41||D||{{pl/Development/NewGRF/ottdp|0.6|2.5}}||Pozycja i długość łańcucha kolejnych pojazdów o tym samym ID||nie
+|+
+|42||D||{{pl/Development/NewGRF/ottdp|0.6|2.5}}||Rodzaje ładunków przewożonych||nie
+|+
+|43||D||{{pl/Development/NewGRF/ottdp|0.6|2.5}}||Player info||{{pl/Development/NewGRF/ottdp|0.6|2.5|ottdrev=r4611|ttdprev=beta 2}}
+|+
+|44||D||{{pl/Development/NewGRF/ottdp|0.6|2.5|ttdprev=2.0.1 alpha 48}}||Aircraft info||nie
+|+
+|45||D||{{pl/Development/NewGRF/ottdp|0.6|2.5|ttdprev=2.0.1 alpha 58}}||<span title='Curvature info'>'Informacje o krzywiznach'</span>||nie
+|+
+|46||D||{{pl/Development/NewGRF/ottdp|0.6|2.5|ttdprev=2.0.1 alpha 59}}||<span title='Motion counter'>'Licznik ruchu'</span>||nie
+|+
+|47||D||{{pl/Development/NewGRF/ottdp|0.6|2.5}}||Informacje o ładunku pojazdu||{{pl/Development/NewGRF/ottdp|0.7|no|ottdrev=r15542}}<!-- <ref name="var47">-->{{pl/Development/NewGRF/NFO Specs/refs|name=var47|text=Zmienna 47 odnosi się do ładunku domyślnego pojazdu, gdy znajduje się na liście zakupów. Różni się to od ładunku używanego w akcji 3, która jest 0xFF na liście zakupów. "Cykl refit" (F2) jest obecnie zawsze zerowy na liście zakupów.|1}}<!--</ref>-->
+|+
+|48||D||{{pl/Development/NewGRF/ottdp|0.6|2.5}}||Informacje o typie pojazdu||{{pl/Development/NewGRF/ottdp|0.6|2.5|ottdrev=r5338|ttdprev=beta 2}}
+|+
+|49||D||{{pl/Development/NewGRF/ottdp|0.7|2.6|ottdrev=r13376|ttdprev=r2216}}||Rok budowy (długi format, 0 bazowy)||{{pl/Development/NewGRF/ottdp|0.7|no|ottdrev=r13376}}<!-- <ref name="date">-->{{pl/Development/NewGRF/NFO Specs/refs|name=date|text=Jest to bieżąca data|2}}<!--</ref>-->
+|+
+|4A||D||{{pl/Development/NewGRF/ottdp|1.1|no|ottdrev=r20165}}||Informacje o aktualnym typie kolei/typie drogi/tramwaju||nie
+|+
+|4B||D||{{pl/Development/NewGRF/ottdp|1.2|no|ottdrev=r23068}}||Data ostatniego serwisu||{{pl/Development/NewGRF/ottdp|1.2|no|ottdrev=r23068}}<!-- <ref name="date" />-->{{pl/Development/NewGRF/NFO Specs/refs|name=date|<!--3-->2-1}}
+|+
+|4C||D||{{pl/Development/NewGRF/ottdp|1.3|no|ottdrev=r24246}}||valign=middle|Aktualna maksymalna prędkość, w tym ograniczenia prędkości toru lub rozkładu jazdy. Ważne tylko dla pojazdu przedniego. Uwaga, jednostki różnią się dla każdego typu pojazdu<!--<ref name="speed">-->{{pl/Development/NewGRF/NFO Specs/refs|name=speed|text=Zerknij [[pl/Development/NewGRF/NFO Specs/Action0/Vehicles/Trains#speed-09|train property 09]], [[pl/Development/NewGRF/NFO Specs/Action0/Vehicles/RoadVehicles|road vehicle property 08]] (nie 15, nawet przy użyciu realistycznego przyspieszenia), [[pl/Development/NewGRF/NFO Specs/Action0/Vehicles/Ships|ship property 0B]] i [[pl/Development/NewGRF/NFO Specs/Action0/Vehicles/Planes|aircraft property 0C]].|<!--4-->3}}<!--</ref>-->||nie
+|+
+|4D||D||{{pl/Development/NewGRF/ottdp|1.4|no|ottdrev=r26157}}||Położenie w pojeździe przegubowym <small>''(articulated)''</small>||nie
+|+
+|60||D||{{pl/Development/NewGRF/ottdp|0.6|2.5|ttdprev=2.0.1 alpha 57}}||Liczba Veh.ID wystąpienie <small>''(occurence)''</small>||nie
+|+
+|61||-<!--<ref>-->{{pl/Development/NewGRF/NFO Specs/refs|text=Rozmiar wyniku odpowiada rozmiarowi poszukiwanej zmiennej.|<!--5-->4}}<!--</ref>-->||{{pl/Development/NewGRF/ottdp|1.2|no|ottdrev=r22997}}||Kwerenda zmienna n-ty pojazdu w łańcuchu <small>''(chain)''</small>||nie
+|+
+|62||D||{{pl/Development/NewGRF/ottdp|1.2|no|ottdrev=r22998}}||Różnica krzywizny/położenia dla pojazdu n-ty w łańcuchu||nie
+|+
+|97||B||{{pl/Development/NewGRF/ottdp|0.6|2.0}}||Licznik 'ticków', zwiększał każdy 'tick' silnika||nie
+|+
+|B2||W||||Pojazd status: bit0 = pojazd niewidoczny (w tunelu/zajezdni), bit1 = zatrzymany, bit7 = rozbity||nie
+|+
+|B4||W||{{pl/Development/NewGRF/ottdp|0.6|2.0}}||valign=middle|Aktualna prędkość. Uwaga, jednostki różnią się dla każdego typu pojazdu<!--<ref name="speed" />-->{{pl/Development/NewGRF/NFO Specs/refs|name=speed|<!--6-->3-1}}||nie
+|+
+|B9||B||{{pl/Development/NewGRF/ottdp|0.6|2.0}}||Typ ładunku (typ B z listy pod  [[pl/Development/NewGRF/NFO Specs/CargoTypes|CargoTypes]]; zależne od klimatu)||nie
+|+
+|C0||W||{{pl/Development/NewGRF/ottdp|0.6|2.0}}||Wiek silnika w dniach<br/>{{pl/Development/NewGRF/ottdp|1.2|2.5|ottdrev=r22816|ttdprev=alpha 61}} Ważne dla wagonów i części przegubowych, jak również.||no
+|+
+|C4||B||{{pl/Development/NewGRF/ottdp|0.6|2.0}}||Rok budowy (liczone od 1920)), Należy pamiętać, że jest to modyfikowane, gdy Cht: Year jest używany||{{pl/Development/NewGRF/ottdp|0.6|no|ottdrev=r4611}}<!-- <ref name="date" />-->{{pl/Development/NewGRF/NFO Specs/refs|name=date|<!--7-->2-2}}
+|+
+|C6||W||{{pl/Development/NewGRF/ottdp|0.6|2.0}}||valign=middle|ID typu pojazdu <!--<ref>-->{{pl/Development/NewGRF/NFO Specs/refs|text={{pl/Development/NewGRF/ottdp|0.7|no}} W OpenTTD 0.7 i nowszych jest grf-lokalny ID pojazdu. Wcześniejsze wersje OpenTTD i TTDPatch zgłaszają [[pl/Development/NewGRF/NFO Specs/VehicleIDs|TTD ID]] . W przypadku pociągów jest to samo; dla innych typów pojazdów różnią się one.|<!--8-->5}}<!--</ref>--> (przydatne dla [[pl/Development/NewGRF/NFO Specs/Callback/Main Page#can-wagon-be-attached-1d|Callback 1D]])||nie
+|+
+|C8||B||{{pl/Development/NewGRF/ottdp|0.6|2.0}}||Typ sprite; FD dla pociągów do przodu, FE lub FF po odwróceniu||nie
+|+
+|C9||B||{{pl/Development/NewGRF/ottdp|0.6|2.0}}||Licznik dzienny; zwiększa się codziennie||nie
+|+
+|DA||W||{{pl/Development/NewGRF/ottdp|0.6|2.0}}||Następny indeks wagonu, FFFF jeśli ostatni wagon (użyj shift-num=08 i sprawdź FF)||nie
+|+
+|F2||B||{{pl/Development/NewGRF/ottdp|0.6|2.5}}||Cykl refit, ile razy przebudowany <small>''(refitted)''</small> do tego samego typu ładunku||{{pl/Development/NewGRF/ottdp|0.7|no|ottdrev=r15542}}<!-- <ref name="var47" />-->{{pl/Development/NewGRF/NFO Specs/refs|name=var47|<!--9-->1-1}}
+|+
+|FE||W||{{pl/Development/NewGRF/ottdp|0.6|2.5}}||Modflags||nie
+|+
+|FF||B||{{pl/Development/NewGRF/ottdp|0.6|2.5}}||Modflags||nie
+|}
+<!--
+<references />-->{{pl/Development/NewGRF/NFO Specs/przypisy|name=var47|2001}}<!-- 1.0
+ -->{{pl/Development/NewGRF/NFO Specs/przypisy|name=var47|2001-1}}<!-- 1.1
+  -->{{pl/Development/NewGRF/NFO Specs/refs|name=var47|text=Zmienna 47 odnosi się do ładunku domyślnego pojazdu, gdy znajduje się na liście zakupów. Różni się to od ładunku używanego w akcji 3, która jest 0xFF na liście zakupów. "Cykl refit" (F2) jest obecnie zawsze zerowy na liście zakupów.|<!--1-->przypis}}<!--
+ 1-0  
+  -->{{pl/Development/NewGRF/NFO Specs/refs|name=var47|<!--9-->1-1}}<!-- 1-1
+ -->{{pl/Development/NewGRF/NFO Specs/przypisy|name=date|22-0}}<!-- 2.0
+ -->{{pl/Development/NewGRF/NFO Specs/przypisy|name=date|2-1}}<!-- 2.1
+ -->{{pl/Development/NewGRF/NFO Specs/przypisy|name=date|2-2}}<!-- 2.2
+  -->{{pl/Development/NewGRF/NFO Specs/refs|name=date|text=Jest to bieżąca data|<!--2-->przypis}}<!-- 2-0
+  -->{{pl/Development/NewGRF/NFO Specs/refs|name=date|<!--3--><!--2-1-->przypis}}<!-- 2-1
+  -->{{pl/Development/NewGRF/NFO Specs/refs|name=date|<!--7--><!--2-2-->przypis}}<!-- 2-2
+ -->{{pl/Development/NewGRF/NFO Specs/przypisy|name=speed|43-0}}<!-- 3.0
+ -->{{pl/Development/NewGRF/NFO Specs/przypisy|name=speed|3-1}}<!-- 3.1
+  -->{{pl/Development/NewGRF/NFO Specs/refs|name=speed|text=Zerknij [[pl/Development/NewGRF/NFO Specs/Action0/Vehicles/Trains#speed-09|train property 09]], [[pl/Development/NewGRF/NFO Specs/Action0/Vehicles/RoadVehicles|road vehicle property 08]] (nie 15, nawet przy użyciu realistycznego przyspieszenia), [[pl/Development/NewGRF/NFO Specs/Action0/Vehicles/Ships|ship property 0B]] i [[pl/Development/NewGRF/NFO Specs/Action0/Vehicles/Planes|aircraft property 0C]].|<!--4--><!--3-->przypis}}<!-- 3-0
+  -->{{pl/Development/NewGRF/NFO Specs/refs|name=speed|<!--6--><!--3-1-->przypis}}<!-- 3-1
+ -->{{pl/Development/NewGRF/NFO Specs/przypisy|222022}}<!-- 4.0
+  -->{{pl/Development/NewGRF/NFO Specs/refs|text=Rozmiar wyniku odpowiada rozmiarowi poszukiwanej zmiennej.|<!--5--><!--4-->przypis}}<!-- 4-0
+ -->{{pl/Development/NewGRF/NFO Specs/przypisy|222031}}<!-- 5
+  -->{{pl/Development/NewGRF/NFO Specs/refs|text={{pl/Development/NewGRF/ottdp|0.7|no}} W OpenTTD 0.7 i nowszych jest grf-lokalny ID pojazdu. Wcześniejsze wersje OpenTTD i TTDPatch zgłaszają [[pl/Development/NewGRF/NFO Specs/VehicleIDs|TTD ID]] . W przypadku pociągów jest to samo; dla innych typów pojazdów różnią się one.|<!--8--><!--5-->przypis}}<!-- 5 -->
+
+W przypadku innych 80 + x zmiennych nadaj [http://marcin.ttdpatch.net/sv1codec/TTD-locations.html#_VehicleArray TTD vehicle structure] .
+
+Zmienne 40, 41, 42 i 43 są buforowane. Oznacza to, że chociaż są one zasadniczo drogie obliczeniowo, mogą być używane bez wpływu na wydajność. Zmienne 45 i 60 są również drogie obliczeniowo, ale nie można ich buforować, dlatego należy ich używać oszczędnie. Jeśli to możliwe, należy preferować zmienne 80+x.
+
+Zmienione w pamięci podręcznej zmienne są aktualizowane, gdy gra jest załadowana, kiedy konsola wjeżdża lub jest przestawiana w składzie i kiedy pociąg się cofa.
+
+Na liście zakupów dostępnych jest tylko kilka zmiennych. W szczególności nie można uzyskać dostępu do pojazdu przedniego (obiekt powiązany) ani innych części przegubowych.
+
+==<span id="Description" title='Description'>Opis</span>==
+===<span id="Position_and_length_(40,_41)"></span><span id="Position_and_length_.2840.2C_41.29" title="Position and length (40, 41)">Pozycja i długość (40, 41)</span>===
+
+'''Format:''' 00nnbbff
+
+{| 
+|-
+!Zmienna!!Wartość
+|-
+|ff||pozycja pojazdu w składzie liczona od silnika (przód), np. silnik miałby ff=0, pierwszy wagon lub przedział pocztowy samolotów miałby ff=1, drugi wagon lub wirnik śmigłowców miałby ff=2, trzeci wagon miałby ff=3 itd.
+|-
+|bb||taki sam jak ff, ale liczony od końca, tj. ostatni wagon ma bb=0, następny wagon ma bb=1 itd..
+|-
+|nn||Łączna liczba pojazdów w składzie, w tym cień i wirnik do samolotu.
+* W var 40 jest to zero. Oznacza to, że zwrócona wartość jest o jeden mniejsza niż rzeczywista liczba pojazdów. Pociąg z silnikiem i trzema wagonami ma nn=3.
+* W var 41 jest to oparte na jednym. Oznacza to, że zwrócona wartość to faktyczna liczba pojazdów.
+|}
+
+W przypadku zmiennej 40 liczby te odnoszą się do całości, ale w przypadku zmiennej 41 odnoszą się tylko do łańcucha kolejnych pojazdów o tym samym identyfikatorze co obecny wagon (w tym sam, ale być może z wyłączeniem silnika):
+
+<span title="ilustracja pod linkiem"><!--[[File:vehicle_var40_41.png]]-->[http://newgrf-specs.tt-wiki.net/wiki/File:vehicle_var40_41.png File:vehicle_var40_41.png]</span>
+
+Należy odnotować, że dostęp do "pokrewnego" <small>''(related)''</small> obiektu (tj. Lokomotywy) nie ma większego sensu w przypadku pojazdów Vars 40/41, z wyjątkiem var40 w łańcuchu  [[pl/Development/NewGRF/NFO Specs/Callback/Main Page#can-wagon-be-attached-1d|callback 1D]] .
+
+===<span  id="Consist_cargo_(42)"></span><span id="Consist_cargo_.2842.29" title="Consist cargo (42)">Skład ładunku (42)</span>===
+
+'''Format:''' uuiicctt
+
+{| 
+|-
+!Zmienna!!Wartość
+|-
+|tt||maska ​​bitowa wszystkich [[pl/Development/NewGRF/NFO Specs/Action0/Cargos#cargoclasses-16|cargo classes]] transportowanych przez skład
+|-
+|cc||najczęściej  [[pl/Development/NewGRF/NFO Specs/CargoTypes|cargo type]] (z kolumny dla typu A)
+|-
+|ii||najczęstszy cykl 'refit' (wariant F2) ładunku typu cc
+|-
+|uu||wynik <span title=ORowania>'ORing'</span> bitów <span title="właściwość">'prop.'</span> 25 ze wszystkich pojazdów w pociągu
+|}
+
+W przypadku użycia z VarAction2 typ 81 (pojazd) zwraca on tylko ładunek z tego pojazdu, przy typie 82 (silnik), na który składa się całość.
+Zobacz także zmienną 47, aby uzyskać więcej informacji na temat ładunku przewożonego przez pojazd.
+
+{{pl/Development/NewGRF/grfTill|7}} Dla wersji GRF 7 i wcześniejszych „cc” to nieprzetłumaczony numer bitu z  [[pl/Development/NewGRF/NFO Specs/Action0/Cargos#bit-number-for-bitmasks-08|cargo property 8]] .
+
+{{pl/Development/NewGRF/grfFrom|8}} W wersji 8 GRF zmienia się znaczenie „cc”. Jeśli plik grf zainstalował  [[pl/Development/NewGRF/NFO Specs/Action0/Global Settings#cargo-translation-table-09|cargo translation table]] , wartość w "cc"  jest indeksem ładunku w tej tabeli; lub FF, jeżeli ładunku nie ma w tabeli.
+
+===<span id="Player_info_(43)"></span><span id="Player_info_.2843.29" title="Player info (43)"> Informacje o graczu (43)</span>===
+
+'''Format:''' Ccttmmnn
+
+{| 
+|-
+!Zmienna!!Wartość
+|-
+|nn||liczba obecnego gracza od 0 do 7 (aż do E (14) w OpenTTD od r14735)
+|-
+|mm||numer gracza wieloosobowego, przy czym gracz hosta (lub gracz pojedynczy) to 0, a gracz klienta to 1
+|-
+|tt||typ player'a, patrz poniżej dla możliwych wartości
+|-
+|c||kolor głównego gracza
+|-
+|C||{{pl/Development/NewGRF/ottdp|0.6|2.5|ttdprev=r1405}} kolor drugiego gracza, równy c, jeśli brak (od r1405)
+|}
+
+
+{| 
+|-
+!wartość tt!!Znaczenie
+|-
+|0||Gracz jest człowiekiem (firma na stałe)
+|-
+|1||Gracz jest graczem AI (nie zarządzany)
+|-
+|2||{{pl/Development/NewGRF/ottdp|no|2.5}} Gracz to człowiek zarządzający firmą AI
+|-
+|3||{{pl/Development/NewGRF/ottdp|no|2.5}} Gracz jest oryginalną firmą gracza będącego człowiekiem, teraz tymczasowo kontrolowaną przez AI
+|}
+
+{{pl/Development/NewGRF/ottdp|0.6|2.5|ttdprev=r1497}} Od r1497, kiedy 'sprite' pojazdu jest wyświetlana w oknie ekskluzywnej oferty lub wiadomości z nowym pojazdem, lub w innych okolicznościach, gdy z pojazdem nie jest powiązany żaden gracz, nn będzie FF.
+
+===<span id="Aircraft_info_(44)"></span><span id="Aircraft_info_.2844.29" title="Aircraft info (44)">Info o samolocie (44)</span>===
+
+'''Format:''' xxxxhhtt
+
+hh jest wysokością statku powietrznego nad ziemią, a właściwie wysokością jego cienia. Budynki, w tym lądowisko dla śmigłowców, nie liczą się jako "ziemia" <small>''(ground)''</small> , tj. Aby uzyskać wysokość nad lądowiskiem dla śmigłowców, należy odjąć wysokość lądowiska dla śmigłowców od hh.
+
+tt jest rodzajem bieżącego lotniska: 0=mały, 1=duży, 2=lądowisko dla śmigłowców, 3=platforma wiertnicza. Obecne lotnisko to lotnisko docelowe dla samolotów, które zakończyły wynurzanie i są w locie.
+
+===<span id="Curvature_info_(45)"></span><span title="Curvature info (45)" id="Curvature_info_.2845.29">Informacje o krzywiznach (45)</span>===
+
+'''Format:''' xxxTxBxF
+
+Zwraca to krzywiznę między sąsiednimi parami wagonów. Jest to przydatne w przypadku pojazdów kolejowych, które zwykle przechylają się na zakrętach. Krzywizna to różnica w kierunku między otaczającymi pojazdami:
+
+F = dla przedniej pary (poprzedni wagon do obecnego wagonu, 0, jeśli pojazd jest pierwszy)
+
+B = dla tylnej pary (aktualny wagon na następny, 0 jeśli wagon jest ostatni)
+
+T = dla tripletu (poprzedni wagon do następnego wagonu; zero na zakręcie S)
+
+Możliwa wartość:
+
+{| 
+|-
+!Decimal!!Hex!!Znaczenie
+|-
+| -4||C||180° <span title=curve>'krzywa'</span> w lewo (tylko T.)
+|-
+| -3||D||Zakręt 135 ° w lewo (tylko T)
+|-
+| -2||E||Zakręt 90° w lewo
+|-
+| -1||F||45° krzywa w lewo
+|-
+|0||0||brak krzywej
+|-
+|1||1||45° zakręt w prawo
+|-
+|2||2||Zakręt 90° w prawo
+|-
+|3||3||135° zakręt w prawo (tylko T.)
+|-
+|4||4||Zakręt 180° w prawo (tylko T.)
+|}
+
+===<span id="Motion_counter_(46)"></span><span title="Motion counter (46)" id="Motion_counter_.2846.29">Licznik ruchu (46)</span>===
+
+'''Format:''' 32-bit value
+
+Ta zmienna zlicza ruch, który wykonał pojazd. &nbsp;Dotyczy tylko pierwszego pojazdu w składzie (tzn. Należy użyć VarAction2 typ 82!). &nbsp;Jego wartość wynosi 1/4096 płytki. &nbsp;Pojazd faktycznie porusza się w sposób widoczny za każdym razem, gdy licznik ruchu wzrasta o 256, a ponieważ płytka składa się z 16 takich podjednostek, 16 * 256 = 4096 jednostek ruchu oznacza ruch na jednej płytce.
+
+Najbardziej przydatnym sposobem dostępu jest prawdopodobnie &lt;shiftnum&gt;=08 i odpowiedni &lt;andmask&gt;. &nbsp;Na przykład, aby uzyskać animację z jedną klatką na ruch pojazdu i łącznie 16 klatek dla ruchu na całej płytce, należy użyć &lt;shiftnum&gt;=08 i &lt;andmask&gt;=0F. &nbsp;Aby uzyskać animację z jedną klatką co dwa ruchy pojazdu i łącznie 4 klatki, użyj &lt;shiftnum&gt;=09 i  &lt;andmask&gt;=03.
+
+Jeśli pojazd jedzie bardzo szybko (&gt;160 mph dla trains), może przesuwać się o kilka 1/16 części kafla jednocześnie, dlatego niektóre klatki mogą być pomijane, ale animacja nadal będzie zsynchronizowana z ruchem.
+
+Pamiętaj, że grafika pojazdu jest aktualizowana tylko za każdym razem, gdy pojazd faktycznie się porusza, więc sprawdzenie dolnego bajtu jest prawdopodobnie bezcelowe i potrzebne tylko wewnętrznie, aby osiągnąć wystarczającą precyzję.
+
+===<span id="Vehicle_cargo_info_(47)"></span><span title="Vehicle cargo info (47)" id="Vehicle_cargo_info_.2847.29">Informacje o ładunku pojazdu (47)</span>===
+
+'''Format:''' ccccwwtt
+
+{| 
+|-
+!Zmienna!!Wartość
+|-
+|tt|| [[pl/Development/NewGRF/NFO Specs/CargoTypes|cargo typ]] przewożony przez pojazd (z kolumny dla typu A); <span title='translated ~ przetłumaczone'>'translacja'</span>, jeśli została zainstalowana tablica translacji
+|-
+|ww||masa jednostki ładunkowej w 1/16 ton, taka sama jak [[pl/Development/NewGRF/NFO Specs/Action0/Cargos#weight-of-one-unit-of-the-cargo-0f|cargo prop. 0F]]
+|-
+|cccc||wartość [[pl/Development/NewGRF/NFO Specs/Action0/Cargos#cargoclasses-16|cargo class]] ładunku przewożonego przez pojazd
+|}
+
+Zauważ, że jeśli GRF zainstalował [[pl/Development/NewGRF/NFO Specs/Action0/Global Settings#cargo-translation-table-09|cargo translation table]] , wartość w „tt” jest numerem szczeliny w tej tabeli, niezależnie od tego, która faktyczna szczelina lub bit ładunek wykorzystuje w gra. Jeśli tabela została zainstalowana, ale aktualny ładunek nie jest tam wymieniony, „tt” zostanie ustawione na FF.
+
+W przeciwieństwie do zmiennej 42, zmienna ta zwraca informacje tylko o bieżącym pojeździe, a nie konsystencję.
+
+===<span id="Vehicle_type_information_(48)"></span><span title="Vehicle type information (48)" id="Vehicle_type_information_.2848.29">Informacje o typie pojazdu (48)</span>===
+
+'''Format:''' xxxxxxff
+
+Bity FF są:
+
+{| 
+|-
+!Bit!!Wartość!!Znaczenie
+|-
+|0||1||Na rynku dostępny jest typ pojazdu
+|-
+|1||2||Typ pojazdu jest w fazie testów
+|-
+|2||4||Ekskluzywna oferta testowa dla aktywnego gracza
+|}
+
+Wszystkie inne bity w ff są niezdefiniowane i muszą zostać zamaskowane.
+
+===<span id="Information_about_current_railtype/roadtype/tramtype_(4A)"></span><span title="Information about current railtype/roadtype/tramtype (4A)" id="Information_about_current_railtype.2Froadtype.2Ftramtype_.284A.29">Informacje o aktualnym typie szyny/typie drogi/typie tramwaju (4A)</span>===
+
+'''Format:''' xxxxFFrr
+
+Dolny bajt (rr) zawiera (przetłumaczony) typ szyny/typ drogi/typ tramwaju, na którym pojazd jedzie.
+
+Jeśli typ szyny/typ drogi/typ tramwaju <small>''(railtype/roadtype/tramtype)''</small> nie ma wpisu w tabeli translacji typu szyna/droga/typ tramwaju GRF, wartość ta będzie wynosić 0xFF.
+
+Jeśli nie ma tabeli translacji, zwracana jest surowa wartość.
+
+Pociągi zwrócą typ szyny. {{pl/Development/NewGRF/ottdp|1.10|no}} Pojazdy drogowe (z wyjątkiem tramwajów) zwracają typ drogi. Tramwaje zwrócą kolej.
+
+Tylko dla pociągów następny bajt (FF) zawiera następujące flagi:
+
+{| 
+|-
+!Bit!!Wartośc!!Znaczenie
+|-
+|0||1||Pojazd jest/byłby zasilany na obecnym typie szyny (jest to niezależne od wagonów z napędem/bez zasilania lub cokolwiek )
+|}
+
+Wszystkie pozostałe bity są niezdefiniowane.
+
+Wszystkie pozostałe bajty i wynik dla pojazdów innych niż kolejowe są niezdefiniowane.
+
+===<span id="Position_within_articulated_vehicle_(4B)"></span><span title="Position within articulated vehicle (4B)" id="Position_within_articulated_vehicle_.284B.29">Pozycja w pojeździe przegubowym (4B)</span>===
+
+'''Format:''' xxxxbbff
+
+{| 
+|-
+!Zmienna!!Wartość
+|-
+|ff||Pozycja pojazdu (części przegubowej) w pojeździe przegubowym, liczona od pierwszej części, zaczynając od 0.
+|-
+|bb||Pozycja pojazdu (część przegubowa) w pojeździe przegubowym, liczona od ostatniej części, zaczynając od 0.
+|-
+|xx||Zarezerwowane, <span title="nie ma dostępu">'nie korzystaj'</span>.
+|}
+
+Całkowita liczba przegubowych części pojazdu wynosi ff + 1 + bb.
+
+Dla pojazdów drogowych  "ff" i "bb" są obecnie równe var 40, ponieważ nie ma jeszcze wagonów pojazdów drogowych.
+
+===<span id="Count_Veh.ID_occurence_(60)"></span><span title="Count Veh.ID occurence (60)" id="Count_Veh.ID_occurence_.2860.29">Policz wystąpienie Vehicle.ID (60)</span>===
+
+'''Format:''' xxxxxxnn
+
+Parametr 60+x to szukany identyfikator pojazdu, a zwracana nn to liczba pojazdów w konsolach, które mają ten identyfikator. W przypadku użycia z VarAction2 typu 81, sprawdzany będzie tylko bieżący pojazd i nowsze, przy VarAction2 typu 82 wszystkie pojazdy w składzie zostaną policzone.
+
+===<span id="Query_variable_of_n-th_vehicle_in_chain_(61)"></span><span title="Query variable of n-th vehicle in chain (61)" id="Query_variable_of_n-th_vehicle_in_chain_.2861.29">Zapytanie o zmienną n-tego pojazdu w łańcuchu (61)</span>===
+
+Jest to specjalna zmienna, aby uzyskać zawartość innej zmiennej innego pojazdu w łańcuchu pojazdu. Jest obsługiwany tylko w pociągach i pojazdach drogowych. Nie jest obsługiwany podczas wywołania zwrotnego używanego do modyfikowania właściwości pojazdu w celu uniknięcia zależności kołowych, co obecnie ogranicza tę zmienną do wywołań zwrotnych 1D, 2D, 31 i 32 oraz poza zakresem oddzwaniania.
+
+Rejestr tymczasowy 10F jest interpretowany jako liczba całkowita ze znakiem i określa przesunięcie w łańcuchu od bieżącego pojazdu. Wartości dodatnie są interpretowane jako w kierunku końca, wartości ujemne w kierunku do przodu. Jeśli przesunięcie znajduje się poza łańcuchem pojazdu, wartość wyniku wyniesie 0.
+
+Parametr 60 + x określa zmienną dostępową, a rejestr tymczasowy 10E jest przekazywany jako nowy parametr 60 + x. Przekazanie 61 jako zmiennej jest niedozwolone. Obecnie tylko zmienne specyficzne dla pojazdu wymienione na tej stronie oraz zmienna globalna 25 i  {{pl/Development/NewGRF/ottdp|1.3|no|ottdrev=r24527}} 5F są dostępne poprzez var 61.
+
+Wynikowa wartość będzie miała wielkość dowolnej zmiennej, której dotyczy zapytanie.
+
+===<span id="Curvature/position_difference_for_n-th_vehicle_in_chain_(62)"></span><span title="Curvature/position difference for n-th vehicle in chain (62)" id="Curvature.2Fposition_difference_for_n-th_vehicle_in_chain_.2862.29">Różnica krzywizny/położenia n-tego pojazdu w łańcuchu (62)</span>===
+
+'''Format:''' zzyyxxFD
+
+Ta zmienna jest obsługiwana tylko dla pociągów i pojazdów drogowych.
+
+Parametr 60+x jest interpretowany jako liczba całkowita ze znakiem i określa przesunięcie w łańcuchu <small>''(chain)''</small> od bieżącego pojazdu. Wartości dodatnie są interpretowane jako w kierunku końca, wartości ujemne w kierunku do przodu. Jeśli przesunięcie znajduje się poza łańcuchem pojazdu, wartość wyniku wyniesie 0.
+
+Najniższa 'skórka' <small>''~nibble''</small> (D) zawiera różnicę kierunku między wybranym pojazdem a tym pojazdem, możliwe wartości są identyczne z wartościami [[#curvature-info-45|variable 45]] .
+
+Następny 'skubek' <small>''~nibble''</small> (F) ma następujące znaczenie:
+{| 
+|-
+!Bit!!Wartośc!!Znaczenie
+|-
+|3||8||Pojazd jest obecnie ukryty
+|}
+
+Trzy górne bajty zawierają podpisaną różnicę pozycji X/Y/Z między wybranym pojazdem a tym pojazdem.
+
+===<span id="Modflags_(FE_and_FF)"></span><span title="Modflags (FE and FF)" id="Modflags_.28FE_and_FF.29">Modflags (FE i FF)</span>===
+
+Bity w FE dotyczą głównie ładowania stopniowego. &nbsp;Kilka przydatnych bitów dla autorów grf;
+
+{| 
+|-
+!Bit!!Wersja!!Wartość bitu
+|-
+|1||{{pl/Development/NewGRF/ottdp|1.5|2.5|ottdrev=r26430}}||Pojazd wciąż rozładowuje i nie rozpoczął jeszcze załadunku nowego ładunku na obecnej stacji.
+|-
+|5||{{pl/Development/NewGRF/ottdp|0.6|2.5}}||Pojazd jest napędzany (silnik lub wagon napędzany, przydatne głównie do tego ostatniego))
+|-
+|6||{{pl/Development/NewGRF/ottdp|0.6|2.5}}||Pojazd byłby napędzany (silnik lub wagon), gdyby istniał odpowiedni tor. (Np. Pociąg elektryczny w pociągu mieszanym na normalnym torze)
+|-
+|valign=middle|8<!-- <ref>-->{{pl/Development/NewGRF/NFO Specs/refs|text=Ten bit jest dokładny tylko dla pierwszego pojazdu w składzie.|<!--6-->61}}<!--</ref>-->||{{pl/Development/NewGRF/ottdp|0.6|2.5}}||Ten bit jest odwracany za każdym razem, gdy pociąg zmienia kierunek
+|-
+|10||{{pl/Development/NewGRF/ottdp|0.6|2.5|ttdprev=r1334}}||Pojazd został zbudowany podczas ekskluzywnej wersji zapoznawczej
+|}
+<!--<references/>-->{{pl/Development/NewGRF/NFO Specs/przypisy|222032}}{{pl/Development/NewGRF/NFO Specs/refs|text=Ten bit jest dokładny tylko dla pierwszego pojazdu w składzie.|<!--6--><!--61-->przypis}}
+
+zmienna FF jest tak naprawdę wysokim bajtem zmiennej FE, więc bit FE 8 jest taki sam jak bit FF 0.
+
+Inne bity są zastrzeżone; większość z nich jest faktycznie wykorzystywana w stanach wewnętrznych TTDPatch.
+
+==<span title="Examples" id="Examples">Przykłady</span>==

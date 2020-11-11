@@ -1,0 +1,175 @@
+{{pl/Development/NewGRF/inne strony|en=newgrf-specs.tt-wiki.net/wiki/Action1
+|pl=pl/Development/NewGRF/NFO Specs/Action1 |sub=nfo
+<!--|language_page=pl-->
+}}
+<!--[[Category:Artykuły w języku polskim/Pl]]-->
+<!--{{-}}<br>{{ambox | text = w trakcie edycji.}}-->
+
+==Wprowadzenie==
+Definiowanie zestawu prawdziwych 'sprites'.
+Działanie 01 służy do definiowania zestawów prawdziwych 'sprites' (w przeciwieństwie do pseudo-'sprites'). Można go później umieścić w dowolnym miejscu pliku .nfo [[pl/Development/NewGRF/NFO Specs/Action8|Action 8]].
+
+== Syntax ==
+
+=== Basic format ===
+{{pl/Development/NewGRF/ottdp|0.6|2.0}}
+ <sprite-number> * <length> '''01''' <feature> <num-sets> <num-ent>
+
+{| 
+|-
+!Element!![[pl/Development/NewGRF/NFO Specs/GRFActionsDetailed|rozmiar]]!!opis
+|-
+|<sprite-number>||dec||Sekwencyjny numer 'sprite'
+|-
+|<length>||dec||Łączna liczba bajtów użytych w tej akcji
+|-
+|01||B||Definiuje akcję 01
+|-
+|<feature>||B||Funkcja, której powinny używać następujące 'sprites' (s.b.)
+|-
+|<num-sets>||B||Liczba posiadanych zestawów 'sprites' (jeden zestaw duszków to jeden pojazd/stacja/statek itp.). Ustawienie tej wartości na 00 powoduje, że jest to rozszerzony format (patrz poniżej).
+|-
+|<num-ent>||B*||Liczba widoków 'sprite'
+|}
+
+Blok danych, który zawsze następuje po akcji 01, powinien składać się z num-sets * num-ent RealSprites lub RecolorSprites.
+
+=== Extended format ===
+{{pl/Development/NewGRF/ottdp|1.2.2|no|ottdrev=r24361}} 
+ <sprite-number> * <length> '''01''' <feature> '''00''' <first-set> <num-sets> <num-ent>
+
+{| 
+|-
+!Element!![[pl/Development/NewGRF/NFO Specs/GRFActionsDetailed|rozmiar]]!!Opis
+|-
+|<sprite-number>||dec||Sekwencyjny numer 'sprite'
+|-
+|<length>||dec||Łączna liczba bajtów użytych w tej akcji
+|-
+|01||B||Definiuje action 01
+|-
+|<feature>||B||Funkcja, której powinny używać następujące 'sprites' (s.b.)
+|-
+|00||B||Identyfikuje format rozszerzony.
+|-
+|<first-set>||B*||ID pierwszego zestawu ikon do zdefiniowania
+|-
+|<num-sets>||B*||Liczba posiadanych zestawów ikonek (jeden zestaw ikonek to jeden vehicle/station/ship etc)
+|-
+|<num-ent>||B*||Liczba widoków 'sprite'
+|}
+
+Blok danych, który zawsze następuje po akcji 01, powinien składać się z ' num-sets * num-ent '  'RealSprites' lub 'RecolorSprites' .
+
+== Description ==
+
+=== sprite-number ===
+
+To tylko numer, na którym jesteś.
+
+=== length ===
+
+Policz liczbę bajtów w tej akcji.
+
+===Feature===
+
+Ustawia to rodzaj [[pl/Development/NewGRF/NFO Specs/Features|feature]] , który chcesz zmienić. Ustaw na:
+
+{|
+|-!Wartość!![[pl/Development/NewGRF/NFO Specs/Features|Feature]]
+|-
+|00||Trains
+|-
+|01||Road Vehicles
+|-
+|02||Ships
+|-
+|03||Aircraft
+|-
+|04||Stations
+|-
+|05||Canals/Rivers
+|-
+|07||Houses
+|-
+|09||Industry Tiles
+|-
+|0A||Industries
+|-
+|0B||Cargos
+|-
+|0D||Airports
+|-
+|0F||Objects
+|-
+|10||Railtypes
+|-
+|11||Airport Tiles
+|-
+|12||Roadtypes
+|-
+|13||Tramtypes
+|}
+
+=== first-set ===
+Określa pierwszy zdefiniowany ID zestawu <small>''(set)''</small>.
+
+{{pl/Development/NewGRF/ottdp|1.2|no|ottdrev=r22925}} Ponieważ zestawy sprite OpenTTD r22925 pozostają ważne w wielu akcjach Action1. Oznacza to, że jeśli jedna akcja 1 definiuje zestawy sprajtu od 0 do 4, a później druga akcja 1 ponownie definiuje zestaw spriterzy 0, zestawy 'sprites' 1 do 4 nadal odnoszą się do pierwszej akcji 1. Zestawy spritesetów są specyficzne dla poszczególnych funkcji, każda funkcja utrzymuje własne mapowanie id <small>''(s)''</small> do spritesetów Action1. (W wersjach wcześniejszych niż OpenTTD r22925 i TTDPatch tylko zestawy sprite z pojedynczej akcji Action1 były jednocześnie powiązane z operacją Action2. Odwoływanie się do akcji Action1 z inną funkcją niż Action2 jest błędem).
+
+To zachowanie Action1 dotyczy zarówno formatu podstawowego, jak i rozszerzonego. 
+
+{{pl/Development/NewGRF/ottdp|1.2|no|ottdrev=r22926}} Ponadto rozszerzony format pozwala określić ID pierwszego zestawu sprite do zdefiniowania. W ten sposób poszczególne zestawy spriterzy zostaną zdefiniowane indywidualnie. 
+
+Nie ma ograniczeń co do kolejności definiowania zestawów ikonek. Jeśli zdefiniujesz zestawy 'sprites' 23..25 w jednej Akcji 1, zdefiniujesz zestawy 'sprites' 0..5 w innej Akcji 1, wtedy akcja 2 będzie mogła uzyskać dostęp do zestawów 0..5 i 23..25. Później inna Akcja 1 może przedefiniować zestawy 'sprites' 2..3, a po Akcji 2 dostęp do 'sprites' 0..1, 2..3, 4, 23..25 z różnych Akcji 1.
+
+Zauważ, że wszystkie zestawy 'sprites' zdefiniowane w pojedynczej akcji 1 mają taką samą liczbę 'sprites' na zestaw 'sprites' . Za pomocą wielu akcji 1 możesz zdefiniować zestaw ikon z różnymi ilościami ikon na zestaw. Action2 indywidualnie użyje rozmiaru każdego odnośnika spriteset. Nie ma wymogu spójnej liczby 'sprites' w Action2 lub spritelayoutach.
+
+=== num-sets ===
+Liczba stacji, pojazdów, statków itp. Reprezentowanych przez następujące 'sprites' (uwaga: jeden zestaw może być użyty dla więcej niż jednego pojazdu lub ciężarówki; zobaczysz to po osiągnięciu [[pl/Development/NewGRF/NFO Specs/Action2/Main Page|Action 2]] i [[pl/Development/NewGRF/NFO Specs/Action3/Main Page|Action 3]])
+
+=== num-ent ===
+
+Określa, ile różnych widoków ma każdy wpis.
+
+W przypadku pojazdów odpowiada to różnym kierunkom, w których może się poruszać. Jeśli twój pojazd jest symetryczny, potrzebujesz 4 widoków, a jeśli nie jest symetryczny, użyj 8 widoków.
+
+Stacja powinna normalnie mieć 12 (hex), ponieważ stacja składa się z 18 (dziesiętnych) 'sprites', chociaż jeśli użyjesz innego układu 'sprites' dla swojej stacji, liczba ta może się różnić.
+W przypadku kanałów zależy to od funkcji kanału, patrz [[pl/Development/NewGRF/NFO Specs/Action3/Main Page|Action 3]].
+
+W przypadku domów i płytek przemysłowych wartość powinna wynosić od 1 do 4 i określa liczbę różnych etapów budowy. 'Sprites' po pierwszych czterech są zawsze ignorowane. Zobacz także działanie 2 i 3.
+
+W przypadku ładunków powinna to być zawsze wartość 1. Następujące 'sprites' nie powinny być większe niż 10x10 pikseli, inaczej nie zmieszczą się w oknie stacji.
+
+{{pl/Development/NewGRF/ottdp|0.6|2.5|ttdprev=2.0.1 alpha 49}} Since TTDPatch 2.0.1 alpha 49, this value is a so-called "extended byte" (see [[pl/Development/NewGRF/NFO Specs/GRFActionsDetailed|GRFActionsDetailed]]).
+
+{{pl/Development/NewGRF/ottdp|0.6|2.5|ttdprev=2.0.1 alpha 63}} Od wersji TTDPatch 2.0.1 alfa 63 możliwe jest, aby <num-ent>=0 . Jest to przydatne do zdefiniowania kombinacji akcji 1/2, która służy tylko jako niepoprawny wynik wywołania zwrotnego. Jeśli plik .grf inaczej nie definiuje grafiki, w ten sposób wywołania zwrotne mogą zwrócić jawny kod błędu bez potrzeby przydzielania żadnych ikonek. Jest to również potrzebne, jeśli funkcja ma [[pl/Development/NewGRF/NFO Specs/Action2/Only Callback Failure | brak grafiki <small>''(no graphics at all)''</small> ]] .
+
+== Przykład ==
+
+Poniżej znajduje się przykład tego, jak mógłby wyglądać prawdziwy pseudo-'sprite'Akcji 1 z wpisami 'sprite' pod nim.
+
+ 2 * 4 01 00 01 08
+ 3 C:\TTD\SPRITES\mytrain.pcx 66 8 01 18 8 -3 -10
+ 4 C:\TTD\SPRITES\mytrain.pcx 82 8 09 15 20 -14 -6
+ 5 C:\TTD\SPRITES\mytrain.pcx 114 8 01 12 28 -14 -6
+ 6 C:\TTD\SPRITES\mytrain.pcx 162 8 09 16 20 -4 -8
+ 7 C:\TTD\SPRITES\mytrain.pcx 194 8 01 18 8 -3 -10
+ 8 C:\TTD\SPRITES\mytrain.pcx 210 8 09 16 20 -14 -7
+ 9 C:\TTD\SPRITES\mytrain.pcx 242 8 01 12 28 -14 -6
+ 10 C:\TTD\SPRITES\mytrain.pcx 290 8 09 15 20 -4 -7
+
+{| 
+|-
+!'''Bajt'''!!'''Znaczenie'''
+|-
+|2||<sprite-number>
+|-
+|4||<length> action w bajtach; start liczenia od 01 (<action>)
+|-
+|01||<action>: ustawia ten pseudo-'sprite' na działanie jako action 1
+|-
+|00||<feature>: W tym przypadku Pociąg
+|-
+|01||<num-sets>: 1 Zestaw widoków
+|-
+|08||<num-ent>: 8 widoków tego pociągu

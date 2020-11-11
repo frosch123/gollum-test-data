@@ -1,0 +1,209 @@
+{{pl/Development/NewGRF/inne strony|en=newgrf-specs.tt-wiki.net/wiki/Action3
+|pl=pl/Development/NewGRF/NFO Specs/Action3/Main Page |sub=nfo
+<!-- | float = left-->
+}}
+<!--[[Category:Artykuły w języku polskim/Pl]]-->
+<!--{{-}}<br>{{ambox | text = w trakcie edycji.}}-->
+
+==<span id="Introduction" title="Introduction">Wprowadzenie</span>==
+
+Działanie 3 przypisuje zestawy graficzne (do których odnoszą się (łańcuchy) [[pl/Development/NewGRF/NFO Specs/Action2/Main Page|action 2(s]] ) do ID funkcji (pojazdy, stacje, domy, branże, ...).
+
+==<span id="Format" title="Format">Format</span>==
+
+Format danych zależy od funkcji.
+
+Dane są:
+
+<pre> &lt;Sprite-number&gt; * &lt;Length&gt; 03 &lt;feature&gt; &lt;n-id&gt; &lt;ids...&gt; &lt;num-cid&gt; (&lt;cargo-type&gt; &lt;set-ID&gt;)...
+ &lt;default set-ID&gt;</pre>
+
+{| class="wikitable"
+|-
+!'''Element'''
+![[pl/Development/NewGRF/NFO Specs/GRFActionsDetailed|'''Rozmiar''']]
+!'''Opis'''
+|-
+|&lt;Sprite-number&gt;
+|dec
+|Sekwencyjny numer 'sprite'
+|-
+|&lt;length&gt;
+|dec
+|Łączna liczba bajtów użytych w tej akcji
+|-
+|03
+|B
+|Definiuje action 03
+|-
+|&lt;feature&gt;
+|B
+|Do jakiego rodzaju funkcji odnoszą się ID
+|-
+|&lt;n-id&gt;
+|B
+|Liczba ID, z którymi ta akcja 3 wiąże grafikę
+|-
+|&lt;ids...&gt;
+|B/B*
+|ID bieżącej funkcji, z którą ta akcja 3 wiąże grafikę. Musi być tyle ID, ile &lt;n-id&gt; określa
+|-
+|&lt;num-cid&gt;
+|B
+|Liczba różnych rodzajów ładunków do obsługi
+|-
+|&lt;cargo-type&gt;
+|B
+|Rodzaj ładunku, dla którego należy użyć następującego setu-ID
+|-
+|&lt;set-ID&gt;
+|W
+|Set-ID (z działania 2 lub z łańcucha varaction2) do użycia dla tego rodzaju ładunku
+|-
+|&lt;default set-ID&gt;
+|W
+|Domyślny set-ID do użycia, jeśli żadne z powyższych nie pasuje
+|}
+
+==<span id="Description" title="Description">Opis</span>==
+
+===<span id="Sprite-number" title="Sprite-number">Sprite-numer</span>===
+
+To tylko numer, na którym jesteś.
+
+===<span id="Length" title="Length">Długość</span>===
+
+Policz liczbę bajtów w tej akcji.
+
+===<span id="Feature" title="Feature">Cecha</span>===
+
+Ustawia to rodzaj [[pl/Development/NewGRF/NFO Specs/Features|feature]] , który chcesz zmienić. Ustaw na:
+
+{|
+|-!Wartość!![[pl/Development/NewGRF/NFO Specs/Features|<span title=Feature>'Funkcja'</span>]]
+|-
+|00||Koleje
+|-
+|01||Pojazdy Drogowe
+|-
+|02||Statki
+|-
+|03||Samoloty
+|-
+|04||Stacje
+|-
+|05||[[pl/Development/NewGRF/NFO Specs/Action3/Canals|Canały/Rzeki]]
+|-
+|07||Domy
+|-
+|09||Kafle Przemysłowe
+|-
+|0A||Branże
+|-
+|0B||Ładunki
+|-
+|0C||Efekty Dźwiękowe (tylko ogólne wywołanie zwrotne)
+|-
+|0D||Lądowiska
+|-
+|0E||Sygnalizatory (generic callback only)
+|-
+|0F||Obiekty
+|-
+|10||[[pl/Development/NewGRF/NFO Specs/Action3/Railtypes|TypyKolejowe]]
+|-
+|11||Kafle Lotniska
+|-
+|12||[[pl/Development/NewGRF/NFO Specs/Action3/Roadtypes|TypyDrogowe]]
+|-
+|13||[[pl/Development/NewGRF/NFO Specs/Action3/Tramtypes|TypyTramwajowe]]
+|}
+
+===<span id="n-id" title="n-id">n-id</span>===
+
+Ile elementów bieżącej funkcji to działanie 3 określa nową grafikę. Jeśli jest więcej niż jeden, wszystkie wymienione elementy otrzymają tę samą grafikę. Jeśli ta wartość ma ustawiony bit 7 (tj. Dodano 80), oznacza to pominięcie wagonu. Zobacz  [[en/Action3LiveryOverride|Action 3 - Livery Override]] , aby uzyskać więcej informacji na temat tej funkcji.
+
+Możesz utworzyć definicję z n-id równym zero (a zatem bez id idących dalej). &nbsp;Tworzy to ogólną definicję specyficzną dla funkcji niepowiązaną z żadnym konkretnym elementem. &nbsp;W tej chwili jest to używane do ogólnych wywołań zwrotnych, ale ostatecznie może zostać rozszerzone na inne funkcje.
+
+===<span id="ids" title="ids">ids</span>===
+
+ID''`y'' funkcji, dla których należy użyć tej akcji 3. Wszystkie ID są liczone od pierwszego w swojej klasie, tj. Pierwszy pojazd drogowy ma 00, podobnie jak pierwszy samolot, pierwszy statek i pierwszy pojazd kolejowy.
+
+W OpenTTD od r13482 każdy ID jest rozszerzonym bajtem dla pojazdów, w przeciwnym razie ID jest zwykłym bajtem.
+
+Dla kanałów i rzek id  ma specjalne znaczenie, patrz jego [[pl/Development/NewGRF/NFO Specs/Action3/Canals|own Action 3 page]]
+
+W przypadku budynków miejskich ID są ID domów, a określenie ID domu, który nie został wcześniej zdefiniowany (poprzez ustawienie jego właściwości 08), nic nie robi, ale również nie powoduje błędu. Zauważ, że niekoniecznie musisz przypisać set-ID do ID domu, jeśli nie zrobisz tego, użyjesz starego 'sprite' TTD typu zastępczego. &nbsp;ID''`y'' kafli branżowych działają w ten sam sposób.
+
+===<span id="num-cid" title="num-cid">num-cid</span>===
+
+Liczba następujących definicji rodzajów ładunku. Może wynosić zero, jeśli następuje tylko wartość domyślna.
+
+W przypadku cech 05 (kanały/rzeki), 07 (domy), 09 (kafle przemysłowe), 0A (branże) i 0B (ładunki) zawsze musi wynosić zero.
+
+===<span id="cargo-type" title="cargo-type">cargo-typ</span>===
+
+<u>Do pojazdów (funkcje 00 .. 03) i stacji (funkcja 04)</u>
+
+Rodzaj ładunku, którego dotyczy ustalony ID <small>''(set-ID)''</small>). &nbsp;Jeśli przedmiot jest zbudowany do korzystania z tego rodzaju ładunku lub jest do niego przystosowany, jego grafika jest używana jako jego grafika. &nbsp;Zobacz kolumnę "type A" w tabeli w  [[pl/Development/NewGRF/NFO Specs/CargoTypes|CargoTypes]] , aby uzyskać listę wartości typu ładunku.
+
+Jeśli plik grf ma zainstalowaną [[pl/Development/NewGRF/NFO Specs/Action0/Global Settings#cargo-translation-table-09|cargo translation table]] , rodzaj ładunku tutaj odnosi się do ładunku z etykietą w danym polu tabeli tłumaczeń, np. jeśli użyjesz cargo-type=08 , odnosi się to do ładunku, który ma etykietę w dziewiątym polu (numer 08) w tabeli translacji.
+
+Jeśli zdefiniowano, FF typu ładunkowego <small>''(cargo-type)''</small> jest używany do grafiki wyświetlanej w oknie zakupu lub budowy.
+: Należy pamiętać, że w przypadku pociągów dwugłowych (prop 13) obowiązują specjalne zasady dla menu zakupu: sprite są rysowane (dla przodu i tyłu) tak, jakby pojazd był normalnie zbudowany. Jeśli dostarczysz jedną ikonkę menu zakupów, będzie ona używana dla obu części pojazdu w menu zakupów. Podaj zestaw 8 'sprites' i siódmego resp. 3. 'sprite' zostanie wylosowany; zapewnij zestaw 8 pustych 'sprites' oprócz siódmej, jeśli chcesz w pełni kontrolować 'sprite' menu pojedynczego zakupu dla silnika z dwiema głowicami.
+
+W przypadku stacji można dodatkowo zdefiniować specjalny rodzaj ładunku FE, który uniemożliwia użycie wartości domyślnej (która wyświetlałaby sumę wszystkich ładunków). &nbsp;Zamiast tego podany ID zestawu jest wyświetlany bez ładunku.
+
+<u>Typy szyn są dostępne tylko w OpenTTD &gt; r19056 i jego działanie 3 ponownie wykorzystują definicję typu 'ładunek' <small>''(cargo)''</small> .</u>
+
+Aby uzyskać szczegółowe informacje, zobacz jego [[pl/Development/NewGRF/NFO Specs/Action3/Railtypes|own Action 3 page]]
+
+Od OpenTTD 1.10 tak też jest [[pl/Development/NewGRF/NFO Specs/Action3/Roadtypes|Roadtypes]] i [[pl/Development/NewGRF/NFO Specs/Action3/Tramtypes|Tramtypes]]
+
+<u>Do kanałów/rzek, domów, kafli przemysłowych, gałęzi przemysłu i ładunków (cechy 05, 07, 09, 0A i 0B)</u>
+
+Jako &lt;num-cid&gt; jest zero dla funkcji 05 (canals/rivers), 07 (houses), 09 (industry tiles), 0A (industries), i 0B (cargoes), &lt;cargo-type&gt; i &lt;set-ID&gt; trzeba pominąć i trzeba tylko ustawić &lt;default set-ID&gt;.
+
+<u>Dla obiektów (funkcja 0F)</u>
+
+Obiekty obsługują 'sprite' menu zakupu podobne do pojazdów (FF typu ładunkowego).
+
+===<span id="default_set-ID" title="default set-ID">domyślny ID-set</span>===
+
+Domyślny ID zestawu <small>''(set-ID)''</small>, jeśli nie ma wpisu z listy rodzajów ładunku powyżej pasujących lub jeśli w ogóle nie ma żadnych specjalnych rodzajów ładunku.
+
+==<span id="Example" title="Example">Przykład</span>==
+
+Poniżej znajduje się przykład tego, jak mogłaby wyglądać pseudo-'sprite' 3 akcji dla silnika pociągu.
+
+<pre> 13 * 7 &nbsp; 03 00 01 02 00 00 00</pre>
+
+{| class="wikitable"
+|-
+!'''Bajt'''
+!'''Znaczenie'''
+|-
+|13
+|&lt;sprite-number&gt;
+|-
+|7
+|&lt;length&gt; <small>''(długość)''</small> akcji w bajtach; zaczynając liczyć od 03 (&lt;action&gt;)
+|-
+|03
+|&lt;action&gt;: ustawia ten pseudo-'sprite' do działania jako akcja 3
+|-
+|00
+|&lt;feature&gt;: 00 dla pociągów
+|-
+|01
+|&lt;n-id&gt;: Jeden ID do zmiany w tym przypadku
+|-
+|02
+|&lt;ids...&gt;: pojazd ID (02 - Ploddyphut Choo-Choo)
+|-
+|00
+|&lt;num-cid&gt;: ten silnik nie ma grafiki specyficznej dla ładunku
+|-
+|00 00
+|&lt;default set-ID&gt;: Użyj działania 2 ID 00, ponieważ dodajesz wartość słowa 00
+|}

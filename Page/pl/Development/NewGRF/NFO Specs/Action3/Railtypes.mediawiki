@@ -1,0 +1,384 @@
+{{pl/Development/NewGRF/inne strony|en=newgrf-specs.tt-wiki.net/wiki/Action3/Railtypes|pl=pl/Development/NewGRF/NFO Specs/Action3/Railtypes |sub=nfo}}
+<!--{{-}}<br>--><!--{{ambox | text = w trakcie edycji.}}-->
+== Wprowadzenie ==
+
+Action 3 przypisuje zestawy graficzne (do których odwołuje się (łańcuchy) [[pl/Development/NewGRF/NFO Specs/Action2/Main Page|action 2(e]] ) do ID''`ów'' funkcji.
+
+{{pl/Development/NewGRF/ottdp|1.0|no|ottdrev=r19056}} Typy szyn są dostępne tylko w OpenTTD &gt; r19056
+
+== Format ==
+
+Format danych zależy od funkcji. Wygląda to na typy szyn
+
+<pre> &lt;Sprite-number&gt; * &lt;Length&gt; 03 10 &lt;n-id&gt; &lt;ids...&gt; &lt;num-cid&gt; &lt;cargo-type&gt; &lt;set-ID&gt;... &lt;default set-ID&gt;</pre>
+
+{| class="wikitable"
+|-
+!'''Element'''
+![[pl/Development/NewGRF/NFO Specs/GRFActionsDetailed|'''Rozmiar''']]
+!'''Opis'''
+|-
+|&lt;Sprite-number&gt;
+|dec
+|Sekwencyjny numer 'sprite'
+|-
+|&lt;length&gt;
+|dec
+|Łączna liczba bajtów użytych w tej akcji
+|-
+|03
+|B
+|Definiuje action 03
+|-
+|10
+|B
+|Bajt funkcji dla typów kolei
+|-
+|&lt;n-id&gt;
+|B
+|Liczba ID''`ów'', z którymi ta akcja 3 wiąże grafikę
+|-
+|&lt;ids...&gt;
+|B/B*
+|ID''`y'' bieżącej funkcji, z którą ta akcja 3 wiąże grafikę. Musi być tyle ID''`ów'' , ile &lt;n-id&gt; określa
+|-
+|&lt;num-cid&gt;
+|B
+|Liczba różnych rodzajów "ładunków" <small>''(cargo)''</small> do wsparcia
+|-
+|&lt;cargo-type&gt;
+|B
+|Typ "Cargo", dla którego należy użyć następującego zestawu ID
+|-
+|&lt;set-ID&gt;
+|W
+|Set-ID (z działania 2 lub z łańcucha varaction2) do użycia dla tego rodzaju ładunku
+|-
+|&lt;default set-ID&gt;
+|W
+|Domyślny set-ID do użycia, jeśli żadne z powyższych nie pasuje
+|}
+
+== Description ==
+
+=== Sprite-number ===
+
+To tylko numer, na którym jesteś.
+
+=== Length ===
+
+Policz liczbę bajtów w tej akcji.
+
+=== n-id ===
+
+Ile elementów bieżącej funkcji to działanie 3 określa nową grafikę. Jeśli jest więcej niż jeden, wszystkie wymienione elementy otrzymają tę samą grafikę. Jeśli ta wartość ma ustawiony bit 7 (tj. Dodano 80), oznacza to pominięcie wagonu. Zobacz [[pl/Development/NewGRF/NFO Specs/Action3LiveryOverride|Action 3 - Livery Override]]  , aby uzyskać więcej informacji na temat tej funkcji.
+
+Możesz utworzyć definicję z n-id równym zero (a zatem bez id idących dalej). &nbsp;Tworzy to ogólną definicję specyficzną dla funkcji niepowiązaną z żadnym konkretnym elementem. &nbsp;W tej chwili jest to używane do ogólnych wywołań zwrotnych, ale ostatecznie może zostać rozszerzone na inne funkcje.
+
+=== ids ===
+
+ID''`y'' funkcji, dla których należy użyć tej akcji 3. Wszystkie ID''`y'' są liczone od pierwszej w swojej klasie, tj. Pierwszy pojazd drogowy ma 00, podobnie jak pierwszy samolot, pierwszy statek i pierwszy pojazd kolejowy.
+
+=== num-cid ===
+
+Liczba poniższych definicji typów "ładunków" <small>''(cargo)''</small> .
+
+=== cargo-type ===
+
+Typy kolei ponownie wykorzystują w swojej Action3 definicję typu 'cargo' w celu przypisania rodzaju grafiki zdefiniowanej przez powiązany identyfikator zestawu <small>''(set-ID)''</small>:
+
+{| class="wikitable"
+|-
+!'Cargo' Typ
+!Sprite Typ
+!#Sprites
+!<span title=Useage>Użytkowanie</span>
+|-
+|00
+|Ikony i kursory
+|16
+|4 kierunki kolejowe, autorail, depot, tunel i konwertuj kolej. Najpierw wszystkie ikony, potem wszystkie kursory.
+|-
+|01
+|valign=middle|<span title="Track overlays">Nakładki na tory</span> na rozjazdy i PBS<!--<ref name=leftout>-->{{pl/Development/NewGRF/NFO Specs/refs|name=leftout|text=Należy dostarczyć wszystkie lub żadne z tych ikonek.|1}}<!--</ref>-->
+|10
+|6 płaskich i 4 nachylonych elementów. 'Sprites' powinny zawierać tylko ścieżkę, bez krajobrazu.
+|-
+|valign=middle|02
+|valign=middle|<span title=Underlay>Podkład</span><!--<ref name=leftout />-->{{pl/Development/NewGRF/NFO Specs/refs|name=leftout|<!--2-->1-1}}
+|valign=middle|16
+|6 płaskich i 4 nachylone oraz 1 X skrzyżowań ''z torem'' i 5 łączników bez toru. Sprite powinny zawierać ścieżkę i 'balast' pod nią. Nie należy rysować krajobrazu.
+|-
+|03
+|valign=middle|Tunel<!--<ref name=leftout />-->{{pl/Development/NewGRF/NFO Specs/refs|name=leftout|<!--3-->1-2}}
+|4
+|1 'sprite' w każdym kierunku. Sprite jest nakładką na ścieżkę w istniejącej grafice tunelu. Rysowany jest pierwotny sprite naziemny, następnie nakładka, następnie prawdopodobnie pociąg i oryginalna głowica tunelu jest rysowana na górze. Zapewnia to zgodność z różnymi typami krajobrazu. Kolejność 'sprite': SW, NW, NE, SE. {{pl/Development/NewGRF/ottdp|1.2|r23952}}Jeśli zdefiniowano również typ 0A, ten 'sprite' jest używany nieco inaczej, patrz [[#tunnel-portal-overlay-0a|Tunnel portal overlay (0A)]].
+|-
+|04
+|<span title="Catenary wire">Drut linowy</span>
+|28
+|Ma taki sam układ przewodów pierwszych 28 'sprites' , jak typ 5 Action5.
+|-
+|05
+|Słupy trakcyjne
+|8
+|Ma taki sam układ dla pylonów 8 'sprites' za drutami, jak w Action5 typu 5.
+|-
+|06
+|valign=middle|Powierzchnie mostów<!--<ref name=leftout />-->{{pl/Development/NewGRF/NFO Specs/refs|name=leftout|<!--4-->1-3}}
+|6
+|10 sprite, jeśli kiedykolwiek uwzględnimy mosty ukośne.
+|-
+|07
+|'Nakładka' na przejazd kolejowy<!--<ref name=leftout />-->{{pl/Development/NewGRF/NFO Specs/refs|name=leftout|<!--5-->1-4}}
+|10
+|1 nakładka na szynę i 4 lekkie sprite'y dla X i Y.
+|-
+|08
+|valign=middle|Depoty<!--<ref name=depotr22854>-->{{pl/Development/NewGRF/NFO Specs/refs|name=depotr22854|text={{pl/Development/NewGRF/ottdp|1.2|r22854}}W OpenTTD przed wersją r22854, sprity zajezdne nie byłyby używane, gdyby powyższe sprity 'wszystkie lub żadne' <span title=<small>''(all or none)''</small>></span> nie zostały dostarczone.|<!--6-->2}}<!--</ref>-->
+|6
+|2 'sprites' na każdego południowego, 1 'sprite' na północnego. Podąża za oryginalnym układem 'sprites  depotu.
+|-
+|09
+|Ogrodzenia
+|8 / 16
+|X, Y, pionowe, poziome, nachylenie SW, nachylenie SE, nachylenie NE i nachylenie NW. Ma ten sam układ, co oryginalne sprite'y ogrodzenia w sprite 1301. {{pl/Development/NewGRF/ottdp|1.6|no|ottdrev=r27343}}Od wersji OpenTTD r27343 istnieje również wersja 16 sprite'ów, patrz poniżej.
+|-
+|0A
+|<span title='Tunnel portal overlay'>'Nakładka na portal' tunelu</span><!--<ref name=tunneloverlay>-->{{pl/Development/NewGRF/NFO Specs/refs|name=tunneloverlay|text=Aby można było użyć tych 'sprites', należy podać powyżej 'wszystkich lub żadnych' <small>''(all or none)''</small> 'sprites'.|<!--7-->3}}<!--</ref>-->
+|4
+|{{pl/Development/NewGRF/ottdp|1.2|r23952}}1 'sprite' na każdy kierunek, kolejność to SW, NW, NE, SE.
+|-
+|0B
+|'Sprites' sygnałowe
+|8
+|{{pl/Development/NewGRF/ottdp|1.3|r24367}}1 sprite dla każdego kierunku, kolejność to SW, NE, NW, SE, E, W, S, N (tj. jak dla odpowiedniego [[pl/Development/NewGRF/NFO Specs/Action5#04-signal-graphics|Action 5]] wpisu).
+|-
+|0C
+|<span title='Precombined overlay sprites'>Wstępnie połączone sprite'y nakładkowe</span>
+|63
+|{{pl/Development/NewGRF/ottdp|1.10|g42046af933}}63 sprite'y dla każdej kombinacji toru na kafelku. Indeks jest określany przez traktowanie każdego utworu jako bitu w kolejności X Y N S W E, odejmując 1.
+|}
+<!--
+<references />-->{{pl/Development/NewGRF/NFO Specs/przypisy|name=leftout|2001}}<!-- 1.0
+ -->{{pl/Development/NewGRF/NFO Specs/przypisy|name=leftout|2001-1}}<!-- 1.1
+ -->{{pl/Development/NewGRF/NFO Specs/przypisy|name=leftout|4101-2}}<!-- 1.2
+ -->{{pl/Development/NewGRF/NFO Specs/przypisy|name=leftout|401-3}}<!-- 1.3
+ -->{{pl/Development/NewGRF/NFO Specs/przypisy|name=leftout|1-4}}<!-- 1.4
+  -->{{pl/Development/NewGRF/NFO Specs/refs|name=leftout|text=Należy dostarczyć wszystkie lub żadne z tych ikonek.|<!--1-->przypis}}<!-- 1-0
+  -->{{pl/Development/NewGRF/NFO Specs/refs|name=leftout|<!--2--><!--1-1-->przypis}}<!-- 1-1
+  -->{{pl/Development/NewGRF/NFO Specs/refs|name=leftout|<!--3--><!--1-2-->przypis}}<!-- 1-2
+  -->{{pl/Development/NewGRF/NFO Specs/refs|name=leftout|<!--4--><!--1-3-->przypis}}<!-- 1-3
+  -->{{pl/Development/NewGRF/NFO Specs/refs|name=leftout|<!--5--><!--1-4-->przypis}}<!-- 1-4
+-->{{pl/Development/NewGRF/NFO Specs/przypisy|name=depotr22854|1101}}<!-- 2
+  -->{{pl/Development/NewGRF/NFO Specs/refs|name=depotr22854|text={{pl/Development/NewGRF/ottdp|1.2|r22854}}W OpenTTD przed wersją r22854, sprity zajezdne nie byłyby używane, gdyby powyższe sprity 'wszystkie lub żadne' <small>''(all or none)''</small> nie zostały dostarczone.|<!--6--><!--2-->przypis}}<!-- 2
+-->{{pl/Development/NewGRF/NFO Specs/przypisy|name=tunneloverlay|3-0}}<!-- 3
+  -->{{pl/Development/NewGRF/NFO Specs/refs|name=tunneloverlay|text=Aby można było użyć tych 'sprites', należy podać powyżej 'wszystkich lub żadnych' <small>''(all or none)''</small> 'sprites'.|<!--7--><!--3-->przypis}}<!-- 3 -->
+
+==== GUI sprites (00) ====
+
+<!--[[File:railtype_gui.png]]--><span title="ilustracja w linku">[http://newgrf-specs.tt-wiki.net/wiki/File:railtype_gui.png File:railtype_gui.png]</span>
+
+==== Rail overlay (01) ====
+
+<!--[[File:railtype_overlay.png]]--><span title="ilustracja w linku">[http://newgrf-specs.tt-wiki.net/wiki/File:railtype_overlay.png File:railtype_overlay.png]</span>
+
+==== Rail underlay (02) ====
+
+<!--[[File:railtype_underlay.png]]--><span title="ilustracja w linku">[http://newgrf-specs.tt-wiki.net/wiki/File:railtype_underlay.png File:railtype_underlay.png]</span>
+
+==== Level crossing sprites (07) ====
+
+Możesz zdefiniować specjalny kawałek toru, który przecina drogę i dla każdego z dwóch kierunków i każdego z rogów płytki oddzielny 'sprite' dla światła, znaku lub cokolwiek, co powinno tam iść.
+
+{| class="wikitable"
+|-
+!Sprite number for X
+!Sprite number for Y
+!Useage
+|-
+|0
+| &nbsp; &nbsp;1
+| &nbsp; &nbsp;Rail overlay
+|-
+|2
+| &nbsp; &nbsp;3
+| &nbsp; &nbsp;North light
+|-
+|4
+| &nbsp; &nbsp;5
+| &nbsp; &nbsp;East light
+|-
+|6
+| &nbsp; &nbsp;7
+| &nbsp; &nbsp;West light
+|-
+|8
+| &nbsp; &nbsp;9
+| &nbsp; &nbsp;South light
+|}
+
+<!--[[File:railtype_levelcrossing.png]]--><span title="ilustracja w linku">[http://newgrf-specs.tt-wiki.net/wiki/File:railtype_levelcrossing.png File:railtype_levelcrossing.png]</span>
+
+==== Depot sprites (08) ====
+
+{| class="wikitable"
+|-
+!Sprite Number
+!Usage
+|-
+|0
+| &nbsp; &nbsp;NE wall for SE-entry depot.
+|-
+|1
+| &nbsp; &nbsp;Depot building for SE-entry depot.
+|-
+|2
+| &nbsp; &nbsp;NW wall for SW-entry depot.
+|-
+|3
+| &nbsp; &nbsp;Depot building for SW-entry depot.
+|-
+|4
+| &nbsp; &nbsp;Depot building for NE-entry depot.
+|-
+|5
+| &nbsp; &nbsp;Depot building for NW-entry depot.
+|}
+==== Fences (09) ====
+
+<!--[[File:railtype_fences.png]]--><span title="ilustracja w linku">[http://newgrf-specs.tt-wiki.net/wiki/File:railtype_fences.png File:railtype_fences.png]</span>
+
+{{pl/Development/NewGRF/ottdp|1.6|no|ottdrev=r27343}} Ponieważ OpenTTD r27343 istnieje również wersja 16 'sprites' , pozwala to na użycie różnych ikonek. przesunięcia dla ogrodzeń po obu stronach torów.
+
+{| 
+|-
+! Sprite number !! Tile slope !! Track bit !! Fence position !! Version
+|-
+| 0 || flat || X || NW || {{pl/Development/NewGRF/ottdp|1.0|no|ottdrev=r19056}}
+|-
+| 1 || flat || Y || NE || {{pl/Development/NewGRF/ottdp|1.0|no|ottdrev=r19056}}
+|-
+| 2 || flat || left || E || {{pl/Development/NewGRF/ottdp|1.0|no|ottdrev=r19056}}
+|-
+| 3 || flat || upper || S || {{pl/Development/NewGRF/ottdp|1.0|no|ottdrev=r19056}}
+|-
+| 4 || SW || X || NW || {{pl/Development/NewGRF/ottdp|1.0|no|ottdrev=r19056}}
+|-
+| 5 || SE || Y || NE || {{pl/Development/NewGRF/ottdp|1.0|no|ottdrev=r19056}}
+|-
+| 6 || NE || X || NW || {{pl/Development/NewGRF/ottdp|1.0|no|ottdrev=r19056}}
+|-
+| 7 || NW || Y || NE || {{pl/Development/NewGRF/ottdp|1.0|no|ottdrev=r19056}}
+|-
+| 8 || flat || X || SE || {{pl/Development/NewGRF/ottdp|1.6|no|ottdrev=r27343}}
+|-
+| 9 || flat || Y || SW || {{pl/Development/NewGRF/ottdp|1.6|no|ottdrev=r27343}}
+|-
+| 10 || flat || left || W || {{pl/Development/NewGRF/ottdp|1.6|no|ottdrev=r27343}}
+|-
+| 11 || flat || upper || N || {{pl/Development/NewGRF/ottdp|1.6|no|ottdrev=r27343}}
+|-
+| 12 || SW || X || SE || {{pl/Development/NewGRF/ottdp|1.6|no|ottdrev=r27343}}
+|-
+| 13 || SE || Y || SW || {{pl/Development/NewGRF/ottdp|1.6|no|ottdrev=r27343}}
+|-
+| 14 || NE || X || SE || {{pl/Development/NewGRF/ottdp|1.6|no|ottdrev=r27343}}
+|-
+| 15 || NW || Y || SW || {{pl/Development/NewGRF/ottdp|1.6|no|ottdrev=r27343}}
+|}
+
+==== Tunnel portal overlay (0A) ====
+
+Jeśli zdefiniowano ten rodzaj 'ładunku' <small>''(cargo)''</small> , tunele dla tego rodzaju kolei będą rysowane inaczej.
+
+Najpierw rysuje się sprite podstawy podkładu z trawy, następnie sprite powraca od typu 03. Następnie trenuje sprite, jeśli ma zastosowanie, a następnie nakładkę na trawę, a na koniec sprite z tego typu (0A). 'sprites' traw są zdefiniowane w zestawie podstawowym i nie zawierają żadnych części torów ani portalu, więc muszą być w pełni dostarczone przez 'sprites' typu kolejowego.
+
+Ilustracja: <!--[[File:RailtypeTunnelExample.png]]--><span title="obraz w linku">[http://newgrf-specs.tt-wiki.net/wiki/File:RailtypeTunnelExample.png File:RailtypeTunnelExample.png]</span>
+
+Zmienna 10 może być użyta do rozróżnienia kilku żądanych wariantów tunelu:
+{| 
+|-
+! Najniższy bajt [[pl/Development/NewGRF/NFO Specs/GlobalVariables#extra-callback-info-10-and-18|variable 10]] !! Znaczenie
+|-
+| 00 || Jest to zwykły portal bez żadnych dodatkowych funkcji (takich jak utwory powyżej).
+|-
+| all other values || zarezerwowane dla przyszłych rozszerzeń (np. basetunnels).
+|}
+Pozostałe bajty zmiennej 10 są zarezerwowane i muszą być zamaskowane.
+
+==== Signal sprites (0B) ====
+
+Ten rodzaj 'ładunku' <small>''(cargo)''</small> może być wykorzystywany do dostarczania niestandardowej grafiki sygnałowej.
+
+Wynikowy zestaw 'sprites' musi składać się z 8 'sprites' , odpowiadających następującym kierunkom sygnałów: skierowanym w stronę SW, skierowanym w kierunku NE, skierowanym w kierunku NW, skierowanym w kierunku SE, skierowanym w kierunku E, skierowanym w kierunku W, skierowanym w kierunku S, skierowanym w kierunku N. Zmienna 18 zawiera informacje o rodzaju sygnału, który ma zostać narysowany. Jeśli rozstrzygnięcie nie powiedzie się lub powstanie pusta grupa 'sprites' , zamiast niej zostanie użyta dopasowana ikonka.
+
+'''Format of [[pl/Development/NewGRF/NFO Specs/GlobalVariables#extra-callback-info-10-and-18|variable 18]]:''' xxTTVVSS
+
+{| 
+|-
+! TT: Signal type !! Meaning
+|-
+| 00 || Normal block signal
+|-
+| 01 || Entry pre-signal
+|-
+| 02 || Exit pre-signal
+|-
+| 03 || Combo pre-signal
+|-
+| 04 || Two-way path signal
+|-
+| 05 || One-way path signal
+|-
+| all other values || Reserved
+|}
+
+
+{| 
+|-
+! VV: Signal variant !! Meaning
+|-
+| 00 || Light (electric) signal
+|-
+| 01 || Semaphore
+|-
+| all other values || Reserved
+|}
+
+
+{| 
+|-
+! SS: Signal state !! Meaning
+|-
+| 00 || Red signal
+|-
+| 01 || Green signal
+|-
+| all other values || Reserved
+|}
+
+Wszystkie pozostałe bajty zmiennej 18 są zastrzeżone i muszą być zamaskowane.
+
+'''Variable 10''' może być użyty do rozróżnienia 'sprites' map i GUI:
+{| 
+|-
+! Najniższy bajt [[pl/Development/NewGRF/NFO Specs/GlobalVariables#extra-callback-info-10-and-18|variable 10]] !! Znaczenie
+|-
+| 00 || Sygnał jest rysowany w rzutni <small>''(viewport)''</small>, tj.na mapie.
+|-
+| 10 || Sygnał jest rysowany w gui sygnału. Zwrócony zestaw sprite musi nadal mieć 8 sprite'ów, ale OpenTTD będzie używał tylko 7 sprite'a, więc wszystkie inne sprite mogą być puste.
+|-
+| all other values || Reserved
+|}
+Pozostałe bajty zmiennej 10 są zarezerwowane i muszą być zamaskowane.
+
+==== Precombined overlay sprites (0C) ====
+
+<!--[[File:Rails_combined.png]]--><span title="ilustracja w linku">[http://newgrf-specs.tt-wiki.net/wiki/File:Rails_combined.png File:Rails_combined.png]</span>
+
+=== default set-ID ===
+
+Domyślny set-ID zestawu byłby używany do wywołań zwrotnych typu kolejowego. Ponieważ jednak nie ma obecnie wywołań zwrotnych dla typów kolei, zawsze powinno to skutkować wynikiem [[pl/Development/NewGRF/NFO Specs/Action2/Only Callback Failure|callback-failure]].
+
+== Przykład ==

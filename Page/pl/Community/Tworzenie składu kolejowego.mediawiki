@@ -2,7 +2,7 @@
 {{pl/Tłumaczenie|oryg. = en/Manual/Railway construction
 |z     = en
 |Postępy = 5}}
-{{pl/Spis treści}}
+{{pl/Manual/Spis treści}}
 {{en/Warning| Stronka gotowa do tłumaczenia zapraszam.}}
 
 =Pojemność (nośność) twoich sieci transportowych=
@@ -122,7 +122,7 @@ Refinements to the cyclotron are possible. There is enough space on the track lo
 The injection delay assumes that the second injected train is accelerating from standstill, and there is a small chance that second train has in fact chanced upon the cyclotron entrance at full speed. In this case, the timing will be wrong and the second train will almost certainly cause a jam within the cyclotron (and consequently on the main line). This can be compensated for by some additional signalling to filter out full-speed trains. The filtered out full-speed trains can either be diverted onto a second loop, or simply drained of momentum by a signal. 
 
 A cyclotron incorporating all the optimisations discussed, and some additional fixes, is shown in Figure 5.
-[[File:en/Community/Cyclotron Full.png|thumb|800px|none|Figure 5: full-featured cyclotron]]
+[[File:en/Community/Junctionary/Cyclotron Full.png|thumb|800px|none|Figure 5: full-featured cyclotron]]
 
 ''[Broken link to a savegame removed.]''
 
@@ -133,7 +133,7 @@ Editor's note: Whilst I would like to defend my cyclotron refinements, experimen
 An attempt to minimize the drawbacks of the full featured cyclotron leads to parallel, small, 1-train cyclotrons. In this design, an array of cyclotrons, each handling one train, may be fed simultaneously. They may have different loop size in order to prevent synchronization between the cycling trains, giving more chance to find a slot in the flow of the main line. Each loop still needs it own acceleration lane so the trains enter the loop at full speed. If a train happened to enter the loop at low speed, it would get a chance to join the main line at non-max speed and cause a possibly large traffic jam.
 
 Figure 6 shows a parallel cyclotron with two loops.
-[[File:en/Community/Parallel Cyclotron.png|thumb|800px|none|Figure 6: Parallel cyclotron]]
+[[File:en/Community/Junctionary/Parallel Cyclotron.png|thumb|800px|none|Figure 6: Parallel cyclotron]]
 
 A savegame with the example given in Figure 6 is available [http://gbizzotto.free.fr/parallel_cyclotron.sav Here] (one of the GRF files used in this savegame is not available for download at the moment) (version 0.7 or higher required to open).
 

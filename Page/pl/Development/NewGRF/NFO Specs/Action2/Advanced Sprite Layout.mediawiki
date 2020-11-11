@@ -1,0 +1,208 @@
+<noinclude>{{pl/Development/NewGRF/inne strony|en=newgrf-specs.tt-wiki.net/wiki/Action2/Advanced_Sprite_Layout|pl=pl/Development/NewGRF/NFO Specs/Action2/Advanced Sprite Layout|sub=<!--nfo-->}}
+</noinclude>== Advanced sprite layout using register offsets ==
+
+ <Sprite-number> * <Length> 02 07/09/0F/11 <set-id> <0x40 + num-sprites>
+     <groundsprite> <flags> [<register/value>]...
+     [ <buildingsprite> <flags>
+         ( <xoffset> <yoffset> <zoffset> <xextent> <yextent> <zextent> 
+         | <xpixeloffset> <ypixeloffset> 80)
+       [<register/value>]...
+     ]...
+
+{{pl/Development/NewGRF/ottdp|1.2|no|ottdrev=r22518}}
+Spritelayout definiuje stałe zestawy ikon do użycia z Akcji 1. Rejestry mogą być używane do indywidualnego wyboru 'sprites' z zestawów ikon, zamiast zawsze korzystania z etapu budowy. Rejestry są oceniane, a ich wartości są zapisywane podczas oceny układu ikonki Action 2. Inne wywołania zwrotne wywoływane podczas rysowania (jak CB 1E) nie mają wpływu na używane wartości rejestrów. 
+
+{|
+!Element!![[pl/Development/NewGRF/NFO Specs/GRFActionsDetailed|Rozmiar]]!!Opis
+|-
+|&lt;[[#sprite-number|Sprite-number]]&gt;||dec||Kolejny numer 'sprite'
+|-
+|&lt;[[#length|length]]&gt;||dec||Całkowita liczba bajtów użytych w tej akcji
+|-
+|02||B||Definiuje akcję 02
+|-
+|04/07/09/0F/11||B||cecha 4=stacje, 7=budynki miejskie, 9=kafle przemysłu, 0F = obiekty lub 11 = kafle lotnisk
+|-
+|&lt;[[#set-id|set-id]]&gt;||B||ID tej definicji
+|-
+|40 + &lt;num-sprites&gt;||B||Liczba kolejnych sprite'ów budujących (nie można liczyć głównego podłoża). Dozwolony zakres: od 1 do 63 (0x01 do 0x3F).
+|-
+|&lt;[[#sprite-definition-for-ground-and-building-sprites|groundsprite]]&gt;||D||'Primary' 'sprite' naziemny dla budynku (patrz format poniżej)
+|-
+|&lt;[[#flags-in-advanced-sprite-layouts|flags]]&gt;||W||Flagi dla pierwszego 'sprite' naziemnego (zobacz format poniżej)
+|-
+|&lt;[[#register-or-value-in-advances-sprite-layouts|register/value]]&gt;||V||Rejestry / wartości do wykorzystania. Zależy od &lt;flags&gt; (zobacz format poniżej)
+|-
+|&lt;[[#sprite-definition-for-ground-and-building-sprites|buildingsprite]]&gt;||D||Sprite do narysowania. W przeciwieństwie do podstawowego formatu, zero nie jest tutaj dozwolone.
+|-
+|&lt;[[#flags-in-advanced-sprite-layouts|flags]]&gt;||W||Flagi dla 'sprite' budynku (patrz format poniżej)
+|-
+!colspan="3"| -- dla 'sprites' definiujących nowe obwiednię --
+|-
+|&lt;xofs&gt;||B||Przesunięcie x od północnego rogu kafla (jako <span title='ze znakiem'>'signed'</span> bajt)
+|-
+|&lt;yofs&gt;||B||Przesunięcie y od północnego rogu kafla (jako 'signed' bajt)
+|-
+|&lt;zofs&gt;||B||z-offset od ziemi
+|-
+|&lt;xextent&gt;||B||rozmiar sprite'a w kierunku x
+|-
+|&lt;yextent&gt;||B||rozmiar sprite'a w kierunku x
+|-
+|&lt;zextent&gt;||B||rozmiar sprite'a w kierunku z
+|-
+!colspan="3"| -- dla 'sprites' dzielących obwiednię z poprzednim 'sprite' --
+|-
+|&lt;xpixeloffset&gt;||B||x <span title=offset>'odsunięcie'</span> od lewego górnego rogu poprzedniego 'sprite'
+|-
+|&lt;ypixeloffset&gt;||B||y odsunięty od lewego górnego rogu poprzedniego 'sprite'
+|-
+|80||B||dosłowny bajt 80-godzinny do odróżnienia od definicji nowego pola ograniczającego
+|-
+!colspan="3"| &nbsp;
+|-
+|&lt;[[#register-or-value-in-advances-sprite-layouts|register/value]]&gt;||V||Registers / values to be used. Depending on &lt;flags&gt; (see format below)
+|}
+
+==<span id="Descriptions_of_elements" title="Descriptions of elements">Opisy elementów</span>==
+
+===<span id="Sprite-number" title="Sprite-number">Numer-sprite'a</span>===
+
+To tylko numer, na którym jesteś.
+
+===<span id="Length" title="Length">Długość</span>===
+
+Policz liczbę bajtów w tej akcji.
+
+===<span id="Set-id" title="Set-id">Set-id</span>===
+
+<span title='Identyfikator zestawu'>'Set-ID'</span>, który chcesz zdefiniować dla tego zestawu. Możesz wybrać dowolną wartość z przedziału od 00 do FF, i możesz użyć ich ponownie w pliku grf w późniejszym momencie (jeśli jest równy istniejącemu set-ID, istniejący jest zastępowany i używany jest nowy).
+
+===<span id="Sprite_definition_for_ground_and_building_sprites" title="Sprite definition for ground and building sprites">Definicja sprite'a dla sprite'ów naziemnych i budowlanych</span>===
+
+Pola 'sprite' ziemi i budynku mają następujący format:
+
+{|
+!Bity!!Wersja!!<span title"zawartość">'Content'</span>
+|-
+|0-13||{{pl/Development/NewGRF/ottdp|0.6|2.5}}||Numer sprite'a, dokładne znaczenie określone przez bit 31
+|-
+|14-15||{{pl/Development/NewGRF/ottdp|0.6|2.5}}||0: rysuj sprite normalnie, 1: rysuj sprite'a w trybie przezroczystym, 2: zmieniaj kolor sprite
+|-
+|16-29||{{pl/Development/NewGRF/ottdp|0.6|2.5}}||Numer specjalnego sprite'a translacji koloru, patrz poniżej
+|-
+|30||{{pl/Development/NewGRF/ottdp|0.6|2.5|ttdprev=alpha 57}}||Jeśli jest ustawiona, sprite jest rysowany normalnie, nawet w trybie przezroczystych budynków (tylko dla budowania 'sprites')
+|-
+|31||{{pl/Development/NewGRF/ottdp|0.6|2.5}}||Typ sprite'a, patrz poniżej
+|}
+
+{{pl/Development/NewGRF/ottdp|0.6|2.5|ttdprev=alpha 57}} Od wersji TTDPatch 2.0.1 alpha 57 wartość dna może być zerowa, jeśli 'sprite' nie jest potrzebny (jest to przydatne, jeśli trzeba narysować niestandardowe fundamenty, patrz [[pl/Development/NewGRF/NFO Specs/Callback/Main Page#decide-drawing-default-foundations-30-14e-150|example]]). Naziemne 'sprite' są zawsze rysowane normalnie, więc bit 30 jest dla nich ignorowany. Bit 30 może mieć inne znaczenie dla naziemnych 'sprites' w późniejszej wersji TTDPatch, więc na razie pozostaw to zero. Nie dotyczy to dodatkowych usług naziemnych korzystających z "&lt;xpixeloffset&gt; &lt;ypixeloffset&gt; 80"-<span title=syntax>'składnia'</span> (patrz wyżej); dla tych bitów 30 ma to samo znaczenie, co dla budowania 'sprites' .
+
+====<span id="Colour_translation_special_sprite_number" title="Colour translation special sprite number">Specjalny numer sprite w translacji koloru</span>====
+
+Jest to używane tylko wtedy, gdy bity 14 lub 15 są niezerowe. Bity 16–29 muszą być liczbą zwykłego 'sprite' TTD zawierającego tabelę translacji kolorów (dostępne tabele tłumaczeń znajdują się poniżej). W trybie przezroczystym potrzebna jest odpowiednia tabela translacji, np. z 'sprite' TTD o numerze 802 (s.b.). Zobacz [[pl/Development/NewGRF/NFO Specs/RecolorSprites|RecolorSprites]], aby uzyskać więcej informacji na temat używania przezroczystych i zmieniających kolor 'sprites' .
+
+W przypadku domów, jeśli nie podano sprite'a zmieniającego kolor, ale zmiana koloru jest włączona w bitach 14-15, istnieją dwie możliwości:
+* Jeśli masz włączone [[pl/Development/NewGRF/NFO Specs/Callback/Main Page#building-colour-1e |callback 1E]] , jest ono wywoływane w celu określenia odwzorowania kolorów.
+* Jeśli [[pl/Development/NewGRF/NFO Specs/Callback/Main Page#building-colour-1e |callback 1E]] jest wyłączone lub nie działa, jeden z kolorów określonych we właściwości 17 zostanie wybrany losowo.
+
+Zobacz [[pl/Development/NewGRF/NFO Specs/RecolorSprites|RecolorSprites]], aby uzyskać listę dostępnych tłumaczeń kolorów.
+
+W przypadku kafli branżowych, jeśli to pole jest równe zero, ale zmiana koloru jest włączona w bitach 14 lub 15, automatycznie zostanie zastosowany kolor branży zawierającej.
+
+Zmielony 'sprite' powinien mieć dokładnie ten sam rozmiar i kształt co płaski kafel TTD. Ogólnie rzecz biorąc, nie powinien zawierać niczego, co ma wymiar Z, ponieważ zakryje go dowolny niemielony 'sprite' .
+
+Przydatne wartości dla 'sprite' naziemnych:
+
+{|
+!Numer sprite'a (<span title=decimal>'dziesiętny'</span>)!!<span title='Zawartość'>'Contents'</span>
+|-
+|3924||<span title='bare land'>'teren'</span>
+|-
+|3981||trawnik
+|-
+|4061||woda
+|-
+|4550||śnieg lub pustynia (w zależności od klimatu)
+|-
+|1420||<span title=concrete>'beton'</span>
+|}
+
+Pamiętaj, że wszystkie 'sprites' naziemne stają się widoczne w trybie <span title="transparent buildings">"przezroczystych budynków"</span> , dlatego powinieneś rysować również części, które wydają się być ukryte.
+
+====<span id="Sprite_type" title="Sprite type">Typ sprite'a</span>====
+
+Jeśli bit 31 jest wyraźny, dolne 14 bitów zawiera regularną liczbę 'sprites' TTD.
+
+Jeśli ustawiony jest bit 31, dolne 14 bitów zawiera pewną liczbę zestawów 'sprites' w najnowszej akcji 1, a o używanym 'sprite' decyduje się zgodnie z bieżącym stanem konstrukcyjnym i liczbą 'sprites' w zestawie:
+* jeśli jest tylko jeden 'sprite' , jest używany zawsze
+* jeśli są dwa 'sprites' , pierwszy jest używany podczas budowy (etapy 0-2), a drugi jest używany do ukończonego budynku (etap 3)
+* jeśli są trzy 'sprites' , pierwszy zostanie użyty na początku budowy (etap 0), drugi będzie użyty podczas reszty budowy (etapy 1 i 2), a trzeci zostanie wykorzystany do ukończenia budowy (etap 3)
+* jeśli są cztery lub więcej 'sprites' , pierwsze cztery zostaną wykorzystane do czterech etapów budowy. 'Sprites' po pierwszych czterech są zawsze ignorowane.
+
+
+===<span id="Flags_in_advanced_sprite_layouts" title="Flags in advanced sprite layouts">Flagi w zaawansowanych układach sprite'ów</span>===
+<flags> jest zbiorem rozmiaru słowa o tych znaczeniach:
+{| border="1"
+|-
+! Bit !! <span title='szesnastkowo'>'Hex'</span> !! <span title='nadrzędny sprite'>'Parentsprite'</span> !! <span title='Groundsprite/Childsprite'>'Gruntsprite/Podrzędnysprite'</span>
+|-
+|| 0 || 0001 || Pominięcie bounding box w tym child sprites || Pominięcie 'sprite'
+|-
+|| 1 || 0002 
+| colspan="2" | Dodanie offset do 'sprite', wyłącza domyślne wykorzystanie konstrukcji lub railtype-offset
+|-
+|| 2 || 0004 
+| colspan="2" | Dodanie offset do recoloursprite
+|-
+|| 3 || 0008 
+| colspan="2" | Recolour 'sprite' jest z Action 1 (będzie 'dotknięte' <small>''(affected)''</small> tą samą fazą <small>''(stage )''</small> konstrukcji resp. railtype-offsets jako sprites, chyba że bit 2 jest ustawiony)
+|-
+|| 4 || 0010 || Dodanie offset dla <xoffset> i <yoffset> || Dodanie offset dla <xpixeloffset>
+|-
+|| 5 || 0020 || Dodanie offset dla <zoffset> || Dodanie offset dla <ypixeloffset>
+|-
+|valign=middle| 6 ||valign=middle| 0040
+| colspan="2" valign=middle| Rozwiązywać sprite z Zmienną 10 ustawioną na określoną wartość<!--<ref name="action123">-->{{pl/Development/NewGRF/NFO Specs/refs|name=action123|text=
+Ważne tylko dla stacji: Łańcuch Action 1/2/3 jest rozwiązywany wielokrotnie, 'sprites' mogą być częścią różnych Action 1: Związana z tym wartość w <register/value> jest wartością surową (nie rejestrem!), którą należy wpisać do zmiennej 10 podczas rozwiązywania 'sprites'.
+<br><ul>
+<li>tylko dozwolone wartości obecnie 0-7</li>
+<li>wartość '2' jest stosowana przy rozwiązywaniu fundowania niestandardowego, (a więc nie należy z tym kolidować))</li>
+<li>nawet jeśli sprite nie pochodzi z Action 1, wartość nadal określa, które łańcuchy Action2 definiują wartości dla rejestrów, do których się odwołują.</li>
+<li>Rejestr dla "Dodaj offset do rekoloryzacji" jest określony przez działanie 1/2/3 łańcucha ze zmienną 10, jak określono dla 'spritu' odbarwionego.</li>
+<li>Pozostałe rejestry są określone przez działanie 1/2/3 łańcucha ze zmienną 10, jak określono dla 'sprite'.</li>
+<li>Jeżeli nie jest zdefiniowana zmienna 10 wartości, to właściwość stacji 13 bit 0 staje się skuteczna; tj. zmienna 10 jest ustawiona na 0 lub 1 w zależności od bitu i tego, czy rozwiązany jest pierwszy 'groundsprite' <small>(naziemny)</small>, czy też inny 'sprite'. Odnosi się to zarówno do 'groundsprite', jak i do palety 'groundsprite'.</li>
+</ul>
+|1}}<!--</ref>-->
+|-
+|valign=middle| 7 ||valign=middle| 0080
+| colspan="2" valign=middle| Rozwiązywanie problemu ponownego odbarwiania za pomocą Zmiennej 10 ustawionej na określoną wartość<!--<ref name="action123"/>-->{{pl/Development/NewGRF/NFO Specs/refs|name=action123|<!--2-->1-1}}
+|-
+|| 8..15 || 
+| colspan="2" | Zarezerwowane, powinno być zero. Jeśli GRF ustawi nieznane bity, to zostanie wyłączony..
+|-
+|}
+<!--
+<references />-->{{pl/Development/NewGRF/NFO Specs/przypisy|name=action123|2001}}<!--
+-->{{pl/Development/NewGRF/NFO Specs/przypisy|name=action123|2001-1}}<!--
+-->{{pl/Development/NewGRF/NFO Specs/refs|name=action123|text=
+Ważne tylko dla stacji: Łańcuch Action 1/2/3 jest rozwiązywany wielokrotnie, 'sprites' mogą być częścią różnych Action 1: Związana z tym wartość w <register/value> jest wartością surową (nie rejestrem!), którą należy wpisać do zmiennej 10 podczas rozwiązywania 'sprites'.<!--
+--><br><ul>
+::<li>tylko dozwolone wartości obecnie 0-7</li>
+::<li>wartość '2' jest stosowana przy rozwiązywaniu fundowania niestandardowego, (a więc nie należy z tym kolidować))</li>
+::<li>nawet jeśli sprite nie pochodzi z Action 1, wartość nadal określa, które łańcuchy Action2 definiują wartości dla rejestrów, do których się odwołują.</li>
+::<li>Rejestr dla "Dodaj offset do rekoloryzacji" jest określony przez działanie 1/2/3 łańcucha ze zmienną 10, jak określono dla 'spritu' odbarwionego.</li>
+::<li>Pozostałe rejestry są określone przez działanie 1/2/3 łańcucha ze zmienną 10, jak określono dla 'sprite'.</li>
+::<li>Jeżeli nie jest zdefiniowana zmienna 10 wartości, to właściwość stacji 13 bit 0 staje się skuteczna; tj. zmienna 10 jest ustawiona na 0 lub 1 w zależności od bitu i tego, czy <span title=resolved>'rozwiązany'</span> jest pierwszy <span title=groundsprite>'spritenaziemny'</span>, czy też inny 'sprite'. Odnosi się to zarówno do 'groundsprite', jak i do palety 'groundsprite'.</li>
+</ul>
+|<!--1-->przypis}}<!--
+-->{{pl/Development/NewGRF/NFO Specs/refs|name=action123|<!--2--><!--1-1-->przypis}}
+
+===<span id="Register_or_value_in_advanced_sprite_layouts" title="Register or value in advanced sprite layouts">Rejestr lub wartość w zaawansowanych układach sprite</span>===
+Są to rejestry tymczasowego przechowywania, które można dodać do poszczególnych części. Wartości rejestru uważa się za podpisane.
+Kolejność rejestrów jest taka sama jak bitów w <flags>. Jeśli bit nie jest ustawiony, nie pojawiają się dla niego rejestry.
+Większość bitów wymaga jednego rejestru.
+*<xoffset> i <yoffset> można włączyć tylko razem, używając dwóch rejestrów,
+*rejestr <span title="skip bounding box">"pomiń ramkę ograniczającą"</span> - używa wartości 1, aby narysować 'sprite' , a 0, aby go pominąć,
+*<span title="recolorsprite from Action 1">"recolorsprite z działania 1"</span> -  w ogóle nie używa rejestru,
+*Wartości zmiennej 10 nie są ustawiane za pomocą rejestru, ale za pomocą stałej bajtowej.

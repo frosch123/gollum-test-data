@@ -1,0 +1,456 @@
+{{pl/Development/NewGRF/inne strony|en=newgrf-specs.tt-wiki.net/wiki/Action0/Industries|pl=pl/Development/NewGRF/NFO Specs/Action0/Industries |sub=nfo}}
+<!--{{-}}<br>--><!--{{ambox | text = w trakcie edycji.}}--><!-- -->
+==<span id="Introduction" title="Introduction">Wprowadzenie</span>==
+
+Branże działają podobnie jak budynki miejskie. Limit liczby rodzajów branży wynosi:
+* {{pl/Development/NewGRF/ttdp|2.5}} TTDPatch: 37
+* {{pl/Development/NewGRF/ottd|&lt;1.6}} OpenTTD < 1.6: 64
+* {{pl/Development/NewGRF/ottd|1.6}} OpenTTD ⩾ 1.6: 128 na NewGRF, w sumie 240
+Nieprzepisane typy oryginalne liczą się do (całkowitego) limitu. Branże nie mają maski klimatycznej; nie powinieneś po prostu definiować branży, jeśli byłaby nieodpowiednia.
+
+Definiowanie branż odbywa się według tego samego schematu, co domy: aby zacząć korzystać z identyfikatora, najpierw należy go zdefiniować, ustawiając dla niego właściwość 8. Jeśli spróbujesz odwołać się do identyfikatora (poprzez akcję 0 lub przez akcję 3), który nie jest zdefiniowany, twoje żądanie zostanie zignorowane, ale również nie zostanie zgłoszone jako błąd. Oznacza to, że jeśli chcesz warunkowo zdefiniować identyfikator, wystarczy pominąć akcję0, która ustawia właściwość 8, a wszystko inne zostanie automatycznie pominięte.
+
+==<span id="Properties" title="Properties">Właściwości</span>==
+{| 
+|-
+!Property !![[pl/Development/NewGRF/NFO Specs/GRFActionsDetailed|Rozmiar]] !!Version !! Opis
+|-
+|08||B||{{pl/Development/NewGRF/ottdp|0.6|2.5|ttdprev=alpha 45}}||Typ Substytutu branży
+|-
+|09||B||{{pl/Development/NewGRF/ottdp|0.6|2.5|ttdprev=alpha 45}}||Zmiana typu branży
+|-
+|0A||V||{{pl/Development/NewGRF/ottdp|0.6|2.5|ttdprev=alpha 45}}||Ustawienie układu(ów) branżowego
+|-
+|0B||B||{{pl/Development/NewGRF/ottdp|0.6|2.5|ttdprev=alpha 45}}||Flaga produkcji branży
+|-
+|0C||W||{{pl/Development/NewGRF/ottdp|0.6|2.5|ttdprev=alpha 45}}||Komunikat zamknięcia branży
+|-
+|0D||W||{{pl/Development/NewGRF/ottdp|0.6|2.5|ttdprev=alpha 45}}||Komunikat zwiększenia produkcji
+|-
+|0E||W||{{pl/Development/NewGRF/ottdp|0.6|2.5|ttdprev=alpha 45}}||Komunikat zmniejszenia produkcji
+|-
+|0F||B||{{pl/Development/NewGRF/ottdp|0.6|2.5|ttdprev=alpha 45}}||Mnożnik kosztów fundowania
+|-
+|10||W||{{pl/Development/NewGRF/ottdp|0.6|2.5|ttdprev=alpha 45}}||Typy produkcji ładunku
+|-
+|11||D||{{pl/Development/NewGRF/ottdp|0.6|2.5|ttdprev=alpha 45}}||Typy ładunków akceptowanych
+|-
+|12,13||B||{{pl/Development/NewGRF/ottdp|0.6|2.5|ttdprev=alpha 45}}||Mnożniki produkcji
+|-
+|14||B||{{pl/Development/NewGRF/ottdp|0.6|2.5|ttdprev=alpha 45}}||Minimalna ilość dystrybuowanego ładunku
+|-
+|15||V||{{pl/Development/NewGRF/ottdp|0.6|2.5|ttdprev=alpha 45}}||Przypadkowe efekty dźwiękowe
+|-
+|16||3*B||{{pl/Development/NewGRF/ottdp|0.6|2.5|ttdprev=alpha 45}}||Sprzeczne typy branż
+|-
+|17||B||{{pl/Development/NewGRF/ottdp|0.6|2.5|ttdprev=alpha 45}}||Prawdopodobieństwo w grze losowej
+|-
+|18||B||{{pl/Development/NewGRF/ottdp|0.6|2.5|ttdprev=alpha 45}}||Prawdopodobieństwo podczas rozgrywki
+|-
+|19||B||{{pl/Development/NewGRF/ottdp|0.6|2.5|ttdprev=alpha 45}}||Kolor mapy
+|-
+|1A||D||{{pl/Development/NewGRF/ottdp|0.6|2.5|ttdprev=alpha 45}}||Specjalne flagi branżowe definiujące specjalne zachowania
+|-
+|1B||W||{{pl/Development/NewGRF/ottdp|0.6|2.5|ttdprev=alpha 45}}||Nowa branża text ID
+|-
+|1C,1D,1E||D||{{pl/Development/NewGRF/ottdp|0.6|2.5|ttdprev=alpha 45}}||Mnożniki ładunków wejściowych dla trzech typów ładunków wejściowych
+|-
+|1F||W||{{pl/Development/NewGRF/ottdp|0.6|2.5|ttdprev=alpha 49}}||Nazwa branży
+|-
+|20||D||{{pl/Development/NewGRF/ottdp|0.6|2.5|ttdprev=alpha 49}}||Perspektywa sukcesu
+|-
+|21,22||B||{{pl/Development/NewGRF/ottdp|0.6|2.5|ttdprev=alpha 49}}||Flagi Callback
+|-
+|23||D||{{pl/Development/NewGRF/ottdp|0.6|2.5|ttdprev=alpha 73}}||Mnożnik kosztów destrukcji
+|-
+|24||W||{{pl/Development/NewGRF/ottdp|0.6|2.6|ttdprev=r1782}}||Tekst domyślny dla pobliskiej stacji
+|-
+|25||V||{{pl/Development/NewGRF/ottdp|1.9|no|ottdrev=e66cec8f}}||Wykaz typów ładunków produkowanych
+|-
+|26||V||{{pl/Development/NewGRF/ottdp|1.9|no|ottdrev=e66cec8f}}||Wykaz typów ładunków akceptowanych
+|-
+|27||V||{{pl/Development/NewGRF/ottdp|1.9|no|ottdrev=e66cec8f}}||Lista mnożników produkcji
+|-
+|28||V||{{pl/Development/NewGRF/ottdp|1.9|no|ottdrev=e66cec8f}}||Lista mnożników ładunków wejściowych
+|}
+
+==><span id="Description" title="Description">Opis</span>==
+
+===<span id="Substitute_industry_type_(08)"></span><span title="Substitute industry type (08)" id="Substitute_industry_type_.2808.29">Substytut typu branży (08)</span>===
+
+Zastępczy typ branży. Pierwsze przypisanie tej właściwości powoduje skopiowanie wszystkich właściwości starego typu do tego nowego typu. W przeciwieństwie do domów, typ zastępczy nie zastąpi tego nowego typu, jeśli definicja stanie się niedostępna. Lista [[pl/Development/NewGRF/NFO Specs/IndustryDefaultProps#climate-independent-properties |valid industry types]]
+
+Istnieje specjalne zastosowanie tej właściwości, począwszy od alfa 70: jeśli ustawisz ją na FFh, możesz wyłączyć oryginalną branżę. W takim przypadku użyty ID musi być numerem branży, którą chcesz wyłączyć. Żądania wyłączenia są ignorowane dla branż nieobecnych w obecnym klimacie i branżach już zastąpionych.
+
+{{pl/Development/NewGRF/ottdp|1.1|ottdrev=r20108}} AI mogą używać typu zastępczego do podejmowania decyzji dotyczących grafiki stacji i wyboru pojazdu za pośrednictwem [[pl/Development/NewGRF/NFO Specs/Callback/Main Page#ai-construction-purchase-selection-18| callback 18]] .
+
+===><span id="Industry_type_override_(09)"></span><span title="Industry type override (09)" id="Industry_type_override_.2809.29">Zastąpienie typu branży (09)</span>===
+
+Zastąpienie typu branży. Zastępowany typ branży nie będzie wbudowany w nowe losowe gry. Jeśli plik GRF stanie się aktywny po uruchomieniu gry, branże zastąpionego nowego typu nie zostaną zastąpione przez nowy typ. Lista [[pl/Development/NewGRF/NFO Specs/IndustryDefaultProps#climate-independent-properties |valid industry types]]
+
+Przesłaniając stary typ, mówisz "mój typ zastępuje ten stary typ". Gdy GRF zapytają o stary typ, który zastąpiłeś (na przykład poprzez zmienną branżową 67), zamiast tego otrzymają informacje o twoim typie. Jeśli chcesz zastąpić stary typ branży czymś zupełnie innym, użyj funkcji "wyłącz" <small>''(disable)''</small> właściwości 08 (patrz wyżej), a następnie zdefiniuj nowy typ branży ''bez'' <small>''(without)''</small> za pomocą właściwości 09. Ogólna zasada: jeśli twoja przemysł przyjmuje lub produkuje ładunki inne niż oryginalne, nie powinien zastępować oryginalnego.
+
+Na przykład, jeśli chcesz zastąpić starą kopalnię czymś, co bardziej dynamicznie zmienia produkcję węgla, użyj właściwości 09, aby zastąpić przemysł 00. W ten sposób inne branże, które chcą być z dala od kopalni węgla, pozostaną z dala od twojego rodzaju przemysłu też. Jeśli jednak chcesz zastąpić kopalnię węgla kopalnią potażu, nie używaj nieruchomości 09. Zapewni to, że inne branże nie uznają twojego typu za kopalnię węgla.
+
+Należy jednak pamiętać, że tylko jedna nowa branża może zastąpić stary typ. Jeśli dwa nowe typy chcą zastąpić ten sam stary typ, pierwszy wygrywa, a drugi jest dodawany normalnie, ignorując jego właściwość 09.
+
+===<span id="Set_industry_layout(s)_(0A)"></span><span title="Set industry layout(s) (0A)" id="Set_industry_layout.28s.29_.280A.29">Ustaw układ(y) branżowy (0A)</span>===
+
+Format tabel układu branżowego:
+
+{| 
+|-
+!Rozmiar!!Zmienna!!Znaczenie
+|-
+|B||numlayouts||Całkowita liczba układów następujących po
+|-
+|D||size||Wielkość całej definicji, z wyłączeniem numlayouts i rozmiar
+|-
+|V||layouts||układy numlayout, patrz format poniżej
+|}
+
+Format układu branżowego:
+
+Jako szczególny przypadek, jeśli pierwszym bajtem nowego układu branżowego jest FEh, następują tylko dwa bajty: numer branżowy i numer układu. Określony układ określonego starego typu branży zostanie dodany do listy układów bieżącej branży. Poniższe ma zastosowanie tylko wtedy, gdy pierwszy bajt nie był FEh
+
+{| 
+|-
+!rozmiar!!Zmienna!!Znaczenie
+|-
+|B||xoffs
+|-
+|B||yoffs||Odsunięcia <small>''(Offsets)''</small> liczone od najbardziej wysuniętego na północ kafla przemysłu, określając pozycję bieżącego kafla. Oba są traktowane jako podpisane liczby całkowite, ale nie mogą być negatywne, z wyjątkiem szczególnego przypadku wymienionego poniżej.
+|-
+|B||oldtile||Stary typ 'kafla' <small>''(tile)''</small>, który należy umieścić na danym kaflu
+|-
+|||--lub--||
+|-
+|0xFE,W||newtile||ID już zdefiniowanego kafla branżowego, wyściełany wartością 0 w celu utworzenia wartości słowa. Ten typ kafla zostanie umieszczony na danym kaflu.
+|-
+|||--lub--||
+|-
+|0xFF|| ||Dany kafel jest sprawdzany pod kątem luzu, ale nic nie zostanie na niej umieszczone. Przydatne, aby zapewnić trochę wolnego miejsca wokół swojej branży. Jest to jedyny przypadek, w którym xoffs i yoffs mogą być negatywne.
+
+{{pl/Development/NewGRF/grfTill|7}} W przypadku wersji GRF <= 7, jeśli xoffs jest ujemny, yoffs musi być o jeden niższy niż wartość pożądanych.
+|
+|}
+
+Układ składa się z listy powyższych definicji kafli, zakończonych dwoma bajtami: 0,80h
+
+===<span id="Industry_production_type_(0B)"></span><span title="Industry production type (0B)" id="Industry_production_type_.280B.29">Typ produkcji przemysłowej (0B)</span>===
+
+{| 
+|-
+!Wartość!!Znaczenie!!{{pl/Development/NewGRF/ottdp|0.6|no}} Wpływ na pobliskie stacje!!Efekt, jeśli [[pl/Development/NewGRF/NFO Specs/Callback/Main Page#random-production-change-29|CB 29]] jest wyłączone 
+|-
+|00||przemysł konsumpcyjny (np. elektrownia) || brak || Brak zmian w produkcji; bez zamknięcia
+|-
+|01||przemysł wydobywczy (np. kopalnia węgla) || przyrostek 'Kopalnie', jeśli produkowany jest ładunek niepłynny, niepasażerski, inny niż poczta || Zmiana standardowej produkcji w przemyśle pierwotnym
+|-
+|02||przemysł ekologiczny (np. las) || przyrostek 'las' lub 'drewno' w przypadku produkcji drewna || Zmiana standardowej produkcji w przemyśle pierwotnym
+|-
+|04||przemysł przetwórczy (np. huta stali) || brak || Standardowe zachowanie podczas zamykania przemysłu przetwórczego
+|}
+Inne wartości są zastrzeżone; nie ustawiaj żadnych innych wartości..
+
+===<span id="Industry_messages_(0C..0E),_new_industry_text_ID_(1B)"></span><span title="Industry messages (0C..0E), new industry text ID (1B)" id="Industry_messages_.280C..0E.29.2C_new_industry_text_ID_.281B.29">In wiadomości branżowe (0C..0E), nowy ID tekstowy branży (1B)</span>===
+
+Tekst skojarzony z tymi identyfikatorami tekstowymi zostanie wyświetlony, jeśli branża ogłosi zamknięcie, jeśli przemysł zwiększy produkcję, jeśli przemysł zmniejszy produkcję lub gdy przemysł zostanie wygenerowany podczas gry.
+
+Dla komunikatu generacyjnego domyślnie wszystkie branże mają napis „Nowy xxx jest budowany w pobliżu yyy”, z wyjątkiem lasów, w których "Nowy las jest sadzony w pobliżu yyy".
+
+===<span id="Production_cargo_types_(10)"></span><span title="Production cargo types (10)" id="Production_cargo_types_.2810.29">Typy ładunków produkcyjnych (10)</span>===
+
+Dwie zależne od klimatu liczby ładunków reprezentujące typy ładunków, które przemysł może wytwarzać. Niewykorzystane miejsca można wypełnić FFh. Lista prawidłowych typów: [[pl/Development/NewGRF/NFO Specs/CargoTypes|CargoTypes]]
+
+{{pl/Development/NewGRF/ottdp|1.9|no|ottdrev=e66cec8f}} Ta właściwość obsługuje tylko dwa ładunki wyjściowe. Zamiast tego użyj właściwości 25, aby wyprowadzić więcej rodzajów ładunku.
+
+===<span id="Acceptance_cargo_types_(11)"></span><span title="Acceptance cargo types (11)" id="Acceptance_cargo_types_.2811.29">Akceptacja typów ładunków (11)</span>===
+
+Trzy zależne od klimatu liczby ładunków reprezentujące typy ładunków, które branża może zaakceptować, plus czwarty bajt wypełniający, który jest zawsze ignorowany. Niewykorzystane sloty można wypełnić FFh. Lista prawidłowych typów: [[pl/Development/NewGRF/NFO Specs/CargoTypes|CargoTypes]]
+
+Te typy ładunków zostaną naprawdę zaakceptowane tylko wtedy, gdy odpowiednia akceptacja kafli branży wyniesie 8/8 lub więcej.
+
+Począwszy od wersji 7 GRF i wyższej, znaczenie powyższych dwóch właściwości ulegnie zmianie: zamiast numerów szczelin ładunkowych zależnych od klimatu należy podać niezależne od klimatu ID ładunków. Jeśli twój GRF ma tabelę translacji ładunku, wówczas ten ID jest indeksem w tej tabeli; w przeciwnym razie jest to kawałek ładunku. Ładunki obecnie nieobecne zostaną zmienione na FFh. Należy pamiętać, że TTD przestaje przetwarzać te listy przy pierwszej wartości FFh, więc określenie nieobecnych ładunków nie zawsze jest bezpieczne.
+
+{{pl/Development/NewGRF/ottdp|1.9|no|ottdrev=e66cec8f}} Ta właściwość obsługuje tylko trzy ładunki wejściowe. Zamiast tego użyj właściwości 26, aby wyprowadzić więcej rodzajów ładunku.
+
+===<span id="Production_multipliers_(12,_13)"></span><span title="Production multipliers (12, 13)" id="Production_multipliers_.2812.2C_13.29">Mnożniki produkcji (12, 13)</span>===
+
+W przypadku wartości niezerowych branża okresowo (co 256 tyknięć, czyli 8 lub 9 razy w miesiącu) wytwarza określoną ilość z odpowiedniego rodzaju ładunku. Właściwości określają ilość produkowaną na domyślnym poziomie produkcji, są one równomiernie skalowane [[pl/Development/NewGRF/NFO Specs/Callback/Main Page#random-production-change-29|production changes]].
+
+{{pl/Development/NewGRF/ottdp|1.9|no|ottdrev=e66cec8f}} Ta właściwość obsługuje tylko dwa ładunki wyjściowe. Zamiast tego użyj właściwości 27, aby wyprowadzić więcej rodzajów ładunku.
+
+===<span id="Minimal_amount_of_cargo_distributed_(14)"></span><span title="Minimal amount of cargo distributed (14)" id="Minimal_amount_of_cargo_distributed_.2814.29">Minimal amount of cargo distributed (14)</span>===
+
+Wyprodukowany ładunek zostanie rozdzielony na stacje dopiero po przekroczeniu tej ilości.
+
+===<span id="Random_sound_effects_(15)"></span><span title="Random sound effects (15)" id="Random_sound_effects_.2815.29">Losowe efekty dźwiękowe (15)</span>===
+
+Dane zaczynają się od bajtu określającego liczbę dostępnych efektów, a następnie jeden bajt na efekt. TTD okresowo wybiera losowo jeden z dostępnych efektów i odtwarza go.
+
+===<span id="Conflicting_industry_types_(16)"></span><span title="Conflicting industry types (16)" id="Conflicting_industry_types_.2816.29">Sprzeczne typy branż (16)</span>===
+
+3 bajty definiują 3 typy, które nie pojawią się w pobliżu tej branży. Jeśli bajt ma ustawiony bit 7, dolne 6 bitów jest identyfikatorem nowego typu już zdefiniowanego w bieżącym pliku GRF. Jeśli bit 7 jest wyraźny, dolne 6 bitów określa stary typ branży. FFh można wykorzystać do wypełnienia nieużywanych wpisów. Nie należy modyfikować właściwości 9 po odwołaniu się do typu przez właściwość 16. Lista [[pl/Development/NewGRF/NFO Specs/IndustryDefaultProps#climate-independent-properties |valid industry types]]
+
+===<span id="Probability_in_random_game_(17),_Probability_during_gameplay_(18)"></span><span title="Probability in random game (17), Probability during gameplay (18)" id="Probability_in_random_game_.2817.29.2C_Probability_during_gameplay_.2818.29">Prawdopodobieństwo w grze losowej (17), Prawdopodobieństwo podczas gry (18)</span>===
+
+Stare typy mają prawdopodobieństwo od 0 do 10. Jeśli wartość prawdopodobieństwa losowej gry jest różna od zera, na mapie z pewnością pojawi się co najmniej jedno wystąpienie tego typu.
+
+Te prawdopodobieństwa są "prawdopodobieństwami względnymi" <small>''(relative probabilities)''</small> . Oznacza to, że jeśli ustawisz prawdopodobieństwo dla przemysłu A na dwukrotność prawdopodobieństwa dla przemysłu B, przemysł A pojawi się około dwa razy częściej niż B. Z drugiej strony zwiększenie prawdopodobieństwa wszystkich branż nic nie zmienia. Prawdopodobieństwa pojawienia się nie mają wpływu na liczbę branż ogółem.
+
+===<span id="Map_colour_(19)"></span><span title="Map colour (19)" id="Map_colour_.2819.29">Kolor mapy (19)</span>===
+
+Wartość musi być indeksem kolorów z palety DOS. Poniższe wartości są używane domyślnie dla branż:
+
+{| 
+|-
+!Numer!!Kolor!!Przykład
+|-
+|01||Black||Coal mine
+|-
+|0A||Gray||Steel mill
+|-
+|0F||White||Bank
+|-
+|25||Dark beige||Water supply
+|-
+|27||Light beige||Rubber plantation
+|-
+|30||Pink||Farm
+|-
+|37||Brown||Food processing plant
+|-
+|56||Green||Forest
+|-
+|98||Blue||Oil wells/oil rig
+|-
+|AE||Purple||Factory
+|-
+|B8||Red||Power station
+|-
+|BF||Yellow||Oil refinery
+|-
+|C2||Orange||Saw mill
+|-
+|D0||Light green||Water tower
+|}
+
+===<span id="Special_industry_flags_to_define_special_behavior_(1A)"></span><span title="Special industry flags to define special behavior (1A)" id="Special_industry_flags_to_define_special_behavior_.281A.29">Specjalne flagi branżowe definiujące specjalne zachowanie (1A)</span>===
+
+{| 
+|-
+!Bit!!Wartość!!Wersja!!Znaczenie
+|-
+|0||1||{{pl/Development/NewGRF/ottdp|0.6|2.5}}||Przemysł okresowo sadzi pola wokół siebie (gospodarstwa umiarkowane i arktyczne))
+|-
+|1||2||{{pl/Development/NewGRF/ottdp|0.6|2.5}}||Przemysł wycina drzewa wokół siebie i wytwarza z nich swój pierwszy ładunek wyjściowy (tartak)
+|-
+|2||4||{{pl/Development/NewGRF/ottdp|0.6|2.5}}||Przemysł opiera się na wodzie (platforma wiertnicza)
+|-
+|3||8||{{pl/Development/NewGRF/ottdp|0.6|2.5}}||Przemysł można budować tylko w miastach (tj. Musi on zastępować domy) o liczbie mieszkańców większej niż 1200 (bank 'umiarkowany')
+|-
+|4||10||{{pl/Development/NewGRF/ottdp|0.6|2.5}}||Przemysł można budować tylko w miastach (tj. Musi on zastępować domy) (arktyczne i tropikalne brzegi, wieża ciśnień)
+|-
+|5||20||{{pl/Development/NewGRF/ottdp|0.6|2.5}}||Przemysł buduje się zawsze w pobliżu miast (tj. W pobliżu znaku miasta; dodatkowo przemysł może zastępować domy) (sklep z zabawkami)
+|-
+|6||40||{{pl/Development/NewGRF/ottdp|0.6|2.5}}||Pola są sadzone wokół przemysłu, gdy jest budowany (wszystkie farmy)
+|-
+|7||80||{{pl/Development/NewGRF/ottdp|0.6|2.5}}||Przemysł nie może zwiększyć produkcji w klimacie umiarkowanym (odwierty naftowe)
+|-
+|8||100||{{pl/Development/NewGRF/ottdp|0.6|2.5}}||Przemysł nie może zwiększyć produkcji w klimacie umiarkowanym (odwierty naftowe)
+|-
+|9||200||{{pl/Development/NewGRF/ottdp|0.6|2.5}}||Przemysł został zbudowany dopiero po 1960 roku (platforma wiertnicza)
+|-
+|10||400||{{pl/Development/NewGRF/ottdp|0.6|2.5}}||Przemysł został zbudowany dopiero po 1960 roku (platforma wiertnicza)
+|-
+|11||800||{{pl/Development/NewGRF/ottdp|0.6|2.5}}||Przemysł może eksplodować samolotem wojskowym (rafineria ropy naftowej)
+|-
+|12||1000||{{pl/Development/NewGRF/ottdp|0.6|2.5}}||Przemysł może eksplodować helikopterem wojskowym (fabryka)
+|-
+|13||2000||{{pl/Development/NewGRF/ottdp|0.6|2.5}}||Przemysł może powodować osiadanie (kopalnia węgla)
+|-
+|14||4000||{{pl/Development/NewGRF/ottdp|0.6|2.5}}||valign=middle|Automatyczne przekazywanie mnożnika produkcji (Żadna branża nie ustawiła tego bitu domyślnie.)<!--<ref>-->{{pl/Development/NewGRF/NFO Specs/refs|text=Jeśli ustawiony jest bit 14, zmienne 40..42 zostaną podzielone przez branżę. Multiplikator produktów (zmienna 93), a otrzymane instrukcje zostaną pomnożone przez tę samą kwotę przed ich zastosowaniem. Jeśli ustawisz ten bit, użyj małych ilości w instrukcjach, ponieważ mnożnik dla przemysłu wynosi 16 dla domyślnej produkcji i może osiągnąć nawet 128.|1}}<!--</ref>-->
+|-
+|15||8000||{{pl/Development/NewGRF/ottdp|0.6|2.5}}||'Cb' produkcyjne wymaga losowych bitów w var. 10 (Żadna branża nie ma domyślnie ustawionego tego bitu.)
+|-
+|16||10000||{{pl/Development/NewGRF/ottdp|1.0|2.6|ttdprev=r1925}}||Nie zmuszaj jednego wystąpienia tego typu do pojawienia się podczas początkowego generowania mapy (żadna branża nie ma domyślnie ustawionego tego bitu.)
+|-
+|17||20000||{{pl/Development/NewGRF/ottdp|0.6|2.6|ttdprev=r1925}}||Zezwalaj na zamykanie ostatniej instancji tego typu (domyślnie żadna branża nie ustawiła tego bitu.)
+|-
+|18||40000||{{pl/Development/NewGRF/ottdp|1.9|no|ottdrev=e66cec8f}}||Nowy format wywołania zwrotnego 37, 14B, 14C do obsługi większej liczby ładunków wejścia/wyjścia. Szczegółowe informacje można znaleźć w wywołaniach zwrotnych.
+|-
+|19||80000||{{pl/Development/NewGRF/ottdp|1.11|no|ottdrev=6d3c2edc}}||Domyślnie ilość drugiego wyprodukowanego ładunku jest ograniczona dla przemysłu wodnego (np. Pax dla platform wiertniczych). Ta flaga wyłącza 'zaciskanie' <small>''(clamping)''</small>.
+|}
+
+<!--<references />-->{{pl/Development/NewGRF/NFO Specs/przypisy|101}}{{pl/Development/NewGRF/NFO Specs/refs|text=Jeśli ustawiony jest bit 14, zmienne 40..42 zostaną podzielone przez branżę. Multiplikator produktów (zmienna 93), a otrzymane instrukcje zostaną pomnożone przez tę samą kwotę przed ich zastosowaniem. Jeśli ustawisz ten bit, użyj małych ilości w instrukcjach, ponieważ mnożnik dla przemysłu wynosi 16 dla domyślnej produkcji i może osiągnąć nawet 128.|<!--1-->przypis}}
+
+Domyślnie TTDPatch stara się nie dopuścić do zerwania łańcuchów ładunkowych. Aby to osiągnąć, TTDPatch zawsze generuje co najmniej jedną instancję z każdego dostępnego typu branży podczas losowego generowania map i zapobiega ostatniej instancji, nawet jeśli wezwanie do zmiany produkcji mówi, że powinna. Jeśli Twój typ branży nie jest niezbędny do rozgrywki lub chcesz sam poradzić sobie z tą sytuacją, możesz ustawić bity 16 i/lub 17, aby wyłączyć domyślne zachowanie TTDPatch.
+
+Jeśli dostarczasz wiele rodzajów branży, ale chcesz również obsługiwać małe rozmiary map OpenTTD, powinieneś ustawić bit 16 dla mniej ważnych rodzajów branży, które można pominąć (prawdopodobnie nie będzie wystarczającej ilości miejsca dla branży każdego typu).
+
+===<span id="Input_cargo_multipliers_for_the_three_input_cargo_types_(1C..1E)"></span><span title="Input cargo multipliers for the three input cargo types (1C..1E)" id="Input_cargo_multipliers_for_the_three_input_cargo_types_.281C..1E.29">Wprowadzenie mnożników ładunku dla trzech wejściowych typów ładunku (1C..1E)</span>===
+
+Jeśli pierwszym (niskim) słowem właściwości jest M1, a drugim (wysokim) słowem jest M2, a jednostki X odpowiedniego ładunku są dostarczane do przemysłu, kwoty wyjściowe są obliczane w ten sposób:
+
+<pre>output_type1 = X*M1/256
+
+output_type2 = X*M2/256</pre>
+
+Domyślna wartość dla starych rodzajów przemysłu to 0100h, 0000h, więc każda jednostka ładunku wejściowego wytwarza jedną jednostkę ładunku wyjściowego pierwszego typu. Wyjątek stanowią banki umiarkowane i platformy wiertnicze, które mają domyślną wartość 0000h, 0000h, więc ładunek wejściowy nie wpływa na wydajność.
+
+{{pl/Development/NewGRF/ottdp|1.9|no|ottdrev=e66cec8f}} Ta właściwość obsługuje tylko trzy ładunki wejściowe i dwa wyjściowe. Zamiast tego użyj nieruchomości 28, jeśli masz więcej rodzajów ładunków.
+
+===<span id="Industry_name_(1F)"></span><span title="Industry name (1F)" id="Industry_name_.281F.29">Nazwa branży (1F)</span>===
+
+Jest to identyfikator tekstowy, który zostanie dołączony do nazwy miasta, gdy teksty TTD odnoszą się do branży.
+
+===<span id="Prospecting_success_chance_(20)"></span><span title="Prospecting success chance (20)" id="Prospecting_success_chance_.2820.29">Poszukiwanie szansy na sukces (20)</span>===
+
+Ta wartość jest obecnie stosowana tylko w przemyśle wydobywczym i ekologicznym (szczegółowe informacje można znaleźć we właściwości 0B). Im wyższa jest ta wartość, tym większa szansa, że ​​twoja branża może zostać zbudowana w przypadkowym miejscu po poszukiwaniach. 0 oznacza ciągłą awarię, podczas gdy FFFFFFFFh oznacza ciągły sukces.
+
+===<span id="Callback_flags_(21,22)"></span><span title="Callback flags (21,22)" id="Callback_flags_.2821.2C22.29">Flagi 'callback' (21,22)</span>===
+
+Właściwość 21 może mieć ustawione następujące bity:
+
+{| 
+|-
+!Bit!!Wartość!!Var. 0C!!Wersja!!'Callback'
+|-
+|0||1||22||{{pl/Development/NewGRF/ottdp| |2.5}}||Określ, czy można zbudować branżę
+|-
+|1||2||00||{{pl/Development/NewGRF/ottdp| |2.5}}||valign=middle|Wywołanie <small>''(Call)''</small> [[pl/Development/NewGRF/NFO Specs/Action2/Industries|production callback]] kiedy ładunek dociera do branży<!--<ref name="smootheconomy">-->{{pl/Development/NewGRF/NFO Specs/refs|name=smootheconomy|text={{pl/Development/NewGRF/ottdp|0.6|no}} Jeśli żadne wywołanie zwrotne zmiany produkcji nie zostanie aktywowane, OpenTTD użyje "łagodna <small>''(smooth)''</small> ekonomia" , jeśli jest włączone. Jeśli którykolwiek z oddzwaniania jest włączony, "płynna ekonomia" zostanie wyłączona dla branży.|2-021}}<!--</ref>-->
+|-
+|2||4||00||{{pl/Development/NewGRF/ottdp| |2.5}}||valign=middle|Wywołanie <small>''(Call)''</small> [[pl/Development/NewGRF/NFO Specs/Action2/Industries|production callback]] co 256 cykli <small>''(ticks)''</small> <!--<ref name="smootheconomy"/>-->{{pl/Development/NewGRF/NFO Specs/refs|name=smootheconomy|2-121}}
+|-
+|3||8||28||{{pl/Development/NewGRF/ottdp| |2.5}}||Określa, czy przemysł można zbudować w danym miejscu
+|-
+|4||10||29||{{pl/Development/NewGRF/ottdp| |2.5}}||Kontrola losowych zmian w produkcji
+|-
+|5||20||35||{{pl/Development/NewGRF/ottdp| |2.5}}||Miesięczna losowa zmiana produkcji
+|-
+|6||40||37||{{pl/Development/NewGRF/ottdp| |2.5}}||Wyświetlanie podtypów ładunku
+|-
+|7||80||38||{{pl/Development/NewGRF/ottdp| |2.5|ttdprev=2.0.1 alpha 72}}||Dodatkowy tekst w oknie funduszy branżowych
+|}
+<!--<references/>-->{{pl/Development/NewGRF/NFO Specs/przypisy|2-021|name=smootheconomy}}{{pl/Development/NewGRF/NFO Specs/przypisy|2-121|name=smootheconomy}}{{pl/Development/NewGRF/NFO Specs/refs|name=smootheconomy|text={{pl/Development/NewGRF/ottdp|0.6|no}} Jeśli żadne wywołanie zwrotne zmiany produkcji nie zostanie aktywowane, OpenTTD użyje "łagodna <small>''(smooth)''</small> ekonomia" , jeśli jest włączone. Jeśli którykolwiek z oddzwaniania jest włączony, "płynna ekonomia" zostanie wyłączona dla branży.|<!--1-->przypis}}{{pl/Development/NewGRF/NFO Specs/refs|name=smootheconomy|<!--1-1-->przypis}}
+
+Właściwość 22 może mieć ustawione następujące bity:
+
+{| 
+|-
+!Bit!!Value!!Var. 0C!!Version!!Callback
+|-
+|0||1||3A||{{pl/Development/NewGRF/ottdp| |2.5|ttdprev=2.0.1 alpha 72}}||Pokaż dodatkowy tekst w oknie branży
+|-
+|1||2||3B||{{pl/Development/NewGRF/ottdp| |2.5|ttdprev=2.0.1 alpha 73}}||Kontroluj specjalne efekty branżowe
+|-
+|2||4||3D||{{pl/Development/NewGRF/ottdp| |2.5|ttdprev=2.5 beta 4 }}||Zrezygnuj z przyjmowania ładunków
+|-
+|3||8||14A||{{pl/Development/NewGRF/ottdp| |2.6|ttdprev=r1712}}||Wybierz kolor branży
+|-
+|4||10||14B||{{pl/Development/NewGRF/ottdp| |2.6|ttdprev=r1718}}||Zdecyduj o typach ładunków wejściowych
+|-
+|5||20||14C||{{pl/Development/NewGRF/ottdp| |2.6|ttdprev=r1718}}||Zdecyduj o typach ładunków wyjściowych
+|-
+|6||40||15F||{{pl/Development/NewGRF/ottdp|1.3|no|ottdrev=r24186}}||Ustaw początkowy poziom produkcji na <span title=construction>'budowie'</span>.
+|}
+
+===<span id="Destruction_cost_multiplier_(23)"></span><span title="Destruction cost multiplier (23)" id="Destruction_cost_multiplier_.2823.29">Mnożnik kosztu zniszczenia (23)</span>===
+
+Ta wartość określa koszt usunięcia przemysłu, gdy włączona jest funkcja ctrl-dynamit w morebuildoptions.removeindustry. Wartość ta jest mnożona przez mnożnik kosztu przeprowadzki, aby uzyskać końcowy koszt. Wartość domyślna to 1000 w TTDPatch i 0 (zero) w OpenTTD.
+
+===<span id="Default_name_for_nearby_station_(24)"></span><span title="Default name for nearby station (24)" id="Default_name_for_nearby_station_.2824.29">Domyślna nazwa pobliskiej stacji (24)</span>===
+
+Jeśli niezerowy, ten identyfikator tekstowy określa dodatkową opcję nazwy dla stacji zbudowanych w pobliżu tej branży, która będzie używana przed dowolną ze standardowych nazw TTD. Tekst powinien zawierać \80, który będzie nazwą pobliskiego miasta.
+
+Jeśli nowo zbudowana stacja nie może użyć określonego tekstu (ponieważ ta nazwa została użyta dla innej stacji w tym samym mieście), zostanie użyty domyślny system nazewnictwa TTD, ale bez nazw "\80 Oilfield" lub "\80 Mines" <small>(kopalnie)</small>.
+
+Ustawienie tej wartości na zero wyłącza "\80 Oilfield" i "\80 Mines" bez dodawania żadnych dodatkowych opcji nazw stacji.
+
+===<span id="Production_cargo_type_list_(25)"></span><span title="Production cargo type list (25)" id="Production_cargo_type_list_.2825.29">Lista typów ładunków produkcyjnych (25)</span>===
+{{pl/Development/NewGRF/ottdp|1.9|no|ottdrev=e66cec8f}} 
+
+Format:
+ <numoutput> (<cargotype>)*
+
+{| 
+|-
+!Rozmiar!!Zmienna!!Znaczenie
+|-
+|B||numoutput||Liczba <cargotype> do <span title=follow>'naśladowania'</span>,
+|-
+|B||cargotype||Cargotyp (z CTT) do produkcji.
+|}
+
+Ta właściwość definiuje do 16 cargotypów wytwarzanych przez przemysł.
+Użyj tej właściwości zamiast właściwości 10.
+
+===<span id="Acceptance_cargo_type_list_(26)"></span><span title="Acceptance cargo type list (26)" id="Acceptance_cargo_type_list_.2826.29">Lista akceptowanych typów ładunków (26)</span>===
+{{pl/Development/NewGRF/ottdp|1.9|no|ottdrev=e66cec8f}} 
+
+Format:
+ <numinput> (<cargotype>)*
+
+{| 
+|-
+!Rozmiar!!Zmienna!!Znaczenie
+|-
+|B||numinput||Liczba <cargotype> do <span title=follow>'naśladowania'</span>,
+|-
+|B||cargotype||Cargotype (z CTT) do zaakceptowania.
+|}
+
+Ta właściwość definiuje do 16 cargotypów, które są akceptowane przez przemysł.
+Użyj tej właściwości zamiast właściwości 11.
+
+===<span id="Production_multiplier_list_(27)"></span><span title="Production multiplier list (27)" id="Production_multiplier_list_.2827.29">Lista mnożników produkcji (27)</span>===
+{{pl/Development/NewGRF/ottdp|1.9|no|ottdrev=e66cec8f}} 
+
+Format:
+ <numoutput> (<amount>)*
+
+{| 
+|-
+!Rozmiar!!Zmienna!!Znaczenie
+|-
+|B||numinput||Liczba <amount> do <span title=follow>'naśladowania'</span>,
+|-
+|B||amount||Ilość ładunku do wyprodukowania.
+|}
+
+W przypadku wartości niezerowych branża okresowo (co 256 tyknięć, czyli 8 lub 9 razy w miesiącu) wytwarza określoną ilość z odpowiedniego rodzaju ładunku.
+Ilości są skorelowane z cargotypami ustawionymi przez właściwość 25. Jeśli ustawionych jest mniej/więcej kwot, dodatkowe pozycje nie są produkowane/ignorowane.
+
+Właściwości określają ilość produkowaną na domyślnym poziomie produkcji, są one równomiernie skalowane [[pl/Development/NewGRF/NFO Specs/Callback/Main Page#random-production-change-29|production changes]].
+
+Użyj tej właściwości zamiast właściwości 12 i 13.
+
+===<span id="Input_cargo_multiplier_list_(28)"></span><span title="Input cargo multiplier list (28)" id="Input_cargo_multiplier_list_.2828.29">Wprowadzanie listy mnożników ładunku (28)</span>===
+{{pl/Development/NewGRF/ottdp|1.9|no|ottdrev=e66cec8f}} 
+
+Format:
+ <numinput> <numoutput> (<multiplier>)*
+
+{| 
+|-
+!Rozmiar!!Zmienna!!Znaczenie
+|-
+|B||numinput||Liczba ładunków wejściowych do wykorzystania.
+|-
+|B||numoutput||Liczba ładunków wyjściowych do wykorzystania.
+|-
+|W||multiplier||Mnożniki ładunku w 1/256 jednostek. <numinput>*<numoutput> pozycji.
+|}
+
+Ta właściwość definiuje macierz, która opisuje, w jaki sposób ładunki wejściowe z właściwości 26 są przetwarzane na ładunki wyjściowe z właściwości 25.
+
+Przykład:
+ 03 04    // 3 input cargos, 4 output cargos
+    \wx0100 \wx0000 \wx0000 \wx0100    // input cargo 0 is converted to output cargos 0 and 3
+    \wx0000 \wx0100 \wx0000 \wx0100    // input cargo 1 is converted to output cargos 1 and 3
+    \wx0000 \wx0000 \wx0100 \wx0100    // input cargo 2 is converted to output cargos 2 and 3
+
+Macierz <small>''(matrix)''</small> koreluje z cargotypami ustawionymi za pomocą właściwości 25 i 26. Jeśli używanych jest mniej/więcej cargotypów, dodatkowe elementy nie są produkowane/ignorowane.
+
+Użyj tej właściwości zamiast właściwości 1C..1E.

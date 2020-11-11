@@ -1,0 +1,56 @@
+{{pl/Development/NewGRF/inne strony|en=newgrf-specs.tt-wiki.net/wiki/VariationalAction2/Railtypes|pl=pl/Development/NewGRF/NFO Specs/VariationalAction2/Railtypes |sub=nfo}}
+<!--{{-}}<br>--><!--{{ambox | text = w trakcie edycji.}}--><!-- -->
+==Wprowadzenie==
+
+== Variables ==
+
+{| 
+|-
+!Zmienna !![[pl/Development/NewGRF/NFO Specs/GRFActionsDetailed|Size]]!!Wersja  !! Opis
+|-
+|10||D||{{pl/Development/NewGRF/ottdp|1.3|ottdrev=r24367}}||Dodatkowe informacje dotyczące wyboru 'sprite' - patrz [[pl/Development/NewGRF/NFO Specs/Action3/Railtypes#signal-sprites-0b|Action3 Signals]]
+|-
+|18||D||{{pl/Development/NewGRF/ottdp|1.3|ottdrev=r24367}}||Dodatkowe informacje dotyczące wyboru 'sprite' - patrz [[pl/Development/NewGRF/NFO Specs/Action3/Railtypes#signal-sprites-0b|Action3 Signals]]
+|-
+|40||B||{{pl/Development/NewGRF/ottdp|1.0|ottdrev=r19056}}||Typ terenu: 0 normalny, 1 pustynia, 2 lasy deszczowe, 4 na lub powyżej linii śniegu.
+|-
+|41||B||{{pl/Development/NewGRF/ottdp|1.0|ottdrev=r19056}}||Ulepszone tunele; wejście ma ścieżkę powyżej. Zawsze 0 w OpenTTD.
+|-
+|42||B||{{pl/Development/NewGRF/ottdp|1.0|ottdrev=r19056}}||Status przejazdu kolejowego: 0 jeśli otwarty (lub nie przejazd), 1 jeśli zamknięty.
+|-
+|43||D||{{pl/Development/NewGRF/ottdp|1.0|ottdrev=r19056}}||Data budowy składu (długi format, 0); inne: aktualna data
+|-
+|44||B||{{pl/Development/NewGRF/ottdp|1.2|ottdrev=r23866}}||[[pl/Development/NewGRF/NFO Specs/TownZones|Strefa miasta]] płytki. (Dostępne tylko dla przejazdów kolejowych i zajezdni.)
+|}
+
+== Description ==
+===<span id="Terrain_type_(40)"></span><span title="Terrain type (40)" id="Terrain_type_.2840.29">Typ terenu (40)</span>===
+
+'''Format:''' bajt
+
+{| 
+|-
+!wartość!!Znaczenie
+|-
+|0||normalny kafel
+|-
+|1||kafel pustyni
+|-
+|2||kafel lasu deszczowego
+|-
+|4||jafek na lub powyżej linii śniegu
+|}
+
+=== Enhanced tunnels (41) ===
+
+'''Format:''' bajt
+
+Ta zmienna zawsze zwraca 0 i jest zarezerwowana do użytku w przyszłości z ulepszonymi tunelami.
+
+=== Level crossing status (42) ===
+
+'''Format:''' bajt
+
+Ta zmienna zwraca 1, jeśli przejście jest zamknięte. Jeśli przejście jest otwarte lub kafelek nie przechodzi przez poziom, zwracana jest wartość 0.
+
+==Przykład==

@@ -1,0 +1,445 @@
+{{pl/Development/NewGRF/inne strony|en=newgrf-specs.tt-wiki.net/wiki/Action0/Railtypes|pl=pl/Development/NewGRF/NFO Specs/Action0/Railtypes |sub=nfo}}
+<!--{{-}}<br>--><!--{{ambox | text = w trakcie edycji.}}--><!-- -->
+'''''Action 0 properties for rail types'''''
+
+= Action 0 - Properties for rail types =
+
+Definiowanie właściwości typów szyn.
+
+{{pl/Development/NewGRF/ottdp|1.0|no|ottdrev=r18969}} 16 typów szyn można zdefiniować.
+
+{{pl/Development/NewGRF/ottdp|1.9|no|ottdrev=bf8d7df7}} 64 typów szyn można zdefiniować.
+
+== Properties ==
+
+{| class="wikitable"
+|-
+!'''Numer'''
+!'''Wersja'''
+!'''Rozmiar'''
+!'''Opis'''
+|-
+|08
+|{{pl/Development/NewGRF/ottdp|1.0}}
+|4*B
+|Etykieta typu szyny
+|-
+|09
+|{{pl/Development/NewGRF/ottdp|1.0}}
+|W
+|valign=middle|StringID: nagłówek paska narzędzi budowania szyny<!--<ref>-->{{pl/Development/NewGRF/NFO Specs/refs|text={{pl/Development/NewGRF/grfTill|7}} Dla wersji GRF 7 lub wcześniejszej ustawienie właściwości 09 ustawia również właściwość 1B.|1}}<!--</ref>-->
+|-
+|0A
+|{{pl/Development/NewGRF/ottdp|1.0}}
+|W
+|StringID: Tekst listy rozwijanej konstrukcji kolejowych
+|-
+|0B
+|{{pl/Development/NewGRF/ottdp|1.0}}
+|W
+|StringID: Nagłówek okna budowania pojazdu
+|-
+|0C
+|{{pl/Development/NewGRF/ottdp|1.0}}
+|W
+|StringID: Automatyczne zastępowanie text
+|-
+|0D
+|{{pl/Development/NewGRF/ottdp|1.0}}
+|W
+|StringID: Text nowego silnika
+|-
+|0E
+|{{pl/Development/NewGRF/ottdp|1.0}}
+|B n*D 
+|valign=middle|Lista kompatybilnych typów szyn<!--<ref name="alt_label">-->{{pl/Development/NewGRF/NFO Specs/refs|name=alt_label|text=Etykiety typu szyny na tej liście są "nie" rozwiązywane za pomocą alternatywnej listy etykiet.|2}}<!--</ref>-->
+|-
+|0F
+|{{pl/Development/NewGRF/ottdp|1.0}}
+|B n*D 
+|valign=middle|Lista typów szyn zasilanych<!--<ref name="alt_label" />-->{{pl/Development/NewGRF/NFO Specs/refs|name=alt_label|2-1<!--3-->}}
+|-
+|10
+|{{pl/Development/NewGRF/ottdp|1.0}}
+|B
+|Flagi typu szynowego
+|-
+|11
+|{{pl/Development/NewGRF/ottdp|1.0}}
+|B
+|Mnożnik 'przewagi' prędkości na łuku
+|-
+|12
+|{{pl/Development/NewGRF/ottdp|1.0}}
+|B
+|Grafika stacji (i zajezdni)
+|-
+|13
+|{{pl/Development/NewGRF/ottdp|1.0}}
+|valign=middle|W <!--<ref>-->{{pl/Development/NewGRF/NFO Specs/refs|text=W r18969 do 19306 ta właściwość miała wielkość bajtu.|3<!--4-->}}<!--</ref>-->
+|Koszty budowy
+|-
+|14
+|{{pl/Development/NewGRF/ottdp|1.0}}
+|W
+|Ograniczenie prędkości
+|-
+|15
+|{{pl/Development/NewGRF/ottdp|1.0}}
+|B
+|Model przyspieszenia
+|-
+|16
+|{{pl/Development/NewGRF/ottdp|1.0|no|ottdrev=r19307}}
+|B
+|Kolor minimapy
+|-
+|17
+|{{pl/Development/NewGRF/ottdp|1.1|no|ottdrev=r21842}}
+|D
+|Data wprowadzenia
+|-
+|18
+|{{pl/Development/NewGRF/ottdp|1.1|no|ottdrev=r21842}}
+|B n*D 
+|valign=middle|Wprowadzenie listy wymaganych typów szyn<!--<ref name="alt_label" />-->{{pl/Development/NewGRF/NFO Specs/refs|name=alt_label|<!--5-->2-2}}
+|-
+|19
+|{{pl/Development/NewGRF/ottdp|1.1|no|ottdrev=r21841}}
+|B n*D 
+|valign=middle|Wprowadzono listę typów szyn<!--<ref name="alt_label" />-->{{pl/Development/NewGRF/NFO Specs/refs|name=alt_label|<!--6-->2-3}}
+|-
+|1A
+|{{pl/Development/NewGRF/ottdp|1.1|no|ottdrev=r21866}}
+|B
+|Porządek sortowania
+|-
+|1B
+|{{pl/Development/NewGRF/ottdp|1.2|no|ottdrev=r23129}}
+|W
+|valign=middle|StringID: Nazwa typu szyny<!--<ref>-->{{pl/Development/NewGRF/NFO Specs/refs|text={{pl/Development/NewGRF/grfTill|7}} W przypadku wersji GRF 7 lub wcześniejszej ustaw właściwość 1B "po" ustawieniu właściwości 09, ponieważ właściwość 09 ustawia również nazwę typu szyny do tyłu zgodność.|<!--7-->4}}<!--</ref>-->
+|-
+|1C
+|{{pl/Development/NewGRF/ottdp|1.2|no|ottdrev=r23415}}
+|W
+|Współczynnik kosztów utrzymania infrastruktury
+|-
+|1D
+|{{pl/Development/NewGRF/ottdp|1.2|no|ottdrev=r23758}}
+|B n*D
+|Alternatywne etykiety typu szyny, które należy "przekierować" na ten typ szyny
+|}
+
+<!--<references />-->{{pl/Development/NewGRF/NFO Specs/przypisy}}{{pl/Development/NewGRF/NFO Specs/refs|text={{pl/Development/NewGRF/grfTill|7}} Dla wersji GRF 7 lub wcześniejszej ustawienie właściwości 09 ustawia również właściwość 1B.|<!--1-->przypis}}<!--
+-->{{pl/Development/NewGRF/NFO Specs/przypisy|name=alt_label|22-0}}<!--
+-->{{pl/Development/NewGRF/NFO Specs/przypisy|name=alt_label|2-1}}<!--
+-->{{pl/Development/NewGRF/NFO Specs/przypisy|name=alt_label|2-2}}<!--
+-->{{pl/Development/NewGRF/NFO Specs/przypisy|name=alt_label|2-3}}<!--
+-->{{pl/Development/NewGRF/NFO Specs/refs|name=alt_label|text=Etykiety typu szyny na tej liście są "nie" rozwiązywane za pomocą alternatywnej listy etykiet.|<!--2--><!--2-0-->przypis}}<!--
+-->{{pl/Development/NewGRF/NFO Specs/refs|name=alt_label|<!--3--><!--2-1-->przypis}}<!--
+-->{{pl/Development/NewGRF/NFO Specs/refs|name=alt_label|<!--5--><!--2-2-->przypis}}<!--
+-->{{pl/Development/NewGRF/NFO Specs/refs|name=alt_label|<!--6--><!--2-3-->przypis}}<!--
+-->{{pl/Development/NewGRF/NFO Specs/przypisy|<!--3-->222021}}{{pl/Development/NewGRF/NFO Specs/refs|text=W r18969 do 19306 ta właściwość miała wielkość bajtu.|<!--4--><!--3-->przypis}}<!--
+-->{{pl/Development/NewGRF/NFO Specs/przypisy|222022}}{{pl/Development/NewGRF/NFO Specs/refs|text={{pl/Development/NewGRF/grfTill|7}} W przypadku wersji GRF 7 lub wcześniejszej ustaw właściwość 1B "po" ustawieniu właściwości 09, ponieważ właściwość 09 ustawia również nazwę typu szyny do tyłu zgodność.|<!--7--><!--4-->przypis}}
+
+W NFO identyfikatory typu szyny będą lokalne GRF, z identyfikatorem mapowania etykiety. Dlatego, aby zmodyfikować istniejący typ szyny, określ jego etykietę we właściwości 08. Aby utworzyć nowy typ szyny, ponownie po prostu określ jej etykietę we właściwości 08. W ten sposób nie ma potrzeby stosowania skomplikowanych mechanizmów GRM do przydzielania ID''`ów''. If a label 'clashes' with another GRF, then one GRF will end up modifying the properties instead of creating a new rail type.
+
+Gdy tworzony jest nowy typ szyny, jest on wypełniany informacjami z pierwszego typu szyny, z tym wyjątkiem, że lista kompatybilnych i zasilanych zawiera tylko tworzony typ szyny. Nie należy jednak zakładać żadnych wartości domyślnych, ponieważ pierwszy typ szyny mógł zostać zmodyfikowany.
+
+== Vehicle and Railtype availability ==
+
+Dostępność i kompatybilność pojazdów i typów szyn zależy od wielu właściwości.
+Zasadniczo pojazd określa, jaki to typ szyny, a typy szyn określają wzajemną kompatybilność.
+* Pojazd istnieje, jeżeli zdefiniowano jego typ szyny (podpora pociągu 05). W przeciwnym razie pojazd jest wyłączony.
+* Kiedy pojazd jest wprowadzany, zawsze wprowadza swój typ szyny (podpora pociągu 05).
+* Typ szyny zostaje wprowadzony, jeżeli spełniony jest przynajmniej jeden z następujących warunków:
+** Wprowadzono pojazd, który odnosi się do typu szyny (podpora pociągu 05).
+** Wprowadzono kolejny typ szyny, który odwołuje się do typu szyny za pomocą wprowadzonej listy rodzajów szyn (prop 19).
+** Data wprowadzenia (podpora typu szyny 17) została przekroczona i dostępne są wszystkie wymagane typy szyn (podpora typu szyny 18).
+
+Poprzez właściwość typu szyny 1D można zdefiniować wiele rodzajów szyn, które należy uznać za równoważne z typem szyny.
+Wpływa to na interpretację właściwości pociągu 05. Jeśli właściwość pociągu 05 odnosi się do niezdefiniowanego rodzaju kolei, wówczas
+właściwość 1D typu szyny jest sprawdzana dla wszystkich zdefiniowanych typów szyn, czy pojazd może zostać ponownie przypisany do innego rodzaju szyny.
+W przeciwnym razie pojazd jest wyłączony.
+
+==<span id="Rail_type_label_(08)"></span><span title="Rail type label (08)" id="Rail_type_label_.2808.29">Etykieta typu szyny (08)</span>==
+
+Są to unikatowe na skalę światową czteroliterowe identyfikatory dla określonych rodzajów szyn (analogiczne do [[pl/Development/NewGRF/NFO Specs/Action0/Cargos#cargo-label-17|cargo labels]] ), używane do udostępniania różnych typów szyn pociągiem grfs pojazdu. Zarezerwowane etykiety dla domyślnych typów szyn to:
+
+{| class="wikitable"
+|-
+!'''Etykieta'''
+!'''Rail Typ'''
+|-
+|RAIL 
+| Normal Rail
+|-
+|ELRL 
+| Electrified Rail
+|-
+|MONO 
+| Mono Rail
+|-
+|MGLV 
+| Maglev Rail
+|}
+
+{{pl/Development/NewGRF/ottdp|1.0|no|ottdrev=r18969}} Można zdefiniować 16 typów szyn.
+
+{{pl/Development/NewGRF/ottdp|1.9|no|ottdrev=bf8d7df7}} Można zdefiniować 64 typy kolei.
+
+Zestawy typów szyn mogą wykorzystywać do 64 rodzajów szyn i muszą określać własne [[pl/Development/NewGRF/NFO Specs/TracktypeLabels|etykiety]].
+
+Zobacz także [[pl/Development/NewGRF/NFO Specs/Action0/Global Settings#railtype-translation-table-12|Rail Type Translation Table]] w celu uzyskania dalszych informacji.
+
+== Build rail toolbar caption (09) ==
+
+ID ciągu nazwy typu szyny, jak pokazano w podpisie paska narzędzi.
+
+{{pl/Development/NewGRF/grfTill|7}} {{pl/Development/NewGRF/ottd|1.2|ottdrev=r23129}} W celu zapewnienia zgodności wstecznej ustawienie tej właściwości ustawia nazwę typu szyny (właściwość 1B) na ten ciąg również w przypadku wersji GRF 7 lub niższej.
+
+OpenTTD przed wersjami r20342 i 1.0.3 wymagają, aby ciąg zaczynał się od białego kodu sterującego. Późniejsze wersje OpenTTD automatycznie domyślnie zmieniają kolor na biały.
+
+== Rail construction dropdown text (0A) ==
+
+Identyfikator ciągu tekstu w menu rozwijanym wszystkich typów szyn.
+
+Ciąg ten nigdy nie może zaczynać się od kodu kontroli koloru.
+
+== Build vehicle window caption (0B) ==
+
+Identyfikator ciągu dla podpisu okna pojazdu.
+
+OpenTTD przed wersjami r20342 i 1.0.3 wymagają, aby ciąg zaczynał się od białego kodu sterującego. Późniejsze wersje OpenTTD automatycznie domyślnie zmieniają kolor na biały.
+
+== Autoreplace text (0C) ==
+
+ID ciągu dla typu szyny pokazany w oknie automatycznego zastępowania.
+
+== New engines (0D) ==
+
+StringID do wyświetlania tekstów typu "Wynaleźliśmy nowy &lt;rail type&gt; silnik" <small>''(engine)''</small>.
+
+== Compatible rail type list (0E) ==
+
+Lista rodzajów szyn, na których mogą jeździć pociągi tego rodzaju, nawet jeśli mogą nie być zasilane. Na przykład. wagony/silniki typu "zelektryfikowana szyna" <small>''(eletrified rail)''</small> - są również kompatybilne z typami "normal rail" i "trzecia szyna" <small>''(third)''</small> , ale nie są napędzane (w celu przemieszczania pociągu musi istnieć inny silnik z napędem).
+
+Format to:
+
+<pre>0E &lt;nvar&gt; (&lt;rail type label&gt;){n}</pre>
+
+Oznacza to, że podajesz liczbę kompatybilnych typów szyn w jednym bajcie, a następnie listę etykiet szyn o takiej długości. Typ szyny jest automatycznie kompatybilny (i zasilany) ze sobą, więc nie musisz wymieniać bieżącego typu szyny.
+
+Należy pamiętać, że te właściwości dotyczą pociągów tego rodzaju szyn, a nie toru. Jeśli chcesz, aby pociągi innych typów kolei mogły jeździć na twoich typach kolei, musisz ustawić właściwość kompatybilnych typów kolei dla każdego rodzaju kolei. Ustawienie tych właściwości zachowuje się zawsze przyrostowo, więc wystarczy ustawić dodatkowe bity dla każdego typu szyny, nie można usunąć kompatybilności/mocy po jej ustawieniu (przez jakiś inny GRF).
+
+== Powered rail type list (0F) ==
+
+Lista rodzajów szyn, na których napędzane są pociągi tego rodzaju szyn. Na przykład. silniki typu "normalna szyna" są zasilane również na "szynie zelektryfikowanej" - i "trzeciej szynie" .
+
+Taki sam format jak dla właściwości 0E powyżej.
+
+== Rail type flags (10) ==
+
+Flagi do zdefiniowania właściwości związanych z typem szyny:
+
+{| class="wikitable"
+|-
+!'''Bit'''
+!'''Wartość'''
+!'''Wersja'''
+!'''Znaczenie'''
+|-
+|0
+|1
+||{{pl/Development/NewGRF/ottdp|1.0}}
+|Narysuj sieć trakcyjną dla tego typu szyn
+|-
+|1
+|2
+||{{pl/Development/NewGRF/ottdp|1.1|no|ottdrev=r20049}}
+|Nie zezwalaj na przejazdy kolejowe dla tego typu szyn
+|-
+|2
+|4
+||{{pl/Development/NewGRF/ottdp|1.9|no|ottdrev=e3b440c9c5}}
+|Ukryj ten typ szyny w menu budowy
+|-
+|3
+|8
+||{{pl/Development/NewGRF/ottdp|1.10|no|ottdrev=g42046af933}}
+|Włącz korzystanie ze wstępnie ustawionych ikonek nakładki
+|-
+|4
+|16
+||{{pl/Development/NewGRF/ottdp|1.10|no|ottdrev=gcc5f175615}}
+|Zawsze zezwalaj na zakręty o 90 stopni
+|-
+|5
+|32
+||{{pl/Development/NewGRF/ottdp|1.10|no|ottdrev=gcc5f175615}}
+|Zawsze zakazuj skrętów o 90 stopni (ma pierwszeństwo przed bitem 4)
+|}
+
+==<span id="Curve_Speed_advantage_multiplier_(11)"></span><span title="Curve Speed advantage multiplier (11)" id="Curve_Speed_advantage_multiplier_.2811.29">Mnożnik przewagi na krzywej prędkości (11)</span>==
+
+Ta właściwość ustawia mnożnik na przewagę prędkości łuku, którą otrzymują wszystkie pociągi kursujące na tym typie torów. Przewaga prędkości krzywej bazowej wynika z pomnożenia wartości tej właściwości przez przewagę prędkości bazowej - która zależy od długości krzywej w wagonach:
+
+{| class="wikitable"
+|-
+!'''<span title='Curve Length'>Długość krzywej</span>'''
+!'''Prędkość bazowa <span title="Śre.">Adv.</span>'''
+|-
+|0 (90° turn) 
+|30
+|-
+|1 (2x45° turn) 
+|44
+|-
+|2
+| 55
+|-
+|3
+| 66
+|-
+|4
+| 75
+|-
+|5
+| 84
+|-
+|6
+| 91
+|-
+|7
+| 98
+|-
+|8
+| 103
+|-
+|9
+| 108
+|-
+|10
+| 111
+|-
+|11
+| 114
+|-
+|12+
+| 115
+|}
+
+<span title="en. Curve length">"Długość krzywej"</span> to średnia liczba wagonów pociągu między zwojami. Jednak bardzo ostre zakręty (wartości 0 i 1) nie są uśredniane w dłuższych pociągach.
+
+Maksymalna prędkość pociągu na łuku jest określona przez "przewagę prędkości podstawowej" * (2 + "właściwość 11"). Pociągi przechylające otrzymują dodatkową premię w wysokości 20% do tej wartości.
+
+Dla domyślnych typów szyn ta właściwość wynosi 0 dla szyny normalnej i szyny zelektryfikowanej, 1 dla szyny jednoszynowej i 2 dla szyny maglev.
+
+== Station (and depot) graphics (12) ==
+
+Ta właściwość określa domyślną grafikę dla stacji. Jeśli nie zdefiniowano żadnych 'sprites' zajezdni, definiuje to jednocześnie 'sprites' , które mają być używane. Istnieją trzy rodzaje domyślnych stacji (i składów), zwykle związanych z torami kolejowymi, jednoszynowymi i maglevowymi. Prawidłowe wartości to:
+
+{| class="wikitable"
+|-
+!'''Wartość'''
+!'''Znaczenie'''
+|-
+|0
+|Normal Rail
+|-
+|1
+|Monorail
+|-
+|2
+|Maglev
+|}
+
+== Speed limit (14) ==
+
+Ograniczenie prędkości w mph*1.6  (ok. km/h). Ustaw na "0" w ogóle bez limitu.
+
+== Acceleration model (15) ==
+
+Ta właściwość definiuje zastosowany model przyspieszenia. Prawidłowe wartości mieszczą się w zakresie od 0 do 2:
+
+{| class="wikitable"
+|-
+!'''Wartość'''
+!'''Znaczenie'''
+|-
+|0
+|Normal Rail
+|-
+|1
+|Monorail
+|-
+|2
+|Maglev
+|}
+
+Obecnie nie ma różnicy między normalną koleją a koleją jednoszynową.
+
+== Map colour (16) ==
+
+Ta właściwość określa kolor, jaki ten typ ścieżki jest rysowany w widoku minimapy. Wartość bajtu określa wpis koloru w <!--[[PalettesAndCoordinates|DOS palette]]-->[http://newgrf-specs.tt-wiki.net/wiki/PalettesAndCoordinates DOS palette].
+
+== Introduction date (17) ==
+
+Ta właściwość określa sformatowaną datę wprowadzenia daty tego typu szyny. Z tym zestawem właściwości typ szyny zostanie wprowadzony w dniu (lub po tej dacie), gdy wszystkie wymagane typy szyny będą dostępne dla firmy gracza lub za każdym razem, gdy pojazd wykorzystujący ten typ szyny zostanie wprowadzony, w zależności od tego, co nastąpi wcześniej.
+
+== Introduction required rail type list (18) ==
+
+Lista rodzajów szyn na tym szynie musi być dostępna dla firmy gracza, aby ten typ szyny mógł zostać wprowadzony w dniu wprowadzenia (lub później). Limit ten nie ma zastosowania, gdy typ szyny zostaje wprowadzony przez wprowadzenie pojazdu.
+
+Taki sam format jak dla właściwości 0E powyżej.
+
+Może to być na przykład wykorzystane do wprowadzenia trzeciej szyny z typem sieci trakcyjnej, gdy dostępne są zarówno typy trzeciej szyny, jak i sieci trakcyjnej.
+
+== Introduced rail type list (19) ==
+
+Lista rodzajów szyn wprowadzanych po wprowadzeniu tego typu szyn. Na przykład, aby upewnić się, że po wprowadzeniu typu szybkiej szyny istnieje wariant wolny.
+
+Taki sam format jak dla właściwości 0E powyżej.
+
+== Sort order (1A) ==
+
+Właściwość wpływająca na porządek sortowania list rozwijanych z typami szyn. Wartości domyślne są następujące:
+
+{| class="wikitable"
+|-
+!'''Wartość'''
+!'''Znaczenie'''
+|-
+|07
+|Normal Rail
+|-
+|17
+|Electrified Rail
+|-
+|27
+|Monorail
+|-
+|37
+|Maglev
+|-
+|n7
+|Railtype #n
+|}
+
+Zatem typ szyny, który (wewnętrznie) otrzymuje indeks 8, otrzyma wartość domyślną 87. Te wartości domyślne mają zachować porządek, gdy ta właściwość nie jest obsługiwana tak, jak były.
+
+== Rail type name (1B) ==
+
+ID ciągu nazwy typu szyny.
+
+{{pl/Development/NewGRF/grfTill|7}} W przypadku GRF w wersji 7 lub wcześniejszej ustaw właściwość 1B ''po'' <small>''(after)''</small> ustawieniu właściwości 09, ponieważ właściwość 09 ustawia również nazwę typu szyny dla kompatybilności wstecznej.
+
+== Alternate rail type labels (1D) ==
+
+Lista alternatywnych etykiet, które "przekierowują" <small>''(redirected)''</small> na ten typ szyny, gdy są używane np. jako typ toru pociągu lub podczas badania, czy zdefiniowano etykietę. Przekierowanie następuje tylko wtedy, gdy alternatywna etykieta nie jest zdefiniowana jako prawdziwy typ szyny. Taki sam format jak dla właściwości 0E powyżej.
+
+Alternatywne etykiety nie są brane pod uwagę przy ocenie właściwości 0E, 0F, 18 i 19.
+
+= Przykład =
+
+Do napisania

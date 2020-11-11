@@ -1,0 +1,235 @@
+{{pl/Development/NewGRF/inne strony|en=newgrf-specs.tt-wiki.net/wiki/Action3/Roadtypes|pl=pl/Development/NewGRF/NFO Specs/Action3/Roadtypes |sub=nfo}}
+<!--{{-}}<br>--><!--{{ambox | text = w trakcie edycji.}} -->
+== Wprowadzenie ==
+
+Action 3 przypisuje zestawy graficzne (do których odwołuje się (łańcuchy) [[pl/Development/NewGRF/NFO Specs/Action2/Main Page|action 2(e]] ) do ID''`ów'' funkcji.
+
+{{pl/Development/NewGRF/ottdp|1.10}} Typy dróg są dostępne tylko w OpenTTD &gt; 1.10
+
+== Format ==
+
+Format danych zależy od funkcji. Wygląda na typy dróg
+
+<pre> &lt;Sprite-number&gt; * &lt;Length&gt; 03 12 &lt;n-id&gt; &lt;ids...&gt; &lt;num-cid&gt; &lt;cargo-type&gt; &lt;set-ID&gt;... &lt;default set-ID&gt;</pre>
+
+{| class="wikitable"
+|-
+!'''Element'''
+![[pl/Development/NewGRF/NFO Specs/GRFActionsDetailed|'''Rozmiar''']]
+!'''Opis'''
+|-
+|&lt;Sprite-number&gt;
+|dec
+|A sequential sprite number
+|-
+|&lt;length&gt;
+|dec
+|The total number of bytes used in this action
+|-
+|03
+|B
+|Defines action 03
+|-
+|12
+|B
+|The feature byte for roadtypes
+|-
+|&lt;n-id&gt;
+|B
+|Number of IDs this action 3 associates graphics with
+|-
+|&lt;ids...&gt;
+|B/B*
+|IDs of the current feature this action 3 associates graphics with. There must be as many IDs as &lt;n-id&gt; specifies
+|-
+|&lt;num-cid&gt;
+|B
+|Number of different "cargo" types to support
+|-
+|&lt;cargo-type&gt;
+|B
+|"Cargo" type for which to use the following set-ID
+|-
+|&lt;set-ID&gt;
+|W
+|Set-ID (from action 2 or from a varaction2 chain) to use for this cargo type
+|-
+|&lt;default set-ID&gt;
+|W
+|Default set-ID to use if none of the above matches
+|}
+
+== Description ==
+
+=== Sprite-number ===
+
+To tylko numer, na którym jesteś.
+
+=== Length ===
+
+Policz liczbę bajtów w tej akcji.
+
+=== n-id ===
+
+Ile elementów bieżącej funkcji to działanie 3 określa nową grafikę. Jeśli jest więcej niż jeden, wszystkie wymienione elementy otrzymają tę samą grafikę. Jeśli ta wartość ma ustawiony bit 7 (tj. Dodano 80), oznacza to pominięcie wagonu. Zobacz  [[pl/Development/NewGRF/NFO Specs/Action3LiveryOverride|Action 3 - Livery Override]] , aby uzyskać więcej informacji na temat tej funkcji.
+
+Możesz utworzyć definicję z n-id równym zero (a zatem bez id idących dalej). &nbsp;Tworzy to ogólną definicję specyficzną dla funkcji niepowiązaną z żadnym konkretnym elementem. &nbsp;W tej chwili jest to używane do ogólnych wywołań zwrotnych, ale ostatecznie może zostać rozszerzone na inne funkcje.
+
+=== ids ===
+
+Identyfikatory funkcji, dla których należy użyć tej akcji 3. Wszystkie identyfikatory są liczone od pierwszego w swojej klasie, tj. Pierwszy pojazd drogowy ma 00, podobnie jak pierwszy samolot, pierwszy statek i pierwszy pojazd kolejowy.
+
+=== num-cid ===
+
+Liczba poniższych definicji typów "ładunków" .
+
+=== cargo-type ===
+
+Typy dróg ponownie wykorzystują w swojej Action3 definicję typ-'cargo' w celu przypisania rodzaju grafiki zdefiniowanej przez powiązany set-ID :
+
+{| class="wikitable"
+|-
+!'Cargo' Typ
+!Sprite Typ
+!#Sprites
+!Użytkowanie
+|-
+|00
+|Ikony i kursory
+|12
+|4 kierunki ruchu drogowego, autoroad, zajezdnia, tunel i konwersja drogi. Najpierw wszystkie ikony, potem wszystkie kursory.
+|-
+|01
+|valign=middle|<span title='Track overlays'>'Nakładki torów'</span><!--<ref name=leftout>-->{{pl/Development/NewGRF/NFO Specs/refs|name=leftout|text=Wszystkie lub żadne z tych sprite'ów powinny być.|1}}<!--</ref>-->
+|19
+|11 kombinacji roadbit, 4 stoki i 4 ślepe zaułki. Te sprite'y są opcjonalne dla rodzajów dróg.
+|-
+|valign=middle|02
+|valign=middle|<span title=Underlay>'Podkład'</span><!--<ref name=leftout />-->{{pl/Development/NewGRF/NFO Specs/refs|name=leftout|<!--2-->1-1}}
+|valign=middle|19
+|valign=middle|11 kombinacji roadbit, 4 stoki i 4 ślepe zaułki. Te sprite'y są wymagane.
+<!--
+|-
+|03
+|Tunel<ref name=leftout />
+|4
+|1 sprite dla każdego kierunku. Sprite to nakładka na tor w istniejącej grafice tunelu. Oryginalny sprite ziemi jest rysowany, a następnie nakładka, a następnie ewentualnie pociąg i oryginalna głowica tunelu jest rysowana na górze. Dzięki temu zgodność z różnymi typami krajobrazu. Kolejność sprite: SW, NW, NE, SE. {{extraZi/ottd/Pl|1.2|r23952}} Jeśli zdefiniowany jest również typ 0A, ten sprite jest używany nieco inaczej, patrz [[#Tunnel portal overlay (0A)|Tunnel portal overlay (0A)]].
+-->
+|-
+|04
+|Przód trakcyjny
+|29
+|11 kombinacji roadbit, 4 zbocza, 4 ślepe zaułki, 4 tunele, 2 mosty środkowe, 4 rampy mostowe
+|-
+|05
+|'Tył' trakcji
+|29
+|11 kombinacji roadbit, 4 zbocza, 4 ślepe zaułki, 4 tunele (nieużywane), 2 mosty środkowe, 4 rampy mostowe
+|-
+|06
+|valign=middle|'Powierzchnie' mostów<!--<ref name=leftout />-->{{pl/Development/NewGRF/NFO Specs/refs|name=leftout|<!--3-->1-2}}
+|6
+|2 środek mostu, 4 rampy mostowe
+|-
+|08
+|Depoty
+|6
+|Jest zgodny z oryginalnym układem sprite'ów magazynowych. Jeśli nie są obecne, są rysowane domyślne sprite'y magazynowe (w zależności od flagi trakcyjnej) oraz nakładka na tor. Jeśli jest obecny, sprite'y zajezdni mają zawierać grafikę nakładki toru.
+<!--
+|-
+|0A
+|Nakładka portalu tunelu<ref name=tunneloverlay>Należy dostarczyć sprite'y 'wszystkie lub żadne' , jeżeli sprite'y mają być.</ref>
+|4
+|{{extraZi/ottd/Pl|1.2|r23952}} 1 sprite dla każdego kierunku, kolejność jest SW, NW, NE, SE.
+-->
+|-
+|0A
+|Przystanki drogowe
+|4
+|<span title=Overlays>'Nakładki'</span> na przystanki drogowe
+|}
+<!--
+<references />-->{{pl/Development/NewGRF/NFO Specs/przypisy|name=leftout|2001}}<!-- 1.0
+ -->{{pl/Development/NewGRF/NFO Specs/przypisy|name=leftout|2001-1}}<!-- 1.1
+ -->{{pl/Development/NewGRF/NFO Specs/przypisy|name=leftout|4101-2}}<!-- 1.2
+  -->{{pl/Development/NewGRF/NFO Specs/refs|name=leftout|text=Wszystkie lub żadne z tych sprite'ów powinny być.|<!--1-->przypis}}<!-- 1-0
+  -->{{pl/Development/NewGRF/NFO Specs/refs|name=leftout|<!--2--><!--1-1-->przypis}}<!-- 1-1
+  -->{{pl/Development/NewGRF/NFO Specs/refs|name=leftout|<!--3--><!--1-2-->przypis}}<!-- 1-2 -->
+
+==== GUI sprites (00) ====
+
+[[File:en/Archive/Development/Nrt gui.png]]
+
+==== Road underlay (02) ====
+
+[[File:en/Archive/Development/Nrt underlay.png]]
+
+==== Catenary front (04)====
+
+[[File:en/Archive/Development/Nrt catenary front.png]]
+
+==== Catenary back (05) ====
+
+[[File:en/Archive/Development/Nrt catenary back.png]]
+
+==== Depot sprites (08) ====
+
+[[File:en/Archive/Development/Nrt depot.png]]
+
+{| class="wikitable"
+|-
+!Sprite Number
+!Usage
+|-
+|0
+| &nbsp; &nbsp;NE wall for SE-entry depot.
+|-
+|1
+| &nbsp; &nbsp;Depot building for SE-entry depot.
+|-
+|2
+| &nbsp; &nbsp;NW wall for SW-entry depot.
+|-
+|3
+| &nbsp; &nbsp;Depot building for SW-entry depot.
+|-
+|4
+| &nbsp; &nbsp;Depot building for NE-entry depot.
+|-
+|5
+| &nbsp; &nbsp;Depot building for NW-entry depot.
+|}
+
+==== Bridge surfaces (06) ====
+
+[[File:en/Archive/Development/Nrt bridge.png]]
+
+==== Road stops (0A) ====
+
+[[File:en/Archive/Development/Nrt drivein.png]]
+<!--
+==== Tunnel portal overlay (0A) ====
+
+Jeśli zdefiniowano ten rodzaj 'ładunku' , tunele dla tego rodzaju kolei będą rysowane inaczej.
+
+Najpierw rysuje się sprite podstawy podkładu z trawy, następnie sprite powraca od typu 03. Następnie trenuje sprite, jeśli ma zastosowanie, a następnie nakładkę na trawę, a na koniec sprite z tego typu (0A). Duszki traw są zdefiniowane w zestawie podstawowym i nie zawierają żadnych części torów ani portalu, więc muszą być w pełni dostarczone przez duszki typu kolejowego.
+
+Ilustracja: [[File:RailtypeTunnelExample.png]]
+
+Zmienna 10 może być użyta do rozróżnienia kilku żądanych wariantów tunelu:
+{| 
+|-
+! Lowest byte of [[user:extrazi/specs.tt/GlobalVariables/Pl#Extra_callback_info_.2810_.2F_-.29_and_.2818_.2F_-.29|variable 10]] !! Meaning
+|-
+| 00 || This is a plain portal without any extra features (like tracks above).
+|-
+| all other values || reserved for future extensions (e.g. basetunnels).
+|}
+The other bytes of variable 10 are reserved, and must be masked.
+-->
+
+=== default set-ID ===
+
+Domyślny ID zestawu <small>''(set-ID)''</small> byłby używany do wywołań zwrotnych typu drogowego. Ponieważ jednak nie ma obecnie wywołań zwrotnych dla typów dróg, zawsze powinno to skutkować  [[pl/Development/NewGRF/NFO Specs/Action2/Only Callback Failure|callback-failure]] .
+
+== Przykład ==

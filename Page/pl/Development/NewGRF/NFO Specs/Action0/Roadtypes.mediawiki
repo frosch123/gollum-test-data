@@ -1,0 +1,282 @@
+{{pl/Development/NewGRF/inne strony|en=newgrf-specs.tt-wiki.net/wiki/Action0/Roadtypes|pl=pl/Development/NewGRF/NFO Specs/Action0/Roadtypes |sub=nfo}}
+<!--{{-}}<br>--><!--{{ambox | text = w trakcie edycji.}}--><!-- -->
+'''''Action 0 properties for road types'''''
+
+= Action 0 - Properties for road types =
+
+Definiowanie właściwości rodzajów dróg.
+
+Można zdefiniować do 63 rodzajów dróg.
+
+== Properties ==
+
+{| class="wikitable"
+|-
+!'''Numer'''
+!'''Wersja'''
+!'''Rozmiar'''
+!'''Opis'''
+|-
+|08
+|{{pl/Development/NewGRF/ottdp|1.10}}
+|4*B
+|Etykieta typu drogi
+|-
+|09
+|{{pl/Development/NewGRF/ottdp|1.10}}
+|W
+|StringID: Utwórz napis <small>''(caption)''</small> paska narzędzi drogi<!--<ref>{{grfTill|7}} For GRF version 7 or earlier, setting property 09 sets property 1B as well.</ref>-->
+|-
+|0A
+|{{pl/Development/NewGRF/ottdp|1.10}}
+|W
+|StringID: Tekst listy rozwijanej budowy dróg
+|-
+|0B
+|{{pl/Development/NewGRF/ottdp|1.10}}
+|W
+|StringID: Tworzy 'podpis' <small>''(caption)''</small> okna pojazdu
+|-
+|0C
+|{{pl/Development/NewGRF/ottdp|1.10}}
+|W
+|StringID: Automatyczne zastępowanie tekstu
+|-
+|0D
+|{{pl/Development/NewGRF/ottdp|1.10}}
+|W
+|StringID: Nowego 'silnika' text
+|-
+|0F
+|{{pl/Development/NewGRF/ottdp|1.10}}
+|B n*D 
+|valign=middle|Lista typów dróg zasilanych <small>''(powered)''</small><!--<ref name="alt_label">-->{{pl/Development/NewGRF/NFO Specs/refs|name=alt_label|text=Etykiety typu drogi na tej liście ''nie'' są rozwiązywane za pomocą alternatywnej listy etykiet.|1}}<!--</ref>-->
+|-
+|10
+|{{pl/Development/NewGRF/ottdp|1.10}}
+|B
+|Flagi drogowe
+|-
+|13
+|{{pl/Development/NewGRF/ottdp|1.10}}
+|W
+|Koszty budowy
+|-
+|14
+|{{pl/Development/NewGRF/ottdp|1.10}}
+|W
+|Limit prędkości
+|-
+|16
+|{{pl/Development/NewGRF/ottdp|1.10}}
+|B
+|Kolor minimapy
+|-
+|17
+|{{pl/Development/NewGRF/ottdp|1.10}}
+|D
+|Data wprowadzenia
+|-
+|18
+|{{pl/Development/NewGRF/ottdp|1.10}}
+|B n*D 
+|valign=middle|Wprowadzenie wymagana lista typu drogi<!--<ref name="alt_label" />-->{{pl/Development/NewGRF/NFO Specs/refs|name=alt_label|<!--2-->1-1}}
+|-
+|19
+|{{pl/Development/NewGRF/ottdp|1.10}}
+|B n*D 
+|valign=middle|Wprowadzono listę typu drogi<!--<ref name="alt_label" />-->{{pl/Development/NewGRF/NFO Specs/refs|name=alt_label|<!--3-->1-2}}
+|-
+|1A
+|{{pl/Development/NewGRF/ottdp|1.10}}
+|B
+|Porządek sortowania
+|-
+|1B
+|{{pl/Development/NewGRF/ottdp|1.10}}
+|W
+|StringID: Nazwa typu drogi<!--<ref>{{grfTill|7}} For GRF version 7 or earlier, set property 1B ''after'' setting property 09, as property 09 sets the rail type name as well for backwards compatibility.</ref>-->
+|-
+|1C
+|{{pl/Development/NewGRF/ottdp|1.10}}
+|W
+|Współczynnik kosztów utrzymania infrastruktury
+|-
+|1D
+|{{pl/Development/NewGRF/ottdp|1.10}}
+|B n*D
+|Alternatywne etykiety typu drogi, które należy "przekierować" na ten typ drogi
+|}
+
+<!--<references />-->{{pl/Development/NewGRF/NFO Specs/przypisy|2001|name=alt_label}}<!--
+-->{{pl/Development/NewGRF/NFO Specs/przypisy|name=alt_label|2001-1}}<!--
+-->{{pl/Development/NewGRF/NFO Specs/przypisy|name=alt_label|4101-2}}<!--
+ -->{{pl/Development/NewGRF/NFO Specs/refs|name=alt_label|text=Etykiety typu drogi na tej liście ''nie'' są rozwiązywane za pomocą alternatywnej listy etykiet.|<!--1-->przypis}}<!--
+ -->{{pl/Development/NewGRF/NFO Specs/refs|name=alt_label|<!--2--><!--1-1-->przypis}}<!--
+ -->{{pl/Development/NewGRF/NFO Specs/refs|name=alt_label|<!--3--><!--1-2-->przypis}}
+
+W NFO identyfikatory typów dróg będą lokalne GRF, z identyfikatorem mapowania etykiety. Dlatego, aby zmodyfikować istniejący typ drogi, określ jego etykietę we właściwości 08. Aby utworzyć nowy typ drogi, ponownie określ swoją etykietę we właściwości 08. W ten sposób złożone mechanizmy GRM nie będą musiały przypisywać identyfikatorów. Jeśli etykieta 'koliduje' <small>''(clashes)''</small> z innym GRF, to jeden GRF skończy modyfikować właściwości zamiast tworzyć nowy typ drogi.
+
+Gdy tworzony jest nowy typ drogi, zapełniane są informacjami z pierwszego typu drogi, z tym wyjątkiem, że lista obsługiwanych pojazdów zawiera tylko tworzony typ drogi. Nie należy jednak zakładać żadnych wartości domyślnych, ponieważ pierwszy typ drogi mógł zostać zmodyfikowany.
+
+== Vehicle and Roadtype availability ==
+
+Dostępność i kompatybilność pojazdu i rodzaju drogi zależy od wielu właściwości.
+Zasadniczo pojazd określa, jaki jest typ drogi, a typy dróg określają wzajemną kompatybilność.
+* Pojazd istnieje, jeśli zdefiniowano jego typ drogi (podpora 05 pojazdu drogowego). W przeciwnym razie pojazd jest wyłączony.
+* Kiedy pojazd jest wprowadzany, zawsze wprowadza swój typ drogi (prop pojazdu drogowego 05).
+* Typ drogi jest wprowadzany, jeśli spełniony jest co najmniej jeden z następujących warunków:
+** Wprowadzono pojazd, który odnosi się do typu drogi (podpora pojazdu drogowego 05).
+** Wprowadzono kolejny typ drogi, który odwołuje się do typu drogi za pomocą wprowadzonej listy rodzajów dróg (prop typu drogi 19).
+** Data wprowadzenia (rekwizyt typu 17) minęła i wszystkie wymagane typy dróg (rekwizyt typu 18) są dostępne.
+
+Poprzez właściwość typu drogi 1D można zdefiniować wiele rodzajów dróg, które należy uznać za równoważne z typem drogi.
+Wpływa to na interpretację właściwości pojazdu drogowego 05. Jeśli właściwość pojazdu drogowego 05 odnosi się do niezdefiniowanego typu drogi, wówczas
+właściwość 1D typu drogi jest sprawdzana dla wszystkich zdefiniowanych typów dróg, czy pojazd może zostać ponownie przypisany do innego typu drogi.
+W przeciwnym razie pojazd jest wyłączony.
+
+== Road type label (08) ==
+
+Są to unikatowe na skalę światową czteroliterowe identyfikatory dla określonych typów dróg (analogicznie do [[pl/Development/NewGRF/NFO Specs/Action0/Cargos#cargo-label-17|cargo labels]] ), używane do udostępniania różnych typów dróg z grfs pojazdów drogowych. Zarezerwowane etykiety dla domyślnych typów dróg to:
+
+{| class="wikitable"
+|-
+!'''Label'''
+!'''Road Type'''
+|-
+|ROAD 
+| Normal Road
+|-
+|ELRD 
+| Electrified Road
+|}
+
+Zestawy typów dróg mogą wykorzystywać do 63 rodzajów dróg i muszą określać własne  [[pl/Development/NewGRF/NFO Specs/TracktypeLabels|labels]] .
+
+Zobacz także  [[pl/Development/NewGRF/NFO Specs/Action0/Global Settings#roadtype-translation-table-16|Road Type Translation Table]] w celu uzyskania dalszych informacji.
+
+== Build road toolbar caption (09) ==
+
+Identyfikator ciągu nazwy rodzaju drogi, jak pokazano w podpisie paska narzędzi.
+
+== Road construction dropdown text (0A) ==
+
+ID ciągu tekstu w menu rozwijanym wszystkich typów dróg.
+
+Ciąg ten nigdy nie może zaczynać się od kodu kontroli koloru.
+
+== Build vehicle window caption (0B) ==
+
+ID ciągu dla podpisu okna pojazdu.
+
+== Autoreplace text (0C) ==
+
+ID ciągu dla typu drogi pokazanego w oknie autoreplace.
+
+== New engines (0D) ==
+
+StringID do wyświetlania tekstów typu "Wynaleźliśmy nowy &lt;road type&gt; silnik".
+
+== Powered road type list (0F) ==
+
+Lista rodzajów dróg, na których napędzane są pojazdy drogowe tego rodzaju dróg. Na przykład. pojazdy typu "normalna droga" są napędzane również na "zelektryfikowanej drodze" - i typie "drogi ciągnionej" <small>''(haul-road)''</small> . Pamiętaj, że nie ma  "listy rodzajów dróg zgodnych" , ponieważ nie ma różnicy między "zasilanymi" <small>''(powered)''</small> a "kompatybilnymi" dla typów dróg
+
+Format to:
+
+<pre>0E &lt;nvar&gt; (&lt;road type label&gt;){n}</pre>
+
+Oznacza to, że podajesz liczbę zgodnych typów dróg w jednym bajcie, a następnie listę etykiet o takiej długości. Typ drogi jest automatycznie zasilany sam z siebie, więc nie musisz wymieniać bieżącego typu drogi.
+
+Należy pamiętać, że te właściwości dotyczą pojazdów drogowych tego rodzaju dróg, a nie samej drogi. Jeśli chcesz, aby pojazdy drogowe innych typów dróg mogły jeździć na twoich drogach, musisz ustawić właściwość typów dróg napędzanych dla każdego rodzaju drogi. Ustawienie tych właściwości zachowuje się zawsze przyrostowo, więc musisz tylko ustawić dodatkowe bity dla każdego rodzaju drogi, nie możesz usunąć zasilania, gdy jest ustawione (przez jakiś inny GRF).
+
+==<span id="Road_type_flags_(10)"></span><span title="Road type flags (10)" id="Road_type_flags_.2810.29">Flagi typów dróg (10)</span>==
+
+Flagi do zdefiniowania właściwości związanych z typem drogi:
+
+{| class="wikitable"
+|-
+!'''Bit'''
+!'''Wartość'''
+!'''Znaczenie'''
+|-
+|0
+|1
+|Narysuj sieć trakcyjną dla tego typu drogi
+|-
+|1
+|2
+|Nie zezwalaj na przejazdy jednopoziomowe dla tego typu dróg
+|-
+|2
+|4
+|Nie zezwalaj na budowę domów wzdłuż typu drogi
+|-
+|3
+|8
+|Ukryj ten typ drogi w menu budowy
+|-
+|4
+|16
+|Umożliwia budowanie typu drogi przez miasta, wybierane według najwyższego ograniczenia prędkości (domyślnie etykieta DROGA, jeśli nie ma ograniczeń prędkości?)
+|}
+
+== Speed limit (14) ==
+
+Ograniczenie prędkości w mph*0.8 (około 0.5km/h). Ustaw na "0" w ogóle bez limitu.
+
+== Map colour (16) ==
+
+Ta właściwość określa kolor, jaki ten typ drogi jest rysowany w widoku minimapy. Wartość bajtu określa wpis koloru w <!--[[PalettesAndCoordinates|DOS palette]]--> [http://newgrf-specs.tt-wiki.net/wiki/PalettesAndCoordinates DOS palette] .
+
+== Introduction date (17) ==
+
+Ta właściwość określa sformatowaną datę wprowadzenia daty tego typu drogi. Przy tym ustawieniu tej właściwości typ drogi zostanie wprowadzony w dniu (lub po tej dacie), gdy wszystkie wymagane typy dróg będą dostępne dla firmy gracza lub za każdym razem, gdy pojazd korzystający z tego rodzaju drogi zostanie wprowadzony w zależności od tego, co nastąpi wcześniej.
+
+== Introduction required road type list (18) ==
+
+Lista rodzajów dróg na tej drodze musi być dostępna dla firmy gracza, aby ten typ drogi mógł zostać wprowadzony w dniu wprowadzenia lub później. Limit ten nie ma zastosowania, gdy typ drogi wprowadzany jest przez wprowadzenie pojazdu.
+
+Taki sam format jak dla właściwości 0F powyżej.
+
+Można to na przykład wykorzystać do wprowadzenia typu drogi z latarniami ulicznymi, gdy dostępne są zarówno droga utwardzona, jak i zelektryfikowana.
+
+== Introduced road type list (19) ==
+
+Lista typów dróg, które są wprowadzane po wprowadzeniu tego typu drogi. Na przykład, aby upewnić się, że po wprowadzeniu typu szybkiej drogi istnieje wariant wolny.
+
+Taki sam format jak dla właściwości 0F powyżej.
+
+== Sort order (1A) ==
+
+Właściwość wpływająca na porządek sortowania list rozwijanych z typami dróg. Wartości domyślne są następujące:
+
+{| class="wikitable"
+|-
+!'''Value'''
+!'''Meaning'''
+|-
+|07
+|Normal Road
+|-
+|17
+|Electrified Road
+|-
+|n7
+|Roadtype #n
+|}
+
+Zatem typ drogi, który (wewnętrznie) otrzymuje indeks 8, otrzyma wartość domyślną 87. Te wartości domyślne mają zachować porządek, gdy ta właściwość nie jest obsługiwana tak, jak były.
+
+== Road type name (1B) ==
+
+ID ciągu nazwy nazwy rodzaju drogi.
+
+== Alternate road type labels (1D) ==
+
+Lista alternatywnych etykiet, które "przekierowują" na ten typ drogi, gdy są używane, np. jako typ drogi pojazdu drogowego lub podczas badania, czy zdefiniowano etykietę. Przekierowanie następuje tylko wtedy, gdy alternatywna etykieta nie jest zdefiniowana jako prawdziwy typ drogi. Taki sam format jak dla właściwości 0F powyżej.
+
+Alternatywne etykiety nie są brane pod uwagę przy ocenie właściwości 0F, 18 i 19.
+
+= Przykład =
+
+Do napisania

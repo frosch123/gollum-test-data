@@ -1,0 +1,34 @@
+{{pl/Development/NewGRF/inne strony|en=newgrf-specs.tt-wiki.net/wiki/Action0/Sound_Effects|pl=pl/Development/NewGRF/NFO Specs/Action0/Sound Effects |sub=nfo}}
+<!--{{-}}<br>--><!--{{ambox | text = w trakcie edycji.}}--><!-- -->
+==Wprowadzenie==
+ID''`y'' nowych efektów dźwiękowych to kolejność numeryczna w odpowiedniej akcji 11 plus 49 (73 miejsca dziesiętne), tj. Pierwsza pozycja w akcji 11 ma ID 49, druga ID 4A i tak dalej. &nbsp;Musisz mieć akcję 11 przed tą czynnością 0, w przeciwnym razie nie zostaną zdefiniowane nowe ID''`y''  dźwięku, a zatem nie można ustawić ich właściwości. Nie można bezpośrednio ustawić właściwości ID''`ów'' 0..48, które odnoszą się do oryginalnych dźwięków TTD, z wyjątkiem zastąpienia tych dźwięków za pomocą właściwości 0A.
+
+== Properties ==
+
+{|
+!Właściwość !![[pl/Development/NewGRF/NFO Specs/GRFActionsDetailed|Rozmiar]] !!Version!! Opis
+|-
+|08 ||B ||{{pl/Development/NewGRF/ottdp|0.6|2.5}}||<span title='Relative volume'>'względna głośność'</span>
+|-
+|09 ||B ||{{pl/Development/NewGRF/ottdp|no|2.5}}||<span title=Priority>'Priorytet'</span>
+|-
+|0A ||B ||{{pl/Development/NewGRF/ottdp|0.6|2.5}}||<span title='Override old sound'>'Zastępuje starszy dźwięk'.</span>
+|}
+
+== Description ==
+
+=== Relative volume (08) ===
+
+Ta wartość określa głośność efektu dźwiękowego w stosunku do głośności głównej. Maksymalny to 80h (0dB), minimalny to 0 (-24dB).
+
+Jeśli nie jest ustawiony, domyślnie ustawiony jest na 80 godzin.
+
+=== Priority (09) ===
+
+Ta wartość ma znaczenie tylko w wersji DOS, w której istnieją ograniczone kanały miksowania. Im niższy jest ten bajt, tym wyższy jest priorytet dźwięku. Jeśli dźwięk musi być odtwarzany, gdy wszystkie kanały miksowania są zajęte, mikser zatrzyma jeden z dźwięków o niższym priorytecie. Mniej ważne dźwięki powinny mieć ten bajt wyżej.
+
+Jeśli nie jest ustawiony, wartość domyślna to 0.
+
+=== Override old sound (0A) ===
+
+Zastępuje podany stary dźwięk (00h..48h) z bieżącym. Zmienia to również efekt dźwiękowy, aby użyć względnej głośności i priorytetu związanego z bieżącym.

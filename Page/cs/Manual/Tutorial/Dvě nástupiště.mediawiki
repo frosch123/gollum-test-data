@@ -1,19 +1,19 @@
 [[Translation:en/Manual/Tutorial/Two Platforms]]
 
 
-{{en/Manual/Tutorial/Tabs|3|1
+{{en/Tabs|3|1
 |cs/Manual/Tutorial/Dvě nástupiště|1. Dvě nástupiště
 |cs/Manual/Tutorial/Dvě koleje|2. Dvě koleje
 |cs/Manual/Tutorial/Základní síť|3. Základní síť
 }}
 <div style="padding:.5em 1em 1em 1em; border-top:none; background-color:#f1f2fe; color:#000;">
-{{cs/Manual/Cvičení}}
+{{cs/Manual/Tutorial/Cvičení}}
 
 == Dvě nástupiště ==
 Nyní, když máte svou první železniční trať, budete ji zřejmě chtít rozšířit o další nástupiště a vlaky.
 
 Z [[cs/Manual/Tutorial/Vlaky|předchozího návodu]] byste měli mít trať podobající se té na obrázku.
-{{en/Manual/Phototable|[[File:en/Manual/Tutorial/Tutorial single track.png]]|Dvě stanice, trať a vlak}}
+{{en/Phototable|[[File:en/Manual/Tutorial/Tutorial single track.png]]|Dvě stanice, trať a vlak}}
 
 Tento příklad je použit proto, že obě stanice se vejdou do jednoho obrázku. Vy však můžete mít mnohem delší trať s jinak umístěnými nástupišti.
 
@@ -31,13 +31,13 @@ Klikněte na tlačítko [[File:en/Manual/Place signal.png]] '''Umístit návěst
 
 ''V OpenTTD je šest různých druhů návěstidel. Naštěstí pro nás, dva z těchto šesti typů se dají použít v 95% případů. Těmto návěstdlům se říká [[cs/Manual/Signály|Dokonalejší návěstidlo]] a jejich používání je určitě nejsnadnejší. Prozatím můžete všechny ostatní druhy návěstidel ignorovat. Pokud jste se už koukali na okno výběru návěstidel, mohli jste si všimnout, že tlačítek není šest, ale dvanáct. Ty horní jsou semaforová návěstidla a dělají úplně to stejné jako jejich dolní protějšky, světelná návěstidla. Semafory jen vypadají jinak a dávají vaší trati klasičtější vzhled. Pro výuku budeme využívat pouze světelná návěstidla, kvůli jejich snadnějšímu rozeznávání. Ve vašich hrách můžete klidně využívat oboje.''
 
-{{en/Manual/Phototable|[[File:en/Manual/Yapp signalgui.png]]|Pokročilá návěstidla|left}} Dokonalejší návěstidla jsou označená na obrazku vlevo. Návěstidlo více vlevo je takzvané obousměrné dokonalejší návěstidlo. Vlaky přes něj mohou projíždět v obou směrech, ale budou se jím řídit pouze pokud řidič vidí světlo zepředu. Návěstidlo více vpravo, s červonou vodorovnou tabulkou, je dokonalejší jednosměrné návěstidlo. Chová se stejně jako předchozí, ale vlaky ho mohou projet jen z jedné strany (zepředu).
+{{en/Phototable|[[File:en/Manual/Yapp signalgui.png]]|Pokročilá návěstidla|left}} Dokonalejší návěstidla jsou označená na obrazku vlevo. Návěstidlo více vlevo je takzvané obousměrné dokonalejší návěstidlo. Vlaky přes něj mohou projíždět v obou směrech, ale budou se jím řídit pouze pokud řidič vidí světlo zepředu. Návěstidlo více vpravo, s červonou vodorovnou tabulkou, je dokonalejší jednosměrné návěstidlo. Chová se stejně jako předchozí, ale vlaky ho mohou projet jen z jedné strany (zepředu).
 
 Tyhle dokonalejší návěstidla jsou chytrá, protože berou v úvahu trasu po které chce vlak jet. Hned jak jimi vlak projede, "zamluví" jeho cestu. Další vlak na tu stejnou cestu pustí, pokud se nijak  nekříží se zamluvenou trasou jiného vlaku. Pokud potřebuje projet přes zamluvenou cestu, počká na návěstidle, dokud si nebude moct rezervovat svoji cestu. Mějte na paměti jedno důležité pravidlo: návěstidla stavějte pouze tam, kde chcete aby vlaky čekaly! Více detailů si vysvětlíme později. Pokud tyhle věci zatím nezvládáte, prostě pokračujte a udělejete to stejné jako je na obrázcích.
 
 Teď vyberte [[File:en/Manual/Signal Electric Path.png]] '''dokonalejší (PSB) návěstidlo'''. Klikněte na první kus koleje před nástupištěm, abyste návěstidlo postavili. Ujistěte se, že je návěstidlo otočené k nástupišti, pro otočení návěstidla na něj klikněte ještě jednou. To stejné udělejte u druhého nástupiště.
 
-{{en/Manual/Phototable|[[File:en/Manual/Tutorial/Tutorial two platforms.png|400px]]|Druhé nástupiště vybavené návěstidly (klikněte pro zvětšení)|none}}
+{{en/Phototable|[[File:en/Manual/Tutorial/Tutorial two platforms.png|400px]]|Druhé nástupiště vybavené návěstidly (klikněte pro zvětšení)|none}}
 
 Ptáte se, jestli je třeba návěstidlo i před depem? Ne, depa už mají návěstidla zabudovaná, takže potřeba není. Možná jste také četli, že návěstidla nejsou třeba ani před nádražími. Přestože to do určité míry platí pro konečné stanice, není to tak pro průjezdní stanice. Pokud s používáním návěstidel nemáte velké zkušenosti, stejně se doporučuje postavit návěstidla před konečnou stanicí. Nehledě na to, že to vypadá lépe, můžete potom snadněji přestavět konečnou stanici na průjezdnou, bez toho, aniž byste zapomněli na návěstidla a pak zjišťovali, proč vlaky nejezdí tak jak chcete.
 
@@ -46,7 +46,7 @@ Teď už je vše připraveno k přidání druhého vlaku. Klikněte na depo pro 
 
 Navíc, když klonujete vlak a při kliknutí na něj držíte Ctrl, vlaky budou mít ''sdílené příkazy''. To znamená, že když změníte příkazy u jednoho ze dvou vlaků, změna automaticky proběhne i u toho druhého (i u všech ostatních s danými sdílenými příkazy). Tohle se vám v budoucnu může hodit. 
 
-{{en/Manual/Phototable|[[File:en/Manual/Tutorial/Tutorial two trains.png|400px]]|Nádraží se dvěma nástupišti a  návěstidly v provozu (klikněte pro zvětšení)|none}}
+{{en/Phototable|[[File:en/Manual/Tutorial/Tutorial two trains.png|400px]]|Nádraží se dvěma nástupišti a  návěstidly v provozu (klikněte pro zvětšení)|none}}
 
 Teď už máte dva vlaky, co jezdí na stejné trase. Dobrá práce!
 Možná jste si všimli, že některé části tratě na obrázku výše mají tmavší barvu. Tento prvek ukazuje rezervovanou trasu každého vlaku. Tahle možnost je v základním nastavení vypnutá, ale dá se zapnout přes [[cs/Pokročilé nastavení|Pokročilé nastavení]] > Ovládání > Zobrazení > Vyznačovat rezervovanou trať.

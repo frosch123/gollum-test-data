@@ -1,0 +1,90 @@
+{{pl/Development/NewGRF/inne strony|en=newgrf-specs.tt-wiki.net/wiki/Action3LiveryOverride|pl=pl/Development/NewGRF/NFO Specs/Action3LiveryOverride |sub=nfo}}
+{{en/-}}<!--<br>--><!--{{ambox | text = w trakcie edycji.}}--><!-- -->
+<div style="float:right; padding-left:12px; background:none;"><!--{{template:user:Extrazi/NFONavVehicles/Pl}}-->{{pl/Development/NewGRF/NFO Specs/Navigation}}</div>
+
+== Wprowadzenie ==
+
+Specjalny rodzaj akcji 3 nazywa się malowaniem lub ominięcie wagonu. Gdy jest używany, zmienia wygląd wagonów kolejowych, gdy są podłączone do określonego silnika. Umożliwia to posiadanie zestawów pociągów, w których wygląd niektórych wagonów odpowiada wyglądowi silnika.
+
+Umożliwia także zmianę wyglądu wirników śmigłowca, aw przyszłości wygląd efektów wizualnych pociągu, takich jak dym z pary i oleju napędowego.
+
+== How to use it ==
+
+Format zastępowania wagonu jest taki sam jak zwykły wpis czynności 3, z następującymi szczególnymi uwagami:
+* Musi natychmiast nastąpić po wejściu silnika do akcji 3 lub w innym obejściu wagonu (żaden inny rodzaj duszków nie jest dozwolony pomiędzy nimi) (To wymaganie nie jest już obecne, począwszy od TTDPatch 2.0.1 alfa 41.)
+* Jego wartość nvid musi mieć ustawiony bit 7, tj. Musi mieć dodane 80
+* Musi zawierać listę ID''`ów''pojazdów wagonów, dla których ma zostać zastosowane przesłonięcie, oraz ID''`y'' akcji 2 grafiki, które mają zostać użyte do przesłonięcia
+* ID 'sprite' wagonu musi być ustawiony na FD, aby pokazać nową grafikę, aby zastąpienie działało
+* Nie można pominąć tylko pomijania barw za pomocą akcji 7, zawsze trzeba pominąć wszystkie powiązane czynności 3, tj. Od akcji silnika 3 do ostatniej zmiany barw.
+
+Możesz wykonać dowolną liczbę zmian wagonów po akcji silnika 3, jak chcesz, ale nie mogą one być przerywane przez inne 'sprites' (z wyjątkiem, ponieważ od TTDPatch 2.0.1 alfa 41, możliwa akcja 6).
+
+Podczas korzystania z tej funkcji w przypadku przesłonięcia wirnika śmigłowca (lub później, w przypadku przesłonięcia efektu wizualnego) działanie silnika 3 i przesłonięcie wagonu musi mieć ten sam ID pojazdu, co zasadniczo oznacza, że ​​nie jest to przesłonięcie wagonu, ale przesłonięcie silnika. &nbsp;Łatka chwyta ten specjalny przypadek i zamiast tego stosuje się do grafiki rotora.
+
+== Przykład ==
+
+Oto przykład zastąpienia wagonu pasażerskiego, furgonetki pocztowej i wagonu opancerzonego dla silnika pociągu o numerze identyfikacyjnym 28. Grafika silnika została zdefiniowana w działaniu 2 ID 00, grafika dla wagonu pasażerskiego o numerze ID 01 oraz furgonetka pocztowa i opancerzona furgonetka używa tej samej grafiki, co ID 02.
+
+<pre>23 * 7   03 00 01 28 00 00 00
+
+24 * 7   03 00 81 1B 00 01 00
+
+25 * 7   03 00 82 1C 37 00 02 00</pre>
+
+{| class="wikitable"
+|-
+!'''Bajt'''
+!'''Znaczenie'''
+|-
+| colspan="2" | Passenger Carriage <small>''(Wagon)''</small> Override <small>''('Zastąpienie')''</small>
+|-
+|24
+|&lt;sprite-number&gt;
+|-
+|7
+|&lt;length&gt; akcji w bajtach; zacznij liczyć o 03 (&lt;action&gt;)
+|-
+|03
+|&lt;action&gt;: ustawia ten pseudo-'sprite' do działania jako akcja 3
+|-
+|00
+|&lt;feature&gt;: 00 dla trains
+|-
+|81
+|&lt;n-id&gt;: 1 wagon do 'obejścia' <small>''(override)'</small>
+|-
+|1B
+|&lt;ids...&gt;: ID pojazdu (1B - wagon pasażerski)
+|-
+|00
+|&lt;num-cid&gt;: ten wagon nie ma grafiki specyficznej dla ładunku
+|-
+|01 00
+|&lt;def-cid&gt;: użycie action 2 ID 01
+|-
+| colspan="2" | Zastąpienie <small>''(Override)''</small> Mail Van i Armored Van
+|-
+|25
+|&lt;sprite-number&gt;
+|-
+|7
+|&lt;length&gt; akcji w bajtach; zacznij liczyć o 03 (&lt;action&gt;)
+|-
+|03
+|&lt;action&gt;: ustawia ten pseudo-'sprite' do działania jako akcja 3
+|-
+|00
+|&lt;feature&gt;: 00 dla trains
+|-
+|82
+|&lt;n-id&gt;: 2 ID wagonów do zastąpienia <small>''(override)''</small>
+|-
+|1C 37
+|&lt;ids...&gt;: ID pojazdów, 'furgon' pocztowy 1C i 37 'furgon' pancerny
+|-
+|00
+|&lt;num-cid&gt;: te wagony nie mają grafiki specyficznej dla ładunku
+|-
+|02 00
+|&lt;def-cid&gt;: Użycie action 2 ID 02
+|}

@@ -1,0 +1,61 @@
+{{pl/Development/NewGRF/inne strony|en=newgrf-specs.tt-wiki.net/wiki/VariationalAction2/Towns|pl=pl/Development/NewGRF/NFO Specs/VariationalAction2/Towns |sub=nfo}}
+<!--{{-}}<br>--><!--{{ambox | text = w trakcie edycji.}}--><!-- -->
+==Wprowadzenie==
+
+== Variables ==
+
+{| 
+|-
+!Wartość!![[pl/Development/NewGRF/NFO Specs/GRFActionsDetailed|Rozmiar]]!!Wersja!!Zawartość
+|-
+|40||B||{{pl/Development/NewGRF/ottdp| |}}||Większy wpływ miejscowości na tą miejscowość
+|-
+|valign=middle|41||valign=middle|W (B)||{{pl/Development/NewGRF/ottdp| |}}||valign=middle|Indeks miejscowości<!--<ref>-->{{pl/Development/NewGRF/NFO Specs/refs|text=W OpenTTD ta zmienna ma rozmiar słowa, w TTDPatch ta zmienna ma rozmiar bajtu.|1}}<!--</ref>-->
+|-
+|82||W||{{pl/Development/NewGRF/ottdp| |}}||Populacja
+|-
+|94, 96, 98, 9A, 9C||W||{{pl/Development/NewGRF/ottdp| |}}||<span title=radii>'Promienie'</span> <span title=Square>'skweru'</span> [[pl/Development/NewGRF/NFO Specs/TownZones|town zone]] dla  [[pl/Development/NewGRF/NFO Specs/TownZones|town zones]] 0 ... 4
+|-
+|B6||W||{{pl/Development/NewGRF/ottdp| |}}||liczba budynków
+|}
+<!--
+<references />-->{{pl/Development/NewGRF/NFO Specs/przypisy|101}}<!--
+  -->{{pl/Development/NewGRF/NFO Specs/refs|text=W OpenTTD ta zmienna ma rozmiar słowa, w TTDPatch ta zmienna ma rozmiar bajtu.|<!--1-->przypis}} <!-- 1 -->
+
+Dostęp do nich można uzyskać za pomocą działania typu 82/86/8A 2 dla stacji, budynków miejskich lub gałęzi przemysłu.
+
+Dla pozostałych 80+x zmiennych nadaj [http://marcin.ttdpatch.net/sv1codec/TTD-locations.html#_TownArray TTD town structure].
+
+== Description ==
+=== Larger town effect (40) ===
+
+Zwraca to, w jaki sposób ustawienie "największych miast" <small>''(largertowns)''</small> / "economy.larger_towns" wpływa na to miasto:
+
+{| 
+|-
+!Wartość!!Znaczenie
+|-
+|0||largertowns jest włączony, ale nie pozwoli to tej miejscowości rozrosnąć się bardziej niż zwykle
+|-
+|1||largertowns jest włączony, co pozwala na powiększanie tej miejscowości
+|-
+|2||largertowns jest wyłączone, więc żadna miejscowość nie może się rozrastać
+|}
+
+=== Town index (41) ===
+
+Zwraca indeks miasta w tablicy miast. Możesz użyć tej wartości do specjalnego traktowania niektórych miast. (Na przykład pierwsze miasto na mapie można uznać za stolicę i można zezwolić na budowę tam parlamentu, ale nigdzie indziej)
+
+Tylko TTDPatch: ta zmienna ma wartość od 0 do 69 (włącznie).
+
+=== Population (82) ===
+Zwraca liczbę mieszkańców miasta, ale najwyżej 65535.
+
+=== [[pl/Development/NewGRF/NFO Specs/TownZones|Town zone]] radii (94, 96, 98, 9A, 9C) ===
+
+Kwadraty o promieniu 5 [[pl/Development/NewGRF/NFO Specs/TownZones| town zones]] , gdzie zmienna 94 odnosi się do najbardziej zewnętrznej strefy 0, a zmienna 9C do najbardziej wewnętrznej strefy 4.
+
+=== Number of buildings (B6) ===
+Zwraca liczbę budynków, które posiada miasto.
+
+==Przykład==

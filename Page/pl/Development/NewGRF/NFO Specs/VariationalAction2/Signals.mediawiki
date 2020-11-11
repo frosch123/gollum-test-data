@@ -1,0 +1,190 @@
+{{pl/Development/NewGRF/inne strony|en=newgrf-specs.tt-wiki.net/wiki/VariationalAction2/Signals|pl=pl/Development/NewGRF/NFO Specs/VariationalAction2/Signals |sub=nfo}}
+<!--{{-}}<br>--><!--{{ambox | text = w trakcie edycji.}}--><!-- -->
+==<span id="Introduction" title="Introduction">Wprowadzenie</span>==
+
+Jest to dostępne od wersji TTDPatch 2.6 alpha 0 r1247 i późniejszych.
+
+Ten typ VarAction2 wymaga zastosowania zaawansowanych obliczeń: [[pl/Development/NewGRF/NFO Specs/VarAction2Advanced|VarAction2Advanced]]
+
+==<span id="Variables" title="Variables">Zmienne</span>==
+
+==<span id="Description" title="Description">Opis</span>==
+
+===<span id="Variable_10" title="Variable 10">Zmienna 10</span>===
+
+{| 
+|-
+!Bit!!Znaczenie
+|-
+|0||Green
+|-
+|1-3||<span title=facing>'Front'</span>: 0=SW, 1=NE, 2=NW, 3=SE, 4=E, 5=W, 6=S, 7=N
+|-
+|4-5||<span title='Przedsygnały'>'Presignals'</span>: 0=norm, 1=<span title=entrance>'wjazd'</span>, 2=exit, 3=combo
+|-
+|6||Semafor
+|-
+|7||PBS
+|-
+|8||<span title=Ograniczone>'Restricted'</span>
+|-
+|9||<span title=programowalne>'Programowane'</span>
+|-
+|10||<span title='połączony'>'Through'</span>
+|-
+|11||<span title='odwracać'>'Inverted'</span>
+|}
+
+Uwaga: są to te same bity, które byłyby użyte do zamówienia bloku Action5 typu 4.
+
+===<span id="Variable_18" title="Variable 18">Zmienna 18</span>===
+
+{| 
+|-
+!Bit!!Znaczenie
+|-
+|0-7||L5 kafla sygnałowego
+
+&nbsp; 0: track w X
+
+&nbsp; 1: track w Y
+
+&nbsp; 2: track w N
+
+&nbsp; 3: track w S
+
+&nbsp; 4: track w W
+
+&nbsp; 5: track w E
+|-
+|8-15||Niska połowa L3 kafli, bity 4-7-bitowej maski, w tym sygnały obecne poniżej, bity 0-3: typ ścieżki
+|-
+|16-23||Który sygnał jest obecnie rysowany, indeks bitowy maski sygnału L3:
+
+&nbsp; * Do toru w kierunku X:
+
+&nbsp; &nbsp; &nbsp; 6: &nbsp;sygnału w kierunku SW
+
+&nbsp; &nbsp; &nbsp; 7: &nbsp;signal w NE direction
+
+&nbsp; * Dla toru w kierunku Y:
+
+&nbsp; &nbsp; &nbsp; 6: &nbsp;signal w NW direction
+
+&nbsp; &nbsp; &nbsp; 7: &nbsp;signal w SE direction
+
+&nbsp; * Dla tracks w W-E direction:
+
+&nbsp; &nbsp; &nbsp; 4: &nbsp;signal w W direction na torze w narożniku S
+
+&nbsp; &nbsp; &nbsp; 5: &nbsp;sygnału w kierunku E na torze w narożniku S
+
+&nbsp; &nbsp; &nbsp; 6: &nbsp;signal w W direction na track w N corner
+
+&nbsp; &nbsp; &nbsp; 7: &nbsp;signal w E direction ma track w N corner
+
+&nbsp; * Dla tracks w N-S direction:
+
+&nbsp; &nbsp; &nbsp; 4: &nbsp;signal w S direction na track w E corner
+
+&nbsp; &nbsp; &nbsp; 5: &nbsp;signal w N direction na track w E corner
+
+&nbsp; &nbsp; &nbsp; 6: &nbsp;signal w S direction na track w W corner
+
+&nbsp; &nbsp; &nbsp; 7: &nbsp;signal in the N direction on the track in the W corner
+|-
+|24-27||Land/Typ ogrodzenia
+|-
+|28-31||Typ terenu: 0=normal, 1=desert, 2=rainforest, 4=snow
+|}
+
+===<span id="Parameterised_var_60" title="Parameterised var 60">Sparametryzowana zmienna 60</span>===
+
+Parametr to dwa podpisane przesunięcia, które można dodać do współrzędnych kafla.
+
+Niski węzeł jest dodawany do współrzędnej X (od <span title='top-right'>'prawej'</span> do prawej do <span title='bottom-left'>'lewej z lewej'</span>).
+
+Wysoki węzeł jest dodawany do współrzędnej Y (od <span title='top-left'>'lewej górnej'</span> do <span title='bottom-right'>'prawej dolnej'</span>).
+
+Informacje są pobierane z kafla po dopasowaniu współrzędnych, zaczynając od kafla, który jest obecnie rysowany.
+
+{| 
+|-
+!Bit!!Znaczenie
+|-
+|0-7||L5
+|-
+|8-15||L3 niski
+|-
+|16-20||Wysokość bezwzględna kafla<<3
+|-
+|21-25||Mapa nachylenia kafla
+|-
+|26||Kafel ma tego samego właściciela
+|-
+|27||Semafory
+|-
+|28||Kafel ma te same bity <span title=track>'toru'</span>
+|-
+|29||Kafel ma takie samo nachylenie i wysokość
+|-
+|30||Kafel ma sygnalizatory
+|-
+|31||Kafel jest kafel 'track'
+|}
+
+Zwracana wartość <span title=cached>'buforowana'</span> w varaction2var 10
+
+==<span id="Output" title="Output">Output</span>==
+
+===<span id="Callback_return_value" title="Callback return value">Wartość zwracana przez wywołanie zwrotne</span>===
+
+{| 
+|-
+!Bit!!Znaczenie
+|-
+|0||Używaj nowych 'sprites'
+|-
+|1-4||Num sprites, varaction2vars 0x20-2F
+|-
+|5||Użyj <span title=recolour>'zmiennokolorowego'</span> 'sprite' określonego w varaction2var 0x30
+|-
+|6||Użyj zwykłej liczby ikonek: varaction2var 0x20, (to zastępuje wszystkie inne bity)
+|}
+
+===<span id="Varaction2var_20-2F_value" title="Varaction2var 20-2F value">Wartość Varaction2var 20-2F</span>===
+
+{| 
+|-
+!Bit!!Znaczenie
+|-
+|0-12||Sprite offset <span title=into>'do'</span> action5 block 0E.
+|-
+|13||Dodaj sprite yrel do korekty Y dla następnego sprite'a (sub z 3D Z), (yrel musi mieścić się w <span title=podpisanym -znak>'signed'</span> bajcie)
+|-
+|14-18||Sprite Y (-3D Z) korekta dla następnego 'sprite', (znak), (dodana do sumy)<br/>Ogólna zmiana na 3D Z, (-Y korekta), musi być dodatnia, w przeciwnym razie istnieje ryzyko awarii TTD
+|-
+|19-23||Korekta Sprite Y (-3D Z) tylko dla tego 'sprite' (ze znakiem), (nie dodawana do całości)
+|-
+|24-27||Korekta Sprite X dla następnego 'sprite' << 1, (znak), (dodane do sumy)
+|-
+|28-31||Korekta Sprite X tylko dla tego 'sprite' << 1, (signed), (nie dodawane do całości)
+|}
+
+---
+
+Do odniesienia do akcji 2 należy użyć ogólnej funkcji 0E 0E.
+
+<span title=Callback>'Wywołanie zwrotne'</span> 0x146 wywoła tę akcję 3, gdy zostanie wyciągnięty sygnał.
+
+Jeśli GRF nie obsługuje typu sygnału wskazanego w zmiennej 10, należy zwrócić niepoprawny wynik wywołania zwrotnego. Zwrócenie 0 zapobiegnie zapytaniu o nowe pliki GRF sygnału i spowoduje użycie domyślnej grafiki sygnału. Zwracanie 0 powinno być wykonywane tylko po to, aby jawnie zapobiec potencjalnemu pobieraniu nowych sygnałów przez GRF o niższym priorytecie.
+
+Wynik wywołania zwrotnego <small>''('cb')''</small> powinien zostać zwrócony jako wynik obliczenia.
+
+Bity 1-4 wyniku wywołania zwrotnego wskazują, ile wariacji varaction2vars rozpoczynających się od 0x20 zostanie użytych do określenia 'sprites' , które zostaną narysowane. Operator 0E powinien być używany do przechowywania odpowiednich wartości w zmiennych 0x20-2F i odpowiednio 30.
+
+Ponowne kolorowanie 'sprites' określonych w varaction2var 0x30 i bit 5 wyniku wywołania zwrotnego są stosowane do wszystkich rysowanych 'sprites' .
+
+===<span id="Example" title="Example">Przykład</span>===
+
+[http://tt-forums.net/viewtopic.php?p=529007#529007|Example GRF with NFO, PCX components.]

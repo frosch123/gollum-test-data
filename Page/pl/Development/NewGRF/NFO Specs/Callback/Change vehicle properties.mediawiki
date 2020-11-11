@@ -1,0 +1,101 @@
+<noinclude>{{pl/Development/NewGRF/inne strony|en=newgrf-specs.tt-wiki.net/wiki/Callback:_Change_vehicle_properties|pl=pl/Development/NewGRF/NFO Specs/Callback/Change vehicle properties}}
+<!--{{-}}<br>--><!--{{ambox | text = w trakcie edycji.}}--></noinclude><!--
+-->==<span id="Change_vehicle_properties_(36)"></span><span title="Change vehicle properties (36)" id="Change_vehicle_properties_.2836.29">Zmiana właściwości pojazdu (36)</span>==
+
+Ten wspólny callback umożliwia modyfikację niektórych właściwości pojazdu, dla którego nie ma określonego callbacka (jak CB 10,11, 12). Niższy bajt zmiennej 10 zawiera numer [[pl/Development/NewGRF/NFO Specs/Action0/Main Page|property]]  z działania 0.
+
+Obsługiwane są następujące właściwości:
+
+{| 
+|-
+!Feature!!Wersja!!Właściwość!!'Oznaczenia' <small>''(Remarks)''</small>
+|-
+|Trains (00)||{{pl/Development/NewGRF/ottdp|1.2|no}} {{pl/Development/NewGRF/grfFrom|8}}||07 ( <span title="'load amount' -we wczesnych wersjach"> Ilość ładowania </span> )||Zobacz też [[pl/Development/NewGRF/NFO Specs/Callback/Main Page#load-amount-callback-12|callback 12]]
+|-
+|||{{pl/Development/NewGRF/ottdp|0.6|2.5|ttdprev=beta 6|ottdrev=r9671}}||09 (Prędkość)||
+|-
+|||{{pl/Development/NewGRF/ottdp|0.6|2.5|ttdprev=beta 6|ottdrev=r9671 }}||0B (Moc)||
+|-
+|||{{pl/Development/NewGRF/ottdp|0.6|2.6|ttdprev=r1420|ottdrev=r9671}}||0D (Współczynnik kosztów eksploatacji)||
+|-
+|||{{pl/Development/NewGRF/ottdp|0.6|2.6|ttdprev=r1966|ottdrev=r9828}}||14 (Pojemność ładunkowa)||Zobacz też [[pl/Development/NewGRF/NFO Specs/Callback/Main Page#refitted-capacity-callback-15|callback 15]]
+|-
+|||{{pl/Development/NewGRF/ottdp|0.6|2.5|ttdprev=r1887|ottdrev=r9780}}||16 (Waga)||
+|-
+|||{{pl/Development/NewGRF/ottdp|0.6|no|ottdrev=r9806}}||17 (Koszt <small>''(..factor)''</small>)||
+|-
+|||{{pl/Development/NewGRF/ottdp|0.6|2.5|ttdprev=beta 6|ottdrev=r9671}}||1F (Siła pociągowa)||
+|-
+|||{{pl/Development/NewGRF/ottdp|1.2|no}} {{pl/Development/NewGRF/grfFrom|8}}||valign=middle|21 (Krótkie wagony) <!--<ref name="onlyindepot">-->{{pl/Development/NewGRF/NFO Specs/refs|name=onlyindepot|text=Te właściwości mogą zmienić swoją wartość tylko wtedy, gdy pojazd znajduje się w depocie. Oznacza to, że jeśli twój pojazd obsługuje autodopasowanie <small>''(autorefit)''</small>, a montaż <small>''(refitting)''</small> może zmienić te właściwości, musisz użyć [[pl/Development/NewGRF/NFO Specs/Callback/Refit cost factor|callback 15E]] aby zapobiec ponownemu 'montażu' <small>''(refitting)''</small>.|1}}<!--</ref>-->||valign=middle|Zobacz też [[pl/Development/NewGRF/NFO Specs/Callback/Main Page#wagon-length-callback-11|callback 11]]
+|-
+|||{{pl/Development/NewGRF/ottdp|no|no}}||''22 (Efekt wizualny & wagony napędzane)''||''Zmieniane via [[pl/Development/NewGRF/NFO Specs/Callback/Main Page#visual-effect-and-wagon-power-10|callback 10]]''
+|-
+|||{{pl/Development/NewGRF/ottdp|0.6|2.5|ttdprev=beta 6|ottdrev=r11431}}||25 (Dane użytkownika)||
+|-
+|||{{pl/Development/NewGRF/ottdp|1.2|no|ottdrev=r22713}}||2B (Niestandardowy okres 'dojrzewania' ładunku)||
+|-
+|Pojazdy drogowe (01)||{{pl/Development/NewGRF/ottdp|1.2|no}} {{pl/Development/NewGRF/grfFrom|8}}||07 ( <span title="'load amount' -we wczesnych wersjach"> Ilość ładowania </span> )||Zobacz też [[pl/Development/NewGRF/NFO Specs/Callback/Main Page#load-amount-callback-12|callback 12]]
+|-
+|||{{pl/Development/NewGRF/ottdp|1.0|no|ottdrev=r18011}}||09 (Współczynnik kosztów eksploatacji)||
+|-
+|||{{pl/Development/NewGRF/ottdp|0.6|no|ottdrev=r9828}}||0F (Pojemność ładunkowa)||Zobacz też [[pl/Development/NewGRF/NFO Specs/Callback/Main Page#refitted-capacity-callback-15|callback 15]]
+|-
+|||{{pl/Development/NewGRF/ottdp|0.6|no|ottdrev=r9806}}||11 (Faktor kosztu)||
+|-
+|||{{pl/Development/NewGRF/ottdp|1.1|no|ottdrev=r21058}}||13 (Moc)||
+|-
+|||{{pl/Development/NewGRF/ottdp|1.1|no|ottdrev=r21058}}||14 (Waga)||
+|-
+|||{{pl/Development/NewGRF/ottdp|1.1|no|ottdrev=r21100}}||15 (Prędkość)||
+|-
+|||{{pl/Development/NewGRF/ottdp|1.1|no|ottdrev=r21058}}||18 (Siła pociągowa)||
+|-
+|||{{pl/Development/NewGRF/ottdp|no|no}}||''21 (Visual effect)''||''Zmieniane via [[pl/Development/NewGRF/NFO Specs/Callback/Main Page#visual-effect-and-wagon-power-10|callback 10]]''
+|-
+|||{{pl/Development/NewGRF/ottdp|1.2|no|ottdrev=r22713}}||22 (Niestandardowy okres 'ageing' ładunku)||
+|-
+|||{{pl/Development/NewGRF/ottdp|1.2|no}} {{pl/Development/NewGRF/grfFrom|8}}||valign=middle|23 (Krótkie wagony)<!--<ref name="onlyindepot"/>-->{{pl/Development/NewGRF/NFO Specs/refs|name=onlyindepot|<!--2-->1-1}}||valign=middle|Zobacz też [[pl/Development/NewGRF/NFO Specs/Callback/Main Page#wagon-length-callback-11|callback 11]]
+|-
+|Statki (02)||{{pl/Development/NewGRF/ottdp|1.2|no}} {{pl/Development/NewGRF/grfFrom|8}}||07 ( <span title="'load amount' -we wczesnych wersjach"> Ilość ładowania </span> )||Zobacz też [[pl/Development/NewGRF/NFO Specs/Callback/Main Page#load-amount-callback-12|callback 12]]
+|-
+|||{{pl/Development/NewGRF/ottdp|0.6|2.6|ttdprev=r1990|ottdrev=r9806}}||0A (Faktor kosztu)||
+|-
+|||{{pl/Development/NewGRF/ottdp|0.6|2.5|ttdprev=beta 6|ottdrev=r9671}}||0B (Prędkość)||
+|-
+|||{{pl/Development/NewGRF/ottdp|0.6|2.6|ttdprev=r1990|ottdrev=r9828}}||0D (Pojemnośc ładunku)||Zobacz też [[pl/Development/NewGRF/NFO Specs/Callback/Main Page#refitted-capacity-callback-15|callback 15]]
+|-
+|||{{pl/Development/NewGRF/ottdp|0.6|2.6|ttdprev=r1510|ottdrev=r9808}}||0F (Współczynnik kosztów eksploatacji)||
+|-
+|||{{pl/Development/NewGRF/ottdp|no|no}}||''1C (Visual effect)''||''Zmieniane via [[pl/Development/NewGRF/NFO Specs/Callback/Main Page#visual-effect-and-wagon-power-10|callback 10]]''
+|-
+|||{{pl/Development/NewGRF/ottdp|1.2|no|ottdrev=r22713}}||1D (Niestandardowy okres 'dojrzewania' ładunku)||
+|-
+|Samoloty (03)||{{pl/Development/NewGRF/ottdp|1.2|no}} {{pl/Development/NewGRF/grfFrom|8}}||07 ( <span title="'load amount' -we wczesnych wersjach"> Ilość ładowania </span> )||Zobacz też [[pl/Development/NewGRF/NFO Specs/Callback/Main Page#load-amount-callback-12|callback 12]]
+|-
+|||{{pl/Development/NewGRF/ottdp|0.6|no|ottdrev=r9806}}||0B (Faktor kosztu)||
+|-
+|||{{pl/Development/NewGRF/ottdp|0.6|2.5|ttdprev=beta 6|ottdrev=r9671}}||0C (Prędkość)||
+|-
+|||{{pl/Development/NewGRF/ottdp|0.6|2.6|ttdprev=r1507|ottdrev=r9678}}||0E (Współczynnik kosztów eksploatacji)||
+|-
+|||{{pl/Development/NewGRF/ottdp|1.0|no|ottdrev=r19218}}||0F (Pierwotna ładowność)||Zobacz też [[pl/Development/NewGRF/NFO Specs/Callback/Main Page#refitted-capacity-callback-15|callback 15]]
+|-
+|||{{pl/Development/NewGRF/ottdp|1.0|no|ottdrev=r19218}}||11 (Dodatkowa ładowność)||
+|-
+|||{{pl/Development/NewGRF/ottdp|1.2|no|ottdrev=r22713}}||1C (Niestandardowy okres dojrzewania ładunku)||
+|-
+|||{{pl/Development/NewGRF/ottdp|1.2|no|ottdrev=r23504}}||1F (Zasięg samolotów)||
+|}
+<!--
+<references/>-->{{pl/Development/NewGRF/NFO Specs/przypisy|name=onlyindepot|2001}}<!-- 1.0
+-->{{pl/Development/NewGRF/NFO Specs/przypisy|name=onlyindepot|2001-1}}<!-- 1.1
+-->{{pl/Development/NewGRF/NFO Specs/refs|name=onlyindepot|text=Te właściwości mogą zmienić swoją wartość tylko wtedy, gdy pojazd znajduje się w depocie . Oznacza to, że jeśli twój pojazd obsługuje autodopasowanie <small>''(autorefit)''</small>, a montaż <small>''(refitting)''</small> może zmienić te właściwości, musisz użyć [[pl/Development/NewGRF/NFO Specs/Callback/Refit cost factor|callback 15E]] aby zapobiec ponownemu 'montażu' <small>''(refitting)''</small>.|<!--1-->przypis}}<!-- 1-0
+-->{{pl/Development/NewGRF/NFO Specs/refs|name=onlyindepot|<!--2--><!--1-1-->przypis}}<!-- 1-1 -->
+
+Większość nieruchomości zmieni się tylko wtedy, gdy pojazd zostanie kupiony, serwisowany (wjeżdża do  depotu), odwiedza stację lub ładuje zapisaną grę. Inne, takie jak TE, są wywoływane przy każdym uruchomieniu obliczeń TE.
+
+Jeśli wywołanie zwrotne nie powiedzie się, zostanie użyta odpowiednia wartość właściwości akcji 0. <span title='Wywołanie zwrotne'>'Callback'</span> jest zawsze używane, gdy jest zdefiniowane, nie trzeba ustawiać bitu we właściwości akcji 0, aby ją włączyć.
+
+Przed wersją r1758 (zarówno 2.5, jak i TTDPatch 2.6) [[pl/Development/NewGRF/NFO Specs/Callback/Main Page#change-vehicle-properties-36 |callback 36]]  było czasami wywoływane ze zmiennymi 40+x i 80+x niedostępnymi, gdy powinny być dostępne lub nie wszystkie poprawnie zainicjalizować wszystkie zmienne 80+x, co powoduje, że niektóre zmienne 40+x są niebezpieczne.
+
+Informacje o właściwościach pojemności można również znaleźć na stronie podsumowania [[pl/Development/NewGRF/NFO Specs/VehicleRefitting|vehicle refitting]].

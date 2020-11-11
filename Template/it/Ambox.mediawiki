@@ -13,12 +13,12 @@
 <div style="position: absolute;">[[{{#if:{{{immagine|}}}
   | File:{{{immagine}}}
   | {{#switch:{{{tipo|}}}
-    | cancellazione     =File:en/Manual/Base Set/Deletion.png
+    | cancellazione     =File:en/Deletion.png
     | contenuto    =File:en/Content.png
-    | stile      =File:en/Manual/Base Set/Edit-clear.png
-    | sposta      =File:en/Manual/Base Set/Move.png
-    | protetto  =File:en/Manual/Base Set/Protection.png
-    | #default   =File:en/Manual/Base Set/Notice.png
+    | stile      =File:en/Edit-clear.png
+    | sposta      =File:en/Move.png
+    | protetto  =File:en/Protection.png
+    | #default   =File:en/Notice.png
   }}
 }}|40px]]</div>
 <div style="border: none; padding: 2px 2px 2px 62px;">
@@ -90,16 +90,16 @@ I seguenti esempi usano diversi parametri '''tipo''' ma non usano dei parametri 
 Le immagini predefinite mostrate sopra sono principalmente per comodità. In molti casi è più appropriato usare immagini più specifiche. Questi esempi usano il parametro '''immagine''' per specificare un'immagine diversa da quelle di default.
 
 <pre>{{it/Ambox| tipo  = notizia
-| immagine = en/Manual/Base Set/OpenttdManual.png
+| immagine = en/Manual/OpenttdManual.png
 | testo  = lorem ipsum ecc. ecc. 
 }}</pre>
 
 {{it/Ambox| tipo  = notizia
-| immagine = en/Manual/Base Set/OpenttdManual.png
+| immagine = en/Manual/OpenttdManual.png
 | testo  = lorem ipsum ecc. ecc. 
 }}
 
-[[Category:en/Manual/Base Set/Message boxes|A]]
+[[Category:en/Message boxes|A]]
 </noinclude><!--
 
   CSS if the option will become available

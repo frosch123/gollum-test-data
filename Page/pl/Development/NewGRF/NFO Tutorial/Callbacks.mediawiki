@@ -1,0 +1,344 @@
+{{pl/Development/NewGRF/inne strony|en= www.tt-wiki.net/wiki/Callbacks_Tutorial|pl=pl/Development/NewGRF/NFO Tutorial/Callbacks}}
+{{en/-}}<!--<br>--><!--{{ambox | text = w trakcie edycji.}}--><!-- -->
+<!--{{NFOTutorial}}-->{{pl/Development/NewGRF/NFO Tutorial/Navigation}}
+
+=Callbacks in Graphics Files=
+
+Od wersji TTDPatch 2.0.1 alpha 11 możliwe jest stosowanie wywołań zwrotnych, w których pliki graficzne mogą wpływać na działanie funkcji TTDPatch. Jest to o wiele bardziej wyrafinowane niż zwykłe użycie akcji 0 do wybierania różnych ustawień, w tym, że oddzwanianie może wykorzystywać pełne możliwości wpisów wariacyjnych i losowych akcji 2.
+
+==How it works==
+
+Gdy łatka chce użyć wartości niektórych właściwości, może zapytać plik graficzny, jakiej wartości użyć, zamiast po prostu przeglądać ją w tabeli ustawionej przez akcję 0. Robi to, jeśli odpowiedni bit wywołania zwrotnego został ustawiony w działanie pojazdu 0 właściwości. Następnie dzieje się, co następuje:
+* Łatka ustawia bieżący identyfikator oddzwaniania, zmienną 0C, zgodnie z tym, czym jest oddzwanianie
+* Następnie łatka rozpoczyna się od wpisu czynności 3 pojazdu i znajduje początkowy numer czynności 2 do użycia
+* Łatka następnie podąża za ciągiem wpisów wariacyjnych/losowych akcji 2
+* Set-id akcji końcowej 2 jest wykorzystywany jako wynik wywołania zwrotnego
+
+Ponieważ wywołania zwrotne różnią się od zwykłej grafiki pojazdu, ostatnia akcja 2 w łańcuchu musi mieć ustawiony identyfikator z ustawionym bitem 15 (np. XX 80, aby zwrócić XX), co jest nieprawidłowe w przypadku zwykłej grafiki. Dlatego co najmniej jedno działanie 2 w łańcuchu musi sprawdzić zmienną 0C, aby zdecydować, czy jest to wywołanie zwrotne, czy określenie grafiki.
+
+==How to define callbacks==
+
+Jest kilka rzeczy, które musisz zrobić, aby oddzwonić do pracy.
+# W razie potrzeby włącz oddzwanianie. W przypadku pojazdów ustaw bit wywołania zwrotnego we właściwości [[pl/Development/NewGRF/NFO Specs/Action0/Main Page|action 0]]  dla pojazdu, który powinien używać wywołań zwrotnych (rekwizyty 1E, 17, 12 lub 14 w zależności od typu pojazdu)
+# Ustaw wartość domyślną dla wartości modyfikowanej przez wywołanie zwrotne, np. ustaw rekwizyt 07 podczas korzystania z wywołania zwrotnego ilości obciążenia
+# Zdefiniuj [[pl/Development/NewGRF/NFO Specs/Action3/Main Page|action 3]] dla pojazdu, jeśli jeszcze go nie ma
+# Dodaj [[pl/Development/NewGRF/NFO Specs/VariationalAction2/Main Page|variational action 2]] , która sprawdza wartość zmiennej wywołania zwrotnego 0C pod kątem wartości wywołania zwrotnego. Zobacz opis działania wariacyjnego 2, aby dowiedzieć się, jakie to są wartości.
+# Zmienna 0C powinna być dostępna jako słowo. Nawet jeśli ID wywołań zwrotnych, które chcesz przetestować, są poniżej 0xFF.
+# Ta akcja wariacyjna 2 musi zwrócić wynik wywołania zwrotnego (set-id z bitem 15 ustawionym), gdy jest w wywołaniu zwrotnym, lub zwykły id zestawu, gdy nie jest w wywołaniu zwrotnym
+# Upewnij się, że "domyślny" <small>''(default);;</small> var. Kontrola 0C (odpowiadająca nieznanym wywołaniom zwrotnym) wskazuje na zwykłe działanie 2 zamiast tego, które zwraca wyniki wywołania zwrotnego, najlepiej przy użyciu tego samego działania 2, co w przypadku braku wywołania zwrotnego. W ten sposób nieznane wywołania zwrotne zakończą się niepowodzeniem zamiast zwracać prawidłowe, ale niepoprawne wyniki.
+
+Jak wyjaśniono powyżej, wynikiem wywołania zwrotnego jest coś w rodzaju <tt>06 80</tt> (przy czym 06 jest używane jako wartość wywołania zwrotnego), zamiast zwykłego set-id, który byłby na przykład <tt>04 00</tt>.
+
+==Examples==
+
+Należy pamiętać, że poniższe przykłady nie dają 100% kompletnych newgrfs, ale koncentrują się na najważniejszych funkcjach kodu. Np. W danym [[pl/Development/NewGRF/NFO Specs/Action0/Vehicles/Trains|action0s]] musisz dodać jeszcze więcej właściwości, aby uzyskać dobrze działający newgrf lub, w przypadku gdy przykład opisuje szczegółowo tylko jeden pojazd, odniesienia do innych pojazdów, np lokomotywa, są podawane w formie symbolicznej ("xx", "nn") zamiast szczegółowo ją wdrażać i podawać prawidłowe ID pojazdów lub ID - c.
+
+==Example1: using Callback 33 (new sounds)==
+
+Pierwszy przykład to prosta aplikacja. Ustawi nowe dźwięki dla lokomotywy za pomocą [[pl/Development/NewGRF/NFO Specs/Callback/Main Page#sound-effect-callback-33|callback 33]]. Nowe dźwięki będą dostarczane przez dwa pliki .wav przy użyciu [[pl/Development/NewGRF/NFO Specs/Action11|action 11]]. Nowo zdefiniowane dźwięki zaczną się od slotu 73 (49h), cyfry 0–48h są oryginalnymi dźwiękami TTD. Rodzaj zdarzenia (w jakich okolicznościach należy odtworzyć określony dźwięk) jest odczytywany ze zmiennej 10.
+
+<pre>
+0 * 4	0F 00 00 00
+
+// add an action 08
+1 * 8	08 02 xx xx xx xx 00 00
+
+// set engine (00) to use new sprites, enable for callback 33
+2 * 9	00 00 02 01 00 
+		12 FD	// use new sprites 
+		1E 80	// enable CB 33
+
+// define sound files, first available slot being 49h
+3 * 3	11 02 00
+4 ** C:\ttdlx\newgrf\sprites\start.wav	// 49: whistle (departure)
+5 ** C:\ttdlx\newgrf\sprites\tunnel.wav	// 4A: whistle (in tunnel)
+
+// engine sprites go here
+6 * 4	01 00 01 04
+[...]	// 4 sprites for engine
+
+// c-ID 0 use above set of sprites
+11 * 9	02 00 00 01 01 00 00 00 00	// engine 
+	
+// sound events are read from var10:
+12 * 18	02 00 01 81 10 00 FF 02
+		49 80 01 01	// whistle: departure
+		4A 80 02 02	// whistle: in tunnel
+		00 00		// else CB fail
+
+// switch between callback and graphics branch
+13 * 17	02 00 02 85 0C 00 FF FF 01
+		01 00 33 00 33 00	// is CB 33, set sound
+		00 00			// graphics
+
+14 * 7	03 00 01 00 00 02 00	// engine
+</pre>
+
+==Example2: using Callbacks 12, 15, and 19==
+
+Załóżmy, że chcesz budować autokary pasażerskie pierwszej i drugiej klasy, o różnych barwach i pojemności, ilości załadunku i dodatkowych sufiksach tekstowych. Aby to zadziałało, potrzebujemy połączeń zwrotnych [[pl/Development/NewGRF/NFO Specs/Callback/Main Page#load-amount-callback-12|12 (load amount]] ), [[pl/Development/NewGRF/NFO Specs/Callback/Main Page#refitted-capacity-callback-15|15 (refitted capacity]] ) i [[pl/Development/NewGRF/NFO Specs/Callback/Main Page#cargo-subtype-display-19|19 (cargo subtype display]] ):
+
+Ponadto użyjemy funkcji [[pl/Development/NewGRF/NFO Specs/VariationalAction2/Vehicles|"refit to same cargo type"]] , aby móc celowo zmieniać barwę, ilość załadunku i pojemność, nawet jeśli autokary przewożą tylko jeden rodzaj ładunku, a mianowicie "pasażerowie".
+
+W .nfo faktyczne "ponowne zamontowanie" <small>''(refitting)''</small> odbywa się poprzez odniesienie do zmiennej F2, która przechowuje ile razy pojazd został zamontowany w tym samym typie ładunku. W grze pojawią się dwa wpisy w menu remontowym zawierające te sufiksy tekstowe wygenerowane przez  [[pl/Development/NewGRF/NFO Specs/Action4|action 4]] . Mianowicie "pasażerowie (1. klasa)" i  "pasażerowie (2. klasa)", spośród których można wybrać żądany rodzaj autokaru. Podobnie ilość obciążenia i pojemność są również powiązane ze zmienną F2 i zostaną odpowiednio zmienione.
+
+<pre>
+0 * 4	15 00 00 00
+	
+// add an action 08
+1 * 8	08 02 xx xx xx xx 00 00
+
+// define additional text suffixes
+2 * 0	04 00 1F 02 00 D0
+		" (1st class)" 00	// D000 = "1st class"
+               	" (2nd class)" 00	// D001 = "2nd class"
+
+// set coach (1B) to use new sprites, 
+// enable for callbacks 12, 15 and 19
+3 * 9	00 00 02 01 1B 
+		12 FD	// use new sprites 
+		1E 2C	// enable CB 12, 15 and 19
+
+// coach sprites go here
+4 * 4	01 00 02 04
+[...]	// 4 sprites for 1st class coach
+[...]	// 4 sprites for 2nd class coach
+
+// c-IDs 0..1 use above set of sprites
+13 * 9	02 00 00 01 01 00 00 00 00	// 1st class
+14 * 9	02 00 01 01 01 01 00 01 00	// 2nd class
+
+// next 4 pseudo sprites are checking var F2, 
+// thus constituting the two refitting possibilities:
+// [1st class, 48 passengers, load amount = 6]  and
+// [2nd class, 56 passengers, load amount = 8]
+
+// set load amount
+15 * 14	02 00 02 81 F2 00 FF 01
+		06 80 00 00	// 1st class = 6/tick
+		08 80		// 2nd class = 8/tick
+
+// set refitted capacity
+16 * 14	02 00 03 81 F2 00 FF 01
+		30 80 00 00	// 1st class = 48 pass  
+		38 80		// 2nd class = 56 pass 
+
+// set text suffixes
+17 * 18	02 00 04 81 F2 00 FF 02
+		00 80 00 00	// "1st class"
+		01 80 01 01	// "2nd class"
+		FF 80
+
+// set livery
+18 * 14	02 00 05 81 F2 00 FF 01
+		00 00 00 00	// 1st class
+		01 00		// 2nd class
+
+// switch between callbacks and graphics branch
+19 * 29	02 00 06 85 0C 00 FF FF 03
+		02 00 12 00 12 00	// is CB12, set load amount
+		03 00 15 00 15 00	// is CB15, set refit capacity
+		04 00 19 00 19 00	// is CB19, set text suffix
+		05 00			// graphics
+
+20 * 7	03 00 01 1B 00 06 00	// coach
+</pre>
+
+==Example3: using callbacks 11 (wagon length) and 16 (articulated engine)==
+
+W tym przykładzie zademonstrowano sposób użycia [[pl/Development/NewGRF/NFO Specs/Callback/Main Page#articulated-engine-callback-16|callback 16]] do projektowania "pojazdów przegubowych" <small>''(articulated vehicles)''</small> , np. lokomotywy z przetargami. Ustawimy dwie lokomotywy przy użyciu dwóch różnych ofert: <engine1> użyje standardowego krótkiego <tender1> i <engine2> użyje jeszcze krótszego <tender2> poprzez zastosowanie [[pl/Development/NewGRF/NFO Specs/Callback/Main Page#wagon-length-callback-11|callback 11]].
+
+<pre>
+0 * 4	34 00 00 00
+
+// add an action 08
+1 * 8	08 02 xx xx xx xx 00 00
+
+// set the generic tender (2D) to use new sprites, 
+// enable for callback 11
+2 * 13	00 00 04 01 2D 
+		06 00	// don't show up in menu
+		12 FD	// use new sprites 
+		1E 02	// enable CB 11
+		21 02	// make shorter by 25%
+
+// tender sprites go here
+3 * 4	01 00 02 08
+[...]	// 8 sprites for tender1
+[...]	// 8 sprites for tender2
+
+// Cargo-ids 0..1 use above set of sprites
+20 * 9	02 00 F0 01 01 00 00 00 00	// tender1 (F0)
+21 * 9	02 00 00 01 01 01 00 01 00	// tender2
+
+// tender2 (F1) is shorter
+22 * 18	02 00 F1 85 0C 00 FF FF 01
+		03 80 11 00 11 00	// is CB11: make shorter by 37.5%
+		00 00			// graphics
+
+23 * 7	03 00 01 2D 00 F0 00	// standard tender
+
+// set two engines (00 and 01) to use new sprites, 
+// enable for callback 16
+24 * 11	00 00 02 02 00 
+		12 FD FD	// use new sprites 
+		1E 10 10	// enable CB 16
+
+// engine sprites go here
+25 * 4	01 00 02 08
+[...]	// 8 sprites for engine1
+[...]	// 8 sprites for engine2
+
+// Cargo-ids 0..1 use above set of sprites
+42 * 9	02 00 00 01 01 00 00 00 00	// engine1
+43 * 9	02 00 01 01 01 01 00 01 00	// engine2
+
+// <engine1> uses standard <tender1>
+// engine is articulated, so show either engine (00) or tender (F0)
+44 * 14	02 00 02 81 41 00 01 01
+		00 00 00 00	// engine1
+		F0 00		// tender1
+
+// set articulated CB
+45 * 14	02 00 03 81 10 00 FF 01
+		2D 80 01 01	// add tender (2D)
+		FF 80		// end of articulated vehicle
+
+// Switch between callback and graphics branch
+46 * 17	02 00 04 85 0C 00 FF FF 01
+		03 00 16 00 16 00	// is CB16, handle it
+		02 00			// graphics
+
+47 * 7	03 00 01 00 00 04 00	// engine1 with tender1
+
+// <engine2> uses shorter <tender2>
+// engine is articulated, so show either engine (01) or tender (F1)
+48 * 14	02 00 02 81 41 00 01 01
+		01 00 00 00	// engine2
+		F1 00		// tender2
+
+// switch between callback and graphics branch
+49 * 17	02 00 04 85 0C 00 FF FF 01
+		03 00 16 00 16 00	// is CB 16, handle it 
+						// (same as for <engine1>)
+		02 00			// graphics
+
+50 * 7	03 00 01 01 00 04 00	// engine2
+51 * 7  03 00 81 2D 00 F1 00    // override with tender2
+</pre>
+
+==Example4: using Callbacks 10, 16, 1D and 23==
+
+Ten przykład wyjaśnia, jak używać [[pl/Development/NewGRF/NFO Specs/Callback/Main Page#articulated-engine-callback-10|callbacks 10 (power]]), [[pl/Development/NewGRF/NFO Specs/Callback/Main Page#articulated-engine-callback-16|16 (articulated]]),
+
+[[pl/Development/NewGRF/NFO Specs/Callback/Main Page#articulated-engine-callback-1d|1D (engine attach]]), i [[pl/Development/NewGRF/NFO Specs/Callback/Main Page#articulated-engine-callback-23|23 (additional text in menu]]) zbudować czteroczęściową EMU.
+
+EMU składa się z tego samego elementu składowego, elektrycznego wagonu kolejowego (ID pojazdu = 62). Ponadto należy zezwolić na połączenie trzech z tych czteroczęściowych EMU, tj. Pełna skład może zawierać łącznie 12 wagonów.
+
+Ze względu na realizm nie należy dopuszczać do przyłączania do EMU pojazdów "odrębnych" <small>''(foreign)''</small>. Osiąga się to poprzez sprawdzenie ID pojazdu z [[pl/Development/NewGRF/NFO Specs/VariationalAction2/Vehicles | zmienna C6]]. Odpowiednie komunikaty o błędach zostaną wygenerowane, jeśli coś będzie nie tak, z liczbą lub rodzajem dodanych pojazdów.
+
+Proszę zauważyć, że CB 1D i 23 nie wymagają ustawiania bitów we właściwości 1E akcji0.
+
+Ponadto pokazano, jak wprowadzić wyraźną pozycję menu dla takiej EMU. Aby to zadziałało, potrzebujemy dodatkowego duszka przedstawiającego nie pojedynczy wagon, ale kompletną czteroczęściową EMU. Ponieważ ten duszek będzie używany tylko w menu zakupu, odpowiedni blok duszka potrzebuje tylko tego jednego duszka dla kierunku poziomego. Wszystkie inne kierunki nie są potrzebne i dlatego nie musimy dołączać do nich duszków.
+
+Ponadto zmienny łańcuch akcji2 dla pozycji menu wymaga odniesień dla oddzwaniania 16 i 23. Ten ostatni służy do umieszczania tekstu dodatkowych informacji w pozycji menu, a CB 16 jest potrzebny, aby uzyskać pojemność czteroczęściowej EMU do wyświetlają się poprawnie w menu zakupów.
+
+<pre>
+0 * 4	39 00 00 00
+
+// add an action 08
+1 * 8	08 02 xx xx xx xx 00 00
+
+// CB 1D error messages 
+2 * 0	04 00 81 02 20 D0
+		" (wrong number of cars)" 00	// D020
+		" (wrong type of car)" 00	// D021
+
+// CB 23 additional text for menu
+3 * 0	04 00 81 01 22 D0
+		0d 91 "4-part EMU for commuter service." 
+                " (Links max 12 parts)" 00
+
+// set rail car (62) to use new sprites, 
+// enable for callbacks 10 and 16
+4 * 11	00 00 03 01 62
+		12 FD	// use new sprites 
+		19 30	// electric traction
+		1E 11	// enable CBs 10 and 16
+
+//----------------------------------------------------------
+// the "train"
+//----------------------------------------------------------
+
+// all rail car sprites go here
+5 * 4	01 00 04 08
+[...]	// sprites for 1st car
+[...]	// sprites for 2nd car
+[...]	// sprites for 3rd car
+[...]	// sprites for 4th car
+
+// c-IDs 0..3 use above set of sprites
+38 * 9	02 00 00 01 01 00 00 00 00	// 1st car
+39 * 9	02 00 01 01 01 01 00 01 00	// 2nd car
+40 * 9	02 00 02 01 01 02 00 02 00	// 3rd car
+41 * 9	02 00 03 01 01 03 00 03 00	// 4th car
+
+// determine which car we are at. AND-ing the number of vehicles
+// in consist is more efficient as a "modulo-4" operation would be.
+42 * 22	02 00 04 81 40 00 03 03
+		03 00 03 03	// 4th car
+		02 00 02 02	// 3rd car
+		01 00 01 01	// 2nd car
+		00 00		// 1st car
+
+// set CB 16 (articulated vehicle)
+43 * 14	02 00 05 81 10 00 FF 01
+		62 80 01 03	// 3 additional parts of veh-ID 62
+		FF 80		// end articulated vehicle		
+
+// set CB 1D (engine attach)
+// allow only 3 * EMU (= 12 cars) in total
+44 * 14	02 00 06 82 40 10 FF 01
+		FE 80 00 09	// allow adding of max 8 cars
+		20 80		// error: "wrong number of cars" 
+
+// allow only EMU to attach itself, nothing else
+45 * 14	02 00 07 81 C6 00 FF 01
+		06 00 62 62	// allow
+		21 80		// error: "wrong type of car"
+
+// only car1 and, if exist, 5 and 9 should be sparking 
+// we're using a modulo-4 operation -> 80-FF-00-04
+46 * 16      02 00 08 81 40 80 FF 00 04 01
+		33 80 01 01	// sparks
+		40 80		// no sparks
+
+// switch between callback and graphics branch
+47 * 29	02 00 09 85 0C 00 FF FF 03
+		05 00 16 00 16 00	// is CB16, handle it
+		07 00 1D 00 1D 00	// is CB 1D, handle it
+		08 00 10 00 10 00	// is CB 10, handle it
+		04 00			// graphics
+
+//----------------------------------------------------------
+// menu entry
+//----------------------------------------------------------
+
+48 * 4	01 00 01 04
+
+49 * 1	00
+50 * 1	00
+51 C:\ttdlx\newgrf\sprites\emu.pcx 226 120 01 15 91 -27 -11
+52 * 1	00
+
+53 * 9	02 00 00 01 01 00 00 00 00
+
+// switch between callback and graphics branch
+54 * 23	02 00 01 85 0C 00 FF FF 02
+		05 00 16 00 16 00	// CB 16 (for capacity calculation)
+		22 80 23 00 23 00	// CB 23, show additional text
+		00 00			// graphics
+
+55 * 10	03 00 01 62 01 FF 01 00 09 00
+</pre>
+<!--[[Category:Tutorials]][[Category:GRF Tutorial]]-->[[Category:pl/User/extrazi/tutorial GRF]]

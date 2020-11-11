@@ -1,5 +1,5 @@
 [[Translation:en/Community/Railway Designs]]
-{{hu/Fordítás|en/Community/Railway Designs|67}}{{hu/Tartalomjegyzék}}
+{{hu/Fordítás|en/Community/Railway Designs|67}}{{hu/Manual/Tartalomjegyzék}}
 
 =Vasúthálózatod teherbírása=
 
@@ -16,7 +16,7 @@ Könnyen belátható az is (lásd. 1. ábra), hogy ha a jelzőtávolság N mező
 Az egyik fontos szempont az összhang. Egy pálya kapacitását az határozza meg, hogy melyik jelzőtávolság a legnagyobb. Így egy kétmezőnként jelzőzött pálya, amelyen van egy egyszeri rendhagyó három-vagy négymezős jelzőtávolság, jelentősen csökkent kapacitástól fog szenvedni és valószínűleg torlódást fog okozni (2. ábra). 
 {{en/-}}
 ===Az átlós sín===
-[[File:en/Community/Tiles.png|frame|right|A képen lent: 1-es jelzősűrűség átlós, majd egyenes pályán. A képen fent: maximális ("félmezős") jelzősűrűség ferde pályán]][[File:en/Community/Pitagoras.png|frame|right|A Pitagorasz-tétel az OpenTTD-ben]]
+[[File:en/Community/Tiles.png|frame|right|A képen lent: 1-es jelzősűrűség átlós, majd egyenes pályán. A képen fent: maximális ("félmezős") jelzősűrűség ferde pályán]][[File:en/Community/Pythagoras.png|frame|right|A Pitagorasz-tétel az OpenTTD-ben]]
 
 Az OpenTTD-ben a vonatok lassabban haladnak ferde pályán (hála SmatZ-nek), ez pedig megnövelt jelzősűrűséget igényel a torlódások elkerülése végett. Fontos, hogy a vonatok legkisebb követési távolsága (nem azonos a jelzőtávolsággal) egyenes és átlós pályán annyira azonosak, amennyire csak lehetséges. Egyébiránt a vonatok torlódhatnak, amikor egyenesről átlós szakaszra, vagy átlósról egyenesre térnek.
 
@@ -131,7 +131,7 @@ Refinements to the cyclotron are possible. There is enough space on the track lo
 The injection delay assumes that the second injected train is accelerating from standstill, and there is a small chance that second train has in fact chanced upon the cyclotron entrance at full speed. In this case, the timing will be wrong and the second train will almost certainly cause a jam within the cyclotron (and consequently on the main line). This can be compensated for by some additional signalling to filter out full-speed trains. The filtered out full-speed trains can either be diverted onto a second loop, or simply drained of momentum by a signal. 
 
 A cyclotron incorporating all the optimisations discussed, and some additional fixes, is shown in Figure 5.
-[[File:en/Community/Cyclotron Full.png|thumb|800px|none|5. ábra: full-featured cyclotron]]
+[[File:en/Community/Junctionary/Cyclotron Full.png|thumb|800px|none|5. ábra: full-featured cyclotron]]
 
 '''''Editor's note:''''' Whilst I would like to defend my cyclotron refinements, experimentation has proven that pre-acceleration is a more robust system. The two have been combined in the savegame linked previously.
 {{en/Feature|0.7}}
@@ -140,7 +140,7 @@ A cyclotron incorporating all the optimisations discussed, and some additional f
 An attempt to minimize the drawbacks of the full featured cyclotron leads to parallel, small, 1-train cyclotrons. In this design, an array of cyclotrons, each handling one train, may be fed simultaneously. They may have different loop size in order to prevent synchronization between the cycling trains, giving more chance to find a slot in the flow of the main line. Each loop still needs it own acceleration lane so the trains enter the loop at full speed. If a train happened to enter the loop at low speed, it would get a chance to join the main line at non-max speed and cause a possibly large traffic jam.
 
 Figure 6 shows a parallel cyclotron with two loops.
-[[File:en/Community/Parallel Cyclotron.png|thumb|800px|none|6. ábra: Parallel cyclotron]]
+[[File:en/Community/Junctionary/Parallel Cyclotron.png|thumb|800px|none|6. ábra: Parallel cyclotron]]
 
 A savegame with the example given in Figure 6 is available [http://gbizzotto.free.fr/parallel_cyclotron.sav Here] (one of the GRF files used in this savegame is not available for download at the moment) (version 0.7 or higher required to open).
 
@@ -172,4 +172,4 @@ At a similar station, there are also 16 platforms each with 9 tiles. But the tra
 
 [[File:en/Community/Trigger-e.png|frame|none|Faster trigger]]
 
-[[Category:hu/Manual/Base Set/Trains/Vasút]]
+[[Category:hu/Manual/Vasút]]

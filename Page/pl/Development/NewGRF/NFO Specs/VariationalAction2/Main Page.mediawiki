@@ -1,0 +1,273 @@
+{{pl/Development/NewGRF/inne strony|en=newgrf-specs.tt-wiki.net/wiki/VariationalAction2|pl=pl/Development/NewGRF/NFO Specs/VariationalAction2/Main Page |sub=nfo}}
+<!--{{-}}<br>{{ambox | text = w trakcie edycji.}} -->
+==<span id="Introduction" title="Introduction">Wprowadzenie</span>==
+
+Aby wesprzeć zmiany grafiki oparte na innych czynnikach niż tylko stany obciążenia, użyj VarAction2. Zapewnia to wyrafinowany sposób decydowania, jakiej grafiki użyć.
+
+VarAction2 może być używane jak każda inna akcja 2, ale zapewnia dodatkowy krok pośredni: zamiast od razu zdefiniować zestawy akcji 1, określa listę dodatkowych wpisów akcji 2, z których jedna jest używana w zależności od rodzaj wariacji, która jest zdefiniowana. Wspomniane wpisy akcji 2 mogą z kolei być wariacyjne lub losowe (w celu zapewnienia łańcuchów decyzji) lub mogą być elementem końcowym, czyli zwykłą akcją 2, która zawiera definicje zestawów akcji 1 lub wynikiem wywołania zwrotnego.
+
+== Format ==
+
+Dane wyglądają następująco:
+
+ <Sprite-number> * <Length> 02 <feature> <set-id> <type> <variable> <varadjust> <nvar> (<set-id>
+ <low-range> <high-range>){n} <default>
+
+{| 
+|-
+!'''Element'''!![[pl/Development/NewGRF/NFO Specs/GRFActionsDetailed|'''Rozmiar''']]!!'''Opis'''
+|-
+|<Sprite-number>||dec||Sekwencyjny numer 'sprite'
+|-
+|<length>||dec||Łączna liczba bajtów użytych w tej akcji.
+|-
+|02||B||Definiuje action 02
+|-
+|<feature>||B||Do jakiego rodzaju pojazdu/stacji należy zastosować tę definicję?
+|-
+|<set-id>||B||ID tej akcji 2 (używany jak ID ładunku)
+|-
+|<type>||B||Typ VarAction2, patrz poniżej
+|-
+|<variable>||B||Na której zmiennej opieramy decyzję
+|-
+|<varadjust>||V||Jak manipulować wartością przed podjęciem decyzji.
+|-
+|<nvar>||B||Liczba różnych zakresów wartości (nie licząc wartości domyślnej)
+|-
+|<set-id>||W||Akcja 2 set-id do użycia dla następującego zakresu.
+|-
+|<low-range>||B/W/D||Minimum (włącznie) zakresu, dla którego należy użyć powyższego zestawu identyfikatorów
+|-
+|<high-range>||B/W/D||Maksymalny (włącznie) zakresu
+|-
+|<default>||W||Akcja 2 set-id do użycia, jeśli żaden zakres nie pasuje
+|}
+
+Rozmiar <varadjust> zależy od <type>, a także dostosowań, które należy wykonać i zawsze musi zapewniać maskę AND. Dla <type> 81, „nic nie rób” <varadjust> to 00 FF.
+
+Powtarzasz sekwencję <set-id> <low-range> <high-range> tak często, jak określa to <nvar>.
+
+<low-range> i <high-range> mają rozmiar B, W lub D, w zależności od <type> . Zobacz ten wpis, aby uzyskać więcej informacji.
+
+==<span id="Description" title="Description">Opis</span>==
+
+===<span id="Sprite-number" title="Sprite-number">Numer sprite'a</span>===
+
+To tylko numer, na którym jesteś.
+
+===<span id="Length" title="Length">Długość</span>===
+
+Policz liczbę bajtów w tej akcji.
+
+===<span id="Feature" title="Feature">Cecha</span>===
+
+Ustawia to rodzaj [[pl/Development/NewGRF/NFO Specs/Features|feature]] , który chcesz zmienić. Ustaw na:
+
+{|
+|-!Value!![[pl/Development/NewGRF/NFO Specs/Features|Feature]]
+|-
+|00||[[pl/Development/NewGRF/NFO Specs/VariationalAction2/Vehicles | Trains]]
+|-
+|01||[[pl/Development/NewGRF/NFO Specs/VariationalAction2/Vehicles | Road Vehicles]]
+|-
+|02||[[pl/Development/NewGRF/NFO Specs/VariationalAction2/Vehicles | Ships]]
+|-
+|03||[[pl/Development/NewGRF/NFO Specs/VariationalAction2/Vehicles | Aircraft]]
+|-
+|04||[[pl/Development/NewGRF/NFO Specs/VariationalAction2/Stations | Stations]]
+|-
+|05||[[pl/Development/NewGRF/NFO Specs/VariationalAction2/Canals | Canals/Rivers]]
+|-
+|06||[[pl/Development/NewGRF/NFO Specs/VariationalAction2/Bridges | Bridges]]
+|-
+|07||[[pl/Development/NewGRF/NFO Specs/VariationalAction2/Houses | Houses]]
+|-
+|09||[[pl/Development/NewGRF/NFO Specs/VariationalAction2/Industry Tiles | Industry Tiles]]
+|-
+|0A||[[pl/Development/NewGRF/NFO Specs/VariationalAction2/Industries | Industries]]
+|-
+|0B||Cargos (brak zmiennych specyficznych dla funkcji)
+|-
+|0C||Sound Effects (brak zmiennych specyficznych dla funkcji)
+|-
+|0D||[[pl/Development/NewGRF/NFO Specs/VariationalAction2/Airports | Airports]]
+|-
+|0E||[[pl/Development/NewGRF/NFO Specs/VariationalAction2/Signals | Signals]]
+|-
+|0F||[[pl/Development/NewGRF/NFO Specs/VariationalAction2/Objects | Objects]]
+|-
+|10||[[pl/Development/NewGRF/NFO Specs/VariationalAction2/Railtypes | Railtypes]]
+|-
+|11||[[pl/Development/NewGRF/NFO Specs/VariationalAction2/Airport Tiles | Airport Tiles]]
+|-
+|12||[[pl/Development/NewGRF/NFO Specs/VariationalAction2/Roadtypes | Roadtypes]]
+|-
+|13||[[pl/Development/NewGRF/NFO Specs/VariationalAction2/Tramtypes | Tramtypes]]
+|}
+
+=== Set-ID ===
+
+Określa liczbę tego działania 2. &nbsp;ID można następnie wykorzystać jako cel w akcji 3 lub innej akcji wariacyjnej/losowej 2.
+
+===<span id="Type" title="Type">Typ</span>===
+
+{| border=1 
+|-
+! !! B<br/>Dostęp do najniższego bajtu !! {{pl/Development/NewGRF/ottdp|0.6|2.5}} W<br/><span title='Access lowest word'>'Dostęp do najniższego słowa'</span> !! {{pl/Development/NewGRF/ottdp|0.6|2.5}} D<br/><span title='Access lowest doubleword'>'Dostęp do najniższego podwójnego słowa'</span>
+|-
+!align="left"| Uzyskaj dostęp do zmiennej ogólnej lub<br/>zmiennej obiektu podstawowego
+|align="center" valign=middle| 81 
+|align="center" valign=middle| 85 
+|align="center" valign=middle| 89
+|-
+!align="left"| Dostęp do zmiennej "powiązanego" obiektu
+|align="center"| 82 
+|align="center"| 86 
+|align="center"| 8A
+|}
+
+Typ dostępu określa zarówno wielkość dostępu do zmiennych, jak i wybiera między zmiennymi ogólnymi a zmiennymi wrodzonymi obiektu lub zmiennymi konkretnego <span title=related>"pokrewnego"</span> obiektu.
+
+{|
+|-!colspan="2"|[[pl/Development/NewGRF/NFO Specs/Features|Feature]]!!Powiązany obiekt
+|-
+|00-03||[[pl/Development/NewGRF/NFO Specs/VariationalAction2/Vehicles | Vehicles]]||Pierwszy [[pl/Development/NewGRF/NFO Specs/VariationalAction2/Vehicles | vehicle]] składu
+|-
+|04||[[pl/Development/NewGRF/NFO Specs/VariationalAction2/Stations | Stations]]||[[pl/Development/NewGRF/NFO Specs/VariationalAction2/Towns | Town]] do której stacji należy
+|-
+|05||[[pl/Development/NewGRF/NFO Specs/VariationalAction2/Canals | Canals/Rivers]]||N/A
+|-
+|06||[[pl/Development/NewGRF/NFO Specs/VariationalAction2/Bridges | Bridges]]||[[pl/Development/NewGRF/NFO Specs/VariationalAction2/Towns | Town]] mostu
+|-
+|07||[[pl/Development/NewGRF/NFO Specs/VariationalAction2/Houses | Houses]]||[[pl/Development/NewGRF/NFO Specs/VariationalAction2/Towns | Town]] domu
+|-
+|09||[[pl/Development/NewGRF/NFO Specs/VariationalAction2/Industry Tiles | Industry Tiles]]||[[pl/Development/NewGRF/NFO Specs/VariationalAction2/Industries | Industry]] zawierające kafel
+|-
+|0A||[[pl/Development/NewGRF/NFO Specs/VariationalAction2/Industries | Industries]]||[[pl/Development/NewGRF/NFO Specs/VariationalAction2/Towns | Town]] przedsiębiorstwa
+|-
+|0B||Cargos||N/A
+|-
+|0C||Sound Effects||N/A
+|-
+|0D||[[pl/Development/NewGRF/NFO Specs/VariationalAction2/Airports | Airports]]||N/A
+|-
+|0E||[[pl/Development/NewGRF/NFO Specs/VariationalAction2/Signals | Signals]]||N/A
+|-
+|0F||[[pl/Development/NewGRF/NFO Specs/VariationalAction2/Objects | Objects]]||[[pl/Development/NewGRF/NFO Specs/VariationalAction2/Towns | Town]] obiektu
+|-
+|10||[[pl/Development/NewGRF/NFO Specs/VariationalAction2/Railtypes | Railtypes]]||N/A
+|-
+|11||[[pl/Development/NewGRF/NFO Specs/VariationalAction2/Airport Tiles | Airport Tiles]]||N/A
+|-
+|12||[[pl/Development/NewGRF/NFO Specs/VariationalAction2/Roadtypes | Roadtypes]]||N/A
+|-
+|13||[[pl/Development/NewGRF/NFO Specs/VariationalAction2/Tramtypes | Tramtypes]]||N/A
+|}
+
+Każda zmienna określa jej rozmiar. Nie każda zmienna jest podwójnym słowem.
+Jeśli dostępna zmienna jest mniejsza niż podany tutaj rozmiar, dodatkowe bity mogą zawierać śmieci i powinny być <and-masked>.
+
+===<span id="Variable" title="Variable">Zmienna</span>===
+
+Działanie wariacyjne 2 umożliwia dostęp do tych zmiennych:
+
+{| 
+|-
+!'''Numer'''!![[pl/Development/NewGRF/NFO Specs/GRFActionsDetailed|'''Rozmiar''']]!!Wersja!!'''Znaczenie'''
+|-
+|00-3F|| || ||Zobacz [[pl/Development/NewGRF/NFO Specs/GlobalVariables| global variables page]].
+|-
+|40+x||D|| ||specjalnie obliczona zmienna charakterystyczna dla funkcji, patrz następujące strony dotyczące funkcji
+|-
+|5F||D||{{pl/Development/NewGRF/ottdp|0.7|2.6|ttdprev=r1928}}||Dane losowe specyficzne dla funkcji: wyzwalacze w młodszym bajcie, bity w pozostałych trzech bajtach. Bity zmiennej niezwiązane z bitami losowymi lub wyzwalającymi są zarezerwowane.
+|-
+|60+x||D|| ||podobny do 40+x zmiennych, ale po numerze zmiennej musi następować bajt, który zostanie przekazany do obsługi zmiennej jako parametr.
+|-
+|7B||-||{{pl/Development/NewGRF/ottdp|1.1|2.6|ottdrev=r21604|ttdprev=r2359}}||Specjalna zmienna 60 + x do użycia w zaawansowanej akcji wariacyjnej 2. Umożliwia ocenę dowolnej innej zmiennej 60+x przy użyciu niestałego parametru z rejestru. Parametr zmiennej 7B określa inną zmienną 60+x, która jest oceniana. Parametr dla tej zmiennej jest odczytywany z akumulatora ('val1'), tj. Wynik z poprzednich operacji tego samego zaawansowanego działania wariacyjnego 2. Dlatego zmienna 7B nie może być pierwszą zmienną używaną w obliczeniach. Zmienna 7B i 7E (wywołanie procedury) nie mogą być używane jako parametry dla zmiennej 7B.
+
+{{pl/Development/NewGRF/ottdp|1.2|no|ottdrev=r23138}} Od OpenTTD r23138 możesz używać tego do przekazywania 32-bitowych parametrów do 60+x zmiennych. Obecnie jest to przydatne tylko w przypadku kilku zmiennych, np. zmienna pojazdu 60. W przypadku większości zmiennych wyższe bity parametru uważa się za zarezerwowane. Dlatego pamiętaj o zamaskowaniu wyższych bitów w poprzednich obliczeniach.
+|-
+|7C||D||{{pl/Development/NewGRF/ottdp|0.6|2.6|ttdprev=r1315}}||Specjalna zmienna 60+x używana do uzyskiwania dostępu do wartości przechowywanych w rejestrach [[pl/Development/NewGRF/NFO Specs/Storages#persistent-storage|persistent storage]].
+|-
+|7D||D||{{pl/Development/NewGRF/ottdp|0.6|2.6|ttdprev=r1246}}||Specjalna zmienna 60+x używana do uzyskiwania dostępu do wartości przechowywanych w rejestrach [[pl/Development/NewGRF/NFO Specs/Storages#temporary-storage|temporary storage]]. Dostępne na liście zakupów.
+|-
+|7E||D||{{pl/Development/NewGRF/ottdp|0.6|2.5}}||Specjalna zmienna 60+x wskazująca [[pl/Development/NewGRF/NFO Specs/VarAction2Advanced#using-procedures|procedure call]]. Dostępne na liście zakupów.
+|-
+|7F||D||{{pl/Development/NewGRF/ottdp|0.6|2.5}}||Specjalna zmienna 60+x odczytująca parametr GRF, którego numer jest określony przez parametr 60 + x. Dostępne na liście zakupów.
+|-
+|80+x|| || ||Zmienna charakterystyczna dla funkcji, zobacz następujące strony dotyczące funkcji. Chociaż większość z tych zmiennych w rzeczywistości odnosi się do surowych lokalizacji pamięci oryginalnych struktur TTD, nie można na tym polegać. Niektóre zmienne zostały dodane później, inne zostały przeniesione lub zastąpione. Tylko zmienne wymienione w specyfikacjach są w pewnym stopniu ustawione tak, aby nie ulegały zmianie w przyszłości.
+|}
+
+W przypadku wszystkich funkcji zmienne 80+x są przesunięte w odpowiednią strukturę w danych gry TTD. &nbsp;Zmienne 40+x i 60+x są specjalnymi zmiennymi, które są obliczane w locie i nie są tak naprawdę nigdzie przechowywane w pamięci, chyba że podano inaczej. Dlatego należy ich używać tak mało, jak to konieczne, aby nie spowalniać zbytnio gry przy obliczaniu tych zmiennych (które można nazwać tysiące razy na sekundę, ilekroć porusza się pojazd).
+
+Podczas wyświetlania pojazdu (itp.) Na liście zakupów, gra prawidłowo pokaże te odmiany na podstawie zmiennych zewnętrznych (daty itp.), Ale odmiany na podstawie zmiennych pojazdu (zmienne 40+x, 60+x i 80+x) zawsze pokaże pierwszy (nie domyślny) identyfikator ładunku, chyba że dla danej zmiennej podano inaczej. Jeśli wykonasz obliczenia, pierwszy identyfikator ładunku zostanie wybrany, jeśli którakolwiek z potrzebnych zmiennych jest niedostępna.
+
+Listy 80+x zmiennych na kolejnych stronach nie są wyczerpujące; wymienione są tylko przydatne zmienne. Aby uzyskać pełną listę, sprawdź definicję odpowiednich struktur w TTD. Marcin Grzegorczyk ma dość dobrą listę definicji struktur [http://marcin.ttdpatch.net/sv1codec/TTD-locations.html savegame internals page].
+
+=== varadjust ===
+
+Dostosuj zmienną do bardziej użytecznego zakresu. Ma następujący format:
+
+<pre>  <shift-num> <and-mask> <nowiki>[<add-val> <divide-val>/<modulo-val>]</nowiki></pre>
+
+{| 
+|-
+!'''Element'''!![[pl/Development/NewGRF/NFO Specs/GRFActionsDetailed|'''Rozmiar''']]!!'''Opis'''
+|-
+|shift-num||B||value, aby przesunąć zmienną w prawo i kilka specjalnych bitów. Zobacz poniżej.
+|-
+|and-mask||B/W/D||wartość, za pomocą której ORAZ zmienną po przesunięciu. Zwróć tę wartość, jeśli ani bit 6, ani bit 7 funkcji shift-num nie są ustawione.
+|-
+|add-val||B/W/D||wartość do dodania do zmiennej po wykonaniu operacji AND. Występuje tylko wtedy, gdy bity 6 lub 7 są ustawione w shift-num.
+|-
+|divide-val||B/W/D||zwraca sumę podzieloną przez tę wartość. Występuje tylko wtedy, gdy bit 6 jest ustawiony w shift-num.
+|-
+|modulo-val||B/W/D||zwraca sumę modulo (reszta z dzielenia przez) tę wartość. Występuje tylko wtedy, gdy bit 7 jest ustawiony w shift-num.
+|}
+
+<shift-num> jest częściową maską-bitową; jego bity mają następujące znaczenie:
+
+{| 
+|-
+!Bit(y)!!Wartość!!Wersja!!Znaczenie
+|-
+|0..4||0..1F||{{pl/Development/NewGRF/ottdp|0.6|2.0}}||liczba bitów do <span title=shift>'przesunięcia;</span> w prawo <variable>
+|-
+|5||20||{{pl/Development/NewGRF/ottdp|0.6|2.5}}||To jest [[pl/Development/NewGRF/NFO Specs/VarAction2Advanced|advanced VarAction2]]
+|-
+|6||40||{{pl/Development/NewGRF/ottdp|0.6|2.5}}||Jest to regulacja typu <span title=shift-and-add-divide>'przesuń-i-dodaj-podziel'</span>.
+|-
+|7||80||{{pl/Development/NewGRF/ottdp|0.6|2.5}}||Jest to regulacja typu shift-and-add-modulo.
+|}
+
+Nie można ustawić obu bitów 6 i 7. Jeśli żaden z nich nie jest ustawiony, ten varadjust jest zmianą i zmianą.
+
+Należy zauważyć, że w przypadku operacji dodawania i dzielenia zarówno zmienna, jak i dzielnik są traktowane jako liczby ze znakiem. Oznacza to, że jeśli ustawiony jest wysoki bit, liczba jest traktowana jako ujemna, więc może być konieczne maskowanie najbardziej znaczącego bitu, aby wykonać podział bez znaku.
+
+=== nvar ===
+
+Tutaj ustawiasz liczbę różnych zakresów do sprawdzenia. Jeśli wartość zmiennej po powyższych manipulacjach nie mieści się w jednym z tych zakresów, zostanie użyta wartość domyślna. &nbsp;Wyświetlana w oknie zakupu, gra zawsze pokaże pierwszy zakres, jeśli zmienna jest typu 40 + x lub 80 + x (ponieważ zmienna jest niezdefiniowana, ponieważ pojazd jeszcze nie istnieje).
+
+{{pl/Development/NewGRF/ottdp|0.6|2.5|ttdprev=2.0.1 alpha 57}} Od TTDPatch 2.0.1 alfa 57 nvar=0 jest szczególnym przypadkiem. Zamiast używać zakresów, nvar = 0 oznacza, że ​​wynik obliczenia  [[pl/Development/NewGRF/NFO Specs/VarAction2Advanced|advanced]] (lub, jeśli nie zostanie wykonane obliczenie, sama wartość zmiennej skorygowanej) jest zwracana jako wynik wywołania zwrotnego, z ustawionym bitem 15. &nbsp;Jest to przydatne w przypadku tych wywołań zwrotnych, w których możliwych jest wiele różnych wartości zwracanych, i łatwiej jest je obliczyć niż podać je w zakresach. &nbsp;Wartość domyślna musi być nadal określona i będzie używana w przypadku, gdy użyte zmienne nie są dostępne.
+
+===<span id="sets_and_ranges" title="sets and ranges" >sets i zakresy</span>===
+
+Dla każdego zakresu, który chcesz sprawdzić, podajesz set-id jako wartość '''WORD''' (tj. Z 00 po, np. set-id 5 staje się 05 00, lub - w przypadku wyniku wywołania zwrotnego - przez ustawienie wysokiego bitu, np. 05 80), a następnie dolnego i górnego limitu tego zakresu. &nbsp;Zostanie użyty pierwszy pasujący zakres.
+
+Różne sekwencje specjalne \b, \w i \d mogą być przydatne dla <min-range> i <max-range> . Zobacz   [[pl/Development/NewGRF/NFO Specs/GRFActionsDetailed#byte-order|the discussion of escape sequences]] w celu uzyskania dalszych informacji.
+
+===<span id="default" title="default">domyślne</span>===
+
+Set-id do użycia, jeśli żaden z zakresów nie pasuje.
+
+=<span id="Example" title="Example">Przykład</span>=
+<pre>
+ -1 * 15       02 05 03 81        // Akcja2, cecha 05 (kanały), akcja2ID 03, zmienna 1-bajtowa
+                   81 00 04       // zmienna 81 (typ terenu), przesunięcie 00, maska ​​0x04 (=bit dla "na
+				  // lub powyżej linii śniegu
+                   01             // sprawdź jeden zakres
+                   02 00    04 04 // śnieżny kafel: link do action2ID 02
+                   01 00          // domyślnie:     link do action2ID 01
+
+</pre>

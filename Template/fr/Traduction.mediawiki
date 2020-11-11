@@ -1,5 +1,5 @@
 <noinclude>[[Translation:Template/en/Translation]]</noinclude>{{en/Ambox| type  = style
-| image = en/Manual/Base Set/Translation.png
+| image = en/Translation.png
 | text  = <strong>Cet article est traduit de l'original en anglais: <includeonly>[[{{{1}}}|{{{1}}}]]</includeonly><noinclude>{{{1}}}</noinclude>.</strong>
 <div style="font-size: 90%">
 <div style="margin:auto; text-align:Left;">Pourcentage: {{{2|0}}}% environ.
@@ -21,7 +21,7 @@ Résultat :
 {{fr/Traduction|en/Main page|100}}
 Dans cet exemple, l'article original en anglais est ''Main page'' (''Accueil'').
 
-Ce modèle fera aussi en sorte d'ajouter l'article à la catégorie [[:Category:fr/Manual/Base Set/Cargos/À traduire en français]].
+Ce modèle fera aussi en sorte d'ajouter l'article à la catégorie [[:Category:fr/À traduire en français]].
 
 === Après la traduction ===
 Une fois l'article entièrement traduit, supprimer ce modèle de page et utiliser le modèle [[Template:en/Other languages]].
@@ -31,5 +31,5 @@ Une fois l'article entièrement traduit, supprimer ce modèle de page et utilise
 *[[:Category:en/Other languages]] pour les statistiques de traduction.
 
 
-[[Category:fr/Manual/Base Set/Infobox|Traducción]]
-</noinclude><includeonly>{{ #ifexpr: {{{2|0}}}=100 | |[[Category:fr/Manual/Base Set/Cargos/À traduire en français]]{{ #ifexpr: {{{2|0}}}>10 | [[Category:fr/Manual/Base Set/Cargos/Traduit plus 10 pour cent]] | [[Category:fr/Manual/Base Set/Cargos/Traduit rien]]}}}}</includeonly>
+[[Category:fr/Infobox|Traducción]]
+</noinclude><includeonly>{{ #ifexpr: {{{2|0}}}=100 | |[[Category:fr/À traduire en français]]{{ #ifexpr: {{{2|0}}}>10 | [[Category:fr/Traduit plus 10 pour cent]] | [[Category:fr/Traduit rien]]}}}}</includeonly>

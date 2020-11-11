@@ -1,5 +1,5 @@
 [[Translation:en/Manual/Signals]]
-{{ca/Taula de contingut}}
+{{ca/Manual/Taula de contingut}}
 :''Veja el tutorial sobre la [[ca/Manual/Col·locar senyals|col·locació de senyals]] per a una introducció pràctica a la senyalització.''
 
 Els '''senyals''' són dispositius útils que li permeten controlar el moviment dels [[ca/Manual/Trens|trens]]. Són necessàries per a evitar les col·lisions en les xarxes [[ca/Manual/Construcció de ferrocarrils|ferroviàries]] amb uns quants trens circulant.
@@ -22,7 +22,7 @@ No es pot construir senyals:
 *Sobre els ponts o dins dels túnels (encara que hi ha un [[en/Community/Patches/Tunnel Signals|pegat de HackaLittleBit]] que simula la col·locació automàtica de senyals dins de túnels i sobre els ponts).
 
 ==Interfície de senyals==
-{{ca/Manual/Característica|0.7|align="right"|text=(desde 0.7.0)}}
+{{ca/Característica|0.7|align="right"|text=(desde 0.7.0)}}
 S’ha creat una nova interfície de selecció de senyals, utilitzada per a seleccionar els tipus de senyals, que elimina la necessitat de fer ctrl+clic, per a poder canviar de tipus de senyal.
 
 Si no està activada, faça ''control+clic'' en la icona construeix senyals de tren [[File:en/Manual/Place signal.png]], o bé active aquesta interfície en ''Paràmetres avançats/Construcció/Senyals'', '''Activa la la interfície dels senyals''' seleccionant l’opció "Actiu" (en versions antigues: en el fitxer openttd.cfg establisca <code>enable_signal_gui</code> com <code>true</code>). D’aquesta manera, ara en fer clic en el botó construeix senyals de tren apareixerà aquesta interfície:
@@ -66,7 +66,7 @@ Si no està activada, faça ''control+clic'' en la icona construeix senyals de t
 '''Nota:''' Canviar el tipus de senyal és gratis, però canviar d’un dispositiu mecànic (semàfor) a un altre elèctric (o lluminós) i viceversa costa diners. Els semàfors poden tenir la seua utilitat, en ser senyals més visibles per al jugador en alguns casos (sobretot quan no es pot veure quin és el color dels senyals elèctrics per trobar-se d’esquena a l’espectador). D’altra banda funcionen exactament igual, un senyal elèctric i el semàfor (mecànic) equivalent.
 
 ==Senyals de tram==
-{{ca/Manual/Característica|Old|align="right"|text=(desde 0.1.1)}}
+{{ca/Característica|Old|align="right"|text=(desde 0.1.1)}}
 Un tram de vies (o bloc de bloqueig, en argot ferroviari) està format per totes aqueixes caselles de vies a les que es pot arribar després de travessar un senyal donat abans de travessar qualsevol altre senyal.
 Els senyals de tram, com el seu nom indica, funcionen sobre la base de trams de vies. Si el tram de vies situat a l'altre costat d’un senyal està ocupat, el senyal es posarà de color roig. Si no, es posarà verd.
 
@@ -117,14 +117,14 @@ Si no té activa l’interfície de senyals, en primer lloc construïsca un seny
 *Recorde que no ha de pressionar la tecla ''Ctrl'' en construir el primer senyal (ja que d’aquesta manera es canvia entre senyals mecànics o semàfors i senyals elèctrics). Tampoc ha d’usar-la si té activa l’interfície de senyals.
 
 ====Limitaciones====
-[[File:en/Manual/PresignalLimitation.png|frame|El problema amb els senyals previs: el senyal d’entrada està verd, encara que és impossible eixir pel senyal de sortida que està de color verd.{{en/Manual/Emoticon|:€}}]]
+[[File:en/Manual/PresignalLimitation.png|frame|El problema amb els senyals previs: el senyal d’entrada està verd, encara que és impossible eixir pel senyal de sortida que està de color verd.{{en/Emoticon|:€}}]]
 Un punt important a assenyalar respecte als senyals de sortida és que aquestes, quan estan de color verd, donen lloc a un senyal d’entrada de color verd, encara que siga materialment impossible eixir per aqueixa eixida a causa del disseny del traçat de les vies (com en la imatge de la dreta quan un tren intente entrar pel carril inferior). Açò pot arruïnar les configuracions més complexes de senyals previs, així que pare la màxima atenció amb la seua planificació.
 
 ''Nota:''' Un dels errors que se han assenyalat com «irresolubles» és que els trens perduts ignoren els senyals de sortida. Si es perd un tren, aquest tria una direcció aleatòria en cada encreuament, ignorant el color dels senyals de sortida, i fàcilment poden bloquejar completament les xarxes amb senyals previs.
 {{en/-}}
 
 ==Senyals de camí==
-{{ca/Manual/Característica|0.7|align="right"|text=(desde 0.7.0)}}
+{{ca/Característica|0.7|align="right"|text=(desde 0.7.0)}}
 Els senyals de camí són dos senyals nous. Permeten que els trens pugan reservar un camí fins al senyal següent abans d’entrar en un tram. Si un altre tren vol entrar en aqueix tram, i té èxit reservant una altre camí diferent dins del mateix tram, el senyal autoritzarà al tren a entrar en el tram, encara que ja hi haja un tren dintre circulant per l’altre camí.
 [[File:ca/Manual/Yapp signalgui.png|frame|none|Els dos nous tipus de senyals en la [[ca/Interfície de senyals|Interfície de senyals]].]]
 [[File:en/Manual/Signal bloc.png|frame|right|Bloc en Y delimitat per tres ''senyals de tram'' normals]]
@@ -180,7 +180,7 @@ Amb aquest disseny d’estació, els trens poden utilitzar ambdues andanes quan 
 [[File:en/Manual/Yapp basicstation.png|frame|center|Estació bàsica.]]
 
 ==Semàfors (o senyals mecánics)==
-{{ca/Manual/Característica|Old|align="right"}}
+{{ca/Característica|Old|align="right"}}
 [[File:en/Manual/Semaphore.png|frame|left]]
 Els '''semàfors''' o '''senyals mecànics''' són un tipus de senyal que no es diferencien dels senyals elèctrics (o lluminosos). Només tenen una aparença distinta, que els dóna un aire més antic.
 
@@ -202,5 +202,5 @@ Tinga en compte que els senyals no són la millor manera de dirigir als trens al
 * [[:Category:ca/Encreuaments de trens|Encreuaments de trens]]: Per a exemples d’encreuaments complexos que trauen partit dels senyals previs.
 * [http://www.darkcoding.net/misc/openttd-trains-and-signals-for-beginners-a-tutorial/ Senyals per al complet principiant (en)]
 
-[[Category:ca/Manual/Base Set/Trains/Ferrocarril]]
+[[Category:ca/Manual/Ferrocarril]]
 [[Category:ca/Manual/Construcció]]

@@ -24,7 +24,7 @@ This task has some pre-conditions:
 #:* Maybe just on the main screen instead of the current difficulty settings. (this would be a normal place in other games, except highscores are currently not quite meaningful/important in OTTD)
 #:* Maybe in game next to the company league or detailed rating windows.
 #:* On a side note: Company league, detailed rating and highscore might all be possibly become subject to game scripts. (highscore per gamescript instead of per difficulty profile)
-{{en/Development/Design Drafts/Progress bar|100|text=completed: Difficulty settings window moved at {{en/Development/Design Drafts/Revision|24791}}}}
+{{en/Progress bar|100|text=completed: Difficulty settings window moved at {{en/Revision|24791}}}}
 
 === Cleanup game options ===
 The game options contain a few settings which better belong to the advanced settings or new map window. Actually the only settings which would remain, which can not be moved to mapgen or advanced settings, are the these:
@@ -49,7 +49,7 @@ This a weird hidden window. Esp. it is only available in game.
 ** either be removed or
 ** would open the advanced settings window with a preset text-filter. The textfilter would be the (translated) category name of the news settings in the tree, with control codes stripped (str_validate).
 *: The first option is the safe way; the second is kind of questionable whether it would turn out well, or just fails :)
-{{en/Development/Design Drafts/Progress bar|100|text=completed: News settings window moved at {{en/Development/Design Drafts/Revision|24845}}}}
+{{en/Progress bar|100|text=completed: News settings window moved at {{en/Revision|24845}}}}
 
 === Filter for settings ===
 Allow users to apply various filters on the settings:
@@ -66,7 +66,7 @@ Allow users to apply various filters on the settings:
 *:* "Advanced settings" should be those settings which the average forum user wants to see. This includes detail stuff like "date format in savegame names", "slope steepness for acceleration"... most settings likely go into this category.
 *:* "Expert settings" should be those settings which usually noone wants to see or change. Examples are "Build on slopes" and "Enable multiple NewGRF engine sets"
 * ...
-{{en/Development/Design Drafts/Progress bar|75}}
+{{en/Progress bar|75}}
 
 === Allow settings presets ===
 Settings presets can mean different things:

@@ -1,0 +1,122 @@
+{{pl/Development/NewGRF/inne strony|en=newgrf-specs.tt-wiki.net/wiki/Action3/Canals|pl=pl/Development/NewGRF/NFO Specs/Action3/Canals |sub=nfo}}
+<!--{{-}}<br>--><!--{{ambox | text = w trakcie edycji.}} -->
+== Wprowadzenie ==
+
+Action 3  przypisuje zestawy graficzne (do których odwołuje się (łańcuchy) [[pl/Development/NewGRF/NFO Specs/Action2/Main Page|action 2(e]] ) do ID''`ów'' funkcji . 
+
+== Format ==
+
+Format danych jest zależny od funkcji, kanały używają określonych identyfikatorów, które definiują dostarczaną grafikę.
+
+Dane są:
+
+<pre> &lt;Sprite-number&gt; * &lt;Length&gt; 03 05 01 &lt;id&gt; 00 &lt;set-ID&gt;</pre>
+
+{| class="wikitable"
+|-
+!'''Element'''
+![[pl/Development/NewGRF/NFO Specs/GRFActionsDetailed|'''Rozmiar''']]
+!'''Opis'''
+|-
+|&lt;Sprite-number&gt;
+|dec
+|Kolejny numer sprite'a
+|-
+|&lt;length&gt;
+|dec
+|Całkowita liczba bajtów użytych w tej akcji
+|-
+|03
+|B
+|Definiuje action 03
+|-
+|05
+|B
+|Cecha 05 "Canały"
+|-
+|01
+|B
+|Kanały i rzeki mogą zapewnić tylko jeden "ID" naraz
+|-
+|&lt;id&gt;
+|B/B*
+|ID''`y'' bieżącej funkcji, z które ta akcja 3 kojarzy grafikę. Musi istnieć tyle ID''`ów'', ile &lt;n-id&gt; określa
+|-
+|00
+|B
+|Kanały nie obsługują typów ładunków
+|-
+|&lt;set-ID&gt;
+|W
+|Domyślny set-id do użycia, jeśli żaden z powyższych dopasowań
+|}
+
+== Description ==
+
+=== Sprite-number ===
+
+To tylko numer, na którym jesteś.
+
+=== Length ===
+
+Policz liczbę bajtów w tej akcji.
+
+=== Feature ===
+
+Ustawia typ [[pl/Development/NewGRF/NFO Specs/Features|feature]] , który chcesz zmienić, 05 dla kanałów w tym przypadku
+
+=== id ===
+
+W przypadku kanałów lub rzek różni się to rodzajem 'sprites' dostępnych w prawdziwym 'sprite' :
+
+{| 
+|-
+!'''ID'''!!'''Opis'''
+!colspan="2"|'''Sprites'''
+!colspan="2"|'''Sprites , gdy [[pl/Development/NewGRF/NFO Specs/Action0/Canals#graphic-flags-09| rekwizyt. <small>''(prop.)''</small> 09 Bit 0]] jest ustawiony'''
+|-
+|00||Canal water||{{pl/Development/NewGRF/ottdp|0.6|2.5}}||4 slope sprites||{{pl/Development/NewGRF/ottdp|1.1|2.6|ottdrev=r20352|ttdprev=r1573}}||1 flat ground sprite followed by 4 slope sprites
+|-
+|01||Locks||{{pl/Development/NewGRF/ottdp|0.6|2.5}}||24||{{pl/Development/NewGRF/ottdp|no|no}}||undefined
+|-
+|02||Dikes||{{pl/Development/NewGRF/ottdp|0.6|2.5}}||12||{{pl/Development/NewGRF/ottdp|no|no}}||undefined
+|-
+|03||Canal GUI||{{pl/Development/NewGRF/ottdp|no|2.5}}||1||{{pl/Development/NewGRF/ottdp|no|no}}||undefined
+|-
+|04||Flat docks||{{pl/Development/NewGRF/ottdp|no|2.5}}||4||{{pl/Development/NewGRF/ottdp|no|no}}||undefined
+|-
+|05||River water||{{pl/Development/NewGRF/ottdp|0.6|2.6}}||4 slope sprites||{{pl/Development/NewGRF/ottdp|1.1|2.6|ottdrev=r20352|ttdprev=r1573}}||1 flat ground sprite followed by 4 slope sprites
+|-
+|06||Riverbanks ||{{pl/Development/NewGRF/ottdp|0.6|2.6}}||12*5 (Last 4 for slopes)||{{pl/Development/NewGRF/ottdp|no|no}}||undefined
+|-
+|07||River GUI||{{pl/Development/NewGRF/ottdp|no|2.6}}||2||{{pl/Development/NewGRF/ottdp|no|no}}||undefined
+|-
+|08||Buoy||{{pl/Development/NewGRF/ottdp|1.2|no|ottdrev=r22973}}||1||{{pl/Development/NewGRF/ottdp|no|no}}||undefined
+|}
+
+==== Watercliffs (00) ====
+<!--[[File:riversprites_00.png]]--><span title="ilustracja w linku">[http://newgrf-specs.tt-wiki.net/wiki/File:riversprites_00.png File:riversprites_00.png]</span>
+
+==== Dikes (Canals) (02) ====
+<!--[[File:riversprites_02.png]]--><span title="ilustracja w linku">[http://newgrf-specs.tt-wiki.net/wiki/File:riversprites_02.png File:riversprites_02.png]
+</span>
+
+==== River slopes (05) ====
+Gdy właściwość 09, bit 0 NIE jest ustawiony, wymagane są 'sprites' 
+<!--[[File:riversprites_05.png]]--><span title="ilustracja w linku">[http://newgrf-specs.tt-wiki.net/wiki/File:riversprites_05.png File:riversprites_05.png]</span>
+
+jeśli bit jest ustawiony, 'sprites' są poprzedzane płaską płytką wodną, ​​która następnie reprezentuje wodę używaną wyłącznie do rzek.
+
+==== Riverbanks (06) ====
+
+Zawiera 5 razy 'sprites', jak pokazano dla id2 (grobli). Pierwsze 12 'sprites' jest dla terenów poziomych, następne są dla rzek nachylonych, gdzie zbocza są w tej samej kolejności co dla id5 (stoki rzeczne).
+
+==== Buoy (08) ====
+
+Zawiera 'sprite' boi bez wody, który ma być pokazany na mapie. Zostanie to nałożone na odpowiednią wodę dla płytki.
+
+=== set-ID ===
+
+set-ID (lub Action2 ID)
+
+== Przykład ==

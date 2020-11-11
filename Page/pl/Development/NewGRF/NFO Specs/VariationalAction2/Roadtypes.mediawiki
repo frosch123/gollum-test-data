@@ -1,0 +1,52 @@
+{{pl/Development/NewGRF/inne strony|en=newgrf-specs.tt-wiki.net/wiki/VariationalAction2/Roadtypes|pl=pl/Development/NewGRF/NFO Specs/VariationalAction2/Roadtypes |sub=nfo}}
+<!--{{-}}<br>--><!--{{ambox | text = w trakcie edycji.}}--><!-- -->
+==Wprowadzenie==
+
+==<span title="Variables" id="Variables">Zmienne</span>==
+
+{| 
+|-
+!Zmienna !![[pl/Development/NewGRF/NFO Specs/GRFActionsDetailed|Size]]!!Wersja  !! Opis
+|-
+|40||B||{{pl/Development/NewGRF/ottdp|1.10}}||Typ terenu: 0 normalny, 1 pustynny, 2 lasy deszczowe, 4 na lub powyżej linii śniegu.
+|-
+|41||B||{{pl/Development/NewGRF/ottdp|1.10}}||Ulepszone tunele; wejście ma tor powyżej. Zawsze 0 w OpenTTD.
+|-
+|42||B||{{pl/Development/NewGRF/ottdp|1.10}}||Status przejazdu kolejowego: 0 jeśli jest otwarty (lub nie jest to przejazd), 1 jeśli jest zamknięty.
+|-
+|43||D||{{pl/Development/NewGRF/ottdp|1.10}}||Data budowy zajezdni (format długi, oparty na 0); inne: aktualna data
+|-
+|44||B||{{pl/Development/NewGRF/ottdp|1.10}}||[[pl/Development/NewGRF/NFO Specs/TownZones|Town zone]] kafla.
+|}
+
+== Description ==
+=== Terrain type (40) ===
+
+'''Format:''' bajt
+
+{| 
+|-
+!value!!Znaczenie
+|-
+|0||normal tile
+|-
+|1||desert tile
+|-
+|2||rain forest tile
+|-
+|4||tile on or above snow line
+|}
+
+=== Enhanced tunnels (41) ===
+
+'''Format:''' bajt
+
+Ta zmienna zawsze zwraca 0 i jest zarezerwowana do użytku w przyszłości z ulepszonymi tunelami.
+
+=== Level crossing status (42) ===
+
+'''Format:''' bajt
+
+Ta zmienna zwraca 1, jeśli przejście jest zamknięte. Jeśli przejście jest otwarte lub kafelek nie przechodzi przez poziom, zwracana jest wartość 0.
+
+==Przykład==

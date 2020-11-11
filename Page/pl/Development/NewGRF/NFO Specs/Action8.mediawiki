@@ -1,0 +1,213 @@
+{{pl/Development/NewGRF/inne strony|en=newgrf-specs.tt-wiki.net/wiki/Action8|pl=pl/Development/NewGRF/NFO Specs/Action8 |sub=nfo}}
+<!--[[Category:Artykuły w języku polskim/Pl]]-->
+<!--{{-}}<br>{{ambox | text = w trakcie edycji.}}-->
+
+==<span id="Introduction" title="Introduction">Wprowadzenie</span>==
+
+Zdefiniuj GRFID, nazwę i opis
+
+Istnieje wiele nowych zestawów graficznych dostępnych dla graczy TTD. Oczywiście musimy upewnić się, że nigdy nie pomieszamy zestawów. Aby mieć pewność, że tak się nigdy nie stanie, możesz ustawić ID. Inną przydatną funkcją Action 8 jest możliwość włączenia użytecznych informacji do końcowego pliku .grf. Tutaj wyjaśniamy, jak działa Action 8.
+
+== Syntax ==
+
+Podobnie jak wszystkie inne pseudo-'sprites' , akcja 8 składa się z bitów szesnastkowych. Nie ma ograniczenia w całkowitej liczbie bitów szesnastkowych, których można użyć w Akcji 8. Jednak jeden termin ma pewien limit. Podajmy przykład tego, jak wygląda linia Action 8:
+
+<pre><sprite-number> * <length> 08 <version> <grf-id> <name> <description></pre>
+
+Oto krótki przegląd tego, co oznacza każdy termin:
+
+{| 
+|-
+!'''Element'''!![[pl/Development/NewGRF/NFO Specs/GRFActionsDetailed|'''Rozmiar''']]!!'''Opis'''
+|-
+|<sprite-number>||dec||Sekwencyjny numer 'sprite'
+|-
+|<length>||dec||Łączna liczba bajtów w akcji
+|-
+|08||B||Action 08
+|-
+|<version>||B||Wersja GRF
+|-
+|<grf-id>||4*B||Unikalny ID pliku .grf
+|-
+|<name>||S||Krótki tekst zawierający nazwę tego zestawu
+|-
+|<description>||S||Dłuższy opis tego zestawu
+|}
+
+==<span id="Descriptions" title="Descriptions">Opisy</span>==
+
+=== Sprite-number ===
+
+Liczba tego 'sprite'.
+
+Działanie 8 musi być jednym z pierwszych pseudospriteów w pliku .NFO. Jednak ważne jest, aby mieć przed sobą inne działania, z wyjątkiem tych, które definiują nowe duszki lub właściwości pojazdu (itp.).
+
+Akcje 6, 7, 9, B, C, D (oprócz [sprite [[pl/Development/NewGRF/NFO Specs/GRFResourceManagement|resource management]] ), 10 i 14 są ważne przed akcją 8.
+
+=== Length ===
+
+Łączna liczba bajtów w Działaniu 8.
+
+=== GRF Version ===
+
+Powinna to być wersja graficzna, dla której plik jest napisany. To jest wersja [[pl/Development/NewGRF/NFO Specs/Version numbers#grf-version|GRF format]] , a nie [[pl/Development/NewGRF/NFO Specs/Version numbers#version-of-a-specific-newgrf|version of your GRF]] !
+Nie jest to również "[[pl/Development/NewGRF/NFO Specs/Version numbers#nfo-version|NFO version]]" , którą umieściłeś na początku plików ".nfo" , aby ogłosić używaną składnię GRFCodec.
+
+Prawidłowe wartości to:
+
+{| 
+|-
+!'''<span title=Value>'Wartość'</span>'''!!'''<span title=Compatibility>'Kompatybilność'</span>'''!!'''[[pl/Development/NewGRF/NFO Specs/Version numbers#ttdpatch-version|Wersja TTDPatch]]'''!!'''[[pl/Development/NewGRF/NFO Specs/Version numbers#openttd-version|Obsługa OpenTTD]]'''
+|-
+|08||02..08|| - || {{pl/Development/NewGRF/ottd|1.2|r23159}}
+|-
+|07||02..07||2.5 beta 1 lub wyżej|| {{pl/Development/NewGRF/ottd|0.6}}
+|-
+|06||02..06||2.0.1 alpha 13 lub wyżej|| {{pl/Development/NewGRF/ottd|0.6}}
+|-
+|05||02..05||2.0r1 Stabilne TTDPatch + TTDPatch 2.0.1 alphas do 12|| {{pl/Development/NewGRF/ottd|0.6}}
+|-
+|04||02..04||2.0 Stabilne TTDPatch||{{pl/Development/NewGRF/ottd|0.6}}
+|-
+|01||00..01||1.9.1 alpha 28 lub wyżej||{{pl/Development/NewGRF/ottd|no}}
+|-
+|00||00||1.9.1 alphas aż do 27||{{pl/Development/NewGRF/ottd|no}}
+|}
+
+Wpisy dla 00 i 01 są uwzględniane tylko w celu uzupełnienia i pomocy w aktualizacji istniejącej grafiki. Nie należy ich używać z nową grafiką, ponieważ będą one niezgodne z aktualnymi wersjami TTDPatch i OpenTTD. OpenTTD 1.1.0 i nowsze wersje wyłączą NewGRF z nieobsługiwanymi wersjami GRF.
+
+Upewnij się, że ustawiłeś numer wersji nie mniejszy niż wersja minimalna, która obsługuje wszystkie funkcje używane przez plik.
+
+Kolumna zgodności oznacza, jak niski numer wersji jest obsługiwany przez daną wersję TTDPatch, np. TTDPatch 2.0r1 obsługuje pliki graficzne w dowolnej wersji od 02 do 05, ale nie na przykład 01 lub 06.
+
+W wersjach 07 i 08 wprowadzono kilka drobnych zmian semantycznych w niektórych funkcjach graficznych, tj. Plik zachowuje się nieco inaczej w zależności od tego, czy jest zadeklarowany jako wersja 06, 07 czy 08. Zmiany te są opisane bardziej szczegółowo na stronach dla funkcji, na które wpływają.
+
+=== GRFID ===
+
+Jest to seria 4 bajtów. To konwencja dla 
+* użyj pierwszych '''trzech bajtów''' <small>''(three bytes)''</small> dla '''inicjałów''' <small>''(initials)''</small> twórcy w kodzie ASCII, np. 54 57 48 dla "TWH" . 
+* Ostatni (czwarty) bajt zazwyczaj określa, który z zestawów autora to jest. Zobacz następny podrozdział dla zakresów grfID, które są już w użyciu.
+* Numery wersji dla NewGRF są przekazywane za pośrednictwem poprzedzającego [[en/Action14]]. 
+
+Zasadniczo masz swobodę korzystania z GRFID, o ile masz pewność, że jest on unikalny, ale ogólnie najlepiej jest postępować zgodnie z powyższymi wytycznymi. Zobacz ostatni podsekcję, aby znaleźć lokalizacje, w których już znajdują się używane GRFID.
+
+Zauważ, że GRFID rozpoczynające się od FF (tj. Pierwszy bajt to FF, taki jak w FF123456) są zarezerwowane do celów wewnętrznych i nie powinny być używane przez zwykłe pliki .grf. Tych GRF nie można wyłączyć; TTDPatch wyświetla je z niebieską flagą w oknie statusu GRF.
+
+Dodatkowy plik newgrf, będący częścią podstawowych zestawów OpenTTD, musi mieć GRFID zaczynający się od FF "OT" .
+Tabela poniżej:
+
+{|
+!GRFID!!<span title=purposes>'zamiar '</span>
+|-
+|00 00 00 00||zarezerwowane (używane jako nieprawidłowy Id NewGRF, na przykład podczas jawnego odwoływania się do oryginalnych typów branży etc.)
+|-
+|00 00 00 01 .. FE FF FF FF||normal NewGRFs
+|-
+|FF 00 00 00 .. FF FF FF FF||reserved
+|-
+|valign=middle|FF "OT" 00 .. FF "OT" FF
+|extra base GRFs
+{|
+|FF "OT" 01|| OpenGFX
+|-
+|FF "OT" 11|| NoGFX
+|-
+|FF "OTD"|| OpenTTD (extra) base graphics: openttdd.grf (OpenTTD 0.6 - 1.0)
+|-
+|FF "OTN"|| NightGFX
+|-
+|FF "OTT"|| OpenTTD (extra) base graphics: openttd.grf (OpenTTD >= 1.1)
+|-
+|FF "OTW"|| OpenTTD (extra) base graphics: openttdw.grf (OpenTTD 0.6 - 1.0)
+|-
+|FF "OTz"|| zBase
+|}
+|-
+|FF FF FF FF|| TTDPatch (extra) base graphics
+|}
+
+====<span id="Used_ranges" title="Used ranges">Użyte zakresy</span>====
+
+Poniższa tabela pokazuje zakresy GRFID, które są używane przez kilku autorów NewGRF. Osoby wybierające nowe GRFID są proszone o nieużywanie GRFID, który mieści się w zakresie jednego z poniższych. Ta lista nie jest w żaden sposób wyczerpująca; jeśli chcesz zgłosić swój własny zakres, zaktualizuj tabelę. Ze starszych powodów istnieją pewne szersze zakresy GRFID zastrzeżone przez niektóre osoby. Kiedy chcesz zarezerwować szerszy zakres niż odmianę tylko w ostatnim bajcie, zastanów się dwa razy i zastanów się, ile czasu zajmie ci napisanie 255 sensownych zupełnie nowych NewGRF (ponieważ wersja pojedynczego grf jest zakodowana w akcji14, a zatem nowy identyfikator nawet zaszkodzi i zabije twoją wsteczną kompatybilność ze starszymi wersjami).
+
+{|
+!<span title='Range (hex)'>'Zakres (szesnastkowo)'</span>!!ASCII!!Używanie
+|-
+|43 41 XX XX||C A _ _||OzTrans; 1st generation Canadian and some North American sets
+|-
+|48 57 XX XX||H W _ _||SwissFan91; TARS Swiss themed newobjects
+|-
+|4A 56 XX XX||J V _ _||juzza1; Various Finnish sets
+|-
+|4D 65 XX XX||M e _ _||George; ECS, Long vehicles
+|-
+|4D 46 47 XX||M F G _||Yoshi; DACh, ...
+|-
+|4D 47 XX XX||M G _ _||Ammler, #openttdcoop
+|-
+|4E 57 XX XX||N W _ _||Norwegian projects
+|-
+|4F 47 2B XX||O G + _||OpenGFX+ sets
+|-
+|4F 7A XX XX||O z _ _||OzTrans; Various non-Canadian projects
+|-
+|50 43 XX XX||P C _ _||PaulC; Town names, various mini GRFs
+|-
+|53 43 XX XX||S C _ _||SAC; INFRA projects
+|-
+|57 42 XX XX||W B _ _||wallyweb; NewObjects, Various features, GRF development
+|-
+|6D 62 XX XX||m b _ _||Michael Blunck; DBsetXL, NewStations, MariCo
+|-
+|97 85 XX XX||? ? _ _||OzTrans; Canadian Theme Pack (under development)
+|-
+|97 87 XX XX||? ? _ _||OzTrans; 2nd generation Canadian graphics
+|-
+|FB FB XX XX||? ? _ _||FooBar; Dutch sets, Transrapid/metro tracks
+|-
+|FF XX XX XX||? _ _ _||System reserved
+|}
+
+==== Used GRFIDs ====
+
+Istnieje kilka miejsc, które mają/pokazują listy GRFID, z których ktoś na pewno korzysta. Brak GRFID na którejkolwiek z tych list nie jest dowodem na to, że nie jest używany.
+
+* [http://bananas.openttd.org/package/newgrf Bananas] Banany pokazuje GRFID wszystkich obecnie aktywnych NewGRF dystrybuowanych przez system
+* [http://grfcrawler.tt-forums.net/index.php?do=search&mode=advanced GRFCrawler] GRFCrawler pozwala przeszukiwać GRFID NewGRF w swoim systemie
+* <s title=nieaktualne>[http://devs.openttd.org/~rubidium/newgrf.html] OpenTTD generuje listę, która pokazuje wszystkie NewGRF, które były kiedykolwiek używane w grze wieloosobowej</s>
+
+=== Name ===
+To krótkie pole powinno zawierać nazwę zestawu. Zobacz [[pl/Development/NewGRF/NFO Specs/GRFActionsDetailed#strings|GRFActionsDetailed]] dla instrukcji dotyczących generowania niezbędnych kodów bajtów oraz ograniczenia dotyczące używania znaków.
+Nazwa musi być krótka, ponieważ powinna pasować do jednej linii GRF Status window.
+
+===<span id="Description" title="Description">Opis</span>===
+To jest dłuższy opis zestawu. Zazwyczaj zawiera imię i nazwisko autora oraz informację o prawach autorskich lub inne informacje. Zobacz [[pl/Development/NewGRF/NFO Specs/GRFActionsDetailed#strings|GRFActionsDetailed]] , aby uzyskać instrukcje dotyczące generowania niezbędnych kodów bajtów oraz ograniczenia dotyczące znaków, których możesz używać.
+Opis może być dość długi, ale powinien być wystarczająco krótki, aby zmieścił się w części opisowej  GRF Status window, lub jego część może zostać odcięta.
+
+==<span id="Example" title="Example">Przykład</span>==
+
+Poniżej znajduje się przykład tego, jak może wyglądać pseudo-sprite prawdziwej Action 8.
+
+ 1 * 43 '''08''' 07 "TW" 01 06 "Tutorial Example" 00 "Changes nothing. Author: A kind person" 00
+
+Wyjaśnijmy to krok po kroku. Aby zrozumieć, co mówią bity, możesz użyć edytora szesnastkowego.
+
+{| 
+|-
+!'''<span title=Byte>'Bajt'</span>'''!!'''Znaczenie'''
+|-
+|1||<sprite-number>
+|-
+|43||<length> akcji w bajtach; zacznij liczyć od 08 (<action>)
+|-
+|08||<action>: ustawia tego pseudo-sprite, aby działał jako action 8
+|-
+|07||<version>: Wersja formatu GRF 7 (jest to wersja używanego formatu GRF, a nie twojego GRF)
+|-
+|54 57 01 06||<-grf-id>: Kod ASCII dla TW, a następnie cyfry 1 i 6 wskazujące wersję 6 pierwszego zestawu TW
+|-
+|"Tutorial..." 00||<name>: Nazwa NewGRF
+|-
+|"Changes..." 00||<description>: Opis NewGRF
+|}

@@ -1,0 +1,212 @@
+{{pl/Development/NewGRF/inne strony|en=newgrf-specs.tt-wiki.net/wiki/VariationalAction2/Industries|pl=pl/Development/NewGRF/NFO Specs/VariationalAction2/Industries |sub=nfo}}
+<!--{{-}}<br>--><!--{{ambox | text = w trakcie edycji.}}--><!-- -->
+==Wprowadzenie==
+
+==<span id="Variables" title="Variables">Zmienne</span>==
+
+{| 
+|-
+!Zmienna !![[pl/Development/NewGRF/NFO Specs/GRFActionsDetailed|Rozmiar]] !!Wersja !! Opis
+|-
+|40..42||||{{pl/Development/NewGRF/ottdp| | }}||Czeka na ładunek. Zobacz także zmienną 6F.
+|-
+|43||||{{pl/Development/NewGRF/ottdp| |2.6|ttdprev=r1298}}||Odległość 'Manhatańska' od najbliższej płytki suchej/lądowej
+|-
+|44||||{{pl/Development/NewGRF/ottdp| |2.6|ttdprev=r1594}}||Numer układu (od-1)
+|-
+|45||||{{pl/Development/NewGRF/ottdp| |2.6|ttdprev=r1711}}||Informacje o graczu
+|-
+|46||||{{pl/Development/NewGRF/ottdp|0.7|2.6|ttdprev=r2047|ottdrev=r13443}}||Data powstania przemysłu w dniach od roku 0
+|-
+|60||||{{pl/Development/NewGRF/ottdp| |2.5|ttdprev=alpha 73}}||Uzyskaj ID płytki branżowej na odsunięciu
+|-
+|61||||{{pl/Development/NewGRF/ottdp| |2.5|ttdprev=alpha 73}}||Uzyskaj losowe fragmenty kafli z przesunięciem
+|-
+|62||||{{pl/Development/NewGRF/ottdp| |2.5|ttdprev=alpha 74}}||Informacje o ziemi pobliskich płytek
+|-
+|63||||{{pl/Development/NewGRF/ottdp| | }}||Etap animacji pobliskich kafelków
+|-
+|64||||{{pl/Development/NewGRF/ottdp| | }}||Odległość najbliższej branży z podanym typem
+|-
+|65||||{{pl/Development/NewGRF/ottdp| | }}||Uzyskaj [[pl/Development/NewGRF/NFO Specs/TownZones|town zone]] i odległość 'Manhatańską' od najbliższego miasta
+|-
+|66||||{{pl/Development/NewGRF/ottdp| | }}||Uzyskaj kwadrat odległości euklidesowej od najbliższego miasta
+|-
+|67||||{{pl/Development/NewGRF/ottdp| | }}||Liczba branży, odległość najbliższej instancji
+|-
+|68||||{{pl/Development/NewGRF/ottdp| | }}||Podobnie jak powyżej, ale z filtrem układu
+|-
+|69||||{{pl/Development/NewGRF/ottdp|1.9|no|ottdrev=e66cec8f}}||Ilość wyprodukowanego ładunku wyjściowego czekającego na dystrybucję.
+|-
+|6A||||{{pl/Development/NewGRF/ottdp|1.9|no|ottdrev=e66cec8f}}||Ilość ładunków wyprodukowanych w tym miesiącu (do tej pory).
+|-
+|6B||||{{pl/Development/NewGRF/ottdp|1.9|no|ottdrev=e66cec8f}}||Ilość ładunków przewiezionych w tym miesiącu (na razie).
+|-
+|6C||||{{pl/Development/NewGRF/ottdp|1.9|no|ottdrev=e66cec8f}}||Ilość ładunków wyprodukowanych w zeszłym miesiącu.
+|-
+|6D||||{{pl/Development/NewGRF/ottdp|1.9|no|ottdrev=e66cec8f}}||Ilość ładunku przewiezionego w zeszłym miesiącu.
+|-
+|6E||||{{pl/Development/NewGRF/ottdp|1.9|no|ottdrev=e66cec8f}}||Data ostatniego dostarczenia ładunku. (w dniach od roku 0)
+|-
+|6F||||{{pl/Development/NewGRF/ottdp|1.9|no|ottdrev=e66cec8f}}||Ilość oczekujących ładunków do przetworzenia.
+|-
+|70||||{{pl/Development/NewGRF/ottdp|1.10|no|ottdrev=fdaf67d924}}||Tempo produkcji ładunku.
+|-
+|71||||{{pl/Development/NewGRF/ottdp|1.10|no|ottdrev=fdaf67d924}}||Procent ładunków przewiezionych w zeszłym miesiącu.
+|-
+|8A||W||{{pl/Development/NewGRF/ottdp| | }}||Ilość wyprodukowanego ładunku wyjściowego czekającego na dystrybucję dla pierwszego ładunku wyjściowego. {{pl/Development/NewGRF/ottdp|1.9|no|ottdrev=e66cec8f}}Przestarzałe, zobacz zamiast tego zmienna 69.
+|-
+|8C||W||{{pl/Development/NewGRF/ottdp| | }}||Ilość wyprodukowanego ładunku wyjściowego czekającego na dystrybucję dla drugiego ładunku wyjściowego. {{pl/Development/NewGRF/ottdp|1.9|no|ottdrev=e66cec8f}}Przestarzałe, zobacz zamiast tego zmienna 69.
+|-
+|93||B||{{pl/Development/NewGRF/ottdp| | }}||Poziom produkcji. Zwykle od 4 do 128, domyślny poziom początkowy to 16. Poziom 0 oznacza rychłe zamknięcie.
+|-
+|94||W||{{pl/Development/NewGRF/ottdp| | }}||Produkcja w tym miesiącu pierwszego ładunku wyjściowego. {{pl/Development/NewGRF/ottdp|1.9|no|ottdrev=e66cec8f}}Przestarzałe, patrz zamiast tego zmienna 6A.
+|-
+|96||W||{{pl/Development/NewGRF/ottdp| | }}||Produkcja w tym miesiącu drugiego ładunku wyjściowego. {{pl/Development/NewGRF/ottdp|1.9|no|ottdrev=e66cec8f}}Przestarzałe, patrz zamiast tego zmienna 6A.
+|-
+|98||W||{{pl/Development/NewGRF/ottdp| | }}||Ilość przewiezionego w tym miesiącu pierwszego ładunku wyjściowego. {{pl/Development/NewGRF/ottdp|1.9|no|ottdrev=e66cec8f}}Przestarzałe, patrz zamiast tego zmienna 6B.
+|-
+|9A||W||{{pl/Development/NewGRF/ottdp| | }}||Ilość przewiezionego w tym miesiącu ładunku 2. ładunku wyjściowego. {{pl/Development/NewGRF/ottdp|1.9|no|ottdrev=e66cec8f}}Przestarzałe, patrz zamiast tego zmienna 6B.
+|-
+|9C||B||{{pl/Development/NewGRF/ottdp| | }}||Frakcja ładunku przewieziona w ostatnim miesiącu pierwszego ładunku wyjściowego. {{pl/Development/NewGRF/ottdp|1.9|no|ottdrev=e66cec8f}}Przestarzałe, zobacz zamiast tego zmienna 71.
+|-
+|9D||B||{{pl/Development/NewGRF/ottdp| | }}||Frakcja ładunku przewieziona w ostatnim miesiącu z 2. ładunku wyjściowego. {{pl/Development/NewGRF/ottdp|1.9|no|ottdrev=e66cec8f}}Przestarzałe, zobacz zamiast tego zmienna 71.
+|-
+|9E||W||{{pl/Development/NewGRF/ottdp| | }}||Produkcja w ostatnim miesiącu pierwszego ładunku wyjściowego. {{pl/Development/NewGRF/ottdp|1.9|no|ottdrev=e66cec8f}}Przestarzałe, zobacz zamiast tego zmienną 6C
+.
+|-
+|A0||W||{{pl/Development/NewGRF/ottdp| | }}||Produkcja w ostatnim miesiącu 2 ładunku wyjściowego. {{pl/Development/NewGRF/ottdp|1.9|no|ottdrev=e66cec8f}}Przestarzałe, zobacz zamiast tego zmienną 6C.
+|-
+|A2||W||{{pl/Development/NewGRF/ottdp| | }}||Ilość ładunku przewiezionego w ostatnim miesiącu pierwszego ładunku wyjściowego. {{pl/Development/NewGRF/ottdp|1.9|no|ottdrev=e66cec8f}}Przestarzałe, patrz zamiast tego zmienna 6D.
+|-
+|A4||W||{{pl/Development/NewGRF/ottdp| | }}||Ilość ładunku przewiezionego w ostatnim miesiącu 2. ładunku wyjściowego. {{pl/Development/NewGRF/ottdp|1.9|no|ottdrev=e66cec8f}}Przestarzałe, patrz zamiast tego zmienna 6D.
+|-
+|A7||B||{{pl/Development/NewGRF/ottdp| |2.5|ttdprev=alpha 74}}||Informacje o założycielach branży
+|-
+|A8||B||{{pl/Development/NewGRF/ottdp| | }}||Losowy (firmowy) kolor, wybrany podczas budowy
+|-
+|B0||W||{{pl/Development/NewGRF/ottdp| | }}||Data powstania przemysłu w dniach od 1920 roku
+|-
+|B3||B||{{pl/Development/NewGRF/ottdp| | }}||Typ konstrukcji
+|-
+|B4||W||{{pl/Development/NewGRF/ottdp| |2.6|ttdprev=r1321}}||Data ostatniego przyjęcia ładunku w dniach od 1920 r. Lub 0, jeśli żaden ładunek nie został przyjęty. Zobacz także zmienną 6E.
+|}
+
+Dla pozostałych 80 + x zmiennych nadaj [http://marcin.ttdpatch.net/sv1codec/TTD-locations.html#_IndustryArray TTD industry structure].
+
+=== Waiting cargo (40..42) ===
+
+Jeśli bit 1 lub 2 jest ustawiony we właściwości 21, zmienne te zawierają ilość ładunku przychodzącego oczekującego na przetworzenie. (40 oznacza liczbę oczekujących pierwszego typu, 41 daje to samo dla drugiego typu itd.) Zmienne te są ograniczone do FFFFh (65535).
+
+Patrz także zmienna 6F.
+
+=== Manhattan distance of closest dry/land tile (43) ===
+
+Ta zmienna działa tak samo jak var. 8B robi to podczas oddzwaniania 28: jeśli twoja branża jest zbudowana na wodzie, podaje odległość najbliższego kafelka suchego lądu, w przeciwnym razie podaje odległość najbliższego kafelka wody. Nie można jednak użyć tej zmiennej podczas oddzwaniania 28; musisz zawsze używać 8B.
+
+'''PROŚBA ODNOTOWANIA''': Obliczanie tej zmiennej jest raczej kosztowne, ponieważ w najgorszym przypadku musi ona sprawdzić wszystkie kafle na mapie, zanim zrezygnuje z poszukiwania dobrego kafla. Staraj się tego unikać w częstych wywołaniach zwrotnych, takich jak wywołania produkcyjne, wywołania animacji (chyba że animacja jest wolna, około 1 klatki na dzień gry lub wolniej). Można jednak używać go podczas wywołań zwrotnych zmian produkcyjnych.
+
+=== Layout number (44) ===
+T
+jego zmienna zwraca numer bieżącego układu. Pierwszy układ zwróci 01, drugi 02 itd. Innymi słowy, jest to jeden większy niż to, co otrzymujesz w zmiennej 86 podczas wywołania zwrotnego 28.
+
+Jeśli branża została utworzona przy użyciu wcześniejszej wersji TTDPatch lub gdy nowe branże były wyłączone, wynik wyniesie zero.
+
+=== Player info (45) ===
+
+Jak [[pl/Development/NewGRF/NFO Specs/VariationalAction2/Vehicles#player-info-43|vehicle variable 43]] , z tym wyjątkiem, że stan braku gracza jest wskazywany przez var A7 jako 10h.
+
+=== Date when industry was built in days since year 0 (46) ===
+
+Dokładnie takie samo zachowanie jak var B0, ale oparte na roku 0, zamiast roku 1920
+
+W TTDPatch wiek branży jest ograniczony do 65535 dni (około 180 lat) - data budowy nigdy nie jest dłuższa niż 65535 dni temu.
+
+=== Get industry tile ID at offset (60) ===
+
+Parametrem tej zmiennej jest przesunięcie w stosunku do najbardziej wysuniętego na północ kafla w branży: wysokie wartości zawierają przesunięcie <small>''(offset)''</small> Y, niskie przesunięcie X; oba są niepodpisane. Górne słowo wartości zwracanej jest obecnie zarezerwowane, a dolne słowo może być:
+* 00xxh, jeśli kafel jest kaflem branżowym i został zdefiniowany w bieżącym GRF o ID xx.
+* FFxxh, jeśli kafel jest kaflem przemysłowym starego typu i ma ID xx.
+* FFFEh, jeśli kafel jest kaflem branżowym, który został zdefiniowany w innym pliku GRF
+* FFFFh, jeśli kafel nie jest kaflem branży lub nie należy do bieżącej branży
+
+=== Get random tile bits at offset (61) ===
+
+Parametrem tej zmiennej jest przesunięcie w stosunku do najbardziej wysuniętego na północ kafelka w branży: wysokie wartości zawierają przesunięcie Y, niskie przesunięcie X; oba są niepodpisane. Jeśli na tym przesunięciu znajduje się kafelek branży i należy on do bieżącej branży, najniższy bajt wartości zwracanej będzie zawierał losowe bity tego kafelka. W przeciwnym razie najniższy bajt będzie wynosił zero.
+
+Pozostałe bajty są zarezerwowane do wykorzystania w przyszłości.
+
+=== Land info of nearby tiles (62) ===
+
+Parametrem tej zmiennej jest przesunięcie w stosunku do najbardziej wysuniętego na północ kafelka w branży: wysokie wartości zawierają przesunięcie Y, niskie przesunięcie X; oba są niepodpisane. Ta zmienna zwraca te same wartości, co [[pl/Development/NewGRF/NFO Specs/VariationalAction2/Industry Tiles#land-info-of-nearby-tiles-60|industry tile variable 60]] , w tym samym formacie, z wyjątkiem tego, że bit 0 w części '''bb''' jest niezdefiniowany. Przesunięcie należy podać w odniesieniu do północnego rogu branży.
+
+=== Animation stage of nearby tiles (63) ===
+
+Parametrem tej zmiennej jest przesunięcie w stosunku do najbardziej wysuniętego na północ kafelka w branży: wysokie wartości zawierają przesunięcie Y, niskie przesunięcie X; oba są niepodpisane. Ta zmienna zwraca te same wartości co [[pl/Development/NewGRF/NFO Specs/VariationalAction2/Industry Tiles#animation-stage-for-nearby-tiles-61|industry tile variable 61]] , w tym samym formacie. Przesunięcie należy podać w odniesieniu do północnego rogu branży.
+
+=== Distance of nearest industry with given type (64) ===
+
+Format parametru jest taki sam jak dla właściwości przemysłowej 16: albo identyfikator nowego typu z ustawionym bitem 7, albo identyfikator starego typu. Zwrócona wartość to FFFFFFFFh, jeśli nie ma branż o danym typie (nie licząc bieżącej, jeśli ma dany typ); w przeciwnym razie zwracana wartość to odległość Manhattanu najbliższej branży o danym typie.
+
+=== Get [[pl/Development/NewGRF/NFO Specs/TownZones|town zone]] and Manhattan distance of closest town (65) ===
+
+Ten parametr daje przesunięcie względem najbardziej wysuniętego na północ kafelka w branży: wysokie wartości oznaczają przesunięcie Y, niskie wartości oznaczają przesunięcie X, obie sygnowane. Zwrócona wartość to rrzzdddd, gdzie rr jest zarezerwowane do wykorzystania w przyszłości, zz to [[pl/Development/NewGRF/NFO Specs/TownZones|town zone]] wybranego pola, a dddd to odległość Manhattan najbliższego miasta.
+
+=== Get square of Euclidean distance of closest town (66) ===
+
+Ten parametr działa jak dla var. 65, ale wynikiem jest kwadratowa odległość euklidesowa najbliższego miasta.
+
+=== Count of industry, distance of closest instance (67, 68) ===
+
+Zmienna 67 otrzymuje dwa parametry: GRFID GRF, gdzie branża jest zdefiniowana w rejestrze 100h (może być zapisany za pomocą operatora 0E z [[pl/Development/NewGRF/NFO Specs/VarAction2Advanced|VarAction2]] ) i setID branży jako parametr regularny. Istnieją dwa specjalne przypadki dla GRFID: 00000000h oznacza, że ​​sprawdzasz domyślny typ branży TTD, podczas gdy FFFFFFFFh można użyć zamiast GRFID obecnego GRF.
+
+Zwracana wartość ma format rrccdddd, gdzie rr jest zarezerwowany do wykorzystania w przyszłości, cc jest liczbą wystąpień typu branżowego, a dddd jest odległością Manhattan najbliższej instancji, FFFFh, jeśli nie ma zastosowania.
+
+Możesz zauważyć, że ta zmienna może być używana zamiast zmiennej 64. Ta zmienna jest preferowanym sposobem uzyskania tych informacji, ponieważ umożliwia sprawdzenie branż zdefiniowanych również w innych GRF. Zmienna 64 pozostanie tylko dla kompatybilności wstecznej.
+
+Zmienna 68 działa jak zmienna 67, z tym wyjątkiem, że można wstawić numer układu do najniższego bajtu rejestru 101. (Pozostałe bity są zarezerwowane do wykorzystania w przyszłości, na razie pozostaw je zerowe). Ten numer układu powinien być oparty na 1 ( pierwszy układ to 01, a nie 00). Tylko branże o danym układzie są brane pod uwagę do liczenia i obliczania odległości. W szczególnym przypadku, jeśli numerem układu jest 00, wszystkie układy są liczone, a więc wynik jest taki sam jak dla zmiennej 67.
+
+Od wersji OpenTTD R22434 możliwe jest filtrowanie według miasta obecnego przemysłu. Jeśli bit nr 8 jest ustawiony, brane będą pod uwagę tylko branże w tym samym mieście niż bieżące.
+
+=== Cargo info variables (69..71) ===
+
+Zmienne te pozwalają zapytać o informacje o przyjętych i wyprodukowanych ładunkach.
+Zmienne są niezależne od liczby rodzajów ładunku i ich kolejności. Parametr 60 + x określa typ ładunku jako indeks w tabeli translacji ładunku.
+
+(69..6F) {{pl/Development/NewGRF/ottdp|1.9|no|ottdrev=e66cec8f}}
+
+* Zmienna 69: ilość wyprodukowanego ładunku oczekującego na transport.
+* Zmienna 6A: ilość ładunku wyprodukowana w tym miesiącu.
+* Zmienna 6B: ilość ładunku przewiezionego w tym miesiącu.
+* Zmienna 6C: ilość ładunku wyprodukowanego w ostatnim miesiącu.
+* Zmienna 6D: ilość ładunku przewiezionego w ostatnim miesiącu.
+* Zmienna 6E: data ostatniego dostarczenia ładunku do branży.
+* Zmienna 6F: ilość dostarczonego ładunku oczekującego na przetworzenie.
+
+(70..71) {{pl/Development/NewGRF/ottdp|1.10|no|ottdrev=fdaf67d924}}
+
+* Zmienna 70: wskaźnik produkcji w przemyśle pierwotnym.
+* Zmienna 71: transportowany w ostatnim miesiącu (FF = 100%).
+
+=== Industry founder information (A7) ===
+
+Ten bajt zawiera identyfikator firmy, która sfinansowała przemysł, lub 10 godzin, jeśli przemysł został wygenerowany losowo. Jeśli branża została zbudowana przy użyciu wcześniejszej wersji TTDPatch niż 2.0.1 &alpha;74 lub przy wyłączonym newindustries, to pole trwa 10 godzin.
+
+=== Construction type (B3) ===
+
+Ten bajt informuje, w jaki sposób przemysł dostał się na mapę. Możliwe są następujące wartości:
+
+{| 
+|-
+!Wartość!!Znaczenie
+|-
+|0||Nieznane - branża ta została zbudowana przy wyłączonym nowym przemyśle lub w wersji TTDPatch przed TTDPatch 2.0.1 alfa 74.
+|-
+|1||Stworzone podczas normalnej rozgrywki, albo przez gracza, albo przez generator losowych branż w grze
+|-
+|2||Tworzone podczas generowania mapy losowej
+|-
+|3||Stworzone w edytorze scenariuszy
+|}
+
+W przypadku 1 możesz sprawdzić zmienną A7, aby dowiedzieć się, czy przemysł został sfinansowany przez gracza, czy przez losowy generator.

@@ -1,0 +1,64 @@
+<noinclude>{{pl/Development/NewGRF/inne strony|en=newgrf-specs.tt-wiki.net/wiki/Callback:_Advanced_effect_creation|pl=pl/Development/NewGRF/NFO Specs/Callback/Advanced effect creation}}
+</noinclude>==<span id="Advanced_effect_creation_(160)"></span><span title="Advanced effect creation (160)" id="Advanced_effect_creation_.28160.29">Zaawansowane tworzenie efektów (160)</span>==
+{{pl/Development/NewGRF/ottdp|1.5|no|ottdrev=r26747}}
+
+To wywołanie zwrotne jest używane, gdy zaawansowane efekty wizualne są włączone za pomocą właściwości Efektu wizualnego lub <small>''(resp.)''</small> [[pl/Development/NewGRF/NFO Specs/Callback/Main Page#visual-effect-and-wagon-power-10|Callback 10]].
+
+<span title='Wywołanie zwrotne'>'Callback'</span> jest wywoływane za każdym razem, gdy model 'spawnujący' efekt powoduje, że pojazd generuje efekt wizualny.
+To wywołanie zwrotne decyduje następnie o pozycji, ilości i wyglądzie efektu wizualnego.
+
+Zmienna 10 określa typ generowanego efektu wizualnego:
+{| 
+|-
+! Bity !! Znaczenie
+|-
+| 0-7 || Effect
+* 00: Normalny efekt wizualny podczas jazdy.
+* 01-FF: Reserved
+|-
+| 8-31 || Zastrzeżone, muszą być zamaskowane.
+|}
+
+Zmienna 18 zawiera 32 losowe bity.
+
+Jeśli callback <span title=fails>'nie powiedzie się'</span>, nie zostanie utworzony żaden efekt wizualny.
+W przeciwnym razie wynik składa się z:
+{| 
+|-
+! Bity !! Znaczenie
+|-
+| 0-1 || Ilość efektów do odrodzenia (0 do 3), szczegóły są określone przez rejestr 100+x
+|-
+| 2-12 || Zastrzeżone, musi być ustawiona na zero.
+|-
+| 13 || Tylko pociąg i RV: Jeśli jest ustawiony, efekt położenia względem środka pojazdu zamiast względem sprite'a pojazdu. (zachowuje się tak samo w przypadku pojazdów o długości 8/8) 
+|-
+| 14 || Jeśli jest ustawiona, wyłącz automatyczne obracanie pozycji efektu wrt. orientacja pojazdu.
+|}
+
+Rejestry 100+x określają wygląd X-tego efektu (kwota określona poprzez wynik wywołania zwrotnego):
+{| 
+|-
+! Bity !! Znaczenie
+|-
+| 0-7 || Typ efektu
+* 00-EF: <span title=Reserved>'Rezerwowane'</span>
+* F0: Rezerwowane
+* F1: Domyślny efekt 'pary'.
+* F2: Domyślny efekt 'diesla'.
+* F3: Domyślny efekt 'elektryczny'.
+* F4-F9: Rezerwowane
+* FA: Domyślny efekt 'zepsuty samolot'.
+* FB-FE: Rezerwowane
+* FF: Brak efektu.
+|-
+| 8-15 || 
+* Jeśli wynik bit 14 jest wyczyszczony: Pozycja wzdłużna (<span title=signed>'podpisana'</span>)
+* Jeśli wynik bit 14 jest ustawiony: Pozycja X ('podpisana')
+|-
+| 16-23 ||
+* Jeśli wynik bit 14 jest wyczyszczony: Pozycja poprzeczne ('znakowana')
+* Jeśli wynik bit 14 jest ustawiony: Pozycja Y ('znakowana')
+|-
+| 24-31 || Pozycja Z (oznakowana <small>''~signed''</small>)
+|}

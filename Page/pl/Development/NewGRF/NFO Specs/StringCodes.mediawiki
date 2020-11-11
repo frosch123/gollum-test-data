@@ -1,0 +1,448 @@
+{{pl/Development/NewGRF/inne strony|en=newgrf-specs.tt-wiki.net/wiki/StringCodes|pl=pl/Development/NewGRF/NFO Specs/StringCodes |sub=nfo}}
+<!--{{-}}<br>--><!--{{ambox | text = w trakcie edycji.}}-->
+=Kody ciągów =
+
+Teksty w TTD są głównie w zestawie znaków Latin-1 (ISO-8859-1) (z wyjątkiem kodowania UTF-8; patrz poniżej), jednak kilka znaków jest różnych. Ponadto niektóre postacie mają specjalne znaczenie. Zostały one wyjaśnione w poniższej tabeli.
+
+{| 
+|-
+!Zakres, hex!!Version!!Znaczenie
+|-
+|00..1F||||Znaki sterujące, nieużywane, z wyjątkiem następujących:
+|-
+|||{{pl/Development/NewGRF/ottdp|0.6-1.3.1|2.0}}||01 X przesunięcie w następnym bajcie ciągu (zmienna przestrzeń). Usunięto z OpenTTD od 1.3.2.
+|-
+|||{{pl/Development/NewGRF/ottdp|0.6|2.0}}||0D New line
+|-
+|||{{pl/Development/NewGRF/ottdp|0.6|2.0}}||0E Set small font size
+|-
+|||{{pl/Development/NewGRF/ottdp|0.6|2.0}}||0F Set large font size
+|-
+|||{{pl/Development/NewGRF/ottdp|0.6-1.3.1|2.0}}||1F X i Y przesunięcia w następnych dwóch bajtów ciągu. Usunięto z OpenTTD od 1.3.2.
+|-
+|20..7A||{{pl/Development/NewGRF/ottdp|0.6|2.0}}|| Znaki Latin-1/ASCII, od spacji " " do małe litery "z"
+|-
+|7B..87|||| Instrukcje formatowania, wszystkie wziąć ich argument ze stosu, jeśli nie określono inaczej
+|-
+|||{{pl/Development/NewGRF/ottdp|0.6|2.0}}||7B Print signed dword
+|-
+|||{{pl/Development/NewGRF/ottdp|0.6|2.0}}||7C Print signed word
+|-
+|||{{pl/Development/NewGRF/ottdp|0.6|2.0}}||7D Print signed byte
+|-
+|||{{pl/Development/NewGRF/ottdp|0.6|2.0}}||7E Print unsigned word
+|-
+|||{{pl/Development/NewGRF/ottdp|0.6|2.0}}||7F Print dword in currency units
+|-
+|||{{pl/Development/NewGRF/ottdp|0.6|2.0}}||80 Print substring (text ID from stack)
+|-
+|||{{pl/Development/NewGRF/ottdp|0.6|2.0}}||81 Print substring (text ID in next 2 bytes of string)
+|-
+|||{{pl/Development/NewGRF/ottdp|0.6|2.0}}||82 Print date (day, month, year) (based on year 1920)
+|-
+|||{{pl/Development/NewGRF/ottdp|0.6|2.0}}||83 Print short date (month and year) (based on year 1920)
+|-
+|||{{pl/Development/NewGRF/ottdp|0.6|2.0}}||84 Print signed word in speed units
+|-
+|||{{pl/Development/NewGRF/ottdp|0.6|2.0}}||85 Discard next word from stack
+|-
+|||{{pl/Development/NewGRF/ottdp|0.6|2.0}}||86 Rotate down top 4 words on stack
+|-
+|||{{pl/Development/NewGRF/ottdp|0.6|2.0}}||87 Print signed word in litres
+|-
+|88..98||||Colour codes
+|-
+|||{{pl/Development/NewGRF/ottdp|0.6|2.0}}||88 Blue
+|-
+|||{{pl/Development/NewGRF/ottdp|0.6|2.0}}||89 Light Gray
+|-
+|||{{pl/Development/NewGRF/ottdp|0.6|2.0}}||8A Light Orange ("Gold")
+|-
+|||{{pl/Development/NewGRF/ottdp|0.6|2.0}}||8B Red
+|-
+|||{{pl/Development/NewGRF/ottdp|0.6|2.0}}||8C Purple
+|-
+|||{{pl/Development/NewGRF/ottdp|0.6|2.0}}||8D Gray-Green
+|-
+|||{{pl/Development/NewGRF/ottdp|0.6|2.0}}||8E Orange
+|-
+|||{{pl/Development/NewGRF/ottdp|0.6|2.0}}||8F Green
+|-
+|||{{pl/Development/NewGRF/ottdp|0.6|2.0}}||90 Yellow
+|-
+|||{{pl/Development/NewGRF/ottdp|0.6|2.0}}||91 Light Green
+|-
+|||{{pl/Development/NewGRF/ottdp|0.6|2.0}}||92 Red-Brown
+|-
+|||{{pl/Development/NewGRF/ottdp|0.6|2.0}}||93 Brown
+|-
+|||{{pl/Development/NewGRF/ottdp|0.6|2.0}}||94 White
+|-
+|||{{pl/Development/NewGRF/ottdp|0.6|2.0}}||95 Light Blue
+|-
+|||{{pl/Development/NewGRF/ottdp|0.6|2.0}}||96 Dark Gray
+|-
+|||{{pl/Development/NewGRF/ottdp|0.6|2.0}}||97 Mauve (grayish purple)
+|-
+|||{{pl/Development/NewGRF/ottdp|0.6|2.0}}||98 Black
+|-
+|99||{{pl/Development/NewGRF/ottdp|no|2.5|ttdprev=2.0.1 alpha 1}}||Przełącz się na kolor firmy, który następuje w następnym bajcie (włączone przez enhancegui)
+|-
+|9A||||Rozszerzony kod formatu w następnym bajcie:
+|-
+|||{{pl/Development/NewGRF/ottdp|0.6|2.5}}||9A 00 -lub- 9A 01 Wyświetlanie 64-bitowej wartości ze stosu w jednostkach walutowych
+|-
+|||{{pl/Development/NewGRF/ottdp|no|2.6}}||9A 02 Ignoruj następny bajt kolorystyczny. Wiele wystąpień pominie wiele bajtów kolorów.
+|-
+|||{{pl/Development/NewGRF/ottdp|0.6|2.6}}||9A 03 WORD Push WORD na stosie odnośnika <small>''(textref)''</small>
+|-
+|||{{pl/Development/NewGRF/ottdp|0.6|2.6}}||9A 04 BYTE Un-print poprzednie znaki BAJTów.
+|-
+|||{{pl/Development/NewGRF/ottdp|no|2.6}}||9A 05 Tylko do użytku wewnętrznego. Nieprawidłowe w plikach GRF.
+|-
+|||{{pl/Development/NewGRF/ottdp|0.7|2.6|ttdprev=r2007}}||9A 06 Print byte in hex
+|-
+|||{{pl/Development/NewGRF/ottdp|0.7|2.6|ttdprev=r2007}}||9A 07 Print word in hex
+|-
+|||{{pl/Development/NewGRF/ottdp|0.7|2.6|ttdprev=r2007}}||9A 08 Print dword in hex
+|-
+|||{{pl/Development/NewGRF/ottdp|no|2.6|ttdprev=r2128}}||9A 09 Tylko do użytku wewnętrznego. Użycie w NewGRFs najprawdopodobniej crash TTDPatch.
+|-
+|||{{pl/Development/NewGRF/ottdp|no|2.6|ttdprev=r2128}}||9A 0A Tylko do użytku wewnętrznego. Użycie w NewGRFs najprawdopodobniej crash TTDPatch.
+|-
+|||{{pl/Development/NewGRF/ottdp|1.0|2.6|ttdprev=r2178}}||9A 0B Print 64-bit value in hex
+|-
+|||{{pl/Development/NewGRF/ottdp|1.1|2.6|ttdprev=r2178}}||9A 0C Print name of station with id in next textrefstack word
+|-
+|||{{pl/Development/NewGRF/ottdp|1.1|ottdrev=r21086}}||9A 0D Print unsigned word in tonnes
+|-
+|||{{pl/Development/NewGRF/ottdp|1.1|ottdrev=r21209}}||valign=middle|9A 0E Ustaw płeć ciągu, wewnętrzny identyfikator NewGRF w następnym bajcie. Musi być pierwszy w ciągu.<!-- <ref name="gendercasedef">-->{{pl/Development/NewGRF/NFO Specs/refs|name=gendercasedef|text=Zerknij [[#setting-genders-and-cases|Setting genders and cases]].|1}}<!--</ref>-->
+|-
+|||{{pl/Development/NewGRF/ottdp|1.1|ottdrev=r21209}}||valign=middle|9A 0F Wybierz przypadek dla następnego podciągacza, wewnętrzny identyfikator NewGRF w następnym bajcie. <!--<ref name="gendercasedef"/>-->{{pl/Development/NewGRF/NFO Specs/refs|name=gendercasedef|<!--2-->1-1}}
+|-
+|||{{pl/Development/NewGRF/ottdp|1.1|ottdrev=r21211}}||valign=middle|9A 10 Rozpocznij wartość listy wyboru, wewnętrzny identyfikator NewGRF w następnym bajcie. <!--<ref name="choices">-->{{pl/Development/NewGRF/NFO Specs/refs|name=choices|text=Zerknij [[#choosing-strings-depending-on-required-gender-or-case|Choosing strings depending on required gender or case]].|<!--3-->2}}<!--</ref>-->
+|-
+|||{{pl/Development/NewGRF/ottdp|1.1|ottdrev=r21211}}||valign=middle|9A 11 Domyślna lista rozpoczynania wyboru <!--<ref name="choices"/>-->{{pl/Development/NewGRF/NFO Specs/refs|name=choices|<!--4-->2-1}}
+|-
+|||{{pl/Development/NewGRF/ottdp|1.1|ottdrev=r21211}}||valign=middle|9A 12 Lista wyboru końcowego <!--<ref name="choices"/>-->{{pl/Development/NewGRF/NFO Specs/refs|name=choices|<!--5-->2-2}}
+|-
+|||{{pl/Development/NewGRF/ottdp|1.1|ottdrev=r21211}}||valign=middle|9A 13 Rozpocznij listę wyboru płci, przesunięcie stosu podciągów, aby uzyskać płeć z następnego bajtu. <!--<ref name="choices"/>-->{{pl/Development/NewGRF/NFO Specs/refs|name=choices|<!--6-->2-3}}
+|-
+|||{{pl/Development/NewGRF/ottdp|1.1|ottdrev=r21211}}||valign=middle|9A 14 Rozpoczyna lista wyboru przypadków <!--<ref name="choices"/>-->{{pl/Development/NewGRF/NFO Specs/refs|name=choices|<!--7-->2-4}}
+|-
+|||{{pl/Development/NewGRF/ottdp|1.1|ottdrev=r21216}}||valign=middle|9A 15 Rozpocznij listę wyboru liczby mnogiej, przesunięcie stosu wartości, aby uzyskać liczbę mnogą w następnym bajcie. <!--<ref>-->{{pl/Development/NewGRF/NFO Specs/refs|text=Zerknij [[#using-plural-forms|Using plural forms]].|<!--8-->3}}<!--</ref>-->
+|-
+|||{{pl/Development/NewGRF/ottdp|1.2|ottdrev=r22778}}||9A 16 Print dword as date (day, month, year) (based on year 0)
+|-
+|||{{pl/Development/NewGRF/ottdp|1.2|ottdrev=r22778}}||9A 17 Print dword as short date (month and year) (based on year 0)
+|-
+|||{{pl/Development/NewGRF/ottdp|1.2|ottdrev=r22779}}||9A 18 Print unsigned word in horse power
+|-
+|||{{pl/Development/NewGRF/ottdp|1.2|ottdrev=r23063}}||9A 19 Print unsigned word as short volume
+|-
+|||{{pl/Development/NewGRF/ottdp|1.2|ottdrev=r23063}}||9A 1A Print unsigned word as short weight
+|-
+|||{{pl/Development/NewGRF/ottdp|1.4|ottdrev=r26244}}||9A 1B Użyj dwóch słów, aby wydrukować ilość ładunku (długa forma: "10 worków poczty"). Pierwsze słowo to typ ładunku (przetłumaczony dla wersji GRF >= 7), drugie słowo to kwota. Kwota jest automatycznie konwertowana zgodnie z ustawieniami jednostki/ustawień regionalnych.
+|-
+|||{{pl/Development/NewGRF/ottdp|1.4|ottdrev=r26244}}||9A 1C Użyj dwóch słów, aby wydrukować ilość ładunku (krótka forma: "10 worków"). Pierwsze słowo to typ ładunku (przetłumaczony dla wersji GRF >= 7), drugie słowo to kwota. Kwota jest automatycznie konwertowana zgodnie z ustawieniami jednostki/ustawień regionalnych.
+|-
+|||{{pl/Development/NewGRF/ottdp|1.4|ottdrev=r26244}}||9A 1D Użyj dwóch słów, aby wydrukować ilość ładunku (mała forma: "10"). Pierwsze słowo to typ ładunku (przetłumaczony dla wersji GRF >= 7), drugie słowo to kwota. Kwota jest automatycznie konwertowana zgodnie z ustawieniami jednostki/ustawień regionalnych.
+|-
+|||{{pl/Development/NewGRF/ottdp|1.7|ottdrev=r27706}}||9A 1E Drukowanie niepodpisanego wyrazu jako nazwy typu ładunku (przetłumaczone dla GRF wersji >= 7).
+|-
+|||{{pl/Development/NewGRF/ottdp|1.10|ottdrev=gd2b6176cdf}}||9A 1F Wsuń bieżący kolor na stos kolorów. Użyj tego, jeśli chcesz przełączyć kolor i przywrócić później.
+|-
+|||{{pl/Development/NewGRF/ottdp|1.10|ottdrev=gd2b6176cdf}}||9A 20 Pop ostatni kolor z stosu kolorów. Użyj tego, aby przywrócić poprzedni kolor.
+|-
+|9B..9D||||Reserved
+|-
+|9E..FF||{{pl/Development/NewGRF/ottdp|0.6|2.0}}||Znaki łacińskie-1, z wyjątkiem następujących:
+|-
+|||{{pl/Development/NewGRF/ottdp|0.6|2.0}}||9E Euro character "&euro;"
+|-
+|||{{pl/Development/NewGRF/ottdp|0.6|2.0}}||9F Capital Y umlaut "&Yuml;"
+|-
+|||{{pl/Development/NewGRF/ottdp|0.6|2.0}}||A0 Scroll button up
+|-
+|||{{pl/Development/NewGRF/ottdp|0.6|2.0}}||AA Scroll button down
+|-
+|||{{pl/Development/NewGRF/ottdp|0.6|2.0}}||AC Tick mark
+|-
+|||{{pl/Development/NewGRF/ottdp|0.6|2.0}}||AD X mark
+|-
+|||{{pl/Development/NewGRF/ottdp|0.6|2.0}}||AF Scroll button right
+|-
+|||{{pl/Development/NewGRF/ottdp|0.6|2.0}}||B4 Train symbol
+|-
+|||{{pl/Development/NewGRF/ottdp|0.6|2.0}}||B5 Truck symbol
+|-
+|||{{pl/Development/NewGRF/ottdp|0.6|2.0}}||B6 Bus symbol
+|-
+|||{{pl/Development/NewGRF/ottdp|0.6|2.0}}||B7 Plane symbol
+|-
+|||{{pl/Development/NewGRF/ottdp|0.6|2.0}}||B8 Ship symbol
+|-
+|||{{pl/Development/NewGRF/ottdp|0.6|2.0}}||B9 Superscript -1
+|-
+|||{{pl/Development/NewGRF/ottdp|0.6|2.0}}||BC Small scroll button up
+|-
+|||{{pl/Development/NewGRF/ottdp|0.6|2.0}}||BD Small scroll button down
+|}
+<!--<references/>-->{{pl/Development/NewGRF/NFO Specs/przypisy|name=gendercasedef|2001}}<!-- 1.0
+ -->{{pl/Development/NewGRF/NFO Specs/przypisy|name=gendercasedef|2001-1}}<!-- 1.1
+  -->{{pl/Development/NewGRF/NFO Specs/refs|name=gendercasedef|text=Zerknij [[#setting-genders-and-cases|Setting genders and cases]].|<!--1-->przypis}}<!-- 1-0
+  -->{{pl/Development/NewGRF/NFO Specs/refs|name=gendercasedef|<!--2--><!--1-1-->przypis}}<!-- 1-1
+ -->{{pl/Development/NewGRF/NFO Specs/przypisy|name=choices|22-0}}<!-- 2.0
+ -->{{pl/Development/NewGRF/NFO Specs/przypisy|name=choices|2-1}}<!-- 2.1
+ -->{{pl/Development/NewGRF/NFO Specs/przypisy|name=choices|2-2}}<!-- 2.2
+ -->{{pl/Development/NewGRF/NFO Specs/przypisy|name=choices|2-3}}<!-- 2.3
+ -->{{pl/Development/NewGRF/NFO Specs/przypisy|name=choices|2-4}}<!-- 2.4
+  -->{{pl/Development/NewGRF/NFO Specs/refs|name=choices|text=Zerknij [[#choosing-strings-depending-on-required-gender-or-case|Choosing strings depending on required gender or case]].|<!--3--><!--2-->przypis}}<!-- 2-0
+  -->{{pl/Development/NewGRF/NFO Specs/refs|name=choices|<!--4--><!--2-1-->przypis}}<!-- 2-1
+  -->{{pl/Development/NewGRF/NFO Specs/refs|name=choices|<!--5--><!--2-2-->przypis}}<!-- 2-2
+  -->{{pl/Development/NewGRF/NFO Specs/refs|name=choices|<!--6--><!--2-3-->przypis}}<!-- 2-3
+  -->{{pl/Development/NewGRF/NFO Specs/refs|name=choices|<!--7--><!--2-4-->przypis}}<!-- 2-4
+ -->{{pl/Development/NewGRF/NFO Specs/przypisy|222021}}<!-- 3
+  -->{{pl/Development/NewGRF/NFO Specs/refs|text=Zerknij [[#using-plural-forms|Using plural forms]].|<!--8--><!--3-->przypis}}<!-- 3 -->
+
+Instrukcje formatowania nie mogą być używane z wyjątkiem ciągów, które ich oczekują, a następnie mogą nie być w porządku (z możliwym wyjątkiem kodu 86 tasowania wewnętrznego stosu). Przy niewłaściwym użyciu najprawdopodobniej spowodują awarię TTD. Kod 81 jest zawsze bezpieczny w użyciu (pod warunkiem, że przywoływany tekstowy ID również nie używa niebezpiecznych instrukcji formatowania) i wstawi podany tekstowy ID (np. "\81\3D\A0" wstawi tekstowy ID A03D, "\98Refit Aircraft" ). Pamiętaj jednak, że jeśli chcesz dołączyć np. ID D000/D400, bajt 00 będzie uważany za koniec łańcucha, a zatem zostanie zerwany, jeśli w akcji mają pojawiać się dodatkowe teksty 4. Nie należy dołączać ID''`ów'' DCxx; ani kody 80, ani 81 nie mają prawidłowego dostępu do ID''`ów'' DCxx.
+
+Każda instrukcja formatowania usuwa swój argument ze stosu, dzięki czemu następna otrzyma następujące bajty jako argumenty. Kod 86 pobiera cztery pierwsze słowa ze stosu, nazwijmy je W1 do W4 i zmieniam ich kolejność na W4 W1 W2 W3. Jest to używane w przypadku języków, w których gałęzie przemysłu lub stacje powinny być nazywane nie "Flinfingbury Power Plant" , ale "Power Plant Flinfingbury" .
+
+==Using genders and cases==
+{{pl/Development/NewGRF/ottdp|1.1}}Gdy wiele ciągów jest łączonych w jedno zdanie, części wpływają na siebie w różnych językach. Na przykład. możesz mieć ciąg "The <industrytype> closes due to next month." <small>''(zamyka się z powodu następnego miesiąca)''</small> , gdzie <industrytype> jest zastąpiony nazwą jakiegoś przemysłu (np.  "brewery" , "textile mill" ). Jednak w języku niemieckim płeć <industrytype> wpływa na ciąg, do którego jest wstawiany. W przypadku  "brewery" ("Brauerei") artykuł "The" przetłumaczono za pomocą "Die", a "textile mill" ("Textilwerk") "The" przetłumaczono za pomocą "Das".
+
+W OpenTTD te interakcje ciągów nazywane są "rodzajami" <small>''(genders)''</small> i "przypadkami" <small>''(cases)''</small> . Chociaż nazwy te odnoszą się do popularnych konstrukcji gramatycznych w różnych językach, istnieje techniczna definicja tego terminu wrt. OpenTTD. Mogą one odpowiadać gramatycznym zastosowaniom płci i przypadków w niektórych językach lub mogą być używane do radzenia sobie z innymi konstrukcjami gramatycznymi.
+
+Ogólnie, gdy ciąg I jest wstawiany do ciągu O:
+* Jeśli wewnętrzny ciąg I wpływa na zewnętrzny O:
+** Mówi się, że mam płeć i
+** O wybiera różne teksty w zależności od płci.
+* Jeśli zewnętrzny ciąg O wpływa na wewnętrzny I:
+** O ustawia przypadek dla I, i
+** Wybieram różne teksty w zależności od wymaganego przypadku.
+
+===Setting genders and cases===
+{{pl/Development/NewGRF/ottdp|1.1}}Kody ciągów 9A 0E i 9A 0F mapują wewnętrzny płeć lub ID NewGRF na płeć lub przypadek OpenTTD. ID wewnętrzny jest rozpoznawany do odpowiedniej płci lub przypadku OpenTTD w czasie ładowania za pomocą mapowania. Pobierany jest pierwszy wewnętrzny ID w odwzorowaniu, który pasuje do ID z łańcucha i ma istniejącą płeć lub wielkość liter OpenTTD, tj. Lista mapowań jest filtrowana według wewnętrznego ID i istnienia płci/wielkości liter OpenTTD, a następnie używany jest element górny . Jeśli ID płci lub sprawy nie jest znany lub nie istnieje płeć lub sprawa OpenTTD z nazwami odwzorowanymi, całe mapowanie jest ignorowane i przyjmowana jest domyślna płeć lub sprawa.
+
+'''Example of gender translation table'''
+
+<pre>
+// Gender translation table
+// Current OpenTTD German translation uses m, w, n and p but
+// support a (fictitious) previous version that used masculine,
+// feminine, neuter and plural as gender names.
+ 0 * 56     00 08 01 01 02
+            13
+            01 "m" 00
+            01 "masculine" 00
+            02 "w" 00
+            02 "feminine" 00
+            03 "n" 00
+            03 "neuter" 00
+            04 "p" 00
+            04 "plural" 00
+            00
+
+// Brauerei is a female word in German; this sets it as female.
+ 1 * 40     04 0A 82 01 73 DC C3 9E 9A 0E 02 "Brauerei" 00
+</pre>
+
+W takim przypadku OpenTTD szuka wewnętrznego ID 2 NewGRF w tabeli płci. To dałoby "w" i "kobiecy" <small>''(feminine)''</small> jako imiona płciowe OpenTTD. W obecnym OpenTTD pasowałoby to do "w" , w fikcyjnej starszej wersji OpenTTD pasowałoby do "żeńskiego" <small>''(feminine)''</small> .
+
+===Choosing strings depending on required gender or case===
+{{pl/Development/NewGRF/ottdp|1.1}}Kody ciągów od 9A 10 do 9A 14 odwzorowują płeć lub przypadek OpenTTD na wewnętrzny ID lub płeć NewGRF. Mapowanie jest rozwiązywane w czasie ładowania poprzez przeglądanie wszystkich przypadków lub płci Tłumaczenie OpenTTD zna mapowanie na wewnętrzne ID''`y'' NewGRF. Jeśli mapowanie zostanie znalezione, wybierany jest domyślny element listy wyboru. Dzieje się tak, filtrując mapowanie według płci lub nazwy sprawy, a następnie używany jest wewnętrzny ID NewGRF górnego elementu.
+
+Kody ciągów list wyboru są powiązane i muszą być używane w określony sposób:
+
+Genders: 9A 13 &lt;offset&gt; (9A 10 &lt;index&gt; &lt;string&gt;)+ 9A 11 &lt;default&gt; 9A 12
+
+Cases: 9A 14 (9A 10 &lt;ndex&gt; &lt;string&gt;)+ 9A 11 &lt;default&gt; 9A 12
+
+Plurals: 9A 13 &lt;offset&gt; (9A 10 &lt;index&gt; &lt;string&gt;)+ 9A 11 &lt;default&gt; 9A 12
+
+Przesunięcie <small>''(offset)''</small> to lokalizacja stosu <small>''(substring)''</small> podłańcucha/wartości, dla której chcesz uzyskać płeć/liczbę mnogą <small>''(plural)''</small> . Jest to rzeczywiste przesunięcie plus 80, tzn. Przesunięcie <small>''(offset)''</small> 0 staje się 80, a przesunięcie <small>''(offset)''</small> 1 staje się 81 w NFO.
+
+'''Example of gender-dependent string'''
+
+<pre>
+// Assuming the translation table of the previous example
+// A string with a gender choice list and a stack item that gets resolved
+ 2 * 29     04 0A FF 01 1A DC "D" 9A 13 80 9A 10 1 "er" 9A 10 3 "as" 9A 11 "ie" 9A 12 " " 80 00
+</pre>
+
+Wyobraź sobie, że "Brauerei" z poprzedniego przykładu znajduje się jako stos na stosie. Następnie ten ciąg znaków przekształciłby się w "Die Brauerei" .
+
+To, co dzieje się w OpenTTD, polega na tym, że za każdym razem, gdy zostanie znaleziony kod "Rozpocznij listę wyboru płci" , rozpozna ciąg w danym miejscu stosu. Z tego rozstrzygniętego ciągu pierwszy znak jest porównywany z kodem ciągu  "ustaw płeć" , a jeśli tak, to pobierana jest (odwzorowana) płeć OpenTTD. Gdy występuje ciąg znaków "ustaw płeć" , używana jest pierwsza płeć OpenTTD. Po rozstrzygnięciu płci OpenTTD płeć jest odwzorowywana odwrotnie na wewnętrzny ID NewGRF. Jeśli ten wewnętrzny ID NewGRF istnieje w jednej z "wartości listy wyboru" , to brany jest (pod) ciąg znaków (aż do następnej wartości listy wyboru/wartość domyślna). Jeśli nie ma odwrotnego odwzorowania łańcucha przy "domyślnej liście wyboru" , używany jest kod ciągu aż do łańcucha "końcowej listy wyboru" . Dalsze przetwarzanie ciągu następuje po liście wyboru, tzn. (Pod) <small>''~Sub''</small> ciągi na liście wyboru nie mogą zawierać żadnych specjalnych kodów ciągów oprócz kodów kolorów.
+
+Listy wyboru wielkości liter działają w podobnej sprawie, z tą różnicą, że zamiast rozstrzygania wielkości liter z (pod) łańcucha znaków "jesteśmy" podciągiem; ciąg zawierający ten podciąg ustawił wielkość liter przy użyciu kodu łańcucha "wybierz wielkość liter" <small>''(select case)''</small> . W związku z tym nie trzeba przesuwać listy wyboru, ale reszta działa w taki sam sposób jak listy wyboru płci.
+
+==Using plural forms==
+{{pl/Development/NewGRF/ottdp|1.1}}Lista mnoga działa jak lista płci, jednak musisz wybrać jedno "mapowanie" <small>''(mapping)''</small> od wartości do indeksu liczby mnogiej, ustawiając formę liczby mnogiej za pomocą [[pl/Development/NewGRF/NFO Specs/Action0/Global Settings|Action0/Global Settings]] property 15.
+
+Jeśli na przykład wybrano liczbę mnogą 0 za pomocą właściwości [[pl/Development/NewGRF/NFO Specs/Action0/Global Settings|Action0/Global Settings]] 15, wówczas istnieją 2 wskaźniki liczby mnogiej. Jeśli wartość na stosie z danym przesunięciem wynosi 1, otrzymasz indeks liczby mnogiej 1, w przeciwnym razie indeks liczby mnogiej 2. Te wskaźniki liczby mnogiej są wskaźnikami używanymi na listach wyboru.
+
+{| 
+|-
+!Plural form!!Plural index!!Description
+|-
+|0||Two forms:
+|-
+|||1||1
+|-
+|||2||rest
+|-
+|1||Only one form:
+|-
+|||1||every form
+|-
+|2||Two forms:
+|-
+|||1||0 or 1
+|-
+|||2||rest
+|-
+|3||Three forms:
+|-
+|||1||ending in 1, but not ending in 11
+|-
+|||2||0
+|-
+|||3||rest
+|-
+|4||Five forms:
+|-
+|||1||1
+|-
+|||2||2
+|-
+|||3||3-6
+|-
+|||4||7-10
+|-
+|||5||rest
+|-
+|5||Three forms:
+|-
+|||1||ending in 1, but not ending in 11
+|-
+|||2||ending in 2-9, but not ending in 1[2-9]
+|-
+|||3||rest
+|-
+|6||Three forms:
+|-
+|||1||ending in 1, but not ending in 11
+|-
+|||2||ending in 2-4, but not ending in 1[2-4]
+|-
+|||3||rest
+|-
+|7||Three forms:
+|-
+|||1||0
+|-
+|||2||ending in 2-4, but not ending in 1[2-4]
+|-
+|||3||rest
+|-
+|8||Four forms:
+|-
+|||1||ending in 01
+|-
+|||2||ending in 02
+|-
+|||3||ending in 03 or ending in 04
+|-
+|||4||rest
+|-
+|9||Two forms:
+|-
+|||1||ending in 1, but not ending in 11
+|-
+|||2||ret
+|-
+|10||Three forms:
+|-
+|||1||1
+|-
+|||2||2-4
+|-
+|||3||rest
+|-
+|11||Two forms:
+|-
+|||1||ending in 0, 1, 3, 6, 7 and 8
+|-
+|||2||ending in 2, 4, 5 and 9
+|-
+|12||Four forms:
+|-
+|||1||1
+|-
+|||2||0 or ending in 02-10
+|-
+|||3||ending in 11-19
+|-
+|||4||rest
+|-
+|13||Four forms:
+|-
+|||1||1, 11
+|-
+|||2||2, 12
+|-
+|||3||3..10, 13..19
+|-
+|||4||rest
+|-
+|}
+
+'''Example of string using plural forms'''
+
+<pre>
+// Set the plural type to type 0
+ 0 * 7      00 08 01 01 02 15 00
+// In case of the first stack item being 1 use "Tonne", otherwise use "Tonnen"
+ 1 * 34     04 0B 82 01 1A DC C3 9E "\UE07C Tonne" 9A 15 80 9A 10 01 "" 9A 11 "n" 9A 12 " Sand" 00
+</pre>
+
+=UTF-8 support=
+{{pl/Development/NewGRF/ottdp|0.6|2.5|ttdprev=2.0.1 alpha 68}}
+Od TTDPatch 2.0.1 alpha 68, TTDPatch obsługuje łańcuchy wejściowe zakodowane w UTF-8. Użyj  [[pl/Development/NewGRF/NFO Specs/Action12|action 12]] , aby zdefiniować glify dla znaków, które nie istnieją w plikach .grf TTD (możliwe od wersji TTDPatch 2.0.1 alpha 73).
+
+Aby wskazać, że dany ciąg ma kodowanie UTF-8, zacznij go od dużego 'ciernia' ↔ (U+00DE, "&THORN;"), zakodowane w UTF-8 jak zwykle bajtami C3 9E. Zakłada się, że wszystko w tym ciągu ma kodowanie UTF-8, z następującym wyjątkiem: jeśli pojawią się znaki, które nie są prawidłowymi sekwencjami UTF-8, zakłada się, że są one jednym z powyższych kodów sterujących. W ten sposób nadal można pisać, np. "&THORN;Pojemność <small>''(Capacity)''</small>: " 87 "litrów" <small>''(litres)''</small>, bez kodowania 87 w UTF-8 (co zamiast tego oznaczałoby znak zainstalowany w punkcie kodowym U+0087).
+
+Ponadto pozwala to na stosowanie znaków innych niż Unicode 9E, 9F, A0, AA, AC, AD, AF, B4..B9, BC i BD z powyższej listy, które po zakodowaniu za pomocą UTF-8 odnosiłyby się do ich odpowiednich Zamiast tego znaki Unicode. Aby użyć znaków TTD, po prostu nie koduj ich za pomocą UTF-8, ale wprowadź je bezpośrednio jako bajty. To powoduje, że są one nieprawidłową sekwencją UTF-8 i pozwalają TTDPatch na użycie poprawnego symbolu z czcionek TTD.
+
+Alternatywnie, te symbole (w rzeczywistości zestaw znaków TTD od 20 do FF) są również odwzorowane w prywatnym obszarze użytkowania Unicode w U+E0xx, więc aby zakodować symbol ciężarówki, możesz również użyć znaku U+E0B5, chociaż to będzie prawdopodobnie postacią niedrukowalną w większości edytorów tekstu.
+
+Wreszcie, znaki 7B..7F nie działają już jak powyższe instrukcje formatowania, ale zamiast tego będą wyświetlać regularne glify (pod warunkiem, że są zainstalowane; domyślnie TTD nie ma w tych punktach kodowych). Zamiast tego, aby skorzystać z instrukcji formatowania w trybie UTF-8, musisz użyć ich punktu kodowego Prywatnego Obszaru Użytkowania w U+E0xx.
+
+Zasadniczo istnieją trzy możliwości:
+# Znaki U+E020..U+E0FF w prywatnym obszarze użytkowania E0xx robią to, co ich znak xx zrobiłby w TTD, podobnie jak znaki kontrolne poniżej U+0020
+# Wszystkie inne prawidłowe sekwencje UTF-8 wyświetlają rzeczywiste glify <small>''(glyphs)''</small>, jeśli są dostępne
+# Wszystkie niepoprawne sekwencje UTF-8 robią to, co robią ich poszczególne bajty w TTD
+
+Podsumowując, oto przydatna tabela:
+
+{| 
+|-
+!Character!!Encoding in UTF-8 mode!!Meaning
+|-
+|7E||7E||Unicode Character 'TILDE' (~)
+|-
+|82||82 (invalid UTF-8)||Print date (day, month, year)
+|-
+|82||C2 82||Display glyph for U+0082
+|-
+|AC||AC (invalid UTF-8)||Tick mark
+|-
+|AC||C2 AC||Unicode Character 'NOT SIGN' (&not;)
+|-
+|E07E||EE 81 BE||Print unsigned word
+|-
+|E082||EE 82 82||Print date (day, month, year)
+|-
+|E0AC||EE 82 AC||Tick mark
+|}

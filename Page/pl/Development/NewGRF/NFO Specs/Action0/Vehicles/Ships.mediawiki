@@ -1,0 +1,134 @@
+{{pl/Development/NewGRF/inne strony|en=newgrf-specs.tt-wiki.net/wiki/Action0/Vehicles/Ships
+|pl=pl/Development/NewGRF/NFO Specs/Action0/Vehicles/Ships |sub=nfo
+}} {{en/-}}<!--<br>{{ambox | text = w trakcie edycji.}}--><!-- -->
+<div style="float:right; padding-left:12px; background:none;">{{pl/Development/NewGRF/NFO Specs/Navigation}}</div>
+
+==<span title="Introduction" id="Introduction">Wprowadzenie</span>==
+
+Definiowanie właściwości statków.
+==<span title="Properties" id="Properties">Właściwości</span>==
+
+{| 
+|-
+!Numer!![[pl/Development/NewGRF/NFO Specs/GRFActionsDetailed|Rozmiar]]!!Version!!Opis
+|-
+|08||B||{{pl/Development/NewGRF/ottdp|0.6|2.0}}||Sprite (FF dla nowej grafiki)
+|-
+|09||B||{{pl/Development/NewGRF/ottdp|0.6|2.0}}||'Refittable' (0 nie, 1 tak)
+|-
+|0A||B||{{pl/Development/NewGRF/ottdp|0.6|2.0}}||<span title='Cost factor'>'Koszt'</span>
+|-
+|0B||B||{{pl/Development/NewGRF/ottdp|0.6|2.0}}||Prędkość w mph*3.2
+|-
+|0C||B||{{pl/Development/NewGRF/ottdp|0.6|2.0}}||Typ ładunku, patrz [[pl/Development/NewGRF/NFO Specs/CargoTypes|CargoTypes]]<br/>
+{{pl/Development/NewGRF/grfTill|7}} Dla wersji GRF 7 i starszych: 'cargo slot' Typu B<br/>
+{{pl/Development/NewGRF/grfFrom|8}} Dla wersji GRF 8 i nowszych: Typ A '(<span title="przetłumaczony">translated</span>) bit cargo '
+|-
+|0D||W||{{pl/Development/NewGRF/ottdp|0.6|2.0}}||Pojemność
+|-
+|0F||B||{{pl/Development/NewGRF/ottdp|0.6|2.0}}||Współczynnik kosztów eksploatacji
+|-
+|10||B||{{pl/Development/NewGRF/ottdp|0.6|2.0}}||Rodzaj efektu dźwiękowego (4=statek towarowy, 5=statek pasażerski)<br/>{{pl/Development/NewGRF/ottdp|1.6|no|ottdrev=r27507}} Od wersji OpenTTD r27507 dozwolone są również <span title=custom>'niestandardowe'</span> efekty dźwiękowe z Action11.
+|-
+|11||D||{{pl/Development/NewGRF/ottdp|0.6|2.0}} {{pl/Development/NewGRF/grfFrom|1}}||Maska bitowa typów ładunków dostępnych do 'refitting'u, patrz kolumna 2 (wartości bitów) w [[pl/Development/NewGRF/NFO Specs/CargoTypes|CargoTypes]]
+|-
+|12||B||{{pl/Development/NewGRF/ottdp|0.6|2.5}} {{pl/Development/NewGRF/grfFrom|6}}||Maska bitowa flag <span title="wywołania zwrotnego">'callback'</span>, patrz poniżej
+|-
+|13||B||{{pl/Development/NewGRF/ottdp|0.6|2.5|ttdprev=alpha 30}}||Koszt refit'u, używając 1/32 domyślnej <span title=base>'podstawy'</span> kosztu refit'u
+|-
+|14||B||{{pl/Development/NewGRF/ottdp|1.2|2.5|ttdprev=alpha 44|ottdrev=r22639}}||<span title='Ocean speed fraction ~frakcja'>'Ułamek prędkości oceanu'</span>, określa ułamek maksymalnej prędkości dostępnej w oceanie; n.p. 00=100%, 80=50%, FF=0.4%
+|-
+|15||B||{{pl/Development/NewGRF/ottdp|1.2|2.5|ttdprev=alpha 44|ottdrev=r22639}}||<span title='Canal speed fraction'>'Udział prędkości kanału'</span>, taki sam jak powyżej, ale dla kanałów i rzek
+|-
+|16||B||{{pl/Development/NewGRF/ottdp|0.6|2.5|ttdprev=alpha 44}}||Wycofaj pojazd wcześniej, na wiele lat przed końcem fazy 2 (patrz [[pl/Development/NewGRF/NFO Specs/Action0/Vehicles|Action0General]])
+|-
+|17||B||{{pl/Development/NewGRF/ottdp|0.6|2.5|ttdprev=alpha 55}}||Różne flagi pojazdów
+|-
+|18||W||{{pl/Development/NewGRF/ottdp|0.6|2.5|ttdprev=alpha 55}}||Klasy ładunków 'refittable', patrz [[pl/Development/NewGRF/NFO Specs/Action0/Vehicles/Trains#cargo-classes-28-29|train prop. 28]]
+|-
+|19||W||{{pl/Development/NewGRF/ottdp|0.6|2.5|ttdprev=alpha 55}}||Klasy ładunków 'non-refittable', patrz [[pl/Development/NewGRF/NFO Specs/Action0/Vehicles/Trains#cargo-classes-28-29|train prop. 29]]
+|-
+|1A||D||{{pl/Development/NewGRF/ottdp|0.6|2.6|ttdprev=r1210|ottdrev=r7191}}||Data wprowadzenia w długim formacie
+|-
+|1B||B*||{{pl/Development/NewGRF/ottdp|0.7|no|ottdrev=r13831}}||Sortuj listę zakupów
+|-
+|1C||B||{{pl/Development/NewGRF/ottdp|1.1|no|ottdrev=r21240}}||Efekt wizualny
+|-
+|1D||W||{{pl/Development/NewGRF/ottdp|1.2|no|ottdrev=r22713}}||Niestandardowy okres <span title='dojrzewania'>'ageing'</span> ładunku
+|-
+|1E||B n*B||{{pl/Development/NewGRF/ottdp|1.2|no|ottdrev=r23291}}||Lista typów ładunków, zawsze refittable, patrz [[pl/Development/NewGRF/NFO Specs/Action0/Vehicles/Trains#list-of-always-refittable-cargo-types-2c-2d|train property 2C]]
+|-
+|1F||B n*B||{{pl/Development/NewGRF/ottdp|1.2|no|ottdrev=r23291}}||Lista typów ładunków, wcale nie 'refittable', patrz [[pl/Development/NewGRF/NFO Specs/Action0/Vehicles/Trains#list-of-always-refittable-cargo-types-2c-2d|train property 2D]]
+|}
+
+==<span title="Descriptions" id="Descriptions">Opis</span>==
+
+===<span id="Callbacks_(12)"></span><span title="Callbacks (12)" id="Callbacks_.2812.29">Callbacks (12)</span>===
+W przypadku statków należy włączyć następujące [[pl/Development/NewGRF/NFO Specs/Callback/Main Page|callbacks]]  poprzez ustawienie odpowiedniego bitu we właściwości 12 (niektóre inne, nie tak często używane oddzwaniania są dostępne bez ustawienia bitu tutaj):
+
+{| 
+|-
+!Bit!!Wartość!!Zmienna wartość 0C!!'Callback'
+|-
+|2||4||12||<span title='Load amount'>'ilość załadunku'
+|-
+|3||8||15||Ustaw 'refitted' pojemność
+|-
+|5||20||19||Pokaż <span title=suffix>'przyrostek'</span> po nazwie typu ładunku
+|-
+|6||40||2D||Wybierz <span title=mapping>'odwzorowanie'</span> kolorów dla pojazdu
+|-
+|7||80||33||<span title="Wywołania zwrotne">'Callbacks'</span> efektów dźwiękowych
+|}
+
+Bit to bit, który musisz ustawić, robisz to poprzez dodanie wszystkich wartości dla wszystkich bitów. Zmienna wartość 0C to ta, dla której zostanie ustawiona zmienna 0C, do sprawdzania jej w VarAction2 pod kątem wywołań zwrotnych.
+
+===<span id="Refit_cost_(13)"></span><span title="Refit cost (13)" id="Refit_cost_.2813.29">Koszt refit'u (13)</span>===
+
+Koszt remontu, przy użyciu 1/32 domyślnej podstawy kosztu remontu. Tę właściwość można zastąpić wywołaniem zwrotnym 15E.
+
+{{pl/Development/NewGRF/ottdp|1.2|no|ottdrev=r23087}} Jeśli współczynnik kosztu <s>remontu</s> 'przebudowy' <small>''(refit)''</small> jest ustawiony na zero i ustawiony jest bit 4 różnych flag (17), dozwolone jest ponowne dopasowanie.
+
+===<span id="Miscellaneous_flags_(17)"></span><span title="Miscellaneous flags (17)" id="Miscellaneous_flags_.2817.29">Różne flagi (17)</span>===
+
+To jest maska ​​nieco z następującymi bitami:
+
+{| 
+|-
+!Bit!!Wartość!!Znaczenie
+|-
+|0||1||<span title=reserved>zastrzeżone</span>, nie używać
+|-
+|1||2||Używa dwóch kolorów firmowych
+|-
+|2||4||zastrzeżone, nie używać
+|-
+|3||8||zarezerwowane, nie używać
+|-
+|4||10||{{pl/Development/NewGRF/ottdp|1.2|no|ottdrev=r23087}} 'Auto-refitting' jest <span title="włączone">'wł.'</span> dla 'refits', w przypadku których pozwala na to <span title="wywołanie zwrotne">'callback'</span> 15E lub 'prop' 13 określa zerowy koszt.
+|-
+|5||   20||{{pl/Development/NewGRF/ottdp|1.2|no|ottdrev=r23861}} Użyj mnożnika ładunku dla domyślnego ładunku. Zobacz stronę o [[pl/Development/NewGRF/NFO Specs/VehicleRefitting#misc-vehicle-flag-5-use-of-capacity-multiplier-for-default-cargo-set|vehicle refitting]].
+|-
+|6||   40||{{pl/Development/NewGRF/ottdp|1.3|no|ottdrev=r24124}} Wyłącz efekt dymu awaryjnego.
+|-
+|7||   80||{{pl/Development/NewGRF/ottdp|1.7|no|ottdrev=r27668}} [[pl/Development/NewGRF/NFO Specs/Action2/Vehicles#composing-vehicles-from-multiple-sprites|Compose vehicle from multiple sprites.]]
+|}
+
+===<span id="Long_format_introduction_date_(1A)"></span><span title="Long format introduction date (1A)" id="Long_format_introduction_date_.281A.29">Data wprowadzenia w długim formacie (1A)</span>===
+
+Ustaw datę wprowadzenia pojazdu, w dniach od roku 0. Uwzględnia to lata przestępne; dzieli się przez 4, ale nie 100, chyba że 400. Datę początkową 1920-01-01 uzyskuje się o wartości 701265 (51 B3 0A 00). Ta właściwość musi zostać ustawiona po właściwości 00, aby obowiązywała.
+
+{{pl/Development/NewGRF/ottdp|no|}} W TTDPatch daty po 2044 r. Będą ograniczone do 2044 r.
+
+===<span id="Sort_vehicle_list_(1B)"></span><span title="Sort vehicle list (1B)" id="Sort_vehicle_list_.281B.29">Sortowanie listy pojazdów (1B)</span>===
+Zobacz listę pojazdów do sortowania dla [[pl/Development/NewGRF/NFO Specs/Action0/Vehicles/Trains#sort-vehicle-list-1a|trains]] , aby uzyskać szczegółowe informacje.
+
+===<span id="Visual_effect_(1C)"></span><span title="Visual effect (1C)" id="Visual_effect_.281C.29">Efekt wizualny (1C)</span>===
+Zobacz równoważne [[pl/Development/NewGRF/NFO Specs/Action0/Vehicles/Trains#visual-effects-and-wagon-power-22|train property]] , aby uzyskać informacje na temat znaczenia wszystkich bitów. Nie ma domyślnego efektu dla statków, dlatego wartości 00..0F nie pokażą żadnego efektu wizualnego. Bit 7 (wyłącz moc wagonu) obecnie nie ma znaczenia i powinien być pozostawiony na 0.
+
+===<span id="Custom_cargo_ageing_period_(1D)"></span><span title="Custom cargo ageing period (1D)" id="Custom_cargo_ageing_period_.281D.29">Niestandardowy okres 'dojrzewania' ładunku (1D)</span>===
+Zobacz niestandardowy okres starzenia się ładunku dla  [[pl/Development/NewGRF/NFO Specs/Action0/Vehicles/Trains#custom-cargo-ageing-period-2b|trains]] , aby uzyskać szczegółowe informacje.
+
+==<span title="Example" id="Example">Przykład</span>==
+
+Do napisania

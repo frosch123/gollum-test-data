@@ -1,0 +1,104 @@
+{{pl/Development/NewGRF/inne strony|en=newgrf-specs.tt-wiki.net/wiki/ReadingPatchVariables|pl=pl/Development/NewGRF/NFO Specs/ReadingPatchVariables |sub=nfo}}
+<!--{{-}}<br>--><!--{{ambox | text = w trakcie edycji.}}--><!-- -->
+== Wprowadzenie ==
+
+
+Od wersji TTDPatch 2.0.1 alpha 48 możliwe było użycie akcji D do odczytu różnych specjalnych zmiennych Patch. Są to zwykle wartości przełączników, ale istnieje również kilka innych przydatnych wartości.
+
+== Syntax ==
+
+ <Sprite-number> * <Length> 0D <target> <operation> <variable> FE FF FF 00 00
+
+{|
+!Element!![[pl/Development/NewGRF/NFO Specs/GRFActionsDetailed|Rozmiar]]!!Opis
+
+|-
+|0D||B||Definiuje action 0D
+
+|-
+|<target>||B||Parametr 'targetu'
+
+|-
+|<operation>||B||Podobnie jak w przypadku ActionD, ale tylko przypisanie jest prawidłowe.
+
+|-
+|<variable>||B||Poprawka numeru zmiennej do odczytania. Patrz poniżej.
+
+|-
+|FE||B||Definiuje specjalny dostęp do zmiennych
+
+|-
+|FF FF 00 00||D||Wskazuje, że czytana jest zmienna łatki
+|}
+
+==<span id="variable" title="variable">zmienna</span>==
+
+Zdefiniowane są następujące zmienne poprawki:
+
+{|
+!<span title=variable>'zmienna'</span>!!<span title='Przełącznik'>'Switch'</span>!!Wersja!!<span title=Value>'Wartość'</span>
+|-
+|00||miscmods/-Yo||{{pl/Development/NewGRF/ottdp|no|2.5}}||<span title='Przełącznik bitowy'>'Bit switch'</span>
+|-
+|01||experimentalfeatures/-XF||{{pl/Development/NewGRF/ottdp|no|2.5}}||Bit switch
+|-
+|02||morevehicles/-x||{{pl/Development/NewGRF/ottdp|no|2.5}}||<span title='Mnożnik tablicy pojazdów'>'Vehicle array multiplier'</span>
+|-
+|03||mountains and curves/-mc||{{pl/Development/NewGRF/ottdp|no|2.5}}||<span title='Two bytes with four sets of two bits'>'Dwa bajty z czterema zestawami dwóch bitów'</span>
+|-
+|04||planecrashcontrol/-Xc||{{pl/Development/NewGRF/ottdp|no|2.5}}||Bit switch
+|-
+|05||autorenew/-Xa||{{pl/Development/NewGRF/ottdp|no|2.5}}||Signed value
+|-
+|06||multihead/-M||{{pl/Development/NewGRF/ottdp|no|2.5}}||Wzrost prędkości w procentach
+|-
+|07||disasters/-XD||{{pl/Development/NewGRF/ottdp|no|2.5}}||Bit switch
+|-
+|08||unifiedmaglev/-XM||{{pl/Development/NewGRF/ottdp|no|2.5}}||Unified maglev mode
+|-
+|09||bridgespeedlimits/-XX||{{pl/Development/NewGRF/ottdp|no|2.5}}||Ułamek prędkości w procentach
+|-
+|0A||---||{{pl/Development/NewGRF/ottdp|no|2.5}}||Język TTD, patrz "nowy schemat" dla [[en/Action4#language-id|action 4]]
+|-
+|0B||startyear/-XY||{{pl/Development/NewGRF/ottdp|0.6|2.5}}||Year-1920
+|-
+|0C||morebuildoptions/-YB||{{pl/Development/NewGRF/ottdp|no|2.5}}||Bit switch
+|-
+|0D||moresteam/-YM||{{pl/Development/NewGRF/ottdp|no|2.5}}||value=LF (two hex digits), L=length, F=frequency
+|-
+|0E||freighttrains/-Yf||{{pl/Development/NewGRF/ottdp|0.6|2.5}}||współczynnik wagi
+|-
+|0F||wagonspeedlimits/-YL||{{pl/Development/NewGRF/ottdp|0.6|2.5}}||Wzrost prędkości dla pustych wagonów
+|-
+|10||planespeed/-YP||{{pl/Development/NewGRF/ottdp|0.6|2.5}}||współczynnik prędkości
+|-
+|11||dual company colors||{{pl/Development/NewGRF/ottdp|0.6|2.5|ttdprev=r1404}}||2CC colormap base sprite
+|-
+|12||miscmods2/-Zm||{{pl/Development/NewGRF/ottdp|no|2.6|ttdprev=r1738}}||Bit switch
+|-
+|13||map size information||{{pl/Development/NewGRF/ottdp|0.6|2.6|ottdrev=r11961|ttdprev=r1817}}||Format = -MABXYSS
+{| 
+|-
+| M  || typ mapy
+* bit 0 set: <span title=kwadratowa>'squared'</span> map. Clear : <span title='prostokątna'>'rectangular'</span> map
+* bit 1 set: Y is the <span title='większa krawędź'>'bigger edge'</span>(bit 0 is clear).Clear : X is the bigger edge.
+|-
+|A  || minimalna krawędź (log2) mapy
+|-
+|B  || maximum edge(log2) of the map
+|-
+|XY || krawędzie (log2) każdej strony mapy.
+|-
+|SS || połączenie X i Y, dając w ten sposób rozmiar (log2) mapy
+|-
+|}
+Wszystkie rozmiary map zostaną odjęte o 6, tak aby rozmiar 64 był najmniejszy, czyli liczony od zera
+|-
+|14||maximum height level||{{pl/Development/NewGRF/ottdp|1.2|no|ottdrev=r23158}}||Maximal possible height level of a tile. {{pl/Development/NewGRF/ottdp|1.5|no|ottdrev=r27010}}Any value between 1 and 255. In earlier versions fixed at 15.
+|-
+|15||extra foundations||{{pl/Development/NewGRF/ottdp|1.4|no|ottdrev=r25230}}||Dodatkowe 'sprite' fundamentu ustawione przez [[pl/Development/NewGRF/NFO Specs/Action5|Action 5 type 06]]. Ten blok 'sprite' zawiera tylko dodatkowe fundamenty z Akcji 5, nie zawiera domyślnych podstaw dla 'sprites' Akcji A od 990 do 1003.
+|-
+|16||coast sprites||{{pl/Development/NewGRF/ottdp|1.4|no|ottdrev=r25230}}||Wszystkie sprite'y wybrzeża w kolejności wersji 16 sprite'ów [[pl/Development/NewGRF/NFO Specs/Action5#in-newgrfs|Action 5 type 0D]]. <span title=Note>'Należy odnotowąć'</span>, że nie ma znaczenia, w jaki sposób 'sprites' zostały pierwotnie zdefiniowane (czy to przez Akcję 5 z 10 lub 16 'sprites', czy przez Akcję A), blok sprite'ów zwracany przez tę zmienną ma zawsze wszystkie sprite'y w tej samej kolejności.
+|}
+
+Jeśli eksperymentalne funkcje, miscmods lub miscmods2 są wyłączone, odpowiednia wartość wyniesie zero. Dla wszystkich innych przełączników wartość jest nieokreślona, ​​jeśli przełącznik jest wyłączony, więc [[pl/Development/NewGRF/NFO Specs/TTDPatchFlags|action 7 variable 85]] należy najpierw sprawdzić.

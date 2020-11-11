@@ -1,0 +1,175 @@
+{{pl/Development/NewGRF/inne strony|en=newgrf-specs.tt-wiki.net/wiki/Action0/Industry_Tiles|pl=pl/Development/NewGRF/NFO Specs/Action0/Industry Tiles |sub=nfo}}
+<!--{{-}}<br>--><!--{{ambox | text = w trakcie edycji.}}--><!-- -->
+==<span id="Introduction" title=Introduction>Wprowadzenie</span>==
+
+<span title=tiles>'Kafle'</span> przemysłowe działają podobnie do budynków miejskich, z tym wyjątkiem, że nie są samodzielne; zawsze są częścią branży.
+
+Definiowanie kafli przemysłu odbywa się według tego samego schematu, co w przypadku domów: aby rozpocząć korzystanie z <span title=identyfikatora>ID</span>, najpierw należy go zdefiniować, ustawiając dla niego właściwość 8. Jeśli spróbujesz odwołać się do ID (poprzez akcję 0 lub przez akcję 3), który nie jest zdefiniowany, twoje żądanie zostanie zignorowane, ale również nie zostanie zgłoszone jako błąd. Oznacza to, że jeśli chcesz warunkowo zdefiniować ID, wystarczy pominąć akcję0, która ustawia właściwość8, a wszystko inne zostanie automatycznie pominięte.
+
+Przemysłowe <span title=identyfikatory>ID</span> kafli są unikalne w każdym pliku grf. ID na GRF jest określony jako bajt, co oznacza, że ​​żaden GRF nie może zdefiniować więcej niż 256 <span title="identyfikatorów">ID</span> kafli. Powinieneś oszczędnie używać <span title="identyfikatorów">ID</span> kafli branży.  [[pl/Development/NewGRF/NFO Specs/VariationalAction2/Industry Tiles#relative-position-43| Variational action 2 variable 43]] dla kafli przemysłowych może pomóc ograniczyć zużycie kafli do 2 lub 3 na branżę. Unikaj używania kafla FFh, dzięki czemu kafel ID może zostać zamieniony na dłuższy bajt (w akcji 3) w odległej przyszłości bez zepsucia twojego NewGRF.
+
+{{pl/Development/NewGRF/ttdp|}} W sumie TTDPatch może mieć do 256 nowych ID kafli branżowych (tzn. Stare typy kafli się nie liczą).
+
+{{pl/Development/NewGRF/ottd|}} OpenTTD może mieć 512 <span title="identyfikatorów">ID</span> dla wszystkich aktywnych plików grf, ale obejmuje to nie przesłonięte oryginalne kafle .
+
+==<span id="Properties" title=Properties>Właściwości</span>==
+
+{| 
+|-
+!<span title="właściwość">'Property'</span> !![[pl/Development/NewGRF/NFO Specs/GRFActionsDetailed|Rozmiar]] !!Wersja !! Opis
+|-
+|08||B||{{pl/Development/NewGRF/ottdp|0.6|2.5|ttdprev=alpha 43}}||Substytut budynku typu
+|-
+|09||B||{{pl/Development/NewGRF/ottdp|0.6|2.5|ttdprev=alpha 43}}||Branżowy kafel <span title=nadpisany>'override'</span>
+|-
+|0A,0B,0C||W||{{pl/Development/NewGRF/ottdp|0.6|2.5}}||Odbiór <small>''(acceptance)''</small> kafli
+|-
+|0D||B||{{pl/Development/NewGRF/ottdp|0.6|2.5|ttdprev=alpha 49}}||Flagi kształtu terenu
+|-
+|0E||B||{{pl/Development/NewGRF/ottdp|0.6|2.5|ttdprev=alpha 54}}||Flagi Callback
+|-
+|0F||W||{{pl/Development/NewGRF/ottdp|0.6|2.5|ttdprev=alpha 54}}||Informacje animacji
+|-
+|10||B||{{pl/Development/NewGRF/ottdp|0.6|2.5|ttdprev=alpha 54}}||Szybkość animacji.
+|-
+|11||B||{{pl/Development/NewGRF/ottdp|0.6|2.5|ttdprev=alpha 54}}||Wyzwalacze dla <span title='wywołania zwrotnego'>'cb'</span> 25
+|-
+|12||B||{{pl/Development/NewGRF/ottdp|0.6|2.5|ttdprev=beta 2}}||Specjalne flagi
+|-
+|13||V||{{pl/Development/NewGRF/ottdp|1.9|no|ottdrev=e66cec8f}}||Lista <span title=acceptance>'odbioru'</span> kafli
+|}
+
+==<span id="Description">Opis</span>==
+
+===<span id="Substitute_tile_type_(08)"></span><span id="Substitute_tile_type_.2808.29" title="Substitute tile type (08)">Zastępczy typ kafla (08) </span>===
+
+Ten typ kafla zostanie użyty zamiast nowego, jeśli definicja nie jest dostępna z jakiegokolwiek powodu. Prawidłowe wartości to [http://marcin.ttdpatch.net/sv1codec/TTD-locations.html#Class8 00h-AEh]. Przypisanie tej właściwości powoduje skopiowanie właściwości starego typu, podobnie jak w przypadku domów.
+
+Jeśli akcja 3 tego kafla pojawi się przed ustawieniem tej właściwości, akcja 3 nie przyniesie żadnego efektu.
+
+===<span id="Industry_tile_override_(09)"></span><span id="Industry_tile_override_.2809.29" title="Industry tile override (09)">Nadpisanie kafla przemysłu (09) </span>===
+
+Działa jak dom nadpisuje właściwość domów.
+
+===<span id="Tile_acceptance_(0A,_0B,_0C)"></span><span id="Tile_acceptance_.280A.2C_0B.2C_0C.29"  title="Tile acceptance (0A, 0B, 0C)">Akceptacja kafli (0A, 0B, 0C) </span>===
+
+Te trzy słowa określają, jakie ładunki przyjmuje kafel i ile z nich. Niski bajt określa rodzaj ładunku zgodnie z aktualnym klimatem, natomiast wysoki bajt określa stopień akceptacji w 1/8 jednostek. Jeśli nie potrzebujesz wszystkich trzech rodzajów ładunku, po prostu wyzeruj wysoki bajt dodatkowych właściwości.
+
+{{pl/Development/NewGRF/grfFrom|7}} Począwszy od wersji 7 GRF i wyższej, znaczenie małych bajtów zmienia się: zamiast numeru szczeliny ładunkowej zależnej od klimatu, musisz podać ID ładunku niezależny od klimatu. Jeśli twój GRF ma tabelę translacji ładunku, wówczas ten ID jest indeksem w tej tabeli; w przeciwnym razie jest to kawałek ładunku. Odbiór aktualnie nieobecnych ładunków zostanie automatycznie wyłączony.
+
+{{pl/Development/NewGRF/ottdp|1.9|no|ottdrev=e66cec8f}} Te właściwości obsługują tylko trzy ładunki. Zamiast tego użyj właściwości 13, aby wymienić więcej rodzajów ładunków. 
+
+===<span id="Land_shape_flags_(0D)"></span><span id="Land_shape_flags_.280D.29" title="Land shape flags (0D)">Flagi kształtu terenu (0D)</span> ===
+
+Ta właściwość określa, na których zboczach można zbudować kafel.
+
+{| 
+|-
+!Bit!!Wartość!!Wersja!!Znaczenie
+|-
+|0||1||{{pl/Development/NewGRF/ottdp|0.6|2.5}}||Nie można obniżyć krawędzi NW
+|-
+|1||2||{{pl/Development/NewGRF/ottdp|0.6|2.5}}||Krawędź NE nie może zostać obniżona
+|-
+|2||4||{{pl/Development/NewGRF/ottdp|0.6|2.5}}||Nie można opuścić krawędzi SW
+|-
+|3||8||{{pl/Development/NewGRF/ottdp|0.6|2.5}}||Krawędzi SE nie można opuścić
+|-
+|4||10||{{pl/Development/NewGRF/ottdp|0.6|2.5}}||Można budować tylko na płaskim terenie
+|-
+|5||20||{{pl/Development/NewGRF/ottdp|0.6|2.5|ttdprev=alpha 58}}||<span title=tile>Kafel</span> jest dozwolona zarówno na lądzie, jak i na wodzie
+|}
+
+Kafle przemysłowe nigdy nie są budowane na stromych zboczach, chyba że  [[pl/Development/NewGRF/NFO Specs/Callback/Main Page#custom-shape-check-2f |callback 2F]] jest włączone, ale w takim przypadku bity 0..4 są ignorowane.
+
+Bit 5 może być użyty do wpuszczenia kaflów przemysłu lądowego zbudowanych na wodzie lub odwrotnie. Skutecznie wyłącza kod kontroli ląd/woda dla kafla. Jeśli chcesz bardziej dostosować zachowanie, możesz użyć [[pl/Development/NewGRF/NFO Specs/Callback/Main Page#custom-shape-check-2f |callback 2F]] , aby zdecydować, jaki rodzaj wody/ziemi jest dozwolony.
+
+;'''PROŚBA ODNOTOWANIA''': Zachowaj ostrożność podczas ustawiania tej właściwości. Jeśli nie ustawisz go poprawnie, twoja branża może skończyć na zboczu wzgórza, co prawdopodobnie nie jest tym, czego chcesz. Najłatwiej jest ustawić bit 4 dla środkowych kafli, bit 0 dla kafli wzdłuż krawędzi SE, bit 1 dla tych wzdłuż krawędzi SW i tak dalej.
+
+===<span id="Callback_flags_(0E)"></span><span id="Callback_flags_.280E.29" title='Callback flags (0E)'>Flagi callback (0E)</span> ===
+
+{| 
+|-
+!Bit!!wartość!!wersja!!znaczenie
+|-
+|0||1||{{pl/Development/NewGRF/ottdp| | }}||użyj [[pl/Development/NewGRF/NFO Specs/Callback/Main Page#next-animation-frame-1a-26-141-153-158 |callback 26]] , aby zdecydować o następnej klatce animacji
+|-
+|1||2||{{pl/Development/NewGRF/ottdp| | }}||użyj [[pl/Development/NewGRF/NFO Specs/Callback/Main Page#length-of-animation-frame-20-27-142-154-15a |callback 27]] do określenia szybkości animacji
+|-
+|2||4||{{pl/Development/NewGRF/ottdp| |2.5|ttdprev=alpha 55 vcs 3}}||użyj  [[pl/Development/NewGRF/NFO Specs/Callback/Main Page#decide-cargo-acceptance-2b |callback 2B]] , aby zdecydować o <span title='amount of acceptance'>'ilości akceptacji'</span>
+|-
+|3||8||{{pl/Development/NewGRF/ottdp| |2.5|ttdprev=alpha 55 vcs 3}}||użyj  [[pl/Development/NewGRF/NFO Specs/Callback/Main Page#get-accepted-cargo-types-2a-2c |callback 2C]] , aby zdecydować o akceptowanych typach
+|-
+|4||10||{{pl/Development/NewGRF/ottdp| | }}||użyj [[pl/Development/NewGRF/NFO Specs/Callback/Main Page#custom-shape-check-2f |callback 2F]] , aby sprawdzić, czy nachylenie jest odpowiednie
+|-
+|5||20||{{pl/Development/NewGRF/ottdp| | }}||użyj [[pl/Development/NewGRF/NFO Specs/Callback/Main Page#decide-drawing-default-foundations-30-14e-150 |callback 30]] , aby zdecydować, czy należy narysować domyślne fundamenty
+|-
+|6||40||{{pl/Development/NewGRF/ottdp| |2.5|ttdprev=beta 3}}||użyj [[pl/Development/NewGRF/NFO Specs/Callback/Main Page#disable-autosloping-3c-14f-15d |callback 3C]] , aby zezwolić lub zabronić 'autoslopingu' poniżej kafla
+|}
+
+Należy pamiętać, że [[pl/Development/NewGRF/NFO Specs/Callback/Main Page#animation-control-1b-25-140-152-159 |callback 25]] nie ma tu trochę. Aby użyć [[pl/Development/NewGRF/NFO Specs/Callback/Main Page#animation-control-1b-25-140-152-159 |callback 25]] , po prostu ustaw żądane bity we właściwości 11 i będzie działać zgodnie z przeznaczeniem.
+
+===<span id="Animation_information_(0F)"></span><span id="Animation_information_.280F.29" title='Animation information (0F)'>Informacje o animacji (0F)</span> ===
+
+Niższy bajt określa liczbę klatek animacji pomniejszoną o jedną, więc 00 oznacza 1 klatkę, 01 oznacza 2 klatki itp. Maksymalna liczba klatek wynosi 256, chociaż możesz mieć pewne problemy, jeśli twoja animacja przekracza liczbę klatek FD (253). Górny bajt musi wynosić 0 dla animacji nie zapętlonych i 01 dla animacji zapętlonych. Każda inna wartość jest zarezerwowana do wykorzystania w przyszłości. Ponadto, jeśli całe słowo zawiera FFFF, animacja dla tego kafla jest wyłączona (jest to wartość domyślna).
+
+===<span id="Animation_speed_(10)"></span><span id="Animation_speed_.2810.29" title='Animation speed (10)'>Prędkość animacji (10)</span> ===
+
+Znaczenie jest takie samo, jak w przypadku właściwości domu 1B, ale dolny limit wynosi 0 zamiast 2, więc najszybsza możliwa animacja zmienia klatki w każdej grze (27ms). Wartość domyślna to 2.
+
+===<span id="Triggers_for_callback_25_(11)"></span><span id="Triggers_for_callback_25_.2811.29" title='Triggers for callback 25 (11)'>Wyzwalacze dla [[pl/Development/NewGRF/NFO Specs/Callback/Main Page#animation-control-1b-25-140-152-159 |callback 25]] (11)</span> ===
+
+Wywołanie [[pl/Development/NewGRF/NFO Specs/Callback/Main Page#animation-control-1b-25-140-152-159 |callback 25]] kiedy:
+
+{| 
+|-
+!Bit!!Wartość!!Version!!Znaczenie||Var 18
+|-
+|0||1||{{pl/Development/NewGRF/ottdp|0.6|2.5}}||zmiany stanu budowlanego||
+|-
+|1||2||{{pl/Development/NewGRF/ottdp|0.6|2.5}}||<span title=tile>'kafel'</span> jest przetwarzany w pętli okresowego przetwarzania||
+|-
+|2||4||{{pl/Development/NewGRF/ottdp|0.6|2.5}}||przemysł kafla jest przetwarzany w pętli okresowego przetwarzania (zsynchronizowana animacja)||
+|-
+|3||8||{{pl/Development/NewGRF/ottdp|0.6|2.5}}||przemysł kafla odbiera ładunek wejściowy ze stacji||
+|-
+|4||10||{{pl/Development/NewGRF/ottdp|0.6|2.5|ttdprev=beta 2}}||przemysł dystrybuuje swój ładunek wyjściowy do jednej ze stacji w pobliżu||
+|}
+Obecnie żaden wyzwalacz <small>''(trigger)''</small> nie zawiera dodatkowych informacji w var 18.
+
+===<span id="Special_flags_(12)"></span><span id="Special_flags_.2812.29" title='Special flags (12)'>Specjalne flagi (12)</span> ===
+
+{| 
+|-
+!Bit!!Wartość!!Znaczenie
+|-
+|0||1||[[pl/Development/NewGRF/NFO Specs/Callback/Main Page#next-animation-frame-1a-26-141-153-158 |Callback 26]] potrzebuje losowych bitów
+|-
+|1||2||{{pl/Development/NewGRF/ottdp|1.9|no|ottdrev=e66cec8f}} Oprócz cargotypów ustawionych przez właściwość 0A..0C i 13, kafel akceptuje wszystkie cargotypy akceptowane przez przemysł.
+* Dotyczy to właściwości przemysłowych 11 i 26 oraz 'cb' 14B.
+* To nie uwzględnia branżowego 'cb' 3D.
+* Ta właściwość dodaje akceptację 8/8 dla pasujących cargotypów. Można podać ujemne akceptacje (-8/8) we właściwości 13, aby wykluczyć określone ładunki.
+* 'Cb' kaflowe 2C zastępuje wszystkie akceptacje, w tym te dodane przez tę flagę.
+|}
+
+===<span id="Tile_acceptance_list_(13)"></span><span id="Tile_acceptance_list_.2813.29" title='Tile acceptance list (13)'>Lista akceptacji kafli (13)</span> ===
+{{pl/Development/NewGRF/ottdp|1.9|no|ottdrev=e66cec8f}} 
+
+Format:
+ <numinput> (<cargotype> <acceptance>)*
+
+{| 
+|-
+!Rozmiar!!Zmienna!!Znaczenie
+|-
+|B||numinput||Liczba (<cargotype> <acceptance>) par do <span title=follow>'naśladowania'</span>,
+|-
+|B||cargotype||Cargotype (z CTT) do zaakceptowania.
+|-
+|B||acceptance||Akceptacja w 1/8 jednostki. Może mieć wartość ujemną, aby zanegować właściwość 12 bit 1.
+|}
+
+Ta właściwość określa do 16 'cargotypów', które są akceptowane przez kafel branży.
+Użyj tej właściwości zamiast właściwości 0A..0C.
+
+==<span id="Example" title=Example>Przykład</span>==

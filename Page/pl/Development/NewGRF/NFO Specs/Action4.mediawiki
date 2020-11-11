@@ -1,0 +1,217 @@
+{{pl/Development/NewGRF/inne strony|en=newgrf-specs.tt-wiki.net/wiki/Action4|pl=pl/Development/NewGRF/NFO Specs/Action4 |sub=nfo}}
+<!--[[Category:Artykuły w języku polskim/Pl]]-->
+<!--{{-}}<br>{{ambox | text = w trakcie edycji.}}-->
+
+==Wprowadzenie ==
+Zdefiniuj ciągi znaków, np. Nazwy pojazdu, domu lub branży
+
+Tworząc nowe grafiki pojazdów, musisz także nazwać nowe pojazdy, w przeciwnym razie pojawią się z oryginalną nazwą z TTD.
+Jednak niestandardowe nazwy pojazdów przypisane przez gracza w grze (lub dla TTDPatch również za pośrednictwem TTD pojazdu.dat) zawsze będą miały pierwszeństwo.
+
+W TTDPatch możesz również użyć tej akcji, aby zmienić większość ciągów tekstowych TTD.
+
+== Syntax ==
+
+Dane wyglądają następująco:
+
+ &lt;Sprite-number&gt; * &lt;Length&gt; '''04''' &lt;feature&gt; &lt;language-id&gt; &lt;num-ent&gt; &lt;offset&gt; &lt;text&gt;
+
+{| 
+|-
+!Element!![[pl/Development/NewGRF/NFO Specs/GRFActionsDetailed|Rozmiar]]!!Opis
+|-
+|&lt;Sprite-number&gt;||dec||Sekwencyjny numer 'sprite'
+|-
+|&lt;length&gt;||dec||Łączna liczba bajtów użytych w tej akcji.
+|-
+|04||B||Definiuje action 04
+|-
+|&lt;feature&gt;||B||Do jakiego rodzaju pojazdu/stacji należy zastosować tę definicję?
+|-
+|&lt;language-id&gt;||B||Dla którego z języków TTD ta nazwa jest
+|-
+|&lt;num-ent&gt;||B||Liczba kolejnych ciągów <small>''(strings)''</small> do zmiany
+|-
+|&lt;offset&gt;||B/W||Pierwszy Id do zmiany
+|-
+|&lt;text&gt;||S||Nowe ciągi tekstowe
+|}
+
+Czy &lt;offset&gt; jest '''BYTE''' (rozszerzony bajt w openttd dla pojazdów) lub a '''WORD''' decyduje bit 7 z &lt;language-id&gt;, patrz poniżej.
+
+== Opisy ==
+
+=== Sprite-number ===
+
+To tylko numer, na którym jesteś.
+
+=== Długość ===
+
+Policz liczbę bajtów w tej akcji.
+
+=== Funkcja ===
+
+To ustawia typ [[pl/Development/NewGRF/NFO Specs/Features|feature]] które chcesz zmienić. Ustaw na:
+
+{|
+|-!Wartość!![[pl/Development/NewGRF/NFO Specs/Features|Funkcja]]
+|-
+|00||Trains
+|-
+|01||Road Vehicles
+|-
+|02||Ships
+|-
+|03||Aircraft
+|-
+|04||Stations
+|-
+|07||Houses
+|-
+|0A||Industries
+|-
+|0B||Cargos
+|-
+|0D||Airports
+|-
+|0F||Objects
+|-
+|10||Railtypes
+|-
+|12||Roadtypes
+|-
+|13||Tramtypes
+|-
+|48||Original strings; zerknij [[pl/Development/NewGRF/NFO Specs/TextIDs|TextIDs]] po listę text ID TTD.
+|}
+
+=== ID języka ===
+Znaczenie tego bajtu zależy od wersji GRF pliku .grf ustawionej w [[pl/Development/NewGRF/NFO Specs/Action8#version|action 8]].
+
+<!--{{grfTill|6}}-->{{pl/Development/NewGRF/grfTill|6}} Do wersji 6 jest to maska ​​nieco następujących bitów:
+
+{| 
+|-
+!Bit!!Wartość!!Znaczenie
+|-
+|0||01||American lub "other"
+|-
+|1||02||English
+|-
+|2||04||German
+|-
+|3||08||French
+|-
+|4||10||Spanish
+|-
+|7||80||Flag dla 16 bit string IDs
+|}
+
+Dodaj bity wszystkich języków, których dotyczą następujące ciągi. Bit 7 kontroluje, czy następujący ID ciągu składa się z 16 czy 8 bitów. Nieznane języki będą używać ciągów amerykańskich jako rezerwowych. W przeciwnym razie ciąg znaków pozostałby niezdefiniowany dla tych języków. Aby faktycznie zdefiniować ciągi znaków dla dowolnego nowego języka, musisz użyć grf w wersji 7.
+
+<!--{{grfFrom|7}}-->{{pl/Development/NewGRF/grfFrom|7}} W wersji 7 i wyższej jest to prosty ID języka z poniższej listy. (Zmieniło się to wraz z TTDPatch 2.5 beta 4). Bit 7 ma takie samo znaczenie, jak we wcześniejszych wersjach powyżej.
+
+W obu schematach można użyć odpowiednio wartości 7F lub FF, aby zdefiniować ciągi znaków dla języków, dla których tłumaczenie nie jest zapewniane. Najpierw ustaw wszystkie ciągi znaków na wartość domyślną, a następnie zastąp te specyficzne dla języka, jeśli istnieją. 
+
+Ustaw bit7 (dodaj 0x80 do languageID jak w poniższej tabeli), aby użyć 16-bitowych ID`y ciągu.
+
+Aby uzyskać listę liczby mnogiej, zobacz [[pl/Development/NewGRF/NFO Specs/StringCodes|StringCodes]] . Ponieważ przypisanie formularzy liczby mnogiej do języków w rzeczywistości nie jest tak ustalone, jak można się spodziewać, używana forma liczby mnogiej jest definiowana przez każdy GRF osobno dla jego ciągów znaków za pomocą właściwości [[pl/Development/NewGRF/NFO Specs/Action0/Global Settings|Action0/Global Settings]] 15.
+
+<!--{{:language_IDs}}-->{{Page:pl/Development/NewGRF/NFO Specs/Language IDs}}
+
+Tłumacząc nowy język, po prostu edytuj [[pl/Development/NewGRF/NFO Specs/Language IDs|language list]] i dodaj nową definicję tutaj.
+
+=== num-ent ===
+
+Ile kolejnych wpisów należy zmienić.
+
+=== offset ===
+
+ID pierwszego ciągu do zmiany.
+
+Gdy bit 7 ID języka jest czysty, jest to wartość bajtowa; Dla OpenTTD od r13482, gdzie jest to wartość rozszerzonego bajtu dla pojazdów.
+
+Gdy ustawiony jest bit 7 id-języka, jest to wartość słowa w małej notacji endian, np. 8134 staje się 34 81.
+
+Wersja 8-bitowa jest dozwolona tylko dla pojazdów, aby ustawić swoją nazwę, w którym to przypadku tekstowy ID jest tylko ID pojazdu.
+Aby zastąpić oryginalne teksty lub zdefiniować teksty do wykorzystania w wywołaniach zwrotnych lub właściwościach pojazdów, stacji, domów lub gałęzi przemysłu, musisz użyć wersji 16-bitowej. Jednak nazwy miast są zmieniane za pomocą [[pl/Development/NewGRF/NFO Specs/ActionF|Action F]].
+
+Przydatne 16-bitowe ID`y tekstowe znajdują się w tabeli poniżej, odpowiednio. dla funkcji 48 patrz [[pl/Development/NewGRF/NFO Specs/TextIDs|TextIDs]].
+
+Chociaż zakresy te są wspólne dla wszystkich funkcji, nadal należy ustawić odpowiednią funkcję, w której ich używasz.
+
+{| 
+|-
+!ID!!Content
+|-
+|C4xx||Ustaw nazwę klasy stacji związanej z ID stacji xx; to jest tekst nad podglądem (gdzie inaczej TTD pokazuje "Orientation")
+|-
+|C5xx||Nowe nazwy stacji, zmienia tekst "liczba platform" na podany tekst, gdy wybrana jest stacja o tym ID z bieżącego zestawu <small>''(set)''</small> (tj.  xx=station-id z działania 3 i 0)
+|-
+|C9xx||Nazwa typu domu tego ID. Jeśli ustawiona jest zarówno właściwość 12, jak i ta, zawsze używana jest najnowsza definicja. Powinieneś raczej wybrać ustawienie  [[pl/Development/NewGRF/NFO Specs/Action0/Houses#building-name-id-12|property 12]] zamiast tego, aby pliki wykonywalne przetłumaczone przy pomocy TTD Translator wyświetlały nazwę w bieżącym języku. Jeśli jednak nie możesz znaleźć odpowiednich starych tekstów TTD, możesz tego użyć do określenia swojej niestandardowej nazwy. Nie zapomnij ustawić tego samego tekstu dla wszystkich części budynku z wieloma płytkami <small>''(multi-tile)''</small>.
+|-
+|D0xx||Różne teksty graficzne, unikatowe dla każdego pliku .grf. Używany do kilku 'cb'. Niektóre 'cb' obsługują ID do D3FF.
+|-
+|D4xx||'''Never use in Action4''', tylko do wyświetlania tekstów w zakresie D000-D3FF (specyficzny dla grf), patrz [[pl/Development/NewGRF/NFO Specs/TextIDs|TextIDs]]
+|-
+|D8xx
+|{{pl/Development/NewGRF/ottd|1.7|rev=r27769}} Przydatny jak DCxx w Akcji 0 i do włączenia poprzez kody łańcuchowe <small>''(string)''</small> 0x80 i 0x81.
+{{pl/Development/NewGRF/ttdp|}} '''Nigdy nie używaj w Action4''', dostępne tylko w funkcjach Action0, patrz [[pl/Development/NewGRF/NFO Specs/TextIDs|TextIDs]]
+|-
+|DCxx||Ustaw różne trwałe teksty GRF. Przydatne w akcji 0 i do włączenia poprzez kody łańcuchowe 0x80 i 0x81.
+{{pl/Development/NewGRF/ttdp|}} W przeciwieństwie do tekstów GRF D0xx, tych ID można używać do ustawiania właściwości. ID tekstowy należy ustawić wcześniej [[pl/Development/NewGRF/NFO Specs/Action0/Houses|action 0]] odwołuje się do tego.
+|}
+
+{{pl/Development/NewGRF/ttdp|}} ID''`y'' DCxx są przydzielane wewnętrznie, gdy są zdefiniowane, i są trwałe w danych zapisu. Każdy plik .grf otrzymuje osobną mapę tych wewnętrznych ID''`ów'' i dlatego może ustawić wszystkie 256 z nich. &nbsp;Jednak w sumie dostępnych jest tylko 1024 ID''`ów'' , które mogą być współużytkowane przez wszystkie pliki .grf kiedykolwiek aktywowane w grze. Oznacza to, że ID''`y'' te powinny być używane tak oszczędnie, jak to możliwe. Ale używaj ich, gdy są przydatne!
+
+=== text ===
+
+Jest to lista ciągów zakończonych zerem, musi być tyle ciągów, ile określa num-ent.
+
+Grfcodec w wersji 0.9.6 lub nowszej akceptuje ciągi literalne w .nfo. Są one kodowane dokładnie tak, jak napisano, niezależnie od tego, jakie kodowanie wykorzystuje Twój edytor tekstu; jeśli potrzebujesz 00, umieść go bezpośrednio po literałowym ciągu.
+Aby zapoznać się z obsługiwanymi kodowaniami, formatem i ograniczeniami dotyczącymi używanych znaków, zobacz [[pl/Development/NewGRF/NFO Specs/GRFActionsDetailed#strings|GRFActionsDetailed]] i StringCodes.
+
+Duża liczba oryginalnych ciągów TTD wymaga kodu koloru przed rzeczywistym ciągiem. Możesz także użyć tych kodów kolorów w większości niestandardowych ciągów znaków. Korzystaj z nich mądrze! W przypadku, gdy ciąg wymaga kodu koloru, zostanie wyświetlony kod przed domyślnym tekstem wymienionym w [[pl/Development/NewGRF/NFO Specs/TextIDs|TextIDs]].Zazwyczaj ciąg kodowany kolorem rozpoczyna się znakiem ucieczki (odwrotnym ukośnikiem), po którym następuje bajt szesnastkowy, a następnie sam ciąg tekstowy. To znaczy. ciąg 0001 ("\94Off edge of map") ma kod koloru 0x94 przed ciągiem tekstowym, który pokoloruje go na biało. Możesz także umieścić zwykły bajt szesnastkowy poza cytowanym ciągiem bez konieczności ucieczki. ''94 "Off edge of map"'' byłby taki sam jak ''"\94Off edge of map"''
+
+Dostępne są następujące kody kolorów:
+
+{| 
+|-
+!'''Kod'''!!'''Kolor'''!!'''Kolor Palety'''
+|-
+|88||Blue|| <div style="background:#3890E8;width:2em;">&nbsp;</div>
+|-
+|89||Silver|| <div style="background:#C8C8C8;width:2em;">&nbsp;</div>
+|-
+|8A||Golden|| <div style="background:#FCC000;width:2em;">&nbsp;</div>
+|-
+|8B||Red|| <div style="background:#FC0000;width:2em;">&nbsp;</div>
+|-
+|8C||Purple|| <div style="background:#A888E0;width:2em;">&nbsp;</div>
+|-
+|8D||Light Brown|| <div style="background:#B0B084;width:2em;">&nbsp;</div>
+|-
+|8E||Orange|| <div style="background:#FCB030;width:2em;">&nbsp;</div>
+|-
+|8F||Green|| <div style="background:#90E05C;width:2em;">&nbsp;</div>
+|-
+|90||Yellow|| <div style="background:#FCF880;width:2em;">&nbsp;</div>
+|-
+|91||Dark Green|| <div style="background:#B4CC7C;width:2em;">&nbsp;</div>
+|-
+|92||Cream|| <div style="background:#D49480;width:2em;">&nbsp;</div>
+|-
+|93||Brown|| <div style="background:#A46040;width:2em;">&nbsp;</div>
+|-
+|94||White|| <div style="background:#FCFCFC;width:2em;">&nbsp;</div>
+|-
+|95||Light Blue|| <div style="background:#80C4FC;width:2em;">&nbsp;</div>
+|-
+|96||Grey|| <div style="background:#626562;width:2em;">&nbsp;</div>
+|-
+|97||Dark Blue|| <div style="background:#8484A4;width:2em;">&nbsp;</div>
+|-
+|98||Black|| <div style="background:#101010;width:2em;">&nbsp;</div>
+|}
+
+==Przykład==

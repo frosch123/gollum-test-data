@@ -1,0 +1,76 @@
+{{pl/Development/NewGRF/inne strony|en=newgrf-specs.tt-wiki.net/wiki/Action2/Single_Set|pl=pl/Development/NewGRF/NFO Specs/Action2/Single Set |sub=nfo}}
+<!--{{-}}<br>--><!--{{ambox | text = w trakcie edycji.}}--><!-- -->
+== Wprowadzenie ==
+{| 
+|-
+!Cecha !! Wersja !! Powiązana grafika
+|-
+|Canały || {{pl/Development/NewGRF/ottdp|0.6|2.5}} || Zależy od [[pl/Development/NewGRF/NFO Specs/Action3/Main Page#ids | Action3 ID]]; zerknij [[pl/Development/NewGRF/NFO Specs/Action0/Canals | Action0]]
+|-
+|Ładunki || {{pl/Development/NewGRF/ottdp|0.6|2.5}} || Pojedyncza ikona 'sprite'
+|-
+|Lądowiska || {{pl/Development/NewGRF/ottdp|1.1|no}} || Pojedynczy obraz podglądu
+|-
+|Railtypes || {{pl/Development/NewGRF/ottdp|1.0|no|ottdrev=r19056}} || Zależy od  [[pl/Development/NewGRF/NFO Specs/Action3/Railtypes#cargo-type| Action3 'cargo' typ]]
+|-
+|Roadtypes || {{pl/Development/NewGRF/ottdp|1.10}} || Zależy od [[pl/Development/NewGRF/NFO Specs/Action3/Roadtypes#cargo-type| Action3 'cargo' typ]]
+|-
+|Tramtypes || {{pl/Development/NewGRF/ottdp|1.10}} || Zależy od [[pl/Development/NewGRF/NFO Specs/Action3/Tramtypes#cargo-type| Action3 'cargo' typ]]
+|}
+
+Action2 dla tych funkcji definiuje tylko jeden zestaw ikonek, dlatego akcja 2, której potrzebujesz, nie jest zbyt skomplikowana.
+
+Jedyną grafiką związaną z ładunkami jest ich ikona wyświetlana w oknie stacji.
+
+Grafika związana z typami kolei, typami dróg i typami tramwajów jest nieco bardziej skomplikowana, ale cała ich logika opiera się na wariacyjnym action2s i action3; standardowa akcja2 znów nie jest skomplikowana.
+
+Jedyną grafiką związaną z lotniskami jest ich sprite. Domyślny rozmiar 'sprite' podglądu to 230 x 140. GUI kompilacji lotniska będzie automatycznie skalowany, jeśli masz mniejszy lub większy obraz, ale prawdopodobnie będzie wyglądał najlepiej, jeśli upewnisz się, że nie jest większy niż domyślny rozmiar.
+
+Nie pomijaj Action2 za pomocą [[pl/Development/NewGRF/NFO Specs/Action7|Action9]] (chyba że pomija cały plik). Action2 nie może być pomijane przez Action9, ponieważ TTDPatch najprawdopodobniej ulegnie awarii. Zamiast tego pomiń lub zmodyfikuj [[pl/Development/NewGRF/NFO Specs/Action3/Main Page|Action3]]. Pominięcie czynności 2 za pomocą [[pl/Development/NewGRF/NFO Specs/Action7|Action7]] nie ma żadnego efektu.
+
+== Syntax ==
+
+ <Sprite-number> * <Length> 02 <feature> <set-id> 01 00 <set>
+
+{|
+!Element!![[pl/Development/NewGRF/NFO Specs/GRFActionsDetailed|Rozmiar]]!!Opis
+|-
+|<Sprite-number>||dec||Sekwencyjny numer 'sprite'
+|-
+|<length>||dec||Łączna liczba bajtów użytych w tej akcji
+|-
+|02||B||Definiuje action2
+|-
+|<feature>||B||[[pl/Development/NewGRF/NFO Specs/Features | Feature]] jest definiowane
+|-
+|<set-id>||B||Co określa set-ID to działanie2
+|-
+|01||B||Dosłowny 01 bajt
+|-
+|00||B||Dosłownie <small>''(literal)''</small> 00 bajtów
+|-
+|<set>||W||Liczba zestawów do użycia od ostatniej akcji 1
+|}
+
+Możesz zauważyć, że jest to to samo co wpis action2 dla pojazdów, ale z num_loadtypes=1 i num_loadingtypes=0 i tylko jednym ustawionym numerem.
+
+== Description ==
+
+=== Sprite-number ===
+
+To tylko numer, na którym jesteś.
+
+=== Length ===
+
+Policz liczbę bajtów w tej akcji.
+
+=== set-id ===
+
+Określa ID bieżącej akcji 2. Do tego ID będzie później odwoływał się [[pl/Development/NewGRF/NFO Specs/Action3/Main Page|action 3]] lub akcja wariacyjna/losowa 2.
+
+Możesz ponownie użyć ID''`ów'' akcji 2 i nie ma ograniczeń co do kolejności ich zdefiniowania.
+
+=== set ===
+
+Zestaw ikonek używany do wyświetlania. Wpis jest wartością WORD w małym formacie endian i odnosi się do najnowszego zestawu akcji1. Na przykład zestaw akcji 1 zestaw 3 będzie zakodowany jako 03 00. Zwróć uwagę na dodatkowy 00, który jest potrzebny, ponieważ tutaj musi być wartością słowa.
+(Nie zapominaj, że numeracja zestawu ikonek zaczyna się od zera)

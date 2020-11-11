@@ -10,7 +10,7 @@
 
 __TOC__
 
-== [[:Category:ru/Manual/Base Set/Окна сообщений|Шаблоны окон сообщений]] ==
+== [[:Category:ru/Окна сообщений|Шаблоны окон сообщений]] ==
 
 Существует 6 типов (цветов) сообщений:
 
@@ -38,8 +38,8 @@ __TOC__
 ===Тип заметка (синий)===
 {| style="border:0px; padding:5px; width=100%;"
 |- valign="top"
-|width=150;|{{en/S|ru/Manual/Заметка|текст| ТЕКСТ }}
-|{{ru/Manual/Заметка|текст| ТЕКСТ }}
+|width=150;|{{en/S|ru/Заметка|текст| ТЕКСТ }}
+|{{ru/Заметка|текст| ТЕКСТ }}
 |- valign="top"
 |{{en/S|ru/Необходимо сделать|комментарий| ТЕКСТ }}
 |{{ru/Необходимо сделать|комментарий| ТЕКСТ |2= }}
@@ -47,19 +47,19 @@ __TOC__
 |{{en/S|ru/Расширить|заметка| ТЕКСТ }}
 |{{ru/Расширить|заметка| ТЕКСТ |2= }}
 |- valign="top"
-|{{en/S|ru/Wiki/Текущие событие}}
-|{{ru/Wiki/Текущие событие|1= }}
+|{{en/S|ru/Текущие событие}}
+|{{ru/Текущие событие|1= }}
 |}
 
 ===Тип стиль (жёлтый)===
 {| style="border:0px; padding: 5px; width=100%;"
 |- valign="top"
-|width=150;|{{en/S|ru/Wiki/Правка}}
-|{{ru/Wiki/Правка|1= }}
+|width=150;|{{en/S|ru/Правка}}
+|{{ru/Правка|1= }}
 |- valign="top"
 |{{en/S|ru/Перевод | название оригинала на английском|Процент}}
 |{{en/Ambox| type  = style
-| image = en/Manual/Base Set/Translation.png
+| image = en/Translation.png
 | text  = <strong>Эта статья переводится с английского языка на русский: <includeonly>[[{{{1}}}|{{{1}}}]]</includeonly><noinclude>{{{1}}}</noinclude>.</strong>
 <div style="font-size: 90%">
 <div style="margin:auto; text-align:Left;">Процент: {{{2|0}}}%
@@ -81,14 +81,14 @@ __TOC__
 |{{en/S|ru/Не завершено}}
 |{{ru/Не завершено|1= }}
 |- valign="top"
-|{{en/S|ru/Manual/Устарело}} <br> {{en/S|ru/Manual/Устарело|текст заметки}} 
-|{{ru/Manual/Устарело|2= }} 
+|{{en/S|ru/Устарело}} <br> {{en/S|ru/Устарело|текст заметки}} 
+|{{ru/Устарело|2= }} 
 |}
 ===Тип удалить (красный)===
 {| style="border:0px; padding:5px; width=100%;"
 |- valign="top"
-|width=150;|{{en/S|ru/Wiki/Удалить| Причина &#124; Имя пользователя}}
-|{{ru/Wiki/Удалить|3= }} 
+|width=150;|{{en/S|ru/Удалить| Причина &#124; Имя пользователя}}
+|{{ru/Удалить|3= }} 
 |- valign="top"
 |{{en/S|ru/Вандал}} Frosch удалил
 |{{ru/Вандал|1= }} Frosch удалил
@@ -113,22 +113,22 @@ __TOC__
 ===Тип защищённый (серый)===
 {| style="border:0px; padding: 5px; width=100%;"
 |- valign="top"
-|width=150;|{{en/S|ru/Wiki/Исторический}}
-|{{ru/Wiki/Исторический|1= }} 
+|width=150;|{{en/S|ru/Исторический}}
+|{{ru/Исторический|1= }} 
 |}
 
 == Особые шаблоны ==
 
 {| style="border:0px; padding: 5px; width=100%;"
 |- valign="top"
-|width=150;|{{en/S|en/Wiki/Linking}}
-|{{en/Wiki/Linking}}
+|width=150;|{{en/S|en/Linking}}
+|{{en/Linking}}
 |- valign="top"
-|{{en/S|en/Wiki/Suggestions}}
-|{{en/Wiki/Suggestions|1= }}
+|{{en/S|en/Suggestions}}
+|{{en/Suggestions|1= }}
 |- valign="top"
-|{{en/S|en/Wiki/License|type=Ваш тип лицензии}}
-|{{en/Wiki/License|type=PD}}
+|{{en/S|en/License|type=Ваш тип лицензии}}
+|{{en/License|type=PD}}
 |}
 
 == Версии OTTD ==
@@ -137,14 +137,14 @@ __TOC__
 ! width=150;|Tags 
 !|Result
 |-
-|{{en/S|en/Wiki/FutureFeature}}
-|{{en/Wiki/FutureFeature}}
+|{{en/S|en/FutureFeature}}
+|{{en/FutureFeature}}
 |-
 |{{en/S|en/Feature| Ваша версия }}
 |{{en/Feature|1.0}}
 |-
-|{{en/S|en/Wiki/Nightly| ТЕКСТ }}
-|{{en/Wiki/Nightly| ТЕКСТ }}
+|{{en/S|en/Nightly| ТЕКСТ }}
+|{{en/Nightly| ТЕКСТ }}
 |}
 
 == Другие ==
@@ -153,11 +153,11 @@ __TOC__
 ! width=150;|Теги 
 !|Результат
 |-
-|{{en/S|en/Development/Design Drafts/Progress bar | 50 }}
-|{{en/Development/Design Drafts/Progress bar| 50}}
+|{{en/S|en/Progress bar | 50 }}
+|{{en/Progress bar| 50}}
 |-
-|{{en/S|en/Wiki/Progress bar 32bpp tracker | category}}
-|{{en/Wiki/Progress bar 32bpp tracker|ground terrain}}
+|{{en/S|en/Archive/Old 32bpp/Progress bar 32bpp tracker | category}}
+|{{en/Archive/Old 32bpp/Progress bar 32bpp tracker|ground terrain}}
 |-
 |{{en/S|en/Other languages | ... }}}
 |
@@ -171,19 +171,19 @@ __TOC__
 |{{en/S|en/Forum| Forum &#124; Topic }}
 |{{en/Forum|0|0}}
 |-
-|{{en/S|en/Manual/User| Имя пользователя }}
-| {{en/Manual/User| Имя пользователя }} 
+|{{en/S|en/User| Имя пользователя }}
+| {{en/User| Имя пользователя }} 
 |-
-|{{en/S|en/Wiki/Check| Type &#124; Color &#124; Size }}
-|{{en/Wiki/Check|Yes|Green|20px}} или {{en/Wiki/Check|No|Red|20px}} или {{en/Wiki/Check|No|Black|20px}} и т.д...
+|{{en/S|en/Check| Type &#124; Color &#124; Size }}
+|{{en/Check|Yes|Green|20px}} или {{en/Check|No|Red|20px}} или {{en/Check|No|Black|20px}} и т.д...
 |-
-|{{en/S|en/Manual/Emoticon| Code &#124; Size }}
-|{{en/Manual/Emoticon|:)}} или {{en/Manual/Emoticon|;)}} или {{en/Manual/Emoticon|:((}} и т.д...
+|{{en/S|en/Emoticon| Code &#124; Size }}
+|{{en/Emoticon|:)}} или {{en/Emoticon|;)}} или {{en/Emoticon|:((}} и т.д...
 |}
 
 == Навигация ==
 
-Смотрите [[:Category:en/Manual/Base Set/Navigation]] для списка доступных в настоящее время шаблонов навигации.
+Смотрите [[:Category:en/Navigation]] для списка доступных в настоящее время шаблонов навигации.
 
 
 === [[Template:en/Navbox|Navbox]] ===

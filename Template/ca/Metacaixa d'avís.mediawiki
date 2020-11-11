@@ -12,12 +12,12 @@
 <div style="position: absolute;">[[{{#if:{{{imatge|}}}
   | File:{{{imatge}}}
   | {{#switch:{{{tipus|}}}
-    | esborrar   =File:en/Manual/Base Set/Deletion.png
+    | esborrar   =File:en/Deletion.png
     | contingut  =File:en/Content.png
-    | estil      =File:en/Manual/Base Set/Edit-clear.png
-    | moure      =File:en/Manual/Base Set/Move.png
-    | protecció  =File:en/Manual/Base Set/Protection.png
-    | #default   =File:en/Manual/Base Set/Notice.png
+    | estil      =File:en/Edit-clear.png
+    | moure      =File:en/Move.png
+    | protecció  =File:en/Protection.png
+    | #default   =File:en/Notice.png
   }}
 }}|40px]]</div>
 <div style="border: none; padding: 2px 2px 2px 62px;">
@@ -87,16 +87,16 @@ Els següents exemples empren diferents valors per al paràmetre '''tipus''', pe
 Les imatges predeterminades mostrades dalt s'han establert, majorment, per conveniència. En molts casos és més apropiat emprar imatges més específiques. Estos exemples empren el paràmetre '''imatge''' per a especificar una imatge diferent a la predeterminada.
 
 <pre>{{ca/Metacaixa d'avís| tipus  = informació
-| imatge = en/Manual/Base Set/OpenttdManual.png
+| imatge = en/Manual/OpenttdManual.png
 | text   = tararí tararà tararí 
 }}</pre>
 
 {{ca/Metacaixa d'avís| tipus  = informació
-| imatge = en/Manual/Base Set/OpenttdManual.png
+| imatge = en/Manual/OpenttdManual.png
 | text   = tararí tararà tararí 
 }}
 
-[[Category:ca/Manual/Base Set/Caixes de missatges|Metacaixa d'avís]]
+[[Category:ca/Caixes de missatges|Metacaixa d'avís]]
 </noinclude><!--
 
   CSS if the option will become available

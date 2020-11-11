@@ -1,0 +1,119 @@
+{{pl/Development/NewGRF/inne strony|en=newgrf-specs.tt-wiki.net/wiki/VariationalAction2/Airport_Tiles|pl=pl/Development/NewGRF/NFO Specs/VariationalAction2/Airport Tiles |sub=nfo}}
+<!--{{-}}<br>--><!--{{ambox | text = w trakcie edycji.}}--><!-- -->
+==<span id="Introduction" title="Introduction">Wprowadzenie</span>==
+
+==<span id="Variables" title="Variables">Zmienne</span>==
+
+
+{| 
+|-
+!Zmienna!![[pl/Development/NewGRF/NFO Specs/GRFActionsDetailed|'''Rozmiar''']]!!Wersja!!Content
+|-
+|40||B||{{pl/Development/NewGRF/ottdp|0.6|2.5}}||Stan konstrukcji kafla: wartość od 0 do 3 (zdefiniowana tylko dla branż)
+|-
+|41||B||{{pl/Development/NewGRF/ottdp|0.6|2.5}}||Typ gruntu, taki sam jak zmienna 81 dla [[pl/Development/NewGRF/NFO Specs/VariationalAction2/Canals|canals]]
+|-
+|42||B||{{pl/Development/NewGRF/ottdp|0.6|2.5}}||Bieżąca [[pl/Development/NewGRF/NFO Specs/TownZones|town zone]] kafla w najbliższym mieście
+|-
+|43||D||{{pl/Development/NewGRF/ottdp|0.6|2.5}}||Względne położenie
+|-
+|44||B||{{pl/Development/NewGRF/ottdp|0.6|2.5}}||Ramka animacji. Na przykład [[pl/Development/NewGRF/NFO Specs/VariationalAction2/Houses#current-animation-frame-46|house variable 46]] , ale może zawierać wszystko 0..FF.
+|-
+|60||D||{{pl/Development/NewGRF/ottdp|0.6|2.5}}||Informacje o terenie pobliskich kafli
+|-
+|61||D||{{pl/Development/NewGRF/ottdp|0.6|2.5}}||Etap animacji pobliskich kafli
+|-
+|62||D||{{pl/Development/NewGRF/ottdp|0.6|2.6|ttdprev=r1270}}||Uzyskaj ID branży lub kafla lotniska na przesunięciu
+|}
+
+VarAction2 dla kafli lotniska jest dostępna tylko w wersji OpenTTD r19204 lub nowszej
+
+Brak dostępnych zmiennych 80+x (nigdy nie będzie). Próba uzyskania dostępu spowoduje awarię TTD.
+
+=== [[pl/Development/NewGRF/NFO Specs/TownZones|Town zone]] (42) ===
+
+[[pl/Development/NewGRF/NFO Specs/TownZones|Town zone]] gdzie znajduje się budynek (co niekoniecznie jest założycielem miasta). Zero, jeśli kafla nie ma w mieście. Jest to szczególnie przydatne dla banków i innych branż miejskich.
+
+===<span id="Relative_position_(43)"></span><span title="Względne położenie (43)" id="Relative_position_.2843.29">Relative position (43)</span>===
+
+Jest to położenie kafla względem najbardziej wysuniętego na północ kafla branży lub lotniska.
+
+'''Format:''' 00yxYYXX
+
+{| 
+|-
+!Zmienna!!Content
+|-
+|x||przesunięcie x od najbardziej wysuniętej na północ kafla
+|-
+|XX||to samo, ale przechowywane w bajcie zamiast <span title='półbajt'>'nibble'</span>
+|-
+|y||y odsunięte od najbardziej wysuniętej na północ kafla
+|-
+|YY||to samo, ale przechowywane w bajcie zamiast <span title='półbajt'>'nibble'</span>
+|}
+
+Z uwagi na fakt, że y i x są skubkami, mogą zawierać niepoprawne wartości, jeśli Twoja branża przekroczy 16 kafli w dowolnym kierunku. Ta zmienna może być używana do oszczędzania <span title='identyfikatorów'>'ID'</span> kafli branży lub lotniska: ten sam typ kafli może wybrać inną reprezentację w zależności od tego, gdzie dokładnie znajduje się w branży.
+
+===<span id="Land_info_of_nearby_tiles_(60)"></span><span title="Land info of nearby tiles (60)" id="Land_info_of_nearby_tiles_.2860.29">Informacje o terenie pobliskich kafli (60)</span>===
+
+Parametr tej zmiennej jest przesunięciem względem położenia bieżącego kafla. Niby-nibble zawiera podpisane przesunięcie X (to znaczy 0h=0, 1h=+1 ... 7h=+7; 8h=-8, 9h=-7 ... Fh=-1 ), high-nibble zawiera Przesunięcie Y Dlatego parametr 00h uzyskuje dostęp do samego bieżącego kafla.
+
+Zwrócone podwójne słowo ma format '''rc zz bb ss''' , w którym oznaczono litery:
+* '''r''' jest zarezerwowany do wykorzystania w przyszłości
+* '''c''' zawiera [http://marcin.ttdpatch.net/sv1codec/TTD-locations.html#Landscape landscape class]  kafla <small>''(tile)''</small>. {{pl/Development/NewGRF/ottdp|0.6|2.5|ttdprev=alpha 72}} 
+* '''zz''' to wysokość najniższego rogu kafla.
+: {{pl/Development/NewGRF/grfTill|7}} Dla GRF w wersji 7 i niższej: wielokrotność 8.
+: {{pl/Development/NewGRF/grfFrom|8}} Dla GRF w wersji 8 i nowszej: wielokrotność 1.
+* '''bb''' to pole bitowe, znaczenie poszczególnych bitów to:
+{| 
+|-
+!Bit||Wartość||Wersja||Znaczenie
+|-
+|0||1||{{pl/Development/NewGRF/ottdp|0.6|2.5}}||Kafel jest kaflem przemysłu i należy do tej samej branży, co obecna
+|- 
+|valign=middle|1||valign=middle|2||valign=middle|{{pl/Development/NewGRF/ottdp|0.6|2.5}}||Na kaflu jest woda. Ta flaga jest również ustawiona dla wybrzeży. Jeśli potrzebujesz pełnego kafla wodnego, sprawdź również dane nachylenia. Jeśli wynosi zero (kafel płaski), kafel jest całkowicie podlany.
+|-
+|2..4|| ||{{pl/Development/NewGRF/ottdp|0.6|2.5|ttdprev=alpha 70}}||0 - normalny kafel; 1 - pustynia; 2 - las deszczowy; 4 - zaśnieżony kafel
+|-
+|valign=middle|5..6|| ||valign=middle|{{pl/Development/NewGRF/ottdp|1.2|no|ottdrev=r22679}}||Klasa wody: 0 - nieokreślona / ląd; 1 - morze; 2 - kanał; 3 - rzeka. To nie to samo, co bit 1, jak np. Kafel przemysłu może mieć klasę wody, ale nie jest ustawiony bit 1.
+|-
+|7|| || ||zarezerwowane do użytku w przyszłości
+|}
+* '''ss''' zawiera dane nachylenia kafla. Znaczenie poszczególnych bitów to:
+{| 
+|-
+!Bit||Wartość||Znaczenie
+|-
+|0||1||Zachodni róg znajduje się powyżej najniższego
+|-
+| 1 || 2 || Południowy róg znajduje się powyżej najniższego
+|-
+| 2 || 4 || Wschodni róg jest powyżej najniższego
+|-
+| 3 || 8 || Północny róg jest powyżej najniższego
+|-
+|4||16||Kafel ma strome nachylenie (tj. Róg przeciwny do najniższego jest o dwie jednostki wyższy)
+|-
+|inne bity|| ||zawsze zero
+|}
+
+Wynikowe, możliwe wartości tego bajtu są zilustrowane na tym obrazku (z dokumentów OpenTTD):
+
+<!--[[File:Industrytile_var60.png]]--><span title='ilustracja w linku'>[http://newgrf-specs.tt-wiki.net/wiki/File:Industrytile_var60.png File:Industrytile_var60.png]</span>
+
+Czasami bardziej przydatna jest znajomość wysokości najwyższego rogu kafla. Można to obliczyć za pomocą  "zz/8 + ((ss+15)/16)" , to znaczy: "60 XX 33 1F 00 60 XX 40 FF 0F 10" , gdzie XX jest parametrem. Zwraca jednak liczbę 0..31 zamiast 0..248.
+Dlaczego to działa i jak dostosować się do innego zakresu wartości, pozostawia się jako ćwiczenia dla czytelnika.
+
+
+Należy pamiętać, że ze względu na sposób, w jaki TTD generuje losową mapę, numer klasy sąsiadującego kafla może różnić się od oczekiwanego. Na przykład, podczas umieszczania branży opartej na wodzie w sąsiedztwie wybrzeża w losowej grze, kafle te nie sąsiadują już z wodą po wygenerowaniu branży, dlatego nie można rzetelnie sprawdzić, czy na wybrzeżu znajdują się kafle wybrzeża. callback.
+
+===<span id="Animation_stage_for_nearby_tiles_(61)"></span><span title="Animation stage for nearby tiles (61)" id="Animation_stage_for_nearby_tiles_.2861.29">Etap animacji dla pobliskich kafli (61)</span>===
+
+Parametr tej zmiennej jest interpretowany w taki sam sposób, jak dla zmiennej 60. Zwracana wartość to FFFFFFFFh, jeśli dany kafel nie należy do branży, a liczba bieżącej klatki animacji danego kafla w przeciwnym razie. (To znaczy wartość, którą var 44 zwróci dla danego kafla).
+
+===<span id="Get_industry_tile_ID_at_offset_(62)"></span><span title="Get industry tile ID at offset (62)" id="Get_industry_tile_ID_at_offset_.2862.29">Uzyskaj ID kafla branżowego na odsunięciu (62)</span>===
+
+Działa podobnie do przemysłowej zmiennej 60, z tym wyjątkiem, że punktem odniesienia jest bieżący kafel zamiast północnego kafla branży, a przesunięcia uważa się za podpisane.
+
+==<span id="Example" title="Example">Przykład</span>==

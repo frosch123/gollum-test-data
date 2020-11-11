@@ -1,0 +1,355 @@
+{{pl/Development/NewGRF/inne strony|en=newgrf-specs.tt-wiki.net/wiki/GlobalVariables|pl=pl/Development/NewGRF/NFO Specs/GlobalVariables |sub=nfo}}
+<!--{{-}}<br>--><!--{{ambox | text = w trakcie edycji.}} -->
+== Przegląd ==
+{|
+!colspan=3|'''Zmienna'''
+!rowspan=2|[[pl/Development/NewGRF/NFO Specs/GRFActionsDetailed|'''Rozmiar''']]
+!rowspan=2|'''Wersje'''
+!rowspan=2|'''Opis'''
+|-
+|[[pl/Development/NewGRF/NFO Specs/VariationalAction2/Main Page | VA2]]||A[[pl/Development/NewGRF/NFO Specs/Action6|6]]/[[pl/Development/NewGRF/NFO Specs/Action7|7]]/[[pl/Development/NewGRF/NFO Specs/Action7|9]]/[[pl/Development/NewGRF/NFO Specs/ActionD|D]]<br>(odczyt)||[[pl/Development/NewGRF/NFO Specs/ActionD|ActD]]<br>(zapisanie)
+|-
+|00||80||  ||W||{{pl/Development/NewGRF/ottdp|0.6|2.0}}||valign=middle|aktualna data (liczona jako dni od 1920)<!--<ref name="startdate">-->{{pl/Development/NewGRF/NFO Specs/refs|name=startdate|text={{pl/Development/NewGRF/ottdp|0.7}} W grach wieloosobowych OpenTTD nie zgłasza bieżącej daty i roku działaniom 6,7,9 i D, ale datę i rok załadowania gry. Powodem jest to, że zauważono, że użycie tej zmiennej prowadzi do desynchronizacji w grach sieciowych.|1}}<!--</ref>-->
+|-
+|01||81||  ||B||{{pl/Development/NewGRF/ottdp|0.6|2.0}}||valign=middle| Bieżący rok (liczyć od 1920 r., Maks. 2175 nawet w grze 'wiecznej')<!--<ref name="startdate"/>-->{{pl/Development/NewGRF/NFO Specs/refs|name=startdate|<!--2-->1-1}}
+|-
+|valign=middle|02||valign=middle|82||  ||valign=middle|B/D||valign=middle|{{pl/Development/NewGRF/ottdp|0.6|2.0}}||valign=middle| bieżący miesiąc (0–11) w bitach 0–7; wyższe bajty zawierają niepotrzebne <span title='śmieci'>'junk'</span>.<!--<ref name="startdate"/>-->{{pl/Development/NewGRF/NFO Specs/refs|name=startdate|<!--3-->1-2}}<br/>{{pl/Development/NewGRF/ottdp|0.7|ottdrev=r13594}} Ponieważ OpenTTD r13594 'dzień miesiąca' (0–30) jest przechowywany w bitach 8–12, bit 15 jest ustawiany w leapyear, a 'dzień roku' (0–364 lub 365) jest przechowywany w bitach 16–24. Wszystkie pozostałe bity są zastrzeżone i powinny być zamaskowane.
+|-
+|03||83||  ||B||{{pl/Development/NewGRF/ottdp|0.6|2.0}}|| Current climate: 00 = temp, 01 = arctic, 02 = trop, 03 = toyland
+|-
+|  ||84||  ||D||{{pl/Development/NewGRF/ottdp|0.6|2.0}}|| [[pl/Development/NewGRF/NFO Specs/GrfLoadingStages|GRF loading stage]], zerknij [[#grf-loading-stage-84|poniżej]]
+|-
+|  ||85||  ||B||{{pl/Development/NewGRF/ottdp|0.6|2.0}}|| [[pl/Development/NewGRF/NFO Specs/TTDPatchFlags|TTDPatch flags]]: tylko dla testów bitowych
+|-
+|06||86||  ||B||{{pl/Development/NewGRF/ottdp|0.6|2.0}}|| Strona ruchu drogowego: bit 4 clear=left, set=right; inne bity są zastrzeżone i muszą być zamaskowane.
+|-
+|  ||(87)||(87)||B||{{pl/Development/NewGRF/ottdp|no|no}}|| Nie jest już używany od TTDPatch 2.0. (była szerokość znaku "€")
+|-
+|  ||88||  ||4*B||{{pl/Development/NewGRF/ottdp|0.6|2.0}}||valign=middle| Sprawdza określony GRFID (patrz [[pl/Development/NewGRF/NFO Specs/Action7#condition-type|condition-types]])<!--<ref>-->{{pl/Development/NewGRF/NFO Specs/refs|text=Wartość zmiennej 88 można przetestować tylko za pomocą testów GRFID.|<!--4-->2}}<!--</ref>-->
+|-
+|09||89||  ||W||{{pl/Development/NewGRF/ottdp|0.6|2.0}}|| ułamek daty, zwiększany o 0x375 dla każdego tiku silnika
+|-
+|0A||8A||  ||W||{{pl/Development/NewGRF/ottdp|0.6|2.0}}|| licznik animacji, zwiększany co tyknięcie
+|-
+|0B||8B||  ||D||{{pl/Development/NewGRF/ottdp|no|2.0}}||valign=middle| [[pl/Development/NewGRF/NFO Specs/Version numbers#ttdpatch-version|TTDPatch version]], zerknij [[#ttdpatch-version-0b-8b|poniżej]] <!--<ref>-->{{pl/Development/NewGRF/NFO Specs/refs|text=OpenTTD zgłasza dowolny arbitralny numer wersji TTDPatch 2.6, aby stare GRF działały, ale nie wiedzą o OpenTTD. Nie polegaj na tym w przypadku nowych NewGRF.|<!--5-->3}}<!--</ref>--><!--<ref name="versionchecks">-->{{pl/Development/NewGRF/NFO Specs/refs|name=versionchecks|text=Zasadniczo nie jest przydatne sprawdzanie zmiennych wersji za pomocą Akcji 7. Jeśli chcesz pominąć niektóre akcje, które są niekompatybilne z niektórymi wersjami, chcesz je pominąć na wszystkich etapach ładowania. Tak więc użyj działania 9.|<!--6-->4}}<!--</ref>-->
+|-
+|0C||  ||  ||W||{{pl/Development/NewGRF/ottdp|0.6|2.5}}|| current [[pl/Development/NewGRF/NFO Specs/Callback/Main Page|callback]] ID (feature-specific), ustaw na 00, gdy nie ma callback
+|-
+|0D||8D||  ||B||{{pl/Development/NewGRF/ottdp|0.6|2.5}}|| TTD version, 0=DOS, 1=Windows
+|-
+|0E||8E||8E||B||{{pl/Development/NewGRF/ottdp|0.6|2.5}}|| Przesunięcie Y <small>''(Y-Offset)''</small> dla 'sprites' pociągu 
+|-
+|0F||8F||8F||3*B||{{pl/Development/NewGRF/ottdp|0.6|2.5}}|| Czynniki kosztowe typu torów kolejowych
+|-
+|10||  ||  ||D||{{pl/Development/NewGRF/ottdp|0.6|2.5}}|| Extra callback info 1, zerknij [[#extra-callback-info-10-and-18|poniżej]].
+|-
+|11||  ||  ||B||{{pl/Development/NewGRF/ottdp|no|2.5}}|| aktualny typ narzędzia szynowego (dla callbacks na stacjach )
+|-
+|12||92||  ||B||{{pl/Development/NewGRF/ottdp|0.6|2.5}}|| Tryb gry, 0 na ekranie tytułowym, 1 w grze i 2 w edytorze
+|-
+|13||93||93||W||{{pl/Development/NewGRF/ottdp|no|2.5|ttdprev=2.0.1 alpha 39}}||valign=middle| Przesunięcie odświeżania płytki przesunięte w lewo <!--<ref name="tilefresh">-->{{pl/Development/NewGRF/NFO Specs/refs|name=tilefresh|text=Zerknij [[pl/Development/NewGRF/NFO Specs/ActionD#tile-refresh-offsets|Action D]] aby uzyskać więcej informacji na temat przesunięć odświeżania kaflów i ich zastosowania.|<!--7-->5}}<!--</ref>-->
+|-
+|14||94||94||W||{{pl/Development/NewGRF/ottdp|no|2.5|ttdprev=2.0.1 alpha 39}}||valign=middle| Odświeżanie płytki przesunięte w prawo <!--<ref name="tilefresh"/>-->{{pl/Development/NewGRF/NFO Specs/refs|name=tilefresh|<!--8-->5-1}}
+|-
+|15||95||95||W||{{pl/Development/NewGRF/ottdp|no|2.5|ttdprev=2.0.1 alpha 39}}||valign=middle| Odświeżanie płytki przesunięte w górę <!--<ref name="tilefresh"/>-->{{pl/Development/NewGRF/NFO Specs/refs|name=tilefresh|<!--9-->5-2}}
+|-
+|16||96||96||W||{{pl/Development/NewGRF/ottdp|no|2.5|ttdprev=2.0.1 alpha 39}}||valign=middle| Odświeżanie płytki przesunięte w dół <!--<ref name="tilefresh"/>-->{{pl/Development/NewGRF/NFO Specs/refs|name=tilefresh|<!--10-->5-3}}
+|-
+|  ||97||97||B||{{pl/Development/NewGRF/ottdp|no|2.5}}||valign=middle| Naprawiono wysokość linii śniegu <!--<ref>-->{{pl/Development/NewGRF/NFO Specs/refs|text=Ta zmienna jest przestarzałym sposobem ustawiania wysokości linii śniegu za pomocą NewGRF za pomocą [[pl/Development/NewGRF/NFO Specs/ActionD|ActionD]]. Zostaje zastąpione przez [[pl/Development/NewGRF/NFO Specs/Action0/Global Settings#snow-line-height-table-10 | Action 0 snow line height table]]. Aby odczytać bieżącą linię śniegu za pomocą [[pl/Development/NewGRF/NFO Specs/VariationalAction2/Main Page | VarAct2]] w uruchomionej grze użyj zamiast tego zmiennej 20.|<!--11-->6}}<!--</ref>--><!--<ref name="heightlevel">-->{{pl/Development/NewGRF/NFO Specs/refs|name=heightlevel|text={{pl/Development/NewGRF/grfTill|7}} Dla GRF w wersji 7 i niższej zmienne te są wielokrotnościami 8; {{pl/Development/NewGRF/grfFrom|8}} dla GRF w wersji 8 i wyższej bezpośrednio podają poziom wysokości jako wielokrotność 1.|<!--12-->7}}<!--</ref>-->
+|-
+|18||  ||  ||D||{{pl/Development/NewGRF/ottdp|0.6|2.5}}|| Extra callback info 2, zerknij [[#extra-callback-info-10-and-18|poniżej]].
+|-
+|  ||99||99||D||{{pl/Development/NewGRF/ottdp|no|2.5}}|| Global ID offset
+|-
+|1A||9A||  ||D||{{pl/Development/NewGRF/ottdp|0.6|2.5}}|| Zawsze ustawia wszystkie bity; możesz użyć tego do bezwarunkowych skoków
+|-
+|valign=middle|1B||  ||  ||valign=middle|B||valign=middle|{{pl/Development/NewGRF/ottdp|no|2.5}}|| opcje wyświetlania; bit 0=town names, 1=station names, 2=signs, 3=animation, 4=transparency, 5=full detail
+|-
+|1C||  ||  ||D||{{pl/Development/NewGRF/ottdp|0.6|2.5}}|| wynik z najnowszej VarAction2
+|-
+|1D||9D||  ||D||{{pl/Development/NewGRF/ottdp|0.6|2.5}}||valign=middle| TTD Platform, 0=TTDPatch, 1=OpenTTD <!--<ref name="versionchecks"/>-->{{pl/Development/NewGRF/NFO Specs/refs|name=versionchecks|<!--13-->0014}}
+|-
+|1E||9E||9E||D||{{pl/Development/NewGRF/ottdp|0.6|2.5}}|| Różne. Funkcje GRF
+|-
+|  ||  ||9F||D||{{pl/Development/NewGRF/ottdp|no|2.5}}|| tylko do zapisu: ustawienia zależne od ustawień regionalnych
+|-
+|20||  ||  ||B||{{pl/Development/NewGRF/ottdp|0.6|2.5}}||valign=middle| Aktualna wysokość linii śniegu, FFh, jeśli w ogóle nie ma śniegu <!--<ref name="heightlevel"/>-->{{pl/Development/NewGRF/NFO Specs/refs|name=heightlevel|<!--14-->7-1}}
+|-
+|21||A1||  ||D||{{pl/Development/NewGRF/ottdp|0.6|no}}||valign=middle| [[pl/Development/NewGRF/NFO Specs/Version numbers#openttd-version|OpenTTD version]], zerknij [[#openttd-version-21-a1|poniżej]]. <!--<ref name="versionchecks"/>-->{{pl/Development/NewGRF/NFO Specs/refs|name=versionchecks|<!--15-->4-2}}
+|-
+|22||A2||  ||D||{{pl/Development/NewGRF/ottdp|0.7|2.6|ottdrev=r12499|ttdprev=r1857}}|| Level trudności: 00= easy, 01=medium, 02=hard, 03=custom
+|-
+|23||A3||  ||D||{{pl/Development/NewGRF/ottdp|0.7|2.6|ottdrev=r13376|ttdpref=r2048}}|| Bieżący format długiej daty
+|-
+|24||A4||  ||D|||{{pl/Development/NewGRF/ottdp|0.7|2.6|ottdrev=r13376|ttdprev=r2048}}|| Bieżący rok zerowy na podstawie
+|-
+|valign=middle|25||  ||  ||valign=middle|D||valign=middle|{{pl/Development/NewGRF/ottdp|0.7|ottdrev=r15739}}|| GRFID grf, który zawiera odpowiednie Action3. Przydatne podczas uzyskiwania dostępu do "powiązanego" <small>''(related)''</small> obiektu. Obecnie obsługiwane tylko dla pojazdów.
+|}
+
+Wszystkie inne numery zmiennych są zastrzeżone i nie wolno ich używać.
+<!--
+<references/>-->{{pl/Development/NewGRF/NFO Specs/przypisy|name=startdate|2001}}<!-- 1.0
+ -->{{pl/Development/NewGRF/NFO Specs/przypisy|name=startdate|2001-1}}<!-- 1.1
+ -->{{pl/Development/NewGRF/NFO Specs/przypisy|name=startdate|4101-2}}<!-- 1.2
+  -->{{pl/Development/NewGRF/NFO Specs/refs|name=startdate|text={{pl/Development/NewGRF/ottdp|0.7}} W grach wieloosobowych OpenTTD nie zgłasza bieżącej daty i roku działaniom 6,7,9 i D, ale datę i rok załadowania gry. Powodem jest to, że zauważono, że użycie tej zmiennej prowadzi do desynchronizacji w grach sieciowych.|<!--1-->przypis}}<!--
+  -->{{pl/Development/NewGRF/NFO Specs/refs|name=startdate|<!--2--><!--1-1-->przypis}}<!-- 1-1
+  -->{{pl/Development/NewGRF/NFO Specs/refs|name=startdate|<!--3--><!--1-2-->przypis}}<!-- 1-2
+-->{{pl/Development/NewGRF/NFO Specs/przypisy|222012}}<!-- 2
+  -->{{pl/Development/NewGRF/NFO Specs/refs|text=Wartość zmiennej 88 można przetestować tylko za pomocą testów GRFID.|<!----><!--2-->przypis}}<!--
+-->{{pl/Development/NewGRF/NFO Specs/przypisy|222021}}<!-- 3
+  -->{{pl/Development/NewGRF/NFO Specs/refs|text=OpenTTD zgłasza dowolny arbitralny numer wersji TTDPatch 2.6, aby stare GRF działały, ale nie wiedzą o OpenTTD. Nie polegaj na tym w przypadku nowych NewGRF.|<!--5--><!--3-->przypis}}<!--
+-->{{pl/Development/NewGRF/NFO Specs/przypisy|name=versionchecks|4104-0}}<!-- 4.0
+ -->{{pl/Development/NewGRF/NFO Specs/przypisy|name=versionchecks|4104-1}}<!-- 4.1
+ -->{{pl/Development/NewGRF/NFO Specs/przypisy|name=versionchecks|4-2}}<!-- 4.2
+  -->{{pl/Development/NewGRF/NFO Specs/refs|name=versionchecks|text=Zasadniczo nie jest przydatne sprawdzanie zmiennych wersji za pomocą Akcji 7. Jeśli chcesz pominąć niektóre akcje, które są niekompatybilne z niektórymi wersjami, chcesz je pominąć na wszystkich etapach ładowania. Tak więc użyj działania 9.|<!--6--><!--4-->przypis}}<!-- 4-0
+  -->{{pl/Development/NewGRF/NFO Specs/refs|name=versionchecks|<!--13--><!--0014-->przypis}}<!-- 4-1
+  -->{{pl/Development/NewGRF/NFO Specs/refs|name=versionchecks|<!--15--><!--4-2-->przypis}}<!-- 4-2
+-->{{pl/Development/NewGRF/NFO Specs/przypisy|name=tilefresh|5-0}}<!-- 5.0
+ -->{{pl/Development/NewGRF/NFO Specs/przypisy|name=tilefresh|5-1}}<!-- 5.1
+ -->{{pl/Development/NewGRF/NFO Specs/przypisy|name=tilefresh|5-2}}<!-- 5.2
+ -->{{pl/Development/NewGRF/NFO Specs/przypisy|name=tilefresh|5-3}}<!-- 5.3
+  -->{{pl/Development/NewGRF/NFO Specs/refs|name=tilefresh|text=Zerknij [[pl/Development/NewGRF/NFO Specs/ActionD#tile-refresh-offsets|Action D]] aby uzyskać więcej informacji na temat przesunięć odświeżania kaflów i ich zastosowania.|<!--7--><!--5-->przypis}}<!-- 5-0
+  -->{{pl/Development/NewGRF/NFO Specs/refs|name=tilefresh|text=Zerknij [[en/ActionD#tile-refresh-offsets|Action D]] aby uzyskać więcej informacji na temat przesunięć odświeżania kaflów i ich zastosowania.|<!--8--><!--5-1-->}}<!-- 5-1
+  -->{{pl/Development/NewGRF/NFO Specs/refs|name=tilefresh|<!--9--><!--5-2-->przypis}}<!--  5-2
+  -->{{pl/Development/NewGRF/NFO Specs/refs|name=tilefresh|<!--10--><!--5-3-->przypis}}<!-- 5-3
+-->{{pl/Development/NewGRF/NFO Specs/przypisy|222032}}<!-- 6
+  -->{{pl/Development/NewGRF/NFO Specs/refs|text=Ta zmienna jest przestarzałym sposobem ustawiania wysokości linii śniegu za pomocą NewGRF za pomocą [[pl/Development/NewGRF/NFO Specs/ActionD|ActionD]]. Zostaje zastąpione przez [[pl/Development/NewGRF/NFO Specs/Action0/Global Settings#snow-line-height-table-10 | Action 0 snow line height table]]. Aby odczytać bieżącą linię śniegu za pomocą [[pl/Development/NewGRF/NFO Specs/VariationalAction2/Main Page | VarAct2]] w uruchomionej grze użyj zamiast tego zmiennej 20.|<!--11--><!--6-->przypis}}<!-- 6
+-->{{pl/Development/NewGRF/NFO Specs/przypisy|name=heightlevel|7-0}}<!--  7.0
+ -->{{pl/Development/NewGRF/NFO Specs/przypisy|name=heightlevel|7-1}}<!-- 7.1
+  -->{{pl/Development/NewGRF/NFO Specs/refs|name=heightlevel|text={{pl/Development/NewGRF/grfTill|7}} Dla GRF w wersji 7 i niższej zmienne te są wielokrotnościami 8; {{pl/Development/NewGRF/grfFrom|8}} dla GRF w wersji 8 i wyższej bezpośrednio podają poziom wysokości jako wielokrotność 1.|<!--12--><!--7-->przypis}}<!-- 7-0
+  -->{{pl/Development/NewGRF/NFO Specs/refs|name=heightlevel|<!--14--><!--7-1-->przypis}}<!-- 7-1 -->
+
+== Special variables ==
+
+===<span id="GRF_Loading_stage_(-_/_84)"></span><span title="GRF Loading stage (- / 84)" id="GRF_Loading_stage_.28-_.2F_84.29">Faza ładowania GRF (- / 84)</span>===
+
+Zmienna 84 jest zmienną BYTE do TTDPatch 2.5r1220. Jego niższy bajt (bity 0..7) ma wartość 0 dla etapów ładowania początkowego i GRF oraz 01 dla wszystkich innych etapów. Pozostałe bity są maską bitową, a włączenie dolnego bajtu ma następujące znaczenie:
+{|
+!Bit!!Wersja!!Znaczenie
+|-
+|0||{{pl/Development/NewGRF/ottdp|0.6|2.0}}||Ustawiony po zakończeniu etapu "Initialization"
+|-
+|1..7||{{pl/Development/NewGRF/ottdp|0.6|2.0}}||Zawsze <span title=klarowne>'clear'</span>
+|-
+|8||{{pl/Development/NewGRF/ottdp|0.6|2.5|ttdprev=r1220}}||Ustawiane tylko na etapie "Rezerwa"
+|-
+|9||{{pl/Development/NewGRF/ottdp|0.6|2.5|ttdprev=r1220}}||Ustawiany tylko na etapie "Aktywuj"
+|-
+|10||{{pl/Development/NewGRF/ottdp|0.6|2.5|ttdprev=r1220}}||Ustawiany tylko na etapie "Test"
+|-
+|11..15|| || Zarezerwowany. Nie testuj dla nich.
+|}
+
+=== TTDPatch Version (0B / 8B) ===
+Zmienna 8B ma następujący format: MMmrbbbb (choć zakodowany w little endian jako bb bb mr MM)
+{|
+!Element!!Meaning!!Value
+|-
+|MM||major||First number of the [[pl/Development/NewGRF/NFO Specs/Version numbers#ttdpatch-version|TTDPatch version]]
+|-
+|m||minor||Drugi numer wersji TTDPatch
+|-
+|valign=middle|r||valign=middle|revision||valign=middle|Trzecia liczba wersji TTDPatch<!--<ref name="rev">-->{{pl/Development/NewGRF/NFO Specs/refs|name=rev|text=Dla TTDPatch 2.0, r=7 i dla serii TTDPatch 2.0.1 , r=10 ze względu na przeoczenie, które wykorzystało r=1..4 dla TTDPatch 2.0 beta 1..4.|<!--1-->8-01}}<!--</ref>-->
+|-
+|bbbb||build||Dziesięć razy liczba wersji alfa / beta (do włącznie z TTDPatch 2.5 beta 5), ​​wersja SVN (od TTDPatch 2.5 beta 5 r418 on)
+|}
+
+Przykłady
+{|
+!Wersja!!Zmienna 8B!!Elementy
+|-
+|1.9.1 alpha 50||019101F4|| MM=01, m=9, r=1, bbbb=50*10=01F4
+|-
+|valign=middle|2.0 beta 4||valign=middle|02040028||valign=middle|MM=02, m=0, r=4<!--<ref name="rev"/>-->{{pl/Development/NewGRF/NFO Specs/refs|name=rev|<!--2-->8-11}}, bbbb=4*10=0028
+|-
+|valign=middle|2.0 final||valign=middle|02070046||valign=middle|MM=02, m=0, r=7<!--<ref name="rev"/>-->{{pl/Development/NewGRF/NFO Specs/refs|name=rev|<!--3-->8-21}}, bbbb=70=0046
+|-
+|valign=middle|2.0 rev 1||valign=middle|02070050||valign=middle|MM=02, m=0, r=7<!--<ref name="rev"/>-->{{pl/Development/NewGRF/NFO Specs/refs|name=rev|<!--4-->8-31}}, bbbb=80=0050
+|-
+|valign=middle|2.0.1 alpha 3||valign=middle|020A001E||valign=middle|MM=02, m=0, r=10<!--<ref name="rev"/>-->{{pl/Development/NewGRF/NFO Specs/refs|name=rev|<!--5-->8-41}}, bbbb=3*10=001E
+|-
+|2.5 beta 2||02500014||MM=02, m=5, r=0, bbbb=2*10=0014
+|-
+|2.5 rev631||02500631||MM=02, m=5, r=0, bbbb=631=0631
+|}
+<!--
+--><!--<references/>-->{{pl/Development/NewGRF/NFO Specs/przypisy|name=rev|8-01}}<!-- 1.0
+ -->{{pl/Development/NewGRF/NFO Specs/przypisy|name=rev|8-11}}<!-- 1.1
+ -->{{pl/Development/NewGRF/NFO Specs/przypisy|name=rev|8-21}}<!--    1-2
+ -->{{pl/Development/NewGRF/NFO Specs/przypisy|name=rev|8-31}}<!--    1-3
+ -->{{pl/Development/NewGRF/NFO Specs/przypisy|name=rev|8-41}}<!--    1-4
+  -->{{pl/Development/NewGRF/NFO Specs/refs|name=rev|text=Dla TTDPatch 2.0, r=7 i dla serii TTDPatch 2.0.1 , r=10 ze względu na przeoczenie, które wykorzystało r=1..4 dla TTDPatch 2.0 beta 1..4.|<!--1--><!--8-01-->przypis}}<!-- 8-0 1.0
+  -->{{pl/Development/NewGRF/NFO Specs/refs|name=rev|<!--2--><!--8-11-->przypis}}<!-- 8-1 1.1
+  -->{{pl/Development/NewGRF/NFO Specs/refs|name=rev|<!--3--><!--8-21-->przypis}}<!-- 8-2 1.2
+  -->{{pl/Development/NewGRF/NFO Specs/refs|name=rev|<!--4--><!--8-31-->przypis}}<!-- 8-3 1.3
+ -->{{pl/Development/NewGRF/NFO Specs/refs|name=rev|<!--5--><!-8-41--->prztpis}} <!-- 8-4 1.4-->
+
+Aby poprawnie wykryć wersje z TTDPatch 2.5 rev419 i nowsze, sprawdź tę zmienną. 8B ma wartość 02500419 lub wyższą lub zamień 0419 na rzeczywistą wymaganą wersję (używając numeru wersji jako cyfr szesnastkowych). Ponieważ wersje SVN są współużytkowane z innymi gałęziami łat, ważne jest sprawdzenie faktycznej wersji łaty, a także rewizji <small>''(revision)''</small> SVN.
+
+=== Y-Offset for train sprites (0E / 8E) ===
+
+Ponieważ 'sprite' pociągu muszą normalnie mieć takie same odsunięcia <small>''(offsets)''</small> na mapie iw widoku zajezdni, pojawią się albo za nisko na mapie, albo za wysoko w widoku zajezdni. Ta zmienna przesuwa wszystkie pojazdy w widoku składu o tyle pikseli.
+
+{{pl/Development/NewGRF/ottdp|1.0|no|ottdrev=r16867}} Ponieważ OpenTTD r16867 ta zmienna działa na plik grf, to znaczy: Wpływa tylko na pociągi zdefiniowane w tym samym grf.
+
+=== Rail track type cost factors (0F / 8F) ===
+
+Ta zmienna jest zbiorem trzech bajtów, które są używane jako mnożniki kosztów śledzenia, gdy przełącznik "trackcostdiff" jest włączony. Wartość 08 jest wartością bazową używaną przez standardowe TTD.
+
+Domyślne są następujące:
+
+{|
+!Values!!Track types!!Electrified railways setting
+
+|-
+|08, 10, 18||Regular, Monorail, Maglev||off
+
+|-
+|08, 0D, 10||Regular, Electric, Monorail/Maglev||on
+|}
+
+=== Extra callback info (10 / -) and (18 / -) ===
+Te zmienne mają znaczenie specyficzne dla wywołania zwrotnego. Są one opisane wzdłuż osoby [[pl/Development/NewGRF/NFO Specs/Callback/Main Page|callbacks]].
+
+Ponadto są używane poza funkcjami zwrotnymi do tych specjalnych celów:
+{| 
+|-
+! [[pl/Development/NewGRF/NFO Specs/Features|Feature]] !! Używanie
+|-
+| Vehicles || Służy do rozróżniania rysunków pojazdów w GUI lub na mapie. Zobacz [[pl/Development/NewGRF/NFO Specs/Action2/Vehicles#introduction|Action2]].
+|-
+| Stations || Służy do komponowania kafli stacji ze sprite'ami z różnych łańcuchów Action-1-2-3 lub do rysowania niestandardowych fundamentów. Zobacz [[pl/Development/NewGRF/NFO Specs/Action0/Stations#general-flags-13|General station flags]] i [[pl/AdvancedSpriteLayout|AdvancedSpriteLayout]].
+|-
+| Railtypes || Służy do rozróżniania między typem portalu tunelu a żądanym sygnałem. Aby uzyskać szczegółowe informacje, zobacz odpowiednio [[pl/Development/NewGRF/NFO Specs/Action3/Railtypes#tunnel-portal-overlay-0a|Railtype tunnel portal overlay]] lub [[pl/Development/NewGRF/NFO Specs/Action3/Railtypes#signal-sprites-0b|Railtype signal sprites]] .
+|}
+
+=== Tile refresh offsets (13,14,15,16 / 93,94,95,96) ===
+
+Te cztery zmienne należą do eksperymentalnej funkcji TTDPatch. Jednak ich definicja opiera się na niepełnym zrozumieniu algorytmu rysowania w TTD, więc w rzeczywistości nie osiągają tego, co mieli zrobić. Rozważ tę historyczną treść.
+
+{{pl/Development/NewGRF/ottdp|no|2.5|ttdprev=2.0.1 alpha 39}}
+
+''Te cztery przesunięcia określają rozmiar i położenie odświeżonego prostokąta, gdy TTD zdecyduje się odświeżyć płytkę. Podstawą obliczeń jest współrzędna pikselowa północnego rogu płytki.''
+
+''Po obliczeniu TTD odejmuje od niej offset_left, aby uzyskać współrzędną x lewej krawędzi, dodaje offset_right, aby uzyskać współrzędną x prawej krawędzi, odejmuje offset_up, aby uzyskać współrzędną y górnej krawędzi i dodaje offset_down, aby uzyskać współrzędną y dolnej krawędzi. Powoduje to odświeżenie pikseli (offset_left+offset_right)*(offset_up+offset_down) pikseli. Domyślne wartości tych zmiennych wynoszą odpowiednio 31, 36, 122 i 32.''
+
+''Odczytywanie tych wartości nie jest zbyt przydatne, ale możesz je modyfikować również za pomocą akcji D, więc twoje 'sprites' , które przekroczyłyby pierwotne limity, mogą być nadal przerysowane i odpowiednio animowane. Pamiętaj, że TTD używa tych wartości dla każdego kafelka, więc podanie zbyt wysokich wartości może spowolnić grę. Należy również pamiętać, że te zmienne są określone jako dwory ze względów technicznych, ale zostanie użyte tylko dolne słowo.''
+
+''Ponieważ te wartości są globalne dla całej gry, nie powinieneś po prostu nadpisywać ich działaniem D. Zamiast tego powinieneś najpierw sprawdzić, czy są one wystarczająco duże, używając działania 7, a jeśli nie, pomiń działanie D. W ten sposób zmienne zostaną ustawione na maksymalną potrzebną wartość, a nie tylko wartość potrzebną dla ostatniego GRF na liście.''
+
+=== Snow line height (- / 97) ===
+
+Jest to aktywne tylko wtedy, gdy przełącznik tempsnowline jest włączony. Domyślnie jest to FF (bez śniegu) i 38 (wersja GRF < 8) lub. 07 (wersja GRF >= 8) odpowiednio w klimacie umiarkowanym i arktycznym.
+
+{{pl/Development/NewGRF/grfTill|7}} W przypadku GRF w wersji 7 i niższej należy ustawić wielokrotność 8, co stanowi jeden poziom różnicy wysokości.
+
+{{pl/Development/NewGRF/grfFrom|8}} Dla GRF w wersji 8 i wyższej poziom wysokości jest ustawiany bezpośrednio jako wielokrotność 1.
+
+=== Global ID offset (- / 99) ===
+
+Ustawienie tej zmiennej doda podaną wartość do wszystkich odpowiednich identyfikatorów w kolejnych działaniach 0, działaniach 3 (przesłonięcie barwników ''z wyjątkiem'' <small>~'except'</small> ), działaniach 4 (z ''wyjątkiem'' teksty ogólne ) i działaniach A. Jest to wygodniejszy sposób zastosowania wyniku żądania zasobu GRF. Ustawienie tej zmiennej dotyczy tylko bieżącego pliku .grf.
+
+Szczegółowo wpływa na następujące elementy:
+
+{|
+!Action!!Element modyfikowany
+
+|-
+|0||<tt><Id></tt> (tj. nie numery <span title=property>'właściwości'</span>)
+
+|-
+|3||<tt><Ids...></tt> (tj. nie dotyczy typów ładunków ani <span title='identyfikatorów'>'ID'</span> ładunków, również nie do nadpisywania barw)
+
+|-
+|4||<tt><Offset></tt> (jednak nie w przypadku tekstów ogólnych)
+
+|-
+|A||<tt><First-sprite></tt>
+|}
+
+=== Display options (1B / -) ===
+Definicja zmiennej 1B jest nieco zależna od funkcji. W przypadku obiektów, które można rysować w sposób przezroczysty (stacje, mosty, domy, kafelki przemysłowe i obiekty), bit 4 jest ustawiany, jeśli bieżący element zostanie narysowany normalnie, i jasne, czy bieżący element zostanie narysowany w sposób przezroczysty. Do tych celów lotniska to stacje. Dla wszystkich innych funkcji bit 4 jest niezdefiniowany.
+
+=== Misc. GRF Features (1E / 9E) ===
+
+Ta zmienna jest globalną maską bitową różnych funkcji łatek, które może włączyć plik grf. Proszę ustawić bity tylko za pomocą operacji 08 (bitowe OR) lub, jeśli jest to absolutnie konieczne, usunąć niektóre bity za pomocą operacji 07 (bitowe AND). To gwarantuje, że nie zepsujesz ustawień innych plików GRF.
+
+{|
+!Bit!!Vartość!!Wersja!!'Feature'
+
+|-
+|0||1||{{pl/Development/NewGRF/ottdp|no|2.5}}||Pozwala drzewom i polom na pustyni
+|-
+|1||2||{{pl/Development/NewGRF/ottdp|0.6|2.5}}||Pokazuje chodnik i światła w pustynnych miastach
+|-
+|2||4||{{pl/Development/NewGRF/ottdp|no|2.5}}||Pola mają wysokość, używając ramki ograniczającej 3D
+|-
+|3||8||{{pl/Development/NewGRF/ottdp|0.6|2.5}}||valign=middle|Wyświetla pojazdy kolejowe o pełnej szerokości 32 pikseli w oknie zajezdni (zamiast 29 pikseli)<!--<ref>-->{{pl/Development/NewGRF/NFO Specs/refs|text=Since {{pl/Development/NewGRF/ottdp|1.0|no|ottdrev=r16867}} ta flaga działa na plik grf, to znaczy: Dotyczy tylko pociągów zdefiniowanych w tym samym GRF.|<!--1-->91}}<!--</ref>-->
+|-
+|4||10||{{pl/Development/NewGRF/ottdp|1.2|2.6|ottdrev=r23114|ttdprev=r821}}||Włącz wywołanie zwrotne efektów dźwiękowych otoczenia 144
+|-
+|5||20||{{pl/Development/NewGRF/ottdp|no|2.5/2.6|ttdprev=r1439, będzie w jeszcze niepublikowanej wersji 2.5 beta 10}}||Włącz sieci trakcyjne na trzecim typie toru (tylko przy włączonej kolei zelektryfikowanej)
+|-
+|6||40||{{pl/Development/NewGRF/ottdp|1.5|no|ottdrev=r27200}}||Włącz użycie drugiego zestawu kamiennych kafli. (sprite'y od 4042 do 4061)
+|-
+|31||80000000||{{pl/Development/NewGRF/ottdp|no|2.5}}||Tylko do ustawienia przez ttdpbase (w) .grf w celu identyfikacji
+|}
+
+Uwagi <small>''(Remarks)''</small>:
+<!--<references />-->{{pl/Development/NewGRF/NFO Specs/przypisy|91}}{{pl/Development/NewGRF/NFO Specs/refs|text=Since {{pl/Development/NewGRF/ottdp|1.0|no|ottdrev=r16867}} ta flaga działa na plik grf, to znaczy: Dotyczy tylko pociągów zdefiniowanych w tym samym GRF.|<!--1--><!--91-->przypis}}
+
+Przykładowy kod ustawienia bitu 3:
+
+   24 * 9     0D 9E 08 9E FF 08 00 00 00
+
+(Tutaj pierwsze 08 wskazuje bitową operację OR, a 08 00 00 00 jest wartością OR var. 9E z.)
+
+=== Locale-dependent settings (1F / 9F) ===
+
+Ta zmienna jest podwójnym słowem w formacie rrccmmll, gdzie jest znaczenie bajtów:
+
+{|
+!Bajt!!znaczenie
+
+|-
+|rr||Zarezerwowane do użytku w przyszłości, po prostu ustaw tutaj zero
+
+|-
+|cc||Domyślna waluta używana przy pierwszym uruchomieniu gry. Może być większy niż 5, aby wybrać jedną z walut dodanych za pośrednictwem większej liczby walut. Jeśli ta wartość jest większa niż 5, a więcej walut jest wyłączone, zamiast nich zostaną użyte dolary amerykańskie.
+
+|-
+|mm||Domyślny system pomiaru, który będzie używany przy pierwszym uruchomieniu gry. 00h oznacza system imperialny (mile), 01h oznacza system metryczny (kilometry), inne wartości są zabronione.
+
+|-
+|ll||ID języka Ustawiając ten bajt, możesz zastąpić domyślny identyfikator języka i pozwolić innym GRF na dostarczanie poprawnie zlokalizowanych tekstów. (Drugi GRF może sprawdzić tę wartość w akcji 4s)
+|}
+
+Odczyt tej zmiennej nie jest wiarygodny, więc musisz tylko do niej pisać. Należy również pamiętać, że części cc i mm są uwzględniane tylko podczas ładowania ekranu tytułowego po raz pierwszy, zmiana ich później jest ignorowana.
+
+'''NOTE''': Ta zmienna jest resetowana po etapie inicjalizacji. Uwzględniane są tylko zmiany na etapie aktywacji. W ten sposób GRF wyłączone w newgrf.cfg nie zmienią języka i/lub ustawień domyślnych. Jeśli chcesz zmodyfikować część cc lub mm, upewnij się, że odpowiednie działanie D nie jest pomijane przez wcześniejsze działanie 7 lub 9. W szczególności, jeśli twój GRF nie jest dostępny dla klimatu tropikalnego, upewnij się, że ustawiłeś zmienną 9F przed sprawdzeniem klimatu, ponieważ domyślnym ekranem tytułowym jest zwrotnik, a sprawdzenie klimatu nie powiedzie się.
+
+=== OpenTTD Version (21 / A1) ===
+Zmienna A1 ma następujący format: Mmrbbbbb (choć zakodowany w małym endianie jako bb bb rb Mm). Ta zmienna ma tylko przydatne znaczenie, gdy zmienna 9D ma wartość 1 (OpenTTD). Ta zmienna może być używana od OpenTTD r11330.
+{|
+!Element!!Znaczenie!!Wartość
+|-
+|M||major||Pierwsza liczba [[pl/Development/NewGRF/NFO Specs/Version numbers#openttd-version|OpenTTD version]]
+|-
+|m||minor||Drugi numer wersji OpenTTD
+|-
+|r||revision||Trzecia liczba wersji OpenTTD
+|-
+|bbbbb||build||Wersje stabilne mają ustawione 80000h.
+{{pl/Development/NewGRF/ottd|&le;1.8}} Kiedy OpenTTD był wersjonowany przy użyciu SVN, niższe bity zawierały wersję SVN. Od OpenTTD 1.9 te bity są nieużywane.
+|}
+
+Obecność 80000h (zestaw bitów 19) oznacza, że ​​wydanie ma zawsze wyższy numer wersji niż jakiekolwiek kompilacje prowadzące do tego wydania.
+
+Przykłady
+{|
+!Wersja!!Zmienna A1!!Elementy
+|-
+|0.6.0 r11330||06002C42||M=0, m=6, r=0, bbbbb=11330=2C42
+|-
+|0.6.0 (release)||06080000||M=0, m=6, r=0, bbbbb=0=80000 (<span title='ze względu'>'due'</span> do wydania)
+|}

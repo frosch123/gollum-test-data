@@ -12,12 +12,12 @@
 <div style="position: absolute;">[[{{#if:{{{image|}}}
   | File:{{{image}}}
   | {{#switch:{{{type|}}}
-    | delete     =File:en/Manual/Base Set/Deletion.png
+    | delete     =File:en/Deletion.png
     | content    =File:en/Content.png
-    | style      =File:en/Manual/Base Set/Edit-clear.png
-    | move       =File:en/Manual/Base Set/Move.png
-    | protected  =File:en/Manual/Base Set/Protection.png
-    | #default   =File:en/Manual/Base Set/Notice.png
+    | style      =File:en/Edit-clear.png
+    | move       =File:en/Move.png
+    | protected  =File:en/Protection.png
+    | #default   =File:en/Notice.png
   }}
 }}|40px]]</div>
 <div style="border: none; padding: 2px 2px 2px 62px;">
@@ -90,16 +90,16 @@ The following examples use different '''type''' parameters but use no image para
 The default images shown above are mostly for convenience. In many cases it is more appropriate to use more specific images. These example use the '''image''' parameter to specify an image other than the default images.
 
 <pre>{{en/Ambox| type  = notice
-| image = en/Manual/Base Set/OpenttdManual.png
+| image = en/Manual/OpenttdManual.png
 | text  = Something Something Something 
 }}</pre>
 
 {{en/Ambox| type  = notice
-| image = en/Manual/Base Set/OpenttdManual.png
+| image = en/Manual/OpenttdManual.png
 | text  = Something Something Something 
 }}
 
-[[Category:en/Manual/Base Set/Message boxes|A]]
+[[Category:en/Message boxes|A]]
 </noinclude><!--
 
   CSS if the option will become available

@@ -1,0 +1,183 @@
+{{pl/Development/NewGRF/inne strony|en=newgrf-specs.tt-wiki.net/wiki/ActionF|pl=pl/Development/NewGRF/NFO Specs/ActionF |sub=nfo}}
+<!--{{-}}<br>{{ambox | text = w trakcie edycji.}}-->
+
+== Wprowadzenie ==
+
+
+Zdefiniuj nowe style nazw miejscowości
+
+
+Tej akcji można użyć do zdefiniowania nowych stylów nazw miejscowości dla losowych gier i losowych miast umieszczonych w edytorze scenariuszy.
+
+== Syntax ==
+
+Dane wyglądają następująco:
+
+ <Sprite-number> * <Length> 0F <ID> <stylenames> <num-parts> <parts>...
+
+{|
+!Element!![[pl/Development/NewGRF/NFO Specs/GRFActionsDetailed|Rozmiar]]!!Opis
+
+|-
+|<Sprite-number>||dec||Sekwencyjny numer 'sprite'
+
+|-
+|<length>||dec||Łączna liczba bajtów użytych w tej akcji.
+
+|-
+|<ID>||B||    ID tej definicji w dolnych 7 bitach. Jeśli bit 7 jest ustawiony, jest to ostateczna definicja (zostanie wyświetlona w oknie Opcje), jeśli jest jasna, jest to definicja pośrednia, której można użyć do stworzenia bardziej złożonych łańcuchów <small>''(chains)''</small> decyzyjnych, patrz poniżej. Definicje końcowe i pośrednie mają takie same 128 ID, więc 01h i 81h definiują ten sam ID dla różnych zastosowań, a nie dwa oddzielne ID.
+
+|-
+|<style-names>||V||Jest to obecne tylko w definicjach końcowych, patrz format poniżej
+
+|-
+|<num-parts>||B||Z ilu części składa się ta nazwa.
+
+|-
+|<parts>||V||Dane dotyczące różnych części, patrz poniżej
+|}
+
+== Style names ==
+
+Ten element jest obecny tylko wtedy, gdy bit 7 jest ustawiony w identyfikatorze. Jego zawartość jest w formacie:
+
+ [<langs> <name>]... 00
+
+{|
+!Element!![[pl/Development/NewGRF/NFO Specs/GRFActionsDetailed|Rozmiar]]!!Znaczenie
+
+|-
+|langs||B||Language ID definition, see below
+
+|-
+|name||S||Null-terminated style name to be displayed in the Options window.
+|}
+
+Może istnieć dowolna liczba nazw stylów, dopóki dosłowne "00" nie zakończy definicji nazwy stylu. Jeśli nie znaleziono odpowiedniej nazwy, w oknie Opcje pojawi się "(unnamed style)" .
+
+Wybór języka działa tak samo jak [[pl/Development/NewGRF/NFO Specs/Action4#language-id|action 4 language ID]] , włączając różnicę dla wersji 7 i wyższych GRF, jednak bit 7 jest ignorowany. Oznacza to, że istnieje dwuznaczność, czy wartość „00” jest terminatorem listy lub identyfikatorem języka amerykańskiego. Aby rozwiązać ten problem, pierwsza definicja nazwy stylu nigdy nie jest terminatorem listy (poczynając od TTDPatch 2.5 beta 4). Oznacza to, że definicja nazwy języka amerykańskiego musi być pierwsza na liście. Alternatywnie, ponieważ bit 7 jest ignorowany, warto również użyć wartości „80” dla identyfikatora języka amerykańskiego, ale umieszczenie go na pierwszym miejscu na liście jest preferowanym sposobem jego zdefiniowania.
+
+==<span id="Parts" title="Parts">Części</span>==
+
+Następujące pola są powtarzane dla każdej części (liczba części razy):
+
+  <textcount> <firstbit> <bitcount> [ <probability> <part/ID> ]... 
+
+{|
+!Element!![[pl/Development/NewGRF/NFO Specs/GRFActionsDetailed|Rozmiar]]!!Znaczenie
+
+|-
+|textcount||B||Liczba możliwych wartości dla tej części
+
+|-
+|firstbit||B||Numer najniższego bitu, który jest brany pod uwagę przy określaniu wartości części
+
+|-
+|bitcount||B||Ile bitów jest używanych do określenia wartości tej części
+|}
+
+Każde miasto ma 32 losowe bity do losowego nazywania. Możesz użyć pola <firstbit> , aby podejmować decyzje dla każdej części liniowo niezależne lub przynajmniej tak niezależne, jak to możliwe.
+
+Minimalna liczba dla pola <bitcount> powinna być najniższą potęgą 2, która jest większa niż suma wszystkich prawdopodobieństw (np. 2, jeśli suma wynosi <=4, 3, jeśli jest <=8, 4, jeśli <=16 itd. on), ale zezwolenie na więcej bitów może sprawić, że rozdział decyzji będzie płynniejszy.
+
+Następujące pola są powtarzane dla każdego tekstu (razy licznik tekstu) w każdej części:
+
+{|
+!Element!![[pl/Development/NewGRF/NFO Specs/GRFActionsDetailed|Rozmiar]]!!Znaczenie
+
+|-
+|probability||B||Względne prawdopodobieństwo pojawienia się następującej nazwy na 7 ostatnich bitach. Bit 7 decyduje o znaczeniu następnego pola.
+
+|-
+|part||S||Jeśli bit 7 prawdopodobieństwa jest czysty, następujące pole jest łańcuchem <span title='null-terminated'>'zakończonym znakiem null'</span>, zawierającym samą część nazwy. Może to być pusty ciąg (zwykły bajt zerowy), aby uniknąć generowania tej części. (Może to być przydatne w przypadku części opcjonalnej: daj wysokie prawdopodobieństwo pojawienia się pustej części i niskie prawdopodobieństwo wielu <span title=n'on-empty'.'niepustych'</span> części, aby skutecznie zmniejszyć szansę, że część w ogóle się pojawi)
+
+|-
+|ID||B||Jeśli ustawiony jest bit 7 prawdopodobieństwa, to następny bajt jest <span title=identyfikatorem>'ID'</span> akcji pośredniej F. Generowana jest losowa nazwa zdefiniowana przez dany ID, a następnie wstawiana do bieżącej nazwy jako część nazwy. Podanie <span title=identyfikatora>'ID'</span>, który nie został jeszcze zdefiniowany, powoduje błąd, a tym samym wyłączenie wszystkich definicji nazw miast w pliku.
+|}
+
+=== Notes ===
+
+Te style nazw miast są wyjątkowe, ponieważ muszą być dostępne również na ekranie tytułowym, gdzie pliki graficzne nie są jeszcze aktywowane. Oznacza to, że są przetwarzane tylko na etapie inicjalizacji i mogą zostać pominięte tylko przez akcję 9, ale spowoduje to, że nie będą działać przez resztę gry. Jedynym sposobem na wyłączenie nowego stylu nazwy miasta po załadowaniu jest wyłączenie całego pliku GRF, w którym się on znajduje (za pomocą okna "New GRF status" lub umieszczając wykrzyknik obok nazwy pliku w newgrf(w).txt ).
+
+Nazwa miasta wygenerowana w ten sposób musi spełniać pewne wymagania, aby mogła zostać zaakceptowana przez TTD: nie może być pusta (więc nie musisz się martwić, nawet jeśli Twój łańcuch może wygenerować pusty ciąg znaków), nie może być nazwą, która już jest podana miastu (aby uniknąć zduplikowanych nazw miejscowości), nie może być dłuższa niż 31 znaków, a wyświetlana postać nie może być szersza niż 130 pikseli. Jeśli wygenerowana nazwa nie spełnia wszystkich tych wymagań, TTD próbuje ponownie z inną losową wartością. Z tego powodu styl nazwy miasta musi być w stanie wygenerować co najmniej 70 różnych akceptowalnych kombinacji, ponieważ jest to maksymalna możliwa liczba miast na mapie, a TTD może zostać zakleszczone, jeśli nie będzie w stanie znaleźć różnych nazw dla każdego miasta w mapa.
+
+Menu rozwijane stylu nazwy miasta nie obsługuje więcej niż 19 pozycji, a ponieważ sześć pozycji jest już zarezerwowanych dla starych stylów, pozostało tylko 13 dla nowych stylów. Jeśli dostępnych jest więcej niż 13 ostatecznych definicji stylów, tylko pierwsze 13 zostanie wyświetlonych w menu rozwijanym, a zatem będzie można je wybrać. Pozostałe definicje będą nadal dostępne (np. Pojawią się w grach, które się z nimi rozpoczęły), ale nie można ich wybrać w interfejsie użytkownika.
+
+Jeśli twój GRF nie jest dostępny, gdy jego nazwa stylu jest używana w grze zapisanej, styl nazwy miasta powraca do Niemieckiego, ale miasta otrzymują zarówno Angielską, jak i Niemiecką nazwę; pojawiają się w niewłaściwej kolejności na liście miast i mogą pojawiać się zduplikowane nazwy miast. Jednak nie następuje utrata danych, więc poprawne nazwy zostaną przywrócone, gdy tylko definicja będzie ponownie dostępna.
+
+== Przykład ==
+
+  2 * 52 0F 80 7F "Mars" 00 00 02
+
+ 02 00 02
+     03 "Alpha" 00 01 "Beta" 00
+ 03 02 04
+     01 " Andromedæ" 00 01 " Carinæ" 00 81 01 
+
+{|
+!Bajt(y)!!Znaczenie
+
+|-
+|0F||Action F
+
+|-
+|80||<ID> Final definition; show in town-name list.
+
+|-
+|7F||<lang-id>: Name for all languages follows
+
+|-
+|"Mars" 00||Style name
+
+|-
+|00||End of style names
+
+|-
+|02||<num-parts>: Two <parts> fields follow:
+
+'''First <parts> field:'''
+
+|-
+|02||<textcount>: two options for this part.
+
+|-
+|00||<firstbit>: start with bit 0, and
+
+|-
+|02||<bitcount>: use two bits (sum of probabilities is 04; minimum number of bits is 2)
+
+|-
+|03||<probability> (probability is 3/4)
+
+|-
+|"Alpha" 00||<part>: First option for first part
+
+|-
+|01 "Beta" 00||<probability>/<part>: Second option for first part, probability 1/4
+
+'''Second <parts> field:'''
+
+|-
+|03||<textcount>: three options for this part:
+
+|-
+|02||<firstbit>: start with bit 2, and
+
+|-
+|04||<bitcount>: use four bits (sum of probabilities is 3; minimum number of bits is 2)
+
+|-
+|01 " Andromedæ" 00 ||<probability>/<part>: First option for second part, probability ~1/3
+
+|-
+|01 " Carinæ" 00 ||<probability>/<part>: Second option for second part, probability ~1/3
+
+|-
+|81 01||<probability>/<ID>: Third option, chain to the action F with ID 01, probability ~1/3
+|}
+
+Notes:
+# ID 01 (a każda akcja F powiązana z ID 01 powinna mieć <pierwsze> <small>''(<firstbit>)''</small> 06 lub wyższe, ponieważ bity 00..05 były używane przez ID 00, a jeśli zostaną użyte ponownie, decyzja będzie związana z decyzją w ID 00.
+# O ile ID 01 nie wygeneruje co najmniej 33 (dek) różnych ciągów znaków, nie zapewni to wystarczającej liczby nazw miejscowości.
+# Drugi <parts> wykorzystuje cztery bity; prawdopodobieństwa dla każdego <part> wynoszą 5/16, 5/16 i 6/16, które są rozsądnie zbliżone do 1/3 i znacznie lepsze niż 1/4, 1/4, 1/2, które spowodowałyby gdyby zastosowano tylko dwa bity. Nie ma wiarygodnego określenia, które <part> uzyska dodatkowe prawdopodobieństwo; jeśli chcesz wiedzieć na pewno, które będą miały dodatkowe prawdopodobieństwo, zakoduj działanie F, aby niektóre <part> miały wyższe lub niższe prawdopodobieństwo niż inne.
+# <probability>/<ID> para 81 01 może również połączyć się <small>''(chain)''</small> z działaniem F o ID 81, ale prawdopodobnie nie jest to pożądany wynik.

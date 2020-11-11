@@ -1,0 +1,453 @@
+{{pl/Development/NewGRF/inne strony|en=newgrf-specs.tt-wiki.net/wiki/Action0/Stations|pl=pl/Development/NewGRF/NFO Specs/Action0/Stations |sub=nfo}}
+<!--{{-}}<br>--><!--{{ambox | text = w trakcie edycji.}}--><!-- -->
+==<span id="Introduction" title="Introduction">Wprowadzenie</span>==
+
+Definiowanie właściwości nowych stacji.
+
+
+W przeciwieństwie do pojazdów, nowe stacje nie mają odpowiednika TTD. W związku z tym można wybrać dowolne identyfikatory i w rzeczywistości zostaną one przydzielone automatycznie. W akcji 0 podajesz tylko identyfikatory w stosunku do zestawu, tj. Identyfikator pierwszego typu stacji to 00, drugi typ stacji to 01 itd..
+
+{{pl/Development/NewGRF/ttdp|}} W TTDPatch każda gra może mieć tylko 255 identyfikatorów stacji dla wszystkich aktywnych plików grf.
+
+Jedyną właściwością, którą '''musisz''' ustawić dla każdego ID stacji, jest 08 (oprócz zdefiniowania dla niej [[pl/Development/NewGRF/NFO Specs/Action3/Main Page|action 3]] ), wszystko inne można pozostawić domyślnie. Musi to być pierwsza właściwość ustawiona dla każdego ID stacji, ponieważ ID stacji jest faktycznie niezdefiniowany, dopóki nie zostanie mu przypisana klasa za pośrednictwem właściwości 08. Ponadto wszystkie ID''`y'' stacji muszą uzyskać swoje klasy we właściwej kolejności, zaczynając od ID 00.
+
+==<span id="Properties" title="Properties">Właściwości</span>==
+
+{| 
+|-
+!Numer!![[pl/Development/NewGRF/NFO Specs/GRFActionsDetailed|Rozmiar]]!!Wersja!!Opis
+|-
+|08||D||{{pl/Development/NewGRF/ottdp|0.6|2.5|ttdprev=alpha 19}}||ID klasy, patrz poniżej
+|-
+|09||V||{{pl/Development/NewGRF/ottdp|0.6|2.5|ttdprev=alpha 20}}||Układ sprite, patrz poniżej
+|-
+|0A||B||{{pl/Development/NewGRF/ottdp|0.6|2.5|ttdprev=alpha 20}}||Skopiuj układ sprite
+|-
+|0B||B||{{pl/Development/NewGRF/ottdp|0.6|2.5|ttdprev=alpha 22}}||Flagi callback
+|-
+|0C||B||{{pl/Development/NewGRF/ottdp|0.6|2.5|ttdprev=alpha 22}}||Maska bitowa wyłączonych numerów platform
+|-
+|0D||B||{{pl/Development/NewGRF/ottdp|0.6|2.5|ttdprev=alpha 22}}||Maska bitowa wyłączonych długości platform
+|-
+|0E||V||{{pl/Development/NewGRF/ottdp|0.6|2.5|ttdprev=alpha 22}}||Zdefiniuj układ niestandardowy, patrz poniżej
+|-
+|0F||B||{{pl/Development/NewGRF/ottdp|0.6|2.5|ttdprev=alpha 22}}||Skopiuj niestandardowy układ z IDstacji podanego przez argument
+|-
+|10||W||{{pl/Development/NewGRF/ottdp|0.6|2.5|ttdprev=alpha 25}}||Próg mały/dużo
+|-
+|11||B||{{pl/Development/NewGRF/ottdp|0.6|2.5|ttdprev=alpha 27}}||Umieszczenie pylonu
+|-
+|12||D||{{pl/Development/NewGRF/ottdp|0.6|2.5|ttdprev=alpha 30}}||Maska bitowa wyzwalaczy typu cargo dla losowych 'sprites'
+|-
+|13||B||{{pl/Development/NewGRF/ottdp|0.6|2.5|ttdprev=alpha 30}}||Flagi ogólne
+|-
+|14||B||{{pl/Development/NewGRF/ottdp|0.6|2.5|ttdprev=alpha 47}}||Umieszczenie <span title=wire>'przewodu'</span> napowietrznego
+|-
+|15||B||{{pl/Development/NewGRF/ottdp|0.6|2.5|ttdprev=alpha 51}}||Może pociąg wprowadzić kafel
+|-
+|16||W||{{pl/Development/NewGRF/ottdp|0.7|2.5|ttdprev=beta 9}}||Informacje o animacji
+|-
+|17||B||{{pl/Development/NewGRF/ottdp|0.7|2.5|ttdprev=beta 9}}||Prędkość animacji
+|-
+|18||W||{{pl/Development/NewGRF/ottdp|0.7|2.5|ttdprev=beta 9}}||Wyzwalacze animacji
+|-
+|19||V||{{pl/Development/NewGRF/ottdp}}||Wyznaczanie tras drogowych (zarezerwowane do użytku w przyszłości)
+|-
+|1A||V||{{pl/Development/NewGRF/ottdp|1.2|no|ottdrev=r22518}}||Zaawansowany układ sprite'ów z modyfikatorami rejestru
+|}
+
+
+Nieoficjalne uzupełnienia i zmiany. Nie polegaj na nich, aby kiedykolwiek działały w ten sposób w OpenTTD lub TTDPatch:
+{| 
+|-
+!Numbe!![[pl/Development/NewGRF/NFO Specs/GRFActionsDetailed|Rozmiar]]!!Wersja!!Opis
+|-
+|1B||8*B||<span title="co tylko">whatever</span>-PP||Minimalna wysokość mostu dla mostów nad stacjami
+|}
+
+==<span id="Description" title="Description">Opis</span>==
+
+===<span id="Station_class_(08)"></span><span title="Station class (08)" id="Station_class_.2808.29">Klasa stacji (08)</span>===
+TTDPatch grupuje zestawy nowej grafiki stacji w różne klasy. &nbsp;Klasy można wybrać z górnej listy rozwijanej w oknie konstrukcyjnym, a poszczególne stacje w klasie z dolnej listy rozwijanej. &nbsp;Ponadto każda stacja może zmienić swój wygląd za pomocą [[pl/Development/NewGRF/NFO Specs/VariationalAction2/Main Page|variational]] i/lub [[pl/Development/NewGRF/NFO Specs/RandomAction2|random]] działania 2 wpisów.
+
+Tylko dwie klasy są wstępnie zdefiniowane:
+
+{| 
+|-
+!Nazwae!!Class ID!!Przeznaczenie do stacji
+|-
+|DFLT||44 46 4C 54||Domyślnie brak specjalnego typu stacji
+|-
+|WAYP||57 41 59 50||Stacje non-cargo, waypointy, 'signal boxes' etc.
+|}
+
+Możesz po prostu użyć innych klas niż powyższe, o ile nie jest (więcej niż (obecnie)) 16 klas używanych we wszystkich aktywnych plikach .grf w dowolnym momencie.
+
+Gdy zbudowana zostanie stacja WAYP, nie będzie ona przyjmować ładunku ani nie będzie ładunku z pobliskich gałęzi przemysłu lub miast. &nbsp;Pociągi nie zatrzymują się na stacjach WAYP, niezależnie od kolejności non-stop i/lub przełącznika non-stop.
+
+===<span id="Sprite_layout_(09)"></span><span title="Sprite layout (09)" id="Sprite_layout_.2809.29">Układ sprite (09)</span>===
+Kontroluje to, które 'sprites' są wyświetlane, gdzie są wyświetlane i w jakiej kolejności. &nbsp;Właściwość jest zmiennej wielkości i zawiera dane dla wszystkich 8 możliwych typów kafli stacji. &nbsp;Jeśli ta właściwość jest ustawiona, liczba w odpowiedniej [[pl/Development/NewGRF/NFO Specs/Action1|action 1]] nie musi być równa 12 (hex), może to być dowolna liczba, a dowolna liczba 'sprites' może być wyświetlana w dowolnej kolejności.
+
+W ten sposób dane są określone jako dane dla wszystkich ośmiu kafli:
+
+<pre>&lt;num&gt; &lt;data1&gt; &lt;data2&gt; ... &lt;datan&gt;</pre>
+
+{| 
+|-
+!Rozmiar!!Nazwa!!Znaczenie
+|-
+|B*||num||Liczba różnych obsługiwanych kafli (patrz poniżej)
+|-
+|V||data1...||Dane o zmiennej wielkości dla każdego z plików &lt;num&gt; kafli, jak określono poniżej
+|}
+
+=====<span id="Number_of_tiles_supported" title="Number of tiles supported">Liczba obsługiwanych kafli</span>=====
+* Zwykle jest to 8, ale możesz też podać mniej
+* Korzystanie z flagi oddzwaniania bit 1, określenie więcej też ma sens
+* Ta wartość musi być taka sama dla wszystkich stacji ustawionych przez tę akcję 0, nawet jeśli musi zostać powtórzona dla śmigła. 09 definicja każdego ID stacji
+
+(Zauważ, że num jest rozszerzonym bajtem, patrz [[pl/Development/NewGRF/NFO Specs/GRFActionsDetailed|GRFActionsDetailed]].)
+
+Zawartość każdego (zwykle ośmiu) zestawów danych jest albo nowym układem ikonek:
+
+{| 
+|-
+!Rozmiar!!Nazwa!!Znaczenie
+|-
+|D||groundsprite||sprite do rysowania po szynach; jest to domyślnie sprite TTD, ale z bitem 31 ustawionym można określić [[pl/Development/NewGRF/NFO Specs/Action1|action 1]] sprite (42D + X)
+|-
+|V||spritedata||dane dla 'sprites' stacji, patrz poniżej; każdy ma rozmiar 10 bajtów, a może być ich kilka
+|-
+|B||80||dosłowne 80 kończy listę sprite'ów dla tego kafla
+|}
+lub, alternatywnie, instrukcja użycia układu TTD przy użyciu czterech bajtów zerowych 00 00 00 00 zamiast bajtów dna naziemnego. Możesz użyć  [http://www.bytetransfer.de/projects/ttdpatch/docs/spriteidmapping.php the online sprite ID converter] , aby wyszukać ID''`y'' 'sprite', których możesz użyć dla wszystkich klimatów.
+
+Można narysować dwa rodzaje 'sprites' . &nbsp;Jeden typ to taki, który ustanawia nową ramkę ograniczającą 3D do użytku przez sortownik 'sprites' . &nbsp;Drugi typ dzieli obwiednię 3D poprzednich ikonek. &nbsp;Nie może być większy niż 'sprite' , który ustanowił obwiednię, ani żadna jej część nie może znajdować się poza tym polem. &nbsp;Dla uproszczenia powinien mieć dokładnie takie same wymiary, jak 'sprite' , z którym dzieli obwiednię. &nbsp;Ten ostatni typ jest obsługiwany na ekranie okna budowy stacji tylko od TTDPatch 2.6 r1684.
+
+Spritedata ikonek z własnym obwiednią ma ten format:
+
+{| 
+|-
+!Rozmiar!!Nazwa!!Znaczenie
+|-
+|B||xofs||x-offset od północnego narożnika kafla
+|-
+|B||yofs||y-offset from northern tile corner
+|-
+|B||zofs||z-offset from northern tile corner
+|-
+|B||xextent||rozmiar sprite'a w kierunku x
+|-
+|B||yextent||size of sprite in y direction
+|-
+|B||zextent||size of sprite in z direction
+|-
+|D||sprite||numer 'sprite' do narysowania
+|}
+
+Spritedata 'sprites' dzielących obwiednię ma ten format:
+
+{| 
+|-
+!Rozmiar!!Nazwa!!Znaczenie
+|-
+|B||xofs||x-offset w stosunku do poprzedniego 'sprite'
+|-
+|B||yofs||y-offset relative to previous sprite
+|-
+|B||80||dosłowne 80
+|-
+|B||00||(ignorowane)
+|-
+|B||00||(ignored)
+|-
+|B||00||(ignored)
+|-
+|D||sprite||numer 'sprite' do narysowania
+|}
+
+Od OpenTTD r18959 możesz narysować wiele 'sprite' ziemi na kafel, co jest przydatne, jeśli chcesz użyć zwykłej kafla podłogowej szyny / trawy / betonu, ale nadal musisz dodać do niej funkcje bez korzystania z nowej ramki ograniczającej. Aby to zrobić, użyj składni ikonek współużytkujących poprzednią ramkę ograniczającą, ale użyj jej przed definicją pierwszej ramki ograniczającej. xpixeloffset i ypixeloffset odnoszą się do zwykłego miejsca kafli naziemnych. Ta sama funkcja jest również częściowo obsługiwana w TTDPatch, ponieważ TTDPatch 2.6 r2312: TTDPatch ignoruje pola xofs i yofs i zawsze używa (0,0) dla offsetu. Jeśli tworzysz GRF, który musi być zgodny zarówno z OpenTTD, jak i TTDPatch, zawsze powinieneś utrzymywać xofs i yofs zero, aby uzyskać ten sam efekt w obu grach.
+Zauważ jednak, że obie implementacje nie biorą pod uwagę  [[pl/Development/NewGRF/NFO Specs/Action0/Stations#general-flags-13|setting of prop13 bit 0]] , dlatego te "liczne 'sprites' naziemne" <small>''(multiple ground sprites)''</small> muszą zawsze być częścią zestawu 'sprite' budynku i nie mogą być częścią inny zestaw ikonek dla ikonek naziemnych.
+
+Liczba ikonek może mieć następujące wartości (pamiętaj, aby używać małego endiana, tj. Odwróconej kolejności bajtów):
+
+{| 
+|-
+!Numer!!Sprite
+|-
+|0000042D+X||użyj sprite X z odpowiedniego bloku [[pl/Development/NewGRF/NFO Specs/Action1|action 1]] (tj. 0000042D dla pierwszego, 0000042E dla drugiego, etc.)
+|-
+|0000842D+X||to samo, ale narysuj to, używając firmowej translacji kolorów
+|-
+|0322442D+X||to samo, ale rysuj w trybie przezroczystym (rzeczywiste kolory 'sprite' są całkowicie pomijane); obsługiwane w wyświetlaniu okna konstrukcji stacji od wersji TTDPatch 2.6 r1683
+|-
+|RRRR842D+X||rysuj sprite'a z translacją koloru zdefiniowanym w sprite RRRR; dostępny od TTDPatch 2.6 r1683
+|}
+
+Przy ustawionym bicie 31 ten 'sprites' będzie odnosił się do 'sprite' TTD, a nie 'sprite' akcji 1. Dla pierwszego 'sprite' naziemnego obowiązuje odwrotne znaczenie.
+
+W zależności od rodzaju szyny sprajty mogą uzyskać dodatkowe przesunięcia <small>''(offsets)''</small> :
+
+{| 
+|-
+! !! Normal/electrified rail !! Monorail !! Maglev
+|-
+|TTD sprites || 0 || 82 || 164
+|-
+|Action 1 sprite (pierwszy grunt sprite) || 0 || 1 || 2
+|-
+|Action 1 sprite (inne 'sprites' w układzie) || 0 || 0 || 0
+|}
+
+Tak więc 'sprites' TTD i pierwszy 'sprite' naziemny są pod wpływem typu szyny, podczas gdy inne 'sprites' akcji 1 w układzie nie są. Przesunięcie "82" odnosi się do przesunięcia między domyślnymi 'sprites' torowymi TTD; jeśli używasz niedziałających naziemnych ikonek, które nie pochodzą z akcji 1, musisz dostarczyć fałszywe numery ikon, które zapobiegawczo odwrócą przesunięcia (to znaczy, potrzebujesz różnych układów ikon dla każdego typu linii, dla którego twoja stacja jest dostępna).
+
+Ustawienie bitu 30 wymusza normalne wyświetlanie tego 'sprite' nawet w trybie "przezroczystych budynków" <small>''(transparent buildings)''</small> (obsługiwane tylko w TTDPatch 2.6 r1695 i późniejszych).
+
+Poniżej znajduje się przykład połączonych 'sprites' , a także przezroczystych 'sprites' (np. Na dachu stacji).
+
+Zauważ, że współrzędne tutaj są współrzędnymi 3D, przy czym x biegnie od prawego górnego rogu do lewego dolnego, zaś y biegnie od lewego górnego rogu do prawego dolnego rogu, przy czym wymiary kafli wynoszą 16 x 16 (i 8 dla jednego poziomu wysokości). Oznacza to, że wartości xiy powinny zawsze zawierać się w przedziale 0–15 (dziesiętnie).
+
+Różni się to i jest niezależne od przesunięć x/y używanych w rzeczywistym pliku .NFO. &nbsp;Obwiednia 3D jest używana przez sortownik sprite'ów TTD do określenia kolejności rysowania 'sprites' , a także do wskazania, które 'sprites' mają rysować, ponieważ te, których ramka graniczna wykracza poza aktualnie aktualizowany prostokąt ekranu, nie zostaną narysowane. &nbsp;Upewnij się, że obwiednia 3D jest wystarczająco duża, aby pomieścić całego 'sprite' , ale nie tak duża, aby sortownik 'sprite' nie mógł określić, które 'sprites' powinny być z przodu.
+
+Oznacza to, że kolejność określania 'sprites' jest nieistotna. &nbsp;'Sprites' będą rysowane od tyłu do przodu, w kolejności, którą sortownik 'sprite' określa jako prawidłowy, z ich ramek ograniczających. &nbsp;Istnieją jednak dwa wyjątki:
+* 'Sprites' dzielące to samo obwiednię zawsze będą rysowane w podanej kolejności.
+* Okno wyświetlania konstrukcji stacji nie korzysta z sortownika 'sprites' . Kafle, które mogą być wyświetlane w tym oknie, muszą być określone we właściwej kolejności rysowania, od tyłu do przodu.
+
+===<span id="Copy_sprite_layout_(0A)"></span><span title="Copy sprite layout (0A)" id="Copy_sprite_layout_.280A.29">Skopiuj układ sprite (0A)</span>===
+
+To nie jest właściwość jako taka, ale działanie. &nbsp;Jako argument przyjmuje bajt interpretowany jako ID stacji do skopiowania niestandardowego układu ikonki.
+
+===<span id="Callback_flags_(0B)"></span><span title="Callback flags (0B)" id="Callback_flags_.280B.29">Flagi callback (0B)</span>===
+W przypadku stacji można zdefiniować następujące [[pl/Development/NewGRF/NFO Specs/Callback/Main Page|callbacks]] poprzez ustawienie odpowiedniego bitu we właściwości 0B:
+
+{| 
+|-
+!Bit!!Wartość!!Zmienna wartość 0C!!<span title="wywołanie zwrotne">'Callback'</span>
+|-
+|0||1||13||Czy udostępnić stację w oknie konstrukcyjnym (niezerowy <span title=return>'zwrot'</span> <span title="wywołania zwrotnego">'callback'</span>) czy nie (<span title="wywołanie zwrotne">'callback'</span> zwraca zero)
+|-
+|1||2||14||Użyj <span title="wywołania zwrotnego">'callback'</span>, aby wybrać układ sprite
+|-
+|2||4||141||Wybierz następną klatkę animacji
+|-
+|3||8||142||Zdecyduj o szybkości animacji
+|-
+|4||10||149||Niestandardowa kontrola nachylenia
+|}
+Bit to bit, który musisz ustawić, robisz to poprzez dodanie wszystkich wartości dla wszystkich bitów. Zmienna wartość 0C to ta, dla której zostanie ustawiona zmienna 0C, do sprawdzania jej w   [[pl/Development/NewGRF/NFO Specs/VariationalAction2/Main Page|VarAction2]] dla wywołań zwrotnych.
+
+===<span id="Selection_of_numbers_of_platforms_and_length_(0C,_0D)"></span><span title="Selection of numbers of platforms and length (0C, 0D)" id="Selection_of_numbers_of_platforms_and_length_.280C.2C_0D.29">Wybór liczby peronów i długości (0C, 0D)</span>===
+
+Domyślnie dla wszystkich stacji dostępne są wszystkie długości platform i dowolna liczba platform. &nbsp;Korzystając z tych właściwości, możesz wybrać, które mają być niedostępne, ustawiając odpowiedni bit we właściwości.
+
+Wartości są bajtami używanymi jako maska ​​bitowa. &nbsp;Bity od 0 do 6 kontrolują dostępność liczby lub długości od 1 do 7, a bit 7 kontroluje dostępność przycisku "+7" . &nbsp;Każdy ustawiony bit wyłącza odpowiednią długość lub liczbę platform.
+
+W celu zapewnienia zgodności z "największymi wyłączeniami" <small>''(largestations off)''</small> musi być dostępna co najmniej jedna długość od 1 do 5 (bity od 0 do 4) i jedna liczba platform od 1 do 4 (bity od 0 do 3), tzn. Co najmniej jeden z tych bitów musi być nieoprawny.
+
+===<span id="Define_custom_layout_(0E)"></span><span title="Define custom layout (0E)" id="Define_custom_layout_.280E.29">definiowanie układu niestandardowego (0E)</span>===
+
+Pozwala to wybrać, który typ kafla jest budowany, na którym kaflu nowo budowany
+
+stacja. &nbsp;Istnieją cztery różne typy, które TTD zwykle określa jako
+
+{| 
+|-
+!Typ kafla!!Wygląd
+|-
+|00||zwykła platforma
+|-
+|02||platforma z zabudową
+|-
+|04||platforma z <span title=daszkiem>'roof'</span>, lewa strona
+|-
+|06||platforma z <span title=daszkiem>'roof'</span>, prawa strona
+|}
+
+Te liczby są używane dla stacji w kierunku NE-SW lub te liczby plus jeden dla stacji w kierunku NW-SE. &nbsp;Aby zdefiniować niestandardowy układ, użyj tego formatu:
+
+{| 
+|-
+!Rozmiar!!Nazwa!!Znaczenie
+|-
+|B||length||długość platform dla tego układu
+|-
+|B||number||liczba platform dla tego układu
+|-
+|V||tiles||<span title="length*number">długość*liczba</span> bajtów typów kafli, jedna platforma po drugiej, tylko 00, 02, 04 lub 06 są dozwolone jako wartości
+|}
+
+Powtarzaj to tak często, jak to konieczne, aby zdefiniować układy dla wszystkich obsługiwanych kombinacji długości i liczby. &nbsp;Zakończ definicje 00 00 (długość zerowa i liczba zerowa). &nbsp;Wszelkie niezdefiniowane kombinacje zostaną zbudowane przy użyciu domyślnego układu TTD.
+Zauważ, że łatwiejsze może być rysowanie różnych zestawów ikonek za pomocą  [[pl/Development/NewGRF/NFO Specs/VariationalAction2/Main Page|VarAction2]] w oparciu o [[pl/Development/NewGRF/NFO Specs/VariationalAction2/Stations#platform-info-40-41-46-47-49|station variable 40]] , zamiast redefiniowania układu. &nbsp;Ponadto [[pl/Development/NewGRF/NFO Specs/Callback/Main Page#custom-station-layout-24|callback 24]]  zostanie wykorzystany do dalszego dostosowania układu zgodnie z definicją tej właściwości (lub TTD, jeśli nie jest dostępny układ prop 0E). Może to być również łatwiejsze niż zdefiniowanie układu prop 0E dla każdej kombinacji długości i liczby platform.
+
+===<span id="Copy_custom_layout_(0F)"></span><span title="Copy custom layout (0F)" id="Copy_custom_layout_.280F.29">kopiowanie układu niestandardowego (0F)</span>===
+
+Podobnie jak właściwość 0A, kopiuje <span title=custom>'niestandardowy'</span> układ z ID-stacji podanego przez argument.
+
+===<span id="Little/lots_threshold_(10)"></span><span title="Little/lots threshold (10)" id="Little.2Flots_threshold_.2810.29">Próg mały/dużo (10)</span>===
+Ilość ładunku do zamiany z "małego" na "dużo" ładunku. &nbsp;TTDPatch dzieli pełny zakres ilości ładunku (od 0 do 4095) na dwa oddzielne podzakresy, "mało" i "dużo" ładunku. &nbsp;Umożliwia to lepszą kontrolę grafiki opartej na ilości ładunku (w razie potrzeby). &nbsp;Właściwość 10 określa, przy jakiej ilości ładunku łata ma się przełączać z jednego do drugiego podzakresu. &nbsp;Więcej informacji można znaleźć w [[pl/Development/NewGRF/NFO Specs/Action2/Stations|Action 2 for stations]] .
+
+===<span id="Pylon_placement_(11)_and_wire_placement_(14)"></span><span title="Pylon placement (11) and wire placement (14)" id="Pylon_placement_.2811.29_and_wire_placement_.2814.29">Umieszczenie pylonu (11) i ułożenie przewodu (14)</span>===
+<span title="właściwość">'Prop.'</span> 11 określa, które typy kafli powinny mieć pylony, gdy są używane z naelektryzowanymi ścieżkami. Domyślnie kafle 0-3 (domyślne stacje bez dachu) mają pylony, a kafle 4-7 (domyślne stacje z dachem) nie. Jest to nieco maska ​​typów kafli, a nieco ustawiony oznacza, że ​​należy narysować pylon. Typy kafli tutaj nie biorą pod uwagę [[pl/Development/NewGRF/NFO Specs/Callback/Main Page#station-sprite-layout-14|callback 14]] , ale raczej typ, w jakim został zbudowany, tj. Z prop. 0E.
+
+Prop. 14 działa w podobny sposób, z tym wyjątkiem, że ustawia typy kafli, na których powinny być wyświetlane przewody <span title=no>''nie''</span> . Przy domyślnej wartości "00" druty są wyświetlane wszędzie, a dla każdego zestawu bitów przewód jest pomijany na tym typie kafla.
+
+Tej właściwości należy używać tylko wtedy, gdy druty powodują problemy z sortownikiem 'sprites' , ponieważ nawet jeśli drut jest zasłonięty przez halę stacji lub podobną, powinien nadal pokazywać się w trybie przezroczystym, aby każdy kafel mógł być łatwo zweryfikowana jako zelektryfikowana.
+
+===<span id="Cargo_types_for_random_triggers_(12)"></span><span title="Cargo types for random triggers (12)" id="Cargo_types_for_random_triggers_.2812.29">Typy ładunków dla losowych wyzwalaczy (12)</span>===
+
+Określa, które typy ładunku powinny uruchamiać ponowną randomizację. Rodzaje ładunków podane są jako maska ​​bitowa bitów z kolumny 3 (typ B) w CargoTypes. &nbsp;Jeśli nic nie jest ustawione (ustawienie domyślne), nie wystąpią żadne losowe wyzwalacze, aby zaoszczędzić czas procesora.
+
+W wersji 7 i nowszych GRF zmienia się interpretacja bitów. Zamiast numerów szczelin ładunkowych zależnych od klimatu (typ B) musisz ustawić bity niezależnego od klimatu identyfikatora ładunku (typ A).
+
+===<span id="General_Flags_(13)"></span><span title="General Flags (13)" id="General_Flags_.2813.29">Flagi ogólne (13)</span>===
+
+{| 
+|-
+!Bit!!Wartość!!Wersja!!Znaczenie
+|-
+|0||1||{{pl/Development/NewGRF/ottdp|0.7|2.5}}||użyj innego zestawu dla 'sprite' naziemnych ([[pl/Development/NewGRF/NFO Specs/GlobalVariables#extra-callback-info-10-and-18|<span title='var.'>'wariant'</span> 10]] to 1 dla 'sprites' naziemnych, w przeciwnym razie 0)
+|-
+|1||2||{{pl/Development/NewGRF/ottdp|0.6|2.5}}||przy obliczaniu ilości ładunku do wyświetlenia należy podzielić ilość przez rozmiar stacji (aby zasymulować ładunek rozłożony na obszarze stacji)
+|-
+|2||4||{{pl/Development/NewGRF/ottdp|0.7|2.5}}||[[pl/Development/NewGRF/NFO Specs/Callback/Main Page#next-animation-frame-1a-26-141-153-158|callback 141]] potrzebuje losowych bitów w <span title='var.'>'zmiennej'</span> 10
+|-
+|3||8||{{pl/Development/NewGRF/ottdp|1.0|2.6}}||Użyj niestandardowych fundamentów na nachylonych kaflach (najniższy bajt [[pl/Development/NewGRF/NFO Specs/GlobalVariables#extra-callback-info-10-and-18|var. 10]] to 2 dla podstawy sprite'y
+|-
+|4||10||{{pl/Development/NewGRF/ottdp|1.0|2.6}}||Gdy bit 3 jest ustawiony, użyj rozszerzonego bloku fundamentowego zamiast prostego
+|}
+
+Bit 3 działa nieco podobnie do bitu 0: wybór twojego 'sprite' zostanie ponownie wywołany, z 2 w najniższym bajcie [[pl/Development/NewGRF/NFO Specs/GlobalVariables#extra-callback-info-10-and-18|variable 10]] . Jeśli łańcuch zakończy się wynikiem wywołania zwrotnego, program przyjmie, że wybór fundamentu nie powiódł się, i użyje domyślnych 'sprites' Foundaton. Niskie słowo  [[pl/Development/NewGRF/NFO Specs/GlobalVariables#extra-callback-info-10-and-18|variable 18]] będzie zawierać typ kafla bieżącego kafla; jeśli masz włączone [[pl/Development/NewGRF/NFO Specs/Callback/Main Page#station-sprite-layout-14|callback 14]] , będzie to jego wartość zwracana - w przeciwnym razie używane są domyślne typy TTD (platforma z budynkiem, platforma z lewym dachem itp.). W obu przypadkach jeden jest dodawany do orientacji NW-SE, na wypadek, gdyby twoja stacja potrzebowała różnych fundamentów w zależności od jej orientacji. Bity 16 i 17 są ustawiane, jeśli fundamenty NW i NE mają zostać połączone z odpowiednim sąsiadującym kaflem, więc nie należy rysować odpowiedniej krawędzi w ikonce fundamentu. Inne bity zmiennej 10 i zmiennej 18 są zarezerwowane do wykorzystania w przyszłości.
+
+Twój kod wyboru 'sprite' powinien wybrać blok 'sprite' fundacji. Zawartość tego bloku zależy od tego, czy bit 4 jest ustawiony, czy nie.
+* Bit 4 czysty (proste podstawy):
+<!--[[File:simple_foundations.png]]-->[http://newgrf-specs.tt-wiki.net/wiki/File:simple_foundations.png File:simple_foundations.png]
+
+Program połączy potrzebny fundament z tych 8 'sprites' w zależności od aktualnego nachylenia. Nie musisz przejmować się danymi scalania w bitach 16..17  [[pl/Development/NewGRF/NFO Specs/GlobalVariables#extra-callback-info-10-and-18|variable 18]] ; zostanie to załatwione automatycznie poprzez dodanie siódmego i ósmego 'sprite' tylko w razie potrzeby.
+* Zestaw bitów 4 (rozszerzone podstawy):
+<!--[[File:extended_foundations.png]]-->[http://newgrf-specs.tt-wiki.net/wiki/File:extended_foundations.png File:extended_foundations.png]
+
+Musisz mieć jednego 'sprite' na każde nachylenie, które jest możliwe poniżej stacji kolejowej. Właściwy zostanie automatycznie wybrany w zależności od aktualnego nachylenia. Jednak nie obsługuje samego scalania, więc potrzebujesz czterech bloków fundamentowych: jeden bez usuniętych krawędzi, jeden z usuniętą krawędzią NW, jeden z usuniętą krawędzią NE i jeden z usuniętymi obydwoma krawędziami północnymi. Twój kod wyboru 'sprite' jest odpowiedzialny za wybranie poprawności tych bloków zgodnie z informacjami o scaleniu w [[pl/Development/NewGRF/NFO Specs/GlobalVariables#extra-callback-info-10-and-18|variable 18]].
+
+W obu przypadkach można wprowadzić dodatkową wartość do rejestru 100h, która posłuży jako przesunięcie w wybranym bloku. Jeśli nie zmodyfikujesz rejestru 100h podczas łańcucha, domyślnie będzie to 0. Ważne jest, aby wymiary tych 'sprites' pozostały takie same - dlatego bit 6 w prawdziwych 'sprites' musi być ustawiony, aby GRFCodec nie przyciął pustych niebieskich obszarów . Odsunięcie tych fundamentów musi wynosić -31 w kierunku X i -9 w kierunku Y.
+
+===<span id="Can_train_enter_tile_(15)"></span><span title="Can train enter tile (15)" id="Can_train_enter_tile_.2815.29">Może pociąg wprowadzić kafel (15)</span>===
+
+Jak rekwizyty. 11 i 14, ta wartość zawiera osiem bitów odnoszących się do ośmiu możliwych rodzajów kafli. Jeśli bit jest ustawiony, pociągi nie mogą przejeżdżać ani wchodzić na żadne kafle tego typu.
+
+===<span id="Animation_information_(16)"></span><span title="Animation information (16)" id="Animation_information_.2816.29">Informacje o animacji (16)</span>===
+
+Niższy bajt określa liczbę klatek animacji pomniejszoną o jedną, więc 00 oznacza 1 klatkę, 01 oznacza 2 klatki itp. Maksymalna liczba klatek wynosi 256, chociaż możesz mieć pewne problemy, jeśli twoja animacja przekracza liczbę klatek FD (253). Górny bajt musi wynosić 0 dla animacji nie zapętlonych i 01 dla animacji zapętlonych. Każda inna wartość jest zarezerwowana do wykorzystania w przyszłości. Ponadto, jeśli całe słowo zawiera FFFF, animacja jest wyłączona dla tej stacji (jest to wartość domyślna).
+Ponieważ nie możesz mieć właściwości dla poszczególnych kafli stacji, ta właściwość dotyczy każdego kafla stacji. Jeśli nie chcesz animować niektórych kafli, powinieneś sprawdzić bieżącą pozycję podczas [[pl/Development/NewGRF/NFO Specs/Callback/Main Page#animation-control-1b-25-140-152-159|callback 140]] i zwrócić FD, jeśli bieżący kafel nie trzeba być animowanym. Jeśli potrzebujesz także animacji o różnej długości na kafel, musisz użyć  [[pl/Development/NewGRF/NFO Specs/Callback/Main Page#next-animation-frame-1a-26-141-153-158|callback 141]] .
+
+===<span id="Animation_speed_(17)"></span><span title="Animation speed (17)" id="Animation_speed_.2817.29">Prędkość animacji (17)</span>===
+Znaczenie jest takie samo jak dla [[pl/Development/NewGRF/NFO Specs/Action0/Houses#animation-speed-1b|house property 1B]] , ale dolny limit to 0 zamiast 2, więc najszybsza możliwa animacja zmienia klatki przy każdym tyknięciu gry (27ms). Wartość domyślna to 2.
+
+===<span id="Animation_triggers_(18)"></span><span title="Animation triggers (18)" id="Animation_triggers_.2818.29">Wyzwalacze animacji (18)</span>===
+Jest to nieco maska ​​zdarzeń, które powinny uruchomić [[pl/Development/NewGRF/NFO Specs/Callback/Main Page#animation-control-1b-25-140-152-159|callback 140]] , umożliwiając zmianę stanu animacji
+
+{| 
+|-
+!Bit!!Wartość!!Wersja!!Znaczenie!!Zdarza się!!<span title=zmienna>Var</span> 18
+|-
+|0||1||{{pl/Development/NewGRF/ottdp|0.7|2.5}}||Część stacji jest zbudowana||nowo zbudowane kafle||
+|-
+|1||2||{{pl/Development/NewGRF/ottdp|0.7|2.5}}||Nowy ładunek przybywa na stację||cała stacja||<!--<ref name="cargotype">-->{{pl/Development/NewGRF/NFO Specs/refs|name=cargotype|text=Bity 8..15 z var 18 zawierają typ wyzwalającego ładunku. Jeśli twój GRF ma tabelę translacji ładunku, typ ładunku będzie indeksem w tej tabeli lub FFh, jeśli ładunku nie ma w tabeli. Jeśli nie masz tabeli translacji ładunku, typ ładunku będzie po prostu numerem typu ładunku zależnym od klimatu.|1}}<!--</ref>-->
+|-
+|2||4||{{pl/Development/NewGRF/ottdp|0.7|2.5}}||Rodzaj ładunku zostaje usunięty ze stacji||cała stacja||<!--<ref name="cargotype"/>-->{{pl/Development/NewGRF/NFO Specs/refs|name=cargotype|1-1}}
+|-
+|3||8||{{pl/Development/NewGRF/ottdp|0.7|2.5}}||Pociąg wjeżdża na stację (rozpoczyna załadunek/rozładunek)||platforma, na której znajduje się pociąg||
+|-
+|4||10||{{pl/Development/NewGRF/ottdp|0.7|2.5}}||Stacja odjeżdża z pociągu (zakończony załadunek/rozładunek)||platforma, na której znajduje się pociąg||
+|-
+|5||20||{{pl/Development/NewGRF/ottdp|1.2|2.5|ottdrev=r22746}}||Pociąg ładuje/rozładowuje ładunek||Pociąg ładuje / rozładowuje ładunek||
+|-
+|6||40||{{pl/Development/NewGRF/ottdp|0.7|2.5}}||Co 250 tyknięć||cała stacja||
+|}
+
+Pozostałe bity są zarezerwowane dla przyszłych wyzwalaczy, na razie muszą wynosić zero.
+
+Kolumna "dzieje się" <small>''(happens on)''</small> informuje, które kafle będą [[pl/Development/NewGRF/NFO Specs/Callback/Main Page#animation-control-1b-25-140-152-159 |callback 140]] .
+
+<!--<references/>-->{{pl/Development/NewGRF/NFO Specs/przypisy|2001|name=cargotype}}{{pl/Development/NewGRF/NFO Specs/przypisy|2001-1|name=cargotype}}{{pl/Development/NewGRF/NFO Specs/refs|name=cargotype|text=Bity 8..15 z var 18 zawierają typ wyzwalającego ładunku. Jeśli twój GRF ma tabelę translacji ładunku, typ ładunku będzie indeksem w tej tabeli lub FFh, jeśli ładunku nie ma w tabeli. Jeśli nie masz tabeli translacji ładunku, typ ładunku będzie po prostu numerem typu ładunku zależnym od klimatu.|przypis<!--1-->}}{{pl/Development/NewGRF/NFO Specs/refs|name=cargotype<!--|2-->}}
+
+===<span id="Road_routing_(19_-_reserved_for_future_use)"></span><span title="Road routing (19 - reserved for future use)" id="Road_routing_.2819_-_reserved_for_future_use.29">Wyznaczanie tras drogowych (19 - zarezerwowane do użytku w przyszłości)</span>===
+
+Pozwoli mieć informacje o trasach dla pojazdów drogowych na dworcach
+
+ogólnie rzecz biorąc, musisz odmówić pojazdowi szynowemu podróżującemu śmigłem 15
+
+Ta właściwość nie jest jeszcze zaimplementowana {{pl/Development/NewGRF/ottd|no}}{{pl/Development/NewGRF/ttdp|no}}.
+
+===<span id="Advanced_sprite_layout_with_register_modifiers_(1A)"></span><span title="Advanced sprite layout with register modifiers (1A)" id="Advanced_sprite_layout_with_register_modifiers_.281A.29">Zaawansowany układ sprite'ów z modyfikatorami rejestru (1A)</span>===
+
+{{pl/Development/NewGRF/ottdp|1.2|no|ottdrev=r22518}}
+Format:
+ 1A <num-layouts> <0x40 + num-sprites>
+                  <groundsprite> <flags> [<register/value>]...
+                  [ <buildingsprite> <flags>
+                      ( <xoffset> <yoffset> <zoffset> <xextent> <yextent> <zextent> 
+                      | <xpixeloffset> <ypixeloffset> 80)
+                    [<register/value>]...
+                  ]...
+
+Aby uzyskać więcej informacji, zobacz [http://wiki.openttd.org/Frosch/Advanced_Sprite_Layout#Stations tutaj] na teraz.
+
+===<span id="Minimum_bridge_height_(1B)"></span><span title="Minimum bridge height (1B)" id="Minimum_bridge_height_.281B.29">Minimalna wysokość mostu (1B)</span>===
+
+Ta właściwość pozwala budować mosty nad stacjami.
+
+Właściwość wysokość mostu określa minimalne prześwity wymagane dla mostu dla każdego z czterech  [[pl/Development/NewGRF/NFO Specs/Action0/Stations#define-custom-layout-0e|tile types]] tej stacji (lub zero, aby nie pozwolić na żaden most). Wartości podano w "height level" jednostek (1 level == 8px).
+
+
+{| class="wikitable" 
+|-
+!Wysokość (1)!!Wygląd
+|-
+| style="text-align:center;" |x1 y1 ||zwykła platforma
+|-
+| style="text-align:center;" |x2 y2 ||platforma z zabudową
+|-
+| style="text-align:center;" |x3 y3 ||platforma z <span title=daszkiem>'roof'</span>, lewa strona
+|-
+| style="text-align:center;" |x4 y4 ||platforma z <span title=daszkiem>'roof'</span>, prawa strona
+|}
+(1) gdzie wartości są jednobajtowymi parami (kierunek x, kierunek y) wyrażone w notacji szesnastkowej.
+
+
+<span title=Syntax>'Składnia'</span>:
+
+1B <1st pair> <2nd pair> <3rd pair> <4th pair><br />
+1B x1 y1 x2 y2 x3 y3 x4 y4<br />
+1B 01 01 02 02 03 03 03 03 // 8px 16px 24px 24px
+
+Ta właściwość jest obecnie dostępna tylko dla pakietu poprawek JGR (wer. 0.26.0 i nowszych) oraz rozwojowego 'widelca' "Nowe funkcje mapy" <small>''(New Map Features)''</small> (NMF) OpenTTD.
+
+==<span id="Examples" title="Examples">Przykłady</span>==
+
+===<span id="Using_TTD's_sprite_layouts_for_certain_tiles"></span><span title="Using TTD's sprite layouts for certain tiles" id="Using_TTD.27s_sprite_layouts_for_certain_tiles">Używanie układów sprite TTD dla niektórych kafli</span>===
+
+Aby użyć układu TTD, używasz <code>00 00 00 00</code> dla naziemnej liczby 'sprites' i odrzuć wszystko inne.
+
+Więc zamiast na przykład
+
+ F4 03 00 00
+    00 00 00    10 05 02    2E 84 00 00
+    00 0B 00    10 05 02    30 84 00 00
+    80
+
+właśnie umieściłeś
+
+ 00 00 00 00
+
+===<span id="Using_transparent_sprites" title="Using transparent sprites">Korzystanie z przezroczystych sprites</span>===
+
+Możesz użyć przezroczystych 'sprites' , aby na przykład dach był półprzezroczysty, jak w stacjach TTD. Dach stacji TTD jest tak wykonany:
+
+ 00 00 10    10 10 0A    37 84 00 00
+ 00 00 80    00 00 00    3B 44 22 03
+
+Pierwszym 'sprite' jest nieprzezroczysta rama dachu, narysowana w kolorach firmowych (ma ustawiony bit 15). Druga część to specjalny "połączony" <small>''(linked)''</small> 'sprites' bez własnego obwiedni, podobnie jak poprzedni 'sprite' . Dokonuje się tego poprzez ustawienie przesunięcia z na 80.
+
+Aby ten drugi 'sprite' był przezroczysty, bit 14 jest ustawiany w numerze 'sprite' , a górne słowo jest ustawione na 322 (*), więc 0322443B oznacza pobranie 'sprite' 43B i narysowanie go w trybie przezroczystym. Kolory tego 'sprite' są całkowicie ignorowane, każdy piksel w kolorze 0 jest w pełni przezroczysty, a wszystkie pozostałe piksele są półprzezroczyste (zasadniczo powodując, że to, co jest rysowane, staje się ciemniejsze).
+
+(*) To jest [[pl/Development/NewGRF/NFO Specs/RecolorSprites#default-recolour-sprites | recolour sprite]] dla efektu szkła.

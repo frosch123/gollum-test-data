@@ -1,0 +1,18 @@
+<noinclude>[[Translation:Template/en/Merge]]</noinclude>
+{{en/Ambox| type  = move
+| image = en/Merge.png
+| text  =  {{#IF: {{{1|}}} |It has been suggested that this article or section be <span class="plainlinks">[http://en.wikipedia.org/wiki/Wikipedia:Merging merged]</span> with<!--
+--> ''[[:{{{1}}}|{{{1}}}]]''.  | Страница,имя было поставлено, исправить или удалить шаблон
+}} }}<includeonly>{{{2|[[Category:en/Articles to be merged|{{PAGENAME}}]]}}}</includeonly><noinclude>
+
+==Usage==
+Введите <nowiki>{{</nowiki>'''Слияния'''|'''Название страницы'''<nowiki>}}</nowiki>. Пример:
+<pre>{{en/Слияния|Some page}}</pre>
+Это позволит добавить статью [[:Category:en/Articles to be merged]].
+
+== Которые сливаются шаблоны,что следует использовать? ==
+* {{en/S|ru/Слияния}} &ndash; чтобы объединить как минимум,два вместе в неустановленном месте.
+* {{en/S|en/Mergeto}} &ndash; чтобы объединить содержимое помеченные статьи "в" указанной статьи.
+* {{en/S|en/Mergefrom}} &ndash; наоборот {{en/S|en/Mergeto}}; содержание указанной статьи следует объединить в помеченных статьях.
+
+[[Category:en/Message boxes|M]]</noinclude>

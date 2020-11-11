@@ -1,19 +1,19 @@
 [[Translation:en/Manual/Tutorial/Two Platforms]]
 __NOTOC__
 
-{{en/Manual/Tutorial/Tabs|3|1
+{{en/Tabs|3|1
 |it/Manual/Tutorial/Due banchine|1. Due stazioni<!-- -->
 |it/Manual/Tutorial/Due binari|2. Due binari<!-- -->
 |it/Manual/Tutorial/Rete ferroviaria di base|3. Rete ferroviaria di base}}
 <div style="padding:.5em 1em 1em 1em; border-top:none; background-color:#f1f2fe; color:#000;">
-{{it/Manual/Tutorial}}
+{{it/Manual/Tutorial/Tutorial}}
 == Due banchine ==
 Ora che avete costruito la vostra prima ferrovia, si consiglia di espandere con più treni e più banchine.
 
 Dal [[it/Manual/Tutorial/Tutorial|precedente tutorial]] si dovrebbe avere una ferrovia che si presenta come l'immagine qui sotto.
 
 
-{{en/Manual/Phototable|[[File:en/Manual/Tutorial/Tutorial single track.png|400px]]|Due stazioni, con il binario e il treno (clicca per ingrandire)|none}}
+{{en/Phototable|[[File:en/Manual/Tutorial/Tutorial single track.png|400px]]|Due stazioni, con il binario e il treno (clicca per ingrandire)|none}}
 Questo esempio è usato solo perchè permette di mostrare le due stazioni nella stessa immagine. In gioco voi potrete avere binari molto più lunghi o piazzare le banchine in maniera differente.
 
 === Aggiungere una seconda banchina ===
@@ -46,7 +46,7 @@ Esistono sei diversi tipi di segnali in OpenTTD. Fortunatamente, quasi tutte le 
 
 <!--''If you already looked at the signal selection window, you may have noticed not six but twelve signal buttons. The upper six are semaphore signals and are functionally the same as the light signal counterparts below them. The semaphores just look different and give your track a more classical look. For the tutorial, we'll only be using light signals as they are more easy to distinguish. You're free to use either in your games.''-->
 
-{{en/Manual/Phototable|[[File:it/Manual/Yapp signalgui.png]]|Contornati in rosso i bottoni relativi ai ''Segnali di percorso''|left}} I segnali di percorso, evidenziati nell'immagine sopra, nella barra di selezione dei segnali si trovano sulla sinistra. Quello più a sinistra dei due è il cosiddetto ''segnale di percorso a due vie''. I treni possono oltrepassare questo segnale da entrambi i lati, ma obbediranno al segnale solo se il macchinista può ''vedere'' la luce dalla parte anteriore. L'altro invece, quello più a destra con la barra rossa orizzontale, è il segnale di ''percorso a senso unico''. Si comporta allo stesso modo della sua controparte a due vie, ma i treni possono solo passare da un lato (frontalmente).
+{{en/Phototable|[[File:it/Manual/Yapp signalgui.png]]|Contornati in rosso i bottoni relativi ai ''Segnali di percorso''|left}} I segnali di percorso, evidenziati nell'immagine sopra, nella barra di selezione dei segnali si trovano sulla sinistra. Quello più a sinistra dei due è il cosiddetto ''segnale di percorso a due vie''. I treni possono oltrepassare questo segnale da entrambi i lati, ma obbediranno al segnale solo se il macchinista può ''vedere'' la luce dalla parte anteriore. L'altro invece, quello più a destra con la barra rossa orizzontale, è il segnale di ''percorso a senso unico''. Si comporta allo stesso modo della sua controparte a due vie, ma i treni possono solo passare da un lato (frontalmente).
 
 
 <!--{{Phototable|[[File:en/Manual/Yapp signalgui.png]]|Path signals|left}} The path signals are marked in the image of the signal selection toolbar at the left. The leftmost of the two path signals is the so-called two-way path signal. Trains can pass this signal from both sides, but will only obey the signal if the train driver can 'see' the light from the front. The rightmost with the horizontal red bar is the one-way path signal. It behaves the same as its two-way counterpart, but trains can only pass it from one side (the front).-->
@@ -58,7 +58,7 @@ Questi segnali di percorso sono segnali intelligenti, poiché considerano il per
 
 Adesso selezionate l'icona [[File:en/Manual/Signal Electric Path.png]] '''segnale di percorso a due vie'''. Cliccate sul primo pezzo di rotaia di fronte alla piattaforma per costruire il segnale lì. Assicuratevi che il segnale sia rivolto verso la piattaforma; potrebbe essere necessario fare clic sul tile una seconda volta per ruotare il segnale nella posizione corretta. Ripetete l'operazione per l'altra banchina.
 
-{{en/Manual/Phototable|[[File:en/Manual/Tutorial/Tutorial two platforms.png|400px]]|La seconda banchina dotata dei segnali di percorso (clicca per ingrandire)|none}}
+{{en/Phototable|[[File:en/Manual/Tutorial/Tutorial two platforms.png|400px]]|La seconda banchina dotata dei segnali di percorso (clicca per ingrandire)|none}}
 
 
 <!--Now select the [[File:en/Manual/Signal Electric Path.png]] '''two-way path signal'''. Click the first piece of track in front of the platform to build the signal there. Make sure the signal faces the platform; you may need to click the tile a second time to turn the signal around. Repeat this for the other platform.
@@ -77,7 +77,7 @@ Ora tutto è pronto per aggiungere il secondo treno. Cliccate sul deposito ferro
 
 Oltre a ciò, se terrete premuto il tasto Control sulla tastiera mentre si fa clic sul primo treno per clonarlo, gli ordini oltre che copiati saranno anche ''condivisi''. Ciò significa che quando cambierete gli ordini di uno dei due treni, anche gli ordini dell'altro treno verranno automaticamente modificati. Potrebbe rivelarsi utile in futuro.
 
-{{en/Manual/Phototable|[[File:en/Manual/Tutorial/Tutorial two trains.png|400px]]|Satazione della miniera con due banchine e segnali di percorso in azione (clicca per ingrandire)|none}}
+{{en/Phototable|[[File:en/Manual/Tutorial/Tutorial two trains.png|400px]]|Satazione della miniera con due banchine e segnali di percorso in azione (clicca per ingrandire)|none}}
 
 <!--In addition to this, if you hold the Control button on the keyboard while clicking on the first train to clone it, the orders of both trains will be ''shared''. This means that when you change the orders of one of the two trains, the orders of the other train will be changed automatically as well. Might be useful in the future.
 

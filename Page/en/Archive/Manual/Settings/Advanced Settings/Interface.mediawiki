@@ -2,7 +2,7 @@
 {{en/Outdated|Setting have been substantially re-organised since this last had a major update}} 
 {{en/Archive/Manual/Settings/Advanced Settings}}
 ==Advanced Settings window: Interface section==
-The Interface section allows you to set various options related to the game's interface. The purpose of the available settings is explained below. For each setting, the respective variable from the [[en/Archive/Manual/Settings/Openttd.cfg|config file]] is listed with its possible values.{{en/Manual/-right}}
+The Interface section allows you to set various options related to the game's interface. The purpose of the available settings is explained below. For each setting, the respective variable from the [[en/Archive/Manual/Settings/Openttd.cfg|config file]] is listed with its possible values.{{en/-right}}
 {| align="center" style="margin:0;"
 |- valign="top"
 |style="padding: 0; border: 0; background: transparent;"|__TOC__
@@ -79,7 +79,7 @@ Sets the amount of windows that can be open at any point in time, not counting s
 
 ====Link landscape toolbar to rail/road/water/airport toolbars====
 {{en/Feature|Old|float=right|text=(since 0.4.0.1)}}
-When clicking on one of [[File:en/Railroad build button.png]] [[en/Manual/Railway construction|Rail Construction]], [[File:en/Road build button.png]] [[en/Manual/Roadway construction|Road Construction]], [[File:en/Dock build button.png]] [[en/Manual/Waterway construction|Dock Construction]] or [[File:en/Airport build button.png]] [[en/Manual/Airport construction|Airport Construction]] buttons on the [[en/Manual/Game interface|Menu Bar]] the [[en/Manual/Landscaping]] toolbar will be opened along with the relevant construction toolbar. When you close an open construction toolbar, the open landscape toolbar will close with it.
+When clicking on one of [[File:en/Manual/Railroad build button.png]] [[en/Manual/Railway construction|Rail Construction]], [[File:en/Manual/Road build button.png]] [[en/Manual/Roadway construction|Road Construction]], [[File:en/Manual/Dock build button.png]] [[en/Manual/Waterway construction|Dock Construction]] or [[File:en/Manual/Airport build button.png]] [[en/Manual/Airport construction|Airport Construction]] buttons on the [[en/Manual/Game interface|Menu Bar]] the [[en/Manual/Landscaping]] toolbar will be opened along with the relevant construction toolbar. When you close an open construction toolbar, the open landscape toolbar will close with it.
 :''Possible Settings:'' <span style="color:green">'''On'''</span> or <span style="color:red">'''Off'''</span>
 :''In Openttd.cfg config file:'' ([gui] link_terraform_toolbar = <true|false>){{en/-}}
 

@@ -12,12 +12,12 @@
 <div style="position: absolute;">[[{{#if:{{{image|}}}
   | File:{{{image}}}
   | {{#switch:{{{type|}}}
-    | suppression=File:en/Manual/Base Set/Deletion.png
+    | suppression=File:en/Deletion.png
     | contenu    =File:en/Content.png
-    | style      =File:en/Manual/Base Set/Edit-clear.png
-    | mouvement  =File:en/Manual/Base Set/Move.png
-    | protection =File:en/Manual/Base Set/Protection.png
-    | #default   =File:en/Manual/Base Set/Notice.png
+    | style      =File:en/Edit-clear.png
+    | mouvement  =File:en/Move.png
+    | protection =File:en/Protection.png
+    | #default   =File:en/Notice.png
   }}
 }}|40px]]</div>
 <div style="border: none; padding: 2px 2px 2px 62px;">
@@ -92,12 +92,12 @@ Les exemples suivants utilisent différents paramètres '''type''', mais n'utili
 Les images par défaut montrées ci-dessus sont présentes essentiellement pour des raisons pratiques. Très souvent, il sera plus approprié d'utiliser des images spécifiques. Cet exemple utilise le paramètre '''image''' pour spécifier une image différente de celles par défaut.
 
 <pre>{{fr/Fenêtre de message| type  = annonce
-| image = en/Manual/Base Set/OpenttdManual.png
+| image = en/Manual/OpenttdManual.png
 | texte = Quelque chose Quelque chose Quelque chose
 }}</pre>
 
 {{fr/Fenêtre de message| type  = annonce
-| image = en/Manual/Base Set/OpenttdManual.png
+| image = en/Manual/OpenttdManual.png
 | texte = Quelque chose Quelque chose Quelque chose
 }}
 

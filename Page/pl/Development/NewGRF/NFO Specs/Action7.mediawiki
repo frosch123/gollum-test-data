@@ -1,0 +1,286 @@
+{{pl/Development/NewGRF/inne strony|en=newgrf-specs.tt-wiki.net/wiki/Action7|pl=pl/Development/NewGRF/NFO Specs/Action7 |sub=nfo}}
+<!--[[Category:Artykuły w języku polskim/Pl]]-->
+<!--{{-}}<br>{{ambox | text = w trakcie edycji.}}-->
+
+==<span id="Introduction" title="Introduction">Wprowadzenie</span>==
+
+Działanie 7 i Działanie 9
+
+Warunkowo pomiń 'sprites' lub przejdź do etykiety
+
+==<span id="Description" title="Description">Opis</span>==
+
+Te dwie akcje pozwalają pominąć określoną liczbę lub wszystkie następujące 'sprites' w tym pliku .grf. Można to wykorzystać np. Do grafiki specyficznej dla klimatu, kontroli <span title='patch-version '>'wersji-poprawek'</span> i komunikatów o błędach oraz dezaktywacji w obecności innych aktywnych plików .grf.
+
+==<span id="Syntax" title="Syntax">Składnia</span>==
+
+Dane wyglądają następująco:
+
+ <sprite-number> * <length> [07/09] <variable> <varsize> <condition-type> <value> <num-sprites> 
+{|
+!Element!![[pl/Development/NewGRF/NFO Specs/GRFActionsDetailed|Rozmiar]]!!Opis
+|-
+|<sprite-number>||dec||Sekwencyjny numer 'sprite'
+|-
+|<length>||dec||Łączna liczba bajtów w akcji
+|-
+|07/09||B||Rodzaj działania. W tym przypadku 07 lub 09
+|-
+|<variable>||B||Na której zmiennej opiera się decyzja
+|-
+|<varsize>||B||Ile bajtów odczytać ze zmiennej
+|-
+|<condition-type>||B||Jaki warunek sprawdzić
+|-
+|<value>||V||Wartość do porównania (rozmiar jest równy <varsize>)
+|-
+|<num-sprites>||B||Ile 'sprites' pominąć
+|}
+
+==<span id="Filling_in_the_terms" title="Filling in the terms">Wypełnianie warunków</span>==
+
+=== sprite-number ===
+
+Aktualny numer 'sprite' .
+
+=== length ===
+
+Łączna liczba bajtów w tym działaniu 7 lub 9.
+
+=== action ===
+
+Rodzaj akcji definiowany przez te pseudo-'sprites'. Jest to 07 lub 09, w zależności od tego, czy używasz akcji 7, czy akcji 9.
+
+Oba mają identyczny format, jedyną różnicą jest to, czy 'sprites' będą pomijane podczas <span title= initialisation>'inicjalizacji'</span> systemu graficznego TTDPatch, czy tylko wtedy, gdy plik .grf stanie się aktywny.
+
+Działanie 9 jest zawsze wykonywane, zarówno podczas inicjalizacji, jak i aktywacji, ale działanie 7 jest wykonywane tylko podczas aktywacji.
+
+W zależności od akcji, które chcesz pominąć, nie zawsze możesz użyć obu akcji. W razie wątpliwości użyj akcji 7, z wyjątkiem pominięcia akcji 6 lub F. Nie możesz w ogóle pomijać akcji 2, chyba że pominiesz całą resztę pliku. Zamiast tego pomiń działanie 3, które go dotyczy.
+
+Oto tabela pokazująca cały problem z akcji 7/9:
+{|
+!Action do pominięcia!!z 7!!z 9!!notes
+|-
+|0 (new props)||tak||tak||Aby pominąć nowe właściwości nieznane w starym OpenTTD lub TTDPatch, musisz użyć Akcji 9.
+|-
+|1 (sprite blk)||tak||tak||
+|-
+|2 (cargo ID)||n/a*||nie||* zamiast tego pomiń odpowiednią akcję 3
+|-
+|3 (veh ID map)||tak*||nie||* nie można pominąć zmiany barwy bez pominięcia również akcji 3 głównego silnika
+|-
+|4 (veh names)||tak||nie||
+|-
+|5 (sprite blk)||tak||tak||
+|-
+|6 (apply param)||n/a*||tak||* "tak" od TTDPatch 2.0.1 alfa 51
+|-
+|7 (skip sprite)||tak||tak||
+|-
+|8 (GRFID)||tak||tak||
+|-
+|9 (skip sprite)||tak*||tak||* oczywiście nie podczas <span title=inicjalizacji>'initialization'</span>
+|-
+|A (repl.sprite)||tak||tak||
+|-
+|B (error msg)||tak||tak||
+|-
+|C (NOP)||tak||tak||
+|-
+|D (set param)||tak*||tak||* nie jeśli parametr zostanie użyty w akcji 6 (z wyjątkiem TTDPatch 2.0.1 alpha 51 i wyższych)
+|-
+|E (deact.GRFs)||tak||tak||
+|-
+|F (town names)||n/a||tak||
+|-
+|10 (goto labels)||n/a||nie||
+|-
+|11 (sound fx)||n/a||nie||
+|-
+|12 (glyphs)||tak||tak||
+|-
+|13 (translate)||tak||tak||
+|-
+|14 (static info)||n/a||n/a|| 
+|}
+
+<span title=tak>'Yes'</span>=<span title='safe to skip'>'bezpiecznie pominąć'</span>
+
+<span title=nie>'No'</span>=nie jest bezpieczne pominięcie, spowoduje 'break' pliku grf lub TTDPatch
+
+N/A=<span title='not applicable'>'nie dotyczy'</span>; niczego nie <span title=break>'zatrzymuje'</span>, ale też nie zostanie pominięty (innymi słowy, jego definicje będą nadal używane)
+
+===<span id="variable" title="variable">zmienna</span>===
+
+To ustawia zmienną, na której opiera się decyzja. Może to być jeden z parametrów GRF (patrz  [[pl/Development/NewGRF/NFO Specs/Action6|action 6]] ) lub wbudowana zmienna łatki. Jeśli jest to parametr GRF, który nie został określony w pliku newgrf(w).cfg, lub zmienna 88 z GRFID, który nie istnieje, akcja 7 lub 9 jest ignorowana i nie są pomijane żadne 'sprites' , jedynym wyjątkiem jest warunek wpisz 0A, który pominie  'sprites' , jeśli GRFID również nie istnieje.
+
+{| 
+|-
+!Zmienne!!Opis
+|-
+|00-7F||Parametry GRF, zobacz [[pl/Development/NewGRF/NFO Specs/Action6|Action6]].
+|-
+|80-BF||Zerknij [[pl/Development/NewGRF/NFO Specs/GlobalVariables| global variables page]].
+|-
+|C0-FF||Zarezerwowane. Nie używać.
+|}
+
+=== varsize ===
+
+W przypadku parametrów GRF jest to to samo, co <param-size> w [[pl/Development/NewGRF/NFO Specs/Action6#param-size|action 6]] . W przypadku zmiennych wbudowanych zależy to od zmiennej, patrz powyższa tabela.
+
+W przypadku testów bitowych ten rozmiar jest ignorowany. Wartość musi być BYTE dla testów bitowych, niezależnie od wielkości testowanej zmiennej.
+
+Od r1384 możliwe jest ustawienie tej wartości na 8 bajtów ze zmienną 88, umożliwiając w ten sposób użycie maski bitowej. Jest to przydatne, gdy tylko kilka bitów zmienia się w kilku plikach graficznych.
+
+===<span id="condition-type" title="condition-type">warunek-typu</span>===
+
+Istnieje kilka warunków, z których możesz wybrać test. Ma sekwencję zmiany znaczenia dla każdej prawidłowej wartości. Zobacz [[pl/Development/NewGRF/NFO Specs/GRFActionsDetailed#byte-order|the discussion of escape sequences]] w celu uzyskania dalszych informacji na temat sekwencji specjalnych. Dla Twojej wygody są one podsumowane w jeszcze jednej tabeli:
+{|
+!Typ warunku!!Escape!!Version!!Opis
+|-
+|00||\71||{{pl/Development/NewGRF/ottdp|0.6| }}||Sprawdź bit podany przez ustawianą wartość
+|-
+|01||\70||{{pl/Development/NewGRF/ottdp|0.6| }}||Sprawdź, czy bit podany przez wartość jest czysty
+|-
+|02||\7=||{{pl/Development/NewGRF/ottdp|0.6| }}||Parametr jest równy wartości
+|-
+|03||\7!||{{pl/Development/NewGRF/ottdp|0.6| }}||Parametr nie jest równy wartości
+|-
+|04||\7<||{{pl/Development/NewGRF/ottdp|0.6| }}||Parametr jest mniejszy niż wartość
+|-
+|05||\7>||{{pl/Development/NewGRF/ottdp|0.6| }}||Parametr jest większy niż wartość
+|-
+|06||\7G||{{pl/Development/NewGRF/ottdp|0.6| }}||GRFID (zobacz [[pl/Development/NewGRF/NFO Specs/Action8|action 8]]) jest aktywne (tylko dla zmiennej 88)
+|-
+|07||\7g||{{pl/Development/NewGRF/ottdp|0.6| }}||GRFID nie jest aktywny (tylko dla zmiennej 88)
+|-
+|08||\7gG||{{pl/Development/NewGRF/ottdp|0.6| }}||GRFID nie jest jeszcze aktywny, ale zostanie aktywowany (tylko zmienna 88)
+|-
+|09||\7GG||{{pl/Development/NewGRF/ottdp|0.6| }}||GRFID jest lub będzie aktywny (tylko zmienna 88)
+|-
+|0A||\7gg||{{pl/Development/NewGRF/ottdp|0.6| |ottdrev=r11358}}||GRFID nie jest ani nie będzie aktywny (tylko zmienna 88)
+|-
+|0B||\7c||{{pl/Development/NewGRF/ottdp|0.6| |ottdrev=r11358}}||Typ ładunku nie jest dostępny (zmienna jest ignorowana; wartością jest etykieta)
+|-
+|0C||\7C||{{pl/Development/NewGRF/ottdp|0.6| |ottdrev=r11358}}||Typ ładunku jest dostępny (zmienna jest ignorowana; wartością jest etykieta)
+|-
+|0D|| ||{{pl/Development/NewGRF/ottdp|0.7|no|ottdrev=r15418}}||Etykieta typu szyny nie jest zdefiniowana (zmienna jest ignorowana; wartość to etykieta)
+|-
+|0E|| ||{{pl/Development/NewGRF/ottdp|0.7|no|ottdrev=r15418}}||Zdefiniowano etykietę typu kolei (zmienna jest ignorowana; wartość to etykieta)
+|-
+|0F|| ||{{pl/Development/NewGRF/ottdp|1.10|no|}}||Nie zdefiniowano etykiety typu drogi (zmienna jest ignorowana; wartość to etykieta)
+|-
+|10|| ||{{pl/Development/NewGRF/ottdp|1.10|no|}}||Zdefiniowano etykietę typu drogi (zmienna jest ignorowana; wartość to etykieta)
+|-
+|11|| ||{{pl/Development/NewGRF/ottdp|1.10|no|}}||Etykieta Tramtype nie jest zdefiniowana (zmienna jest ignorowana; wartość jest etykietą)
+|-
+|12|| ||{{pl/Development/NewGRF/ottdp|1.10|no|}}||Zdefiniowano etykietę Tramtype (zmienna jest ignorowana; wartość to etykieta)
+|}
+
+<span title=Note>'Należy odnotować'</span>, że dla znaków wielka litera oznacza dostępne, a mała litera oznacza niedostępne. W przypadku dwuznakowych sekwencji GRFID, pierwszy znak to jego obecny stan, a drugi to jego przyszły stan.
+
+Testy dla zmiennej 88 zależą od bieżącego [[pl/Development/NewGRF/NFO Specs/GrfLoadingStages|GRF Loading Stage]] , kolejności, w jakiej GRF są ładowane, i oczywiście, czy są one obecne, czy zostały wyłączone (przez siebie lub przez inne GRF). Rozważ dwa GRF A i B (załadowane w tej kolejności):
+
+{| border=1 
+|-
+!rowspan="2"| <span title=Condition>'Warunek'</span>
+!colspan="2"| <span title=Inicjalizacja>'Initialisation'</span>
+!colspan="2"| Rezerwacja/Aktywacja
+!rowspan="2"| Brak testowanego GRF
+|-
+! A <span title='testing for'>'testowanie dla'</span> B !! B testowanie dla A !! A testowanie dla B !! B testowanie dla A
+|-
+|-
+|06  \7G   ||zawsze false          || zawsze false          || zawsze false          || A nie wyłączone?       || zawsze false
+|-
+|07  \7g   || zawsze true           || zawsze true           || zawsze true           || A wyłączone?           || zawsze false
+|-
+|08  \7gG  || zawsze false          || <span title='A not (yet) disabled?'>'A nie (jeszcze) wyłączony?'</span> || B nie (jeszcze) wyłączony? || zawsze false          || zawsze false
+|-
+|09  \7GG  || zawsze false          || A nie (jeszcze) wyłączony? || B nie (jeszcze) wyłączony? || A nie wyłączone?       || zawsze false
+|-
+|0A  \7gg  || B <span title='(already) disabled?'>'(już) wyłączone?'</span> || A (już) wyłączone? || B (już) wyłączone? || A wyłączone?           || zawsze true
+|}
+
+Jeśli testowany GRF nie jest obecny, warunki od 06 do 09 zawsze oceniają na "fałsz" <small>''(false)''</small> . Dla warunku 0A "wyłączone" <small>''(disabled)''</small> i "nieobecne" <small>''(not present)''</small> są takie same, tzn. Zawsze przyjmuje wartość "prawda" <small>''(true)''</small> .
+
+=== value ===
+
+Ten termin jest porównywany ze zmienną. Jego rozmiar podaje <varsize>.
+
+W przypadku testów bitowych (typy warunków 00 lub 01) zawsze musi to być pojedynczy BYTE dla testów bitowych i określa bit do przetestowania.
+
+Dla warunków 0B, 0C, 0D i 0E wartość określa bezpośrednio etykietę typu ładunek/szyna <small>''(cargo/railtype label)''</small>; to nie jest indeks do tabeli translacji.
+
+Dla warunków 0B i {{pl/Development/NewGRF/ottdp| |2.5|ttdprev=alpha 72}} 0C, podana zmienna jest ignorowana (ale mimo to musi być poprawną zmienną), zmienna musi mieć wartość 4, a wartość musi być etykietą ładunkową do sprawdzenia. Jeśli żaden ładunek z tą etykietą nie jest zdefiniowany w przypadku warunku 0B, podana liczba 'sprites' jest pomijana. Dla warunku 0C 'sprites' są pomijane, jeśli etykieta ładunku została zdefiniowana. Oba testy działają niezależnie od kolejności plików .grf w newgrf(w).cfg; ładunek jest uważany za dostępny, nawet jeśli jest zdefiniowany w późniejszym pliku grf. Aby działało to poprawnie, nie wolno  (''must not'') pomijać definicji ładunku z warunkami 0B lub 0C.
+
+To samo dotyczy warunków 0D i 0E wrt. typ kolei <small>''(railtypes)''</small> i ich rezerwacja.
+
+Od {{pl/Development/NewGRF/ottdp| |2.5|ttdprev=r1384}} , ustawienie varsize na 8, nieznacznie zmienia wartość, pierwsze 4 bajty to wartość (uogólniony GRFID), a kolejne 4 bajty to maska ​​bitowa do sprawdzenia przez GRFID. Pamiętaj, że powinieneś się upewnić, że zamaskowane bity również nie znajdują się w GRFID do sprawdzenia, ponieważ wartość do sprawdzenia nie jest obecnie maskowana.
+
+=== num-sprites ===
+
+Ten element określa liczbę 'sprites' , które zostaną pominięte, jeśli warunek jest spełniony. Jeśli num-sprites ma wartość zero, cała reszta pliku .grf zostanie pominięta, w przeciwnym razie zostanie pominiętych wiele 'sprites' . Jeśli spowoduje to pominięcie działania 8, plik .grf zostanie uznany za nieaktywny.
+
+Jeśli warunek jest fałszywy, przetwarzanie jest kontynuowane dla następującego 'sprite' .
+
+Począwszy od TTDPatch 2.0.1 alpha 49, można przeskoczyć do określonej pozycji w pliku grf, definiując etykiety za pomocą [[pl/Development/NewGRF/NFO Specs/Action10|action 10]] . Jeśli num-sprites jest numerem etykiety zdefiniowanej gdzieś w pliku, wówczas przetwarzanie pliku grf zostanie wznowione wraz ze sprite'em za etykietą, zamiast pomijania tylu sprite'ów. Jest to jedyny sposób na pominięcie więcej niż 255 'sprites' na raz.
+
+Od wersji TTDPatch 2.0.1 alfa 70 duplikaty etykiet są w pełni obsługiwane. Skok będzie zawsze następował do pierwszej pasującej etykiety. Jeśli nie pojawi się pasująca etykieta, zostanie zastosowana pierwsza pasująca etykieta w pliku.
+
+Należy pamiętać, że zwykle nie jest bezpiecznie przeskakiwanie do tyłu, tj. Do wcześniejszej pozycji. Chociaż łatka z radością to zrobi, otrzymasz dziwne wyniki, jeśli niektóre działania zostaną powtórzone. Tylko działania 0, 6, 7, 9, C i D można w uzasadniony sposób wykonać więcej niż jeden raz.
+
+==<span id="Examples" title="Examples">Przykłady</span>==
+
+Zacznijmy od prostej akcji 7:
+
+ 47 * 6 07 83 01 03 00 00
+
+Co ta akcja 7 mówi programowi do zrobienia z fikcyjnym plikiem .grf?
+{|
+!<span title=Byte>'Bajt'</span>!!Znaczenie
+|-
+|47||<sprite-number>
+|-
+|6||<length> akcji w bajtach; zacznij liczyć od 07 (<action>)
+|-
+|07||<action>: ustawia tego pseudo-sprite, aby działał jako action 7
+|-
+|83||<variable> 83 odnosi się do 4 różnych klimatów
+|-
+|01||<varsize>: ilość bajtów do porównania; jeden bajt dla klimatu
+|-
+|03||<condition-type> 03 oznacza pominięcie, jeśli zmienna nie jest równa <value>
+|-
+|00||<value> 00 oznacza klimat umiarkowany dla tej zmiennej
+|-
+|00||<num-sprites> 00 oznacza pominięcie całego pliku .grf, jeśli warunek jest prawdziwy, tj. Dla wszystkich klimatów z wyjątkiem umiarkowanego w tym przypadku
+|}
+
+Dlatego ta akcja 7 pomija resztę pliku, jeśli jest ładowany w klimacie innym niż klimat umiarkowany.
+
+===<span id="Check_for_a_specific_TTDPatch_version" title="Check for a specific TTDPatch version">Sprawdzenie konkretnej wersji TTDPatch</span>===
+
+Ponieważ akcja 7 jest pomijana podczas inicjacji, a bit ważności 7 akcji B nie działa przed TTDPatch 2.0.1 alfa 66, najlepszym sposobem sprawdzenia wymaganej wersji łatki jest następująca sekwencja:
+
+  // Sprawdź TTDPatch 2.0.1 alpha 57, pomiń działanie B, jeśli jest obecne
+ 1 * 9       09 8B 04 05 39 02 0A 02 01
+  // Przerwij z fatalną operacją B, jeśli nie (podczas pierwszej aktywacji)
+ 2 * 19      0B 03 1F 00 32 2E 30 2E 31 20 61 6C 70 68 61 20 35 37 00
+  // Action 8
+ 3 * ...     08 06 ...
+  // Pomiń resztę pliku, jeśli nie TTDPatch 2.0.1 alpha 57,
+  // aby zapobiec bezsensownym błędom "nieprawidłowego sprite'a"
+ 4 * 9       09 8B 04 04 3A 02 0A 02 00
+
+W ten sposób pozycja Status GRF pokazuje właściwy komunikat o błędzie, a także poprawną nazwę i opis, ponieważ akcja 8 jest nadal przetwarzana podczas <span title= initialization>'inicjalizacji'</span>, a wszystkie nieznane 'sprites' są pomijane, tak że komunikat o błędzie "invalid sprites" (nieprawidłowe 'sprity') nie jest pokazywany pierwszy ( inaczej stałby się stałym komunikatem wyświetlanym w oknie statusu GRF) .
+
+===<span id="Unconditional_jump" title="Unconditional jump">Bezwarunkowy skok</span>===
+
+Var 9A zawsze ma ustawione wszystkie bity, więc aby wykonać bezwarunkowy skok, możesz użyć trochę testu:
+
+ 1 * 7   07 9A 01 00 00 01 resp.
+ 1 * 7   07 9A 01 \71 00 01
+
+W ten sposób sprawdza się, czy bit 0 z pierwszego bajtu zmiennej 9A jest ustawiony (którym zawsze jest), więc 'sprite' , który umieścisz po tej akcji 7, jest zawsze pomijany.

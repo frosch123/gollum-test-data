@@ -1,0 +1,76 @@
+{{pl/Development/NewGRF/inne strony|en=newgrf-specs.tt-wiki.net/wiki/Action2/Stations|pl=pl/Development/NewGRF/NFO Specs/Action2/Stations |sub=nfo}}
+<!--{{-}}<br>--><!--{{ambox | text = w trakcie edycji.}}--><!-- -->
+== Wprowadzenie ==
+
+Definiowanie set-IDs stacji .
+
+W przypadku stacji Action2 służy do definiowania identyfikatorów zestawów, podobnie jak w przypadku pojazdów. Szczegóły znajdują się w poniższym opisie.
+
+Nie pomijaj Action2 za pomocą [[pl/Development/NewGRF/NFO Specs/Action7|Action9]] (chyba że pomija cały plik). Action2 nie może zostać pominięte przez Action9, ponieważ TTDPatch najprawdopodobniej ulegnie awarii. Zamiast tego pomiń lub zmodyfikuj [[pl/Development/NewGRF/NFO Specs/Action3/Main Page|Action3]]. Pominięcie czynności 2 za pomocą [[pl/Development/NewGRF/NFO Specs/Action7|Action7]] nie ma żadnego efektu.
+
+== Syntax ==
+
+W przypadku stacji dane wyglądają następująco:
+
+ <Sprite-number> * <Length> 02 04 <set-id> <numlittlesets> <numlotssets> <sets...>
+
+{|
+!Element!![[pl/Development/NewGRF/NFO Specs/GRFActionsDetailed|Rozmiar]]!!Opis
+
+|-
+|<[[#sprite-number|Sprite-number]]>||dec||Sekwencyjny numer 'sprite'
+
+|-
+|<[[#length|length]]>||dec||Łączna liczba bajtów użytych w tej akcji
+
+|-
+|02||B||Definiuje akcję 2
+
+|-
+|04||B||Stacje to funkcja 4
+
+|-
+|<[[#set-id|set-id]]>||B||Co określa identyfikator zestawu <small>''(set-ID)''</small> to działanie2
+
+|-
+|<[[#numlittlesets-numlotssets|numlittlesets]]>||B||Ile różnych ładunków pokazać, gdy jest mało ładunku
+
+|-
+|<[[#numlittlesets-numlotssets|numlotssets]]>||B||To samo, ale gdy jest dużo ładunku
+
+|-
+|<[[#sets|sets]]...>||W||Zestawy 'sprite' dla każdej ilości ładunku
+|}
+
+== Description ==
+
+=== Sprite-number ===
+
+To tylko numer, na którym jesteś.
+
+=== Length ===
+
+Policz liczbę bajtów w tej akcji.
+
+=== Set-id ===
+
+Identyfikator zestawu, który chcesz zdefiniować dla tego zestawu. Możesz wybrać dowolną wartość z przedziału od 00 do FF, i możesz użyć ich ponownie w pliku grf w późniejszym momencie (jeśli jest równy istniejącemu identyfikatorowi zestawu, istniejący jest zastępowany i używany jest nowy).
+
+=== numlittlesets, numlotssets ===
+
+Podobnie jak w przypadku pojazdów, decyduje to, którego zestawu graficznego użyć, w zależności od ilości oczekującego ładunku. Istnieją jednak dwa zastrzeżenia. Po pierwsze, na stacji może czekać 12 różnych ładunków, a nie tylko jeden. Po drugie, maksymalna kwota wynosi 4095 dla wszystkich stacji i wszystkich rodzajów ładunku.
+
+Jeśli chodzi o pierwszy problem, ilość ładunku, o której mowa, zależy od akcji3, która uruchomiła tę akcję2:
+* jeśli typ ładunku dokładnie pasuje, jest to ilość pasującego ładunku (np. akcja3 powiedziała „w przypadku węgla, użyj tej akcji2”)
+* jeśli użyto wartości domyślnej, jest to suma wszystkich rodzajów ładunku razem
+* jeśli stacja jest wyświetlana do budowy, wyświetlana jest maksymalna ilość
+
+W odniesieniu do drugiego problemu TTDPatch wprowadza rozróżnienie między "małym" <small>''(little)''</small> a "dużym" <small>''(lots of)''</small> ładunkiem. Ilość, w której to nastąpi, jest ustawiana przez właściwość 10, która domyślnie wynosi zero. Ale jeśli zostanie ustawiona na wartość niezerową, na przykład 200, wówczas zakres od 0 do 199 jest podzielony przez zestawy liczb numl, a pozostały zakres od 200 do 4095 jest podzielony przez zestawy liczb. Jeśli właściwość 10 jest równa zero, "małe" zestawy nigdy nie są używane, a zatem liczba małych zestawów może wynosić zero. numlotssets nie może jednak nigdy wynosić zero.
+
+=== sets ===
+
+Zestawy z ostatniej akcji1 do użycia dla tego set-ID, dla każdego etapu zestawów liczb <small>''(numlittlesets)''</small> i zestawów liczb <small>''(numlotssets)''</small>, tj. Łącznie wpisów <small>''(numlittlesets+numlotssets)''</small>.
+
+== Przykład ==
+
+<span style='color:#808080'>Something to go here</span>

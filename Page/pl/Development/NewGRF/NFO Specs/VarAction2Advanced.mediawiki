@@ -1,0 +1,144 @@
+{{pl/Development/NewGRF/inne strony|en=newgrf-specs.tt-wiki.net/wiki/VarAction2Advanced|pl=pl/Development/NewGRF/NFO Specs/VarAction2Advanced |sub=nfo}}
+<!--{{-}}<br>--><!--{{ambox | text = w trakcie edycji.}} -->
+==Wprowadzenie ==
+
+Zwykła akcja 2 może uzyskać dostęp do jednej zmiennej i wykonywać na niej ograniczone modyfikacje (shift, i dodawać, dzielić/modulo) zamiast prostego dostępu do zmiennej. Korzystając z zaawansowanej akcji 2, można wykonać prawie nieograniczoną liczbę wielu różnych operacji na kilku zmiennych.
+
+Ponadto za pomocą wywołań procedur (ze zmienną 7E) możliwe jest ponowne użycie bloków VarAction2 w kilku miejscach kodu NFO.
+
+== Format ==
+
+Zaawansowana VarAction2 wygląda następująco:
+
+ <Sprite-number> * <Length> 02 <feature> <set-id> <type> <variable> <varadjust> '''[<operator>
+ <variable> <varadjust>]'''... <nvar> (<set-id> <low-range> <high-range>){n} <default>
+
+Nowe elementy to <operator> (bajt), a po nim następna para <variable> i <varadjust>. &nbsp;Sekwencję tę można powtarzać tak często, jak to konieczne, ustawiając odpowiedni bit w poprzednim <varadjust> (patrz poniżej).
+
+=== varadjust ===
+
+<varadjust> sam ma ten sam format, co zwykły var. działanie 2, jednak aby wykonać obliczenia, należy ustawić bit 5 w <shift-num> :
+
+{|
+!Bit(y)!!Wartość!!Znaczenie
+|-
+|0..4||0..1F||liczba bitów do przesunięcia <small>''(shift)''</small> w prawo <variable>
+|-
+|5||20||'''na <operator> <variable> <varadjust> potrójne podąża za tym <varadjust>'''
+|-
+|6||40||Jest to dostosowanie przesuń i dodaj-podziel .
+|-
+|7||80||Jest to regulacja przesunięcia i dodania modulo.
+|}
+
+Bit 5 należy ustawić dla każdego <shift-num>, z wyjątkiem ostatniego, po którym nie będzie następnych obliczeń (tj. <operator> <variable> <varadjust> set). Bit 5 clear kończy obliczenia i wykorzystuje wynikową wartość do sprawdzenia zakresów określających identyfikator zestawu do użycia (lub, jeśli nvar=0, jako wynik wywołania zwrotnego).
+
+=== operator ===
+
+To pole i następna para zmienna 'variable/varadjust' są dostępne tylko wtedy, gdy poprzedni numer shift miał ustawiony bit 5. To pole ma sekwencje specjalne dla każdej z poprawnych wartości, jak pokazano w poniższej tabeli. Zobacz [[pl/Development/NewGRF/NFO Specs/GRFActionsDetailed#byte-order|the discussion of escape sequences]]  w celu uzyskania dalszych informacji na temat sekwencji specjalnych. Może mieć następujące wartości:
+
+{|
+!Wartość!!Escape!!Efekt!!Wersja!!Notes
+|-
+|00||\2+||result = val1 + val2||{{pl/Development/NewGRF/ottdp|0.6|2.5}}||
+|-
+|01||\2-||result = val1 - val2||{{pl/Development/NewGRF/ottdp|0.6|2.5}}||
+|-
+|02||\2<||result = min(val1, val2)||{{pl/Development/NewGRF/ottdp|0.6|2.5}}
+|rowspan=2|val1 i val2 są uważane za 'podpisane' <small>''(signed)''</small>
+|-
+|03||\2>||result = max(val1, val2)||{{pl/Development/NewGRF/ottdp|0.6|2.5}}
+|-
+|04||\2u<||result = min(val1, val2)||{{pl/Development/NewGRF/ottdp|0.6|2.5}}
+|rowspan=2|wart1 i wart2 są uważane za bez znaku <small>''(unsigned)''</small>
+|-
+|05||\2u>||result = max(val1, val2)||{{pl/Development/NewGRF/ottdp|0.6|2.5}}
+|-
+|06||\2/||result = val1 / val2||{{pl/Development/NewGRF/ottdp|0.6|2.5}}
+|rowspan=2|zarówno val1, jak i val2 są uważane za 'podpisane' <small>''(signed)''</small>
+|-
+|07||\2%||result = val1 mod val2||{{pl/Development/NewGRF/ottdp|0.6|2.5}}
+|-
+|08||\2u/||result = val1 / val2||{{pl/Development/NewGRF/ottdp|0.6|2.5}}
+|rowspan=2|zarówno val1, jak i val2 są uważane za 'niepodpisane'
+|-
+|09||\2u%||result = val1 mod val2||{{pl/Development/NewGRF/ottdp|0.6|2.5}}
+|-
+|0A||\2*||result = val1 * val2||{{pl/Development/NewGRF/ottdp|0.6|2.5}}||wynik zostanie obcięty do B/W/D (co czyni to samo dla operandów 'podpisanych/niepodpisanych')
+|-
+|0B||\2&||result = val1 & val2||{{pl/Development/NewGRF/ottdp|0.6|2.5}}||bitwise AND
+|-
+|0C||\2<nowiki>|</nowiki>||result = val1 <nowiki>|</nowiki> val2||{{pl/Development/NewGRF/ottdp|0.6|2.5}}||bitwise OR
+|-
+|0D||\2<nowiki>^</nowiki>||result = val1 <nowiki>^</nowiki> val2||{{pl/Development/NewGRF/ottdp|0.6|2.5}}||bitowy XOR
+|-
+|0E||valign=middle|\2s or \2sto <!--<ref name="renum1265">-->{{pl/Development/NewGRF/NFO Specs/refs|name=renum1265|text=Obsługiwane od grfcodec i nforenum r1265 (odpowiednio 1.0.0 i 3.4.4.)|1}}<!--</ref>-->||var7D[val2]  = val1, result = val1||{{pl/Development/NewGRF/ottdp|0.6|2.6|ttdprev=r1246}}||Magazynuj rezultat. Zerknij [[pl/Development/NewGRF/NFO Specs/Storages#temporary-storage|Temporary storage]].
+|-
+|0F||valign=middle|\2r or \2rst<!-- --><!--<ref name="renum1265"/>-->{{pl/Development/NewGRF/NFO Specs/refs|name=renum1265|<!--2-->1-1}}||valign=middle|result = val2 <!--<ref>-->{{pl/Development/NewGRF/NFO Specs/refs|text=Operator 0F jest użyteczny tylko przy użyciu zmiennej 7B lub bezpośrednio po operatorach 0E lub 10, do przechowywania wyniku obliczeń, a następnie odrzuć ten wynik i zacznij od nowa.|<!--3-->2}}<!--</ref>-->||{{pl/Development/NewGRF/ottdp|0.6|2.6|ttdprev=r1246}}||
+|-
+|10||valign=middle|\2psto <!--<ref name="grfcodec100">-->{{pl/Development/NewGRF/NFO Specs/refs|name=grfcodec100|text=Obsługiwane od grfcodec 1.0.0 i nforenum 4.0.0.|<!--4-->3}}<!--</ref>-->||var7C[val2] = val1, result = val1||{{pl/Development/NewGRF/ottdp|0.6|2.6|ttdprev=r1315}}||Przechowuj wynik w trwałym magazynie. Zobacz  [[pl/Development/NewGRF/NFO Specs/Storages#persistent-storage|Persistent storage]].
+|-
+|11||valign=middle|\2ror or \2rot <!--<ref>-->{{pl/Development/NewGRF/NFO Specs/refs|text=Obsługiwane od grfcodec i nforenum r1655 (1.0.0 i 3.4.6, kolejno.)|<!--5-->4}}<!--</ref>-->||result = val1 rotate right val2||{{pl/Development/NewGRF/ottdp|0.6|2.6|ttdprev=r1651}}||Zawsze obrót 32-bitowy.
+|-
+|12||valign=middle|\2cmp <!--<ref name="grfcodec100"/>-->{{pl/Development/NewGRF/NFO Specs/refs|name=grfcodec100|<!--6-->3-1}}||Zobacz notatki||{{pl/Development/NewGRF/ottdp|0.6|2.6|ttdprev=r1698}}||valign=middle|Rezultat jest 0, jeśli val1<val2, 1 jeśli val1=val2 i 2 jeśli val1>val2. Obie wartości są traktowane jako podpisane <small>''(signed)''</small> . <!--<ref name="compare">-->{{pl/Development/NewGRF/NFO Specs/refs|name=compare|text=Operacje 12 i 13 powinny być preferowane w stosunku do operacji 01 (odejmowanie), gdy potrzebna jest tylko relacja dwóch wartości, a sama różnica jest nieistotna. Jest tak, ponieważ operacja 01 może się przepełnić i dać zły znak, jeśli różnica jest zbyt duża, ale porównania działają poprawnie dla wszystkich wartości.|<!--7-->5}}<!--</ref>-->
+|-
+|13||valign=middle|\2ucmp<!-- --><!--<ref name="grfcodec100"/>-->{{pl/Development/NewGRF/NFO Specs/refs|name=grfcodec100|<!--8-->3-2}}||see notes||{{pl/Development/NewGRF/ottdp|0.6|2.6|ttdprev=r1698}}||valign=middle|To samo co 12, ale operandy są uważane za niepodpisane. <!--<ref name="compare"/>-->{{pl/Development/NewGRF/NFO Specs/refs|name=compare|<!--9-->5-1}}
+|-
+|14||valign=middle|\2<< <!--<ref name="grfcodec100"/>-->{{pl/Development/NewGRF/NFO Specs/refs|name=grfcodec100|<!--10-->3-3}}||result = val1 << val2||{{pl/Development/NewGRF/ottdp|1.1|2.6|ottdrev=r20332|ttdprev=r2335}}||shift left; val2 should be in the range 0 to 31.
+|-
+|15||valign=middle|\2u>> <!--<ref name="grfcodec100"/>-->{{pl/Development/NewGRF/NFO Specs/refs|name=grfcodec100|<!--11-->3-4}}||result = val1 >> val2||{{pl/Development/NewGRF/ottdp|1.1|2.6|ottdrev=r20332|ttdprev=r2335}}||Shift w prawo (bez znaku); val2 powinno mieścić się w zakresie od 0 do 31.
+|-
+|16||valign=middle|\2>> <!--<ref name="grfcodec100"/>-->{{pl/Development/NewGRF/NFO Specs/refs|name=grfcodec100|<!--12-->3-5}}||result = val1 >> val2||{{pl/Development/NewGRF/ottdp|1.1|2.6|ottdrev=r20332|ttdprev=r2335}}||przesuń w prawo (podpis); val2 powinno mieścić się w zakresie od 0 do 31.
+|}
+
+gdzie val1 jest wartością wynikającą z bieżącej pary zmienna/varadjust (lub wynikiem poprzednich obliczeń, jeśli nie jest to pierwsza para), a val2 jest wartością wynikającą z następującej pary zmienna/varadjust. Ustawiając wielokrotnie bit 5 shift-num, możesz połączyć kilka zmiennych razem przed podjęciem decyzji.
+<!--
+<references/>-->{{pl/Development/NewGRF/NFO Specs/przypisy|name=renum1265|2001}}<!--
+ -->{{pl/Development/NewGRF/NFO Specs/przypisy|name=renum1265|2001-1}}<!--
+  -->{{pl/Development/NewGRF/NFO Specs/refs|name=renum1265|text=Obsługiwane od grfcodec i nforenum r1265 (odpowiednio 1.0.0 i 3.4.4.)|<!--1-->przypis}}<!--
+  -->{{pl/Development/NewGRF/NFO Specs/refs|name=renum1265|<!--2--><!--1-1-->przypis}}<!--
+-->{{pl/Development/NewGRF/NFO Specs/przypisy|222012}}<!--
+  -->{{pl/Development/NewGRF/NFO Specs/refs|text=Operator 0F jest użyteczny tylko przy użyciu zmiennej 7B lub bezpośrednio po operatorach 0E lub 10, do przechowywania wyniku obliczeń, a następnie odrzuć ten wynik i zacznij od nowa.|<!--3--><!--2-->przypis}}<!--
+-->{{pl/Development/NewGRF/NFO Specs/przypisy|name=grfcodec100|43-0}}<!--
+ -->{{pl/Development/NewGRF/NFO Specs/przypisy|name=grfcodec100|3-1}}<!--
+ -->{{pl/Development/NewGRF/NFO Specs/przypisy|name=grfcodec100|3-2}}<!--
+ -->{{pl/Development/NewGRF/NFO Specs/przypisy|name=grfcodec100|3-3}}<!--
+ -->{{pl/Development/NewGRF/NFO Specs/przypisy|name=grfcodec100|3-4}}<!--
+ -->{{pl/Development/NewGRF/NFO Specs/przypisy|name=grfcodec100|3-5}}<!--
+  -->{{pl/Development/NewGRF/NFO Specs/refs|name=grfcodec100|text=Obsługiwane od grfcodec 1.0.0 i nforenum 4.0.0.|<!--4--><!--3-->przypis}}<!--
+  -->{{pl/Development/NewGRF/NFO Specs/refs|name=grfcodec100|<!--6--><!--3-1-->przypis}}<!--
+  -->{{pl/Development/NewGRF/NFO Specs/refs|name=grfcodec100|<!--8--><!--3-2-->przypis}}<!--
+  -->{{pl/Development/NewGRF/NFO Specs/refs|name=grfcodec100|<!--10--><!--3-3-->przypis}}<!--
+  -->{{pl/Development/NewGRF/NFO Specs/refs|name=grfcodec100|<!--11--><!--3-4-->przypis}}<!--
+  -->{{pl/Development/NewGRF/NFO Specs/refs|name=grfcodec100|<!--12--><!--3-5-->przypis}}<!--
+-->{{pl/Development/NewGRF/NFO Specs/przypisy|222022}}<!--
+  -->{{pl/Development/NewGRF/NFO Specs/refs|text=Obsługiwane od grfcodec i nforenum r1655 (1.0.0 i 3.4.6, kolejno.)|<!--5--><!--4-->przypis}}<!--
+-->{{pl/Development/NewGRF/NFO Specs/przypisy|name=compare|5-0}}<!--
+ -->{{pl/Development/NewGRF/NFO Specs/przypisy|name=compare|5-1}}<!--
+  -->{{pl/Development/NewGRF/NFO Specs/refs|name=compare|text=Operacje 12 i 13 powinny być preferowane w stosunku do operacji 01 (odejmowanie), gdy potrzebna jest tylko relacja dwóch wartości, a sama różnica jest nieistotna. Jest tak, ponieważ operacja 01 może się przepełnić i dać zły znak, jeśli różnica jest zbyt duża, ale porównania działają poprawnie dla wszystkich wartości.|<!--7--><!--5-->przypis}}<!--
+  -->{{pl/Development/NewGRF/NFO Specs/refs|name=compare|<!--9--><!--5-1-->przypis}}
+Zauważ, że bitowego NIE można wykonać przez XORing ze zmienną 1A. Podobnie możesz określić wartości literalne (tj. Liczby zwykłe zamiast zmiennych), używając zmiennej 1A i maski i wartości, którą chcesz. Na przykład, aby podać literał 26, użyj zmiennej=1A, shift-num=00 (lub ustaw więcej bitów, jeśli potrzebujesz dalszych obliczeń) i and-mask=26 . Działa to z literałami o rozmiarach B, W lub D, jeśli użyjesz odpowiedniego rozmiaru i maski dla danego typu akcji 2. Odpowiednia sekwencja ucieczki \b, \w lub \d może być użyteczna do określania literałów. Zobacz [[pl/Development/NewGRF/NFO Specs/GRFActionsDetailed#byte-order|omówienie sekwencji escape]] w celu uzyskania dalszych informacji.
+
+=== Using types 81/82 (etc) simultaneously ===
+{{pl/Development/NewGRF/ottdp|0.6|2.5|ttdprev=2.0.1 alpha 59}}
+Od wersji TTDPatch 2.0.1 alfa 59 możliwy jest dostęp do zmiennych przy użyciu zarówno VarAction2 typu 81, jak i 82 (oraz ich kuzynów W/D) pośrednio poprzez nową zmienną 1C.
+
+Ta zmienna przechowuje wynik bieżącej VarAction2 i udostępnia ją następnej VarAction2 w łańcuchu. &nbsp;Dlatego, aby uzyskać dostęp, na przykład podczas rysowania domu, zarówno zmiennych domu (typ 81), jak i zmiennych miasta (typ 82), należy odczytać zmienne domu w jednym var. akcja 2, 'type' 81, a następnie połącz do następnej VarAction2, 'type' 82. &nbsp;Tam masz teraz dostęp do wartości zmiennej domu przechowywanej w zmiennej 1C, a także zmiennych miasta w zmiennych regularnych.
+
+Zauważ, że aby przejść do następnego VarAction2, ''nie możesz'' <small>''(must not)''</small> użyć nvar=0, ponieważ to zwraca wartość wyniku jako wynik wywołania zwrotnego. &nbsp;Zamiast tego musisz użyć nvar=1 i określić powiązane łańcuchowe VarAction2 zarówno w pozycjach <set-id>, jak i <default>.
+
+{{pl/Development/NewGRF/ottdp|0.6|2.6|ttdprev=r1246}}
+Od wersji TTDPatch 2.6 r1246 możesz także przechowywać wartości w tablicy 7D, gdzie będą one zachowane przez cały czas trwania łańcucha akcji 2, chyba że zostaną zastąpione.
+
+=== Using procedures ===
+{{pl/Development/NewGRF/ottdp|0.6|2.5|ttdprev=2.5 beta 7}}
+Gdy zmienna w VarAction2 ma wartość 7E, wywoływana jest procedura podana przez parametr 60 + x. Oznacza to, że bajt następujący po numerze zmiennej (7E) określa wariacyjny lub losowy identyfikator akcji 2 do wywołania, podobnie jak zwykły VarAction2 rozgałęzia się do innych pozycji akcji 2. Jednak zamiast rozgałęzienia jest to wywołanie podprogramu, a wartość obliczona przez wywoływany wpis jest używana jako wartość zmiennej.
+
+Wywołane działanie 2 powinno zwrócić wynik wywołania zwrotnego. {{pl/Development/NewGRF/ottdp|0.6|2.6|ttdprev=r2367}}  Jeśli łańcuch kończy się zwykłą akcją2, zwracany wynik to 0xFFFF. Dla wcześniejszych wersji TTDPatch zmienna 7E była w tym przypadku niezdefiniowana.
+
+Ponieważ wyniki wywołania zwrotnego są ograniczone do 15 bitów, aby uzyskać dostęp do pełnego wyniku 32-bitowego, można zamiast tego odczytać zmienną 1C (np. Przez dodanie wyniku 7E z 0, a następnie dodanie zmiennej 1C).
+
+Funkcja tak zwanej akcji 2 jest ignorowana, a wszystkie zmienne, do których uzyskano dostęp, używają tej samej funkcji, co wywoływanie VarAction2. Jednak ważne jest użycie dowolnego typu VarAction2, np. typy 81 i 82 oraz różne rozmiary bajtów/słów/dwordów <small>''(byte/word/dword)''</small> mogą być mieszane. Prawidłowe jest również użycie nvar=00 do zwrócenia obliczonej wartości jako wyniku wywołania zwrotnego, zamiast określania zakresów, chociaż w ten sposób wartość zwracana jest nadal ograniczona do 15 bitów. Podczas używania losowej akcji 2 w wywoływanym łańcuchu losowe wyzwalacze są przetwarzane w taki sam sposób, jak w "normal" łańcuchach.
+
+{{pl/Development/NewGRF/ottdp|0.6|2.5/2.6|ttdprev=r846, will be in yet unreleased 2.5 beta 10}}
+W TTDPatch 2.5 beta 9 i wcześniejszych oraz w TTDPatch 2.6 przed r846, VarAction2s, które próbują wykonać wiele wywołań sekwencyjnych (w przeciwieństwie do zagnieżdżonych), będą miały niezdefiniowane wyniki.

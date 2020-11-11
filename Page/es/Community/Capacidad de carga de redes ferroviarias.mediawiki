@@ -1,6 +1,6 @@
 [[Translation:en/Community/Railway Designs]]
 {{es/Traducción|en/Community/Railway Designs|65}}
-{{es/Tabla de contenido}}
+{{es/Manual/Tabla de contenido}}
 
 =Capacidad de carga de su red=
 Tenga en cuenta que esta página hace un tratamiento puramente teórico sobre la capacidad de carga de las redes de ferrocarril. Los cruces y la organización de la red son mucho más importantes. Después de este aviso, vamos a considerar los diversos factores que afectan la capacidad de carga de su red.
@@ -20,7 +20,7 @@ Cualquiera que sea la distancia entre señales que elija, debe de tener en cuent
 ===Vías en diagonal===
 Como usted habrá notado, las vías se construyen en casillas cuadradas. Por defecto, el motor del juego considera que las vías en diagonal tienen una distancia que equivale a la diagonal de una casilla (&radic;2=1,41). Por eso los trenes recorren menos casillas cuando van por tramos diagonales que cuando van por los tramos rectos (¡gracias SmatZ!).<br style="clear:both;">
 
-[[File:en/Community/Pitagoras.png|frame|right|Figura 4: Pitágoras.]]
+[[File:en/Community/Pythagoras.png|frame|right|Figura 4: Pitágoras.]]
 Como los trenes se mueven más lentamente (en términos de casillas, no de distancias) por las casillas diagonales, en estos tramos requerirán mayor número de señales, (o reducir la distancia entre señales) para evitar atascos. La relación es de 1 a 1'41 (aplicando Pitágoras). O sea que, 1 casilla oblicua (h, en figura 4) equivale a 1'41 casillas rectas; y a la inversa 1 casilla recta (a, en figura 4) equivale a 0'7 oblicuas.<br style="clear:both;">
 
 ==Longitud de los trenes (LT)==
@@ -81,7 +81,7 @@ Refinements to the cyclotron are possible. There is enough space on the track lo
 
 The injection delay assumes that the second injected train is accelerating from standstill, and there is a small chance that second train has in fact chanced upon the cyclotron entrance at full speed. In this case, the timing will be wrong and the second train will almost certainly cause a jam within the cyclotron (and consequently on the main line). This can be compensated for by some additional signalling to filter out full-speed trains. The filtered out full-speed trains can either be diverted onto a second loop, or simply drained of momentum by a signal. 
 
-A cyclotron incorporating all the optimisations discussed, and some additional fixes, is shown in Figure 5 [[File:en/Community/Cyclotron Full.png|thumb|700px|none|Figure 7: full-featured cyclotron]].
+A cyclotron incorporating all the optimisations discussed, and some additional fixes, is shown in Figure 5 [[File:en/Community/Junctionary/Cyclotron Full.png|thumb|700px|none|Figure 7: full-featured cyclotron]].
 
 A savegame containing all of the techniques discussed above is available [http://patrickthomson.ath.cx/cyclotron.sav Here] (version 0.7 or higher required to open).
 
@@ -92,7 +92,7 @@ Editor's note: Whilst I would like to defend my cyclotron refinements, experimen
 An attempt to minimize the drawbacks of the full featured cyclotron leads to parallel, small, 1-train cyclotrons. In this design, an array of cyclotrons, each handling one train, may be fed simultaneously. They may have different loop size in order to prevent synchronization between the cycling trains, giving more chance to find a slot in the flow of the main line. Each loop still needs it own acceleration lane so the trains enter the loop at full speed. If a train happened to enter the loop at low speed, it would get a chance to join the main line at non-max speed and cause a possibly large traffic jam.
 
 Figure 6 shows a parallel cyclotron with two loops.
-[[File:en/Community/Parallel Cyclotron.png|thumb|700px|none|Figure 8: Parallel cyclotron]]
+[[File:en/Community/Junctionary/Parallel Cyclotron.png|thumb|700px|none|Figure 8: Parallel cyclotron]]
 
 A savegame with the example given in Figure 8 is available [http://gbizzotto.free.fr/parallel_cyclotron.sav Here] (version 0.7 or higher required to open).
 

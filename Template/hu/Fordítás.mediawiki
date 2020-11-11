@@ -1,5 +1,5 @@
 <noinclude>[[Translation:Template/en/Translation]]</noinclude>{{en/Ambox| type  = style
-| image = en/Manual/Base Set/Translation.png
+| image = en/Translation.png
 | text  = <strong>Ez a cikk az eredeti angol nyelvű fordítása: <includeonly>[[{{{1}}}|{{{1}}}]]</includeonly><noinclude>{{{1}}}</noinclude>.</strong>
 <div style="font-size: 90%">
 <div style="margin:auto; text-align:Left;">Lefordítva: kb. {{{2|0}}}%
@@ -15,18 +15,18 @@
 === A sablon használata ===
 Gépelje be a <code><nowiki>{{</nowiki>Fordítás/Hu|''title original in english''|''percentage''<nowiki>}}</nowiki></code> sort a cikk elejére jelezvén, hogy a fordítás folyamatban van.
 
-A cikk hozzá lesz adva a [[:Category:hu/Manual/Base Set/Cargos/Fordításban|Fordításban/Hu]] és a [[:Category:hu/Cikkek magyar|Cikkek magyar/Hu]] kategóriákhoz.
+A cikk hozzá lesz adva a [[:Category:hu/Fordításban|Fordításban/Hu]] és a [[:Category:hu/Cikkek magyar|Cikkek magyar/Hu]] kategóriákhoz.
 
 === A fordítás befejezése ===
 Távolítsa el ezt a sablont, ha a cikk fordítása teljesen befejeződött.
 
 === További cikkek ===
-*[[:Category:hu/Manual/Base Set/Cargos/Fordításban]]
+*[[:Category:hu/Fordításban]]
 *[[:Category:en/Other languages|Más nyelvek]] fordítási statisztikái.
 
 
-[[Category:hu/Manual/Base Set/Üzenet dobozok|Fordítás]]
+[[Category:hu/Üzenet dobozok|Fordítás]]
 
 
 
-</noinclude><includeonly>[[Category:hu/Manual/Base Set/Cargos/Fordításban]]{{ #ifexpr: {{{2|0}}}=100 | |{{ #ifexpr: {{{2|0}}}>10 | [[Category:hu/Manual/Base Set/Cargos/Lefordítva több mint 10 százalék]] | [[Category:hu/Lefordítva a 10 százalékot]]}}}}</includeonly>
+</noinclude><includeonly>[[Category:hu/Fordításban]]{{ #ifexpr: {{{2|0}}}=100 | |{{ #ifexpr: {{{2|0}}}>10 | [[Category:hu/Lefordítva több mint 10 százalék]] | [[Category:hu/Lefordítva a 10 százalékot]]}}}}</includeonly>

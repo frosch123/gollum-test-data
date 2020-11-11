@@ -1,0 +1,128 @@
+{{pl/Development/NewGRF/inne strony|en=newgrf-specs.tt-wiki.net/wiki/ActionD|pl=pl/Development/NewGRF/NFO Specs/ActionD |sub=nfo}}
+<!--{{-}}<br>{{ambox | text = w trakcie edycji.}}-->
+
+==<span id="Introduction" title="Introduction">Wprowadzenie</span>==
+
+
+Przypisz parametry i oblicz wyniki.
+
+
+
+Działanie D pozwala ustawić wartość parametru grf (tj. Te, które zwykle ustawia się jako opcje w pliku newgrf(w).cfg ), a także wykonać na nich matematykę.
+
+== Syntax ==
+
+Dane wyglądają następująco:
+
+ <Sprite-number> * <Length> 0D <target> <operation> <source1> <source2> [<data>]
+
+{|
+!Element!![[pl/Development/NewGRF/NFO Specs/GRFActionsDetailed|Rozmiar]]!!Opis
+
+|-
+|<Sprite-number>||dec||Sekwencyjny numer 'sprite'
+
+|-
+|<length>||dec||Łączna liczba bajtów użytych w tej akcji
+
+|-
+|0D||B||Definiuje action 0D
+
+|-
+|<target>||B||Parametr docelowy
+
+|-
+|<operation>||B||Obliczenia do przeprowadzenia
+
+|-
+|<source1>||B||Pierwszy argument
+
+|-
+|<source2>||B||Drugi argument
+
+|-
+|<data>||D||Wartość do wykorzystania jako źródło, jeśli nie parametr
+|}
+
+== Description ==
+
+=== target, source1, source2 ===
+
+Te bajty określają parametr docelowy i parametry źródłowe. Mogą to być albo liczby parametrów grf, albo mogą być [[pl/Development/NewGRF/NFO Specs/GlobalVariables| global variable]].
+
+Jeśli źródło1 lub źródło2 to FF, zamiast wartości parametru używana jest wartość z <danych>.
+
+Jeśli <source2> to FE, to działanie D wykona jeden z następujących dostępów specjalnych zmiennych. W takim przypadku <operation> musi być przypisaniem, a <data> jest argumentem dostępu do danych, a nie wartością źródłową.
+
+* [[pl/Development/NewGRF/NFO Specs/ReadingOtherGRFParameters | Read parameters of another GRF]]
+* [[pl/Development/NewGRF/NFO Specs/ReadingPatchVariables | Read game configuration settings]]
+* [[pl/Development/NewGRF/NFO Specs/GRFResourceManagement | Reserve GRF resources to prevent conflicts with other GRFs]]
+
+=== operation ===
+
+Operacja przeprowadzania argumentów źródłowych. Ten bajt ma sekwencję zmiany znaczenia dla każdej z możliwych wartości wymienionych poniżej. Zobacz [[pl/Development/NewGRF/NFO Specs/GRFActionsDetailed#byte-order|the discussion of escape sequences]] w celu uzyskania dalszych informacji na temat sekwencji specjalnych. Wynik tego obliczenia zostanie zapisany w parametrze docelowym.
+
+{|
+!Operacja!!Escape!!Version!!Nazwa!!Rezultat 
+
+|-
+|00||\D=||{{pl/Development/NewGRF/ottdp| | }}||<span title=Assignment>'Przypisanie'</span>||target = source1
+
+|-
+|01||\D+||{{pl/Development/NewGRF/ottdp| | }}||<span title=Addition>'Dodanie'</span>||target = source1 + source2
+
+|-
+|02||\D-||{{pl/Development/NewGRF/ottdp| | }}||<span title=Subtraction>'Odejmowanie'</span>||target = source1 - source2
+
+|-
+|valign=middle|03||valign=middle|\Du*||valign=middle|{{pl/Development/NewGRF/ottdp| | }}||<span title='Unsigned multiplication'>'Mnożenie bez znaku'</span>||target = source1 * source2, przy czym oba <span title=sources>'źródła'</span> są uważane za <span title='bez znaku'>'unsigned'</span>
+
+|-
+|valign=middle|04||valign=middle|\D*||valign=middle|{{pl/Development/NewGRF/ottdp| | }}||<span title='Signed multiplication'>'ze znakiem mnożenie'</span>||target = source1 * source2, z obydwoma <span title=sources>'źródłami'</span> uważanymi za <span title='ze znkaiem'>signed'</span>
+
+|-
+|valign=middle|05||valign=middle|\Du<<||valign=middle|{{pl/Development/NewGRF/ottdp| | }}||Unsigned bit shift||target = source1 << source2 if source2>0, or target = source1 >> abs(source2) if source2 < 0. source1 jest uważane za <span title='bez nzkau'>'unsigned'</span>
+
+|-
+|06||\D<<||{{pl/Development/NewGRF/ottdp| | }}||<span title='Signed bit shift'>'ze znakiem przesunięcie bitu'</span>||tak samo jak 05, ale source1 jest uważane za <span title='ze znkakiem'>'signed'</span>)
+
+|-
+|07||\D&||{{pl/Development/NewGRF/ottdp| |2.5|ttdprev=alpha 48}}||Bitowo AND||target = source1 AND source2
+
+|-
+|08||\D||{{pl/Development/NewGRF/ottdp| |2.5|ttdprev=alpha 48}}|||Bitowo OR||target = source1 OR source2
+
+|-
+|09||\Du/||{{pl/Development/NewGRF/ottdp| |2.5|ttdprev=alpha 59}}||<span title='Podział bez znaku'>'Unsigned division'</span>||target = source1 / source2
+
+|-
+|0A||\D/||{{pl/Development/NewGRF/ottdp| |2.5|ttdprev=alpha 59}}||<span title='Dzielenie ze znakiem'>'Signed division'</span>||target = source1 / source2
+
+|-
+|0B||\Du%||{{pl/Development/NewGRF/ottdp| |2.5|ttdprev=alpha 59}}||Unsigned modulo||target = source1 % source2
+
+|-
+|0C||\D%||{{pl/Development/NewGRF/ottdp| |2.5|ttdprev=alpha 59}}||<span title='ze znakiem modulo'>'Signed modulo'</span>||target = source1 % source2
+|}
+
+Możesz dodać 80 do numeru operacji, aby zastosować go tylko wtedy, gdy cel nie został jeszcze zdefiniowany. W tym względzie przyjmuje się, że parametr jest definiowany, jeśli ma zastosowanie którykolwiek z poniższych warunków:
+* ustawiono dowolną wartość z listy parametrów newgrf(w).cfg
+* it '''lub parametr o większej liczbie''' został ustawiony na dowolną wartość przez wcześniejsze działanie D
+
+Jeśli na przykład parametry 0 i 1 są ustawione w pliku newgrf(w).cfg, a akcja D ustawia parametr 4, wówczas parametry 2 i 3 zostają automatycznie zdefiniowane i otrzymują wartość zero.
+
+=== Notes ===
+
+Możesz zrobić bitowe NIE dla <param>, obliczając "-1 - <param>" , tj. operation=02, source1=FF, source2=param, data=FF FF FF FF .
+
+Operand docelowy może również odnosić się do zmiennych specjalnych z działania 7, patrz poniżej lista zmiennych, do których można zapisać.
+
+Ponieważ łatka musi ponownie przydzielić pamięć dla całej listy parametrów za każdym razem, gdy dodawany jest nowy parametr, należy najpierw ustawić parametr o najwyższym numerze (przynajmniej w miarę możliwości), aby cała pamięć mogła zostać przydzielona od razu.
+
+Pamiętaj, że parametry nigdy nie są resetowane po uruchomieniu gry, dlatego nie wolno modyfikować parametrów newgrf(w).cfg przy jakimkolwiek nieodwracalnym działaniu. Można na przykład dodać wartość do parametru tylko wtedy, gdy ta sama wartość zostanie później odjęta, aby utrzymać ten sam parametr podczas ładowania lub uruchamiania kilku gier.
+
+Te zmienne globalne, dla których można zapisać, są wskazane w osobnej kolumnie w [[pl/Development/NewGRF/NFO Specs/GlobalVariables| global variable list]] . Zauważ, że akcja D obsługuje tylko zapisywanie wartości dword. Podany tam rozmiar służy jedynie do przekazania, ile tej wartości dworu zostanie wykorzystane w grze, tj. Jaka jest maksymalna wartość.
+
+== Przykład ==
+
+<span style='color:#808080'>Something to go here</span>

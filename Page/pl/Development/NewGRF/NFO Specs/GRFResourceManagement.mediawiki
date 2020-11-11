@@ -1,0 +1,130 @@
+{{pl/Development/NewGRF/inne strony|en=newgrf-specs.tt-wiki.net/wiki/GRFResourceManagement|pl=pl/Development/NewGRF/NFO Specs/GRFResourceManagement |sub=nfo}}
+<!--{{-}}<br>--><!--{{ambox | text = w trakcie edycji.}}--><!-- -->
+== Wprowadzenie ==
+
+Zapobieganie konfliktom przy ograniczonych zasobach
+
+
+
+Od czasu TTDPatch 2.0.1 alpha 51 możliwe było użycie działania D w celu uczestniczenia we wspólnym zarządzaniu zasobami.
+
+Ta funkcja jest przydatna w celu uniknięcia konfliktów zasobów między plikami grf. Plik może sprawdzać dostępne zasoby, sprawdzać, czy niektóre identyfikatory są dostępne i/lub oznaczać je jako zastrzeżone. Następnie akcja 6 wprowadzi rzeczywiste wartości do odpowiednich wpisów akcji, na przykład akcja 0 lub 3 dla pojazdów, a akcja A dla 'sprites' . Alternatywnie można użyć innej akcji D, aby ustawić zmienną 99 i odpowiednio dopasować identyfikatory odpowiednich akcji.
+
+Jeśli żądane zasoby nie są dostępne, plik grf zostanie dezaktywowany i wyświetlony w pomarańczowym kolorze w oknie statusu GRF, a także komunikat wskazujący typ zasobu, który był niedostępny. Pamiętaj, że wcześniej przydzielone zasoby nie zostaną zwolnione, jeśli tak się stanie, dlatego musisz najpierw ''sprawdzić'' <small>''(check)''</small> , czy ''wszystkie'' <small>''(all)''</small>  zasoby są dostępne, zanim zarezerwujesz ''dowolne'' <small>''(any)''</small> z nich. Oznacza to, że jeśli wymagany jest więcej niż jeden typ zasobu, potrzebne są dwa wpisy akcji D dla każdego typu, pierwsza jedna akcja D dla każdego typu za pomocą operacji "sprawdź" lub "znajdź" <small>''(find)''</small>, po których wszystkie wykonaj akcję Wpisy D dla każdego typu przy użyciu operacji "zarezerwować" <small>''(reserve)''</small> lub "zaznaczyć" <small>''(mark)''</small>.
+
+Ten typ akcji D jest ignorowany podczas inicjalizacji (ponieważ zasoby również nie zostały jeszcze zainicjowane), a parametr docelowy zostanie wówczas ustawiony na 0.
+
+'''Proszę zanotować:''' To zarządzanie zasobami jest oparte na współpracy. Oznacza to, że pliki grf, które go nie używają, mogą nadal uzyskiwać dostęp do wszystkich ID''`y'' , a łatka nigdy się o tym nie dowie. Tylko te pliki GRF, które korzystają z tego zarządzania zasobami, będą się "wiedzieć" <small>''(know)''</small> o sobie i będą mieć pewność, że nie będą używać sprzecznych zasobów. Jeśli inny plik grf użyje wtedy "zarezerwowanego" <small>''(reserved)''</small> identyfikatora bez podania łaty poprzez akcję D, nic nie stoi na przeszkodzie, aby to zrobić.
+
+== Syntax ==
+
+ <Sprite-number> * <Length> 0D <target> 00 <GRM-op> FE FF <feature> <count>
+
+{|
+!Element!![[pl/Development/NewGRF/NFO Specs/GRFActionsDetailed|Rozmiar]]!!Opis
+
+|-
+|0D||B||Definiuje action 0D
+
+|-
+|<target>||B||Parametr docelowy. Zobacz także poniżej.
+
+|-
+|00||B||'Przeniesienie' <small>''(Assignment)''</small>
+
+|-
+|<GRM-op>||B||Operacja zasobów do wykonania. Patrz poniżej.
+
+|-
+|FE||B||Definiuje specjalny dostęp do zmiennych
+
+|-
+|FF||B||Zapobiegaj konfliktom z ReadingOtherGRFParameters
+
+|-
+|<feature>||B||Funkcja obsługi. Patrz poniżej.
+
+|-
+|<count>||W||Liczba ID do obsługi <small>''(operate)''</small>.
+|}
+
+W przypadku operacji sprawdzania, oznaczania, sprawdzania bezawaryjnego i uzyskiwania informacji o właścicielu <target> musi zawierać pierwszy ID, który będzie obsługiwany.
+
+==<span id="Description_of_GRM-ops" title="Description of GRM-ops">Opis operacji GRM</span>==
+
+Dostępne są następujące operacje:
+
+Każda operacja ma również odpowiednią sekwencję zmiany znaczenia, zgodnie z listą. Zobacz [[pl/Development/NewGRF/NFO Specs/GRFActionsDetailed#byte-order|the discussion of escape sequences]] w celu uzyskania dalszych informacji na temat sekwencji specjalnych.
+
+{|
+!Numer!!Escape!!Operacja &nbsp; &nbsp; &nbsp; &nbsp; !!Rezultat!!Znaczenie
+
+|-
+|00||\DR||Reserve||<span title='Pierwszy znaleziony identyfikator'>'First found ID'</span>||znajdź dostępny ID zasobu i oznacz jako używany
+
+|-
+|01||\DF||Find||First found ID||znajdź dostępny ID zasobu, ale nie zaznaczaj
+
+|-
+|02||\DC||Check||(none)||sprawdź, czy dane zasoby (ID przechowywane w zmiennej <target>) są dostępne
+
+|-
+|03||\DM||Mark||(none)||sprawdź, czy dane zasoby są dostępne, a jeśli tak, zaznacz jako używane
+
+|-
+|04||\DnF||<span title='Bezbłędne znajdowanie'>'No-fail Find'</span>||(patrz poniżej)||jak "Find", ale nie dezaktywuje grf, jeśli nie znaleziono identyfikatorów
+
+|-
+|05||\DnC||No-fail Check||(patrz poniżej)||jak <span title="Check">"Sprawdź"</span>, ale nie dezaktywuje GRF, jeśli jest konflikt
+
+|-
+|06||\DO||<span title='Pobranie  właściciela'>'Get Owner'</span>||GRF-ID właściciela||<span title=Retrieve>'Pobierz'</span> GRFID, który zarezerwował podany ID (lub 0, jeśli nie został zarezerwowany)
+|}
+
+Działanie D zwraca wynik (jeśli istnieje) w danym parametrze <target>. Jeśli wynik zostanie oznaczony jako "(none)" w powyższej tabeli, parametr <target> nie zostanie zmodyfikowany.
+
+Operacje "Zarezerwuj" i "Znajdź" spróbują znaleźć ciągły blok <count> wpisów i zapiszą pierwszą liczbę w parametrze docelowym akcji D. Jeśli nie można znaleźć wystarczającej liczby wpisów, plik grf jest dezaktywowany. W przypadku OpenTTD nie jest użyteczne dzielenie dużych bloków na wiele mniejszych bloków, ponieważ jest mało prawdopodobne, aby nawet dużego bloku nie można było znaleźć w 'sprites' 16777216, które można przypisać.
+
+Operacje "sprawdź" i "zaznacz" wykorzystują wartość zapisaną w parametrze ''cel'' <small>''(target)''</small> akcji D i zaznaczają 'check/mark' blok <count> pozycji zaczynając od tej liczby. Jeśli nie wszystkie wpisy są dostępne, plik grf jest dezaktywowany.
+
+Wersje bezawaryjne działają dokładnie tak, jak ich zwykłe odpowiedniki, ale ustawiają parametr <target> na -1 (FFFFFFFF), jeśli zasoby są niedostępne, co można sprawdzić za pomocą akcji 7. Nie dezaktywują pliku grf. Jeśli się powiedzie, nic nie robią. Są one przydatne, jeśli plik chce dobrowolnie pominąć niektóre modyfikacje w przypadku, gdy inne pliki już je zmieniły.
+
+Zazwyczaj operacje  "rezerwowania" lub  "znajdowania " będą stosowane w przypadku plików modyfikujących tylko kilka pojazdów. W przypadku (głównie) kompletnych zestawów operacje  "sprawdź" i   "zaznacz" są bardziej przydatne, ponieważ często nie jest możliwe ponowne mapowanie identyfikatorów całego zestawu, więc operacje te po prostu upewnią się, że wszystkie potrzebne identyfikatory są dostępne.
+
+Dla każdej funkcji wiele operacji "znajdź" sprawdzi, czy bloki mają różne rozmiary, ale zawsze zwróci ten sam podstawowy numer wpisu, więc "znajdź" należy wywoływać tylko raz dla każdej funkcji.
+
+==<span id="Support_for_features" title="Support for features">Wsparcie dla funkcji</span>==
+
+Obsługiwane są następujące funkcje i kombinacje funkcji/GRM-op:
+
+{|
+!Feature!!Reserve!!Find!!Check!!Mark!!Get!!Notes
+
+|-
+|00 (trains)||<center>0</center>||<center>0</center>||<center>X</center>||<center>X</center>||<center>X</center>||
+
+|-
+|01 (road vehicles)||<center>0</center>||<center>0</center>||<center>X</center>||<center>X</center>||<center>X</center>||
+
+|-
+|02 (ships)||<center>0</center>||<center>0</center>||<center>X</center>||<center>X</center>||<center>X</center>||
+
+|-
+|03 (aircraft)||<center>0</center>||<center>0</center>||<center>X</center>||<center>X</center>||<center>X</center>||
+
+|-
+|08 (general sprites)||<center>X</center>||<center>X</center>||<center>*</center>||<center>*</center>||<center>-</center>||
+
+|-
+|0B (cargos)||<center>-</center>||<center>-</center>||<center>X</center>||<center>X</center>||<center>X</center>||patrz poniżej
+|}
+
+0 = niebezpieczne, ID''`y'' mogą ulec zmianie podczas ładowania gry
+
+X = bezpieczny w użyciu
+
+<nowiki>*</nowiki> = bezpieczne, ale bezużyteczne
+
+- = nie używać
+
+W przypadku nowych ładunków, <span title=identyfikatory>'ID'</span> 00..1F odnoszą się do samych <span title='identyfikatorów'>'ID'</span> ładunku (np. ID 0B jest dostępny w klimacie umiarkowanym, a 0C..1F we wszystkich klimatach), podczas gdy <span title=identyfikatory>'ID'</span> 20..3F odnoszą się do numeru bitu z podpory. 08 plus 20 (np. ID 2D, będący bitem 0D=fruit , jest dostępny we wszystkich klimatach oprócz tropikalnego). Musisz sprawdzić i oznaczyć oba typy <span title='identyfikatorów'>'ID'</span> dla poprawnego działania.
